@@ -1,0 +1,113 @@
+### YamlMime:Landing
+title: SQL の機械学習のドキュメント
+summary: SQL で機械学習を使用して、オンプレミスとクラウドの両方でリレーショナル データに対して Python と R を実行する方法について説明します。 チュートリアル、コード例、インストール ガイド、そのほかのドキュメントで SQL の機械学習の使い方が紹介されています。
+metadata:
+  title: SQL の機械学習のドキュメント - チュートリアルとインストール ガイド
+  description: SQL で機械学習を使用して、オンプレミスとクラウドの両方でリレーショナル データに対して Python と R を実行する方法について説明します。 チュートリアル、コード例、インストール ガイド、そのほかのドキュメントで SQL の機械学習の使い方が紹介されています。
+  ms.prod: sql
+  ms.technology: machine-learning
+  ms.topic: landing-page
+  author: dphansen
+  ms.author: davidph
+  ms.date: 04/24/2020
+  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
+  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83606826"
+landingContent:
+- title: SQL Server での機械学習
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server Machine Learning Services (Python と R) とは
+      url: sql-server-machine-learning-services.md
+  - linkListType: get-started
+    links:
+    - text: Windows への Machine Learning Services のインストール
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Linux への Machine Learning Services のインストール
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+  - linkListType: video
+    links:
+    - text: Machine Learning Services を使用して SQL Server で R/Python を実行する方法
+      url: https://www.youtube.com/watch?v=ACejZ9optCQ
+- title: Python を使い始める
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 単純な Python スクリプトを実行する
+      url: tutorials/quickstart-python-create-script.md
+    - text: 入力と出力の処理
+      url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
+    - text: SQL で Python のデータ構造を使用する
+      url: tutorials/quickstart-python-data-structures.md
+    - text: 最初のモデルのトレーニングと使用
+      url: tutorials/quickstart-python-train-score-model.md
+  - linkListType: tutorial
+    links:
+    - text: 線形回帰によるスキー レンタルの予測
+      url: tutorials/python-ski-rental-linear-regression.md
+    - text: K-Means クラスタリングを使用した顧客の分類
+      url: tutorials/python-clustering-model.md
+- title: R を使い始める
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 単純な R スクリプトを実行する
+      url: tutorials/quickstart-r-create-script.md
+    - text: 入力と出力の処理
+      url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
+    - text: SQL で R のデータ構造を使用する
+      url: tutorials/quickstart-r-data-types-and-objects.md
+    - text: 最初のモデルのトレーニングと使用
+      url: tutorials/quickstart-r-train-score-model.md
+  - linkListType: tutorial
+    links:
+    - text: T-SQL での R の使用
+      url: tutorials/sqldev-in-database-r-for-sql-developers.md
+    - text: R ツールでの Machine Learning Services の使用
+      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+- title: ビッグ データ クラスターでの ML
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server ビッグ データ クラスターとは
+      url: ../big-data-cluster/big-data-cluster-overview.md
+  - linkListType: get-started
+    links:
+    - text: SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする
+      url: ../big-data-cluster/machine-learning-services.md
+  - linkListType: how-to-guide
+    links:
+    - text: MLeap での Spark の機械学習モデル
+      url: ../big-data-cluster/spark-create-machine-learning-model.md
+    - text: SQL Server のビッグ データ クラスターの Sparklyr
+      url: ../big-data-cluster/sparklyr-from-rstudio.md
+    - text: SQL Server での Spark を統合する
+      url: ../big-data-cluster/spark-mssql-connector.md
+- title: Azure Synapse Analytics での ML
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Synapse Analytics とは
+      url: /azure/synapse-analytics/overview-what-is
+  - linkListType: tutorial
+    links:
+    - text: Apache Spark MLlib と Azure Synapse Analytics を使用して機械学習アプリを構築する
+      url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Synapse Studio ノートブックを作成、開発、管理する
+      url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
+- title: Azure SQL Database Edge での ML
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge での ONNX を使用した機械学習と AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: SQL Database Edge での ONNX モデルを使用したデプロイと予測
+      url: /azure/sql-database-edge/deploy-onnx

@@ -1,5 +1,5 @@
 ---
-title: 'レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs'
+title: レポートのトラブルシューティング:マップ レポート (レポート ビルダー) | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,24 +8,24 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574474"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080841"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
     
    ## <a name="need-more-help"></a>他に支援が必要でしょうか。  
    
-  次の方法をお試しください。  
+  次の操作を試してください。  
  * スタック オーバーフローの [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services)  
  * [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server) で問題や提案を報告  
 
   
-##  <a name="Embedded"></a> レポート定義のサイズの問題  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> レポート定義のサイズの問題  
  レポート定義のサイズに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>レポート定義のサイズを小さくするには  
@@ -49,7 +49,7 @@ ms.locfileid: "65574474"
   
  マップ ギャラリーのレポートからのマップ要素は常にマップ レイヤーに埋め込まれます。  
   
-##  <a name="Spatial"></a> 空間データの問題  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> 空間データの問題  
  空間データに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>デザイン画面にサンプルの空間データが表示される  
@@ -100,7 +100,7 @@ ms.locfileid: "65574474"
   
 -   空間データのソースに SQL Server データベースを使用している場合は、空間関数を使用してデータがもっと狭い領域に限定されるようにクエリを変更します。  
   
-##  <a name="Viewport"></a> ビューポートの中心とビューの問題  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> ビューポートの中心とビューの問題  
  ビューポートのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>埋め込みマップ要素の中心とビューを設定できない  
@@ -122,7 +122,7 @@ ms.locfileid: "65574474"
   
 -   空間データをレポートに埋め込み、含めたくない場所を削除する。  
   
-##  <a name="Layers"></a> レイヤーの問題  
+##  <a name="layer-issues"></a><a name="Layers"></a> レイヤーの問題  
  レイヤーのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>マップ内の 1 つまたは複数のレイヤーが表示されない  
@@ -144,7 +144,7 @@ ms.locfileid: "65574474"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>マップ レイヤーにフィルターを設定したがまったく効果がない  
  レイヤーのデータをフィルター処理するには、フィルター式でデータ型を指定する必要があります。 指定した条件がフィルター式によって正しく評価されるように、基になるデータ型が正しく指定されていることを確認してください。 詳細については、「[フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Legend"></a> 凡例、カラー スケール、およびルールの問題  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> 凡例、カラー スケール、およびルールの問題  
  ルール、凡例、およびカラー スケールのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>マップの凡例の値を制御するには  
@@ -175,7 +175,7 @@ ms.locfileid: "65574474"
   
  カラー スケールを表示するには、レイヤーまたは埋め込みマップ要素に色ルールを指定します。 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Tile"></a> タイルの問題  
+##  <a name="tile-issues"></a><a name="Tile"></a> タイルの問題  
  タイルの背景のオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Bing のマップ タイルの背景を表示できない  
@@ -187,7 +187,7 @@ ms.locfileid: "65574474"
   
 -   マップ投影法が **[Mercator]** である必要があります。  
   
--   ローカル プレビューの場合は、インターネットにアクセスできる必要があります。 レポート サーバーから実行されるレポートの場合は、タイルの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「マップ サポートの計画」を参照してください。  
+-   ローカル プレビューの場合は、インターネットにアクセスできる必要があります。 レポート サーバーから実行されるレポートの場合は、タイルの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[マップ レポートの計画](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
  タイトル レイヤーの追加方法の詳細については、「[マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "65574474"
   
  タイル レイヤーをテキストなしで含めるには、 **[航空写真]** ビューを選択します。  
   
-##  <a name="Tooltip"></a> ツールヒントとラベルの問題  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> ツールヒントとラベルの問題  
  ラベルまたはツールヒントのオプションに関連した問題の解決方法については、このセクションを参照してください。  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>ラベルまたはツールヒントに式を設定したところ、データセットのスコープに関するエラーが発生した  
@@ -206,6 +206,6 @@ ms.locfileid: "65574474"
   
 ## <a name="see-also"></a>参照  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [レポート ビルダーのトラブルシューティング](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [レポート ビルダーのトラブルシューティング](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

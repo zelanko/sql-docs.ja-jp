@@ -1,5 +1,5 @@
 ---
-title: SQLBulkOperations を使ったブックマークによる行の更新 |Microsoft Docs
+title: SQLBulkOperations を使用したブックマークによる行の更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9b10037883ef9cfa4051195270e6477c5cc04ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091622"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283200"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations を使ったブックマークによる行の更新
-ブックマークで行を更新するときに**SQLBulkOperations**データ ソースのテーブルの 1 つまたは複数の行を更新します。 行は、バインドされたブックマーク列内のブックマークによって識別されます。 バインドされた各列 (列の長さ/インジケーター バッファーの値が SQL_COLUMN_IGNORE) を除くアプリケーションのバッファーでデータを使用して、行が更新されます。 バインドされていない列は更新されません。  
+ブックマークによって行を更新すると、 **Sqlbulkoperations**によってデータソースがテーブルの1つ以上の行を更新します。 行は、バインドされたブックマーク列のブックマークによって識別されます。 行は、バインドされた各列のアプリケーションバッファーのデータを使用して更新されます (ただし、列の長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE の場合を除きます)。 非バインド列は更新されません。  
   
- 使ったブックマークによる行を更新する**SQLBulkOperations**アプリケーション。  
+ **Sqlbulkoperations**でブックマークを使用して行を更新するには、次のアプリケーションを実行します。  
   
-1.  取得し、更新するすべての行のブックマークをキャッシュします。 ブックマークは配列に格納されている 1 つ以上のブックマークが存在し、列方向のバインドを使用した場合1 つ以上のブックマークが存在し、行方向のバインドを使用した場合、それらのブックマークは、行の構造体の配列に格納されます。  
+1.  更新するすべての行のブックマークを取得してキャッシュします。 複数のブックマークがあり、列方向のバインドが使用されている場合、ブックマークは配列に格納されます。複数のブックマークがあり、行方向のバインドが使用されている場合、ブックマークは行構造の配列に格納されます。  
   
-2.  ブックマークの数、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定し、ブックマークの値、または列 0 へのブックマークの配列を含むバッファーをバインドします。  
+2.  SQL_ATTR_ROW_ARRAY_SIZE statement 属性をブックマークの数に設定し、ブックマーク値を含むバッファー、またはブックマークの配列を列0にバインドします。  
   
-3.  行セットのバッファーでは、新しいデータ値を配置します。 長い形式のデータを送信する方法については**SQLBulkOperations**を参照してください[長い形式のデータ、SQLSetPos および SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)します。  
+3.  新しいデータ値を行セットバッファーに配置します。 **Sqlbulkoperations**で長いデータを送信する方法の詳細については、「 [Long data And SQLSetPos And sqlbulkoperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)」を参照してください。  
   
-4.  必要に応じて、各列の長さ/インジケーター バッファーの値を設定します。 これは、SQL_NTS またはデータのバイト長のバイナリのバッファーを NULL に設定する列の SQL_NULL_DATA バインドされている列のデータのバイト長の文字列のバッファーにバインドされている列です。  
+4.  各列の長さ/インジケーターバッファーの値を必要に応じて設定します。 これは、文字列バッファーにバインドされている列のデータまたは SQL_NTS のバイト長、バイナリバッファーにバインドされた列のデータのバイト長、および NULL に設定する列の SQL_NULL_DATA です。  
   
-5.  SQL_COLUMN_IGNORE に更新されませんが、それらの列の長さ/インジケーター バッファーの値を設定します。 アプリケーションは、この手順をスキップし、既存のデータを再送信、これは非効率的とが切り詰められました。 読み取られたときにデータ ソースに値を送信するリスクがあります。  
+5.  SQL_COLUMN_IGNORE に更新されない列の長さ/インジケーターバッファーの値を設定します。 アプリケーションでこの手順をスキップして既存のデータを再送信することはできますが、これは非効率的であり、読み取り時に切り捨てられたデータソースに値を送信するリスクです。  
   
-6.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_UPDATE_BY_BOOKMARK に設定します。  
+6.  *操作*引数が SQL_UPDATE_BY_BOOKMARK に設定された**sqlbulkoperations**を呼び出します。  
   
- 更新プログラムとして、データ ソースに送信されるすべての行をアプリケーション バッファーは有効な行のデータが必要です。 行の状態配列が維持されている場合、フェッチすることによってアプリケーション バッファーが入力されているし、行の状態値が SQL_ROW_DELETED、SQL_ROW_ERROR、または sql_row_norow であって場合は、無効なデータは、データ ソースに誤って送信でした。
+ 更新プログラムとしてデータソースに送信されるすべての行について、アプリケーションバッファーに有効な行データが含まれている必要があります。 フェッチによってアプリケーションバッファーがいっぱいになった場合、行の状態配列が保持されていて、行の状態値が SQL_ROW_DELETED、SQL_ROW_ERROR、または SQL_ROW_NOROW の場合、データソースに無効なデータが誤って送信される可能性があります。

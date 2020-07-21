@@ -12,16 +12,16 @@ helpviewer_keywords:
 - number of rows fetched [ODBC]
 - result sets [ODBC], row status array
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20e1632e8da765b0da2785bd846b67d13ebe01ed
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086336"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302363"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>フェッチされた行の数と状態
-SQL_ATTR_ROWS_FETCHED_PTR ステートメントの属性が設定されている場合、呼び出しからフェッチされた行の数を返すバッファーを指定します。 **SQLFetch**または**SQLFetchScroll**、およびエラーの行。 (この数は、状態 SQL_ROW_NO_ROWS がないすべての行の数です)。呼び出しの後に**SQLBulkOperations**または**SQLSetPos**バッファーには、関数によって実行される一括操作の影響を受けた行の数が含まれています。 SQL_ATTR_ROW_STATUS_PTR ステートメントの属性が設定されている場合**SQLFetch**または**SQLFetchScroll**を返します、*行の状態の配列、* 各の状態を提供します。返された行。 アプリケーションによって割り当てられ、ドライバーによって設定されます。 これらのフィールドによって示されるバッファーの両方が。 アプリケーションは、カーソルが閉じられるまでこれらのポインターが有効であることを確認してください。  
+SQL_ATTR_ROWS_FETCHED_PTR statement 属性が設定されている場合は、 **Sqlfetch**または**sqlfetchscroll**への呼び出しによってフェッチされた行の数を返すバッファーと、エラー行を指定します。 (この数値は、ステータス SQL_ROW_NO_ROWS を持たないすべての行の数です)。**Sqlbulkoperations**または**SQLSetPos**を呼び出した後、バッファーには、関数によって実行された一括操作によって影響を受けた行数が含まれます。 SQL_ATTR_ROW_STATUS_PTR statement 属性が設定されている場合、 **Sqlfetch**または**sqlfetchscroll**は、返された各行の状態を示す*行の状態の配列*を返します。 これらのフィールドが指すバッファーは、どちらもアプリケーションによって割り当てられ、ドライバーによって設定されます。 アプリケーションでは、カーソルが閉じられるまで、これらのポインターが有効なままであることを確認する必要があります。  
   
- 行の状態配列内のエントリが更新されたかどうか、各行が正常にフェッチされたかどうかは、追加、または、行をフェッチ中にエラーが発生したかどうかと、前回フェッチされた以降に削除されました。 場合**SQLFetch**または**SQLFetchScroll**を複数行の行セットの 1 つの行を取得中にエラーが発生した場合、または**SQLBulkOperations**で、*操作* SQL_FETCH_BY_BOOKMARK の引数には、一括取得が実行中にエラーが発生した、SQL_ROW_ERROR、行の状態配列内の対応する値の設定は引き続き、行をフェッチし、SQL_SUCCESS_WITH_INFO が返されます。 エラー処理と行の状態配列の詳細については、次を参照してください。、 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)と[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)関数の説明。
+ 行の状態配列のエントリは、各行が正常にフェッチされたかどうか、最後にフェッチされてから更新、追加、または削除されたかどうか、および行のフェッチ中にエラーが発生したかどうかを指定します。 複数行の行セットの1行を取得しているときに**Sqlfetch**または**sqlfetchscroll**でエラーが発生した場合、または SQL_FETCH_BY_BOOKMARK の操作引数を持つ**sqlbulkoperation**で一括フェッチの実行中にエラーが発生した場合は、行状態配列の対応する値が SQL_ROW_ERROR に設定され、行のフェッチが続行され、SQL_SUCCESS_WITH_INFO が*Operation* エラー処理と行の状態の配列の詳細については、「 [Sqlfetch](../../../odbc/reference/syntax/sqlfetch-function.md)および[sqlfetchscroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)関数の説明」を参照してください。

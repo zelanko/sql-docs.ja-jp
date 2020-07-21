@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8fd328fa1d1112e0bafc8fda98f1fdaa986a3b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a20bb7cd3ff7bcbd5795f46572d9983433230c17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672471"
 ---
-# <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB データベース)
+# <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   インスタンスの実行中に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージによって使用される実際のパラメーター値を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |execution_parameter_id|**bigint**|実行パラメーターの一意識別子 (ID)。|  
 |execution_id|**bigint**|実行のインスタンスの一意の ID。|  
@@ -39,7 +39,7 @@ ms.locfileid: "68065265"
 |value_set|**bit**|値が `1` の場合、パラメーター値は割り当てられています。 値が `0` の場合、パラメーター値は割り当てられていません。|  
 |runtime_override|**bit**|値が `1` の場合、実行が開始される前に、パラメーター値が元の値から変更されました。 値が `0` の場合、パラメーター値は割り設定された元の値です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの実行の各パラメーターの行を表示します。 実行パラメーター値は、1 つのインスタンスの実行中にプロジェクト パラメーターまたはパッケージ パラメーターに割り当てられた値です。  
   
 ## <a name="permissions"></a>アクセス許可  

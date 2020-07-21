@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9795b15cf47fbaad588139aff0658978ae868807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088767"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297594"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 式)
 
@@ -46,10 +46,10 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
- FINDSTRING は DT_WSTR データ型でのみ機能します。  *character_expression* および *searchstring* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、FINDSTRING による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳細については、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
+## <a name="remarks"></a>解説  
+ FINDSTRING は DT_WSTR データ型でのみ機能します。  *character_expression* および *searchstring* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、FINDSTRING による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
- FINDSTRING は、*character_expression* または *searchstring* が null の場合は null を返します。  
+ FINDSTRING は、 *character_expression* または *searchstring* が null の場合は null を返します。  
   
  1 回目に検出された場所のインデックスを取得するには、 *occurrence* 引数の値に 1 を使用します。2 回目以降の検出場所のインデックスを取得する場合も同様です。  
   
@@ -82,6 +82,6 @@ FINDSTRING(Name,Size,1)
   
 ## <a name="see-also"></a>参照  
  [REPLACE &#40;SSIS &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
- [関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

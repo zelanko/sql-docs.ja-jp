@@ -1,5 +1,5 @@
 ---
-title: 'レコード セット (Visual C 構文のインデックスで #import) |Microsoft Docs'
+title: 'レコードセット (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931279"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761850"
 ---
-# <a name="recordset-visual-c-syntax-index-with-import"></a>レコード セット (Visual C 構文のインデックスで #import)
+# <a name="recordset-visual-c-syntax-index-with-import"></a>レコードセット (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
   
 ```  
@@ -88,7 +88,7 @@ HRESULT Seek( const _variant_t & KeyValues, enum SeekEnum
 VARIANT_BOOL Supports( enum CursorOptionEnum CursorOptions );  
 ```  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 ```  
 enum PositionEnum GetAbsolutePage( );  
@@ -203,5 +203,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

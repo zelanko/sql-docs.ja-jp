@@ -1,10 +1,9 @@
 ---
-title: 'レッスン 3: dta コマンドプロンプトユーティリティの使用 |Microsoft Docs'
-ms.custom: ''
+title: DTA コマンド プロンプト ユーティリティの使用
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04179ee339f41dde1b9e90d7abc30a00e492f3cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034717"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306976"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3 : dta コマンド プロンプト ユーティリティの使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +36,11 @@ ms.locfileid: "68034717"
   
 ここでは、 **dta** ユーティリティを起動してヘルプを表示した後、同ユーティリティを使用してコマンド プロンプトからワークロードをチューニングします。 このユーティリティは、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の実習「[ワークロードのチューニング](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)」で作成したワークロード MyScript.sql を使用します。  
   
-このチュートリアルでは、AdventureWorks2017 サンプルデータベースを使用します。 セキュリティ上の理由から、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)」を参照してください。  
+このチュートリアルでは、AdventureWorks2017 サンプル データベースを使用します。 セキュリティ上の理由から、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)」を参照してください。  
   
 この後の実習では、コマンド プロンプトを開き、 **dta** コマンド プロンプト ユーティリティを起動して、構文ヘルプを表示します。さらに、「 [ワークロードのチューニング](../../tools/dta/lesson-1-1-tuning-a-workload.md)」で作成した簡単なワークロード MyScript.sql をチューニングします。  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>前提条件 
 
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
@@ -50,9 +51,9 @@ ms.locfileid: "68034717"
 SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)に関するページをご覧ください。
 
   >[!NOTE]
-  > このチュートリアルは、SQL Server Management Studio と基本的なデータベース管理タスクの使用に慣れているユーザーを対象としています。 
+  > このチュートリアルは、SQL Server Management Studio の使用と基本的なデータベース管理タスクに慣れているユーザーを対象としています。 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>DTA コマンドプロンプトユーティリティの [ヘルプ] メニューにアクセスする
+## <a name="access-dta-command-prompt-utility-help-menu"></a>DTA コマンド プロンプト ユーティリティのヘルプ メニューにアクセスする
   
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** の順にポイントして、 **[コマンド プロンプト]** をクリックします。  
@@ -65,9 +66,9 @@ SSMS でデータベースを復元する手順については、[データベ�
   
     このコマンドの `| more` の部分は省略可能です。 これを指定した場合は、ユーティリティの構文ヘルプが 1 画面ずつ表示されます。 ヘルプを 1 行ずつ表示するには Enter キーを押し、1 ページずつ表示するにはスペース キーを押します。  
 
-  ![DTA cmd utility で help を使用する](media/dta-tutorials/dta-cmd-help.png)
+  ![DTA cmd ユーティリティでのヘルプの使用](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>DTA コマンドプロンプトユーティリティを使用して簡単なワークロードをチューニングする  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>DTA コマンド プロンプト ユーティリティを使用して簡単なワークロードをチューニングする  
 
 
   

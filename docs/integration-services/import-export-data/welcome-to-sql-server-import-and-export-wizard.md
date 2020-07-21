@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 39403bec40e76b66a57d8c2276001aa15e558b65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4767267c1fc88eab6dafe646a0f61e3bd1992de8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023582"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71284978"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>[SQL Server インポートおよびエクスポート ウィザードへようこそ]
 
@@ -44,7 +44,7 @@ ms.locfileid: "68023582"
 ## <a name="whats-next"></a>次の操作  
  次のページは、 **[データ ソースの選択]** です。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。 詳細については、「 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」を参照してください。
 
-## <a name="related"></a> 関連タスクとコンテンツ  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 関連タスクとコンテンツ  
  その他の基本的なタスクは次のとおりです。
 -   **ウィザードのしくみの簡単な例を参照してください。**
 

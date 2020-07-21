@@ -1,5 +1,5 @@
 ---
-title: キャッシュ接続マネージャー エディター |Microsoft Docs
+title: キャッシュ接続マネージャーエディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061081"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439149"
 ---
 # <a name="cache-connection-manager-editor"></a>[キャッシュ接続マネージャー エディター]
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) から参照データセットを読み取り、そのデータをキャッシュ ファイルに保存できます。 データは常にメモリに格納されます。  
@@ -35,14 +34,14 @@ ms.locfileid: "66061081"
   
  キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](connection-manager/cache-connection-manager.md)」を参照してください。  
   
-##  <a name="generaltab"></a> [全般] タブ  
+##  <a name="general-tab"></a><a name="generaltab"></a>[全般] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[全般]** タブを使用すると、ファイルからキャッシュを読み取るか、キャッシュをファイルに保存するかを指定できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **接続マネージャー名**  
  ワークフローにおけるキャッシュ接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **説明**  
  接続の説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続の目的に従って記述することをお勧めします。  
   
  **[ファイル キャッシュを使用する]**  
@@ -66,10 +65,10 @@ ms.locfileid: "66061081"
  **[メタデータの更新]**  
  キャッシュ接続マネージャーで列のメタデータを削除し、選択したキャッシュ ファイルの列のメタデータでキャッシュ接続マネージャーを再設定します。  
   
-##  <a name="columnstab"></a> [列] タブ  
+##  <a name="columns-tab"></a><a name="columnstab"></a>[列] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[列]** タブを使用すると、キャッシュ内の各列のプロパティを構成できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **列**  
  列名を指定します。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66061081"
 > [!NOTE]  
 >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。  
   
- **型**  
+ **Type**  
  列のデータ型を指定します。  
   
  `Length`  
@@ -98,7 +97,7 @@ ms.locfileid: "66061081"
  `Code Page`  
  列の型のコード ページを指定します。 `Code Page` は、そのデータ型で使用できる範囲内であれば更新できます。  
   
-## <a name="see-also"></a>参照  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>関連項目  
+ [参照変換](data-flow/transformations/lookup-transformation.md)  
   
   

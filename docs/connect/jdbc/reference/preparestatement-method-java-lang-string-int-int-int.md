@@ -16,10 +16,10 @@ ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67976181"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement (java.lang.String, int, int, int) メソッド
@@ -55,13 +55,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  結果セットの保持機能を示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- PreparedStatement オブジェクトです。  
+ PreparedStatement オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この指定されたステートメントメソッドは、java. .sql. 接続インターフェイスの "ドステートメント" メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この prepareStatement メソッドは、java.sql.Connection インターフェイスの prepareStatement メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [prepareStatement メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

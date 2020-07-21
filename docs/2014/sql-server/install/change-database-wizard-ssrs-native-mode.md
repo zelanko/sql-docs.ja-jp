@@ -1,5 +1,5 @@
 ---
-title: データベースの変更ウィザード (SSRS ネイティブ モード) |Microsoft Docs
+title: データベースの変更ウィザード (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,31 +12,30 @@ helpviewer_keywords:
 - Change Database Wizard
 - report server database, create
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f164bc5be7929c0bf697f6896b975cdda5a9d5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065447"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>データベースの変更ウィザード (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーのデータベースの変更ウィザードを使用して、新しいレポート サーバー データベースを作成するか、現在のレポート サーバー インスタンスで使用する既存のレポート サーバー データベースを選択することができます。  
   
  以前のバージョンのレポート サーバー データベースを選択すると、接続先のレポート サーバー インスタンスのバージョンと一致するようにアップグレードされます。 サービスの開始時にデータベース バージョンが確認され、現在のスキーマに自動的にアップグレードされます。  
   
- このウィザードを起動するには、 **構成マネージャーの [データベース] ページにある** [データベースの変更] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をクリックします。 開始する方法については、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager を参照してください[Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)します。  
+ このウィザードを起動するには、 **構成マネージャーの [データベース] ページにある** [データベースの変更] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をクリックします。 Configuration Manager を開始する方法については [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 、「 [Reporting Services Configuration Manager &#40;ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **操作**  
  実行するタスクを選択します。 ネイティブ モードまたは SharePoint 統合モードで新しいデータベースを作成できます。 または、現在のレポート サーバー インスタンスで使用する既存のレポート サーバー データベースを選択できます。  
   
- **データベース サーバー**  
- レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンス名を指定します。 ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを使用できます。 名前付きインスタンスに接続する場合は、この形式でサーバー名を入力します: \< *server*>\\<*インスタンス*>。  
+ **データベースサーバー**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] レポートサーバーデータベースをホストするインスタンスの名前を指定します。 ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを使用できます。 名前付きインスタンスに接続する場合は、[インスタンス>] の形式でサーバー名を入力し \<*server*> \\ < *instance*ます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するには、サーバーにログオンしてデータベース情報を更新するための権限がある資格情報を使用する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、現在の Windows 資格情報が使用されますが、ログイン権限またはデータベース権限がない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを指定する必要があります。 別の Windows 資格情報を指定することはできません。 別の Windows ユーザーとして接続する場合は、ユーザーとしてログインし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動します。  
   
@@ -45,16 +44,16 @@ ms.locfileid: "66096669"
  **[データベース]**  
  サーバー データを格納するレポート サーバー データベースの名前を指定します。 既存のデータベースを指定するか、新しいデータベースを作成できます。  
   
- [アクション] ページで **[新しいデータベースを作成する]** を選択すると、新しいデータベースの作成に使用されるプロパティがウィザードに表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、名前でバインドされた 2 つのデータベースを作成します。1 つは静的データを格納するデータベースで、もう 1 つはセッションおよび作業データを格納するための一時データベースです。 詳細については、次を参照してください。[レポート サーバー データベース&#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+ [アクション] ページで **[新しいデータベースを作成する]** を選択すると、新しいデータベースの作成に使用されるプロパティがウィザードに表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、名前でバインドされた 2 つのデータベースを作成します。1 つは静的データを格納するデータベースで、もう 1 つはセッションおよび作業データを格納するための一時データベースです。 詳細については、オンラインブックの「[レポートサーバーデータベース &#40;SSRS ネイティブモード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) 」を参照してください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  既存のレポート サーバー データベースを選択することもできます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、無効なデータベースが除外されません。 有効なデータベースは、レポート サーバー データベース スキーマに基づきます (必要なテーブル、ビュー、またはストアド プロシージャが欠落しているデータベースは選択できません)。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成されたデータベースを選択すると、データベースが現在の形式にアップグレードされます。  
   
- **言語**  
+ **Language**  
  この値は、新しいレポート サーバー データベースを作成する場合にのみ設定します。  
   
  この値を使用して、ロールの定義および説明を作成するときの言語を指定します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、一連の定義済みロールを含んでいるロールベースの承認モデルが用意されています。 ロールは、指定した言語で一度だけ作成されます。 サーバーでサポートされているカルチャまたは言語が設定されているブラウザーを使用してレポート サーバーに接続した場合でも、ロール名と説明が指定以外の言語で表示されることはありません。 また、指定した言語によって、個人用レポート機能に含まれている [個人用レポート] フォルダーおよび [Users] フォルダーの名前の作成に使用される言語も決定されます。  
   
- **サーバー モード**  
+ **サーバーモード**  
  レポート サーバー データベースでは、ネイティブ モードまたは SharePoint 統合モードのいずれかがサポートされます。 これらのモードは、同時には指定できません。  
   
  新しいレポート サーバー データベースを作成する場合は、モードを指定する必要があります。 選択したモードにより、レポート サーバー データベースの構造が決まり、`SharePointIntegrated` レポート サーバー システム プロパティが `true` または `false` に設定されます。  
@@ -62,25 +61,25 @@ ms.locfileid: "66096669"
  別のレポート サーバー データベースを選択する場合は、現在のデータベースの使用方法がわかるように、現在のデータベースのモードが表示されます。  
   
  **資格情報**  
- レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを指定します。 指定できる値は、レポート サーバー Web サービスのサービス アカウント、レポート サーバーのホストに使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで定義されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース ログイン、または Windows アカウントです。 Windows アカウントを使用している場合は、ローカル アカウントを指定できます ( *\<computername >\\< ユーザー名\>* ) 場合は、レポート サーバーとデータベースが同じコンピューターまたはドメイン ユーザーにはアカウント ( *\<ドメイン >\\< ユーザー名\>* ) 同じドメイン内の異なるコンピューター上にある場合。  
+ レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを指定します。 指定できる値は、レポート サーバー Web サービスのサービス アカウント、レポート サーバーのホストに使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで定義されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース ログイン、または Windows アカウントです。 Windows アカウントを使用している場合は、レポートサーバーとデータベースが同じコンピューター上に存在する場合はローカルアカウント (* \<computername> \\<ユーザー名 \> *) を指定し、同じドメイン内の異なるコンピューターに存在する場合はドメインユーザーアカウント (* \<domain> \\<username \> *) を指定できます。  
   
  レポート サーバーはデータベース ログインを作成し、指定したアカウントにデータベース権限を割り当てます。  
   
  レポート サーバーでは、アカウントの作成は行われません。 配置構成に対して有効な、既に存在するアカウントを指定する必要があります。 特に、データベースがリモート コンピューター上にある環境で、Windows アカウントを使用する場合は、そのコンピューターへのログオン権限のあるアカウントを指定する必要があります。  
   
- コンピューターが別のドメインまたは信頼されていないドメイン内に存在する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用することをお勧めします。 アカウントの選択の詳細については、次を参照してください。[レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)します。  
+ コンピューターが別のドメインまたは信頼されていないドメイン内に存在する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用することをお勧めします。 アカウントの選択の詳細については、「 [SSRS Configuration Manager&#41;&#40;レポートサーバーデータベース接続を構成](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)する」を参照してください。  
   
- **概要**  
+ **まとめ**  
  セットアップで接続を構成する前に、設定を確認します。  
   
- **進行状況と完了**  
+ **[続行して完了する]**  
  各タスクの進行状況を監視します。  
   
 ## <a name="see-also"></a>参照  
- [データベース&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [ウィザードの資格情報を変更する&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)   
- [ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [データベース &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [資格情報の変更ウィザード &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)   
+ [SSRS Configuration Manager &#40;ネイティブモードのレポートサーバーデータベースを作成&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Reporting Services Configuration Manager F1 ヘルプトピック &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

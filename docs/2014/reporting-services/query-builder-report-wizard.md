@@ -1,5 +1,5 @@
 ---
-title: クエリ ビルダー (レポート ウィザード) |Microsoft Docs
+title: クエリビルダー (レポートウィザード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107994"
 ---
 # <a name="query-builder-report-wizard"></a>クエリ ビルダー (レポート ウィザード)
@@ -37,23 +37,23 @@ ms.locfileid: "66107994"
  **[テキストとして編集]**  
  テキスト ベースのクエリ デザイナーとグラフィカル クエリ デザイナーを切り替えます (両方のデザイナーが使用できる場合)。  
   
- **[インポート]**  
+ [**インポート**]  
  **[クエリのインポート]** ダイアログ ボックスを開き、利用可能なレポートの .rdl ファイルおよび .sql ファイルを表示します。 インポートされたクエリはそのまま使用することもできますが、クエリ ビルダーで修正することもできます。  
   
- **演算子(実行)**  
+ **[!] (実行)**  
  クエリを実行し、クエリが有効であれば結果セットを返します。 クエリが式の場合、そのクエリは実行できません。 式に基づくクエリかどうかを確認するには、レポートをプレビューする必要があります。  
   
  **コマンドの種類**  
  テキスト、ストアド プロシージャ、またはテーブルを直接指定します。 使用できるコマンドの種類は、指定したデータ処理拡張機能によって異なります。  
   
- **[クエリ] ペイン**  
+ **クエリペイン**  
  クエリを入力します。  
   
  **結果ペイン**  
  クエリから返された結果セットが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [レポート ウィザードのヘルプ](../../2014/reporting-services/report-wizard-help.md)  
   
   

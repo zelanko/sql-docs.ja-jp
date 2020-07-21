@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938938"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834733"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "67938938"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-IDENTITY [ (seed , increment) ]  
+IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -54,7 +53,7 @@ IDENTITY [ (seed , increment) ]
   
  seed と increment の両方を指定するか、またはどちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ID 列はキー値の生成に使用できます。 列の ID プロパティでは、次の点が保証されます。  
   
 -   新しい値はそれぞれ、現在のシードと増分に基づいて生成されます。  
@@ -79,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  メモリ最適化テーブルで、シードと増分を 1,1 に設定する必要があります。 シードまたは増分を 1 以外に設定すると、次のエラーが発生します。1 以外のシードと増分の使用は、メモリ最適化テーブルではサポートされません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-identity-property-with-create-table"></a>A. CREATE TABLE で IDENTITY プロパティを使用する  
  次の例では、ID 番号を自動的に増分するテーブルを、`IDENTITY` プロパティを使用して新規作成します。  

@@ -1,5 +1,5 @@
 ---
-title: Integration Services サービスのイベントの表示 |Microsoft Docs
+title: Integration Services サービスのイベントを表示する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57340afcbe1914b5e54ded06c8a7384ff33fd901
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054672"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420139"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services サービスのイベントを表示する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのイベントを表示できるツールには、次の 2 つがあります。  
@@ -32,7 +31,7 @@ ms.locfileid: "66054672"
   
 ### <a name="to-view-service-events-for-integration-services-in-sql-server-management-studio"></a>SQL Server Management Studio で Integration Services のサービス イベントを表示するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。  
   
 2.  **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]** をクリックします。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66054672"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Windows イベント ビューアーで Integration Services のサービス イベントを表示するには  
   
-1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]** 、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
 2.  **[イベント ビューアー]** をクリックします。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66054672"
   
 9. **[ファイル]** メニューの **[終了]** をクリックして、 **[イベント ビューアー]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービスを管理する](../../2014/integration-services/manage-the-integration-services-service.md)   
  [データ フロー パフォーマンス カウンターのログを追加する](performance/performance-counters.md)  
   

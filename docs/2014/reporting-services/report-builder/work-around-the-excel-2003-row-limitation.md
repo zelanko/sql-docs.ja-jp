@@ -1,5 +1,5 @@
 ---
-title: Excel の行制限の回避 |Microsoft Docs
+title: Excel の行制限を回避する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107549"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Excel の行制限を回避する
@@ -26,7 +26,7 @@ ms.locfileid: "66107549"
   
 1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] またはレポート マネージャーでレポートを開きます。  
   
-2.  テーブルのデータ行を右クリックし、 **[グループの追加]**  >  **[親グループ]** の順にクリックして、外部テーブルのグループを追加します。  
+2.  テーブル内のデータ行を右クリックし、[**グループ** > の**親グループ**の追加] をクリックして、外側のテーブルグループを追加します。  
   
      ![親グループの選択](../media/datarow-selectparentgroup.png "親グループの選択")  
   

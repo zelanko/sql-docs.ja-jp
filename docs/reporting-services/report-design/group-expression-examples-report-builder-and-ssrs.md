@@ -1,5 +1,5 @@
 ---
-title: グループ式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グループ式の例 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580267"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082100"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>グループ式の例 (レポート ビルダーおよび SSRS)
   データ領域では、1 つのフィールドでデータをグループ化することも、グループ化の基準となるデータを識別する、より複雑な式を作成することもできます。 複合式には、複数のフィールドやパラメーター、条件ステートメント、またはカスタム コードなどへの参照が含まれます。 データ領域に対してグループを定義する場合、これらの式を **[グループ]** プロパティに追加します。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
@@ -31,7 +31,7 @@ ms.locfileid: "65580267"
 ## <a name="examples-of-group-expressions"></a>グループ式の例  
  次の表に、グループの定義に使用できるグループ式の例を挙げます。  
   
-|[説明]|式|  
+|説明|式|  
 |-----------------|----------------|  
 |`Region` フィールドでグループ化します。|`=Fields!Region.Value`|  
 |姓と名でグループ化します。|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

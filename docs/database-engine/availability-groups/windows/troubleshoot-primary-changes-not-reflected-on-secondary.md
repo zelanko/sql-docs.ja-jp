@@ -1,24 +1,24 @@
 ---
-title: 可用性グループでセカンダリ レプリカに変更が反映されない理由を判断する - SQL Server
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
-ms.custom: ag-guide,seodec18
+title: セカンダリ可用性グループ レプリカで変更が表示されない
+description: Always On 可用性グループのプライマリ レプリカの変更がセカンダリ レプリカに反映されない理由を特定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: bed83c98489d1622e97dd84c9f5c1994715b60fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887998"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>可用性グループでセカンダリ レプリカにプライマリ レプリカの変更が反映されない理由を判断する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。 この場合、可用性の同期状態は正常であると仮定します。 ほとんどの場合、この動作は、数分後に解決します。  
   
  変更が数分後にセカンダリ レプリカでまだ反映されていない場合、同期ワークフローにボトルネックがある可能性があります。 ボトルネックの場所は、セカンダリ レプリカが同期コミットまたは非同期コミットのどちらに設定されているかどうかによって異なります。  
@@ -50,7 +50,7 @@ ms.locfileid: "68013681"
 以下のセクションでは、プライマリ レプリカで変更が読み取り専用クエリでセカンダリ レプリカに反映されていない一般的な原因について説明します。  
 
 
-##  <a name="BKMK_OLDTRANS"></a> 実行時間の長いアクティブなトランザクション  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> 実行時間の長いアクティブなトランザクション  
  プライマリ レプリカでの実行時間の長いトランザクションは、更新がセカンダリ レプリカで読み取られることを妨げます。  
   
 ### <a name="explanation"></a>説明  
@@ -59,7 +59,7 @@ ms.locfileid: "68013681"
 ### <a name="diagnosis-and-resolution"></a>診断と解決  
  プライマリ レプリカで、 [DBCC OPENTRAN &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) を使用して、最も古いアクティブなトランザクションを表示し、それらをロールバックできるかどうかを確認します。 最も古いアクティブなトランザクションがロールバックされ、セカンダリ レプリカに同期された後、セカンダリ レプリカ上の読み取りワークロードは、次に古いアクティブなトランザクションの先頭までの可用性データベース内の更新を確認できます。  
   
-##  <a name="BKMK_LATENCY"></a> 長いネットワーク遅延またはスループットが低いネットワークは、プライマリ レプリカでログの構築の原因になります。  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 長いネットワーク遅延またはスループットが低いネットワークは、プライマリ レプリカでログの構築の原因になります。  
  長いネットワーク遅延または低いスループットは、セカンダリ レプリカに十分な速さでログが送信されることを妨げます。  
   
 ### <a name="explanation"></a>説明  
@@ -76,7 +76,7 @@ ms.locfileid: "68013681"
   
 -   DMV [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
--   パフォーマンス カウンター `SQL Server:Database > Log Bytes Flushed/sec`  
+-   パフォーマンス カウンター`SQL Server:Database > Log Bytes Flushed/sec`  
   
 -   パフォーマンス カウンター`SQL Server:Database Mirroring > Send/Receive Ack Time`  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68013681"
   
  この問題を解決するには、ネットワーク帯域幅をアップグレードするか、不要なネットワーク トラフィックを削除するか減らしてみてください。  
   
-##  <a name="BKMK_REDOBLOCK"></a> 別のレポート ワークロードが再実行スレッドの実行をブロックする  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> 別のレポート ワークロードが再実行スレッドの実行をブロックする  
  セカンダリ レプリカの再実行スレッドが、実行時間の長い読み取り専用クエリによるデータ定義言語 (DDL) の変更をブロックしています。 再実行スレッドが読み取りワークロードで利用できるように追加の更新を提供するには、その前に再実行スレッドがブロック解除される必要があります。  
   
 ### <a name="explanation"></a>説明  
@@ -106,9 +106,9 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;TRANSACT-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
+ レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;Transact-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
   
-##  <a name="BKMK_REDOBEHIND"></a> リソースの競合のために再実行スレッドが遅れる  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> リソースの競合のために再実行スレッドが遅れる  
  セカンダリ レプリカでの大量のレポート ワークロードのために、セカンダリ レプリカのパフォーマンスが低下し、再実行スレッドが遅れています。  
   
 ### <a name="explanation"></a>説明  
@@ -126,7 +126,7 @@ from sys.dm_hadr_database_replica_states
   
  再実行スレッドが実際に遅れている場合、セカンダリ レプリカのパフォーマンスの低下の根本原因を調査する必要があります。 レポート ワークロードとの I/O の競合がある場合、[リソース ガバナー](~/relational-databases/resource-governor/resource-governor.md)を使用して、レポート ワークロードによって使用される CPU サイクルを制御し、取得される I/O サイクルを間接的にある程度制御することができます。 たとえば、レポート ワークロードが CPU の 10% を消費していても、ワークロードが I/O バウンドになっている場合は、リソース ガバナーを使用して、CPU リソースの使用率を 5% に制限し、読み取りワークロードを制限して、I/O への影響を最小限に抑えることができます。  
   
-## <a name="next-steps"></a>次の手順  
- [SQL Server 2008 のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
+## <a name="next-steps"></a>次のステップ  
+ [SQL Server 2008 のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
   
   

@@ -1,5 +1,5 @@
 ---
-title: 拡張イベント カタログ ビュー (TRANSACT-SQL) |Microsoft Docs
+title: 拡張イベントのカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - xe
 - catalog views [SQL Server], extended events
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 5cfbdced0cae3188f8bfd50f2b0c12278f48a50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7dad424fac7daf73bcd32a8a74873fc1fdfe744d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033011"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882162"
 ---
-# <a name="extended-events-catalog-views-transact-sql"></a>拡張イベント カタログ ビュー (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="extended-events-catalog-views-transact-sql"></a>拡張イベント カタログ ビュー (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、以下に示す SQL Server 拡張イベントのカタログ ビューについて説明します。  
   

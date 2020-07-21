@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 320cb248cc51599628b26e60c3460aa1be701a35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bd993cc8729277a51b505b979bdb56d5dab21f17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737845"
 ---
-# <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
+# <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの実行のインスタンスにパラメーターの値を設定します。  
   
@@ -70,14 +70,14 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  パラメーターの値。 *parameter_value* は **sql_variant** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  特定の実行に使用されたパラメーター値を調べるには、catalog.execution_parameter_values ビューに対してクエリを実行します。  
   
  パッケージの実行中にログに記録される情報のスコープを指定するには、*parameter_name* を LOGGING_LEVEL に設定して、*parameter_value* を次のいずれかの値に設定します。  
   
  *object_type* パラメーターを 50 に設定します。  
   
-|[値]|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|なし<br /><br /> ログ記録をオフにします。 パッケージの実行状態のみがログに記録されます。|  
 |1|Basic<br /><br /> カスタム イベントと診断イベントを除く、すべてのイベントをログに記録します。 これが既定値です。|  
@@ -88,7 +88,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  パッケージの実行中にエラーが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
-|パラメーター|[値]|  
+|パラメーター|値|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
@@ -97,7 +97,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルを生成されるように指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。  
   
-|パラメーター|[値]|  
+|パラメーター|値|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  
@@ -106,7 +106,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  パッケージの実行中に、Integration Services サーバーによるダンプ ファイルの生成が行われる原因となるイベントを指定するには、未実行の実行インスタンスに次のパラメーター値を設定します。 複数のイベント コードは、セミコロンで区切ります。  
   
-|パラメーター|[値]|  
+|パラメーター|値|  
 |---------------|-----------|  
 |*execution_id*|実行のインスタンスの一意識別子|  
 |*object_type*|50|  

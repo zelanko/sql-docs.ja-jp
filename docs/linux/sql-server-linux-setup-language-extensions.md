@@ -1,25 +1,26 @@
 ---
-title: SQL Server の言語拡張 (Java) を Linux 上にインストールする
-description: Red Hat、Ubuntu、SUSE 上に SQL Server の言語拡張 (Java) をインストールする方法について説明します。
+title: SQL Server の言語拡張を Linux にインストールする
+titleSuffix: ''
+description: Red Hat、Ubuntu、SUSE 上に SQL Server の言語拡張をインストールする方法について説明します。
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: eecea181dc6ac96021df2db0707537e86d4a50ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476019"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895297"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>SQL Server 2019 の言語拡張 (Java) を Linux 上にインストールする
+# <a name="install-sql-server-language-extensions-on-linux"></a>SQL Server の言語拡張を Linux にインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 言語拡張は、データベース エンジンに対するアドオンです。 [データベース エンジンと言語拡張を同時にインストールする](#install-all)ことは可能ですが、コンポーネントを追加する前に問題を解決できるように、まずは SQL Server データベースエンジンをインストールして構成することをお勧めします。 
 
@@ -29,9 +30,11 @@ Java 拡張機能のパッケージは、SQL Server Linux ソース リポジト
 
 また、言語拡張は Linux コンテナー上でもサポートされます。 言語拡張には、ビルド済みのコンテナーは付属していませんが、[GitHub 上で入手できるサンプル テンプレート](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)を使用して、SQL Server コンテナーから作成できます。
 
-## <a name="uninstall-previous-ctp"></a>以前の CTP をアンインストールする
+言語拡張と [Machine Learning Services](../machine-learning/index.yml) は、SQL Server ビッグ データ クラスターには既定でインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 
-パッケージ一覧は、最新のいくつかの CTP リリースによって変更されており、パッケージ数は減少しています。 CTP 3.2 をインストールする前に、以前のすべてのパッケージを削除するために、CTP 2.x をアンインストールすることをお勧めします。 複数のバージョンの並列インストールはサポートされていません。
+## <a name="uninstall-preview-version"></a>プレビュー バージョンをアンインストールする
+
+プレビュー リリース (Community Technical Preview (CTP) またはリリース候補 (RC)) をインストールしている場合は、SQL Server 2019 をインストールする前に、このバージョンをアンインストールして以前のすべてのパッケージを削除することをお勧めします。 複数のバージョンのサイド バイ サイド インストールはサポートされていません。また、パッケージ一覧は、最新のいくつかのプレビュー (CTP/RC) リリースで変更されています。
 
 ### <a name="1-confirm-package-installation"></a>1.パッケージのインストールを確認する
 
@@ -41,7 +44,7 @@ Java 拡張機能のパッケージは、SQL Server Linux ソース リポジト
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2.以前の CTP 2.x パッケージをアンインストールする
+### <a name="2-uninstall-previous-ctprc-packages"></a>2.以前の CTP/RC パッケージをアンインストールする
 
 最下位のパッケージ レベルでアンインストールを行います。 より下位のパッケージに依存しているアップストリーム パッケージがすべて、自動的にアンインストールされます。
 
@@ -51,11 +54,11 @@ ls /opt/microsoft/mssql/bin
 
 | プラットフォーム  | パッケージの削除コマンド | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove msssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
+| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3.CTP 3.2 のインストールを続行する
+### <a name="3-install-sql-server-2019"></a>3.SQL Server 2019 をインストールする
 
 この記事の手順を使用して、お使いのオペレーティング システムに最上位のパッケージ レベルでインストールを行います。
 
@@ -67,7 +70,7 @@ OS 固有の一連のインストール手順ごとに、"*最上位のパッケ
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + Linux バージョンは、必ず [SQL Server によってサポートされます](sql-server-linux-release-notes-2019.md#supported-platforms)が、Docker エンジンは含まれていません。 サポートされているバージョンは次のとおりです。
 
@@ -83,16 +86,16 @@ OS 固有の一連のインストール手順ごとに、"*最上位のパッケ
 
 インターネットに接続されたデバイス上で、各オペレーティング システム用のパッケージ インストーラーを使用して、パッケージがデータベース エンジンとは別個にダウンロードされてインストールされます。 次の表に、使用可能な全パッケージについて説明します。
 
-| パッケージ名 | 適用先 | [説明] |
+| パッケージ名 | 適用先 | 説明 |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | すべての言語 | Java コードを実行するために使用される拡張機能のフレームワーク。 |
-|mssql-server-extensibility-java | Java | Java の実行環境を読み込むための Java の拡張機能。 Java 用の追加のライブラリやパッケージはありません。 |
+|mssql-server-extensibility  | すべての言語 | Java 言語拡張機能に使用される拡張性フレームワーク |
+|mssql-server-extensibility-java | Java | Java 言語拡張機能に使用され、サポートされている Java ランタイムが含まれる拡張性フレームワーク |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>言語拡張をインストールする
 
-**mssql-server-extensibility-java** をインストールすることによって、Linux 上に言語拡張と Java をインストールできます。 **mssql-server-extensibility-java** をインストールすると、JRE 8 がまだインストールされていない場合は、パッケージによって自動的にインストールされます。 また、JVM パスが JRE_HOME という環境変数に追加されます。
+**mssql-server-extensibility-java** をインストールすることによって、Linux 上に言語拡張と Java をインストールできます。 **mssql-server-extensibility-java** をインストールすると、JRE 11 がまだインストールされていない場合は、パッケージによって自動的にインストールされます。 また、JVM パスが JRE_HOME という環境変数に追加されます。
 
 > [!Note]
 > インターネットに接続されたサーバー上では、パッケージの依存関係がダウンロードされ、メイン パッケージのインストールの一部としてインストールされます。 サーバーがインターネットに接続されていない場合は、[オフライン セットアップ](#offline-install)に関するページで詳細を確認してください。
@@ -154,7 +157,7 @@ sudo zypper install mssql-server-extensibility-java
     chown mssql_satellite:mssql_satellite <MyJarFile.jar>
     ```
 
-    追加の構成には、主に[ mssql-conf ツール](sql-server-linux-configure-mssql-conf.md)を利用します。
+    追加の構成には、主に [mssql-conf ツール](sql-server-linux-configure-mssql-conf.md)を利用します。
 
 2. SQL Server サービスの実行に使用する mssql ユーザー アカウントを追加します。 事前にセットアップを実行していない場合、これは必須です。
 
@@ -162,7 +165,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. 送信ネットワーク アクセスを有効にします。 既定では、送信ネットワーク アクセスは無効になっています。 送信要求を有効にするには、mssql-conf ツールを使用して "outboundnetworkaccess" ブール型プロパティを設定します。 詳しくは、「[mssql-conf ツールを利用して Linux 上で SQL Server を構成する](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)」をご覧ください。
+3. 送信ネットワーク アクセスを有効にします。 既定では、送信ネットワーク アクセスは無効になっています。 送信要求を有効にするには、mssql-conf ツールを使用して "outboundnetworkaccess" ブール型プロパティを設定します。 詳しくは、「[mssql-conf ツールを利用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)」をご覧ください。
 
    ```bash
    # Run as SUDO or root
@@ -197,9 +200,13 @@ sudo zypper install mssql-server-extensibility-java
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+Java 拡張の場合、環境変数 "JRE_HOME" を使用して、JVM を検索および初期化するパスが決定されます。
+
+CREATE EXTERNAL LANGUAGE ddl には、拡張機能をホストするプロセス専用の環境変数を設定するためのパラメーター (ENVIRONMENT_VARIABLES) が用意されています。 これは、外部言語拡張に必要な環境変数を設定するために推奨される、最も効果的な方法です。
 
 詳しくは、「[CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)」をご覧ください。
 
@@ -223,13 +230,13 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
   sudo yum install -y mssql-server mssql-server-extensibility-java 
   ```
 
-3. 使用許諾契約書に同意し、インストール後の構成を完了します。 このタスクには、**mssql-conf** ツールを使用します。
+3. ライセンス契約に同意し、インストール後の構成を完了します。 このタスクには、**mssql-conf** ツールを使用します。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  データベース エンジンの使用許諾契約書に同意し、エディションを選択して、管理者パスワードを設定するように求められます。 
+  データベース エンジンのライセンス契約に同意し、エディションを選択して、管理者パスワードを設定するように求められます。 
 
 4. 求められた場合は、サービスを再起動します。
 
@@ -237,7 +244,7 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
   sudo systemctl restart mssql-server.service
   ```
 
-## <a name="unattended-installation"></a>無人インストール
+## <a name="unattended-installation"></a>自動実行インストール
 
 データベース エンジンの[無人インストール](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended)を使用して、mssql-server-extensibility-java 用のパッケージを追加します。
 
@@ -259,23 +266,23 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
 
 |||
 |--|----|
-| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 パス
 
 |||
 |--|----|
-| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 パス
 
 |||
 |--|----|
-| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>パッケージ一覧
 
-使用する拡張機能に応じて、特定の言語に必要なパッケージをダウンロードします。 正確なファイル名には、サフィックスにプラットフォーム情報が含まれますが、以下でのファイル名は、取得するファイルを十分に判断できる程度に近いものにしておく必要があります。
+使用する拡張機能に応じて、特定の言語に必要なパッケージをダウンロードします。 正確なファイル名にはサフィックス内のプラットフォーム情報が含まれますが、以下のファイル名では、取得するファイルを十分に判断できる程度に近いものにしておく必要があります。
 
 ```
 # Core packages 
@@ -286,18 +293,15 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>CTP リリースにおける制限事項
-
-Linux 上での言語拡張と Java 拡張機能は、今も開発が進められています。 プレビュー バージョンでは、次の機能がまだ有効になっていません。
+## <a name="limitations"></a>制限事項
 
 + 現時点では、暗黙の認証は Linux 上では使用できません。つまり、データやその他のリソースにアクセスするために、実行中の Java からサーバーへ接続することはできません。
 
-
 ### <a name="resource-governance"></a>リソース管理
 
-外部リソース プールに対する[リソース管理](../t-sql/statements/create-external-resource-pool-transact-sql.md)では、Linux と Windows 間で一致していますが、[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) に対する統計では、現時点では、Linux 上に異なるユニットがあります。 今後の CTP では、ユニットが調整される予定です。
+外部リソース プールに対する[リソースのガバナンス](../t-sql/statements/create-external-resource-pool-transact-sql.md)では、Linux と Windows 間に一致がありますが、[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) の統計では、現在は Linux 上に異なるユニットがあります。 
  
-| 列名   | [説明] | Linux 上の値 | 
+| 列名   | 説明 | Linux 上の値 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | リソース プールに使用されているメモリの最大量。 | Linux では、この統計は CGroups メモリ サブシステムから提供され、値は memory.max_usage_in_bytes になります |
 |write_io_count | Resource Governor の統計がリセットされてから発行された書き込み IO の合計。 | Linux では、この統計は CGroups blkio サブシステムから提供され、書き込み行での値は blkio.throttle.io_serviced になります | 
@@ -306,8 +310,8 @@ Linux 上での言語拡張と Java 拡張機能は、今も開発が進めら�
 |total_cpu_user_ms | Resource Governor の統計がリセットされてからの累積 CPU ユーザー時間 (ミリ秒単位)。| Linux では、この統計は CGroups cpuacct サブシステムから提供され、システム行での値は cpuacct.stat になります | 
 |active_processes_count | 要求の時点で実行されている外部プロセスの数。| Linux では、この統計は CGroups pids サブシステムから提供され、値は pids.current になります | 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Java 開発者はいくつかの簡単な例を試して、SQL Server での Java の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: Java での正規表現](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [チュートリアル:Java での正規表現](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

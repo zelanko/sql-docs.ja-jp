@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499945"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
@@ -113,7 +113,7 @@ ms.locfileid: "66499945"
   
 8.  レポート サーバーを再起動して、現在開いているセッションを消去します。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> レポート サーバーに接続するときに、Kerberos 認証エラーを解決します。  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> レポート サーバーに接続するときに、Kerberos 認証エラーを解決します。  
  ネゴシエート認証または Kerberos 認証が構成されているレポート サーバーでは、Kerberos 認証エラーが発生すると、レポート サーバーへのクライアント接続が失敗します。 Kerberos 認証エラーは、次の場合に発生します。  
   
 -   サービス プリンシパル名 (SPN) を登録していない Windows ドメイン ユーザー アカウントでレポート サーバー サービスが実行されたとき。  

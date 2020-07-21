@@ -1,5 +1,6 @@
 ---
 title: SQL Server の暗号化 | Microsoft Docs
+description: これらのリソースを使用して、SQL Server が暗号化を使用してデータベースのセキュリティを強化する方法について説明します。
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0919bdf40eb1736a31aea0b0107dd57dda671a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720433"
 ---
 # <a name="sql-server-encryption"></a>SQL Server の暗号化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   暗号化は、キーまたはパスワードを使用してデータを難読化するプロセスです。 暗号化によって、データは対応する暗号化解除キーまたはパスワードがないと使用できなくなります。 暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされる場合でもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、機密データをハッカーが入手したとしても、その情報が暗号化されていれば、ハッカーはその情報を使用できません。  
   
 
@@ -31,7 +32,7 @@ ms.locfileid: "68111551"
 >  暗号化は、セキュリティの強化に役立つ便利なツールですが、すべてのデータまたは接続に対して考慮すべきものではありません。 暗号化を実装するかどうかを検討する際は、ユーザーがデータにどのようにアクセスするかを考慮する必要があります。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにデータの暗号化が必要になると考えられます。 一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を使用する場合は、それに伴ってパスワード、キー、および証明書のメンテナンス計画が必要になります。  
   
 > [!NOTE]  
->  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「 [Microsoft SQL Server 用の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
+>  トランスポート層セキュリティ (TLS1.2) に関する最新情報は、「[Microsoft SQL Server 用の TLS 1.2 のサポート](https://support.microsoft.com/kb/3135244)」から入手できます。  
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、接続、データ、およびストアド プロシージャに対して暗号化を使用できます。 次のトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での暗号化の詳細が説明されています。  
 
@@ -85,6 +86,7 @@ ms.locfileid: "68111551"
 ## <a name="see-also"></a>参照  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
+ [データベース エンジンへの暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
   
   

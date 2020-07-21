@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8a071caf6eb989758564731fd68f424821b6681
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762784"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551077"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7903|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_FILE|  
-|メッセージ テキスト|テーブル エラー:孤立したファイル 'FILE' は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の Filestream ディレクトリが見つかりました。|  
+|メッセージ テキスト|テーブル エラー:孤立したファイル 'FILE' が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の Filestream ディレクトリに見つかりました。|  
   
 ## <a name="explanation"></a>説明  
  FILESTREAM 列ディレクトリ内で FILESTREAM ファイルが検出されましたが、パーティション内の対応する列値がありません。  
@@ -48,6 +47,6 @@ ms.locfileid: "62762784"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

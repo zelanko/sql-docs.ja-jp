@@ -1,5 +1,5 @@
 ---
-title: パッケージのプロパティを設定 |Microsoft Docs
+title: パッケージのプロパティを設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84d7f96befa709ebeb99e91013be771db1d54a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055798"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421599"
 ---
 # <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する
   この手順では、 **[プロパティ]** ウィンドウを使用してパッケージのプロパティを構成する方法について説明します。  
@@ -45,8 +44,8 @@ ms.locfileid: "66055798"
   
 5.  **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックし、更新したパッケージを保存します。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; パッケージ &#40;Integration Services](../../2014/integration-services/integration-services-ssis-packages.md)   
  [パッケージのプロパティを設定する](set-package-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: getScale メソッド (SQLServerParameterMetaData) |Microsoft Docs
+title: getScale メソッド (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4e55fe6d5407cb9ab46f57e125f34d4e14dcdb9d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980206"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921757"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public int getScale(int param)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getScale メソッドは、java. .sql. ParameterMetaData インターフェイスの getScale メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getScale メソッドは、java.sql.ParameterMetaData インターフェイスの getScale メソッドで指定されています。  
   
  このメソッドは、列の小数点以下の桁数を取得します。 小数点を持たない型の場合は、"0" を返します。  
   

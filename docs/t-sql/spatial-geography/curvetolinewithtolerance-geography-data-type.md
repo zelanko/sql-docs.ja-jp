@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d8eab0f281349dd1602525c8d64976b6a15c37f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736160"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 円弧を含む **geography** インスタンスの多角形近似を返します。  
   
@@ -46,17 +46,17 @@ _relative_
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-CLR の戻り値の型:**SqlGeography**  
+CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
 tolerance <= 0 を設定すると、**ArgumentOutOfRange** 例外がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 このメソッドでは、結果として得られる **LineString** に許容誤差量を指定できます。  
   
 **CurveToLineWithTolerance** メソッドでは、**CircularString** または **CompoundCurve** インスタンスに **LineString** インスタンスが返され、**CurvePolygon** インスタンスに **Polygon** インスタンスが返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
 次の例では、許容値の設定によって、`CircularString` から返される `LineString` インスタンスが変化するしくみを確認できます。  

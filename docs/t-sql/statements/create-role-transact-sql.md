@@ -27,15 +27,15 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 234fe7a9d26c91bc5b390997f56c9dcb050561aa
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661423"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392860"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースに新しいデータベース ロールを作成します。  
   
@@ -43,18 +43,20 @@ ms.locfileid: "68661423"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *role_name*  
  作成するロールの名前です。  
   
  AUTHORIZATION *owner_name*  
  新しいロールを所有するデータベース ユーザーまたはロールを指定します。 ユーザーを指定しない場合、ロールは CREATE ROLE を実行するユーザーが所有します。 ロールの所有者、または所有するロールのメンバーは、ロールのメンバーを追加または削除できます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ロールはデータベース レベルのセキュリティ保護可能なリソースです。 ロールを作成した後は、GRANT、DENY、REVOKE を使って、ロールのデータベース レベルの権限を構成します。 データベース ロールにメンバーを追加するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。 詳しくは、「[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。  
   
  データベース ロールは、sys.database_role_members および sys.database_principals カタログ ビューで確認できます。  
@@ -73,13 +75,13 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
   
 -   ロールの所有権をアプリケーション ロールに割り当てるには、アプリケーション ロールに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 以下のすべての例では、AdventureWorks データベースを使います。   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. データベース ユーザーが所有するデータベース ロールを作成する  
  次の例では、ユーザー `BenMiller` が所有するデータベース ロール `buyers` を作成します。  
   
-```  
+```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
 GO  
 ```  
@@ -87,7 +89,7 @@ GO
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. 固定データベース ロールが所有するデータベース ロールを作成する  
  次の例では、固定データベース ロール `db_securityadmin` が所有するデータベース ロール `auditors` を作成します。  
   
-```  
+```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
 GO  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング デザイナー |Microsoft Docs
+title: データマイニングデザイナー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98176d54f6cdf29be5c06563ec1dbd7fd6275724
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085110"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523170"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
-  データ マイニング デザイナーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
+  データマイニングデザイナーは、でマイニングモデルを操作するための主要な環境です [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
   
 -   最初にデータ マイニング ウィザードで作成したマイニング構造とマイニング モデルを変更する。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66085110"
   
  マイニング モデルのテストおよび検証の詳細については、次のトピックを参照してください。  
   
- [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
   
  [テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
@@ -79,11 +78,11 @@ ms.locfileid: "66085110"
   
  データ マイニング クエリの作成の詳細については、次のトピックを参照してください。  
   
- [データ マイニング クエリ](data-mining-queries.md)  
+ [データマイニングクエリ](data-mining-queries.md)  
   
  [データ マイニングのクエリ タスクと操作方法](data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング ソリューション](data-mining-solutions.md)  
   
   

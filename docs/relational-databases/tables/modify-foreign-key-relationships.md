@@ -17,15 +17,15 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139598"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007095"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68139598"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  新しい外部キー列は、関連付けられる主キー列のデータ型およびサイズと一致する必要があります。ただし、次の例外があります。  
   
 -   **char** 列または **sysname** 列は **varchar** 列と関連付けることができます。  
@@ -54,12 +54,12 @@ ms.locfileid: "68139598"
   
 -   alias データ型は、その基本型に関連付けることができます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-modify-a-foreign-key"></a>外部キーを変更するには  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68139598"
      **[選択されたリレーションシップ]**  
      既存のリレーションシップを一覧表示します。 右側のグリッドにプロパティを表示するリレーションシップを選択します。 この一覧が空の場合、テーブルにはリレーションシップがまったく定義されていません。  
   
-     **[追加]**  
+     **追加**  
      新しいリレーションシップを作成します。 リレーションシップを有効にする前に、 **[テーブルと列の指定]** を設定する必要があります。  
   
-     **Del**  
+     **削除**  
      **[選択されたリレーションシップ]** ボックスの一覧で選択したリレーションシップを削除します。 追加したリレーションシップを取り消すには、このボタンを使用してリレーションシップを削除します。  
   
      **[全般] カテゴリ**  
@@ -102,16 +102,16 @@ ms.locfileid: "68139598"
      **[IDENTITY] カテゴリ**  
      展開して **[オブジェクト名]** および **[説明]** のプロパティ フィールドを表示します。  
   
-     **[名前]**  
+     **Name**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
-     **[説明]**  
+     **説明**  
      リレーションシップの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号 ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
      **[テーブル デザイナー] カテゴリ**  
      展開して **[作成時または再度有効化するときに既存データを確認]** および **[レプリケーションに対して適用]** に関する情報を表示します。  
   
-     **Enforce For Replication**  
+     **[レプリケーションに対して適用]**  
      レプリケーション エージェントがこのテーブルに対して挿入、更新、または削除操作を行うときに制約を適用するかどうかを示します。  
   
      **[外部キーの制約を適用]**  
@@ -142,9 +142,9 @@ ms.locfileid: "68139598"
   
     -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
-4.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+4.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  
   
  Transact-SQL を使用して FOREIGN KEY 制約を変更するには、まず既存の FOREIGN KEY 制約を削除してから、新しい定義を使用して再作成する必要があります。 詳細については、「 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 」および「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 325242c6660aa49c9358399b38c92d72e21aaf46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 344c5fd0639876998f1585c32fac5f7599f664e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061658"
 ---
 # <a name="guest-permissions-on-user-databases"></a>ユーザー データベースに対する guest の権限
   このルールでは、guest ユーザーがデータベースにアクセスする権限を持っているかどうかを調べます。 このルールはユーザー データベースにのみ適用されます。  
@@ -31,6 +30,6 @@ ms.locfileid: "62705119"
  [SQL Server の保護](../security/securing-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [ポリシーベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

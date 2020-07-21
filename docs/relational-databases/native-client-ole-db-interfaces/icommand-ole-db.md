@@ -1,5 +1,5 @@
 ---
-title: ICommand (OLE DB) |Microsoft Docs
+title: ICommand (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,26 +10,24 @@ ms.topic: reference
 helpviewer_keywords:
 - ICommand [SQL Server Native Client]
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a46abd03ac5c8bb60c03531d78c705bdbf35c3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 7c80508be28bd0f51c1e3941d78fe656a2883803
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074204"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008396"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client に固有の OLE DB の動作について説明します。  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- 列のサイズより大きなデータを挿入すると、通常はエラーが発生します。 ただし、S_OK が返され、*dwStatus* が DBSTATUS_S_TRUNCATED に設定される場合もあります。 これは、一般ときに発生しますパラメーターを持つデータを挿入する場所、列は、データを保持するのに十分な大きさがないと**icommandwithparameters::setparameterinfo**呼び出されていません。  
+ 列のサイズより大きなデータを挿入すると、通常はエラーが発生します。 ただし、S_OK が返され、*dwStatus* が DBSTATUS_S_TRUNCATED に設定される場合もあります。 これは通常、パラメーターを使用してデータを挿入するときに、列のサイズがデータを保持するのに十分ではなく、 **ICommandWithParameters:: SetParameterInfo**が呼び出されていない場合に発生します。  
   
-## <a name="see-also"></a>関連項目  
- [インターフェイス&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+## <a name="see-also"></a>参照  
+ [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
   
   

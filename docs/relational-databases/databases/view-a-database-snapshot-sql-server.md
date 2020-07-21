@@ -1,5 +1,6 @@
 ---
 title: データベース スナップショットの表示 (SQL Server) | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server データベース スナップショットを表示する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 57df1a271d7c7694de048864f8b0db06223c4009
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7ba50746752b0c3531d1ae3a0b1b9d4820dea82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727540"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>データベース スナップショットの表示 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データベース スナップショットを表示する方法について説明します。  
   
 > [!NOTE]  
@@ -36,7 +37,7 @@ ms.locfileid: "68127101"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **データベース スナップショットを確認するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
@@ -45,9 +46,7 @@ ms.locfileid: "68127101"
   
 3.  **[データベース スナップショット]** を展開し、表示するスナップショットを選択します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **データベース スナップショットを確認するには**  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
@@ -56,7 +55,7 @@ ms.locfileid: "68127101"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのデータベース スナップショットの一覧を表示するには、 **sys.databases** カタログ ビューの [source_database_id](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列で NULL 以外の値に対してクエリを実行します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベース スナップショットの作成 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

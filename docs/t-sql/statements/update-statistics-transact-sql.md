@@ -21,15 +21,15 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5197708ff1e12aae5b2df32bc82b08cd48f1222c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099782"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009628"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 テーブルまたはインデックス付きビューで、クエリ最適化に関する統計を更新します。 統計は既定で、クエリ プランを改善するためにクエリ オプティマイザーによって必要に応じて更新されますが、`UPDATE STATISTICS` またはストアド プロシージャ [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) を使用して既定の更新より頻繁に統計を更新することでクエリのパフォーマンスを向上できる場合もあります。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68099782"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -71,7 +71,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
@@ -111,7 +111,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  ほとんどのワークロードでは、フル スキャンは必要なく、既定のサンプリングで十分です。  
 ただし、変化するデータ分布の影響を受ける特定のワークロードではサンプル サイズの増加が必要な場合があり、フル スキャンが必要な場合もあります。  
-詳しくは、[CSS SQL Escalation Services に関するブログ](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)をご覧ください。  
+詳しくは、[CSS SQL Escalation Services に関するブログ](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)をご覧ください。  
   
  RESAMPLE  
  最新のサンプル レートを使用して各統計を更新します。  
@@ -125,14 +125,17 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > AUTO_UPDATE_STATISTICS が実行された場合、保存されたサンプリング率が使用可能な場合はそのサンプリング率が使用され、そうでない場合は既定のサンプリング率が使用されます。
  > RESAMPLE の動作は、このオプションの影響を受けません。
  
+ > [!NOTE]
+ > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) と [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) は、選択した統計について保存されたサンプル率値を公開します。
  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) 以降 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 句で指定したパーティションを対象としたリーフ レベルの統計を強制的に再計算してから、それらをマージして全体統計を構築します。 異なるサンプル レートで構築されたパーティションの統計はマージできないため、WITH RESAMPLE が必要になります。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
   
  ALL | COLUMNS | INDEX  
  すべての既存の統計、1 つ以上の列で作成された統計、またはインデックスに対して作成された統計を更新します。 何も指定しない場合は、UPDATE STATISTICS ステートメントによりテーブルまたはインデックス付きビューのすべての統計が更新されます。  
@@ -160,7 +163,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 -   内部テーブルに対して作成された統計。  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
 
 MAXDOP = *max_degree_of_parallelism*  
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
@@ -178,9 +181,11 @@ MAXDOP = *max_degree_of_parallelism*
  0 (既定値)  
  現在のシステム ワークロードに基づいて、実際の数以下のプロセッサを使用します。  
   
- \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> 
+ 
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ### <a name="when-to-use-update-statistics"></a>いつ UPDATE STATISTICS を使用するか  
  `UPDATE STATISTICS` を使用する場合の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
@@ -190,7 +195,7 @@ MAXDOP = *max_degree_of_parallelism*
 * `MAXDOP` オプションは、`STATS_STREAM`、`ROWCOUNT`、および `PAGECOUNT` の各オプションと互換性がありません。
 * `MAXDOP` オプションは、Resource Governor ワークロード グループの `MAX_DOP` の設定によって制限されます (使用されている場合)。
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>sp_updatestats によるすべての統計の更新  
 データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば、次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
   
 ```sql  
@@ -206,7 +211,7 @@ EXEC sp_updatestats;
 ### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
  次の構文は、PDW / SQL Data Warehouse ではサポートされていません  
   
-```sql  
+```syntaxsql
 update statistics t1 (a,b);   
 ```  
   
@@ -229,7 +234,7 @@ update statistics t1 (a) with stats_stream = 0x01;
 ## <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する `ALTER` 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-update-all-statistics-on-a-table"></a>A. テーブルのすべての統計を更新する  
  次の例では、`SalesOrderDetail` テーブルのすべてのインデックスの統計を更新します。  
@@ -276,7 +281,7 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. テーブルの統計を更新する  
  次の例では、`Customer` テーブルの `CustomerStats1` 統計を更新します。  

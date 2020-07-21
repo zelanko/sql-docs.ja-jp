@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f54dd4ea82b9d46cde0c83f645f378d13f32849
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061837"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>クエリ結果のコピー (Visual Database Tools)
   結果セットは、 **[結果]** ペインからタブ区切りテキストとしてコピーできます。 結果セット全体をコピーすることも、任意の数の連続する行やセル、または連続しない行やセルをコピーすることもできます。  
@@ -50,7 +49,7 @@ ms.locfileid: "63269894"
   
 5.  右クリックして **[コピー]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [結果ペインのデータの操作 (Visual Database Tools)](visual-database-tools.md)  
   
   

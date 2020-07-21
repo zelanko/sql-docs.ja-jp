@@ -1,5 +1,6 @@
 ---
 title: '[データベースのバックアップ タスク] (メンテナンス プラン) | Microsoft Docs'
+description: データベースのバックアップ タスクを使用して SQL Server のメンテナンス プランにバックアップ タスクを追加する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1a233cdd69f069ae425de644dfe8b6d1475dd86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774402"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>メンテナンス プラン用のデータベースのバックアップ タスクのオプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[データベースのバックアップ タスク]** ダイアログ ボックスを使用すると、バックアップ タスクをメンテナンス プランに追加できます。 システムまたはハードウェアのトラブル (またはユーザー エラー) が原因でデータがなんらかの損傷を受けた場合、データの回復にはバックアップ コピーからの復元が必要になるため、データベースのバックアップは定期的に実行することが重要です。 このタスクを使用すると、ファイル、ファイル グループ、トランザクション ログの完全バックアップと差分バックアップを実行できます。  
   
  **データベースのバックアップ タスクを作成するには**  
   
 -   [メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
-## <a name="options"></a>オプション  
- **[接続]**  
+## <a name="options"></a>Options  
+ **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -46,13 +47,13 @@ ms.locfileid: "68115828"
  **[すべてのシステム データベース] (master、msdb、model)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各システム データベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 ユーザーが作成したデータベースではメンテナンス タスクは実行されません。  
   
- **「すべてのユーザー データベース」 (master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース] \(master、model、msdb、tempdb は対象外)**  
  ユーザーが作成したすべてのデータベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
  **[これらのデータベース]**  
  選択されたデータベースだけを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 このオプションをオンにする場合は、少なくとも 1 つのデータベースが一覧内で選択されている必要があります。  
   
- **[バックアップの種類]**  
+ **バックアップの種類**  
  実行するバックアップの種類を表示します。  
   
  **[バックアップ コンポーネント]**  
@@ -110,7 +111,7 @@ ms.locfileid: "68115828"
 >  影響を受けるオブジェクトが大量にある場合は、表示にかなりの時間を要する場合があります。  
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  
@@ -126,9 +127,9 @@ ms.locfileid: "68115828"
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
- **User name**  
+ **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
  **パスワード**  

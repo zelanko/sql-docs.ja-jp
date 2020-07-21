@@ -17,17 +17,17 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0fd4b0459552330fcbc17b4e3409b1106abc8bd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732691"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数はグループ内の値のチェックサムを返します。 `CHECKSUM_AGG` は null 値を無視します。 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は `CHECKSUM_AGG` に続けることができます。
   
@@ -52,7 +52,7 @@ DISTINCT
 ## <a name="return-types"></a>戻り値の型
 すべてのチェックサムを返します *式* 値としての **int**です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `CHECKSUM_AGG` は、テーブルの変更を検出できます。
   
 `CHECKSUM_AGG` の結果は、テーブル内の行の順序に依存しません。 また、`CHECKSUM_AGG` 関数では、`DISTINCT` キーワードと `GROUP BY` 句の使用が許可されます。
@@ -61,8 +61,8 @@ DISTINCT
   
 `CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)を参照してください。
   
-## <a name="examples"></a>使用例  
-次の例では、`CHECKSUM_AGG` を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルの `Quantity` 列の変更を検出します。
+## <a name="examples"></a>例  
+次の例では、`CHECKSUM_AGG` を使用して、`Quantity` データベースの `ProductInventory` テーブルの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列の変更を検出します。
   
 ```sql
 --Get the checksum value before the column value is changed.  

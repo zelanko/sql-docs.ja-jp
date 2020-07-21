@@ -1,6 +1,6 @@
 ---
-title: DiffGram の例 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: DiffGram の例 (SQLXML)
+description: データベースに対して挿入、更新、および削除の操作を実行する SQLXML 4.0 の diffgram の例を示します。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb8dfe264cfc8f1fb2d7d12b88fc483e46f50167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1dbc6d4d2be27ca0a91a7ed312d26baf19a72551
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650004"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、データベースに対して挿入、変更、および削除の各操作を実行する DiffGram の例を示します。 例を使用する前に、次のことに注意してください。  
   
 -   例では、2 つのテーブル (Cust と Ord) を使用します。したがって、DiffGram の例をテストするにはこれらを作成する必要があります。  
@@ -74,7 +75,7 @@ ms.locfileid: "67895077"
   
      このスキーマを、例で使用する他のファイルと同じフォルダーに DiffGramSchema.xml として保存してください。  
   
-## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A. DiffGram を使用してレコードを削除する  
+## <a name="a-deleting-a-record-by-using-a-diffgram"></a>A: DiffGram を使用してレコードを削除する  
  この例の DiffGram では、CustomerID が ALFKI の顧客レコードを Cust テーブルから削除し、OrderID が 1 の、対応する注文レコードを Ord テーブルから削除します。  
   
 ```  
@@ -101,11 +102,11 @@ ms.locfileid: "67895077"
 </ROOT>  
 ```  
   
- **\<する前に >** が、ブロック、 **\<順序 >** 要素 (**diffgr:id ="Order1"** ) と **\<顧客 >** 要素 (**diffgr:id ="Customer1"** )。 これらの要素はデータベースの既存のレコードを表します。 **\<DataInstance >** 要素に対応するレコードがありません (同じ **diffgr:id**)。 これは削除操作を表します。  
+ ブロックに **\<before>** は、 **\<Order>** 要素 (**Order1: Id = ""**) と **\<Customer>** 要素 (**"Customer1"** という) があります。 これらの要素はデータベースの既存のレコードを表します。 要素には、 **\<DataInstance>** 対応するレコードがありません (同一の場合 **: id**)。 これは削除操作を表します。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
-1.  これらのテーブルを作成、 **tempdb**データベース。  
+1.  これらのテーブルを**tempdb**データベースに作成します。  
   
     ```  
     CREATE TABLE Cust(  
@@ -141,9 +142,9 @@ ms.locfileid: "67895077"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用して DiffGram を実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. DiffGram を使用してレコードを挿入する  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B: DiffGram を使用してレコードを挿入する  
  この例の DiffGram では、Cust テーブルと Ord テーブルにレコードを挿入します。  
   
 ```  
@@ -168,11 +169,11 @@ ms.locfileid: "67895077"
 </ROOT>  
 ```  
   
- この DiffGram で、 **\<する前に >** ブロックが指定されていない (既存のデータベース レコード)。 2 つのレコード インスタンスがある (で識別される、 **\<顧客 >** と **\<順序 >** 内の要素、  **\<DataInstance >** ブロック) それぞれ Cust と Ord テーブルにマップされます。 これらの要素の両方を指定、 **diffgr:hasChanges**属性 (**hasChanges ="inserted"** )。 これは挿入操作を表します。 指定した場合、この DiffGram で**hasChanges ="modified"** 、その結果、エラーが存在しないレコードを変更することを示します。  
+ この DiffGram で **\<before>** は、ブロックが指定されていません (既存のデータベースレコードが指定されていません)。 **\<Customer>** **\<Order>** **\<DataInstance>** Cust テーブルと Ord テーブルにマップされる2つのレコードインスタンス (ブロック内の要素と要素によって識別される) があります。 これらの要素はどちらも **、** "属性の変更" 属性 (**haschanges = "inserted"**) を指定します。 これは挿入操作を表します。 この DiffGram では、 **Haschanges = "modified"** を指定した場合、存在しないレコードを変更しようとするとエラーになります。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
-1.  これらのテーブルを作成、 **tempdb**データベース。  
+1.  これらのテーブルを**tempdb**データベースに作成します。  
   
     ```  
     CREATE TABLE Cust(  
@@ -208,9 +209,9 @@ ms.locfileid: "67895077"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用して DiffGram を実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. DiffGram を使用して既存のレコードを更新する  
+## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C: DiffGram を使用して既存のレコードを更新する  
  この例では、DiffGram で顧客 ALFKI の顧客情報 (CompanyName と ContactName) を更新します。  
   
 ```  
@@ -240,11 +241,11 @@ ms.locfileid: "67895077"
 </ROOT>  
 ```  
   
- **\<する前に >** ブロックが含まれています、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"** )。 **\<DataInstance >** ブロックに含まれる、対応する **\<顧客 >** 要素と同じ **id**します。 **\<顧客 >** 内の要素、 **\<NewDataSet >** も指定 **diffgr:hasChanges ="modified"** します。 これは、更新操作、および顧客レコードを示します、 **Cust**テーブルがそれに応じて更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視されます、および更新は実行されません。  
+ ブロックには **\<before>** 要素が含まれてい **\<Customer>** ます (**diffgram: Id = "Customer1"**)。 ブロックには、 **\<DataInstance>** **\<Customer>** 同じ**id**を持つ対応する要素が含まれています。**\<customer>** また、の要素は、 **\<NewDataSet>** **"変更前" と "変更**された" というように指定します。 これは更新操作であることを示し、 **Cust**テーブルの顧客レコードがそれに応じて更新されます。 DiffGram **: hasChanges**属性が指定されていない場合、diffgram 処理ロジックはこの要素を無視し、更新は実行されないことに注意してください。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
-1.  これらのテーブルを作成、 **tempdb**データベース。  
+1.  これらのテーブルを**tempdb**データベースに作成します。  
   
     ```  
     CREATE TABLE Cust(  
@@ -280,9 +281,9 @@ ms.locfileid: "67895077"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用して DiffGram を実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. DiffGram を使用して、レコードの挿入、更新、および削除を実行する  
+## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D: DiffGram を使用して、レコードの挿入、更新、および削除を実行する  
  この例では、比較的複雑な DiffGram を使用して、挿入、更新、および削除操作を実行します。  
   
 ```  
@@ -341,19 +342,19 @@ ms.locfileid: "67895077"
   
  この DiffGram は、DiffGram のロジックにより次のように処理されます。  
   
--   DiffGram の処理ロジックで内のすべての最上位要素、 **\<する前に >** マッピング スキーマ」の説明に従って、対応するテーブルにマップをブロックします。  
+-   DiffGram 処理ロジックに従って、ブロック内の最上位レベルのすべての要素は、 **\<before>** マッピングスキーマで説明されているように、対応するテーブルにマップされます。  
   
--   **\<する前に >** ブロックには、 **\<順序 >** 要素 (**dffgr:id ="Order1"** ) と **\<顧客>** 要素 (**diffgr:id ="Customer1"** ) がないの対応する要素の **\<DataInstance >** (同じ ID) をブロックします。 これは削除操作を表し、レコードは Cust テーブルと Ord テーブルから削除されます。  
+-   **\<before>** ブロックには、 **\<Order>** 要素 (**dffgr: Id = "Order1"**) と、( **\<Customer>** 同じ id を持つ) ブロック内に対応する要素が存在しない要素 (**: id = "Customer1"**) があり **\<DataInstance>** ます。 これは削除操作を表し、レコードは Cust テーブルと Ord テーブルから削除されます。  
   
--   **\<する前に >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer2"** ) が対応する **\<顧客 >** 内の要素、 **\<DataInstance >** (同じ ID) をブロックします。 内の要素、  **\<DataInstance >** ブロックを指定します**diffgr:hasChanges ="modified"** します。 これは顧客 ANATR、CompanyName と ContactName の情報が更新で指定されている値を使用して、Cust テーブルに update 操作、  **\<DataInstance >** ブロックします。  
+-   ブロックには、 **\<before>** **\<Customer>** (同じ id を持つ) ブロック内に対応する要素が存在する要素 (**diffgram gr: Id = "Customer2"**) があり **\<Customer>** **\<DataInstance>** ます。 ブロック内の要素は、次のように指定されて **\<DataInstance>** います **: haschanges = "modified"**。 これは更新操作であり、顧客 ANATR に対して、ブロックで指定された値を使用して、Cust テーブルの CompanyName および担当する情報が更新されます **\<DataInstance>** 。  
   
--   **\<DataInstance >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer3"** ) および **\<順序 >** 要素 (**diffgr:id ="Order3"** )。 これらの要素のどちらが指定されて、 **diffgr:hasChanges**属性。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
+-   **\<DataInstance>** ブロックには **\<Customer>** 要素 (**diffgram: Id = "Customer3"**) と **\<Order>** 要素 (**Order3: id = ""**) があります。 これらの要素のどちらにも、 **diffgram: hasChanges**属性が指定されていません。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
   
--   **\<DataInstance >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer4"** ) および **\<順序 >** 要素 (**diffgr:id ="Order4"** ) がないに対応する要素、\<する前に > ブロックします。 これらの要素を **\<DataInstance >** ブロック指定**diffgr:hasChanges ="inserted"** します。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
+-   **\<DataInstance>** ブロックには、 **\<Customer>** 要素 (Order4 **: Id = "Customer4"**) と、 **\<Order>** 対応する要素がブロック内に存在しない要素 (**: id = ""**) があり \<before> ます。 ブロック内のこれらの要素は、次のように **\<DataInstance>** 指定します。 **haschanges = "inserted"**。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
-1.  次のテーブルを作成、 **tempdb**データベース。  
+1.  次のテーブルを**tempdb**データベースに作成します。  
   
     ```  
     CREATE TABLE Cust(  
@@ -389,10 +390,10 @@ ms.locfileid: "67895077"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用して DiffGram を実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. DiffGram で diffgr:parentID 注釈を指定して更新を適用する  
- この例では方法、 **parentID**注釈で指定されている、 **\<する前に >** 更新プログラムを適用することで、DiffGram のブロックを使用します。  
+ この例では、DiffGram のブロックで指定されている**parentID**注釈を使用して更新プログラムを適用する方法を示し **\<before>** ます。  
   
 ```  
 <NewDataSet />  
@@ -413,6 +414,6 @@ ms.locfileid: "67895077"
 </diffgr:diffgram>  
 ```  
   
- のみがあるため、この DiffGram は削除操作を指定します、 **\<する前に >** ブロックします。 Diffgram で、 **parentID**注釈を使用して、注文と注文の詳細の間の親子リレーションシップを指定します。 SQLXML でレコードが削除されるときには、このリレーションシップで指定された子テーブルからレコードが削除された後、対応する親テーブルからレコードが削除されます。  
+ この DiffGram は、ブロックが1つしかないため、削除操作を指定し **\<before>** ます。 DiffGram では、 **parentID**注釈を使用して、注文と注文の詳細の間に親子リレーションシップを指定します。 SQLXML でレコードが削除されるときには、このリレーションシップで指定された子テーブルからレコードが削除された後、対応する親テーブルからレコードが削除されます。  
   
   

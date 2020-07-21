@@ -1,5 +1,5 @@
 ---
-title: SSIS パッケージの形式 |Microsoft Docs
+title: SSIS パッケージ形式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,20 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 813339fea4db41433ca73e47245cb9c87f393421
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055349"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420939"
 ---
 # <a name="ssis-package-format"></a>SSIS パッケージの形式
-  最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 変更の競合またはバイナリ形式で格納されている変更が含まれていないパッケージをより確実にマージできます。  
+  最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 また、競合する変更やバイナリ形式での変更が含まれていないパッケージをより確実にマージすることもできます。  
   
- 最新の DTSX パッケージ ファイル形式を表示するを参照してください[ \[MS-DTSX\]:。データ変換サービス パッケージの XML ファイル形式の仕様](https://go.microsoft.com/fwlink/?LinkId=233251)します。  
+ 現在の .DTSX パッケージファイル形式を表示するには、「 [ \[ .Dtsx \] : データ変換サービスパッケージの XML ファイル形式の仕様](https://go.microsoft.com/fwlink/?LinkId=233251)」を参照してください。  
   
  ファイル形式の変更の概要を次に示します。 これらの変更のコード例については、「 [SQL Server 2012 のパッケージ形式の変更](https://go.microsoft.com/fwlink/?LinkId=233255)」を参照してください。  
   

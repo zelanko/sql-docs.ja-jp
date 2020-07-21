@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b01965313a02bf22126afa058247a80eb053b7e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040814"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>自己結合の手動作成 (Visual Database Tools)
   データベースでテーブルに再帰リレーションシップが設定されていなくても、テーブルをテーブル自身に結合できます。 たとえば、自己結合を使用して、同じ市に住む著者の組を検索できます。  
@@ -125,7 +124,7 @@ Cheryl Carson       Abraham Bennet
 7.  出力列、検索条件、並べ替え順序など、クエリの他のオプションを指定します。  
   
 ## <a name="see-also"></a>参照  
- [作成する自己結合の自動&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [Visual Database Tools &#40;自動的に自己結合を作成&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

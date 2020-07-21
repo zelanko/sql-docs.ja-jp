@@ -1,6 +1,6 @@
 ---
-title: XPath クエリ (SQLXML 4.0) でのブール演算子の指定 |マイクロソフトのドキュメント
-ms.custom: ''
+title: XPath クエリでのブール演算子の使用 (SQLXML)
+description: SQLXML 4.0 XPath クエリでブール演算子を使用する方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,38 +16,39 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57742e1fe2c11c7e81518384f72b2acbab7a925
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06d56d0537bfda3a2ce44033a30d0f8e429fc0c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773011"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理演算子の指定 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  以下の例では、XPath クエリに論理演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  以下の例では、XPath クエリに論理演算子を指定する方法を示します。 この例の XPath クエリは、SampleSchema1.xml に格納されているマッピング スキーマに対して指定されます。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 論理演算子を指定する  
- この XPath クエリを返します、 **\<顧客 >** 、コンテキスト ノードの子要素、 **CustomerID**属性 13 または 31 の値。  
+ この XPath クエリでは、 **\<Customer>** **CustomerID**属性値が13または31のコンテキストノードの子要素が返されます。  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- ショートカット、**属性**軸 (@) を指定できますので、**子**軸は既定値、省略可能します。  
+ **属性**軸 (@) へのショートカットを指定できます。また、**子**軸が既定値であるため、省略できます。  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 述語では、`attribute`は、軸と`CustomerID`はノード テストです (場合は TRUE **CustomerID**は、 **\<属性 >** ノード、ため、  **\<属性 >** ノードは、プライマリ ノードの**属性**軸) です。 述語フィルター、 **\<顧客 >** 要素と、述語で指定された条件を満たすものだけを返します。  
+ 述語では、 `attribute` は軸で、 `CustomerID` はノードテストです。これは**CustomerID** 、 **\<attribute>** **\<attribute>** ノードが**属性**軸のプライマリノードであるため、CustomerID がノードの場合は TRUE になります。 述語は、要素をフィルター処理 **\<Customer>** し、述語に指定された条件を満たす要素のみを返します。  
   
-##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
+##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>マッピングスキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  [サンプルスキーマコード](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)をコピーし、テキストファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (BooleanOperatorsA.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "68027080"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
  このテンプレートを実行した場合の結果セットは次のとおりです。  
   

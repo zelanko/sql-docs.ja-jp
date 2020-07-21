@@ -1,27 +1,29 @@
 ---
-title: Azure Blob Storage 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:Azure Blob Storage - PolyBase
+description: この記事では、SQL Server インスタンス上の PolyBase と Azure Blob Storage を使用します。 PolyBase は、外部テーブルとデータのインポート/エクスポートのアドホック クエリに適しています。
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d9c17199ec6477b59ad4fdf4e4e670bf0b5e5a9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020230"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215873"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage 上の外部データにアクセスするように PolyBase を構成する
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server インスタンス上で PolyBase を使用して、Hadoop 上の外部データに対してクエリを実行する方法について説明します。
+この記事では、SQL Server インスタンスで PolyBase を使用し、Azure Blob Storage 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
 
@@ -29,7 +31,7 @@ PolyBase をインストールしていない場合は、「[PolyBase のイン�
 
 最初に、Azure Blob Storage を使用するように SQL Server PolyBase を構成します。
 
-1. 'hadoop connectivity' を Azure Blob Storage プロバイダーに設定して [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。 既定では、Hadoop connectivity は 7 に設定されています。
+1. 'hadoop connectivity' を Azure Blob Storage プロバイダーに設定して [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。 既定で、Hadoop 接続は 7 に設定されています。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -47,13 +49,13 @@ PolyBase をインストールしていない場合は、「[PolyBase のイン�
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase エンジン  
   
-   ![services.msc での PolyBase サービスの停止と開始](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc での PolyBase サービスの停止と開始")  
+   ![services.msc で PolyBase サービスを停止および開始する](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc で PolyBase サービスを停止および開始する")  
   
 ## <a name="configure-an-external-table"></a>外部テーブルを構成する
 
 Hadoop データ ソース内のデータのクエリを実行するには、Transact-SQL クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法を説明します。
 
-1. データベースにマスター キーを作成します。 これは、資格情報シークレットの暗号化に必要です。
+1. データベースにマスター キーを作成します。 これは、資格情報のシークレットの暗号化に必須です。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -136,7 +138,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>インポート、データ  
+### <a name="importing-data"></a>データのインポート  
 
 次のクエリでは、外部データを SQL Server にインポートします。 この例では、高速走行しているドライバーのデータを、さらに詳細な分析を実行するために SQL Server にインポートします。 パフォーマンスを向上させるために、列ストア テクノロジが活用されています。  
 
@@ -191,7 +193,7 @@ SSMS では、外部テーブルが別のフォルダー **[外部テーブル]*
   
 ![SSMS での PolyBase オブジェクト](media/polybase-management.png)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の記事を参照して、PolyBase を使用して監視するための方法をさらに調べます。
 

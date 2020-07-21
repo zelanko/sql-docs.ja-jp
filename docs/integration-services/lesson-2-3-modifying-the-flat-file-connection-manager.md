@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1cb492b9b162c9494c4cd009fd3ad5b68427a030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f09ac0b6b7a1d0536205596a553eddb06765b93
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086583"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296028"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更
 
@@ -47,7 +47,7 @@ ms.locfileid: "68086583"
   
 9.  再度 **[OK]** を選択し、 **[プロパティ式エディター]** ダイアログを閉じます。  
   
-## <a name="go-to-next-task"></a>次の実習に進む  
+## <a name="go-to-next-task"></a>次のタスクに進む  
 [手順 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

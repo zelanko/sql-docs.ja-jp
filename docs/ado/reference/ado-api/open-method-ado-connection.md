@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931937"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762203"
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO Connection)
-データ ソースへの接続を開きます。  
+データソースへの接続を開きます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,32 +35,32 @@ connection.Open ConnectionString, UserID, Password, Options
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ConnectionString*  
- 任意。 A**文字列**接続情報を表す値です。 参照してください、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの詳細については、有効な設定をします。  
+ *文字列*  
+ 任意。 接続情報を含む**文字列**値です。 有効な設定の詳細については、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを参照してください。  
   
  *UserID*  
- 任意。 A**文字列**接続を確立するときに使用するユーザー名を含む値。  
+ 任意。 接続を確立するときに使用するユーザー名を含む**文字列**値です。  
   
- *Password*  
- 任意。 A**文字列**接続を確立するときに使用するパスワードを表す値です。  
+ *パスワード*  
+ 任意。 接続を確立するときに使用するパスワードを含む**文字列**値です。  
   
  *[オプション]*  
- 任意。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)後に、このメソッドを返す必要があるかどうかを決定する値 (同期) (非同期)、接続が確立される前に、または。  
+ 任意。 このメソッドが (同期的に) 後に返すか、または (非同期に) 接続を確立するかを決定する[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)値。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**オープン**メソッドを[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトは、データ ソースへの物理接続を確立します。 このメソッドが正常に完了したら、接続はライブとに対してコマンドを発行し、結果を処理することができます。  
+## <a name="remarks"></a>解説  
+ [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトで**Open**メソッドを使用すると、データソースへの物理的な接続が確立されます。 このメソッドが正常に完了すると、接続が有効になり、その接続に対してコマンドを発行して結果を処理できるようになります。  
   
- オプションを使用して、 *ConnectionString*一連を含む接続文字列を指定する引数*引数* *値 =* ステートメントをセミコロンで区切られた、またはURL で識別されるファイルまたはディレクトリのリソース。 **ConnectionString**プロパティで使用される値を自動的に継承する、 *ConnectionString*引数。 そのため、いずれかに設定できます、 **ConnectionString**のプロパティ、**接続**、開く前にオブジェクトまたはを使用して、 *ConnectionString*引数を設定またはオーバーライドするには現在の接続パラメーター中に、**オープン**メソッドの呼び出し。  
+ 省略可能な*ConnectionString*引数を使用して、一連の*引数*を含む接続文字列、セミコロンで区切られた*値*ステートメント、または URL で識別されるファイルまたはディレクトリリソースのいずれかを指定します。 **Connectionstring**プロパティは、 *connectionstring*引数に使用される値を自動的に継承します。 このため、**接続**オブジェクトを開く前に**connectionstring**プロパティを設定するか、 *connectionstring*引数を使用して**Open**メソッド呼び出し中に現在の接続パラメーターを設定またはオーバーライドできます。  
   
- ユーザー名とパスワード両方の情報を渡す場合、 *ConnectionString*引数と省略可能な*UserID*と*パスワード*、引数、 *UserID*と*パスワード*引数で指定された値をオーバーライドは*ConnectionString*します。  
+ *Connectionstring*引数とオプションの*UserID*および*password*引数の両方でユーザーとパスワードの情報を渡すと、 *userid*と*password*の引数によって*connectionstring*に指定された値が上書きされます。  
   
- 開いている操作が完了すると**接続**を使用して、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)メモリを解放するメソッドには、システム リソースが関連付けられています。 オブジェクトを閉じるは削除されません。 メモリからそのプロパティの設定を変更して使用できます、**開く**メソッドを後でもう一度開きます。 メモリからオブジェクトを完全に排除するに、オブジェクト変数を設定します。 *Nothing*します。  
-  
-> [!NOTE]
->  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、**オープン**メソッドまで、サーバーへの接続を確立実際には、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で開かれた、**接続**オブジェクト。  
+ 開いている**接続**で操作を完了したら、 [Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用して、関連付けられているすべてのシステムリソースを解放します。 オブジェクトを閉じると、メモリから削除されません。プロパティの設定を変更し、 **open**メソッドを使用して後で再び開くことができます。 メモリからオブジェクトを完全に削除するには、オブジェクト変数を*Nothing*に設定します。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  **リモートデータサービスの使用状況****Open**メソッドをクライアント側の**接続**オブジェクトで使用すると、**接続**オブジェクトで[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)が開かれるまで、サーバーへの接続が実際に確立されることはありません。  
+  
+> [!NOTE]
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -68,7 +68,7 @@ connection.Open ConnectionString, UserID, Password, Options
 ## <a name="see-also"></a>参照  
  [Open および Close メソッドの例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open および Close メソッドの例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Open および Close メソッドの例 (vc++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Open および Close メソッドの例 (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   

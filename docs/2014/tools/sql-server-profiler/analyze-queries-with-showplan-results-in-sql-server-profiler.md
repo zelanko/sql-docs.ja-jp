@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 284dfdbd57dde61c92d4cb368371ebe3b1ae6913
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064109"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler での Showplan 結果を使用したクエリの分析
   Showplan イベント クラスをトレース定義に追加することで、クエリ プランに関する情報を [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレースで収集して表示できます。 また、トレースで収集した他のイベントから Showplan イベントを抽出し、これらの Showplan イベントを個別の XML ファイルに保存することもできます。  
@@ -47,7 +46,7 @@ ms.locfileid: "68211106"
 |**Showplan XML For Query Compile**|クエリがコンパイルされたときにクエリ プランを表示します。 詳細については、「 [Showplan XML for Query Compile イベント クラス](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)」を参照してください。|  
 |**Showplan XML Statistics Profile**|実行時の完全な詳細情報が含まれたクエリ プランを XML 形式で表示します。 たとえば、このイベント クラスでは、実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの各操作に渡される行数をキャプチャします。 詳細については、「 [Showplan XML Statistics Profile イベント クラス](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)」を参照してください。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Performance イベント カテゴリ](../../relational-databases/event-classes/performance-event-category.md)  
   
   

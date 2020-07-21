@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6f3692ab986f3648bd1ab5b411207fe4948ca216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d422e448a4f67daca7a5214f344cb1797c2b6758
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62868516"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551667"
 ---
-# <a name="mssqlserver33085"></a>MSSQLSERVER_33085
+# <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|33085|  
@@ -35,7 +34,7 @@ ms.locfileid: "62868516"
 ## <a name="explanation"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、エラー メッセージに表示されている暗号化サービス プロバイダーを使用できませんでした。 該当する暗号化サービス プロバイダーでは、必要なメソッドがサポートされていません。 エラーの状態によって、見つからなかったメソッドを確認できます。  
   
-|状態|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

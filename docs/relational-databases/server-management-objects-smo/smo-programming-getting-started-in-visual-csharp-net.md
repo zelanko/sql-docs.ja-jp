@@ -1,5 +1,5 @@
 ---
-title: Visual c# .NET の概要 |マイクロソフトのドキュメント
+title: Visual C# .NET でのはじめに |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -8,27 +8,26 @@ ms.topic: quickstart
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1818f32f746b527645ecf5e587bb4bf07bc656d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 4bbaf0300bd77191145a26056e00fa8a8ffbd4d9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097948"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012273"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO プログラミング - Visual C# .NET の概要
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET は、共通言語ランタイム (CLR) でサポートされているマネージ プログラミング言語のいずれかで[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET。 C# 言語の詳細については多く、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET ドキュメント。 SMO アプリケーションを開発するには、[!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] および [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用できます。  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].NET は、.Net の共通言語ランタイム (CLR) でサポートされているマネージプログラミング言語の1つです [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。 C# 言語の詳細については、.Net のドキュメントを参照してください [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。 SMO アプリケーションを開発するには、[!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] および [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用できます。  
   
 ## <a name="references-and-imports"></a>参照とインポート  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトを起動した後、SMO アセンブリへの参照を追加する必要があります。 次に、プログラムが SMO の種類を認識できるように、必要な名前空間をインポートします。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SMO アセンブリは C:\Program files \microsoft SQL Server\130\SDK\Assemblies\ フォルダーにあります。  
+ では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SMO アセンブリは C:\Program ARE SQL Server\130\SDK\Assemblies\ フォルダーにあります。  
   
-## <a name="see-also"></a>関連項目  
- [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
+## <a name="see-also"></a>参照  
+ [Visual Studio .NET で Visual C&#35; SMO プロジェクトを作成する](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

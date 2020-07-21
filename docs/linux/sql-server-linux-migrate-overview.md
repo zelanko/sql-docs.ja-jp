@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.openlocfilehash: e7affa88f1856571d0b2142f7dcfdf762ed79197
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 185d62a67309f9e76e5f738494ee2137e2ef4a73
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68129351"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897767"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>データベースと構造化データを SQL Server on Linux に移行する 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Linux 上で実行されている SQL Server にデータベースとデータを移行することができます。 使用する方法は、ソース データと具体的なシナリオによって異なります。 以下のセクションでは、さまざまな移行シナリオのベスト プラクティスについて説明します。
 
@@ -32,7 +32,7 @@ Windows 上の SQL Server データベースを SQL Server on Linux に移行す
 
 - [Windows から Linux へ SQL Server データベースを移行する](sql-server-linux-migrate-restore-database.md)
 
-また、データベースを BACPAC ファイル (データベース スキーマとデータを含む圧縮ファイル) にエクスポートすることもできます。 BACPAC ファイルがある場合は、このファイルを Linux マシンに転送し、それを SQL Server にインポートすることができます。 詳細については、次の各トピックを参照してください。
+また、データベースを BACPAC ファイル (データベース スキーマとデータを含む圧縮ファイル) にエクスポートすることもできます。 BACPAC ファイルがある場合は、このファイルを Linux マシンに転送し、それを SQL Server にインポートすることができます。 詳細については、次のトピックを参照してください。
 
 - [SSMS または SqlPackage.exe を使用してデータベースをエクスポートおよびインポートする](sql-server-linux-migrate-ssms.md)
 

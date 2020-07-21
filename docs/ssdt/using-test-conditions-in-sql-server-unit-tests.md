@@ -1,25 +1,26 @@
 ---
-title: SQL Server の単体テストでのテスト条件の使用 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストでのテスト条件の使用
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140972"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243519"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
+
 SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、[SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
   
 ## <a name="predefined-test-conditions"></a>定義済みテスト条件  
@@ -41,9 +42,9 @@ SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スク
 >   
 > 報告された継続時間には、テストの実行前に行われるデータの生成およびスキーマの配置に要する時間は含まれません。 テストの継続時間を表示するには、 **[テスト結果]** ウィンドウで実行されたテストを選択し、右クリックして **[テスト結果の詳細の表示]** をクリックします。  
   
-SQL Server 単体テストにテスト条件を追加するには、SQL Server 単体テスト デザイナーの [テスト条件] ウィンドウを使用します。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」を参照してください。  
+SQL Server 単体テストにテスト条件を追加するには、SQL Server 単体テスト デザイナーの [テスト条件] ウィンドウを使用します。 詳しくは、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
   
-また、テスト メソッド コードを直接編集して機能を追加することもできます。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストを開いて編集する方法](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)」および「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」を参照してください。 たとえば、Assert ステートメントを追加することにより、テスト メソッドに機能を追加することができます。 詳しくは、「[SQL Server の単体テストでの Transact-SQL アサーションの使用](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)」をご覧ください。  
+また、テスト メソッド コードを直接編集して機能を追加することもできます。 詳しくは、「[SQL Server の単体テストを開いて編集する方法](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)」および「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。 たとえば、Assert ステートメントを追加することにより、テスト メソッドに機能を追加することができます。 詳しくは、「[SQL Server の単体テストでの Transact-SQL アサーションの使用](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)」をご覧ください。  
   
 ## <a name="expected-failures"></a>予期されるエラー  
 成功すべきではない動作をテストする SQL Server 単体テストを作成することができます。 これらの予期されるエラーは、ネガティブ テストとも呼ばれます。 例として、次のようなものがあります。  
@@ -62,7 +63,7 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
 [ExpectedSqlException(MessageNumber = nnnnn, Severity = x, MatchFirstError = false, State = y)]  
 ```  
   
-各要素の説明は次のとおりです。  
+各値の説明:  
   
 -   *nnnnn* は、予期されるメッセージの番号 (たとえば 14025) です。  
   
@@ -72,9 +73,9 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
   
 指定されていないパラメーターは無視されます。 これらのパラメーターは、データベース コードの **THROW** ステートメントに渡します。 MatchFirstError = false を指定すると、この属性は例外のいずれの SqlError にも一致します。 既定の動作 (MatchFirstError = true) は、最初に発生するエラーにしか一致しません。  
   
-予期される例外と SQL Server のネガティブ単体テストの使用方法の例については、「[チュートリアル: SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」を参照してください。  
+予期される例外と SQL Server のネガティブ単体テストの使用方法の例については、「[チュートリアル: SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」をご覧ください。  
   
-## <a name="SpecifyDataChecksum"></a>データ チェックサムの指定  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>データ チェックサムの指定  
 SQL Server 単体テスト デザイナーを表示するには、**ソリューション エクスプローラー**で単体テストのソース コード ファイルをダブルクリックします。  
   
 データベース単体テストにデータ チェックサム テスト条件を追加した後、次の手順に従って予期されるチェックサムを構成する必要があります。  
@@ -91,7 +92,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳細については、「[ソフト NUMA を使用するようにデータベース接続を作成する](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」を参照してください。  
+5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   
@@ -106,7 +107,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
     テスト条件の **[値]** 列には、予期されるチェックサムの値が表示されます。  
   
-## <a name="SpecifyExpectedSchema"></a>予期されるスキーマの指定  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>予期されるスキーマの指定  
 SQL Server 単体テストに予期されるスキーマ テスト条件を追加した後、次の手順に従って予期されるスキーマを構成する必要があります。  
   
 #### <a name="to-specify-an-expected-schema"></a>予期されるスキーマを指定するには  
@@ -121,7 +122,7 @@ SQL Server 単体テストに予期されるスキーマ テスト条件を追�
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳細については、「[ソフト NUMA を使用するようにデータベース接続を作成する](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」を参照してください。  
+5.  テストするデータベースへの接続を指定します。 詳しくは、「[方法:データベース接続の作成](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」をご覧ください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   

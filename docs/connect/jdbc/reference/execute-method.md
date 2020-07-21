@@ -1,5 +1,5 @@
 ---
-title: execute メソッド () |Microsoft Docs
+title: execute メソッド () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4acb89b86540c6142961a2c3cad6f8ea28e5813
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954922"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922120"
 ---
 # <a name="execute-method-"></a>execute () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,12 +35,12 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- ステートメントによって結果セットが返される場合は**true**を指定します。 更新数を返すか、または結果を返さない場合は**false** 。  
+ このステートメントで結果セットを返す場合は **true** です。 これが更新数を返す場合、または結果を返さない場合は **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この execute メソッドは、java.sql.PreparedStatement インターフェイスの execute メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

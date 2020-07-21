@@ -18,14 +18,14 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b8dd37b2c97c7c78f2699f5742b33ee773ff98d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941427"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292405"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
 
@@ -66,7 +66,7 @@ ms.locfileid: "67941427"
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  パスの一意な名前を指定します。  
   
  **ID**  
@@ -75,7 +75,7 @@ ms.locfileid: "67941427"
  **[IdentificationString]**  
  パスを識別する文字列です。 上記で入力した名前から自動的に生成されます。  
   
- **[説明]**  
+ **説明**  
  パスの説明を記述します。  
   
  **[PathAnnotation]**  
@@ -94,7 +94,7 @@ ms.locfileid: "67941427"
  **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
- **[名前]**  
+ **Name**  
  列名が一覧表示されます。  
   
  **[データ型]**  
@@ -103,7 +103,7 @@ ms.locfileid: "67941427"
  **[精度]**  
  数値の桁数が一覧表示されます。  
   
- **[スケール]**  
+ **スケール**  
  数値の中で小数点より右側の桁数が一覧表示されます。  
   
  **[データ型]**  
@@ -131,13 +131,13 @@ ms.locfileid: "67941427"
 **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  データ ビューアーが一覧表示されます。  
   
  **[データ ビューアーの種類]**  
  データ ビューアーの種類が一覧表示されます。  
   
- **[追加]**  
+ **追加**  
  クリックすると、 **[データ ビューアーの構成]** ダイアログ ボックスを使用してデータ ビューアーを追加できます。  
   
  **削除**  
@@ -156,7 +156,7 @@ ms.locfileid: "67941427"
   
  次の表は、データ フロー内のパスの、値が設定できるプロパティを示しています。 データ フロー エンジンは、この一覧にない追加の読み取り専用プロパティにも値を割り当てます。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は、 **AsNeeded**、 **SourceName**、 **PathName**、 **Never**です。 既定値は **AsNeeded**です。|  
 |[DestinationName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|パスに関連付けられた入力|  

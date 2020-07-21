@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 570a9185a83ecf1af0e47ee25cce5445dca1b958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3e55e6a938dcd361bbee9cf7ba3630186c16d7cb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975980"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920073"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>refreshRow メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +37,8 @@ public void refreshRow()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この refreshRow メソッドは、java. ResultSet インターフェイスの refreshRow メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この refreshRow メソッドは、java.sql.ResultSet インターフェイスの refreshRow メソッドによって指定されます。  
   
  カーソルが挿入行にあるときは、このメソッドを呼び出すことができません。  
   

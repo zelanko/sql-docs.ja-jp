@@ -11,22 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 13efde1888c50e243f0d07a534f538646db1eaa5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060835"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434789"
 ---
 # <a name="configure-adonet-connection-manager"></a>[ADO.NET の接続マネージャーの構成]
   **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスでは、SqlClient プロバイダーなど、.NET Framework データ プロバイダーを使用してアクセスできるデータ ソースへの接続を追加できます。 接続マネージャーでは、既存の接続を使用することも、新しく接続を作成することもできます。  
   
  ADO.NET 接続マネージャーの詳細については、「 [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[データ接続]**  
  一覧から既存の ADO.NET データ接続を選択します。  
   

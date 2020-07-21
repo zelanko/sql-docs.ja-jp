@@ -1,5 +1,5 @@
 ---
-title: addBatch メソッド (SQLServerStatement) |Microsoft Docs
+title: addBatch メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c19e8cd92f7ee7aafcf6dd23e9c179f2557e628f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 180c9cf6976bdea44e7c6a4f23a3b35abdcd94ee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955998"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923007"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>addBatch メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public void addBatch(java.lang.String sql)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この addBatch メソッドは、java. .sql. ステートメントインターフェイスの addBatch メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この addBatch メソッドは、java.sql.Statement インターフェイスの addBatch メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

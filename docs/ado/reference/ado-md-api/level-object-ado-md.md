@@ -1,5 +1,5 @@
 ---
-title: レベルのオブジェクト (ADO MD) |Microsoft Docs
+title: Level オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,56 +13,56 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949603"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753846"
 ---
 # <a name="level-object-ado-md"></a>Level オブジェクト (ADO MD)
-それぞれが階層内で同じランクを持つメンバーのセットが含まれています。  
+にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。  
   
-## <a name="remarks"></a>コメント  
- コレクションのプロパティと、**レベル**オブジェクトを次を行うことができます。  
+## <a name="remarks"></a>Remarks  
+ **Level**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   識別、**レベル**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティ。  
+-   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**レベル**を識別します。  
   
--   表示するときに使用する文字列を返す、**レベル**で、[キャプション](../../../ado/reference/ado-md-api/caption-property-ado-md.md)プロパティ。  
+-   [キャプション](../../../ado/reference/ado-md-api/caption-property-ado-md.md)プロパティを使用して**レベル**を表示するときに使用する文字列を返します。  
   
--   説明するわかりやすい文字列を返す、**レベル**で、[説明](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティ。  
+-   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを使用して、**レベル**を説明する意味のある文字列を返します。  
   
--   返す、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)を構成するオブジェクト、**レベル**で、[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクション。  
+-   [メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションを使用して、**レベル**を構成する[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクトを返します。  
   
--   ルートからレベルの数を返す、**レベル**で、[深さ](../../../ado/reference/ado-md-api/depth-property-ado-md.md)プロパティ。  
+-   [Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)プロパティを使用して、**レベル**のルートからレベル数を返します。  
   
--   標準の ADO を使用して[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに関する追加情報を取得、**レベル**オブジェクト。  
+-   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **Level**オブジェクトに関する追加情報を取得します。  
   
- **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、使用可能な可能性があるプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
+ **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
 |名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
 |説明|レベルのわかりやすい説明。|  
-|DimensionUniqueName|明確な名前、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)します。|  
+|DimensionUniqueName|[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)の明確な名前です。|  
 |HierarchyUniqueName|階層の明確な名前。|  
-|LevelCaption|ラベルまたはキャプション、レベルに関連付けられています。|  
+|LevelCaption|レベルに関連付けられているラベルまたはキャプション。|  
 |LevelCardinality|レベル内のメンバーの数。|  
-|LevelGUID|レベルの GUID です。|  
+|LevelGUID|レベルの GUID。|  
 |LevelName|レベルの名前。|  
-|LevelNumber|レベルと階層のルート間の距離。|  
-|LevelType|レベルの型。|  
-|LevelUniqueName|明確なレベルの名前。|  
-|SchemaName|このキューブが所属するスキーマの名前。|  
+|LevelNumber|階層のレベルとルートとの間の距離。|  
+|LevelType|レベルの種類。|  
+|LevelUniqueName|レベルの明確な名前。|  
+|SchemaName|このキューブが所属するスキーマの名前です。|  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Hierarchy オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   

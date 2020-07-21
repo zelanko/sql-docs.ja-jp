@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 709219b1-f8b2-4696-8923-dd2e91492eb8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 198a58816388a1f5c80b45b776548508f01a1c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2b92d959afa9dc38e9aad4a15ecd5eb3c44e87e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914276"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551757"
 ---
-# <a name="mssqlserver32040"></a>MSSQLSERVER_32040
+# <a name="mssqlserver_32040"></a>MSSQLSERVER_32040
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|32040|  

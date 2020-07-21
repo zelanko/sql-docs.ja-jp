@@ -1,6 +1,7 @@
 ---
-title: Showplan XML イベントを個別に保存する方法 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
+title: Showplan XML イベントを個別に保存する
+titleSuffix: SQL Server Profiler
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc0fcbe1a04e9b49f47c30e9eae40abbd1dccfd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84799148490179aadb571662f0291aa7a09df9db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758965"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML イベントを個別に保存する方法 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、トレースにキャプチャされた **Showplan XML** イベントを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で個別の .SQLPlan ファイルに保存する方法について説明します。 **Showplan XML** イベント ファイルは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で開くことができるので、イベントごとの実行プランをグラフィカルに表示できます。  
   
 ## <a name="save-showplan-xml-events-separately"></a>Showplan XML イベントを個別に保存する  
@@ -62,8 +63,6 @@ ms.locfileid: "68113369"
 10. 1 つの XML ファイルにすべての **Showplan XML** イベントを保存するには、 **[1 つのファイルにすべての XML プラン表示バッチを保存する]** を選択します。 または、**Showplan XML** イベントごとに新しい XML ファイル を作成するには、 **[個別のファイルに各 XML プラン表示バッチを保存する]** を選択します。  
   
 11. SQL Server Management Studio で **Showplan XML** イベント ファイルを表示するには、 **[ファイル]** メニューの **[開く]** をポイントして、 **[ファイル]** を選択します。 **Showplan XML** イベント ファイルを保存したディレクトリに参照し、イベント ファイルを選択して開きます。 **Showplan XML** イベント ファイルには .SQLPlan ファイル拡張子が付いています。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler でのプラン表示結果を使用したクエリの分析](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

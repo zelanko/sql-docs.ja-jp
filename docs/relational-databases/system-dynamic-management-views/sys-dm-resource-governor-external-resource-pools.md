@@ -1,9 +1,9 @@
 ---
-title: sys _resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
+title: dm_resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 5a143d4f7052995dddd8bc9cc5239b8ccc7a366f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718742"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys _resource_governor_external_resource_pools (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>dm_resource_governor_external_resource_pools (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 現在の外部リソースプールの状態、リソースプールの現在の構成、およびリソースプールの統計に関する情報を返します。 
   
@@ -37,10 +37,10 @@ ms.locfileid: "68468520"
 |名前の指定      |データの種類      |説明|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|リソースプールの ID。 NULL 値は許可されません。 |
-| NAME|**sysname**|リソースプールの名前。 NULL 値は許可されません。 
+| name|**sysname**|共有リソースの名前。 NULL 値は許可されません。 
 | pool_version|**int**|内部バージョン番号。|
 | max_cpu_percent|**int**|CPU の競合がある場合に、リソースプールのすべての要求で許容される最大平均 CPU 帯域幅の現在の構成。 NULL 値は許可されません。 |
-| max_processes|**int**|同時外部プロセスの最大数。 既定値は 0 で、制限がないことを示します。 NULL 値は許可されません。|
+| max_processes|**int**|同時外部プロセスの最大数。 既定値は0で、無制限であることを示します。 NULL 値は許可されません。|
 | max_memory_percent|**int**|このリソースプール内の要求で使用できる合計サーバーメモリの割合の現在の構成。 NULL 値は許可されません。 |
 | statistics_start_time|**datetime**|このプールの統計がリセットされた時刻。 NULL 値は許可されません。 
 | peak_memory_kb|**bigint**|リソースプールに使用されるメモリの最大量 (kb 単位)。 NULL 値は許可されません。 |

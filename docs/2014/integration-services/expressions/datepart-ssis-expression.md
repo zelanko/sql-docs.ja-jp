@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 460cc962ec8ce871438a74ee914ba60ba406d583
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769339"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428829"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
   ある日付の、特定の日付要素を整数で返します。  
@@ -40,7 +39,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、DATEPART は NULL を返します。  
   
  日付リテラルは、日付データ型のいずれかに明示的にキャストされる必要があります。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。  
@@ -55,10 +54,10 @@ DATEPART(datepart, date)
 |Dayofyear|dy、y|  
 |日|dd、d|  
 |Week|wk、ww|  
-|曜日|dw|  
-|Hour|Hh|  
-|Minute|mi、n|  
-|第 2 週|ss、s|  
+|平日|dw|  
+|時|Hh|  
+|分|mi、n|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>SSIS 式の例  
@@ -82,8 +81,8 @@ DATEPART("yy",GETDATE())
   
 ## <a name="see-also"></a>参照  
  [DATEADD &#40;SSIS 式&#41;](dateadd-ssis-expression.md)   
- [DATEDIFF (SSIS 式)](datediff-ssis-expression.md)   
- [DAY (SSIS 式)](day-ssis-expression.md)   
+ [DATEDIFF &#40;SSIS 式&#41;](datediff-ssis-expression.md)   
+ [DAY &#40;SSIS 式&#41;](day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](year-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  

@@ -1,6 +1,6 @@
 ---
-title: 登録済みサーバー情報のエクスポート (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 登録済みサーバーの情報のエクスポート
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c753a997b1d65c5691eb33e7d3fe61f720b29c20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048674"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で登録済みサーバーの情報を保存およびエクスポートして、他の従業員またはサーバーに配布する方法について説明します。 このエクスポート機能を使用すると、複数のコンピューターに一貫性のあるユーザー インターフェイスを提供できます。  
@@ -57,6 +56,6 @@ ms.locfileid: "63298109"
     >  エクスポート ファイルは暗号化されますが、ユーザー名および SQL&#xA0;Server 認証パスワードがファイルに含まれている場合は、ファイルへのアクセスを慎重に管理する必要があります。 したがって、既定では、ユーザー名およびパスワードはエクスポート ファイルから除外されます。  
   
 ## <a name="see-also"></a>参照  
- [登録済みサーバー情報のインポート&#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [登録済みサーバーの新規作成&#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [登録済みサーバーの情報をインポート &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) [新しい登録済みサーバー &#40;SQL Server Management Studio を作成&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

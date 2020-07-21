@@ -1,5 +1,5 @@
 ---
-title: ビジネス ルールに対してバージョンを検証する (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルールに対してバージョンを検証する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813205"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールをモデル バージョンのすべてのメンバーに適用するためにバージョンが検証されます。  
   
@@ -33,12 +33,12 @@ ms.locfileid: "68102551"
 > [!NOTE]  
 >  バージョンをコミットするには、すべてのメンバーが検証に合格する必要があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   バージョンの状態は、 **[未処理]** または **[ロック済み]** である必要があります。  
   
@@ -64,10 +64,10 @@ ms.locfileid: "68102551"
 -   [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>関連項目  
- [検証状態 (マスター データ サービス)](../master-data-services/validation-statuses-master-data-services.md)   
- [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)   
- [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
+ [検証の状態 &#40;マスターデータサービス&#41;](../master-data-services/validation-statuses-master-data-services.md)   
+ [検証ストアドプロシージャ &#40;マスターデータサービス&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
+ [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

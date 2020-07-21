@@ -1,5 +1,5 @@
 ---
-title: '[ユーザー/グループのアクセス許可] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+title: '[ユーザー/グループの権限] 機能領域'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fac1e0c639bbe49e0c837f6de0a5abd9d2139d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813204"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>[ユーザー/グループの権限] 機能領域 (マスター データ マネージャー)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [ユーザー/グループの権限] 機能領域では、管理者は機能領域、属性 ([モデル] タブ)、およびメンバー ([階層メンバー] タブ) に権限を付与できます。 権限の重複を解決し、個々の属性値に対するユーザーの権限を決定します。  
   

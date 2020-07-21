@@ -1,5 +1,6 @@
 ---
 title: ファイルとファイル グループの復元 (SQL Server) | Microsoft Docs
+description: この記事では、SQL Server Management Studio または Transact-SQL を使用して、SQL Server でファイルおよびファイル グループを復元する方法について示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81a832b4372dc2b35893c329d0b7ca909224fb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fade272bf603b0931d19c66b0ca1009b8cfbb3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737689"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>ファイルとファイル グループの復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループを復元する方法について説明します。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "68041507"
   
      [制限事項と制約事項](#Restrictions)  
   
--   [セキュリティ](#Security)  
+-   [Security](#Security)  
   
 -   **ファイルおよびファイル グループを復元する方法:**  
   
@@ -43,9 +44,9 @@ ms.locfileid: "68041507"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ファイルとファイル グループの復元中は、復元作業を実行するシステム管理者以外は、復元されるデータベースを使用しないでください。  
   
@@ -53,18 +54,18 @@ ms.locfileid: "68041507"
   
 -   単純復旧モデルでは、ファイルは読み取り専用のファイル グループに属している必要があります。  
   
--   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、ファイルを復元する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でファイルとファイル グループを復元する方法について説明します。  
+-   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、ファイルを復元する前に、ログの末尾と呼ばれるアクティブ トランザクション ログをバックアップする必要があります。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
   
--   暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
+-   暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-restore-files-and-filegroups"></a>ファイルおよびファイル グループを復元するには  
   
@@ -90,21 +91,21 @@ ms.locfileid: "68041507"
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
-7.  **[復元するバックアップ セットの選択]** グリッドで、復元するバックアップを選択します。 このグリッドには、指定された場所に対して使用可能なバックアップが表示されます。 既定では、復旧計画が推奨されています。 推奨された復元計画をオーバーライドするには、グリッドの選択を変更します。 バックアップの選択を解除すると、それに依存するその他のバックアップも自動的に選択が解除されます。  
+7.  **[復元するバックアップ セットの選択]** グリッドで、復元するバックアップを選択します。 このグリッドには、指定された場所に対して使用可能なバックアップが表示されます。 既定では、復旧計画が推奨されています。 推奨された復元計画を変更するには、グリッドの選択を変更します。 バックアップの選択を解除すると、それに依存するその他のバックアップも自動的に選択が解除されます。  
   
     |列見出し|値|  
     |-----------------|------------|  
-    |**[復元]**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
-    |**[名前]**|バックアップ セットの名前です。|  
+    |**復元**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
+    |**名前**|バックアップ セットの名前です。|  
     |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ**です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
-    |**型**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
     |**[開始日]**|バックアップ操作が開始した日時で、クライアントの地域設定で表示されます。|  
     |**完了日**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
     |**[サイズ]**|バックアップ セットのサイズ (バイト単位) です。|  
-    |**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
+    |**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
   
 8.  詳細設定オプションの表示または選択を行うには、 **[ページの選択]** ペインの **[オプション]** をクリックします。  
   
@@ -138,25 +139,23 @@ ms.locfileid: "68041507"
   
 11. **[復旧状態]** パネルの選択内容により、復元操作後のデータベースの状態が決まります。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。別のトランザクション ログは復元できません。(RESTORE WITH RECOVERY)]**  
+  データベースを復旧します。 これは既定の動作です。 このオプションは、必要なすべてのバックアップをすべて復元する場合のみ選択します。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH RECOVERY を使用することと同じです。  
   
-     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます(RESTORE WITH NORECOVERY)**  
+  データベースを復元状態のままにします。 データベースを復旧するには、RESTORE WITH RECOVERY オプションを使用して (上記を参照) 別の復元を実行する必要があります。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH NORECOVERY を使用することと同じです。  
   
-     If you select this option, the **Preserve replication settings** option is unavailable.  
+  このオプションを選択すると、 **[レプリケーションの設定を保存する]** オプションを選択できなくなります。  
   
-     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **[データベースを読み取り専用モードにする。コミットされていないトランザクションはロールバックされますが、復旧結果を元に戻せるようにロールバック操作をファイルに保存します。(RESTORE WITH STANDBY)]**  
+  データベースをスタンバイ状態のままにします。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH STANDBY を使用することと同じです。  
   
-     Choosing this option requires that you specify a standby file.  
+  このオプションを選択した場合は、スタンバイ ファイルを指定する必要があります。  
   
-     **Rollback undo file**  
-     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
+  **[ロールバック UNDO ファイル]**  
+  **[ロールバック UNDO ファイル]** テキスト ボックスで、スタンバイ ファイル名を指定します。 データベースを読み取り専用モード (RECOVERY WITH STANDBY) にする場合は、このオプションが必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-restore-files-and-filegroups"></a>ファイルおよびファイル グループを復元するには  
   
@@ -182,7 +181,7 @@ ms.locfileid: "68041507"
   
          トランザクション ログ バックアップを適用する場合、そのバックアップには、ファイルとファイル グループのバックアップが作成された時刻の情報が格納されている必要があります (すべてのデータベース ファイルを復元する場合を除く)。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `MyDatabase` データベースのファイルとファイル グループを復元します。 データベースを現在の時刻に復元するために、2 つのトランザクション ログが適用されます。  
   
 ```sql  

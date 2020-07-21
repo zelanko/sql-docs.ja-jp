@@ -1,23 +1,26 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Microsoft SQL Server 用 ODBC Driver
+description: Microsoft ODBC Driver for SQL Server を使うと、標準の ODBC API を使用して SQL Server や Azure SQL Database に接続できます。
 ms.custom: ''
-ms.date: 02/05/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702689"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886340"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
+
+[!INCLUDE[ODBC_Current_Version](../../includes/odbc-latest-release.md)]
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
@@ -33,11 +36,11 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 
 ## <a name="download"></a>ダウンロード
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ODBC ドライバーをダウンロードするには](download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[ODBC ドライバーをダウンロードするには](download-odbc-driver-for-sql-server.md)
 
 ## <a name="documentation"></a>ドキュメント
 
-### <a name="features"></a>[機能]
+### <a name="features"></a>特徴
 
 - [カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)
 - [データ分類](../../connect/odbc/data-classification.md)
@@ -50,7 +53,8 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 
 ### <a name="linux-and-macos"></a>Linux と macOS
 
-- [ドライバーのインストール](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Linux へのドライバーのインストール](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS へのドライバーのインストール](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [SQL Server への接続](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [**bcp** による接続](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [**sqlcmd** による接続](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
@@ -72,8 +76,7 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 - [Windows 上の SQL Server に対する ODBC のリリース ノート](windows/release-notes-odbc-sql-server-windows.md)
 - [システム要件、インストール、およびドライバー ファイル](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## <a name="community"></a>コミュニティ
 
-
-## <a name="community"></a>コミュニティ  
-- [Microsoft ODBC Driver For SQL Server チーム ブログ](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server ドライバーのブログ](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [SQL Server データ アクセス フォーラム](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

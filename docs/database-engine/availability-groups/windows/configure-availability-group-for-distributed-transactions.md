@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d0c587b7960d54f6dccb834f0831432aade30f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6f7f07070842dbdc9903d7654cea3d76c2e0a8e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991278"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896114"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] は、可用性グループのデータベースを含むすべての分散トランザクションをサポートします。 この記事では、分散トランザクションの可用性グループを構成する方法について説明します。  
 
@@ -39,7 +39,9 @@ ms.locfileid: "67991278"
 
 可用性グループが分散トランザクション用に構成されていない場合であっても、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] は可用性グループ内のデータベースに対する分散トランザクションを妨げません。 ただし、可用性グループが分散トランザクション対応に構成されていない場合は、一部の状況でフェールオーバーが失敗する可能性があります。 具体的には、新しいプライマリ レプリカの [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスが、DTC からトランザクションの結果を取得できない場合があります。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー後に DTC から未確定トランザクションの結果を取得できるようにするには、可用性グループを分散トランザクション対応に構成します。 
 
-## <a name="prerequisites"></a>Prerequisites
+データベースがフェールオーバー クラスターのメンバーでもある場合を除き、DTC は可用性グループの処理には関与しません。 可用性グループ内では、可用性グループのロジックによってレプリカ間の整合性が維持されます。永続的なストレージにログ レコードが永続化されたことをセカンダリが確認して初めて、プライマリはコミットを完了し、呼び出し元へのコミットを確認します。 その後で初めて、プライマリはトランザクションの完了を宣言します。 非同期モードでは、セカンダリからの肯定応答を待たないため、少量のデータが失われる可能性が明示的に存在します。
+
+## <a name="prerequisites"></a>前提条件
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
 
@@ -51,6 +53,8 @@ ms.locfileid: "67991278"
 
 分散トランザクションをサポートするように可用性グループを構成します。 各データベースがリソース マネージャーとして登録するのを許可するように、可用性グループを設定します。 この記事では、各データベースが DTC のリソース マネージャーになることができるように、可用性グループを構成する方法について説明します。
 
+
+
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 以降では、分散トランザクション対応の可用性グループを作成できます。 分散トランザクション対応の可用性グループを作成するには、可用性グループの定義に `DTC_SUPPORT = PER_DB` を追加します。 次のスクリプトは、分散トランザクション対応の可用性グループを作成します。 
 
 ```sql
@@ -60,12 +64,12 @@ CREATE AVAILABILITY GROUP MyAG
       )
    FOR DATABASE DB1, DB2
    REPLICA ON
-      Server1 WITH (
+      'Server1' WITH (
          ENDPOINT_URL = 'TCP://SERVER1.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
-         )
-      Server2 WITH (
+         ),
+      'Server2' WITH (
          ENDPOINT_URL = 'TCP://SERVER2.corp.com:5022',  
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = AUTOMATIC  
@@ -98,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
 
 分散トランザクションとは、2 つ以上のデータベースにまたがるトランザクションです。 トランザクション マネージャーとしての DTC は、SQL Server インスタンス間、および他のデータ ソース間でトランザクションを調整します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] データベース エンジンの各インスタンスは、リソース マネージャーとして動作できます。 可用性グループが `DTC_SUPPORT = PER_DB` で構成されていると、データベースはリソース マネージャーとして動作できます。 詳細については、MS DTC のドキュメントを参照してください。
 
@@ -191,7 +195,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 未確定トランザクションの解決について詳しくは、「[トランザクションを手動で解決する](https://technet.microsoft.com/library/cc754134.aspx)」をご覧ください。
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 
 [分散トランザクション](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

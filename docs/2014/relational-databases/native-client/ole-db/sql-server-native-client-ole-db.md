@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client (OLE DB) |マイクロソフトのドキュメント
+title: SQL Server Native Client (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,30 +15,29 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c69ded7b487168063109d1acb3f44f20e138e38f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055830"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、データへのアクセスに使用する低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの使用をお勧めします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するアプリケーションに OLE DB サポートを提供します。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、OLE DB バージョン 2.0 準拠のプロバイダー。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、OLE DB バージョン2.0 に準拠しているプロバイダーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [SQL Server Native Client OLE DB プロバイダー アプリケーションの作成](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [データ ソース オブジェクト&#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [データ ソース オブジェクト &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [[コマンド]](../../native-client-ole-db-commands/commands.md)  
+-   [コマンド](../../native-client-ole-db-commands/commands.md)  
   
 -   [行セット](../../native-client-ole-db-rowsets/rowsets.md)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63033561"
   
 -   [テーブルとインデックス](../../native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [データ型&#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
+-   [データ型 &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
 -   [スキーマ行セットのサポート &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
@@ -58,7 +57,7 @@ ms.locfileid: "63033561"
   
 -   [大きな CLR ユーザー定義型 &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
--   [FILESTREAM のサポート&#40;OLE DB&#41;](filestream-support-ole-db.md)  
+-   [FILESTREAM サポート &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
 -   [トランザクション](../../native-client-ole-db-transactions/transactions.md)  
   
@@ -68,7 +67,7 @@ ms.locfileid: "63033561"
   
 -   [スパース列のサポート &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
--   [SQL Server Native Client &#40;OLE DB&#41;リファレンス](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41; 参照](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [OLE DB の使用法に関するトピック](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 名前付きセット (MDX) のセッション スコープの作成 |Microsoft Docs
+title: セッションスコープの名前付きセットの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d35bd61dcc59eca8bcb920ed99f2e791631047c7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546284"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>セッション スコープの名前付きセットの作成 (MDX)
-  多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、[CREATE SET](/sql/mdx/mdx-data-definition-create-set) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、WITH キーワードの構文は非常に単純で使いやすいものです。  
   
@@ -52,7 +51,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クエリ スコープの名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

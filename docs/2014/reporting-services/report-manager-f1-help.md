@@ -1,5 +1,5 @@
 ---
-title: レポート マネージャー F1 ヘルプ |Microsoft Docs
+title: レポートマネージャー F1 ヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104464"
 ---
 # <a name="report-manager-f1-help"></a>レポート マネージャー F1 ヘルプ
-  以下のトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーのページごとのヘルプについて説明しています。 アプリケーションのページごとに、1 つのトピックがあります。 記載されているページの一部は、利用できない場合があります。 セキュリティの設定により、アクセスできるページが決まります。 レポート マネージャーからこれらのトピックにアクセスするには、メイン ツール バーの **[ヘルプ]** をクリックします。  
+  次のトピックでは、レポートマネージャーのページ[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レベルのヘルプについて説明します。 アプリケーションのページごとに、1 つのトピックがあります。 記載されているページの一部は、利用できない場合があります。 セキュリティの設定により、アクセスできるページが決まります。 レポート マネージャーからこれらのトピックにアクセスするには、メイン ツール バーの **[ヘルプ]** をクリックします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -42,15 +42,15 @@ ms.locfileid: "66104464"
   
 -   [[エラー] ページ](../../2014/reporting-services/error-page-report-manager.md)  
   
--   [[全般] プロパティ ページ (フォルダー)](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+-   [[全般] プロパティページ (フォルダー)](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
--   [[全般] プロパティ ページ (モデル)](../../2014/reporting-services/general-properties-page-models-report-manager.md)  
+-   [[全般] プロパティページ (モデル)](../../2014/reporting-services/general-properties-page-models-report-manager.md)  
   
--   [[全般] プロパティ ページ (レポート)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+-   [[全般] プロパティページ (レポート)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
--   [[全般] プロパティ ページ (リソース)](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
+-   [[全般] プロパティページ (リソース)](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
   
--   [[全般] プロパティ ページ (共有データ ソース)](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
+-   [[全般] プロパティページ (共有データソース)](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
   
 -   [[モデル アイテムのセキュリティ] ページ](../../2014/reporting-services/model-item-security-page-report-manager.md)  
   
@@ -66,29 +66,29 @@ ms.locfileid: "66104464"
   
 -   [[新しいモデル] ページ](../../2014/reporting-services/new-model-page-report-manager.md)  
   
--   [新しいロールの割り当て、[ロールの割り当て] ページの編集](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
+-   [[新しいロールの割り当て]/[ロールの割り当てを編集] ページ](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
   
--   [[新しいスケジュール]/[スケジュール] ページの編集](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
+-   [[新しいスケジュール]/[スケジュールの編集] ページ](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [新しいサブスクリプション/[サブスクリプション] ページの編集](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [[新しいサブスクリプションの作成]/[サブスクリプションの編集] ページ](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
--   [新しいシステム ロールの割り当て、[システム ロールの割り当て] ページの編集](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+-   [[新しいシステム ロールの割り当て]/[システム ロールの割り当てを編集] ページ](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
 -   [[パラメーター] プロパティ ページ](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
   
--   [処理オプション プロパティ ページ](../../2014/reporting-services/processing-options-properties-page-report-manager.md)  
+-   [[処理オプション] プロパティ ページ](../../2014/reporting-services/processing-options-properties-page-report-manager.md)  
   
 -   [[レポート履歴] ページ](../../2014/reporting-services/report-history-page-report-manager.md)  
   
--   [検索結果ページ](../../2014/reporting-services/search-page-report-manager.md)  
+-   [[検索結果] ページ](../../2014/reporting-services/search-page-report-manager.md)  
   
 -   [[セキュリティ] ページ ([サイトの設定])](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
--   [セキュリティのプロパティ ページ (アイテム)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+-   [[セキュリティ] プロパティページ (アイテム)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
 -   [[スケジュール] ページ](../../2014/reporting-services/schedules-page-report-manager.md)  
   
--   [サイト設定 ページ](../../2014/reporting-services/site-settings-page-report-manager.md)  
+-   [[サイトの設定] ページ](../../2014/reporting-services/site-settings-page-report-manager.md)  
   
 -   [[スナップショット オプション] プロパティ ページ](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
@@ -96,9 +96,9 @@ ms.locfileid: "66104464"
   
 -   [[ファイルのアップロード] ページ](../../2014/reporting-services/upload-file-page-report-manager.md)  
   
--   [ビュー ページ (レポート)](../../2014/reporting-services/view-page-reports-report-manager.md)  
+-   [[表示] ページ (レポート)](../../2014/reporting-services/view-page-reports-report-manager.md)  
   
--   [ビュー ページ (リソース)](../../2014/reporting-services/view-page-resources-report-manager.md)  
+-   [[表示] ページ (リソース)](../../2014/reporting-services/view-page-resources-report-manager.md)  
   
  レポート マネージャーと [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の詳細については、MSDN で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   
@@ -107,6 +107,6 @@ ms.locfileid: "66104464"
  [機能リファレンス (Reporting Services)](feature-reference-reporting-services.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート マネージャー](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Reporting Services コンポーネントの概要](tools/reporting-services-tools.md)  
+ [Reporting Services のコンポーネントの概要](tools/reporting-services-tools.md)  
   
   

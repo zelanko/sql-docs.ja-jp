@@ -1,5 +1,5 @@
 ---
-title: ディメンションおよびパーティションの文字列ストレージの構成 |Microsoft Docs
+title: ディメンションとパーティションの文字列ストレージの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536946"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>ディメンションおよびパーティションの文字列ストレージの構成
   文字列ストレージは、ディメンション属性またはパーティションの非常に大きな文字列 (文字列ストアの 4 GB のファイル サイズ制限を超えるもの) に対応するように再構成できます。 このサイズの文字列ストアがディメンションまたはパーティションに含まれている場合、ディメンション レベルまたはパーティション レベルで **[StringStoresCompatibilityLevel]** プロパティを変更することによって、ファイル サイズの制約を回避できます。これは、ローカル オブジェクトとリンクされている (ローカルまたはリモート) オブジェクトの両方に適用されます。  
@@ -32,17 +31,17 @@ ms.locfileid: "66076536"
 > [!IMPORTANT]  
 >  オブジェクトの文字列ストレージ設定を変更すると、そのオブジェクト自体と依存オブジェクトの再処理が必要になります。 手順を完了するには処理が必要です。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 -   [文字列ストアについて](#bkmk_background)  
   
 -   [前提条件](#bkmk_prereq)  
   
--   [ステップ 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定します。](#bkmk_step1)  
+-   [手順 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定する](#bkmk_step1)  
   
--   [手順 2:オブジェクトを処理します。](#bkmk_step2)  
+-   [手順 2: オブジェクトを処理する](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a> 文字列ストアについて  
+##  <a name="about-string-stores"></a><a name="bkmk_background"></a>文字列ストアについて  
  文字列ストレージの構成はオプションです。つまり、作成した新規データベースでも、既定の文字列ストア アーキテクチャが使用され、最大ファイル サイズが 4 GB に制限されます。 大きな文字列ストレージ アーキテクチャを使用すると、パフォーマンスにわずかながら明白な影響が生じます。 文字列ストレージ ファイルが最大 4 GB の制限に達しているか、それに近い場合にだけ使用してください。  
   
 > [!NOTE]  
@@ -54,14 +53,14 @@ ms.locfileid: "66076536"
   
  物理ファイルのサイズを制限する既定の文字列ストレージ アーキテクチャとは異なり、大きな文字列ストレージでは文字列の最大数を制限します。 大きな文字列ストレージの上限は、一意の文字列とレコードのどちらかの数が 40 億に達した時点となります。 大きな文字列ストレージでは均等なサイズのレコードが作成され、各レコードのサイズは 64 K ページに等しくなります。 1 つのレコードに収まらない非常に長い文字列がある場合、文字列数の実際の制限は 40 億よりも少なくなります。  
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 前提条件  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]以上のバージョンが必要です。  
   
  ディメンションとパーティションは MOLAP ストレージを使用する必要があります。  
   
- データベース互換性レベルを 1100 に設定する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用してデータベースを作成または配置した場合、データベース互換性レベルはあらかじめ 1100 に設定されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の以前のバージョンで作成したデータベースを ssSQL11 以上に移動した場合、互換性レベルを更新する必要があります。 再配置ではなく、移動するデータベースには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して互換性レベルを設定できます。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
+ データベース互換性レベルを 1100 に設定する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用してデータベースを作成または配置した場合、データベース互換性レベルはあらかじめ 1100 に設定されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の以前のバージョンで作成したデータベースを ssSQL11 以上に移動した場合、互換性レベルを更新する必要があります。 再配置ではなく、移動するデータベースには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して互換性レベルを設定できます。 詳細については、「[多次元データベースの互換性レベルを設定する &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)」を参照してください。  
   
-##  <a name="bkmk_step1"></a> ステップ 1:SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定します。  
+##  <a name="step-1-set-the-stringstorecompatiblitylevel-property-in-sql-server-data-tools"></a><a name="bkmk_step1"></a>手順 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して、変更するディメンションまたはパーティションが含まれているプロジェクトを開きます。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66076536"
   
 8.  ファイルを保存します。  
   
-##  <a name="bkmk_step2"></a> ステップ 2:オブジェクトを処理します。  
+##  <a name="step-2-process-the-objects"></a><a name="bkmk_step2"></a>手順 2: オブジェクトを処理する  
  オブジェクトを処理した後は、新しいストレージ アーキテクチャが使用されます。 オブジェクトを処理することで、以前は文字列ストアのオーバーフロー状態を報告していたエラーが発生しなくなるため、ストレージの制約の問題が正常に解決されたことも確認できます。  
   
 -   ソリューション エクスプローラーで、変更したディメンションを右クリックし、 **[処理]** をクリックします。  
@@ -87,9 +86,9 @@ ms.locfileid: "66076536"
  新しい文字列ストア アーキテクチャを使用している各オブジェクトに、完全処理オプションを使用する必要があります。 処理の前に、ディメンションに対する影響分析を必ず実行して、依存オブジェクトも再処理が必要かどうかを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [処理するためのツールと方法 &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [&#40;Analysis Services を処理するためのツールと方法&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [パーティションのストレージ モードおよび処理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [パーティションストレージモードと処理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [ディメンションのストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29b026ac60fd3f7d00ca519c4ced84533ce9740f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004218"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー
   プロパティ検索機能を含むフルテキスト検索をサポートする Transact-SQL ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトの一覧を示します。  
   
  非推奨のオブジェクトは含まれていません。  
   
- セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー](../views/views.md)」を参照してください。  
+ セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)」を参照してください。  
   
-##  <a name="ddl"></a> Transact-SQL データ定義言語 (DDL) ステートメント  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL データ定義言語 (DDL) ステートメント  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66011311"
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-search-property-list-transact-sql)  
   
-##  <a name="func"></a> システムの述語と関数  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> システムの述語と関数  
   
 -   [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66011311"
   
 -   [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)  
   
-##  <a name="meta"></a> システム メタデータ関数  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> システム メタデータ関数  
   
 -   [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66011311"
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
-##  <a name="proc"></a> システム ストアド プロシージャ  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> システム ストアド プロシージャ  
   
 -   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql)  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66011311"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="cat"></a> システム ビュー - カタログ ビュー  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> システム ビュー - カタログ ビュー  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66011311"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
-##  <a name="dmv"></a> システム ビュー - 動的管理ビュー  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> システム ビュー - 動的管理ビュー  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql)  
   

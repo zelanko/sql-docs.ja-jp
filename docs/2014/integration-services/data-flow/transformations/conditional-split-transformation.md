@@ -12,18 +12,17 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eba0f7b305d3b08692c69cc44202f9d565ca9d38
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900826"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430939"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
-  条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  
+  条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているので、行が式に一致しない場合は既定の出力に送られます。  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>条件分割変換の構成  
  条件分割変換は、次の方法で構成できます。  
@@ -69,8 +68,8 @@ ms.locfileid: "62900826"
 ## <a name="related-tasks"></a>Related Tasks  
  [条件分割変換を使用してデータセットを分割する](conditional-split-transformation.md)  
   
-## <a name="see-also"></a>参照  
- [データ フロー](../data-flow.md)   
+## <a name="see-also"></a>関連項目  
+ [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   
   

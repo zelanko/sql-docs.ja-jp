@@ -1,5 +1,5 @@
 ---
-title: 拡張ストアド プロシージャのしくみ |Microsoft Docs
+title: 拡張ストアドプロシージャのしくみ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62512994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027130"
 ---
 # <a name="how-extended-stored-procedures-work"></a>拡張ストアド プロシージャのしくみ
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512994"
   
  拡張ストアド プロシージャが動作するプロセスは次のとおりです。  
   
-1.  表形式データ ストリーム (TDS) または、クライアント アプリケーションからの簡易オブジェクト アクセス プロトコル (SOAP) 形式で要求を送信するクライアントは、拡張ストアド プロシージャを実行するとき[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+1.  クライアントが拡張ストアドプロシージャを実行すると、要求はクライアントアプリケーションからに表形式のデータストリーム (TDS) 形式または Simple Object Access Protocol (SOAP) 形式で送信され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は拡張ストアド プロシージャに関連付けられた DLL を検索し、対象の DLL がまだロードされていない場合はロードします。  
   

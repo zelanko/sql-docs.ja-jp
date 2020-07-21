@@ -1,5 +1,5 @@
 ---
-title: トレース テンプレートのプロパティ ([全般] タブ) の編集 |Microsoft Docs
+title: '[トレーステンプレートのプロパティの編集] ([全般] タブ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fca9d196526745f1e700e8ada42230ef9bff0da7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933103"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>[トレース テンプレートのプロパティ] ([全般] タブ) の編集
-  **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで以下のオプションを使用すると、既存のトレース テンプレートを表示または編集できます。 このダイアログ ボックスにアクセスするには、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **Edit Template**.  
+  **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで以下のオプションを使用すると、既存のトレース テンプレートを表示または編集できます。 このダイアログ ボックスにアクセスする、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **ファイル**メニューで、**テンプレート**、] をクリックし、**テンプレートの編集**。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[サーバーの種類の選択]**  
  このテンプレートを使用するサーバーの種類を選択します。  
   

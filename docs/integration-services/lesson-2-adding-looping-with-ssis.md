@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:SSIS でのループの追加 | Microsoft Docs
+title: 'レッスン 2: SSIS でのループの追加 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 558e29edd2d3fef3f59fa9821069f276efdb05d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086561"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296052"
 ---
-# <a name="lesson-2-add-looping-with-ssis"></a>レッスン 2:SSIS でのループの追加
+# <a name="lesson-2-add-looping-with-ssis"></a>レッスン 2: SSIS でのループの追加
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -59,16 +59,16 @@ ms.locfileid: "68086561"
   
 -   [ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [ステップ 2:Foreach ループ コンテナーの追加および構成](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [手順 2:Foreach ループ コンテナーの追加および構成](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
 -   [ステップ 3:フラット ファイル接続マネージャーの変更](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [ステップ 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [手順 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
 [ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)  
   
   

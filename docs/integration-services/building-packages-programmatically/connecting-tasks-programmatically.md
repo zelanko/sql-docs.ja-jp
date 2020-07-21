@@ -15,14 +15,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1713d70ecf6ae18517d23f778643def53fcf9e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51cce76a41cfcc513e633a20b16ca5e861fa492a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052171"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71299036"
 ---
 # <a name="connecting-tasks-programmatically"></a>プログラムによるタスクの接続
 
@@ -33,7 +33,7 @@ ms.locfileid: "68052171"
   
  次の表で説明するように、<xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A> プロパティに指定する値に応じて、1 つの優先順位制約内で制約と式の両方を使用できます。  
   
-|EvalOp プロパティの値|[説明]|  
+|EvalOp プロパティの値|説明|  
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|制約付きコンテナーまたは制約付きタスクを実行するかどうかを実行結果が決定するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティを <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列挙の目的の値に設定します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|制約付きコンテナーまたは制約付きタスクを実行するかどうかを式の値で決定するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティを設定します。|  

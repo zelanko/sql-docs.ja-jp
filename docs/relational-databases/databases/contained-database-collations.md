@@ -1,5 +1,6 @@
 ---
 title: 包含データベースの照合順序 | Microsoft Docs
+description: 包含および非包含データベースでの照合順序のしくみについて説明します。 セッションが包含と非包含コンテキストの間にまたがっている場合に発生する可能性のある問題を確認してください。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763627"
 ---
 # <a name="contained-database-collations"></a>包含データベースの照合順序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  大文字と小文字の区別、アクセント記号の区別、使用されるベース言語など、さまざまなプロパティがテキスト データの並べ替え順序と等値セマンティクスに影響します。 これらの性質の指定は、データの照合順序の選択を通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されます。 照合順序の詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  大文字と小文字の区別、アクセント記号の区別、使用されるベース言語など、さまざまなプロパティがテキスト データの並べ替え順序と等値セマンティクスに影響します。 これらの性質の指定は、データの照合順序の選択を通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に示されます。 照合順序の詳細については、「 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
  照合順序は、ユーザー テーブルに格納されているデータだけでなく、メタデータ、一時オブジェクト、変数名など、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって処理されるすべてのテキストに適用されます。これらの処理は、包含データベースと非包含データベースとでは異なります。 この変更は、多くのユーザーには影響しませんが、インスタンスに対する独立性と統一性を提供する助けになります。 これも、包含データベースと非包含データベースの両方にアクセスするセッションの問題と同様に、いくつかの混乱を生じさせる場合があります。  
   
@@ -127,12 +128,12 @@ END;
   
 ||||  
 |-|-|-|  
-|**アイテム**|**非包含データベース**|**包含データベース**|  
+|**Item**|**非包含データベース**|**包含データベース**|  
 |ユーザー データ (既定値)|COLLATE|COLLATE|  
 |一時データ (既定値)|TempDB の照合順序|COLLATE|  
-|メタデータ|DATABASE_DEFAULT / CATALOG_DEFAULT|COLLATE|  
+|Metadata|DATABASE_DEFAULT / CATALOG_DEFAULT|COLLATE|  
 |一時的なメタデータ|TempDB の照合順序|COLLATE|  
-|変数:|インスタンスの照合順序|COLLATE|  
+|変数|インスタンスの照合順序|COLLATE|  
 |Goto ラベル|インスタンスの照合順序|COLLATE|  
 |カーソル名|インスタンスの照合順序|COLLATE|  
   

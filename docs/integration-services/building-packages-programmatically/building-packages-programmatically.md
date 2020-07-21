@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5b180adec1eb2569da19f487f22b762d84aa9613
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b8704464f9921b441ddca6040503ca5a8a910502
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052264"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71299085"
 ---
 # <a name="building-packages-programmatically"></a>プログラムによるパッケージの作成
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc74d7b1bba2a0163ac9edefb5d465c54ef6296c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922133"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958853"
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
   *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
@@ -43,49 +42,46 @@ ms.locfileid: "62922133"
 ## <a name="to-create-a-copy-only-backup"></a>コピーのみのバックアップを作成するには  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-1.  **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページで、 **[バックアップのみコピーする]** オプションを選択します。  
+1.  **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページで、**[バックアップのみコピーする]** オプションを選択します。  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  必須の [!INCLUDE[tsql](../../../includes/tsql-md.md)] 構文は次のとおりです。  
   
 -   コピーのみの完全バックアップの場合:  
   
-     データベースのバックアップ*database_name* TO \<backup_device *>* .WITH COPY_ONLY.  
+     データベース*database_name*を \<backup_device*> *...COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY は、DIFFERENTIAL オプションと共に指定した場合には機能しません。  
   
 -   コピーのみのログ バックアップの場合:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device *>* .WITH COPY_ONLY.  
+     バックアップログ*database_name* .. *\<*backup_device*>* .COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a> PowerShell の使用  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
   
-1.  `Backup-SqlDatabase` パラメーターを指定して `-CopyOnly` コマンドレットを使用します。  
+`Backup-SqlDatabase` パラメーターを指定して `-CopyOnly` コマンドレットを使用します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
- **完全バックアップまたはログ バックアップを作成するには**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
+
+### <a name="to-create-a-full-or-log-backup"></a>完全バックアップまたはログ バックアップを作成するには
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
- **コピーのみのバックアップを表示するには**  
+### <a name="to-view-copy-only-backups"></a>コピーのみのバックアップを表示するには
   
 -   [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)  
   
- **SQL Server PowerShell プロバイダーを設定して使用するには**  
+### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーを設定して使用するには
   
 -   [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)  
-  
 
-  
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [バックアップと復元によるデータベースのコピー](../databases/copy-databases-with-backup-and-restore.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
-  
-  

@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cbd58058799a6f6b62574d1926161d828b95d937
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb8e8a66206bdff9fda5ca321bcf68e05b60842c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749712"
 ---
-# <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB データベース)
+# <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   カタログ プロパティを特定の値に設定することによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログを構成します。  
   
@@ -45,7 +45,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このストアド プロシージャは、各 *property_name* に対して *property_value* が有効であるかどうかを決定します。  
   
  このストアド プロシージャは、実行が保留中、キュー状態、実行中、一時停止中など、アクティブな実行がない場合にのみ実行できます  

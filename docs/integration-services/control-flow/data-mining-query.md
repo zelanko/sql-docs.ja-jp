@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fdff711249e7fd356ad74f37faf5bb98482672d2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893091"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298317"
 ---
 # <a name="data-mining-query"></a>データ マイニング クエリ
 
@@ -32,7 +32,7 @@ ms.locfileid: "68893091"
   
  デザイン ペインに切り替えるには、![デザイン アイコン](../../integration-services/control-flow/media/ssis-designicon.gif "デザイン アイコン") アイコンをクリックします。  
   
- クエリ ペインに切り替えるには、![SQL アイコン](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL アイコン") アイコンをクリックします。  
+ クエリ ペインに切り替えるには、![SQL アイコン](../../integration-services/control-flow/media/ssis-queryicon.gif "SQL アイコン")アイコンをクリックします。  
   
  **[マイニング モデル]**  
  予測の基準として選択されているマイニング モデルを表示します。  
@@ -51,13 +51,13 @@ ms.locfileid: "68893091"
  **フィールド**  
  ソース テーブルから派生した列の一覧から列を選択します。 **[ソース]** で **[予測関数]** を選択した場合、このセルは、選択されたマイニング モデルで利用できる予測関数のドロップダウン リストを含みます。  
   
- **別名**  
+ **エイリアス**  
  サーバーから返された列の名前です。  
   
  **[表示]**  
  列を返す場合、または WHERE 句内でのみ列を使用する場合に選択します。  
   
- **[グループ]**  
+ **グループ**  
  式をグループ化するために **[ルールの適用条件]** 列と組み合わせて使用します。 たとえば、(expr1 OR expr2) AND expr3 のように指定します。  
   
  **[ルールの適用条件]**  

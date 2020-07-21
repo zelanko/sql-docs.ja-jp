@@ -1,5 +1,5 @@
 ---
-title: getColumnPrivileges メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getColumnPrivileges メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67952874"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges メソッド (SQLServerDatabaseMetaData)
@@ -60,12 +60,12 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getColumnPrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスの getColumnPrivileges メソッドで規定されています。  
   
  getColumnPrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|カタログ名。|  
 |TABLE_SCHEM|**String**|テーブル スキーマ名です。|  

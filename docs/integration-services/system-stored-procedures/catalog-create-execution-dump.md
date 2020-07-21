@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 72b833d5e11e5a034001eca4cac698b5ef392930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a93801d7d17ff8952d02b5351c1cf0dd9bce4486
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749676"
 ---
-# <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump 
+# <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  実行中のパッケージを一時停止させ、ダンプ ファイルを作成します。 ファイルは *\<ドライブ>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps フォルダーに格納されます。  
+  実行中のパッケージを一時停止させ、ダンプ ファイルを作成します。 ファイルは *\<drive>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps フォルダーに格納されます。  
   
 ## <a name="syntax"></a>構文  
   

@@ -1,5 +1,5 @@
 ---
-title: DROP INDEX ステートメント |Microsoft Docs
+title: DROP INDEX Statement |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - DROP INDEX [ODBC]
 - SQL grammar [ODBC], DROP INDEX
 ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 638bae6491c020519a0123ff56fe31e9a9ca1cf7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071858"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303433"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX ステートメント
-Microsoft Access、dBASE、または Paradox ドライバーを使用する場合、DROP INDEX ステートメントの構文は、"DROP INDEX on a b"、インデックスの名前は、"a"と"b"は、テーブルの名前 (DROP INDEX いない*インデックス名*)。  
+Microsoft Access、dBASE、または Paradox ドライバーが使用されている場合、DROP INDEX ステートメントの構文は "DROP INDEX a on b" になります。ここで、"a" はインデックスの名前、"b" はテーブルの名前 (DROP INDEX*インデックス名*ではありません) です。  
   
- Paradox ドライバーを使用すると、DROP INDEX ステートメントは Paradox セカンダリ インデックスのファイルを削除します。  
+ Paradox ドライバーを使用すると、DROP INDEX ステートメントによって、Paradox セカンダリインデックスファイルが削除されます。  
   
- DROP INDEX ステートメントは、Microsoft Excel またはテキストのドライバーではサポートされていません。
+ DROP INDEX ステートメントは、Microsoft Excel またはテキストドライバーではサポートされていません。

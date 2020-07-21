@@ -1,5 +1,6 @@
 ---
-title: 中央管理サーバーを使用した複数のサーバーの管理 | Microsoft Docs
+title: 中央管理サーバーを使用した複数のサーバーの管理
+description: 中央管理サーバーを指定し、サーバー グループを作成して、SQL Server で複数のサーバーを管理することについて説明します。
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 967f2f582b3d0bc5b5a7b6277b97f6557e19e7cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fc7868735a05a81afe324755d880cc9e63353c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754569"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>中央管理サーバーを使用した複数のサーバーの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   中央管理サーバーを指定し、サーバー グループを作成することで、複数のサーバーを管理できます。  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>中央管理サーバーおよびサーバー グループとは  
@@ -39,7 +41,7 @@ ms.locfileid: "67934560"
  
  中央管理サーバーとサーバー グループの作成方法については、「[中央管理サーバーおよびサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

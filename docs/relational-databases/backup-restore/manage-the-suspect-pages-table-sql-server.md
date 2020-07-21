@@ -1,5 +1,6 @@
 ---
 title: suspect_pages テーブルの管理 (SQL Server) | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server で suspect_pages (問題のあるページ) テーブルを管理する方法について説明します。 問題のあるページとは、特定のエラーが発生したページです。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b463e8afdfa7f3f1c2054c273ed1b9074b7035b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718028"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルは、 [msdb データベース](../../relational-databases/databases/msdb-database.md)にあります。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がデータ ページの読み取りを試みたときに次のエラーのいずれかを検出すると、ページは "問題あり" と見なされます。  
@@ -49,9 +50,9 @@ ms.locfileid: "68033813"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   
@@ -59,9 +60,9 @@ ms.locfileid: "68033813"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   **suspect_pages テーブルに記録されるエラー**  
   
@@ -116,14 +117,14 @@ ms.locfileid: "68033813"
   
      データベース管理者は、レコードの挿入や更新も行うことができます。 たとえば、問題のあるページが実際には一貫性の取れている状態であることが確かであっても、しばらくレコードを残しておきたい場合に、行を更新できると便利です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **msdb** に対するアクセスを持つユーザー は、 **suspect_pages** テーブルのデータを読み取ることができます。 suspect_pages テーブルに対する UPDATE 権限を持つすべてのユーザーは、そのレコードを更新できます。 **msdb** の **db_owner** 固定データベース ロールのメンバーまたは **sysadmin** 固定サーバー ロールのメンバーは、レコードの挿入、更新、および削除を行うことができます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
@@ -133,11 +134,9 @@ ms.locfileid: "68033813"
   
 4.  クエリ ウィンドウで、目的の行を編集、更新、または削除します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   

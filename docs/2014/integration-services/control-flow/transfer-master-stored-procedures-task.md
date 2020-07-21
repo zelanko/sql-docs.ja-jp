@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6356c0ba1a1f9423bffdc704ae9f9f1ab2dd1a4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829483"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438089"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
   Master ストアド プロシージャ転送タスクは、 **のインスタンス上の** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間で、1 つ以上のユーザー定義ストアド プロシージャを転送します。 **master** データベースからストアド プロシージャを転送するには、プロシージャの所有者が dbo である必要があります。  
@@ -34,12 +33,12 @@ ms.locfileid: "62829483"
   
 -   重複するストアド プロシージャをスキップします。  
   
- Master ストアド プロシージャ転送タスクは実行時に、2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーの構成は Master ストアド プロシージャ転送タスクとは別に行い、Master ストアド プロシージャ転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../connection-manager/smo-connection-manager.md)」を参照してください。  
+ Master ストアド プロシージャ転送タスクは実行時に、2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーの構成は Master ストアド プロシージャ転送タスクとは別に行い、Master ストアド プロシージャ転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../connection-manager/smo-connection-manager.md)」をご覧ください。  
   
 ## <a name="transferring-stored-procedures-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのストアド プロシージャの転送  
  Master ストアド プロシージャ転送タスクでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 転送元と転送先をサポートします。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  Master ストアド プロシージャ転送タスクでは、転送されたストアド プロシージャの数を報告する情報イベントと、ストアド プロシージャが上書きされた場合の警告イベントが発生します。  
   
  Master ストアド プロシージャ転送タスクでは、増分中のログイン転送タスクの進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
@@ -56,7 +55,7 @@ ms.locfileid: "62829483"
   
  また、`OnInformation` イベントのログ エントリは転送されたストアド プロシージャの数を報告し、`OnWarning` イベントのログ エントリは転送先でストアド プロシージャが上書きされると書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  ソースの **master** データベースでストアド プロシージャの一覧を表示する権限が必要です。また、転送先サーバーの sysadmin サーバー ロールのメンバーであるか、転送先サーバーの **master** データベースでストアド プロシージャを作成する権限を持つユーザーである必要があります。  
   
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスクの構成  
@@ -64,7 +63,7 @@ ms.locfileid: "62829483"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[Master ストアド プロシージャ転送タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[Master ストアド プロシージャ転送タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
 -   [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62829483"
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server オブジェクトの転送タスク](transfer-sql-server-objects-task.md)   
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  

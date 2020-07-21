@@ -1,6 +1,6 @@
 ---
-title: SQL Server のプロパティ (起動時のパラメーター タブ) |Microsoft Docs
-ms.custom: ''
+title: '[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a95a90271c6196c68a23d0ba416c5157c90ae9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023915"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306772"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68023915"
   
 -   すべての起動時のパラメーターの先頭文字は - (ダッシュ) で、2 番目の値は文字です。  
   
-## <a name="required-parameters"></a>必要なパラメーター  
+## <a name="required-parameters"></a>必須のパラメーター  
  以下のパラメーターが必要です。 これらは変更できますが、削除できません。  
   
 -   -d は、 **master.mdf** ファイル (master データベースのデータ ファイル) のパスです。  
@@ -71,7 +71,7 @@ ms.locfileid: "68023915"
 > [!CAUTION]  
 >  省略可能なパラメーターの中には、サーバーの動作を変更し、パフォーマンスに影響を与えるものもあります。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  このページは、レジストリの関連エントリを変更できるユーザーのみが使用できます。 該当するユーザーは次のとおりです。  
   
 -   ローカル管理者グループのメンバー。  

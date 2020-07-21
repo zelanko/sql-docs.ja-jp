@@ -1,5 +1,6 @@
 ---
-title: Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Web ポータルを使用したレポートの検索と表示 (レポート ビルダー) | Microsoft Docs
+description: レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: d3bd5691a31ebaaaf49bb5c2f8eb1357b60f6551
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492849"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342816"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../../reporting-services/report-server/configure-report-manager-native-mode.md)」を参照してください。  
@@ -26,7 +27,7 @@ ms.locfileid: "67492849"
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>レポート マネージャーでのフォルダー階層の移動  
  実行するレポートを参照する場合は、ホーム ページを使用できます。このページは、レポート マネージャーを起動したとき、およびフォルダー階層内で任意のフォルダーを開いたときに自動的に表示されます。 ホーム ページには、表示権限のあるアイテムだけが表示されます。 フォルダー パスは、ホーム ページの上部にリンク行として表示されます。 ルート フォルダー ([ホーム]) を先頭に、フォルダー名が順に一覧表示されます。 各サブフォルダーを開くと、ページの最上部のフォルダー パスにフォルダー名が追加されます。 下のイメージの **(1)** 。 レポートを開くと、レポートの名前もフォルダー パスに追加されます。  
   
- ![レポート マネージャーのリボンとナビゲーション](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "レポート マネージャーのリボンとナビゲーション")  
+ ![レポート マネージャー リボンとナビゲーション](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "レポート マネージャー リボンとナビゲーション")  
 レポート マネージャーのリボン  
   
  フォルダー階層内を移動するには、次の方法を使用します。  
@@ -53,6 +54,6 @@ ms.locfileid: "67492849"
 -   レポート内の特定のテキストを検索するには、レポートの最上部にあるツール バーを使用します。  
   
 ## <a name="see-also"></a>参照  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

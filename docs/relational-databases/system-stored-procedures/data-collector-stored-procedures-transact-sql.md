@@ -1,5 +1,5 @@
 ---
-title: データ コレクター ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: データコレクターのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d35bbc8be52beca58977a8eba224f79af4914311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898191"
 ---
-# <a name="data-collector-stored-procedures-transact-sql"></a>データ コレクター ストアド プロシージャ (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="data-collector-stored-procedures-transact-sql"></a>データコレクターのストアドプロシージャ (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  SQL Server データ コレクターと、次のコンポーネントを操作するために使用する次のシステム ストアド プロシージャをサポートしています。 コレクション セット、コレクション アイテム、およびコレクション型。  
+  SQL Server は、データコレクターおよび次のコンポーネント (コレクションセット、コレクションアイテム、コレクション型) を操作するために使用される次のシステムストアドプロシージャをサポートしています。  
   
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "67942400"
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|[sp_syscollector_update_collector_type](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|  
 |[sp_syscollector_set_cache_directory](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|[sp_syscollector_upload_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql.md)|  
   
- 次のストアド プロシージャは内部でのみ使用されます。  
+ 次のストアドプロシージャは、内部でのみ使用されます。  
   
 -   sp_syscollector_get_warehouse_connection_string  
   

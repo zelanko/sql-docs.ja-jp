@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 リリース ノート | Microsoft Docs
+description: この記事では、SQL Server 2017 の制限事項と問題について説明し、関連情報へのリンクを提供します。
 ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136479"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001129"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-ここでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、次を参照してください。
+ここでは、SQL Server 2017 での制限事項と問題について説明します。 関連情報については、以下をご覧ください。
 - [SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上の SQL Server のリリース ノート](../linux/sql-server-linux-release-notes.md)
 - [SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu): 最新の累積的な更新プログラム (CU) のリリースに関する情報
@@ -36,7 +37,7 @@ ms.locfileid: "68136479"
 
 - **問題およびユーザーへの影響:** アップグレード後、既存の FILESTREAM のネットワーク共有が使用できなくなる場合がある。
 
-- **回避策:** 最初にコンピューターを再起動し、FILESTREAM のネットワーク共有が利用可能かどうかを確認します。 それでも共有が使用できない場合は、次の手順のようにします。
+- **対処法:** 最初にコンピューターを再起動し、FILESTREAM のネットワーク共有が利用可能かどうかを確認します。 それでも共有が使用できない場合は、次の手順のようにします。
 
     1. SQL Server 構成マネージャーで SQL Server インスタンスを右クリックして、 **[プロパティ]** をクリックします。 
     2. **[FILESTREAM]** タブで、 **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をオフにして、 **[適用]** をクリックします。
@@ -45,7 +46,7 @@ ms.locfileid: "68136479"
 ### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
 - **問題およびユーザーへの影響:**  [ユーザーのアクセス許可] ページで、エンティティのツリー ビューのルート レベルにアクセス許可を付与すると、次のエラーが表示される: `"The model permission cannot be saved. The object guid is not valid"`
 
-- **回避策:** 
+- **対処法:** 
   - ツリー ビューのルート レベルではなくサブノードにアクセス許可を付与します。
 
 ### <a name="analysis-services"></a>Analysis Services
@@ -53,14 +54,14 @@ ms.locfileid: "68136479"
   - Amazon Redshift
   - IBM Netezza
   - Impala
-- **回避策:** [なし] :   
+- **対処法:** [なし] :   
 
 - **問題およびユーザーへの影響:** パースペクティブを含む 1400 の互換性レベルの直接クエリ モデルが、メタデータのクエリまたは検索時に失敗する場合がある。
-- **回避策:** パースペクティブを削除して、再展開します。
+- **対処法:** パースペクティブを削除して、再展開します。
 
 ### <a name="tools"></a>ツール
 - **問題およびユーザーへの影響:** *DReplay* の実行が次のメッセージにより失敗する: "Error DReplay Unexpected error occurred!" (DReplay エラー 予期しないエラーが発生しました)。
-- **回避策:** [なし] :
+- **対処法:** [なし] :
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
@@ -113,7 +114,7 @@ Windows 上の SQL Server については、このリリースに関するリリ
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **問題およびユーザーへの影響:** *TSqlLanguageService.msi* の 2016 バージョンが (SQL セットアップにより、またはスタンドアロンの再頒布可能コンポーネントとして) インストールされているコンピューターにインストールした後、v13.* (SQL 2016) バージョンの *Microsoft.SqlServer.Management.SqlParser.dll* および *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* が削除されます。 これらのアセンブリの 2016 バージョンに依存しているすべてのアプリケーションは動作を停止し、次のようなエラーを生成します。"*エラー: ファイルまたはアセンブリ 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。* "
+- **問題およびユーザーへの影響:** *TSqlLanguageService.msi* の 2016 バージョンが (SQL セットアップにより、またはスタンドアロンの再頒布可能コンポーネントとして) インストールされているコンピューターにインストールした後、v13.* (SQL 2016) バージョンの *Microsoft.SqlServer.Management.SqlParser.dll* および *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* が削除されます。 これらのアセンブリの 2016 バージョンに依存しているすべてのアプリケーションは動作を停止し、次のようなエラーを生成します。"*エラー: ファイルまたはアセンブリ 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。*
 
    さらに、2016 バージョンの TSqlLanguageService.msi をインストールしようとすると、次のようなメッセージで失敗します: "*Microsoft SQL Server 2016 T-SQL 言語サービスのインストールに失敗しました。この製品の新しいバージョンが既にこのコンピューターにインストールされています。* "。
 
@@ -149,7 +150,7 @@ Windows 上の SQL Server については、このリリースに関するリリ
 
 ## <a name="more-information"></a>詳細情報
 - [SQL Server Reporting Services リリース ノート](../reporting-services/release-notes-reporting-services.md)での制限事項と問題について説明します。
-- [Machine Learning サービスの既知の問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [Machine Learning サービスの既知の問題](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center - サポート対象のすべてのバージョンのリンクと情報](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

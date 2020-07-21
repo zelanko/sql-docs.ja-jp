@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cc70ffc8f2520c4d8c50eff24b451f5a53ffbfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732737"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、証明書の公開部分をバイナリ形式で返します。 この関数は、引数として証明書の ID を受け取り、エンコードされた証明書を返します。 証明書を作成するには、バイナリの結果を **CREATE CERTIFICATE …WITH BINARY** に渡します。
   
@@ -42,13 +42,13 @@ CERTENCODED ( cert_id )
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **CERTENCODED** と **CERTPRIVATEKEY** を一緒に使用すると、バイナリの形式で証明書の異なる部分を返します。
   
 ## <a name="permissions"></a>アクセス許可  
 **CERTENCODED** はパブリックに使用できます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="simple-example"></a>簡単な例  
 この例では、`Shipping04` という名前の証明書を作成した後、その証明書のバイナリ エンコードを **CERTENCODED** 関数を使用して返します。 この例では、証明書の有効期限を 2040 年 10 月 31 日に設定します。
@@ -152,7 +152,7 @@ SELECT @CLEARTEXT AS ClearTextInTarget, @CIPHERTEXT AS CipherTextInTarget, @UNCI
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  

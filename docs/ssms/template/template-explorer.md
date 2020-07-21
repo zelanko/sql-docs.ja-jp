@@ -1,10 +1,7 @@
 ---
-title: テンプレート エクスプローラー | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: テンプレート エクスプローラー
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +16,18 @@ helpviewer_keywords:
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff1ca6ab0c454dd56c93413aca2252e9452c4c4b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266751"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247188"
 ---
 # <a name="template-explorer"></a>テンプレート エクスプローラー
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはさまざまなテンプレートがあります。 テンプレートは、データベース内のオブジェクトを簡単に作成するための SQL スクリプトを含む、定型的なファイルです。 テンプレート エクスプローラーを初めて開いたときには、テンプレートのコピーが C:\Users, under AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates にあるユーザーのフォルダーに配置されています。  
   
@@ -44,8 +45,8 @@ ms.locfileid: "68266751"
 ## <a name="related-tasks"></a>Related Tasks  
 テンプレートの基礎知識については、次の各トピックを参照してください。  
   
-|**Description**|**トピック**|  
+|**説明**|**トピック**|  
 |-------------------|-------------|  
 |テンプレートからコード エディター ウィンドウにコードを読み込む方法について説明します。|[テンプレートを開く](../../ssms/template/open-a-template.md)|  
-|コード エディターでテンプレートを開いてからテンプレート パラメーターの値を置換する方法について説明します。|[[テンプレート パラメーターの置換]](../../ssms/template/replace-template-parameters.md)|  
+|コード エディターでテンプレートを開いてからテンプレート パラメーターの値を置換する方法について説明します。|[テンプレート パラメーターの置換](../../ssms/template/replace-template-parameters.md)|  
   

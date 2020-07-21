@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのコピーを作成 |Microsoft Docs
+title: マイニングモデルのコピーを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 776de6d17b1e17197b331f9578da018b740f0138
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084218"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522188"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>マイニング モデルのコピーの作成
   マイニング モデルのコピーの作成は、同じデータに基づいて複数のマイニング モデルをすばやく作成する場合に便利です。 モデルをコピーした後で、パラメーターを変更したり、フィルターを追加したりすることで、新しいコピーを編集できます。  
@@ -47,19 +46,19 @@ ms.locfileid: "66084218"
   
 1.  マイニング モデルを選択します。  
   
-2.  **プロパティ**ウィンドウで、テキスト ボックスをクリックして、**フィルター**プロパティ、およびクリック ビルド **(...)** ボタンをクリックします。  
+2.  [**プロパティ**] ウィンドウで、[**フィルター** ] プロパティのテキストボックスをクリックし、[ビルド **(...)** ] ボタンをクリックします。  
   
 3.  フィルター条件を変更します。  
   
      フィルター エディターのダイアログ ボックスの使用方法の詳細については、「 [マイニング モデルへのフィルターの適用](apply-a-filter-to-a-mining-model.md)」を参照してください。  
   
-4.  **プロパティ**ウィンドウで、`AlgorithmParameters`テキスト ボックスに、] をクリックして **[アルゴリズム パラメーターの**、およびアルゴリズム パラメーターは、必要に応じて変更します。  
+4.  [**プロパティ**] ウィンドウの `AlgorithmParameters` テキストボックスで、[ **setalgorithm パラメーター**] をクリックし、必要に応じてアルゴリズムパラメーターを変更します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [マイニング モデルのフィルター (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
- [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
+## <a name="see-also"></a>参照  
+ [マイニングモデルのフィルター &#40;Analysis Services データマイニング&#41;](mining-models-analysis-services-data-mining.md)   
+ [マイニングモデルタスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからのフィルターの削除](delete-a-filter-from-a-mining-model.md)  
   
   

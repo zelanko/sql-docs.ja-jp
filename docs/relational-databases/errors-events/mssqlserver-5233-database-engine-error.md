@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78b381311aa5a3552550ae8ae480b9eec48125f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6f38b9831539c846c7dec0ac91155f0554134c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717042"
 ---
-# <a name="mssqlserver5233"></a>MSSQLSERVER_5233
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_5233"></a>MSSQLSERVER_5233
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|5233|  
 |イベント ソース|MSSQLSERVER|  
@@ -46,5 +46,5 @@ ms.locfileid: "68122949"
 問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
-該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、マイクロソフト カスタマー サポート サービス (CSS) にご連絡ください。  
+適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、マイクロソフト カスタマー サポート サービス (CSS) にご連絡ください。  
   

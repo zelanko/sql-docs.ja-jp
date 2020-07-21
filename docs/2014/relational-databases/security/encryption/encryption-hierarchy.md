@@ -13,15 +13,14 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: d38bb83c2f6a2487e547c4686be5c65bc012e33e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016201"
 ---
 # <a name="encryption-hierarchy"></a>暗号化階層
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化とキーの階層的な管理インフラストラクチャを使用してデータを暗号化します。 各層では、証明書、非対称キー、および対称キーの組み合わせを使用して、その層の下位にある層を暗号化します。 拡張キー管理 (EKM) モジュールで、非対称キーと対称キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外部に格納できます。  
@@ -68,7 +67,7 @@ ms.locfileid: "63011453"
 -   透過的なデータ暗号化  
   
 ### <a name="transact-sql-functions"></a>Transact-SQL 関数  
- 個々のアイテムは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数を使用して挿入または更新するときに暗号化できます。 詳細については、「[ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)」および「[DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql)」を参照してください。  
+ 個々のアイテムは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数を使用して挿入または更新するときに暗号化できます。 詳細については、「[ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)」および「[DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql)」を参照してください。  
   
 ### <a name="certificates"></a>証明書  
  通常は単に証明書と呼ばれる公開キー証明書は、公開キーの値を、対応する秘密キーを保持する人物、デバイス、またはサービスの ID にバインドする、デジタル署名されたステートメントです。 証明書は、CA (証明機関) によって発行および書名されます。 CA から証明書を受け取るエンティティは、その証明書のサブジェクトです。 通常、証明書には次の情報が含まれています。  
@@ -102,7 +101,7 @@ ms.locfileid: "63011453"
  対称キーは、暗号化と暗号化解除の両方で使用される 1 つのキーです。 対称キーを使用した暗号化および暗号化解除は、高速であり、データベース内の機密データでの定型的な使用に適しています。  
   
 ### <a name="transparent-data-encryption"></a>透過的なデータ暗号化  
- 透過的なデータ暗号化 (TDE) は、対称キーを使用した暗号化の特殊なケースです。 TDE では、データベース暗号化キーという対称キーを使用してデータベース全体を暗号化します。 データベース暗号化キーは、データベース マスター キーまたは EKM モジュールに格納された非対称キーによって保護される、他のキーまたは証明書によって保護されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」をご覧ください。  
+ 透過的なデータ暗号化 (TDE) は、対称キーを使用した暗号化の特殊なケースです。 TDE では、データベース暗号化キーという対称キーを使用してデータベース全体を暗号化します。 データベース暗号化キーは、データベース マスター キーまたは EKM モジュールに格納された非対称キーによって保護される、他のキーまたは証明書によって保護されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [SQL Server の保護](../securing-sql-server.md)  

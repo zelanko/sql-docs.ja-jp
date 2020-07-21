@@ -1,5 +1,5 @@
 ---
-title: Service Broker と AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
+title: AlwaysOn 可用性グループを使用した Service Broker (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da179219363422c4ec242d29be61f35dd1609823
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936473"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker と AlwaysOn 可用性グループ (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で Service Broker を [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]と共に使用できるように構成する方法について説明します。  
@@ -29,11 +28,11 @@ ms.locfileid: "62788532"
   
 -   [可用性グループのリモート サービスにメッセージを送信するための要件](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a> 可用性グループのサービスでリモート メッセージを受信するための要件  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a>可用性グループのサービスでリモートメッセージを受信するための要件  
   
 1.  **可用性グループにリスナーが存在している。**  
   
-     詳細については、「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
+     詳細については、「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)が存在する必要があります。  
   
 2.  **Service Broker エンドポイントが存在し、正しく構成されている。**  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62788532"
         FOR SERVICE_BROKER (AUTHENTICATION = WINDOWS)  
     ```  
   
-     詳細については、「 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)と共に使用できるように構成する方法について説明します。  
+     詳細については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)」を参照してください。  
   
 3.  **エンドポイントに対する CONNECT 権限を許可する。**  
   
@@ -67,7 +66,7 @@ ms.locfileid: "62788532"
     GRANT CONNECT ON ENDPOINT::[broker_endpoint] TO [PUBLIC]  
     ```  
   
-     詳細については、「 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)と共に使用できるように構成する方法について説明します。  
+     詳細については、「 [GRANT &#40;transact-sql&#41;](/sql/t-sql/statements/grant-transact-sql)」を参照してください。  
   
 4.  **msdb に AutoCreatedLocal ルートまたは特定のサービスへのルートが含まれている。**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62788532"
   
      ルートの作成の詳細については、「 [Service Broker のルーティングの例](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) 」( [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] バージョンのオンライン ブック) および「 [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)と共に使用できるように構成する方法について説明します。  
   
-##  <a name="SendRemoteMessages"></a> 可用性グループのリモート サービスにメッセージを送信するための要件  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a>可用性グループのリモートサービスにメッセージを送信するための要件  
   
 1.  **対象サービスへのルートを作成する。**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "62788532"
   
 2.  **msdb に AutoCreatedLocal ルートまたは特定のサービスへのルートが含まれている。** (詳細については、このトピックの前の「 [可用性グループのサービスでリモート メッセージを受信するための要件](#ReceiveRemoteMessages)」を参照してください)。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
@@ -107,14 +106,14 @@ ms.locfileid: "62788532"
   
 -   [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
--   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [可用性グループリスナー &#40;SQL Server&#41;を作成または構成](create-or-configure-an-availability-group-listener-sql-server.md)します。  
   
 -   [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [ログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ セットアップ&#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
+-   [データベースミラーリングまたは AlwaysOn 可用性グループ &#40;SQL Server のログインアカウントを設定&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../configure-windows/sql-server-service-broker.md)  
   

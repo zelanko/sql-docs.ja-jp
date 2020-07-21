@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング | Microsoft Docs
-ms.custom: ''
+title: ハッシュ インデックスのトラブルシューティング - メモリ最適化テーブル
+description: この情報を使用して、SQL Server および Azure SQL Database 内のメモリ最適化テーブルのハッシュ インデックスに関するトラブルシューティングを行います。
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47560883fa845abb2758c7d96b8892c1bebbde2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723216"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="prerequisite"></a>前提条件  
   
@@ -113,11 +114,9 @@ SELECT の結果を、次の統計ガイドラインと比較します。
   
 1. いくつかのハッシュ インデックスがあるメモリ最適化テーブルを作成します。  
 2. テーブルに数千行を設定します。  
-    A. モジュロ演算子を使用して、StatusCode 列の重複する値の割合を構成します。  
-    B. INSERT ループは、262,144 行を約 1 分間で挿入します。  
+    a. モジュロ演算子を使用して、StatusCode 列の重複する値の割合を構成します。  
+    b. INSERT ループは、262,144 行を約 1 分間で挿入します。  
 3. PRINT は、前述の SELECT を **sys.dm_db_xtp_hash_index_stats**から実行することを指示するメッセージを出力します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
@@ -234,6 +233,6 @@ OLTP ワークロードは、個々の行に注目します。 フル テーブ�
   - ハッシュ インデックスのフル スキャンに必要な時間の増加。  
   
 
-##  <a name="Additional_Reading"></a> その他の情報  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報  
  [メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [メモリ最適化テーブルの非クラスター化インデックス](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

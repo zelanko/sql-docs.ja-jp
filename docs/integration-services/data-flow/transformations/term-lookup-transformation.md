@@ -21,14 +21,14 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eae1f4798d1c98e5b6ef02e8fef9f450588fc799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943929"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291202"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
 
@@ -63,11 +63,11 @@ ms.locfileid: "67943929"
   
  参照セット内で重複している用語が参照項目に含まれる場合、つまりサブ用語が複数の参照レコード内に存在する場合、用語参照変換は参照結果を 1 つだけ返します。 次の例は、重複するサブ用語が参照項目に含まれる場合の結果を示しています。 この場合、重複するサブ用語は *Windows*で、2 つの参照用語内に存在します。 ただし、変換は結果を 2 つ返さず、参照用語の 1 つ *Windows*のみを返します。 2 番目の参照用語である *Windows 7 Professional*は返されません。  
   
-|アイテム|[値]|  
+|アイテム|値|  
 |----------|-----------|  
 |入力用語|Windows 7 Professional|  
 |参照用語|Windows, Windows 7 Professional|  
-|[出力]|Windows|  
+|Output|Windows|  
   
  用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "67943929"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67943929"
   **[用語参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照テーブルへの接続を指定できます。  
   
 ### <a name="options"></a>オプション  
- **OLE DB 接続マネージャー**  
+ **[キャッシュなし]**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  

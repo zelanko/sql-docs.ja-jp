@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_addextendedproc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28711f289e86309baf6f2b54cf6c037d04d54d4d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878002"
 ---
-# <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  拡張ストアド プロシージャの新しい名前を登録します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  新しい拡張ストアドプロシージャの名前をに登録 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[CLR 統合](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @functname = ] 'procedure'` ダイナミック リンク ライブラリ (DLL) 内で呼び出す関数の名前です。 *プロシージャ*は**nvarchar (517)** 、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
+`[ @functname = ] 'procedure'`ダイナミックリンクライブラリ (DLL) 内で呼び出す関数の名前を指定します。 *プロシージャ*は**nvarchar (517)**,、既定値はありません。 *必要に*応じて、owner *. 関数*の形式で所有者名を含めることができます。  
   
-`[ @dllname = ] 'dll'` 関数を含む DLL の名前です。 *dll*は**varchar (255)** 、既定値はありません。 DLL の完全なパスを指定することをお勧めします。  
+`[ @dllname = ] 'dll'`関数を含む DLL の名前を指定します。 *dll*は**varchar (255)**,、既定値はありません。 DLL の完全なパスを指定することをお勧めします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,21 +53,21 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- 拡張ストアド プロシージャが作成された後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**します。 詳細については、次を参照してください。[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)します。  
+## <a name="remarks"></a>解説  
+ 拡張ストアドプロシージャを作成した後は、sp_addextendedproc を使用してに追加する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_addextendedproc** 詳細については、「 [SQL Server への拡張ストアドプロシージャの追加](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)」を参照してください。  
   
- のみこの手順を実行することができます、**マスター**データベース。 以外のデータベースから拡張ストアド プロシージャを実行する**マスター**、拡張ストアド プロシージャの名前を修飾**マスター**します。  
+ このプロシージャは、 **master**データベースでのみ実行できます。 **Master**以外のデータベースから拡張ストアドプロシージャを実行するには、拡張ストアドプロシージャの名前を**master**で修飾します。  
   
- **sp_addextendedproc**にエントリを追加、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)拡張ストアド プロシージャのカタログ ビュー、新しい名前を登録する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 内のエントリも追加、 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログ ビューです。  
+ **sp_addextendedproc**によって、新しい拡張ストアドプロシージャの名前がに登録された、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューにエントリが追加され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また、 [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログビューにエントリが追加されます。  
   
 > [!IMPORTANT]  
->  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 問題を解決するには使用**sp_dropextendedproc** 、DLL の登録を解除し、それを再登録する**sp_addextendedproc**、完全なパスを指定します。  
+>  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 この問題を解決するには、 **sp_dropextendedproc**を使用して DLL の登録を解除した後、完全なパスを指定して**sp_addextendedproc**に再登録します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_addextendedproc**します。  
+ **Sp_addextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、追加、 **xp_hello**拡張ストアド プロシージャ。  
+ 次の例では、 **xp_hello**拡張ストアドプロシージャを追加します。  
   
 ```  
 USE master;  
@@ -77,10 +77,10 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
   
 ## <a name="see-also"></a>参照  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_dropextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [&#40;Transact-sql&#41;を取り消す](../../t-sql/statements/revoke-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

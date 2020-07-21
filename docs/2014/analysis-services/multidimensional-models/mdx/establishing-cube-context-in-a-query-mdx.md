@@ -1,5 +1,5 @@
 ---
-title: クエリ (MDX) 内のキューブ コンテキストの確立 |Microsoft Docs
+title: クエリでのキューブコンテキストの確立 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ae6e19f879651feb47841d70b444e9f845c74e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074600"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546514"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>クエリ内のキューブ コンテキストの確立 (MDX)
   各 MDX クエリは、指定したキューブ コンテキスト内で実行されます。 このコンテキストは、クエリ内の式によって評価されるメンバーを定義します。  

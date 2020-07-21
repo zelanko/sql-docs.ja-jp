@@ -1,5 +1,5 @@
 ---
-title: Ibcpsession::bcpreadfmt (OLE DB) |Microsoft Docs
+title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ topic_type:
 helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: be8d8ef1148cf77491099bc40224fe5cd4009af8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047999"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
   フォーマット ファイルから列ごとにフォーマット情報を読み取ります。  
@@ -34,14 +33,14 @@ HRESULT BCPReadFmt(
 const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>コメント  
- **BCPReadFmt** メソッドは、データ ファイルのデータ形式を指定するフォーマット ファイルからデータを読み取る場合に使用されます。 このメソッドでは、適切なバージョンのフォーマット ファイルを検出することができます。 また、フォーマット ファイルが xml 形式か、または古いスタイルのテキスト形式かを自動的に検出し、フォーマット ファイルに適した動作をします。 フォーマット ファイルのバージョンでサポートされている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー BCP がバージョン 6.0 以降。  
+## <a name="remarks"></a>Remarks  
+ **BCPReadFmt** メソッドは、データ ファイルのデータ形式を指定するフォーマット ファイルからデータを読み取る場合に使用されます。 このメソッドでは、適切なバージョンのフォーマット ファイルを検出することができます。 また、フォーマット ファイルが xml 形式か、または古いスタイルのテキスト形式かを自動的に検出し、フォーマット ファイルに適した動作をします。 Native Client OLE DB プロバイダー BCP でサポートされているフォーマットファイルのバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、6.0 以降です。  
   
  **BCPReadFmt** メソッドは形式の値を読み取ると、適宜、[IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドを呼び出します。 ユーザーがフォーマット ファイルを解析し、これらのメソッドを呼び出す必要はありません。  
   
  フォーマット ファイルを保存するには、[IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) メソッドを呼び出します。 **BCPReadFmt** メソッドの呼び出しでは、保存した形式を参照することができます。 また、一括コピー ユーティリティ (**bcp**) を使用して、**BCPReadFmt** メソッドで参照できるファイルに、ユーザー定義のデータ形式を保存することもできます。  
   
- `BCP_OPTION_DELAYREADFMT`の値、 *eOption*パラメーターの[ibcpsession::bcpcontrol](ibcpsession-bcpcontrol-ole-db.md) ibcpsession::bcpreadfmt の動作を変更します。  
+ `BCP_OPTION_DELAYREADFMT` [Ibcpsession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md)の*eOption*パラメーターの値によって、Ibcpsession:: BCPReadFmt の動作が変更されます。  
   
 ## <a name="arguments"></a>引数  
  *pwszFormatFile*[in]  

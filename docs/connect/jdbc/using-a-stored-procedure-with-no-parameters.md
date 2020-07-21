@@ -11,10 +11,10 @@ ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027019"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>パラメーターのないストアド プロシージャの使用
@@ -28,7 +28,7 @@ JDBC ドライバーを使用してパラメーターのないストアド プ�
 `{call procedure-name}`
 
 > [!NOTE]  
-> SQL エスケープシーケンスの詳細については、「 [sql エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
+> SQL エスケープ シーケンスの詳細については、「[SQL エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
 たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のストアド プロシージャを作成します。
 

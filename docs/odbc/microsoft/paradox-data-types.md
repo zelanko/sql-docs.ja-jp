@@ -15,49 +15,49 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043689"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290932"
 ---
 # <a name="paradox-data-types"></a>Paradox データ型
-ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表では、すべて Paradox データ型の一覧し、ODBC SQL データの型にマップされますを示しています。  
+ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表に、すべての Paradox データ型の一覧と、マップ先の ODBC SQL データ型を示します。  
   
 |Paradox データ型|ODBC データ型|  
 |-----------------------|--------------------|  
 |英数字|SQL_VARCHAR|  
-|[自動増分] [1]|SQL_INTEGER|  
+|自動インクリメント [1]|SQL_INTEGER|  
 |BCD [1]|SQL_DOUBLE|  
 |バイト [1]|SQL_BINARY|  
-|[DATE]|SQL_DATE|  
+|DATE|SQL_DATE|  
 |イメージ [2]|SQL_LONGVARBINARY|  
 |論理 [1]|SQL_BIT|  
-|時間の長い [1]|SQL_INTEGER|  
-|[2] のメモ|SQL_LONGVARCHAR|  
+|長い [1]|SQL_INTEGER|  
+|メモ [2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |SHORT|SQL_SMALLINT|  
-|時間 [1]|SQL_TIMESTAMP|  
-|[1] のタイムスタンプ|SQL_TIMESTAMP|  
+|時刻 [1]|SQL_TIMESTAMP|  
+|タイムスタンプ [1]|SQL_TIMESTAMP|  
   
- Paradox バージョン 5 には [1] 有効です。*x*します。  
+ [1] は、Paradox バージョン5でのみ有効です。*x*。  
   
- Paradox バージョン 4 に対してのみ有効なを [2]。*x* 5 *。x*します。  
+ [2] は、Paradox バージョン4に対してのみ有効です。*x*および5。*x*。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** ODBC SQL データ型を返します。 付録 d のすべての変換、 *ODBC プログラマ リファレンス*このトピックで前述した ODBC SQL データ型はサポートされます。  
+>  **SQLGetTypeInfo**は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
   
- 次の表では、Paradox データ型の制限事項を示します。  
+ 次の表は、Paradox データ型に関する制限を示しています。  
   
-|データの種類|説明|  
+|データ型|説明|  
 |---------------|-----------------|  
-|英数字|0 の英数字の列を作成または指定されていない長さが実際には 255 バイト列を返します。|  
-|BYTES|Paradox5 ドライバーとバイナリ列に NULL を挿入する場合は、0 に変更されます。|  
-|LONG|Paradox 5 で長い形式のデータ型の Paradox ドライバーでサポートされている負の値の最大値。*x*は-2 ^31 (-2147483648)、ODBC データに長いマップ以降が必要です、入力 SQL_INTEGER します。 時間の長いのサポートされる最大の負の値が実際には-2 ^31 + 1 (-2147483647)。|  
-|timestamp|値は、Paradox ドライバーによって TIMESTAMP 列に挿入し、列から取得した後、取得した値によって異なる場合が挿入された値から 1 秒程度切り捨てられるためです。|  
+|英数字|0または指定されていない長さの英数字列を作成すると、実際には255バイトの列が返されます。|  
+|BYTES|Paradox5 ドライバーを使用してバイナリ列に NULL を挿入すると、0に変更されます。|  
+|LONG|Paradox 5 の Long データ型に対して、Paradox ドライバーでサポートされる最大の負の値。*x*は-2 ^ 31 (-2147483648) ではありません。これは、LONG が ODBC データ型 SQL_INTEGER にマップされているためです。 Long に対してサポートされる最大の負の値は、実際には-2 ^ 31 + 1 (-2147483647) です。|  
+|timestamp|Paradox ドライバーによってタイムスタンプ列に値が挿入され、その後列から取得された場合、取得した値と挿入された値が、丸め処理によって1秒ほどに異なる場合があります。|  
   
- データ型の複数の制限事項が記載[データ型の制限事項](../../odbc/microsoft/data-type-limitations.md)します。
+ データ型に関する制限事項の詳細については、 [「データ型の制限](../../odbc/microsoft/data-type-limitations.md)」を参照してください。

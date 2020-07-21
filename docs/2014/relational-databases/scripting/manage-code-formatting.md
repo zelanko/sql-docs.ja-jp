@@ -1,6 +1,6 @@
 ---
-title: コードの書式設定の管理 | Microsoft Docs
-ms.custom: ''
+title: コードの書式設定の管理
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -23,15 +23,14 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009698"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
   エディターでは、コードに関して、インデント設定、テキストの非表示、URL などの書式設定を行えます。 スマート インジケーターを使用して、入力と同時にコードを自動的に書式設定することも可能です。  
@@ -51,7 +50,7 @@ ms.locfileid: "66090399"
   
 5.  以下のいずれかのオプションをクリックします。  
   
-    -   **None**。 カーソルは次の行の先頭に移動します。  
+    -   **なし**。 カーソルは次の行の先頭に移動します。  
   
     -   **[ブロック]** 。 次行のインデントは前行に合わせて設定されます。  
   

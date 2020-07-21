@@ -11,12 +11,12 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc5b7c3d5c8fd1ad1c050ea2f50c55d4a0d1120f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991132"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72586765"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 可用性グループ用のクラスター化された DTC リソースを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "67991132"
 
 このチュートリアルでは、クラスター化された DTC リソースと SQL Server 可用性グループを「[Cluster MSDTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)」(SQL Server 可用性グループの DTC をクラスター化する) の要件に基づいて作成します。
 
-このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、「 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)」 (PowerShell モジュールのインポート) を参照してください。  このチュートリアルは以下を前提条件とします。
+このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、[PowerShell モジュールのインポート](/powershell/scripting/developer/module/importing-a-powershell-module)に関する記事を参照してください。  このチュートリアルは以下を前提条件とします。
 - 「[Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」の要件をすべて満たしています。  
 - ドメインが `contoso.lab`です。
 - DTC ネットワーク名リソースが作成される OU でコンピューター オブジェクトを作成する権限がユーザーに与えられています。
@@ -41,7 +41,7 @@ ms.locfileid: "67991132"
 - クラスターの詳細 (既存):
   - 名前: `Cluster`
   - ネットワーク名: `Cluster Network 1`
-  - ノード: `SQLNODE1, SQLNODE2`
+  - 複数ノード: `SQLNODE1, SQLNODE2`
   - 共有ストレージ:`Cluster Disk 3` (`SQLNODE1` が所有)
 - クラスター詳細 (作成予定):
   - ネットワーク名リソース: `DTCnet1`
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7. 可用性グループを作成する
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  `SQLNODE1` SQLCMD モード **で**に対して SSMS の次の T-SQL スクリプトを実行します。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************
@@ -332,7 +332,7 @@ GO
 > 
 > 可用性グループで DTC サポートを有効にする唯一の方法は、Transact-SQL を利用して可用性グループを作成することです。
  
-## <a name="ClusterDTC"></a>8.クラスター リソースを準備する
+## <a name="8--prepare-cluster-resources"></a><a name="ClusterDTC"></a>8.クラスター リソースを準備する
 
 このスクリプトは DTC 依存リソース(ディスクと IP) を準備します。  共有ストレージが Windows クラスターに追加されます。  ネットワーク リソースが作成されます。それから DTC が作成され、可用性グループのリソースとなります。  `SQLNODE1` で次の PowerShell スクリプトを実行します。 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) さんのスクリプトに感謝します。
 
@@ -479,7 +479,7 @@ $nodes = (Get-ClusterNode).Name;
 }
 ```  
 
-## <a name="11--cycle-the-includessnoversionincludesssnoversion-mdmd-service-for-each-instance"></a>11.各インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを停止し、すぐに起動する
+## <a name="11--cycle-the-ssnoversion-service-for-each-instance"></a>11.各インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを停止し、すぐに起動する
 
 完全に構成されているクラスター化された DTC サービスでは、この DTC サービスを使用するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が登録されていることを確認するために、可用性グループの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを停止して再起動する必要があります。
 

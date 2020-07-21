@@ -21,15 +21,14 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4d31334e742161aadd5911f58d65fca0df4cbd73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766630"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440129"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、次のタスクを含むいくつかのタスクを伴います。  
@@ -44,13 +43,13 @@ ms.locfileid: "62766630"
 >  このトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]との互換性を維持するために、このサービスをサポートしています。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、Integration Services サーバー上のパッケージなどのオブジェクトを管理できます。  
   
 ## <a name="package-store"></a>パッケージ ストア  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 2 つの最上位フォルダーにアクセスするには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。**パッケージを実行している**と**パッケージが格納されている**します。 **[実行中のパッケージ]** フォルダーには、サーバーで現在実行中のパッケージが一覧表示されます。 **[格納されたパッケージ]** フォルダーには、パッケージ ストアに保存されたパッケージが一覧表示されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するパッケージは、これらのパッケージのみです。 パッケージ ストアは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで一覧されている msdb データベースとファイル システム フォルダーのいずれかまたは両方で構成することができます。 この構成ファイルは、管理する msdb とファイル システム フォルダーを指定します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理していないパッケージは、ファイル システム内の他の場所に保存することもできます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、パッケージにアクセスするための最上位レベルのフォルダー [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と、パッケージの**実行**と**格納**されたパッケージの2つがあります。 **[実行中のパッケージ]** フォルダーには、サーバーで現在実行中のパッケージが一覧表示されます。 **[格納されたパッケージ]** フォルダーには、パッケージ ストアに保存されたパッケージが一覧表示されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するパッケージは、これらのパッケージのみです。 パッケージ ストアは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで一覧されている msdb データベースとファイル システム フォルダーのいずれかまたは両方で構成することができます。 この構成ファイルは、管理する msdb とファイル システム フォルダーを指定します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理していないパッケージは、ファイル システム内の他の場所に保存することもできます。  
   
  msdb に保存するパッケージは、sysssispackages というテーブルに格納されます。 パッケージを msdb に保存するとき、論理フォルダーに格納してグループ化できます。 論理フォルダーを使用することで、パッケージを目的別に整理したり、sysssispackages テーブルでパッケージをフィルター処理したりできます。 新しい論理フォルダーを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 既定では、msdb に追加する論理フォルダーは自動的にパッケージ ストアに含まれます。  
   
  msdb 内のパッケージをグループ化するために作成する論理フォルダーは、msdb 内の sysssispackagefolders テーブルの行として表現されます。 sysssispackagefolders の folderid 列と parentfolderid 列は、フォルダー階層を定義します。 msdb のルート論理フォルダーは、parentfolderid 列が NULL 値である sysssispackagefolders の行です。 詳細については、「[sysssispackages (Transact-SQL)](/sql/relational-databases/system-tables/sysssispackages-transact-sql)」および「[sysssispackagefolders (Transact-SQL)](/sql/relational-databases/system-tables/sysssispackagefolders-transact-sql)」を参照してください。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に接続すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理する msdb フォルダーが、[格納されたパッケージ] フォルダー内に一覧表示されます。 構成ファイルでルート ファイル システム フォルダーを指定している場合は、[格納されたパッケージ] フォルダーにファイル システムのルート フォルダーとすべてのサブフォルダーに保存されているパッケージも一覧表示されます。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理する msdb フォルダーが、[格納されたパッケージ] フォルダー内に一覧表示されます。 構成ファイルでルート ファイル システム フォルダーを指定している場合は、[格納されたパッケージ] フォルダーにファイル システムのルート フォルダーとすべてのサブフォルダーに保存されているパッケージも一覧表示されます。  
   
  パッケージは任意のファイル システム フォルダーに保存できますが、そのフォルダーをパッケージ ストアの構成ファイルのフォルダー一覧に追加していない場合、 **[格納されたパッケージ]** フォルダーのサブフォルダーにはパッケージが一覧表示されません。 構成ファイルの詳細については、「[Integration Services サービスの構成 (SSIS サービス)](integration-services-service-ssis-service.md)」を参照してください。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "62766630"
   
 -   [SQL Server Management Studio で Integration Services パッケージを表示する (SSIS サービス)](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービス (SSIS サービス)](integration-services-service-ssis-service.md)  
   
   

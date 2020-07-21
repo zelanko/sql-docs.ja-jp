@@ -1,5 +1,5 @@
 ---
-title: 並べ替えプロパティの例 (vc++) |Microsoft Docs
+title: Sort プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4c01370efddbd4163459d694772f3e581ddeadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930968"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759848"
 ---
 # <a name="sort-property-example-vc"></a>Sort プロパティの例 (VC++)
-この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティを**Recordset**から派生した、***作成者***のテーブル**Pubs**データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  
+この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Sort](../../../ado/reference/ado-api/sort-property.md)プロパティを使用して、 **Pubs**データベースの***Authors***テーブルから派生した**レコードセット**の行を並べ替えます。 セカンダリユーティリティルーチンによって各行が出力されます。  
   
 ```  
 // SortPropertyExample.cpp  
@@ -132,6 +132,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)

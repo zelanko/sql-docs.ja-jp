@@ -27,17 +27,17 @@
 - name: アップグレード アドバイザーの操作方法に関するトピック
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: '方法:アップグレード アドバイザーをインストールする'
+    - name: アップグレード アドバイザーをインストールする方法
       href: how-to-install-upgrade-advisor.md
-    - name: '方法:アップグレード アドバイザーを起動する'
+    - name: アップグレード アドバイザーを起動する方法
       href: how-to-launch-upgrade-advisor.md
-    - name: '方法:アップグレード アドバイザー分析ウィザードを実行する'
+    - name: アップグレード アドバイザー分析ウィザードを実行する方法
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: '方法:アップグレード アドバイザーのレポートを表示する'
+    - name: アップグレード アドバイザーのレポートを表示する方法
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: '方法:レポートに表示する問題を選択する'
+    - name: レポートに表示する問題を選択する方法
       href: how-to-filter-reports.md
-    - name: '方法:Export Reports'
+    - name: レポートをエクスポートする方法
       href: how-to-export-reports.md
 - name: ユーザー インターフェイス リファレンス
   href: upgrade-advisor-user-interface-reference.md
@@ -114,7 +114,7 @@
           href: nested-after-trigger-fires-even-when-trigger-nesting-is-off.md
         - name: sp_helptrigger 出力の新しい列がアプリケーションに影響を与える可能性がある
           href: new-column-in-output-of-sp-helptrigger-may-impact-applications.md
-        - name: osql は ED と !! をサポートしない コマンド
+        - name: osql は ED と !! をサポートしない commands
           href: osql-no-longer-supports-the-ed-and-commands.md
         - name: 互換性モード 90 以上では外部結合演算子 *= および =* がサポートされない
           href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
@@ -335,11 +335,11 @@
       href: failover-cluster-report.md
     - name: '[機能の確認]'
       href: feature-review.md
-    - name: インストール ルール
+    - name: '[次へ]'
       href: installation-rules.md
     - name: 機能ルール
       href: feature-rules.md
-    - name: 機能の選択
+    - name: 特徴選択
       href: feature-selection.md
     - name: 機能の選択 (アンインストール)
       href: feature-selection-uninstall.md
@@ -351,11 +351,11 @@
       href: complete-installation.md
     - name: インストールの前提条件
       href: installation-prerequisites.md
-    - name: インストールの進行状況
+    - name: Installation Progress
       href: installation-progress.md
     - name: インストールの種類
       href: installation-type.md
-    - name: インスタンスの構成
+    - name: '[インスタンスの構成]'
       href: instance-configuration.md
     - name: インスタンスの選択 (アンインストール)
       href: instance-selection-uninstall.md
@@ -424,15 +424,15 @@
   items:
     - name: コマンド プロンプトからの更新プログラムのインストール
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: '方法:SQL Server 更新プログラムのインストールが成功したかどうかを確認する'
+    - name: SQL Server 更新プログラムのインストールが成功したかどうかを確認する方法
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: SQL Server サービスのインストールの概要
       href: overview-of-sql-server-servicing-installation.md
-    - name: '[ようこそ]'
+    - name: ようこそ
       href: welcome.md
     - name: ライセンス条項
       href: license-terms.md
-    - name: '[機能の選択]'
+    - name: 機能を選択する
       href: select-features.md
     - name: 使用中のファイルの確認
       href: check-files-in-use.md
@@ -440,5 +440,5 @@
       href: ready-to-update.md
     - name: 更新の進行状況
       href: update-progress.md
-    - name: '[完了]'
+    - name: 完了
       href: complete.md

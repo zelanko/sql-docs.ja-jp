@@ -1,26 +1,26 @@
 ---
-title: トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: トレース ファイルの最大ファイル サイズを設定する
+titleSuffix: SQL Server Profiler
+description: SQL Server Profiler でトレース ファイルのサイズを制限する方法、およびファイルが最大サイズに達したときにロールオーバーするかどうかを指定する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: b426b6eff3c8e8d561d6151f20fa32a294b43d45
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928732"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151687"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>トレース ファイルの最大ファイル サイズの設定 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   トレース ファイルの最大ファイル サイズを設定するには、次の手順を実行します。  
   

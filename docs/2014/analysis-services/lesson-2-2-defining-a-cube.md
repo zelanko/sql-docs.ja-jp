@@ -1,5 +1,5 @@
 ---
-title: キューブの定義 |Microsoft Docs
+title: Cube を定義する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543514"
 ---
 # <a name="defining-a-cube"></a>キューブの定義
   キューブ ウィザードを使用すると、キューブのメジャー グループとディメンションを定義できます。 この実習では、キューブ ウィザードを使用してキューブを作成します。  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>キューブとそのプロパティを定義するには  
   
-1.  ソリューション エクスプローラーで **[キューブ]** を右クリックし、 **[新しいキューブ]** をクリックします。 キューブ ウィザードが表示されます。  
+1.  ソリューションエクスプローラーで、[**キューブ**] を右クリックし、[**新しいキューブ**] をクリックします。 キューブ ウィザードが表示されます。  
   
 2.  **[キューブ ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66079056"
   
     -   **Sales Territory Key**  
   
-    -   **Revision Number**  
+    -   **リビジョン番号**  
   
      既定では、ファクト テーブル内で、ディメンションにリンクしていないすべての数値列がメジャーとして選択されます。 ただし、上の 4 つの列は実際にはメジャーではありません。 最初の 3 つは、ファクト テーブルとディメンション テーブルをリンクするキー値で、この初期段階のキューブでは使用しません。  
   
@@ -52,11 +51,11 @@ ms.locfileid: "66079056"
   
 9. **[既存のディメンションの選択]** ページで、既に作成した **Date** ディメンションが選択されていることを確認し、 **[次へ]** をクリックします。  
   
-10. **[新しいディメンションの選択]** ページで、作成する新しいディメンションを選択します。 そのためには、 **[Customer]** 、 **[Geography]** 、 **[Product]** の各チェック ボックスがオンになっていることを確認し、 **[InternetSales]** チェック ボックスをオフにします。  
+10. **[新しいディメンションの選択]** ページで、作成する新しいディメンションを選択します。 そのためには、 **[Customer]**、 **[Geography]**、 **[Product]** の各チェック ボックスがオンになっていることを確認し、 **[InternetSales]** チェック ボックスをオフにします。  
   
 11. **[次へ]** をクリックします。  
   
-12. **ウィザードの完了** ページで、キューブの名前を変更`Analysis Services Tutorial`します。 [プレビュー] ペインで、 **InternetSales** メジャー グループとそのメジャーを表示できます。 **Date**、 **Customer** 、 **Product** の各ディメンションも表示できます。  
+12. [**ウィザードの完了**] ページで、キューブの名前をに変更し `Analysis Services Tutorial` ます。 [プレビュー] ペインで、 **InternetSales** メジャー グループとそのメジャーを表示できます。 **Date**、 **Customer** 、 **Product** の各ディメンションも表示できます。  
   
 13. **[完了]** をクリックしてウィザードを終了します。  
   

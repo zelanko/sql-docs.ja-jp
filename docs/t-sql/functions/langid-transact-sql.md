@@ -19,17 +19,17 @@ helpviewer_keywords:
 - ID for language in use
 - local language IDs [SQL Server]
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf0aa9d1bcdd2fc8de86d64c4a70455ef8f8864a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752222"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   現在使用している言語のローカル言語識別子 (ID) を返します。  
   
@@ -44,10 +44,10 @@ ms.locfileid: "68109249"
 ## <a name="return-types"></a>戻り値の型  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  言語 ID 番号を含めて、言語の設定に関する情報を表示するには、パラメーターを指定しないで **sp_helplanguage** を実行します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、現在のセッションで使用する言語を `Italian` に設定し、`@@LANGID` を使用してイタリア語の ID を返します。  
   
 ```  

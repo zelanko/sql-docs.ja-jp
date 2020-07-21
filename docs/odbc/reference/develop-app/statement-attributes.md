@@ -1,5 +1,5 @@
 ---
-title: ステートメント属性 |Microsoft Docs
+title: ステートメントの属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec24cc43e8c57e47ddda9f20fac1807f42453e84
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107276"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299645"
 ---
 # <a name="statement-attributes"></a>ステートメント属性
-ステートメント属性は、ステートメントの特性です。 たとえば、ステートメントの結果を使用するカーソルの設定の種類とブックマークを使用するかどうかは、ステートメントの属性です。  
+ステートメント属性は、ステートメントの特性です。 たとえば、ブックマークを使用するかどうか、およびステートメントの結果セットと共に使用するカーソルの種類は、ステートメント属性です。  
   
- ステートメント属性が設定されて**SQLSetStmtAttr**で、現在の設定の取得と**SQLGetStmtAttr**します。 アプリケーションで任意のステートメント属性を設定する必要はありません。すべてのステートメント属性では、その一部は、ドライバー固有の既定値があります。  
+ ステートメント属性は**SQLSetStmtAttr**で設定され、その現在の設定は**SQLGetStmtAttr**で取得されます。 アプリケーションでステートメント属性を設定する必要はありません。すべてのステートメント属性には既定値があり、その一部はドライバー固有です。  
   
- ステートメント属性を設定する場合は、属性自体に依存します。 ステートメントが実行される前に、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY、SQL_ATTR_SIMULATE_CURSOR、および SQL_ATTR_USE_BOOKMARKS ステートメント属性を設定する必要があります。 SQL_ATTR_ASYNC_ENABLE と SQL_ATTR_NOSCAN ステートメント属性は、いつでもでも設定できますが、ステートメントをもう一度使用するまでには適用されません。 SQL_ATTR_MAX_LENGTH と SQL_ATTR_MAX_ROWS、SQL_ATTR_QUERY_TIMEOUT ステートメント属性は、いつでも設定できますが、ドライバー固有かどうか、ステートメントをもう一度使用する前に適用されます。 残りのステートメント属性は、いつでも設定できます。  
+ ステートメント属性を設定できるかどうかは、属性自体によって異なります。 ステートメントを実行する前に、SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_SIMULATE_CURSOR、および SQL_ATTR_USE_BOOKMARKS ステートメントの属性を設定する必要があります。 SQL_ATTR_ASYNC_ENABLE および SQL_ATTR_NOSCAN statement 属性はいつでも設定できますが、ステートメントが再度使用されるまでは適用されません。 SQL_ATTR_MAX_LENGTH、SQL_ATTR_MAX_ROWS、および SQL_ATTR_QUERY_TIMEOUT ステートメント属性はいつでも設定できますが、ステートメントを再使用する前に適用するかどうかはドライバーによって異なります。 残りのステートメント属性は、いつでも設定できます。  
   
 > [!NOTE]  
->  ステートメント属性を呼び出すことで、接続レベルで設定できる**SQLSetConnectAttr** ODBC 3 では非推奨します *。x*します。 ODBC 3。*x*アプリケーションは接続レベルでステートメント属性を設定しない必要があります。 ODBC 3。*x* ODBC 2 協力する場合、ドライバーはこの機能をサポートのみ必要があります *。x*アプリケーション。 詳細については、次を参照してください[SQLSetConnectOption のマッピング](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
+>  ODBC 3 では、 **SQLSetConnectAttr**を呼び出して、接続レベルでステートメント属性を設定する機能は非推奨とされました。*x*。 ODBC 3.*x*アプリケーションでは、接続レベルでステートメント属性を設定しないでください。 ODBC 3.*x*ドライバーは ODBC 2 で動作する必要がある場合にのみ、この機能をサポートする必要があります。*x*アプリケーション。 詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「 [SQLSetConnectOption Mapping](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 」を参照してください。  
 >   
->  この例外は、これは、接続属性とステートメント属性の両方のいずれかの接続レベルまたはステートメント レベルで設定できます SQL_ATTR_METADATA_ID と SQL_ATTR_ASYNC_ENABLE 属性です。  
+>  この例外は、SQL_ATTR_METADATA_ID 属性と SQL_ATTR_ASYNC_ENABLE 属性であり、接続属性とステートメント属性の両方であり、接続レベルまたはステートメントレベルで設定できます。  
 >   
->  ODBC 3 で導入された、ステートメント属性の none です。*x* (SQL_ATTR_METADATA_ID) を除くと、接続レベルで設定できます。  
+>  ODBC 3 では、どのステートメント属性も導入されていません。*x* (SQL_ATTR_METADATA_ID を除く) は、接続レベルで設定できます。  
   
- 詳細については、次を参照してください。、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明。
+ 詳細については、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明を参照してください。

@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルの持続性 | Microsoft Docs
+description: インメモリ OLTP により、メモリ最適化テーブルの完全な持続性が提供されます。トランザクション ログを使用し、データの変更をディスク上のストレージに保存することによって、これを実現する方法について説明します。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942802"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723249"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] により、メモリ最適化テーブルには完全な持続性が提供されます。 メモリ最適化テーブルを変更したトランザクションがコミットされると、基になるストレージが使用可能な場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、(ディスク ベース テーブルの場合と同様に) この変更が永続的である (データベースの再起動後も保持される) ことが保証されます。 持続性には、トランザクション ログとディスク上ストレージでのデータ変更の保持という、2 つの主なコンポーネントがあります。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "67942802"
 ## <a name="populating-data-and-delta-files"></a>データ ファイルとデルタ ファイルの取り込み  
  データ ファイルとデルタ ファイルへのデータの取り込みは、メモリ最適化テーブルに対するコミットされたトランザクションが生成したトランザクション ログ レコードに基づいて行われ、挿入された行や削除された行に関する情報が適切なデータ ファイルとデルタ ファイルに追加されます。 ディスク ベース テーブルでは、チェックポイントの完了時にデータやインデックス ページがランダム I/O でフラッシュされますが、これとは異なり、メモリ最適化テーブルの永続化は連続的なバックグラウンド操作によって行われます。 トランザクションでは、それ以前のいずれかのトランザクションによって挿入された任意の行が削除または更新されることがあるため、複数のデルタ ファイルへのアクセスが発生します。 削除情報は常にデルタ ファイルの末尾に追加されます。 たとえば、下に示す図では、コミット タイムスタンプが 600 のトランザクションでは、1 つの新しい行が挿入され、コミット タイムスタンプが 150、250、および 450 のトランザクションによって挿入された行が削除されます。 4 つのファイル I/O 操作 (3 つは削除された行が対象で、1 つは新しく挿入された行が対象) はすべて、対応するデルタ ファイルとデータ ファイルに対する追加専用の操作です。  
   
- ![メモリ最適化テーブルの読み取りログ レコード。](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "メモリ最適化テーブルの読み取りログ レコード。")  
+ ![メモリ最適化テーブルのログ レコードの読み取り](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "メモリ最適化テーブルのログ レコードの読み取り")  
   
 ## <a name="accessing-data-and-delta-files"></a>データ ファイルとデルタ ファイルへのアクセス  
  データ ファイルとデルタ ファイルのペアにアクセスするのは次のような場合です。  
@@ -82,11 +83,11 @@ ms.locfileid: "67942802"
   
  次の例では、メモリ最適化テーブルのファイル グループに、タイムスタンプが 500 の時点でデータ ファイルとデルタ ファイルのペアが 4 組あり、以前のトランザクションからのデータが含まれています。 たとえば、最初のデータ ファイルの行は、100 より大きく 200 以下のタイムスタンプを持つトランザクションに対応します。この範囲は (100, 200] と表すこともできます。 2 番目と 3 番目のデータ ファイルは、削除済みとしてマークされている行を考慮すると、入力率が 50% 未満になっています。 これらの 2 つの CFP をマージ操作で結合し、タイムスタンプが 200 より大きく 400 以下 (2 つのファイルの結合範囲) のトランザクションを含む新しい CFP を作成します。 すると、範囲が (500, 600] のもう 1 つの CFP と、トランザクション範囲が (200, 400] の空でないデルタ ファイルが現れます。これは、マージ操作と同時に、ソース CFP から他の行を削除するといったトランザクション アクティビティを実行できることを示しています。  
   
- ![図はメモリ最適化テーブル ファイル グループを示している](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "図はメモリ最適化テーブル ファイル グループを示している")  
+ ![メモリ最適化テーブルのファイル グループを示す図](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "メモリ最適化テーブルのファイル グループを示す図")  
   
  バックグラウンド スレッドでは、閉じているすべての CFP がマージ ポリシーを使用して評価され、該当する CFP に対して 1 つ以上のマージ要求が開始されます。 これらのマージ要求は、オフライン チェックポイント スレッドによって処理されます。 マージ ポリシーの評価は定期的に実行され、チェックポイントが閉じられるときにも行われます。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ ポリシー  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ ポリシー  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次のマージ ポリシーが実装されています。  
   
 -   削除済みの行を考慮したうえで 2 つ以上の連続する CFP が統合でき、結果の行が目標サイズの 1 つの CFP に収まる場合、マージがスケジュールされます。 前述のように、データ ファイルとデルタ ファイルの目標サイズは元のサイズ設定に対応しています。  

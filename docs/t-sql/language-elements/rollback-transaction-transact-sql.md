@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121821"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -103,7 +103,7 @@ ROLLBACK { TRAN | TRANSACTION }
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、名前付きトランザクションをロールバックした場合の影響を示します。 テーブルを作成した後、次のステートメントで名前付きトランザクションが開始され、2 行が挿入され、変数 @TransactionName に指定されたトランザクションがロールバックされます。 名前付きトランザクション外の外側にあるもう 1 つのステートメントで 2 行が挿入されます。 クエリによって、前のステートメントの結果が返されます。   
   
 ```sql    

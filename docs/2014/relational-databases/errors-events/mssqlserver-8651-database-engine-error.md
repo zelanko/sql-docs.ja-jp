@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 4cc3498d-5449-4c4e-b1f9-3271831c725a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07e5ae8a84f11908c1948535ade95dfea69024b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762372"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553147"
 ---
-# <a name="mssqlserver8651"></a>MSSQLSERVER_8651
+# <a name="mssqlserver_8651"></a>MSSQLSERVER_8651
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8651|  
@@ -42,7 +41,7 @@ ms.locfileid: "62762372"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  パフォーマンス モニター カウンターを収集を開始**SQL Server:バッファー マネージャー**、 **SQL Server:Memory Manager**します。  
+2.  次のパフォーマンス モニター カウンターの収集を開始します。**SQL Server:Buffer Manager**、**SQL Server:Memory Manager**。  
   
 3.  次に示す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ構成パラメーターを確認します。  
   
@@ -73,11 +72,11 @@ ms.locfileid: "62762372"
  問題が解決しない場合は、さらに調査します。ワークロードの軽減が必要になる場合もあります。  
   
 ## <a name="see-also"></a>参照  
- [DBCC FREESYSTEMCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
- [DBCC FREESESSIONCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
- [DBCC FREEPROCCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
+ [DBCC FREESYSTEMCACHE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
+ [DBCC FREESESSIONCACHE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
+ [DBCC FREEべきキャッシュ &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [SQL Server: Buffer Manager オブジェクト](../performance-monitor/sql-server-buffer-manager-object.md)   
+ [SQL Server、Buffer Manager オブジェクト](../performance-monitor/sql-server-buffer-manager-object.md)   
  [SQL Server の Memory Manager オブジェクト](../performance-monitor/sql-server-memory-manager-object.md)  
   
   

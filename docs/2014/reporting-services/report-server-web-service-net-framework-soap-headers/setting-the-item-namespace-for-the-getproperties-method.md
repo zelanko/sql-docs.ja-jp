@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012277"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties メソッドのアイテム名前空間の設定
@@ -120,7 +120,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>参照  
- [テクニカル リファレンス &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [Reporting Services SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
+ [SSRS&#41;&#40;テクニカルリファレンス](../technical-reference-ssrs.md)   
+ [Reporting Services の SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
   
   

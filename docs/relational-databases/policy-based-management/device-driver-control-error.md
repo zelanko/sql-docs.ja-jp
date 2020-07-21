@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ab246e886e4f439fbf1dca600372a6816bc198b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2dd7ec5d8c7c321887d2553690e80dda12156203
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940452"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654587"
 ---
 # <a name="device-driver-control-error"></a>デバイス ドライバー制御エラー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このルールでは、システム イベント ログの EventId 11 を確認します。 このエラーは、デバイス ドライバーの破損、ハードウェアの問題、ケーブル接続の不具合、または接続の問題が原因で発生する場合があります。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  

@@ -15,15 +15,15 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee869a8bc2842bcc56fd0e8ab79c7668c28b50a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140355"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999862"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。 スパース列および列セットを定義するには、 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) または [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ステートメントを使用します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68140355"
 |-|-|  
 |**geography**|**text**|  
 |**geometry**|**timestamp**|  
-|**image**|**ユーザー定義データ型**|  
+|**画像**|**ユーザー定義データ型**|  
 |**ntext**||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>領域を節約するためのデータ型別推定値  
@@ -181,7 +181,7 @@ ms.locfileid: "68140355"
   
 -   テーブルをコピーするとき、列のスパース プロパティは保持されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。 この例のコードでは、スパース列を使用するテーブルを作成し、そのテーブルに 2 つの行を挿入し、そのテーブルからデータを選択します。  
   
 > [!NOTE]  

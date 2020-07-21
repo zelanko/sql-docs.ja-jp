@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bdaaeeddf8f35792c536624abfe6ff11b2dbd2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68187296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011713"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>テーブルのデータの読み取り (チュートリアル)
   テーブルのデータを読み取るには、SELECT ステートメントを使用します。 SELECT ステートメントは最も重要な [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの 1 つで、構文には多くのバリエーションがあります。 このチュートリアルでは、5 つの単純なバージョンを使用します。  
@@ -80,13 +79,13 @@ ms.locfileid: "68187296"
   
 |||  
 |-|-|  
-|[文字列関数 (Transact-SQL)](/sql/t-sql/functions/string-functions-transact-sql)|[日付と時刻のデータ型および関数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[数学関数 (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)|[テキスト関数とイメージ関数 (Transact-SQL)](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[文字列関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[数学関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [概要:データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  
+ [要約 : データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

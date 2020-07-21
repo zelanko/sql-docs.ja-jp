@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 889cdb18a323e64cf1b94bcde57eaf77c37e89d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892548"
 ---
-# <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ユーザーがデータベース接続文字列で指定したデータベース名を返します。 このデータベースは、**sqlcmd-d** オプション (USE *database*) を使用して指定します。 Open Database Connectivity (ODBC) のデータ ソース式を使用して指定することもできます (initial catalog =*databasename*)。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67914573"
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  初期データベースが指定されていない場合、この関数は空文字列を返します。  
   
 ## <a name="see-also"></a>参照  

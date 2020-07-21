@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f7512331c57fb69ee953261b08b4bfeeef167dde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fb9be98dbbdf2935fe79c6f579be7ab0e357624
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009922"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293197"
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
 
@@ -45,7 +45,7 @@ ms.locfileid: "68009922"
  **インフォオブジェクトの名前**  
  新しいインフォソースの基にするインフォオブジェクトの名前を入力します。  
   
- **参照**  
+ **[参照]**  
  インフォオブジェクトを参照します。 このオプションは、インフォオブジェクトを選択できる **[インフォオブジェクトの参照]** ダイアログ ボックスを開きます。 このダイアログ ボックスの詳細については、「 [インフォオブジェクトの参照](../../integration-services/data-flow/look-up-infoobject.md)」を参照してください。  
   
  インフォオブジェクトを選択すると、選択したインフォオブジェクトの名前が **[インフォオブジェクトの名前]** ボックスに設定されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "68009922"
  **転送元システム**  
  新しいインフォソースに関連付ける転送元システムを選択します。  
   
- **アプリケーション**  
+ **Application**  
  新しいインフォソースに関連付けるアプリケーションの名前を入力します。  
   
  **属性**  

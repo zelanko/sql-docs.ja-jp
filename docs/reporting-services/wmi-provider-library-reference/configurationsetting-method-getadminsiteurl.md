@@ -11,10 +11,10 @@ ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0032f92c79916cbd12962e792b51a05e9f353388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581030"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>ConfigurationSetting メソッド - GetAdminSiteUrl
@@ -45,6 +45,6 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [MSReportServer_ConfigurationSetting メソッド](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
+ [MSReportServer_ConfigurationSetting Methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
   
   

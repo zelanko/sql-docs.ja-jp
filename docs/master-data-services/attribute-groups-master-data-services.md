@@ -1,5 +1,5 @@
 ---
-title: 属性グループ (マスター データ サービス) | Microsoft Docs
+title: 属性グループ
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 239b3b2131dd5da345fe415dcaa0d6846a62e1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcdd46e56914d3189332a25f8bd747b37ebc4d28
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812057"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68047613"
 |新しい属性グループを作成して属性を追加する。|[属性グループを作成する (マスター データ サービス)](../master-data-services/create-an-attribute-group-master-data-services.md)|  
 |属性グループがユーザーに表示されるようにする。|[属性グループのユーザーへの表示 (マスター データ サービス)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
 |既存の属性グループの名前を変更する。|[属性グループ名を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|既存の属性グループを削除する。|[属性グループを削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|既存の属性グループを削除する。|[属性グループを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

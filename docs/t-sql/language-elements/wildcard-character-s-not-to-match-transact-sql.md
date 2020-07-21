@@ -1,6 +1,8 @@
 ---
-title: '[^] (ワイルドカード - 一致しない文字列) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: 文字列を除外する [^] ワイルドカード
+description: 一致しない文字列の T-SQL ワイルドカード
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,29 +22,57 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eedf1db97477788489dd9b7c9c1789804ca064a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7291bc39092d4f65fd69f8c4050bb52a512ef04
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086090"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "76831734"
 ---
-# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (ワイルドカード - 一致しない文字列) (TRANSACT-SQL)
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (ワイルドカード - 一致しない文字列) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  角かっこで指定した範囲または集合に該当しない、任意の 1 文字を判別します。  
+  角かっこで囲んで指定された範囲またはセット `[^]` に含まれない任意の 1 文字と一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。 
   
-## <a name="examples"></a>使用例  
- 次の例では [^] 演算子を使用して、`Contact` テーブルを対象に、名前の先頭が `Al` で始まり 3 文字目が `a` ではないすべての人を検索します。  
+## <a name="examples"></a>例  
+### <a name="a-simple-example"></a>A:簡単な例   
+ 次の例では [^] 演算子を使用して、`Contact` テーブル内で、名前が `Al` で始まり、かつ 3 文字目が文字 `a` ではない上位 5 人を検索します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
+SELECT TOP 5 FirstName, LastName  
 FROM Person.Person  
-WHERE FirstName LIKE 'Al[^a]%'  
-ORDER BY FirstName;  
+WHERE FirstName LIKE 'Al[^a]%';  
 ```  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+FirstName     LastName
+---------     --------
+Alex          Adams
+Alexandra     Adams
+Allison       Adams
+Alisha        Alan
+Alexandra     Alexander
+```
+### <a name="b-searching-for-ranges-of-characters"></a>B:文字の範囲の検索
+
+ワイルドカード セットには、1 文字または文字の範囲に加えて、文字と範囲の組み合わせも含めることができます。 次の例では、[^] 演算子を使用して、文字または数字で始まらない文字列を検索します。
+
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[^0-9A-z]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name   name    column_id
+---------     -----------   ----    ---------
+1591676718    JunkTable     _xyz    1
+```
   
 ## <a name="see-also"></a>参照  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

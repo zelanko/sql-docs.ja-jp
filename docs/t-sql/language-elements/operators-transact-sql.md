@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61dad1f375a60fa22f4ee38f7023b5836bc3d5a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84b4d21dd9f4c01827569824f652662e7ec6bd9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121913"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883385"
 ---
 # <a name="operators-transact-sql"></a>演算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   演算子は、1 つ以上の式に対して実行される操作を指定する記号です。 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用する演算子を分類して示します。  
   

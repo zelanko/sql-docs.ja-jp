@@ -1,23 +1,22 @@
 ---
-title: チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する
-titleSuffix: Azure Data Studio
+title: Transact-SQL エディターを使用し、データベース オブジェクトを作成する
 description: このチュートリアルでは、T-SQL の操作を簡単にする Azure Data Studio の主な機能について説明します。
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.reviewer: alayu, maghan, sstein
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726745"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>チュートリアル:Transact-SQL エディターを使用してデータベース オブジェクトを作成する - Azure Data Studio
 
 クエリ、ストアド プロシージャ、スクリプトなどの作成と実行は、データベース プロフェッショナルの中心的な仕事です。 このチュートリアルでは、データベース オブジェクトを作成するための T-SQL の主な機能について説明します。
 
@@ -29,7 +28,7 @@ ms.locfileid: "67959010"
 > * *[定義をここに表示]* と *[定義へ移動]* を使用し、データベース オブジェクトの詳細を表示する
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
@@ -54,13 +53,13 @@ ms.locfileid: "67959010"
 
    ![クイック検索ウィジェット](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 最初の行で **[電子メール]** 列を編集し、「 *orlando0@adventure-works.com* 」と入力し、**Enter** を押して変更内容を保存します。
+1. 最初の行の **[電子メール]** 列を編集して「*orlando0\@adventure-works.com*」と入力し、**Enter** キーを押して変更を保存します。
 
    ![データの編集](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL スニペットを使用し、ストアド プロシージャを作成する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、ステートメントを簡単に作成するための T-SQL スニペットがたくさん組み込まれています。
+Azure Data Studio には、ステートメントを簡単に作成するための組み込みの T-SQL スニペットが多数用意されています。
 
 
 1. **Ctrl + N** を押し、新しいクエリ エディターを開きます。
@@ -114,7 +113,7 @@ ms.locfileid: "67959010"
 
 ## <a name="use-peek-definition"></a>[定義をここに表示] を使用する 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、[定義をここに表示] 機能を使用し、オブジェクトの定義を表示できます。 このセクションでは、2 つ目のストアド プロシージャを作成します。[定義をここに表示] を使用してテーブルに入っている列を表示し、ストアド プロシージャの本文を簡単に作成します。
+Azure Data Studio では、[定義をここに表示] 機能を使用して、オブジェクトの定義を表示できます。 このセクションでは、2 つ目のストアド プロシージャを作成します。[定義をここに表示] を使用してテーブルに入っている列を表示し、ストアド プロシージャの本文を簡単に作成します。
 
 1. **Ctrl + N** を押し、新しいエディターを開きます。 
 
@@ -182,7 +181,7 @@ ms.locfileid: "67959010"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>クエリ結果を JSON として保存し、setCustomer ストアド プロシージャをテストする
 
-前のセクションで作成した *setCustomer* ストアド プロシージャでは、JSON データを *@json_val* パラメーターに渡す必要があります。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す目的で正しく書式設定した JSON を用意する方法について説明します。
+前のセクションで作成した *setCustomer* ストアド プロシージャでは、JSON データを *\@json_val* パラメーターに渡す必要があります。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す目的で正しく書式設定した JSON を用意する方法について説明します。
 
 1. **[サーバー]** サイドバーで、 *[dbo.Customers]* テーブルを右クリックし、 **[SELECT TOP 1000 Rows]\(上位 1000 行を選択する\)** をクリックします。
 
@@ -217,8 +216,8 @@ ms.locfileid: "67959010"
 
    ![テスト結果](./media/tutorial-sql-editor/test-result.png)
 
-## <a name="next-steps"></a>次の手順
-このチュートリアルでは、次の方法を学習しました。
+## <a name="next-steps"></a>次のステップ
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * スキーマ オブジェクトをクイック検索する
 > * テーブル データを編集する 

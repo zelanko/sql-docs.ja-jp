@@ -1,5 +1,5 @@
 ---
-title: setClientInfo メソッド (SQLServerConnection) |Microsoft Docs
+title: setClientInfo メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9eaafb0e-8bfa-456c-a481-8e06e5d539e1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5c85b92a7c404cda846e7c8189a383877c7d744e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20878762ce7bd225ad90471fa43c16e652de7ed4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974606"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927183"
 ---
 # <a name="setclientinfo-method-sqlserverconnection"></a>setClientInfo メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67974606"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[setClientInfo &#40;java.util.Properties&#41; メソッド](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|接続のクライアント情報のプロパティの値を設定します。|  
 |[setClientInfo &#40;java.lang.String, java.lang.String&#41; メソッド](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|指定されたクライアント情報のプロパティの値を設定します。|  

@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー コンピューター (アップグレード アドバイザー) で廃止された拡張機能が検出されました |Microsoft Docs
+title: 古い拡張機能がレポートサーバーコンピューターで検出されました (アップグレードアドバイザー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 93a971b82fa4bafd1d8fb51a148b7e488c7d6d20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5fa59ce825a8731997cc905db636f40dcd7964e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012150"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>互換性のために残されている拡張機能がレポート サーバー コンピューターで検出された (アップグレード アドバイザー)
   アップグレード アドバイザーによって、現在のリリースでは使用できない表示拡張機能が 1 つ以上検出されました。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -43,7 +42,7 @@ ms.locfileid: "66093805"
 ## <a name="corrective-action"></a>修正措置  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に現在含まれている一連の機能を評価して、サポートされている機能がユーザーの要件を満たすかどうかを判断します。  
   
-## <a name="see-also"></a>関連項目  
- [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>参照  
+ [アップグレードに関する問題を Reporting Services &#40;アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

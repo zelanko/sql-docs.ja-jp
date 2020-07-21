@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc666567edb0c09896953de58a5f98bef166fbd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066733"
 ---
 # <a name="select-source-dialog-box"></a>[ソースの選択] ダイアログ ボックス
   このダイアログ ボックスを使用すると、実行するポリシーのソースを選択できます。 ポリシーを含む 1 つ以上の XML ファイルを選択するには、 **[ファイル]** を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上にあるポリシーを実行するには、 **[サーバー]** を選択します。  
@@ -32,7 +31,7 @@ ms.locfileid: "62691801"
   
 -   オブジェクト エクスプローラーで、サーバー、データベース、またはデータベース オブジェクトを右クリックし、 **[ポリシー]** 、 **[評価]** の順にクリックします。 **[ポリシーの評価]** ダイアログ ボックスの **[ポリシーの選択]** ページで、参照ボタン ( **[...]** ) をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ファイル]**  
  ポリシーを含む 1 つ以上の XML ファイルを選択します。  
   
@@ -45,13 +44,13 @@ ms.locfileid: "62691801"
  **サーバー名**  
  接続するサーバー インスタンスを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
- **[認証]**  
+ **認証**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。  
   
  **Windows 認証モード ([Windows 認証])**  
  Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
   
- **SQL Server 認証 (SQL Server Authentication)**  
+ **SQL Server 認証**  
  指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログイン アカウントが設定されていない場合、認証は失敗し、エラー メッセージが返されます。  
   
 > [!IMPORTANT]  
@@ -63,7 +62,7 @@ ms.locfileid: "62691801"
  **Login**  
  接続に使用するログインを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ使用できます。  
   
- **Password**  
+ **パスワード**  
  ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ編集できます。  
   
 ## <a name="see-also"></a>参照  

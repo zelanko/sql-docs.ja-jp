@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df2e0d9a4c077ff16eba09bc5ebb6447d5d27595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061015"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051426"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures イベント カテゴリ
   **Stored Procedures** イベント カテゴリには、一般的なストアド プロシージャ イベントが含まれています。  
@@ -45,7 +44,7 @@ ms.locfileid: "63061015"
 |[SP:StmtCompleted イベント クラス](sp-stmtcompleted-event-class.md)|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが完了したことを示します。|  
 |[SP:StmtStarting イベント クラス](sp-stmtstarting-event-class.md)|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが開始されたことを示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

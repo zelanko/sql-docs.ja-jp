@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化テーブルが含まれるデータベースのバックアップ | Microsoft Docs
-ms.custom: ''
+title: メモリ最適化テーブルを含むデータベースのバックアップ
+description: メモリ最適化テーブルが、通常のデータベースのバックアップの一部としてどのようにバックアップされるかについて説明します。 データベースの完全バックアップと差分バックアップについて説明します。
+ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723401"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>メモリ最適化テーブルが含まれるデータベースのバックアップ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   メモリ最適化されたテーブルは、通常のデータベースのバックアップの一部としてバックアップされます。 ディスク ベース テーブルについては、ストレージの破損を検出するために、データベース バックアップの一部としてデータのチェックサムおよびデルタ ファイルのペアが検証されます。  
   

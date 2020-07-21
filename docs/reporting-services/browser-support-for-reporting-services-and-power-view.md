@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574816"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
@@ -94,11 +94,11 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
 |**ブラウザーの種類**|**サポート**|**ブラウザーの既定値**|**サーバーの既定値**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|可能。 Edge の既定の認証設定を使用します。|
-|**[Microsoft Internet Explorer]**|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|可能。 Internet Explorer の既定の認証設定を使用します。|
-|**Google Chrome**(+)|ネゴシエート、NTLM、基本|ネゴシエート|可能。 Chrome の既定の認証設定を使用します。|
-|**Mozilla Firefox**(+)|NTLM、基本|NTLM|可能。 Firefox の既定の認証設定を使用します。|
-|**Apple Safari**(+)|NTLM、基本|Basic|可能。 Safari の既定の認証設定を使用します。|
+|**Microsoft Edge** (+)|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|はい。 Edge の既定の認証設定を使用します。|
+|**[Microsoft Internet Explorer]**|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|はい。 Internet Explorer の既定の認証設定を使用します。|
+|**Google Chrome**(+)|ネゴシエート、NTLM、基本|ネゴシエート|はい。 Chrome の既定の認証設定を使用します。|
+|**Mozilla Firefox**(+)|NTLM、基本|NTLM|はい。 Firefox の既定の認証設定を使用します。|
+|**Apple Safari**(+)|NTLM、基本|Basic|はい。 Safari の既定の認証設定を使用します。|
 
  **(+)** 最新公開リリース バージョン
 
@@ -108,7 +108,7 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
  スクリプトが有効になっていない場合は、レポートを開くときに次のようなエラー メッセージが表示されます。
 
-- **ブラウザーでスクリプトがサポートされていないか、スクリプトの実行を許可するように構成されていません。ここをクリックして、スクリプトを使用せずにこのレポートを表示します**。
+- **ブラウザーでスクリプトがサポートされていないか、スクリプトを許可するように構成されていません。ここをクリックすると、スクリプトを使用せずにこのレポートが表示されます**。
 
  スクリプトを使用せずにレポートを表示することを選択した場合、レポート ツール バーやドキュメント マップなどのレポート ビューアー機能を使用しない HTML でレポートが表示されます。
 
@@ -152,12 +152,12 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Web ポータルを使用したレポートの検索と表示](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)  
 [Web ポータル (SSRS ネイティブ モード)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[HTML ビューアーとレポート ツールバー](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

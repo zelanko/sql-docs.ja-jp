@@ -13,22 +13,21 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bf206182c73f179857ab6197fac3b7ae36a1dbc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833758"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438459"
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
-  HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクには、この接続マネージャーを使用します。  
+  HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、この接続マネージャーが使用されます。  
   
  HTTP 接続マネージャーをパッケージに追加するときは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時に HTTP 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
- `ConnectionManagerType`接続マネージャーのプロパティに設定 `HTTP.`  
+ `ConnectionManagerType`接続マネージャーのプロパティがに設定されています。`HTTP.`  
   
  HTTP 接続マネージャーは、次の方法で構成できます。  
   
@@ -54,8 +53,8 @@ ms.locfileid: "62833758"
   
  プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Web サービス タスク](../control-flow/web-service-task.md)   
+## <a name="see-also"></a>関連項目  
+ [Web サービスタスク](../control-flow/web-service-task.md)   
  [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   
   

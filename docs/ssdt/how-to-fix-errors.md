@@ -1,23 +1,24 @@
 ---
-title: 方法:エラーを修正する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: エラーを修正する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e7cc581bc721f3174b5526ecf44941ee2d455634
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035169"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241396"
 ---
 # <a name="how-to-fix-errors"></a>方法:エラーを修正する
+
 エラー一覧ペインには、配置エラーおよびビルド エラーが表示されます。 データベース エンティティおよびその定義を編集する際に、Transact\-SQL エディターまたはテーブル デザイナーでの編集によって生じた構文エラーおよびセマンティック エラーも、この一覧に表示されます。 各タブでスクリプトの編集を行うと、エラー一覧は動的に更新されます。 特定されたエラーを追跡することにより、トラブルシューティングを進めることができます。  
   
 > [!WARNING]  

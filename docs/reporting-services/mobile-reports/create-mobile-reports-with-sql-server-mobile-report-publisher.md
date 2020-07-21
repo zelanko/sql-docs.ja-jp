@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63200535"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
@@ -31,7 +31,7 @@ ms.locfileid: "63200535"
 * 調整可能なグリッド行とグリッド列と柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応するモバイル レポートをレイアウトできます。 
 * その後、これらのモバイル レポートを Reporting Services サーバーに保存しておき、iPad、iPhone、Android フォンおよびタブレットと、Windows 10 デバイスのブラウザーまたは Power BI モバイル アプリで表示と操作を実行できます。
   
-## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  モバイル レポートの作成  
+## <a name="create-ssrsnoversion_md--mobile-reports"></a>[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  モバイル レポートの作成  
   
 操作を開始するために次の記事が役立ちます。
 -  [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)のダウンロード  

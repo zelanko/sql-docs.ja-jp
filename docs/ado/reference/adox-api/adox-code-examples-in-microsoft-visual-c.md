@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual C での ADOX のコード例 |Microsoft Docs
+title: Microsoft Visual C++ | の ADOX のコード例Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952128"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764173"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ での ADOX のコード例
-これらのトピックでは、ADOX を使用する方法を理解するのに役立つサンプル コードを提供します。 すべてのコード例では、Microsoft Visual C を使用して書き込まれます。  
+これらのトピックでは、ADOX の使用方法を理解するのに役立つサンプルコードを提供しています。 すべてのコード例は Microsoft Visual C++ を使用して記述されます。  
   
 > [!NOTE]
->  全体のコード例は、最初から最後まで、コード エディターに貼り付けます。 部分的な例を使用する場合、または段落の書式設定が失われた場合、例が正しく動作しない可能性があります。  
+>  コード例全体をコードエディターに貼り付けます。 部分例を使用する場合や、段落の書式設定が失われた場合、この例は正しく動作しない可能性があります。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -43,9 +43,9 @@ ms.locfileid: "67952128"
   
 -   [Indexes Append メソッドの例 (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、および UpdateRule プロパティの例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Keys Append メソッド、Key Type、UpdateRule 列、関連性テーブル、およびプロパティの例 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
   
 -   [Attributes プロパティの例 (VC++)](../../../ado/reference/adox-api/attributes-property-example-vc.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67952128"
   
 -   [Command プロパティおよび CommandText プロパティの例 (VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Command プロパティ、パラメーター コレクションの例 (vc++)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command プロパティ、Parameters コレクションの例 (VC + +)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated および DateModified プロパティの例 (VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -65,9 +65,9 @@ ms.locfileid: "67952128"
   
 -   [IndexNulls プロパティの例 (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティ、キーの Append メソッドの例 (vc++)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [キーの種類、関連性のある列、関連性のあるテーブル、UpdateRule プロパティ、Keys Append メソッドの例 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Name プロパティ、Columns および Tables Append メソッドの例 (vc++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Name プロパティ、Columns および Tables Append メソッドの例 (VC + +)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [NumericScale および Precision プロパティの例 (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67952128"
   
 -   [PrimaryKey および Unique プロパティの例 (VC++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [テーブル型のプロパティ、接続の終了メソッドの例 (vc++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [Table Type プロパティ、Connection Close メソッドの例 (VC + +)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>コレクション  
   

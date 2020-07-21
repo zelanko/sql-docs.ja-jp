@@ -1,5 +1,5 @@
 ---
-title: 探索とデータのクリーニング |Microsoft Docs
+title: データの探索とクリーニング |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a31ed2e8e79e6f3ebf6cbecfeac14d24b56bf303
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081266"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528338"
 ---
 # <a name="exploring-and-cleaning-data"></a>データの探索とクリーニング
   データの準備は、データのクレンジングよりはるかに大きな概念です。 データの準備方法によって、最終的な結果の解釈も影響を受けることを忘れないでください。 データの準備には、次のようなタスクがあります。  
@@ -68,13 +67,13 @@ ms.locfileid: "66081266"
   
 -   数値の範囲を表すグループを作成することで、データをビン分割します。  
   
-     ラベルが付いたなど、Income 列の数値を置換するなど、**収入 - モデレートする**と**収入 - 高**します。  
+     たとえば、数値の収入列を、**収入-** 中、**収入-高**などのラベルに置き換えることができます。  
   
 -   不連続値をカテゴリに分類して集約します。  
   
      たとえば、購入のパターンを検出するには個別の製品が多すぎる場合、製品をより幅広いカテゴリに割り当てることができます。  
   
- [ラベルの変更&#40;SQL Server データ マイニング アドイン&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [&#40;SQL Server データマイニングアドインのラベルを再付け&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
 ### <a name="cleanse-data"></a>データのクレンジング  
  データ クレンジングでは、さまざまな処理が行われ、そのほとんどがアドインによってサポートされています。  
@@ -83,24 +82,24 @@ ms.locfileid: "66081266"
   
 -   不足値を検出して削除するか、平均値や NULL などの適切な値を帰属させます。  
   
- [データの探索&#40;SQL Server データ マイニング アドイン&#41;](explore-data-sql-server-data-mining-add-ins.md)  
+ [データ &#40;SQL Server データマイニングアドインの探索&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
- [ラベルの変更&#40;SQL Server データ マイニング アドイン&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [&#40;SQL Server データマイニングアドインのラベルを再付け&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
  [例の全体適用](fill-from-example-table-analysis-tools-for-excel.md)  
   
 ### <a name="sample-data"></a>サンプル データ  
  サンプル データ ウィザードでは、モデルのトレーニングとテストに使用する均衡の取れたデータ セットを 2 つの方法で作成できます。  
   
--   **ランダムにサンプリングします。** トレーニングやテストに使用するために、大きなデータ セットから対応するデータ セットを抽出する場合にこのオプションを使用します。 データ マイニング アドインでは、*階層化されたサンプリング*を使用して、サンプリングされた各変数に対してバランスの取れた値のセットが取得されるようにします。  
+-   **ランダムサンプリング。** トレーニングやテストに使用するために、大きなデータ セットから対応するデータ セットを抽出する場合にこのオプションを使用します。 データ マイニング アドインでは、*階層化されたサンプリング*を使用して、サンプリングされた各変数に対してバランスの取れた値のセットが取得されるようにします。  
   
--   **オーバー サンプリングします。** 対象となる結果に対してデータが不足しており、そのデータにより重みを付ける必要がある場合にこのオプションを使用します。 たとえば、詐欺行為は比較的まれにしか発生しませんが、詐欺行為に関連するケースをオーバーサンプリングして、モデリングするための最適化データを取得できます。  
+-   **[オーバーサンプリング]。** 対象となる結果に対してデータが不足しており、そのデータにより重みを付ける必要がある場合にこのオプションを使用します。 たとえば、詐欺行為は比較的まれにしか発生しませんが、詐欺行為に関連するケースをオーバーサンプリングして、モデリングするための最適化データを取得できます。  
   
  [サンプル データ &#40;SQL Server データ マイニング アドイン&#41;](sample-data-sql-server-data-mining-add-ins.md)。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング モデルを作成します。](creating-a-data-mining-model.md)   
- [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [データマイニングモデルの作成](creating-a-data-mining-model.md)   
+ [Excel 用データマイニングアドインのモデルを検証し、モデルを使用して予測 &#40;する&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Excel 用データマイニングアドイン &#40;のマイニングモデルの配置とスケーリング&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

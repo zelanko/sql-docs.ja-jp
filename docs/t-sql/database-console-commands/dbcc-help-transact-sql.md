@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: da8c23819a2f47caf087ab44cd654b795a9a044d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c8f5d9635b33a7578c2ab9ba30cf4845e20a5eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039116"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901696"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 指定された DBCC コマンドに関する構文情報を返します。
   
@@ -40,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>引数  
- *dbcc_statement* |  *@dbcc_statement_var*  
+ *dbcc_statement* |  *\@dbcc_statement_var*  
  構文情報を取得する DBCC コマンドの名前を指定します。 DBCC コマンドの "DBCC" より後の部分のみを指定します (たとえば、DBCC CHECKDB ではなく CHECKDB と指定します)。  
   
  ?  
@@ -55,7 +55,7 @@ DBCC HELP は、指定された DBCC コマンドの構文を示す結果セッ�
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-using-dbcc-help-with-a-variable"></a>A. DBCC HELP と変数  
 次の例では、DBCC `CHECKDB` に関する構文情報を返します。
   

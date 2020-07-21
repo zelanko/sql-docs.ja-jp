@@ -1,5 +1,5 @@
 ---
-title: データベース ID 32767 をデタッチ |Microsoft Docs
+title: データベース ID 32767 | をデタッチします。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9fc5ca2d3c1d7944342b9902ad0d74ce4bf7a725
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 120b87b0e15ef4fa40ca95277ca0a42150d45c56
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012492"
 ---
 # <a name="detach-database-id-32767"></a>データベース ID 32767 をデタッチする
   アップグレード アドバイザーによって、データベース ID 32767 を持つデータベースが検出されました。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、このデータベース ID は予約されています。 データベースをデタッチした後でアップグレードします。 アップグレード後にデータベースをアタッチできます。  
@@ -25,8 +24,8 @@ ms.locfileid: "66095572"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>参照  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

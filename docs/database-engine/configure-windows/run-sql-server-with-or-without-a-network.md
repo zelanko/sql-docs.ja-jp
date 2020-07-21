@@ -1,5 +1,6 @@
 ---
 title: ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行 | Microsoft Docs
+description: SQL Server の実行をネットワークの上で行う方法と、それを使用せずに行う方法について説明します。 ローカルで使用する場合は、ローカル パイプを使用する方法を参照してください。 ネットワークで使用する場合は、必要とされるサービスを確認する方法を参照してください。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - starting Server service
 - SQL Server, running
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: db02b300e0f327a9186fb9b9af612d8f3f1ec452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40da72c64afd53e01e7ce5060d18a273c5263796
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651505"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>ネットワークを使用する場合とネットワークを使用しない場合の SQL Server の実行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はネットワーク上で実行できます。また、ネットワークを使用せずに機能させることもできます。  
   
 ## <a name="running-sql-server-on-a-network"></a>ネットワーク上での SQL Server の実行  

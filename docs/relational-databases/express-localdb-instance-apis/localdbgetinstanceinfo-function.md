@@ -15,18 +15,18 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789500"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   指定した SQL Server Express LocalDB インスタンスの情報を返します。たとえば、存在するかどうか、使用する LocalDB バージョン、実行中かどうかなどです。  
   
- 情報が返されます、**構造体**という**LocalDBInstanceInfo**、次の定義を持ちます。  
+ この情報は、 **Localdbinstanceinfo**という名前の構造体に返されます。この**構造体**には次の定義が含まれています。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **ヘッダー ファイル:** sqlncli.h  
+ **ヘッダーファイル:** sqlncli  
   
 ## <a name="syntax"></a>構文  
   
@@ -93,7 +93,7 @@ HRESULT LocalDBGetInstanceInfo(
  [出力] LocalDB インスタンスについての情報を格納するバッファー。  
   
  *dwInstanceInfoSize*  
- [入力]サイズを保持する、 *InstanceInfo*バッファー。  
+ 代入*Instanceinfo*バッファーのサイズを保持します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -127,11 +127,11 @@ HRESULT LocalDBGetInstanceInfo(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="details"></a>詳細  
- 概要の背後にある"the rationale"、**構造体**サイズ引数 (*lpInstanceInfoSize*) を返す別のバージョンの API を有効にするのには、 **LocalDBInstanceInfostruct**実質的に、上位および下位互換性を有効にします。  
+ **構造体**のサイズ引数 (*Lpinstanceinfosize*) の導入の背後にある論理的な理由は、API が異なるバージョンの**localdbinstanceinfostruct**を返すことができるようにすることです。これにより、上位互換性と下位互換性が効果的に有効になります。  
   
- 場合、**構造体**サイズ引数 (*lpInstanceInfoSize*) の既知のバージョンのサイズに合った、 **LocalDBInstanceInfostruct**、そのバージョンの**構造体**が返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
+ **構造体**のサイズ引数 (*Lpinstanceinfosize*) が既知のバージョンの**localdbinstanceinfostruct**のサイズと一致する場合、その**構造体**のバージョンが返されます。 それ以外の場合、LOCALDB_ERROR_INVALID_PARAMETER が返されます。  
   
- 典型的な例**LocalDBGetInstanceInfo**次のような API の使用量。  
+ **Localdbgetinstanceinfo** API の一般的な使用例は次のようになります。  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -139,9 +139,9 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
+ LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

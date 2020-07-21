@@ -1,5 +1,5 @@
 ---
-title: sys.fn_translate_permissions (TRANSACT-SQL) |Microsoft Docs
+title: fn_translate_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aec909b59a6e174269a14a330ad839d3e3ff4faa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055375"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898250"
 ---
-# <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  権限名のテーブルに SQL トレースによって返される権限のビットマスクを変換します。  
+  SQL トレースによって返されるアクセス許可のビットマスクを権限名のテーブルに変換します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引数  
- *level*  
- 権限が適用されるセキュリティ保護可能なリソースの種類を指定します。 *レベル*は**nvarchar (60)** します。  
+ *レベル*  
+ 権限が適用されるセキュリティ保護可能なリソースの種類を指定します。 *レベル*は**nvarchar (60)** です。  
   
  *perms*  
- 権限列に返されるビットマスクを指定します。 *perms*は**varbinary (16)** します。  
+ 権限列に返されるビットマスクを指定します。 *perms*は**varbinary (16)** です。  
   
 ## <a name="returns"></a>戻り値  
  **テーブル**  
   
-## <a name="remarks"></a>コメント  
- 戻り値、**権限**SQL トレースの列で使用されるビットマスクを整数で表したの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効なアクセス許可を計算します。 それぞれ 25 種類のセキュリティ保護可能なは、独自の対応する数値を使用した権限セットがあります。 **sys.fn_translate_permissions**このビットマスクを権限名のテーブルに変換します。  
+## <a name="remarks"></a>Remarks  
+ SQL トレースの**permissions**列に返される値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有効な権限を計算するためにによって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **fn_translate_permissions**は、このビットマスクを権限名のテーブルに変換します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 次のクエリは`sys.fn_builtin_permissions`を使用して、証明書に適用するアクセス許可を表示する`sys.fn_translate_permissions`権限のビットマスクの結果を返します。  
+ 次のクエリでは、を使用して、 `sys.fn_builtin_permissions` 証明書に適用されるアクセス許可を表示し、を使用して `sys.fn_translate_permissions` アクセス許可のビットマスクの結果を返します。  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -69,8 +69,8 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+ [アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [server_permissions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

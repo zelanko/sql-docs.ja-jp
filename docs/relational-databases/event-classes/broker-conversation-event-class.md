@@ -12,22 +12,22 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679502"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation イベント クラスのデータ列  
   
-|データ列|型|[説明]|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
@@ -38,12 +38,12 @@ ms.locfileid: "67999771"
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**MethodName**|**nvarchar**|このメッセージ交換が属しているメッセージ交換グループ。|47|いいえ|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|ダイアログのメッセージ交換ハンドル。|34|いいえ|  
-|**[Priority]**|**int**|メッセージ交換の優先度レベル。|5|はい|  
+|**優先順位**|**int**|メッセージ交換の優先度レベル。|5|はい|  
 |**RoleName**|**nvarchar**|メッセージ交換ハンドルのロール。 **initiator** または **target**のいずれかです。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの重大度。|29|いいえ|  
@@ -55,13 +55,13 @@ ms.locfileid: "67999771"
 |||**CO**。 メッセージ交換中状態。 メッセージ交換が確立され、メッセージ交換の両側からメッセージを送信できます。 通常のサービスに関する通信の大部分は、メッセージ交換がこの状態のときに行われます。|||  
 |||**DI**。 受信切断状態。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションは引き続きこのメッセージ交換のメッセージを受信できます。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションで END CONVERSATION を発行すると、メッセージ交換は終了 (CD) 状態に移行します。|||  
 |||**DO**。 送信切断状態。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側で END CONVERSATION が承認されると、メッセージの交換は終了 (CD) 状態に移行します。|||  
-|||**ER**。 エラー状態。 このエンドポイントでエラーが発生しました。 Error、Severity、State の各列に、発生した特定のエラーに関する情報が含まれています。|||  
+|||**ER**。 エラーが発生します。 このエンドポイントでエラーが発生しました。 Error、Severity、State の各列に、発生した特定のエラーに関する情報が含まれています。|||  
 |||**CD**。 終了状態。 メッセージ交換のエンドポイントは解放されました。|||  
 |**Transaction ID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  次の表は、このイベント クラスのサブクラス値の一覧です。  
   
-|ID|サブクラス|[説明]|  
+|id|サブクラス|説明|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で SEND ステートメントが実行されるときに、** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **で WITH ERROR 句を指定しない END CONVERSATION ステートメントが実行されるときに、** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] イベントが生成されます。|  

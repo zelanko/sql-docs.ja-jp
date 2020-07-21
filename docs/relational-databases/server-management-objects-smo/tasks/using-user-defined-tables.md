@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義テーブルの使用 |マイクロソフトのドキュメント
+title: ユーザー定義テーブルを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,22 +10,21 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26db752cffe88a06003f3255ea42c049d62af697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: caf585eacb9fdb9cc93177220150144cbea00fd2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048919"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011850"
 ---
 # <a name="using-user-defined-tables"></a>ユーザー定義テーブルの使用
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ユーザー定義テーブルは、表形式の情報を表します。 ストアド プロシージャやユーザー定義関数に表形式のデータを渡すときにパラメーターとして使用されます。 データベース テーブルの列を表すために使用することはできません。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> プロパティがあります。 各<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>オブジェクト コレクションには、**列**プロパティのコレクションを参照する<xref:Microsoft.SqlServer.Management.Smo.Column>ユーザー定義テーブルの列を一覧表示するオブジェクト。 Add メソッドを使用すると、ユーザー定義テーブルに列を追加できます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> プロパティがあります。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>そのコレクション内の各オブジェクトには、ユーザー定義テーブルの列を一覧表示するオブジェクトのコレクションを参照する**Columns**プロパティがあり <xref:Microsoft.SqlServer.Management.Smo.Column> ます。 Add メソッドを使用すると、ユーザー定義テーブルに列を追加できます。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> オブジェクトを使用して新しいユーザー定義テーブルを定義するときには、テーブルの列と、それらの列のいずれかに基づく主キーを指定する必要があります。  
   
@@ -33,16 +32,16 @@ ms.locfileid: "68048919"
   
  <xref:Microsoft.SqlServer.Management.Smo.DataType> クラスは、列やパラメーターに関連付けられたデータ型を指定するために使用します。 この型を使用して、ユーザー定義テーブル型を、ユーザー定義の関数やストアド プロシージャのパラメーターとして指定できます。  
   
-## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+## <a name="examples"></a>例  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Visual Basic でのユーザー定義テーブルの作成  
- この例を含むクラス ライブラリの imports ステートメントを含める必要が、 **StringCollection**型。  
+ この例では、 **StringCollection**型を含むクラスライブラリの imports ステートメントを含める必要があります。  
   
  `Imports System.Collections.Specialized`  
   
- この例では、ユーザー定義のテーブルを作成する方法と、ユーザー定義関数のパラメーターとして使用する方法を示します。  
+ この例では、ユーザー定義テーブルを作成する方法と、ユーザー定義テーブルをユーザー定義関数のパラメーターとして使用する方法を示します。  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server  
@@ -102,7 +101,7 @@ ms.locfileid: "68048919"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Visual C# でのユーザー定義テーブルの作成  
- この例を含むクラス ライブラリの imports ステートメントを含める必要が、 **StringCollection**型。  
+ この例では、 **StringCollection**型を含むクラスライブラリの imports ステートメントを含める必要があります。  
   
  `using System.Collections.Specialized;`  
   
@@ -172,7 +171,7 @@ ms.locfileid: "68048919"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>PowerShell でのユーザー定義テーブルの作成  
- この例を含むクラス ライブラリの imports ステートメントを含める必要が、 **StringCollection**型。  
+ この例では、 **StringCollection**型を含むクラスライブラリの imports ステートメントを含める必要があります。  
   
  `using System.Collections.Specialized;`  
   

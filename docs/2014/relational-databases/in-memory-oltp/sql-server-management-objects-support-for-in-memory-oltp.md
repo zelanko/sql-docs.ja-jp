@@ -8,14 +8,13 @@ ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.author: jroth
+ms.openlocfilehash: 08f3d9bd62459ecab124fb740a4fe64875af464a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049999"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート
   このトピックでは、インメモリ OLTP 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の変更について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "63066440"
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
 ## <a name="code-sample"></a>コード サンプル  
- このサンプルの内容は次のとおりです。  
+ このサンプルでは、次の処理を実行します。  
   
 -   メモリ最適化ファイル グループとメモリ最適化ファイルが含まれるデータベースを作成します。  
   

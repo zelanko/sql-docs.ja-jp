@@ -1,6 +1,7 @@
 ---
-title: 定義済みのレプリケーションの警告の構成 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 定義済みのレプリケーションの警告の構成 (SSMS)
+description: SQL Server Management Studio (SSMS) を使用して、定義済みのレプリケーションの警告を構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 04f082e8cee19c7416b21ee2abc88467a0ea707d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 74ea5f383422ae75fb5bdd6f449c2498ce6c7ea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726065"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>定義済みのレプリケーションの警告の構成 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]
   レプリケーションには、以下の定義済みの警告が用意されています。これらは、レプリケーション イベントに応答するように構成できます。  
   
 -   **レプリケーション: エージェントが成功しました**  
@@ -41,9 +42,9 @@ ms.locfileid: "68768833"
   
 -   **レプリケーション: エージェントのカスタム シャットダウン**  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[警告]** フォルダーまたはレプリケーション モニターの **[警告]** タブからこれらの警告を構成できます。 このタブにアクセスする方法の詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の **[警告]** フォルダー、またはレプリケーション モニターの **[警告]** タブからこれらの警告を構成できます。 このタブにアクセスする方法の詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
- これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」をご覧ください。  
+ これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」を参照してください。  
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Management Studio で定義済みのレプリケーションの警告を構成するには  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68768833"
   
 3.  レプリケーションの警告を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスのオプションを設定します。  
+4.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスでオプションを設定します。  
   
     -   **[全般]** ページで **[有効化]** をクリックし、警告を適用するデータベースを指定します。  
   
@@ -65,15 +66,13 @@ ms.locfileid: "68768833"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="to-configure-an-alert-for-a-threshold-in-replication-monitor"></a>レプリケーション モニターでしきい値に対する警告を構成するには  
   
 1.  **[警告]** タブで、 **[警告の構成]** をクリックします。  
   
 2.  **[レプリケーションの警告の構成]** ダイアログ ボックスで警告を選択し、 **[構成]** をクリックします。  
   
-3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスのオプションを設定します。  
+3.  **[\<AlertName> 警告のプロパティ]** ダイアログ ボックスでオプションを設定します。  
   
     -   **[全般]** ページで **[有効化]** をクリックし、警告を適用するデータベースを指定します。  
   

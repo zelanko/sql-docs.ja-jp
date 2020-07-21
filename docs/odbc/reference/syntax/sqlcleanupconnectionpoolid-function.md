@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a74a92cc05ecd41e99ff87642c7fe3ee527e0c98
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036089"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301322"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
+**互換性**  
+ 導入されたバージョン: ODBC 3.81 標準準拠: ODBC  
   
- **概要**  
- **SQLCleanupConnectionPoolID**プール ID がタイムアウトになったドライバーに通知します。そのプール ID に関連付けられたプール内のすべての接続されたときに ID がタイムアウトには、プールがタイムアウトしました。参照してください[、Microsoft Data Access Components のプーリング](https://msdn.microsoft.com/library/ms810829.aspx)接続タイムアウトの詳細についてはします。  
+ **まとめ**  
+ **SQLCleanupConnectionPoolID**は、プール ID がタイムアウトしたことをドライバーに通知します。プール ID は、そのプール ID に関連付けられているプール内のすべての接続がタイムアウトしたときにタイムアウトすることがあります。接続タイムアウトの詳細については[、「Microsoft Data Access コンポーネントでのプーリング](https://msdn.microsoft.com/library/ms810829.aspx)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
 ## <a name="arguments"></a>引数  
  *EnvironmentHandle*  
- [入力]プールの環境ハンドル。  
+ 代入プールの環境ハンドル。  
   
  *PoolID*  
- [入力]タイムアウトするプールの ID に関連付けられたプール。  
+ 代入タイムアウトしたプール ID に関連付けられているプール。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ドライバー マネージャーはから返された診断情報を処理しません**SQLCleanupConnectionPoolID**します。  
+ ドライバーマネージャーは、 **SQLCleanupConnectionPoolID**から返された診断情報を処理しません。  
   
- アプリケーションでは、ドライバーによって返されるエラー メッセージを受信できません。  
+ アプリケーションは、ドライバーによって返されたエラーメッセージを受信できません。  
   
-## <a name="remarks"></a>コメント  
- **SQLCleanupConnectionPoolID** 、いつでも呼び出すことができますが、ドライバー マネージャーを他のスレッドが同時を呼び出していないことを保証**SQLGetPoolID**およびその他のスレッドが同時に呼び出しありません**SQLRateConnection**と**SQLPoolConnect**そのプール ID に割り当てられている接続情報トークンを使用して そのため、ドライバーはこの関数はスレッド セーフであることを確認してください。  
+## <a name="remarks"></a>Remarks  
+ **SQLCleanupConnectionPoolID**はいつでも呼び出すことができますが、ドライバーマネージャーは、他のスレッドが同時に**SQLGetPoolID**を呼び出していないことを保証します。また、そのプール ID で割り当てられた接続情報トークンを使用して、他のスレッドが**SQLRateConnection**と**sqlpoolconnect**を同時に呼び出すことはありません。 そのため、ドライバーは、この機能がスレッドセーフであることを確認する必要があります。  
   
- ドライバーはプール ID に関連付けられたリソースをクリーンアップできます。  
+ ドライバーは、プール ID に関連付けられているリソースをクリーンアップできます。  
   
- アプリケーションでは、この関数を直接呼び出さないでください。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
+ アプリケーションでは、この関数を直接呼び出すことはできません。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
   
- ODBC ドライバーの開発の sqlspi.h が含まれます。  
+ ODBC ドライバーの開発には sqlspi. h を含めます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

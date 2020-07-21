@@ -1,5 +1,5 @@
 ---
-title: トレース (SQL Server Profiler) を一時停止 |Microsoft Docs
+title: トレースを一時停止する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4961b68d46f8e4f1627c28c05ab2efb609d9f90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdc9dbbd01099b1d33787a72b0bd59b65cea722e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054339"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>トレースの一時停止 (SQL Server Profiler)
   トレースを一時停止すると、トレースを再開するまで、それ以上のイベント データはキャプチャされません。  

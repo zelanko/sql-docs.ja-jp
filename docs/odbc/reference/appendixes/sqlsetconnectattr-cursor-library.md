@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectAttr (カーソル ライブラリ) |Microsoft Docs
+title: SQLSetConnectAttr (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73d1369a2bce0327ac3367d33f0894bdcfab8205
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a87c85d727fb9eb2fc27613b9eecd3fe0ec51b58
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125579"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300542"
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLSetConnectAttr**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLSetConnectAttr**を参照してください[SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)します。  
+ このトピックでは、カーソルライブラリでの**SQLSetConnectAttr**関数の使用について説明します。 **SQLSetConnectAttr**の一般的な情報については、「 [SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)」を参照してください。  
   
- アプリケーションを呼び出す**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 属性をカーソル ライブラリが常に使用になっていること、ドライバーは、スクロール可能なカーソルをサポートしていない場合に使用または使用しないかどうかを指定します。 カーソル ライブラリは、ドライバーでは、SQL_CA1_RELATIVE で SQL_STATIC_CURSOR_ATTRIBUTES1 情報の種類を返す場合に、スクロール可能なカーソルがサポートしている前提としています。 **SQLGetInfo**します。  
+ アプリケーションは、SQL_ATTR_ODBC_CURSORS 属性を使用して**SQLSetConnectAttr**を呼び出し、カーソルライブラリを常に使用するかどうかを指定します。これは、ドライバーがスクロール可能なカーソルをサポートしていない場合、または使用しない場合に使用します。 カーソルライブラリでは、 **SQLGetInfo**の SQL_STATIC_CURSOR_ATTRIBUTES1 情報型に対して SQL_CA1_RELATIVE が返された場合に、ドライバーがスクロール可能なカーソルをサポートしていると想定しています。  
   
- アプリケーションを呼び出す必要があります**SQLSetConnectAttr**呼び出した後、カーソル ライブラリの使用量を指定する**SQLAllocHandle**で、 *HandleType*の割り当てを sql_handle_dbc として接続およびデータ ソースに接続する前にします。 アプリケーションを呼び出す場合**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 属性を持つ接続がまだアクティブなときに、カーソル ライブラリ エラーが返されます。  
+ アプリケーションは**SQLSetConnectAttr**を呼び出して、接続を割り当て、データソースに接続する前に、SQL_HANDLE_DBC の*handletype*を使用して**SQLAllocHandle**を呼び出した後、カーソルライブラリの使用を指定する必要があります。 接続がまだアクティブであるときに、アプリケーションが SQL_ATTR_ODBC_CURSORS 属性を使用して**SQLSetConnectAttr**を呼び出すと、カーソルライブラリがエラーを返します。  
   
- 接続に関連付けられているすべてのステートメントのカーソル ライブラリでサポートされているステートメント属性を設定するアプリケーションを呼び出す必要があります**SQLSetConnectAttr**とその前に、データ ソースに接続した後は、そのステートメント属性カーソルを開きます。 アプリケーションを呼び出す場合**SQLSetConnectAttr**ステートメントで属性と、カーソルが開いている接続に関連付けられているステートメントで、カーソルが閉じられるまで、ステートメント属性をそのステートメントに適用されませんが、再度開きます。
+ 接続に関連付けられているすべてのステートメントについて、カーソルライブラリでサポートされているステートメント属性を設定するには、データソースに接続してからカーソルを開く前に、そのステートメント属性に対して**SQLSetConnectAttr**を呼び出す必要があります。 アプリケーションがステートメント属性を使用して**SQLSetConnectAttr**を呼び出し、その接続に関連付けられているステートメントでカーソルが開いている場合、カーソルを閉じて再度開くまで、ステートメント属性はそのステートメントに適用されません。

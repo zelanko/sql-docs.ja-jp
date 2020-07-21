@@ -1,5 +1,5 @@
 ---
-title: getObject メソッド (int, java. util. Map) |Microsoft Docs
+title: getObject メソッド (int, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f064d1fa6dd84d72f49ebc5352db85de088b8f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981240"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905088"
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject (int, java.util.Map) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public java.lang.Object getObject(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
  *map*  
   
- マップオブジェクト。  
+ Map オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  **Object** 値。  
@@ -53,7 +53,7 @@ public java.lang.Object getObject(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getObject メソッドは、java.sql.CallableStatement インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  

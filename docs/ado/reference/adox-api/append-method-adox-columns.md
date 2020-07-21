@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967328"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764043"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX Columns)
-新しく追加[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを[列](../../../ado/reference/adox-api/columns-collection-adox.md)コレクション。  
+[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションに新しい[Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,23 +35,23 @@ Columns.Append Column [,Type] [,DefinedSize]
   
 #### <a name="parameters"></a>パラメーター  
  *列*  
- **列**オブジェクトを追加するかを作成し、付加列の名前。  
+ 追加する**列**オブジェクト、または作成して追加する列の名前。  
   
- *型*  
- 任意。 A**長い**列のデータ型を指定する値。 *型*パラメーターに対応、[型](../../../ado/reference/adox-api/type-property-column-adox.md)のプロパティを**列**オブジェクト。  
+ *Type*  
+ 任意。 列のデータ型を指定する**Long**型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](../../../ado/reference/adox-api/type-property-column-adox.md)プロパティに対応しています。  
   
  *DefinedSize*  
- 任意。 A**長い**列のサイズを指定する値。 *DefinedSize*パラメーターに対応、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティを**列**オブジェクト。  
+ 任意。 列のサイズを指定する**Long 型**の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティに対応します。  
   
 > [!NOTE]
->  追加するときにエラーが発生する**列**を**列**のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)場合、**列**に存在しません[テーブル](../../../ado/reference/adox-api/table-object-adox.md)に既に追加されて、[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。  
+>  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに既に追加されている[テーブル](../../../ado/reference/adox-api/table-object-adox.md)**に列が**存在しない場合、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

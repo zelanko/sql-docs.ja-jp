@@ -13,25 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - SaveOptionsEnum enumeration [ADO]
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3423d215fa4a52286509769bb2ac0b75d2283a02
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931144"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755836"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-ファイルを作成または上書きを保存するときにするかどうかを指定します、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。 値は、 **adSaveCreateNotExist**または**adSaveCreateOverWrite**.  
+[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトから保存するときにファイルを作成するか上書きするかを指定します。 値には、 **adSaveCreateNotExist**または**adSaveCreateOverWrite**を指定できます。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adSaveCreateNotExist**|1|既定値です。 によって、ファイルが指定されている場合は、新しいファイルを作成、 *FileName*パラメーターが存在しません。|  
-|**adSaveCreateOverWrite**|2|データを現在開いているファイルが上書きされます**Stream**によってファイルが指定されている場合、オブジェクト、 *Filename*パラメーターは既に存在します。 によって、ファイルが指定されている場合、 *Filename*パラメーターが存在しないか、新しいファイルが作成されます。|  
+|**adSaveCreateNotExist**|1|既定値。 *FileName*パラメーターで指定したファイルがまだ存在しない場合は、新しいファイルを作成します。|  
+|**adSaveCreateOverWrite**|2|*Filename*パラメーターで指定されたファイルが既に存在する場合、ファイルを現在開いている**ストリーム**オブジェクトのデータで上書きします。 *Filename*パラメーターで指定されたファイルが存在しない場合は、新しいファイルが作成されます。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- これらの定数には、ADO と WFC 対応はありません。  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [SaveToFile メソッド](../../../ado/reference/ado-api/savetofile-method.md)

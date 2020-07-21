@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931860"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762103"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
-プロバイダーからデータベース スキーマ情報を取得します。  
+プロバイダーからデータベーススキーマ情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,44 +34,44 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)スキーマ情報を含むオブジェクト。 **Recordset**の静的な読み取り専用カーソルとして開かれます。 *QueryType*に表示する列を指定、 **Recordset**します。  
+ スキーマ情報を含む[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを返します。 **レコードセット**は、読み取り専用の静的カーソルとして開かれます。 *QueryType*は、**レコードセット**に表示される列を決定します。  
   
 #### <a name="parameters"></a>パラメーター  
  *QueryType*  
- すべて[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)スキーマ クエリの実行の種類を表す値です。  
+ 実行するスキーマクエリの種類を表す[Schemaenum](../../../ado/reference/ado-api/schemaenum.md)値。  
   
  *条件*  
- 任意。 配列の各クエリの制約の*QueryType*オプション、記載されている[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)します。  
+ 任意。 [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)に記載されているように、各*QueryType*オプションのクエリ制約の配列。  
   
  *SchemaID*  
- OLE DB 仕様で定義されていないプロバイダー スキーマ クエリの GUID です。 このパラメーターは必要な場合*QueryType*に設定されている**adSchemaProviderSpecific**。 それ以外は使用されません。  
+ OLE DB 仕様で定義されていないプロバイダースキーマクエリの GUID。 *QueryType*が**Adschemaproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
-## <a name="remarks"></a>コメント  
- **OpenSchema**メソッドは、データ ソース、テーブル内の列内のテーブルなど、データ ソースに関する情報を返し、データ型がサポートされています。  
+## <a name="remarks"></a>解説  
+ **OpenSchema**メソッドは、データソース内のテーブル、テーブル内の列、サポートされるデータ型など、データソースに関する自己記述的な情報を返します。  
   
- *QueryType*引数が列 (スキーマ) が返されるかを示す GUID。 OLE DB 仕様では、スキーマの完全な一覧があります。  
+ *QueryType*引数は、返される列 (スキーマ) を示す GUID です。 OLE DB 仕様には、スキーマの完全な一覧が含まれています。  
   
- *条件*引数がスキーマ クエリの結果を制限します。 *条件*対応する結果の制約の列と呼ばれる列のサブセットで行う必要のある値の配列を指定します。 **Recordset**します。  
+ *Criteria*引数は、スキーマクエリの結果を制限します。 *条件*には、結果として得られる**レコードセット**内の、対応する列のサブセット (制約列) に出現する必要がある値の配列を指定します。  
   
- 定数**adSchemaProviderSpecific**の使用は、 *QueryType*引数場合は、プロバイダーは、外の独自の標準スキーマ クエリを定義します。 前の表にします。 この定数を使用する場合、 *SchemaID*引数を実行する、スキーマ クエリの GUID を渡す必要があります。 場合*QueryType*に設定されている**adSchemaProviderSpecific**が*SchemaID*が提供されていない場合、エラーが発生します。  
+ プロバイダーが、前に示した以外の非標準のスキーマクエリを定義している場合は、 *QueryType*引数に定数**Adschemaproviderspecific**が使用されます。 この定数を使用する場合は、実行するスキーマクエリの GUID を渡すために*Schemaid*引数が必要です。 *QueryType*が**Adschemaproviderspecific**に設定されていても、 *schemaid*が指定されていない場合、エラーが発生します。  
   
- プロバイダーは、OLE DB 標準スキーマのすべてのクエリをサポートする必要はありません。 具体的には、のみ**adSchemaTables**、 **adSchemaColumns**、および**adSchemaProviderTypes**が OLE DB 仕様で必要です。 ただし、プロバイダーは、サポートする必要はありません、*条件*これらのスキーマ クエリの制約が以前に紹介します。  
-  
-> [!NOTE]
->  **リモート データ サービスの使用状況**、 **OpenSchema**メソッドがクライアント側でご利用いただけません[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
+ プロバイダーは、すべての OLE DB 標準スキーマクエリをサポートする必要はありません。 具体的には、OLE DB の仕様で**adSchemaColumns**は、 **adschematables**、 **adschematables**だけが必要です。 ただし、これらのスキーマクエリに対して前述した*条件*制約をサポートするために、プロバイダーは必要ありません。  
   
 > [!NOTE]
->  Visual basic での 4 バイト符号なし整数 (DBTYPE UI4) である列、 **Recordset**から返される、 **OpenSchema**メソッドを**接続**オブジェクトことはできませんその他の変数と比較します。 OLE DB データ型の詳細については、次を参照してください[OLE DB (OLE DB) でのデータ型](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)と[付録 a:。データ型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)Microsoft OLE DB プログラマーズ リファレンス。  
+>  **リモートデータサービスの使用状況****OpenSchema**メソッドは、クライアント側の[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトでは使用できません。  
   
 > [!NOTE]
->  **Visual C/C++ユーザー**クライアント側のカーソルを使用していない場合は、MDAC 2.7、MDAC 2.8、および使用される型の中に Windows Data Access Components (Windows DAC) 6.0 では、型 VT_R8 のバリアント型を返します ADO では列のスキーマの"ORDINAL_POSITION"を取得します。MDAC 2.6 VT_I4 でした。 MDAC 2.6 のバリアント型を探してそのだけに記述されたプログラムは、0 を変更しなくても、MDAC 2.7、MDAC 2.8、および Windows DAC 6.0 で実行する場合は、すべて序数を取得 VT_I4 型の返されます。 OLE DB が返すデータ型が、DBTYPE_UI4 であるために、この変更が行われ、VT_I4 の符号付きの型がないが発生していると、原因となり、データが失われる可能性がある切り捨てることがなくすべての値を格納する十分な空き領域。  
+>  Visual Basic、**接続**オブジェクトの**OpenSchema**メソッドから返された**レコードセット**内の4バイト符号なし整数 (DBTYPE UI4) を持つ列を他の変数と比較することはできません。 OLE DB データ型の詳細については、「 [OLE DB のデータ型」 (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)および「[付録 a:](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) Microsoft OLE DB プログラマーリファレンス」の「データ型」を参照してください。  
+  
+> [!NOTE]
+>  **Visual C/c + + ユーザー**クライアント側カーソルを使用していない場合は、ADO の列スキーマの "ORDINAL_POSITION" を取得すると、mdac 2.7、MDAC 2.8、および Windows Data Access Components (Windows DAC) 6.0 の VT_R8 型のバリアントが返されますが、MDAC 2.6 で使用されていた型は VT_I4 ます。 MDAC 2.6 用に記述されたプログラムでは、VT_I4 型で返される variant のみを検索する場合、MDAC 2.7、MDAC 2.8、および Windows DAC 6.0 で変更を行わずに実行すると、すべての序数に対して0が返されます。 この変更は、OLE DB が返すデータ型が DBTYPE_UI4 であり、符号付き VT_I4 型には、切り捨てが発生してデータが失われる可能性がないため、すべての可能な値を格納するのに十分な領域がないためです。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OpenSchema メソッドの例 (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
- [OpenSchema メソッドの例 (vc++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
+ [OpenSchema メソッドの例 (VC + +)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

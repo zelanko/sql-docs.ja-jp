@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891203"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
@@ -35,13 +35,13 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Unsigned_Integer*  
  正の整数値です。  
   
- *MDX SELECT statement*  
+ *MDX の SELECT ステートメント*  
  任意の有効な多次元式 (MDX) 式の SELECT ステートメントです。  
   
  *Set_of_Attributes_and_Measures*  
  ディメンションの属性とメジャーのコンマ区切りの一覧です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ドリルスルーとは、エンドユーザーがキューブから1つのセルを選択し、より詳細な情報を取得するためにそのセルのソースデータから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンドユーザーがドリルスルーを行うには、クライアントアプリケーションがこの機能をサポートしている必要があります。 で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、ROLAP パーティションまたはディメンションに対してクエリを実行しない限り、結果は MOLAP ストレージから直接取得されます。  
   
 > [!IMPORTANT]  
@@ -49,9 +49,9 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  対象のセルは、MDX ステートメントによって指定します。 **MAXROWS**引数で指定された値は、結果の行セットによって返される行の最大数を示します。  
   
- 既定では、返される行の最大数は1万行です。 つまり、 **MAXROWS**を指定しないままにした場合、1万行以下になります。 この値がシナリオに対して小さすぎる場合は、 **MAXROWS**をなどのより大きい数値`MAXROWS 20000`に設定できます。 全体が少なすぎる場合は、 **OLAP\Query\DefaultDrillthroughMaxRows**サーバーのプロパティを変更することで、既定値を増やすことができます。 このプロパティの変更の詳細については、「 [Analysis Services のサーバープロパティ](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)」を参照してください。  
+ 既定では、返される行の最大数は1万行です。 つまり、 **MAXROWS**を指定しないままにした場合、1万行以下になります。 この値がシナリオに対して小さすぎる場合は、 **MAXROWS**をなどのより大きい数値に設定`MAXROWS 20000`できます。 全体が少なすぎる場合は、 **OLAP\Query\DefaultDrillthroughMaxRows**サーバーのプロパティを変更することで、既定値を増やすことができます。 このプロパティの変更の詳細については、「 [Analysis Services のサーバープロパティ](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)」を参照してください。  
   
- 特に指定しない限り、返される列には、多対多ディメンション以外の、指定したメジャーのメジャーグループに関連付けられているすべてのディメンションのすべての粒度属性が含まれます。 ディメンションとメジャーグループを区別するために、キューブディメンションの前に $ が付きます。 **RETURN**句を使用して、ドリルスルー クエリで返される列を指定します。 次の関数が 1 つの属性に適用できるまたはによってメジャー、**RETURN**句。  
+ 特に指定しない限り、返される列には、多対多ディメンション以外の、指定したメジャーのメジャーグループに関連付けられているすべてのディメンションのすべての粒度属性が含まれます。 ディメンションとメジャーグループを区別するために、キューブディメンションの前に $ が付きます。 **RETURN**句は、ドリルスルークエリによって返される列を指定するために使用します。 次の関数は、 **RETURN**句によって1つの属性またはメジャーに適用できます。  
   
  Name(attribute_name)  
  指定された属性メンバーの名前を返します。  
@@ -96,7 +96,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

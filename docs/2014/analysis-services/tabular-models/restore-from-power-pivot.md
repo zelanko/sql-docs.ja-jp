@@ -1,5 +1,5 @@
 ---
-title: PowerPivot から復元 |Microsoft Docs
+title: PowerPivot からの復元 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b153dfbe9dfdbb5741304153bd7b3dfd1d0d1b3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938673"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot から復元
   SQL Server Management Studio の PowerPivot から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、PowerPivot ブック (.xlsx) から既存のデータベースに復元したりできます。  
   
 > [!NOTE]  
->  SQL Server Data Tools の PowerPivot からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、次を参照してください。 [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)します。  
+>  SQL Server Data Tools の PowerPivot からのインポート プロジェクト テンプレートが同様の機能を提供します。 詳細については、「 [PowerPivot からのインポート &#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)」を参照してください。  
   
  PowerPivot から復元機能を使用する場合、次の点に注意してください。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "66066637"
   
 ### <a name="to-restore-from-powerpivot"></a>PowerPivot から復元するには  
   
-1.  SSMS で、復元する Active Directory インスタンスで右クリック**データベース**、 をクリックし、 **PowerPivot から復元**します。  
+1.  SSMS で、復元先の Active Directory インスタンスの [**データベース**] を右クリックし、[ **PowerPivot から復元**] をクリックします。  
   
-2.  **PowerPivot から復元** ダイアログ ボックスで**復元元**の**バックアップ ファイル**、 をクリックして**参照**、.abf または .xslx を選択します復元するファイル。  
+2.  [ **PowerPivot から復元**] ダイアログボックスの [**復元元**] の [**バックアップファイル**] で、[**参照**] をクリックし、復元元の abf または .xslx ファイルを選択します。  
   
 3.  **[復元対象]** の **[データベースの復元]** で、新しいデータベースまたは既存のデータベースの名前を入力します。 名前を指定しない場合は、ブック名が使用されます。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66066637"
 5.  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 PowerPivot ブックから復元する場合は、この設定は適用されません。  
   
 ## <a name="see-also"></a>参照  
- [表形式モデルのデータベース (SSAS 表形式)](tabular-model-databases-ssas-tabular.md)   
- [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)  
+ [SSAS 表形式&#41;&#40;テーブルモデルデータベース](tabular-model-databases-ssas-tabular.md)   
+ [PowerPivot からのインポート &#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

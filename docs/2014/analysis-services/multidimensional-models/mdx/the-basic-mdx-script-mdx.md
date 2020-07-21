@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de0d2fea002beda0eca480bd27140bdd202fcb83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073809"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546198"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本的な MDX スクリプト (MDX)
-  多次元式 (MDX) スクリプトは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]におけるキューブの計算処理を定義します。 MDX スクリプトには、以下の 2 種類があります。  
+  多次元式 (MDX) スクリプトでは、のキューブの計算プロセスを定義 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] します。 MDX スクリプトには、以下の 2 種類があります。  
   
  **既定の MDX スクリプト**  
  キューブを作成すると、そのキューブの既定の MDX スクリプトが [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって作成されます。 このスクリプトは、キューブ全体の計算パスを定義します。  
@@ -52,11 +51,11 @@ ms.locfileid: "66073809"
  すべての MDX スクリプト ステートメント  
  MDX スクリプトにおいて、MDX スクリプト ステートメントは、計算のコンテキストと範囲を制御し、MDX スクリプト内の他のステートメントの動作を管理します。 このカテゴリには以下のステートメントが含まれます。  
   
--   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
+-   [行なう](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [あせん](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [検索](/sql/mdx/mdx-scripting-scope)  
   
  MDX スクリプト ステートメントの詳細については、「[MDX スクリプト ステートメント &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)」を参照してください。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66073809"
  [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET ステートメントは名前付きセットを作成します。 名前付きセットの作成方法の詳細については、「[MDX での名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)」を参照してください。  
   
- 条件ステートメント  
+ 条件付きステートメント  
  条件ステートメントは、MDX スクリプトに条件ロジックを追加します。 このカテゴリには [CASE](/sql/mdx/case-statement-mdx) および [IF](/sql/mdx/mdx-scripting-if) ステートメントが含まれます。  
   
  代入式  
@@ -89,8 +88,8 @@ ms.locfileid: "66073809"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+## <a name="see-also"></a>参照  
+ [Mdx 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: アクション フォーム エディター ([アクション] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
+title: アクションフォームエディター (キューブデザイナーの [アクション] タブ) (Analysis Services 多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062956"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528268"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
-  キューブ デザイナーの **[アクション**] タブのアクション フォーム エディター ペインを使用すると、標準のアクションを作成したり変更したりできます。  
+  キューブ デザイナーの **[アクション** ] タブのアクション フォーム エディター ペインを使用すると、標準のアクションを作成したり変更したりできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  アクションの名前を入力します。  
   
@@ -35,15 +34,15 @@ ms.locfileid: "66062956"
 |値|選択されたオブジェクト|  
 |-----------|---------------------|  
 |[属性メンバー]|**[対象になるオブジェクト]** の属性に基づくレベルからメンバーが選択されます。|  
-|[セル]|**[対象になるオブジェクト]** の名前付きセットが選択されます。 キューブ内のすべてのセルを選択するには、 **[すべてのセル]** を選択します。|  
-|Cube|**[対象になるオブジェクト]** のキューブが選択されます。 現在のキューブを使用するには、[CURRENTCUBE] を選択します。<br /><br /> 注:[Currentcube] を使用する場合、キューブの名前を変更することがありますまたは他のキューブにアクションがコピーされる移植性を提供します。 現在のキューブを表すために、[CURRENTCUBE] を使用することをお勧めします。|  
+|セル|**[対象になるオブジェクト]** の名前付きセットが選択されます。 キューブ内のすべてのセルを選択するには、 **[すべてのセル]** を選択します。|  
+|Cube|**[対象になるオブジェクト]** のキューブが選択されます。 現在のキューブを使用するには、[CURRENTCUBE] を選択します。<br /><br /> 注: キューブが名前を変更したり、アクションを他のキューブへコピーしたりする場合、[CURRENTCUBE] を使用することにより、移植性が向上します。 現在のキューブを表すために、[CURRENTCUBE] を使用することをお勧めします。|  
 |[ディメンションのメンバー]|**[対象になるオブジェクト]** でディメンションのメンバーが選択されます。|  
-|Hieararchy|**[対象になるオブジェクト]** で階層が選択されます。|  
+|Hierarchy|**[対象になるオブジェクト]** で階層が選択されます。|  
 |[階層メンバー]|**[対象になるオブジェクト]** で階層内のメンバーが選択されます。|  
 |Level|**[対象になるオブジェクト]** でレベルが選択されます。|  
 |[レベル メンバー]|**[対象になるオブジェクト]** でレベル内のメンバーが選択されます。|  
   
- **ターゲット オブジェクト**  
+ **ターゲットオブジェクト**  
  アクションが関連付けられるオブジェクトを選択します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスは、選択したオブジェクトに適用されるこれらのアクションのみをクライアントに返します。 使用可能なオブジェクトは、 **[対象になる種類]** の選択によって制限されます。  
   
  **[条件 (省略可能)]**  
@@ -54,7 +53,7 @@ ms.locfileid: "66062956"
  **[アクションの内容]**  
  展開すると、 **[種類]** と **[アクションの式]** オプションが表示されます。  
   
- **型**  
+ **Type**  
  アクションが実行されるときのアクションの種類を選択します。 次のアクションの種類が使用できます。  
   
 |値|説明|  
@@ -62,18 +61,18 @@ ms.locfileid: "66062956"
 |データセット|クライアント アプリケーションによって実行および表示される、多次元データセットを表す多次元式 (MDX) ステートメントを返します。|  
 |[専用]|このアクションの **[アプリケーション]** 設定に関連付けられたクライアント アプリケーションによって、解釈される専用文字列を返します。|  
 |[行セット]|クライアント アプリケーションによって実行および表示される、表形式の行セットを表す多次元式 (MDX) ステートメントを返します。|  
-|ステートメントから削除してください。|クライアント アプリケーションによって実行されるコマンド文字列を返します。|  
-|[URL]|クライアント アプリケーション (通常は、インターネット ブラウザー) によって開かれる URL 文字列を返します。|  
+|ステートメント|クライアント アプリケーションによって実行されるコマンド文字列を返します。|  
+|URL|クライアント アプリケーション (通常は、インターネット ブラウザー) によって開かれる URL 文字列を返します。|  
   
  アクションの種類の詳細については、「[アクション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)」を参照してください。  
   
- **アクションの式**  
+ **[アクションの式]**  
  実行するクライアント アプリケーションに対して、アクションによって返される文字列を返す多次元式 (MDX) を入力します。  
   
- **[追加のプロパティ]**  
- **[呼び出し]** 、 **[アプリケーション]** 、 **[説明]** 、 **[キャプション]** 、および **[キャプションに MDX を使用]** オプションの表示を拡張します。  
+ **追加のプロパティ**  
+ **[呼び出し]**、 **[アプリケーション]**、 **[説明]**、 **[キャプション]**、および **[キャプションに MDX を使用]** オプションの表示を拡張します。  
   
- **[呼び出し]**  
+ **呼び出し**  
  いつアクションを実行する必要があるかを設定します。  
   
 > [!NOTE]  
@@ -87,7 +86,7 @@ ms.locfileid: "66062956"
 |Interactive|アクションは、ユーザーがアクションを呼び出したときに実行されます。|  
 |[オープン時]|アクションは、キューブが最初に開いたときに実行されます。|  
   
- **アプリケーション**  
+ **Application**  
  **[アクションの式]** によって返される文字列を解釈できる、アプリケーションの名前を入力します。  
   
  このオプションを使用して、どのクライアント アプリケーションが最もよくこのアクションを使用するか識別したり、ポップアップ メニューのアクションの横に適切なアイコンを表示したりできます。  
@@ -95,7 +94,7 @@ ms.locfileid: "66062956"
 > [!NOTE]  
 >  このオプションは、どのクライアント アプリケーションがアクションを実行するかについて推奨するだけで、アクションへのアクセスを直接制御することはありません。 クライアント アプリケーションでは、他のクライアント アプリケーションに関連付けられているすべてのアクションを非表示にする必要があります。  
   
- **[説明]**  
+ **説明**  
  アクションの説明をオプションで入力します。  
   
  **Caption**  
@@ -103,17 +102,17 @@ ms.locfileid: "66062956"
   
  **[キャプションに MDX を使用]** を **[True]** に設定する場合は、キャプションの文字列を返す多次元式 (MDX) を入力します。  
   
- **キャプションに MDX**  
+ **True**  
  クライアント アプリケーションのアクションに表示されるキャプションを表すリテラル文字列が **[キャプション]** に入力されている場合は、 **[False]** を選択します。  
   
  クライアント アプリケーションのアクションに表示されるキャプションを表す文字列を返す MDX 式が **[キャプション]** に入力されている場合は、 **[True]** を選択します。 MDX 式は、アクションがクライアント アプリケーションに返される前に解析される必要があります。  
   
 ## <a name="see-also"></a>参照  
- [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;アクションタブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [アクション オーガナイザー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [レポート アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [アクション &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバーの [&#40;の操作] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [アクション &#40;オーガナイザーの [アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [[計算ツール] &#40;[アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [ドリルスルーアクションフォームエディター &#40;[アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [レポートアクションフォームエディター &#40;[アクション] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

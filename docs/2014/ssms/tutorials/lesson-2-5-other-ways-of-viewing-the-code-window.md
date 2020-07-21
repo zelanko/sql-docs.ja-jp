@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41f2efdf74dc528731f686e7aef4e35264e94803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63252676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040945"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>コード ウィンドウを表示するその他の方法
   コード ウィンドウでは、複数のコード ウィンドウをいくつかの方法で構成できます。  

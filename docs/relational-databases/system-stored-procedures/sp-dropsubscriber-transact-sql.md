@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscriber
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 093c04b63b9b99a777f7b20af70ea06677b0c917
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727196"
 ---
-# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-sql)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-sql)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  登録済みサーバーからサブスクライバーの指定を削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  登録済みサーバーからサブスクライバーの指定を削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
 >  このストアドプロシージャは非推奨とされます。 パブリッシャーでサブスクライバーを明示的に登録する必要がなくなりました。  
@@ -51,7 +51,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscriber**は、すべての種類のレプリケーションで使用されます。  
   
  このストアドプロシージャは、サーバーの**サブ**オプションを削除し、システム管理者のリモートログインマッピングを**repl_subscriber**に削除します。  
@@ -62,11 +62,11 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="see-also"></a>関連項目  
  [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addsubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

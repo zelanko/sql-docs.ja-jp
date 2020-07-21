@@ -18,21 +18,19 @@ helpviewer_keywords:
 - sensitivity behavior of cursor
 - ODBC cursors, cursor behaviors
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ac0e2585398eb3e3d47edea769c75d512bc4d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 65ee29f4bab4994f3d96bd4cacdbab65c46ab305
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134099"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000645"
 ---
 # <a name="cursor-behaviors"></a>カーソル動作
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、SQL_ATTR_CURSOR_SCROLLABLE と SQL_ATTR_CURSOR_SENSITIVITY オプションへの呼び出しでの設定で指定された[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
+  ODBC では、カーソルのスクロールの可否と感度を設定することでカーソル動作を指定する、ISO オプションがサポートされます。 これらの動作は、 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)の呼び出しで SQL_ATTR_CURSOR_SCROLLABLE オプションと SQL_ATTR_CURSOR_SENSITIVITY オプションを設定することによって指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の特性を持つサーバー カーソルを要求して、これらのオプションを実装します。  
   
 |カーソル動作の設定|要求されるサーバー カーソルの特性|  
 |------------------------------|---------------------------------------------|  
@@ -43,15 +41,15 @@ ms.locfileid: "68134099"
 |SQL_NONSCROLLABLE と SQL_INSENSITIVE|既定の結果セット (順方向専用、読み取り専用)|  
 |SQL_NONSCROLLABLE と SQL_UNSPECIFIED|既定の結果セット (順方向専用、読み取り専用)|  
   
- バージョンに基づくオプティミスティック同時実行制御が必要です、**タイムスタンプ**基になるテーブル内の列。 バージョンに基づくオプティミスティック同時実行制御がないテーブルで要求された場合、**タイムスタンプ**列に、サーバー使用の値に基づくオプティミスティック同時実行制御。  
+ バージョンベースのオプティミスティック同時実行制御には、基になるテーブルに**timestamp**列が必要です。 **Timestamp**列のないテーブルに対してバージョンベースのオプティミスティック同時実行制御が要求された場合、サーバーは値に基づくオプティミスティック同時実行制御を使用します。  
   
 ## <a name="scrollability"></a>スクロール可能  
- SQL_ATTR_CURSOR_SCROLLABLE が SQL_SCROLLABLE に設定されている場合、カーソルはのすべての異なる値をサポートしています、 *FetchOrientation*パラメーターの[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)します。 SQL_ATTR_CURSOR_SCROLLABLE が SQL_NONSCROLLABLE に設定されている場合、カーソルのみをサポートする*FetchOrientation* SQL_FETCH_NEXT の値。  
+ SQL_ATTR_CURSOR_SCROLLABLE が SQL_SCROLLABLE に設定されている場合、カーソルは[Sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)の*fetchorientation*パラメーターのさまざまな値をすべてサポートします。 SQL_ATTR_CURSOR_SCROLLABLE が SQL_NONSCROLLABLE に設定されている場合、カーソルは SQL_FETCH_NEXT の*Fetchorientation*値のみをサポートします。  
   
 ## <a name="sensitivity"></a>感度  
  SQL_ATTR_CURSOR_SENSITIVITY が SQL_SENSITIVE に設定されているとき、現在のユーザーが行ったデータ変更または他のユーザーがコミットしたデータ変更がカーソルに反映されます。 SQL_ATTR_CURSOR_SENSITIVITY が SQL_INSENSITIVE に設定されているときは、データ変更がカーソルに反映されません。  
   
-## <a name="see-also"></a>関連項目  
- [カーソル (ODBC) を使用して](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)[カーソル プロパティ](properties/cursor-properties.md) 
+## <a name="see-also"></a>参照  
+ カーソル[(ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [カーソルプロパティ](properties/cursor-properties.md)の使用 
   
   

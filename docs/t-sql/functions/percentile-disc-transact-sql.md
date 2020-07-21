@@ -16,26 +16,26 @@ helpviewer_keywords:
 - PERCENTILE_DISC function
 - analytic functions,PERCENTILE_DISC
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccd04bec4416fdf5bb5f2137dc2f86e69a9a2ab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00ed86cdfd3002bc44c7a20c49c96663f6206417
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914342"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82803913"
 ---
-# <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
+# <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の行セット全体または行セットの別個のパーティション内で並べ替えられた値の特定の百分位数を計算します。 百分位数が *P* の場合、PERCENTILE_DISC は ORDER BY 句で式の値を並べ替えます。 次に、指定された CUME_DIST 値が最小となる *P* 以上の値を返します (並べ替え仕様は同じ)。たとえば、PERCENTILE_DISC (0.5) は式の 50 番目の百分位数 (つまり、中央値) を計算します。 PERCENTILE_DISC は、列値の離散型分布に基づく百分位数を計算します。 結果は列の特定の値と等しくなります。  
   
- ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
     OVER ( [ <partition_by_clause> ] )  
 ```  
@@ -48,7 +48,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  並べ替える値のリストを指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 既定の並べ替え順は昇順です。 値のリストは、並べ替え操作に対して有効な任意のデータ型を指定できます。  
   
  OVER **(** \<partition_by_clause>)**  
- FROM 句の結果セットをパーティションに分割します。 百分位関数がこれらのパーティションに適用されます。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。 \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
+ FROM 句の結果セットをパーティションに分割します。 百分位関数がこれらのパーティションに適用されます。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は *order_by_expression* の型によって決まります。  
@@ -61,7 +61,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
   
  PERCENTILE_DISC は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="basic-syntax-example"></a>基本構文例  
 
@@ -96,7 +96,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="basic-syntax-example"></a>基本構文例  
 

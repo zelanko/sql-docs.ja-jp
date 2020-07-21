@@ -1,5 +1,6 @@
 ---
 title: 一括インポートで最小ログ記録を行うための前提条件 | Microsoft Docs
+description: 単純復旧モデルまたは一括ログ復旧モデルでは、一括インポート操作の最小ログ記録を行うと、その操作によってログ領域がいっぱいになる可能性が少なくなります。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 213ea19f753a4f08a75b353bae3f6b12024a9f9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772298"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>一括インポートで最小ログ記録を行うための前提条件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   完全復旧モデルのデータベースの場合、一括インポート中に実行されるすべての行挿入操作が、トランザクション ログに完全に記録されます。 完全復旧モデルを使用する場合、大きなデータをインポートするとトランザクション ログがすぐにいっぱいになってしまいます。 これとは対照的に、単純復旧モデルまたは一括ログ復旧モデルでは、一括インポート操作の最小ログ記録を行うと、一括インポート操作によってログ領域がいっぱいになる可能性が少なくなります。 最小ログ記録は完全ログ記録よりも効率的です。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68307636"
   
 -   テーブルがレプリケート中でないこと。  
   
--   (TABLOCK を使用して) テーブル ロックが指定されていること。 クラスター化列ストア インデックスを持つテーブルでは、最小ログ記録に TABLOCK は不要です。  さらに、バッチサイズが 102400 以上必要な、圧縮された行グループへのデータ読み込みでのみ最小ログ記録が行われます。  
+-   (TABLOCK を使用して) テーブル ロックが指定されていること。 
   
     > [!NOTE]  
     >  最小限のログ記録しか行われない一括インポート操作では、データを挿入してもトランザクション ログに記録されませんが、新しいエクステントがテーブルに割り当てられるたびに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエクステントの割り当てがログに記録されます。  
@@ -62,7 +63,7 @@ ms.locfileid: "68307636"
 > [!NOTE]  
 >  トランザクション レプリケーションが有効な場合、BULK INSERT 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

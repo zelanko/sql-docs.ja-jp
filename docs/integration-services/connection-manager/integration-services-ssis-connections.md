@@ -21,21 +21,21 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dccf6bd22d6e68271f83d686cf8ddffe9e190ead
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904670"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79112270"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続の使用により、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装が行われます。  
   
 -   テキスト、XML、Excel ブック、リレーショナル データベースなど、変換元および変換先のデータ ストアに接続し、データの抽出と読み込みを行います。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "67904670"
 >  2 つのモデルの詳細とプロジェクト配置モデルへのプロジェクトの変換の詳細については、「[Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」 (Integration Services (SSIS) プロジェクトおよびパッケージの展開) を参照してください。
 
 ### <a name="built-in-connection-managers"></a>組み込みの接続マネージャー  
- 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている接続マネージャーの種類を一覧にしたものです。  
+ 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている接続マネージャーの種類を一覧にしたものです。  
   
-|型|[説明]|トピック|  
+|種類|説明|トピック|  
 |----------|-----------------|-----------|  
 |ADO (ADO)|ActiveX Data Objects (ADO) オブジェクトに接続します。|[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|.NET プロバイダーを使用して、データ ソースに接続します。|[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -101,9 +101,9 @@ ms.locfileid: "67904670"
 |OLEDB|OLE DB プロバイダーを使用して、データ ソースに接続します。|[OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
 |ODBC|ODBC を使用して、データ ソースに接続します。|[ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |SMOServer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) サーバーに接続します。|[SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)|  
-|SMTP (SMTP)|SMTP メール サーバーに接続します。|[SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)|  
+|SMTP|SMTP メール サーバーに接続します。|[SMTP 接続マネージャー](../../integration-services/connection-manager/smtp-connection-manager.md)|  
 |SQLMOBILE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続します。|[SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
-|WMI (WMI)|サーバーに接続し、サーバー上の Windows Management Instrumentation (WMI) 管理のスコープを指定します。|[WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)|  
+|WMI|サーバーに接続し、サーバー上の Windows Management Instrumentation (WMI) 管理のスコープを指定します。|[WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>ダウンロード可能な接続マネージャー  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトからダウンロードできるその他の種類の接続マネージャーをリストします。  
@@ -111,10 +111,10 @@ ms.locfileid: "67904670"
 > [!IMPORTANT]  
 >  次の表にリストされている接続マネージャーは、 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] および [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]でのみ動作します。  
   
-|型|[説明]|トピック|  
+|種類|説明|トピック|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle \<バージョン情報\> サーバーに接続します。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)のダウンロード ページを参照してください。|  
-|SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、[Microsoft SQL Server 2008 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016) のダウンロード ページを参照してください。|  
+|ORACLE|Oracle \<バージョン情報\> サーバーに接続します。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
+|SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)のダウンロード ページを参照してください。|  
 |TERADATA|Teradata \<バージョン情報\> サーバーに接続します。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
   
 ### <a name="custom-connection-managers"></a>カスタム接続マネージャー  
@@ -144,13 +144,13 @@ ms.locfileid: "67904670"
   どちらのバージョンのプロバイダーも ID は同じです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムで使用可能な 64 ビット バージョンのプロバイダーを使用するかどうかを指定するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの Run64BitRuntime プロパティを設定します。 Run64BitRuntime プロパティが **true** に設定されると、ランタイムは 64 ビット プロバイダーを探して使用します。Run64BitRuntime が **false** に設定されると、32 ビット プロバイダーを探して使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトで設定できるプロパティの詳細については、「[Integration Services (SSIS) と Studio の環境](https://msdn.microsoft.com/library/ms140028.aspx)」を参照してください。   
 
 ## <a name="add-a-connection-manager"></a>接続マネージャーを追加する
-###  <a name="wizard"></a> パッケージ作成時に接続マネージャーを追加する  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> パッケージ作成時に接続マネージャーを追加する  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用します。  
   
      接続マネージャーの作成と構成に加えて、このウィザードでは、接続マネージャーを使用する変換元および変換先の作成と構成を行うこともできます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](../../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
-###  <a name="package"></a> 接続マネージャーを既存のパッケージに追加する  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> 接続マネージャーを既存のパッケージに追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "67904670"
   
     -   パッケージに追加する接続マネージャーの種類をクリックします。  
   
-         \- または -  
+         または  
   
     -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "67904670"
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-###  <a name="project"></a> プロジェクト レベルで接続マネージャーを追加する  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> プロジェクト レベルで接続マネージャーを追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -240,17 +240,17 @@ ms.locfileid: "67904670"
  **[接続マネージャーの種類]**  
  エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]** をクリックするか、接続の種類をダブルクリックします。  
   
- **[追加]**  
+ **追加**  
  エディターを使用して、接続の種類に対応する接続プロパティを指定します。  
    
-##  <a name="parameter"></a> 接続マネージャーのプロパティのパラメーターを作成する  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> 接続マネージャーのプロパティのパラメーターを作成する  
   
 1.  **[接続マネージャー]** 領域で、パラメーターを作成する接続マネージャーを右クリックし、 **[パラメーター化]** をクリックします。  
   
 2.  **[パラメーター化]** ダイアログ ボックスでパラメーター設定を構成します。 詳細については、「 [[パラメーター化] ダイアログ ボックス](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
 
 ## <a name="delete-a-connection-manager"></a>接続マネージャーを削除する 
-###  <a name="DeletePackageLevel"></a> パッケージから接続マネージャーを削除する  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> パッケージから接続マネージャーを削除する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "67904670"
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-###  <a name="DeleteProjectLevel"></a> 共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除する  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> 共有接続マネージャー (プロジェクト レベルの接続マネージャー) を削除する  
   
 1.  プロジェクト レベルの接続マネージャーを削除するには、 **[ソリューション エクスプローラー]** ウィンドウの **[接続マネージャー]** ノードで接続マネージャーを右クリックし、 **[削除]** をクリックします。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で次のような警告メッセージが表示されます。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "67904670"
   
 4.  **[接続マネージャー]** 領域で接続マネージャーをダブルクリックして、 **[接続マネージャー]** ダイアログ ボックスを開きます。 特定の種類の接続マネージャーおよび各種類で使用するオプションの詳細については、次の表を参照してください。  
   
-    |[接続マネージャー]|オプション|  
+    |[ODBC 入力元エディター]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -337,14 +337,14 @@ ms.locfileid: "67904670"
 
 ## <a name="related-content"></a>関連コンテンツ  
   
--   technet.microsoft.com のビデオ「[パッケージのパフォーマンスを強化するための Microsoft Attunity Connector for Oracle の活用](https://technet.microsoft.com/sqlserver/gg598963.aspx)」  
+-   technet.microsoft.com のビデオ「 [パッケージのパフォーマンスを強化するための Microsoft Attunity Connector for Oracle の活用](https://technet.microsoft.com/sqlserver/gg598963.aspx)」  
   
--   social.technet.microsoft.com の Wiki の記事「[SSIS の接続性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)」  
+-   social.technet.microsoft.com の Wiki の記事「 [SSIS の接続性](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)」  
   
--   blogs.msdn.com のブログ「[SSIS から MySQL への接続](https://go.microsoft.com/fwlink/?LinkId=217669)」  
+-   blogs.msdn.com のブログ「 [SSIS から MySQL への接続](https://go.microsoft.com/fwlink/?LinkId=217669)」  
   
--   msdn.microsoft.com の技術記事「[SQL Server Integration Services での SharePoint データの抽出と読み込み](https://go.microsoft.com/fwlink/?LinkId=247826)」  
+-   msdn.microsoft.com の技術記事「 [SQL Server Integration Services での SharePoint データの抽出と読み込み](https://go.microsoft.com/fwlink/?LinkId=247826)」  
   
--   support.microsoft.com の技術記事「[SSIS で Oracle 接続マネージャーを使用すると、"DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" というエラー メッセージが表示される](https://go.microsoft.com/fwlink/?LinkId=233696)」  
+-   support.microsoft.com の技術記事「 [SSIS で Oracle 接続マネージャーを使用すると、"DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" というエラー メッセージが表示される](https://go.microsoft.com/fwlink/?LinkId=233696)」  
   
   

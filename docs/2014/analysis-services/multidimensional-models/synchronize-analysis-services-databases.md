@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072850"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547354"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
@@ -40,21 +39,21 @@ ms.locfileid: "66072850"
  データベースを同期するには、データベースの同期ウィザードを実行して直ちにデータベースを同期するか、このウィザードを使用して、後で実行できる同期スクリプトを生成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびキューブの可用性とスケーラビリティを向上するために、いずれかの方法を使用できます。  
   
 > [!NOTE]  
->  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「[Analysis Services を使用するクエリのスケールアウト](https://go.microsoft.com/fwlink/?LinkId=253136)」および「[読み取り専用データベースによる Analysis Services のクエリのスケールアウト](https://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
+>  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「 [Analysis Services を使用するクエリのスケールアウト](https://go.microsoft.com/fwlink/?LinkId=253136) 」および「 [読み取り専用データベースによる Analysis Services のクエリのスケールアウト](https://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
- データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者ロールとデータベース権限の詳細については、次を参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース アクセス許可を付与&#40;。Analysis Services&#41;](grant-database-permissions-analysis-services.md)します。  
+ データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者ロールとデータベース権限の詳細については、「 [Analysis Services&#41;&#40;サーバー管理者権限を付与](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)する」および「 [Analysis Services&#41;&#40;データベース権限](grant-database-permissions-analysis-services.md)を許可する」を参照してください。  
   
  既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
- ソースと宛先の両方のサーバーは、同じバージョンおよび service pack である必要があります。 モデルのメタデータが同期されていることもあるため、ビルドの互換性を確保する両方のサーバー数する必要があります同じであります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ 移行元と移行先の両方のサーバーが同じバージョンであり、Service Pack である必要があります。 モデルメタデータも同期されるため、互換性を確保するために、両方のサーバーのビルド番号は同じである必要があります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションの機能の詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
- サーバー配置モードは、各サーバーで同じである必要があります。 同期するデータベースが多次元である場合は、同期元サーバーと同期先サーバーの両方が、多次元サーバー モードで構成されている必要があります。 配置モードの詳細については、「[Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
+ サーバー配置モードは、各サーバーで同じである必要があります。 同期するデータベースが多次元である場合は、同期元サーバーと同期先サーバーの両方が、多次元サーバー モードで構成されている必要があります。 配置モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
- 同期元サーバーでレイジー集計処理を使用している場合は、その処理を無効にします。 バックグラウンドで処理されている集計は、データベースの同期を妨げる可能性があります。 このサーバー プロパティの設定の詳細については、「[OLAP のプロパティ](../server-properties/olap-properties.md)」を参照してください。  
+ 同期元サーバーでレイジー集計処理を使用している場合は、その処理を無効にします。 バックグラウンドで処理されている集計は、データベースの同期を妨げる可能性があります。 このサーバー プロパティの設定の詳細については、「 [OLAP のプロパティ](../server-properties/olap-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  データベースのサイズは、同期が適切な方法であるかどうかを判断する要因になります。 厳格な要件はありませんが、同期が遅すぎる場合はときに、考慮を並列に複数のサーバー同期テクニカル ペーパーで説明されています。[Analysis Services の同期のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkID=253136)します。  
+>  データベースのサイズは、同期が適切な方法であるかどうかを判断する要因になります。 厳格な要件は存在しませんが、同期が非常に遅い場合は、「 [Analysis Services の同期に関する推奨事項](https://go.microsoft.com/fwlink/?LinkID=253136)」というテクニカル ペーパーで説明されているように、複数のサーバーを並列に同期することを検討してください。  
   
 ## <a name="synchronize-database-wizard"></a>データベースの同期ウィザード  
  同期元から同期先データベースへの一方向の同期を実行するか、データベースの同期操作を指定するスクリプトを生成するには、データベースの同期ウィザードを使用します。 同期処理中にローカル パーティションとリモート パーティションの両方を同期し、ロールを含めるかどうかを選択することもできます。  
@@ -105,7 +104,7 @@ ms.locfileid: "66072850"
     > [!NOTE]  
     >  同期元インスタンスの既定の場所に格納されているローカル パーティションを選択した場合、この列は変更できません。  
   
-     **Size**  
+     **[サイズ]**  
      ローカル パーティションの推定サイズが表示されます。  
   
      **[選択した場所のパーティション]** オプションでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [場所] **で選択した行の** [同期元フォルダー] **列で指定した同期元**インスタンス上の場所に格納されたローカル パーティションについて、グリッドに説明が表示されます。  
@@ -113,7 +112,7 @@ ms.locfileid: "66072850"
      **Cube**  
      パーティションが含まれているキューブの名前が表示されます。  
   
-     **[メジャー グループ]**  
+     **メジャーグループ**  
      パーティションが含まれているキューブ内のメジャー グループの名前が表示されます。  
   
      **[パーティション名]**  
@@ -122,7 +121,7 @@ ms.locfileid: "66072850"
      **[サイズ (MB)]**  
      パーティションのサイズ (MB) が表示されます。  
   
-5.  必要に応じて、リモート パーティションの場所を変更します。 **[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
+5.  必要に応じて、リモート パーティションの場所を変更します。**[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
   
     > [!NOTE]  
     >  このページは、同期元の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの指定されたデータベースによって 1 つ以上のリモート パーティションが管理されている場合にのみ表示されます。  
@@ -135,13 +134,13 @@ ms.locfileid: "66072850"
     > [!NOTE]  
     >  このオプションをオフにした場所では、その場所に格納されているリモート パーティションは同期されません。  
   
-     **[同期元サーバー]**  
+     **ソース サーバー**  
      リモート パーティションが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前が表示されます。  
   
      **[同期元フォルダー]**  
      リモート パーティションが含まれている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのフォルダー名が表示されます。 列に値 "(既定値)" が含まれている場合は、 **[同期元サーバー]** に表示されているインスタンスの既定の場所にリモート パーティションが含まれています。  
   
-     **[同期先サーバー]**  
+     **移行先サーバー**  
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [同期元サーバー] **と** [同期元フォルダー] **で指定された場所に格納されているリモート パーティションを同期する、** インスタンスの名前が表示されます。  
   
      **[...]** ボタンをクリックして、 **[接続マネージャー]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを指定します。  
@@ -151,7 +150,7 @@ ms.locfileid: "66072850"
   
      **[...]** ボタンをクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、選択した場所に格納されたリモート パーティションを同期する同期先インスタンス上のフォルダーを指定します。  
   
-     **Size**  
+     **[サイズ]**  
      この場所に格納されたリモート パーティションの推定サイズが表示されます。  
   
      **[選択した場所のパーティション]** では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [場所] **で選択した行の** [同期元フォルダー] **列で指定した同期元の**インスタンス上の場所に格納されたリモート パーティションについて、グリッドに説明が表示されます。 このグリッドには次の列が含まれています。  
@@ -159,7 +158,7 @@ ms.locfileid: "66072850"
      **Cube**  
      パーティションが含まれているキューブの名前が表示されます。  
   
-     **[メジャー グループ]**  
+     **メジャーグループ**  
      パーティションが含まれているキューブ内のメジャー グループの名前が表示されます。  
   
      **[パーティション名]**  
@@ -170,10 +169,10 @@ ms.locfileid: "66072850"
   
 6.  ユーザー権限の情報を含める必要があるかどうか、および圧縮を使用する必要があるかどうかを指定します。 既定では、同期先サーバーにファイルをコピーする前に、ウィザードはすべてのデータとメタデータを圧縮します。 このオプションを使用すると、ファイル転送がより高速になります。 ファイルは、同期先サーバーに到着した時点で圧縮解除されます。  
   
-     **[すべてコピー]**  
+     **すべてコピー**  
      同期時にセキュリティ定義とメンバーシップ情報を含めます。  
   
-     **[メンバーシップのスキップ]**  
+     **メンバーシップのスキップ**  
      同期時にセキュリティ定義を含め、メンバーシップ情報を含めません。  
   
      **[すべて無視する]**  
@@ -187,8 +186,8 @@ ms.locfileid: "66072850"
  ロールまたはロールのメンバーシップを同期しなかった場合は、この段階で、同期先データベースでユーザー アクセス権を指定してください。  
   
 ## <a name="see-also"></a>参照  
- [Synchronize 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
- [XMLA を使用したモデル ソリューションの配置](deploy-model-solutions-using-xmla.md)   
- [配置ウィザードを使用したモデル ソリューションの配置](deploy-model-solutions-using-the-deployment-wizard.md)  
+ [XMLA&#41;&#40;要素の同期](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+ [XMLA を使用したモデルソリューションの配置](deploy-model-solutions-using-xmla.md)   
+ [Deploy Model Solutions Using the Deployment Wizard](deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

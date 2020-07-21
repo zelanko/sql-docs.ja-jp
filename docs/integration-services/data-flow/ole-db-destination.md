@@ -21,14 +21,14 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0e406e5966b9b865d7e25d8156880f333d5cba26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897154"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298186"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
 
@@ -71,7 +71,7 @@ ms.locfileid: "67897154"
   
  OLE DB 変換先は、1 つの標準入力と 1 つのエラー出力をとります。  
   
- データ型の詳細については、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ データ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
   
 ## <a name="fast-load-options"></a>高速読み込みオプション  
  OLE DB 変換先で高速読み込みデータ アクセス モードが使用される場合、 **[OLE DB 変換先エディター]** のユーザー インターフェイスで、変換先に対して次の高速読み込みオプションを指定できます。  
@@ -93,7 +93,7 @@ ms.locfileid: "67897154"
   
  **[OLE DB 変換先エディター]** ダイアログ ボックスで公開される高速読み込みオプションに加えて、 **[詳細エディター]** ダイアログ ボックスで、FastLoadOptions プロパティに次の一括読み込みオプションを入力することにより、それらのオプションを使用するように OLE DB 変換先を構成できます。  
   
-|高速読み込みオプション|[説明]|  
+|高速読み込みオプション|説明|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプションの形式は、**KILOBYTES_PER_BATCH** = \<正の整数 **>** です。|  
 |FIRE_TRIGGERS|挿入テーブルでトリガーを起動するかどうかを指定します。 このオプションの形式は、 **FIRE_TRIGGERS**です。 このオプションが指定されている場合は、トリガーが起動されます。|  
@@ -140,11 +140,11 @@ ms.locfileid: "67897154"
  **[データ アクセス モード]**  
  データを変換先に読み込む方法を指定します。 2 バイト文字セット (DBCS) データを読み込むには、高速読み込みオプションのいずれかを使用する必要があります。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|データを OLE DB 変換先のテーブルまたはビューに読み込みます。|  
 |[テーブルまたはビュー - 高速読み込み]|高速読み込みオプションを使用し、データを OLE DB 変換先のテーブルまたはビューに読み込みます。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**:[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[テーブル名またはビュー名の変数 - 高速読み込み]|高速読み込みオプションを使用し、テーブル名またはビュー名を変数で指定します。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
 |[SQL コマンド]|SQL クエリを使用し、データを OLE DB 変換先に読み込みます。|  
   
@@ -260,7 +260,7 @@ ms.locfileid: "67897154"
 ## <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、テーブル内の使用できる入力列を変換先列にマップします。  
   
@@ -276,7 +276,7 @@ ms.locfileid: "67897154"
 ## <a name="ole-db-destination-editor-error-output-page"></a>[OLE DB 変換先エディター] ([エラー出力] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[入力または出力]**  
  入力の名前を表示します。  
   
@@ -286,12 +286,12 @@ ms.locfileid: "67897154"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  使用されていません。  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -301,7 +301,7 @@ ms.locfileid: "67897154"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)  
+ [OLE DB 変換元](../../integration-services/data-flow/ole-db-source.md)  
   
  [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
   

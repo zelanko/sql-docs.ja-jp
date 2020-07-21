@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893537"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>キューブ式とサブキューブ式の使用
@@ -35,7 +35,7 @@ ms.locfileid: "68893537"
   
  `CREATE MEMBER [Adventure Works].[Measures].[Test] AS 1`  
   
- MDX スクリプト内で CREATE MEMBER ステートメントを使用すると、キューブの名前を CURRENTCUBE キーワードに置き換えることができます。これは、計算されるメンバーが作成されるキューブが、MDX スクリプトが属しているキューブと同じである必要があるためです (followingexamp を参照)。&  
+ MDX スクリプト内で CREATE MEMBER ステートメントを使用すると、キューブの名前を CURRENTCUBE キーワードに置き換えることができます。これは、次の例に示すように、計算されるメンバーが作成されるキューブが、MDX スクリプトが属するキューブと同じキューブである必要があるためです。  
   
  `CREATE MEMBER CURRENTCUBE.[Measures].[Test] AS 1;`  
   
@@ -66,13 +66,13 @@ ms.locfileid: "68893537"
   
  `END SCOPE;`  
   
- サブキューブ識別子は*Subcube_Name*として表示されます。 MDX ステートメントの BNF 表記について説明します。  
+ サブキューブ識別子が*Subcube_Name*として表示されます。 MDX ステートメントの BNF 表記について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX の基本的なクエリ &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [MDX &#40;mdx でのサブキューブの作成&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [CREATE サブキューブ&#40;ステートメント MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [MDX &#40;の式&#41;](../mdx/expressions-mdx.md)   
- [SCOPE ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
+ [Mdx &#40;mdx&#41;のサブキューブの作成](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [MDX&#41;&#40;サブキューブステートメントの作成](../mdx/mdx-data-definition-create-subcube.md)   
+ [MDX &#40;式&#41;](../mdx/expressions-mdx.md)   
+ [SCOPE ステートメント (MDX)](../mdx/mdx-scripting-scope.md)  
   
   

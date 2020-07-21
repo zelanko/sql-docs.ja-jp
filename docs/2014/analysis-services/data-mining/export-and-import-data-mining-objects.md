@@ -1,5 +1,5 @@
 ---
-title: エクスポートし、データ マイニング オブジェクトのインポート |Microsoft Docs
+title: データマイニングオブジェクトのエクスポートとインポート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2f79f8bf9a1d0ff01ba97d29662fab026d4adcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e8651dd7e9d59012b0ba065bccb9ea62a1ee54
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084468"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522541"
 ---
 # <a name="export-and-import-data-mining-objects"></a>データ マイニング オブジェクトのエクスポートおよびインポート
   SQL Server データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されている、ソリューションをバックアップ、復元、および移行するための機能に加えて、データ マイニング拡張機能 (DMX) を使用して異なるサーバー間でデータ マイニング構造およびデータ マイニング モデルをすばやく転送する機能を提供しています。  
@@ -49,7 +48,7 @@ ms.locfileid: "66084468"
   
  `Restore` コマンドを使用して、マイニング構造またはマイニング モデルをインポートすることもできます。 モデルや構造は、エクスポート元のデータベースと同じ名前のデータベースに復元されます。 詳細については、「 [復元オプション](../multidimensional-models/restore-options.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  同じ名前のモデルや構造がインポート先のサーバーに既に存在する場合は、モデルや構造をインポートできません。 また、データ マイニング オブジェクトをエクスポートしてから、エクスポート ファイルに含まれるオブジェクトの名前を変更することもできません。 したがって、名前の競合が予想される場合は、ターゲット サーバー上のデータ マイニング オブジェクトを削除するか、定義をエクスポートする前にデータ マイニング オブジェクトの名前を変更する必要があります。  
   
 ## <a name="see-also"></a>参照  

@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE の File および Filegroup オプション (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE の File および Filegroup
+description: Transact-SQL を使用して、データベースの File および Filegroup を更新します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809790"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216279"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション
 
@@ -63,12 +65,10 @@ ms.locfileid: "68809790"
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_ ** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
-
-# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>構文
 
@@ -78,7 +78,6 @@ ALTER DATABASE database_name
     <add_or_modify_files>
   | <add_or_modify_filegroups>
 }
-[;
 
 <add_or_modify_files>::=
 {
@@ -139,17 +138,17 @@ REMOVE FILE *logical_file_name*: [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 *logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。
 
 > [!WARNING]
-> `FILE_SNAPSHOT` のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「 [Microsoft Azure Blob Storage サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。
+> `FILE_SNAPSHOT` のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
 
 変更するファイルを指定します。 一度に 1 つの \<filespec> プロパティだけを変更できます。 変更するファイルを識別するには、\<filespec> に NAME を指定する必要があります。 SIZE を指定する場合、ファイルの現在のサイズより新しいサイズの方が大きくなければなりません。
 
-データ ファイルまたはログ ファイルの論理名を変更するには、変更するファイルの論理名を `NAME` 句で指定し、`NEWNAME` 句にそのファイルの新しい論理名を指定します。 例:
+データ ファイルまたはログ ファイルの論理名を変更するには、変更するファイルの論理名を `NAME` 句で指定し、`NEWNAME` 句にそのファイルの新しい論理名を指定します。 次に例を示します。
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-データ ファイルまたはログ ファイルを別の場所に移動するには、`NAME` 句にファイルの現在の論理名を指定し、`FILENAME` 句に新しいパスとオペレーティング システム ファイル名を指定します。 例:
+データ ファイルまたはログ ファイルを別の場所に移動するには、`NAME` 句にファイルの現在の論理名を指定し、`FILENAME` 句に新しいパスとオペレーティング システム ファイル名を指定します。 次に例を示します。
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -240,7 +239,7 @@ FILEGROWTH *growth_increment*: ファイルを自動拡張するときの増加�
 
 FILEGROWTH が指定されていない場合、既定値は次のとおりです。
 
-|バージョン|[既定値]|
+|Version|既定値|
 |-------------|--------------------|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|
@@ -269,7 +268,7 @@ CONTAINS FILESTREAM: ファイル グループで FILESTREAM バイナリ ラー
 
 CONTAINS MEMORY_OPTIMIZED_DATA
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)
 
 ファイル グループでメモリ最適化データをファイル システムに格納することを指定します。 詳細については、「 [インメモリ OLTP - インメモリ最適化](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。 データベースあたり 1 つの `MEMORY_OPTIMIZED_DATA` ファイル グループのみが許可されます。 メモリ最適化テーブルを作成する場合は、ファイル グループを空にすることはできません。 ファイルが少なくとも 1 つ必要です。 *filegroup_name* パスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。
 
@@ -286,13 +285,13 @@ DEFAULT: 既定のデータベース ファイル グループを *filegroup_nam
 
 NAME = *new_filegroup_name*: ファイル グループ名を *new_filegroup_name* に変更します。
 
-AUTOGROW_SINGLE_FILE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)
+AUTOGROW_SINGLE_FILE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 ファイル グループ内のファイルが自動拡張のしきい値を満たす場合は、そのファイルのみが拡張されます。 これは既定値です。
 
 AUTOGROW_ALL_FILES
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 ファイル グループ内のファイルが自動拡張のしきい値を満たすときに、ファイル グループ内のすべてのファイルを拡張します。
 
@@ -312,7 +311,7 @@ READ_ONLY | READONLY: ファイル グループが読み取り専用であるこ
 - 読み取り専用データベースでは、ロックは発生しません。 これにより、クエリのパフォーマンスが向上することがあります。
 
 > [!NOTE]
-> キーワード `READONLY` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READONLY` の使用は避け、現在 `READONLY` を使用しているアプリケーションは修正するようにしてください。 代わりに `READ_ONLY` を使用します。
+> キーワード `READONLY` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READONLY` の使用は避け、現在 `READONLY` を使用しているアプリケーションは修正するようにしてください。 代わりに `READ_ONLY` を使用してください
 
 READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定します。 ファイル グループ内のオブジェクトを更新できます。 この状態を変更するには、データベースに対する排他的アクセスが必要になります。 詳細については、SINGLE_USER 句をご覧ください。
 
@@ -321,7 +320,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 > [!TIP]
 > これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
 
@@ -338,7 +337,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 
 メモリ最適化ファイル グループには、SIZE および FILEGROWTH パラメーターを設定することはできません。
 
-キーワード `READONLY` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READONLY` の使用は避け、現在 READONLY を使用しているアプリケーションは修正するようにしてください。 代わりに `READ_ONLY` を使用します。
+キーワード `READONLY` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READONLY` の使用は避け、現在 READONLY を使用しているアプリケーションは修正するようにしてください。 代わりに `READ_ONLY` を使用してください
 
 キーワード `READWRITE` は、将来のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、`READWRITE` の使用は避け、現在 `READWRITE` を使用しているアプリケーションは `READ_WRITE` を使用するように修正することを計画してください。
 
@@ -356,14 +355,14 @@ FILENAME に新しい場所を指定することにより、システムまた�
 
 既定では、データ ファイルおよびログ ファイルは、次のいずれかの操作を実行したときに、ファイルを 0 で埋め込むことにより初期化されます。
 
-- データベースの作成。
+- データベースを作成します。
 - 既存データベースへのファイルの追加
 - 既存のファイルのサイズの拡張
 - データベースまたはファイル グループの復元。
 
-データ ファイルを瞬時に初期化できます。 そのため、このようなファイル操作を高速に実行できます。 詳細については、「 [データベース ファイルの初期化](../../relational-databases/databases/database-instant-file-initialization.md)」を参照してください。
+データ ファイルを瞬時に初期化できます。 そのため、このようなファイル操作を高速に実行できます。 詳細については、「 [データベース ファイルの初期化](../../relational-databases/databases/database-instant-file-initialization.md)」をご覧ください。
 
-## <a name="removing-a-filestream-container"></a> FILESTREAM コンテナーの削除
+## <a name="removing-a-filestream-container"></a><a name="removing-a-filestream-container"></a> FILESTREAM コンテナーの削除
 
 "DBCC SHRINKFILE" 操作によって FILESTREAM コンテナーが空にされた場合でも、データベースは、さまざまなシステム保守上の理由から、削除されたファイルへの参照を維持する必要があります。 [sp_filestream_force_garbage_collection](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) を使用すると、FILESTREAM ガベージ コレクターが実行され、これらのファイルを削除しても安全な場合は削除されます。 FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、ALTER DATABASE REMOVE FILE 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 FILESTREAM コンテナーを削除する場合は、次の手順をお勧めします。
 
@@ -375,7 +374,7 @@ FILENAME に新しい場所を指定することにより、システムまた�
 6. もう一度手順 2. ～ 4. を繰り返して、ガベージ コレクションを完了します。
 7. ALTER Database...REMOVE FILE を使用して、このコンテナーを削除します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-adding-a-file-to-a-database"></a>A. データベースにファイルを追加する
 
@@ -683,7 +682,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />マネージド インスタンス \*_**<br />&nbsp;|
 
 &nbsp;
 
@@ -849,7 +848,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 
 これらのオプションの状態を確認するには、**sys.databases** カタログ ビューの **is_read_only** 列、または `DATABASEPROPERTYEX` 関数の **Updateability** プロパティを調べてください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
 
@@ -857,7 +856,7 @@ READ_WRITE | READWRITE: ファイル グループを READ_WRITE に指定しま�
 
 各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-adding-a-file-to-a-database"></a>A. データベースにファイルを追加する
 

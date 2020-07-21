@@ -1,6 +1,6 @@
 ---
 title: CASE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CASE 関数の Transact-SQL リファレンス。 CASE では、条件の一覧が評価され、特定の結果が返されます。
 ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,15 +21,15 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b1a17bebea6abf2a096622bb2e4806f35478f81
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950358"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990516"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 一連の条件を評価して、考えられる結果式のうちの 1 つを返します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67950358"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 Simple CASE expression:   
@@ -62,7 +62,7 @@ CASE
 END  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CASE  
@@ -111,7 +111,7 @@ END
   
 -   *Boolean_expression* の評価がいずれも TRUE でなかった場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、ELSE 句が指定されていれば *else_result_expression* を、ELSE 句が指定されていない場合は NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Case 式に入れ子にできるのは 10 レベルまでです。  
   
  CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御言語の一覧については、「[フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
@@ -135,7 +135,7 @@ FROM Data ;
   
  WHEN 条件が上から順に評価されるという前提は、スカラー式 (スカラー値を返す非相関サブクエリを含む) では問題ありませんが、集計式では成立しないので注意が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. SELECT ステートメントを単純 CASE 式と共に使用する  
  `SELECT` ステートメント内では、単純 `CASE` 式は等しいかどうかのチェックだけを実行できます。これ以外の比較操作は実行できません。 `CASE` 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。  
@@ -312,7 +312,7 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. SELECT ステートメントを単純 CASE 式と共に使用する  
  SELECT ステートメント内では、CASE 式は比較値に基づいて結果セット内で値を置換できます。 CASE 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。 値が存在しない場合は、テキスト "Not for sale" が表示されます。  

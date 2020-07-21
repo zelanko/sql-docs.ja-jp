@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 90b4ec97a3ab31c93e92219b96724b75d7f86425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfa43b8e6e1762e87dd9c2abbdf7a583963e196e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935313"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level サーバー構成オプション
   この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM のアクセス レベルを変更するには、filestream_access_level オプションを使用します。  

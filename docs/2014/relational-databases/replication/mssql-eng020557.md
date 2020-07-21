@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: c43c6952-5b60-4347-b881-11a0004dce24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6816a0301a03e2c0d01cfe78a5c88213394c445b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12bbdf4c7cca974953602f760c2d298424eaaa8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010284"
 ---
-# <a name="mssqleng020557"></a>MSSQL_ENG020557
+# <a name="mssql_eng020557"></a>MSSQL_ENG020557
     
 ## <a name="message-details"></a>メッセージの詳細  
   

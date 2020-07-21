@@ -1,5 +1,5 @@
 ---
-title: MSmerge_errorlineage (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_errorlineage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_errorlineage system table
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d6502c32f47668cbd2ce78ec91296ce61767a95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889805"
 ---
-# <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_errorlineage**テーブルに行がサブスクライバーで、削除するが、その削除がパブリッシャーに反映されません。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  **MSmerge_errorlineage**テーブルには、サブスクライバーで削除された行が含まれていますが、その削除はパブリッシャーに反映されていません。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**int**|マージ レプリケーション用にパブリッシュされたテーブルに割り当てられる整数値。 内のニックネーム フィールドに対応する、 **sysmergearticles**テーブル。|  
-|**rowguid**|**uniqueidentifier**|行の識別子です。|  
-|**系列**|**varbinary(501)**|履歴リストがサブスクライバーとパブリッシャーの更新プログラムに行った行を格納します。 検出および競合の状態を解決するために使用します。|  
+|**tablenick**|**int**|マージレプリケーション用にパブリッシュされたテーブルに割り当てられた整数値。 **Sysmergearticles**テーブルの [ニックネーム] フィールドに対応します。|  
+|**rowguid**|**uniqueidentifier**|行識別子。|  
+|**継承**|**varbinary (501)**|行の更新を行ったサブスクライバーとパブリッシャーの履歴リストを格納します。 競合の状況を検出して解決するために使用されます。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

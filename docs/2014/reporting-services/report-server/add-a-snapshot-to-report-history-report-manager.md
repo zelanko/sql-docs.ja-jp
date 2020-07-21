@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413114"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
@@ -39,7 +39,7 @@ ms.locfileid: "67413114"
     > [!NOTE]
     > レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)をクリックします。
 
-4. **[適用]** をクリックします。
+4. **[Apply]** をクリックします。
 
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>レポート履歴にすべてのスナップショットを自動で追加するには  
   
@@ -53,7 +53,7 @@ ms.locfileid: "67413114"
   
 5. **[すべてのレポート実行スナップショットを履歴に格納する]** チェック ボックスをオンにします。  
   
-6. **[適用]** をクリックします。  
+6. **[Apply]** をクリックします。  
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>スケジュールを基にスナップショットを自動でレポート履歴に追加するには  
   
@@ -63,13 +63,13 @@ ms.locfileid: "67413114"
   
 3. **[スナップショット オプション]** をクリックします。  
   
-4. **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]** チェック ボックスをオンにします。 次のいずれかを実行します。  
+4. **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]** チェック ボックスをオンにします。 以下のいずれかを行います。  
   
     - **[レポート固有のスケジュール]** をクリックします。 スケジュールの詳細を入力し、スケジュールの開始日と終了日を選択して、 **[OK]** をクリックします。  
   
     - **[共有スケジュール]** を選択します。 一覧から適切なスケジュールを選択します。  
   
-5. **[適用]** をクリックします。  
+5. **[Apply]** をクリックします。  
   
 ## <a name="see-also"></a>参照
 

@@ -1,5 +1,5 @@
 ---
-title: 記述子を暗黙的に割り当てられた |Microsoft Docs
+title: 暗黙的に割り当てられた記述子 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - implicitly allocated descriptors [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 9f88c863-affc-4ab4-a558-63a3ef766f37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0eb34866b75802a32c63e62b41d384e5a1dea73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 271d479a9d2faa8cd7ab01e02e830b194c4138b2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138953"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300132"
 ---
 # <a name="implicitly-allocated-descriptors"></a>暗黙的に割り当てられた記述子
-ステートメント ハンドルが割り当てられるときに、アプリケーションは暗黙的に 4 つの記述子の 1 つのセットを割り当てます。 アプリケーションでは、ステートメント ハンドルの属性として記述子を暗黙的に割り当てられたこれらのハンドルを取得できます。 アプリケーションでは、ステートメント ハンドルを解放、ドライバーは、そのハンドルで暗黙的に割り当てられたすべての記述子を解放します。
+ステートメントハンドルが割り当てられると、アプリケーションは、4つの記述子のセットを暗黙的に割り当てます。 アプリケーションは、暗黙的に割り当てられたこれらの記述子のハンドルを、ステートメントハンドルの属性として取得できます。 アプリケーションがステートメントハンドルを解放すると、ドライバーはそのハンドルで暗黙的に割り当てられたすべての記述子を解放します。

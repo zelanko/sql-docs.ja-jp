@@ -1,6 +1,6 @@
 ---
 title: FOR XML での RAW モードの使用 | Microsoft Docs
-ms.custom: ''
+description: SQL クエリの FOR XML 句で RAW モードを使用して、結果の XML データを変換する方法について説明します。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +18,17 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784664"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 RAW モードでは、クエリの結果セットの各行が XML 要素に変換されます。この XML 要素は、汎用識別子 \<row> を持つか、必要に応じて要素名が付けられます。 既定では、NULL 以外の行セットの各列の値が \<row> 要素の属性にマップされます。 FOR XML 句に ELEMENTS ディレクティブが追加されると、各列の値が \<row> 要素のサブ要素にマップされます。 必要に応じて ELEMENTS ディレクティブと共に XSINIL オプションを指定して、`xsi:nil="true"` 属性を持つ要素に結果セットの NULL 列値をマップできます。
   
@@ -36,13 +37,13 @@ RAW モードでは、クエリの結果セットの各行が XML 要素に変�
  バイナリ データを base64 エンコード形式で返すには、BINARY BASE64 オプションを FOR XML 句に指定する必要があります。 RAW モードでは、BINARY BASE64 オプションを指定しないでバイナリ データを取得すると、エラーが発生します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- ここでは、次の例について説明します。  
+ このセクションには、次の例が含まれています。  
   
 -   [例: XML での製品モデル情報の取得](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [例: ELEMENTS ディレクティブで XSINIL を指定する](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [XMLDATA & XMLSCHEMA を使用した結果としてのスキーマの要求](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [例: バイナリ データの取得](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

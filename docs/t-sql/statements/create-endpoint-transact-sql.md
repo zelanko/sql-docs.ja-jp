@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft Docs
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,15 +31,16 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902832"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392740"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   エンドポイントを作成し、クライアント アプリケーションで使用可能なメソッドを含む、プロパティを定義します。 関連する権限については、「[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "67902832"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
 AS { TCP } (  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *endPointName*  
  作成するエンドポイントに割り当てられた名前です。 エンドポイントを更新または削除する場合に使用します。  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  エンドポイントを認証するために、Windows 認証プロトコルを使用してエンドポイントを接続することを指定します。 これは既定値です。  
   
  1 つの認証方法 (NTLM または KERBEROS) を指定した場合、その方法が常に認証プロトコルとして使用されます。 既定値の NEGOTIATE を指定すると、エンドポイントは Windows ネゴシエーション プロトコルを使用して NTLM か Kerberos のどちらかを選択します。  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  エンドポイントが、認証用の ID を設定するために *certificate_name* で指定された証明書を使用して接続を認証することを指定します。 反対側のエンドポイントは、指定された証明書の秘密キーと一致する公開キー付きの証明書を持っている必要があります。  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  エンドポイントが Windows 認証を使用して接続を試み、それが失敗した場合は指定された証明書を使用することを指定します。  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  エンドポイントが、指定された証明書を使用して接続を試行され、それが失敗した場合は Windows 認証が使用されるよう指定します。  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  プロセスで暗号化を使用するかどうかを指定します。 既定値は REQUIRED です。  
   
  DISABLED  
@@ -256,7 +259,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  DATABASE_MIRRORING には既定のポートはありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内では実行できません。 変更対象となるエンドポイントが、アクティブなスナップショット分離レベル トランザクションで使用されている場合でも、ENDPOINT DDL ステートメントは失敗しません。  
   
  ENDPOINT に対する要求は、次のユーザーが実行できます。  
@@ -316,7 +319,7 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
 
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

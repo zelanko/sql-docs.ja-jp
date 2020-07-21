@@ -13,17 +13,17 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 810cb2cdeb45c3ab7ea907864b344c4624bfa527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3145309ec2fadab882d62e8c044a3ceb5a962ab8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941647"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759478"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch および CancelBatch メソッドの例 (VB)
-この例では、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドと組み合わせて、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド。  
+この例では、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドと共に、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを示します。  
   
 ```  
 'BeginUpdateBatchVB  
@@ -123,6 +123,6 @@ End Sub
 'EndUpdateBatchVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2d6a7318c8d45da6c6c029dcacc315fdd1b36460
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a21564e102d8267c2ac7ca719c7a10a2d973e89c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721909"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68809963"
   
  ディストリビューター インスタンスが正しく登録されていることを確認したら、ディストリビューション データベースが **msdb..MSdistributiondbs**の一覧に表示されているかどうかを確認します。 表示されていない場合は、次の手順を実行します。  
   
-1.  ディストリビューション構成のスクリプトを作成します。 詳細については、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」を参照してください。  
+1.  ディストリビューション構成のスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。  
   
 2.  ディストリビューションを無効化してから、再度有効化します。 詳しくは、「 [Configure Distribution](../../relational-databases/replication/configure-distribution.md)」を参照してください。  
   

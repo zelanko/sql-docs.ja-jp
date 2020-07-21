@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3081d4bc0c79e9a0745f2e5941fe50922586e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 13fc4ecaf9c33d23fdf6c2e1776a4776357231a7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981595"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905808"
 ---
 # <a name="getncharacterstream-method-sqlserverresultset"></a>getNCharacterStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "67981595"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getNCharacterStream メソッド &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Reader オブジェクトとして取得されます。|  
-|[getnSQLServerResultSet stream メソッド&#40;java. lang. String&#41; &#40;&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Reader オブジェクトとして取得されます。|  
+|[getNCharacterStream メソッド &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Reader オブジェクトとして取得されます。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

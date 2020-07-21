@@ -1,5 +1,5 @@
 ---
-title: sys.resource_governor_configuration (TRANSACT-SQL) |Microsoft Docs
+title: resource_governor_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,34 +17,34 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_configuration catalog view
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c85332cb1c26f81cdbbaa7bffa5410cf29e711e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0fa22e199415b19049e3db2beb0637218af3692
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897517"
 ---
-# <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  格納されているリソース ガバナーの状態を返します。  
+  格納されている Resource Governor 状態を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|メタデータに格納されている分類子関数の ID。 NULL 値は許可されません。<br /><br /> **注**この関数は新しいセッションを分類するために使用し、ワークロードを適切なワークロード グループにルーティングする規則を使用します。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。|  
-|is_enabled|**bit**|リソース ガバナーの現在の状態を示します。<br /><br /> 0 = リソース ガバナーが有効になっていません。<br /><br /> 1 = リソース ガバナーを有効にします。<br /><br /> NULL 値は許可されません。|  
-|max_outstanding_io_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ボリュームごとの未処理の I/O の最大数。|  
+|classifier_function_id|**int**|メタデータに格納されている分類子関数の ID。 NULL 値は許可されません。<br /><br /> **メモ**この関数は、新しいセッションを分類し、ルールを使用してワークロードを適切なワークロードグループにルーティングするために使用されます。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。|  
+|is_enabled|**bit**|リソース ガバナーの現在の状態を示します。<br /><br /> 0 = Resource Governor が有効になっていません。<br /><br /> 1 = Resource Governor が有効になっています。<br /><br /> NULL 値は許可されません。|  
+|max_outstanding_io_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> ボリュームごとの未処理の I/O の最大数。|  
   
-## <a name="remarks"></a>コメント  
- カタログ ビューには、メタデータに格納されているリソース ガバナー構成が表示されます。 対応する動的管理ビューを使用してメモリ内の構成を参照してください。  
+## <a name="remarks"></a>Remarks  
+ カタログ ビューには、メタデータに格納されているリソース ガバナー構成が表示されます。 メモリ内の構成を表示するには、対応する動的管理ビューを使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 内容を表示するには VIEW ANY DEFINITION 権限が必要です。内容を変更するには CONTROL SERVER 権限が必要です。  
+ コンテンツを表示するには VIEW ANY DEFINITION 権限が必要です。コンテンツを変更するには CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、取得し、格納されているメタデータと、リソース ガバナーの構成のメモリ内の値を比較する方法を示します。  
+## <a name="examples"></a>例  
+ 次の例では、格納されているメタデータ値と Resource Governor 構成のメモリ内の値を取得して比較する方法を示します。  
   
 ```  
 USE master;  
@@ -66,9 +66,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [リソース ガバナーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.dm_resource_governor_configuration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [Resource Governor カタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [dm_resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)  
   
   

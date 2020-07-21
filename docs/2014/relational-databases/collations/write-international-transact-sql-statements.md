@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1888d1045e43e0a9839fd76a21c51500af63539a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953322"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
   以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
@@ -36,15 +35,15 @@ ms.locfileid: "62873520"
   
     -   ADO、OLE DB、および ODBC アプリケーションでは、以下に示す ODBC タイムスタンプ、日付、時刻のエスケープ句を使用する必要があります。  
   
-         **{ts'** yyyy **-** _mm_ **-** _ddhh_ **:** _mm_ **:** _ss_[ **.** _fff_] **'}** など: **{ts'** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts '** yyyy **-** _mm_ **-** _ddhh_**:**_mm_**:**_ss_[**.**_fff_**'}** 例: **{ts '** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** such as: **{ d'** 1998 **-** 09 **-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** such as: **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
+         **{t '** _hh_ **:** _mm_ **:** _ss_ **'}** (例: **{t '** 10:02:20 **'}** )  
   
     -   他の API、または [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーを使用するアプリケーションでは、区切られていない数字列を使用してください。 たとえば、 *yyyymmdd* には 19980924 を使用します。  
   
-    -   その他の Api を使用するアプリケーションまたは[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト、ストアド プロシージャ、およびトリガーする必要がありますを使用して CONVERT ステートメント明示的なスタイル パラメーターを持つの間でのすべての変換、 `time`、 `date`、 `smalldate`、 `datetime`、**datetime2**、および`datetimeoffset`データ型と文字列データ型。 たとえば、次のステートメントは、すべての言語または日付形式の接続設定で同じように解釈されます。  
+    -   他の api、 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、ストアドプロシージャ、およびトリガーを使用するアプリケーションでは、、、 `time` `date` `smalldate` 、 `datetime` 、 **datetime2**、および `datetimeoffset` データ型と文字列データ型の間のすべての変換に対して、明示的なスタイルパラメーターを指定して CONVERT ステートメントを使用する必要があります。 たとえば、次のステートメントは、すべての言語または日付形式の接続設定で同じように解釈されます。  
   
         ```  
         SELECT *  

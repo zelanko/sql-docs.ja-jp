@@ -12,14 +12,14 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503074"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用できる HTML ビューアーがあります。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
   
  レポート ツール バーを変更することはできませんが、レポート URL でパラメーターを構成して、ツール バーがレポートに表示されないようにすることができます。 レポート ツール バーを非表示にする操作の詳細については、「 [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)」を参照してください。  
   
@@ -30,11 +30,11 @@ ms.locfileid: "65503074"
   
  レポート ツール バーは、次の図のように表示されます。 使用可能なレポート機能や表示オプションによっては、図とは異なるレポート ツール バーが表示される場合があります。  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![レポート ツール バー](../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツール バー")  
   
  次の表では、一般的に使用されるレポート ツール バーの機能を説明します。 各機能は、アクセスに使用するコントロールごとに分類されています。  
   
-|使用するアイコンまたはコントロール||変換先|  
+|使用するアイコンまたはコントロール||ターゲット|  
 |------------------------------|-|--------|  
 |![ページ ナビゲーション コントロール](../reporting-services/media/htmlviewer-pagenav.gif "ページ ナビゲーション コントロール")|**ページ ナビゲーション コントロール**|レポートの最初または最後のページを開き、レポートをページごとにスクロールし、レポートの特定のページを開きます。 特定のページを表示するには、ページ番号を入力して Enter キーを押します。|  
 |![ページ表示コントロール](../reporting-services/media/htmlviewer-pagesize.gif "ページ表示コントロール")|**ページ表示コントロール**|レポート ページのサイズを拡大または縮小します。 パーセンテージ ベースの変更以外に、 **[ページの幅]** を選択してレポート ページの幅をブラウザー ウィンドウに合わせるか、 **[ページ全体]** を選択してレポートの高さをブラウザー ウィンドウに合わせることができます。 **[ズーム]** オプションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 以降のバージョンでサポートされています。|  
@@ -43,22 +43,22 @@ ms.locfileid: "65503074"
 |![ドキュメント マップ アイコン](../reporting-services/media/htmlviewer-docmap.GIF "ドキュメント マップ アイコン")|**ドキュメント マップ アイコン**|ドキュメント マップを含んだレポート内のドキュメント マップ ペインの表示と非表示を切り替えます。 ドキュメント マップは、Web サイトのナビゲーション ウィンドウに類似したレポート ナビゲーション コントロールです。 ドキュメント マップ内のアイテムをクリックして、特定のグループ、ページ、またはサブレポートに移動することができます。|  
 |![プリンターのアイコン](../reporting-services/media/printer-icon.gif "プリンターのアイコン")|**プリンターのアイコン**|[印刷] ダイアログ ボックスが表示され、印刷オプションの指定と、レポートの印刷ができます。 最初に使用する際、このアイコンをクリックすると、印刷コントロールをダウンロードするよう求められます。|  
 ||**表示および非表示のアイコン**|パラメーターを含んだレポートのパラメーター値を入力するフィールドと **[レポートの表示]** ボタンの表示と非表示を切り替えます。|  
-|![[レポート] ツールバーのブラウザー更新ボタン](../reporting-services/media/htmlviewer-refresh.GIF "[レポート] ツールバーのブラウザー更新ボタン")|**レポートの更新アイコン**|レポートを更新します。 アクティブなレポートのデータが更新されます。 キャッシュされたレポートが格納先の場所から再度読み込まれます。|  
-|![HTML ビューアーのデータ フィード](../reporting-services/media/htmlviewer-datafeed.gif "HTML ビューアーのデータ フィード")|**データ フィード アイコン**|レポートから生成されたデータ フィードです。|  
-|![SSRS レポート ビューアーの Power BI ボタン](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "SSRS レポート ビューアーの Power BI ボタン")|**Power BI ダッシュボードにピン留めする**|サポート レポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めします。 ボタンが表示されていない場合は、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていません。  詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。|  
+|![レポート ツールバーのブラウザー更新ボタン](../reporting-services/media/htmlviewer-refresh.GIF "レポート ツール バーのブラウザー更新ボタン")|**レポートの更新アイコン**|レポートを更新します。 アクティブなレポートのデータが更新されます。 キャッシュされたレポートが格納先の場所から再度読み込まれます。|  
+|![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**データ フィード アイコン**|レポートから生成されたデータ フィードです。|  
+|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Power BI ダッシュボードにピン留めする**|サポート レポート アイテムを [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めします。 ボタンが表示されていない場合は、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていません。  詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。|  
   
 ### <a name="about-export-formats"></a>エクスポート形式について  
  レポート ツール バーを使用すると、さまざまな形式でレポートを表示できます。 レポート サーバーにインストールされている表示拡張機能によって、使用可能な形式が決まります。 他の形式を選択した場合、選択したエクスポート形式に関連付けられたビューアーを使用して、新しいブラウザー ウィンドウが開き、レポートが表示されます。 選択した形式をビューアーで利用できない場合、他の形式を選択することができます。  
   
  次のエクスポート形式が、レポート サーバーの既定のインストールに含まれています。 利用可能なエクスポート形式は、ここに一覧表示されているものとは異なる場合があります。  
   
-|エクスポート形式|[説明]|  
+|エクスポート形式|説明|  
 |-------------------|-----------------|  
 |XML|XML 構文でレポートを表示します。 XML で表示されたレポートが新しいブラウザー ウィンドウに表示されます。|  
 |CSV|コンマ区切り形式でレポートを表示します。 レポートは、CSV ファイル形式に関連付けられているアプリケーションで開きます。|  
 |PDF|クライアント側の PDF ビューアーを使用して、レポートを表示します。 この形式を使用するには、サード パーティの PDF ビューアー (たとえば、Adobe Acrobat Reader) が必要です。|  
 |MHTML|イメージおよびリンクされたコンテンツをレポートに保持する、MIME エンコード HTML 形式でレポートを表示します。|  
-|[エクスポート]|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel でレポートを表示します (.xlsx ファイル)。|  
+|Excel|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel でレポートを表示します (.xlsx ファイル)。|  
 |PowerPoint|[!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint でレポートを表示します (.pptx ファイル)。|  
 |TIFF ファイル|標準の TIFF ビューアーでレポートを表示します。 一部の [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows クライアントでは、これは Windows 画像と FAX ビューアーです。 印刷ページのレイアウトでレポートを表示するには、この形式を選択します。|  
 |Word|[!INCLUDE[msCoName](../includes/msconame-md.md)] Word でレポートを表示します (.docx ファイル)。|  
@@ -73,7 +73,7 @@ ms.locfileid: "65503074"
   
 ## <a name="see-also"></a>参照  
  [レポート データ ソースに関する資格情報と接続情報を指定する](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: PolyBase の機能と制限事項 | Microsoft Docs
+descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -7,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a619f67d951ba7407aa0987b2ca9fb65373de95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061969"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216032"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
 
@@ -77,6 +78,6 @@ PolyBase には次の制限事項があります。
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase について詳しくは、「[PolyBase とは](polybase-guide.md)」をご覧ください。

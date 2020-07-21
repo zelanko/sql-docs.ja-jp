@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0ad01826b563a53713ed0bec69092115ab5cd53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971212"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
   モデルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の最上位レベルのデータ編成単位です。 モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルには次のオブジェクトが含まれています。  
   
--   [エンティティ]  
+-   エンティティ  
   
 -   属性と属性グループ  
   
@@ -71,7 +70,7 @@ ms.locfileid: "65482546"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |モデルを作成してマスター データを整理する。|[モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)|  
-|既存のモデルの名前を変更する。|[モデル名を変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
+|既存のモデルの名前を変更する。|[モデル名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |既存のモデルを削除する。|[モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  

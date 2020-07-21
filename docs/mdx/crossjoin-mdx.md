@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892946"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
@@ -33,12 +33,12 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
 ## <a name="arguments"></a>引数  
  *Set_Expression1*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Set_Expression2*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **Crossjoin**関数は、2つ以上の指定されたセットのクロス積を返します。 結果セット内の組の順序は、結合されるセットの順序とメンバーの順序によって異なります。 たとえば、最初のセットが {x1, x2,..., x*n*} で構成され、2番目のセットが {y1, y2,..., y*n*} で構成されている場合、これらのセットのクロス積は次のようになります。  
   
  {(x1, y1)、(x1, y2),..., (x1, y*n*)、(x2, y1)、(x2, y2),...,  
@@ -127,7 +127,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

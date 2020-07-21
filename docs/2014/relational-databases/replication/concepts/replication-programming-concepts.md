@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db4ab6196c138eaf21de08afc27731225df398e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064691"
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
   レプリケーション機能を利用するアプリケーションを開発する前に、次に示す一般的な計画手順を実行してください。  
@@ -103,7 +102,7 @@ ms.locfileid: "62721810"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>適切なレプリケーション プログラミング インターフェイスの選択  
  計画の最後の手順は、選択した開発環境で目的のレプリケーション機能を実装するためのレプリケーション プログラミング インターフェイスを適切に選択することです。 次の表に、使用できるレプリケーション プログラミング インターフェイスを示します。  
   
-|インターフェイス|環境|使用法|  
+|インターフェイス|環境|用途|  
 |---------------|-----------------|----------|  
 |[レプリケーション管理オブジェクトの概念](replication-management-objects-concepts.md)|マネージド コード|管理、監視、同期|  
 |<xref:Microsoft.SqlServer.Replication>|マネージド コード|同期|  
@@ -120,7 +119,7 @@ ms.locfileid: "62721810"
   
 2.  販売アプリケーションに必要な一般的なデータ アクセスに加えて、このアプリケーションでは販売担当者が必要なときにボタンをクリックしてプル サブスクリプションを同期できるようにする必要があります。 さらに、販売担当者がこのアプリケーションをインストールして実行するため、クライアント側でサブスクリプションを構成し、初期スナップショットを適用できる必要があります。 場合によっては、このアプリケーションは Windows で提供されているインフラストラクチャを利用してワイヤレス接続を探し、接続が検出された場合はサブスクリプションを自動的に同期します。  
   
-3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳細については、「[Web 同期の構成](../configure-web-synchronization.md)」を参照してください。  
+3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳しくは、「 [Configure Web Synchronization](../configure-web-synchronization.md)」をご覧ください。  
   
 4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
   

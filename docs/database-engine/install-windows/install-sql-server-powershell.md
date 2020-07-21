@@ -1,5 +1,6 @@
 ---
 title: SQL Server PowerShell のインストール | Microsoft Docs
+description: この記事では、ユーザーが PowerShell サポートを必要とする SQL Server 機能を選択するとセットアップによりインストールされる SQL Server PowerShell コンポーネントについて説明します。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad6dc50d1144b0efa13bf4b429a1ca2103fefcd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991060"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883533"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell のインストール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell のコンポーネントは、セットアップによって自動的に構成されます。  
 
@@ -34,9 +35,9 @@ ms.locfileid: "67991060"
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、オブジェクト エクスプローラー ツリーからの Windows PowerShell セッションの起動をサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、Windows PowerShell ジョブ ステップをサポートします。  
   
-Windows Server 2012 以降と Windows 8 以降には、PowerShell がインストールされ構成されています。 Windows PowerShell のインストールの詳細については、「[Windows PowerShell のインストール](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell)」を参照してください。  
+Windows Server 2012 以降と Windows 8 以降には、PowerShell がインストールされ構成されています。 Windows PowerShell のインストールの詳細については、「[Windows PowerShell のインストール](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell)」を参照してください。  
 
-詳細については、以下をご覧ください。   
+詳細については、次を参照してください。   
 
 - [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

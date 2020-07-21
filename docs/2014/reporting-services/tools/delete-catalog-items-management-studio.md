@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100385"
 ---
 # <a name="delete-catalog-items-management-studio"></a>カタログ アイテムの削除 (Management Studio)
@@ -28,17 +28,17 @@ ms.locfileid: "66100385"
   
  削除操作は元に戻せません。 削除したアイテムを復旧するには、そのアイテムを再作成するか、レポート サーバー データベースのバックアップ コピーを復元する必要があります。  
   
-## <a name="options"></a>および  
- **名前**  
+## <a name="options"></a>オプション  
+ **Name**  
  削除するアイテムの名前を指定します。  
   
- **型**  
+ **Type**  
  削除するアイテムの種類を表示します。  
   
- **所有者**  
+ **[所有者]**  
  所有者の名前を表示します。 ほとんどの場合は [システム] です。  
   
- **ステータス**  
+ **状態**  
  削除操作の進行状況を表示します。  
   
  **Error**  
@@ -47,6 +47,6 @@ ms.locfileid: "66100385"
 ## <a name="see-also"></a>参照  
  [アイテムの削除 &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
+ [スケジュールの作成、変更、および削除](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

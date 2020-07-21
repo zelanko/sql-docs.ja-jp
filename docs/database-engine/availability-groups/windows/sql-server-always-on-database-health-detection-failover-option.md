@@ -1,6 +1,7 @@
 ---
-title: データベースの正常性検出フェールオーバー オプション | Microsoft Docs
-ms.custom: ''
+title: データベース レベルの正常性検出
+description: SQL Server の Always On 可用性グループで使用できるデータベース レベルの正常性検出機能について説明します。
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013963"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898065"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 SQL Server 2016 以降、Always On 可用性グループを構成するときに、データベース レベルの正常性検出 (DB_FAILOVER) オプションを使用できます。 何らかの問題が発生し、データベースがオンライン状態でなくなると、このデータベース レベルの正常性検出によって検知され、可用性グループの自動フェールオーバーがトリガーされます。
 
 可用性グループのデータベース レベルの正常性検出は、可用性グループ全体に対して有効になるため、データベース レベルの正常性検出では可用性グループ内のすべてのデータベースが監視されます。 可用性グループ内の特定のデータベースを選択して有効にすることはできません。
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 dmv 出力の例:
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -125,7 +126,7 @@ dmv 出力の例:
 >
 >2016-04-25 12:20:21.21 spid75      可用性グループ 'ag' のローカル可用性レプリカの状態が 'PRIMARY_NORMAL' から 'RESOLVING_NORMAL' に変わりました。  可用性グループがオフラインに移行しているため、状態が変わりました。  関連付けられている可用性グループが削除されたか、関連付けられている可用性グループをユーザーが Windows Server フェールオーバー クラスタ リング (WSFC) 管理コンソールでオフラインにしたか、可用性グループが別の SQL Server インスタンスにフェールオーバーしているため、レプリカがオフラインに移行しています。  詳細については、SQL Server エラー ログ、Windows Server フェールオーバー クラスタリング (WSFC) 管理コンソール、または WSFC ログをご覧ください。
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>拡張イベント sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>拡張イベント sqlserver.availability_replica_database_fault_reporting
 
 SQL Server 2016 以降、新しい拡張イベントが定義されました。このイベントは、データベース レベルの正常性検出によってトリガーされます。  イベントの名前は **sqlserver.availability_replica_database_fault_reporting** です。
 
@@ -151,7 +152,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 
 フィールドの説明:
 
-|列のデータ | [説明]|
+|列のデータ | 説明|
 |---------|---------|
 |availability_group_id |可用性グループの ID。|
 |availability_group_name |可用性グループの名前です。|
@@ -160,13 +161,13 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 |database_name |エラーをレポートしているデータベースの名前。|
 |database_replica_id |可用性レプリカ データベースの ID。|
 |failover_ready_replicas |同期されている自動フェールオーバー セカンダリ レプリカの数。|
-|fault_type  | レポートされたエラー ID。 有効値は次のとおりです。  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown|
+|fault_type  | レポートされたエラー ID。 指定できる値  <br/> 0 - NONE <br/>1 - Unknown<br/>2 - Shutdown|
 |is_critical | SQL Server 2016 の XEvent では、この値は常に true を返します。|
 
 
 この出力例は、AutoHa-Sample2 という名前のデータベースで "fault_type 2 シャットダウン" が発生したため、SQLSERVER-1 という名前のレプリカの、可用性グループ Contoso-ag で、重大なイベントが発生したことを示しています。
 
-|フィールド  | [値]|
+|フィールド  | 値|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

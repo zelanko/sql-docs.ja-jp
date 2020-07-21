@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ea8d17c11c47c4a31f21a2e538bcc9918ad0fea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904644"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294390"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
 
@@ -55,11 +55,11 @@ ms.locfileid: "67904644"
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         \- または -  
+         または  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         \- または -  
+         または  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107694"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
@@ -45,13 +45,13 @@ ms.locfileid: "66107694"
  [他のアプリケーションからのレポートの印刷 (レポート ビルダーおよび SSRS)](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  別のアプリケーションにエクスポートされたレポートを印刷する方法を説明します。  
   
- [レポートの印刷 (レポート ビルダーおよび SSRS)](print-a-report-report-builder-and-ssrs.md)  
- レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラーを使用してレンダリングされるレポートの用紙サイズを指定する手順について説明します(PDF、画像、または印刷のハード改ページレンダラー)。  
+ [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラー (PDF、画像、または印刷) によってレンダリングされるレポートの用紙サイズを指定する手順について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [画像 (レポート ビルダーおよび SSRS)](../report-design/images-report-builder-and-ssrs.md)   
- [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [ページヘッダーとページフッター &#40;レポートビルダーと SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS&#41;の画像](../report-design/images-report-builder-and-ssrs.md)   
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

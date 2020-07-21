@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787255"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   シノニムは、次の目的で機能するデータベース オブジェクトです。  
   
 -   ベース オブジェクトと呼ばれる別のデータベース オブジェクトの代替名を提供します。ベース オブジェクトは、ローカル サーバーまたはリモート サーバーに配置できます。  
@@ -120,7 +120,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 シノニムのベース オブジェクトの基本データ型を調べるには、OBJECTPROPERTYEX 関数を使用します。 詳細については、「[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)」を参照してください。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
 次の例は、ローカル オブジェクトであるシノニムのベース オブジェクトの基本データ型を返します。  
   
 ```sql  

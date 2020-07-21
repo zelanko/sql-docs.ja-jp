@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e24efe4204d9117af0d3743f91fe028b305a36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25ed0a2ce97310389f53238e81f16ab8b1482b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706536"
 ---
 # <a name="cursors-transact-sql"></a>カーソル (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントによって完全な結果セットが作成されますが、結果を一度に 1 行ずつ処理するのが最適な場合もあります。 結果セットの上でカーソルをオープンすると、結果セットを一度に 1 行ずつ処理できます。 **cursor** データ型を使用してカーソルを変数またはパラメーターに割り当てることができます。  
   

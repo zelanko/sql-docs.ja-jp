@@ -1,6 +1,6 @@
 ---
-title: ヒット カウントの指定 | Microsoft Docs
-ms.custom: ''
+title: ヒット カウントの指定
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e053de9abdb9806a3294a2904827cf9f29753686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48198318ec2febe4e79a501ef27d1bb56905f1f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047535"
 ---
 # <a name="specify-a-hit-count"></a>ヒット カウントの指定
   ブレークポイントのヒット カウントは、ブレークポイントに達するたびに [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーによって増加されるカウンターです。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
@@ -45,7 +44,7 @@ ms.locfileid: "66063707"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
-     \- または -  
+     または  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66063707"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
-     \- または -  
+     または  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66063707"
   
 4.  **[OK]** または **[キャンセル]** をクリックして、ダイアログ ボックスを終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ブレークポイント条件の指定](specify-a-breakpoint-condition.md)  
   
   

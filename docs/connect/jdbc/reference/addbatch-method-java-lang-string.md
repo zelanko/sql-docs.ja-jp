@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 748828e4d58afa1fd9c5ee637e702a2403400b7a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956010"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923019"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public void addBatch(java.lang.String sql)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この addBatch メソッドは、java. .sql. ステートメントインターフェイスの addBatch メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この addBatch メソッドは、java.sql.Statement インターフェイスの addBatch メソッドで指定されています。  
   
  SQLServerPreparedStatement オブジェクトが作成される際、オブジェクトの SQL ステートメントが指定されるため、このメソッドを呼び出すと例外が発生します。  
   

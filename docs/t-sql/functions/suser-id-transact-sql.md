@@ -23,15 +23,15 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1b3e67e84738532baee8f0413dd3896c2a19f26d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ebf42b9f8495690472e57baf6ccde33ef94aefd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897957"
 ---
-# <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+# <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   ユーザーのログイン ID 番号を返します。  
   
@@ -54,14 +54,14 @@ SUSER_ID ( [ 'login' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SUSER_ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に明示的に展開されているログインに対してのみ、ID 番号を返します。 この ID は、所有権と権限を追跡するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で使用されます。 この ID は、SUSER_SID から返されるログインの SID と等しくありません。 *login* が SQL Server ログインの場合、SID は GUID にマップされます。 *login* が Windows ログインまたは Windows グループの場合、SID は Windows セキュリティ識別子にマップされます。  
   
  SUSER_SID は、**syslogins** システム テーブルにエントリを持つログインに対してのみ SUID を返します。  
   
  システム関数は、選択リストの中、WHERE 句の中、および式を使用できるすべての場所で使用できます。ただし、パラメーターを指定しない場合であっても、その後に常にかっこを指定する必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`sa` ログインのログイン ID 番号を返します。  
   
 ```  
@@ -71,6 +71,6 @@ SELECT SUSER_ID('sa');
 ## <a name="see-also"></a>参照  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

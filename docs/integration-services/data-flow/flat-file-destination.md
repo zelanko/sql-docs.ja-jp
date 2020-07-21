@@ -17,14 +17,14 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c62f746d13fdc818ed9caf8010be84065ffe8fbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941511"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292530"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
 
@@ -74,7 +74,7 @@ ms.locfileid: "67941511"
  **[ファイル内のデータを上書きする]**  
  既存のファイルを上書きするか、データを追加するかを指定します。  
   
- **[ヘッダー]**  
+ **ヘッダー**  
  データが書き込まれる前にファイルに挿入するテキストのブロックを入力します。 このオプションをオンにすると、列見出しなどの追加情報を含めることができます。  
   
  **プレビュー**  

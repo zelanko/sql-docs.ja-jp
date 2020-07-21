@@ -1,6 +1,7 @@
 ---
 title: SQL Server 2017 の各エディションとサポートされる機能 - Linux
-ms.date: 09/14/2017
+description: この記事では、SQL Server 2017 on Linux のさまざまなエディションでサポートされている機能について説明します。 利用可能なエディションとコンポーネントから選択するのに役立ちます。
+ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,32 +25,32 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893092"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、SQL Server 2017 on Linux のさまざまなエディションでサポートされている機能の詳細を説明します。 SQL Server on Windows の各エディションとサポートされている機能については、「[SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
   
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
 最新のリリース ノートと新機能については、以下の情報を参照してください。
-- [Linux 上の SQL Server のリリース ノート](sql-server-linux-release-notes.md)
-- [SQL Server on Linux の新機能](sql-server-linux-whats-new.md)
+- [SQL Server 2017 on Linux のリリース ノート](sql-server-linux-release-notes.md)
+- [SQL Server 2017 on Linux の新機能](sql-server-linux-whats-new.md)
 
-Linux 上で使用できない SQL Server の機能の一覧については、[「サポートされていない機能とサービス](sql-server-linux-release-notes.md#Unsupported)」を参照してください。
+Linux 上で使用できない SQL Server の機能の一覧については、[「サポートされていない機能とサービス](#Unsupported)」を参照してください。
 
 ### <a name="try-sql-server"></a>SQL Server を試してください    
     
 [SQL Server 2017 をダウンロードする](https://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
+## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
  次の表で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のエディションについて説明します。 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
@@ -60,24 +61,24 @@ Linux 上で使用できない SQL Server の機能の一覧については、[�
 |Developer|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
 |Express Edition|Express Edition はエントリレベルの無料のデータベースで、学習や、デスクトップおよび小規模サーバー データ ドリブン アプリケーションの構築などに適しています。 このエディションは、独立系ソフトウェア ベンダー、開発者、クライアント アプリケーションを趣味で開発する開発者などに最適です。 さらに高度なデータベース機能が必要な場合には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の他の上位バージョンにシームレスにアップグレードできます。|  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
+## <a name="using-ssnoversion-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクライアント コンポーネントだけを、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに直接接続するクライアント/サーバー アプリケーションを実行するコンピューターにインストールできます。 クライアント コンポーネントをインストールすることは、データベース サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを管理する場合、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アプリケーションを開発しようとしている場合にも適切なオプションです。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント  
+## <a name="ssnoversion-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント  
 
 SQL Server 2017 on Linux では、SQL Server データベース エンジンがサポートされています。 次の表で、データベース エンジンの機能について説明します。   
   
-|サーバー コンポーネント|[説明]|  
+|サーバー コンポーネント|説明|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には、[!INCLUDE[ssDE](../includes/ssde-md.md)]、データを格納、処理、およびセキュリティで保護するための主要サービス、レプリケーション、フルテキスト検索、リレーショナル データと XML データを管理するためのツール、およびデータベース内分析の統合が含まれます。|  
 
 **Developer Edition、Enterprise Core Edition、および Evaluation Edition**  
 Developer Edition、Enterprise Core Edition、および Evaluation Edition でサポートされている機能については、次の表に記載されている SQL Server Enterprise Edition の機能をご覧ください。
 
-Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) のクライアントを 1 つだけサポートします。 
+Developer Edition では引き続き、[SQL Server 分散再生](../tools/distributed-replay/sql-server-distributed-replay.md)のクライアントが 1 つだけサポートされます。 
   
-##  <a name="Cross-BoxScaleLimits"></a> スケールの制限  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> スケールの制限  
   
 |機能|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +91,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) に基づくライセンス (新しい使用許諾契約では利用できません) は、SQL Server インスタンスあたり最大 20 コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「[SQL Server のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
  
-##  <a name="RDBMSHA"></a> RDBMS の高可用性  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS の高可用性  
   
 |機能|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -110,7 +111,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |ミラー化バックアップ|はい|いいえ|いいえ|いいえ|
 |ホット アド メモリと CPU|はい|いいえ|いいえ|いいえ|
 |暗号化されたバックアップ|はい|はい|いいえ|いいえ|
-|Windows Azure へのハイブリッド バックアップ (URL へのバックアップ)|はい|はい|いいえ|いいえ|
+|Azure へのハイブリッド バックアップ (URL へのバックアップ)|はい|はい|いいえ|いいえ|
   
 <sup>1</sup> Enterprise Edition では、ノードの数はオペレーティング システムの最大容量です。 Standard Edition では、2 つのノードがサポートされます。 
 
@@ -118,7 +119,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 
 <sup>3</sup> Standard Edition では、基本的な可用性グループがサポートされます。 基本的な可用性グループは、1 つのデータベースで、2 つのレプリカをサポートします。 基本的な可用性グループの詳細については、「[基本的な可用性グループ](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。    
 
-##  <a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> RDBMS のスケーラビリティとパフォーマンス  
   
 |機能|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,13 +144,13 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 
 <sup>1</sup> インメモリ OLTP データ サイズおよび列ストア セグメント キャッシュは、「スケールの制限」セクションでエディションごとに指定されているメモリ量に制限されます。 並列処理には最大限度があります。 インデックス構築のための並列処理の度合い (DOP) は、Standard Edition では 2 DOP に、Web Edition と Express Edition では 1 DOP に制限されます。 これは、ディスク ベース テーブルとメモリ最適化テーブルで作成された列ストア インデックスに当てはまります。
 
-##  <a name="RDBMSS"></a> RDBMS のセキュリティ  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> RDBMS のセキュリティ  
   
 |機能|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |行レベルのセキュリティ|はい|はい|はい|はい|  
 |Always Encrypted|はい|はい|はい|はい| 
-|動的なデータ マスキング|はい|はい|はい|はい|   
+|動的データ マスク|はい|はい|はい|はい|   
 |基本的な監査|はい|はい|はい|はい| 
 |詳細な監査|はい|はい|はい|はい| 
 |透過的なデータベースの暗号化|はい|いいえ|いいえ|いいえ|   
@@ -157,26 +158,26 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |包含データベース|はい|はい|はい|はい| 
 |バックアップの暗号化|はい|はい|いいえ|いいえ|  
 
-##  <a name="RDBMSM"></a> RDBMS の管理の容易性  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> RDBMS の管理の容易性  
   
 |機能|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|専用管理者接続|はい|はい|はい|はい (トレース フラグを使用)|はい (トレース フラグを使用)|   
+|専用管理者接続|はい|はい|はい|はい (トレース フラグを使用)|   
 |PowerShell スクリプティングのサポート|はい|はい|はい|はい| 
 |データ層アプリケーション コンポーネントの操作のサポート - 抽出、配置、アップグレード、削除|はい|はい|はい|はい| 
-|ポリシー オートメーション (変更時とスケジュールに基づいて確認)|はい|はい|はい|いいえ|いいえ|   
-|パフォーマンス データ コレクター|はい|はい|はい|いいえ|いいえ| 
-|標準的なパフォーマンス レポート|はい|はい|はい|いいえ|いいえ| 
-|プラン ガイドおよびプラン ガイドの固定計画|はい|はい|はい|いいえ|いいえ|   
+|ポリシー オートメーション (変更時とスケジュールに基づいて確認)|はい|はい|はい|いいえ|  
+|パフォーマンス データ コレクター|はい|はい|はい|いいえ|
+|標準的なパフォーマンス レポート|はい|はい|はい|いいえ|
+|プラン ガイドおよびプラン ガイドの固定計画|はい|はい|はい|いいえ| 
 |NOEXPAND ヒントを使用したインデックス付きビューの直接クエリ|はい|はい|はい|はい| 
-|インデックス付きビューの自動メンテナンス|はい|はい|はい|いいえ|いいえ| 
+|インデックス付きビューの自動メンテナンス|はい|はい|はい|いいえ|
 |分散パーティション ビュー|はい|いいえ|いいえ|いいえ| 
 |並列インデックス操作|はい|いいえ|いいえ|いいえ|  
 |クエリ オプティマイザーによる自動的なインデックス付きのビュー使用|はい|いいえ|いいえ|いいえ| 
 |並列整合性チェック|はい|いいえ|いいえ|いいえ| 
 |SQL Server ユーティリティ コントロール ポイント|はい|いいえ|いいえ|いいえ|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |機能|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -188,20 +189,20 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |MERGE と UPSERT の機能|はい|はい|はい|はい|   
 |日付および時刻データ型|はい|はい|はい|はい|  
 |国際化サポート|はい|はい|はい|はい| 
-|フルテキストおよびセマンティック検索|はい|はい|はい|はい|いいえ| 
-|クエリ内の言語指定|はい|はい|はい|はい|いいえ|   
-|Service Broker (メッセージング)|はい|はい|不可 (クライアントのみ)|不可 (クライアントのみ)|不可 (クライアントのみ)|   
-|Transact-SQL エンドポイント|はい|はい|はい|いいえ|いいえ| 
+|フルテキストおよびセマンティック検索|はい|はい|はい|はい|
+|クエリ内の言語指定|はい|はい|はい|はい|
+|Service Broker (メッセージング)|はい|はい|不可 (クライアントのみ)|不可 (クライアントのみ)|
+|Transact-SQL エンドポイント|はい|はい|はい|いいえ|
 |グラフ|はい|はい|はい|はい|  
 
 
 <sup>1</sup> 複数のコンピューティング ノードでのスケール アウトにはヘッド ノードが必要です。
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] の各エディションがサポートする Integration Services (SSIS) の機能については、「[SQL Server の各エディションがサポートする Integration Services の機能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)」をご覧ください。
 
-##  <a name="SLS"></a> 空間およびロケーション サービス  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> 空間およびロケーション サービス  
   
 |機能名|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -209,14 +210,41 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |平面データ型と測地データ型|はい|はい|はい|はい| 
 |高度な空間的なライブラリ|はい|はい|はい|はい|   
 |業界標準の空間データ形式のインポート/エクスポート|はい|はい|はい|はい|   
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> サポートされていない機能とサービス
 
+次の機能とサービスは、SQL Server 2017 on Linux では利用できません。 これらの機能のサポートは、今後ますます使用可能になります。
+
+| 領域 | サポートされていない機能またはサービス |
+|-----|-----|
+| **データベース エンジン** | マージ レプリケーション |
+| &nbsp; | Stretch DB |
+| &nbsp; | PolyBase |
+| &nbsp; | サード パーティの接続を使用した分散クエリ |
+| &nbsp; | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のデータ ソースへのリンク サーバー  |
+| &nbsp; | システム拡張ストアド プロシージャ (XP_CMDSHELL など) |
+| &nbsp; | Filetable、FILESTREAM |
+| &nbsp; | EXTERNAL_ACCESS 権限または UNSAFE 権限が設定された CLR アセンブリ |
+| &nbsp; | バッファー プール拡張 |
+| **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
+| &nbsp; | 警告 |
+| &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
+| &nbsp; | 管理対象のバックアップ |
+| **高可用性** | データベース ミラーリング  |
+| **Security** | 拡張キー管理 |
+| &nbsp; | リンク サーバーに対する AD 認証 | 
+| &nbsp; | 可用性グループに対する AD 認証 (AG) | 
+| **サービス** | SQL Server Browser |
+| &nbsp; | SQL Server R サービス |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Data Quality Services |
+| &nbsp; | マスター データ サービス |
   
-## <a name="next-steps"></a>次の手順 
+## <a name="next-steps"></a>次のステップ
+ [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [SQL Server 2014 の各エディションとサポートされる機能 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [SQL Server をインストールする](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
-
-  
-  
+ [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)

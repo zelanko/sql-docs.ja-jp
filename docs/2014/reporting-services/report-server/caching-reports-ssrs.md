@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104108"
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
@@ -72,10 +72,10 @@ ms.locfileid: "66104108"
 ## <a name="see-also"></a>参照  
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポート処理プロパティの設定](set-report-processing-properties.md)   
- [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)   
- [キャッシュの事前読み込み (レポート マネージャー)](preload-the-cache-report-manager.md)   
+ [Reporting Services の概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
+ [キャッシュ &#40;レポートマネージャーを事前に読み込む&#41;](preload-the-cache-report-manager.md)   
  [[スケジュール]](../subscriptions/schedules.md)   
- [共有データセットのキャッシュ (SSRS)](cache-shared-datasets-ssrs.md)   
- [キャッシュ更新オプション (レポート マネージャー)](../cache-refresh-options-report-manager.md)  
+ [SSRS&#41;&#40;共有データセットをキャッシュする](cache-shared-datasets-ssrs.md)   
+ [[キャッシュ更新オプション] &#40;レポート マネージャー&#41;](../cache-refresh-options-report-manager.md)  
   
   

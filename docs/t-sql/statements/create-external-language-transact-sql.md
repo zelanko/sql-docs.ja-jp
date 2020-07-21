@@ -1,29 +1,28 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 04/03/2020
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: language-extensions
 ms.topic: language-reference
-author: nelgson
-ms.author: negust
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8d4f85f004d1b15e356b02f025f4297296f9ef2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735837"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 指定したファイル パスまたはバイト ストリームから、データベースに外部言語拡張機能を登録します。 このステートメントは、データベース管理者が SQL Server によってサポートされている任意の OS プラットフォームで新しい外部言語拡張機能を登録する汎用メカニズムとして機能します。 詳細については、[Language Extensions (言語拡張)](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview) に関する記事を参照してください。
 
 > [!NOTE]
-> 現在、外部言語としては **Java** のみがサポートされています。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。 **R** および **Python** を使う方法について詳しくは、「[SQL Server Machine Learning Services (SQL Server Machine Learning Services)](https://docs.microsoft.com/sql/advanced-analytics/)」をご覧ください。
+> 現在、外部言語としては **Java** のみがサポートされています。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。 **R** および **Python** を使う方法について詳しくは、「[SQL Server Machine Learning Services (SQL Server Machine Learning Services)](https://docs.microsoft.com/sql/machine-learning/)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -31,16 +30,15 @@ ms.locfileid: "68893416"
 CREATE EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]  
 FROM <file_spec> [ ,...2 ]  
-WITH (<option_spec>)
 [ ; ]  
 
 <file_spec> ::=  
 {
-    ( CONTENT = { <external_lang_specifier> | <content_bits>,
+    ( CONTENT = { <external_lang_specifier> | <content_bits> },
     FILE_NAME = <external_lang_file_name>
     [ , PLATFORM = <platform> ]
     [ , PARAMETERS = <external_lang_parameters> ]
-    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> )
+    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> ] )
 }
 
 <external_lang_specifier> :: =  
@@ -102,15 +100,11 @@ WITH (<option_spec>)
 
 **external_lang_env_variables**
 
-これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 例:JRE_HOME。
+これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 次に例を示します。JRE_HOME。
 
 **platform**
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
-
-## <a name="remarks"></a>Remarks
-
-CTP 3.0 では、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -120,7 +114,7 @@ CTP 3.0 では、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートさ
 
 ### <a name="execute-external-script-permission"></a>EXECUTE EXTERNAL SCRIPT アクセス許可
 
-SQL Server 2019 では、特定の言語について外部スクリプトの実行を許可できるように、EXECUTE EXTERNAL SCRIPT アクセス許可が導入されています。 以前は、EXECUTE ANY EXTERNAL SCRIPT データベース アクセス許可しかなく、特定の言語に対する実行アクセス許可を付与することはできませんでした。
+EXECUTE EXTERNAL SCRIPT アクセス許可を使用すると、特定の言語で外部スクリプトの実行を許可できます。 これは、特定の言語での実行アクセス許可の付与を許可しない EXECUTE ANY EXTERNAL SCRIPT データベース許可とは異なります。
 
 これは、**dbo** 以外のユーザーは、特定の言語を実行するためのアクセス許可を付与してもらう必要があることを意味します。
 
@@ -133,7 +127,7 @@ TO database_principal_name;
 
 アセンブリと同様、外部ライブラリと外部言語の間にリンクが存在するように、外部言語に対する参照アクセス許可が必要です。 たとえば、外部言語を削除する場合、ユーザーは最初に、その言語を参照しているすべての外部ライブラリを削除する必要があります。 外部言語は、階層内で外部ライブラリより上位レベルのオブジェクトと見ることができます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-create-an-external-language-in-a-database"></a>A. データベース内の外部言語を作成する  
 
@@ -166,7 +160,7 @@ TO mylogin;
 ```
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  

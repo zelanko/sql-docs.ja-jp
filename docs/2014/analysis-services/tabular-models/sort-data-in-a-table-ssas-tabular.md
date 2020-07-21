@@ -1,5 +1,5 @@
 ---
-title: テーブル (SSAS テーブル) 内のデータを並べ替える |Microsoft Docs
+title: テーブル内のデータの並べ替え (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf1a9c8782e1771d5a53700b5f72c48dbb300c7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938653"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>テーブル内のデータの並べ替え (SSAS テーブル)
   データは、1 つ以上の列のテキスト (A から Z、または Z から A) または数値 (小さい数値から大きい数値、または大きい数値から小さい数値) の順で並べ替えることができます。  
@@ -47,8 +46,8 @@ ms.locfileid: "66066657"
     >  期待した結果が得られない場合、列の数値が数値ではなくテキストとして格納されている可能性があります。 たとえば、何らかの会計システムからインポートされた負の数値や、先頭にアポストロフィ (') が入力されている数値は、テキストとして格納されます。  
   
 ## <a name="see-also"></a>参照  
- [データのフィルター処理と並べ替え (SSAS テーブル)](../filter-and-sort-data-ssas-tabular.md)   
- [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;データのフィルター処理と並べ替え](../filter-and-sort-data-ssas-tabular.md)   
+ [SSAS テーブル&#41;&#40;パースペクティブ](perspectives-ssas-tabular.md)   
  [ロール (SSAS テーブル)](roles-ssas-tabular.md)  
   
   

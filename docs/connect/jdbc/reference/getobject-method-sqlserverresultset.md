@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 924df406-14b2-40b8-a7bc-c2fd145d7d7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e37449fc991cc02fb1e15eb73719e9fef1bde83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51014150475dfa614879a9327a62247a7347bc8d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981066"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925266"
 ---
 # <a name="getobject-method-sqlserverresultset"></a>getObject メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67981066"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Java プログラミング言語のオブジェクトとして取得します。|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map-sqlserverresultset.md)|渡された Map オブジェクトを使用して、[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が Java プログラミング言語のオブジェクトとして取得されます。|  

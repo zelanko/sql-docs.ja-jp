@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066810"
 ---
 # <a name="monitor-and-tune-for-performance"></a>パフォーマンスの監視とチューニング
   データベースを監視する目的は、サーバーのパフォーマンスを評価することです。 適切な監視には、現在のパフォーマンスのスナップショットを定期的にキャプチャして問題の原因となっているプロセスを特定したり、長期にわたって継続的にデータを採取してパフォーマンスの傾向を追跡する作業が必要です。  
@@ -41,7 +40,7 @@ ms.locfileid: "63150716"
  データベース パフォーマンスの継続的な評価は、応答時間を最小限にし、スループットを最大限にして、最適なパフォーマンスを実現するために役立ちます。 パフォーマンスを最大限に高めるには、効率的なネットワーク トラフィック、ディスク I/O、および CPU 使用が重要です。 アプリケーションの要件を十分に分析し、データの論理構造と物理構造を理解し、データベースの使用状況を評価し、競合する処理 (オンライン トランザクション処理 (OLTP) と意思決定支援など) の関係を調整する必要があります。  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>パフォーマンスのためのデータベースの監視とチューニングの利点  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Microsoft Windows オペレーティング システムでは、データベースの現在の状態を参照したり、状態の変化に伴うパフォーマンスを追跡するためのユーティリティが用意されています。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、さまざまなツールや技法を使用して監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を監視する方法を理解しておくと、次の作業に役立ちます。  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Microsoft Windows オペレーティング システムでは、データベースの現在の状態を参照したり、状態の変化に伴うパフォーマンスを追跡するためのユーティリティが用意されています。 の監視に使用できるさまざまなツールと手法があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を監視する方法を理解しておくと、次の作業に役立ちます。  
   
 -   パフォーマンスを向上できるかどうかの判断。 たとえば、頻繁に使用するクエリの応答時間を監視することで、テーブルに対するクエリまたはインデックスの変更が必要かどうかを判断できます。  
   
@@ -76,9 +75,9 @@ ms.locfileid: "63150716"
 |[クエリのストアを使用した、パフォーマンスの監視](monitoring-performance-by-using-the-query-store.md)|クエリ ストアは、自動的にクエリ、プラン、および実行時統計の履歴をキャプチャし、確認用に保持します。|  
   
 ## <a name="see-also"></a>参照  
- [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
+ [企業全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [データベース エンジン チューニング アドバイザー](database-engine-tuning-advisor.md)   
- [リソースの利用状況の監視 &#40;System Monitor&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [リソース使用状況の監視 &#40;システムモニタ&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ソリューション エクスプ ローラーのソースの管理 |Microsoft Docs
+title: ソリューションエクスプローラーソース管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44843764b7eed26bfd424ee61f2534aae42b9a73
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62843114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928983"
 ---
 # <a name="solution-explorer-source-control"></a>ソリューション エクスプローラーのソース管理
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューション エクスプ ローラーは、別のソース管理システムに統合できます。 ソリューションまたはプロジェクトをソース管理システムに統合すると、プロジェクト内のスクリプトとクエリを対象に、ファイル アクセスとバージョン管理を制御できるようになります。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ソリューションエクスプローラーは、別のソース管理システムに統合できます。 ソリューションまたはプロジェクトをソース管理システムに統合すると、プロジェクト内のスクリプトとクエリを対象に、ファイル アクセスとバージョン管理を制御できるようになります。  
   
 ## <a name="solution-and-project-source-control"></a>ソリューションとプロジェクトのソース管理  
   
@@ -41,9 +40,9 @@ ms.locfileid: "62843114"
   
 2.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-3.  **オプション** ダイアログ ボックスで、展開**ソース管理**、 をクリックし、**プラグインの選択**ページ。  
+3.  [**オプション**] ダイアログボックスで、[**ソース管理**] を展開し、[**プラグインの選択**] ページをクリックします。  
   
-4.  **現在ソース管理プラグイン**ボックスで、ソース管理プラグインを選択します。  
+4.  [**現在のソース管理プラグイン**] ボックスで、ソース管理プラグインを選択します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -58,9 +57,9 @@ ms.locfileid: "62843114"
 |||  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](../ssms/solution/solution-explorer.md)   
- [ソリューション&#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
- [プロジェクト&#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   
+ [ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)   
+ [ソリューション &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
+ [プロジェクト &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   
  [ソリューションとプロジェクトを管理するためのファイル](../ssms/solution/files-that-manage-solutions-and-projects.md)  
   
   

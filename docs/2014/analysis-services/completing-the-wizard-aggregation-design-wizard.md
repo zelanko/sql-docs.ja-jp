@@ -1,5 +1,5 @@
 ---
-title: ウィザードの完了 (集計のデザイン ウィザード) |Microsoft Docs
+title: '[ウィザードの完了] (集計のデザインウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,28 @@ f1_keywords:
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3b6261697d101242cae1052b5da1c30fde65661
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087725"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527388"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>[ウィザードの完了] (集計のデザイン ウィザード)
   **[ウィザードの完了]** ページを使用すると、選択したパーティションに集計デザインを保存できます。 オプションで、集計デザイン ウィザードが集計のデザインと保存を終了した後で、選択されたパーティションの配置および処理を行うことができます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  集計デザインの名前を入力します。  
   
- **展開し、集計を今すぐ処理**  
+ **[集計を今すぐ配置して処理する]**  
  ウィザードを完了し、選択したパーティションに集計デザインを割り当てて、選択したパーティションの配置と処理を行います。  
   
- **集計の保存が処理しません。**  
+ **[集計の処理を行わずに保存する]**  
  ウィザードを完了し、選択したパーティションに集計デザインを割り当てますが、選択したパーティションの配置と処理は行いません。  
   
 ## <a name="see-also"></a>参照  
- [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
- [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [集計のデザインウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
+ [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

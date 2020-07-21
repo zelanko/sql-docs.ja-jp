@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 807c3e955f4772b5263cfee95b3bc5ebbff2a146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011017"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
   ここでは、マージ レプリケーションの Web 同期で使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) バージョン 7 以降を手動で構成する手順について説明します。 
@@ -28,7 +27,7 @@ ms.locfileid: "62721546"
  構成プロセス全体の概要については、「[Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 以前のバージョンの[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]など、エラーが発生することができます。"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
+>  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンを使用すると、次のようなエラーが発生する可能性があります。"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
   
  Web 同期を使用するには、以下の手順で IIS 7 を構成する必要があります。 ここでは、各手順を詳しく説明します。  
   
@@ -48,13 +47,13 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 1. SQL Server レプリケーションを IIS コンピューターにインストールします。
 
-2.  IIS を実行しているコンピューターに、replisapi.dll 用の新しいファイル ディレクトリを作成します。 ディレクトリはどこに作成してもかまいませんが、\<*drive*>:\Inetpub ディレクトリの下に作成することをお勧めします。 たとえば、ディレクトリ \<*drive*>:\Inetpub\SQLReplication\\ を作成します。  
+2.  IIS を実行しているコンピューターに、replisapi.dll 用の新しいファイル ディレクトリを作成します。 ディレクトリは任意の場所に作成できますが、: \Inetpub under ディレクトリにディレクトリを作成することをお勧めし \<*drive*> ます。 たとえば、\Inetpub\SQLReplication というディレクトリを作成し \<*drive*> \\ ます。  
   
 3.  replisapi.dll を [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ ディレクトリから、手順 1. で作成したファイル ディレクトリにコピーします。  
   
 4.  次の手順に従って replisapi.dll を登録します。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 [**名前**] ボックスに「」と入力し、 `cmd` [ **OK**] をクリックします。  
   
     2.  手順 1. で作成したディレクトリで、次のコマンドを実行します。  
   
@@ -66,9 +65,9 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     1.  **インターネット インフォメーション サービス (IIS) マネージャー**の **[接続]** ペインで **[既定の Web サイト]** を右クリックし、 **[仮想ディレクトリの追加]** を選択します。  
   
-    2.  **エイリアス**、入力`SQLReplication`します。  
+    2.  [**エイリアス**] に「」と入力し `SQLReplication` ます。  
   
-    3.  **[物理パス]** に「 **\<drive>:\Inetpub\SQLReplication\\** 」と入力し、 **[OK]** をクリックします。  
+    3.  [**物理パス**] に「 ** \<drive> \Inetpub\SQLReplication \\ **」と入力し、[ **OK]** をクリックします。  
   
 7.  replisapi.dll を実行できるように IIS を構成します。  
   
@@ -78,13 +77,13 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     3.  **[アクション]** ペインで、 **[モジュール マップの追加]** をクリックします。  
   
-    4.  **要求**、パスを入力`replisapi.dll`します。  
+    4.  [**要求**パス] に「」と入力し `replisapi.dll` ます。  
   
     5.  **[モジュール]** ボックスの一覧から **[IsapiModule]** を選択します。  
   
-    6.  **[実行可能ファイル]** に「 **\<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
+    6.  [**実行可能ファイル**] に「 ** \<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
   
-    7.  **名前**、入力`Replisapi`します。  
+    7.  **名前**には、`Replisapi`を入力します。  
   
     8.  **[要求の制限]** をクリックし、 **[アクセス]** タブをクリックして、 **[実行]** をクリックします。  
   
@@ -168,7 +167,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーの実行に使用するアカウントを最小の権限で構成するには、次の手順を完了する必要があります。 以下の手順は、IIS 7.0 を実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 に適用されます。  
   
- 次の手順の他に、PAL (パブリケーション アクセス リスト) に必要なログインが登録されていることを確認してください。 PAL の詳細については、「[Secure the Publisher](security/secure-the-publisher.md)」(パブリッシャーのセキュリティ保護) をご覧ください。  
+ 次の手順の他に、PAL (パブリケーション アクセス リスト) に必要なログインが登録されていることを確認してください。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](security/secure-the-publisher.md)」を参照してください。  
   
  **重要** ここで作成するアカウントは、同期の際にパブリッシャーとディストリビューターに接続するアカウントです。 したがって、ディストリビューション サーバーとパブリケーション サーバーに SQL ログイン アカウントとして追加する必要があります。  
   
@@ -218,7 +217,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     2.  **[セキュリティ]** タブで、 **[編集]** をクリックします。  
   
-    3.  **[\<フォルダー名> のアクセス許可]** ダイアログ ボックスで **[追加]** をクリックして、手順 1 で作成したアカウントを追加します。  
+    3.  [**の \<foldername> アクセス許可**] ダイアログボックスで [**追加**] をクリックし、手順 1. で作成したアカウントを追加します。  
   
     4.  **[場所を指定してください]** フィールドに、ドメインではなくローカル コンピューターの名前が表示されていることを確認します。 ローカル コンピューターの名前が表示されていない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   
@@ -280,7 +279,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例:  **https://server.domain.com/directory/replisapi.dll?diag** します。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 (例: `https://server.domain.com/directory/replisapi.dll?diag`)。  
   
     > [!NOTE]  
     >  上の例の **server.domain.com** は、IIS マネージャーの **[サーバー証明書]** セクションに表示される **[発行先]** の正確な名前に置き換える必要があります。  
@@ -307,7 +306,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
     > [!NOTE]  
     >  ユーザーの証明書がインストールされます。 IIS と同期するユーザーすべてに対してこの手順を実行する必要があります。  
   
-4.  **[\<ServerName> に接続]** ダイアログ ボックスで、マージ エージェントが IIS サーバーへの接続に使用するログインとパスワードを指定します。 これらの資格情報は、サブスクリプションの新規作成ウィザードで指定することもできます。  
+4.  [**接続先 \<ServerName> ** ] ダイアログボックスで、マージエージェントが IIS への接続に使用するログインとパスワードを指定します。 これらの資格情報は、サブスクリプションの新規作成ウィザードで指定することもできます。  
   
 5.  **[SQL Web 同期診断情報]** と呼ばれる Internet Explorer のウィンドウで、ページの **[Status]** 列の値が **[SUCCESS]** になっていることを確認します。  
   
@@ -319,6 +318,6 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションの Web 同期](web-synchronization-for-merge-replication.md)   
- [Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)  
+ [[Web 同期の構成]](configure-web-synchronization.md)  
   
   

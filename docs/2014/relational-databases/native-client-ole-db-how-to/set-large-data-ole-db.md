@@ -1,5 +1,5 @@
 ---
-title: 大きなデータ (OLE DB) の設定 |Microsoft Docs
+title: 大きなデータの設定 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 777aeb6dea50a3c49f8e68ee17907295f8d886fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63218663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049645"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  
@@ -33,7 +32,7 @@ ms.locfileid: "63218663"
   
 #### <a name="to-set-blob-data"></a>BLOB データを設定するには  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 設定、 **dwFlag** DBOBJECT の要素に STGM_READ 構造体し、iid 要素に設定`IID_ISequentialStream`(インターフェイスを公開する)。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の**Dwflag**要素を STGM_READ に設定し、iid 要素を `IID_ISequentialStream` (公開するインターフェイス) に設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63218663"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ### <a name="code"></a>コード  
   

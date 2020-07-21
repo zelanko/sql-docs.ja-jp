@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2016 の新機能
+description: 新しい SQL Server 2016 のセキュリティ機能、クエリ機能、Hadoop とクラウドの統合、R 分析などについて説明します。
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893032"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886240"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -32,9 +33,9 @@ ms.locfileid: "68893032"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **SQL Server 2016 をお試しください。** 
-- **無料の** [**SQL Server 2016 Developer edition**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers) をダウンロードしてください。
+- **無料**の [**SQL Server 2016 Developer エディション**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)をダウンロードしてください。
 - 最新バージョンの [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) をダウンロードします。 
-- Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)をすぐにご利用いただけます。
+- Azure アカウントをすでにお持ちですか? [SQL Server 2016 がインストール済みの仮想マシン](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)をすぐにご利用いただけます。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 データベース エンジン
 - SQL Server のインストールおよびセットアップ時に、**複数の tempDB** データベース ファイルを構成できます。
@@ -48,14 +49,13 @@ ms.locfileid: "68893032"
     - 最大テーブル 2 TB をサポートしています (256 GB 以上)。 
     - 並べ替えと Always On 可用性グループのサポートに対する列ストア インデックスの機能強化があります。
 - 新しいセキュリティ機能
-    - **Always Encrypted:** 有効にすると、暗号化キーを持つアプリケーションのみが、SQL Server 2016 データベースの暗号化された機密データにアクセスにできます。 キーが SQL Server に渡されることはありません。
-    - **動的なデータ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
-    - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照できます。 
+    - **Always Encrypted:** 有効にすると、暗号化キーを持つアプリケーションのみが、SQL Server 2016 データベースの暗号化された機微なデータにアクセスにできます。 キーが SQL Server に渡されることはありません。
+    - **動的データ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
+    - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照します。 
 
-[データベース エンジン](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)に関する記事を参照してください。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。
-- **[SQL Server R サービス](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
+- **[SQL Server R サービス](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
 - 新しい **Database Consistency Checker (DBCC)** は、潜在的なデータの破損の問題を検出するために、内部的に実行されます。
 - **直接クエリ**は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
 - 多数の新しい **DAX (Data Access Expressions) 関数**が追加されています。
@@ -96,7 +96,7 @@ Microsoft は、このリリースで Reporting Services を全面的に改良�
 
 [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) に関する記事を参照してください。
 
-## <a name="next-steps"></a>次の手順   
+## <a name="next-steps"></a>次のステップ   
 - [SQL Server セットアップ](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md) 
 - [SQL Server 2016 データシート](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)

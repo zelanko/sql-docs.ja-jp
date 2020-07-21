@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:証明書を使用したストアド プロシージャの署名 |Microsoft Docs
+title: 'チュートリアル: 証明書を使用したストアド プロシージャへの署名 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fe387c43431436ba5fba5bcab879584ecdad533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62524095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002514"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル:証明書を使用したストアド プロシージャへの署名
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>チュートリアル : 証明書を使用したストアド プロシージャへの署名
   このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で生成された証明書を使用してストアド プロシージャに署名する方法について説明します。  
   
 > [!NOTE]  
@@ -48,7 +47,7 @@ ms.locfileid: "62524095"
  以下で、この例の各コード ブロックについて説明します。 完全なサンプル コードをコピーするには、このチュートリアルの最後の「 [完全なサンプル コード](#CompleteExample) 」を参照してください。  
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
- この例の初期コンテキストを設定するには、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で新しいクエリを開き、次のコードを実行して [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースを開きます。 このコードにより、データベース コンテキストが `AdventureWorks2012` に変更され、新しいサーバー ログインとデータベース ユーザー アカウント (`TestCreditRatingUser`) が作成されます。ログインにはパスワードが設定されます。  
+ この例の初期コンテキストを設定するには、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で新しいクエリを開き、次のコードを実行して [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースを開きます。 このコードにより、データベース コンテキストが `AdventureWorks2012` に変更され、新しいサーバー ログインとデータベース ユーザー アカウント (`TestCreditRatingUser`) が作成されます。ログインにはパスワードが設定されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +77,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3.ストアド プロシージャを作成し、証明書を使用して署名する  
- 次のコードを実行し、`Vendor` データベース スキーマ内の `Purchasing` テーブルからデータを選択するストアド プロシージャを作成して、信用格付け 1 の会社にアクセスを限定します。 ストアド プロシージャの最初のセクションに、ストアド プロシージャを実行するユーザー アカウントのコンテキストが表示されていますが、これは概念を説明するためだけのものです。 要件を満たすために必要なものではありません。  
+ 次のコードを実行し、 `Vendor` データベース スキーマ内の `Purchasing` テーブルからデータを選択するストアド プロシージャを作成して、信用格付け 1 の会社にアクセスを限定します。 ストアド プロシージャの最初のセクションに、ストアド プロシージャを実行するユーザー アカウントのコンテキストが表示されていますが、これは概念を説明するためだけのものです。 要件を満たすために必要なものではありません。  
   
 ```  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -192,7 +191,7 @@ GO
   
  REVERT ステートメントの詳細については、「[REVERT (Transact-SQL)](/sql/t-sql/statements/revert-transact-sql)」 を参照してください。  
   
-##  <a name="CompleteExample"></a> 完全な例  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>コード例全体  
  次に、完全なサンプル コードを示します。  
   
 ```  

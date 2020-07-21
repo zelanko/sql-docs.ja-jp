@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションを手動でフェールオーバーする方法 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーをパートナーに手動でフェールオーバーする
+description: Transact-SQL (T-SQL) を使用して、プリンシパル データベース ミラーをセカンダリ パートナーに手動でフェールオーバーする手順。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ddfaec9f9192af98f8b3580554f8c89d757af566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34fdb80d9c1393b25a4cdbff63f0546ec6d9ddac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754606"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションを手動でフェールオーバーする方法 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ミラー化されたデータベースが同期されている場合 (つまり、データベースが SYNCHRONIZED 状態である場合)、データベース所有者はミラー サーバーに対して手動フェールオーバーを開始できます。 手動フェールオーバーは、プリンシパル サーバーのみから開始できます。  
   
 ### <a name="to-manually-fail-over-a-database-mirroring-session"></a>データベース ミラーリング セッションを手動でフェールオーバーするには  
@@ -35,7 +36,7 @@ ms.locfileid: "68041742"
   
 3.  プリンシパル サーバーで次のステートメントを実行します。  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER ( *database_name* はミラー データベースの名前です)。  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER (*database_name* はミラー化されたデータベースです)。  
   
      これにより、プリンシパル ロールへのミラー サーバーの移行がすぐに開始されます。  
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4a0830e5db32fcc651b59114e1a2dad870e48d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5820a49a51358a409e5f87ddca0b79c797a9eeab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063873"
 ---
 # <a name="import-policies-dialog-box"></a>[ポリシーのインポート] ダイアログ ボックス
   このダイアログ ボックスを使用すると、XML ファイルとして保存された 1 つ以上のポリシー (およびその参照された条件) を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の現在のインスタンスにインポートできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[インポートするファイル]**  
  XML ファイルからポリシーをインポートするには、ファイルのパスと名前を入力するか、参照ボタン ( **[...]** ) を使用します。  
   
@@ -41,6 +40,6 @@ ms.locfileid: "62705242"
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)   
  [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)   
- [ポリシー ベースの管理ポリシーのエクスポート](export-a-policy-based-management-policy.md)  
+ [ポリシーベースの管理ポリシーのエクスポート](export-a-policy-based-management-policy.md)  
   
   

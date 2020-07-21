@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_status (TRANSACT-SQL) |Microsoft Docs
+title: MSdistribution_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df060b429b48eb1e1a99c48dbb2789fce3e10833
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129576"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889167"
 ---
-# <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdistribution_status**ビューは、ディストリビューション データベースの状態コマンドに追加の情報を公開します。 このビューは、ディストリビューション データベースに保存されます。  
+  **MSdistribution_status**ビューでは、ディストリビューションデータベースの状態コマンドに関する追加情報が公開されます。 このビューは、ディストリビューション データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|アーティクルを識別します。|  
 |**agent_id**|**int**|レプリケーション エージェントを識別します。|  
-|**UndelivCmdsInDistDB**|**int**|保留中のサブスクライバーへの配信コマンド数です。|  
-|**DelivCmdsInDistDB**|**int**|サブスクライバーに配信されたコマンド数。|  
+|**UndelivCmdsInDistDB**|**int**|サブスクライバーへの配信が保留されているコマンドの数。|  
+|**Sinvcmdsindistdb**|**int**|サブスクライバーに配信されたコマンドの数。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

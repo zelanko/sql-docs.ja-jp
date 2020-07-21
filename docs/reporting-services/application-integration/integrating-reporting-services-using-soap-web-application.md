@@ -1,9 +1,11 @@
 ---
-title: Reporting Services の Web アプリケーションで SOAP API の使用 |Microsoft Docs
+title: Web アプリケーションで SOAP API を使用する
+description: レポート サーバーの機能には、Reporting Services SOAP API を使用してアクセスできます。この API にアクセスすると、エンタープライズ レポート機能を提供できます。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d9b086f6ec5a57493c96e3a4d0462a44d9c2e3c
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492771"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198200"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>SOAP を使用した Reporting Services の統合 - Web アプリケーション
   Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスであるため、容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションから SOAP API にアクセスするのと同じように、Web アプリケーションからレポート サーバー Web サービスにアクセスします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、レポート サーバー Web サービスのプロパティとメソッドを公開するプロキシ クラスを生成できます。このクラスにより、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] テクノロジに基づいたビジネス アプリケーションをビルドできます。  
@@ -49,7 +51,7 @@ ms.locfileid: "67492771"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- Web アプリケーションを使用してレポート サーバーとその内容を管理することもできます。 Web ポータルでは、付属[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、Reporting Services の使用は通常実行タスクの大部分を管理する Web アプリケーションの例を示します。 Web ポータルのレポート管理機能はカスタム Web アプリケーションに追加できます。 たとえば、レポート サーバー データベースの利用可能なレポートの一覧を返し、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** コントロールに表示して、ユーザーが選択できるようにすることができます。 次のコードでは、レポート サーバー データベースに接続し、レポート サーバー データベースのアイテムの一覧を返します。 利用可能なレポートは Listbox コントロールに追加され、各レポートのパスが表示されます。  
+ Web アプリケーションを使用してレポート サーバーとその内容を管理することもできます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれる Web ポータルは、通常 Reporting Services を使用して実行するタスクのほとんどを管理する、Web アプリケーションの一例です。 Web ポータルのレポート管理機能はカスタム Web アプリケーションに追加できます。 たとえば、レポート サーバー データベースの利用可能なレポートの一覧を返し、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** コントロールに表示して、ユーザーが選択できるようにすることができます。 次のコードでは、レポート サーバー データベースに接続し、レポート サーバー データベースのアイテムの一覧を返します。 利用可能なレポートは Listbox コントロールに追加され、各レポートのパスが表示されます。  
 
 ::: moniker-end
   

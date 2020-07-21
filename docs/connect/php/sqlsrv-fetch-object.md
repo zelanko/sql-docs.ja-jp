@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_object |Microsoft Docs
+title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67992740"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PHP オブジェクトとしてデータの次の行を取得します。  
@@ -66,7 +66,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 返されたオブジェクトの値のデータ型は既定の PHP データ型になります。 既定の PHP データ型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 クラス名が省略可能な *$className* パラメーターで指定される場合、このクラス型のオブジェクトはインスタンス化されます。 名前が結果セットのフィールド名に一致するプロパティがクラスにある場合、対応する結果セット値がプロパティに適用されます。 結果セットのフィールド名がクラス プロパティに一致しない場合、結果セットのフィールド名を持つプロパティがオブジェクトに追加され、結果セットの値がプロパティに適用されます。  
   
 次の規則は、 *$className* パラメーターと共にクラスを指定したときに適用されます。  

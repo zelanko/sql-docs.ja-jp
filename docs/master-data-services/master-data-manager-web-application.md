@@ -1,5 +1,6 @@
 ---
-title: マスター データ マネージャー Web アプリケーション | Microsoft Docs
+title: マスター データ マネージャー Web アプリケーション
+description: マスターデータマネージャー web アプリケーションを使用してマスターデータサービスの管理タスクを実行する方法について説明します。
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: be12690eac91a8e9c7746e12bc01fd64f35ba7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99e82901a8d3dac593e60896fc663f03e8ec431a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812949"
 ---
 # <a name="master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーション
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションは、主に、管理者が管理タスクを実行するために使用します。 たとえば、管理者のみが、モデル、ビジネス ルール、またはデータのバージョンを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   

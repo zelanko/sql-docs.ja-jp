@@ -21,14 +21,14 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a1c662fb5584fec6de91a98710d13412c828899
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074629"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296977"
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
 
@@ -37,14 +37,14 @@ ms.locfileid: "68074629"
 
   製品またはユーザーのデータベースには、テキストや数値データに加え、画像も頻繁に含まれています。 Microsoft .NET Framework の **System.Drawing** 名前空間では、画像を操作するためのクラスが提供されています。  
   
- [例 1: 画像を JPEG 形式に変換する](#example1)  
+ [例 1 : 画像を JPEG 形式に変換する](#example1)  
   
- [例 2: サムネイル画像を作成および保存する](#example2)  
+ [例 2 : サムネイル画像を作成および保存する](#example2)  
   
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-##  <a name="example1"></a> 例 1 の説明:画像を JPEG 形式に変換する  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> 例 1 の説明 : 画像を JPEG 形式に変換する  
  次の例では、変数で指定された画像ファイルを開き、エンコーダーを使用して圧縮 JPEG ファイルとして保存します。 エンコーダー情報を取得するコードは、private 関数にカプセル化されています。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>このスクリプト タスクの例を単一の画像ファイルで使用するように構成するには  
@@ -153,7 +153,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> 例 2 の説明:サムネイル画像を作成および保存する  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> 例 2 の説明 : サムネイル画像を作成および保存する  
  次の例では、変数で指定された画像ファイルを開いて、一定の縦横比を維持しながら画像のサムネイルを作成し、ファイル名を変更してサムネイルを保存します。 一定の縦横比を維持しながらサムネイルの高さと幅を計算するコードは、private サブルーチンでカプセル化されています。  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>このスクリプト タスクの例を単一の画像ファイルで使用するように構成するには  
@@ -172,7 +172,7 @@ End Function
   
 1.  Foreach ループ コンテナー内にスクリプト タスクを入れます。  
   
-2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
+2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
   
 3.  **[変数のマッピング]** ページで、`CurrentImageFile` 変数をインデックス 0 にマップします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
   

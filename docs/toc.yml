@@ -1,12 +1,12 @@
-- name: SQL Server へようこそ
-  href: sql-server/sql-server-technical-documentation.md
-- name: SQL ドキュメントのナビゲーションに関するヒント
+- name: SQL Server
+  href: sql-server/index.yml
+- name: ドキュメントのナビゲーションに関するヒント
   href: sql-server/sql-docs-navigation-guide.md
-- name: 以前のバージョン 2014-2005
-  href: toc/previous-versions-sql-server.md
+- name: 以前のバージョン 2005-2014
+  href: sql-server/previous-versions-sql-server.md
 - name: 概要
   items:
-    - name: SQL Server の新機能
+    - name: 新機能
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -14,15 +14,10 @@
           href: sql-server/what-s-new-in-sql-server-2017.md
         - name: SQL Server 2016
           href: sql-server/what-s-new-in-sql-server-2016.md
-    - name: データベース エンジンの新機能
-      href: database-engine/sql-server-database-engine-overview.md
-      items:
-        - name: SQL Server 2017
-          href: database-engine/whats-new-in-sql-server-2017.md
-        - name: SQL Server 2016
-          href: database-engine/whats-new-in-sql-server-2016.md
     - name: エディションと機能
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: SQL Server 2017
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: SQL Server 2016
@@ -30,7 +25,7 @@
     - name: リリース ノート
       items:
         - name: SQL Server 2019
-          href: sql-server/sql-server-ver15-release-notes.md
+          href: sql-server/sql-server-version-15-release-notes.md
         - name: SQL Server 2017
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
@@ -55,7 +50,7 @@
       items:
         - name: 開始するには
           items:
-            - name: ビッグ データ クラスターをデプロイする
+            - name: 配置
               href: big-data-cluster/deploy-get-started.md
             - name: サンプル データを読み込む
               href: big-data-cluster/tutorial-load-sample-data.md
@@ -64,11 +59,27 @@
             - name: ビッグ データ ツールをインストールする
               href: big-data-cluster/deploy-big-data-tools.md
             - name: azdata をインストールする
-              href: big-data-cluster/deploy-install-azdata.md
+              items:
+                - name: インストール
+                  href: big-data-cluster/deploy-install-azdata.md
+                - name: macOS
+                  href: big-data-cluster/deploy-install-azdata-macos.md
+                - name: Windows
+                  href: big-data-cluster/deploy-install-azdata-installer.md
+                - name: Linux (apt を使用)
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: Linux (yum を使用)
+                  href: big-data-cluster/deploy-install-azdata-yum.md
+                - name: Linux (zypper を使用)
+                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                - name: pip を使う
+                  href: big-data-cluster/deploy-install-azdata-pip.md
         - name: 配置
           items:
             - name: 展開のガイダンス
               href: big-data-cluster/deployment-guidance.md
+            - name: デプロイされるリソース
+              href: big-data-cluster/concept-architecture-pods.md
             - name: 新しいリリースにアップグレードする
               href: big-data-cluster/deployment-upgrade.md
             - name: 展開をカスタマイズする
@@ -77,14 +88,20 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: オフライン展開
               href: big-data-cluster/deploy-offline.md
+            - name: Active Directory モード
+              href: big-data-cluster/deploy-active-directory.md
+            - name: 高可用性で展開する
+              items:
+                - name: マスター インスタンス
+                  href: big-data-cluster/deployment-high-availability.md
+                - name: HDFS のノード名と Spark
+                  href: big-data-cluster/deployment-high-availability-hdfs-spark.md
             - name: Kubernetes クラスター
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: 展開スクリプト
               items:
                 - name: AKS Python スクリプト
@@ -92,7 +109,7 @@
                 - name: 単一ノードの Kubeadm スクリプト
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: ノートブックを使用したデプロイ
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: 概念
       items:
         - name: アプリケーションの展開
@@ -111,6 +128,12 @@
           href: big-data-cluster/concept-security.md
     - name: 操作方法ガイド
       items:
+        - name: 構成
+          items:
+            - name: SQL Server マスター インスタンス
+              href: big-data-cluster/configure-sql-server-master-instance.md
+            - name: Apache Spark と Apache Hadoop を構成する
+              href: big-data-cluster/configure-spark-hdfs.md
         - name: データの仮想化
           items:
             - name: リレーショナル データ
@@ -122,7 +145,7 @@
             - name: HDFS データ
               items:
                 - name: CSV データを仮想化する
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: HDFS データのクエリ
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS の階層
@@ -131,6 +154,8 @@
                   href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
                 - name: HDFS の階層制御の S3 のマウント
                   href: big-data-cluster/hdfs-tiering-mount-s3.md
+                - name: HDFS のアクセス許可の管理
+                  href: big-data-cluster/hdfs-tiering-manage-permissions.md
         - name: データ インジェスト
           items:
             - name: CURL を使用したデータの読み込み
@@ -151,6 +176,8 @@
               href: big-data-cluster/big-data-cluster-consume-apps.md
         - name: ビッグ データ/Machine Learning
           items:
+            - name: Machine Learning Services (Python、R) の使用
+              href: big-data-cluster/machine-learning-services.md
             - name: PROSE コード アクセラレータを使用したデータ ラングリング
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: MLeap での Spark の機械学習モデル
@@ -159,24 +186,24 @@
               href: big-data-cluster/sparklyr-from-RStudio.md
             - name: SQL Server での Spark を統合する
               href: big-data-cluster/spark-mssql-connector.md
-        - name: SQL Server ビッグ データ クラスターを管理する
+        - name: 管理する
           items:
-            - name: ビッグ データ クラスターに接続する
+            - name: 接続する
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: クラスターの状態を表示する
               href: big-data-cluster/view-cluster-status.md
-            - name: Kubernetes のトラブルシューティング
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: ノートブックを使用して管理する
-              href: big-data-cluster/manage-notebooks.md
-        - name: ノートブック
-          items:
-            - name: ノートブックの概要
-              href: big-data-cluster/notebooks-guidance.md
-            - name: ノートブックのチュートリアル
-              href: big-data-cluster/tutorial-notebook-spark.md
+            - name: コントローラー ダッシュボードを使って管理する
+              href: big-data-cluster/manage-with-controller-dashboard.md
             - name: 既存のノートブックを管理する
-              href: big-data-cluster/notebooks-how-to-manage.md
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: Spark を使用してノートブックを実行する
+              href: big-data-cluster/notebooks-tutorial-spark.md
+            - name: Security
+              items:
+                - name: AZDATA_PASSWORD を更新する
+                  href: big-data-cluster/change-azdata-password.md
+                - name: ユーザー アクセスを管理する
+                  href: big-data-cluster/manage-user-access.md
         - name: Spark ジョブ
           items:
             - name: Azure Data Studio で Spark ジョブを送信する
@@ -187,8 +214,22 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 拡張された Spark History Server を使用する
               href: big-data-cluster/spark-history-server.md
+        - name: トラブルシューティング
+          items:
+            - name: Kubernetes のトラブルシューティング
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Active Directory ドメイン グループのスコープ
+              href: big-data-cluster/troubleshoot-active-directory.md
+            - name: Active Directory DNS
+              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Active Directory ログインに失敗する
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: HDFS 管理者権限
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: リファレンス
       items:
+        - name: BDC パートナー
+          href: sql-server/partner-big-data-cluster.md
         - name: 展開リファレンス
           items:
             - name: 展開構成フォーム
@@ -196,10 +237,16 @@
         - name: azdata リファレンス
           items:
             - name: azdata
-              href: big-data-cluster/reference-azdata.md
+              items:
+                - name: azdata
+                  href: big-data-cluster/reference-azdata.md
+                - name: ノートブック
+                  href: big-data-cluster/reference-azdata-notebook.md
+                - name: sql
+                  href: big-data-cluster/reference-azdata-sql.md
             - name: アプリ配置
               items:
-                - name: アプリ
+                - name: app
                   href: big-data-cluster/reference-azdata-app.md
                 - name: アプリ テンプレート
                   href: big-data-cluster/reference-azdata-app-template.md
@@ -207,6 +254,10 @@
               items:
                 - name: bdc
                   href: big-data-cluster/reference-azdata-bdc.md
+                - name: bdc app
+                  href: big-data-cluster/reference-azdata-bdc-app.md
+                - name: bdc app status
+                  href: big-data-cluster/reference-azdata-bdc-app-status.md
                 - name: bdc の構成
                   href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc コントロール
@@ -217,14 +268,16 @@
                   href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc エンドポイント
                   href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: bdc gateway
+                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                - name: bdc gateway status
+                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
                   href: big-data-cluster/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs のマウント
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
-                - name: bdc プール
-                  href: big-data-cluster/reference-azdata-bdc-pool.md
-                - name: bdc プールの状態
-                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
+                - name: bdc hdfs status
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
                 - name: bdc spark バッチ
@@ -233,6 +286,10 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-session.md
                 - name: bdc spark ステートメント
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                - name: bdc spark status
+                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                - name: bdc sql
+                  href: big-data-cluster/reference-azdata-bdc-sql.md
                 - name: bdc の状態
                   href: big-data-cluster/reference-azdata-bdc-status.md
 - name: ビジネス継続性
@@ -247,7 +304,7 @@
               href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Azure BLOB ストレージ
               href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
-        - name: クイック スタート
+        - name: クイックスタート
           items:
             - name: バックアップと復元
               href: relational-databases/backup-restore/quickstart-backup-restore-database.md
@@ -259,15 +316,15 @@
               items:
                 - name: URL へのバックアップ
                   href: relational-databases/backup-restore/sql-server-backup-to-url.md
-                - name: Azure Blob Storage サービスへのバックアップ (PowerShell)
+                - name: Azure BLOB ストレージへのバックアップ
                   href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-                - name: バックアップ ブログ ファイルの削除
+                - name: バックアップ ログ ファイルの削除
                   href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
-                - name: '[復元]'
+                - name: 復元
                   href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
                 - name: 管理対象のバックアップ
                   items:
-                    - name: '[有効化]'
+                    - name: 有効化
                       href: relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md
                     - name: 詳細設定オプションの構成
                       href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
@@ -289,7 +346,7 @@
                   href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
                 - name: ミラー化メディア セットへのバックアップ
                   href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-            - name: '[復元]'
+            - name: 復元
               items:
                 - name: SQL Server Management Studio (SSMS) の使用
                   href: relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -414,6 +471,8 @@
                   href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
                 - name: システム データベース
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
+                - name: VSS と SQL ライター
+                  href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
             - name: 構成
               items:
                 - name: 圧縮
@@ -495,11 +554,72 @@
                       href: relational-databases/backup-restore/select-backup-device.md
                     - name: Azure Storage への接続
                       href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+            - name: VDI リファレンス
+              items:
+                - name: VDI の概要
+                  href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+                - name: IClientVirtualDevice
+                  items:
+                    - name: CompleteCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+                    - name: GetCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+                - name: IClientVirtualDeviceSet2
+                  items:
+                    - name: 閉じる
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+                    - name: CreateEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+                    - name: GetBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+                    - name: MapBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+                    - name: OpenInSecondaryEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+                - name: IServerVirtualDevice
+                  items:
+                    - name: CloseDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+                    - name: SendCommand
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+                - name: IServerVirtualDeviceSet2
+                  items:
+                    - name: AllocateBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+                    - name: BeginConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+                    - name: 閉じる
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+                    - name: EndConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+                    - name: ExecuteCompletionAgent
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+                    - name: FreeBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+                    - name: IsSharedBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+                    - name: '[ファイル]'
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+                    - name: RequestBuffers
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: Always On 可用性グループ
-      href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
         - name: 概要
           items:
+            - name: Always On 可用性グループとは
+              href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
             - name: 可用性モード
               href: database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md
             - name: テクノロジと機能
@@ -528,7 +648,7 @@
         - name: 操作方法
           href: database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
           items:
-            - name: 可用性グループを構成する
+            - name: 可用性グループの構成
               items:
                 - name: レプリカの可用性を変更する
                   href: database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md
@@ -592,7 +712,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: リスナーのプロパティを表示する
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: 演算
+            - name: 操作
               items:
                 - name: データベースを追加する
                   items:
@@ -636,6 +756,8 @@
                   href: database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md
                 - name: 正常性とポリシーを表示する
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+                - name: リスナーへの接続
+                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
         - name: 概念
           items:
             - name: 構成
@@ -652,8 +774,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: フェールオーバーとフェールオーバー モード
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: 自動フェールオーバーのための柔軟なフェールオーバー ポリシー
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: 読み取りスケールのみ
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: 読み取り/書き込み接続のリダイレクト
@@ -676,12 +796,12 @@
                   href: database-engine/availability-groups/windows/possible-failures-during-sessions-between-availability-replicas-sql-server.md
             - name: 接続
               items:
-                - name: クライアント接続
+                - name: リスナー
+                  href: database-engine/availability-groups/windows/availability-group-listener-overview.md
+                - name: クライアント接続の種類
                   href: database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md
-                - name: クライアント接続
+                - name: ドライバーおよびクライアントのサポート
                   href: database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md
-                - name: リスナー、クライアント、フェールオーバー
-                  href: database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md
             - name: 相互運用性
               items:
                 - name: レプリケーション、CT、CDC
@@ -756,7 +876,7 @@
                       href: database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md
                 - name: Always On ダッシュボード
                   items:
-                    - name: オプション
+                    - name: Options
                       href: database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md
                     - name: ポリシー評価の結果
                       href: database-engine/availability-groups/windows/policy-evaluation-result-always-on.md
@@ -828,13 +948,16 @@
                     - name: SQL Server エラー ログ
                       href: database-engine/availability-groups/windows/sql-server-error-log-always-on-availability-groups.md
     - name: Always On フェールオーバー クラスター インスタンス
-      href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
       items:
         - name: 概要
-          href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+          items:
+            - name: フェールオーバー クラスター インスタンスとは
+              href: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+            - name: Windows Server フェールオーバー クラスター
+              href: sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
         - name: 操作方法
           items:
-            - name: 展開
+            - name: デプロイ
               items:
                 - name: インストールの準備
                   href: sql-server/failover-clusters/install/before-installing-failover-clustering.md
@@ -849,7 +972,7 @@
                 - name: クラスターの削除
                   href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
                 - name: クラスターのアップグレード
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: Windows Server 2012 および 2016 への移行
                   href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
             - name: 構成
@@ -886,8 +1009,6 @@
           items:
             - name: 構成
               items:
-                - name: アップグレード
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: クォーラム モードと投票
                   href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
                 - name: マルチサブネット クラスタリング
@@ -919,7 +1040,7 @@
           items:
             - name: 構成
               items:
-                - name: 展開
+                - name: デプロイ
                   items:
                     - name: 設定
                       href: database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
@@ -1064,7 +1185,7 @@
           href: database-engine/log-shipping/about-log-shipping-sql-server.md
         - name: 操作方法
           items:
-            - name: '[構成]'
+            - name: 構成
               href: database-engine/log-shipping/configure-log-shipping-sql-server.md
             - name: セカンダリ データベースの追加
               href: database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
@@ -1248,7 +1369,7 @@
                   href: relational-databases/databases/modified-features-contained-database.md
                 - name: 照合順序
                   href: relational-databases/databases/contained-database-collations.md
-                - name: セキュリティのベスト プラクティス
+                - name: セキュリティの運用方法
                   href: relational-databases/databases/security-best-practices-with-contained-databases.md
         - name: リファレンス
           items:
@@ -1276,6 +1397,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: '[クエリ ストア] ページ'
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: イベント通知
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: 実装
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: 構成ダイアログ セキュリティ
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: 情報の取得
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: FILESTREAM、FileTable、および BLOB
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1319,7 +1449,7 @@
               href: relational-databases/blob/filestream-ddl-functions-stored-procedures-and-views.md
         - name: FileTables
           items:
-            - name: Prerequisites
+            - name: 前提条件
               href: relational-databases/blob/enable-the-prerequisites-for-filetable.md
             - name: 作成、変更、削除
               href: relational-databases/blob/create-alter-and-drop-filetables.md
@@ -1371,7 +1501,7 @@
               href: relational-databases/indexes/sort-in-tempdb-option-for-indexes.md
             - name: Disable
               href: relational-databases/indexes/disable-indexes-and-constraints.md
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/indexes/enable-indexes-and-constraints.md
             - name: '[名前の変更]'
               href: relational-databases/indexes/rename-indexes.md
@@ -1415,7 +1545,7 @@
             - name: データ ウェアハウス (data warehouse)
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: デフラグ
-              href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+              href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
     - name: SQL Graph
       href: relational-databases/graphs/sql-graph-overview.md
       items:
@@ -1431,14 +1561,7 @@
         - name: シーケンスのプロパティ
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: 実装
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: 構成ダイアログ セキュリティ
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: 情報の取得
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: 空間データ
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -1485,7 +1608,7 @@
           href: relational-databases/stored-procedures/modify-a-stored-procedure.md
         - name: 削除
           href: relational-databases/stored-procedures/delete-a-stored-procedure.md
-        - name: Execute
+        - name: 実行
           href: relational-databases/stored-procedures/execute-a-stored-procedure.md
         - name: パラメーターの指定
           href: relational-databases/stored-procedures/specify-parameters.md
@@ -1587,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: INSERT と UPDATE による制約の無効化
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: UNIQUE 制約
+        - name: Unique 制約と check 制約
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: 作成
@@ -1611,7 +1734,7 @@
         - name: テンポラル テーブル
           href: relational-databases/tables/temporal-tables.md
           items:
-            - name: 管理する
+            - name: 作成と管理
               items:
                 - name: 作業の開始
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1631,7 +1754,7 @@
                   href: relational-databases/tables/temporal-table-usage-scenarios.md
                 - name: 整合性チェック
                   href: relational-databases/tables/temporal-table-system-consistency-checks.md
-                - name: '[パーティション分割]'
+                - name: パーティション分割
                   href: relational-databases/tables/partitioning-with-temporal-tables.md
                 - name: 注意点と制限事項
                   href: relational-databases/tables/temporal-table-considerations-and-limitations.md
@@ -1639,24 +1762,24 @@
                   href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
                 - name: メタデータのビューと関数
                   href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: メモリ最適化テーブル
-          href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-          items:
-            - name: 作成
-              href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: 操作
-              href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: モニター
-              href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: パフォーマンスに関する考慮事項
-              href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+            - name: メモリ最適化されたテンポラル テーブル
+              href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+              items:
+                - name: 作成
+                  href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+                - name: 操作
+                  href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+                - name: モニター
+                  href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+                - name: パフォーマンスに関する考慮事項
+                  href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
         - name: チュートリアル
           items:
             - name: hierarchyid データ型の使用
               href: relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
             - name: 'レッスン 1:テーブルの階層構造への変換'
               href: relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
-            - name: 'レッスン 2:階層テーブルでのデータの作成と管理'
+            - name: 'レッスン 2: 階層テーブルでのデータの作成と管理'
               href: relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
         - name: リファレンス
           items:
@@ -1666,7 +1789,7 @@
               href: relational-databases/tables/table-properties-ssms.md
             - name: 列のプロパティ
               href: relational-databases/tables/column-properties-general-page.md
-    - name: 変更の追跡
+    - name: 変更を追跡する
       href: relational-databases/track-changes/track-data-changes-sql-server.md
       items:
         - name: 変更データ キャプチャ
@@ -1747,7 +1870,7 @@
           href: relational-databases/user-defined-functions/modify-user-defined-functions.md
         - name: 削除
           href: relational-databases/user-defined-functions/delete-user-defined-functions.md
-        - name: Execute
+        - name: 実行
           href: relational-databases/user-defined-functions/execute-user-defined-functions.md
         - name: '[名前の変更]'
           href: relational-databases/user-defined-functions/rename-user-defined-functions.md
@@ -1994,7 +2117,7 @@
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: 配置
           href: relational-databases/data-tier-applications/deploy-a-data-tier-application.md
-        - name: '[エクスポート]'
+        - name: エクスポート
           href: relational-databases/data-tier-applications/export-a-data-tier-application.md
         - name: データベースからの DAC の抽出
           href: relational-databases/data-tier-applications/extract-a-dac-from-a-database.md
@@ -2123,7 +2246,7 @@
               href: relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
             - name: Alter
               href: relational-databases/clr-integration/assemblies/altering-an-assembly.md
-            - name: CreatE
+            - name: 作成
               href: relational-databases/clr-integration/assemblies/creating-an-assembly.md
             - name: Drop
               href: relational-databases/clr-integration/assemblies/dropping-an-assembly.md
@@ -2140,7 +2263,7 @@
           items:
             - name: 新機能
               href: relational-databases/clr-integration/clr-integration-what-s-new.md
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/clr-integration/clr-integration-enabling.md
             - name: パフォーマンス
               href: relational-databases/clr-integration/clr-integration-architecture-performance.md
@@ -2148,7 +2271,7 @@
               href: relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md
         - name: データベース オブジェクト
           items:
-            - name: ビルド
+            - name: Build
               href: relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
             - name: デバッグ
               href: relational-databases/clr-integration/debugging-clr-database-objects.md
@@ -2176,7 +2299,7 @@
           items:
             - name: 機能
               href: relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md
-            - name: '[追加]'
+            - name: 追加
               href: relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md
             - name: 作成
               href: relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
@@ -2442,7 +2565,11 @@
             - name: Java から SQL データ型
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java の jar ファイルを作成する
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: リファレンス
+          items:
+            - name: 機能拡張フレームワーク API
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -2456,7 +2583,7 @@
               href: relational-databases/native-client/system-requirements-for-sql-server-native-client.md
             - name: SQL Server Native Client を使用する場合
               href: relational-databases/native-client/when-to-use-sql-server-native-client.md
-        - name: '[機能]'
+        - name: 特徴
           href: relational-databases/native-client/features/sql-server-native-client-features.md
           items:
             - name: 診断情報の拡張イベント
@@ -2505,12 +2632,12 @@
               href: relational-databases/native-client/features/working-with-query-notifications.md
             - name: スナップショット分離を使用した作業
               href: relational-databases/native-client/features/working-with-snapshot-isolation.md
-        - name: '[アプリケーション]'
+        - name: アプリケーション
           href: relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
           items:
             - name: Components
               href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-            - name: Windows Azure への接続
+            - name: Native Client を使って Azure SQL に接続する
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
             - name: dbmslpcn.dll 共有メモリの ConnectionValidSharedMemory 関数
               href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
@@ -2563,7 +2690,7 @@
               href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
             - name: Properties
               href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-            - name: 接続の確立
+            - name: 接続を確立する
               href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
             - name: コマンドの実行
               href: relational-databases/native-client-ole-db-provider/executing-a-command.md
@@ -2626,9 +2753,9 @@
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
             - name: 行セット内のデータの更新
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
-            - name: カーソルでのデータの更新
+            - name: カーソルのデータの更新
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
-            - name: 'IRow::GetColumns の使用'
+            - name: 'IRow:: GetColumns の使用'
               href: relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
         - name: BLOB と OLE オブジェクト
           href: relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
@@ -3140,7 +3267,7 @@
               href: relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md
             - name: ステートメント パラメーターの使用
               href: relational-databases/native-client-odbc-queries/using-statement-parameters.md
-        - name: '[結果]'
+        - name: 結果
           href: relational-databases/native-client-odbc-results/processing-results-odbc.md
           items:
             - name: ストレージの割り当て
@@ -3334,7 +3461,7 @@
               href: relational-databases/server-management-objects-smo/create-program/using-transactions.md
             - name: データ型の処理
               href: relational-databases/server-management-objects-smo/create-program/working-with-data-types.md
-        - name: 処理手順
+        - name: タスク
           items:
             - name: データベースおよびトランザクション ログのバックアップと復元
               href: relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md
@@ -4058,20 +4185,18 @@
       items:
         - name: 新機能
           href: sql-server/install/what-s-new-in-sql-server-installation.md
-        - name: 最大容量仕様
-          href: sql-server/maximum-capacity-specifications-for-sql-server.md
-        - name: エディション別の計算容量制限
-          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: リリース ノート
       items:
-        - name: 旧バージョンとの互換性
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: SQL Server で廃止された機能
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: SQL Server 2019 の非推奨の機能
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017 の非推奨の機能
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 の非推奨の機能
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: SQL Server 2016 で廃止された機能
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: SQL Server 2019 における重大な変更
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: SQL Server 2017 における重大な変更
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 における重大な変更
@@ -4079,22 +4204,34 @@
     - name: 計画
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
+        - name: 最大容量仕様
+          href: sql-server/maximum-capacity-specifications-for-sql-server.md
+        - name: エディション別の計算容量制限
+          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
         - name: ハードウェアとソフトウェアの要件
-          href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+          items:
+            - name: SQL Server 2019
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+            - name: SQL Server 2016 および 2017
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: セキュリティに関する考慮事項
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-        - name: ネットワーク プロトコルとネットワーク ライブラリ
+        - name: ネットワーク プロトコルとライブラリ
           href: sql-server/install/network-protocols-and-network-libraries.md
-        - name: 複数のバージョンおよびインスタンスの操作
+        - name: 複数のバージョンとインスタンスの操作
           href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-        - name: ローカルの言語バージョン
+        - name: 言語バージョン
           href: sql-server/install/local-language-versions-in-sql-server.md
         - name: ファイルの場所
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: 使用状況と診断データの収集
           items:
-            - name: のプライバシーの補足情報
-              href: sql-server/sql-server-privacy.md
+            - name: SQL Server のプライバシーの補足情報
+              items:
+                - name: SQL Server 2017 以前
+                  href: sql-server/sql-server-privacy.md
+                - name: SQL Server 2019
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: SQL Server の使用状況と診断データを構成する
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: ツールの使用状況と診断データを構成する
@@ -4102,7 +4239,6 @@
             - name: SQL Server のローカル監査
               href: sql-server/usage-and-diagnostic-data-in-local-audit.md
     - name: SQL Server をインストールする
-      href: database-engine/install-windows/installation-for-sql-server.md
       items:
         - name: 概要
           href: database-engine/install-windows/install-sql-server.md
@@ -4153,14 +4289,16 @@
     - name: SQL Server をアップグレードする
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: 互換性証明書
+          href: database-engine/install-windows/compatibility-certification.md
+        - name: サポートされているバージョンとエディションのアップグレード SQL Server 2019
+          href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
         - name: サポートされているバージョンとエディションのアップグレード SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: サポートされているバージョンとエディションのアップグレード SQL Server 2016
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
         - name: Data Migration Assistant を実行してアップグレードを準備する
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-        - name: SQL 2005、2008、または 2008 R2 からのアップグレード
-          href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
         - name: Analysis Services
           href: database-engine/install-windows/upgrade-analysis-services.md
         - name: Data Quality Services
@@ -4188,8 +4326,19 @@
               href: database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md
             - name: アップグレードの完了
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
-            - name: データベース互換性モードの変更とクエリ データ ストアの使用
+            - name: データベース互換性モードの変更とクエリ ストアの使用
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: クエリ調整アシスタントを使用してデータベース互換性モードを変更する
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+            - name: SQL Server の最新の更新プログラム
+              href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
+    - name: サポート終了
+      items:
+        - name: 概要
+          href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+          displayName: 'end of support, end of life'
+        - name: 拡張セキュリティ更新プログラム
+          href: sql-server/end-of-support/sql-server-extended-security-updates.md
     - name: 構成
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -4215,6 +4364,8 @@
           href: relational-databases/in-memory-database.md
         - name: ハイブリッド バッファー プール
           href: database-engine/configure-windows/hybrid-buffer-pool.md
+        - name: 永続化ログバッファーを追加する
+          href: relational-databases/databases/add-persisted-log-buffer.md
         - name: サーバーの認証モードの変更
           href: database-engine/configure-windows/change-server-authentication-mode.md
         - name: SQL ライター サービス
@@ -4233,8 +4384,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: SQL Server モニターの概要
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: バッファー プール拡張
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: サーバー構成オプション
@@ -4500,6 +4649,8 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: データの移行と読み込み
   items:
+    - name: 移行に関するドキュメント
+      href: sql-server/migrate/index.yml
     - name: SQL Server Integration Services (SSIS) >
       href: integration-services/index.md
     - name: 一括コピー ユーティリティ (bcp)
@@ -4670,7 +4821,7 @@
         - name: 概要
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: 旧バージョンとの互換性
               href: relational-databases/replication/replication-backward-compatibility.md
             - name: 非推奨の機能
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
@@ -4721,7 +4872,7 @@
                       href: relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md
                     - name: スキーマ オプションの指定
                       href: relational-databases/replication/publish/specify-schema-options.md
-                    - name: '[スキーマ変更のレプリケート]'
+                    - name: スキーマ変更のレプリケート
                       href: relational-databases/replication/publish/replicate-schema-changes.md
                     - name: ID 列の管理
                       href: relational-databases/replication/publish/manage-identity-columns.md
@@ -4854,7 +5005,7 @@
                   items:
                     - name: レプリケーション モニターの開始
                       href: relational-databases/replication/monitor/start-the-replication-monitor.md
-                    - name: 権限の管理
+                    - name: アクセス許可の管理
                       href: relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md
                     - name: パブリッシャーの追加または削除
                       href: relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md
@@ -4908,7 +5059,7 @@
               items:
                 - name: ディストリビューター
                   href: relational-databases/replication/security/secure-the-distributor.md
-                - name: パブリッシャー
+                - name: Publisher
                   href: relational-databases/replication/security/secure-the-publisher.md
                 - name: サブスクライバー (Subscriber)
                   href: relational-databases/replication/security/secure-the-subscriber.md
@@ -4968,10 +5119,6 @@
                   href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
                 - name: 論理レコード リレーションシップの定義
                   href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-                - name: Web 同期の構成
-                  href: relational-databases/replication/configure-web-synchronization.md
-                - name: Web 同期用の IIS の構成
-                  href: relational-databases/replication/configure-iis-for-web-synchronization.md
                 - name: Web 同期用の IIS 7 の構成
                   href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
                 - name: データの競合の解決
@@ -5020,7 +5167,7 @@
                   href: relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md
                 - name: Oracle パブリッシャー用のトランザクション セット ジョブ
                   href: relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md
-                - name: 権限の付与
+                - name: アクセス許可を付与する
                   href: relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md
                 - name: Oracle テーブルスペースの管理
                   href: relational-databases/replication/non-sql/manage-oracle-tablespaces.md
@@ -5249,9 +5396,9 @@
                       href: relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
                     - name: サブスクリプション
                       href: relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
-                    - name: Warnings
+                    - name: 警告
                       href: relational-databases/replication/publication-information-warnings-transactional-publication.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: relational-databases/replication/publication-information-agents-transactional-publication.md
                     - name: トレーサー トークン
                       href: relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
@@ -5267,9 +5414,9 @@
                       href: relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md
                     - name: サブスクリプション
                       href: relational-databases/replication/publication-information-all-subscriptions-merge-publication.md
-                    - name: Warnings
+                    - name: 警告
                       href: relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: relational-databases/replication/publication-information-agents-merge-publication.md
                     - name: 同期の履歴
                       href: relational-databases/replication/subscription-synchronization-history.md
@@ -5279,9 +5426,9 @@
                       href: relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md
                     - name: サブスクリプション
                       href: relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md
-                    - name: Warnings
+                    - name: 警告
                       href: relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: relational-databases/replication/publication-information-agents-snapshot-publication.md
                     - name: ディストリビューターからサブスクライバーまでの履歴
                       href: relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md
@@ -5294,7 +5441,7 @@
                   href: relational-databases/replication/snapshot-folder.md
                 - name: ディストリビューション データベース
                   href: relational-databases/replication/distribution-database.md
-                - name: '[ディストリビューターのプロパティ]'
+                - name: ディストリビューターのプロパティ
                   href: relational-databases/replication/publishers.md
                 - name: '[ディストリビューター パスワード]'
                   href: relational-databases/replication/distributor-password.md
@@ -5666,7 +5813,7 @@
                   href: sql-server/stretch-database/configure-compatible-sql-server-features-with-stretch-database.md
         - name: 操作方法
           items:
-            - name: '[有効化]'
+            - name: 有効化
               items:
                 - name: データベースを有効にする
                   href: sql-server/stretch-database/enable-stretch-database-for-a-database.md
@@ -5684,7 +5831,7 @@
                   href: sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md
                 - name: バックアップ
                   href: sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md
-                - name: '[復元]'
+                - name: 復元
                   href: sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md
                 - name: データを無効にして戻す
                   href: sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md
@@ -5700,20 +5847,20 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: ビデオ >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: Database Experimentation ウィザード
+    - name: Database Experimentation Assistant (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: はじめに
+        - name: ワークロードの比較の概要
           href: dea/database-experimentation-assistant-get-started.md
-        - name: トレースのキャプチャ
-          href: dea/database-experimentation-assistant-capture-trace.md
         - name: 再生の構成
           href: dea/database-experimentation-assistant-configure-replay.md
+        - name: トレースのキャプチャ
+          href: dea/database-experimentation-assistant-capture-trace.md
         - name: トレースの再生
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: レポートを作成します
           href: dea/database-experimentation-assistant-create-report.md
-        - name: レポートの表示
+        - name: レポートの確認
           href: dea/database-experimentation-assistant-view-report.md
         - name: コマンド プロンプトでの実行
           href: dea/database-experimentation-assistant-run-command-prompt.md
@@ -5722,8 +5869,12 @@
       items:
         - name: 新機能
           href: dma/dma-whatsnew.md
-        - name: アクセス
+        - name: SQL Database の評価
           href: dma/dma-assesssqlonprem.md
+        - name: SQL Server Integration Services (SSIS) の評価
+          href: dma/dma-assess-ssis.md
+        - name: 評価の保存と読み込み
+          href: dma/dma-save-load-assessments.md
         - name: 適切な Azure SQL Database SKU の特定
           href: dma/dma-sku-recommend-sql-db.md
         - name: SQL Server の新しいバージョンへのアップグレード
@@ -5738,667 +5889,24 @@
           href: dma/dma-bestpractices.md
         - name: 評価レポートの統合
           href: dma/dma-consolidatereports.md
-        - name: 評価のための Power BI レポート
-          href: dma/dma-powerbiassesreport.md
+        - name: アプリのデータ アクセス層を評価する
+          href: dma/dma-assess-app-data-layer.md
         - name: コマンド ラインからの実行
           href: dma/dma-commandline.md
         - name: 設定の構成
           href: dma/dma-configurationsettings.md
     - name: SQL Server Migration Assistant (SSMA)
-      href: ssma/sql-server-migration-assistant.md
-      items:
-        - name: アクセス
-          href: ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
-          items:
-            - name: SSMA のインストール
-              href: ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: 作業の開始
-              href: ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md
-            - name: 新機能
-              href: ssma/access/what-s-new-in-ssma-for-access-accesstosql.md
-            - name: Access データベースの準備
-              href: ssma/access/preparing-access-databases-for-migration-accesstosql.md
-            - name: 互換性のない Access の機能
-              href: ssma/access/incompatible-access-features-accesstosql.md
-            - name: SSMA GUI の新機能
-              href: ssma/access/new-gui-features-in-ssma-for-access-to-sql.md
-            - name: Access のインベントリ スキーマ
-              href: ssma/access/access-inventory-schemas-accesstosql.md
-            - name: メタデータの保存
-              href: ssma/access/save-metadata-accesstosql.md
-            - name: SQL Server への接続
-              href: ssma/access/connecting-to-sql-server-accesstosql.md
-            - name: Azure SQL DB での Access データの移行
-              href: ssma/access/migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
-            - name: プロジェクトの作成と管理
-              href: ssma/access/creating-and-managing-projects-accesstosql.md
-            - name: SSMA for Access コンソールの操作
-              href: ssma/access/working-with-ssma-for-access-console-accesstosql.md
-            - name: データベース ファイルの追加と削除
-              href: ssma/access/adding-and-removing-access-database-files-accesstosql.md
-            - name: Access データベース オブジェクトの変換
-              href: ssma/access/converting-access-database-objects-accesstosql.md
-            - name: 著作権情報
-              href: ssma/access/legal-notice-ssma-for-access.md
-            - name: SQL Server への接続
-              href: ssma/access/connect-to-sql-server-accesstosql.md
-            - name: グローバル設定
-              href: ssma/access/global-settings-output-window-accesstosql.md
-            - name: 新しいプロジェクト (SSMA)
-              href: ssma/access/new-project-ssma-accesstosql.md
-            - name: SSMA コンソールのコマンド ライン オプション
-              href: ssma/access/command-line-options-in-ssma-console-accesstosql.md
-            - name: Azure SQL DB への接続
-              href: ssma/access/connect-to-azure-sql-db-accesstosql.md
-            - name: 評価レポート
-              href: ssma/access/assessment-report-accesstosql.md
-            - name: ソースとターゲットのデータ型のマッピング
-              href: ssma/access/mapping-source-and-target-data-types-accesstosql.md
-            - name: パスワードの管理
-              href: ssma/access/managing-passwords-accesstosql.md
-            - name: データ移行レポート
-              href: ssma/access/data-migration-report-accesstosql.md
-            - name: ユーザー インターフェイス リファレンス
-              href: ssma/access/user-interface-reference-accesstosql.md
-            - name: サンプルのコンソール スクリプト ファイルの操作
-              href: ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
-            - name: レポートの生成
-              href: ssma/access/generating-reports-accesstosql.md
-            - name: SSMA コンソールの実行
-              href: ssma/access/executing-the-ssma-console-accesstosql.md
-            - name: 変換のための Access データベース オブジェクトへのアクセス
-              href: ssma/access/assessing-access-database-objects-for-conversion-accesstosql.md
-            - name: サーバー接続ファイルの作成
-              href: ssma/access/creating-the-server-connection-files-accesstosql.md
-            - name: Azure SQL DB への Access アプリケーションのリンク
-              href: ssma/access/linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
-            - name: 変数値ファイルの作成
-              href: ssma/access/creating-variable-value-files-accesstosql.md
-            - name: 型のマッピングの編集
-              href: ssma/access/edit-type-mapping-accesstosql.md
-            - name: Access インベントリのエクスポート
-              href: ssma/access/exporting-an-access-inventory-accesstosql.md
-            - name: Azure SQL DB への Access データベースの移行
-              href: ssma/access/migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
-            - name: ソースとターゲットのデータベースのマッピング
-              href: ssma/access/mapping-source-and-target-databases-accesstosql.md
-            - name: スクリプト ファイルの作成
-              href: ssma/access/creating-script-files-accesstosql.md
-            - name: データベースのウィザードを検索 (選択の確認)
-              href: ssma/access/find-databases-wizard-verify-selection-accesstosql.md
-            - name: 移行ウィザード
-              href: ssma/access/migration-wizard-accesstosql.md
-            - name: 変換、読み込み、移行
-              href: ssma/access/convert-load-and-migrate-accesstosql.md
-            - name: SQL Server への変換されたデータベース オブジェクトの読み込み
-              href: ssma/access/loading-converted-database-objects-into-sql-server-accesstosql.md
-            - name: 高度なオブジェクトの選択
-              href: ssma/access/advanced-object-selection-accesstosql.md
-            - name: SQL Server Migration Assistant の概要
-              href: ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: データベースからの更新
-              href: ssma/access/refresh-from-database-accesstosql.md
-            - name: データベースのウィザードを検索 (ファイルの選択)
-              href: ssma/access/find-databases-wizard-select-files-accesstosql.md
-            - name: ショートカット キー
-              href: ssma/access/shortcut-keys-accesstosql.md
-            - name: Azure SQL DB への接続
-              href: ssma/access/connecting-to-azure-sql-db-accesstosql.md
-            - name: 変換と移行のオプションの設定
-              href: ssma/access/setting-conversion-and-migration-options-accesstosql.md
-            - name: トラブルシューティング
-              href: ssma/access/troubleshooting-accesstosql.md
-            - name: メニュー コマンドやその他のショートカット キー
-              href: ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md
-            - name: データベースのウィザードを検索 (場所の選択)
-              href: ssma/access/find-databases-wizard-select-locations-accesstosql.md
-            - name: 付録 - 1
-              href: ssma/access/appendix-1-accesstosql.md
-            - name: '[プロジェクトの設定]'
-              items:
-                - name: 移行
-                  href: ssma/access/project-settings-migration-accesstosql.md
-                - name: GUI
-                  href: ssma/access/project-settings-gui-accesstosql.md
-                - name: 変換
-                  href: ssma/access/project-settings-conversion-accesstosql.md
-                - name: Azure SQL DB
-                  href: ssma/access/project-settings-azure-sql-db-accesstosql.md
-                - name: 型のマッピング
-                  href: ssma/access/project-settings-type-mapping-accesstosql.md
-                - name: オブジェクトの読み込み
-                  href: ssma/access/project-settings-loading-objects-accesstosql.md
-            - name: グローバル設定
-              items:
-                - name: ダイアログ
-                  href: ssma/access/global-settings-dialogs-accesstosql.md
-                - name: ログ記録
-                  href: ssma/access/global-settings-logging-accesstosql.md
-                - name: エディター
-                  href: ssma/access/global-settings-editor-accesstosql.md
-        - name: DB2
-          href: ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
-          items:
-            - name: SSMA のインストール
-              href: ssma/db2/installing-ssma-for-db2-db2tosql.md
-            - name: 作業の開始
-              href: ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md
-            - name: 新機能
-              href: ssma/db2/what-s-new-in-ssma-for-db2-db2tosql.md
-            - name: GUI の新機能
-              href: ssma/db2/new-gui-features-in-ssma-for-db2-db2tosql.md
-            - name: SSMA for DB2 クライアントのインストール
-              href: ssma/db2/installing-ssma-for-db2-client-db2tosql.md
-            - name: ユーザー インターフェイス リファレンス
-              href: ssma/db2/user-interface-reference-db2tosql.md
-            - name: 型のマッピングの編集
-              href: ssma/db2/edit-type-mapping-db2tosql.md
-            - name: SQL Server への変換されたデータベース オブジェクトの読み込み
-              href: ssma/db2/loading-converted-database-objects-into-sql-server-db2tosql.md
-            - name: プロジェクト オプションの設定
-              href: ssma/db2/setting-project-options-db2tosql.md
-            - name: スクリプト ファイルの作成
-              href: ssma/db2/creating-script-files-db2tosql.md
-            - name: トラブルシューティング
-              href: ssma/db2/troubleshooting-db2tosql.md
-            - name: DB2 と SQL Server のデータ型のマッピング
-              href: ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md
-            - name: 著作権情報
-              href: ssma/db2/legal-notice-db2tosql.md
-            - name: SQL Server での SSMA コンポーネントのインストール
-              href: ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md
-            - name: SSMA コンソールの実行
-              href: ssma/db2/executing-the-ssma-console-db2tosql.md
-            - name: ショートカット キー
-              href: ssma/db2/shortcut-keys-db2tosql.md
-            - name: 高度なオブジェクトの選択
-              href: ssma/db2/advanced-object-selection-db2tosql.md
-            - name: SQL Server への接続
-              href: ssma/db2/connect-to-sql-server-db2tosql.md
-            - name: SQL Server への接続
-              href: ssma/db2/connecting-to-sql-server-db2etosql.md
-            - name: 評価レポート
-              href: ssma/db2/assessment-report-db2tosql.md
-            - name: DB2 への接続
-              href: ssma/db2/connect-to-db2-db2tosql.md
-            - name: メタデータの保存
-              href: ssma/db2/save-metadata-db2tosql.md
-            - name: 変換のための DB2 スキーマの評価
-              href: ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
-            - name: DB2 スキーマの変換
-              href: ssma/db2/converting-db2-schemas-db2tosql.md
-            - name: SQL Server Migration Assistant
-              href: ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
-            - name: レポートの生成
-              href: ssma/db2/generating-reports-db2tosql.md
-            - name: サーバー接続ファイルの作成
-              href: ssma/db2/creating-the-server-connection-files-db2tosql.md
-            - name: '[新しいプロジェクト]'
-              href: ssma/db2/new-project-db2tosql.md
-            - name: データベースからの更新
-              href: ssma/db2/refresh-from-database-db2tosql.md
-            - name: DB2 データベースへの接続
-              href: ssma/db2/connecting-to-db2-database-db2tosql.md
-            - name: サンプルのコンソール スクリプト ファイルの操作
-              href: ssma/db2/working-with-the-sample-console-script-files-db2tosql.md
-            - name: データの移行設定
-              href: ssma/db2/data-migration-settings-db2tosql.md
-            - name: パスワードの管理
-              href: ssma/db2/managing-passwords-db2tosql.md
-            - name: SSMA for DB2 コンポーネントの削除
-              href: ssma/db2/removing-ssma-for-db2-components-db2tosql.md
-            - name: SSMA for DB2 入門
-              href: ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md
-            - name: データ移行レポート
-              href: ssma/db2/data-migration-report-db2tosql.md
-            - name: SSMA for Oracle コンソールの操作
-              href: ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md
-            - name: SSMA コンソールのコマンド ライン オプション
-              href: ssma/db2/command-line-options-in-ssma-console-db2tosql.md
-            - name: DB2 データベースの SQL Server への移行
-              href: ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md
-            - name: メニュー コマンドやその他のショートカット キー
-              href: ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md
-            - name: 変数値ファイルの作成
-              href: ssma/db2/creating-variable-value-files-db2tosql.md
-            - name: SSMA プロジェクトでの作業
-              href: ssma/db2/working-with-ssma-projects-db2tosql.md
-            - name: DB2 スキーマの SQL Server スキーマへのマッピング
-              href: ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
-            - name: 付録 - 1
-              href: ssma/db2/appendix-1-db2tosql.md
-            - name: '[プロジェクトの設定]'
-              items:
-                - name: 移行
-                  href: ssma/db2/project-settings-migration-db2tosql.md
-                - name: 型のマッピング
-                  href: ssma/db2/project-settings-type-mapping-db2tosql.md
-                - name: 変換
-                  href: ssma/db2/project-settings-conversion-db2tosql.md
-                - name: システム オブジェクトの読み込み
-                  href: ssma/db2/project-settings-loading-system-objects-db2tosql.md
-                - name: GUI
-                  href: ssma/db2/project-settings-gui-db2tosql.md
-                - name: Synchronization
-                  href: ssma/db2/project-settings-synchronization-db2tosql.md
-            - name: グローバル設定
-              href: ssma/db2/global-settings-dialogs-db2tosql.md
-              items:
-                - name: エディター
-                  href: ssma/db2/global-settings-editor-db2tosql.md
-                - name: '[出力ウィンドウ]'
-                  href: ssma/db2/global-settings-output-window-db2tosql.md
-                - name: ログ記録
-                  href: ssma/db2/global-settings-logging-db2tosql.md
-        - name: MySQL
-          href: ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
-          items:
-            - name: SSMA のインストール
-              href: ssma/mysql/installing-ssma-for-mysql-mysqltosql.md
-            - name: SSMA for MySQL 入門
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md
-            - name: 著作権情報
-              href: ssma/mysql/legal-notice-mysqltosql.md
-            - name: 変換の設定
-              href: ssma/mysql/conversion-settings-mysqltosql.md
-            - name: SSMA for MySQL クライアントのインストール
-              href: ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md
-            - name: SSMA コンソールの実行
-              href: ssma/mysql/executing-the-ssma-console-mysqltosql.md
-            - name: サーバー接続ファイルの作成
-              href: ssma/mysql/creating-the-server-connection-files-mysqltosql.md
-            - name: SQL モード
-              href: ssma/mysql/sql-modes-mysqltosql.md
-            - name: SQL Server への接続
-              href: ssma/mysql/connect-to-sql-server-mysqltosql.md
-            - name: Azure SQL DB への接続
-              href: ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md
-            - name: スクリプト ファイルの作成
-              href: ssma/mysql/creating-script-files-mysqltosql.md
-            - name: SQL Server への変換されたデータベース オブジェクトの読み込み
-              href: ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md
-            - name: MySQL データベースの変換
-              href: ssma/mysql/converting-mysql-databases-mysqltosql.md
-            - name: SQL Server への移行 - Azure SQL DB
-              href: ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
-            - name: SSMA コンソールのコマンド ライン オプション
-              href: ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md
-            - name: SSMA プロジェクトでの作業
-              href: ssma/mysql/working-with-ssma-projects-mysqltosql.md
-            - name: データの移行設定
-              href: ssma/mysql/data-migration-settings-mysqltosql.md
-            - name: メタデータの保存
-              href: ssma/mysql/save-metadata-mysqltosql.md
-            - name: メニュー コマンドやその他のショートカット キー
-              href: ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md
-            - name: トラブルシューティング
-              href: ssma/mysql/troubleshooting-mysqltosql.md
-            - name: MySQL への接続
-              href: ssma/mysql/connect-to-mysql-mysqltosql.md
-            - name: SSMA for MySQL コンポーネントの削除
-              href: ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md
-            - name: Azure SQL DB への接続
-              href: ssma/mysql/connect-to-azure-sql-db-mysqltosql.md
-            - name: MySQL データベースの Azure SQL DB への移行
-              href: ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
-            - name: サンプルのコンソール スクリプト ファイルの操作
-              href: ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md
-            - name: '[新しいプロジェクト]'
-              href: ssma/mysql/new-project-ssma-mysqltosql.md
-            - name: SQL Server での SSMA コンポーネントのインストール
-              href: ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md
-            - name: MySQL データベースの SQL Server スキーマへのマッピング
-              href: ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
-            - name: データベースからの更新
-              href: ssma/mysql/refresh-from-database-mysqltosql.md
-            - name: ショートカット キー
-              href: ssma/mysql/shortcut-keys-mysqltosql.md
-            - name: 評価レポート
-              href: ssma/mysql/assessment-report-mysqltosql.md
-            - name: データ移行レポート
-              href: ssma/mysql/data-migration-report-mysqltosql.md
-            - name: パスワードの管理
-              href: ssma/mysql/managing-passwords-mysqltosql.md
-            - name: 高度なオブジェクトの選択
-              href: ssma/mysql/advanced-object-selection-mysqltosql.md
-            - name: ユーザー インターフェイス リファレンス
-              href: ssma/mysql/user-interface-reference-mysqltosql.md
-            - name: 付録 - 1
-              href: ssma/mysql/appendix-1-mysqltosql.md
-            - name: 変換のための MySQL データベースの評価
-              href: ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md
-            - name: SSMA for MySQL コンソールの操作
-              href: ssma/mysql/working-with-ssma-for-mysql-console-mysqltosql.md
-            - name: SSMA for MySQL コンソール入門
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md
-            - name: MySQL と SQL Server の文字セットのマッピング
-              href: ssma/mysql/mapping-mysql-and-sql-server-character-set-mysqltosql.md
-            - name: 変数値ファイルの作成
-              href: ssma/mysql/creating-variable-value-files-mysqltosql.md
-            - name: レポートの生成
-              href: ssma/mysql/generating-reports-mysqltosql.md
-            - name: 型のマッピングの編集
-              href: ssma/mysql/edit-type-mapping-mysqltosql.md
-            - name: MySQL と SQL Server のデータ型のマッピング
-              href: ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md
-            - name: SSMA for MySQL の新機能
-              href: ssma/mysql/what-s-new-in-ssma-for-mysql-mysqltosql.md
-            - name: SSMA for MySQL の新しい GUI 機能
-              href: ssma/mysql/new-gui-features-in-ssma-for-mysql-mysqltosql.md
-            - name: プロジェクト オプションの設定
-              href: ssma/mysql/setting-project-options-mysqltosql.md
-            - name: MySQL への接続
-              href: ssma/mysql/connecting-to-mysql-mysqltosql.md
-            - name: SQL Server への接続
-              href: ssma/mysql/connecting-to-sql-server-mysqltosql.md
-            - name: プロジェクトの設定
-              items:
-                - name: GUI
-                  href: ssma/mysql/project-settings-gui-mysqltosql.md
-                - name: Azure SQL DB
-                  href: ssma/mysql/project-settings-azure-sql-db-mysqltosql.md
-                - name: 型のマッピング
-                  href: ssma/mysql/project-settings-type-mapping-mysqltosql.md
-                - name: 移行
-                  href: ssma/mysql/project-settings-migration-mysqltosql.md
-                - name: Synchronization
-                  href: ssma/mysql/project-settings-synchronization-mysqltosql.md
-                - name: 変換
-                  href: ssma/mysql/project-settings-conversion-mysqltosql.md
-            - name: グローバル設定
-              href: ssma/mysql/global-settings-output-window-mysqltosql.md
-              items:
-                - name: ダイアログ
-                  href: ssma/mysql/global-settings-dialogs-mysqltosql.md
-                - name: ログ記録
-                  href: ssma/mysql/global-settings-logging-mysqltosql.md
-                - name: エディター
-                  href: ssma/mysql/global-settings-editor-mysqltosql.md
-        - name: Oracle
-          href: ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
-          items:
-            - name: SSMA の新機能
-              href: ssma/oracle/what-s-new-in-ssma-for-oracle-oracletosql.md
-            - name: SSMA のインストール
-              href: ssma/oracle/installing-ssma-for-oracle-oracletosql.md
-            - name: 作業の開始
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md
-            - name: SQL Server への Oracle HR スキーマの変換
-              href: ssma/oracle/sql-server-linux-convert-from-oracle.md
-            - name: 著作権情報
-              href: ssma/oracle/legal-notice-ssma-for-oracle.md
-            - name: SSMA for Oracle クライアントのインストール
-              href: ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md
-            - name: SSMA GUI の新機能
-              href: ssma/oracle/new-gui-features-in-ssma-for-oracle-oracletosql.md
-            - name: テスト ケースの実行
-              href: ssma/oracle/running-test-cases-oracletosql.md
-            - name: メニュー コマンドやその他のショートカット キー
-              href: ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md
-            - name: テスト リポジトリの使用
-              href: ssma/oracle/using-test-repositories-oracletosql.md
-            - name: 変数値ファイルの作成
-              href: ssma/oracle/creating-variable-value-files-oracletosql.md
-            - name: 移行されたデータベース オブジェクトのテスト
-              href: ssma/oracle/testing-migrated-database-objects-oracletosql.md
-            - name: SSMA プロジェクトでの作業
-              href: ssma/oracle/working-with-ssma-projects-oracletosql.md
-            - name: Oracle データベースへの接続
-              href: ssma/oracle/connecting-to-oracle-database-oracletosql.md
-            - name: SQL Server への Oracle データの移行
-              href: ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md
-            - name: Oracle スキーマの変換
-              href: ssma/oracle/converting-oracle-schemas-oracletosql.md
-            - name: データ移行レポート
-              href: ssma/oracle/data-migration-report-oracletosql.md
-            - name: レポートの生成
-              href: ssma/oracle/generating-reports-oracletosql.md
-            - name: 高度なオブジェクトの選択
-              href: ssma/oracle/advanced-object-selection-oracletosql.md
-            - name: サンプルのコンソール スクリプト ファイルの操作
-              href: ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md
-            - name: SSMA コンソールのコマンド ライン オプション
-              href: ssma/oracle/command-line-options-in-ssma-console-oracletosql.md
-            - name: ショートカット キー
-              href: ssma/oracle/shortcut-keys-oracle-to-sql.md
-            - name: SQL Server への変換されたデータベース オブジェクトの読み込み
-              href: ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md
-            - name: プロジェクト オプションの設定
-              href: ssma/oracle/setting-project-options-oracletosql.md
-            - name: バックアップの管理
-              href: ssma/oracle/managing-backups-oracletosql.md
-            - name: メタデータの保存
-              href: ssma/oracle/save-metadata-oracletosql.md
-            - name: 呼び出し順序のカスタマイズ
-              href: ssma/oracle/customizing-calls-order-oracletosql.md
-            - name: データの移行設定
-              href: ssma/oracle/data-migration-settings-oracletosql.md
-            - name: テスト ケースのレポートの表示
-              href: ssma/oracle/viewing-test-case-reports-oracletosql.md
-            - name: パスワードの管理
-              href: ssma/oracle/managing-passwords-oracletosql.md
-            - name: SSMA for Oracle コンポーネントの削除
-              href: ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md
-            - name: データベースからの更新
-              href: ssma/oracle/refresh-from-database-oracletosql.md
-            - name: SSMA コンソールの実行
-              href: ssma/oracle/executing-the-ssma-console-oracletosql.md
-            - name: 型のマッピングの編集
-              href: ssma/oracle/edit-type-mapping-oracletosql.md
-            - name: SSMA for Oracle コンソール入門
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md
-            - name: スクリプト ファイルの作成
-              href: ssma/oracle/creating-script-files-oracletosql.md
-            - name: 影響を受けるオブジェクトの選択と構成
-              href: ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md
-            - name: SQL Server への接続
-              href: ssma/oracle/connect-to-sql-server-oracletosql.md
-            - name: SSMA for Oracle コンソールの操作
-              href: ssma/oracle/working-with-ssma-for-oracle-console-oracletosql.md
-            - name: 変換のための Oracle Schemas へのアクセス
-              href: ssma/oracle/assessing-oracle-schemas-for-conversion-oracletosql.md
-            - name: テスト ケースの初期化
-              href: ssma/oracle/initializing-test-cases-oracletosql.md
-            - name: SQL Server での SSMA コンポーネントのインストール
-              href: ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md
-            - name: テスト ケースの準備の終了
-              href: ssma/oracle/finishing-test-case-preparation-oracletosql.md
-            - name: テスト対象のオブジェクトの選択と構成
-              href: ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md
-            - name: Oracle への接続
-              href: ssma/oracle/connect-to-oracle-oracletosql.md
-            - name: テスト ケースの作成
-              href: ssma/oracle/creating-test-cases-oracletosql.md
-            - name: トラブルシューティング
-              href: ssma/oracle/troubleshooting-oracletosql.md
-            - name: SQL Server への Oracle データベースの移行
-              href: ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md
-            - name: SQL Server への接続
-              href: ssma/oracle/connecting-to-sql-server-oracletosql.md
-            - name: 評価レポート
-              href: ssma/oracle/assessment-report-oracletosql.md
-            - name: '[新しいプロジェクト]'
-              href: ssma/oracle/new-project-oracletosql.md
-            - name: ユーザー インターフェイス リファレンス
-              href: ssma/oracle/user-interface-reference-oracletosql.md
-            - name: SQL Server スキーマへの Oracle スキーマのマッピング
-              href: ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
-            - name: Oracle と SQL Server のデータ型のマッピング
-              href: ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md
-            - name: サーバー接続ファイルの作成
-              href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
-            - name: 付録 - 1
-              href: ssma/oracle/appendix-1-oracletosql.md
-            - name: '[プロジェクトの設定]'
-              items:
-                - name: 変換
-                  href: ssma/oracle/project-settings-conversion-oracletosql.md
-                - name: システム オブジェクトの読み込み
-                  href: ssma/oracle/project-settings-loading-system-objects-oracletosql.md
-                - name: Synchronization
-                  href: ssma/oracle/project-settings-synchronization-oracletosql.md
-                - name: GUI
-                  href: ssma/oracle/project-settings-gui-oracletosql.md
-                - name: 型のマッピング
-                  href: ssma/oracle/project-settings-type-mapping-oracletosql.md
-                - name: 移行
-                  href: ssma/oracle/project-settings-migration-oracletosql.md
-            - name: グローバル設定
-              items:
-                - name: テスト担当者
-                  href: ssma/oracle/global-settings-tester-oracletosql.md
-                - name: エディター
-                  href: ssma/oracle/global-settings-editor-oracletosql.md
-                - name: ログ記録
-                  href: ssma/oracle/global-settings-logging-oracletosql.md
-                - name: ダイアログ
-                  href: ssma/oracle/global-settings-dialogs-oracletosql.md
-                - name: '[出力ウィンドウ]'
-                  href: ssma/oracle/global-settings-output-window-oracletosql.md
-        - name: Sybase
-          href: ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
-          items:
-            - name: SSMA のインストール
-              href: ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
-            - name: SSMA for Sybase 入門
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md
-            - name: SSMA for Sybase コンソール入門
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md
-            - name: 著作権情報
-              href: ssma/sybase/legal-notice-ssma-for-sybase.md
-            - name: SSMA の新機能
-              href: ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md
-            - name: SSMA for Sybase クライアントのインストール
-              href: ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md
-            - name: SSMA GUI の新機能
-              href: ssma/sybase/new-gui-features-in-ssma-for-sybase-sybasetosql.md
-            - name: '[新しいプロジェクト]'
-              href: ssma/sybase/new-project-sybasetosql.md
-            - name: テスト ケースの初期化
-              href: ssma/sybase/initializing-test-cases-sybasetosql.md
-            - name: サンプルのコンソール スクリプト ファイルの操作
-              href: ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md
-            - name: Azure SQL DB への Sybase ASE データベースの移行
-              href: ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
-            - name: 変換のための Sybase ASE データベース オブジェクトの評価
-              href: ssma/sybase/assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-            - name: SSMA コンソールの実行
-              href: ssma/sybase/executing-the-ssma-console-sybasetosql.md
-            - name: スクリプト ファイルの作成
-              href: ssma/sybase/creating-script-files-sybasetosql.md
-            - name: グローバル設定
-              href: ssma/sybase/global-settings-dialogs-sybasetosql.md
-            - name: SQL Server への接続
-              href: ssma/sybase/connecting-to-sql-server-sybasetosql.md
-            - name: 高度なオブジェクトの選択
-              href: ssma/sybase/advanced-object-selection-sybasetosql.md
-            - name: プロジェクトの設定 (GUI)
-              href: ssma/sybase/project-settings-gui-sybasetosql.md
-            - name: テスト ケースのレポートの表示
-              href: ssma/sybase/viewing-test-case-reports-sybasetosql.md
-            - name: SSMA for Sybase Console の操作
-              href: ssma/sybase/working-with-ssma-for-sybase-console-sybasetosql.md
-            - name: テスト リポジトリの使用
-              href: ssma/sybase/using-test-repositories-sybasetosql.md
-            - name: データ移行レポート
-              href: ssma/sybase/data-migration-report-sybasetosql.md
-            - name: テスト ケースの作成
-              href: ssma/sybase/creating-test-cases-sybasetosql.md
-            - name: メタデータの保存
-              href: ssma/sybase/save-metadata-sybasetosql.md
-            - name: 評価レポート
-              href: ssma/sybase/assessment-report-sybasetosql.md
-            - name: SSMA for Sybase コンポーネントの削除
-              href: ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md
-            - name: Sybase ASE への接続
-              href: ssma/sybase/connecting-to-sybase-ase-sybasetosql.md
-            - name: 影響を受けるオブジェクトの選択と構成
-              href: ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md
-            - name: Azure SQL DB への接続
-              href: ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md
-            - name: パスワードの管理
-              href: ssma/sybase/managing-passwords-sybasetosql.md
-            - name: プロジェクト オプションの設定
-              href: ssma/sybase/setting-project-options-sybasetosql.md
-            - name: Azure SQL DB への接続
-              href: ssma/sybase/connect-to-azure-sql-db-sybasetosql.md
-            - name: データの移行設定
-              href: ssma/sybase/data-migration-settings-sybasetosql.md
-            - name: テスト ケースの準備の終了
-              href: ssma/sybase/finishing-test-case-preparation-sybasetosql.md
-            - name: テスト対象のオブジェクトの選択と構成
-              href: ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md
-            - name: トラブルシューティング
-              href: ssma/sybase/troubleshooting-sybasetosql.md
-            - name: Sybase ASE と SQL Server のデータ型とのマッピング
-              href: ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-            - name: SQL Server での SSMA コンポーネントのインストール
-              href: ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md
-            - name: Azure SQL DB への Sybase ASE データの移行
-              href: ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
-            - name: Sybase への接続
-              href: ssma/sybase/connect-to-sybase-sybasetosql.md
-            - name: 型のマッピングの編集
-              href: ssma/sybase/edit-type-mapping-sybasetosql.md
-            - name: Sybase ASE データベース オブジェクトの変換
-              href: ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md
-            - name: SQL Server への変換されたデータベース オブジェクトの読み込み
-              href: ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md
-            - name: 移行されたデータベース オブジェクトのテスト
-              href: ssma/sybase/testing-migrated-database-objects-sybasetosql.md
-            - name: 呼び出し順序のカスタマイズ
-              href: ssma/sybase/customizing-calls-order-sybasetosql.md
-            - name: ユーザー インターフェイス リファレンス
-              href: ssma/sybase/user-interface-reference-sybasetosql.md
-            - name: 変数値ファイルの作成
-              href: ssma/sybase/creating-variable-value-files-sybasetosql.md
-            - name: サーバー接続ファイルの作成
-              href: ssma/sybase/creating-the-server-connection-files-sybasetosql.md
-            - name: SSMA コンソールのコマンド ライン オプション
-              href: ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md
-            - name: SQL Server への接続
-              href: ssma/sybase/connect-to-sql-server-sybasetosql.md
-            - name: ショートカット キー
-              href: ssma/sybase/shortcut-keys-sybase-to-sql.md
-            - name: Sybase ASE スキーマの SQL Server スキーマへのマッピング
-              href: ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
-            - name: バックアップの管理
-              href: ssma/sybase/managing-backups-sybasetosql.md
-            - name: メニュー コマンドやその他のショートカット キー
-              href: ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md
-            - name: テスト ケースの実行
-              href: ssma/sybase/running-test-cases-sybasetosql.md
-            - name: レポートの生成
-              href: ssma/sybase/generating-reports-sybasetosql.md
-            - name: SSMA プロジェクトでの作業
-              href: ssma/sybase/working-with-ssma-projects-sybasetosql.md
-            - name: 付録 - 1
-              href: ssma/sybase/appendix-1-sybasetosql.md
-            - name: '[プロジェクトの設定]'
-              items:
-                - name: 変換
-                  href: ssma/sybase/project-settings-conversion-sybasetosql.md
-                - name: 型のマッピング
-                  href: ssma/sybase/project-settings-type-mapping-sybasetosql.md
-                - name: Synchronization
-                  href: ssma/sybase/project-settings-synchronization-sybasetosql.md
-                - name: Azure SQL DB
-                  href: ssma/sybase/project-settings-azure-sql-db-sybasetosql.md
-                - name: 移行
-                  href: ssma/sybase/project-settings-migration-sybasetosql.md
-            - name: グローバル設定
-              href: ssma/sybase/global-settings-output-window-sybasetosql.md
-              items:
-                - name: エディター
-                  href: ssma/sybase/global-settings-editor-sybasetosql.md
-                - name: ログ記録
-                  href: ssma/sybase/global-settings-logging-sybasetosql.md
-                - name: テスト担当者
-                  href: ssma/sybase/global-settings-tester-sybasetosql.md
+      href: ssma/toc.yml
 - name: 管理、監視、チューニング
   items:
     - name: 管理する
       items:
+        - name: 高速データベース回復
+          items:
+            - name: 概要
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: 管理
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: 中央管理サーバー
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: 構成マネージャー
@@ -6414,7 +5922,7 @@
               href: relational-databases/database-mail/create-a-database-mail-profile.md
             - name: アカウントを作成する
               href: relational-databases/database-mail/create-a-database-mail-account.md
-            - name: '[構成]'
+            - name: 構成
               href: relational-databases/database-mail/configure-database-mail.md
             - name: メッセージング オブジェクト
               href: relational-databases/database-mail/database-mail-messaging-objects.md
@@ -6447,7 +5955,7 @@
               href: relational-databases/data-compression/page-compression-implementation.md
             - name: Unicode 圧縮
               href: relational-databases/data-compression/unicode-compression-implementation.md
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
             - name: Disable
               href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
@@ -6470,7 +5978,7 @@
                   href: relational-databases/maintenance-plans/maintenance-plan-design-tab.md
                 - name: ページのレポートとログ
                   href: relational-databases/maintenance-plans/maintenance-plan-reporting-and-logging-page.md
-                - name: '[接続の管理]'
+                - name: 接続の管理
                   href: relational-databases/maintenance-plans/maintenance-plan-manage-connections.md
                 - name: データベースのバックアップ タスク
                   href: relational-databases/maintenance-plans/options-in-the-back-up-database-task-for-maintenance-plan.md
@@ -6622,7 +6130,7 @@
               items:
                 - name: 'レッスン 1:"既定でオフ" ポリシーの作成と適用'
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
-                - name: 'レッスン 2:名前付け基準ポリシーの作成と適用'
+                - name: 'レッスン 2: 名前付け基準ポリシーの作成と適用'
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: リファレンス
               items:
@@ -6672,15 +6180,6 @@
                       href: relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
         - name: トランザクション ログの管理
           items:
-            - name: ログ ファイルの表示
-              href: relational-databases/logs/log-file-viewer.md
-              items:
-                - name: '[ファイル]'
-                  href: relational-databases/logs/open-log-file-viewer.md
-                - name: オフラインで表示
-                  href: relational-databases/logs/view-offline-log-files.md
-                - name: F1 ヘルプ
-                  href: relational-databases/logs/log-file-viewer-f1-help.md
             - name: '[トランザクション ログ]'
               href: relational-databases/logs/the-transaction-log-sql-server.md
               items:
@@ -6787,9 +6286,9 @@
         - name: 拡張イベント (XEvent) の概要
           href: relational-databases/extended-events/extended-events.md
           items:
-            - name: クイック スタート
+            - name: クイックスタート
               items:
-                - name: 'クイック スタート: SQL Server の拡張イベント'
+                - name: 'クイック スタート:SQL Server の拡張イベント'
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
             - name: チュートリアル
               items:
@@ -6923,7 +6422,7 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-databases.md
                     - name: ガベージ コレクション
                       href: relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-                    - name: IO ガバナー
+                    - name: I/O ガバナー
                       href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
                     - name: ファントム プロセッサ
                       href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
@@ -7257,7 +6756,7 @@
                       href: relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
                 - name: メモリ最適化のための SSMS
                   href: relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-        - name: '[メジャー グループ]'
+        - name: メジャー グループ
           href: relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
             - name: 作成
@@ -7266,7 +6765,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: スキームの変更
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: パーティションの管理ウィザードの F1 ヘルプ
+            - name: パーティションの管理ウィザード
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: プラン ガイド
           href: relational-databases/performance/plan-guides.md
@@ -7291,10 +6790,12 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: アップグレード後のプラン ガイドの検証
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: クエリ調整アシスタント
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: リソース ガバナー
           href: relational-databases/resource-governor/resource-governor.md
           items:
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/resource-governor/enable-resource-governor.md
             - name: Disable
               href: relational-databases/resource-governor/disable-resource-governor.md
@@ -7318,7 +6819,7 @@
                   href: relational-databases/resource-governor/create-a-workload-group.md
                 - name: 設定の変更
                   href: relational-databases/resource-governor/change-workload-group-settings.md
-                - name: '[詳細ビュー]'
+                - name: 詳細ビュー
                   href: relational-databases/resource-governor/move-a-workload-group.md
                 - name: 削除
                   href: relational-databases/resource-governor/delete-a-workload-group.md
@@ -7406,7 +6907,7 @@
                   href: relational-databases/polybase/data-virtualization.md
                 - name: CSV データを仮想化する
                   href: relational-databases/polybase/data-virtualization-csv.md
-            - name: '[トラブルシューティング]'
+            - name: トラブルシューティング
               items:
                 - name: 監視とトラブルシューティング
                   href: relational-databases/polybase/polybase-troubleshooting.md
@@ -7528,13 +7029,13 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: レポートと分析
   items:
-    - name: 高度な分析と機械学習 >
-      href: advanced-analytics/
+    - name: Machine Learning Services >
+      href: machine-learning/
     - name: 分析プラットフォーム システム >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: SQL Server Analysis Services (SSAS) >
-      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
+      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
     - name: SQL Server Reporting Services (SSRS) >
       href: reporting-services/index.md
     - name: マスター データ サービス
@@ -7543,7 +7044,7 @@
       items:
         - name: 作業の開始
           items:
-            - name: 追跡
+            - name: トレース
               href: master-data-services/tracing-master-data-services.md
             - name: Web サービス操作の分類
               href: master-data-services/develop/categorized-web-service-operations-master-data-services.md
@@ -7633,7 +7134,7 @@
               href: master-data-services/edit-model-master-data-services.md
             - name: 削除
               href: master-data-services/delete-a-model-master-data-services.md
-        - name: '[エンティティ]'
+        - name: エンティティ
           href: master-data-services/entities-master-data-services.md
           items:
             - name: エンティティの依存関係エクスプローラー
@@ -8021,29 +7522,95 @@
               href: relational-databases/security/authentication-access/create-a-credential.md
         - name: 暗号化
           items:
+            - name: Always Encrypted
+              items:
+                - name: Configure Always Encrypted using PowerShell
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                - name: SSMS を使用した Always Encrypted の構成
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+                - name: Always Encrypted キーのプロビジョニング
+                  items:
+                    - name: 列マスター キーの作成と保存
+                      href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+                    - name: SSMS を使用した Always Encrypted キーのプロビジョニング
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+                    - name: PowerShell を使用して Always Encrypted キーをプロビジョニングする
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                - name: Always Encrypted キーの交換
+                  items:
+                    - name: SQL Server Management Studio (SSMS)
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+                    - name: PowerShell
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                - name: Always Encrypted を使用した列の構成
+                  items:
+                    - name: ウィザード
+                      href: relational-databases/security/encryption/always-encrypted-wizard.md
+                    - name: PowerShell
+                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+                    - name: DAC パッケージ
+                      href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+                - name: Always Encrypted を使用した列のクエリ
+                  items:
+                    - name: SSMS での Always Encrypted を使用した列のクエリ
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                - name: Always Encrypted で保護された機密データの移行
+                  items:
+                    - name: エクスポートとインポート
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+                    - name: バックアップと復元
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+                    - name: インポートおよびエクスポート ウィザードを使用したデータの移行
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+                    - name: 暗号化データの列への一括読み込み
+                      href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+                - name: Always Encrypted を使用したアプリケーションの開発
+                  items:
+                    - name: Always Encrypted を使用したアプリケーションの開発
+                      href: relational-databases/security/encryption/always-encrypted-client-development.md
+                    - name: .NET Framework でのアプリケーションの開発
+                      href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+            - name: セキュア エンクレーブを使用する Always Encrypted
+              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+              items:
+                - name: エンクレーブと構成証明をサポートする環境を設定する
+                  items:
+                    - name: ホスト ガーディアン サービスの構成証明を使用した VBS エンクレーブの設定
+                      items:
+                        - name: ホスト ガーディアン サービスの構成証明の計画
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                        - name: ホスト ガーディアン サービスを展開する
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                        - name: ホスト ガーディアン サービスにコンピューターを登録する
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する
+                  items:
+                    - name: エンクレーブ対応キーの管理
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+                    - name: エンクレーブ対応キーをプロビジョニングする
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+                    - name: エンクレーブ対応キーの交換
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted で列を構成する
+                  items:
+                    - name: 列暗号化の構成
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+                    - name: Transact-SQL を使用してインプレースでの列の暗号化を構成する
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+                    - name: 既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する
+                  items:
+                    - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                    - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを SSMS で実行する
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: エンクレーブ対応の列でインデックスを作成して使用する
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: TDE のトラブルシューティング
               href: relational-databases/security/encryption/troubleshoot-tde.md
-            - name: Always Encrypted の構成
-              items:
-                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
-                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-                - name: SQL Server Management Studio での構成
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell での構成
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-                  items:
-                    - name: Always Encrypted キーの構成
-                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                    - name: Always Encrypted キーの交換
-                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                    - name: 列暗号化の構成
-                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                - name: 列マスター キーの作成と保存
-                  href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 機密データの移行
-                  href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: .NET Framework でのアプリケーションの開発
-                  href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: TDE で保護されたデータベースの移動
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
             - name: 拡張キー管理
@@ -8095,8 +7662,6 @@
           items:
             - name: SQL インジェクション
               href: relational-databases/security/sql-injection.md
-            - name: 機能の制限
-              href: relational-databases/security/feature-restrictions.md
             - name: TRUSTWORTHY データベース プロパティ
               href: relational-databases/security/trustworthy-database-property.md
             - name: パスワード ポリシー
@@ -8107,8 +7672,6 @@
               href: relational-databases/security/row-level-security.md
             - name: 動的なデータ マスキング
               href: relational-databases/security/dynamic-data-masking.md
-            - name: 静的データ マスキング
-              href: relational-databases/security/static-data-masking.md
             - name: 証明書と非対称キー
               href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
         - name: 認証アクセス
@@ -8122,7 +7685,7 @@
               href: relational-databases/security/authentication-access/database-level-roles.md
             - name: アプリケーション ロール
               href: relational-databases/security/authentication-access/application-roles.md
-            - name: '[資格情報]'
+            - name: 資格情報
               href: relational-databases/security/authentication-access/credentials-database-engine.md
             - name: '[セキュリティ保護可能なリソース]'
               href: relational-databases/security/securables.md
@@ -8155,14 +7718,12 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted
-                  href: relational-databases/security/encryption/always-encrypted-enclaves.md
-                - name: キー管理
+                - name: Always Encrypted のキー管理の概要
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-                - name: Cryptography
+                - name: Always Encrypted による暗号
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
-                - name: クライアント開発
-                  href: relational-databases/security/encryption/always-encrypted-client-development.md
+            - name: セキュア エンクレーブを使用する Always Encrypted
+              href: relational-databases/security/encryption/always-encrypted-enclaves.md
             - name: 暗号化キー
               href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8179,27 +7740,36 @@
               href: relational-databases/security/auditing/sql-server-audit-records.md
     - name: チュートリアル
       items:
-        - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
-          href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-        - name: セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用
-          href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+        - name: Always Encrypted
+          items:
+            - name: Windows 証明書ストアでの機密データの保護と暗号化キーの格納 >
+              href: /azure/sql-database/sql-database-always-encrypted
+            - name: Azure Key Vault での機密データの保護と暗号化キーの格納 >
+              href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+        - name: セキュア エンクレーブを使用する Always Encrypted
+          items:
+            - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
+              href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用
+              href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+            - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET Framework アプリケーションを開発する
+              href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: リファレンス
       items:
         - name: '[権限] ページまたは [セキュリティ保護可能なリソース] ページ'
           href: relational-databases/security/permissions-or-securables-page.md
-        - name: Always Encrypted ウイザード
-          href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: ツール
-  href: tools/overview-sql-tools.md
   items:
+    - name: 概要
+      href: tools/overview-sql-tools.md
     - name: Azure Data Studio
       href: azure-data-studio/what-is.md
       items:
         - name: インストール
-          href: azure-data-studio/download.md
+          href: azure-data-studio/download-azure-data-studio.md
         - name: リリース ノート
           href: azure-data-studio/release-notes-azure-data-studio.md
-        - name: クイック スタート
+        - name: クイックスタート
           items:
             - name: SQL Server に対する接続およびクエリ
               href: azure-data-studio/quickstart-sql-server.md
@@ -8221,6 +7791,55 @@
               href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
             - name: バックアップと復元
               href: azure-data-studio/tutorial-backup-restore-sql-server.md
+        - name: 概念
+          items:
+            - name: 拡張機能
+              href: azure-data-studio/extensions.md
+              items:
+                - name: PostgreSQL の拡張機能
+                  href: azure-data-studio/postgres-extension.md
+                - name: データの仮想化の拡張機能
+                  href: azure-data-studio/data-virtualization-extension.md
+                - name: SQL Server エージェント
+                  href: azure-data-studio/sql-server-agent-extension.md
+                - name: SQL Server 中央管理サーバーの拡張機能
+                  href: azure-data-studio/sql-server-cms-extension.md
+                - name: SQL Server dacpac の拡張機能
+                  href: azure-data-studio/sql-server-dacpac-extension.md
+                - name: SQL Server インポート
+                  href: azure-data-studio/sql-server-import-extension.md
+                - name: SQL Server プロファイラー
+                  href: azure-data-studio/sql-server-profiler-extension.md
+                - name: スキーマ比較の拡張機能
+                  href: azure-data-studio/schema-compare-extension.md
+                - name: PowerShell の拡張機能
+                  href: azure-data-studio/powershell-extension.md
+                - name: Managed Instance の拡張機能
+                  href: azure-data-studio/azure-sql-managed-instance-extension.md
+                - name: SandDance の拡張機能
+                  href: azure-data-studio/sanddance-extension.md
+            - name: 拡張機能のオーサリング
+              items:
+                - name: 拡張性の概要
+                  href: azure-data-studio/extensibility.md
+                - name: 拡張機能のオーサリング
+                  href: azure-data-studio/extension-authoring.md
+                - name: 拡張機能を作成する
+                  href: azure-data-studio/tutorial-create-extension.md
+                - name: 拡張性 API
+                  href: azure-data-studio/extensibility-apis.md
+            - name: ノートブック
+              items:
+                - name: Notebooks の概要
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: SQL カーネルを使用する
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Python カーネルを使用する
+                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
+                - name: Kqlmagic
+                  href: azure-data-studio/notebooks-kql-magic.md
+                - name: ノートブックを管理する
+                  href: azure-data-studio/notebooks-manage-sql-server.md
         - name: 操作方法ガイド
           items:
             - name: ダッシュボードおよび分析情報のウィジェット
@@ -8233,51 +7852,18 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: エクスプローラーの Azure SQL リソース
               href: azure-data-studio/azure-resource-explorer.md
-            - name: SQL のノートブック
-              href: azure-data-studio/sql-notebooks.md
             - name: サーバー グループ
               href: azure-data-studio/server-groups.md
             - name: ソース管理
               href: azure-data-studio/source-control.md
+            - name: 使用状況データ収集
+              href: azure-data-studio/usage-data-collection.md
             - name: ワークスペースとユーザー設定
               href: azure-data-studio/settings.md
             - name: Windows 認証 (Kerberos)
               href: azure-data-studio/enable-kerberos.md
             - name: 使用状況データ収集
               href: azure-data-studio/usage-data-collection.md
-        - name: 拡張機能
-          href: azure-data-studio/extensions.md
-          items:
-            - name: PostgreSQL の拡張機能 (プレビュー)
-              href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (プレビュー)
-              href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server エージェント (プレビュー)
-              href: azure-data-studio/sql-server-agent-extension.md
-            - name: SQL Server 中央管理サーバーの拡張機能 (プレビュー)
-              href: azure-data-studio/sql-server-cms-extension.md
-            - name: SQL Server dacpac の拡張機能 (プレビュー)
-              href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server インポート (プレビュー)
-              href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (プレビュー)
-              href: azure-data-studio/sql-server-profiler-extension.md
-            - name: スキーマ比較の拡張機能 (プレビュー)
-              href: azure-data-studio/schema-compare-extension.md
-            - name: PowerShell の拡張機能
-              href: azure-data-studio/powershell-extension.md
-            - name: SandDance の拡張機能 (プレビュー)
-              href: azure-data-studio/sanddance-extension.md
-        - name: 拡張機能のオーサリング
-          items:
-            - name: 拡張性の概要
-              href: azure-data-studio/extensibility.md
-            - name: 拡張機能のオーサリング
-              href: azure-data-studio/extension-authoring.md
-            - name: 拡張機能を作成する
-              href: azure-data-studio/tutorial-create-extension.md
-            - name: 拡張性 API
-              href: azure-data-studio/extensibility-apis.md
         - name: リソース
           items:
             - name: よく寄せられる質問
@@ -8406,7 +7992,7 @@
               items:
                 - name: 'レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作'
                   href: tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-                - name: 'レッスン 2:データベース エンジン チューニング アドバイザーの使用'
+                - name: 'レッスン 2: データベース エンジン チューニング アドバイザーの使用'
                   href: tools/dta/lesson-2-using-database-engine-tuning-advisor.md
                 - name: 'レッスン 3:DTA コマンド プロンプト ユーティリティの使用'
                   href: tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
@@ -8424,7 +8010,7 @@
               href: tools/distributed-replay/complete-the-post-installation-steps.md
             - name: コントローラー サービスとクライアント サービスのアカウントの変更
               href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
-        - name: '[構成]'
+        - name: 構成
           href: tools/distributed-replay/configure-distributed-replay.md
           items:
             - name: 入力トレース データの準備
@@ -8449,7 +8035,7 @@
     - name: SQL Server 構成マネージャー
       href: tools/configuration-manager/sql-server-services.md
       items:
-        - name: ヘルプ
+        - name: Help
           href: tools/configuration-manager/sql-server-configuration-manager-help.md
         - name: SQL Server Browser Service
           href: tools/configuration-manager/sql-server-browser-service.md
@@ -8834,6 +8420,15 @@
               href: ssms/ssms-utility.md
             - name: SSMS のキーボード ショートカット
               href: ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: ログ ファイルの表示
+              href: relational-databases/logs/log-file-viewer.md
+              items:
+                - name: F1 ヘルプ
+                  href: relational-databases/logs/log-file-viewer-f1-help.md
+                - name: '[ファイル]'
+                  href: relational-databases/logs/open-log-file-viewer.md
+                - name: オフラインで表示
+                  href: relational-databases/logs/view-offline-log-files.md
             - name: SQL Server エージェント
               items:
                 - name: SQL Server エージェント
@@ -8954,11 +8549,17 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: SSMS を使用したスクリプトの作成
               items:
+                - name: スクリプトの生成
+                  items:
+                    - name: スクリプトの生成
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: スクリプトの生成およびパブリッシュ ウィザード
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: スクリプト生成ウィザードでサポートされるオブジェクト
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: クエリ エディターとテキスト エディター
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: データベース エンジン クエリ エディター
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML エディター
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: クエリ エディターでのコードの色分け
@@ -9077,14 +8678,6 @@
                       items:
                         - name: '[空間結果] ウィンドウ'
                           href: ssms/scripting/spatial-results-window.md
-                        - name: スクリプトの生成
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: スクリプトの生成およびパブリッシュ ウィザード
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: スクリプト生成ウィザードでサポートされるオブジェクト
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: 操作方法
           items:
             - name: 英語以外の SSMS のインストール
@@ -9103,7 +8696,7 @@
               href: ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
             - name: ログインの監査の構成
               href: ssms/configure-login-auditing-sql-server-management-studio.md
-            - name: '[トラブルシューティング]'
+            - name: トラブルシューティング
               items:
                 - name: 完全メモリ ダンプの取得
                   href: ssms/troubleshoot/get-full-memory-dump.md
@@ -9111,9 +8704,9 @@
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server エージェント
               items:
-                - name: '[構成]'
+                - name: 構成
                   items:
-                    - name: '[構成]'
+                    - name: 構成
                       href: ssms/agent/configure-sql-server-agent.md
                     - name: ジョブ カテゴリへのジョブの割り当て
                       href: ssms/agent/assign-a-job-to-a-job-category.md
@@ -9460,6 +9053,8 @@
               items:
                 - name: サーバー接続 (SSMS) の F1 ヘルプ
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: データベース エンジン クエリ エディター
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Microsoft Azure Storage への接続
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: SQL Server Management Studio から SQL Server コンポーネントへの接続
@@ -9510,15 +9105,15 @@
                   href: ssms/menu-help/options-environment-help-general-page.md
                 - name: '[外部ツール]'
                   href: ssms/menu-help/external-tools.md
-                - name: '[カスタマイズ] \([コマンド] ページ)'
+                - name: '[カスタマイズ] ([コマンド] ページ)'
                   href: ssms/menu-help/customize-commands-page.md
-                - name: '[オプション] \([環境]/[全般] ページ)'
+                - name: '[オプション] ([環境]/[全般] ページ)'
                   href: ssms/menu-help/options-environment-general-page.md
                 - name: '[オプション] ([環境] - [スタートアップ] ページ)'
                   href: ssms/menu-help/options-environment-startup-page.md
                 - name: '[オプション] ダイアログ ボックスの F1 ヘルプ'
                   href: ssms/menu-help/options-dialog-boxes-f1-help.md
-                - name: '[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)'
+                - name: '[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ)'
                   href: ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md
                 - name: '[オプション] ([デザイナー] - [テーブルおよびデータベース デザイナー] ページ)'
                   href: ssms/menu-help/options-designers-table-and-database-designers-page.md
@@ -9526,7 +9121,7 @@
                   href: ssms/menu-help/about-sql-server-management-studio.md
                 - name: '[変更の保存]'
                   href: ssms/menu-help/save-changes.md
-                - name: '[ファイルを開くアプリケーションの選択] \([新しいファイル])'
+                - name: '[ファイルを開くアプリケーションの選択] ([新しいファイル])'
                   href: ssms/menu-help/open-with-new-file.md
                 - name: オプション (デザイナー - Analysis Services デザイナー - 全般)
                   href: ssms/menu-help/options-designers-analysis-services-designers-general.md
@@ -9536,7 +9131,7 @@
                   href: ssms/menu-help/advanced-save-options.md
                 - name: '[名前を付けて保存]'
                   href: ssms/menu-help/save-as.md
-                - name: '[ユーザー設定] \([ツール バー] ページ)'
+                - name: '[ユーザー設定] ([ツール バー] ページ)'
                   href: ssms/menu-help/customize-toolbars-page.md
                 - name: '[オプション] ([デザイナー] - [メンテナンス プラン] ページ)'
                   href: ssms/menu-help/options-designers-maintenance-plans-page.md
@@ -9568,7 +9163,7 @@
                   href: ssms/object/connect-to-an-instance-from-object-explorer.md
                 - name: '[名前が見つかりません] ダイアログ ボックス'
                   href: ssms/object/name-not-found-dialog-box.md
-                - name: '[オブジェクトの参照] \(オブジェクト エクスプローラー)'
+                - name: '[オブジェクトの参照] (オブジェクト エクスプローラー)'
                   href: ssms/object/browse-for-objects-object-explorer.md
                 - name: '[オブジェクトの種類を選択] (オブジェクト エクスプローラー)'
                   href: ssms/object/select-object-types-object-explorer.md
@@ -10044,7 +9639,7 @@
               href: tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md
             - name: トレース ファイルまたはトレース テーブルからテンプレートを作成する
               href: tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
-            - name: '[エクスポート]'
+            - name: エクスポート
               href: tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md
             - name: '[インポート]'
               href: tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md
@@ -10153,6 +9748,14 @@
           href: relational-databases/sqltoolsvsnativehelpers.md
         - name: FrameWindowVisible
           href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+    - name: 拡張された機能
+      items:
+        - name: 拡張された機能およびツール
+          href: tools/download-sql-feature-packs.md
+    - name: Visual Studio Code
+      items:
+        - name: T-SQL スクリプト
+          href: visual-studio-code/sql-server-develop-use-vscode.md
 - name: チュートリアル
   items:
     - name: SQL Server
@@ -10178,7 +9781,7 @@
       items:
         - name: 'レッスン 1:データベース オブジェクトの作成とクエリ'
           href: t-sql/lesson-1-creating-database-objects.md
-        - name: 'レッスン 2:データベース オブジェクトに対するアクセス許可の構成'
+        - name: 'レッスン 2: データベース オブジェクトに対するアクセス許可の構成'
           href: t-sql/lesson-2-configuring-permissions-on-database-objects.md
         - name: 'レッスン 3:データベース オブジェクトの削除'
           href: t-sql/lesson-3-deleting-database-objects.md
@@ -10187,19 +9790,27 @@
   items:
     - name: 概要
       items:
+        - name: 新機能
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-whats-new-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-whats-new.md
         - name: リリース ノート
           items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-release-notes-2019.md
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-            - name: SQL Server 2019 プレビュー
-              href: linux/sql-server-linux-release-notes-2019.md
-        - name: 新機能
-          href: linux/sql-server-linux-whats-new.md
-        - name: エディションとサポートされる機能
-          href: linux/sql-server-linux-editions-and-components-2017.md
+        - name: エディションと機能
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-editions-and-components-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-editions-and-components-2017.md
         - name: よく寄せられる質問
           href: linux/sql-server-linux-faq.md
-    - name: クイック スタート
+    - name: クイックスタート
       items:
         - name: インストールと接続 - Red Hat
           href: linux/quickstart-install-connect-red-hat.md
@@ -10232,7 +9843,7 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
+        - name: フェールオーバー クラスター インスタンスを操作する
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
         - name: ペースメーカー クラスターの配置
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
@@ -10242,8 +9853,6 @@
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: レプリケーションの設定
           href: linux/sql-server-linux-replication-tutorial-tsql.md
-        - name: コンテナーでの機械学習
-          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 概念
       items:
         - name: インストール
@@ -10260,28 +9869,30 @@
               href: linux/sql-server-linux-setup-ssis.md
             - name: SQL Server Machine Learning Services のインストール
               href: linux/sql-server-linux-setup-machine-learning.md
+            - name: Docker に SQL Server Machine Learning Services をインストールする
+              href: linux/sql-server-linux-setup-machine-learning-docker.md
             - name: SQL Server の言語拡張をインストールする
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: リポジトリの構成
               href: linux/sql-server-linux-change-repo.md
-        - name: '[構成]'
+        - name: 構成
           items:
             - name: mssql-conf での構成
               href: linux/sql-server-linux-configure-mssql-conf.md
             - name: 環境変数
               href: linux/sql-server-linux-configure-environment-variables.md
-            - name: Docker コンテナーの構成
-              href: linux/sql-server-linux-configure-docker.md
-            - name: MSDTC
-              items:
-                - name: MSDTC の構成
-                  href: linux/sql-server-linux-configure-msdtc.md
-                - name: MSDTC 用の Docker の構成
-                  href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: MSDTC の構成
+              href: linux/sql-server-linux-configure-msdtc.md
             - name: 永続的なメモリ PMEM の構成
               href: linux/sql-server-linux-configure-pmem.md
             - name: 使用状況と診断データを Microsoft に送信するように構成する
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+        - name: Containers
+          items:
+            - name: Docker コンテナーの構成
+              href: linux/sql-server-linux-configure-docker.md
+            - name: MSDTC 用の Docker の構成
+              href: linux/sql-server-linux-configure-msdtc-docker.md
         - name: 開発
           href: linux/sql-server-linux-develop-overview.md
           items:
@@ -10376,17 +9987,8 @@
             - name: コンテナーの高可用性
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: SQL Server のコンテナー用の Always On 可用性グループ
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: 配置
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: 管理する
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: 接続する
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: 配置スクリプトを作成する
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: Kubernetes でコンテナーを構成する
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Security
           href: linux/sql-server-linux-security-overview.md
           items:
@@ -10407,7 +10009,7 @@
         - name: レプリケーション
           href: linux/sql-server-linux-replication.md
           items:
-            - name: '[構成]'
+            - name: 構成
               href: linux/sql-server-linux-replication-configure.md
             - name: '[スナップショット フォルダー]'
               href: linux/sql-server-linux-replication-snapshot-shares.md
@@ -10425,7 +10027,7 @@
               href: linux/sample-unattended-install-ubuntu.md
     - name: リソース
       items:
-        - name: '[トラブルシューティング]'
+        - name: トラブルシューティング
           href: linux/sql-server-linux-troubleshooting-guide.md
         - name: ライセンス方法 >>
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
@@ -10449,13 +10051,17 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: リソース
   items:
+    - name: オフライン SQL Server のドキュメント
+      href: sql-server/sql-server-offline-documentation.md
     - name: 学習する
       items:
+        - name: 学習用リソース
+          href: sql-server/educational-sql-resources.yml
         - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: Channel 9 での SQL >>
           href: 'https://channel9.msdn.com/Search'
-    - name: ヘルプ
+    - name: Help
       items:
         - name: ヘルプの参照
           href: sql-server/sql-server-get-help.md
@@ -10497,18 +10103,13 @@
           href: sql-server/partner-management-sql-server.md
         - name: 開発
           href: sql-server/partner-dev-sql-server.md
-    - name: ヘルプ ビューアーでのローカル コンテンツ
-      href: sql-server/sql-server-help-installation.md
 - name: リファレンス
   items:
-    - name: アーカイブ コンテンツ (SQL 2005 から 2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: データベースのサンプル
       items:
         - name: サンプルの概要
           href: samples/sql-samples-where-are.md
-        - name: すべての Github サンプル >>
+        - name: すべての GitHub サンプル >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -10768,6 +10369,8 @@
                   href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
             - name: エラー 5000 から 8000
               items:
+                - name: 5120
+                  href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
                 - name: 5228
                   href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
                 - name: 5229
@@ -11040,6 +10643,8 @@
                   href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
                 - name: 17204
                   href: relational-databases/errors-events/mssqlserver-17204-database-engine-error.md
+                - name: 17207
+                  href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
                 - name: 17300
                   href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
                 - name: 17660
@@ -11589,7 +11194,7 @@
               href: powershell/encode-and-decode-sql-server-identifiers.md
             - name: SQL Server 識別子のエスケープ
               href: powershell/escape-sql-server-identifiers.md
-        - name: コマンドレット参照
+        - name: コマンドレット リファレンス
           items:
             - name: SqlServer のコマンドレット
               href: /powershell/module/sqlserver/
@@ -11646,8 +11251,6 @@
               href: relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md
             - name: sys.resource_usage
               href: relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md
-            - name: dbo.server_quotas
-              href: relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
             - name: sys.server_resource_stats
               href: relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
         - name: 変更の追跡
@@ -12106,8 +11709,6 @@
               href: relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
             - name: sys.server_role_members
               href: relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
-            - name: sys.sql_feature_restrictions
-              href: relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
             - name: sys.sql_logins
               href: relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
             - name: sys.symmetric_keys
@@ -12380,6 +11981,12 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
             - name: sys.dm_tcp_listener_states
               href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+        - name: ビッグ データ クラスター
+          items:
+            - name: sys.dm_cluster_endpoints
+              href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+            - name: sys.dm_exec_compute_pools
+              href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
         - name: 変更データ キャプチャ
           items:
             - name: sys.dm_cdc_errors
@@ -12736,6 +12343,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
             - name: sys.dm_audit_class_type_map
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+            - name: sys.dm_column_encryption_enclave
+              href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
             - name: sys.dm_cryptographic_provider_algorithms
               href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
             - name: sys.dm_cryptographic_provider_keys
@@ -12797,6 +12406,16 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md
             - name: sys.dm_pdw_exec_sessions
               href: relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_query_plan
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_query_profiles
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-profiles-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_query_statistics_xml
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-statistics-xml-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_sql_text
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-sql-text-transact-sql.md
+            - name: sys.dm_pdw_nodes_exec_text_query_plan
+              href: relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-text-query-plan-transact-sql.md
             - name: sys.dm_pdw_hadoop_operations
               href: relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql.md
             - name: sys.dm_pdw_lock_waits
@@ -12846,6 +12465,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-os-cluster-properties-transact-sql.md
             - name: sys.dm_os_dispatcher_pools
               href: relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md
+            - name: sys.dm_os_enumerate_fixed_drives
+              href: relational-databases/system-dynamic-management-views/sys-dm-os-enumerate-fixed-drives.md
             - name: sys.dm_os_host_info
               href: relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md
             - name: sys.dm_os_hosts
@@ -12940,7 +12561,7 @@
             - name: sys.dm_tran_version_store_space_usage
               href: relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md
     - name: システム関数
-      href: relational-databases/system-functions/system-functions-for-transact-sql.md
+      href: relational-databases/system-functions/system-functions-category-transact-sql.md
       items:
         - name: Always On 可用性グループ
           href: relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md
@@ -15060,7 +14681,7 @@
               href: t-sql/data-types/getancestor-database-engine.md
             - name: GetDescendant
               href: t-sql/data-types/getdescendant-database-engine.md
-            - name: GetLevel)
+            - name: GetLevel
               href: t-sql/data-types/getlevel-database-engine.md
             - name: GetRoot
               href: t-sql/data-types/getroot-database-engine.md
@@ -15907,7 +15528,7 @@
                   href: t-sql/functions/radians-transact-sql.md
                 - name: RAND
                   href: t-sql/functions/rand-transact-sql.md
-                - name: '[ROUND]'
+                - name: ROUND
                   href: t-sql/functions/round-transact-sql.md
                 - name: SIGN
                   href: t-sql/functions/sign-transact-sql.md
@@ -15925,7 +15546,7 @@
                   href: t-sql/functions/logical-functions-choose-transact-sql.md
                 - name: IIF
                   href: t-sql/functions/logical-functions-iif-transact-sql.md
-            - name: メタデータ
+            - name: Metadata
               href: t-sql/functions/metadata-functions-transact-sql.md
               items:
                 - name: '@@PROCID'
@@ -16028,7 +15649,6 @@
                 - name: PUBLISHINGSERVERNAME
                   href: t-sql/functions/replication-functions-publishingservername.md
             - name: '[行セット]'
-              href: t-sql/functions/rowset-functions-transact-sql.md
               items:
                 - name: OPENDATASOURCE
                   href: t-sql/functions/opendatasource-transact-sql.md
@@ -16112,9 +15732,9 @@
                   href: t-sql/functions/left-transact-sql.md
                 - name: LEN
                   href: t-sql/functions/len-transact-sql.md
-                - name: '[LOWER]'
+                - name: LOWER
                   href: t-sql/functions/lower-transact-sql.md
-                - name: '[LTRIM]'
+                - name: LTRIM
                   href: t-sql/functions/ltrim-transact-sql.md
                 - name: NCHAR
                   href: t-sql/functions/nchar-transact-sql.md
@@ -16122,7 +15742,7 @@
                   href: t-sql/functions/patindex-transact-sql.md
                 - name: QUOTENAME
                   href: t-sql/functions/quotename-transact-sql.md
-                - name: '[REPLACE]'
+                - name: REPLACE
                   href: t-sql/functions/replace-transact-sql.md
                 - name: REPLICATE
                   href: t-sql/functions/replicate-transact-sql.md
@@ -16130,7 +15750,7 @@
                   href: t-sql/functions/reverse-transact-sql.md
                 - name: RIGHT
                   href: t-sql/functions/right-transact-sql.md
-                - name: '[RTRIM]'
+                - name: RTRIM
                   href: t-sql/functions/rtrim-transact-sql.md
                 - name: SOUNDEX
                   href: t-sql/functions/soundex-transact-sql.md
@@ -16146,7 +15766,7 @@
                   href: t-sql/functions/string-split-transact-sql.md
                 - name: STUFF
                   href: t-sql/functions/stuff-transact-sql.md
-                - name: '[SUBSTRING]'
+                - name: SUBSTRING
                   href: t-sql/functions/substring-transact-sql.md
                 - name: TRANSLATE
                   href: t-sql/functions/translate-transact-sql.md
@@ -16154,7 +15774,7 @@
                   href: t-sql/functions/trim-transact-sql.md
                 - name: UNICODE
                   href: t-sql/functions/unicode-transact-sql.md
-                - name: '[UPPER]'
+                - name: UPPER
                   href: t-sql/functions/upper-transact-sql.md
             - name: システム
               href: t-sql/functions/system-functions-transact-sql.md
@@ -16496,7 +16116,7 @@
                   href: t-sql/language-elements/rollback-work-transact-sql.md
                 - name: SAVE TRANSACTION
                   href: t-sql/language-elements/save-transaction-transact-sql.md
-            - name: '変数:'
+            - name: 変数
               href: t-sql/language-elements/variables-transact-sql.md
               items:
                 - name: SET @local_variable
@@ -16571,7 +16191,7 @@
             - name: '[ヒント]'
               href: t-sql/queries/hints-transact-sql.md
               items:
-                - name: 結合
+                - name: Join
                   href: t-sql/queries/hints-transact-sql-join.md
                 - name: クエリ
                   href: t-sql/queries/hints-transact-sql-query.md

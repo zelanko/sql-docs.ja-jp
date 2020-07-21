@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62805573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040891"
 ---
 # <a name="create-custom-templates"></a>カスタム テンプレートの作成
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 一般的な作業のためのテンプレートが多数用意されていますが、テンプレートの真価は、頻繁に作成する複雑なスクリプトに適したカスタム テンプレートを作成できる点にあります。 この演習では、2 ～ 3 のパラメーターを使用した簡単なスクリプトを作成しますが、規模が大きく、反復的なスクリプトを作成する場合にもテンプレートが役立ちます。  
@@ -67,7 +66,7 @@ ms.locfileid: "62805573"
   
 10. クエリ エディターに「 **EXECUTE dbo.WorkOrdersForBlade**」と入力し、F5 キーを押してクエリを実行します。 **結果**ペインに、ブレードに対する作業命令の一覧が返されていることを確認します。  
   
-11. テンプレート スクリプト (手順 7 でスクリプト) を編集して、製品名 Blade をパラメーターに置き換えて <strong> *<* product_name</strong>、 `nvarchar(50)`、<strong>名前 *>* </strong> 、4 つの場所にします。  
+11. テンプレートスクリプト (手順7で作成したスクリプト) を編集し、product name ブレードを、 <strong> *<* </strong> `nvarchar(50)` 4 つの場所にあるパラメーター product_name、<strong>名前 *>* </strong>に置き換えます。  
   
     > [!NOTE]  
     >  パラメーターには、置き換えるパラメーターの名前、パラメーターのデータ型、パラメーターの既定値の 3 つの要素が必要です。  
@@ -97,13 +96,13 @@ ms.locfileid: "62805573"
   
 #### <a name="to-test-the-custom-template"></a>カスタム テンプレートをテストするには  
   
-1.  テンプレート エクスプローラーで **[Stored Procedure]** 、 **[Custom]** の順に展開し、 **[WorkOrderProc]** をダブルクリックします。  
+1.  テンプレート エクスプローラーで **[Stored Procedure]**、 **[Custom]** の順に展開し、 **[WorkOrderProc]** をダブルクリックします。  
   
 2.  **[データベース エンジンへの接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **WorkOrderProc** テンプレートの内容が表示されます。  
   
 3.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
-4.  **テンプレート パラメーターの置換** ダイアログ ボックスの`product_name`値には、入力**FreeWheel** (既定の内容を上書き) 順にクリックします**ok**を閉じる、**テンプレート パラメーターの置換** ダイアログ ボックスし、クエリ エディターでスクリプトを変更します。  
+4.  [**テンプレートパラメーターの置換**] ダイアログボックスで、値として `product_name` 「 **freewheel** 」と入力し (既定の内容を上書きします)、[ **OK** ] をクリックして [**テンプレートパラメーターの置換**] ダイアログボックスを閉じ、クエリエディターでスクリプトを変更します。  
   
 5.  F5&lt;/localizedText&gt; キーを押してクエリを実行し、プロシージャを作成します。  
   

@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec3677976a82cfb9237c4bcab267ae67f8f6cc5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059547"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>既存の列を XML 列に変更する方法
   `xml` データ型は ALTER TABLE ステートメントでサポートされています。 たとえば、文字列型の列を `xml` データ型に変更できます。 このような場合、列に格納されるドキュメントは正しい形式でなければなりません。 また、列の型を文字列から型指定された xml に変更する場合、列内のドキュメントは指定した XSD スキーマに対して検証されます。  
@@ -33,7 +32,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- `xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 以下に例を示します。  
+ `xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 次に例を示します。  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

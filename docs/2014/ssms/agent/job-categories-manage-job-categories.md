@@ -1,5 +1,5 @@
 ---
-title: '[ジョブ カテゴリ]:ジョブ カテゴリの管理 |Microsoft Docs'
+title: 'ジョブカテゴリ: ジョブカテゴリの管理 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c08c423e7e5d3e59bfe75d388363f5d70dd885db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62937019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035774"
 ---
 # <a name="job-categories-manage-job-categories"></a>[ジョブ カテゴリ]:ジョブ カテゴリの管理
   **[ジョブ カテゴリ]** ダイアログ ボックスを使用すると、ジョブ カテゴリを追加したり削除したりできます。 組み込みジョブ カテゴリは削除できません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  ジョブ カテゴリの名前です。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62937019"
  **削除**  
  選択したジョブ カテゴリを削除します。 ユーザー定義ジョブ カテゴリの場合のみ有効です。  
   
- **[更新]**  
+ **Refresh\(更新\)**  
  現在の情報をサーバーでクエリします。  
   
 #### <a name="to-access-the-job-categories-dialog-box"></a>[ジョブ カテゴリ] ダイアログ ボックスにアクセスするには  

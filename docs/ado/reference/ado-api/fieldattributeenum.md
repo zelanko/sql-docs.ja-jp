@@ -13,55 +13,55 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918701"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764523"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
-1 つまたは複数の属性を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
+[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの1つまたは複数の属性を指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adFldCacheDeferred**|0x1000|プロバイダーは、フィールドの値をキャッシュし、キャッシュからそれ以降の読み取りが行われることを示します。|  
-|**adFldFixed**|0x10|フィールドが固定長のデータが含まれていることを示します。|  
-|**adFldIsChapter**|0x2000|フィールドに、この親フィールドに関連する特定の子レコード セットを指定するチャプター値が含まれていることを示します。 通常」の章のフィールドは、データの整形やフィルターで使用されます。|  
-|**adFldIsCollection**|0x40000|フィールドを指定、レコードによって表されるリソースがテキスト ファイルなどの単純なリソースではなく、フォルダーなどの他のリソースのコレクションを示します。|  
-|**adFldKeyColumn**|0x8000|列の主キーの一部またはすべてフィールドを指定することを示します。|  
-|**adFldIsDefaultStream**|0x20000|フィールドに、レコードによって表されるリソースの既定のストリームが含まれていることを示します。 たとえば、既定のストリームは、ルート URL を指定すると自動的に提供される Web サイト上のルート フォルダーの HTML コンテンツを指定できます。|  
-|**adFldIsNullable**|0x20|フィールドが null 値を受け入れることを示します。|  
-|**adFldIsRowURL**|0x10000|フィールドに、リソース レコードによって表されるデータ ストアからの名前を示す URL が含まれていることを示します。|  
-|**adFldLong**|0x80|フィールドがフィールド長のバイナリであることを示します。 使用できることを示します、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッド。|  
-|**adFldMayBeNull**|0x40|フィールドから null 値を読み取ることを示します。|  
-|**adFldMayDefer**|0x2|フィールドが遅延することを示しますが、フィールドの値は、レコード全体ですが明示的にアクセスする場合にのみ、データ ソースから取得されません。|  
-|**adFldNegativeScale**|0x4000|フィールドが負数の拡大縮小値をサポートする列の数値を表すことを示します。 小数点以下桁数がで指定された、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティ。|  
-|**adFldRowID**|0x100|フィールドに書き込むことはできませんし、行 (レコード番号、一意の識別子、やなど) を識別する以外の意味のある値を持つ永続的な行識別子が含まれていることを示します。|  
-|**adFldRowVersion**|0x200|フィールドに、ある種更新プログラムを追跡するために使用される日付または時刻のスタンプにはが含まれていることを示します。|  
-|**adFldUnknownUpdatable**|0x8|プロバイダーがフィールドを記述することができるかどうかを判断できないことを示します。|  
-|**adFldUnspecified**|-1 0 xffffffff|プロバイダーに、フィールドの属性が指定されていないことを示します。|  
-|**adFldUpdatable**|0x4|フィールドに記述できることを示します。|  
+|**adFldCacheDeferred**|0x1000|プロバイダーがフィールド値をキャッシュし、それ以降の読み取りがキャッシュから実行されることを示します。|  
+|**adFldFixed**|0x10|フィールドに固定長のデータが含まれていることを示します。|  
+|**adFldIsChapter**|0x2000|フィールドにチャプター値が含まれていることを示します。これは、この親フィールドに関連する特定の子レコードセットを指定します。 通常、チャプターフィールドはデータシェイプまたはフィルターで使用されます。|  
+|**adFldIsCollection**|0x40000|フィールドが、レコードによって表されるリソースが、テキストファイルなどの単純なリソースではなく、フォルダーなどの他のリソースのコレクションであることを指定することを示します。|  
+|**adFldKeyColumn**|0x8000|フィールドが列の主キーの一部またはすべてを指定することを示します。|  
+|**adFldIsDefaultStream**|0x20000|レコードによって表されるリソースの既定のストリームがフィールドに格納されていることを示します。 たとえば、既定のストリームは、Web サイトのルートフォルダーの HTML コンテンツにすることができます。これは、ルート URL を指定したときに自動的に提供されます。|  
+|**adFldIsNullable**|0x20|フィールドが null 値を許容することを示します。|  
+|**adFldIsRowURL**|0x10000|レコードによって表されるデータストアからリソースに名前を指定する URL がフィールドに含まれていることを示します。|  
+|**adFldLong**|0x80|フィールドが長いバイナリフィールドであることを示します。 また、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)メソッドと[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッドも使用できることを示します。|  
+|**adFldMayBeNull**|0x40|フィールドから null 値を読み取ることができることを示します。|  
+|**Adfldon Defer**|0x2|フィールドが遅延していることを示します。つまり、フィールド値は、レコード全体ではなく、明示的にアクセスしたときにのみ、データソースから取得されません。|  
+|**adFldNegativeScale**|0x4000|フィールドが負の小数点以下桁数の値をサポートする列の数値を表すことを示します。 小数点以下桁数は、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティによって指定されます。|  
+|**Adflが Wid**|0x100|フィールドには、に書き込むことができず、行 (レコード番号、一意識別子など) を識別する以外に意味のある値を持たない永続的な行識別子が含まれていることを示します。|  
+|**adFldRowVersion**|0x200|更新を追跡するために使用される時間または日付スタンプがフィールドに含まれていることを示します。|  
+|**adFldUnknownUpdatable**|0x8|フィールドに書き込むことができるかどうかをプロバイダーが判断できないことを示します。|  
+|**adFldUnspecified**|-1 0xFFFFFFFF|プロバイダーでフィールド属性が指定されていないことを示します。|  
+|**adFldUpdatable**|0x4|フィールドに書き込むことができることを示します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.FieldAttribute.CACHEDEFERRED|  
-|AdoEnums.FieldAttribute.FIXED|  
-|AdoEnums.FieldAttribute.ISNULLABLE|  
-|AdoEnums.FieldAttribute.LONG|  
+|AdoEnums FieldAttribute|  
+|AdoEnums FieldAttribute|  
+|AdoEnums FieldAttribute|  
+|AdoEnums FieldAttribute|  
 |AdoEnums.FieldAttribute.MAYBENULL|  
-|AdoEnums.FieldAttribute.MAYDEFER|  
+|AdoEnums FieldAttribute|  
 |AdoEnums.FieldAttribute.NEGATIVESCALE|  
-|AdoEnums.FieldAttribute.ROWID|  
-|AdoEnums.FieldAttribute.ROWVERSION|  
+|AdoEnums FieldAttribute|  
+|AdoEnums. FieldAttribute. ROWVERSION|  
 |AdoEnums.FieldAttribute.UNKNOWNUPDATABLE|  
-|AdoEnums.FieldAttribute.UNSPECIFIED|  
-|AdoEnums.FieldAttribute.UPDATABLE|  
+|AdoEnums. FieldAttribute|  
+|AdoEnums FieldAttribute|  
   
 ## <a name="applies-to"></a>適用対象  
   

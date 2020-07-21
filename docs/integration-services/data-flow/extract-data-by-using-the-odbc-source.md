@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 71cbdada940bcb252f7e90b40ce645a35972f076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941560"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292669"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 入力元を使用したデータ抽出
 
@@ -40,7 +40,7 @@ ms.locfileid: "67941560"
   
          この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   
-    -   **[SQL コマンド]** : SQL コマンドを入力するか、 **[参照]** をクリックしてテキスト ファイルから SQL クエリを読み込みます。  
+    -   **[SQLコマンド]** : SQLコマンドを入力するか、 **[参照]** をクリックしてテキスト ファイルから SQL クエリを読み込みます。  
   
 6.  **[プレビュー]** をクリックすると、ODBC 入力元によって抽出されるデータを最大 200 行表示できます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67941560"
   
 ## <a name="see-also"></a>参照  
  [ODBC ソース エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC ソース エディター ([列] ページ)](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [[ODBC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
  [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

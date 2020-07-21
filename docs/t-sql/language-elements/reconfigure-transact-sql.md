@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072379"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880408"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_configure** システム ストアド プロシージャで変更された構成オプションの現在の構成値 (**sp_configure** 結果セット内の **config_value** 列) に基づいて更新を行います。 構成オプションによっては、サーバーをいったん停止し、再起動しないと、現在実行中の値を更新できません。このため RECONFIGURE では、変更された構成値に対応する現在実行中の値 (**sp_configure** 結果セット内の **run_value** 列) は常に更新されるわけではありません。    
     
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  WITH OVERRIDE オプションを使用してほとんどすべての構成オプションを再構成できますが、それでも一部の致命的なエラーは防止されています。 たとえば、**min server memory** 構成オプションを、**max server memory** 構成オプションで指定されている値よりも大きい値を使用して構成することはできません。
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
  **sp_configure** では、各構成オプションに定義されている有効値の範囲外の値を新しい構成オプションの値として使用することはできません。    
     
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。 複数のオプションを同時に再構成すると、いずれかの再構成オプションが失敗した場合に、すべての再構成オプションが無効になります。    
@@ -62,7 +62,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## <a name="permissions"></a>アクセス許可    
  RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **sysadmin** および **serveradmin** 固定サーバー ロールでは、この権限が暗黙的に保持されます。    
     
-## <a name="examples"></a>使用例    
+## <a name="examples"></a>例    
  次の例では、`recovery interval` 構成オプションの上限を `75` 分に設定し、`RECONFIGURE WITH OVERRIDE` を使用してインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`75`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
     
 ```    

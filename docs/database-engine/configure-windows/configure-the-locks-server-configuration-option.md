@@ -1,5 +1,6 @@
 ---
 title: locks サーバー構成オプションの構成 | Microsoft Docs
+description: locks オプションについて説明します。 これを使用して、SQL Server データベース エンジンでロックに使用されるメモリの量を制限する方法について説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fa3483acfe078dbdd3537c0b327032765def62d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697131"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **locks** オプションは、使用できるロックの最大数を設定することによって、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がそのために使用するメモリの量を制限します。 既定値は 0 です。0 の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はシステム要件の変更に基づいてロック構造を動的に割り当てたり、割り当てを解除したりできます。  
   
@@ -31,9 +32,9 @@ ms.locfileid: "68012605"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して locks オプションを構成するには:**  
   
@@ -43,9 +44,9 @@ ms.locfileid: "68012605"
   
 -   **補足情報:** [locks オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  
   
@@ -57,12 +58,12 @@ ms.locfileid: "68012605"
   
 -   **locks** オプションも、ロックのエスカレートがいつ行われるかに影響を与えます。 **locks** を 0 に設定すると、現在のロック構造で使用されるメモリが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のメモリ プールの 40% に達したときに、ロックのエスカレートが行われます。 **locks** が 0 に設定されていない場合は、ロック数が **locks**に指定された値の 40% に達したときに、ロックのエスカレートが行われます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-locks-option"></a>locks オプションを構成するには  
   
@@ -74,7 +75,7 @@ ms.locfileid: "68012605"
   
      **locks** オプションは、使用可能なロックの最大数を設定して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってロックに使用されるメモリの量を制限するために使用します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-locks-option"></a>locks オプションを構成するには  
   
@@ -99,7 +100,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: locks オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-locks-option"></a><a name="FollowUp"></a>補足情報: locks オプションを構成した後  
  設定を有効にするには、サーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

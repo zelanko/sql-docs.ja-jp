@@ -1,5 +1,5 @@
 ---
-title: ServerSettingsGeneralFlag クラス |Microsoft Docs
+title: ServerSettingsGeneralFlag クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1276e1411757dfc31d9fb874a8a78472591a0bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e8a1d6d6a934be58ac5e4062fc1ea90818c15bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052703"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880688"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [ServerSettingsGeneralFlag クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の一般的なフラグ設定を表します。  
   
  このクラスを使用すると、次のことが行えます。  
@@ -35,6 +35,6 @@ ms.locfileid: "68052703"
 -   フラグ値の表示および変更  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

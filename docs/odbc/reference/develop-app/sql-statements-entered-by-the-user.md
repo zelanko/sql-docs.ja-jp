@@ -1,5 +1,5 @@
 ---
-title: SQL ステートメントが、ユーザーが入力した |Microsoft Docs
+title: ユーザーによって入力された SQL ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf2f8cf36be392cb42a970fa2fb0b19c35daeb39
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086072"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301963"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>ユーザーが入力した SQL ステートメント
-よくアド ホック分析を実行するアプリケーションでは、SQL ステートメントを直接入力するユーザーを許可します。 以下に例を示します。  
+アドホック分析を実行するアプリケーションでは、通常、ユーザーが直接 SQL ステートメントを入力できるようにすることもできます。 次に例を示します。  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -48,4 +48,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- この手法はアプリケーションのコーディングを簡略化します。アプリケーションでは、SQL ステートメントを作成しているユーザーに対する、ステートメントの有効性をチェックするデータ ソースに依存しています。 SQL の複雑な作業を適切に公開するグラフィカル ユーザー インターフェイスを記述するため、SQL ステートメントのテキストを入力するユーザーに依頼するだけと、ことをお勧めの代替可能性があります。 ただし、SQL だけでなく、クエリ対象のデータ ソースのスキーマを把握するユーザーが必要です。 一部のアプリケーションは、ユーザーが基本的な SQL ステートメントを作成しが、ユーザーが変更できるテキスト インターフェイスを提供するグラフィカル ユーザー インターフェイスを提供します。
+ この方法では、アプリケーションのコーディングが簡単になります。アプリケーションでは、ステートメントの有効性を確認するために、ユーザーが SQL ステートメントとデータソースを作成することに依存しています。 複雑な SQL を適切に公開するグラフィカルユーザーインターフェイスを作成するのは困難なので、SQL ステートメントのテキストを入力するようユーザーに求めるだけで、代替手段として使用することもできます。 ただし、これには、SQL だけでなく、クエリ対象のデータソースのスキーマも把握しておく必要があります。 アプリケーションによっては、グラフィカルユーザーインターフェイスが用意されており、ユーザーは基本的な SQL ステートメントを作成できます。また、ユーザーがこのステートメントを変更できるテキストインターフェイスも用意されています。

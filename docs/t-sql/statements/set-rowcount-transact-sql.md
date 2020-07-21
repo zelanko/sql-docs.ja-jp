@@ -27,15 +27,15 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f79e7931e0e1fd04a699620f65c1dc2566347202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de38a90be373ac8962fa98f28eb7467dd918b19a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140230"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002420"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定の行数が返された後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリの処理を停止します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68140230"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -51,7 +51,7 @@ SET ROWCOUNT { number | @number_var }
  *number* | @*number_var*  
  特定のクエリを停止するまでに処理される行数を整数で指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  SQL Server の将来のリリースでは、SET ROWCOUNT を使用しても、DELETE、INSERT、および UPDATE ステートメントが影響を受けることはありません。 新しい開発作業では DELETE、INSERT、および UPDATE ステートメントでの SET ROWCOUNT の使用を避け、現在 SET ROWCOUNT を使用しているアプリケーションは変更を検討してください。 同様の処理を行う場合は、TOP 構文を使用します。 詳細については、「[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)」を参照してください。  
@@ -67,10 +67,10 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  SET ROWCOUNT を指定した場合、指定した行数が返されると処理は停止します。 次の例では、500 行を超える行数は、`Quantity` が `300` より少ないという条件を満たしていますが、 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT count(*) AS Count  
@@ -91,20 +91,20 @@ GO
   
  ここで `ROWCOUNT` を `4` に設定し、すべての行のうち、4 行だけが返されることを確認します。  
   
-```  
+```sql
 SET ROWCOUNT 4;  
 SELECT *  
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
   
-(4 row(s) affected)
+-- (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT を指定した場合、指定した行数が返されると処理は停止します。 次の例では、20 より多くの行が `AccountType = 'Assets'` の条件を満たしていることに注意してください。 SET ROWCOUNT の適用後、すべての行が返されたわけではないことがわかります。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 5;  
@@ -114,7 +114,7 @@ WHERE AccountType = 'Assets';
   
  すべての行を返すには、ROWCOUNT を 0 に設定します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SET ROWCOUNT 0;  

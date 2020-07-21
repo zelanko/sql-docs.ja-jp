@@ -1,5 +1,5 @@
 ---
-title: ActualSize および DefinedSize プロパティの例 (vc++) |Microsoft Docs
+title: ActualSize とのサイズプロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 092c67ec3fef6705d103e87cd5e47adc37397475
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921472"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760698"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize および DefinedSize プロパティの例 (vc++)
-この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)と[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)定義されたサイズと、フィールドの実際のサイズを表示するプロパティ。  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize とのサイズプロパティの例 (VC + +)
+この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティと defined [size](../../../ado/reference/ado-api/definedsize-property.md)プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。  
   
 ## <a name="example"></a>例  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **ストア名:Eric 読み取りブック**  
-**定義されているサイズ:40**  
+ **店舗名: 閲覧した書籍の Eric**  
+**定義されたサイズ:40**  
 **実際のサイズ:19**  
-**ストア名:Barnum**  
-**定義されているサイズ:40**  
-**実際のサイズ:8**  
-**ストア名:ニュースおよび Brews**  
-**定義されているサイズ:40**  
+**ストア名: Barnum**  
+**定義されたサイズ:40**  
+**実際のサイズ: 8**  
+**店舗名: News & のニュース**  
+**定義されたサイズ:40**  
 **実際のサイズ:12**  
-**ストア名:次のドキュメント-U:洗濯物の品質とブックの「**  
-**定義されているサイズ:40**  
+**店舗名: Doc-U-マット: 品質の洗濯物と書籍**  
+**定義されたサイズ:40**  
 **実際のサイズ:36**  
-**ストア名:Fricative Bookshop**  
-**定義されているサイズ:40**  
+**店舗名: Fricative Bookshop**  
+**定義されたサイズ:40**  
 **実際のサイズ:18**  
-**ストア名:Bookbeat**  
-**定義されているサイズ:40**  
-**実際のサイズ:8**   
-## <a name="see-also"></a>関連項目  
+**ストア名: Bookbeat**  
+**定義されたサイズ:40**  
+**実際のサイズ: 8**   
+## <a name="see-also"></a>参照  
  [ActualSize プロパティ (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize プロパティ](../../../ado/reference/ado-api/definedsize-property.md)

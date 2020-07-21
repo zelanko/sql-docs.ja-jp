@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a1f50e106ad2e5b326f698089691ee996f058cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059816"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress クラス
-  [ServerNetworkProtocolIPAddress クラス] servernetworkprotocolipaddress-class.md) は、サーバー ネットワーク プロトコルによってサポートされている IP アドレスを表します。  
+  [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) は、サーバーネットワークプロトコルによってサポートされる IP アドレスを表します。  
   
- [ServerNetworkProtocolIPAddress クラス] servernetworkprotocolipaddress-class.md) では、次のタスクを実行できます。  
+ [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) では、次のタスクを実行できます。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前の確認  
+-   のインスタンスの名前を確認 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] します。  
   
 -   IP アドレス名およびプロトコル名の確認  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62643378"
   
 -   IP アドレスの有効化および無効化  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

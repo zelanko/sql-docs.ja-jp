@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c35ca3cfecd0eca0b08c0a1437cd8b57570126b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ea01bd48dea04e5ae5d00a480d6ce43662d96d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700485"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 指定された一連の **geometry** オブジェクトに対して凸包を返します。
   
@@ -43,7 +43,7 @@ ConvexHullAggregate ( geometry_operand )
 ## <a name="exception"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
@@ -51,7 +51,7 @@ ConvexHullAggregate ( geometry_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、テーブル変数列内の geometry オブジェクトのセットの凸包を返します。  
   
  ```

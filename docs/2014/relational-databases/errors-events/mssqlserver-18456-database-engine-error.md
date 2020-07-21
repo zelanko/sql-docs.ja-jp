@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0f1216bf1b617a80288c6e5112674c2447979f4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869597"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552247"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|18456|  
@@ -33,7 +32,7 @@ ms.locfileid: "62869597"
 |メッセージ テキスト|ユーザー '%.*ls'.%.\*ls はログインできませんでした|  
   
 ## <a name="explanation"></a>説明  
- を不正なパスワードまたはユーザー名を含む認証の失敗によって接続試行が拒否された場合、次のようなメッセージがクライアントに返されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー:18456)".  
+ 無効なパスワードまたはユーザー名の使用による認証の失敗によって接続の試行が拒否された場合、クライアントに次のようのメッセージが表示されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー:18456)"。  
   
  クライアントに返される追加情報には、次のようなものがあります。  
   
@@ -43,13 +42,13 @@ ms.locfileid: "62869597"
   
  "サーバー名: <computer_name>"  
   
- "エラー番号。18456"  
+ "エラー番号:18456"  
   
- "重大度。14"  
+ "重大度:14"  
   
- "の状態。1"  
+ "状態:1"  
   
- "行番号。65536"  
+ "行番号:65536"  
   
  次のメッセージが返されることもあります。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62869597"
 ## <a name="additional-error-information"></a>エラーに関する追加情報  
  セキュリティ向上のために、クライアントに返されるエラー メッセージでは、認証エラーの性質を意図的に非表示にしています。 ただし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログでは、対応するエラーに、認証失敗条件と対応付けられるエラー状態が含まれています。 ログインできない理由を判断するには、エラー状態を次の一覧と比較してください。  
   
-|状態|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |1|エラー情報を表示できません。 通常、この状態は、エラーの詳細情報を受け取る権限がないことを意味します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。|  
 |2|ユーザー ID が無効です。|  
@@ -85,16 +84,16 @@ ms.locfileid: "62869597"
   
  この問題を解決するには、接続文字列に `TRUSTED_CONNECTION = TRUE` を含めます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、認証エラー状態は 8 です。 これは、パスワードが正しくないことを示します。  
   
-|date|ソース|メッセージ|  
+|Date|source|Message|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|ログオン|エラー:18456、重大度:14、状態:8.|  
-|2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [クライアント: \<ip アドレス >]|  
+|2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [CLIENT: \<ip address>]|  
   
 > [!NOTE]  
->  Windows 認証モードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードに変更すると、**sa** ログインは最初は無効になります。 これにより、状態 7 のエラーが発生します。「ログインはユーザー 'sa' にできませんでした。」**sa** ログインを有効にするには、「[サーバーの認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)」を参照してください。  
+>  Windows 認証モードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードに変更すると、**sa** ログインは最初は無効になります。 これにより、次の状態 7 のエラーが発生します。"ユーザー 'sa' はログインできませんでした。"**sa** ログインを有効にするには、「[サーバーの認証モードの変更](../../database-engine/configure-windows/change-server-authentication-mode.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続しようとしている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が混合モード認証で構成されていることを確認します。  
@@ -109,6 +108,6 @@ ms.locfileid: "62869597"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
   
- ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、このトピックの「[方法: ASP.NET のリソースにアクセスするネットワーク サービス アカウントを使用します。](https://msdn.microsoft.com/library/ff647402.aspx)  
+ ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、このトピックの「[方法: ASP.NET で Network Service アカウントを使用してリソースにアクセスする方法](https://msdn.microsoft.com/library/ff647402.aspx)」を参照してください。  
   
   

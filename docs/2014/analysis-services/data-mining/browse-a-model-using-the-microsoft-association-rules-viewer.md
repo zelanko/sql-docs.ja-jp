@@ -1,5 +1,5 @@
 ---
-title: Microsoft アソシエーション ルール ビューアーを使用してモデルの参照 |Microsoft Docs
+title: Microsoft アソシエーションルールビューアーを使用したモデルの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cb289f4825dfbfdf55fdacb72229355f8cb815b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525346"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft アソシエーション ルール ビューアーを使用したモデルの参照
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アソシエーション ルール ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析に使用できるデータ マイニング モデルを作成するときに使用するアソシエーション アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Association Algorithm](microsoft-association-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]のアソシエーションルールビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アソシエーションアルゴリズムを使用して作成されたマイニングモデルが表示され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析に使用できるデータ マイニング モデルを作成するときに使用するアソシエーション アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Association Algorithm](microsoft-association-algorithm.md)」を参照してください。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用する主な理由は次のとおりです。  
   
@@ -39,9 +38,9 @@ ms.locfileid: "66086158"
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md)」を参照してください。  
   
- 作成、調査、およびアソシエーション マイニング モデルを使用する方法のチュートリアルは、次を参照してください。[レッスン 3。マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)します。  
+ アソシエーション マイニング モデルの作成、調査、使用のチュートリアルについては、「[Lesson 3: Building a Market Basket Scenario (Intermediate Data Mining Tutorial)](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)」(レッスン 3 : マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)) を参照してください。  
   
-##  <a name="BKMK_ViewerTabs"></a> ビューアーのタブ  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>ビューアーのタブ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でマイニング モデルを参照すると、そのモデルに適したビューアーを使用してデータ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール ビューアーには、次のタブがあります。  
   
 -   [アイテムセット](#BKMK_Itemsets)  
@@ -52,8 +51,8 @@ ms.locfileid: "66086158"
   
  各タブには **[長い名前を表示する]** チェック ボックスがあります。このチェック ボックスを使用して、ルールまたはアイテムセットでアイテムセットの元のテーブルを表示するか非表示にするかを切り替えることができます。  
   
-###  <a name="BKMK_Itemsets"></a> アイテムセット  
- **[アイテムセット]** タブには、同時に検出されることが多いとモデルで判断されたアイテムセットの一覧が表示されます。 タブには、次の列を持つグリッドが表示されます。**サポート**、**サイズ**、および**アイテム セット**します。 サポートの詳細については、「 [Microsoft Association Algorithm](microsoft-association-algorithm.md)」を参照してください。 **[サイズ]** 列には、アイテムセット内のアイテム数が表示されます。 **[アイテムセット]** 列には、モデルで検出された実際のアイテムセットが表示されます。 **[表示]** の一覧を使用してアイテムセットの形式を指定できます。この一覧では、次のオプションを設定できます。  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>アイテムセット  
+ **[アイテムセット]** タブには、同時に検出されることが多いとモデルで判断されたアイテムセットの一覧が表示されます。 このタブには、 **[サポート]**、 **[サイズ]**、および **[アイテムセット]** 列を持つグリッドが表示されます。 サポートの詳細については、「 [Microsoft Association Algorithm](microsoft-association-algorithm.md)」を参照してください。 **[サイズ]** 列には、アイテムセット内のアイテム数が表示されます。 **[アイテムセット]** 列には、モデルで検出された実際のアイテムセットが表示されます。 **[表示]** の一覧を使用してアイテムセットの形式を指定できます。この一覧では、次のオプションを設定できます。  
   
 -   **[属性の名前と値を表示]**  
   
@@ -65,29 +64,29 @@ ms.locfileid: "66086158"
   
  列見出しをクリックすると、グリッド内の行を並べ替えることができます。  
   
- [トップに戻る](#BKMK_ViewerTabs)  
+ [ページのトップへ](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a> ルール  
- **[ルール]** タブには、アソシエーション アルゴリズムで発見されたルールが表示されます。 **ルール** タブには、次の列を含む grid が含まれています。**確率**、**重要度**、および**ルール**します。 確率は、ルールの結果が発生する可能性を示します。 重要度では、ルールの有用性が測定されます。 ルールが発生する確率が高くても、ルールの有用性自体は低い場合があります。 [重要度] 列は、これに対処しています。 たとえば、すべてのアイテムセットに特定の状態の属性が含まれている場合、確率が非常に高くても、状態を予測するルールはあまり意味がありません。 重要度が高いほど、ルールはより重要になります。  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>ロジック  
+ **[ルール]** タブには、アソシエーション アルゴリズムで発見されたルールが表示されます。 **[ルール]** タブには、 **[確率]** 列、 **[重要度]** 列、および **[ルール]** 列で構成されたグリッドがあります。 確率は、ルールの結果が発生する可能性を示します。 重要度では、ルールの有用性が測定されます。 ルールが発生する確率が高くても、ルールの有用性自体は低い場合があります。 [重要度] 列は、これに対処しています。 たとえば、すべてのアイテムセットに特定の状態の属性が含まれている場合、確率が非常に高くても、状態を予測するルールはあまり意味がありません。 重要度が高いほど、ルールはより重要になります。  
   
- **[アイテムセット]** タブでのフィルター処理と同様に、 **[最小の確率]** と **[最小の重要度]** を使用してルールをフィルター処理できます。 **[ルールのフィルター]** を使用して、ルールに含まれている属性の状態に基づいてルールをフィルター処理することもできます。  
+ [**アイテムセット**] タブで行うことができるフィルター処理と同様に、[**最小の確率**] と [**最小の重要度**] を使用してルールをフィルター処理できます。**フィルタールール**を使用して、含まれている属性の状態に基づいてルールをフィルター処理することもできます。  
   
  列見出しをクリックすると、グリッド内の行を並べ替えることができます。  
   
- [トップに戻る](#BKMK_ViewerTabs)  
+ [ページのトップへ](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a> 依存関係ネットワーク  
- **[依存関係ネットワーク]** タブには依存関係ネットワーク ビューアーがあります。 ビューアーの各ノードは、"state = WA" などのアイテムを表します。 ノード間の矢印は、アイテム間の関連を表します。 矢印の方向は、アルゴリズムが発見したルールに従ってアイテム間の関連を示します。 たとえば、ビューアーに 3 つの項目が含まれている場合 A、B、C、および C はによって予測して、B、C、ノードを選択する場合は、2 つの矢印を指しますつまりノード C の C を A と B が c を。  
+###  <a name="dependency-net"></a><a name="BKMK_Dependency"></a>依存関係ネットワーク  
+ **[依存関係ネットワーク]** タブには依存関係ネットワーク ビューアーがあります。 ビューアーの各ノードは、"state = WA" などのアイテムを表します。 ノード間の矢印は、アイテム間の関連を表します。 矢印の方向は、アルゴリズムが発見したルールに従ってアイテム間の関連を示します。 たとえば、ビューアーに A、B、C という3つの項目が含まれており、C が A と B によって予測されている場合、ノード C を選択すると、ノード C-A から C、B から C に向かう2つの矢印が表示されます。  
   
  ビューアーの左側にあるスライダーは、ルールの確率に関連付けられたフィルターとして機能します。 スライダーを小さく設定すると、緊密なリンクのみが表示されます。  
   
- [トップに戻る](#BKMK_ViewerTabs)  
+ [ページのトップへ](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Association Algorithm](microsoft-association-algorithm.md)   
- [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [データ マイニング ツール](data-mining-tools.md)   
+ [Microsoft アソシエーションアルゴリズム](microsoft-association-algorithm.md)   
+ [マイニングモデルビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
+ [マイニングモデルビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
+ [データマイニングツール](data-mining-tools.md)   
  [データ マイニング モデル ビューアー](data-mining-model-viewers.md)  
   
   

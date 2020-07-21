@@ -1,6 +1,7 @@
 ---
-title: フェールオーバー クラスター インスタンスの IP アドレスの変更 | Microsoft Docs
-ms.custom: ''
+title: フェールオーバー クラスター インスタンスの IP アドレスを変更する
+description: フェールオーバー クラスター マネージャーを使用して SQL Server フェールオーバー クラスター インスタンスの IP アドレスを変更する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93738cb12b13b5f7c6434acd7d7d86b5496d4fc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4960a10a44e3a84b42c0bf43872a38be05be292
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063790"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75230135"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスの IP アドレスの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,15 +28,15 @@ ms.locfileid: "68063790"
   
 -   **作業を開始する準備:** [セキュリティ](#Security)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  作業を開始する前に、次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのトピックを参照してください。[Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  FCI を保持または更新するには、FCI のすべてのノードにおいて、サービスとしてログオンする権限を持つローカル管理者である必要があります。  
   
-##  <a name="WSFC"></a> フェールオーバー クラスター マネージャー スナップインの使用  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WSFC"></a> フェールオーバー クラスター マネージャー スナップインの使用  
  **FCI の IP アドレス リソースを変更するには**  
   
 1.  フェールオーバー クラスター マネージャー スナップインを開きます。  
@@ -46,7 +47,7 @@ ms.locfileid: "68063790"
   
 4.  **[全般]** タブで、IP アドレス リソースを変更します。  
   
-5.  **[OK]** をクリックして、ダイアログ ボックスを閉じます。  
+5.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 6.  右側のペインで、[SQL IP Address1 (フェールオーバー クラスターのインスタンス名)] を右クリックし、 **[オフラインにする]** をクリックします。 [SQL IP Address1 (フェールオーバー クラスターのインスタンス名)]、[SQL Network Name (フェールオーバー クラスターのインスタンス名)]、および [ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ] の状態が、[オンライン]、[オフライン待ち]、[オフライン] と変化していくのを確認できます。  
   

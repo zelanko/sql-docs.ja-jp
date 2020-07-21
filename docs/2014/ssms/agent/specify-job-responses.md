@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8e19977300bc32bf832028b0d7e060fbaeb1665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062130"
 ---
 # <a name="specify-job-responses"></a>ジョブ応答の指定
   ジョブ応答では、ジョブの完了後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスで実行するアクションを指定します。 ジョブ応答により、データベース管理者はジョブの完了日時や実行頻度を確認できます。 以下に、一般的なジョブ応答を示します。  
@@ -41,9 +40,9 @@ ms.locfileid: "63245994"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |オペレーターにジョブの状態を通知する方法について説明します。|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|ジョブの状態を Windows アプリケーション ログに書き込む方法について説明します。|[Windows アプリケーション ログへのジョブ状態の書き込み](../../reporting-services/report-server/windows-application-log.md)|  
+|ジョブの状態を Windows アプリケーション ログに書き込む方法について説明します。|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>参照  
  [イベントの監視と応答](monitor-and-respond-to-events.md)  

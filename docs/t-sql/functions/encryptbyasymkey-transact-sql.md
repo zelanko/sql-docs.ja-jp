@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9c0128fab05a83720bd7f4eedd8d2e200c62450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de84d9fd01f49661dc099d166829d19e39559904
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682058"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は非対称キーでデータを暗号化します。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
@@ -46,28 +46,28 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 *cleartext*  
 `ENCRYPTBYASYMKEY` が非対称キーで暗号化するデータの文字列。 *cleartext* のデータ型には
  
-+ **binary**
++ **[バイナリ]**
 + **char**
 + **nchar**
 + **nvarchar**
 + **varbinary**
   
-内の複数の
+or
   
 + **varchar**
  
 があります。  
   
-**@plaintext**  
-`ENCRYPTBYASYMKEY` が非対称キーで暗号化する値を保持する変数。 **@plaintext** のデータ型には
+**\@plaintext**  
+`ENCRYPTBYASYMKEY` が非対称キーで暗号化する値を保持する変数。 **\@plaintext** のデータ型には
   
-+ **binary**
++ **[バイナリ]**
 + **char**
 + **nchar**
 + **nvarchar**
 + **varbinary**
   
-内の複数の
+or
   
 + **varchar**
  
@@ -76,7 +76,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 非対称キーを使用する暗号化操作と復号操作は大量のリソースを消費します。そのため、対称キーの暗号化と復号に比べ、高くつきます。 データベース テーブルに格納されているユーザー データ データベースなど、データセットが大規模になる場合、非対称キーで暗号化/復号することは開発者にお勧めしていません。 代わりに、強力な対称キーでデータを暗号化し、その対称キーを非対称キーで暗号化することをお勧めしています。  
   
 アルゴリズムにもよりますが、`ENCRYPTBYASYMKEY` は、入力が特定のバイト数を超えると、**NULL** を返します。 具体的な制限:
@@ -87,7 +87,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、証明書と非対称キーの両方が RSA キーのラッパーとして機能します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`@cleartext` に格納されているテキストを非対称キー `JanainaAsymKey02` を使用して暗号化します。 このステートメントは、`ProtectedData04` テーブルに暗号化されたデータを挿入します。  
   
 ```  

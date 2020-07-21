@@ -8,21 +8,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0146d58a1495ad5c17625edbb9b9c6f2d295cfb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9b053d9a7e891ce872c9f038571f1b601a7c359
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985305"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053573"
 ---
-# <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value 
+# <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   統計情報、または既存のログ記録のカスタマイズされたレベルで記録されたイベントを変更します。 カスタマイズされたログ記録レベルの詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
   
@@ -52,7 +49,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  *property_value* は **bigint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

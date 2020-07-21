@@ -1,5 +1,5 @@
 ---
-title: データ ソース (SSAS) への接続 |Microsoft Docs
+title: データソースへの接続 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fe7f7d5b31118369b8ce2a855b955e44f661dbc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527228"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>[データ ソースへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、リレーショナル データベース、データ フィード、ファイルなど、さまざまなデータ ソースに対する新しいデータ ソース接続を作成できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

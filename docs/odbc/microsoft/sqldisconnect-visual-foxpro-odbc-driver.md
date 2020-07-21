@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDisconnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3789c065f11c1c7ce9a8cb34037fbc284ee17c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80044b0eb730b2378d14769c193e39c659d1afc1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053994"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301683"
 ---
 # <a name="sqldisconnect-visual-foxpro-odbc-driver"></a>SQLDisconnect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:コア レベル  
+ ODBC API の準拠: コアレベル  
   
  接続を閉じます。  
   
- 詳細については、次を参照してください。 [SQLDisconnect](../../odbc/reference/syntax/sqldisconnect-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [sqldisconnect](../../odbc/reference/syntax/sqldisconnect-function.md) 」を参照してください。

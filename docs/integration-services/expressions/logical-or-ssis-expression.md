@@ -12,14 +12,14 @@ helpviewer_keywords:
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e364d807205dd00d99a42aa0e3836c0c475856e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e9154b2ad6d574f251f3248903f2518e0f6b0b3d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027362"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289029"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (論理 OR) (SSIS 式)
 
@@ -42,7 +42,7 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表は、|| 演算子の結果を示します。  
   
 |結果|式|式|  

@@ -1,6 +1,6 @@
 ---
-title: 外部ツールの引数 | Microsoft Docs
-ms.custom: ''
+title: 外部ツールの引数
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f1cff589dfe005011c025b6083821d259f6e9f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 80b7d5e3eec617f82cb49b67a80d928cb3df9328
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267060"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252232"
 ---
 # <a name="arguments-for-external-tools"></a>外部ツールの引数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68267060"
   
 外部ツールの引数は、次の表のとおりです。  
   
-|[オブジェクト名]|引数|[説明]|  
+|Name|引数|説明|  
 |--------|------------|---------------|  
 |**項目のパス**|$(ItemPath)|現在のソースの完全なファイル名 (ドライブ + パス + ファイル名として定義されます)。ソース以外のウィンドウがアクティブな場合は空白です。|  
 |**項目のディレクトリ**|$(ItemDir)|現在のソースのディレクトリ (ドライブ + パスとして定義されます)。ソース以外のウィンドウがアクティブな場合は空白です。|  

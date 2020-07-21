@@ -1,5 +1,5 @@
 ---
-title: supportsCatalogsInIndexDefinitions メソッド |Microsoft Docs
+title: supportsCatalogsInIndexDefinitions メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a19423a0-e7b6-4f5c-94be-80ddf3fa4717
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15d253050f557c799bef717962bc0e3750656147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17b8d4de4bbecac7687ce2f2bbb6581bede31eb1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969705"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913319"
 ---
 # <a name="supportscatalogsinindexdefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInIndexDefinitions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean supportsCatalogsInIndexDefinitions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsCatalogsInIndexDefinitions メソッドは、supportsCatalogsInIndexDefinitions メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsCatalogsInIndexDefinitions メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsCatalogsInIndexDefinitions メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

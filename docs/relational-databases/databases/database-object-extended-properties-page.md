@@ -1,5 +1,6 @@
 ---
 title: データベース オブジェクト ([拡張プロパティ] ページ) | Microsoft Docs
+description: '[拡張プロパティ] ページについて説明します。 このページを使用して、データベース オブジェクトのカスタム プロパティを追加、表示、または変更する方法について説明します。'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756241"
 ---
 # <a name="database-object-extended-properties-page"></a>データベース オブジェクト ([拡張プロパティ] ページ)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   拡張プロパティによって、カスタム プロパティをデータベース オブジェクトに追加できます。 このページを使用すると、選択されているオブジェクトの拡張プロパティを表示または変更できます。 データベース オブジェクトのすべての種類に対して、同じ **[拡張プロパティ]** ページが表示されます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[データベース]**  
  選択しているデータベースの名前が表示されます。 このフィールドは読み取り専用です。  
   
- **[照合順序]**  
+ **Collation**  
  選択されているデータベースに使用する照合順序を表示します。 このフィールドは読み取り専用です。  
   
  **Properties**  

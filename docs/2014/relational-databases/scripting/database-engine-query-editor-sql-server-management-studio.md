@@ -1,6 +1,6 @@
 ---
-title: データベース エンジン クエリ エディター (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: データベース エンジン クエリ エディター
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -19,15 +19,14 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056839"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含んだスクリプトの作成と実行を行います。 **sqlcmd** コマンドを含んだスクリプトの実行もサポートされます。  
@@ -48,15 +47,15 @@ ms.locfileid: "66064095"
     -   システム ストアド プロシージャのテーブル名やビュー名 (sys.data_spaces、sp_tableoption など)。  
   
 ## <a name="working-with-the-database-engine-query-editor"></a>データベース エンジン クエリ エディターを使用した作業  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に実装されている 4 つのエディターの 1 つです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターに実装されている機能の詳細と、このエディターを使用して実行できる主な作業については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)」をご覧ください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に実装されている 4 つのエディターの 1 つです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターに実装されている機能の詳細と、このエディターを使用して実行できる主な作業については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)」をご覧ください。  
   
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが開いているときは、次のボタンを持つ SQL エディター ツール バーが表示されます。  
   
- **Connect**  
+ **接続する**  
  **[サーバーへの接続]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、サーバーへの接続を確立できます。  
   
- **[接続解除]**  
+ **Disconnect (切断)**  
  現在のクエリ エディターをサーバーから接続解除します。  
   
  **[接続の変更]**  
@@ -68,16 +67,16 @@ ms.locfileid: "66064095"
  **[使用できるデータベース]**  
  接続を同じサーバー上の別のデータベースに変更します。  
   
- **Execute**  
+ **おい**  
  選択されているコードを実行します。コードが選択されていない場合は、クエリ エディター内のコード全体を実行します。  
   
- **デバッグ**  
+ **Debug**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを有効にします。 このデバッガーでは、ブレークポイントの設定、変数の監視、コードのステップ実行などのデバッグ操作がサポートされます。  
   
  **[クエリ実行のキャンセル]**  
  キャンセル要求をサーバーに送信します。 即座にキャンセルできないクエリもあります。そのようなクエリは、適切なキャンセル条件が整うまでキャンセルできません。 トランザクションが取り消されると、トランザクションがロールバックされる間に遅延が発生することがあります。  
   
- **[解析]**  
+ **Parse**  
  選択されているコードの構文をチェックします。 コードが選択されていない場合は、クエリ エディター ウィンドウ内のコード全体の構文をチェックします。  
   
  **[推定実行プランの表示]**  
@@ -122,7 +121,7 @@ ms.locfileid: "66064095"
  また、 **[表示]** メニューの **[ツール バー]** を選択し、 **[SQL エディター]** を選択して、SQL エディター ツール バーを追加することもできます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターのウィンドウが開いていない状態で SQL エディター ツール バーを追加した場合、ボタンは使用できません。  
   
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]** 、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]**、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
   
  **Continue**  
  ブレークポイントに達するまで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  
@@ -130,7 +129,7 @@ ms.locfileid: "66064095"
  **[すべて中断]**  
  中断が生じたときに、デバッガーがアタッチされているすべてのプロセスを中断するようにデバッガーを設定します。  
   
- **[デバッグの停止]**  
+ **デバッグ中に診断ツールを有効にします**  
  選択された [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウのデバッグ モードを解除して、標準の実行モードに戻します。  
   
  **[次のステートメントの表示]**  
@@ -148,7 +147,7 @@ ms.locfileid: "66064095"
  **Windows**  
  **[ブレークポイント]** ウィンドウまたは **[イミディエイト]** ウィンドウを開きます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

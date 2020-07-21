@@ -16,18 +16,18 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9852e5ee037cd8106e4022b3b30b30085339784c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d909e2e0321610feab8832587bd43e473c8032cb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906951"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996178"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定した浮動小数点値の 2 乗を返します。  
   
@@ -41,12 +41,12 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に float 型に変換できる**式**を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、半径が `1` インチで高さが `5` インチの円柱の体積を返します。  
   
 ```  
@@ -64,7 +64,7 @@ Cyl Vol
 15.707963267948966  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`volume` テーブル内の `containers` 列の値の 2 乗を返します。  
   
 ```  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 493513f21fbf61dd516160e61a7afb9e71e477fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 619a9186d659019a61220f44f7d8080b33a751f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723557"
 ---
-# <a name="mssqlserver33128"></a>MSSQLSERVER_33128
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_33128"></a>MSSQLSERVER_33128
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|33128|  
 |イベント ソース|MSSQLSERVER|  
@@ -42,7 +42,7 @@ ms.locfileid: "67908432"
 > [!NOTE]  
 > リング バッファーは完全には文書にまとめられていない内部コンポーネントであり、ユーザーが使用するためのものではありません。 リング バッファーからのメッセージは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポートに問い合わせる際に役立ちます。 リング バッファーを表示するには、sys.dm_os_ring_buffers 動的管理ビューに対してクエリを実行します。  
   
-|状態|[説明]|  
+|State|説明|  
 |---------|---------------|  
 |1|RC4 キーは、encryptbykey() 組み込み関数で使用されます。 組み込み関数は NULL を返します。 このメッセージは、リング バッファーにのみ表示されます。|  
 |2|RC4 キーは、decryptbykey() 組み込み関数で使用されます。 このメッセージは、リング バッファーにのみ表示されます。|  

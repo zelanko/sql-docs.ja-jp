@@ -1,6 +1,6 @@
 ---
-title: エンコーディングによるファイルの管理 | Microsoft Docs
-ms.custom: ''
+title: エンコーディングによるファイルの管理
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c75981961540081d8761bfb4cdf24028b41d1071
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 67106a11e7a42f6167c0d08df99917ed057f11f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262827"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251877"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

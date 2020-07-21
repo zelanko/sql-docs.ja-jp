@@ -1,6 +1,7 @@
 ---
-title: 'ページの自動修復 (可用性グループ: データベース ミラーリング) | Microsoft Docs'
-ms.custom: ''
+title: 可用性グループとデータベース ミラーリングのページの自動修復
+description: 'データベースが Always On 可用性グループまたはデータベース ミラーリング リレーションシップに参加している場合、特定の種類のページ破損が自動修復されます。 このトピックでは、エラーの種類とその解決策について説明します。 '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035274"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74822644"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ ms.locfileid: "68035274"
   
 -   [方法: ページの自動修復の試行結果を表示する](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> ページの自動修復が試行されるエラーの種類  
+##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a> ページの自動修復が試行されるエラーの種類  
  次の表に示すいずれかのエラーが原因でデータ ファイル操作が失敗した場合のみ、そのページにデータベース ミラーリングの自動修復が適用されます。  
   
-|エラー番号|[説明]|ページの自動修復の原因となるインスタンス|  
+|エラー番号|説明|ページの自動修復の原因となるインスタンス|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|オペレーティング システムがデータの巡回冗長検査 (CRC) を実行し、それに失敗した場合のみ処理が行われます。|ERROR_CRC。 このエラーのオペレーティング システムの値は 23 です。|  
 |824|論理エラー。|破損した書き込みや不適切なページ チェックサムなどの論理データ エラー。|  
@@ -55,17 +56,17 @@ ms.locfileid: "68035274"
  最近発生した 823 CRC エラーおよび 824 エラーを確認するには、 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) データベースの [suspect_pages](../../relational-databases/databases/msdb-database.md) テーブルを参照してください。  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="page-types-that-cannot-be-automatically-repaired"></a><a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
  次のコントロール ページの種類は、ページの自動修復機能では修復できません。  
   
 -   ファイル ヘッダー ページ (ページ ID 0)。  
   
 -   ページ 9 (データベースのブート ページ)。  
   
--   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
+-   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
   
  
-##  <a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
+##  <a name="handling-io-errors-on-the-principalprimary-database"></a><a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
  プリンシパル/プライマリ データベースでページの自動修復が試行されるのは、データベースが SYNCHRONIZED 状態にあり、そのデータベースのログ レコードがプリンシパル/プライマリ サーバーからミラー/セカンダリへ送信され続けている場合だけです。 ページの自動修復が試行される場合の基本的な処理順序を次に示します。  
   
 1.  プリンシパル/プライマリ データベースのデータ ページで読み取りエラーが発生すると、プリンシパル/プライマリは、該当するエラー状態が記録された行を [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルに挿入します。 この後、データベース ミラーリングの場合は、プリンシパルがミラーに対してページのコピーを要求します。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の場合は、プライマリが、すべてのセカンダリに要求をブロードキャストし、最初に応答したセカンダリからページを取得します。 この要求では、ページ ID と、現在フラッシュされたログの最後にある LSN を指定します。 要求対象のページは、 *復元待ち*としてマークされます。 これにより、ページの自動修復の試行時、このページにはアクセスできなくなります。 修復の試行時にこのページにアクセスしようとすると、エラー 829 (復元待ち) が発生して失敗します。  
@@ -79,7 +80,7 @@ ms.locfileid: "68035274"
 5.  ページ I/O エラーによって [遅延トランザクション](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)が発生した場合は、ページを修復した後で、プリンシパル/プライマリがそれらのトランザクションを解決しようとします。  
   
  
-##  <a name="SecondaryIOErrors"></a> ミラー/セカンダリ データベースでの I/O エラーの処理  
+##  <a name="handling-io-errors-on-the-mirrorsecondary-database"></a><a name="SecondaryIOErrors"></a> ミラー/セカンダリ データベースでの I/O エラーの処理  
  ミラー/セカンダリ データベースで発生したデータ ページの I/O エラーは通常、データベース ミラーリングでも [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でも同じように処理されます。  
   
 1.  データ ミラーリングでは、ミラーがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのミラーリング セッションは SUSPENDED 状態になります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、セカンダリ レプリカがログ レコードを再実行している最中にページ I/O エラーが 1 回でも検出されると、そのセカンダリ データベースは SUSPENDED 状態になります。 この時点で、ミラー/セカンダリは、該当するエラー状態が記録された行を **suspect_pages** テーブルに挿入します。 次に、ミラー/セカンダリは、プリンシパル/プライマリにそのページのコピーを要求します。  
@@ -91,11 +92,11 @@ ms.locfileid: "68035274"
      要求したページをプリンシパル/プライマリから受信できない場合、ページの自動修復の試行は失敗です。 データベース ミラーリングでは、ミラーリング セッションは中断されたままになります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、セカンダリ データベースが中断されたままになります。 ミラーリング セッションまたはセカンダリ データベースを手動で再開すると、破損したページが同期フェーズ時に再びヒットします。  
   
  
-##  <a name="DevBP"></a> Developer Best Practice  
+##  <a name="developer-best-practice"></a><a name="DevBP"></a> Developer Best Practice  
  ページの自動修復は、バックグラウンドで実行される非同期プロセスです。 したがって、読み取ることのできないページを要求した場合はデータベース操作に失敗し、その原因を示すエラー コードが返されます。 ミラー化されたデータベースまたは可用性データベースのアプリケーションを開発するときは、失敗した操作を例外として処理できるようにする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー コードが 823、824、または 829 のときは、その操作を後で再試行してください。  
   
 
-##  <a name="ViewAPRattempts"></a> 方法:ページの自動修復の試行結果を表示する  
+##  <a name="how-to-view-automatic-page-repair-attempts"></a><a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
  以下の動的管理ビューは、特定の可用性データベースまたはミラー化された特定のデータベースに対して最近試行されたページの自動修復に対応する行を返します (データベースあたり最大 100 行)。  
   
 -   **Always On 可用性グループ:**  

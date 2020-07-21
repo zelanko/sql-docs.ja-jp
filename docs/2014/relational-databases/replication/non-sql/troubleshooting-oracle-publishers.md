@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065829"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
   このトピックでは、Oracle パブリッシャーを構成および使用する際に発生する可能性のあるいくつかの問題を示します。  
@@ -66,9 +65,9 @@ ms.locfileid: "63021907"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle パブリッシャーが別のディストリビューターに関連付けられている  
  Oracle パブリッシャーは、1 つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにのみ関連付けることができます。 別のディストリビューターを Oracle パブリッシャーに関連付ける場合は、関連付けられているディストリビューターを削除してから、別のディストリビューターを使用する必要があります。 ディストリビューターを最初に削除しない場合、次のエラー メッセージのいずれかが表示されます。  
   
--   "Oracle サーバー インスタンス '\<*OraclePublisherName*>' は、'\<*SQLServerDistributorName*>' をディストリビューターとして使用するように構成されています。 '\<*NewSQLServerDistributorName*>' をディストリビューターとして使用するためには、Oracle サーバー インスタンスの現在のレプリケーション構成を削除する必要があります。その場合、サーバー インスタンス上のすべてのパブリケーションが削除されます。"  
+-   "Oracle サーバーインスタンス ' \<*OraclePublisherName*> ' は、' ' をディストリビューターとして使用するように既に構成されてい \<*SQLServerDistributorName*> ます。 ' ' のディストリビューターとしての使用を開始するには、 \<*NewSQLServerDistributorName*> Oracle サーバーインスタンスの現在のレプリケーション構成を削除する必要があります。これにより、そのサーバーインスタンス上のすべてのパブリケーションが削除されます。 "  
   
--   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
+-   "Oracle サーバー ' \<*OracleServerName*> ' は、 \<*OraclePublisherName*> ディストリビューター '. ' のパブリッシャー ' ' として既に定義されてい \<*SQLServerDistributorName*> *\<DistributionDatabaseName>* ます。 パブリッシャーを削除するか、パブリックシノニム ' *\<SynonymName>* ' を削除して再作成してください。 "  
   
  Oracle パブリッシャーが削除されると、Oracle データベース内のレプリケーション オブジェクトが自動的にクリーンアップされます。 ただし、Oracle レプリケーション オブジェクトを手動でクリーンアップすることが必要な場合もあります。 レプリケーションで作成した Oracle レプリケーション オブジェクトを手動でクリーン アップするには、次の手順を実行します。  
   
@@ -81,14 +80,14 @@ ms.locfileid: "63021907"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>主キーの欠如に関する SQL Server エラー 21663 が発生する  
  トランザクション パブリケーションのアーティクルには、有効な主キーが必要です。 有効な主キーがない場合は、アーティクルを追加しようとすると、次のエラー メッセージが表示されます。  
   
- "ソース テーブル [\<*TableOwner*>].[\<*TableName*>] に有効な主キーが見つかりません。"  
+ "ソーステーブル [ \<*TableOwner*> ]. [] の有効な主キーが見つかりません \<*TableName*>  
   
  主キーの要件の詳細については、トピック「 [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md)」の「一意のインデックスおよび制約」を参照してください。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>リンク サーバー ログインの重複に関する SQL Server エラー 21642 が発生する  
  Oracle パブリッシャーを最初に構成するときに、パブリッシャーとディストリビューター間の接続用にリンク サーバー エントリが作成されます。 リンク サーバーには、Oracle TNS サービスと同じ名前が付けられます。 同じ名前でリンク サーバーを作成しようとすると、次のエラー メッセージが表示されます。  
   
- "異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー ' *\<LinkedServerName>* ' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。"  
+ "異種パブリッシャーにはリンク サーバーが必要です。 ' ' という名前のリンクサーバーは *\<LinkedServerName>* 既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。"  
   
  このエラーは、リンク サーバーを直接作成しようとしたり、Oracle パブリッシャーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューター間のリレーションシップを以前に削除し、再構成しようとしている場合に発生する可能性があります。 パブリッシャーを再構成しようとしているときにこのエラーが表示される場合は、[sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql) を使用してリンク サーバーを削除してください。  
   
@@ -155,7 +154,7 @@ ms.locfileid: "63021907"
   
 2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **regedit**」と入力し、 **[OK]** をクリックします。  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers に移動します。  
+3.  HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server に移動します。 \\ *\<InstanceName>*  
   
      [Providers] の下に、[OraOLEDB.Oracle] という名前のフォルダーがあります。 このフォルダーの中に、 **[AllowInProcess]** という名前の DWORD 値があり、値は **1**になっている必要があります。  
   
@@ -205,7 +204,7 @@ ms.locfileid: "63021907"
 ## <a name="oracle-error-ora-01555"></a>Oracle エラー ORA-01555  
  次の Oracle データベース エラーは、スナップショット レプリケーションに関連するものではありません。このエラーは、Oracle でのデータの読み取り一貫性ビューの構築方法に関連します。  
   
- "ORA-01555:スナップショットが古すぎる"  
+ "ORA-01555: Snapshot too old"  
   
  Oracle では、ロールバック セグメントと呼ばれるオブジェクトを使用して、SQL ステートメントの発行時点のデータの読み取り一貫性ビューを構築します。 "Snapshot too old" エラーは、ロールバック情報が他の同時接続セッションによって上書きされた場合に発生する可能性があります。 Oracle 9i よりも前のバージョンでは、このエラーの発生頻度を減らす方法として、ロールバック セグメントのサイズや数を増やしたり、大きいトランザクションを特定のロールバック セグメントに割り当てる方法が推奨されていました。  
   

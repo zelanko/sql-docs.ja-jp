@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:接続サーバー間でデータを継続的にレプリケーション |Microsoft Docs
+title: 'チュートリアル: 常時接続サーバー間でのデータのレプリケーション | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047618"
 ---
-# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>チュートリアル:常時接続サーバー間でのデータのレプリケーション
+# <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>チュートリアル : 常時接続サーバー間でのデータのレプリケーション
   レプリケーションは、常時接続サーバー間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、レプリケーション トポロジを簡単に設定し、管理できます。 このチュートリアルでは、常時接続サーバー間にレプリケーション トポロジを設定する方法を学習します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
@@ -46,17 +45,17 @@ ms.locfileid: "62655393"
     >  既定では、レプリケーションは [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] にインストールされません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。  
+>  で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 **sysadmin**固定サーバーロールのメンバーであるログインを使用して、パブリッシャーおよびサブスクライバーに接続する必要があります。  
   
- **このチュートリアルの推定所要時間: 30 分。**  
+ **このチュートリアルの推定所要時間:30 分。**  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
   
--   [レッスン 1:トランザクション レプリケーションを使用してデータのパブリッシュ](lesson-1-publishing-data-using-transactional-replication.md)  
+-   [レッスン 1 : トランザクション レプリケーションを使用したデータのパブリッシュ](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [レッスン 2:トランザクション パブリケーションに対するサブスクリプションを作成します。](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [レッスン 2 : トランザクション パブリケーションへのサブスクリプションの作成](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
--   [レッスン 3:サブスクリプションの検証と待機時間の計測](lesson-3-validating-the-subscription-and-measuring-latency.md)  
+-   [レッスン 3 : サブスクリプションの検証と待機時間の計測](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   
  [チュートリアルを開始する](transactional/transactional-replication.md)  
   

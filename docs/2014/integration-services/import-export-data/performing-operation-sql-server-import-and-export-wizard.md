@@ -9,40 +9,39 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3abd9f9c0e5b2b76a2966e7c8da5583c5364d133
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767904"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424849"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**操作を実行して**ページで、進行状況と、インポート/エクスポート操作の結果を表示し、必要な場合は、操作を中断します。  
+  [**操作の実行**] ページを使用すると、インポート/エクスポート操作の進行状況と結果を表示したり、必要に応じて操作を中断したりできます。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
+ このウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限の詳細については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **操作**  
  操作の一部であるそれぞれのアクションを表示します。  
   
- **ステータス**  
+ **状態**  
  各アクションが成功したか、失敗したかを表示します。  
   
  **メッセージ**  
  アクションによって生成された表示メッセージおよびエラー メッセージを表示します。  
   
- **[フィルター]**  
- エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 選択して、既定の表示に戻すことができます**すべてのアクションを表示**します。  
+ **Assert**  
+ エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 [**すべてのアクションを表示]** を選択すると、既定の表示に戻すことができます。  
   
- **[停止]**  
- 使用して、操作を必要に応じて、中断、**停止**ボタンをクリックします。  
+ **Stop**  
+ 必要に応じて、[**停止**] ボタンを使用して操作を中断します。  
   
- **レポート**  
+ **Report**  
  結果レポートを表示したり、ファイルに保存することができます。さらに、レポートをクリップボードにコピーすることも、電子メールで送信することもできます。  
   
   

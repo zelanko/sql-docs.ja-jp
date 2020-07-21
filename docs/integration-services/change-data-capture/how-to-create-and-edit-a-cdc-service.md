@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 65fcfef4cbb28d8c07190dbd71819c89d269477e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9df960fa5018ad8f4368c99a91c5aed3fe0aab15
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011359"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294788"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service を作成および編集する方法
 
@@ -66,6 +66,6 @@ ms.locfileid: "68011359"
   
 ## <a name="see-also"></a>参照  
  [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Oracle CDC Service の作成と編集](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

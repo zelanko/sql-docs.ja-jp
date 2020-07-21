@@ -1,7 +1,8 @@
 ---
 title: フォーマット ファイルを使用したテーブル列のスキップ (SQL Server) | Microsoft Docs
+description: この記事では、スキップされた列のデータがソース データ ファイルに存在しない場合に、フォーマット ファイルを使用してテーブル列のインポートをスキップする方法について説明します。
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024979"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007189"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この記事では、スキップされた列のデータがソース データ ファイルに存在しない場合に、フォーマット ファイルを使用してテーブル列のインポートをスキップする方法について説明します。 データ ファイルに含めることができるフィールドの数はインポート先のテーブルの列の数よりも少なくなります。つまり、インポート先のテーブルで次の 2 つの条件のうち少なくともどちらかが true である場合のみ、列のインポートをスキップすることができます。
 -   スキップされる列が NULL 値である。
@@ -45,7 +46,7 @@ GO
   
 この記事の例では、サンプル データ ファイル `myTestSkipCol2.dat` も使用します。 インポート先のテーブルには 3 つの列が含まれていますが、このデータ ファイルには 2 つのフィールドしか含まれていません。
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -58,8 +59,6 @@ XML 以外のフォーマット ファイルまたは XML フォーマット フ
 1.   **bcp** コマンドライン ユーティリティを使用して、既定のフォーマット ファイルを作成します。
 
 2.   テキスト エディターで、既定のフォーマット ファイルを変更します。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 変更後のフォーマット ファイルで、存在するそれぞれのフィールドをインポート先のテーブルの対応する列にマップする必要があります。 どのテーブル列 (複数可) をスキップするかも指定する必要があります。 
 
@@ -81,7 +80,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  次のスクリーンショットに、この既定のフォーマット ファイルのサンプルで使用されている値を示します。 
   
- ![myTestSkipCol 用の既定の XML 以外のフォーマット ファイル](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の XML 以外のフォーマット ファイル")  
+ ![myTestSkipCol 用の既定の非 XML 形式ファイル](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の非 XML 形式ファイル")  
   
 > [!NOTE]  
 >  フォーマット ファイル フィールドの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」をご覧ください。  
@@ -222,9 +221,9 @@ GO
 
 `OPENROWSET(BULK...)` を使用してテーブル列をスキップするために XML フォーマット ファイルを使用するには、次のように選択リストおよび対象テーブルの列リストを明示的に指定する必要があります。  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 次の例では、 `OPENROWSET` 一括行セット プロバイダーと `myTestSkipCol2.xml` フォーマット ファイルを使用します。 この例では、 `myTestSkipCol2.dat` データ ファイルを `myTestSkipCol` テーブルに一括インポートします。 必要に応じて、ステートメントでは、選択リストおよびターゲット テーブルの列の一覧を明示的に指定します。  
   
@@ -243,7 +242,7 @@ GO
 ```
 
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

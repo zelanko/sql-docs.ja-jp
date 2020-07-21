@@ -1,6 +1,6 @@
 ---
 title: Excel デバイス情報設定 | Microsoft Docs
-ms.date: 03/16/2017
+ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -11,21 +11,23 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e63af3904696e053d7e74419bd7cffdd23aa117
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65504011"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "76761826"
 ---
 # <a name="excel-device-information-settings"></a>Excel  デバイス情報設定
   次の表は、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 形式で表示するためのデバイス情報設定を示しています。  
   
-|設定|[値]|  
+|設定|値|  
 |-------------|-----------|  
-|**OmitDocumentMap**|ドキュメント マップをサポートするレポートで、ドキュメント マップを省略するかどうかを示します。 既定値は **false**です。|  
-|**OmitFormulas**|表示レポートで式を省略するかどうかを示します。 既定値は **false**です。|  
-|**SimplePageHeade**rs|レポートのページ ヘッダーを Excel ページのヘッダーに表示するかどうかを示します。 値 **false** は、ページ ヘッダーがワークシートの 1 行目に表示されることを示します。 既定値は **false**です。|  
+|**OmitDocumentMap**|ドキュメント マップをサポートするレポートで、ドキュメント マップを省略するかどうかを示します。 既定値は **false** です。|  
+|**OmitFormulas**|表示レポートで式を省略するかどうかを示します。 既定値は **false** です。|  
+|**SimplePageHeaders**|レポートのページ ヘッダーを Excel ページのヘッダーに表示するかどうかを示します。 値 **false** は、ページ ヘッダーがワークシートの 1 行目に表示されることを示します。 既定値は **false** です。|  
+|**DynamicImageDpi**|グラフ、ゲージ、マップなどの動的画像の解像度。 既定値は **96**です。 (Power BI Report Server (2020 年 1 月) 以降で使用可能)|  
+
   
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

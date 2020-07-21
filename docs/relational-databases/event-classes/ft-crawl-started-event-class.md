@@ -12,20 +12,20 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f559d5e46f06e8bdf33687713ce2dc0c5c49cb78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 258b2de1778476482a2939f8ef7f4e4f464b923d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737372"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **FT:Crawl Started** イベント クラスは、フルテキスト クロール (作成) が開始されたことを示します。 このイベント クラスを使用して、クロール要求がワーカー タスクによって実際に取得されたかどうかを確認します。  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Crawl Started イベント クラスのデータ列  
+## <a name="ft-crawl-started-event-class-data-columns"></a>FT:Crawl Started イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|フルテキスト クロールが開始されたデータベースの ID です。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|イベントの種類 = 155。|27|いいえ|  

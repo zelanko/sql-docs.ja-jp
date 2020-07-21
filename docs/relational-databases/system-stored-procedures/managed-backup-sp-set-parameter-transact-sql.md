@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup。 sp_set_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942032"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052918"
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup。 sp_set_parameter (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  指定された Smart Admin システム パラメーターの値を設定します。  
+  指定した Smart Admin システムパラメーターの値を設定します。  
   
- 使用可能なパラメーターは、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連します。 これらのパラメーターは、電子メール通知を設定し、特定の拡張イベントを有効にする、ユーザー ポリシー ベースの管理ポリシーの設定を有効にするに使用されます。 パラメーター名とパラメーター値のペアを指定する必要があります.  
+ 使用可能なパラメーターは、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連します。 これらのパラメーターは、電子メール通知の設定、特定の拡張イベントの有効化、およびユーザー設定ポリシーベースの管理ポリシーの有効化に使用されます。 パラメーター名とパラメーター値のペアを指定する必要があります。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,36 +44,36 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @parameter_name  
- 値を設定するパラメーターの名前。 @parameter_name nvarchar (128) です。 使用可能なパラメーター名は**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**StorageOperationDebugXevent**します。  
+ 値を設定するパラメーターの名前。 @parameter_nameNVARCHAR (128) です。 使用できるパラメーター名は、 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**storageoperationdebugxevent**です。  
   
  @parameter_value  
- 設定するパラメーターの値。 @parameter 値は、nvarchar (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
+ 設定するパラメーターの値。 @parameter値は NVARCHAR (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = '電子メール'  
+-   @parameter_name= ' SSMBackup2WANotificationEmailIds ': @parameter_value = ' email '  
   
--   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' |false'}  
+-   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' |' false '}  
   
--   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value = {'true' |false'}  
+-   @parameter_name= ' SSMBackup2WADebugXevent ': @parameter_value = {' true ' |' false '}  
   
--   @parameter_name = 'FileRetentionDebugXevent' : @parameter_value  = { 'true' | 'false' }  
+-   @parameter_name= ' FileRetentionDebugXevent ': @parameter_value = {' true ' |' false '}  
   
--   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
+-   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' |' false '}  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- ステートメントまたはルーチンを実行するときに、ユーザーが知っておく必要がベスト プラクティスについて説明する省略可能なセクションです。  
+ ステートメントまたはルーチンの実行時にユーザーが知る必要のあるベストプラクティスについて説明する省略可能なセクションです。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 必要があります**EXECUTE**に対する**managed_backup.sp_set_parameter**ストアド プロシージャ。  
+ Managed_backup に対する**EXECUTE**権限が必要です **。 sp_set_parameter**ストアドプロシージャ。  
   
-## <a name="examples"></a>使用例  
- 次の例では、運用を有効にし、拡張イベントをデバッグします。  
+## <a name="examples"></a>例  
+ 次の例では、拡張イベントの操作とデバッグを有効にします。  
   
 ```  
 -- to enable operational events  
@@ -88,7 +87,7 @@ Go
   
 ```  
   
- 次の例では、エラーおよび警告の電子メール通知を有効にしに通知の送信に使用する emailID を設定します。  
+ 次の例では、エラーと警告の電子メール通知を有効にし、通知をに送信するために使用する emailID を設定します。  
   
 ```  
 Use msdb  

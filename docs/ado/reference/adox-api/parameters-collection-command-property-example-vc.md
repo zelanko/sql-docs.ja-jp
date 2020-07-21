@@ -1,5 +1,5 @@
 ---
-title: Parameters コレクションおよび Command プロパティの例 (vc++) |Microsoft Docs
+title: Parameters Collection、Command プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Parameters collection [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5197f81ed9363a1df128281bd2ae6020bdb6bf14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa623c7141c7c9fe0a9cacc00ed35cf686108511
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965602"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763773"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters コレクションおよび Command プロパティの例 (VC++)
-次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)プロシージャのパラメーター情報を取得するオブジェクト。  
+次のコード[は、command プロパティを](../../../ado/reference/adox-api/command-property-adox.md) [command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと共に使用して、プロシージャのパラメーター情報を取得する方法を示しています。  
   
 ```  
 // BeginProcedureParametersCpp.cpp  
@@ -90,7 +90,7 @@ void ProcedureParametersX() {
         printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
     }  
     catch(...) {  
-        cout << "Error occured in ProcedureParametersX...." << endl;  
+        cout << "Error occurred in ProcedureParametersX...." << endl;  
     }  
 }  
 ```

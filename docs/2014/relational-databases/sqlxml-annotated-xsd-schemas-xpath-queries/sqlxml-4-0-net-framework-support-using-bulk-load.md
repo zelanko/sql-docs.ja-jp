@@ -1,5 +1,5 @@
 ---
-title: .NET 環境での SQLXML 一括読み込みの使用 |マイクロソフトのドキュメント
+title: .NET 環境での SQLXML 一括読み込みの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,27 +12,26 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], XML Bulk Load
 - bulk load [SQLXML], .NET environment
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014903"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060109"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 環境での SQLXML 一括読み込みの使用
-  ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、次を参照してください。 [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)します。  
+  ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、「 [Xml データの一括読み込みの実行 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)」を参照してください。  
   
  マネージド環境から SQLXML 一括読み込み COM オブジェクトを使用するには、このオブジェクトにプロジェクト参照を追加する必要があります。 これによって、一括読み込み COM オブジェクトのマネージド ラッパー インターフェイスが生成されます。  
   
 > [!NOTE]  
->  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 マルチ スレッド環境で一括ロード コンポーネントを実行しようとすると、次の追加情報を含む InvalidCastException 例外が表示されます。「インターフェイス SQLXMLBULKLOADLib.ISQLXMLBulkLoad の QueryInterface が失敗しました。」 回避するには、一括読み込みオブジェクト シングル スレッド アクセスを含むオブジェクトを作成する (などを使用して、 **[STAThread]** 属性のサンプルに示すように)。  
+>  マネージド XML 一括読み込みはマネージド ストリームでは動作せず、ネイティブ ストリームのラッパーが必要です。 SQLXML 一括読み込みコンポーネントはマルチスレッド環境 ('[MTAThread]' 属性) では動作しません。 マルチスレッド環境で一括読み込みコンポーネントを実行しようとすると、InvalidCastException 例外が発生し、次の追加情報が表示されます。 "インターフェイス SQLXMLBULKLOADLib. がの QueryInterface に失敗しました。" これを回避するには、一括読み込みオブジェクトを含むオブジェクトをシングルスレッドにアクセスできるようにします (たとえば、サンプルに示すように、[を使用する **]** を使用します)。  
   
  ここでは、データベースに XML データの一括読み込みを行う、実際の C# サンプル アプリケーションを紹介します。 実際のサンプルを作成するには、次の手順に従います。  
   
-1.  次の表を作成します。  
+1.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Ord (  
@@ -111,11 +110,11 @@ ms.locfileid: "66014903"
   
 5.  C# コンソール アプリケーションを作成します。  
   
-6.  **プロジェクト**メニューの **参照の追加**します。  
+6.  [**プロジェクト**] メニューの [**参照の追加**] をクリックします。  
   
-7.  **COM**  タブで  **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll) をクリック**OK**します。 表示されます、 **Interop.SQLXMLBULKLOADLib**プロジェクトで作成されたアセンブリ。  
+7.  [ **COM** ] タブで、[ **Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll)] を選択し、[ **OK**] をクリックします。 プロジェクトで作成された**Interop. SQLXMLBULKLOADLib**アセンブリが表示されます。  
   
-8.  Main() メソッドを次のコードに置き換え、 更新プログラム、 **ConnectionString**プロパティと、スキーマとデータ ファイルへのファイル パス。  
+8.  Main() メソッドを次のコードに置き換え、 **ConnectionString**プロパティと、スキーマファイルとデータファイルへのファイルパスを更新します。  
   
     ```  
     [STAThread]  
@@ -139,7 +138,7 @@ ms.locfileid: "66014903"
 9. 作成したテーブルに XML を読み込むには、プロジェクトをビルドして実行します。  
   
     > [!NOTE]  
-    >  .NET Framework で提供される tlbimp.exe ツールを使用して、一括読み込みコンポーネント (xblkld4.dll) への参照を追加することもできます。 このツールでは、ネイティブ DLL (xblkld4.dll) のマネージド ラッパーが作成され、任意の .NET プロジェクトで使用できます。 以下に例を示します。  
+    >  .NET Framework で提供される tlbimp.exe ツールを使用して、一括読み込みコンポーネント (xblkld4.dll) への参照を追加することもできます。 このツールでは、ネイティブ DLL (xblkld4.dll) のマネージド ラッパーが作成され、任意の .NET プロジェクトで使用できます。 次に例を示します。  
   
     ```  
     c:\>tlbimp xblkld4.dll  
@@ -148,6 +147,6 @@ ms.locfileid: "66014903"
      この例では、.NET Framework プロジェクトで使用できるマネージド ラッパー DLL (SQLXMLBULKLOADLib.dll) が作成されます。 新しく作成した DLL へのプロジェクト参照を、.NET Framework で追加します。  
   
 ## <a name="see-also"></a>参照  
- [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML データの一括読み込みの実行 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

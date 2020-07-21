@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 3380531a26e062d6b06c2f08cb5bc36a8df55004
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262982"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>法的通知 (SSMA for Oracle)
@@ -35,7 +35,7 @@ SAP NetWeaver は、ドイツ SAP AG のドイツおよびその他の国にお�
 記載されている会社名、製品名には、各社の商標のものもあります。  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server のサポートおよびアップグレードに関するドキュメント ポリシー  
-SQL Server のドキュメントに記載されている内容は、十分なテストを実施した後にはじめて公開されます。 -SQL Server オンライン ブック、readme ファイル、既知の問題ドキュメント、およびサポート技術情報の記事 - 製品ドキュメントには、SQL Server の機能とは安全にすべての顧客によって一般的な使用するのに十分な堅牢な機能に関する内容が含まれています。 このポリシーは、リリースおよびサービス パックの Readme ファイルを含む、すべての SQL Server のドキュメントに適用されます。Readme は、オンライン ブックの追加ファイルとして扱われます。  
+SQL Server のドキュメントに記載されている内容は、十分なテストを実施した後にはじめて公開されます。 製品ドキュメント-SQL Server オンラインブック、readme ファイル、既知の問題、およびサポート技術情報の記事-すべてのお客様が一般に使用するのに十分な堅牢性を備えた SQL Server の機能に関するコンテンツが含まれています。 このポリシーは、リリースおよびサービス パックの Readme ファイルを含む、すべての SQL Server のドキュメントに適用されます。Readme は、オンライン ブックの追加ファイルとして扱われます。  
   
 機能によっては、お客様が直接使用しないものもあり、そのような機能に関してはドキュメントに記載されていません。 Microsoft が発行する SQL Server のドキュメントに記載されていない機能については、サード パーティの書籍や Web サイトの内容は Microsoft カスタマー サポートによってサポートされません。実稼働データベースやアプリケーションでは使用しないでください。  
   

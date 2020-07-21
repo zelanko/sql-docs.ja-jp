@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5e67b62ec00e2dd98ff4289c1f725892592340e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 006e3d0d5e92dea8146897d57da394b974782813
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787508"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>グラフ、警告、ログ、およびレポートの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   システム モニターを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成できます。  
   
 ## <a name="charts"></a>グラフ  
@@ -57,7 +57,7 @@ ms.locfileid: "68024758"
   
  ログ ファイルには、トラブルシューティングやプランニングに役立つ豊富な情報が記録されています。 現在の利用状況に関するグラフ、警告、およびレポートが即時のフィードバックを与えるのに対して、ログ ファイルは、長期間にわたってカウンターを追跡できます。 このため、情報をより徹底的に検査し、システムのパフォーマンスを文書化することができます。  
   
-## <a name="reports"></a>[レポート]  
+## <a name="reports"></a>Reports  
  レポートを使用すると、選択したオブジェクトに対して、絶えず変化し続けるカウンター値とインスタンス値を表示できます。 値は、各インスタンスの列に表示されます。 レポート間隔を調整したり、スナップショットを印刷したり、データをエクスポートすることもできます。 raw 番号を表示する必要がある場合には、レポートを使用します。  
   
  グラフ、警告、ログ、およびレポートの作成、または Windows オブジェクトとカウンターの詳細については、Windows のマニュアルを参照してください。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d8271b6279910321058d01c7b2f96b1df62bd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003349"
 ---
 # <a name="get-information-about-event-notifications"></a>イベント通知に関する情報の取得
   次のカタログ ビューは、イベント通知に関するメタデータのクエリに使用できます。  
@@ -29,14 +28,14 @@ ms.locfileid: "63015314"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  任意のイベント通知に関するメタデータを表示する**sys.event_notifications**レベルには、少なくとも、データベースで作成された、次がある必要があります。制御、ALTER、TAKE OWNERSHIP、データベースに対する VIEW DEFINITION 権限またはイベント通知の所有者である、または ALTER ANY DATABASE EVENT NOTIFICATION 権限を持っています。 特定のキューの作成、イベント通知の最小値で以下が必要。制御、ALTER、TAKE OWNERSHIP、オブジェクトに対する VIEW DEFINITION 権限またはイベント通知の所有者である、または ALTER ANY DATABASE EVENT NOTIFICATION 権限を持っています。  
+>  データベース レベルで作成した **sys.event_notifications** の任意のイベント通知に関するメタデータを表示するには、少なくとも、データベースに対して CONTROL 権限、ALTER 権限、TAKE OWNERSHIP 権限、または VIEW DEFINITION 権限を持っているか、イベント通知の所有者であるか、ALTER ANY DATABASE EVENT NOTIFICATION 権限を持っている必要があります。 特定のキューで作成したイベント通知の場合は、少なくとも、オブジェクトに対して CONTROL 権限、ALTER 権限、TAKE OWNERSHIP 権限、または VIEW DEFINITION 権限を持っているか、イベント通知の所有者であるか、ALTER ANY DATABASE EVENT NOTIFICATION 権限を持っている必要があります。  
   
  **サーバーレベルのイベント通知に関する情報を取得するには**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  少なくとも次が必要です。コントロールまたはサーバー上の任意の定義のアクセス許可の表示、ログオンまたはイベント通知の所有者であるまたは任意のイベント通知に関するメタデータを表示する ALTER ANY EVENT NOTIFICATION 権限を持っている**sys.server_event_notifications**.  
+>  **sys.server_event_notifications**の任意のイベント通知に関するメタデータを表示するには、少なくとも、サーバーに対して CONTROL 権限または VIEW ANY DEFINITION 権限を持っているか、イベント通知のログオンまたは所有者であるか、ALTER ANY EVENT NOTIFICATION 権限を持っている必要があります。  
   
  **イベント通知を発生させることができるすべてのイベントに関する情報を取得するには**  
   

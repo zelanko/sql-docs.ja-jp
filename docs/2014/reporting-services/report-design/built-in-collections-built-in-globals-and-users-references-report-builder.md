@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106439"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS)
@@ -26,10 +26,10 @@ ms.locfileid: "66106439"
 ## <a name="using-the-globals-collection"></a>Globals コレクションの使用  
  `Globals` コレクションには、レポートのグローバル変数が保持されます。 デザイン画面では、これらの変数は、`[&ReportName]` など、先頭に & (アンパサンド) が付いた状態で表示されます。 次の表では、`Globals` コレクションのメンバーについて説明します。  
   
-|**Member**|**型**|**[説明]**|  
+|**メンバー**|**Type**|**説明**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|レポートの実行を開始した日付と時刻です。|  
-|PageNumber|`Integer`|ページ番号をリセットした改ページを基準とする現在のページ番号です。 レポート処理の開始時、初期値は 1 に設定されています。 ページ番号は、表示されるページごとに増えます。<br /><br /> 四角形、データ領域、データ領域グループ、または、PageBreak プロパティで、マップの改ページ内のページ番号を ResetPageNumber プロパティを設定`True`します。 Tablix 列階層グループではサポートされていません。<br /><br /> PageNumber は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
+|PageNumber|`Integer`|ページ番号をリセットした改ページを基準とする現在のページ番号です。 レポート処理の開始時、初期値は 1 に設定されています。 ページ番号は、表示されるページごとに増えます。<br /><br /> 四角形、データ領域、データ領域グループ、またはマップの改ページ内のページ数を指定するには、[改ページ] プロパティの値をに`True`設定します。 Tablix 列階層グループではサポートされていません。<br /><br /> PageNumber は、ページ ヘッダーまたはページ フッターの式でのみ使用できます。|  
 |ReportFolder|`String`|レポートを含んでいるフォルダーへの完全なパスです。 これには、レポート サーバーの URL は含まれません。|  
 |ReportName|`String`|レポート サーバー データベースに格納されているとおりのレポートの名前です。|  
 |ReportServerUrl|`String`|レポートが実行されるレポート サーバーの URL です。|  
@@ -44,7 +44,7 @@ ms.locfileid: "66106439"
 ### <a name="renderformat"></a>RenderFormat  
  次の表では、`RenderFormat` のメンバーについて説明します。  
   
-|Member|型|説明|  
+|メンバー|種類|説明|  
 |------------|----------|-----------------|  
 |名前|`String`|RSReportServer 構成ファイルに登録されているレンダラーの名前です。<br /><br /> レポート処理または表示サイクルの特定の部分で使用できます。|  
 |IsInteractive|`Boolean`|現在の表示要求で対話型の表示形式を使用するかどうかを示します。|  
@@ -57,7 +57,7 @@ ms.locfileid: "66106439"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   次の式は、レポート名およびレポートが実行された時間を返します。 時間の書式は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の短い日付用の書式設定の文字列を使用して設定されます。  
+-   次の式は、レポート名およびレポートが実行された時間を返します。 時刻は、短い日付の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]書式設定文字列を使用して書式設定されます。  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66106439"
   
  次の表では、`User` コレクションのメンバーについて説明します。  
   
-|**Member**|**型**|**[説明]**|  
+|**メンバー**|**Type**|**説明**|  
 |----------------|--------------|---------------------|  
 |`Language`|`String`|レポートを実行しているユーザーの言語です。 たとえば、`en-US` のようにします。|  
 |`UserID`|`String`|レポートを実行しているユーザーの ID です。 Windows 認証を使用している場合、この値は現在のユーザーのドメイン アカウントです。 値は、Windows 認証またはカスタム認証を使用できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] セキュリティ拡張機能によって決まります。|  
@@ -88,11 +88,11 @@ ms.locfileid: "66106439"
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>スナップショット レポートまたは履歴レポートの UserID の識別  
  場合によっては、 *User!UserID* 変数を含むレポートは、レポートを参照している現在のユーザー固有のレポート データを表示することができません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [[式] ダイアログ ボックス (レポート ビルダー)](../expression-dialog-box-report-builder.md)   
- [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [数値と日付の書式設定 (レポート ビルダーおよび SSRS)](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [[式] ダイアログボックス &#40;レポートビルダー&#41;](../expression-dialog-box-report-builder.md)   
+ [式に含まれるデータ型 &#40;レポートビルダーと SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [&#40;レポートビルダーと SSRS&#41;の数値と日付の書式設定](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
   

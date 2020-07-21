@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 944b3e02894e86de9ff5c0f2254b71de7b76bd2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752364"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   セキュリティ保護可能なリソースに対して現在のユーザーが持つ有効な権限を評価します。 関連する関数は [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) です。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68019732"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  権限をチェックするセキュリティ保護可能なサブエンティティの名前を表す、**sysname** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] までのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、sub-securables に **'[** _sub name_ **]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[** _sub name_ **]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
   
  *sub-securable_class*  
  権限をチェックするセキュリティ保護可能なサブエンティティのクラスを表す、**nvarchar(60)** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  クエリが失敗した場合は NULL が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この組み込み関数では、現在のプリンシパルが、指定したセキュリティ保護可能なリソースに対して、特定の有効な権限を保持しているかどうかが評価されます。 HAS_PERMS_BY_NAME は、セキュリティ保護可能なリソースに対する有効な権限がユーザーにある場合は 1 を返し、有効な権限がない場合は 0 を返します。また、セキュリティ保護可能なクラスまたは権限が無効である場合は NULL を返します。 有効な権限とは、次のような権限です。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  
@@ -101,11 +101,11 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   列レベルのチェックの場合、"ANY" はサポートされません。 適切な権限を指定する必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. サーバー レベルの VIEW SERVER STATE 権限を保持しているかどうかをチェックする  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. サーバー プリンシパル Ps に対する IMPERSONATE 権限を保持しているかどうかをチェックする  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

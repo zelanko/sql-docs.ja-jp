@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f6f16706c12ad40a8d5720e8cb868c279dbefc30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031343"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298990"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
 
@@ -27,7 +27,7 @@ ms.locfileid: "68031343"
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
   
 > [!NOTE]  
->  変更データの増分読み込みを実行するパッケージのデータ フローをデザインするための 2 番目のタスクは、挿入、更新、および削除を分割することです。 このコンポーネントの詳細については、「[挿入、更新、および削除を処理する](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)」を参照してください。 変更データの増分読み込みを実行するパッケージを作成するプロセス全体の説明については、「[変更データ キャプチャ (SSIS)](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
+>  変更データの増分読み込みを実行するパッケージのデータ フローをデザインするための 2 番目のタスクは、挿入、更新、および削除を分割することです。 このコンポーネントの詳細については、「 [挿入、更新、および削除を処理する](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)」を参照してください。 変更データの増分読み込みを実行するパッケージを作成するプロセス全体の説明については、「[変更データ キャプチャ &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)」を参照してください。  
   
 ## <a name="applying-inserts"></a>挿入の適用  
  挿入を適用するには、新しい行で特別な処理は必要ないので、OLE DB 変換先を使用します。  

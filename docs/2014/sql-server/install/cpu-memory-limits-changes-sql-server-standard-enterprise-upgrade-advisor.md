@@ -1,5 +1,5 @@
 ---
-title: SQL Server Standard および Enterprise (アップグレード アドバイザー) CPU とメモリの制限に変更点 |Microsoft Docs
+title: SQL Server Standard および Enterprise の CPU およびメモリの制限に対する変更 (アップグレードアドバイザー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4b58d7b9d449a6fe9ab3e5de8a7e369d57d13d70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e3645dea1a929295d72c01a31fdc0e1f7999e9ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012855"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>SQL Server Standard および Enterprise での CPU およびメモリの制限の変更点 (アップグレード アドバイザー)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition および Enterprise Edition では、最大 64 GB のシステム メモリがサポートされています。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -40,6 +39,6 @@ ms.locfileid: "66095948"
 -   [SQL Server のエディション別の計算容量制限](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [アップグレードに関する問題を Reporting Services &#40;アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

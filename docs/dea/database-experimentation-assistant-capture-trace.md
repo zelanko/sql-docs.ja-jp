@@ -1,8 +1,8 @@
 ---
-title: SQL Server アップグレードのために Database Experimentation Assistant でトレースをキャプチャする
-description: Database Experimentation Assistant でトレースをキャプチャする
-ms.custom: ''
-ms.date: 10/22/2018
+title: SQL Server アップグレードのトレースをキャプチャする
+description: SQL Server アップグレードのために Database Experimentation Assistant でトレースをキャプチャする
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,66 +10,75 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653815"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "79289830"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースをキャプチャする
 
-Database Experimentation Assistant (DEA) のトレースキャプチャを使用して、キャプチャされたサーバーイベントのログを含むトレースファイルを作成できます。 キャプチャされたサーバーイベントは、特定の期間に特定のサーバーで発生するイベントです。 トレースキャプチャは、サーバーごとに1回実行する必要があります。
+Database Experimentation Assistant (DEA) を使用して、キャプチャされたサーバーイベントのログを含むトレースファイルを作成できます。 キャプチャされたサーバーイベントは、特定の期間に特定のサーバーで発生するイベントです。 トレースキャプチャは、サーバーごとに1回実行する必要があります。
 
 トレースキャプチャを開始する前に、すべてのターゲットデータベースをバックアップしていることを確認してください。
 
 SQL Server のクエリキャッシュは、評価結果に影響を与える可能性があります。 評価結果の一貫性を向上させるために、サービスアプリケーションで SQL Server サービス (MSSQLSERVER) を再起動することをお勧めします。
 
-## <a name="create-a-trace-capture"></a>トレースキャプチャを作成する
+## <a name="configure-a-trace-capture"></a>トレースキャプチャの構成
 
-1. DEA で、左側のメニューのメニューアイコンを選択します。 展開されたメニューで、カメラ アイコンの横にある **トレースのキャプチャ** を選択します。
+1. DEA の左側のナビゲーションバーで、カメラアイコンを選択し、[**すべてのキャプチャ**] ページで [**新しいキャプチャ**] を選択します。
 
-    ![メニューの [トレースのキャプチャ] を選択します。](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-capture.png)
+    ![DEA でキャプチャを作成する](./media/database-experimentation-assistant-capture-trace/dea-initiate-capture.png)
 
-1. **[新しいキャプチャ]** の下で、次の情報を入力または選択します。
+2. [**新しいキャプチャ**] ページの [**キャプチャの詳細**] で、次の情報を入力または選択します。
 
-    - **SQL Server インスタンス名**:サーバートレースをキャプチャする SQL Server 実行しているコンピューターの名前を入力します。
-    - **データベース名**:データベーストレースを開始するデータベースの名前を入力します。 データベースを指定しない場合は、サーバー上のすべてのデータベースでトレースがキャプチャされます。
-    - **トレースファイル名**:キャプチャのトレースファイルの名前を入力します。
-    - **ファイルの最大サイズ (MB)** :ファイルのロールオーバーサイズを選択します。 必要に応じて、選択したファイルサイズに新しいファイルが作成されます。 推奨されるロールオーバーサイズは 200 MB です。
-    - **期間 (分)** :トレースキャプチャを実行する時間の長さ (分単位) を選択します。
-    - **出力トレースファイルを格納するパス**:トレースファイルの保存先のパスを選択します。 
+    - **キャプチャ名**: キャプチャのトレースファイルの名前を入力します。
+    - **形式**: キャプチャの形式 (Trace または xevent) を指定します。
+    - [**期間**]: トレースキャプチャを実行する時間の長さ (分単位) を選択します。
+    - [**キャプチャの場所**]: トレースファイルの保存先のパスを選択します。
 
-    > [!NOTE]
-    > トレースファイルへのファイルパスは、SQL Server を実行しているコンピューター上にある必要があります。 SQL Server サービスが特定のアカウントに対して設定されていない場合、トレースファイルを書き込むために、指定したフォルダーに対する書き込みアクセス許可がサービスに必要な場合があります。
-    >
-    >
+        > [!NOTE]
+        > トレースファイルへのファイルパスは、SQL Server を実行しているコンピューター上にある必要があります。 SQL Server サービスが特定のアカウントに対して設定されていない場合、トレースファイルを書き込むために、指定したフォルダーに対する書き込みアクセス許可がサービスに必要な場合があります。
 
-    ![新しいキャプチャページ](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-inputs.png)
+3. **[はい、手動でバックアップ**を作成しました] を選択してバックアップを実行したことを確認します。 チェック ボックスをオンにします。
+
+4. [**キャプチャの詳細**] で、次の情報を入力または選択します。
+
+    - [**サーバーの種類**]: SQL server の種類 (**SqlServer**、 **AzureSqlDb**、 **AzureSqlManagedInstance**) を指定します。
+    - **サーバー名**: SQL Server のサーバー名または IP アドレスを指定します。
+    - **認証の種類**: [認証の種類] で [ **Windows**] を選択します。
+    - **データベース名**: データベーストレースを開始するデータベースの名前を入力します。 データベースを指定しない場合は、サーバー上のすべてのデータベースでトレースがキャプチャされます。
+
+5. シナリオに応じて、[**接続を暗号化**し、**サーバー証明書を信頼**する] チェックボックスをオンまたはオフにします。
+
+    ![新しいキャプチャページ](./media/database-experimentation-assistant-capture-trace/dea-new-capture.png)
 
 ## <a name="start-the-trace-capture"></a>トレースキャプチャを開始する
 
-必要な情報を入力または選択したら、 **[開始]** を選択してトレースのキャプチャを開始します。 入力した情報が有効な場合は、トレースキャプチャプロセスが開始されます。 そうしないと、無効なエントリを含むテキストボックスが赤色で強調表示されます。 
+1. 必要な情報を入力または選択したら、[**開始**] を選択してトレースキャプチャを開始します。
 
-選択または入力した値が正しいことを確認し、 **[開始]** を選択します。
+    入力した情報が有効な場合は、トレースキャプチャプロセスが開始されます。 そうしないと、無効なエントリを含むテキストボックスが赤色で強調表示されます。 エラーが発生した場合は、必要なエントリを修正し、[**開始**] を再度選択します。
 
-トレースキャプチャの実行が完了したら、 **[出力トレースファイルを格納するパス]** で指定したファイルの場所で、新しいトレースファイルを見つけます。 左側のメニューの下部にあるベルアイコンを選択して、キャプチャの進行状況を監視します。
+    トレースキャプチャが実行されている間、[**キャプチャの詳細**] の下にトレースキャプチャプロセスの状態と進行状況が表示されます。
 
-![トレースのキャプチャの進行状況](./media/database-experimentation-assistant-capture-trace/dea-capture-trace-progress.png)
+    ![キャプチャの進行状況の監視](./media/database-experimentation-assistant-capture-trace/dea-capture-running.png)
 
-### <a name="trace-file"></a>[トレース ファイル]
+2. トレースキャプチャの実行が完了すると、新しいトレース (.trc) ファイルが、初期構成中に指定した**キャプチャ場所**に保存されます。
 
-トレースキャプチャによって、指定した場所に .trc ファイルが書き込まれます。 トレースファイルには、SQL Server データベースのアクティビティのトレース結果が含まれます。 TRC ファイルは、SQL Server によって検出および報告されたエラーに関する詳細情報を提供するように設計されています。
+    ![完了したトレースキャプチャ](./media/database-experimentation-assistant-capture-trace/dea-capture-complete.png)
+
+    トレースファイルには、SQL Server データベースのアクティビティのトレース結果が含まれます。 .trc ファイルは、SQL Server によって検出および報告されたエラーに関する詳細情報を提供するように設計されています。
 
 ## <a name="frequently-asked-questions-about-trace-capture"></a>トレースキャプチャに関してよく寄せられる質問
 
 DEA でのトレースキャプチャに関してよく寄せられる質問を次に示します。
 
-### <a name="what-events-are-captured-when-i-run-a-trace-capture-on-a-production-database"></a>実稼働データベースでトレースキャプチャを実行すると、どのようなイベントがキャプチャされますか。
+**Q: 実稼働データベースでトレースキャプチャを実行すると、どのようなイベントがキャプチャされますか。**
 
-次の表に、トレース用に収集するイベントとそれに対応する列データの一覧を示します。
+次の表に、トレースで収集されるイベントと対応する列データを示します。
   
 |イベント名|テキストデータ (1)|バイナリデータ (2)|データベース ID (3)|ホスト名 (8)|アプリケーション名 (10)|ログイン名 (11)|SPID (12)|開始時刻 (14)|終了時刻 (15)|データベース名 (35)|イベントシーケンス (51)|Issystem で (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
@@ -89,43 +98,43 @@ DEA でのトレースキャプチャに関してよく寄せられる質問を�
 |**CursorUnprepare (77)**|*||*|*|*|*|*|*||*|*|*|  
 |**カーソルを閉じる (78)**|*||*|*|*|*|*|*||*|*|*|  
 
-### <a name="is-there-a-performance-effect-on-my-production-server-when-trace-capture-is-running"></a>トレースキャプチャが実行されている場合、実稼働サーバーにパフォーマンス上の影響はありますか。
-    
+**Q: トレースキャプチャが実行されている場合、実稼働サーバーにパフォーマンス上の影響はありますか。**
+
 はい、トレースコレクションの実行中は、パフォーマンスの影響が最小限に抑えられます。 このテストでは、3% のメモリ不足が発生しました。
-    
-### <a name="what-kind-of-permissions-are-required-for-capturing-traces-on-a-production-workload"></a>運用環境のワークロードでトレースをキャプチャするには、どのような種類のアクセス許可が必要ですか。
-    
+
+**Q: 運用ワークロードでトレースをキャプチャするには、どのような種類のアクセス許可が必要ですか。**
+
 - DEA アプリケーションでトレース操作を実行する Windows ユーザーには、SQL Server を実行しているコンピューターに対する sysadmin 権限が必要です。
 - SQL Server を実行しているコンピューターで使用されるサービスアカウントには、指定されたトレースファイルパスへの書き込みアクセス権が必要です。
 
-### <a name="can-i-capture-traces-for-the-entire-server-or-only-on-a-single-database"></a>サーバー全体または1つのデータベースのみのトレースをキャプチャできますか。
-    
+**Q: サーバー全体または1つのデータベースのみのトレースをキャプチャすることはできますか。**
+
 DEA を使用すると、サーバー内のすべてのデータベースまたは単一のデータベースのトレースを取り込むことができます。
-    
-### <a name="i-have-a-linked-server-configured-in-my-production-environment-do-those-queries-show-up-in-the-traces"></a>実稼働環境にリンクサーバーが構成されています。 これらのクエリはトレースに表示されますか。
-    
-サーバー全体のトレースキャプチャを実行している場合は、リンクサーバークエリを含むすべてのクエリがトレースによってキャプチャされます。 サーバー全体のトレースキャプチャを実行するには、 **[新しいキャプチャ]** の **[データベース名]** ボックスを空のままにします。
-    
-### <a name="whats-the-minimum-recommended-time-for-production-workload-traces"></a>実稼働ワークロードトレースで推奨される最小時間は何ですか?
-    
+
+**Q: 実稼働環境にリンクサーバーが構成されています。これらのクエリはトレースに表示されますか。**
+
+サーバー全体のトレースキャプチャを実行している場合は、リンクサーバークエリを含むすべてのクエリがトレースによってキャプチャされます。 サーバー全体のトレースキャプチャを実行するには、[**新しいキャプチャ**] の [**データベース名**] ボックスを空のままにします。
+
+**Q: 実稼働ワークロードトレースで推奨される最小時間は何ですか。**
+
 ワークロード全体を最もよく表す時間を選択することをお勧めします。 そうすることで、ワークロード内のすべてのクエリで分析が実行されます。
-    
-### <a name="how-important-is-to-take-a-database-backup-right-before-i-start-a-trace-capture"></a>トレースキャプチャを開始する前に、データベースのバックアップを実行することが重要です。
-    
+
+**Q: トレースキャプチャを開始する前に、データベースのバックアップを実行するにはどの程度重要ですか?**
+
 トレースキャプチャを開始する前に、すべてのターゲットデータベースをバックアップしていることを確認してください。 ターゲット1とターゲット2でキャプチャされたトレースが再生されます。 データベースの状態が同じでない場合は、実験の結果がスキューされます。
 
-### <a name="can-i-collect-xevents-instead-of-traces-and-can-i-replay-xevents"></a>トレースではなく Xevent を収集することはできますか。 Xevent を再生できますか。
-    
-可能。 DEA は Xevent をサポートしています。 DEA の最新バージョンをダウンロードし、試してみてください。
+**Q: トレースではなく Xevent を収集することはできますか。 Xevent を再生できますか。**
+
+はい。 DEA は Xevent をサポートしています。 DEA の最新バージョンをダウンロードし、試してみてください。
 
 ## <a name="troubleshoot-trace-captures"></a>トレースキャプチャのトラブルシューティング
 
-トレースキャプチャの実行時にエラーが発生した場合は、次の前提条件を確認してください。
+トレースキャプチャの実行中にエラーが発生した場合は、次のことを確認してください。
 
-- SQL Server を実行しているコンピューターの名前が有効であることを確認します。 確認するには、SQL Server Management Studio (SSMS) を使用して SQL Server を実行しているコンピューターに接続します。
-- ファイアウォール構成で SQL Server を実行しているコンピューターへの接続がブロックされていないことを確認します。
-- ブログ投稿の再生に関する[FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)に記載されているアクセス許可がユーザーにあることを確認します。
-- トレース名が標準のロールオーバー規則 (Capture\_1) に従っていないことを確認します。 代わりに、Capture\_1a や Capture1 などのトレース名を試してください。
+- SQL Server を実行しているコンピューターの名前が有効です。 確認するには、SQL Server Management Studio (SSMS) を使用して SQL Server を実行しているコンピューターに接続します。
+- ファイアウォールの構成により、SQL Server を実行しているコンピューターへの接続がブロックされることはありません。
+- ユーザーには、[再生 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)に記載されているアクセス許可があります。
+- トレース名は、標準のロールオーバー規則 (Capture\_1) に従っていません。 代わりに、Capture\_1A や Capture1 などのトレース名を試してください。
 
 表示される可能性のあるエラーとその解決策を次に示します。
 
@@ -138,10 +147,6 @@ DEA を使用すると、サーバー内のすべてのデータベースまた�
 
 *Sql エラーコード*というラベルの他のエラーが表示された場合は、詳細な説明について[データベースエンジンエラー](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors)を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="see-also"></a>関連項目
 
-- キャプチャしたトレースを再生する前に SQL Server の分散再生ツールを構成する方法については、「 [replay の構成](database-experimentation-assistant-configure-replay.md)」を参照してください。
-
-- DEA とデモの19分の概要については、次のビデオをご覧ください。
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- キャプチャしたトレースを再生する前に SQL Server の分散再生ツールを構成する方法については、 [Database Experimentation Assistant の分散再生の構成に関する](database-experimentation-assistant-configure-replay.md)ページを参照してください。

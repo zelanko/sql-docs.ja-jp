@@ -1,6 +1,7 @@
 ---
-title: バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: バックアップの復元、復旧、および管理
+description: バックアップの復元、復旧、管理用の Transact-SQL RESTORE ステートメントです。
+ms.custom: seo-lt-2019
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
@@ -22,12 +23,12 @@ ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082549"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75258757"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +40,7 @@ ms.locfileid: "68082549"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|ステートメントから削除してください。|[説明]|  
+|ステートメント|説明|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|RESTORE DATABASE および RESTORE LOG Transact-SQL ステートメントについて説明します。これらのステートメントは、BACKUP コマンドで作成されたバックアップからデータベースを復元および復旧するときに使用します。 RESTORE DATABASE は、すべての復旧モデルのデータベースに使用できます。 RESTORE LOG は、完全復旧モデルと一括ログ復旧モデルでのみ使用します。 RESTORE DATABASE は、データベースをデータベース スナップショットに戻す場合にも使用できます。|  
 |[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE ステートメントと、関連する一連の補助ステートメントの「構文」セクションで説明されている次の引数について説明します: RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。|  

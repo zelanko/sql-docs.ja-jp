@@ -1,6 +1,6 @@
 ---
-title: Microsoft Connectors for Oracle and Teradata by Attunity (SSIS) | Microsoft Docs
-ms.date: 05/16/2017
+title: Microsoft Connectors for Oracle and Teradata by Attunity | Microsoft Docs
+ms.date: 08/16/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -8,20 +8,25 @@ ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ''
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bdd68dccdcf8c2b317c81b120feb6949bb96c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf543438e3d1490f74df7a92a12545f29eeb5f2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027575"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903833"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Microsoft Connectors for Oracle and Teradata by Attunity
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
+> [!NOTE]
+> Atunity Connectors for Oracle and Teradata では、SQL Server 2017 以下がサポートされています。
+>
+> SQL Server 2019 以降では、Oracle と Teradata 用の最新コネクタを次の場所から取得してください:
+> - [Microsoft Connector for Oracle](data-flow/oracle-connector.md)
+> - [Microsoft Connector for Teradata](data-flow/teradata-connector.md)
 
 SSIS パッケージでの Oracle または Teradata との間でデータを読み込むときのパフォーマンスを最適化する Attunity による Integration Services 用のコネクタをダウンロードできます。
 

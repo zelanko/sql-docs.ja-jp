@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bd0b61626f4af268f93043114d5945d00a37b5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68210740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061589"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
   レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
@@ -90,7 +89,7 @@ ms.locfileid: "68210740"
  使用できるすべてのパラメーターを表示します。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、*server_name* を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-PublisherDB** _publisher_database_  
  パブリッシャー データベースの名前です。  
@@ -143,7 +142,7 @@ ms.locfileid: "68210740"
  > [!NOTE]  
  >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
 
- 詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
+ 詳細については、「 [SQL Server レプリケーションセキュリティ](../security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
  **-ErrorFile** _error_path_and_file_name_  
  ディストリビューション エージェントが作成するエラー ファイルのパスとファイル名です。 このファイルは、サブスクライバーでレプリケーション トランザクションを適用しているときに、エラーが発生すると生成されます。パブリッシャーまたはディストリビューターで発生したエラーについては、このファイルには記録されません。 このファイルには、障害が発生したレプリケーション トランザクションおよび関連するエラー メッセージが含まれます。 指定しない場合は、エラー ファイルはディストリビューション エージェントの現在のディレクトリに作成されます。 エラー ファイル名は、ディストリビューション エージェントの名前に .err 拡張子を付けた名前です。 指定したファイル名が既存の場合、エラー メッセージはこのファイルに追加されます。 このパラメーターには最大 256 個の Unicode 文字を指定できます。  
@@ -172,7 +171,7 @@ ms.locfileid: "68210740"
 |HistoryVerboseLevel の値|説明|  
 |-------------------------------|-----------------|  
 |**0**|進行状況メッセージがコンソールまたは出力ファイルに書き込まれます。 履歴レコードは、ディストリビューション データベースのログに記録されません。|  
-|**1**|既定値です。 同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
+|**1**|既定値。 同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
 |**2**|アイドル状態や長時間実行を示すメッセージでない場合、新しい履歴レコードを挿入します。アイドル状態などを示すメッセージの場合には、以前のレコードを更新します。|  
 |**3**|アイドル状態を示すメッセージの場合以外は、常に新しいレコードを挿入します。|  
   
@@ -186,7 +185,7 @@ ms.locfileid: "68210740"
  ログインがタイムアウトになるまでの秒数です。既定値は **15** 秒です。  
   
  **-MaxBcpThreads** _number_of_threads_  
- 並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドと ODBC 接続の最大数は、 **MaxBcpThreads** の値と、ディストリビューション データベースの同期トランザクションに示されている一括コピー要求の数の小さい方の値になります。 **MaxBcpThreads** は **0** よりも大きくする必要がありますが、上限はありません。 既定値は、プロセッサ数の **2** 倍の値です。最大値は、 **8**になります。 パブリッシャー側で同時実行スナップショット オプションを使って生成されたスナップショットを適用する場合は、 **MaxBcpThreads**に指定した値に関係なく、単一のスレッドが使用されます。  
+ 並列実行できる一括コピーの操作数を指定します。 同時に存在するスレッドと ODBC 接続の最大数は、 **MaxBcpThreads** の値と、ディストリビューション データベースの同期トランザクションに示されている一括コピー要求の数の小さい方の値になります。 **MaxBcpThreads** は **0** よりも大きくする必要があり、上限はありません。 既定値は、プロセッサ数の **2** 倍の値です。最大値は、 **8**になります。 パブリッシャー側で同時実行スナップショット オプションを使って生成されたスナップショットを適用する場合は、 **MaxBcpThreads**に指定した値に関係なく、単一のスレッドが使用されます。  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  1 回の同期でサブスクライバーに適用するプッシュまたはプル トランザクションの最大数です。 値 **0** は、トランザクション数に制限がないことを示します。 その他の値は、サブスクライバーがパブリッシャーからプルする同期の経過時間を短縮するときに使用できます。  
@@ -273,7 +272,7 @@ ms.locfileid: "68210740"
  ディストリビューションのサブスクリプションの種類を指定します。 値 **0** はプッシュ サブスクリプションを、値 **1** はプル サブスクリプションを、値 **2** は匿名サブスクリプションを示します。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 上記の **-MessageInterval** パラメーターを参照してください。  
+ 履歴をログに記録するトランザクション間隔を指定します。 最後に履歴をログに記録してからコミットしたトランザクションの数がこのオプションより多い場合、履歴メッセージがログに記録されます。 既定値は、100 です。 値 **0** は、 **TransactionsPerHistory**が無制限であることを指定します。 **MessageInterval**パラメーターを参照してください。  
   
  **-UseDTS**  
  データ変換を許可するパブリケーションでは、このパラメーターを指定する必要があります。  
@@ -284,7 +283,7 @@ ms.locfileid: "68210740"
  **-UseOledbStreaming**  
  指定した場合、BLOB データをストリームとしてバインドできるようになります。 ストリームが使用されるしきい値 (バイト サイズ) を指定するには、 **-OledbStreamThreshold** を使用します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにのみアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへのログイン時に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェントの下で実行するディストリビューション エージェントで、Windows 認証モードを使用するように構成すると、ディストリビューション エージェントは失敗します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。 セキュリティ アカウント変更の詳細については、「 [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)」を参照してください。  

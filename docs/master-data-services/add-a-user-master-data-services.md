@@ -1,5 +1,6 @@
 ---
-title: ユーザーを追加する (マスター データ サービス) | Microsoft Docs
+title: ユーザーを追加する
+description: マスターデータマネージャーのユーザー一覧にユーザーを追加する方法について説明します。 Web アプリケーションにアクセス許可を割り当てるプロセスを開始するには、ユーザーを追加する必要があります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2be9caff295a41dbb79c1062d2a3f132ea93141c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812837"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   ユーザーを **の** [ユーザー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の一覧に追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 一覧に含まれるユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスするには、ユーザーの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
@@ -37,7 +38,7 @@ ms.locfileid: "68047940"
   
 2.  **[ユーザー]** ページで **[ユーザーの追加]** をクリックします。  
   
-3.  ユーザーの名前を Active Directory ドメイン名またはサーバー コンピューターの名前の後に入力します ( *domain*\\*user_name* または *computer\user_name*のように入力します)。  
+3.  *ドメイン* \\ *user_name*または*コンピューター \ user_name*のように、Active Directory のドメイン名またはサーバーコンピューターの名前を指定して、ユーザー名を入力します。  
   
 4.  必要に応じて、 **[名前の確認]** をクリックします。  
   

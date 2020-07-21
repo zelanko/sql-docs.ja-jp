@@ -1,5 +1,6 @@
 ---
-title: Showplan XML Statistics Profile イベントを個別に保存 (SQL Server Profiler) | Microsoft Docs
+title: Showplan XML Statistics Profile イベントを個別に保存する
+titleSuffix: SQL Server Profiler
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 72d07cc36de00fd0f6fc2b9377a5ed3870413c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b4200f709700a3836c47b89aa6c4cee03639c94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753043"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Showplan XML Statistics Profile イベントを個別に保存 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、トレースでキャプチャされる **Showplan XML Statistics Profile** イベントを、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して個別の SQLPlan ファイルに保存する方法について説明します。 **Showplan XML Statistics Profile** イベント ファイルは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開くことができるので、イベントごとの実行プランをグラフィカルに表示できます。  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>Showplan XML Statistics Profile イベントを個別に保存する  

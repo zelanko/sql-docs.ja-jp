@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b894d7b554dffcb0941ddf38182519cf85a84c2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809352"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934963"
 ---
 # <a name="server-properties-connections-page"></a>[サーバーのプロパティ] ([接続] ページ)
   このページを使用すると、接続オプションを表示したり変更したりできます。  
@@ -70,8 +69,8 @@ ms.locfileid: "62809352"
  **[実行中の値]**  
  このペイン上のオプションの、現在実行中の値を表示します。 これらの値は読み取り専用です。  
   
-## <a name="see-also"></a>関連項目  
- [オプション&#40;実行: SQL Server のクエリ: [詳細] ページ&#41;](../options-query-execution-sql-server-advanced-page.md)   
+## <a name="see-also"></a>参照  
+ [クエリ実行 &#40;オプション: SQL Server: [詳細設定] ページ&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

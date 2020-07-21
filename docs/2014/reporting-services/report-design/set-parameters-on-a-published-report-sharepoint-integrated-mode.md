@@ -1,5 +1,5 @@
 ---
-title: パブリッシュされたレポート (SharePoint 統合モードで Reporting Services) のパラメーターを設定 |Microsoft Docs
+title: パブリッシュされたレポートのパラメーターの設定 (SharePoint 統合モードでの Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105015"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 (Reporting Services の SharePoint 統合モード)
@@ -79,7 +79,7 @@ ms.locfileid: "66105015"
   
     3.  既定値を使用し、パラメーター領域にもサブスクリプション ページにもパラメーターを表示しない場合には、 **[内部]** を選択します。  
   
-7.  **[適用]** をクリックします。  
+7.  **[Apply]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

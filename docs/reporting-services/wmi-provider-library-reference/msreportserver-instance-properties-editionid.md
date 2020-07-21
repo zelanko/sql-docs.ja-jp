@@ -11,13 +11,13 @@ ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3e73d8416c6c475a8cc5225d478a6e85472ceb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571085"
 ---
-# <a name="msreportserverinstance-properties---editionid"></a>MSReportServer_Instance プロパティ - EditionID
+# <a name="msreportserver_instance-properties---editionid"></a>MSReportServer_Instance プロパティ - EditionID
   レポート サーバーのエディションを返します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  

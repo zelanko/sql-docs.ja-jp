@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 01f0824bd93535a05ee0d3dba6b56ce79c4e34d0
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061065"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391673"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-データベースに列マスター キー メタデータ オブジェクトを作成します。 列マスター キー メタデータ エントリは、外部キー ストアに格納されたキーを表します。 そのキーにより、[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使用するときの列暗号化キーが保護 (暗号化) されます。 複数の列マスター キーを使用してキーのローテーションを定期的に行い、セキュリティを強化できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーまたは PowerShell を使用して、キー ストアに列マスター キーを作成し、データベースに関連するメタデータ オブジェクトを作成します。 詳しくは、「[Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」をご覧ください。  
+データベースに列マスター キー メタデータ オブジェクトを作成します。 列マスター キー メタデータ エントリは、外部キー ストアに格納されたキーを表します。 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) を使用していると、そのキーによって列暗号化キーが保護 (暗号化) されます。 複数の列マスター キーを使用してキーのローテーションを定期的に行い、セキュリティを強化できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーまたは PowerShell を使用して、キー ストアに列マスター キーを作成し、データベースに関連するメタデータ オブジェクトを作成します。 詳しくは、「[Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」をご覧ください。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ ms.locfileid: "68061065"
 
 ## <a name="syntax"></a>構文  
 
-```  
+```syntaxsql
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -56,7 +56,9 @@ CREATE COLUMN MASTER KEY key_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *key_name*  
 データベース内の列マスター キーの名前。  
   
@@ -72,9 +74,7 @@ Always Encrypted が有効なクライアント ドライバーでは次のこ�
   
 Always Encrypted が有効なクライアント ドライバー ライブラリには、一般的なキー ストア用のキー ストア プロバイダーが含まれます。   
   
-使用可能なプロバイダーのセットは、クライアント ドライバーの種類とバージョンによって異なります。 特定のドライバーについては、Always Encrypted の次のドキュメントをご覧ください。
-
-[Always Encrypted と .NET Framework Provider for SQL Server を使用してアプリケーションを開発する](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+使用可能なプロバイダーのセットは、クライアント ドライバーの種類とバージョンによって異なります。 特定のドライバーについては、Always Encrypted の次のドキュメントをご覧ください。[Always Encrypted を使用したアプリケーションの開発](../../relational-databases/security/encryption/always-encrypted-client-development.md)。
 
 
 次の表では、システム プロバイダーの名前を示します。  
@@ -84,7 +84,8 @@ Always Encrypted が有効なクライアント ドライバー ライブラリ�
     |'MSSQL_CERTIFICATE_STORE'|Windows 証明書ストア| 
     |'MSSQL_CSP_PROVIDER'|Microsoft CryptoAPI をサポートするハードウェア セキュリティ モジュール (HSM) などのストア。|
     |'MSSQL_CNG_STORE'|ハードウェア セキュリティ モジュール (HSM) など、Cryptography API: Next Generation をサポートするストア。|  
-    |'Azure_Key_Vault'|「[Azure Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)」をご覧ください|  
+    |'AZURE_KEY_VAULT'|「[Azure Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)」をご覧ください|  
+    |'MSSQL_JAVA_KEYSTORE'| Java キー ストア。
   
 
 Always Encrypted が有効なクライアント ドライバーでは、組み込みのキー ストア プロバイダーがない列マスター キーを格納するカスタム キー ストア プロバイダーを設定することができます。 カスタム キー ストア プロバイダーの名前を "MSSQL_" で始めることはできません。これは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] キー ストア プロバイダー用に予約されているプレフィックスです。 
@@ -97,7 +98,7 @@ key_path
   
     **キーのパスの形式:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
-     各要素の説明は次のとおりです。  
+     各値の説明:  
   
     *CertificateStoreLocation*  
     証明書ストアの場所。現在のユーザーまたはローカル マシンにする必要があります。 詳しくは、「[Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)」(ローカル マシンおよび現在のユーザーの証明書ストア) をご覧ください。  
@@ -108,7 +109,7 @@ key_path
     *CertificateThumbprint*  
     証明書のサムプリント。  
   
-    **使用例:**  
+    **例:**  
   
     ```  
     N'CurrentUser/My/BBF037EC4A133ADCA89FFAEC16CA5BFA8878FB94'  
@@ -120,7 +121,7 @@ key_path
   
     **キーのパスの形式:** *ProviderName*/*KeyIdentifier*  
   
-    各要素の説明は次のとおりです。  
+    各値の説明:  
   
     *ProviderName*  
     列マスター キー ストアの暗号サービス プロバイダー (CSP) の名前。CAPI が実装されています。 キー ストアとして HSM を使用する場合、プロバイダー名は HSM ベンダー提供の CSP の名前にする必要があります。 クライアント コンピューターにプロバイダーをインストールする必要があります。  
@@ -128,7 +129,7 @@ key_path
     *KeyIdentifier*  
     キー ストア内のキーの識別子。列マスター キーとして使用されます。  
   
-    **使用例:**  
+    **例:**  
   
     ```  
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
@@ -138,7 +139,7 @@ key_path
   
     **キーのパスの形式:** *ProviderName*/*KeyIdentifier*  
   
-    各要素の説明は次のとおりです。  
+    各値の説明:  
   
     *ProviderName*  
     列マスター キー ストアのキー ストレージ プロバイダー (KSP) の名前。Cryptography: Next Generation (CNG) API が実装されています。 キー ストアとして HSM を使用する場合、プロバイダー名は HSM ベンダー提供の KSP の名前にする必要があります。 クライアント コンピューターにプロバイダーをインストールする必要があります。  
@@ -146,7 +147,7 @@ key_path
     *KeyIdentifier*  
     キー ストア内のキーの識別子。列マスター キーとして使用されます。  
   
-    **使用例:**  
+    **例:**  
   
     ```  
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
@@ -156,7 +157,7 @@ key_path
   
     **キーのパスの形式:** *KeyUrl*  
   
-    各要素の説明は次のとおりです。  
+    各値の説明:  
   
     *KeyUrl*  
     Azure Key Vault 内のキーの URL
@@ -168,21 +169,22 @@ ENCLAVE_COMPUTATIONS
 "*キーのパス*" のデジタル署名と列マスター キーでの ENCLAVE_COMPUTATIONS の設定の結果であるバイナリ リテラル。 署名には、ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されます。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名が検証されて、署名が無効な場合はアプリケーションにエラーが返されます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 データベースに列暗号化キー メタデータ エントリを作成する前、および Always Encrypted を使用してデータベース内の列を暗号化する前に、列マスター キー メタデータ エントリを作成します。 メタデータ内の列マスター キー エントリには、実際の列マスター キーは含まれません。 列マスター キーは、(SQL Server の外部にある) 外部列キー ストアに格納する必要があります。 メタデータ内のキー ストア プロバイダー名と列マスター キー パスは、クライアント アプリケーションに対して有効である必要があります。 クライアント アプリケーションでは、列マスター キーを使用して、列暗号化キーの暗号化を解除する必要があります。 列暗号化キーは、列マスター キーで暗号化されています。 また、クライアント アプリケーションでは、暗号化された列のクエリを実行する必要があります。
 
+SQL Server Management Studio (SSMS) や PowerShell などのツールを使って、列マスター キーを管理することをお勧めします。 そのようなツールを使うと、署名を生成し (セキュリティで保護されたエンクレーブが設定された Always Encrypted を使っている場合)、`CREATE COLUMN MASTER KEY` ステートメントを自動的に発行して列暗号化キーのメタデータ オブジェクトを作成することができます。 「[SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md)」および「[PowerShell を使用した Always Encrypted キーのプロビジョニング](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)」を参照してください。 
 
   
 ## <a name="permissions"></a>アクセス許可  
 **ALTER ANY COLUMN MASTER KEY** 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-column-master-key"></a>A. 列マスター キーを作成する  
 次の例では、列マスター キーの列マスター キー メタデータ エントリを作成します。 列マスター キーは、MSSQL_CERTIFICATE_STORE プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーションの証明書ストアに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -192,7 +194,7 @@ WITH (
   
 列マスター キーの列マスター キー メタデータ エントリを作成します。 MSSQL_CNG_STORE プロバイダーを使用するクライアント アプリケーションが、列マスター キーにアクセスします。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +204,7 @@ WITH (
   
 列マスター キーの列マスター キー メタデータ エントリを作成します。 列マスター キーは、AZURE_KEY_VAULT プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーション用に、Azure キー コンテナーに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +214,7 @@ WITH (
   
 列マスター キーの列マスター キー メタデータ エントリを作成します。 列マスター キーは、カスタム列マスター キー ストアに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +224,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. エンクレーブ対応の列マスター キーを作成します  
 次の例では、エンクレーブ対応の列マスター キーに対する列マスター キー メタデータ エントリを作成します。 エンクレーブ対応の列マスター キーは、MSSQL_CERTIFICATE_STORE プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーションの証明書ストアに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +235,7 @@ WITH (
   
 エンクレーブ対応の列マスター キーに対する列マスター キー メタデータ エントリを作成します。 エンクレーブ対応の列マスター キーは、AZURE_KEY_VAULT プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーション用に、Azure キー コンテナーに格納されます。  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -247,6 +249,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [常に暗号化](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

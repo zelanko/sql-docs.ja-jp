@@ -1,6 +1,6 @@
 ---
-title: ブレークポイント条件の指定 | Microsoft Docs
-ms.custom: ''
+title: ブレークポイント条件の指定
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e331c8dfd533a99d2938633fe7dae5654f5c0ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 659b6ca1149eb8f0412efbe2adbaf4c1ffce59d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997869"
 ---
 # <a name="specify-a-breakpoint-condition"></a>ブレークポイント条件の指定
   ブレークポイント条件は、ブレークポイントに達したときにデバッガーによって評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 式です。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、デバッガーはブレークポイントに指定されたアクションを実行するか、中断します。  
@@ -31,17 +30,17 @@ ms.locfileid: "66063741"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[条件]** をクリックします。  
   
-     - または -  
+     または  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[条件]** をクリックします。  
   
 2.  **[ブレークポイントの条件]** ダイアログ ボックスで、 **[条件]** ボックスに有効なブール式を入力します。  
   
-3.  選択**が true**に式が評価されたときに中断する`true`を選択または**が変更された**式の値が変更されたときに中断する場合。  
+3.  式がに評価されたときに中断する場合は [ **true** ] `true` 、式の値が変更されたときに中断する場合は [**変更済み**] を選択します。  
   
     > [!NOTE]  
     >  デバッガーは、初めてブレークポイントに達するまでブール式を評価しません。 **[変更された場合]** を選択した場合、デバッガーは最初の評価を変更とは見なさないため、最初の評価でブレークすることはありません。  
   
 ## <a name="see-also"></a>参照  
- [ヒット カウントの指定](specify-a-hit-count.md)   
+ [ヒットカウントの指定](specify-a-hit-count.md)   
  [ブレークポイント アクションの指定](specify-a-breakpoint-action.md)  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 16c2c3028dfe3481089de9e661ddcece1fb6404b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 335ccdfb3857ba7d32147424a46f76bc0ccdbe17
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967933"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288422"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 式)
 
@@ -40,7 +40,7 @@ REPLACENULL(expression 1,expression 2)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 -   *expression 2* の長さは 0 にできます。  
   

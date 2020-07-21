@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dde3637c5307fdfbd40a5ade78ebd7de077d0e73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d6933f45d70636b2c7ea8b2ca20f71e1ab2fd02
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968267"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298883"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
 
@@ -50,7 +50,7 @@ ms.locfileid: "67968267"
   
 -   [Change Data Capture Designer for Oracle by Attunity 操作ガイド](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [インスタンスの作成のための SQL サーバー接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [インスタンスの作成のための SQL Server 接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [高度な接続プロパティ](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   

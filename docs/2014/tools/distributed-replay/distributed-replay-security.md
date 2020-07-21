@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay のセキュリティ |Microsoft Docs
+title: 分散再生 Security |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdc220e658cf7ad2153114510ab714ccec9c5572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054444"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能をインストールして使用する前に、このトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能をインストールして使用する前に、このトピックの重要なセキュリティ情報を確認する必要があります。 このトピックでは、Distributed Replay を使用する前に必要なインストール後のセキュリティ構成手順について説明します。 また、データ保護に関する重要な考慮事項や、重要な削除手順についても説明します。  
   
 ## <a name="user-and-service-accounts"></a>ユーザーおよびサービスのアカウント  
  次の表に、Distributed Replay に使用するアカウントを示します。 Distributed Replay をインストールした後、コントローラーおよびクライアントのサービス アカウントを実行するセキュリティ プリンシパルを割り当てる必要があります。 したがって、Distributed Replay 機能をインストールする前に、対応するドメイン ユーザー アカウントを構成することをお勧めします。  
@@ -29,7 +28,7 @@ ms.locfileid: "63150347"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client のサービス アカウント|ドメイン ユーザー アカウントまたはローカル ユーザー アカウントを使用できます。 ローカル ユーザー アカウントを使用する場合、コントローラー、クライアント、および対象の SQL Server のすべてが同じコンピューター上で実行されている必要があります。<br /><br /> **\*\* セキュリティに関する注意 \*\*** このアカウントには、Windows のローカルの Administrators グループのメンバー以外を使用することをお勧めします。|  
 |Distributed Replay 管理ツールの実行に使用する対話ユーザー アカウント|ローカル ユーザーまたはドメイン ユーザー アカウントを使用できます。 ローカル ユーザー アカウントを使用するには、管理ツールとコントローラーが同じコンピューター上で実行されている必要があります。|  
   
- **重要な**:分散再生コント ローラーを構成するときに、分散再生クライアント サービスの実行に使用される 1 つまたは複数のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
+ **重要**:分散再生コントローラーを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。  
   
 -   ドメイン ユーザー アカウント  
   
@@ -47,9 +46,9 @@ ms.locfileid: "63150347"
   
 1.  オペレーティング システムに応じて、次のいずれかを実行します。  
   
-    -   クリックして**開始**、型`services.msc`で、**検索**ボックス、および ENTER キーを押します。  
+    -   [**スタート**] ボタンをクリックし、 `services.msc` **検索**ボックスに「」と入力して、enter キーを押します。  
   
-    -   クリックして**開始**、 をクリックして**実行**、型`services.msc`、し、ENTER キーを押します。  
+    -   [**スタート**] ボタンをクリックし、[**実行**] をクリックして「」と入力し、 `services.msc` enter キーを押します。  
   
 2.  **[サービス]** ダイアログ ボックスで、構成するサービスを右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "63150347"
 ## <a name="file-and-folder-permissions"></a>ファイルおよびフォルダーの権限  
  サービス アカウントを指定したら、それらのサービス アカウントに必要なファイルおよびフォルダーの権限を付与する必要があります。 次の表に従ってファイルおよびフォルダーの権限を構成します。  
   
-|アカウント|フォルダー権限|  
+|Account|フォルダー権限|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller のサービス アカウント|`<Controller_Installation_Path>\DReplayController` (読み取り、書き込み、削除)<br /><br /> `DReplayServer.xml` ファイル (読み取り、書き込み)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client のサービス アカウント|`<Client_Installation_Path>\DReplayClient` (読み取り、書き込み、削除)<br /><br /> `DReplayClient.xml` ファイル (読み取り、書き込み)<br /><br /> クライアント構成ファイルで `WorkingDirectory` 要素および `ResultDirectory` 要素により指定された作業ディレクトリおよび結果ディレクトリ。 (読み取り、書き込み)|  
@@ -70,21 +69,21 @@ ms.locfileid: "63150347"
   
  コントローラーの DCOM 権限を構成するには、次の手順を実行します。  
   
-1.  **開く、コンポーネント サービス スナップイン dcomcnfg.exe**:これは、DCOM 権限を構成するために使用するツールです。  
+1.  **コンポーネント サービス スナップイン dcomcnfg.exe を開く**:これは、DCOM 権限を構成するために使用するツールです。  
   
     1.  コントローラーのコンピューターで、 **[スタート]** ボタンをクリックします。  
   
-    2.  型`dcomcnfg.exe`で、**検索**ボックス。  
+    2.  `dcomcnfg.exe`**検索**ボックスに「」と入力します。  
   
     3.  Enter キーを押します。  
   
-2.  **コンピューター全体の DCOM 権限を構成する**:次の表に示す各アカウントに対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体のアクセス許可を設定する方法の詳細については、次を参照してください。[チェックリスト。DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)します。  
+2.  **コンピューター全体の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
   
-3.  **アプリケーション固有の DCOM アクセス許可を構成**:次の表に示す各アカウントに対応するアプリケーション固有 DCOM アクセス許可を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有のアクセス許可を設定する方法の詳細については、次を参照してください。[チェックリスト。DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)します。  
+3.  **アプリケーション固有の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
   
  次の表に、管理ツールの対話ユーザー アカウントとクライアント サービス アカウントに必要な DCOM 権限を示します。  
   
-|機能|アカウント|コントローラーで必要な DCOM 権限|  
+|機能|Account|コントローラーで必要な DCOM 権限|  
 |-------------|-------------|---------------------------------------------|  
 |Distributed Replay 管理ツール|対話ユーザー アカウント|ローカル アクセス<br /><br /> リモート アクセス<br /><br /> ローカルからの起動<br /><br /> リモートからの起動<br /><br /> ローカルからのアクティブ化<br /><br /> リモートからのアクティブ化|  
 |[分散再生クライアント]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client のサービス アカウント|ローカル アクセス<br /><br /> リモート アクセス<br /><br /> ローカルからの起動<br /><br /> リモートからの起動<br /><br /> ローカルからのアクティブ化<br /><br /> リモートからのアクティブ化|  

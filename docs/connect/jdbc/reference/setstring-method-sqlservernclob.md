@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2195ec6b-3cd1-4e57-90ba-89d111e20ea4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bed8e642cb480c403c3cb1596a6e0e0fd0a9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1d5093396c556f1d55d8e852bfb17438c20d4b6c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972609"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926610"
 ---
 # <a name="setstring-method-sqlservernclob"></a>setString メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定した**文字列**を**NCLOB**の指定した位置から書き込みます。  
+  指定された **String** が **NCLOB** の指定された位置から書き込まれます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
-|[setString メソッド &#40;long, java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|指定した**文字列**を**NCLOB**の指定した位置から書き込みます。|  
+|[setString メソッド &#40;long, java.lang.String&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|指定された **String** が **NCLOB** の指定された位置から書き込まれます。|  
 |[setString &#40;long, java.lang.String, int, int&#41; メソッド &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|指定された文字列を、指定されたオフセットと長さに基づいて NCLOB の指定された位置から書き込みます。|  
   
 ## <a name="see-also"></a>参照  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f87c57b25e425246c7256cb0ef22910e3e4bfcbd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766058"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定されたスキーマからシノニムを削除します。  
   
@@ -54,7 +54,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  削除するシノニムの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  シノニムへの参照はスキーマにバインドされていません。したがってシノニムはいつでも削除できます。 削除したシノニムへの参照は、実行時にのみ検出されます。  
   
  シノニムは、動的な SQL で作成、削除、参照することができます。  
@@ -68,7 +68,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
 -   シノニムを含むスキーマに対する ALTER SCHEMA 権限を許可されている。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、まずシノニム `MyProduct` を作成し、その後シノニムを削除します。  
   
 ```  

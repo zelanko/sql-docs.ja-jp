@@ -1,5 +1,5 @@
 ---
-title: 設定の処理オプション (SharePoint 統合モードで Reporting Services) |Microsoft Docs
+title: 処理オプションの設定 (SharePoint 統合モードでの Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101336"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
@@ -36,7 +36,7 @@ ms.locfileid: "66101336"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード:|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint モード|  
   
  **このトピックの内容:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101336"
   
 -   [データベースのタイムアウトを設定する](#bkmk_set_database_timeout)  
   
-##  <a name="bkmk_set_data_refresh"></a> データ更新オプションを設定するには  
+##  <a name="to-set-data-refresh-options"></a><a name="bkmk_set_data_refresh"></a>データ更新オプションを設定するには  
   
 1.  ライブラリ内のレポートをポイントします。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66101336"
   
 7.  スケジュールされたデータ処理の実行を待たずに、直ちにスナップショット データを作成してレポートに使用する必要がある場合は、 **[データ スナップショットのオプション]** で **[このページを保存するときにスナップショットを作成または更新する]** を選択します。  
   
-##  <a name="bkmk_set_report_caching"></a> レポート キャッシュ オプションを設定するには  
+##  <a name="to-set-report-caching-options"></a><a name="bkmk_set_report_caching"></a>レポートキャッシュオプションを設定するには  
   
 1.  ライブラリ内のレポートをポイントします。  
   
@@ -82,15 +82,15 @@ ms.locfileid: "66101336"
   
     -   指定した時刻にキャッシュを消去するには、カスタム スケジュールを作成します。  
   
-##  <a name="bkmk_set_processing"></a> 処理のタイムアウト値を設定するには  
+##  <a name="to-set-processing-time-out-values"></a><a name="bkmk_set_processing"></a>処理のタイムアウト値を設定するには  
   
 1.  ライブラリ内のレポートをポイントします。  
   
 2.  下矢印をクリックし、 **[処理の管理のオプション]** をクリックします。  
   
-3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値にオーバーライドする必要がある場合は、 **[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
+3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値にオーバーライドする必要がある場合は、**[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
   
-##  <a name="bkmk_set_report_history"></a> レポート履歴のオプションと制限を設定するには  
+##  <a name="to-set-report-history-options-and-limits"></a><a name="bkmk_set_report_history"></a>レポート履歴のオプションと制限を設定するには  
   
 1.  ライブラリ内のレポートをポイントします。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "66101336"
   
 4.  レポート サーバー レベルで指定された値を使用する場合は、 **[履歴スナップショットの制限]** で **[サイトの既定の設定を使用する]** をクリックします。 それ以外の場合は、 **[スナップショット数を制限しない]** を選択するか、 **[スナップショットを次の数に制限する]** でカスタム値を指定します。  
   
-##  <a name="bkmk_set_database_timeout"></a> データベースのタイムアウトを設定する  
+##  <a name="set-database-timeout"></a><a name="bkmk_set_database_timeout"></a>データベースタイムアウトの設定  
   
 1.  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、「[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」の「Reporting Service アプリケーション データベースのプロパティの取得と設定」セクションを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](report-server/set-report-processing-properties.md)   
- [レポートのキャッシュ (SSRS)](report-server/caching-reports-ssrs.md)   
- [レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [レポートのキャッシュ &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
+ [レポートおよび共有データセット処理のタイムアウト値の設定 &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

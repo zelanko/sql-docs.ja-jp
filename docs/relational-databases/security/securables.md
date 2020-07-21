@@ -1,5 +1,6 @@
 ---
 title: '[セキュリティ保護可能なリソース] | Microsoft Docs'
+description: SQL Server データベース エンジンの承認システムによって、セキュリティ保護可能なリソースへのアクセスを制御するために使用される、セキュリティ保護可能なスコープについて説明します。
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -19,26 +20,26 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0d87132c7a0d0d6b9f44e28ca3d797d20fb4b32
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986565"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999603"
 ---
 # <a name="securables"></a>[セキュリティ保護可能なリソース]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   セキュリティ保護可能なリソースは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の承認システムによりアクセスが制限されたリソースです。 たとえば、テーブルはセキュリティ保護可能です。 セキュリティ保護可能なリソースの中には他のセキュリティ保護可能なリソースに含まれているものがあります。これらは "スコープ" と呼ばれ、それ自体をセキュリティで保護できる入れ子構造の階層を形成しています。 セキュリティ保護可能なスコープは、 **サーバー**、 **データベース**、および **スキーマ**です。  
   
-## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ:[サーバー]  
+## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ:サーバー  
  **サーバー** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   可用性グループ  
   
 -   エンドポイント  
   
--   Login  
+-   ログイン  
   
 -   サーバー ロール  
   
@@ -67,7 +68,7 @@ ms.locfileid: "67986565"
   
 -   (データベース) ロール  
   
--   Route  
+-   ルート  
   
 -   スキーマ  
   
@@ -77,12 +78,12 @@ ms.locfileid: "67986565"
   
 -   対称キー  
   
--   ユーザー  
+-   User  
   
 ## <a name="securable-scope-schema"></a>セキュリティ保護可能なスコープ:スキーマ  
  **スキーマ** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
--   型  
+-   Type  
   
 -   XML スキーマ コレクション  
   

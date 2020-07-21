@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105456"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
@@ -25,11 +25,11 @@ ms.locfileid: "66105456"
   
 -   **どの形式でレポートを表示するか**  
   
-     レポート マネージャーなどのブラウザーでレポートをオンラインで表示したり、Excel、Word、PDF などの他の形式にレポートをエクスポートしたりすることができます。 エクスポート形式によっては一部の機能を使用できないので、レポートの最終的な形式を検討することは重要です。 詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)します。  
+     レポート マネージャーなどのブラウザーでレポートをオンラインで表示したり、Excel、Word、PDF などの他の形式にレポートをエクスポートしたりすることができます。 エクスポート形式によっては一部の機能を使用できないので、レポートの最終的な形式を検討することは重要です。 詳細については、「[レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 -   **どのような構造を使用してレポートのデータを表すか**  
   
-     テーブル、マトリックス (クロス集計レポートや PivotTable レポートに似ています)、グラフ、自由形式の構造を選択するか、これらの構造を組み合わせてデータを表します。 詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md)と[グラフ&#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)します。  
+     テーブル、マトリックス (クロス集計レポートや PivotTable レポートに似ています)、グラフ、自由形式の構造を選択するか、これらの構造を組み合わせてデータを表します。 詳細については、「 [&#40;レポートビルダーと ssrs&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md) 」および「[レポートビルダーと ssrs&#41;&#40;](charts-report-builder-and-ssrs.md)の一覧」を参照してください。  
   
 -   **レポートをどのように表示するか**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66105456"
   
 -   **どのデータを表示するか、データまたは形式をさまざまな対象ユーザーに合わせてフィルター選択する必要があるかどうか**  
   
-     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+     レポートの範囲を特定のユーザーまたは場所、あるいは特定の期間などに絞り込むことができます。 レポート データをフィルター処理するには、パラメーターを使用して、必要なデータのみを取得して表示します。 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)にあります。  
   
 -   **独自の計算を作成する必要があるかどうか**  
   
@@ -52,8 +52,8 @@ ms.locfileid: "66105456"
      レポートをローカル コンピューターに保存して、引き続き操作したり、独自の情報に関してローカルで実行したりすることができます。 ただし、レポートを他のユーザーと共有するには、ネイティブ モードで構成されたレポート サーバーまたは SharePoint 統合モードのレポート サーバーにレポートを保存する必要があります。 サーバーに保存すると、他のユーザーが必要なときにいつでも実行できます。 または、レポート サーバー管理者がレポートのサブスクリプションを設定したり、他のユーザーへのレポートの電子メール配信を設定したりすることができます。 必要に応じて、レポートを特定のエクスポート形式で配信できます。 詳細については、「 [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 のレポート ビルダー](../report-builder/report-builder-in-sql-server-2016.md)   
- [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)  
+ [SQL Server 2014 のレポートビルダー](../report-builder/report-builder-in-sql-server-2016.md)   
+ [レポート作成の概念 &#40;レポートビルダーと SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [チュートリアル &#40;レポートビルダー&#41;](../report-builder-tutorials.md)  
   
   

@@ -11,22 +11,21 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa5d7788650cd1a36dfcf3f59531ff4b09182b61
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770305"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437539"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが含まれています。  
   
  次の図は、1 つの変換元、2 つの変換、および 1 つの変換先を持つ、簡単なデータ フローを示しています。  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![データ フロー](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換では、次の機能が用意されています。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62770305"
 -   [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>参照  
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
+ [データ フロー タスク](../../control-flow/data-flow-task.md)   
  [データ フロー](../data-flow.md)   
  [パスを使用してコンポーネントを連結する](../../connect-components-with-paths.md)   
  [データのエラー処理](../error-handling-in-data.md)   

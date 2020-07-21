@@ -1,6 +1,7 @@
 ---
-title: SQL Server on Linux へのデータベースの移行を自動化する
-description: ''
+title: SSMA:Linux 上の SQL Server への移行を自動化する
+description: SQL Server Migration Assistant (SSMA) を使用し、Microsoft Access、DB2、MySQL、Oracle、Sybase から Linux 上の SQL Server へのデータベースの移行を自動化します。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: 6120229f939fce8686e6414b5fa65141088396c3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ced5df4a63cf6fbfed9e47a59a5c7f626de3874b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68129339"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882710"
 ---
-# <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant を使用して Linux へのデータベースの移行を自動化する
+# <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant-ssma"></a>SQL Server Migration Assistant (SSMA) を使用して Linux へのデータベースの移行を自動化する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Microsoft Access、DB2、MySQL、Oracle、Sybase から SQL Server on Linux にデータベースを簡単に移行できる [SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) を紹介します。 SSMA は Windows アプリケーションです。Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがある場合は SSMA を使用してください。 
 
@@ -38,7 +39,7 @@ SSMA は、Oracle、MySQL、Sybase、DB2、Microsoft Access などのさまざ�
 
 次に、[SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) に従って、ソース データベースを SQL Server on Linux に移行します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Microsoft Data Migration ブログ](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) ブログ](https://blogs.msdn.microsoft.com/ssma/)
 

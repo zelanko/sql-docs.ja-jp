@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19a95cfa5c6780fbdf71ae58bd141aa9aa351efa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956199"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL)
   既定の設定では、圧縮を使用してバックアップを行うと CPU 使用率が著しく増加し、圧縮処理に CPU が追加で消費されるために、同時に実行中の操作が悪影響を受ける可能性があります。 このため、CPU の競合が発生したときは、[リソース ガバナー](../resource-governor/resource-governor.md) によって CPU 使用率が制限されるセッションで、優先度の低い圧縮されたバックアップを作成することが必要になる場合もあります。 このトピックでは、このような場合に CPU 使用率を制限するリソース ガバナー ワークロード グループに、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーのセッションをマップしてそれらのセッションを分類するシナリオを示します。  
@@ -29,7 +28,7 @@ ms.locfileid: "62920787"
 > [!IMPORTANT]  
 >  所定のリソース ガバナーのシナリオでは、セッションの分類が、ユーザー名、アプリケーション名、または接続を区別できるその他の要素に基づいて行われます。 詳細については、「 [Resource Governor Classifier Function](../resource-governor/resource-governor-classifier-function.md) 」および「 [Resource Governor Workload Group](../resource-governor/resource-governor-workload-group.md)」を参照してください。  
   
-##  <a name="Top"></a> このトピックでは、一連のシナリオを以下の順序で取り上げます。  
+##  <a name="this-topic-contains-the-following-set-of-scenarios-which-are-presented-in-sequence"></a><a name="Top"></a> このトピックでは、一連のシナリオを以下の順序で取り上げます。  
   
 1.  [優先度の低い操作を行うためのログインとユーザーの設定](#setup_login_and_user)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62920787"
   
 4.  [CPU が制限されているセッションを使用したバックアップの圧縮](#creating_compressed_backup)  
   
-##  <a name="setup_login_and_user"></a> 優先度の低い操作を行うためのログインとユーザーの設定  
+##  <a name="setting-up-a-login-and-user-for-low-priority-operations"></a><a name="setup_login_and_user"></a> 優先度の低い操作を行うためのログインとユーザーの設定  
  このトピックのシナリオには、優先度の低い [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびユーザーが必要です。 ユーザー名は、このログインで実行されるセッションを分類し、CPU 使用率を制限するリソース ガバナー ワークロード グループにセッションをルーティングするために使用されます。  
   
  以下では、この目的でログインとユーザーを設定する手順について説明した後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] の例「例 A :ログインとユーザーの設定 (Transact-SQL)」を説明します。  
@@ -76,7 +75,7 @@ ms.locfileid: "62920787"
   
      詳細については、「[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql)」を参照してください。  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>例 a:ログインとユーザーの設定 (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>例 A:ログインとユーザーの設定 (Transact-SQL)  
  次の例は、優先度の低いバックアップ用に新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびユーザーを作成する場合にのみ該当します。 既存のログインとユーザーで適切なものがあれば、それを使用してもかまいません。  
   
 > [!IMPORTANT]  
@@ -100,7 +99,7 @@ GO
   
  [&#91;先頭に戻る&#93;](#Top)  
   
-##  <a name="configure_RG"></a> CPU 使用率を制限するためのリソース ガバナーの構成  
+##  <a name="configuring-resource-governor-to-limit-cpu-usage"></a><a name="configure_RG"></a> CPU 使用率を制限するためのリソース ガバナーの構成  
   
 > [!NOTE]  
 >  リソース ガバナーが有効になっていることを確認してください。 詳細については、「 [リソース ガバナーの有効化](../resource-governor/enable-resource-governor.md)」を参照してください。  
@@ -160,7 +159,7 @@ GO
   
      RETURN @workload_group_name  
   
-     END  
+     End  
   
      この CREATE FUNCTION ステートメントのコンポーネントの詳細については、次のトピックを参照してください。  
   
@@ -183,7 +182,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>例 b:Resource Governor の構成 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>例 B:Resource Governor の構成 (Transact-SQL)  
  次の例では、以下の手順を 1 つのトランザクションで実行します。  
   
 1.  `pMAX_CPU_PERCENT_20` リソース プールを作成します。  
@@ -238,7 +237,7 @@ GO
   
  [&#91;先頭に戻る&#93;](#Top)  
   
-##  <a name="verifying"></a> 現在のセッションの分類の確認 (Transact-SQL)  
+##  <a name="verifying-the-classification-of-the-current-session-transact-sql"></a><a name="verifying"></a> 現在のセッションの分類の確認 (Transact-SQL)  
  必要に応じて、分類子関数で指定したユーザーとしてログインし、オブジェクト エクスプローラーで次の [SELECT](/sql/t-sql/queries/select-transact-sql) ステートメントを実行してセッションの分類を確認します。  
   
 ```sql  
@@ -258,10 +257,10 @@ GO
   
  [&#91;先頭に戻る&#93;](#Top)  
   
-##  <a name="creating_compressed_backup"></a> CPU が制限されているセッションを使用したバックアップの圧縮  
- 最大 CPU が制限されているセッションで圧縮されたバックアップを作成するには、分類子関数で指定したユーザーでログインします。 バックアップ コマンドで、WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定するか、 **[バックアップを圧縮する]** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) を選択します。 圧縮されたデータベース バックアップを作成する方法については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)」をご覧ください。  
+##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> CPU が制限されているセッションを使用したバックアップの圧縮  
+ 最大 CPU が制限されているセッションで圧縮されたバックアップを作成するには、分類子関数で指定したユーザーでログインします。 バックアップコマンドで、WITH COMPRESSION () を指定するか、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [**バックアップを圧縮**する] () を選択し [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。 圧縮されたデータベース バックアップを作成する方法については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)」をご覧ください。  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>例 c:圧縮されたバックアップの作成 (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>例 C: 圧縮されたバックアップの作成 (Transact-SQL)  
  次に示す [BACKUP](/sql/t-sql/statements/backup-transact-sql) の例では、 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] データベースの圧縮された完全バックアップを、新たな形式のバックアップ ファイル `Z:\SQLServerBackups\AdvWorksData.bak`に作成します。  
   
 ```sql  

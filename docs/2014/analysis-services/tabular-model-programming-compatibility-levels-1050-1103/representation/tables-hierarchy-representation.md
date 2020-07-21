@@ -1,5 +1,5 @@
 ---
-title: 階層表現 (テーブル) |Microsoft Docs
+title: 階層表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea95066a8fecbf96c8f6b14b42486d4d62264ae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83d91be5152c4e7f1345cee8756abbe57c0016f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757721"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940033"
 ---
 # <a name="hierarchy-representation-tabular"></a>階層表現 (テーブル)
   テーブル モデルにおける階層は、ユーザーが選択した値に基づいて属性間を移動するためのナビゲーション パスです。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cc4515806fc43aa06cb53b340c38081479ada3e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62875601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957156"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>マークされたトランザクションへのデータベースの復元 (SQL Server Management Studio)
   データベースが復元中の状態である場合、 **[トランザクション ログの復元]** ダイアログ ボックスを使用して、使用可能なログ バックアップのマークされたトランザクションにデータベースを復元できます。  
@@ -31,7 +30,7 @@ ms.locfileid: "62875601"
   
 ### <a name="to-restore-a-marked-transaction"></a>マークされたトランザクションを復元するには  
   
-1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
@@ -45,18 +44,18 @@ ms.locfileid: "62875601"
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |[ヘッダー]|値|  
+    |ヘッダー|値|  
     |------------|-----------|  
-    |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
+    |\<blank>|マークを選択するためのチェック ボックスを表示します。|  
     |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
     |**Date**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
-    |**[説明]**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
+    |**説明**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
     |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
     |**[データベース]**|マークされたトランザクションがコミットされたデータベースの名前。|  
-    |**[ユーザー名]**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
+    |**ユーザー名**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
   
 ## <a name="see-also"></a>参照  
- [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
+ [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
   

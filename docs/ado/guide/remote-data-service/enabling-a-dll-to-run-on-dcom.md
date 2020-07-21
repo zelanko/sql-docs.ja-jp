@@ -1,5 +1,5 @@
 ---
-title: DCOM 上で実行するように DLL の有効化 |Microsoft Docs
+title: DLL を DCOM で実行できるようにする |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53dc804c4182aaf2574b4d37d49371c9293fa90f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922702"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749593"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM 上で実行するための DLL の有効化
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次の手順では、DCOM とコンポーネント サービスを介して Microsoft インターネット インフォメーション サービス (HTTP) の両方を使用するビジネス オブジェクト .dll を有効にする方法を説明します。  
+ 次の手順では、ビジネスオブジェクトの .dll で、コンポーネントサービスを介して DCOM と Microsoft インターネットインフォメーションサービス (HTTP) の両方を使用できるようにする方法を説明します。  
   
-1.  コンポーネント サービス MMC スナップインで新しい空のパッケージを作成します。  
+1.  コンポーネントサービス MMC スナップインで、新しい空のパッケージを作成します。  
   
-     コンポーネント サービス MMC スナップインで使用するパッケージを作成し、このパッケージに DLL を追加します。 これにより、.dll ファイルは、DCOM を使用してアクセスできますが、IIS でのアクセシビリティを削除します。 (.Dll、用にレジストリでチェックする場合、 **Inproc**キーが空になった; の値を追加します、このトピックの後半で説明した、アクティベーション属性を設定、 **Inproc**キー)。  
+     コンポーネントサービス MMC スナップインを使用して、パッケージを作成し、このパッケージに DLL を追加します。 これにより、DCOM を介して .dll にアクセスできるようになりますが、IIS を使用してユーザー補助が削除されます。 (レジストリで .dll をチェックインすると、 **inproc**キーは空になります。このトピックの後半で説明する Activation 属性を設定すると、 **inproc**キーに値が追加されます)。  
   
-2.  パッケージにビジネス オブジェクトをインストールします。  
+2.  ビジネスオブジェクトをパッケージにインストールします。  
   
      \- または -  
   
-     インポート、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)パッケージへのオブジェクト。  
+     パッケージに[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトをインポートします。  
   
-3.  パッケージのアクティブ化の属性を設定**作成者のプロセスで**(ライブラリ アプリケーション)。  
+3.  **作成者のプロセス**(ライブラリアプリケーション) で、パッケージの [アクティブ化] 属性をに設定します。  
   
-     .Dll を同じコンピューターで DCOM と IIS を介してアクセスできるようにするには、コンポーネント サービス MMC スナップインでコンポーネントのアクティブ化の属性を設定する必要があります。 属性を設定した後**作成者のプロセスで**、表示になります、 **Inproc**コンポーネント サービスへのポインターが .dll をサロゲート サーバーのレジストリ キーが追加されました。  
+     同じコンピューターで DCOM と IIS を使用して .dll にアクセスできるようにするには、コンポーネントサービス MMC スナップインでコンポーネントのアクティブ化属性を設定する必要があります。 **作成者のプロセスで**属性をに設定すると、コンポーネントサービスのサロゲート .dll を指す**Inproc**サーバーキーがレジストリに追加されていることがわかります。  
   
- コンポーネント サービス (または Microsoft トランザクション サービス、Windows NT を使用している場合) の詳細については、次の手順を実行する、Microsoft Transaction Server Web サイトにアクセスする方法。
+ コンポーネントサービス (または Microsoft トランザクションサービス) の詳細、およびこれらの手順の実行方法については、Microsoft トランザクションサーバーの Web サイトを参照してください。
 
 

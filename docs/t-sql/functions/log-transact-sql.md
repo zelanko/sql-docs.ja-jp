@@ -17,18 +17,18 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2baf7dd62a949dadbaaa5ff1f867c84fb097ed75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0acbc4f5244852f988047e9ec1798201fefc30e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059894"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008828"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定したの自然対数を返します **float** 内の式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
@@ -36,45 +36,45 @@ ms.locfileid: "68059894"
   
 ## <a name="syntax"></a>構文  
   
-```  
--- Syntax for SQL Server  
+```syntaxsql
+-- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
-```  
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  
 ```  
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- **float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
   
  *base*  
  対数の底を設定するオプションの整数引数です。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定では、 を持つ **LOG()** 自然対数を返します。 以降で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 、対数の底を別の値に変更するには、(省略可能) を使用して *基本* パラメーター。  
   
  自然対数は **e** を底とする対数です。ここで、**e** は 2.718281828 にほぼ等しい無理定数です。  
   
- 数値の指数の自然対数は、その数値自体になります。LOG( EXP( *n* ) ) = *n*。 また、数値の自然対数の指数は、その数値自体になります。EXP( LOG( *n* ) ) = *n*。  
+ 数値の指数の自然対数は、その数値自体になります。つまり LOG( EXP( *n* ) ) = *n* です。 また、数値の自然対数の指数は、その数値自体になります。つまり EXP( LOG( *n* ) ) = *n* です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 数値の自然対数を計算する  
- 次の例では、指定された **float** 式の `LOG` を計算します。  
+ 次の例では、指定された `LOG`float**式の** を計算します。  
   
 ```  
-DECLARE @var float = 10;  
-SELECT 'The LOG of the variable is: ' + CONVERT(varchar, LOG(@var));  
+DECLARE @var FLOAT = 10;  
+SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
 ```  
   
@@ -103,10 +103,10 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 数値の自然対数を計算する  
- 次の例では、指定された **float** 式の `LOG` を計算します。  
+ 次の例では、指定された `LOG`float**式の** を計算します。  
   
 ```  
 SELECT LOG(10);  

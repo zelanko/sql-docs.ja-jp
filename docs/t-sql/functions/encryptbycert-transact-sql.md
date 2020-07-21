@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f6d60553fe8eff418dfb5cfb42f35dea37632d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2a25f62b563a01aa9cafb522d9ea32ab0f32fc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682029"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 証明書の公開キーを使ってデータを暗号化します。  
   
@@ -35,35 +35,35 @@ ms.locfileid: "68135899"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
   
 ## <a name="arguments"></a>引数  
 _certificate\_ID_  
-データベース内の証明書の ID。 **int** です。  
+データベース内の証明書の ID。 **int**.  
   
 _cleartext_  
 証明書で暗号化されるデータの文字列。  
   
-**@cleartext**  
+**\@cleartext**  
 証明書の公開キーで暗号化されるデータが含まれる次のいずれかの型の変数:
 
 * **nvarchar** 
 * **char**
 * **varchar**
-* **binary** 
+* **[バイナリ]** 
 * **varbinary**
 * **nchar**
   
 ## <a name="return-types"></a>戻り値の型  
 **varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 この関数によって証明書の公開キーでデータが暗号化されます。 この暗号文は、対応する秘密キーでのみ暗号化を解除できます。 対称キーを使用した暗号化と暗号化の解除に比べ、このような非対称変換はコストが高くなります。 そのため、大きなデータセットを扱う場合、非同期暗号化は推奨されません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、`@cleartext` という証明書を使用して、`JanainaCert02` に格納されているプレーン テキストを暗号化します。 暗号化されたデータは、テーブル `ProtectedData04` に挿入されます。  
   
 ```  

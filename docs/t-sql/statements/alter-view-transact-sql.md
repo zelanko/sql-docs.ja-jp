@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b12802ee2d4c8e9263b1a8c5ca284d134e56d59
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100969"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380835"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   以前に作成されたビューを変更します。 これにはインデックス付きビューが含まれます。 ALTER VIEW は、従属するストアド プロシージャやトリガーに影響を与えず、権限を変更することもありません。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68100969"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER VIEW [ schema_name . ] view_name [ ( column [ ,...n ] ) ]   
 [ WITH <view_attribute> [ ,...n ] ]   
 AS select_statement   
@@ -48,9 +48,20 @@ AS select_statement
     [ SCHEMABINDING ]  
     [ VIEW_METADATA ]       
 }   
-```  
+```
+
+```syntaxsql
+-- Syntax for Azure Synapse Analytics (SQL DW) and Parallel Data Warehouse  
   
-## <a name="arguments"></a>引数  
+ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+
+``` 
+  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *schema_name*  
  ビューが所属するスキーマの名前を指定します。  
   
@@ -67,7 +78,7 @@ AS select_statement
 >  ビューの列では、基底となるデータのソースにかかわらず、列名に対する権限は、CREATE VIEW ステートメントまたは ALTER VIEW ステートメントを超えて適用されます。 たとえば、CREATE VIEW ステートメントで **SalesOrderID** 列に対して権限が与えられる場合、ALTER VIEW ステートメントは **SalesOrderID** 列の名前を **OrderRef** などに変更でき、その後も **SalesOrderID** を使用してビューに関連付けられた権限を保持します。  
   
  ENCRYPTION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ALTER VIEW ステートメントのテキストを含んでいる [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) のエントリを暗号化します。 WITH ENCRYPTION を指定すると、そのビューを SQL Server レプリケーションの一部としてパブリッシュできなくなります。  
   
@@ -92,7 +103,7 @@ AS select_statement
  WITH CHECK OPTION  
  ビューに対して実行されるすべてのデータ変更ステートメントについて、*select_statement* 内で設定される条件に従うよう強制します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER VIEW について詳しくは、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」の「解説」をご覧ください。  
   
 > [!NOTE]  
@@ -105,7 +116,7 @@ AS select_statement
 ## <a name="permissions"></a>アクセス許可  
  ALTER VIEW を実行するには、少なくとも OBJECT に対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、すべての従業員とその雇用日を含んだ `EmployeeHireDate` というビューを作成します。 ビューには権限が与えられますが、必要条件が変更されて、雇用日が特定の日付よりも古い従業員を選択することになりました。 そこで、`ALTER VIEW` を使用してビューを変更します。  
   
 ```  

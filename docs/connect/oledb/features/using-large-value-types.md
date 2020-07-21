@@ -1,5 +1,5 @@
 ---
-title: 大きな値の型を使用する |Microsoft Docs
+title: 大きな値の型の使用 | Microsoft Docs
 description: OLE DB Driver for SQL Server での大きな値の型の使用
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988858"
 ---
 # <a name="using-large-value-types"></a>大きな値をとるデータ型の使用
@@ -33,7 +33,7 @@ ms.locfileid: "67988858"
 > [!NOTE]  
 >  大きな値をとるデータ型は、最大サイズを 1 KB から 8 KB に制限できます。また、サイズを無制限にすることもできます。  
   
- 以前は、**text**、**ntext**、**image** などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型のみにこのようなサイズを指定できました。 **varchar**、**nvarchar**、**varbinary** に **max** 指定子が導入されたことで、これらのデータ型の存在は冗長になりました。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの下位互換性を維持するために、OLE DB Driver for SQL Server の DBCOLUMNFLAGS_ISLONG フラグは引き続き使用されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
+ 以前は、**text**、**ntext**、**image** などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型のみにこのようなサイズを指定できました。 **varchar**、**nvarchar**、**varbinary** に **max** 指定子が導入されたことで、これらのデータ型の存在は冗長になりました。 ただし、これらの大きなデータ型も引き続き使用できるので、OLE DB データ アクセス コンポーネントに対する大部分のインターフェイスは変更されません。 以前のリリースとの下位互換性を維持するために、OLE DB Driver for SQL Server では DBCOLUMNFLAGS_ISLONG フラグが引き続き使用されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降用に作成されたプロバイダーやドライバーでは、最大長を無制限に設定する場合、新しいデータ型に対して、DBCOLUMNFLAGS_ISLONG や SQL_LONGVARCHAR といった表現を引き続き使用できます。  
   
 > [!NOTE]  
 >  **varchar(max)** データ型、**nvarchar(max)** データ型、**varbinary(max)** データ型を、ストアド プロシージャの入力パラメーターの型や出力パラメーターの型、または関数の戻り値の型として指定したり、[CAST と CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) の各関数に指定することもできます。  
@@ -62,7 +62,7 @@ ms.locfileid: "67988858"
   
 -   DBTYPE_IUNKNOWN としてバインドし、ストリーミングを使用します。  
   
- 列の最大サイズをレポートすると、SQL Server の OLE DB ドライバーによって次のように報告されます。  
+ OLE DB Driver for SQL Server では、列の最大サイズを報告するときに次が報告されます。  
   
 -   定義された最大サイズ。たとえば、**varchar(** 2000 **)** 列の場合は 2000 になります。  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- SQL Server の OLE DB ドライバーが大きな値のデータ型を公開する方法の詳細については、「 [blob と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
+ OLE DB Driver for SQL Server が大きな値のデータ型を公開する方法の詳細については、「[BLOB と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
 
   
 ## <a name="see-also"></a>参照  

@@ -24,15 +24,15 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe87e41f31ff7c85152138015c3ba3649cacda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82a5b3d8ee0f037fc8ea2909d333ea7de13841fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130139"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990585"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのグループを実行できるように、一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを囲みます。 BEGIN と END はフロー制御言語のキーワードです。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68130139"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 BEGIN  
     { sql_statement | statement_block }   
 END  
@@ -50,56 +50,51 @@ END
  { *sql_statement* | *statement_block* }  
  有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックで定義したステートメントのグループを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  BEGIN...END ブロックは入れ子にできます。  
   
  BEGIN...END ブロック内ではすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが有効ですが、同じバッチまたはステートメント ブロック内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`BEGIN` と `END` を使用して、まとめて実行する一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定義します。 `BEGIN...END` ブロックが指定されていない場合、両方の `ROLLBACK TRANSACTION` ステートメントが実行され、両方の `PRINT` メッセージが返されます。  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012
 GO  
-BEGIN TRANSACTION;  
+BEGIN TRANSACTION
 GO  
 IF @@TRANCOUNT = 0  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM Person.Person WHERE LastName = 'Adams';  
-    ROLLBACK TRANSACTION;  
-    PRINT N'Rolling back the transaction two times would cause an error.';  
-END;  
-ROLLBACK TRANSACTION;  
-PRINT N'Rolled back the transaction.';  
+    FROM Person.Person WHERE LastName = 'Adams'
+    ROLLBACK TRANSACTION
+    PRINT N'Rolling back the transaction two times would cause an error.'
+END
+ROLLBACK TRANSACTION
+PRINT N'Rolled back the transaction.'
 GO  
 /*  
 Rolled back the transaction.  
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`BEGIN` と `END` を使用して、まとめて実行する一連の [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを定義します。 `BEGIN...END` ブロックが含まれていない場合、次の例は連続するループになります。  
   
-```  
+```sql
 -- Uses AdventureWorks  
-  
+
 DECLARE @Iteration Integer = 0  
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM dbo.DimCustomer WHERE LastName = 'Adams';  
-SET @Iteration += 1  
-END;  
-  
+    FROM dbo.DimCustomer WHERE LastName = 'Adams'
+    SET @Iteration += 1  
+END
 ```  
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
-  
-  
-
-
+ [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)

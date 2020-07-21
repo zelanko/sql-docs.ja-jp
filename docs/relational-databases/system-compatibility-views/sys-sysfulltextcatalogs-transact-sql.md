@@ -1,5 +1,5 @@
 ---
-title: sys.sysfulltextcatalogs (TRANSACT-SQL) |Microsoft Docs
+title: sys.sysfulltextcatalogs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,30 +21,29 @@ ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e5bbae3a511249774d95e52210b04016c3370f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 1966f1bfa62fb85d99cee1db6900ad78e6a89b24
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053457"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091793"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  フルテキスト カタログに関する情報が含まれています。  
+  フルテキストカタログに関する情報を格納します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ftcatid**|**smallint**|フルテキスト カタログの識別子。|  
-|**name**|**sysname**|ユーザーによって指定されたフルテキスト カタログ名。|  
+|**ftcatid**|**smallint**|フルテキストカタログの識別子。|  
+|**name**|**sysname**|ユーザーによって指定されたフルテキストカタログ名。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**path**|**nvarchar(260)**|ユーザーによって指定されたルート パスです。<br /><br /> NULL = パスが指定されていません。 既定 (インストール) パスが使用されています。|  
   
-## <a name="see-also"></a>関連項目  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

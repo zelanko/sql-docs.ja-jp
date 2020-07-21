@@ -1,21 +1,21 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117316"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627409"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68117316"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
@@ -60,14 +60,14 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  接続文字列は、セミコロンで区切られたキーと値のペアの一覧です。 キーワードの大文字と小文字は区別されません。 キーと値のペア間のスペースは無視されます。 ただし、データ ソースによっては、値の大文字小文字が区別されます。  
   
- *[データ ソース]*  
+ *データ ソース*  
  リモートの SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前、IP アドレス、および TCP ポート番号を指定するパラメーターです。  
   
  *hostname* または *IP_address*  
  リモート サーバー コンピューターの名前またはリモート サーバーの IPv4 アドレスです。 IPv6 アドレスはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きインスタンスを、**Computer_Name\Instance_Name** または **IP_address\Instance_Name** の形式で指定することができます。 サーバーは、リモートである必要があり、(local) として指定することはできません。  
   
  TCP *port* 番号  
- 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 例:**ServerA,1450** または **10.192.14.27,1435**  
+ 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 次に例を示します。**ServerA,1450** または **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP アドレスを使用してリモート サーバーに接続することをお勧めします。 ネットワーク構成によっては、コンピューター名を使用して接続するときに、正しいサーバーの名前を解決する非アプライアンス DNS サーバーを使用するために、追加の手順が必要になることがあります。 IP アドレスで接続するときには、この手順は必要ではありません。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)」(DNS フォワーダーを使用して非アプライアンス DNS 名を解決する (分析プラットフォーム システム)) を参照してください。  
@@ -120,10 +120,10 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="locking-behavior"></a>ロック動作  
  リモート テーブルを作成した後で、コピーを開始するまで、移行先テーブルはロックされません。 したがって、リモート テーブルが作成された後、コピーを開始する前に別のプロセスがリモート テーブルを削除する可能性があります。 これが発生した場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] はエラーを生成し、コピーは失敗します。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  選択したデータのリモート SMP サーバーへのコピーの進行状況を表示するには、[sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md) を使用します。 PARALLEL_COPY_READER 型の行に、この情報が含まれています。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  CREATE REMOTE TABLE は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して、リモートの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。Windows 認証は使用しません。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の外部に公開されたネットワークはファイアウォールが使用されている必要があります。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ポートおよび管理ポートは例外です。  
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  接続設定では、SSL で保護されたユーザー名とパスワードのデータを使用して SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できますが、実際のデータはクリア テキストで暗号化されずに送信されます。 この場合、悪意のあるユーザーが、SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにログオンするための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名とパスワードが含まれている CREATE REMOTE TABLE ステートメントのテキストを傍受する可能性があります。 このリスクを避けるためには、SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続ではデータの暗号化を使用してください。  
   
-##  <a name="Examples"></a> 使用例  
+##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-creating-a-remote-table"></a>A. リモート テーブルの作成  
  この例では、`MyOrdersTable` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP のリモート テーブルをデータベース `OrderReporting` およびスキーマ `Orders` に作成します。 `OrderReporting` データベースは、既定のポート 1433 でリッスンする `SQLA` というサーバー上にあります。 サーバーへの接続では、ユーザー `David` の資格情報を使用します。ユーザーのパスワードは `e4n8@3` です。  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. リモート テーブルのコピーのステータスの sys.dm_pdw_dms_workers DMV のクエリを実行します。  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. リモート テーブルのコピーのステータスの sys.dm_pdw_dms_workers DMV のクエリを実行します。  
  このクエリは、リモート テーブルのコピーのコピー状態を表示する方法を示します。  
   
 ```  

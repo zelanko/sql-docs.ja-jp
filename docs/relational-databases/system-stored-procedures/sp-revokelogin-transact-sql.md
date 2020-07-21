@@ -1,5 +1,5 @@
 ---
-title: sp_revokelogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_revokelogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95727b3cb27e5ac72af38374da01b203f1a076cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944721"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901333"
 ---
-# <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ログイン エントリを削除します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ユーザーまたはログインの作成を使用して作成したグループの**sp_grantlogin**、または**sp_denylogin**します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE login、 **sp_grantlogin**、または**sp_denylogin**を使用して作成された Windows ユーザーまたはグループに対して、からログインエントリを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,31 +42,31 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'` Windows ユーザーまたはグループの名前です。 *ログイン*は**sysname**、既定値はありません。 *ログイン*、既存の Windows ユーザー名またはフォーム内のグループを指定することができます*コンピューター名*\\*ユーザーまたはドメイン*\\*ユーザー*します。  
+`[ @loginame = ] 'login'`Windows ユーザーまたはグループの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログイン*には、*コンピューター名* \\ *ユーザーまたはドメイン* \\ *ユーザー*の形式で、既存の Windows ユーザー名またはグループを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_revokelogin**で指定されたアカウントを使用して接続を無効になります、*ログイン*パラメーター。 インスタンスへのアクセスが許可されている Windows ユーザーが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のメンバーシップを通じてグループに接続できる、グループ、個々 のアクセスが取り消された後です。 同様に場合、*ログイン*とは別にされているそのグループのメンバーは、のインスタンスへのアクセスを許可パラメーターでは、Windows グループの名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は引き続き接続できます。  
+## <a name="remarks"></a>解説  
+ **sp_revokelogin**は、 *login*パラメーターで指定されたアカウントを使用した接続を無効にします。 ただし、Windows グループのメンバーシップによってのインスタンスへのアクセスが許可されている Windows ユーザー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、個別のアクセスが取り消された後もグループとして接続できます。 同様に、 *login*パラメーターで Windows グループの名前を指定した場合、そのグループのメンバーはのインスタンスへのアクセスが個別に許可されていて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] も接続できます。  
   
- たとえば場合、Windows ユーザー **advworks \john** Windows グループのメンバーである**advworks \admins**、および**sp_revokelogin**へのアクセスを取り消します`ADVWORKS\john`:  
+ たとえば、Windows ユーザー **ADVWORKS\john**が windows グループ**ADVWORKS\Admins**のメンバーである場合、 **sp_revokelogin**は次のアクセス権を取り消し `ADVWORKS\john` ます。  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- ユーザー **advworks \john**場合にも接続できます**advworks \admins**のインスタンスへのアクセス権が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 同様に場合、Windows グループ**advworks \admins**取り消すそのアクセスしますが、 **advworks \john**アクセスが許可**advworks \john**も接続できます。  
+ ユーザー **ADVWORKS\john**は、 **ADVWORKS\Admins**にのインスタンスへのアクセスが許可されている場合でも接続でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 同様に、Windows グループ**ADVWORKS\Admins**のアクセスが取り消されても、 **ADVWORKS\john**にアクセス権が付与されている場合、 **ADVWORKS\john**は引き続き接続できます。  
   
- 使用**sp_denylogin**明示的にユーザーのインスタンスに接続できないようにする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows グループ メンバーシップに関係なく、します。  
+ **Sp_denylogin**を使用すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Windows グループメンバーシップに関係なく、ユーザーがのインスタンスに明示的に接続するのを防ぐことができます。  
   
- **sp_revokelogin**ユーザー定義のトランザクション内で実行することはできません。  
+ **sp_revokelogin**は、ユーザー定義のトランザクション内では実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、Windows ユーザー用のログイン エントリを削除する`Corporate\MollyA`します。  
+## <a name="examples"></a>例  
+ 次の例では、Windows ユーザーのログインエントリを削除し `Corporate\MollyA` ます。  
   
 ```  
 EXEC sp_revokelogin 'Corporate\MollyA';  
@@ -79,11 +79,11 @@ EXEC sp_revokelogin [Corporate\MollyA];
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のログインを削除します。](../../t-sql/statements/drop-login-transact-sql.md)   
+ [sp_denylogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

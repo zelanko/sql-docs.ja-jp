@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルの変更 | Microsoft Docs
+description: ALTER TABLE ステートメントで、メモリ最適化テーブルのスキーマとインデックスの変更がどのように実行されるかを説明します。 ADD、DROP、および ALTER 操作を 1 つのステートメントに結合します。
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951295"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776072"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 メモリ最適化テーブルのスキーマとインデックスの変更は、ALTER TABLE ステートメントを使用して実行できます。 SQL Server 2016 と Azure SQL Database では、メモリ最適化テーブルに対する ALTER TABLE 操作は OFFLINE です。つまり、操作が行われている間、テーブルのクエリを行うことはできません。 データベース アプリケーションは実行を継続できます。また、テーブルにアクセスする操作は、変更プロセスが完了するまでブロックされます。 1 つの ALTER TABLE ステートメントに、複数の ADD、DROP、または ALTER 操作を組み合わせることができます。
 
@@ -70,7 +71,7 @@ ALTER TABLE 構文は、テーブル スキーマを変更する場合だけで�
   - 新しい行外の列を作成します。
   - *例外:* 既存の行外列が長くなった場合は、最適化された方法でログに記録されます。
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、既存のハッシュ インデックスのバケット数を変更します。 その結果、新しいバケット数でハッシュ インデックスが再構築されますが、ハッシュ インデックスの他のプロパティは変わりません。  
 

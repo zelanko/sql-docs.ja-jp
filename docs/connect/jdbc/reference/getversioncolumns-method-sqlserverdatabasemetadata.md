@@ -16,10 +16,10 @@ ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67978159"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns メソッド (SQLServerDatabaseMetaData)
@@ -55,12 +55,12 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getVersionColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getVersionColumns メソッドで規定されています。  
   
  getVersionColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|JDBC ドライバーではサポートされていません。|  
 |COLUMN_NAME|**String**|列名。|  

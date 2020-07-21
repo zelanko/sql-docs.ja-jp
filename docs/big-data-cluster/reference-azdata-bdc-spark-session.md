@@ -1,26 +1,26 @@
 ---
 title: azdata bdc spark session リファレンス
-titleSuffix: SQL Server big data clusters
 description: azdata bdc spark session コマンドの参照記事。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1573c5b95eeaf314db08acc60d6fe5e1e2c4b753
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 6829ce474b2f2f0b000a8ded5cfae2e293e1c2da
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653429"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258623"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-次の記事では、**azdata** ツールでの **bdc spark session** コマンドのリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
+以下の記事では、`azdata` ツールの `bdc spark session` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -49,10 +49,10 @@ azdata bdc spark session create [--session-kind -k]
                                 [--config -c]  
                                 [--timeout-seconds -t]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 セッションを作成します。
 ```bash
-azdata bdc spark session create --session-kind pyspark
+azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--session-kind -k`
@@ -91,18 +91,18 @@ Spark 構成値を含む名前と値のペアのリスト。  JSON ディクシ�
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
 Spark 内のすべてのアクティブなセッションを一覧表示します。
 ```bash
 azdata bdc spark session list 
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 すべてのアクティブなセッションを一覧表示します。
 ```bash
-azdata bdc spark session list
+azdata spark session list
 ```
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
@@ -112,21 +112,20 @@ azdata bdc spark session list
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 これにより、指定された ID を持つアクティブな Spark セッションのセッション情報が取得されます。  このセッション ID は、'spark session create' から返されます。
 ```bash
 azdata bdc spark session info --session-id -i 
-                              
-```
-### <a name="examples"></a>使用例
-0 の ID を持つセッションのセッション情報を取得します。
+            ```
+### Examples
+Get session info for session with ID of 0.
 ```bash
-azdata bdc spark session info --session-id 0
+azdata spark session info --session-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
 Spark セッションの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -137,21 +136,20 @@ Spark セッションの ID 番号。
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 これにより、指定された ID を持つアクティブな Spark セッションのセッション ログ エントリが取得されます。  このセッション ID は、'spark session create' から返されます。
 ```bash
 azdata bdc spark session log --session-id -i 
-                             
-```
-### <a name="examples"></a>使用例
-0 の ID を持つセッションのセッション ログを取得します。
+           ```
+### Examples
+Get session log for session with ID of 0.
 ```bash
-azdata bdc spark session log --session-id 0
+azdata spark session log --session-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
 Spark セッションの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -162,21 +160,20 @@ Spark セッションの ID 番号。
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 これにより、指定された ID を持つアクティブな Spark セッションのセッション状態が取得されます。  このセッション ID は、'spark session create' から返されます。
 ```bash
 azdata bdc spark session state --session-id -i 
-                               
-```
-### <a name="examples"></a>使用例
-0 の ID を持つセッションのセッション状態を取得します。
+             ```
+### Examples
+Get session state for session with ID of 0.
 ```bash
-azdata bdc spark session state --session-id 0
+azdata spark session state --session-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
 Spark セッションの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -187,21 +184,20 @@ Spark セッションの ID 番号。
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 これにより、対話型の Spark セッションが削除されます。 このセッション ID は、'spark session create' から返されます。
 ```bash
 azdata bdc spark session delete --session-id -i 
-                                
-```
-### <a name="examples"></a>使用例
-セッションを削除します。
+              ```
+### Examples
+Delete a session.
 ```bash
-azdata bdc spark session delete --session-id 0
+azdata spark session delete --session-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--session-id -i`
 Spark セッションの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -212,10 +208,10 @@ Spark セッションの ID 番号。
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **Azdata**ツールをインストールする方法の詳細については、「[管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する azdata をインストール](deploy-install-azdata.md)する」を参照してください。
+`azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

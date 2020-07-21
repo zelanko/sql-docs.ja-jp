@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fe15544cd689004eb2fcc56ae4083651e6c02ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732792"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ルートからのパスが _newRoot_ のパスで、_oldRoot_ からのパスが続くノードを返します。
   
@@ -53,13 +53,13 @@ _newRoot_
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 _oldRoot_ から _newRoot_ にノードを移動することでツリーを変更するために使用されます。 GetReparentedValue は、階層内の新しい場所に階層ノードを移動するために使用されます。 **hierarchyid** データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid 新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 **hierarchyid** エントリの重複を防止のデータ型に役立ちます。 サブツリー全体の移動例については、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 2 つのノードの位置の比較  
-次の例は、ノードの現在の hierarchyid と、 移動されたノードが **@NewParent** ノードの子孫になる場合のノードの **hierarchyid** も示します。 この例では、`ToString()` メソッドを使用して階層関係を表示しています。
+次の例は、ノードの現在の hierarchyid と、 移動されたノードが **\@NewParent** ノードの子孫になる場合のノードの **hierarchyid** も示します。 この例では、`ToString()` メソッドを使用して階層関係を表示しています。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -109,7 +109,7 @@ WHERE LoginID = 'adventure-works\gail0' ; -- Now node /2/3/2/
 this. GetReparentedValue(oldParent, newParent)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

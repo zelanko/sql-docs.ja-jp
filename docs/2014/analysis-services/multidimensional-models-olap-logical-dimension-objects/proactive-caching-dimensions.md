@@ -1,5 +1,5 @@
 ---
-title: プロアクティブ キャッシュ (ディメンション) |Microsoft Docs
+title: プロアクティブキャッシュ (ディメンション) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f5e6bab81e982adbf8ee443bd84a5e806b960db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50c723d46b6c51fae0ccc227b5e58cf96f72c7b4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545106"
 ---
 # <a name="proactive-caching-dimensions"></a>プロアクティブ キャッシュ (ディメンション)
   プロアクティブ キャッシュでは、自動 MOLAP キャッシュの作成と、OLAP オブジェクトの管理が可能です。 データベース内のデータに加えられた変更は、データベースからの通知に基づき、すぐにキューブに反映されます。 プロアクティブ キャッシュの目標は、従来の MOLAP のパフォーマンスを提供しながら、ROLAP の即時性と管理のしやすさを保つことです。  

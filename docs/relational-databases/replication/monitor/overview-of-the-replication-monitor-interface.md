@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4906f088a20b6028958bf1d613e839dbfe568f26
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770603"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159790"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターでは、レプリケーションのすべての利用状況について、パブリッシャー関連の情報またはディストリビューター関連の情報が 2 つのペインで表示されます。 左ペインにパブリッシャーを追加すると、パブリッシャーとそのパブリケーション、パブリケーションのサブスクリプション、およびさまざまなレプリケーション エージェントに関する情報が右ペインに表示されます。 レプリケーション モニターでは、レプリケーション トポロジに関する情報の表示に加えて、エージェントの開始や停止、データの検証などさまざまなタスクを実行できます。  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>トポロジ全体の情報を表示  
@@ -223,11 +223,11 @@ ms.locfileid: "68770603"
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>情報の表示とエージェント プロファイル関連のタスクの実行  
  レプリケーション モニターには、エージェント プロファイルを管理するためのさまざまなダイアログ ボックスが用意されています。 エージェント プロファイルとは、エージェントのパラメーターのセットであり、これらのパラメーターによってエージェントの動作が決定されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。 これらのダイアログ ボックスには以下のものがあります。  
   
--   **[エージェント プロファイル]**  
+-   **エージェント プロファイル**  
   
      このダイアログ ボックスでは、プロファイルのプロパティの変更、プロファイルの作成と削除、既定のプロファイルの指定、および特定の種類のエージェント (スナップショット エージェントなど) のすべてが使用するプロファイルの指定を行うことができます。  
   
--   **\<AgentProfileName > プロパティ**  
+-   **\<AgentProfileName>プロパティ**  
   
      このダイアログ ボックスでは、プロファイルのパラメーター設定の表示と編集を行うことができます。  
   

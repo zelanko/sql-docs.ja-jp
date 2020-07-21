@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 7: Windows Azure ストレージへのデータ ファイルの移動 |Microsoft Docs'
+title: 'レッスン 7: データファイルを Azure Storage に移動する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c75b5b8ef384956ac05bab4e016ce37e691856da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ae5b92ace65f255aacff5b49fe789a31d3a69e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049807"
 ---
-# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>レッスン 7: Microsoft Azure ストレージへのデータ ファイルの移動
-  このレッスンでは、Windows Azure ストレージ (SQL Server インスタンスではなく) にデータ ファイルを移動する方法について学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>レッスン 7: Azure Storage にデータ ファイルを移動する
+  このレッスンでは、(SQL Server インスタンスではなく) Azure Storage にデータファイルを移動する方法を学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
   
- Windows Azure ストレージにデータ ファイルを移動するには、データ ファイルの場所を変更できる `ALTER DATABASE` ステートメントを使用できます。  
+ データファイルを Azure Storage に移動するには、ステートメントを使用し `ALTER DATABASE` ます。これは、データファイルの場所を変更するのに役立ちます。  
   
- このレッスンでは、次の手順が既に完了したことを前提としています。  
+ このレッスンでは、次の手順を既に完了していることを前提としています。  
   
--   Windows Azure ストレージ アカウントを入手しました。  
+-   Azure Storage アカウントを持っています。  
   
--   Windows Azure ストレージ アカウントにコンテナーを作成しました。  
+-   Azure Storage アカウントでコンテナーを作成しました。  
   
 -   読み取り、書き込み、一覧表示の権限のあるコンテナーに対するポリシーを作成しました。 SAS キーも生成しました。  
   
 -   ソース コンピューターで SQL Server 資格情報を作成しました。  
   
- 次に、以下の手順を使用して、Windows Azure ストレージにデータ ファイルを移動します。  
+ 次に、次の手順を使用して、データファイルを Azure Storage に移動します。  
   
 1.  まず、ソース コンピューターにテスト データベースを作成し、それにデータを追加します。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66090722"
     ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
-    -- the new location of the file in Windows Azure Storage container.   
+    -- the new location of the file in Azure Storage container.   
     ALTER DATABASE TestDB1Alter    
         MODIFY FILE ( NAME = TestDB1Alter,    
                     FILENAME = 'https://teststorageaccnt.blob.core.windows.net/testcontaineralter/TestDB1AlterData.mdf');   
@@ -63,7 +62,7 @@ ms.locfileid: "66090722"
   
     ```  
   
-3.  これを実行すると、このメッセージが表示されます。"ファイル"TestDB1Alter"がシステム カタログに変更されました。 新しいパスが使用次回データベースを起動します。"  
+3.  これを実行すると、システムカタログで "ファイル" TestDB1Alter "が変更されていることがわかります。 新しいパスは、次回データベースを起動するときに使用されます。  
   
 4.  続いて、データベースをオフラインにします。  
   
@@ -74,9 +73,9 @@ ms.locfileid: "66090722"
   
     ```  
   
-5.  ここで、次のメソッドのいずれかを使用して Windows Azure ストレージにデータ ファイルをコピーする必要があります。[AzCopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[ストレージ クライアント ライブラリ リファレンス](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサード パーティのストレージ エクスプ ローラー ツール。  
+5.  次に、 [Azcopy ツール](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサードパーティのストレージエクスプローラーツールのいずれかの方法を使用して、データファイルを Azure Storage にコピーする必要があります。  
   
-     **重要:** この新しい機能強化を使用して、常にブロック blob ではなくページ blob を作成することを確認します。  
+     **重要:** この新しい機能強化を使用する場合は、必ずブロック blob ではなくページ blob を作成してください。  
   
 6.  続いて、データベースをオンラインにします。  
   
@@ -89,6 +88,6 @@ ms.locfileid: "66090722"
   
  **次のレッスン:**  
   
- [レッスン 8:Windows Azure ストレージにデータベースを復元する](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [レッスン8。Azure Storage にデータベースを復元する](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAGetProperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ca2b73fc6498d6cdf1d0addd11225d2ce2c0cb81
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899328"
 ---
-# <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   OLE オブジェクトのプロパティ値を取得します。  
   
@@ -42,47 +42,47 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 使用して作成した OLE オブジェクトのオブジェクト トークン**sp_OACreate**します。  
+ 以前に**sp_OACreate**を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
   
  *propertyname*  
- 返される OLE オブジェクトのプロパティ名です。  
+ 返される OLE オブジェクトのプロパティ名を指定します。  
   
- *propertyvalue* **出力**  
- 返されるプロパティ値です。 指定する場合は、適切なデータ型のローカル変数でなければなりません。  
+ *propertyvalue*の**出力**  
+ 返されるプロパティ値を指定します。 指定する場合は、適切なデータ型のローカル変数でなければなりません。  
   
- プロパティは OLE オブジェクトを返す場合*propertyvalue*データ型のローカル変数にする必要があります**int**します。オブジェクト トークンがローカル変数に格納され、このオブジェクト トークンを他の OLE オートメーション ストアド プロシージャで使用できます。  
+ プロパティが OLE オブジェクトを返す場合、 *propertyvalue*は、データ型が**int**のローカル変数である必要があります。オブジェクトトークンはローカル変数に格納され、このオブジェクトトークンを他の OLE オートメーションストアドプロシージャと共に使用できます。  
   
- ローカル変数を指定するか、プロパティが 1 つの値を返す場合*propertyvalue*、ローカル変数の値または指定しないプロパティが返されます*propertyvalue*、返された、単一列、単一行の結果セットとしてクライアントにプロパティ値です。  
+ プロパティが単一の値を返す場合は、 *propertyvalue*のローカル変数を指定します。これにより、ローカル変数のプロパティ値が返されます。または、 *propertyvalue*を指定せずに、単一列の単一行の結果セットとしてクライアントにプロパティ値を返します。  
   
- 場合に、プロパティが、配列を返す場合*propertyvalue*を指定すると、NULL に設定されます。  
+ プロパティが配列を返す場合、 *propertyvalue*を指定すると、NULL に設定されます。  
   
- 場合*propertyvalue*が指定されているが、プロパティは、値を返されないため、エラーが発生します。 プロパティが 3 次元以上の配列を返す場合は、エラーが発生します。  
+ *Propertyvalue*が指定されていても、プロパティが値を返さない場合は、エラーが発生します。 プロパティが3次元以上の配列を返す場合、エラーが発生します。  
   
- *index*  
- インデックス パラメーターです。 指定した場合*インデックス*適切なデータ型の値を指定する必要があります。  
+ *インデックス*  
+ はインデックスパラメーターです。 指定する場合、*インデックス*は、適切なデータ型の値である必要があります。  
   
- プロパティの一部はパラメーターを持っています。 このようなプロパティをインデックス付きプロパティ、パラメーターをインデックス パラメーターと呼びます。 1 つのプロパティが複数のインデックス パラメーターを持つことができます。  
+ 一部のプロパティにはパラメーターがあります。 これらのプロパティはインデックス付きプロパティと呼ばれ、パラメーターはインデックスパラメーターと呼ばれます。 プロパティは、複数のインデックスパラメーターを持つことができます。  
   
 > [!NOTE]  
->  このストアド プロシージャのパラメーターは、名前ではなく位置で指定されます。  
+>  このストアドプロシージャのパラメーターは、名前ではなく位置によって指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
+ 0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
 ## <a name="result-sets"></a>結果セット  
  プロパティが 1 次元または 2 次元の配列を返す場合、配列は結果セットとしてクライアントに返されます。  
   
 -   1 次元の配列の場合は、配列内の要素数と同数の列を持つ 1 行の結果セットとしてクライアントに返されます。 つまり、配列は列数として返されます。  
   
--   2 次元の配列の場合は、最初の次元の配列の要素数を列数とし、2 番目の次元の配列の要素数を行数とした結果セットとしてクライアントに返します。 つまり、配列を (列数,行数) として返します。  
+-   2 次元の配列の場合は、最初の次元の配列の要素数を列数とし、2 番目の次元の配列の要素数を行数とした結果セットとしてクライアントに返します。 つまり、配列は (columns, rows) として返されます。  
   
- ときに、プロパティの戻り値またはメソッドの戻り値は、配列**sp_OAGetProperty**または**sp_OAMethod**クライアントに結果セットを返します。 メソッドの出力パラメーターを配列にすることはできません。これらのプロシージャは、配列内のすべてのデータ値をスキャンし、結果セットのそれぞれの列に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の適切なデータ型とデータ長を決定します。 これらのプロシージャは必要なデータ型とデータ長を使用して、特定の列内のすべてのデータ値を表現します。  
+ プロパティの戻り値またはメソッドの戻り値が配列の場合、 **sp_OAGetProperty**または**sp_OAMethod**によって結果セットがクライアントに返されます。 メソッドの出力パラメーターを配列にすることはできません。これらのプロシージャは、配列内のすべてのデータ値をスキャンし、結果セットのそれぞれの列に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の適切なデータ型とデータ長を決定します。 これらのプロシージャは必要なデータ型とデータ長を使用して、特定の列内のすべてのデータ値を表現します。  
   
- 列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 1 列のデータ値がそれぞれ異なるデータ型である場合、列全体に適用されるデータ型は次の表を基に選択されます。  
+ 列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値のデータ型が異なる場合、列全体のデータ型が次のグラフに基づいて選択されます。  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||INT|float|money|DATETIME|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -91,16 +91,16 @@ sp_OAGetProperty objecttoken , propertyname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>コメント  
- 使用することも**sp_OAMethod**プロパティ値を取得します。  
+## <a name="remarks"></a>注釈  
+ また、 **sp_OAMethod**を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
+ **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-a-local-variable"></a>A. ローカル変数を使用する  
- 次の例では、取得、`HostName`プロパティ (の前に作成**SQLServer**オブジェクト)、ローカル変数に格納します。  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -113,8 +113,8 @@ END
 PRINT @property;  
 ```  
   
-### <a name="b-using-a-result-set"></a>B. 結果セットを使用する  
- 次の例では、取得、`HostName`プロパティ (の前に作成**SQLServer**オブジェクト) をクライアントに結果セットとして返します。  
+### <a name="b-using-a-result-set"></a>B: 結果セットの使用  
+ 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、結果セットとしてクライアントに返します。  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  
@@ -125,8 +125,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>参照  
- [OLE オートメーション ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

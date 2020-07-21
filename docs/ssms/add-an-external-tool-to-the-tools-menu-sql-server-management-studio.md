@@ -1,6 +1,6 @@
 ---
-title: '[ツール] メニューへの外部ツールの追加 | Microsoft Docs'
-ms.custom: ''
+title: '[ツール] メニューへの外部ツールの追加'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41cb442df9651f4013a8053bf0070350eacac0c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: aec569600c07fb829836313972c02241f121d088
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265586"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254551"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>[ツール] メニューへの外部ツールの追加 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] から任意の [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows アプリケーションまたは [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] アプリケーションを起動できます。 外部アプリケーションを **[ツール]** メニューに追加し、そこから起動することができます。  
+[!INCLUDE[msCoName](../includes/msconame_md.md)] から任意の [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows アプリケーションまたは [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] アプリケーションを起動できます。 外部アプリケーションを **[ツール]** メニューに追加し、そこから起動することができます。  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>[ツール] メニューに外部ツールを追加するには  
   

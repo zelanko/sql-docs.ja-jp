@@ -1,5 +1,5 @@
 ---
-title: メモリ内またはテーブル モデル データベース用 DirectQuery アクセスの構成 |Microsoft Docs
+title: テーブルモデルデータベースに対するメモリ内または DirectQuery アクセスの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 145d5a0d32384a0bcea1d60d00dcf3988642229c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938913"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>テーブル モデルのデータベースの In-Memory または DirectQuery アクセスの構成
   このトピックでは、既に配置されたテーブル モデルの接続プロパティを変更し、モデルを直接クエリ モードで使用できるようにする方法について説明します。  
   
- これらのプロパティ、および最も一般的なシナリオの構成に関する詳細については、次を参照してください。 [DirectQuery の配置シナリオ&#40;SSAS 表形式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)します。  
+ これらのプロパティ、および最も一般的なシナリオの構成の詳細については、「 [SSAS のデプロイシナリオ &#40;SSAS 表形式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
  テーブル モデルで直接クエリ モードを使用できるようにする操作は、複数の手順から成るプロセスです。 次の手順が必要です。  
@@ -41,9 +40,9 @@ ms.locfileid: "66067192"
   
 1.  SQLServer Management Studio で、モデルを配置するインスタンスを開きます。  
   
-2.  オブジェクト エクスプ ローラーで、モデル データベースの名前を右クリックして**プロパティ**します。  
+2.  オブジェクトエクスプローラーで、モデルデータベースの名前を右クリックし、[**プロパティ**] を選択します。  
   
-3.  プロパティを探します**DirectQueryMode**します。 リレーショナル データ ソースを使用できるようにするには、このプロパティを次のいずれかの値に設定する必要があります。  
+3.  **Directquerymode**プロパティを見つけます。 リレーショナル データ ソースを使用できるようにするには、このプロパティを次のいずれかの値に設定する必要があります。  
   
     -   **DirectQuery**  
   

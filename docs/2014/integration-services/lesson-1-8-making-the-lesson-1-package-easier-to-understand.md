@@ -1,5 +1,5 @@
 ---
-title: 手順 8:レッスン 1 のパッケージをわかりやすく |Microsoft Docs
+title: '手順 8: レッスン 1 のパッケージをわかりやすくする作業 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3a8837cbf3b102435a94706ee277aab9a42fb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767594"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440679"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>手順 8:レッスン 1 のパッケージをわかりやすくする作業
   ここまでの作業で、レッスン 1 のパッケージの構成が完了しました。次は、パッケージのレイアウトを整理することをお勧めします。 制御フローやデータ フローのレイアウトの図形サイズがまちまちであったり、図形の整列やグループ化が行われていないと、パッケージの機能がわかりにくくなることがあります。  

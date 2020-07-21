@@ -1,5 +1,6 @@
 ---
 title: XML データのシリアル化の定義 | Microsoft Docs
+description: SQL Server で xml データをシリアル化するときに使用される規則について学習します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b77c2d78818656c3cbb59619ce99bed8cb0bcd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738441"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML データ型を SQL 文字列型やバイナリ型に明示的または暗黙にキャストすると、XML データ型のコンテンツはこのトピックで説明する規則に従ってシリアル化されます。  
   
 ## <a name="serialization-encoding"></a>シリアル化のエンコード  
  SQL の対象型が VARBINARY の場合、結果は UTF-16 バイト順マークを前に付け、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -46,7 +47,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  SQL の対象型が NVARCHAR または NCHAR の場合、結果はバイト順マークを前に付けず、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -58,9 +59,9 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- SQL の対象型が VARCHAR または NCHAR の場合、結果はバイト順マークまたは XML 宣言を付けずに、データベースの照合順序のコード ページに対応するエンコードでシリアル化されます。 対象型が小さすぎるか、または対象の照合順序のコード ページに値をマップできない場合、エラーが発生します。  
+ SQL の対象型が VARCHAR または CHAR の場合、結果はバイト順マークまたは XML 宣言を付けずに、データベースの照合順序のコード ページに対応するエンコードでシリアル化されます。 対象型が小さすぎるか、または対象の照合順序のコード ページに値をマップできない場合、エラーが発生します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -76,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>シリアル化中の XML 文字のエンティティ変換  
  シリアル化されたすべての XML 構造は再解析が可能である必要があります。 したがって、XML パーサーの正規化フェーズ中に引き続き文字を互いにやり取りできるようにするには、一部の文字をエンティティに変換する方法でシリアル化する必要があります。 ただし、一部の文字をエンティティに変換する場合は、ドキュメントが整形式になり、解析可能になるようにする必要があります。 次に、シリアル化中に適用されるエンティティ変換の規則を示します。  
   
--   &、\<、> の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
+-   &、\<, and > の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
   
 -   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot;にエンティティ変換されます。  
   
@@ -88,7 +89,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   空白文字だけが含まれているテキスト ノードを保護するために、空白文字の 1 つ (通常は最後の空白文字) が数字参照としてエンティティ変換されます。 このようにすると、解析時の空白文字の処理の設定とは無関係に、再解析時に空白文字のテキスト ノードが保持されます。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 declare @u NVARCHAR(50)  
@@ -152,6 +153,6 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
 ## <a name="see-also"></a>参照  
  [XQuery での型キャストの規則](../../xquery/type-casting-rules-in-xquery.md)   
- [CAST と CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

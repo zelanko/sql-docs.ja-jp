@@ -1,5 +1,5 @@
 ---
-title: データ フロー パス エディター (全般 ページ) |Microsoft Docs
+title: '[データフローパスエディター] ([全般] ページ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85382ac1f2c61b603fe56065236645efcab19c16
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059963"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432599"
 ---
 # <a name="data-flow-path-editor-general-page"></a>[データ フロー パス エディター] ([全般] ページ)
   **[データ フロー パス エディター]** ダイアログ ボックスを使用すると、パス プロパティの設置、列メタデータの表示、およびパスにアタッチされるデータ ビューアーの管理を行うことができます。  
   
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  パスの一意な名前を指定します。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66059963"
  **[IdentificationString]**  
  パスを識別する文字列です。 上記で入力した名前から自動的に生成されます。  
   
- **[説明]**  
+ **説明**  
  パスの説明を記述します。  
   
  **[PathAnnotation]**  
@@ -45,13 +44,13 @@ ms.locfileid: "66059963"
  **[DestinationName]**  
  パスの末尾の入力を表示します。  
   
- **[SourceName]**  
+ **SourceName**  
  パスの先頭の出力を表示します。  
   
 ## <a name="see-also"></a>関連項目  
- [データ フロー パス エディター&#40;メタデータ ページ&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
- [データ フロー パス エディター&#40;データ ビューアー ページ&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [データ フロー](data-flow/data-flow.md)   
+ [データフローパスエディター &#40;メタデータページ&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+ [データフローパスエディターの [データビューアー] ページ &#40;&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [データフロー](data-flow/data-flow.md)   
  [パッケージで注釈を使用する](use-annotations-in-packages.md)  
   
   

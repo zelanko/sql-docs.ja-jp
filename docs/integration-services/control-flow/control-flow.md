@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2f8a622f35245e50c75354efef9d7dfc9aaf7eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105581"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298386"
 ---
-# <a name="control-flow"></a>[制御フロー]
+# <a name="control-flow"></a>制御フロー
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "68105581"
   
  次の図は、1 つのコンテナーと 6 つのタスクで構成される制御フローを示しています。 タスクのうち 5 つはパッケージ レベルで定義され、残りの 1 つのタスクはコンテナー レベルで定義されています。 タスクは、コンテナーの内部にあります。  
   
- ![6 つのタスクと 1 つのコンテナーを含む制御フロー](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 つのタスクと 1 つのコンテナーを含む制御フロー")  
+ ![6 つのタスクと 1 つのコンテナーで構成される制御フロー](../../integration-services/control-flow/media/ssis-controlflowelmt.gif "6 つのタスクと 1 つのコンテナーとで構成される制御フロー")  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアーキテクチャでは入れ子のコンテナーがサポートされており、制御フローには複数のレベルで入れ子になったコンテナーを含めることができます。 たとえば、パッケージには Foreach ループ コンテナーなどのコンテナーを含めることができ、Foreach ループ コンテナーには、さらに別の Foreach ループ コンテナーなどを含めることができます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68105581"
   
      **[制御フロー]** タブのデザイン画面にタスクまたはコンテナーを追加すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、アイテムにコネクタを自動的に追加します。 パッケージに 2 つ以上のアイテム、つまりタスクまたはコンテナーが含まれている場合、コネクタを 1 つのアイテムから別のアイテムにドラッグすると、それらを制御フローに結合できます。  
   
-     2 つのアイテム間のコネクタは、優先順位制約を表します。 優先順位制約では、連結された 2 つのアイテムの関連性を定義します。 ここでは、実行時にタスクとコンテナーが実行される順序、およびタスクとコンテナーが実行される条件を指定します。 たとえば、優先順位制約は、あるタスクが成功した場合にのみ、制御フロー内の次のタスクが実行されるように指定できます。 優先順位制約の詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+     2 つのアイテム間のコネクタは、優先順位制約を表します。 優先順位制約では、連結された 2 つのアイテムの関連性を定義します。 ここでは、実行時にタスクとコンテナーが実行される順序、およびタスクとコンテナーが実行される条件を指定します。 たとえば、優先順位制約は、あるタスクが成功した場合にのみ、制御フロー内の次のタスクが実行されるように指定できます。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
 -   接続マネージャーを追加します。  
   

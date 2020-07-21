@@ -1,5 +1,6 @@
 ---
 title: XML データの取得および XML データに対するクエリの実行 | Microsoft Docs
+description: XML データのクエリを実行するときに指定する必要があるクエリ オプション、およびデータベースに格納されている場合に保持されない XML インスタンスの部分について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738396"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、XML データのクエリを実行するために指定する必要があるクエリ オプションについて説明します。 また、XML インスタンスをデータベースに格納するときに保持されない部分についても説明します。  
   
-##  <a name="features"></a> 保持されない XML インスタンスの機能  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> 保持されない XML インスタンスの機能  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インスタンスの内容は保持されますが、XML データ モデルで重要と見なされない側面は保持されません。 つまり、取得した XML インスタンスは、サーバーに格納されたインスタンスと同一とは限りませんが、含まれている情報は同じです。  
   
 ### <a name="xml-declaration"></a>XML 宣言  
- インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例:  
+ インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 次に例を示します。  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -80,14 +81,14 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 結果の名前空間プレフィックスは、異なる可能性があります。 例:  
+ 結果の名前空間プレフィックスは、異なる可能性があります。 次に例を示します。  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
 ```  
   
   
-##  <a name="query"></a> 必要なクエリ オプションの設定  
+##  <a name="setting-required-query-options"></a><a name="query"></a> 必要なクエリ オプションの設定  
  **xml** データ型メソッドを使用して **xml** 型の列や変数のクエリを行うときは、次のようにオプションを設定する必要があります。  
   
 |SET オプション|設定する値|  

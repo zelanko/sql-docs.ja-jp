@@ -1,5 +1,5 @@
 ---
-title: (MDS アドインを Excel 用) を読み込む前にデータをフィルター処理 |Microsoft Docs
+title: 読み込み前にデータをフィルター処理する (Excel 用 MDS アドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864e95a075477b80bdbbe06912be37bba33fadf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961145"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>読み込み前のデータのフィルター処理 (Excel 用 MDS アドイン)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、サイズまたは Excel に読み込むデータのスコープを制限する場合に、データをフィルター処理します。  
+  で [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 、Excel に読み込むデータのサイズまたは範囲を制限する場合は、データをフィルター処理します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
@@ -45,14 +44,14 @@ ms.locfileid: "65478931"
   
     > [!NOTE]  
     >  -   最初の 100 万個のメンバーだけが Excel に読み込まれます。  
-    > -   制約付き一覧 (ドメイン ベースの属性) である列の場合は、最初の 1000 個の値のみが読み込まれます。  
+    > -   制約リスト (ドメインベースの属性) の列では、最初の1000値のみが読み込まれます。  
   
 ## <a name="next-steps"></a>次の手順  
- [Excel からデータを MDS にパブリッシュ&#40;MDS アドインの Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Excel から MDS へのデータのパブリッシュ &#40;Excel 用 MDS アドイン&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>参照  
- [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)](filter-dialog-box-mds-add-in-for-excel.md)   
+ [データ &#40;Excel 用 MDS アドインの読み込み&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [[フィルター] ダイアログボックス &#40;Excel 用 MDS アドイン&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
  [列の並べ替え (Excel 用 MDS アドイン)](reorder-columns-mds-add-in-for-excel.md)  
   
   

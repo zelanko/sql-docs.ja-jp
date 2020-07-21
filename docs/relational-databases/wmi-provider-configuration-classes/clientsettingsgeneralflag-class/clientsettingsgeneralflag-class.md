@@ -1,5 +1,5 @@
 ---
-title: ClientSettingsGeneralFlag クラス |Microsoft Docs
+title: ClientSettingsGeneralFlag クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec778a93c1b82f45f5e75f993bd041ade38b4823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba3e3a6eaafc85b01d007d1c51cc2a043fa1c1ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888843"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag クラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [ClientSettingsGeneralFlag クラス](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)のインスタンス上の一般的なフラグ設定を表します[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [ClientSettingsGeneralFlag クラス](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)は、クライアントのインスタンスの一般的なフラグ設定を表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。  
   
- [ClientSettingsGeneralFlag クラス](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)以下を実行するために使用できます。  
+ [ClientSettingsGeneralFlag クラス](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)を使用して、次の操作を行うことができます。  
   
 -   フラグ名の表示  
   

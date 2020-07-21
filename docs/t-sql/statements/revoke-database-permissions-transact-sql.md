@@ -17,15 +17,15 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d54baf32affef290334503d9c18c04a6c28c8d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 365f39eb24fde04d76e9424df12b77b65d411b40
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082345"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998537"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE (データベースの権限の取り消し) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベースに対して許可および拒否された権限を取り消します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68082345"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ]    
     { TO | FROM } <database_principal> [ ,...n ]   
@@ -76,7 +76,7 @@ permission | ALL [ PRIVILEGES ]
 > [!CAUTION]  
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消すには、その権限を派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -85,41 +85,41 @@ permission | ALL [ PRIVILEGES ]
  データベース ロールを指定します。  
   
  *Application_role*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  アプリケーション ロールを指定します。  
   
  *Database_user_mapped_to_Windows_User*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  Windows ユーザーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_Windows_Group*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  Windows グループにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_certificate*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  証明書にマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_asymmetric_key*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  非対称キーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GRANT OPTION で権限が許可されたプリンシパルに対する権限を取り消すときに CASCADE を指定しない場合、ステートメントは失敗します。  
   
  データベースは、セキュリティ保護可能なリソースで、権限の階層で親となっているサーバーに含まれています。 次の表に、データベースで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |データベース権限|権限が含まれるデータベース権限|権限が含まれるサーバー権限|  
 |-------------------------|------------------------------------|----------------------------------|  
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]」を参照してください。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|  
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|  
@@ -132,7 +132,7 @@ permission | ALL [ PRIVILEGES ]
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |すべての外部データ ソースを変更します。|ALTER|CONTROL SERVER|  
 |任意の外部のファイル形式を変更します。|ALTER|CONTROL SERVER|  
@@ -202,12 +202,12 @@ permission | ALL [ PRIVILEGES ]
   
  AS オプションを使用する場合、指定するプリンシパルはデータベースを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-permission-to-create-certificates"></a>A. 証明書を作成する権限を取り消す  
  次の例では、`AdventureWorks2012` データベースに対する `CREATE CERTIFICATE` 権限を、ユーザー `MelanieK` から取り消します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 USE AdventureWorks2012;  
@@ -218,7 +218,7 @@ GO
 ### <a name="b-revoking-references-permission-from-an-application-role"></a>B. REFERENCES 権限をアプリケーション ロールから取り消す  
  次の例では、`AdventureWorks2012` データベースに対する `REFERENCES` 権限を、アプリケーション ロール `AuditMonitor` から取り消します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  

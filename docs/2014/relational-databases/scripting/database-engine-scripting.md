@@ -1,6 +1,6 @@
 ---
-title: データベース エンジン スクリプト | Microsoft Docs
-ms.custom: ''
+title: データベース エンジン スクリプト
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e7b4c7e2972ed797048dbcaedcaaeec4d682d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae905ba881e2337660d47306ce0ed84fdac35d8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056860"
 ---
 # <a name="database-engine-scripting"></a>データベース エンジン スクリプト
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスとそのインスタンスに含まれるオブジェクトを管理するための [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell スクリプト環境をサポートします。 スクリプト環境と非常によく似た環境で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と XQuery を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを作成および実行することもできます。  
@@ -30,7 +29,7 @@ ms.locfileid: "66090516"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト モデル階層を、ファイル システム パスと同様の PowerShell パスとして公開する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダー。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト モデル クラスを使用して、パスの各ノードで表されるオブジェクトを管理できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを実装する一連の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドレット。 コマンドレットの 1 つは **Invoke-Sqlcmd**です。 これは、実行に使用される[!INCLUDE[ssDE](../../includes/ssde-md.md)]クエリ スクリプトを使用して実行する、`sqlcmd`ユーティリティ。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドを実装する一連の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドレット。 コマンドレットの 1 つは **Invoke-Sqlcmd**です。 これは [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、ユーティリティで実行されるクエリスクリプトを実行するために使用され `sqlcmd` ます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、PowerShell を実行するための次の機能を備えています。  
   
@@ -47,19 +46,19 @@ ms.locfileid: "66090516"
   
 -   XQuery 言語ステートメント  
   
--   コマンドと変数、`sqlcmd`ユーティリティ。  
+-   ユーティリティのコマンドと変数 `sqlcmd` 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリを作成および実行するための次の 3 つの環境を提供します。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターで [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]クエリを対話形式で実行およびデバッグできます。 1 つのセッションで複数のステートメントをコーディングおよびデバッグしてから、1 つのスクリプト ファイルにすべてのステートメントを保存できます。  
   
--   `sqlcmd`コマンド プロンプト ユーティリティでは、対話的に実行できます。[!INCLUDE[ssDE](../../includes/ssde-md.md)]クエリ、および実行既存[!INCLUDE[ssDE](../../includes/ssde-md.md)]クエリ スクリプト ファイル。  
+-   `sqlcmd`コマンドプロンプトユーティリティを使用すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリを対話形式で実行したり、既存のクエリスクリプトファイルを実行したりすることができ [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ スクリプト ファイルは、通常 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターを使用して対話形式でコーディングされます。 ファイルは、次のいずれかの環境で後から開くことができます。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** / メニューの **[開く]** を使用して、新しい[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウでファイルを開きます。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** / **[開く]** メニューを使用して、新しい [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウでファイルを開きます。  
   
--   使用して、 **-i**_input_file_パラメーターを使用して、ファイルを実行、`sqlcmd`ユーティリティ。  
+-   **-I**_input_file_パラメーターを使用して、ユーティリティでファイルを実行し `sqlcmd` ます。  
   
 -   **-QueryFromFile** パラメーターを使用して、 **PowerShell スクリプトの** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コマンドレットでファイルを実行します。  
   
@@ -76,8 +75,8 @@ ms.locfileid: "66090516"
 |Windows PowerShell 2.0 環境に SQL Server コンポーネントを統合し、SQL Server インスタンスおよびオブジェクトを管理するための PowerShell スクリプトを作成する方法について説明します。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |データベースの 1 つまたは複数のオブジェクトを再作成する **スクリプトを作成するために、** スクリプトの生成とパブリッシュ [!INCLUDE[tsql](../../includes/tsql-md.md)] ウィザードを使用する方法について説明します。|[スクリプトの生成 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [チュートリアル: Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [チュートリアル:Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

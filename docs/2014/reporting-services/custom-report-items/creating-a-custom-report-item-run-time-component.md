@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265857"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>カスタム レポート アイテムの実行時コンポーネントの作成
-  カスタム レポート アイテムの実行時コンポーネントは、任意の CLS 準拠の言語を使用して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] コンポーネントとして実装され、実行時にレポート プロセッサによって呼び出されます。 実行時コンポーネントのプロパティをデザイン環境で定義するには、カスタム レポート アイテムの対応するデザイン時コンポーネントを変更します。  
+  カスタムレポートアイテムの実行時コンポーネントは、任意の CLS [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]準拠の言語を使用するコンポーネントとして実装され、実行時にレポートプロセッサによって呼び出されます。 実行時コンポーネントのプロパティをデザイン環境で定義するには、カスタム レポート アイテムの対応するデザイン時コンポーネントを変更します。  
 
 <!--
 Replacing the following multiValue.....
@@ -146,10 +146,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [カスタム レポート アイテムのアーキテクチャ](custom-report-item-architecture.md)   
- [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
- [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)   
- [方法:カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
+## <a name="see-also"></a>参照  
+ [カスタムレポートアイテムのアーキテクチャ](custom-report-item-architecture.md)   
+ [カスタムレポートアイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
+ [カスタムレポートアイテムクラスライブラリ](custom-report-item-class-libraries.md)   
+ [方法: カスタム レポート アイテムを配置する](how-to-deploy-a-custom-report-item.md)  
   
   

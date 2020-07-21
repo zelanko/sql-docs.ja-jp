@@ -1,5 +1,5 @@
 ---
-title: 手順 6:追加して、参照変換の構成 |Microsoft Docs
+title: '手順 6 : 参照変換の追加と構成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3798dd0632522cf68b1b73976b7f4b932b257c0f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62891550"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440689"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:参照変換の追加と構成
   ソース ファイルからデータを取り出すフラット ファイルを構成したら、次は、 **CurrencyKey** および **DateKey**の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソースとなるデータを含むデータベースに接続します。  
   
 > [!NOTE]  
->  参照データセットを含むキャッシュに接続するように参照変換を構成することもできます。 詳細については、「 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
+>  参照データセットを含むキャッシュに接続するように参照変換を構成することもできます。 詳細については、「[参照変換](data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
  このチュートリアルでは、次の 2 つの参照変換コンポーネントをパッケージに追加し、構成します。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "62891550"
   
 ### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>Lookup Currency Key 変換を追加および構成するには  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[参照]** を **[データ フロー]** タブのデザイン画面にドラッグします。[参照] を **[Extract Sample Currency Data]** ソースのすぐ下に置きます。  
+1.  [ **SSIS ツールボックス**] で **[共通**] を展開し、[**参照**] を [**データフロー** ] タブのデザイン画面にドラッグします。 " **Extract Sample Currency" データ**ソースのすぐ下に [参照] を配置します。  
   
 2.  **[Extract Sample Currency Data]** フラット ファイル ソースをクリックします。次に、緑色の矢印を、新しく追加した **[参照]** 変換までドラッグして、これら 2 つのコンポーネントを接続します。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "62891550"
   
 9. [Lookup Currency Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
-10. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と**DefaultCodePage**プロパティに設定されて**1252**。  
+10. プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定され、 **defaultcodepage**プロパティが**1252**に設定されていることを確認します。  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>Lookup Date Key 変換を追加および構成するには  
   
@@ -128,12 +127,12 @@ ms.locfileid: "62891550"
   
 11. [Lookup Date Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
-12. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と**DefaultCodePage**プロパティに設定されて**1252**。  
+12. プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定され、 **defaultcodepage**プロパティが**1252**に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 7:追加して、OLE DB 変換先の構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [手順 7:OLE DB 変換先の追加と構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>関連項目  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+ [参照変換](data-flow/transformations/lookup-transformation.md)  
   
   

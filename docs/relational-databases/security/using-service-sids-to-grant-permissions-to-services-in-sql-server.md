@@ -1,17 +1,18 @@
 ---
-title: サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する | Microsoft Docs
+title: サービスの SID を使用してサービスにアクセス許可を付与する
+ms.custom: seo-dt-2019
 author: randomnote1
 ms.author: dareist
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: aeb813feb46c5895352e4da3ea748a3e2f12c1e2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888591"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807612"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する
 
@@ -43,7 +44,7 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 
 サービス SID を使用すると、特定のサービスにアクセス許可を付与することができます。 そのサービスは、実行時にアクセス許可を与えられたリソースにのみアクセスできます。 たとえば、`HealthService` が `LocalSystem` として実行されていて、それに `View Server State` が付与されている場合、`LocalSystem`アカウントは、`HealthService` のコンテキストで実行されているときに、`View Server State` に対してのみアクセスできます。 その他のどのプロセスが `LocalSystem` として SQL のサーバー状態にアクセスを試みても、アクセスは拒否されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-create-a-service-sid"></a>A. サービス ID を作成する
 
@@ -90,17 +91,17 @@ GO
 可用性グループを管理するために必要なアクセス許可をクラスター サービスに付与します。
 
 ```SQL
-GRANT ALTER ANY AVAILABILITY GROUP TO 'NT SERVICE\ClusSvc'
+GRANT ALTER ANY AVAILABILITY GROUP TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT CONNECT SQL TO 'NT SERVICE\ClusSvc'
+GRANT CONNECT SQL TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
+GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 サービス SID 構造体の詳細について、「[SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)」 (SERVICE_SID_INFO 構造体) を参照してください。
 

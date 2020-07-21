@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) のプロパティの変更 |Microsoft Docs
+title: データソースビューのプロパティの変更 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 201ff28999efb006b80157125c85242d538d756a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076734"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537104"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>データ ソース ビューのプロパティの変更 (Analysis Services)
   データ ソース ビュー ウィザードを使用してデータ ソース ビューを定義し、テーブル、ビュー、名前付き計算、および名前付きクエリをデータ ソース ビューに追加した後、以下の項目に関するプロパティを変更できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "66076734"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|[データ ソース]|表示中のプロパティを持つデータ ソース ビュー内のデータ ソースを指定します。|  
+|Data Source|表示中のプロパティを持つデータ ソース ビュー内のデータ ソースを指定します。|  
 |説明|データ ソース ビューの説明を指定します。|  
 |名前|ソリューション エクスプローラーまたは Analysis Services データベースに表示されるデータ ソース ビューの名前を指定します。 データ ソース ビュー名は、ここで変更するか、ソリューション エクスプローラーで変更できます。|  
 |NameMatchingCriteria|データ ソースの名前一致条件。 主キーと外部キーのリレーションシップがデータ ソース ビュー ウィザードで検出された場合の既定値は (なし) です。 このプロパティがデータ ソース ビュー ウィザードで設定されているかどうかにかかわらず、ここでは値を指定できます。 データベース リレーションシップが存在している場合に名前一致条件を指定すると、これら両方が既存のテーブルと新たに追加されたテーブル間のリレーションシップの推測に使用されます。|  
@@ -79,8 +78,8 @@ ms.locfileid: "66076734"
 |長さ|基になるテーブルまたはビュー内の列のデータに基づいて、列の最大長を指定します。|  
 |名前|基になる列の名前、または名前付き計算の名前を指定します。 **Name** プロパティは、名前付き計算を基にして属性を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは、名前付き計算に対してのみ編集できます。|  
   
-## <a name="see-also"></a>関連項目  
- [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
+ [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

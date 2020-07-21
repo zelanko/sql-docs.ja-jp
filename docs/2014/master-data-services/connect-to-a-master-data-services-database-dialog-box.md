@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 911338cd67c44125ec7c10d8e76c5abe4b2f52af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514b8910b1626eeb276882c379842d88f93ff45f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483513"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971992"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>[マスター データ サービス データベースへの接続] ダイアログ ボックス
   **[マスター データ サービス データベースへの接続]** ダイアログ ボックスを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択します。  
@@ -33,15 +32,15 @@ ms.locfileid: "65483513"
   
 |コントロール名|説明|  
 |------------------|-----------------|  
-|**SQL Server インスタンス (SQL Server instance)**|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストするために必要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス名を指定します。 ここには、ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを指定できます。 次のように入力して、情報を指定します。<br /><br /> ローカル コンピューター上の既定のインスタンスに接続するには、ピリオド (.) を入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の既定のインスタンスに接続するには、サーバー名または IP アドレスを入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の名前付きインスタンスに接続するには、サーバー名または IP アドレスと、インスタンス名を入力します。 この情報は、 *server_name*\\*instance_name*の形式で指定します。|  
-|**認証の種類**|指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスへの接続時に使用する認証の種類を選択します。 接続に使用する資格情報によって、 **[マスター データ サービス データベース]** ドロップダウン リストに表示されるデータベースが決まります。 認証の種類は次のとおりです。<br /><br /> **[現在のユーザー – 統合セキュリティ]** :現在の Windows ユーザー アカウントの資格情報を使用して接続するときに、統合 Windows 認証を使用します。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] では、コンピューターにログオンしてアプリケーションを開いたユーザーの Windows 資格情報が使用されます。 アプリケーションで別の Windows 資格情報を指定することはできません。 別の Windows 資格情報を使用して接続する場合は、そのユーザーとしてコンピューターにログオンし、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を開く必要があります。<br /><br /> **[SQL Server アカウント]** :接続する際に SQL Server アカウントを使用します。 このオプションを選択すると、 **[ユーザー名]** フィールドと **[パスワード]** フィールドが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
-|**ユーザー名**|指定した SQL Server インスタンスへの接続に使用されるユーザー アカウントの名前を指定します。 アカウントは、指定した **インスタンスの** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ロールに属している必要があります。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]** の場合、 **[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[ユーザー名]** ボックスが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
-|**Password**|ユーザー アカウントに関連付けられているパスワードを指定します。<br /><br /> **[認証の種類]** が **[現在のユーザー - 統合セキュリティ]** の場合、 **[パスワード]** ボックスは読み取り専用で、指定した Windows ユーザー アカウントの資格情報が接続に使用されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[パスワード]** ボックスが有効になり、指定したユーザー アカウントに関連付けられているパスワードを指定する必要があります。|  
-|**Connect**|指定した資格情報を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続します。|  
-|**[マスター データ サービス データベース]**|次の基準に基づいて、指定した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースが表示されます。<br /><br /> ユーザーがそのインスタンスの **sysadmin** サーバー ロールのメンバーである場合は、そのインスタンス内の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースがすべて表示されます。<br /><br /> ユーザーがそのインスタンスに含まれるいずれかの **データベースの** db_owner [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース ロールのメンバーである場合は、それらの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースが表示されます。<br /><br /> <br /><br /> SQL Server ロールの詳細については、「 [サーバー レベルのロール](../relational-databases/security/authentication-access/server-level-roles.md) 」および「 [データベース レベルのロール](../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。|  
+|**SQL Server インスタンス (SQL Server instance)**|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストするために必要な [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス名を指定します。 ここには、ローカルまたはリモートのコンピューターの、既定または名前付きのインスタンスを指定できます。 次のように入力して、情報を指定します。<br /><br /> ローカル コンピューター上の既定のインスタンスに接続するには、ピリオド (.) を入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の既定のインスタンスに接続するには、サーバー名または IP アドレスを入力します。<br /><br /> 指定したローカル コンピューターまたはリモート コンピューター上の名前付きインスタンスに接続するには、サーバー名または IP アドレスと、インスタンス名を入力します。 この情報は*server_name*instance_name の形式で指定し \\ *instance_name*ます。|  
+|**認証の種類**|指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスへの接続時に使用する認証の種類を選択します。 接続に使用する資格情報によって、 **[マスター データ サービス データベース]** ドロップダウン リストに表示されるデータベースが決まります。 認証の種類は次のとおりです。<br /><br /> **現在のユーザー統合セキュリティ**: 統合 windows 認証を使用して、現在の windows ユーザーアカウントの資格情報を使用して接続します。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] では、コンピューターにログオンしてアプリケーションを開いたユーザーの Windows 資格情報が使用されます。 アプリケーションで別の Windows 資格情報を指定することはできません。 別の Windows 資格情報を使用して接続する場合は、そのユーザーとしてコンピューターにログオンし、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]を開く必要があります。<br /><br /> **[SQL Server アカウント]**: 接続する際に SQL Server アカウントを使用します。 このオプションを選択すると、 **[ユーザー名]** フィールドと **[パスワード]** フィールドが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
+|**ユーザー名**|指定した SQL Server インスタンスへの接続に使用されるユーザー アカウントの名前を指定します。 アカウントは、指定した **インスタンスの** sysadmin [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ロールに属している必要があります。<br /><br /> [**認証の種類**] が [**現在のユーザー統合セキュリティ**] の場合、[**ユーザー名**] ボックスは読み取り専用で、コンピューターにログオンしている Windows ユーザーアカウントの名前が表示されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[ユーザー名]** ボックスが有効になり、指定した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アカウントの資格情報を指定する必要があります。|  
+|**パスワード**|ユーザー アカウントに関連付けられているパスワードを指定します。<br /><br /> [**認証の種類**] が [**現在のユーザー統合セキュリティ**] の場合、[**パスワード**] ボックスは読み取り専用で、指定された Windows ユーザーアカウントの資格情報が接続に使用されます。<br /><br /> **[認証の種類]** が **[SQL Server アカウント]** の場合、 **[パスワード]** ボックスが有効になり、指定したユーザー アカウントに関連付けられているパスワードを指定する必要があります。|  
+|**接続する**|指定した資格情報を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続します。|  
+|**マスターデータサービスデータベース**|次の基準に基づいて、指定した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースが表示されます。<br /><br /> ユーザーがそのインスタンスの **sysadmin** サーバー ロールのメンバーである場合は、そのインスタンス内の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースがすべて表示されます。<br /><br /> ユーザーがそのインスタンスに含まれるいずれかの **データベースの** db_owner [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース ロールのメンバーである場合は、それらの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースが表示されます。<br /><br /> <br /><br /> SQL Server ロールの詳細については、「 [サーバー レベルのロール](../relational-databases/security/authentication-access/server-level-roles.md) 」および「 [データベース レベルのロール](../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [[データベースの構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービスのデータベースと Web サイトの設定](set-up-the-database-and-website-for-master-data-services.md)  
   
   

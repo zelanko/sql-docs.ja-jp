@@ -1,5 +1,5 @@
 ---
-title: MSsubscriptions (Transact-SQL) |Microsoft Docs
+title: MSsubscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,45 +15,45 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 51ab87c830d27a2749fdb332c5a13a5b5dd85542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 210329f301790b9a977e356d883c13a8a246a9c3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139712"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889327"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsubscriptions**ローカル ディストリビューターによって処理されるサブスクリプションでアーティクルをパブリッシュされた各テーブルに 1 つの行が含まれます。 このテーブルは、ディストリビューション データベースに格納されます。  
+  **Mssubscriptions**テーブルには、ローカルディストリビューターによってサービスが提供されるサブスクリプション内のパブリッシュされたアーティクルごとに1行のレコードが含まれます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**publisher_database_id**|**int**|パブリッシャー データベースの ID。|  
+|**publisher_database_id**|**int**|パブリッシャーデータベースの ID。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
-|**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**publication_id**|**int**|パブリケーションの ID。|  
-|**article_id**|**int**|アーティクルの ID。|  
-|**subscriber_id**|**smallint**|サブスクライバーの ID。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
-|**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プルします。<br /><br /> **2** = 匿名です。|  
+|**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
+|**publication_id**|**int**|パブリケーションの ID です。|  
+|**article_id**|**int**|アーティクルの ID です。|  
+|**subscriber_id**|**smallint**|サブスクライバーの ID です。|  
+|**subscriber_db**|**sysname**|サブスクリプションデータベースの名前。|  
+|**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プル。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同期の種類。<br /><br /> **1** = 自動。<br /><br /> **2** = 同期なし。|  
-|**status**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブです。<br /><br /> **1** = サブスクライブします。<br /><br /> **2** = アクティブ。|  
-|**subscription_seqno**|**varbinary(16)**|スナップショット トランザクション シーケンス番号。|  
-|**snapshot_seqno_flag**|**bit**|値が、スナップショット トランザクションのシーケンス番号のソースを示す**1**つまり**subscription_seqno**スナップショット シーケンス番号します。|  
-|**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。|  
+|**status**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ。<br /><br /> **1** = サブスクライブ済み。<br /><br /> **2** = アクティブ。|  
+|**subscription_seqno**|**varbinary(16)**|スナップショットトランザクションのシーケンス番号です。|  
+|**snapshot_seqno_flag**|**bit**|スナップショットトランザクションのシーケンス番号のソースを示します。値が**1**の場合、 **subscription_seqno**がスナップショットのシーケンス番号であることを意味します。|  
+|**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
 |**subscription_time**|**datetime**|内部使用のみです。|  
-|**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = は送信しません。<br /><br /> **0** = 戻す。<br /><br /> 注:この列は、双方向レプリケーション機能との互換性に対してのみサポートされます[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 以降のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ピア ツー ピア レプリケーションを代わりに使用する必要があります。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
+|**loopback_detection**|**bit**|双方向トランザクションレプリケーショントポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = を返しません。<br /><br /> **0** = 返送します。<br /><br />|  
 |**agent_id**|**int**|エージェントの ID。|  
 |**update_mode**|**tinyint**|更新の種類。|  
 |**publisher_seqno**|**varbinary(16)**|このサブスクリプションに対するパブリッシャー側のトランザクションのシーケンス番号。|  
 |**ss_cplt_seqno**|**varbinary(16)**|同時実行スナップショット処理の完了を示すために使用するシーケンス番号。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

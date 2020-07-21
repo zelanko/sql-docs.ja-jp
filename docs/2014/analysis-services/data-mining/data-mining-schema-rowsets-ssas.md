@@ -1,5 +1,5 @@
 ---
-title: データ マイニング スキーマ行セットのクエリ (Analysis Services - データ マイニング) |Microsoft Docs
+title: データマイニングスキーマ行セットに対するクエリの実行 (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8775ec4dbfb7d851d98e0a943d052589f45b1ade
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084908"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523068"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>データ マイニング スキーマ行セットのクエリ (Analysis Services - データ マイニング)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既存の OLE DB データ マイニング スキーマ行セットの多くが、データ マイニング拡張機能 (DMX) ステートメントを使用して照会できるシステム テーブルのセットとして公開されます。 データ マイニング スキーマ行セットに対するクエリを作成することによって、利用可能なサービスの特定、モデルおよび構造の状態の更新、モデル コンテンツまたはパラメーターに関する詳細の確認を行うことができます。 データ マイニング スキーマ行セットの説明については、「 [データ マイニング スキーマ行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)」を参照してください。  
@@ -48,10 +47,10 @@ ms.locfileid: "66084908"
 > [!NOTE]  
 >  表で示した内容がすべてではありません。トラブルシューティングに特に必要と思われる行セットのみを示しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のセクションで、データ マイニング スキーマ行セットに対するクエリの例をいくつか示します。  
   
-### <a name="example-1-list-data-mining-services"></a>例 1 : リストのデータ マイニング サービス  
+### <a name="example-1-list-data-mining-services"></a>例 1: データ マイニング サービスの一覧表示  
  次のクエリでは、現在のサーバーで使用できるマイニング サービス、すなわち有効なアルゴリズムの一覧が返されます。 各マイニング サービスに対して指定される列には、各アルゴリズムで使用できるモデリング フラグとコンテンツの種類、各サービスの GUID、および各サービスに対して追加されている予測の制限が含まれます。  
   
 ```  
@@ -59,7 +58,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>例 2:マイニング モデル パラメーターの一覧  
+### <a name="example-2-list-mining-model-parameters"></a>例 2: データ マイニング モデル パラメーターの一覧表示  
  次の例では、特定のマイニング モデルの作成に使用されたパラメーターを返します。  
   
 ```  
@@ -68,7 +67,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>例 3: すべての行セットを一覧表示します。  
+### <a name="example-3-list-all-rowsets"></a>例 3: すべての行セットの一覧表示  
  次のクエリでは、現在のサーバーで使用できる行セットの詳細な一覧が返されます。  
   
 ```  

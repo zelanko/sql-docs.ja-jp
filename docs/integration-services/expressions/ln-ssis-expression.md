@@ -11,14 +11,14 @@ helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b9c5fe52381018da9f41a81234d56a55d774c676
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bbf59211c35a6048c715594d9c298ba041bcf15
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027452"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289126"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 式)
 
@@ -41,7 +41,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この数値式は、対数の計算前に DT_R8 データ型にキャストされます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  *numeric_expression* が 0 または負の値に評価される場合、返される結果は NULL になります。  

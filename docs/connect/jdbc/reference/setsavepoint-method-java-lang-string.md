@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7af636bd72c3c46a0f327a48bad644c8b4344b2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973087"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925017"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
  セーブポイントの名前を含む**文字列**値です。  
   
 ## <a name="return-value"></a>戻り値  
- セーブポイントオブジェクト。  
+ SavePoint オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setSavePoint メソッドは、java. .sql. 接続インターフェイスの setSavePoint メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setSavePoint メソッドは、java.sql.Connection インターフェイスの setSavePoint メソッドによって指定されます。  
   
  *sName* 引数は、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって自動的にエスケープされます。  
   

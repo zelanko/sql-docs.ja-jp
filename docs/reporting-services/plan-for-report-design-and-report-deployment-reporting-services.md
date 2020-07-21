@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581244"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
@@ -22,7 +22,7 @@ ms.locfileid: "65581244"
   
  RDL ファイルは [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のレポート デザイナー、またはレポート ビルダーで作成します。 RDLC ファイルは、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]に搭載されている ReportViewer コントロールを使用して作成します。
   
-##  <a name="bkmk_rdl_schema_versions"></a> RDL スキーマのバージョン  
+##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL スキーマのバージョン  
  次の表は、利用できるスキーマ バージョンとその省略形の対応表です。このトピックの説明には、以降、これらの省略形を使用します。  
   
 |省略形|スキーマ バージョン|  
@@ -39,11 +39,11 @@ ms.locfileid: "65581244"
   
 -   [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)  
   
--   [レポート定義言語 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+-   [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
  ReportViewer コントロールの詳細については、「[ReportViewer コントロール (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)」を参照してください。  
   
-##  <a name="bkmk_report_server_rdl_schema_support"></a> レポート サーバーと RDL スキーマのサポート  
+##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> レポート サーバーと RDL スキーマのサポート  
  レポート定義ファイルは、次の方法で [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] レポート サーバーに配置できます。  
   
 -   **レポート デザイナー:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]のレポート デザイナーからレポートを配置する。  
@@ -58,7 +58,7 @@ ms.locfileid: "65581244"
 
 ::: moniker-end
   
--   **プログラムから:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートをパブリッシュする。 詳しくは、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」をご覧ください。  
+-   **プログラムから:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートをパブリッシュする。 詳細については、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  次の表は、サポートされる RDL スキーマのバージョンをレポート サーバーのバージョン別に示したものです。  
   
@@ -82,7 +82,7 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
   
  レポートのアップグレードと、サポートされているスキーマ バージョンの詳細については、「 [レポートのアップグレード](../reporting-services/install-windows/upgrade-reports.md)」を参照してください。  
   
-##  <a name="bkmk_report_authoring_and_deployment"></a> レポートの作成と配置のサポート  
+##  <a name="report-authoring-and-deployment-support"></a><a name="bkmk_report_authoring_and_deployment"></a> レポートの作成と配置のサポート  
  レポート作成環境は [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のレポート デザイナー、またはレポート ビルダーです。 レポート作成環境には、レポートのアップグレード、レポート デザイン、ローカル モードでのレポート プレビュー、レポート サーバーでのレポート プレビュー、レポートの配置など、さまざまな機能がサポートされています。  
   
  次の表は、各種スキーマ バージョンのレポート定義の作成と配置に関するサポート状況をまとめたものです。  
@@ -101,7 +101,7 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
   
 -   [Visual Studio 2015 用 SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
-##  <a name="bkmk_reportviewer"></a> ReportViewer コントロール  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a> ReportViewer コントロール  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の ReportViewer コントロールは、ローカル プレビュー モードまたはリモート モードで .rdlc レポートを表示できるほか、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーでホストされている .rdl ファイルを表示できます。 次の表は、ローカル処理 (.rdlc) 用の ReportViewer コントロールでサポートされている RDL バージョンの一覧です。 サーバー側の RDL のサポートについて、 [レポート サーバーと RDL スキーマのサポート](#bkmk_report_server_rdl_schema_support)にまとめられています。  
   
 |製品の ReportViewer コントロール|ローカル プレビュー用の RDL のバージョン|  
@@ -109,7 +109,7 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>または<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> または<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> または<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> または<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- 詳細については、以下を参照してください。  
+ 詳細については、「  
   
 -   [RDLC ファイルから RDL ファイルへの変換](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -120,6 +120,6 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
 ## <a name="see-also"></a>参照  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)   
- [レポート定義言語 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

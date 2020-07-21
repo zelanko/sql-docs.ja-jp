@@ -1,5 +1,5 @@
 ---
-title: exist() メソッド (xml データ型) | Microsoft Docs
+title: exist() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2f8643b9c76f2abf8a6ffb49620b85f9b150891
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051311"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392710"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   次のいずれかの状態を表す **bit** 型を返します。  
   
@@ -39,11 +39,13 @@ ms.locfileid: "68051311"
 exist (XQuery)   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  XQuery  
  文字列リテラルの XQuery 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  **exist()** メソッドは、空でない結果を返す XQuery 式に対して 1 を返します。 **exist()** メソッド内に **true()** 関数または **false()** 関数を指定した場合、**exist()** メソッドは 1 を返します。これは、**true()** 関数および **false()** 関数がブール値の True および False をそれぞれ返すためです (つまり、空でない結果が返されます)。 したがって、次の例に示すように **exist()** は 1 (True) を返します。  
@@ -54,7 +56,7 @@ set @x='';
 select @x.exist('true()');   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **exist()** メソッドを指定する例を次に示します。  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>例:xml 型の変数に対する exist() メソッドの指定  
@@ -72,7 +74,7 @@ select @f;
   
 -   コード `cast as xs:date?` は、比較する値を **xs:date** 型にキャストします。  
   
--   **@Somedate** 属性の値は型指定されません。 この値は、比較するときに右側の比較対象の型である **xs:date** 型に暗黙的にキャストされます。  
+-   **\@Somedate** 属性の値は型指定されません。 この値は、比較するときに右側の比較対象の型である **xs:date** 型に暗黙的にキャストされます。  
   
 -   **cast as xs:date()** の代わりに、**xs:date()** コンストラクター関数を使用できます。 詳細については、「[コンストラクター関数 &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)」を参照してください。  
   

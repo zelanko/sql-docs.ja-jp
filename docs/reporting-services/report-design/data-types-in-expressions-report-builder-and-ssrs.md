@@ -1,5 +1,5 @@
 ---
-title: 式で使用されるデータ型 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 式で使用されるデータ型 (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892996"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080531"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  
@@ -30,13 +30,13 @@ ms.locfileid: "68892996"
 |--------------|---------------|  
 |String|既定値: String<br /><br /> Chart、GUID、Timespan|  
 |Boolean|既定値: Boolean|  
-|Integer|既定値: Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
+|整数|既定値: Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
 |DateTime|既定値: DateTime<br /><br /> DateTimeOffset|  
-|float|既定値: Double<br /><br /> Single、Decimal|  
+|Float|既定値: Double<br /><br /> Single、Decimal|  
 |Binary|既定値: Byte[]|  
 |Variant|Byte[] 以外の上記すべて|  
 |VariantArray|Variant の配列|  
-|Serializable|Serializable に指定されている、または ISerializable を実装する Variant または型|  
+|シリアル化可能|Serializable に指定されている、または ISerializable を実装する Variant または型|  
   
 ## <a name="understanding-data-types-and-writing-expressions"></a>データ型と式の作成について  
  グループ式、フィルター式、集計計算など、値を比較したり結合したりする式を作成する際は、データ型について十分に理解しておく必要があります。 比較と計算は、同じデータ型のアイテム間でしか行えません。 データ型が異なる場合は、式を使用して、レポート アイテムのデータ型を明示的に変換する必要があります。  
@@ -63,7 +63,7 @@ ms.locfileid: "68892996"
   
 -   既存のレポート データセット フィールドに基づく計算フィールドを作成する。それには、結果セット列のすべてのデータを異なるデータ型の新しい列に変換する式を作成します。 たとえば、Year フィールドを整数値から文字列値に変換するには、 `=CStr(Fields!Year.Value)`という式を作成します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。  
   
--   使用しているデータ処理拡張機能に、書式設定済みのデータを取得するためのメタデータが含まれているかどうかを確認する。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリには、キューブの処理時に書式設定されたキューブ値を保持する FORMATTED_VALUE という拡張プロパティがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
+-   使用しているデータ処理拡張機能に、書式設定済みのデータを取得するためのメタデータが含まれているかどうかを確認する。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリには、キューブの処理時に書式設定されたキューブ値を保持する FORMATTED_VALUE という拡張プロパティがあります。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
 ## <a name="understanding-parameter-data-types"></a>パラメーターのデータ型について  
  レポート パラメーターに使用できるデータ型は、Boolean、DateTime、Integer、Float、Text (String) の 5 つだけです。 データセット クエリにクエリ パラメーターが含まれている場合は、レポート パラメーターが自動的に作成されて、対応するクエリ パラメーターに関連付けられます。 レポート パラメーターの既定のデータ型は String です。 レポート パラメーターの既定のデータ型を変更するには、 **[レポート パラメーターのプロパティ]** ダイアログ ボックスの **[全般]** ページで、 **[データ型]** ボックスの一覧から該当する値を選択します。  
@@ -106,7 +106,7 @@ ms.locfileid: "68892996"
   
  次のいずれかの方法を使用することで、このデータを 1 つまたは複数の CLR 値に変換できます。  
   
--   テキスト ボックスに、文字列の一部分を抽出する式を入力します。 例:  
+-   テキスト ボックスに、文字列の一部分を抽出する式を入力します。 次に例を示します。  
   
     -   UTC タイム ゾーン オフセットの時間部分だけを抽出し、分に変換するには、次の式を使用します。 `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

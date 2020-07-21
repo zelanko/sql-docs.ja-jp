@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 70eb07072e77e9626e8617e03cc74928d53b8c4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934626"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294222"
 ---
 # <a name="data-profile-viewer"></a>Data Profile Viewer (Data Profile Viewer)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67934626"
 > [!IMPORTANT]  
 >  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」をご覧ください。  
   
-## <a name="data-profiles"></a>データ プロファイル  
+## <a name="data-profiles"></a>データのプロファイル  
  データ プロファイルを表示するには、出力をファイルに送信するようにデータ プロファイル タスクを構成し、スタンドアロンの Data Profile Viewer を使用します。 Data Profile Viewer を開くには、次のいずれかの操作を行います。  
   
 -   **デザイナーの** [データ プロファイル] [!INCLUDE[ssIS](../../includes/ssis-md.md)] でタスクを右クリックし、 **[編集]** をクリックします。 **データ プロファイル タスク エディター** の **[全般]** ページで、 **[プロファイル ビューアーを開く]** をクリックします。  
@@ -76,7 +76,7 @@ ms.locfileid: "67934626"
  Data Profile Viewer の使用方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。 データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。データ プロファイル タスクを使用すると、Data Profile Viewer で分析するプロファイル出力を作成できます。  
   
 ### <a name="static-options"></a>静的オプション  
- **開く**  
+ **[ファイル]**  
  データ プロファイル タスクの出力を含む保存済みファイルを参照する場合にクリックします。  
   
  **[プロファイル]** ペイン  
@@ -111,13 +111,13 @@ ms.locfileid: "67934626"
  テーブルまたはビューの行数が表示されます。  
   
 ##### <a name="detailed-length-distribution-pane"></a>[詳細な長さ分布] ペイン  
- **長さ**  
+ **[データ型]**  
  プロファイルされた列の列長が表示されます。  
   
  **Count**  
  プロファイルされた列の値の長さが **[長さ]** 列に表示された長さである行の数が表示されます。  
   
- **[パーセント]**  
+ **Percentage**  
  プロファイルされた列の値の長さが **[長さ]** 列に表示された長さである行の割合が表示されます。  
   
 #### <a name="profile-type--column-null-ratio-profile"></a>プロファイルの種類 = 列の NULL 比プロファイル  
@@ -142,7 +142,7 @@ ms.locfileid: "67934626"
  **パターン**  
  プロファイルされた列について計算されたパターンが表示されます。  
   
- **[パーセント]**  
+ **Percentage**  
  **[パターン]** 列に表示されたパターンに一致する値を持つ行の割合が表示されます。  
   
 #### <a name="profile-type--column-statistics-profile"></a>プロファイルの種類 = 列統計プロファイル  
@@ -154,7 +154,7 @@ ms.locfileid: "67934626"
  **[最大]**  
  プロファイルされた列の最大値が表示されます。  
   
- **平均**  
+ **Mean (平均値)**  
  プロファイルされた列の値の平均が表示されます。  
   
  **Standard Deviation**  
@@ -176,7 +176,7 @@ ms.locfileid: "67934626"
  **Count**  
  プロファイルされた列の値が **[値]** 列に表示された値である行の数が表示されます。  
   
- **[パーセント]**  
+ **Percentage**  
  プロファイルされた列の値が **[値]** 列に表示された値である行の割合が表示されます。  
   
 #### <a name="profile-type--candidate-key-profile"></a>プロファイルの種類 = 候補キー プロファイル  

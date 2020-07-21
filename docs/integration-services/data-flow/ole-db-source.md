@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6ec05696c511ea14e481fdde8512861f2a343f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897094"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292233"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
 
@@ -106,7 +106,7 @@ ms.locfileid: "67897094"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [OLE DB ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
+-   [OLE DB 変換元を使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
 -   [クエリ パラメーターをデータ フロー コンポーネントの変数にマップする](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -146,7 +146,7 @@ ms.locfileid: "67897094"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|OLE DB データベースのテーブルまたはビューからデータを取得します。|  
 |[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -176,7 +176,7 @@ ms.locfileid: "67897094"
  **パラメーター**  
  クエリ テキスト内でパラメーターのプレースホルダーとして "?" を使用することにより、 パラメーター化クエリを入力した場合は、 **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、クエリ入力パラメーターをパッケージ変数にマップします。  
   
- **Build query**  
+ **[クエリの作成]**  
  SQL クエリを視覚的に作成するには、 **[クエリ ビルダー]** ダイアログ ボックスを使用します。  
   
  **[参照]**  
@@ -192,7 +192,7 @@ ms.locfileid: "67897094"
 ## <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "67897094"
 ## <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -215,12 +215,12 @@ ms.locfileid: "67897094"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  

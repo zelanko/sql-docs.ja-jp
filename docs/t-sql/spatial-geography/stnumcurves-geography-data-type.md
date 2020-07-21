@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c4e8a1e2a277d5888603a84a1dcb9f582380e3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702500"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   1 次元の **geography** インスタンスに含まれる曲線の数を返します。  
   
@@ -39,16 +39,16 @@ ms.locfileid: "68120932"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  1 次元の空間データ型には、**LineString**、**CircularString**、**CompoundCurve** があります。 空の 1 次元 **geography** インスタンスは 0 を返します。す。  
   
  `STNumCurves`() は単純型に対してのみ機能し、**MultiLineString** のような **geography** コレクションでは機能しません。 **geography** インスタンスが 1 次元のデータ型ではない場合、**NULL** が返されます。  
   
  初期化されていない **geography** インスタンスに対しては **Null** が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して STNumCurves() を使用する  
  次の例では、`CircularString` インスタンスに含まれる曲線の数を取得する方法を示します。  

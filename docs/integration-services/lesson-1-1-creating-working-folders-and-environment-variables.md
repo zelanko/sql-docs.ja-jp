@@ -1,5 +1,5 @@
 ---
-title: 手順 1:作業フォルダーと環境変数の作成 | Microsoft Docs
+title: '手順 1: 作業フォルダーと環境変数の作成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f8c738987803390872217a0eee19682fa23c29d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057288"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71284134"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>レッスン 1-1 - 作業フォルダーと環境変数の作成
 
@@ -87,7 +87,7 @@ ms.locfileid: "68057288"
 10. 必要に応じて、コンピューターを再起動します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 2:配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+[手順 2: 配置プロジェクトの作成](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

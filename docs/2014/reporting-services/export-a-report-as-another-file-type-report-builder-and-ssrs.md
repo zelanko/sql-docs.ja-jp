@@ -1,5 +1,5 @@
 ---
-title: 別のファイルの種類 (レポート ビルダーおよび SSRS) としてエクスポートする |Microsoft Docs
+title: 別の種類のファイルとしてレポートをエクスポートする (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109180"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66109180"
   
 3.  使用する形式を選択します。  
   
-     **[名前を付けて保存]** ダイアログ ボックスが表示されます。 既定では、ファイル名はエクスポートしたレポートの名前になります。 必要に応じてファイル名を変更できます。  
+     **[名前を付けて保存]** ダイアログ ボックスが開きます。 既定では、ファイル名はエクスポートしたレポートの名前になります。 必要に応じてファイル名を変更できます。  
   
 4.  レポートを保存した場所へ移動して、レポートを開きます。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "66109180"
   
 4.  使用する形式を選択します。  
   
-5.  **[エクスポート]** をクリックします。  
+5.  クリックして **エクスポート**します。  
   
      ファイルを開くか保存するかを確認するメッセージが表示されます。  
   
 6.  選択したエクスポート形式でレポートを表示するには、 **[開く]** をクリックします。  
   
-     \- - または -  
+     \- または  
   
      選択したエクスポート形式でレポートをすぐに保存するには、 **[保存]** をクリックします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66109180"
   
 3.  選択したエクスポート形式でレポートを表示するには、 **[開く]** をクリックします。  
   
-     \- - または -  
+     \- または  
   
      選択したエクスポート形式でレポートをすぐに保存するには、 **[保存]** をクリックします。  
   
@@ -85,8 +85,8 @@ ms.locfileid: "66109180"
      **注** ファイルの種類に関連付けられたプログラムがないことが原因で、レポートを選択した形式で開くことができない場合は、エクスポートされたファイルを保存するか、レポートを開くためのプログラムをオンライン上で探すことが求められます。  
   
 ## <a name="see-also"></a>参照  
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能&#40;レポート ビルダーおよび SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

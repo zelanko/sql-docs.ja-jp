@@ -1,6 +1,5 @@
 ---
-title: リンク サーバー プロバイダーの作成 (SQL Server データベース エンジン) | Microsoft Docs
-ms.custom: ''
+title: リンク サーバー プロバイダーを作成する
 ms.date: 07/01/2019
 ms.prod: sql
 ms.technology: ''
@@ -10,12 +9,13 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301358"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74095991"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散クエリ: OLE DB 接続
 
@@ -110,9 +110,9 @@ SQL 以外のコマンド プロバイダーの 2 つの例として、Microsoft
 
 キーセット カーソルは、*OpenQuery* 関数を含む分散クエリに対してはサポートされていません。
 
-#### <a name="updatable-keyset-cursor-requirements"></a>更新可能なキーセット カーソルの要件
+#### <a name="updatable-keyset-cursor-requirements"></a>更新可能なキーセット カーソルの必要条件
 
-リモート テーブルは、分散クエリで定義されたキーセット カーソルを使用して更新または削除できます (たとえば、`UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`)。 次に、更新可能なカーソルが分散クエリに対して許可される条件を示します。
+リモート テーブルは、分散クエリで定義されたキーセット カーソルを使用して更新または削除できます (たとえば、`UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`)。 次に、更新可能なカーソルが分散クエリに許可される条件を示します。
 
 - 更新可能なカーソルは、プロバイダーがリモート テーブルに対する更新と削除の条件も満たしている場合に許可されます。 詳細については、この記事で後述する「\"UPDATE ステートメントと DELETE ステートメント\"」を参照してください。
 
@@ -190,7 +190,7 @@ SQL Server では 2 つのリモート データ オブジェクト名前付け�
 
    SQL Server によって、分散クエリ評価で使用されるいくつかのプロバイダー プロパティが収集されます。これらのプロパティは、`IDBProperties::GetProperties` を呼び出すことによって取得されます。 これらのプロパティはすべてオプションです。ただし、関連するすべてのプロパティをサポートすることで、SQL Server がプロバイダーの機能を最大限に活用できるようになります。 たとえば、SQL Server からプロバイダーにクエリを送信できるかどうかを判別するには、`DBPROP_SQLSUPPORT` が必要です。 このプロパティがサポートされていない場合、SQL Server ではリモート プロバイダーが (SQL コマンド プロバイダーであったとしても) SQL コマンド プロバイダーとして使用されません。 次の表の「既定値」列は、プロパティがプロバイダーでサポートされていない場合に、SQL Server によって想定される値を示しています。
 
-プロパティ| 既定値| 新しく使用する機能 |
+プロパティ| 既定値| 用途 |
 |:----|:----|:----|
 |`DBPROP_DBMSNAME`|なし|エラー メッセージに使用されます。|
 |`DBPROP_DBMSVER` |なし|エラー メッセージに使用されます。|
@@ -308,7 +308,7 @@ OLE DB プロバイダーでは、OLE DB で定義されたデータ型 (OLE DB 
 
 SQL Server と OLE DB のデータ型マッピング テーブル。
 
-| OLE DB 型 | `DBCOLUMNFLAG` | SQL Server データ型 |
+| OLE DB 型 | `DBCOLUMNFLAG` | SQL Server のデータ型 |
 |-----|-----|-----|
 |`DBTYPE_I1`*| |`numeric(3, 0)`|
 |`DBTYPE_I2`| |`smallint`|
@@ -323,34 +323,34 @@ SQL Server と OLE DB のデータ型マッピング テーブル。
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>内の複数の<br> 最大長 > 4000 文字|ntext|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
-|`DBTYPE_IDISPATCH`| |Error|
-|`DBTYPE_ERROR`| |Error|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>or<br> 最大長 > 4000 文字|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|nchar|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|nvarchar|
+|`DBTYPE_IDISPATCH`| |エラー|
+|`DBTYPE_ERROR`| |エラー|
 |`DBTYPE_BOOL`| |`bit`|
-|`DBTYPE_VARIANT`*| |NVARCHAR|
-|`DBTYPE_IUNKNOWN`| |Error|
+|`DBTYPE_VARIANT`*| |nvarchar|
+|`DBTYPE_IUNKNOWN`| |エラー|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列サイズ = 8 <br>内の複数の<br> 最大長は報告されない。 | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>or<br> 最大長 > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列サイズ = 8 <br>or<br> 最大長は報告されない。 | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 8000 文字 <br>内の複数の<br>   最大長は報告されない。 | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> 最大長 > 8000 文字 <br>or<br>   最大長は報告されない。 | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 4000 文字 <br>内の複数の<br>   最大長は報告されない。 | `ntext`|
-|`DBTYPE_UDT`| |Error|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> 最大長 > 4000 文字 <br>or<br>   最大長は報告されない。 | `ntext`|
+|`DBTYPE_UDT`| |エラー|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (明示的な変換が必要)|
 |`DBTYPE_DBTIME`| | `datetime` (明示的な変換が必要)|
 |`DBTYPE_DBTIMESTAMP`* | | `datetime`|
-|`DBTYPE_ARRAY` | |Error|
+|`DBTYPE_ARRAY` | |エラー|
 |`DBTYPE_BYREF` | | 無視 |
-|`DBTYPE_VECTOR` | |Error|
-|`DBTYPE_RESERVED`| |Error|
+|`DBTYPE_VECTOR` | |エラー|
+|`DBTYPE_RESERVED`| |エラー|
 
 \* SQL Server 型の表記への何らかの形式の変換を示します。これは、SQL Server に正確な同等のデータ型がないためです。 このような変換によって、精度の損失、オーバーフロー、またはアンダーフローが生じる可能性があります。 対応するデータ型が SQL Server の将来のバージョンでサポートされた場合、既定の暗黙的なマッピングは将来変更される可能性があります。
 
@@ -479,7 +479,7 @@ SQL Server では、Transact-SQL 文字列内のパラメーター マーカー�
 
 1. SQL Server により、`IDBCreateCommand::CreateCommand` を使用して `Session` オブジェクトから `Command` オブジェクトが作成されます。
 
-9. `Remote Query Timeout` サーバー構成オプションが 0 より大きい値に設定されている場合、SQL Server により、Command オブジェクトの DBPROP_COMMANDTIMEOUT プロパティが、ICommandProperties::SetProperties を使用して同じ値に設定されます。コマンド テキストを、生成された Transact-SQL 文字列に設定するために、ICommand::SetCommandText が呼び出される必要があります。` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `` object to the same value by using ``; `
+9. `Remote Query Timeout` サーバー構成オプションが 0 より大きい値に設定されている場合、SQL Server により、`Command` オブジェクトの `DBPROP_COMMANDTIMEOUT` プロパティが、`ICommandProperties::SetProperties` を使用して同じ値に設定されます。コマンド テキストを、生成された Transact-SQL 文字列に設定するために、`ICommand::SetCommandText` が呼び出される必要があります。
 
 10. コマンドを準備するために、SQL Server によって `ICommandPrepare::Prepare` が呼び出されます。 プロバイダーでこのインターフェイスがサポートされていない場合、SQL Server の手順 4 に進みます。
 
@@ -610,13 +610,13 @@ SQL Server で使用されるすべての OLE DB インターフェイスの一�
 
 Microsoft SQL Server によって、異種データ ソースにあるデータにアクセスするための最も信頼性の高いツール セットが提供されます。 SQL Server によって公開されている OLE DB インターフェイスを理解することで、開発者は分散クエリの高度な制御と高度な処理を実現できます。
 
-## <a name="appendixa"></a>SQL Server によって使用される OLE DB インターフェイス
+## <a name="ole-db-interfaces-consumed-by-sql-server"></a><a name="appendixa"></a>SQL Server によって使用される OLE DB インターフェイス
 
 次の表は、SQL Server によって使用されるすべての OLE DB インターフェイスを示しています。 「必須」列は、インターフェイスが SQL Server に必要な最小限の OLE DB 機能の一部であるか、またはオプションかを示します。 特定のインターフェイスが必須としてマークされていない場合でも、SQL Server からプロバイダーへのアクセスは可能ですが、プロバイダーに対して特定の SQL Server 機能または最適化を実行することはできません。
 
 オプションのインターフェイスの場合、「シナリオ」列には、指定したインターフェイスを使用する 6 つのシナリオのうち 1 つ以上が示されています。 たとえば、ベース テーブル行セットの `IRowsetChange` インターフェイスはオプションのインターフェイスです。このインターフェイスは、`UPDATE`、DELETE、`INSERT` の各ステートメントのシナリオで使用されます。 このインターフェイスがサポートされていない場合、UPDATE、DELETE、`INSERT` の各ステートメントをそのプロバイダーに対してサポートすることはできません。 オプションであるその他のインターフェイスの一部には、「シナリオ」列に \"パフォーマンス\" とマークされています。これは、そのインターフェイスを使用すると全般的なパフォーマンスが高くなることを示しています。 たとえば、`IDBSchemaRowset` インターフェイスがサポートされていない場合、SQL Server では行セットを 2 回開く必要があります (メタデータのために 1 回、クエリ実行のために 1 回)。 `IDBSchemaRowset` をサポートすることにより、SQL Server のパフォーマンスが向上します。
 
-|Object|インターフェイス|Required|コメント|シナリオ|
+|Object|インターフェイス|必須|説明|シナリオ|
 |:-----|:-----|:-----|:-----|:-----|
 |データ ソース オブジェクト|`IDBInitialize`|はい|データおよびセキュリティ コンテキストの初期化とセットアップを行います。| |
 | |`IDBCreateSession`|はい|DB セッション オブジェクトを作成します。| |
@@ -640,7 +640,7 @@ Microsoft SQL Server によって、異種データ ソースにあるデータ�
 | |`IColumnsInfo`|はい|行セット内の列に関する情報を取得します。|インデックス アクセス、パフォーマンス。|
 | |`IRowsetInfo`|はい|行セット プロパティに関する情報を取得します。|インデックス アクセス、パフォーマンス。|
 | |`IRowsetIndex`|はい|インデックスについての行セットにのみ必要で、インデックス機能 (範囲の設定、シーク) に使用されます。|インデックス アクセス、パフォーマンス。|
-|コマンド|`ICommand`|はい| |リモート クエリ、パススルー クエリ。|
+|command|`ICommand`|はい| |リモート クエリ、パススルー クエリ。|
 | |`ICommandText`|はい|クエリ テキストの定義に使用します。|リモート クエリ、パススルー クエリ。|
 | |`IColumnsInfo`|はい|クエリ結果の列のメタデータを取得するために使用します。|リモート クエリ、パススルー クエリ。|
 | |`ICommandProperties`|はい|コマンドが返す行セットに対して必要なプロパティを指定するために使用します。|リモート クエリ、パススルー クエリ。|
@@ -654,7 +654,7 @@ Microsoft SQL Server によって、異種データ ソースにあるデータ�
 >[!NOTE]
 >`Index` オブジェクト、`Command` オブジェクト、および `Error` オブジェクトは必須ではありません。 ただし、サポートされている場合、「必須」列に示されているとおり、一覧にあるインターフェイスは必須です。
 
-## <a name="appendixb"></a>リモート クエリの生成に使用される SQL サブセット
+## <a name="sql-subset-used-for-generating-remote-queries"></a><a name="appendixb"></a>リモート クエリの生成に使用される SQL サブセット
 
 SQL コマンド プロバイダーに対して SQL Server クエリ プロセッサによって生成される SQL サブセットは、`DBPROP_SQLSUPPORT`プロパティで示されているとおり、プロバイダーがサポートしている構文レベルによって異なります。
 
@@ -680,7 +680,7 @@ SQL Server では、SQL-92 エントリ レベルまたは ODBC コアのどち�
 
    - AS キーワードを使用しないテーブルの別名。
 
-1. `WHERE` 句では、`NOT` `EXISTS`、`ANY`、`ALL`でサブクエリを使用します。
+1. `WHERE` 句では、`NOT` `EXISTS`、`ANY`、`ALL` でサブクエリを使用します。
 
 1. 式:
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 
@@ -794,7 +794,7 @@ digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
 
-## <a name="appendixc"></a>SQL Server 固有のプロパティ
+## <a name="sql-server-specific-properties"></a><a name="appendixc"></a>SQL Server 固有のプロパティ
 
 ```
 enum SQLPROPERTIES

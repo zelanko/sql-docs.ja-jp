@@ -1,6 +1,6 @@
 ---
-title: XPath クエリの実行 (SQLXML マネージ クラス) |Microsoft Docs
-ms.custom: ''
+title: XPath クエリの実行 (SQLXML)
+description: SQLXML マネージクラスを使用してマッピングスキーマに対して XPath クエリを実行する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1402886d70447a5bf0324d101136cb7c8f5ce065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 139ebeadb8ea481180aa97df600bfc9d3280d20f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649358"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath クエリの実行 (SQLXML マネージド クラス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、マッピング スキーマに対する XPath クエリの実行方法を示します。  
   
  次のスキーマについて考えてみます。  
@@ -90,7 +91,7 @@ class Test
   
 2.  この例で提供される XSD スキーマ (MySchema.xml) をフォルダーに保存します。  
   
-3.  スキーマが格納されている同じフォルダーには、この例では、c# コード (DocSample.cs されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+3.  この例で提供されている C# コード (DocSample.cs) を、スキーマが格納されているのと同じフォルダーに保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 4.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

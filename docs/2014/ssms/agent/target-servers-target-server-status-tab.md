@@ -1,5 +1,5 @@
 ---
-title: '[対象サーバー] ([対象サーバーの状態] タブ) | Microsoft Docs'
+title: '[ターゲット サーバー] ([ターゲット サーバーの状態] タブ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 324bee017a307b381fa44ddc4e000f4205c26644
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067476"
 ---
-# <a name="target-servers-target-server-status-tab"></a>[対象サーバー] ([対象サーバーの状態] タブ)
+# <a name="target-servers-target-server-status-tab"></a>[ターゲット サーバー] ([ターゲット サーバーの状態] タブ)
   このページを使用すると、このマスター サーバーのターゲット サーバーの状態を表示できます。  
   
-## <a name="options"></a>および  
- **[対象サーバー]**  
+## <a name="options"></a>オプション  
+ **対象サーバー**  
  ターゲット サーバーの名前を表示します。  
   
  **[ローカル時刻]**  
@@ -35,7 +34,7 @@ ms.locfileid: "63245720"
  **[未読の命令]**  
  ターゲット サーバーが受け取っていない命令の数を表示します。  
   
- **ステータス**  
+ **状態**  
  ターゲット サーバーの状態を表示します。  
   
  **[強制的にポーリング]**  

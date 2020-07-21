@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103788"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
@@ -47,7 +47,7 @@ ms.locfileid: "66103788"
  [ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  レポート サーバー データベースを共有するための複数のレポート サーバーの構成手順を説明します。  
   
- [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [SSRS Configuration Manager &#40;電子メール配信用にレポートサーバーを構成&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  電子メール配信用のレポート サーバーを構成する手順を説明します。  
   
  [レポート サーバー アクセスに対するファイアウォールの構成](configure-a-firewall-for-report-server-access.md)  
@@ -65,8 +65,8 @@ ms.locfileid: "66103788"
  [リモート エラーの有効化 (Reporting Services)](enable-remote-errors-reporting-services.md)  
  リモート サーバーで発生するエラー状態に関する追加情報を返すように、レポート サーバーのサーバー プロパティを設定する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
+ [レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
   
   

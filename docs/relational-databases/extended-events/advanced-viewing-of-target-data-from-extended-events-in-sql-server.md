@@ -1,6 +1,6 @@
 ---
-title: SQL Server での拡張イベントからのターゲット データの詳細表示 | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントからのターゲット データの詳細表示
+description: SQL Server Management Studio の高度な機能を使用して、拡張イベントからのターゲット データを詳細にわたって表示します。 データの表示、エクスポート、および操作を行うことができます。
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,17 +10,18 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16671290ed86def1b013a77d991487dfdad26a10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85779497"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server での拡張イベントからのターゲット データの詳細表示
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 この記事では、SQL Server Management Studio (SSMS.exe) の高度な機能を使用して、拡張イベントからのターゲット データを詳細にわたって表示する方法を示します。 この記事では、以下の方法について説明します。
@@ -32,7 +33,7 @@ ms.locfileid: "68021929"
 
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 この記事では、イベント セッションを作成して開始する方法を既に知っていることを前提としています。 イベント セッションを作成する方法については、次の記事の初めの部分で説明されています。
 
@@ -164,7 +165,7 @@ SSMS のタブ付きペインにターゲット データが表示されます�
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 sys.fn_xe_file_target_read_file 関数を使用して .XEL を表示する
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>B.4 sys.fn_xe_file_target_read_file 関数を使用して .XEL を表示する
 
 
 次のシステム関数は、.XEL ファイル内のレコードに対応する XML をバッチ処理で生成できます。
@@ -180,8 +181,6 @@ SSMS にターゲット データがあれば、次のようにしてデータ�
 
 
 1. データ表示にフォーカスを移動します。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - 拡張イベント用の新しいツール バーと新しいメニュー項目が両方ともすぐに表示されます。
 
@@ -320,7 +319,7 @@ SSMS 表示フィルターは、次のとおりです。
 
 ![あるノードのプロパティの一覧が表示されているクエリ プラン](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XELite: XEL ファイルまたはライブ SQL ストリームから XEvents を読み取るためのクロスプラットフォーム ライブラリ](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)、2019 年 5 月リリース。
 

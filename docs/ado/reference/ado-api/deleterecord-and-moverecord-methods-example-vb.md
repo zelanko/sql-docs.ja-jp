@@ -1,5 +1,5 @@
 ---
-title: DeleteRecord および MoveRecord メソッドの例 (VB) |Microsoft Docs
+title: DeleteRecord メソッドと MoveRecord メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af8f2a1431c8d41393e25638edf1ac83fee16236
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919098"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763463"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord および MoveRecord メソッドの例 (VB)
-この例では、コピー、移動、編集、および Web フォルダーに発行されたテキスト ファイルの内容を削除する方法を示します。 その他のプロパティとメソッドを含める[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)、[ソース](../../../ado/reference/ado-api/source-property-ado-record.md)、および[フラッシュ](../../../ado/reference/ado-api/flush-method-ado.md)します。  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord メソッドと MoveRecord メソッドの例 (VB)
+この例では、Web フォルダーに発行されたテキストファイルの内容をコピー、移動、編集、および削除する方法を示します。 使用されるその他のプロパティとメソッドには、 [Getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md)、 [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-record.md)、および[Flush](../../../ado/reference/ado-api/flush-method-ado.md)があります。  
   
 ```  
 'BeginDeleteRecordVB  
@@ -148,7 +148,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DeleteRecord メソッド (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush メソッド (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren メソッド (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

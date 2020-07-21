@@ -1,5 +1,5 @@
 ---
-title: マネージ インスタンスの詳細 (SQL Server ユーティリティ) |Microsoft Docs
+title: Managed Instance の詳細 (SQL Server ユーティリティ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edd9853a68fd86481e32cfa9dee69b0be8b577a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930962"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  リスト ビュー  
  上部のペインには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の個々のインスタンス (ComputerName\InstanceName) とそのデータがリスト表示されます。  
   
  正常性状態アイコンにより、各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの状態が使用率カテゴリごとに示されます。  
   
--   緑のチェック - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数。 リソースは適正使用です。  
+-   緑のチェック - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数。 リソースは適正使用です。  
   
 -   緑の下向き矢印 - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
   
@@ -68,17 +67,17 @@ ms.locfileid: "62774344"
   
 -   [SQL Server のエディション]  
   
--   クラスター化します。(True または False)  
+-   [クラスター化]\([True] または [False])  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   大文字小文字を区別します。(True または False)  
+-   [大文字と小文字を区別]\([True] または [False])  
   
 -   [言語]  
   
--   最終報告日時:この列は、UCP のローカル日付と時刻の datetime データ型を使用して表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
+-   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -165,20 +164,20 @@ ms.locfileid: "62774344"
   
 -   [SQL Server のエディション]  
   
--   クラスター化します。(True または False)  
+-   [クラスター化]\([True] または [False])  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   大文字小文字を区別します。(True または False)  
+-   [大文字と小文字を区別]\([True] または [False])  
   
 -   [言語]  
   
-## <a name="see-also"></a>関連項目  
- [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+## <a name="see-also"></a>参照  
+ [配置されたデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [ユーティリティダッシュボード &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [SQL Server ユーティリティ内の SQL Server のインスタンスを監視する](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server ユーティリティのトラブルシューティング](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   

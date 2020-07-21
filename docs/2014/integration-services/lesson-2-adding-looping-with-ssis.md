@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:ループの追加 |Microsoft Docs
+title: 'レッスン 2: ループの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,20 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4023db85af32babf04de54efbceb6130d7f979ea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767554"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440589"
 ---
-# <a name="lesson-2-adding-looping"></a>レッスン 2:ループの追加
-  「[レッスン 1: プロジェクトと基本パッケージ作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)、単一のフラット ファイル ソースからデータを抽出、変換された、参照変換を使用してデータおよびにデータが最後に読み込まれているパッケージを作成し、 **FactCurrency**ファクト テーブルの**AdventureWorksDW2012**サンプル データベース。  
+# <a name="lesson-2-adding-looping"></a>レッスン 2: ループの追加
+  「[レッスン 1: プロジェクトと基本パッケージの作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)」では、単一のフラットファイルソースからデータを抽出し、参照変換を使用してデータを変換した後、最後にデータを**AdventureWorksDW2012**サンプルデータベースの**FactCurrency**ファクトテーブルに読み込むパッケージを作成しました。  
   
- しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、反復やループをパッケージへ簡単に追加できるようになりました。  
+ しかし、抽出、変換、読み込み (ETL) プロセスでフラット ファイルを 1 つだけ使用することはほとんどありません。 通常の ETL プロセスでは、複数のフラット ファイル ソースからデータを抽出します。 複数のソースからデータを抽出するには、反復型の制御フローが必要となります。 の最も期待される機能の1つ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、繰り返しまたはループをパッケージに簡単に追加できることです。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージ全体をループさせる 2 種類のコンテナーがあります。1 つは Foreach ループ コンテナー、もう 1 つは For ループ コンテナーです。 Foreach ループ コンテナーが列挙子を使用してループを実行するのに対し、For ループ コンテナーは、通常、変数式を使用します。 このレッスンでは Foreach ループ コンテナーを使用します。  
   
@@ -47,23 +46,23 @@ ms.locfileid: "62767554"
  このレッスンでは、データ フローは変更せずに、制御フローのみを変更します。  
   
 > [!IMPORTANT]  
->  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールしてデプロイする方法の詳細については、「 [Reporting Services Product Samples Project on CodePlex (CodePlex でのサービス製品サンプルのレポート)](https://go.microsoft.com/fwlink/p/?LinkID=526910)」をご覧ください。  
+>  このチュートリアルには、 **AdventureWorksDW2012** サンプル データベースが必要です。 **AdventureWorksDW2012**をインストールして配置する方法の詳細については、 [CodePlex での Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/p/?LinkID=526910)を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 1 パッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [手順 1:レッスン 1 のパッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [手順 2:追加して、Foreach ループ コンテナーの構成](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [手順 2:Foreach ループ コンテナーの追加と構成](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [ステップ 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 -   [手順 4:レッスン 2 のチュートリアル パッケージのテスト](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
- [ステップ 1: レッスン 1 パッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
+ [手順 1:レッスン 1 のパッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [For ループ コンテナー](control-flow/for-loop-container.md)  
   
   

@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9030b4f538e997fff3f90c95dee12fca506f523c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030461"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable イベント クラス
   このインスタンスのサービスに配信する必要のある受信メッセージを、Service Broker が保持できないときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**Broker:Message Undeliverable** イベントを生成します。 転送されたメッセージの場合は、「 [Broker:Forwarded Message Dropped イベント クラス](broker-forwarded-message-dropped-event-class.md)」を参照してください。  
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Broker:Message Undeliverable イベント クラスのデータ列  
   
-|データ列|型|説明|列番号|フィルターの適用|  
+|データ列|種類|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**Application Name**|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|**アプリケーション名**|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|`bigint`|配信不能メッセージのシーケンス番号。|52|いいえ|  
 |**BigintData2**|`bigint`|最後に正常に受信確認されたメッセージのシーケンス番号。|53|いいえ|  
 |**ClientProcessID**|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
@@ -43,7 +42,7 @@ ms.locfileid: "62663970"
 |**IntegerData**|`int`|配信不能メッセージのフラグメント番号。|25|いいえ|  
 |**IntegerData2**|`int`|配信不能メッセージが受信確認していたメッセージ フラグメント番号。|55|いいえ|  
 |**IsSystem**|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginName**|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\Username という形式の Windows ログイン資格情報)。|11|いいえ|  
+|**ログイン**|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\Username という形式の Windows ログイン資格情報)。|11|いいえ|  
 |**LoginSid**|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|`nvarchar`|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|`nvarchar`|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  

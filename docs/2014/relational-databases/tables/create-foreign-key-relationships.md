@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009190"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で外部キーのリレーションシップを作成する方法について説明します。 あるテーブルの行と他のテーブルの行を関連付ける場合は、2 つのテーブル間にリレーションシップを作成します。  
@@ -30,15 +29,15 @@ ms.locfileid: "62761614"
   
      [Security](#Security)  
   
--   **リレーションシップを作成する外部キーを使用しています。**  
+-   **以下を使用して外部キー リレーションシップを作成するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   外部キー制約からリンクを設定できるのは、別のテーブルの主キー制約だけではありません。別のテーブルの UNIQUE 制約が定義された列を参照するように定義することもできます。  
   
@@ -60,14 +59,14 @@ ms.locfileid: "62761614"
   
 -   `varchar(max)` 型の列は、その列が参照する主キーも `varchar(max)` 型として定義されている場合にのみ FOREIGN KEY 制約で使用できます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  外部キーが設定された、新しいテーブルを作成するには、データベースの CREATE TABLE 権限と、テーブルを作成するスキーマの ALTER 権限が必要です。  
   
  既存のテーブルに外部キーを作成するには、テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>テーブル デザイナーで外部キー リレーションシップを作成するには  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62761614"
   
 3.  **[外部キーのリレーションシップ]** ダイアログ ボックスで、 **[追加]** をクリックします。  
   
-     リレーションシップが **[選択されたリレーションシップ]** ボックスに表示されます。このリレーションシップには、FK_\<*tablename*>_\<*tablename*> (*tablename* は外部キー テーブルの名前) という形式の名前が自動的に割り当てられます。  
+     リレーションシップが [**選択されたリレーションシップ**] ボックスの一覧に表示され、FK_ _ の形式でシステム指定の名前が付けられ \<*tablename*> \<*tablename*> ます。 *tablename*は外部キーテーブルの名前です。  
   
 4.  **[選択されたリレーションシップ]** ボックスの一覧で、リレーションシップをクリックします。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62761614"
   
 8.  **[OK]** をクリックしてリレーションシップを作成します。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>新しいテーブルに外部キーを作成するには  
   

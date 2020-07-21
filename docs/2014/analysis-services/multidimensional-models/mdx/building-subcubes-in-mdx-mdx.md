@@ -1,5 +1,5 @@
 ---
-title: MDX (MDX) でのサブキューブの構築 |Microsoft Docs
+title: MDX でのサブキューブの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 653b4d30aa86f52179c7b13619ac4347aa65c339
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074716"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546556"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX でのサブキューブの作成 (MDX)
   サブキューブは、基になるデータにフィルターを適用したビューを表す、キューブのサブセットです。 キューブをサブキューブに限定することによって、クエリのパフォーマンスを向上させることができます。  
@@ -53,7 +52,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  さらに、サブキューブ内の集計値は視覚的に合計されます。 たとえば、 `USA`、 `WA`、 `OR`を含むサブキューブがあるとします。 サブキューブによって定義されている州は `USA` と `{WA,OR}` だけなので、 `WA` の集計値は `OR` の合計になります。 他の州は無視されます。  
   
- また、サブキューブの外部にあるセルへの明示的な参照を行うと、キューブ全体のコンテキストで評価されるセル値が返されます。 たとえば、今年度に限定したサブキューブを作成するとします。 この場合、 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 関数を使用して今年度を前年度と比較することができます。 前年度の値が、サブキューブの外部にある場合でも、値の差が返されます。  
+ また、サブキューブの外部にあるセルへの明示的な参照を行うと、キューブ全体のコンテキストで評価されるセル値が返されます。 たとえば、今年度に限定したサブキューブを作成するとします。 この場合、 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 関数を使用して今年度を前年度と比較することができます。 前年の値がサブキューブの外側にある場合でも、値の違いが返されます。  
   
  さらに、元のコンテキストを上書きしない場合、サブセレクト内で評価されるセット関数は、サブセレクトのコンテキストで評価されます。 コンテキストを上書きする場合、セット関数はキューブ全体のコンテキストで評価されます。  
   
@@ -67,7 +66,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>参照  
- [クエリ内のキューブ コンテキストの確立 (MDX)](establishing-cube-context-in-a-query-mdx.md)   
- [MDX クエリの基礎 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
+ [MDX&#41;&#40;クエリでのキューブコンテキストの確立](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

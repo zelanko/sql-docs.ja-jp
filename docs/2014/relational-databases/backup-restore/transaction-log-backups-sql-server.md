@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 752447d6c38a2df0fcbdce72fbba12edd7a9eeb3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956163"
 ---
 # <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログのバックアップについて説明します。  
@@ -29,18 +28,18 @@ ms.locfileid: "62920688"
   
  **このトピックの内容**  
   
--   [ログ バックアップのシーケンスのしくみ](#LogBackupSequence)  
+-   [一連のログバックアップの動作](#LogBackupSequence)  
   
--   [推奨事項](#Recommendations)  
+-   [Recommendations (推奨事項)](#Recommendations)  
   
 -   [関連タスク](#RelatedTasks)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> ログ バックアップのシーケンスのしくみ  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>一連のログバックアップの動作  
  トランザクション ログのバックアップの *ログ チェーン* のシーケンスは、データのバックアップとは関連がありません。 たとえば、次の一連のイベントが発生したとします。  
   
-|Time|イベント|  
+|Time|Event|  
 |----------|-----------|  
 |午前 8 時|データベースのバックアップ。|  
 |正午|トランザクション ログのバックアップ。|  
@@ -50,7 +49,7 @@ ms.locfileid: "62920688"
   
  午後 8 時に作成されたトランザクション ログ バックアップには、 午後 4 時から午後 8 時までのトランザクション ログ レコードが含まれています。 その間、午後 6 時に、データベースの完全バックアップが作成されています。 トランザクション ログ バックアップのシーケンスは、午前 8 時に最初にデータベースの完全バックアップが作成されて以降、 午後 8 時に作成された最後のトランザクション ログ バックアップまで継続しています。 これらのログ バックアップを適用する方法の詳細については、「 [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)」の例を参照してください。  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   トランザクション ログが破損すると、前回の有効なバックアップ以降に行われた作業が失われます。 そのため、ログ ファイルはフォールト トレランス ストレージに置くことを強くお勧めします。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62920688"
   
 -   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **トランザクション ログのバックアップを作成するには**  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
@@ -67,10 +66,10 @@ ms.locfileid: "62920688"
   
  バックアップ ジョブのスケジュールを設定するには、「 [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   

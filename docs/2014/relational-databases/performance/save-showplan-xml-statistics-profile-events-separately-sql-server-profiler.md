@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23cc38bbec77b01a1e8a7d09dddfe70b46844920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047872"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Showplan XML Statistics Profile イベントを個別に保存 (SQL Server Profiler)
   このトピックでは、トレースでキャプチャされる **Showplan XML Statistics Profile** イベントを、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して個別の SQLPlan ファイルに保存する方法について説明します。 **Showplan XML Statistics Profile** イベント ファイルは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開くことができ、イベントごとの実行プランをグラフィカルに表示できます。  
@@ -39,15 +38,15 @@ ms.locfileid: "63150628"
   
 4.  次のいずれかの操作を行います。  
   
-    -   トレースをファイルに記録する場合は、 **[ファイルに保存]** をクリックします。 **[最大ファイル サイズの設定 (MB)]** ボックスに値を指定します。  
+    -   トレースをファイルに記録する場合は、**[ファイルに保存]** をクリックします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。  
   
-         必要に応じて、 **[ファイル ロールオーバーを有効にする]** チェック ボックスと **[サーバーがトレース データを処理する]** チェック ボックスをオンにします。  
+         必要に応じて、[**ファイルロールオーバーを有効にする**] と [**サーバープロセストレースデータ**] を選択します  
   
-    -   トレースをデータベース テーブルに記録する場合は、 **[テーブルに保存]** をクリックします。  
+    -   トレースをデータベース テーブルに記録する場合は、**[テーブルに保存]** をクリックします。  
   
-         必要に応じて、 **[最大行数の設定 (1000 行単位)]** チェック ボックスをオンにし、値を指定します。  
+         必要に応じて、[**最大行数の設定**] をクリックし、値を指定します。  
   
-5.  必要に応じて、 **[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
+5.  必要に応じて、[**トレース停止時刻を有効にする**] チェックボックスをオンにして、停止日時を指定します。  
   
 6.  **[イベントの選択]** タブをクリックします。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "63150628"
   
 11. SQL Server Management Studio で **Showplan XML Statistics Profile** イベント ファイルを表示するには、 **[ファイル]** メニューで **[開く]** をポイントし、 **[ファイル]** をクリックします。 **Showplan XML Statistics Profile** イベント ファイルを保存したディレクトリに移動し、ファイルを選択して開きます。 **Showplan XML Statistics Profile** イベント ファイルの拡張子は .SQLPlan です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler での Showplan 結果を使用したクエリの分析](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

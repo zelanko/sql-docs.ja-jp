@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo (テキスト ファイル ドライバー) |Microsoft Docs
+title: SQLGetTypeInfo (テキストファイルドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Text File Driver
 - text file driver [ODBC], SQLGetTypeInfo
 ms.assetid: 05a58975-093c-4bd9-bd72-b5f0026a6e36
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2659b3251cf77882f3762ce5699c36441e6c8ebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b70b58e4760959db102450b5f8b7beed042df95
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898648"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81295002"
 ---
 # <a name="sqlgettypeinfo-text-file-driver"></a>SQLGetTypeInfo (テキスト ファイル ドライバー)
 > [!NOTE]  
->  このトピックでは、テキスト ファイル ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックでは、テキストファイルドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- によって生成されたテーブルの型 (TYPE_NAME) の名前が返される**SQLGetTypeInfo**データ ソースで最もよく使用する名前になります。  
+ **SQLGetTypeInfo**によって生成されるテーブルに返される型の名前 (TYPE_NAME) は、データソースで最もよく使用される名前になります。  
   
- SQL_ALL_EXCEPT_LIKE が返されます、検索可能な列で、バイトのカウンター、Double、1 つ、Long、Short データ型。 (LIKE 機能は、値を比較を実行し、ODBC 標準変換関数を使用する文字に変換することで実現できます)。  
+ SQL_ALL_EXCEPT_LIKE は、Byte、Counter、Double、Single、Long、Short の各データ型の検索可能な列に返されます。 (LIKE 機能は、ODBC 正規変換関数を使用して値を文字に変換してから、比較を実行することで実現できます)。  
   
- テキストのドライバーを使用すると、 **SQLGetTypeInfo** CASE_SENSITIVE の値が FALSE のテキストのデータ型 (CHAR および LONGCHAR) を返しますとデータ型実際には、大文字小文字を区別します。
+ テキストドライバーが使用されている場合、 **SQLGetTypeInfo**は、データ型が実際に大文字と小文字を区別する場合に、テキストデータ型 (CHAR および longchar) に対して CASE_SENSITIVE 値 FALSE を返します。

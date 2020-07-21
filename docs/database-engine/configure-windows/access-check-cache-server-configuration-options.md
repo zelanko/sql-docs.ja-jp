@@ -1,5 +1,6 @@
 ---
 title: access check cache サーバー構成オプション | Microsoft Docs
+description: アクセス チェックの結果キャッシュと、キャッシュの動作を制御するオプションについて説明します。 どのような場合に SQL Server でこれらのオプションを変更すべきかについて説明します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -9,22 +10,35 @@ ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - access check cache option
+- access check cache bucket count
+- access check cache quota
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 74b4e43ba9b973f83263ad36aabc859211926ef6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5790d5eb416f789bbe67f10d28f18a375b4c572
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013325"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158930"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベース オブジェクトに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアクセスすると、アクセス チェックが **access check result cache**と呼ばれる内部構造にキャッシュされます。 **access check cache quota** オプションと **access check cache bucket count** オプションは、 **access check result cache**に使用されるエントリ数とハッシュ バケット数を制御します。 まれに、これらのオプションを変更することによってパフォーマンスが向上する場合があります。  
+データベース オブジェクトに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアクセスすると、アクセス チェックが **access check result cache**と呼ばれる内部構造にキャッシュされます。 
   
- 既定値は 0 で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらのオプションを管理していることを示します。 これらのオプションはマイクロソフト カスタマー サポート サービスから指示があった場合にのみ変更することをお勧めします。  
+**access check cache bucket count** オプションは、access check result cache に使用されるハッシュ バケットの数を制御します。 
+
+**access check cache quota** オプションは、access check result cache に格納されるエントリの数を制御します。 エントリが最大数に達すると、最も古いエントリが access check result cache から削除されます。
+  
+既定値は 0 で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらのオプションを管理していることを示します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、既定値は次の内部構成に変換されます。
+-   access check cache bucket count の値が 0 の場合、バケット数の既定値は 256 になります。
+-   access check cache quota の値が 0 の場合、エントリの既定値は 1,024 になります。
+
+まれに、これらのオプションを変更することによってパフォーマンスが向上する場合があります。 たとえば、メモリの使用率が高すぎる場合は、access check result cache のサイズを小さくした方がよいでしょう。 または、アクセス許可の再計算時に CPU の使用率が高い場合は、access check result cache のサイズを大きくした方がよいでしょう。
+ 
+> [!IMPORTANT]
+> これらのオプションはマイクロソフト カスタマー サポート サービスから指示があった場合にのみ変更することをお勧めします。 "access check cache bucket count" と "access check cache quota" の値を変更する必要がある場合は、1:4 の比率を使用してください。 たとえば、"access check cache bucket count" 値を 512 に変更した場合、"access check cache quota" 値は 2,048 に変更します。 
   
 ## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

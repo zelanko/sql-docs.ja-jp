@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0462829430f75f51764ffd318953f175ef857ab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b031b74da10dd4162650d11559474562d69d3f3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714931"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   プレーン テキストに非対称キーで署名する  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68139156"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
@@ -48,7 +48,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  現在のデータベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は**int**です。  
   
- **@plaintext**  
+ **\@plaintext**  
  非対称キーを使って署名するデータを格納する **nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
   
  *password*  
@@ -57,10 +57,10 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  非対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、プレーン テキストとその署名を格納するテーブル `SignedData04` を作成し、 次に、非対称キー `PrimeKey` を使用して署名したレコードをテーブルに挿入します。このキーは最初にパスワード `'pGFD4bb925DGvbd2439587y'` で暗号化解除されます。  
   
 ```  

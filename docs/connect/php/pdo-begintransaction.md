@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: beginTransaction |Microsoft Docs'
+title: PDO::beginTransaction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 739565ae633140cef7d0df6531b6adfd6389d1e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ec1b4149b882e520eb58a8789516461c83c01de
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993305"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919400"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>戻り値  
 メソッドの呼び出しに成功した場合は true、それ以外の場合は false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO::beginTransaction で開始されたトランザクションは、[PDO::commit](../../connect/php/pdo-commit.md) または [PDO::rollback](../../connect/php/pdo-rollback.md) が呼び出されたときに終了します。  
   
 PDO::beginTransaction は PDO::ATTR_AUTOCOMMIT の値によって影響を受けず、PDO::ATTR_AUTOCOMMIT の値に影響を与えません。  

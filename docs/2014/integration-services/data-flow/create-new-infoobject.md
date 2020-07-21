@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6c58e86baddb164fd0247b4eaba704b17de9190
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827907"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432249"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
@@ -92,7 +91,7 @@ ms.locfileid: "62827907"
  **TIMS - 時刻 (HHMMSS)**  
  インフォオブジェクト オブジェクトに時刻データが含まれていることを示します。  
   
- **Length**  
+ **[データ型]**  
  データ型の長さを入力します。  
   
 ## <a name="text-options"></a>[テキスト] のオプション  
@@ -120,10 +119,10 @@ ms.locfileid: "62827907"
 ### <a name="attributes-list"></a>[属性] の一覧  
  **[属性]** ボックスの一覧には、作成するインフォオブジェクトの属性が表示されます。 **[属性]** の一覧には次の列見出しがあります:  
   
- **[インフォオブジェクト]**  
+ **インフォオブジェクト**  
  インフォオブジェクトの名前を表示します。  
   
- **[説明]**  
+ **説明**  
  インフォオブジェクトの説明を表示します。  
   
  **インフォオブジェクトの種類**  
@@ -133,13 +132,13 @@ ms.locfileid: "62827907"
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|主要データ|  
-|UNI|単位|  
+|UNI|Units|  
 |TIM|時間の特性|  
   
 ### <a name="attributes-options"></a>[属性] のオプション  
  作成するインフォオブジェクトの属性を追加または削除するには、次のオプションを使用します。  
   
- **[追加]**  
+ **追加**  
  属性として既存のインフォオブジェクトを追加します。  
   
  既存のインフォオブジェクトを追加するには、[追加] をクリックし、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用してインフォオブジェクトを検索します。 このダイアログ ボックスの詳細については、「 [インフォオブジェクトの参照](look-up-infoobject.md)」を参照してください。  
@@ -149,13 +148,13 @@ ms.locfileid: "62827907"
   
  新しいインフォオブジェクトを作成して追加するには、[新規作成] をクリックし、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスの新しいインスタンスを使用して、新しいインフォオブジェクトを作成します。  
   
- **[削除]**  
+ **Remove**  
  選択したインフォオブジェクトを **[属性]** の一覧から削除します。  
   
 ## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](create-infosource.md)   
- [[トランザクション データのインフォソースの作成]](create-infosource-for-transaction-data.md)   
+ [トランザクション データのインフォソースの作成](create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](create-infosource-for-master-data.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

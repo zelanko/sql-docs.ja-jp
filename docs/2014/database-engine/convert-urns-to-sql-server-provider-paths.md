@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06e59cd00382610e330e2c288f44fda50244256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3160e5e6a70344d0340b0b14db822c7089b60680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934574"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>URN から SQL Server プロバイダー パスへの変換
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルでは、オブジェクトに対して URN (Uniform Resource Name) が作成されます。 各 URN によって、SMO オブジェクトが一意に識別されます。また、`Convert-UrnToPath` コマンドレットを使用して、URN を SQL Server PowerShell プロバイダーのパスに変換できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "66065117"
   
  このコマンドレットの使用例については、Windows PowerShell で次を実行してください。  
   
-```  
+```powershell
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
@@ -43,5 +42,3 @@ Get-Help Convert-UrnToPath -Examples
  [クエリ式と Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)   
  [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
-  
-  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe8a7c8ad24c472eb41448f1303ad240a5232c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048426"
 ---
 # <a name="eventstring-element-dta"></a>EventString 要素 (DTA)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ワークロードを XML 入力ファイルで直接指定します。  
@@ -37,15 +36,15 @@ ms.locfileid: "68211114"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|`Weight`|任意。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 重み係数の指定には、`float` データ型を使用します。 たとえば、`Weight`="100.01" のようにします。 `Weight` に指定できる最小値は「0」です。|  
+|`Weight`|省略可能。 対象のイベントに関するクエリの重み係数 (重要度の係数) を指定します。 重み係数の指定には、`float` データ型を使用します。 たとえば、`Weight`="100.01" のようにします。 `Weight` に指定できる最小値は「0」です。|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|説明|  
 |--------------------|-----------------|  
-|**データ型と長さ**|`string`、長さは制限されます。|  
+|**データ型と長さ**|`string`、長さは無制限です。|  
 |**既定値**|[なし] :|  
 |**個数**|他の種類のワークロードが指定されていない場合は、1 回の出現が必要です。 `EventString` 親要素に対しては、`File`、`Database`、または `Workload` 子要素を指定する必要がありますが、使用できるのは 1 種類だけです。 たとえば、`EventString` 要素を使用してワークロードを指定した場合は、同じ XML 入力ファイル内でワークロードを `File` 要素で指定することはできません。|  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68211114"
 ## <a name="example"></a>例  
  この要素の使用例については、「[インライン ワークロードを使用した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

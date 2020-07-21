@@ -1,5 +1,5 @@
 ---
-title: ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ページ ヘッダーとページ フッター (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8a94f7bf5e149431135972e4911463c5f86ffaa5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576334"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082460"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
   レポートには、各ページの上部と下部にヘッダーとフッターを含めることができます。 ヘッダーとフッターには、静的テキスト、画像、線、四角形、罫線、背景色、背景画像、式などを含めることができます。 式には、データセットが 1 つしかないレポートでのデータセット フィールド参照と、スコープとしてデータセットを指定する集計関数呼び出しが含まれます。  
@@ -58,9 +58,9 @@ ms.locfileid: "65576334"
 |レポート本文のテキスト ボックス|はい|いいえ|  
 |&PageNumber|はい|いいえ|  
 |&TotalPages|はい|いいえ|  
-|集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|集計関数|はい。 たとえば、次のように入力します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|はい。 たとえば、次のように入力します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|ページ上のアイテムのフィールド コレクション|間接的。 たとえば、次のように入力します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|はい。 たとえば、次のように入力します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|データバインド画像|間接的。 たとえば、`=ReportItems!TXT_Photo.Value` のように指定します。|はい。 たとえば、次のように入力します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  このトピックの以下のセクションでは、ヘッダーおよびフッターで一般的に使用される変数データを取得するための、すぐに使用できる式を示します。 また、Excel 表示拡張機能でヘッダーおよびフッターが処理される方法についても説明します。 式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "65576334"
  詳細については、「 [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)で操作できます。  
   
 ## <a name="see-also"></a>参照  
- [レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [四角形と線 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

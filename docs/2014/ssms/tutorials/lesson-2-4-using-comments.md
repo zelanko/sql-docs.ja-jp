@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f09d6099ea9c80e9ce237e3462cec93fa66626b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67e251af883eaffb4d826249a7fd6e5147cd0fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63164025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040979"
 ---
 # <a name="using-comments"></a>コメントの使用
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、スクリプトの一部を簡単にコメント アウトできます。  

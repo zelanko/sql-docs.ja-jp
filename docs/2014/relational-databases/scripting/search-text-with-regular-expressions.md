@@ -1,6 +1,6 @@
 ---
-title: 正規表現によるテキストの検索 | Microsoft Docs
-ms.custom: ''
+title: 正規表現によるテキストの検索
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060320"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
-  正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
+  正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の**[検索と置換][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスの **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
   
 #### <a name="to-find-using-regular-expressions"></a>正規表現を使用して検索を行うには  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66063768"
   
 |式|構文|説明|  
 |----------------|------------|-----------------|  
-|任意の 1 文字|を選択します。|改行以外の任意の 1 文字を検索します。|  
+|任意の 1 文字|。|改行以外の任意の 1 文字を検索します。|  
 |0 個以上|*|直前の正規表現のゼロ個以上の項目を検索します (考えられるすべての一致項目を取得します)。|  
 |1 個以上|+|直前の正規表現の 1 個以上の項目を検索します。|  
 |行頭|^|一致文字列を行の先頭に合わせます。|  
@@ -55,7 +54,7 @@ ms.locfileid: "66063768"
 |C/C++ 識別子|:i|正規表現 ([a-zA-Z_$][a-zA-Z0-9_$]*) を検索します。|  
 |引用符で囲んだ文字列|:q|正規表現 (("[^"]*")&#124;('[^']\*')) を検索します。|  
 |スペースまたはタブ|:b|スペース文字またはタブ文字を検索します。|  
-|Integer|:z|正規表現 ([0-9]+) を検索します。|  
+|整数|:z|正規表現 ([0-9]+) を検索します。|  
   
  **[検索と置換]** の操作で有効なすべての正規表現の一覧が **参照一覧**に表示されるわけではありません。 **[検索する文字列]** の文字列に以下の正規表現を挿入することも可能です。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66063768"
 |非空白記号|:Mn|非空白記号を検索します。|  
 |連結記号|:Mc|連結記号を検索します。|  
 |囲み記号|:Me|囲み記号を検索します。|  
-|数学記号|:Sm|+、=、~、&#124、\<、> を検索します。|  
+|数学記号|:Sm|+、=、~、&#124;、に一致 \<, and > します。|  
 |通貨記号|:Sc|$ などの通貨記号を検索します。|  
 |アクセント記号|:Sk|曲アクセント記号、抑音符、長音記号など、アクセント記号を検索します。|  
 |その他の記号|:So|著作権記号、段落記号、度記号など、その他の記号を検索します。|  
@@ -120,9 +119,9 @@ ms.locfileid: "66063768"
   
 |式|構文|説明|  
 |----------------|------------|-----------------|  
-|[アルファ]|:Al|任意の 1 文字を検索します。 たとえば、「:Alhe」は、「The」、「then」、「reached」などの単語を検索します。|  
+|Alpha|:Al|任意の 1 文字を検索します。 たとえば、「:Alhe」は、「The」、「then」、「reached」などの単語を検索します。|  
 |数値|:Nu|任意の 1 つの数字を検索します。|  
-|区切り記号|:Pu|任意の 1 つの区切り記号 (?、@、' など) を検索します。|  
+|句読点|:Pu|任意の 1 つの区切り記号 (?、@、' など) を検索します。|  
 |空白|:Wh|すべての種類の空白を検索します。印刷用や表意文字の空白も含みます。|  
 |Bidi|:Bi|アラビア語やヘブライ語など、右から左に記述する文字を検索します。|  
 |ハングル|:Ha|韓国語のハングルおよびジャモの組み合わせを検索します。|  

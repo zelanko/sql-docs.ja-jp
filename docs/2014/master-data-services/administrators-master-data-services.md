@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972272"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、モデル管理者と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者の 2 種類の管理者があります。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を持つユーザーは、**更新**で最上位のモデル オブジェクトに割り当てられた権限、**モデル オブジェクト**タブとしないアクセス許可を割り当てられます。  
+ で [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、モデル管理者は、[**モデルオブジェクト**] タブの最上位のモデルオブジェクトに割り当てられた**更新**権限を持ち、その他の割り当てられた権限がないユーザーです。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -36,27 +35,27 @@ ms.locfileid: "65480016"
  ユーザーをモデル管理者として構成するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使用するかプログラムで構成します。 詳細については、「 [モデル管理者を作成する (マスター データ サービス)](create-a-model-administrator-master-data-services.md)」を参照してください。  
   
 ## <a name="master-data-services-system-administrator"></a>Master Data Services システム管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者は 1 人だけです。 システム管理者は、指定されたユーザー、**管理者アカウント**を作成するとき、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者は 1 人だけです。 システム管理者は、データベースの作成時に**管理者アカウント**に対して指定されたユーザーです [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者:  
   
 -   すべての機能領域に対するアクセス権が自動的に付与されます。  
   
--   追加、削除、およびすべてのモデルのすべてのマスター データを更新、**エクスプ ローラー**機能領域。  
+-   [**エクスプローラー** ] 機能領域のすべてのモデルのすべてのマスターデータを追加、削除、および更新できます。  
   
- システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
+  システム管理者として割り当てられているユーザーを変更できます。 詳細については、「[マスターデータサービス&#41;&#40;システム管理者アカウントを変更](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)する」を参照してください。  
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   
 |管理者の種類|説明|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 自動的に**Update**すべてのモデルにアクセスを許可します。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。<br /><br /> Mdm.tbluser で、値、 **ID**列が**1**します。|  
-|モデル管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で割り当てられた権限によって、ユーザーがモデル管理者であるかどうかが決まります。<br /><br /> 明示的に割り当てられている権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> モデルに対してのみ管理者**Update** 、最上位のモデル オブジェクトに割り当てられた権限とアクセス許可がありません。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> Mdm.tbluser で、値、 **ID**列がない**1**します。|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> すべてのモデルに対する**更新**権限が自動的に付与されます。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。<br /><br /> Mdm.tbluser では、 **ID**列の値は**1**です。|  
+|モデル管理者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で割り当てられた権限によって、ユーザーがモデル管理者であるかどうかが決まります。<br /><br /> 明示的に割り当てられている権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> は、最上位のモデルオブジェクトに割り当てられた**更新**権限を持ち、他の権限がないモデルに対してのみ管理者になります。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> Mdm.tbluser で、 **ID**列の値が**1**ではありません。|  
   
 ## <a name="see-also"></a>参照  
- [モデル管理者を作成する (マスター データ サービス)](create-a-model-administrator-master-data-services.md)   
- [システム管理者アカウントを変更&#40;マスター データ サービス&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
- [マスター データ サービス データベースの作成](install-windows/create-a-master-data-services-database.md)   
+ [モデル管理者 &#40;マスターデータサービスを作成し&#41;](create-a-model-administrator-master-data-services.md)   
+ [システム管理者アカウント &#40;マスターデータサービスに変更&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
+ [マスターデータサービスデータベースを作成する](install-windows/create-a-master-data-services-database.md)   
  [通知 (マスター データ サービス)](../../2014/master-data-services/notifications-master-data-services.md)  
   
   

@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68006507"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -123,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  MIRROR_ADDRESS が指定されている場合、ルートには SERVICE_NAME 句と BROKER_INSTANCE 句を指定する必要があります。 *next_hop_address* に **'LOCAL'** または **'TRANSPORT'** を指定するルートでは、ミラー アドレスが指定されない場合があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ルートを格納するルーティング テーブルは、**sys.routes** カタログ ビューを介して読み取ることができるメタデータ テーブルです。 このカタログ ビューを更新できるのは、CREATE ROUTE、ALTER ROUTE、および DROP ROUTE ステートメントだけです。  
   
  既定では、各ユーザー データベースにあるルーティング テーブルには 1 つのルートが含まれています。 このルートには **AutoCreatedLocal** という名前が付いています。 ルートは *next_hop_address* に **'LOCAL'** を指定し、任意のサービス名およびブローカー インスタンス識別子と一致します。  
@@ -139,7 +139,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ## <a name="permissions"></a>アクセス許可  
  ルートを作成する権限は、既定では **db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. DNS 名を使用して TCP/IP ルートを作成する  
  次の例では、サービス `//Adventure-Works.com/Expenses` へのルートを作成します。 このルートでは、このサービスへのメッセージが、TCP 経由で DNS 名 `1234` に対応するホスト上のポート `www.Adventure-Works.com` に伝達されるように指定します。 ターゲット サーバーにメッセージが到着すると、一意識別子 `D8D4D268-00A3-4C62-8F91-634B89C1E315` で指定されるブローカー インスタンスにメッセージが配信されます。  

@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのプロパティ |Microsoft Docs
+title: マイニングモデルのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083510"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521234"
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
   マイニング モデルには、次の種類のプロパティがあります。  
@@ -43,7 +42,7 @@ ms.locfileid: "66083510"
 |--------------|-----------------|  
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
-|**[フィルター]**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
+|**Assert**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
 |**名前**|マイニング モデルの名前を設定します。|  
 |**AllowDrillThrough**|マイニング モデルでドリルスルーを有効にするかどうかを指定します。|  
   
@@ -52,19 +51,19 @@ ms.locfileid: "66083510"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**[説明]**|マイニング列の目的について説明します。|  
+|**説明**|マイニング列の目的について説明します。|  
 |**名前**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  
 |**ModelingFlags**|列に対してアルゴリズム固有のフラグを設定します。|  
 |**SourceColumnID**|モデル列の基になるマイニング構造列の名前を示します。<br /><br /> このプロパティは読み取り専用です。|  
 |**使用方法**|マイニング モデルによる列の使用方法を設定します。|  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル列](mining-model-columns.md)   
- [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
- [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
- [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)   
- [データ マイニング ツール](data-mining-tools.md)   
- [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)   
+ [マイニングモデル列](mining-model-columns.md)   
+ [マイニング構造 &#40;Analysis Services-データマイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [マイニングモデルタスクと操作方法](mining-model-tasks-and-how-tos.md)   
+ [マイニングモデルのプロパティの変更](change-the-properties-of-a-mining-model.md)   
+ [データマイニングツール](data-mining-tools.md)   
+ [リレーショナルマイニング構造の作成](create-a-relational-mining-structure.md)   
  [モデル列の別名の作成](create-an-alias-for-a-model-column.md)  
   
   

@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3da3f7332bdabce65785b2844157dd4639389254
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936743"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>可用性グループに対するセカンダリ データベースの手動準備 (SQL Server)
-  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で AlwaysOn 可用性グループのセカンダリ データベースを準備する方法について説明します。 セカンダリ データベースを準備するには、2 つの手順が必要です。(1)、プライマリ データベースの最新のデータベース バックアップとセカンダリ レプリカをホストする各サーバー インスタンスに後続のログ バックアップの復元、RESTORE WITH NORECOVERY を使用して、および (2)、復元されたデータベースを可用性グループに参加させます。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で AlwaysOn 可用性グループのセカンダリ データベースを準備する方法について説明します。 セカンダリ データベースを準備するには、2 つの手順を実行する必要があります。まず、RESTORE WITH NORECOVERY を使用して、プライマリ データベースの最新のバックアップとそれ以降のログ バックアップを、セカンダリ レプリカをホストする各サーバー インスタンスに復元します。次に、復元したデータベースを可用性グループに参加させます。  
   
 > [!TIP]  
->  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、AlwaysOn プライマリ データベースと 1 つ以上の AlwaysOn セカンダリ データベースに変換できる場合があります。 詳細については、次を参照してください。[移行の前提条件のログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)します。  
+>  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、AlwaysOn プライマリ データベースと 1 つ以上の AlwaysOn セカンダリ データベースに変換できる場合があります。 詳細については、「[ログ配布から AlwaysOn 可用性グループ &#40;SQL Server&#41;への移行の前提条件](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)」を参照してください。  
   
 -   **作業を開始する準備:**  
   
      [前提条件と制限](#Prerequisites)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [Security](#Security)  
   
@@ -51,9 +50,9 @@ ms.locfileid: "62792082"
   
 -   **補足情報:** [セカンダリ データベースを準備した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件と制限  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>前提条件と制限  
   
 -   データベースを配置するシステムのディスク ドライブに、セカンダリ データベース用に十分な空き領域があることを確認します。  
   
@@ -67,24 +66,24 @@ ms.locfileid: "62792082"
   
 -   データベースの復元後、復元された最後のデータ バックアップの後に作成されたすべてのログ バックアップを復元する必要があります (WITH NORECOVERY)。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスでは、可能であれば、特定のセカンダリ データベースのファイル パス (ドライブ文字を含む) は、対応するプライマリ データベースのパスと一致させることをお勧めします。 セカンダリ データベースの作成時にデータベース ファイルを移動し、その後でセカンダリ データベースにファイルを追加しようとした場合、ファイルの追加操作が失敗し、セカンダリ データベースが中断される可能性があるためです。  
   
 -   セカンダリ データベースを準備する場合は、セカンダリ レプリカの初期化が完了するまでの間、可用性グループ内のデータベースでスケジュールされているログ パックアップを一時停止することを強くお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
- データベースをバックアップするときに、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md) は OFF に設定されます。 したがって、新たに復元されたデータベースでは TRUSTWORTHY は常に OFF です。  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
+ データベースがバックアップされると、 ["信頼できるデータベース" プロパティ](../../../relational-databases/security/trustworthy-database-property.md)が [オフ] に設定されます。 したがって、新たに復元されたデータベースでは TRUSTWORTHY は常に OFF です。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  
   
- 復元するデータベースがサーバー インスタンスに存在しない場合、RESTORE ステートメントに CREATE DATABASE 権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
+ 復元するデータベースがサーバー インスタンスに存在しない場合、RESTORE ステートメントに CREATE DATABASE 権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)で復元することはできません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 > [!NOTE]  
->  バックアップ ファイルと復元ファイルのパスが、プライマリ レプリカをホストするサーバー インスタンスとセカンダリ レプリカをホストする各インスタンスとで同じ場合は、 [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md)、 [可用性グループへのレプリカ追加ウィザード](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)、または [可用性グループへのデータベース追加ウィザード](availability-group-add-database-to-group-wizard.md)を使用して、セカンダリ データベースを作成できます。  
+>   バックアップ ファイルと復元ファイルのパスが、プライマリ レプリカをホストするサーバー インスタンスと、セカンダリ レプリカをホストする各インスタンスとで同じ場合は、 [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md)、 [可用性グループへのレプリカ追加ウィザード](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)、または [可用性グループへのデータベース追加ウィザード](availability-group-add-database-to-group-wizard.md)を使用して、セカンダリ データベースを作成できます。  
   
  **セカンダリ データベースを準備するには**  
   
@@ -101,9 +100,9 @@ ms.locfileid: "62792082"
 4.  セカンダリ データベースの構成を完了するには、セカンダリ データベースを可用性グループに参加させる必要があります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  これらのバックアップ操作および復元操作の実行方法については、このセクションの「 [関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
+>   これらのバックアップ操作および復元操作の実行方法については、このセクションの「 [関連するバックアップと復元のタスク](#RelatedTasks)」を参照してください。  
   
-###  <a name="RelatedTasks"></a> 関連するバックアップおよび復元のタスク  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a>関連するバックアップと復元のタスク  
  **データベースのバックアップを作成するには**  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -116,7 +115,7 @@ ms.locfileid: "62792082"
   
  **バックアップを復元するには**  
   
--   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [データベースの差分バックアップの復元 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62792082"
   
 -   [データベースを新しい場所に復元する &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **セカンダリ データベースを準備するには**  
   
 > [!NOTE]  
@@ -144,14 +143,14 @@ ms.locfileid: "62792082"
 4.  セカンダリ データベースの構成を完了するには、セカンダリ データベースを可用性グループに参加させる必要があります。 詳細については、「[可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  これらのバックアップ操作および復元操作の実行方法については、このトピックの「 [関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
+>   これらのバックアップ操作および復元操作の実行方法については、このトピックの「 [関連するバックアップと復元のタスク](#RelatedTasks)」を参照してください。  
   
-###  <a name="ExampleTsql"></a> Transact-SQL の例  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a>Transact-sql の例  
  次の例では、セカンダリ データベースを準備します。 この例では、既定で単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。  
   
 1.  [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースを使用するには、完全復旧モデルが使用されるように変更します。  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     ALTER DATABASE MyDB1   
@@ -166,7 +165,7 @@ ms.locfileid: "62792082"
   
      プライマリ レプリカをホストするサーバー インスタンス (`INSTANCE01`) 上で、次のとおりプライマリ データベースの完全バックアップを作成します。  
   
-    ```  
+    ```sql
     BACKUP DATABASE MyDB1   
         TO DISK = 'C:\MyDB1.bak'   
         WITH FORMAT  
@@ -181,7 +180,7 @@ ms.locfileid: "62792082"
   
          セカンダリ レプリカをホストするコンピューターで、次のとおり完全バックアップを復元します。  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1   
             FROM DISK = 'C:\MyDB1.bak'   
             WITH NORECOVERY  
@@ -195,9 +194,9 @@ ms.locfileid: "62792082"
         > [!IMPORTANT]  
         >  プライマリ データベースとセカンダリ データベースのパス名が異なる場合は、ファイルを追加することはできません。 ファイル追加操作のログの受信時に、セカンダリ レプリカのサーバー インスタンスがプライマリ データベースで使用されるのと同じパスに新しいファイルを配置しようとするためです。  
   
-         たとえば、次のコマンドは、既定の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスのデータ ディレクトリ (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) に存在するプライマリ データベースのバックアップを復元します。 データベースの復元操作にデータベースのリモート インスタンスのデータ ディレクトリを移動する必要があります[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]という名前 (*AlwaysOn1*)、別のクラスター ノード上のセカンダリ レプリカをホストします。 データとログ ファイルが復元されますが、 *C:\Program files \microsoft SQL Server\MSSQL12 します。ALWAYSON1\MSSQL\DATA*ディレクトリ。 この復元操作では WITH NORECOVERY を使用してセカンダリ データベースを復元するデータベースに残します。  
+         たとえば、次のコマンドは、既定の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスのデータ ディレクトリ (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) に存在するプライマリ データベースのバックアップを復元します。 データベースの復元操作では、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 別のクラスターノードのセカンダリレプリカをホストするという名前の (*AlwaysOn1*) のリモートインスタンスのデータディレクトリにデータベースを移動する必要があります。 そこで、データファイルとログファイルが C:\Program are *SQL Server\MSSQL12. に復元されます。ALWAYSON1\MSSQL\DATA*ディレクトリ。 この復元操作では WITH NORECOVERY を使用してセカンダリ データベースを復元するデータベースに残します。  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1  
           FROM DISK='C:\MyDB1.bak'  
          WITH NORECOVERY,   
@@ -210,7 +209,7 @@ ms.locfileid: "62792082"
   
 5.  完全バックアップを復元した後、プライマリ データベースでログ バックアップを作成する必要があります。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、ログを *E:\MyDB1_log.bak*というバックアップ ファイルにバックアップします。  
   
-    ```  
+    ```sql
     BACKUP LOG MyDB1   
       TO DISK = 'E:\MyDB1_log.bak'   
     GO  
@@ -220,7 +219,7 @@ ms.locfileid: "62792082"
   
      たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、最初のログを *C:\MyDB1.bak*から復元します。  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=1, NORECOVERY  
@@ -231,7 +230,7 @@ ms.locfileid: "62792082"
   
      たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントは、2 つの追加のログを *E:\MyDB1_log.bak*から復元します。  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=2, NORECOVERY  
@@ -242,7 +241,7 @@ ms.locfileid: "62792082"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ データベースを準備するには**  
   
 1.  プライマリ データベースの最新のバックアップを作成する必要がある場合は、プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更します (`cd`)。  
@@ -262,29 +261,26 @@ ms.locfileid: "62792082"
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> バックアップと復元のスクリプトとコマンドのサンプル  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a>バックアップと復元のスクリプトとコマンドのサンプル  
  次の PowerShell コマンドは、データベースの完全バックアップとトランザクション ログをネットワーク共有にバックアップし、その共有からこれらのバックアップを復元します。 この例では、データベースの復元先のファイル パスとデータベースがバックアップされたファイル パスが同じであると想定しています。  
   
-```  
+```powershell
 # Create database backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -ServerInstance "SourceMachine\Instance"  
 # Create log backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\backups\MyDB1.trn" -ServerInstance "SourceMachine\Instance"  
-# Restore database backup   
+# Restore database backup
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-# Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-  
+# Restore log backup
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a>補足情報: セカンダリ データベースを準備した後  
+##  <a name="follow-up-after-preparing-a-secondary-database"></a><a name="FollowUp"></a>補足情報: セカンダリデータベースを準備した後  
  セカンダリ データベースの構成を完了するには、新たに復元したデータベースを可用性グループに参加させる必要があります。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE の引数 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [ファイル追加失敗の操作のトラブルシューティング&#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
-  
+ [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

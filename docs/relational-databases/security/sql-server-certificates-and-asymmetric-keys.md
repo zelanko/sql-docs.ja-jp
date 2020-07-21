@@ -1,5 +1,6 @@
 ---
 title: SQL Server の証明書と非対称キー | Microsoft Docs
+description: 外部で生成された、または SQL Server 生成された証明書、ツール、関連タスクなど、SQL Server の証明書と非対称キーについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126828"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001026"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  公開キー暗号化は、メッセージを秘匿する方法の 1 つです。この方法では、ユーザーが "*公開*" キーと "*秘密*" キーを作成します。 秘密キーは秘匿されますが、公開キーは他のユーザーに配布できます。 2 つのキーは数学的に相関していますが、公開キーを使用して秘密キーを簡単に導出することはできません。 公開キーを使用して、対応する秘密キーでのみ復号化できるデータ暗号化を行うことができます。 これは、秘密キーの所有者へのメッセージの暗号化に使用できます。 同様に、秘密キーの所有者は、公開キーでのみ復号化できるデータ暗号化を行うことができます。 このような使い方により、証明書に含まれる情報が秘密キーの所有者によって暗号化される、コンテンツの作成者を保証するデジタル証明書の基礎が形成されます。 暗号化キーと復号化キーは異なるので、これらは "*非対称*" キーと呼ばれます。
   
@@ -45,7 +46,7 @@ ms.locfileid: "68126828"
 ### <a name="using-a-certificate-in-sql-server"></a>SQL Server での証明書の使用  
  証明書は、データベース ミラーリングで接続を保護したり、パッケージや他のオブジェクトに署名したり、データや接続を暗号化したりする場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の証明書に関するその他のリソースを次の表に示します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|証明書を作成するためのコマンドについて説明します。|  
 |[デジタル署名を使用してパッケージのソースを特定する](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|証明書を使用してソフトウェア パッケージに署名する方法について説明します。|  
@@ -59,18 +60,19 @@ ms.locfileid: "68126828"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>SQL Server での非対称キーの使用  
  非対称キーは、データを保護したり、プレーンテキストに署名したりする場合に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での非対称キーに関するその他のリソースを次の表に示します。  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|非対称キーを作成するためのコマンドについて説明します。|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|オブジェクトに署名するためのオプションについて説明します。|  
   
 ## <a name="tools"></a>ツール  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、証明書および厳密な名前のキー ファイルを生成するツールとユーティリティを提供しています。 これらのツールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構文よりも柔軟にキーを生成できます。 これらのツールを使用することで、より複雑なキー長の RSA キーを作成して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートできます。 次の表では、これらのツールの入手先を示します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、証明書および厳密な名前のキー ファイルを生成するツールとユーティリティを提供しています。 これらのツールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構文よりも柔軟にキーを生成できます。 これらのツールを使用することで、より複雑なキー長の RSA キーを作成して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートできます。 これらのツールの入手先を次の表に示します。  
   
 |||  
 |-|-|  
-|ツール|用途|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|証明書を作成します。|  
+|ツール|目的|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|自己署名証明書を作成します。|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|証明書を作成します。 **New-SelfSignedCertificate** を優先するために非推奨になりました。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|対称キーの厳密名を作成します。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

@@ -1,5 +1,5 @@
 ---
-title: sp_remoteoption (TRANSACT-SQL) |Microsoft Docs
+title: sp_remoteoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_remoteoption
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 01f87d00c1f0a8cc9ff7ca492092738a96f98c06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215932"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901417"
 ---
-# <a name="spremoteoption-transact-sql"></a>sp_remoteoption (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているローカル サーバーで定義されているリモート ログインのオプションを表示または変更します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]sp_remoteoption では、任意のオプションは変更されず、エラー メッセージが返されます。 旧バージョンと互換性のためだけのことができます。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]sp_remoteoption では、どのオプションも変更されず、エラー メッセージが返されます。 旧バージョンとの互換性のためにのみサポートされています。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,8 +45,8 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
      [ , [ @optvalue = ] 'optvalue' ]  
 ```  
   
-## <a name="remarks"></a>コメント  
- このストアド プロシージャには、次のエラー メッセージが返されます。  
+## <a name="remarks"></a>Remarks  
+ このストアドプロシージャは、次のエラーメッセージを返します。  
   
  `The trusted option in remote login mapping is no longer supported.`  
   

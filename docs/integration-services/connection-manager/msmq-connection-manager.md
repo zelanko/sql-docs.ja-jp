@@ -15,14 +15,14 @@ helpviewer_keywords:
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: abe5321f4f8f8cedfb9442e1137b7c2be68a2b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104175"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298526"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 接続マネージャー
 
@@ -44,7 +44,7 @@ ms.locfileid: "68104175"
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
 |パブリック|\<コンピューター名>\\<キュー名\>|  
-|Private|\<コンピューター名>\Private$\\<キュー名\>|  
+|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
   
  ピリオド (.) を使用してローカル コンピューターを表すことができます。  
   
@@ -64,10 +64,10 @@ ms.locfileid: "68104175"
 >  MSMQ 接続マネージャーでは、ローカルのパブリック キューと専用キュー、およびリモートのパブリック キューがサポートされています。 リモートの専用キューはサポートされていません。 スクリプト タスクを使用する回避策については、「 [スクリプト タスクによるリモート プライベート メッセージ キューへの送信](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  ワークフローにおける MSMQ 接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **説明**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
  **[パス]**  
@@ -76,7 +76,7 @@ ms.locfileid: "68104175"
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
 |パブリック|\<コンピューター名>\\<キュー名\>|  
-|Private|\<コンピューター名>\Private$\\<キュー名\>|  
+|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
   
  "." を使用してローカル コンピューターを表すことができます。  
   

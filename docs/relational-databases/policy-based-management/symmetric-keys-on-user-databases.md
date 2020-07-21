@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 71e52cf9d65eb21df0553f5601bd4aefb3727175
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd650742e2781388d0d0941b80c6c9a9d60a801c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727309"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>ユーザー データベースの対称キー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このルールでは、長さが 128 バイト未満のキーが RC2 または RC4 暗号化アルゴリズムを使用していないかどうかを確認します。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  
@@ -30,6 +30,6 @@ ms.locfileid: "68021507"
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [ポリシーベースの管理を使用したベスト プラクティスの監視と実行](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

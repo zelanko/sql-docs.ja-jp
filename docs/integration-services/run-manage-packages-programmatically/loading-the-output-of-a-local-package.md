@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e50ca7e1942444c81a70553b0635a2e5ff67cb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028562"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295744"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
 
@@ -36,7 +36,7 @@ ms.locfileid: "68028562"
 > [!NOTE]  
 > このトピックで説明されている手順では、データ フロー タスクおよび親オブジェクトの DelayValidation プロパティが既定値の **False** に設定されている必要があります。
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  この手順では、マネージド コードを使用して、DataReader 変換先でパッケージの出力をメモリから直接読み込むクライアント アプリケーションを開発する方法を示します。 ここにまとめた手順は、後のコード例で示します。  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>クライアント アプリケーションにパッケージ出力を読み込むには  
@@ -45,14 +45,14 @@ ms.locfileid: "68028562"
   
 2.  開発プロジェクトで、アセンブリ **Microsoft.SqlServer.Dts.DtsClient.dll** を検索して、**Microsoft.SqlServer.Dts.DtsClient** 名前空間への参照を設定します。 既定では、このアセンブリは **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** にインストールされます。 C# の **Using**、または [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の **Imports** ステートメントを使用して、コードにこの名前空間をインポートします。  
   
-3.  コードで、**DtsClient.DtsConnection** という種類のオブジェクトを作成します。このオブジェクトにある接続文字列には、パッケージの実行時に **dtexec.exe** で必要になるコマンド ライン パラメーターが格納されます。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。  
+3.  コードで、**DtsClient.DtsConnection** という種類のオブジェクトを作成します。このオブジェクトにある接続文字列には、パッケージの実行時に **dtexec.exe** で必要になるコマンド ライン パラメーターが格納されます。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。  
   
     > [!NOTE]  
     >  このサンプル コードは、`/FILE <path and filename>` 構文を使用してファイル システムからパッケージを読み込む方法を示していますが、 `/SQL <package name>` 構文を使用して MSDB データベースからパッケージを読み込んだり、`/DTS \<folder name>\<package name>` 構文を使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ストアからパッケージを読み込むこともできます。  
   
 4.  前に作成した **DtsConnection** を使用する **DtsClient.DtsCommand** という種類のオブジェクトを作成し、その **CommandText** プロパティに、パッケージ内の DataReader 変換先の名前を設定します。 次に、コマンド オブジェクトの **ExecuteReader** メソッドを呼び出して、パッケージの結果を新しい DataReader に読み込みます。  
   
-5.  必要に応じて、**DtsCommand** オブジェクトで **DtsDataParameter** オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアント アプリケーションから **DtsDataParameter** オブジェクトとこれらの変数を使用するには、あらかじめ **DtsClient** 名前空間でパッケージに変数を定義しておく必要があります ( **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックすると、 **[名前空間]** 列が表示されます)。クライアント コードで、**DtsDataParameter** を **DtsCommand** の **Parameters** コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 例:  
+5.  必要に応じて、**DtsCommand** オブジェクトで **DtsDataParameter** オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアント アプリケーションから **DtsDataParameter** オブジェクトとこれらの変数を使用するには、あらかじめ **DtsClient** 名前空間でパッケージに変数を定義しておく必要があります ( **[名前空間]** 列を表示するには、 **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。クライアント コードで、**DtsDataParameter** を **DtsCommand** の **Parameters** コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 次に例を示します。  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

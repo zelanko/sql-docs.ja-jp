@@ -1,5 +1,6 @@
 ---
 title: メンテナンス プラン ウィザードの使用 | Microsoft Docs
+description: SQL Server でメンテナンス プラン ウィザードを使用して、単一またはマルチサーバーのメンテナンス プランを作成する方法について説明します。
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,19 +35,19 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 402c417de43637f810366423fb4e66b9cb3c507c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758981"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>メンテナンス プラン ウィザードの使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン ウィザードを使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 メンテナンス プラン ウィザードを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって定期的に実行されるメンテナンス プランを作成できます。 これにより、バックアップ、データベースの整合性のチェック、データベース統計の更新など、さまざまなデータベース管理タスクを指定した間隔で実行できます。  
     
  
-##  <a name="Restrictions"></a> 制限事項と制約事項  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上のターゲット サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 ターゲット サーバーでプランを表示できます。   
 
@@ -54,14 +55,14 @@ ms.locfileid: "68115713"
 
 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、 **db_ssisadmin** ロールおよび **dc_admin** ロールには **sysadmin** メンバーのみを追加するようにします。  
 
-##  <a name="Prerequisite"></a> 前提条件 
+##  <a name="prerequisites"></a><a name="Prerequisite"></a> 前提条件 
 [Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)を有効にする必要があります。
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ユーザーが **sysadmin** 固定サーバー ロールのメンバーである場合のみ、オブジェクト エクスプローラーに **[メンテナンス プラン]** ノードが表示されます。  
   
-##  <a name="SSMSProcedure"></a> メンテナンス プラン ウィザードの使用  
+##  <a name="use-the-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a> メンテナンス プラン ウィザードの使用  
   
 **ウィザードの起動** 
 
@@ -163,7 +164,7 @@ ms.locfileid: "68115713"
   
   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **およびユーザーが作成したデータベースを除く** システム データベースを対象として、このタスクを実行するメンテナンス プランを生成します。  
   
- **[すべてのユーザー データベース] (master、model、msdb、tempdb は対象外)**  
+ **[すべてのユーザー データベース] \(master、model、msdb、tempdb は対象外)**  
   
  - ユーザーが作成したすべてのデータベースを対象として、このタスクを実行するメンテナンス プランを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベースではメンテナンス タスクは実行されません。  
   
@@ -174,10 +175,10 @@ ms.locfileid: "68115713"
 **[インデックスを含める]** チェック ボックス  
  - すべてのインデックス ページおよびテーブル データ ページの整合性を確認します。  
   
-**[Physical only] (物理のみ)**  
+**[Physical only] \(物理のみ)**  
  - ページの物理構造の整合性、レコード ヘッダー、およびデータベースの割り当ての一貫性にチェックを限定します。 このオプションは、大規模なデータベースの DBCC CHECKDB の実行時間を大幅に短縮することがあるため、実稼働システムで頻繁に使用する場合にお勧めします。  
   
-**[Tablock] (Tablock)**  
+**[Tablock] \(Tablock)**  
  - DBCC CHECKDB が、内部データベースのスナップショットを使用せずに、ロックを取得します。 これにはデータベースの短期の排他 (X) ロックも含まれます。 このオプションを使用すると、負荷の高いデータベースでの DBCC CHECKDB の実行速度が速くなることがありますが、DBCC CHECKDB の実行中はデータベースでのコンカレンシーが低下します。  
   
 ## <a name="define-database-shrink-tasks"></a>データベースの圧縮タスクを定義する  
@@ -366,12 +367,12 @@ ms.locfileid: "68115713"
      自動的に作成されたデータベース ファイルを格納するフォルダーを指定します。 バックアップ先として [URL] を選択した場合、このオプションは無効になります。  
   
      **[SQL 資格情報]**  
-     Windows Azure ストレージへの認証に使用する SQL 資格情報を選択します。 使用できる既存の SQL 資格情報がない場合は、 **[作成]** ボタンをクリックして新しい SQL 資格情報を作成します。  
+     Azure Storage への認証に使用する SQL 資格情報を選択します。 使用できる既存の SQL 資格情報がない場合は、 **[作成]** ボタンをクリックして新しい SQL 資格情報を作成します。  
   
     > **重要:** **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 Transact-SQL を使用して資格情報を作成するには、「 [資格情報の作成](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 」のサンプル コードを参照してください。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]** 、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
   
      **[Azure ストレージ コンテナー]**  
-     Windows Azure ストレージ コンテナーの名前を指定します。  
+     Azure ストレージ コンテナーの名前を指定します  
   
      **[URL プレフィックス]**  
      これは、SQL 資格情報に格納されているストレージ アカウント情報と、指定した Azure ストレージ コンテナー名に基づいて自動的に生成されます。 **\<storage account>.blob.core.windows.net** 以外の形式を使ったドメインを使用している場合を除き、このフィールドの情報は編集しないことをお勧めします。  
@@ -502,13 +503,13 @@ ms.locfileid: "68115713"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **ステータス**  
+     **状態**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  
      プロセスから返されたすべてのエラー メッセージまたは警告メッセージを提供します。  
   
-     **レポート**  
+     **Report**  
      パーティションの作成ウィザードの結果を含むレポートを作成します。 **[レポートの表示]** 、 **[レポートをファイルに保存]** 、 **[レポートをクリップボードにコピー]** 、 **[レポートを電子メールとして送信]** の各オプションがあります。  
   
      **[レポートの表示]**  

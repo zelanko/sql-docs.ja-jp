@@ -1,6 +1,6 @@
 ---
-title: '[空間結果] ウィンドウ | Microsoft Docs'
-ms.custom: ''
+title: '[空間結果] ウィンドウ'
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20cc4b1c97e7153fc93d810fba18742a0bb2e24b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267718"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253612"
 ---
 # <a name="spatial-results-window"></a>[空間結果] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68267718"
  クエリで Point インスタンスのみが返される場合は、このオプションを使用できません。  
   
  **[投影の選択]**  
- geography 型のデータを、4 つの投影法のいずれかで表示します:正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法。  
+ geography 型のデータを、正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法という 4 つの投影法のいずれかで表示します。  
   
  このオプションは、geometry 型のデータには使用できません。  
   

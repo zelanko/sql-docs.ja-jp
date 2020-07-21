@@ -1,5 +1,5 @@
 ---
-title: 位置指定更新と Delete ステートメント |Microsoft Docs
+title: 位置指定の Update および Delete ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,43 +13,43 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023296"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282363"
 ---
 # <a name="positioned-update-and-delete-statements"></a>位置指定の UPDATE および DELETE ステートメント
-アプリケーションの更新または位置指定更新と結果セットの現在の行を削除またはステートメントを削除します。 位置指定更新と delete ステートメントは、一部のデータ ソースが、それらのすべてでサポートします。 アプリケーションが配置されているデータ ソースのサポートが update および delete ステートメントであるかどうかを判断するを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1*情報の種類*(によって、カーソルの種類)。 ODBC カーソル ライブラリが位置指定更新をシミュレートし、ステートメントを削除することに注意してください。  
+アプリケーションでは、位置指定の update または delete ステートメントを使用して、結果セット内の現在の行を更新または削除できます。 位置指定の update および delete ステートメントは一部のデータソースではサポートされていますが、一部のデータソースではサポートされていません。 アプリケーションでは、位置指定の update および delete ステートメントがサポートされているかどうかを判断するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (カーソルの種類によって異なります) を使用して**SQLGetInfo**を呼び出します。 ODBC カーソルライブラリは、位置指定の update および delete ステートメントをシミュレートすることに注意してください。  
   
- 位置指定更新を使用して、または delete ステートメントは、アプリケーションは結果セットを作成する必要があります、**選択更新**ステートメント。 このステートメントの構文です。  
+ 配置された update ステートメントまたは delete ステートメントを使用するには、アプリケーションで**SELECT FOR update**ステートメントを使用して結果セットを作成する必要があります。 このステートメントの構文は次のとおりです。  
   
- **選択**[**すべて**&#124; です。**DISTINCT**]*選択リスト*  
+ [**すべて**&#124;**個別**] 選択*リスト*を**選択し**ます。  
   
- **FROM** *table-reference-list*  
+ **FROM** *table-list*  
   
- [**WHERE** *search-condition*]  
+ [**WHERE** *検索条件*]  
   
- **FOR UPDATE OF** [*列名*[ **、** *列名*]...]  
+ **更新する場合**は、[*列名*[**,、** *列名*]...]  
   
- 次に、アプリケーションは、更新または削除する行にカーソルを位置付けます。 呼び出してそのこの**SQLFetchScroll**必要な行を格納していると、呼び出しの行セットを取得する**SQLSetPos**をその行に行セットのカーソルを配置します。 その後、アプリケーションは、結果セットで使用されているステートメントよりも別のステートメントで、位置指定の update または delete ステートメントを実行します。 これらのステートメントの構文です。  
+ 次に、アプリケーションは、更新または削除する行にカーソルを置きます。 これを行うには、 **Sqlfetchscroll**を呼び出して、必要な行を含む行セットを取得し、 **SQLSetPos**を呼び出して行セットカーソルをその行に配置します。 その後、アプリケーションは、結果セットで使用されているステートメントとは別のステートメントで、配置された update ステートメントまたは delete ステートメントを実行します。 これらのステートメントの構文は次のとおりです。  
   
- **UPDATE** *table-name*  
+ **UPDATE** *テーブル名の*更新  
   
- **設定** *列識別子*  **=** {*式* &#124; です。**NULL**}  
+ **SET** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
   
- [ **、** *列識別子* **=** {*式*&#124; です。**NULL**}].  
+ [**,** *列識別子* **=** {*式*&#124; **NULL**}]...  
   
- **WHERE CURRENT OF** *cursor-name*  
+ *カーソル名***の現在の場所**  
   
- **DELETE FROM** *table-name* **WHERE CURRENT OF** *table-name*  
+ テーブル**からの削除** *-名前***の現在の***カーソル名*  
   
- これらのステートメントでカーソル名が必要なことに注意してください。 アプリケーションはいずれかでカーソル名を指定できます**SQLSetCursorName**設定またはデータ ソースを自動的にさせることができます、結果を作成するステートメントを実行する前に、カーソルが作成されたときにカーソル名を生成します。 後者の場合、アプリケーションが呼び出すことで位置指定更新と delete ステートメントで使用するためには、このカーソル名を取得**SQLGetCursorName**します。  
+ これらのステートメントにはカーソル名が必要であることに注意してください。 アプリケーションでは、 **SQLSetCursorName**を使用してカーソル名を指定してから、結果セットを作成するステートメントを実行するか、カーソルの作成時にデータソースに自動的にカーソル名を生成させることができます。 後者の場合、アプリケーションは、 **Sqlgetcursor name**を呼び出すことによって、位置指定の update および delete ステートメントで使用するために、このカーソル名を取得します。  
   
- たとえば、次のコードは、Customers テーブルをスクロールし、顧客レコードを削除または、アドレスと電話番号を更新するユーザーを許可します。 呼び出す**SQLSetCursorName** 3 つのステートメント ハンドルを使用して顧客の結果セットを作成する前に、カーソル名を指定する: *hstmtCust* 、結果セットの*hstmtUpdate*位置指定の update ステートメント、および*hstmtDelete*位置指定の delete ステートメント。 コードでは、位置指定の update ステートメントのパラメーターに別個の変数をバインドすることが、行セットのバッファーを更新し、これらのバッファーの要素をバインドします。 これにより、更新されたデータと同期した行セットのバッファーが保持されます。  
+ たとえば、次のコードでは、ユーザーは Customers テーブルをスクロールして顧客レコードを削除したり、住所や電話番号を更新したりできます。 **SQLSetCursorName**を呼び出して、顧客の結果セットを作成する前にカーソル名を指定し、3つのステートメントハンドルを使用します。結果セットの場合は*hstmtCust* 、配置された update ステートメントの場合は*hstmtUpdate* 、位置指定 delete ステートメントの場合は*hstmtDelete*です。 コードでは、配置された update ステートメント内のパラメーターに個別の変数をバインドできますが、行セットバッファーを更新し、これらのバッファーの要素をバインドします。 これにより、更新されたデータと行セットバッファーの同期が維持されます。  
   
 ```  
 #define POSITIONED_UPDATE 100  

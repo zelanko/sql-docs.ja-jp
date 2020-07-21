@@ -1,5 +1,6 @@
 ---
 title: レプリケートされたデータベースのアップグレードまたは修正プログラム | Microsoft Docs
+description: SQL Server では、他のノードでの操作を停止せずに、レプリケートされたデータベースを以前のバージョンの SQL Server からアップグレードできます。
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900226"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>レプリケートされたデータベースのアップグレードまたは修正プログラム
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードすることができます。ノードのアップグレード中は、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関して、以下の規則が守られていることを確認してください。  
   
@@ -88,7 +89,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 ## <a name="steps-to-upgrade-a-replication-topology"></a>レプリケーション トポロジをアップグレードする手順
 以下の手順では、レプリケーション トポロジ内のサーバーをアップグレードする順序の概要を示します。 トランザクション レプリケーションまたはマージ レプリケーションのどちらを実行している場合でも、同じ手順が適用されます。 ただし、以下の手順は、ピア ツー ピア レプリケーション、キュー更新サブスクリプション、または即時更新サブスクリプションには適用されません。 
 
-### <a name="in-place-upgrade"></a>インプレース アップグレード 
+### <a name="in-place-upgrade"></a>一括アップグレード 
 1. ディストリビューターを更新します。 
 2. パブリッシャーとサブスクライバーを更新します。 これらは、任意の順序でアップグレードできます。 
 
@@ -104,7 +105,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Windows Server 2012 R2 へのディストリビューターのサイド バイ サイド移行の手順
-SQL Server インスタンスを SQL 2016 (またはそれ以降) にアップグレードしようとしていて、現在の OS が Windows 2008 (または 2008 R2) である場合は、Windows Server 2012 R2 以降への OS のサイド バイ サイド アップグレードを実行する必要があります。 この中間 OS アップグレードの理由は、SQL Server 2016 は Windows Server 2008/2008 R2 にインストールできず、Windows Server 2008/20008 R2 ではフェールオーバー クラスターをインプレース アップグレードできないためです。 以下の手順は、スタンドアロン SQL Server インスタンス上、または Always On フェールオーバー クラスター インスタンス (FCI) 内のいずれかで実行できます。
+SQL Server インスタンスを SQL Server 2016 (またはそれ以降) にアップグレードしようとしていて、現在の OS が Windows 2008 (または 2008 R2) である場合は、Windows Server R2 以降への OS のサイド バイ サイド アップグレードを実行する必要があります。 この中間 OS アップグレードの理由は、SQL Server 2016 は Windows Server 2008/2008 R2 にインストールできず、Windows Server 2008/20008 R2 では Windows Server 2016 に直接インプレース アップグレードできないためです。 Windows Server 2008/2008 R2 から Windows server 2012 へのインプレース アップグレードを実行してから、Windows Server 2016 にアップグレードすることは可能ですが、ダウンタイムが発生し、複雑さが増してロールバック パスが容易にならないため、通常は推奨されません。 フェールオーバー クラスターに参加している SQL Server インスタンスで使用できるアップグレード パスは、サイド バイ サイド アップグレードだけです。  以下の手順は、スタンドアロン SQL Server インスタンス上、または Always On フェールオーバー クラスター インスタンス (FCI) 内のいずれかで実行できます。
 
 1. Windows Server 2012 R2/2016 上のディストリビューターとして、新しい SQL Server インスタンス (スタンドアロンまたは Always On フェールオーバー クラスター)、エディション、およびバージョンを、異なる Windows クラスターと SQL Server FCI 名またはスタンドアロン ホスト名で設定します。 レプリケーション エージェントの実行可能ファイル、レプリケーション フォルダー、およびデータベース ファイルのパスが、新しい環境でも同じパスで見つかるように、ディレクトリ構造を古いディストリビューターと同じにする必要があります。 これにより、移行/アップグレード後に必要な手順が減ります。
 1. レプリケーションが同期されていることを確認した後、すべてのレプリケーション エージェントをシャットダウンします。 
@@ -129,7 +130,7 @@ SQL Server インスタンスを SQL 2016 (またはそれ以降) にアップ�
  以前のバージョンからレプリケートされたデータベースのバックアップを復元するときにレプリケーション設定が保持されるようにするには、バックアップが作成されたサーバーおよびデータベースと同じ名前のサーバーおよびデータベースに復元します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)  
+ [SQL Server レプリケーション](../../relational-databases/replication/sql-server-replication.md)  
  [レプリケーション管理に関する FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [レプリケーションの下位互換性](../../relational-databases/replication/replication-backward-compatibility.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

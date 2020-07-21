@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3ee9e6d0b56da01d3d8dd1ea16bc3d21eb1ce5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 4a4bc6bf4a8fe1b600ec7bd7b3ba1877023751db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755885"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (拡張ストアド プロシージャ API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -53,9 +53,9 @@ srvproc
 ## <a name="remarks"></a>Remarks  
  次の表では、各実行時フラグについて説明します。  
   
-|実行時フラグ|[説明]|  
+|実行時フラグ|説明|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|クライアントがメタデータ情報なしの結果を要求したことを示します。 このフラグが使用されるのは、クライアントと [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが通信中である場合だけです。 拡張ストアド プロシージャ API アプリケーションではメタデータ情報を省略できません。|  
+|SRV_NOMETADATA|クライアントがメタデータ情報なしの結果を要求したことを示します。 このフラグは、クライアントがのインスタンスと通信している場合にのみ使用され [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 拡張ストアド プロシージャ API アプリケーションではメタデータ情報を省略できません。|  
 |SRV_RECOMPILE|クライアントがリモート ストアド プロシージャの実行前に再コンパイルを要求していることを示します。 このフラグは、拡張ストアド プロシージャ API アプリケーションには適用できません。|  
   
 > [!IMPORTANT]  

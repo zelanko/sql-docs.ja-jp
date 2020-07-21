@@ -21,15 +21,15 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1266097e82f5db84f5a91951adc784d6d9580ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 470d72fba19cf398722dfa09264e64a871b11c27
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901851"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999795"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   クエリ全体で、指定のクエリ ヒントを使用する必要があることを指定します。 複数のクエリ ヒントを使用できますが、各クエリ ヒントを指定できるのは 1 回だけです。 OPTION 句はステートメントで 1 回だけ指定できます。  
   
@@ -39,13 +39,13 @@ ms.locfileid: "67901851"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 OPTION ( <query_option> [ ,...n ] )  
@@ -66,7 +66,7 @@ OPTION ( <query_option> [ ,...n ] )
  *query_hint*  
  データベース エンジンのステートメント処理をカスタマイズするためのオプティマイザー ヒントを示すキーワードです。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. OPTION 句を GROUP BY 句と共に使用する  
  次の例では、`OPTION` 句と共に `GROUP BY` 句を使用する方法を示します。  
@@ -83,7 +83,7 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. SELECT ステートメントと OPTION 句のラベル  
  次は、単純な [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT ステートメントと OPTION 句のラベルの例です。  

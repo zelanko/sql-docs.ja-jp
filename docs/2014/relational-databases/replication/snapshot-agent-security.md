@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bfd64cea8d661b2d1d5b1b4c7e581d2f4e413a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055658"
 ---
 # <a name="snapshot-agent-security"></a>[スナップショット エージェントのセキュリティ]
   **[スナップショット エージェントのセキュリティ]** ダイアログ ボックスを使用すると、次の項目を指定できます。  
@@ -35,8 +34,8 @@ ms.locfileid: "62676638"
   
  各アカウントに正しいパスワードが指定され、すべてのアカウントが有効である必要があります。 アカウントとパスワードは、エージェントが実行されるまで検証されません。  
   
-## <a name="options"></a>および  
- **Process account**  
+## <a name="options"></a>オプション  
+ **[プロセス アカウント]**  
  ディストリビューターでスナップショット エージェントを実行するときに使用される  Windows アカウントを入力します。 指定する Windows アカウントは、次の条件を満たしている必要があります。  
   
 -   最低でも、ディストリビューション データベースで **db_owner** 固定データベース ロールのメンバーである。  
@@ -54,8 +53,8 @@ ms.locfileid: "62676638"
   
  接続に使用される Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントは、少なくとも、パブリケーション データベースの **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーションのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+## <a name="see-also"></a>参照  
+ [レプリケーションでのログインとパスワードの管理](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [レプリケーション エージェントのセキュリティ モデル](security/replication-agent-security-model.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 48434ea86b3f8516ee1936256437dddf54f94005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052133"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294925"
 ---
 # <a name="creating-a-package-programmatically"></a>プログラムを使用したパッケージ作成
 

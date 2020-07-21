@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1f071250b80ce1368b7a30ae9ca8ea66a3e7194
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700714"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスから各地点までの距離が指定した許容範囲内にある、すべての地点値の和集合を表すジオメトリック オブジェクトを返します。
   
@@ -53,7 +53,7 @@ ms.locfileid: "68017540"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  *tolerance* パラメーターには、0 より大きい値を指定する必要があります。 *tolerance* <= 0 の場合は、`System.ArgumentOutOfRangeException` がスローされます。  
@@ -61,7 +61,7 @@ ms.locfileid: "68017540"
 > [!NOTE]  
 >  *tolerance* は **float** 型であるため、tolerance に指定された値が非常に小さい場合、浮動小数点型の丸めの問題が原因で `System.Runtime.InteropServices.COMException` がスローされる可能性があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *distance* > 0 のときは、**Polygon** または **MultiPolygon** インスタンスが返されます。  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "68017540"
   
  理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は *tolerance* パラメーターの値になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`BufferWithTolerance()` を使用して、インスタンスの周りの大まかなバッファーを取得する例を次に示します。  
   
 ```  

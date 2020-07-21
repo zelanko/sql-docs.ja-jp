@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ddbbeb80664c06b517eee1f766294d9fa0bfe232
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967697"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288256"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "67967697"
 > [!NOTE]  
 >  前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、式の評価結果の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型が DT_WSTR または DT_STR であるとき、結果の文字数が 4,000 文字に制限されていました。 この制限はなくなっています。  
   
- 特定の演算子と関数を使用するサンプル式については、「[演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)」と「[関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)」の演算子または関数別のトピックを参照してください。  
+ 特定の演算子と関数を使用するサンプル式については、「[演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)」および「[関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)」の各演算子と関数のトピックを参照してください。  
   
  複数の演算子と関数、および識別子とリテラルを使用するサンプル式については、「 [Integration Services 式の詳細の例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)」を参照してください。  
   

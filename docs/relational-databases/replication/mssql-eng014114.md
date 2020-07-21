@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c2a2777ca1679cbc8fe0748c4c5ec1cdfa92f1d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 32568df6c0786ce153427ef4710c53cc0e1547d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721904"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68811482"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのいずれかを IP アドレスまたは完全修飾ドメイン名 (FQDN) で登録している場合、レプリケーションはサポートされません。 レプリケーションの構成時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に IP アドレスまたは FQDN で登録された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インスタンスがあった場合、このエラーが発生する可能性があります。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラー メッセージで特定のインスタンスが指定されている場合、サーバーをディストリビューターとして構成してください。 詳細については、「[ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)」を参照してください。  
+ エラー メッセージで特定のインスタンスが指定されている場合、サーバーをディストリビューターとして構成してください。 詳しくは、「 [Configure Distribution](../../relational-databases/replication/configure-distribution.md)」を参照してください。  
   
  エラー メッセージで特定のインスタンスが指定されていない (つまり 'NULL' である) 場合、ディストリビューター インスタンスが正しく登録されていることを確認してください。 コンピューターのネットワーク名と SQL Server インスタンスの名前が異なる場合は、次のいずれかを実行してください。  
   

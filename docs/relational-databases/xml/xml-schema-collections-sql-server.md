@@ -1,5 +1,6 @@
 ---
 title: XML スキーマ コレクション (SQL Server) | Microsoft Docs
+description: XML スキーマ コレクションにインポートされた XML スキーマを格納して、XML インスタンスを検証し、SQL Server データベースに格納されているとおりに XML データを入力する方法について説明します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2db7f06f0e68b1a03bf4b2a205666fcf90a58d32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729772"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   「[xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md)」で説明したように、SQL Server には、**xml** データ型を使った XML データのネイティブ ストレージが用意されています。 必要に応じて、XML スキーマ コレクションを使って **xml** 型の変数や列と XSD スキーマを関連付けることができます。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
   
 -   XML インスタンスの検証  
@@ -48,7 +49,7 @@ ms.locfileid: "68096818"
   
  また、XML スキーマ コレクションは、XML 変数、パラメーター、および列の型指定にも使用できます。  
   
-##  <a name="ddl"></a> スキーマ コレクションを管理するための DDL  
+##  <a name="ddl-for-managing-schema-collections"></a><a name="ddl"></a> スキーマ コレクションを管理するための DDL  
  データベースに XML スキーマ コレクションを作成し、 **xml** 型の変数や列に関連付けることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、データベースでスキーマ コレクションを管理するために、次の DDL ステートメントが用意されています。  
   
 -   [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md): データベースにスキーマ コンポーネントをインポートします。  
@@ -61,7 +62,7 @@ ms.locfileid: "68096818"
   
  スキーマ コレクションを削除するには、DROP XML SCHEMA COLLECTION ステートメントを使用します。 このステートメントを実行すると、スキーマ コレクションに含まれているすべてのスキーマが削除され、コレクション オブジェクトが削除されます。 スキーマ コレクションを削除する前に、「[DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)」に記載されている条件を満たしていることを確認してください。  
   
-##  <a name="components"></a> スキーマ コンポーネントについて  
+##  <a name="understanding-schema-components"></a><a name="components"></a> スキーマ コンポーネントについて  
  CREATE XML SCHEMA COLLECTION ステートメントを使用すると、さまざまなスキーマ コンポーネントがデータベースにインポートされます。 スキーマ コンポーネントには、スキーマの要素、属性、および型の定義などがあります。 DROP XML SCHEMA COLLECTION ステートメントを使用すると、コレクション全体が削除されます。  
   
  CREATE XML SCHEMA COLLECTION ステートメントを使用すると、さまざまなシステム テーブルにスキーマ コンポーネントが保存されます。  
@@ -112,7 +113,7 @@ ms.locfileid: "68096818"
   
 -   MODELGROUP  
   
- 例:  
+ 次に例を示します。  
   
 -   **SomeAttribute** は、ATTRIBUTE コンポーネントです。  
   
@@ -131,7 +132,7 @@ ms.locfileid: "68096818"
 |**targetNamespace**|対象の名前空間に属するコンポーネントに関する情報がメタデータに格納されます。|  
 | &nbsp; | &nbsp; |
   
-##  <a name="perms"></a> XML スキーマ コレクションに対する権限  
+##  <a name="permissions-on-an-xml-schema-collection"></a><a name="perms"></a> XML スキーマ コレクションに対する権限  
  次の操作を行うためには必要な権限を持っている必要があります。  
   
 -   XML スキーマ コレクションを作成する、または読み込む  
@@ -160,7 +161,7 @@ ms.locfileid: "68096818"
   
      XML スキーマ コレクションを作成する権限を拒否する方法、および XML スキーマ コレクション オブジェクトに対する権限を拒否する方法について説明します。  
   
-##  <a name="info"></a> XML スキーマおよびスキーマ コレクションに関する情報の取得  
+##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> XML スキーマおよびスキーマ コレクションに関する情報の取得  
  カタログ ビュー sys.xml_schema_collections には XML スキーマ コレクションが列挙されます。 XML スキーマ コレクション "sys" がシステムにより定義されています。 このコレクションには、すべてのユーザー定義 XML スキーマ コレクションで明示的に読み込むことなく使用できる定義済みの名前空間が含まれています。 一覧には xml、xs、xsi、fn、および xdt 用の名前空間が含まれています。 この他に、各 XML スキーマ コレクションのすべての名前空間を列挙する sys.xml_schema_namespaces、および各 XML スキーマのすべての XML スキーマ コンポーネントを列挙する sys.xml_components の 2 つのカタログ ビューがあります。  
   
  組み込み関数 **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri* により、**xml** データ型のインスタンスが生成されます。 このインスタンスには、XML スキーマ コレクションに含まれるスキーマ (定義済みの XML スキーマを除く) の XML スキーマ フラグメントが含まれます。  

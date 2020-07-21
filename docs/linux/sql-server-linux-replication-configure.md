@@ -1,6 +1,7 @@
 ---
-title: Linux 上で SQL Server レプリケーションを構成する
+title: レプリケーションの設定 (SSMS)
 description: この記事では、Linux 上で SQL Server レプリケーションを構成する方法について説明します。
+ms.custom: seo-dt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,19 +10,20 @@ ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
+titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4f367f7d6c41600ddb26d12b28ae14d0fc1cdffc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67895935"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882686"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux 上で SQL Server レプリケーションを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、SQL Server on Linux のインスタンス用に SQL Server レプリケーションが導入されています。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、SQL Server on Linux インスタンス用の SQL Server レプリケーションが導入されています。
 
 レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
@@ -33,7 +35,7 @@ SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロ�
   
 * ストアド プロシージャの例については、[Linux での SQL Server レプリケーションの構成](sql-server-linux-replication-tutorial-tsql.md)に関するチュートリアルを参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 パブリッシャー、ディストリビューター、およびサブスクライバーを構成する前に、SQL Server インスタンスの構成手順をいくつか完了する必要があります。
 
@@ -93,7 +95,7 @@ SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロ�
 
 オブジェクト エクスプローラーで、 **[レプリケーション]** を右クリックし、 **[レプリケーション モニターの起動]** をクリックします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [概念:Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
 

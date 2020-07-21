@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0582672a9203e8efbae1de9767ff4c24a10919f9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998692"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928348"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- リーダーオブジェクト。  
+ Reader オブジェクト。  
   
  *length*  
   
@@ -47,10 +47,10 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Updaten; Stream メソッドは、java. ResultSet インターフェイスの Updatenキャラクターストリームメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateNCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateNCharacterStream メソッドで指定されています。  
   
- このメソッドは、リーダーオブジェクトから選択した**nchar**、 **nvarchar (max)** 、 **ntext**、および**xml**列に Unicode 文字を渡します。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
+ このメソッドは、Unicode 文字を Reader オブジェクトから選択した **nchar** 列、**nvarchar(max)** 列、**ntext** 列、**xml** 列に渡します。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

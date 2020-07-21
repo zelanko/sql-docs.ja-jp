@@ -11,15 +11,14 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59d7eb92d79aa77da3faded36036de4b14142c93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 756d9bd066f4ecbcb1cfb7e43cec8ca7ea2713a6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896521"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437069"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (SSIS 式)
   先頭および末尾のスペースを削除した後の文字式を返します。  
@@ -41,7 +40,7 @@ TRIM(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、TRIM は NULL を返します。  
   
  TRIM は、DT_WSTR データ型でのみ機能します。 *character_expression* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、TRIM による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」をご覧ください。  
@@ -61,7 +60,7 @@ TRIM(FirstName + " "+ LastName)
   
 ## <a name="see-also"></a>参照  
  [LTRIM (SSIS 式)](trim-ssis-expression.md)   
- [RTRIM (SSIS 式)](rtrim-ssis-expression.md)   
+ [RTRIM &#40;SSIS 式&#41;](rtrim-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

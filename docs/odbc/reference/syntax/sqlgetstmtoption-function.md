@@ -17,24 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC]
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e3e7bd7a48dbf2116702b52f4963bb545e809352
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030668"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303284"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
   
- **概要**  
- ODBC 3.*x* では、ODBC 2.0 の関数 **SQLGetStmtOption** が **SQLGetStmtAttr** に置き換えられました。 詳細については、次を参照してください。 [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)します。  
+ **まとめ**  
+ ODBC 3 の場合。*x*では、ODBC 2.0 関数**SQLGetStmtOption**は**SQLGetStmtAttr**に置き換えられています。 詳細については、「 [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)」を参照してください。  
   
 > [!NOTE]  
->  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
+>  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

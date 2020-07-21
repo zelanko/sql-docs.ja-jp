@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d47b798f9af00fc3cae3699001b645fc5564b4b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706211"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   クエリまたはプロシージャを無条件で終了します。 RETURN は即時に実行され、完了します。また、プロシージャ、バッチ、またはステートメント ブロックを終了する任意の位置で使用できます。 RETURN の後に続くステートメントは実行されません。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68072371"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  
@@ -55,12 +55,12 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  特に記述がない限り、すべてのシステム ストアド プロシージャでは値 0 が返されます。 これは成功を示し、0 以外の値は失敗を示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ストアド プロシージャと一緒に使用する場合、RETURN は NULL 値を返すことができません。 プロシージャが NULL 値を返そうとすると (たとえば、@status の値が NULL のときに RETURN @status を使用)、警告メッセージが生成されて値 0 が返されます。  
   
  現在のプロシージャを実行したバッチまたはプロシージャの中の後続の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに、返されたステータス値を指定できます。この場合、`EXECUTE @return_status = <procedure_name>` の形式で入力する必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-from-a-procedure"></a>A. プロシージャを終了する  
  次の例では、`findjobs` を実行するときにユーザー名がパラメーターとして指定されていない場合、ユーザーの画面にメッセージを出力後、`RETURN` でプロシージャを終了します。 ユーザー名が指定された場合は、そのユーザーが現在のデータベースに作成したすべてのオブジェクトの名前が、適切なシステム テーブルから取得されます。  

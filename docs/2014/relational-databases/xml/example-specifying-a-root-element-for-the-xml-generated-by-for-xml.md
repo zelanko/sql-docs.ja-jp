@@ -1,5 +1,5 @@
 ---
-title: 例:FOR XML で生成される XML のルート要素の指定 | Microsoft Docs
+title: '例 : FOR XML で生成される XML のルート要素の指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,16 @@ helpviewer_keywords:
 - RAW mode, specifying root element example
 - RAW mode, with FOR XML example
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab9253727389e29973ee1f4b5ce38ce94ca86670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067848"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例:FOR XML で生成される XML のルート要素の指定
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例 : FOR XML で生成される XML のルート要素の指定
   次のクエリに示すように、 `ROOT` クエリで `FOR XML` オプションを指定することにより、結果の XML に 1 つのトップレベル要素を要求できます。 `ROOT` ディレクティブに指定した引数で、ルート要素名を指定します。  
   
 ## <a name="example"></a>例  
@@ -45,7 +44,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)  
   
   

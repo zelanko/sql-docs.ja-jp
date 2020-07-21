@@ -42,7 +42,7 @@
       href: packages/execute-package-utility-dtexecui-ui-reference.md
     - name: dtexec ユーティリティ
       href: packages/dtexec-utility.md
-    - name: '[式ビルダー]'
+    - name: 式ビルダー
       href: expression-builder-integration-services.md
     - name: プロジェクトのインポート ウィザード
       href: import-project-wizard.md
@@ -154,14 +154,14 @@
       href: integration-services-ssis-package-and-project-parameters.md
     - name: Parameterize Dialog Box
       href: parameterize-dialog-box.md
-    - name: Create Parameters
+    - name: パラメーターを作成する
       href: create-parameters.md
     - name: プロジェクトを配置した後にパラメーターの値を設定する
       href: set-parameter-values-after-the-project-is-deployed.md
 - name: Integration Services (SSIS) のクエリ
   href: integration-services-ssis-queries.md
   items:
-    - name: クエリ ビルダー
+    - name: '[クエリ ビルダー]'
       href: query-builder.md
     - name: Integration Services (SSIS) の式 +
       href: expressions/integration-services-ssis-expressions.md
@@ -248,7 +248,7 @@
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
         - name: '手順 9:レッスン 1 のチュートリアル パッケージのテスト'
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: 'レッスン 2:ループの追加'
+    - name: 'レッスン 2: ループの追加'
       href: lesson-2-adding-looping-with-ssis.md
       items:
         - name: '手順 1:レッスン 1 のパッケージのコピー'
@@ -319,7 +319,7 @@
           href: lesson-1-4-adding-package-configurations.md
         - name: '手順 5:更新したパッケージのテスト'
           href: lesson-1-5-testing-the-updated-packages.md
-    - name: 'レッスン 2:配置バンドルの作成'
+    - name: 'レッスン 2: 配置バンドルの作成'
       href: lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
         - name: '手順 1:配置ユーティリティの構築'

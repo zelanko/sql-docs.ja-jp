@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a413e83-e0a4-41f8-9fe0-33ce4d368ee4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a80dddc28fbca156fe31a7620f1d1b0460359a75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d920e2e382ac49c3baf604ab777b4c33f55524b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972162"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901788"
 ---
 # <a name="setunicodestream-method-sqlserverpreparedstatement"></a>setUnicodeStream メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,8 +55,8 @@ public final void setUnicodeStream(int n,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setUnicodeStream メソッドは、PreparedStatement インターフェイスの setUnicodeStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setUnicodeStream メソッドは、java.sql.PreparedStatement インターフェイスの setUnicodeStream メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

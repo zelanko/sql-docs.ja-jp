@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105250"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 関数 (レポート ビルダーおよび SSRS)
@@ -36,8 +36,8 @@ InScope(scope)
 ## <a name="return-type"></a>戻り値の型  
  `Boolean` を返します。  
   
-## <a name="remarks"></a>コメント  
- `InScope`関数で指定されたスコープ内のメンバーシップのレポート アイテムの現在のインスタンスのスコープのテスト、*スコープ*パラメーター。  
+## <a name="remarks"></a>解説  
+ 関数`InScope`は、レポートアイテムの現在のインスタンスのスコープをテストして、 *scope*パラメーターで指定されたスコープのメンバーシップを調べます。  
   
  *Scope* には、式を指定することはできません。  
   

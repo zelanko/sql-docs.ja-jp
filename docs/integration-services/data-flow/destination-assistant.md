@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 075f061eadf98385b75de1f0cbf3558a08bd9a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111240"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292910"
 ---
 # <a name="destination-assistant"></a>デスティネーション アシスタント
 
@@ -48,7 +48,7 @@ ms.locfileid: "68111240"
 ## <a name="add-new-destination-dialog-box"></a>[新しい変換先の追加] ダイアログ ボックス
 次の表に、 **[新しい変換先の追加]** ダイアログ ボックスで使用できるオプションをリストします。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |型|変換先の種類を選択します。|  
 |接続マネージャー|既存の接続マネージャーを選択するか、 **[\<新規作成>]** をクリックして新しい接続マネージャーを作成します。|  

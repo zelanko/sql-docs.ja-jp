@@ -20,17 +20,17 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: b70bba03159f652945f4919e02d89e452153cafc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881981"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>テキスト関数とイメージ関数 - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   特定のテキスト ポインターが有効であるかどうかを確認する、**text**、**ntext**、または **image** 型の関数です。  
   
@@ -59,18 +59,18 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ポインターが有効なら 1 を、ポインターが無効なら 0 を返します。 **text** 列の識別子には、テーブル名を含む必要があることに注意してください。 有効なテキスト ポインターがないと、UPDATETEXT、WRITETEXT、READTEXT は使用できません。  
   
  次の関数とステートメントは、**text**、**ntext**、および **image** データを操作する場合にも役立ちます。  
   
-|関数またはステートメント|[説明]|  
+|関数またはステートメント|説明|  
 |---------------------------|-----------------|  
 |PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|**text** および **ntext** 列で指定された文字列の文字位置を返します。|  
 |DATALENGTH **(** _expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`logo` テーブルの `pub_info` 列の各値に対して、有効なテキスト ポインターが存在するかどうかを報告します。  
   
 > [!NOTE]  

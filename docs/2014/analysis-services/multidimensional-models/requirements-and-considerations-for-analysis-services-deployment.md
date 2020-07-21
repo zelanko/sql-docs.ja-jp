@@ -1,5 +1,5 @@
 ---
-title: 要件と考慮事項の Analysis Services の配置 |Microsoft Docs
+title: Analysis Services の展開に関する要件と考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545735"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services の配置に関する要件と注意点
   あるソリューションのパフォーマンスと可用性は、多くの因子に左右されます。たとえば、基になるハードウェアの機能、サーバーの配置トポロジ、ソリューションの特性 (たとえば、パーティションが複数サーバーに分散されているとか、リレーショナル エンジンへの直接アクセスを必要とする ROLAP ストレージを使用するなど)、サービス レベル契約、データ モデルの複雑さなどです。  
@@ -61,7 +60,7 @@ ms.locfileid: "66073171"
  大きなファクト テーブルを持つキューブでは、小さなファクト テーブルを持つキューブよりも大きなディスク空き容量が必要です。 同様に、小さなエクステントでも、多くの大きなディメンションを持つキューブでは、ディメンション メンバーが少ないキューブよりも大きなディスク空き容量が必要です。 通常、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースでは、基になるリレーショナル データベースに保存されている同じデータに必要な空き容量の約 20% が必要です。  
   
  集計  
- 集計で必要な追加、集計するために比例した空き容量より多くの集計があるより多くの領域が必要です。 不要な集計を作成しないようにするには、通常、集計に必要な追加の空き容量が、基になるリレーショナル データベースに保存されているデータのサイズの約 10% を超えないようにする必要があります。  
+ 集計には、追加された集計に比例した追加の領域が必要です。集計が多いほど、より多くの領域が必要になります。 不要な集計を作成しないようにするには、通常、集計に必要な追加の空き容量が、基になるリレーショナル データベースに保存されているデータのサイズの約 10% を超えないようにする必要があります。  
   
  データ マイニング  
  既定では、マイニング構造によって、トレーニングされるデータセットがディスクにキャッシュされます。 このキャッシュされたデータをディスクから削除するには、マイニング構造オブジェクトで **[構造消去の処理]** の処理オプションを使用できます。 詳細については、「[処理の要件および注意事項 (データ マイニング)](../data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
@@ -69,13 +68,13 @@ ms.locfileid: "66073171"
  オブジェクト処理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、処理が終了するまで、処理トランザクションで処理中のオブジェクトのコピーがディスクに保存されます。 処理が終了すると、オブジェクトの処理済みのコピーによって元のオブジェクトが置き換えられます。 このため、処理する各オブジェクトの 2 番目のコピー用に十分な空き容量を確保する必要があります。 たとえば、1 つのトランザクションでキューブ全体を処理する場合、キューブ全体の 2 番目のコピーを保存するために十分なハード ディスク容量が必要です。  
   
-##  <a name="BKMK_Availability"></a> 可用性に関する注意点  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>可用性に関する考慮事項  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 環境では、ハードウェアまたはソフトウェアの障害によって、キューブまたはマイニング モデルをクエリに使用できない場合があります。 また、キューブも処理する必要があるので使用できない場合があります。  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>ハードウェアまたはソフトウェアの障害時における可用性の提供  
  ハードウェアやソフトウェアでは、さまざまな理由により障害が発生します。 ただし、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インストールの可用性を維持すると、そのような障害の原因をトラブルシューティングできるだけでなく、障害が発生した場合にユーザーがシステムの使用を続行できるように代替のリソースを提供することもできます。 サーバーのクラスター化と負荷分散は、通常、ハードウェアまたはソフトウェアの障害が発生した場合に可用性の維持に必要な代替のリソースを提供するために使用されます。  
   
- ハードウェアまたはソフトウェアの障害が発生した場合に可用性を維持するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をフェールオーバー クラスターに配置することを検討してください。 フェールオーバー クラスターでは、なんらかの理由でプライマリ ノードで障害が発生した場合や、プライマリ ノードを再起動する必要がある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のクラスター化によってセカンダリ ノードにフェールオーバーされます。 フェールオーバーは非常に短時間で行われ、その後にユーザーがクエリを実行すると、そのクエリはセカンダリ ノードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスします。 フェールオーバー クラスターの詳細については、次を参照してください。 [Windows Server テクノロジ。フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)します。  
+ ハードウェアまたはソフトウェアの障害が発生した場合に可用性を維持するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をフェールオーバー クラスターに配置することを検討してください。 フェールオーバー クラスターでは、なんらかの理由でプライマリ ノードで障害が発生した場合や、プライマリ ノードを再起動する必要がある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のクラスター化によってセカンダリ ノードにフェールオーバーされます。 フェールオーバーは非常に短時間で行われ、その後にユーザーがクエリを実行すると、そのクエリはセカンダリ ノードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスします。 フェールオーバー クラスターの詳細については、「 [Windows Server テクノロジ: フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)」をご覧ください。  
   
  可用性の問題に対する別の解決方法としては、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを 2 つ以上の実稼働サーバーに配置することです。 Windows サーバーのネットワーク負荷分散 (NLB) 機能を使用して、実稼働サーバーを 1 つのクラスターに結合できます。 NLB クラスターでは、クラスター内のサーバーがハードウェアまたはソフトウェアの問題が原因で使用できない場合、NLB サービスによって使用可能なサーバーにクエリするように指示されます。  
   
@@ -86,8 +85,8 @@ ms.locfileid: "66073171"
   
  ソース データの増分更新を簡単に処理するには、プロアクティブ キャッシュを有効にします。 プロアクティブ キャッシュでは、新しいソース データを使用してキューブが更新されます。手動での処理は必要なく、キューブの可用性に影響を与えることもありません。 詳細については、「[プロアクティブ キャッシュ (パーティション)](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)」をご覧ください。  
   
-##  <a name="BKMK_Scalability"></a> スケーラビリティに関する注意点  
- 同じコンピューター上に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスがあると、パフォーマンスの問題が発生する場合があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>スケーラビリティに関する考慮事項  
+ との複数のインスタンス [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が同じコンピューター上にあると、パフォーマンスの問題が発生する可能性があります。 このような問題を解決する 1 つの方法は、サーバー上のプロセッサ、メモリ、およびディスク リソースを増やすことです。 ただし、複数のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスをスケーリングすることが必要な場合もあります。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>複数のコンピューターにおける Analysis Services のスケーリング  
  複数のコンピューターで [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインストールをスケーリングするには、いくつかの方法があります。 これらのオプションについては、次の一覧をご覧ください。  
@@ -98,7 +97,7 @@ ms.locfileid: "66073171"
   
 -   1 つまたは複数のリレーショナル データベースから [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースにデータが提供される場合は、これらのデータベースを別のコンピューターに移動できます。 データベースを移動する前に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースと基になるデータベース間に存在するネットワークの速度と帯域幅を検討してください。 ネットワークが低速であるか混雑している場合、基になるデータベースを別のコンピューターに移動すると、処理のパフォーマンスが低下します。  
   
--   処理クエリのパフォーマンスに影響を与えます削減クエリ負荷のときに処理できない場合は、ステージング サーバーに移行して、処理タスク、実稼働サーバーとステージング サーバーの同期をオンラインを実行することを検討してください。 詳細については、「 [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)」を参照してください。 また、リモート パーティションを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに処理を分散することもできます。 リモート パーティションの処理では、ローカル コンピューターのリソースではなく、リモート サーバーのプロセッサおよびメモリ リソースを使用します。 リモート パーティションの管理の詳細については、「[リモート パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)」を参照してください。  
+-   処理がクエリのパフォーマンスに影響を与えるが、クエリの負荷が低いときに処理できない場合は、処理タスクをステージングサーバーに移動し、運用サーバーとステージングサーバーのオンライン同期を実行することを検討してください。 詳細については、「 [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)」を参照してください。 また、リモート パーティションを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の複数のインスタンスに処理を分散することもできます。 リモート パーティションの処理では、ローカル コンピューターのリソースではなく、リモート サーバーのプロセッサおよびメモリ リソースを使用します。 リモート パーティションの管理の詳細については、「[リモート パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)」を参照してください。  
   
 -   クエリのパフォーマンスは低いが、ローカル サーバーのプロセッサおよびメモリ リソースを増やすことができない場合は、2 つ以上の実稼働サーバーに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置することを検討してください。 ネットワーク負荷分散 (NLB) を使用して、サーバーを 1 つのクラスターに結合できます。 NLB クラスターでは、クエリは NLB クラスター内のすべてのサーバーに自動的に分散されます。  
   

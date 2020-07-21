@@ -1,5 +1,5 @@
 ---
-title: 多次元データを扱う |Microsoft Docs
+title: 多次元データの操作 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,58 +10,58 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923131"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747992"
 ---
 # <a name="working-with-multidimensional-data"></a>多次元データの操作
-A*セルセット*多次元データに対するクエリの結果です。 軸、以下の 4 つの軸は、通常、通常 2 つまたは 3 つのコレクションで構成されます。 *軸*を探すか、キューブ内の特定の値をフィルター処理に使用される 1 つまたは複数のディメンションのメンバーのコレクションです。  
+*セルセット*は、多次元データに対するクエリの結果です。 これは、軸のコレクションで構成されており、通常は4つの軸を超えていません。通常は2つまたは3つです。 *軸*は、1つまたは複数のディメンションのメンバーのコレクションであり、キューブ内の特定の値を検索またはフィルター処理するために使用されます。  
   
- A*位置*軸に沿ったポイントです。 1 つのディメンションで構成される軸では、それらの位置は、ディメンション メンバーのサブセットです。 軸は、1 つ以上のディメンションのかどうかは、各位置が、複合エンティティは、 *n* where 部分*n*その軸に沿った指向ディメンションの数です。 位置の各部分は、1 つの構成要素であるディメンションのメンバーです。  
+ *位置*は、軸に沿ったポイントです。 1つのディメンションで構成される軸の場合、これらの位置はディメンションメンバーのサブセットになります。 1つの軸が複数の次元で構成されている場合、各位置は複合エンティティになります。ここで *、n は*、その軸に沿った次元の数*を示します*。 位置の各部分は、1つの構成ディメンションのメンバーです。  
   
- たとえば、売上データを格納しているキューブから、Geography、Product のディメンションは、セルセットの x 軸に沿って方向は、場合この軸に沿った位置含めることができます"USA"と「コンピューター」メンバー この例では、x 軸に沿った位置を決定するが各ディメンションのメンバーが軸に沿った指向が必要です。  
+ たとえば、売上データを含むキューブの Geography および Product ディメンションが、セルセットの x 軸に沿って配置されている場合、この軸に沿った位置に、メンバー "USA" と "Computers" が含まれている可能性があります。 この例では、x 軸に沿って位置を決定するには、各次元のメンバーが軸に沿って配置されている必要があります。  
   
- A*セル*は軸の座標が交差する位置に配置されているオブジェクトです。 各セルには、データ自体、書式設定された文字列 (セルのデータの表示可能な項目のフォーム)、およびセルの序数値を含む、関連付けられている情報の複数の部分。 (各セルはセルセットの一意の序数値です。 セル セットの最初のセルの序数値は 0、8 つの列を含むセル セットの 2 行目で一番左のセル序数値は 8 になります。)  
+ *セル*は、軸の座標の交差部分に配置されるオブジェクトです。 各セルには、データ自体、書式設定された文字列 (表示可能な形式のセルデータ)、およびセルの序数値を含む、複数の情報が関連付けられています。 (各セルは、セルセット内の一意の序数値です。 セルセット内の最初のセルの序数値は0ですが、8つの列を持つセルセットの2番目の行の一番左のセルの序数値は8になります)。  
   
- たとえば、キューブには、次の 6 つのディメンション (で指定された例から、このキューブ スキーマが若干異なりますに注意してください。[多次元スキーマの概要とデータ](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md))。  
+ たとえば、キューブには次の6つのディメンションがあります (このキューブスキーマは、 [「多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)」で説明した例と若干異なることに注意してください)。  
   
 -   営業担当者  
   
--   大陸、国、州、および、geography (自然階層)  
+-   Geography (自然階層)-大陸、国、州など  
   
--   四半期四半期、月、日  
+-   四半期、月、日  
   
 -   Years  
   
--   メジャーの Sales、PercentChange、BudgetedSales  
+-   メジャー-Sales、PercentChange、BudgetedSales  
   
--   Products  
+-   製品  
   
- 次のセル セットでは、1991 すべての製品の売上を表します。  
+ 次のセルセットは、すべての製品の1991の売上を表します。  
   
 > [!NOTE]
->  セルの値の例では、最初の桁が x 軸の位置と y 軸の位置に、2 番目の数字を表す軸位置の序数の順序付けされたペアとして表示できます。  
+>  この例のセル値は、軸位置序数の順序付きペアとして表示できます。最初の桁は x 軸の位置を表し、2番目の数字は y 軸の位置を表します。  
   
- このセル セットの特性は次のとおりです。  
+ このセルセットの特性は次のとおりです。  
   
--   軸ディメンション:四半期数、販売員、Geography  
+-   軸の寸法: 四半期、販売員、Geography  
   
--   ディメンションをフィルター処理します。メジャー、年の製品  
+-   ディメンションのフィルター選択: メジャー、年、製品  
   
--   2 つの軸:(X、または軸 0) の列と行 (y または軸 1)  
+-   2つの軸: 縦棒 (x, または軸 0) と行 (y または軸 1)  
   
--   x 軸: 入れ子になった 2 つの販売員と Geography ディメンションは、  
+-   x 軸: 2 つの入れ子になったディメンション、販売員、地理  
   
--   y 軸:ディメンションの四半期  
+-   y 軸: 四半期ディメンション  
   
- X 軸では、2 つの入れ子になったディメンションがあります。販売員と Geography です。 Geography 型から 4 つのメンバーが選択されます。シアトル、ボストン、米国南部、および日本です。 2 つのメンバーは、営業担当者から選択されます。バレンタイン Nash. この軸 (2 * 8 = 4) の 8 つの位置の合計が生成されます。  
+ X 軸には、販売員と地理の2つの入れ子になったディメンションがあります。 Geography から、4つのメンバーが選択されています。シアトル、ボストン、米国南部、および日本です。 販売員: バレンタインと Nash から2つのメンバーが選択されています。 これにより、この軸上に合計8個の位置 (8 = 4 * 2) が生成されます。  
   
- 各座標は、販売員のディメンションから 1 つと、Geography ディメンションからの 2 つのメンバーの位置として表されます。  
+ 各座標は、2つのメンバーを持つ位置として表されます。1つは販売員ディメンションから、もう1つは Geography ディメンションです。  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -69,16 +69,16 @@ A*セルセット*多次元データに対するクエリの結果です。 軸�
 (Nash, Japan)  
 ```  
   
- Y 軸には、次の 8 つの位置を含む 1 つだけのディメンションがあります。  
+ Y 軸には、次の8つの位置を含むディメンションが1つだけあります。  
   
 ```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- セル セット、セル、軸、および位置はすべてで表される ADO MD で対応するオブジェクト。[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)します。  
+ セルセット、セル、軸、および位置はすべて、対応するオブジェクト (セルセット[、](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、および[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)) によって ADO MD で表されます。  
   
-## <a name="see-also"></a>関連項目  
- [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+## <a name="see-also"></a>参照  
+ [ADO MD オブジェクトモデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

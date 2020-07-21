@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918186"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754364"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords プロパティの例 (VB)
-この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを開き、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で最も高価な 10 のタイトルを含む、***タイトル***テーブル。  
+この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを使用して、***タイトル***テーブルに最も高価な10個のタイトルを含む[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。  
   
 ```  
 'BeginMaxRecordsVB  
@@ -87,6 +87,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MaxRecords プロパティ (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

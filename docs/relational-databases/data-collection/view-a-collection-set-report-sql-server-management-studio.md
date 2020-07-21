@@ -1,5 +1,5 @@
 ---
-title: コレクション セット レポートの表示 (SQL Server Management Studio) | Microsoft Docs
+title: コレクション セットのレポートの表示 (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 548f6a6a75be51df2ea0de87f4eca91bebf8358b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 161fbacb2edc8d73d69bbc501e255ce657f6208c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715525"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>コレクション セット レポートの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   管理データ ウェアハウスを構成した後、コレクション セットのレポートを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で表示できます。 セットアップ中にインストールされるシステム データ コレクション セットについては、レポートが用意されています。 レポートには、次のものが含まれます。  
   
 -   ディスク使用量の概要  

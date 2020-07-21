@@ -32,15 +32,15 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a20ed4afa262bcf891682c759f519f9b94f8868b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901944"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999188"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定した式が NULL かどうかを判定します。  
   
@@ -67,10 +67,10 @@ expression IS [ NOT ] NULL
   
  *式*の値が NULL の場合、IS NOT NULL では FALSE が返されます。それ以外の場合は TRUE が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  式が NULL かどうかを判定するには、= や != などの比較演算子の代わりに、IS NULL または IS NOT NULL を使用してください。 比較演算子では、引数のいずれかまたは両方が NULL の場合、UNKNOWN が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、重量が `10` ポンド未満または色が不明の全製品の名前と重量、または `NULL` を返します。  
   
 ```  
@@ -83,7 +83,7 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、ミドルネームのイニシャルがあるすべての従業員のフル ネームを返します。  
   
 ```  

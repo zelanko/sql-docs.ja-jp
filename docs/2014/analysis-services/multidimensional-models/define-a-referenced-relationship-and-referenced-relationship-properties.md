@@ -1,5 +1,5 @@
 ---
-title: 参照リレーションシップを定義し、参照リレーションシップのプロパティ |Microsoft Docs
+title: 参照リレーションシップと参照リレーションシップのプロパティの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00305d00bb3a11cc4237e005a057c70d4c5f3397
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a84cf2ed95ab3660c5a6b3c039dc58351dc43264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075759"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547066"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>参照リレーションシップと参照リレーションシップのプロパティの定義
   参照ディメンションのリレーションシップは、キューブ デザイナーの **[ディメンションの使用法]** タブで定義します。 参照ディメンションのリレーションシップを定義するには、以下を指定します。  

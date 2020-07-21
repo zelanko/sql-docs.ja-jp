@@ -1,5 +1,5 @@
 ---
-title: データ ソースの非時間テーブルを生成することで、ディメンションの作成 |Microsoft Docs
+title: データソースに時間テーブル以外のテーブルを生成してディメンションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,32 +14,31 @@ helpviewer_keywords:
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66ac0c2a120e0981ce23c794b97427121ae5eb23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076436"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536784"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して、既存のデータ ソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
+  では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、のディメンションウィザードを使用し [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] て、既存のデータソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
   
  ディメンション ウィザードで提供されるサンプルのディメンション テンプレートから、一般的に使用される種類のディメンションを構築できます。 次のディメンションの種類から選択できます。  
   
--   アカウント  
+-   Account  
   
 -   Customer  
   
--   date  
+-   日付  
   
--   Department  
+-   部署  
   
 -   Destination Currency  
   
 -   Employee  
   
--   Geography  
+-   [地理的な場所]  
   
 -   Internet Sales Order Details  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66076436"
   
  **[変化するディメンション]** チェック ボックスをオンにすると、ディメンション ウィザードでは、次の表に示す属性が定義されます。  
   
-|属性|型|  
+|属性|Type|  
 |---------------|----------|  
 |SCD のオリジナル ID|SCDOriginalID|  
 |SCD の終了日|SCDEndDate|  
@@ -104,7 +103,7 @@ ms.locfileid: "66076436"
  **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を表示します。 **[完了]** をクリックした後にスキーマ生成ウィザードを開始するには、 **[今すぐスキーマを生成する]** チェック ボックスをオンにします。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 このチェック ボックスを選択しない場合は、ディメンション デザイナーを使用して後でスキーマを作成できます。  
   
 ## <a name="see-also"></a>参照  
- [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [時間テーブルを生成して時間ディメンションを作成する](create-a-time-dimension-by-generating-a-time-table.md)   
  [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

@@ -1,6 +1,7 @@
 ---
 title: Reporting Services モバイル レポートへのカスタム マップの追加 | Microsoft Docs
-ms.date: 03/01/2017
+description: Reporting Services モバイル レポートにカスタム マップを追加できます。 この記事では、カスタム マップにデータを読み込んで接続する方法について説明します。
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1c15d5b5155d68f94a1672ca55654485c6b1835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63141248"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448348"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートへのカスタム マップの追加
 カスタム マップには、2 つのファイルが必要です。  
@@ -22,11 +23,11 @@ ms.locfileid: "63141248"
   
 詳しくは、「 [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)」 (Reporting Services モバイル レポートのカスタム マップ) をご覧ください。  
   
-この 2 つのファイルは同じフォルダーに格納します。 また、この 2 つのファイル名は一致する必要があります (例: canada.shp と canada.dbf)。 メタデータ (DBF ファイル) には、マップにデータを設定するときに使用する対応する図形の名前 (キー) を値として含む "NAME" フィールドを含める必要があります。   
+この 2 つのファイルは同じフォルダーに格納します。 また、この 2 つのファイル名は一致する必要があります (例: canada.shp と canada.dbf)。 メタデータ (DBF ファイル) の最初の列は、マップにデータを設定するときに使用する、対応する図形の名前 (キー) のキー値と照合するために使用されます。
   
 ## <a name="load-a-custom-map"></a>カスタム マップを読み込む  
   
-1. **[レイアウト]** タブで、マップの種類として **[Gradient Heat Map]** (グラデーション ヒート マップ)、 **[Range Stop Heat Map]** (範囲境界ヒート マップ)、 **[Bubble Map]** (バブル マップ) のいずれかを選択し、デザイン画面にドラッグして、必要なサイズにします。  
+1. **[レイアウト]** タブで、マップの種類を選択します: **[グラデーション ヒート マップ]** 、 **[範囲停止のヒート マップ]** 、または **[バブル マップ]** 。これをデザイン画面にドラッグして、必要なサイズにします。  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
@@ -45,7 +46,7 @@ ms.locfileid: "63141248"
   
 カスタム マップへの実際のデータの表示は、組み込みマップへのデータ表示と同じです。 データを表示するには、「 [Maps in SQL Server mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md) 」 (SQL Server モバイル レポートのマップ)の手順に従います。  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Maps in SQL Server mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   

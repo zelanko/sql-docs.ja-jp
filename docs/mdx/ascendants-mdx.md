@@ -1,5 +1,5 @@
 ---
-title: Ascendants (MDX) |Microsoft Docs
+title: 先祖 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017061"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
@@ -28,14 +28,14 @@ Ascendants(Member_Expression)
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **Ascendants**関数がメンバーの階層の最上位までメンバーからすべてのメンバーの先祖を返します具体的には、指定されたメンバーの階層の逆順にたどってを実行し、。セット自体も含めたメンバーに関連するすべての先祖メンバーを返します。 これとは対照的に、[Ancestor](../mdx/ancestor-mdx.md)関数で、特定の先祖メンバー、または特定のレベルの先祖を返します。  
+## <a name="remarks"></a>Remarks  
+ **先祖**関数は、メンバーの階層の最上位にあるメンバーの先祖をすべて返します。具体的には、指定されたメンバーの階層のポスト順序走査を実行し、そのメンバーに関連するすべての先祖メンバー (それ自体を含む) を set で返します。 これは、特定のレベルで特定の先祖メンバー (先祖) を返す[先祖](../mdx/ancestor-mdx.md)関数とは対照的です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、再販業者の注文の数を返します、`[Sales Territory].[Northwest]`メンバーとそのメンバーからのすべての先祖、 **Adventure Works**キューブ。 **Ascendants**関数を含むセットを構築します、`[Sales Territory].[Northwest]`メンバーとその先祖 ROWS 軸。  
+ 次の例では、 **Adventure works**キューブから、 `[Sales Territory].[Northwest]`メンバーの再販業者の注文数と、そのメンバーのすべての先祖を返します。 **先祖**関数は、ROWS 軸の`[Sales Territory].[Northwest]`メンバーとその先祖を含むセットを構築します。  
   
 ```  
 SELECT  
@@ -50,7 +50,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

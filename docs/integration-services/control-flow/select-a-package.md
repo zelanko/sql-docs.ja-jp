@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 22f1d99709ea131ee28e9f5c5cef2ee0b6fe3693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 561495eaad4dbe41a0af05e80d3c2ba35d91cb74
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215786"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293962"
 ---
 # <a name="select-a-package"></a>[パッケージの選択]
 
@@ -29,10 +29,10 @@ ms.locfileid: "68215786"
   **[パッケージの選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクで受信されるメッセージの送信元パッケージを指定できます。  
   
 ## <a name="static-options"></a>静的オプション  
- **場所**  
+ **Location**  
  パッケージの場所を特定します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。 この値を選択すると、動的オプションの [パッケージ名]、 **[サーバー]** 、 **[Windows 認証を使用する]** 、 **[SQL Server 認証を使用する]** 、 **[ユーザー名]** 、および **[パスワード]** が表示されます。|  
 |[DTSX ファイル]|DTSX ファイルの場所を設定します。 この値を選択すると、動的オプションの **[ファイル名]** が表示されます。|  
@@ -52,11 +52,11 @@ ms.locfileid: "68215786"
  **[SQL Server 認証を使用する]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合にクリックします。  
   
- **User name**  
+ **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、サーバーにログオンするときに使用するユーザー名を入力します。  
   
  **パスワード**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを入力します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
 ### <a name="location--dtsx-file"></a>[場所] = [DTSX ファイル]  
  **[ファイル名]**  

@@ -1,5 +1,5 @@
 ---
-title: サーバー オブジェクト (Analysis Services - 多次元データ) |Microsoft Docs
+title: サーバーオブジェクト (Analysis Services-多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 365bfd63-c55a-433d-9e1a-a788bc149a25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c70c0ba8e402f41a7936c4d70bd3d5ac9a51ad7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f41a930bd5054583918180d7c50eca46c3ea5e22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62699324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545974"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>Server オブジェクト (Analysis Services - 多次元データ)
     
 ## <a name="introducing-server-objects"></a>Server オブジェクトの導入  
- <xref:Microsoft.AnalysisServices.Server>オブジェクトが、サーバーとのインスタンスを表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]を使用します。  
+ オブジェクトは、 <xref:Microsoft.AnalysisServices.Server> 使用するサーバーとのインスタンスを表し [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ます。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに接続するとすぐに、次の情報を参照できるようになります。  
   

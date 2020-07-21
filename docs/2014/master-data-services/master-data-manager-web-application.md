@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 413f7176e5b849d2e51cf575716928021f6e2fae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971242"
 ---
 # <a name="master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーション
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションは、主に、管理者が管理タスクを実行するために使用します。 たとえば、管理者のみが、モデル、ビジネス ルール、またはデータのバージョンを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  

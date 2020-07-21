@@ -1,5 +1,5 @@
 ---
-title: CacheSize プロパティの例 (vc++) |Microsoft Docs
+title: CacheSize プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68cea9dc78bbb2fa895dc8fb697404e462c1bc07
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920257"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762839"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize プロパティの例 (VC++)
-この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)と 30 レコードのキャッシュなしに実行される操作のパフォーマンスの違いを表示するプロパティ。  
+この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -160,6 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CacheSize プロパティ (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

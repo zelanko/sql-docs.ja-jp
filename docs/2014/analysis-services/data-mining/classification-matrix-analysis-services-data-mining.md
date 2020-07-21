@@ -1,5 +1,5 @@
 ---
-title: 分類マトリックス (Analysis Services - データ マイニング) |Microsoft Docs
+title: 分類マトリックス (Analysis Services-データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac1067bf817051f28c939ce5f438dd617e4a9495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085787"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524835"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類マトリックス (Analysis Services - データ マイニング)
-  *分類マトリックス*は、モデルのすべてのケースについて、予測値が実際の値と一致したかどうかを判断してカテゴリに分類します。 各カテゴリのすべてのケースがカウントされ、合計がマトリックスに表示されます。 分類マトリックスは統計モデルの評価に使用する標準のツールで、 *混同行列*とも呼ばれます。  
+  *分類マトリックス* は、モデルのすべてのケースについて、予測値が実際の値と一致したかどうかを判断してカテゴリに分類します。 各カテゴリのすべてのケースがカウントされ、合計がマトリックスに表示されます。 分類マトリックスは統計モデルの評価に使用する標準のツールで、 *混同行列*とも呼ばれます。  
   
  **[分類マトリックス]** オプションを選択して作成されるグラフでは、実際の値が、指定した各予測状態の予測値と比較されます。 各マトリックスの行はモデルの予測値を表し、列は実際の値を表します。 分析で使用されるこれらのカテゴリは、 *偽陽性*, *真陽性*, *偽陰性*、および *真陰性*と呼ばれる場合もあります。  
   
@@ -79,11 +78,11 @@ ms.locfileid: "66085787"
 |トピック|リンク|  
 |------------|-----------|  
 |Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|関連するグラフの種類について説明します。|[リフト チャート (Analysis Services - データ マイニング)](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](scatter-plot-analysis-services-data-mining.md)|  
-|マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[相互検証 (Analysis Services - データ マイニング)](cross-validation-analysis-services-data-mining.md)|  
+|関連するグラフの種類について説明します。|[リフト チャート &#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](scatter-plot-analysis-services-data-mining.md)|  
+|マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[相互検証 &#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
 |リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
- [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
   
   

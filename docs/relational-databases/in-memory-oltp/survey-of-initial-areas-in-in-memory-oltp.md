@@ -1,7 +1,8 @@
 ---
-title: 'クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ | Microsoft Docs'
-ms.custom: ''
-ms.date: 09/05/2017
+title: T-SQL のパフォーマンスの高速化のためのインメモリ OLTP
+description: SQL Server と Azure SQL Database のインメモリ OLTP パフォーマンス機能の基本を、簡単な説明と開発者向けコア コード サンプルを使用して紹介します。
+ms.custom: seo-dt-2019
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,15 +12,16 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cfa9f47e92852929bddb4e3aa3105d8dbf9508e
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: e90d523b4dc17d640ebaae825abef59d80582389
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650867"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 この記事は、Microsoft SQL Server と Azure SQL データベースのインメモリ OLTP パフォーマンス機能の基本を短時間で学習する開発者を対象にしています。  
@@ -77,7 +79,7 @@ Transact-SQL で大量の計算を処理するシステムには最適です。
 この記事では分析ではなく OLTP に焦点を当てています。 列ストア インデックスを使用した SQL での分析の詳細については、次の項目を参照してください。  
   
 - [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
-- [列ストア インデックス ガイド](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+- [列ストア インデックスの説明](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
   
 > [!NOTE]
@@ -211,7 +213,7 @@ Microsoft SQL Server では、メモリ最適化テーブルを作成する前�
   
 Azure SQL Database では、このようなファイルグループを作成する必要はありません (作成できません)。  
 
-次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
+次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)。
 
 MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サポートされていない SQL Server 機能もあります。 制限の詳細については、次を参照してください: [インメモリ OLTP に対してサポートされていない SQL Server の機能](unsupported-sql-server-features-for-in-memory-oltp.md)
   
@@ -402,7 +404,7 @@ PRINT @mesg;
 - [メモリ最適化テーブルのテーブルと行のサイズ](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**大規模テーブルのパーティション分割:** 大量のアクティブ メモリの需要を満たす方法の 1 つは、大規模なテーブルをパーティション分割して、*使用中の最近の*データ行を格納する部分 (メモリ内) と、出荷済みや完了済みの注文など、*使用していない古い*行を格納する部分 (ディスク上) に分けることです。 このパーティション分割は、手動で設計して実装します。 次のチュートリアルを参照してください。  
+**大規模テーブルのパーティション分割:** 大量のアクティブ メモリの需要を満たす方法の 1 つは、大規模なテーブルをパーティション分割して、*使用中の最近の*データ行を格納する部分 (メモリ内) と、出荷済みや完了済みの注文など、*使用していない古い*行を格納する部分 (ディスク上) に分けることです。 このパーティション分割は、手動で設計して実装します。 参照:  
   
 - [アプリケーション レベルのパーティション分割](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -423,7 +425,7 @@ PRINT @mesg;
 - [メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)
 - [メモリ最適化テーブル用の非クラスター化インデックス](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
-計画したメモリ最適化テーブルとインデックスのための十分なアクティブ メモリがあることを確認する必要があります。 次のチュートリアルを参照してください。  
+計画したメモリ最適化テーブルとインデックスのための十分なアクティブ メモリがあることを確認する必要があります。 参照:  
   
 - [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
@@ -433,7 +435,7 @@ PRINT @mesg;
 - データベースがオンラインに復帰すると、メモリ最適化テーブルがアクティブ メモリに読み込まれ、データは空になります。  
 - 数千の行が含まれている場合は、tempdb の [#temporary テーブルよりも](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) SCHEMA_ONLY テーブルの方が適していることがあります。  
   
-テーブル変数をメモリ最適化として宣言することもできます。 次のチュートリアルを参照してください。  
+テーブル変数をメモリ最適化として宣言することもできます。 参照:  
   
 - [メモリ最適化を使用した一時テーブルとテーブル変数の高速化](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   

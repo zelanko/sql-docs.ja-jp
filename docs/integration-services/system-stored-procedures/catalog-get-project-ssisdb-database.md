@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b6eaef69d6984494543dc730e19a8436a3a9b658
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f6cec9d492b00943eafa2bcfc7c5914e4932ff46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748518"
 ---
-# <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (SSISDB データベース)
+# <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトのバイナリ ストリームを取得します。  
   
@@ -37,7 +37,7 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
  プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [ @project_name = ] *project_name*  
- プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
+ プロジェクトの名前です。 *project_name* は **nvarchar(128)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  

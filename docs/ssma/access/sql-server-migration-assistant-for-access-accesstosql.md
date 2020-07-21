@@ -1,38 +1,39 @@
 ---
-title: SQL Server Migration Assistant for Access (AccessToSQL) |Microsoft Docs
+title: アクセスの SQL Server Migration Assistant (アクセス可能な Sql) |Microsoft Docs
+description: SSMA for Access の詳細については、SQL Server または Azure SQL Database にアクセスデータベースを移行するための詳細な手順に関するページを参照してください。
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2017
+ms.date: 10/10/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
-author: Shamikg
-ms.author: Shamikg
+author: Jtoland
+ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: 9189087be52fbb23e8768dd64f0a63bb9d0fe480
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2e4ce80a111efcf978da55cab280205b08acdd1f
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266986"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292946"
 ---
-# <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、移行するためのツールからデータベース[!INCLUDE[msCoName](../../includes/msconame_md.md)]2010年による 97 のバージョンにアクセス[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows と Linux (プレビュー) で 2017/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB します。 変換する Access データベース オブジェクトのアクセス用の SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL データベース オブジェクトにこれらのオブジェクトの読み込み[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL へのアクセスからデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL。  
+# <a name="sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant (アクセス可能な Sql)
+
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access の Migration Assistant (SSMA) は、から [!INCLUDE[msCoName](../../includes/msconame_md.md)] データベースを移行するためのツールです。バージョン97から2010、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 (windows および Linux の場合)、2019 (windows と linux の場合)、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database にアクセス [!INCLUDE[msCoName](../../includes/msconame_md.md)] できます。 SSMA for Access は、Access データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または AZURE SQL database オブジェクトに変換し、それらのオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に読み込み、Access からまたは Azure SQL Database にデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。
   
-このドキュメントは、SSMA for Access を紹介し、Access データベースへの移行の手順について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure と移行後に発生する可能性がある問題に関する情報。  
+このドキュメントでは、アクセスのための SSMA について説明します。また、アクセスデータベースをまたは Azure SQL Database に移行する手順 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と、移行後に発生する可能性がある問題に関する情報を示します。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
-|セクション|説明|  
-|-----------|---------------|  
-|[SSMA for Access の新機能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|SSMA リリースへの変更を一覧表示します。|  
-|[SQL Server Migration Assistant for Access をインストールします。](installing-sql-server-migration-assistant-for-access-accesstosql.md)|インストールして、ライセンスの SSMA、および最新バージョンへのリンクについて、手順、SSMA のインストールの前提条件の一覧を表示します。|  
-|[SQL Server Migration Assistant for Access の概要&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA とそのユーザー インターフェイスが導入されています。|  
-|[Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)|変換を Access データベースを準備する方法について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure です。|  
-|[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|変換プロセスと、プロセスの各手順に関する詳細情報の概要を示します。|  
-|[SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|既存の Access アプリケーションを使用する方法について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|[ユーザー インターフェイス リファレンス](user-interface-reference-accesstosql.md)|SSMA のダイアログ ボックスのドキュメントが含まれています。|  
-|[SSMA for Access コンソールの操作](working-with-ssma-for-access-console-accesstosql.md)|SSMA コンソールのアプリケーションに関するドキュメントします。|  
-|[SSMA の参考資料のアクセス](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|に関する追加情報についてを説明します。|  
-  
+|Section|説明|
+|-----------|---------------|
+|[SSMA for Access の新機能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|SSMA リリースに対する変更の一覧を示します。|  
+|[アクセスのための SQL Server Migration Assistant のインストール](installing-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA をインストールするための前提条件、SSMA をインストールおよびライセンスする手順、および最新バージョンへのリンクを示します。|  
+|[アクセスのための SQL Server Migration Assistant を使用したはじめに &#40;アクセス許可 SQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA とそのユーザーインターフェイスについて説明します。|  
+|[Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)|/SQL Azure に変換するために Access データベースを準備する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|[Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|変換プロセスの概要と、プロセスの各手順に関する詳細情報について説明します。|  
+|[Access アプリケーションの SQL Server へのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|既存の Access アプリケーションをで使用する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|[ユーザーインターフェイスリファレンス](user-interface-reference-accesstosql.md)|SSMA ダイアログボックスのドキュメントが含まれています。|  
+|[SSMA for Access コンソールの操作](working-with-ssma-for-access-console-accesstosql.md)|SSMA コンソールアプリケーションに関するドキュメントが含まれています。|  
+|[SSMA のアクセス権の取得](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|追加のサポートを受ける方法について説明します。|  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 26fe36ec71463721adf2810221fa3fc118917ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967680"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297354"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 式)
 
@@ -43,7 +43,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、<character_expression> 文字列を <delimiter_string> で指定された区切り記号で区切ったトークンのセットに分割した後、N 番目のトークンを返します。N は\<occurrence> パラメーターで指定されたトークンの発生回数です。 この関数のサンプルについては、「使用例」のセクションを参照してください。  
   
  TOKEN 関数には次の解説が適用されます。  

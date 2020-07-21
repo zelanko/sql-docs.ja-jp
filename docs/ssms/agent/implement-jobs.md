@@ -1,10 +1,9 @@
 ---
-title: ジョブの実装 | Microsoft Docs
-ms.custom: ''
+title: ジョブの実装
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 31cef7a310eed27fc086b5f9a8b78167f8fc35c5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9770382558af7e77090235775c133dbeaeabff51
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262381"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242353"
 ---
 # <a name="implement-jobs"></a>ジョブの実装
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68262381"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |ジョブの作成と所有権の割り当てについて説明します。|[ジョブの作成](../../ssms/agent/create-jobs.md)|  
 |ジョブをカテゴリごとに編成するための情報を記載しています。|[ジョブの整理](../../ssms/agent/organize-jobs.md)|  
 |ユーザーが作成できるさまざまな種類のジョブ ステップおよびそれらの管理方法について説明します。|[ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)|  

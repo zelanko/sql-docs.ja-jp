@@ -1,6 +1,6 @@
 ---
-title: 拡張イベントへの PowerShell プロバイダーの使用 | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントへの PowerShell プロバイダーの使用
+description: SQL Server PowerShell プロバイダーを使用して、SQL Server 拡張イベントを管理します。 この記事では、セッションの作成、変更、管理の例を示します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,16 +15,16 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b4aad088298790c4add3ddea318131a1ed61d70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756815"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントを管理できます。 XEvent サブフォルダーは、SQLSERVER ドライブで利用可能です。 このフォルダーには、次のいずれかの方法でアクセスできます。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "68009318"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーは、拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 次のセクションでは、拡張イベントに PowerShell スクリプトを使用する基本的な例をいくつか紹介します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  以下の例では、次の点に注意してください。  
   
 -   スクリプトは、PS SQLSERVER:\\> プロンプト (コマンド プロンプトで「**sqlps**」と入力すると利用可能になります) から実行する必要があります。  
   
--   スクリプトでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスを使用します。  
+-   スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスを使用します。  
   
 -   スクリプトは、.ps1 拡張子を付けて保存してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: Web サーバーのコンピューターへのゲスト特権の付与 |Microsoft Docs
+title: Web サーバーコンピューターにゲスト特権を付与する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,32 +10,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9a2145fdf106814647b4d9cca067c28db72f848
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749586"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Web サーバー コンピューターへのゲスト特権の付与
-匿名の Web サーバーのアカウント (iusr _*ComputerName*) RDS を使用して、ゲストをローカル Web サーバー コンピューターのグループに追加する必要があります  
+RDS を使用するには、匿名 Web サーバーアカウント (IUSR_*ComputerName*) を web サーバーコンピューターの Guests ローカルグループに追加する必要があります。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-### <a name="to-grant-guest-privileges-to-a-web-server-computer"></a>Web サーバー コンピューターへのゲスト特権を付与するには  
+### <a name="to-grant-guest-privileges-to-a-web-server-computer"></a>Web サーバーコンピューターにゲスト特権を付与するには  
   
-1.  Microsoft Windows 2000 Server コンピューターに次のようにクリックします**開始**、 をポイント**プログラム**、 をポイント**管理ツール**、 をクリックし、**コンピューター。管理**します。  
+1.  Microsoft Windows 2000 Server コンピューターで、[**スタート**] をクリックし、[**プログラム**]、[**管理ツール**] の順にポイントし、[**コンピューターの管理**] をクリックします。  
   
-2.  コンソール ツリーで [**ローカル ユーザーとグループ**、] をクリックして**グループ**します。  
+2.  コンソールツリーの [**ローカルユーザーとグループ**] で、[**グループ**] をクリックします。  
   
-3.  選択、**ゲスト**ローカル グループです。 **アクション**] メニューの [選択**プロパティ**します。  
+3.  [ **Guests** ] ローカルグループを選択します。 [**操作**] メニューの [**プロパティ**] をクリックします。  
   
-4.  **ゲスト プロパティ**ダイアログ ボックスで、をクリックして**追加**します。  
+4.  [ **Guests のプロパティ**] ダイアログボックスで、[**追加**] をクリックします。  
   
-5.  一覧で、匿名の Web サーバーのアカウントが表示されないかどうか、 **ユーザーまたはグループ** ダイアログ ボックスで、その名前を入力 (iusr _*ComputerName*) をクリックし、下部にある空白ボックスに**追加**.  
+5.  匿名 Web サーバーアカウントが **[ユーザーまたはグループの選択**] ダイアログボックスの一覧に表示されない場合は、その名前 (IUSR_*ComputerName*) を下の空白のボックスに入力し、[**追加**] をクリックします。  
   
 6.  **[OK]** をクリックします。
 

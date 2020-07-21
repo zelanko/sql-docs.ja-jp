@@ -15,14 +15,14 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c196f1514afcb447f584d0fea6c71917ae2a5ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988225"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488176"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
 
@@ -41,7 +41,7 @@ ms.locfileid: "67988225"
   
  次の図は、メール送信タスクの For ループ コンテナーを示しています。 初期化式が `@Counter = 0`の場合、評価式は `@Counter < 4`になり、初期化式が `@Counter = @Counter + 1`の場合、ループは 4 回繰り返して 4 つの電子メール メッセージを送信します。  
   
- ![For ループ コンテナーがタスクを 4 回繰り返す](../../integration-services/control-flow/media/ssis-forloop.gif "For ループ コンテナーがタスクを 4 回繰り返す")  
+ ![タスクを 4 回繰り返す For ループ コンテナー](../../integration-services/control-flow/media/ssis-forloop.gif "タスクを 4 回繰り返す For ループ コンテナー")  
   
  この式は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の式である必要があります。  
   
@@ -56,24 +56,22 @@ ms.locfileid: "67988225"
   
  For ループ コンテナーは、ループの各繰り返しにおいて条件を評価し、条件が FALSE に評価されると停止します。 For ループ コンテナーに含まれる式によって、ループの初期化、繰り返される制御フローの実行を停止する評価条件の指定、評価条件の比較対象となる値を更新する式への値の代入を行います。 評価条件は必ず指定する必要がありますが、初期化式および代入式の指定は任意です。  
   
- For ループ コンテナーに機能は用意されていません。繰り返し可能な制御フローを構築する構造を提供するだけです。 コンテナーに機能を設定するには、For ループ コンテナーに少なくとも 1 つのタスクを含める必要があります。 詳細については、「[Integration Services のタスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  
+ For ループ コンテナーに機能は用意されていません。繰り返し可能な制御フローを構築する構造を提供するだけです。 コンテナーに機能を設定するには、For ループ コンテナーに少なくとも 1 つのタスクを含める必要があります。 詳細については、「 [Integration Services のタスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  
   
  For ループ コンテナーには、複数のタスクを持つ制御フローを含めたり、他のコンテナーを含めることができます。 For ループ コンテナーにタスクとコンテナーを追加する手順は、タスクとコンテナーをドラッグする先がパッケージではなく For ループ コンテナーであること以外は、パッケージに追加する手順と同様です。 For ループ コンテナーに複数のタスクまたはコンテナーが含まれる場合、パッケージの場合と同様に、優先順位制約を使用してそれらを連結できます。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
 ## <a name="add-a-for-loop-container-in-a-control-flow"></a>For ループ コンテナーを制御フローに追加する  
   
-1.  For ループ コンテナーをパッケージに追加します。 詳細については、「[制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
+1.  For ループ コンテナーをパッケージに追加します。 詳細については、「 [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
 2.  タスクとコンテナーを For ループ コンテナーに追加します。 詳細については、「 [制御フローのタスクまたはコンテナーを追加または削除する](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   
-3.  優先順位制約を使用して、For ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「[既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)」を参照してください。  
+3.  優先順位制約を使用して、For ループ コンテナー内のタスクとコンテナーを連結します。 詳細については、「 [既定の優先順位制約を使用してタスクとコンテナーを連結する](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)」を参照してください。  
   
 4.  For ループ コンテナーを構成します。 詳細については、「 [For ループ コンテナーを構成する](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)に評価されるまでそのワークフローを繰り返します。  
 
 ##  <a name="configure-the-for-loop-container"></a>For ループ コンテナーを構成する
 この手順では、 **[For ループ エディター]** ダイアログ ボックスを使用して、For ループ コンテナーを構成する方法について説明します。  
-  
- For ループ コンテナーの例については、bimonkey.com の「 [失敗しない SSIS ループ](https://go.microsoft.com/fwlink/?LinkId=240295) 」を参照してください。  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、For ループ コンテナーをダブルクリックして **[For ループ エディター]** を開きます。  
   
@@ -97,7 +95,7 @@ ms.locfileid: "67988225"
   
  For ループ コンテナーの概要とパッケージ内で For ループ コンテナーを使用する方法の詳細については、「 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[InitExpression]**  
  必要に応じて、ループが使用する値を初期化する式を指定します。  
   
@@ -107,13 +105,13 @@ ms.locfileid: "67988225"
  **[AssignExpression]**  
  必要に応じて、ループの繰り返しごとに条件を変更する式を指定します。  
   
- **[名前]**  
+ **名前**  
  For ループ コンテナーに一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  オブジェクト名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  For ループ コンテナーの説明を指定します。  
  
 ## <a name="use-expressions-with-the-for-loop-container"></a>For ループ コンテナーで式を使用する  
@@ -123,13 +121,13 @@ ms.locfileid: "67988225"
   
  式の内部で変数を指定する場合、変数名をアット マーク (@) で始める必要があります。 たとえば、**Counter** という名前の変数を指定するには、For ループ コンテナーが使用する式に「@Counter」と入力します。 変数の名前空間のプロパティを含める場合は、変数と名前空間を角かっこで囲む必要があります。 たとえば、**MyNamespace** 名前空間内にある **Counter** 変数については、「@MyNamespace::Counter」と入力します。  
   
- For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+ For ループ コンテナーが使用する変数は、For ループ コンテナーのスコープ、またはパッケージ コンテナー階層において上位層にある任意のコンテナーのスコープ内で定義する必要があります。 たとえば、For ループ コンテナーは、それ自体のスコープ内で定義された変数と、パッケージ スコープ内で定義された変数を使用できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] の式文法には、評価、初期化、または代入に使用する複雑な式を実装するための、演算子と関数の完全なセットが用意されています。 詳細については、「 [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
   
 ## <a name="see-also"></a>参照  
  [制御フロー](../../integration-services/control-flow/control-flow.md)   
- [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

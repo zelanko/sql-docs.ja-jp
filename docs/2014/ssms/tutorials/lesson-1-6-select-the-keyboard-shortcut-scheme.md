@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d088740fc6f1f72213c04866713a8579eb126d2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058287"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>キーボード ショートカット スキームの選択
   標準の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] キーボード スキームではなく、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と互換性のあるキーボード スキームを使用するように [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]を構成できます。  
   
-## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>[!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] のキーボード スキームへの変更  
+## <a name="changing-to-the-vs_dev10_long-keyboard-scheme"></a>[!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] のキーボード スキームへの変更  
   
-#### <a name="to-apply-includevsdev10longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>[!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] と互換性のあるキーボード スキームを適用するには  
+#### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>[!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] と互換性のあるキーボード スキームを適用するには  
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
@@ -35,8 +34,8 @@ ms.locfileid: "63312562"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [起動オプションの設定](lesson-1-7-set-the-startup-options.md)  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server Management Studio のキーボード ショートカット](../sql-server-management-studio-keyboard-shortcuts.md)   
- [メニューとショートカット キーのカスタマイズ](../customize-menus-and-shortcut-keys.md)  
+## <a name="see-also"></a>参照  
+ [SQL Server Management Studio のキーボードショートカット](../sql-server-management-studio-keyboard-shortcuts.md)   
+ [メニューとショートカットキーのカスタマイズ](../customize-menus-and-shortcut-keys.md)  
   
   

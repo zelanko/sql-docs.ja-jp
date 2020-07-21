@@ -17,10 +17,10 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67412656"
 ---
 # <a name="monitoring-report-server-performance"></a>レポート サーバーのパフォーマンスの監視
@@ -57,7 +57,7 @@ ms.locfileid: "67412656"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services パフォーマンス オブジェクト  
-SQL Server 2016 Reporting Services またはそれ以降 (SSRS) は、次のパフォーマンス オブジェクトが含まれています。  
+SQL Server Reporting Services (SSRS) 2016 以降には、次のパフォーマンス オブジェクトが含まれます。  
   
 -   レポート サーバーのパフォーマンスを監視するための**MSRS 2011 Web Service** および **MSRS 2011 SharePoint Mode Web Service** 。 これらのパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
   
@@ -70,9 +70,9 @@ SQL Server 2016 Reporting Services またはそれ以降 (SSRS) は、次のパ�
 ## <a name="other-performance-counters"></a>その他のパフォーマンス カウンター  
  **MSRS 2008 Web Service**、**MSRS 2008 Windows Service**、および **ReportServer サービス**専用に、カスタムの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パフォーマンス カウンターが用意されています。 次のパフォーマンス オブジェクトにより、レポート サーバーに関する補足的なパフォーマンス監視データが提供されます。  
   
-|パフォーマンス オブジェクト|注|  
+|パフォーマンス オブジェクト|メモ|  
 |------------------------|-----------|  
-|**.NET CLR データ** および **.NET CLR メモリ**|Web ポータルを使用して[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]パフォーマンス カウンター。 詳細については、MSDN の「Improving .NET Application Performance and Scalability」を参照してください。|  
+|**.NET CLR データ** および **.NET CLR メモリ**|Web ポータルでは、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] パフォーマンス カウンターが使用されます。 詳細については、MSDN の「Improving .NET Application Performance and Scalability」を参照してください。|  
 |**[処理]**|ReportingServicesService のインスタンスでプロセス ID ごとの稼働時間を追跡するための **Elapsed Time** および **ID Process** パフォーマンス カウンターを追加します。|  
   
 ## <a name="sharepoint-events"></a>SharePoint のイベント  
@@ -82,7 +82,7 @@ SQL Server 2016 Reporting Services またはそれ以降 (SSRS) は、次のパ�
  [MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  レポート サーバー Web サービスで使用するパフォーマンス カウンターについて説明します。  
   
- [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  レポート サーバー Windows サービスで使用するパフォーマンス カウンターについて説明します。  
   
  [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  

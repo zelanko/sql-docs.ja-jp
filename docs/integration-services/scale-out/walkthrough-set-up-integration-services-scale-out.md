@@ -1,21 +1,21 @@
 ---
-title: チュートリアル:SQL Server Integration Services Scale Out を設定する | Microsoft Docs
+title: チュートリアル:SSIS Scale Out を設定する | Microsoft Docs
 description: この記事では、SSIS Scale Out のセットアップと構成について説明します
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896133"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488001"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
 
@@ -43,7 +43,7 @@ ms.locfileid: "67896133"
 
 * [Scale Out Worker を有効にする](#EnableWorker)
 
-## <a name="InstallMaster"></a> Scale Out Master をインストールする
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> Scale Out Master をインストールする
 
 Scale Out Master をセットアップするには、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をセットアップするときに、データベース エンジン サービス、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]、および SSIS の Scale Out Master 機能をインストールする必要があります。 
 
@@ -66,9 +66,9 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
 
     ![マスターの構成](media/master-config.PNG "マスターの構成")
 
-4.  次のいずれかを行って、Scale Out Master と Scale Out Worker の間の通信の保護に使用する SSL 証明書を指定します。
-    * **[新しい SSL 証明書の作成]** をクリックして、セットアップ プロセスで既定の自己署名 SSL 証明書を作成します。  既定の証明書は、ローカル コンピューターの信頼されたルート証明機関にインストールされます。 この証明書で CN を指定できます。 マスター エンドポイントのホスト名は、CN に含める必要があります。 既定では、マスター ノードのコンピューター名と IP が含まれます。
-    * **[既存の SSL 証明書を使用する]** をクリックしてから **[参照]** をクリックして証明書を選択し、ローカル コンピューターで既存の SSL 証明書を選択します。 証明書のサムプリントがテキスト ボックスに表示されます。 **[Browse]** (参照) をクリックすると、ローカル コンピューターの信頼されたルート証明機関に格納されている証明書が表示されます。 選択する証明書はここに格納されている必要があります。       
+4.  次のいずれかを行って、Scale Out Master と Scale Out Worker の間の通信の保護に使用する TLS/SSL 証明書を指定します。
+    * **[新しい SSL 証明書の作成]** をクリックして、セットアップ プロセスで既定の自己署名 TLS/SSL 証明書を作成します。  既定の証明書は、ローカル コンピューターの信頼されたルート証明機関にインストールされます。 この証明書で CN を指定できます。 マスター エンドポイントのホスト名は、CN に含める必要があります。 既定では、マスター ノードのコンピューター名と IP が含まれます。
+    * **[既存の SSL 証明書を使用する]** をクリックしてから **[参照]** をクリックして証明書を選択し、ローカル コンピューターで既存の TLS/SSL 証明書を選択します。 証明書のサムプリントがテキスト ボックスに表示されます。 **[Browse]** (参照) をクリックすると、ローカル コンピューターの信頼されたルート証明機関に格納されている証明書が表示されます。 選択する証明書はここに格納されている必要があります。       
 
     ![マスターの構成 2](media/master-config-2.PNG "マスターの構成 2")
   
@@ -91,7 +91,7 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
     > [!NOTE]
     > Scale Out Master が Microsoft SQL Server データベース エンジンと共にインストールされず、そのデータベース エンジン インスタンスが名前付きインスタンスである場合は、インストール後に Scale Out Master サービス構成ファイルで `SqlServerName` を構成する必要があります。 詳細については、[Scale Out Master](integration-services-ssis-scale-out-master.md) に関するページを参照してください。
 
-## <a name="InstallWorker"></a> Scale Out Worker をインストールする
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> Scale Out Worker をインストールする
  
 Scale Out Worker をセットアップするには、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のセットアップで [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] とその Scale Out Worker 機能をインストールする必要があります。
 
@@ -118,14 +118,14 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
     > [!NOTE]
     > ここで Worker 構成を省略し、インストール後に [Scale Out Manager](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Worker を Scale Out Master に関連付けることができます。
 
-4. **複数コンピューター**環境の場合は、Scale Out Master の検証に使用されるクライアント SSL 証明書を指定します。 **1 台のコンピューター**環境では、クライアント SSL 証明書を指定する必要がありません。 
+4. **複数コンピューター**環境の場合は、Scale Out Master の検証に使用されるクライアント TLS/SSL 証明書を指定します。 **1 台のコンピューター**環境では、クライアント TLS/SSL 証明書を指定する必要がありません。 
   
-    **[Browse]** (参照) をクリックして、証明書ファイル (*.cer) を指定します。 既定の SSL 証明書を使用するには、Scale Out Master がインストールされているコンピューター上の `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` に置かれている `SSISScaleOutMaster.cer` ファイルを選択します。   
+    **[Browse]** (参照) をクリックして、証明書ファイル (*.cer) を指定します。 既定の TLS/SSL 証明書を使用するには、Scale Out Master がインストールされているコンピューター上の `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` に置かれている `SSISScaleOutMaster.cer` ファイルを選択します。   
 
     ![ワーカーの構成 2](media/worker-config-2.PNG "ワーカーの構成 2")
 
     > [!NOTE]
-    > Scale Out Master で使用される SSL 証明書が自己署名されている場合は、Scale Out Worker のコンピューターに対応するクライアント SSL 証明書をインストールする必要があります。 **[Integration Services スケール アウト ワーカーの構成]** ページでクライアント SSL 証明書のファイル パスを指定した場合、証明書は自動的にインストールされます。それ以外の場合は、後で証明書を手動でインストールする必要があります。 
+    > Scale Out Master で使用される TLS/SSL 証明書が自己署名されている場合は、Scale Out Worker のコンピューターに対応するクライアント TLS/SSL 証明書をインストールする必要があります。 **[Integration Services スケール アウト ワーカーの構成]** ページでクライアント TLS/SSL 証明書のファイル パスを指定した場合、証明書は自動的にインストールされます。それ以外の場合は、後で証明書を手動でインストールする必要があります。 
      
 5. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] インストール ウィザードを最後まで実行します。
 
@@ -142,20 +142,20 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
     -   `/ISWORKERSVCMASTER` (省略可)
     -   `/ISWORKERSVCCERT` (省略可)
  
-## <a name="InstallCert"></a> Scale Out Worker クライアント証明書をインストールする
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> Scale Out Worker クライアント証明書をインストールする
 
 Scale Out Worker のインストール時に、ワーカー証明書が自動的に作成され、コンピューターにインストールされます。 また、対応するクライアント証明書 SSISScaleOutWorker.cer が `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` にインストールされます。 Scale Out Master で Scale Out Worker を認証するには、このクライアント証明書を Scale Out Master のローカル コンピューターのルート ストアに追加する必要があります。
   
 ルート ストアにクライアント証明書を追加するには、.cer ファイルをダブルクリックし、[証明書] ダイアログ ボックスで **[証明書のインストール]** をクリックします。 **証明書のインポート ウィザード**が開きます。  
 
-## <a name="Firewall"></a> ファイアウォールのポートを開く
+## <a name="open-firewall-port"></a><a name="Firewall"></a> ファイアウォールのポートを開く
 
 Scale Out Master コンピューターの Windows ファイアウォールで、Scale Out Master のインストール時に指定したポートと、SQL Server のポート (既定では 1433) を開きます。
 
 > [!Note]
 > ファイアウォールのポートを開いた後に、Scale Out Worker サービスを再開する必要もあります。
     
-## <a name="Start"></a> SQL Server Scale Out Master および Worker サービスを開始する
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> SQL Server Scale Out Master および Worker サービスを開始する
 
 インストール時にサービスのスタートアップの種類を **[自動]** に設定していない場合は、次のサービスを開始してください。
 
@@ -163,18 +163,18 @@ Scale Out Master コンピューターの Windows ファイアウォールで、
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Scale Out Master を有効にする
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> Scale Out Master を有効にする
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、 **[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** をクリックします。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、 **[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** を選択します。
 
 カタログの作成後は、[[Scale Out Manager]](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Master を有効にすることができます。
 
-## <a name="EnableAuth"></a> SQL Server 認証モードを有効にする
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> SQL Server 認証モードを有効にする
 データベース エンジンをインストールするときに [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 認証を有効にしなかった場合は、SSISDB カタログをホストする [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] インスタンスで SQL Server 認証モードを有効にします。 
 
 SQL Server 認証を無効にすると、パッケージの実行はブロックされません。 ただし、実行ログを SSISDB データベースに書き込むことはできません。
 
-## <a name="EnableWorker"></a> Scale Out Worker を有効にする
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> Scale Out Worker を有効にする
 
 Scale Out Worker は [Scale Out Manager](integration-services-ssis-scale-out-manager.md) (グラフィカル ユーザー インターフェイスを利用可能) またはストアド プロシージャを使用して有効にすることができます。
 
@@ -196,5 +196,5 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 -   [Integration Services (SSIS) Scale Out でパッケージを実行する](run-packages-in-integration-services-ssis-scale-out.md)

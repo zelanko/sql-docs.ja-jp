@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindValue |Microsoft Docs'
+title: PDOStatement::bindValue | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: adb07064c6252978b343415fc1758c0b2f5da5f5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993124"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921013"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ $*data_type*: PDO::PARAM_* 定数で表される省略可能な (整数) デー�
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   

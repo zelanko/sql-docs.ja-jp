@@ -1,5 +1,5 @@
 ---
-title: コレクション (ADO MD) の配置 |Microsoft Docs
+title: 位置コレクション (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,33 +15,33 @@ f1_keywords:
 helpviewer_keywords:
 - Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28d0305daa755a501ff1214103b77a94bccff7ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949219"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765023"
 ---
 # <a name="positions-collection-ado-md"></a>Positions コレクション (ADO MD)
-含まれています、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸の位置を定義するオブジェクト。  
+軸上の点を定義する[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- **位置**は、標準の ADO のコレクションです。 プロパティとメソッドのコレクションでは、次の操作を実行できます。  
+## <a name="remarks"></a>Remarks  
+ **位置**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   
--   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  
   
--   既定値は、コレクションからオブジェクトを返す[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   既定の[Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクションからオブジェクトを返します。  
   
--   コレクション内のプロバイダーからオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダーからコレクション内のオブジェクトを更新します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [軸オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Position オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)

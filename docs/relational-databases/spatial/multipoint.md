@@ -12,20 +12,20 @@ ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b045ca8fd9d93ab2c088d898bd86fafe7acfc60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5551c6547fd93d0d6dce0565e152ba65650b6be7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640387"
 ---
 # <a name="multipoint"></a>MultiPoint
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **MultiPoint** は、0 個以上のポイントのコレクションです。 **MultiPoint** インスタンスの境界は空になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
-### <a name="example-a"></a>例 A。
+### <a name="example-a"></a>例 A.
 次の例では、SRID が 23 で、ポイントが 2 つある (1 つは座標 (2,3) のポイントで、もう 1 つは座標 (7,8) で Z が 9.5 のポイント) `geometry MultiPoint` インスタンスを作成します。  
   
 ```sql  

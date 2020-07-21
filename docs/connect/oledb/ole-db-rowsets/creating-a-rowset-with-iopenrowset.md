@@ -1,6 +1,6 @@
 ---
-title: IOpenRowset | を使用した行セットの作成Microsoft Docs
-description: SQL Server 用の OLE DB Driver の IOpenRowset インターフェイスを使用した行セットの作成
+title: IOpenRowset を使用した行セットの作成 | Microsoft Docs
+description: OLE DB Driver for SQL Server の IOpenRowset インターフェイスで行セットを作成する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994311"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset を使用した行セットの作成
@@ -27,7 +27,7 @@ ms.locfileid: "67994311"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server は、次の制限付きの**IOpenRowset:: OpenRowset**メソッドをサポートしています。  
+  OLE DB Driver for SQL Server では、**IOpenRowset::OpenRowset** メソッドをサポートしますが、次の制限があります。  
   
 -   *pTableID* パラメーターが指すデータベース ID (DBID) 構造体に、ベース テーブルまたはビューを指定する必要があります。  
   

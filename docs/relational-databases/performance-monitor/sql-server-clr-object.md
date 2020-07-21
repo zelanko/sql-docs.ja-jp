@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 91d3a7b23602b631d51904fa5e2b68821725d77e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9936cf11b0b8a71989f41cf6e7834bfe845cf7ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656276"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server: CLR オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SQLServer:CLR** オブジェクトには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での CLR (共通言語ランタイム) の実行を監視するカウンターが用意されています。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  **SQLServer:CLR** オブジェクトには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での CLR (共通言語ランタイム) の実行を監視するためのカウンターが用意されています。  
   
- 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** カウンターを示します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** カウンターについて説明します。  
   
-|CLR カウンター|[説明]|  
+|CLR カウンター|説明|  
 |------------------|-----------------|  
 |**CLR Execution**|CLR での総実行時間 (ミリ秒)|  
   

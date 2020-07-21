@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: この記事では、Linux に SQL Server ツールをインストールする方法について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085721"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897336"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux に SQL Server コマンドライン ツール sqlcmd および bcp をインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 次の手順で、コマンドライン ツール、Microsoft ODBC ドライバー、およびそれらの依存関係をインストールします。 **mssql-tools** パッケージには次のものが含まれます。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68085721"
 
 この記事では、コマンドライン ツールをインストールする方法について説明します。 **sqlcmd** または **bcp** の使用方法の例を参照するには、トピックの最後にある[リンク](#next-steps)をご覧ください。
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7 にツールをインストールする
+## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>RHEL 8 にツールをインストールする
 
 次の手順を使用して、Red Hat Enterprise Linux に **mssql-tools** をインストールします。 
 
@@ -49,7 +49,7 @@ ms.locfileid: "68085721"
 1. Microsoft Red Hat リポジトリ構成ファイルをダウンロードします。
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. スーパーユーザー モードを終了します。
@@ -92,9 +92,12 @@ ms.locfileid: "68085721"
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Ubuntu 16.04 にツールをインストールする
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Ubuntu 16.04 にツールをインストールする
 
-次の手順を使用して、Ubuntu に **mssql-tools** をインストールします。 
+次の手順を使用して、Ubuntu に **mssql-tools** をインストールします。
+
+> [!NOTE]
+> Ubuntu 18.04 は SQL Server 2019 CU3 以降でサポートされています。 Ubuntu 18.04 を使用している場合は、リポジトリのパスを `/ubuntu/16.04` から `/ubuntu/18.04` に変更します。
 
 1. パブリック リポジトリの GPG キーをインポートします。
 
@@ -137,7 +140,7 @@ ms.locfileid: "68085721"
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>SLES 12 にツールをインストールする
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>SLES 12 にツールをインストールする
 
 次の手順を使用して、SUSE Linux Enterprise Server に **mssql-tools** をインストールします。 
 
@@ -176,17 +179,17 @@ ms.locfileid: "68085721"
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>macOS にツールをインストールする
+## <a name="install-tools-on-macos"></a><a id="macos"></a>macOS にツールをインストールする
 
 **sqlcmd** と **bcp** のプレビューが macOS で使用できるようになりました。 詳しくは、[お知らせ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)をご覧ください。
 
 " *[Homebrew](https://brew.sh) をインストールします (まだインストールしていない場合)。* "
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Mac El Capitan および Sierra のツールをインストールするには、次のコマンドを使用します。
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -195,9 +198,9 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
-SQL Server コマンドライン ツールは、Docker イメージに含まれています。 対話型のコマンド プロンプトを使用してイメージにアタッチすると、ツールをローカルで実行できます。
+[Docker コンテナー内で SQL Server を実行する](quickstart-install-connect-docker.md)場合、SQL Server のコマンドライン ツールは SQL Server Linux コンテナー イメージに既に含まれています。 対話型の Bash シェルで実行中のコンテナーにアタッチする場合は、ツールをローカルで実行できます。
 
 ## <a name="offline-installation"></a>オフライン インストール
 
@@ -215,11 +218,11 @@ SQL Server コマンドライン ツールは、Docker イメージに含まれ�
 
    | Linux ディストリビューション | ODBC パッケージの場所 |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
-1. **ダウンロードしたパッケージを Linux マシンに移動します**。 別のマシンを使用してパッケージをダウンロードした場合、パッケージを Linux マシンに移動する方法の 1 つは **scp** コマンドの使用です。
+1. **ダウンロードしたパッケージを Linux マシンに移動します**。 別のコンピューターを使用してパッケージをダウンロードした場合、パッケージをお使いの Linux コンピューターに移動する 1 つの方法は **scp** コマンドを使用することです。
 
 1. **パッケージをインストールします**。**mssql-tools** および **msodbc** パッケージをインストールします。 依存関係のエラーが発生した場合は無視して次の手順に進みます。
 
@@ -229,7 +232,7 @@ SQL Server コマンドライン ツールは、Docker イメージに含まれ�
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **不足している依存関係を解決します**。この時点で、依存関係が不足している可能性があります。 そうでない場合は、この手順は省略します。 場合によっては、それらの依存関係を手動で見つけてインストールする必要があります。
+1. **不足している依存関係を解決します**。この時点で、依存関係が不足している場合があります。 そうでない場合は、この手順は省略できます。 場合によっては、それらの依存関係を手動で見つけてインストールする必要があります。
 
     RPM パッケージでは、次のコマンドを使用して必要な依存関係を調べることができます。
 
@@ -254,7 +257,7 @@ SQL Server コマンドライン ツールは、Docker イメージに含まれ�
     dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 **sqlcmd** を使用して SQL Server に接続してデータベースを作成する方法の例については、次のクイックスタートのいずれかをご覧ください。
 

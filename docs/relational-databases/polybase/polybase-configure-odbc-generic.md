@@ -1,95 +1,111 @@
 ---
-title: ODBC ジェネリック型の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:ODBC ジェネリック型 - PolyBase
+description: SQL Server で PolyBase を使用すると、ODBC コネクタから互換性のあるデータ ソースに接続できます。 ODBC ドライバーをインストールし、外部テーブルを作成します。
+ms.date: 02/19/2020
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79d089282cdf243768138ea972f7d817534bf386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab118c18b2656701470a22b6987a659b45f2fdc7
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062313"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406115"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server 上の外部データにアクセスするための PolyBase の構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 2019 で PolyBase を使用すると、ODBC コネクタから ODBC と互換性のあるデータ ソースに接続できます。 
+SQL Server 2019 で PolyBase を使用すると、ODBC コネクタから ODBC と互換性のあるデータ ソースに接続できます。
 
-## <a name="prerequisites"></a>Prerequisites
+この記事では、ODBC ドライバーの使用例をいくつか示します。 特定の例については、ODBC プロバイダーにお問い合わせください。 適切な接続文字列のオプションを決定するには、データ ソースの ODBC ドライバーに関するドキュメントを参照してください。 この記事の例は、特定の ODBC ドライバーには適用されない場合があります。
 
-"=" 機能は Windows 上の SQL Server でのみ機能することに注意してください。 
+## <a name="prerequisites"></a>前提条件
 
-PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。
+>[!NOTE]
+>この機能を使用するには、SQL Server on Windows が必要です。
 
- データベース スコープ資格情報より前に、[マスター キー](../../t-sql/statements/create-master-key-transact-sql.md)を作成しておく必要があります。 
+* [PolyBase のインストール](polybase-installation.md)。
 
-まず、それぞれの PolyBase ノードで接続するデータ ソースの ODBC ドライバーをダウンロードしてインストールします。 ドライバーが適切にインストールされたら、[ODBC データ ソースの管理者] からドライバーを表示してテストできます。
+* データベース スコープ資格情報より前に、[マスター キー](../../t-sql/statements/create-master-key-transact-sql.md)を作成しておく必要があります。
+
+## <a name="install-the-odbc-driver"></a>ODBC ドライバーをインストールする
+
+まず、各 PolyBase ノードで、接続するデータ ソースの ODBC ドライバーをダウンロードしてインストールします。 ドライバーが適切にインストールされたら、 **[ODBC データ ソースの管理者]** からドライバーを表示してテストできます。
 
 ![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-> **重要:**
-> 
-> クエリのパフォーマンスを向上させるために、ドライバーで接続プールを有効にしていることを確認します。 この操作は [ODBC データ ソースの管理者] から実現できます。
-> 
-> **注**
-> 
-> ドライバーの名前 (上記の囲まれた例) は、外部データ ソースの作成時 (以下の手順 3) に指定する必要がります。
+上の例で、赤色の円で囲んでいるのがドライバーの名前です。 外部データ ソースを作成するときに、この名前を使用します。
 
-## <a name="create-an-external-table"></a>外部テーブルの作成
+> [!IMPORTANT]
+> クエリのパフォーマンスを向上させるために、接続プールを有効にします。 この操作は、 **[ODBC データ ソースの管理者]** から実行できます。
+
+## <a name="create-an-external-table"></a>外部テーブルを作成する
 
 ODBC データ ソースのデータに対してクエリを実行するには、外部テーブルを作成して外部データを参照する必要があります。 このセクションでは、外部テーブルを作成するサンプル コードを示します。
 
 このセクションでは以下の Transact-SQL コマンドが使用されます。
 
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+* [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. ODBC ソースにアクセスするために、データベース スコープ資格情報を作成します。
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    ```
+
+    たとえば、次の例では、`username` という ID と複雑なパスワードを使用して、`credential_name` という名前の資格情報を作成します。
+
+    ```sql
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'BycA4ZjrE#*2W%!';
     ```
 
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */  
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    CREATE EXTERNAL DATA SOURCE <external_data_source_name>
+    WITH ( LOCATION = 'odbc://<ODBC server address>[:<port>]',
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_nam );
+    -- PUSHDOWN = [ON] | OFF,
+    CREDENTIAL = <credential_name> );
+    ```
+
+    次の例では、以下の条件で外部データ ソースを作成します。
+    * `external_data_source_name` という名前
+    * ODBC `SERVERNAME` およびポート `4444`に配置する
+    * `CData ODBC Driver For SAP 2015` に接続する - これは、「[ODBC ドライバーをインストールする](#install-the-odbc-driver)」で作成したドライバーです。
+    * `ServerNode``sap_server_node` のポート `5555`
+    * サーバーへのプッシュ ダウンを処理できるように構成する (`PUSHDOWN = ON`)
+    * 資格情報 `credential_name` を使用する
+
+    ```sql
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH ( LOCATION = 'odbc://SERVERNAME:4444',
+    CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
+    ServerNode = sap_server_node:5555',
+    PUSHDOWN = ON,
+    CREDENTIAL = credential_name );
     ```
 
 1. **省略可能:** 外部テーブルの統計を作成します。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    We recommend creating statistics on external table columns especially the ones used for joins, filters and aggregates,for optimal query performance.
+    クエリのパフォーマンスを最適化するには、外部テーブルの列、特に結合、フィルター、集計に使用される列に統計を作成することをお勧めします。
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
     ```
 
->[!IMPORTANT] 
->外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。 
+>[!IMPORTANT]
+>外部データ ソースを作成したら、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

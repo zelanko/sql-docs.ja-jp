@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 274eabcf6db0902f18bc8d6348e9b5e5a2314d12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706566"
 ---
 # <a name="compound-operators-transact-sql"></a>複合演算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   複合演算子では、いくつかの演算を実行し、元の値に演算の結果を設定します。 たとえば、変数 @x が 35 である場合、@x += 2 は @x の元の値を取得し、2 を加算して、@x にその新しい値 (37) を設定します。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、次の複合演算子があります。  
   
-|演算子|詳細情報へのリンク|操作|  
+|演算子|詳細情報へのリンク|アクション|  
 |--------------|------------------------------|------------|  
 |+=|[+= &#40;加算代入&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|いくつかの数値を元の値に加算し、元の値に結果を設定します。|  
 |-=|[-= &#40;減算代入&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|いくつかの数値を元の値から減算し、元の値に結果を設定します。|  
@@ -54,10 +54,10 @@ expression operator expression
 ## <a name="result-types"></a>戻り値の型  
  優先順位が高い引数のデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  詳細については、それぞれの演算子に関するトピックを参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  複合演算の例を次に示します。  
   
 ```  

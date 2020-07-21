@@ -1,5 +1,5 @@
 ---
-title: レコード セットの境界 |Microsoft Docs
+title: Recordset | の境界Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925910"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761228"
 ---
 # <a name="boundaries-of-a-recordset"></a>レコードセットの境界
-**レコード セット**サポート、 **BOF**と**EOF**プロパティに、データセットの先頭と末尾をそれぞれ含めます。 考えることができます**BOF**と**EOF**先頭と末尾の位置「ファントム」のレコードとして、 **Recordset**します。 カウント**BOF**と**EOF**、サンプル**レコード セット**ようになりますようになりました。  
+**レコードセット**では、データセットの先頭と末尾を区切るために、 **BOF**プロパティと**EOF**プロパティがサポートされています。 **BOF**と**EOF**は、**レコードセット**の先頭と末尾に配置される "ファントム" レコードと考えることができます。 **BOF**と**EOF**をカウントすると、サンプル**レコードセット**は次のようになります。  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
 |BOF|||  
-|7|おじさん Bob の有機的な乾燥なし|30.0000|  
-|14|階層|23.2500|  
-|28|Rssle ザワークラウト|45.6000|  
-|51|りんご|53.0000|  
-|74|Longlife 階層|10.0000|  
+|7|あなた Bob's 有機理屈 Pears|30.0000|  
+|14|Tofu|23.2500|  
+|28|Rssle ラウト|45.6000|  
+|51|Manjimup 理屈リンゴ|53.0000|  
+|74|Longlife Tofu|10.0000|  
 |EOF|||  
   
- 過去の最後のレコードでは、カーソルが移動したときに**EOF**に設定されている**True**。 それ以外の値は**False**します。 カーソルが最初のレコードの前に移動したときに同様に、 **BOF**に設定されている**True**。 それ以外の値は**False**します。 これらのプロパティは、JScript コードを次に示すように、データセット内のレコードを列挙するためによく使用します。  
+ カーソルが最後のレコードを越えて移動すると、 **EOF**は**True**に設定されます。それ以外の場合、値は**False**です。 同様に、カーソルが最初のレコードの前に移動すると、 **BOF**は**True**に設定されます。それ以外の場合、値は**False**です。 これらのプロパティは、通常、次の JScript コードフラグメントに示すように、データセット内のレコードを列挙するために使用されます。  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -54,7 +54,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- 両方**BOF**と**EOF**は**True**、**レコード セット**オブジェクトは空です。 両方のプロパティになります**False**新しく開かれたが、空でないため**Recordset**オブジェクト。 使用することができます、 **BOF**と**EOF**プロパティかどうかをまとめて、**レコード セット**オブジェクトが空か、次の JScript コード フラグメントに示すとして。  
+ **BOF**と**EOF**の両方が**True**の場合、**レコードセット**オブジェクトは空になります。 新しく開いた、空でない**レコードセット**オブジェクトでは、両方のプロパティが**False**になります。 次の JScript コードフラグメントに示すように、 **BOF**プロパティと**EOF**プロパティを一緒に使用して、**レコードセット**オブジェクトが空であるかどうかを判断できます。  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  
@@ -67,6 +67,6 @@ else
 }  
 ```  
   
- このスキームでは、すべての種類のカーソル動作し、は、基になるプロバイダーに依存しません。 空かどうかを判断しようとした場合、**レコード セット**オブジェクトをチェックすることでその**RecordCount**プロパティの値がゼロ (0) か、適切なカーソルとプロバイダーを使用する際に対策を行う必要がありますが結果内のレコードの数を返すをサポートします。  
+ このスキームは、すべての種類のカーソルに対して機能し、基になるプロバイダーからは独立しています。 その**RecordCount**プロパティの値がゼロ (0) であるかどうかをチェックして、**レコードセット**オブジェクトの empを判別しようとする場合は、結果のレコード数の返却をサポートする適切なカーソルとプロバイダーを使用するための予防措置をとる必要があります。  
   
- 最後の残りのレコードを削除する場合、 **Recordset**オブジェクト、カーソルが不確定な状態のままにします。 **BOF**と**EOF**プロパティが残る可能性がある**False**現在のレコードの位置を変更しようとするまでは、プロバイダーによって異なります。 詳細については、次を参照してください。 [Delete メソッドを使用して削除すると、レコード](../../../ado/guide/data/deleting-records-using-the-delete-method.md)します。
+ **レコードセット**オブジェクト内の最後のレコードを削除すると、そのカーソルは不確定状態のままになります。 現在のレコードの位置を変更するには、プロバイダーに応じて、 **BOF**プロパティと**EOF**プロパティを**False**のままにします。 詳細については、「 [Delete メソッドを使用したレコードの削除](../../../ado/guide/data/deleting-records-using-the-delete-method.md)」を参照してください。

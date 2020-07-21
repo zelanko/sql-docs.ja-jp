@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Native Client, ODBC
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 570c0574357d9315f0e6b153f3eeabac79ec673b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90ab34064ec5114d352b73474afd6791e73f1f3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63055662"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011080"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
   ODBC は、リレーショナル データベースまたは索引順次アクセス方式 (ISAM) データベースのデータへのアクセスに使用するアプリケーション プログラミング インターフェイス (API) の標準的な定義です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と通信する C および C++ アプリケーションの作成に使用されるネイティブ API の 1 つとして、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを介して ODBC をサポートしています。  
@@ -38,15 +37,15 @@ ms.locfileid: "63055662"
   
 -   [SQL Server Native Client ODBC ドライバー アプリケーションの作成](creating-a-driver-application.md)  
   
--   [SQL Server と通信する&#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [ODBC&#41;&#40;SQL Server との通信](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [クエリの実行&#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
+-   [ODBC&#41;&#40;クエリの実行](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [結果の処理&#40;ODBC&#41;](../../native-client-odbc-results/processing-results-odbc.md)  
+-   [ODBC&#41;&#40;結果の処理](../../native-client-odbc-results/processing-results-odbc.md)  
   
--   [カーソルを使用して&#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [ODBC&#41;&#40;カーソルの使用](../../native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [トランザクションを実行する&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+-   [ODBC&#41;&#40;のトランザクションの実行](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
 -   [エラーとメッセージの処理](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -54,25 +53,25 @@ ms.locfileid: "63055662"
   
 -   [カタログ関数の使用](using-catalog-functions.md)  
   
--   [一括コピー操作を実行する&#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [ODBC&#41;&#40;の一括コピー操作の実行](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [text 列と image 列の管理](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
--   [ODBC ドライバー パフォーマンスのプロファイル](profiling-odbc-driver-performance.md)  
+-   [ODBC ドライバーのパフォーマンスのプロファイル](profiling-odbc-driver-performance.md)  
   
 -   [テーブル値パラメーター &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [日付と時刻の強化&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [ODBC&#41;&#40;の日付と時刻の改善](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [大きな CLR ユーザー定義型&#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
+-   [大きな CLR ユーザー定義型 &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
   
--   [FILESTREAM のサポート&#40;ODBC&#41;](filestream-support-odbc.md)  
+-   [FILESTREAM のサポート &#40;ODBC&#41;](filestream-support-odbc.md)  
   
--   [サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
+-   [クライアント接続 &#40;ODBC&#41; でのサービス プリンシパル名 &#40;SPNs&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [スパース列のサポート&#40;ODBC&#41;](sparse-columns-support-odbc.md)  
+-   [スパース列は &#40;ODBC&#41;をサポートしています](sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41;リファレンス](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+-   [SQL Server Native Client &#40;ODBC&#41; リファレンス](../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
 -   [ODBC の使用法に関するトピック](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   

@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5fc0adfec791294bb6c680dab94078b8a63ec07
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932333"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758688"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage イベント (ADO)
-**InfoMessage**中に警告が発生するたびにイベントが呼び出される、 **ConnectionEvent**操作。  
+**Connectionevent**操作中に警告が発生するたびに、 **infomessage**イベントが呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,17 +35,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>パラメーター  
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 このパラメーターには、返されるエラーが含まれています。 複数のエラーが返された場合は、列挙、**エラー**それらを検索するコレクション。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 このパラメーターには、返されたすべてのエラーが含まれます。 複数のエラーが返された場合は、**エラー**コレクションを列挙して検出します。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。 警告が発生した場合*adStatus*に設定されている**adStatusOK**と*pError*警告が含まれています。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。 警告が発生した場合、 *adstatus*は**adstatusok**に設定*され、* エラーメッセージには警告が含まれます。  
   
- このイベントから制御が戻る前に、このパラメーターを設定**adStatusUnwantedEvent**後続通知しないように設定します。  
+ このイベントが返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pConnection*  
- A[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 警告が発生した接続です。 開くときに警告が発生することがなど、**接続**オブジェクトまたはを実行する、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)で、**接続**します。  
+ [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトです。 警告が発生した接続。 たとえば、接続オブジェクトを開いたり、**接続**で[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を**実行したり**すると、警告が発生することがあります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

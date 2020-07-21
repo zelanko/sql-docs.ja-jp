@@ -1,5 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
+description: Service Broker について説明します。 これにより、どのように SQL Server データベース エンジンおよび Azure SQL Database Managed Instance でのメッセージングがネイティブにサポートされるかを説明します。
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - SQL Server Service Broker
 - Service Broker
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764044"
 ---
 # <a name="service-broker"></a>Service Broker
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) でのメッセージングとキューのネイティブ サポートが提供されています。 開発者は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントを使用して異種データベース間の通信を行う高度なアプリケーションを簡単に作成し、分散型で信頼できるアプリケーションをビルドすることができます。  
   
@@ -58,7 +59,7 @@ CREATE SERVICE ExpensesService
     ON QUEUE dbo.ExpenseQueue; 
 ```
 
-### <a name="sending-messages"></a>メッセージの送信
+### <a name="sending-messages"></a>メッセージを送信する
   
   メッセージは、[SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL ステートメントを使用してサービス間のメッセージ交換で送信されます。 メッセージ交換は、`BEGIN DIALOG` Transact-SQL ステートメントを使用してサービス間で確立される通信チャネルです。 
   
@@ -106,7 +107,7 @@ FROM ExpenseQueue;
 
 - インスタンス間の Service Broker はサポートされていません 
  - `sys.routes` - 前提条件: sys.routes からアドレスを選択してください。 すべてのルートでアドレスをローカルにする必要があります。 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md) をご覧ください。
- - `CREATE ROUTE` - `CREATE ROUTE` を `LOCAL` 以外の `ADDRESS` と共に使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
+ - `CREATE ROUTE` - `LOCAL` 以外の `ADDRESS` で `CREATE ROUTE` を使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
  - `ALTER ROUTE` では、`LOCAL` 以外の `ADDRESS` と共に `ALTER ROUTE` を使用することはできません。 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md) をご覧ください。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>メッセージを複数の対象サービスに送信可能 (マルチキャスト)  
@@ -122,4 +123,8 @@ FROM ExpenseQueue;
  詳細については、「 [Service Broker と Always On 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
   
+## <a name="next-steps"></a>次のステップ
+
+Service Broker の最も一般的な用途は、[イベント通知](../../relational-databases/service-broker/event-notifications.md)に使用することです。 [イベント通知を実装する](../../relational-databases/service-broker/implement-event-notifications.md)方法、[ダイアログ セキュリティを構成する](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)方法、[詳細情報](../../relational-databases/service-broker/get-information-about-event-notifications.md)を確認してください。 
+
 

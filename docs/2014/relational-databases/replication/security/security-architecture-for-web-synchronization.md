@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5feaaefb469e7ad1bdf25fe70c6cc6963e4418d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998240"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同期のセキュリティ アーキテクチャ
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用すると、Web 同期のセキュリティ設定をきめ細かく制御できます。 ここでは、Web 同期の構成に含めることができるすべてのコンポーネントを紹介し、コンポーネント間で行われる接続に関する情報を示します。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -33,7 +32,7 @@ ms.locfileid: "62959754"
   
 |アカウントの種類|アカウントを指定する場所|  
 |---------------------|------------------------------------|  
-|Windows ユーザー|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@job_login** の **@job_password** パラメーターと [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)パラメーター<br /><br /> レプリケーション管理オブジェクト (RMO): <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>プロパティ|  
+|Windows ユーザー|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ job_login**パラメーターと** \@ job_password**パラメーター。<br /><br /> レプリケーション管理オブジェクト (RMO): <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> の <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>プロパティ|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントの Windows サービス アカウント|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャー|  
 |スタンドアロンのアプリケーション|マージ エージェントは、アプリケーションを実行している Windows ユーザーのコンテキストで実行されます。|  
   
@@ -46,24 +45,24 @@ ms.locfileid: "62959754"
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
 |Windows 認証。|マージ エージェントは、マージ エージェント (A) に指定されている Windows ユーザーのコンテキストで接続します。|  
-|次のように指定する場合にのみ、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **0**の**SubscriberSecurityMode**します。|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-SubscriberLogin** および **-SubscriberLogin**|  
+|次のように指定する場合にのみ、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **SubscriberSecurityMode**に**0**を指定します。|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-SubscriberLogin** および **-SubscriberLogin**|  
   
 ## <a name="c-connection-to-an-outgoing-proxy-server"></a>C. 発信プロキシ サーバーへの接続  
  サブスクライバーの内部ネットワークへのアクセスを制限する発信プロキシ サーバーが存在する場合にのみ、この接続に Windows ユーザーを指定します。  
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
-|[Windows 認証]|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin%2A> 、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword%2A> 、および <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer%2A><br /><br /> マージ エージェントのコマンド ライン : **-InternetProxyLogin** 、 **-InternetProxyPassword** 、および **-InternetProxyServer**|  
+|Windows 認証|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin%2A> 、 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword%2A> 、および <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer%2A><br /><br /> マージ エージェントのコマンド ライン : **-InternetProxyLogin** 、 **-InternetProxyPassword** 、および **-InternetProxyServer**|  
   
 ## <a name="d-connection-to-iis"></a>D. IIS への接続  
  サブスクライバーに接続して変更をサブスクリプション データベースから抽出した後、マージ エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) への HTTPS 要求を作成し、データ変更を XML メッセージとしてアップロードします。 マージ エージェントには、IIS に対するログオンの権限が必要です。  
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
-|次のいずれかを指定する場合は、基本認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 値の**0**の、 ** @internet_security_mode **パラメーターの[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **0**の **- InternetSecurityMode**します。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@internet_login** の **@internet_password** パラメーターと [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)パラメーター<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-InternetLogin** と **-InternetPassword**|  
-|統合認証\*次のいずれかを指定した場合に使用されます。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 値の**1**の、 ** @internet_security_mode **パラメーターの[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **1**の **- InternetSecurityMode**します。|マージ エージェントは、マージ エージェント (A) に指定されている Windows ユーザーのコンテキストで接続します。|  
+|次のいずれかを指定する場合は、基本認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ internet_security_mode**パラメーターの値**0** 。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **-InternetSecurityMode**の値は**0**です。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ internet_login**パラメーターと** \@ internet_password**パラメーター。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-InternetLogin** と **-InternetPassword**|  
+|\*次のいずれかが指定されている場合は、統合認証が使用されます。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ internet_security_mode**パラメーターの値**1** 。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **-InternetSecurityMode**の値は**1**です。|マージ エージェントは、マージ エージェント (A) に指定されている Windows ユーザーのコンテキストで接続します。|  
   
- * 統合認証は、すべてのコンピューターが同じドメイン内または相互の信頼関係のある複数のドメインにある場合にのみ使用できます。  
+ * 統合認証は、すべてのコンピューターが同じドメイン内にある場合、または互いに信頼関係を持つ複数のドメイン内にある場合にのみ使用できます。  
   
 > [!NOTE]  
 >  統合認証を使用する場合は、委任が必要です。 サブスクライバーから IIS への接続には、基本認証と SSL を使用することをお勧めします。  
@@ -85,8 +84,8 @@ ms.locfileid: "62959754"
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
-|次のいずれかを指定する場合は、Windows 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 値の**1**の、 ** @publisher_security_mode **パラメーターの[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **1**の **-publishersecuritymode**します。|マージ エージェントは、IIS (D) への接続に指定されている Windows ユーザーのコンテキストでパブリッシャーに接続します。 パブリッシャーと IIS が異なるコンピューター上に存在し、接続 (D) に統合認証を使用する場合は、IIS を実行しているコンピューター上で Kerberos 委任を有効にする必要があります。 詳細については、Windows のマニュアルを参照してください。|  
-|以下のいずれかを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 値の**0**の、 ** @publisher_security_mode **パラメーターの[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **0**の **-publishersecuritymode**します。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@publisher_login** の **@publisher_password** パラメーターと [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)パラメーター<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-PublisherLogin** と **-PublisherPassword**|  
+|次のいずれかを指定する場合は、Windows 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ publisher_security_mode**パラメーターの値**1** 。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **-PublisherSecurityMode**の値は**1**です。|マージ エージェントは、IIS (D) への接続に指定されている Windows ユーザーのコンテキストでパブリッシャーに接続します。 パブリッシャーと IIS が異なるコンピューター上に存在し、接続 (D) に統合認証を使用する場合は、IIS を実行しているコンピューター上で Kerberos 委任を有効にする必要があります。 詳細については、Windows のマニュアルを参照してください。|  
+|以下のいずれかを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ publisher_security_mode**パラメーターの値**0** 。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **-PublisherSecurityMode**の値は**0**です。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ publisher_login**パラメーターと** \@ publisher_password**パラメーター。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-PublisherLogin** と **-PublisherPassword**|  
   
 ## <a name="f-connection-to-the-distributor"></a>F. ディストリビューターへの接続  
  IIS を実行しているコンピューター上でホストされるマージ レプリケーション競合回避モジュールもディストリビューターに接続します。 マージ レプリケーション競合回避モジュールは、Windows 認証または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のいずれかを使用してディストリビューターに接続します。 指定する Windows ユーザーまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインは、次の条件を満たしている必要があります。  
@@ -99,22 +98,22 @@ ms.locfileid: "62959754"
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
-|次のいずれかを指定する場合は、Windows 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 値の**1**の、 ** @distributor_security_mode **パラメーターの[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **1**の **-distributorsecuritymode**します。|マージ エージェントは、IIS (D) への接続に指定されている Windows ユーザーのコンテキストでディストリビューターに接続します。 ディストリビューターと IIS が異なるコンピューター上に存在し、接続 (D) に統合認証を使用する場合は、IIS を実行しているコンピューター上で Kerberos 委任を有効にする必要があります。 詳細については、Windows のマニュアルを参照してください。|  
-|以下のいずれかを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 値の**0**の、 ** @distributor_security_mode **パラメーターの[sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)します。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> を指定<br /><br /> マージ エージェントのコマンドライン: @property **0**の **-distributorsecuritymode**します。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@distributor_login** の **@distributor_password** パラメーターと [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)パラメーター<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-DistributorLogin** と **-DistributorPassword**|  
+|次のいずれかを指定する場合は、Windows 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ distributor_security_mode**パラメーターの値**1** 。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **-DistributorSecurityMode**の値は**1**です。|マージ エージェントは、IIS (D) への接続に指定されている Windows ユーザーのコンテキストでディストリビューターに接続します。 ディストリビューターと IIS が異なるコンピューター上に存在し、接続 (D) に統合認証を使用する場合は、IIS を実行しているコンピューター上で Kerberos 委任を有効にする必要があります。 詳細については、Windows のマニュアルを参照してください。|  
+|以下のいずれかを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用します。<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ distributor_security_mode**パラメーターの値**0** 。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> の値に <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A> を指定<br /><br /> マージエージェントコマンドライン: **-DistributorSecurityMode**の値は**0**です。|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)の** \@ distributor_login**パラメーターと** \@ distributor_password**パラメーター。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> と <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> マージ エージェントのコマンド ライン : **-DistributorLogin** と **-DistributorPassword**|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. FTP サーバーへの接続  
  スナップショットをサブスクライバーに適用する前に、IIS を実行しているコンピューターに、UNC の場所ではなく FTP サーバーからスナップショット ファイルをダウンロードする場合にのみ、この接続に Windows ユーザーを指定します。 詳細については、「[FTP によるスナップショットの転送](../transfer-snapshots-through-ftp.md)」を参照してください。  
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
-|[Windows 認証]|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@ftp_login** の **@ftp_password** パラメーターと [@ftp_password](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)パラメーター<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.Publication.FtpLogin%2A> と <xref:Microsoft.SqlServer.Replication.Publication.FtpPassword%2A>|  
+|Windows 認証|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)の** \@ ftp_login**パラメーターと** \@ ftp_password**パラメーター。<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.Publication.FtpLogin%2A> と <xref:Microsoft.SqlServer.Replication.Publication.FtpPassword%2A>|  
   
 ## <a name="h-access-to-the-snapshot-share"></a>H. スナップショット共有へのアクセス  
  スナップショット共有には、IIS を実行しているコンピューター上でホストされるマージ レプリケーション競合回避モジュールを使用してアクセスします。  
   
 |認証の種類|認証を指定する場所|  
 |----------------------------|-------------------------------------------|  
-|[Windows 認証]|マージ エージェントは、IIS (D) への接続に指定されている Windows ユーザーのコンテキストでスナップショット共有に接続します。 スナップショット共有と IIS が異なるコンピューター上に存在し、接続 (D) に統合認証を使用する場合は、IIS を実行しているコンピューター上で Kerberos 委任を有効にする必要があります。 詳細については、Windows のマニュアルを参照してください。|  
+|Windows 認証|マージ エージェントは、IIS (D) への接続に指定されている Windows ユーザーのコンテキストでスナップショット共有に接続します。 スナップショット共有と IIS が異なるコンピューター上に存在し、接続 (D) に統合認証を使用する場合は、IIS を実行しているコンピューター上で Kerberos 委任を有効にする必要があります。 詳細については、Windows のマニュアルを参照してください。|  
   
 ## <a name="i-application-pool-account-for-iis"></a>I. IIS のアプリケーション プール アカウント  
  このアカウントは、 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] の場合は IIS を実行しているコンピューター上で W3wp.exe プロセスを開始するために、また、 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]の場合は Dllhost.exe プロセスを開始するために使用します。 これらのプロセスによって、IIS を実行しているコンピューター上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナーやマージ レプリケーション競合回避モジュールなどのアプリケーションがホストされます。 このアカウントは、IIS を実行しているコンピューター上にある次のレプリケーション DLL に対して読み取りと実行の権限を持っている必要があります。  
@@ -135,7 +134,7 @@ ms.locfileid: "62959754"
 |---------------------|------------------------------------|  
 |必要な権限を持つ Windows ユーザー|インターネット インフォメーション サービス (IIS) マネージャー。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Configure Web Synchronization](../configure-web-synchronization.md)   
  [Replication Merge Agent](../agents/replication-merge-agent.md)  
   

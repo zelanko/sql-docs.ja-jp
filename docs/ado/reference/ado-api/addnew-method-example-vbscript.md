@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd5d6a54bd36b62c9aec6492a66e4a451ead25f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921280"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760618"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew メソッドの例 (VBScript)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
+この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  
   
- 次の例を Active Server Page (ASP) で使用します。 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AddNewVBS.asp**します。 結果は、任意のクライアント ブラウザーで表示できます。  
+ Active Server ページ (ASP) で次の例を使用します。 [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewvbs. asp**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
- 例を実行するには、HTML フォームに新しいレコードを追加します。 クリックして**新規追加**します。 参照してください、[削除メソッドの例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)不要なレコードを削除します。  
+ この例を実行するには、HTML フォームに新しいレコードを追加します。 [**新規追加**] をクリックします。 不要なレコードを削除するには、 [Delete メソッドの例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)を参照してください。  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -212,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

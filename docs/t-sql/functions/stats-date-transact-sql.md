@@ -19,18 +19,18 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a79134e8d872501dd78f20c79bf7905f138c0ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22055e7e653ffd9be74ddc7c3c381af5de44f870
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906942"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85996094"
 ---
-# <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   テーブルまたはインデックス付きビューの統計の最終更新日を返します。  
   
@@ -54,17 +54,17 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>戻り値の型  
  成功時に **datetime** を返します。 統計 BLOB が作成されていない場合は、**NULL** を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。  
  
  統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できません。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
  
- 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。
+ 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップか、テーブルまたはインデックス付きビューのメタデータを表示する権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>A. テーブルの統計の最終更新日を返す  
  次の例では、`Person.Address` テーブルの各統計オブジェクトの最終更新日を返します。  
@@ -79,7 +79,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
+ 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -91,7 +91,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>B. 指定された統計の最終更新日時を確認する  
  次の例では、DimCustomer テーブルの LastName 列に統計を作成します。 その後、統計情報の日付を表示するクエリを実行します。 さらに、統計を更新し、もう一度クエリを実行して更新された日付を表示します。  
@@ -140,7 +140,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
+ 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -153,7 +153,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [統計](../../relational-databases/statistics/statistics.md)    

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b70fdfc02e876310841bde3646aab9620c56951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082506"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896579"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメント - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   NOREWIND オプションで実行された BACKUP または RESTORE ステートメントにより、開かれたままとなっていた特定のテープ デバイスを巻き戻して閉じます。 このコマンドはテープ デバイスに対してのみサポートされています。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68082506"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RESTORE REWINDONLY   
 FROM <backup_device> [ ,...n ]  
@@ -91,7 +91,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="general-remarks"></a>全般的な解説  
  RESTORE REWINDONLY は、RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND の代わりに使用できます。 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューを使用すると、開いているテープ ドライブの一覧を確認できます。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  すべてのユーザーが RESTORE REWINDONLY を使用できます。  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.erroroutput.f1
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30f3ba05726b038b802c704df855e9896da082c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9016a943848247ce7c9ba81d70cf542b470b6e2a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034187"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291964"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>[SAP BW 変換先エディター] ([エラー出力] ページ)
 
@@ -56,7 +56,7 @@ ms.locfileid: "68034187"
  **切り捨て**  
  このオプションは使用されません。  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  

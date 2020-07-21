@@ -1,5 +1,5 @@
 ---
-title: セットを結果の特性の決定 (ODBC) |Microsoft Docs
+title: 結果セットの特性 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,23 +16,21 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18619fd1603cdfc939116158d1c6a4d451999591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: ec78b6708feae1b8eea6394705516577772026ae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112039"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002874"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>結果セットの特性の決定 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   メタデータは、他のデータを説明するデータです。 たとえば、結果セットのメタデータは、結果セットに含まれる列数、これらの列のデータ型、名前、有効桁数、NULL 値の許容属性など、結果セットの特性を説明します。  
   
- ODBC は、ODBC のカタログ API 関数を使用してアプリケーションにメタデータを渡します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、多くの ODBC API カタログ関数を実装を対応する呼び出しとして[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログ プロシージャ。  
+ ODBC は、ODBC のカタログ API 関数を使用してアプリケーションにメタデータを渡します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーでは、対応するカタログプロシージャへの呼び出しとして、多くの ODBC API カタログ関数が実装されて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。  
   
  アプリケーションは、ほとんどの結果セット操作にメタデータを必要とします。 たとえば、列のデータ型を使用して、列にバインドされている変数の種類を判断します。 または、文字型の列のバイト長を使用して、その列のデータの表示に必要な領域サイズを判断します。 アプリケーションが列のメタデータを判断する方法は、アプリケーションの種類によって異なります。  
   
@@ -42,17 +40,17 @@ ms.locfileid: "68112039"
   
  アプリケーションは次の関数を呼び出すことで、結果セットの特性を判断できます。  
   
--   [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)要求数の列を返すかを判断します。  
+-   要求から返される列の数を確認するには、 [Sqlnumresultcols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)を指定します。  
   
--   [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)または[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)に結果セット内の列について説明します。  
+-   [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)または[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)を実行して、結果セット内の列を記述します。  
   
- 適切にデザインされたアプリケーションを作成する場合、結果セットの状態が不明であることが前提となります。またアプリケーションでは、これらの関数により返される情報を使用して結果セットの列をバインドします。 アプリケーションは、ステートメントが準備または実行されると、いつでもこれらの関数を呼び出すことができます。 ただし、最適なパフォーマンス、アプリケーションを呼び出す必要があります**SQLColAttribute**、 **SQLDescribeCol**、および**SQLNumResultCols**ステートメントの実行後。  
+ 適切にデザインされたアプリケーションを作成する場合、結果セットの状態が不明であることが前提となります。またアプリケーションでは、これらの関数により返される情報を使用して結果セットの列をバインドします。 アプリケーションは、ステートメントが準備または実行されると、いつでもこれらの関数を呼び出すことができます。 ただし、最適なパフォーマンスを得るには、ステートメントの実行後に、アプリケーションで**Sqlcolattribute**、 **SQLDescribeCol**、および**sqlnumresultcols**を呼び出す必要があります。  
   
  メタデータを取得するための呼び出しを複数同時に実行できます。 ODBC カタログ API 実装の基盤であるシステム カタログ プロシージャは、ODBC ドライバーが静的サーバー カーソルを使用しているときでも ODBC ドライバーから呼び出すことができます。 このため、アプリケーションは ODBC カタログ関数の複数の呼び出しを同時に処理できます。  
   
  アプリケーションが特定のメタデータのセットを複数回使用する場合、関数からの情報を最初に取得した時点でプライベート変数に格納すると、メタデータの利点を活用することができます。 このような操作を行うと、同じ情報を取得するために、ドライバーとサーバー間のラウンドトリップが必要になる ODBC カタログ関数の呼び出しを後で実行する必要がなくなります。  
   
-## <a name="see-also"></a>関連項目  
- [結果の処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

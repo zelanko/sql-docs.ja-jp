@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15643a1f3980f6ccf66539fe447aa195b3d7012a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922953"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960392"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>タブ補完の管理 (SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインには、Windows PowerShell のタブ補完を制御するための 3 つの変数 (`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems`、および `$SqlServerIncludeSystemObjects`) が追加されました。 入力された文字列で名前が始まるアイテムの一覧を返すタブ補完によって、入力の手間を削減することができます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62922953"
  **$SqlServerMaximumChildItems =** *n*  
  **Get-ChildItem**で表示されるオブジェクトの最大数を指定します。 **n** を超える数のオブジェクトが含まれるパス ノードで *Get-ChildItem* を実行した場合、一覧が *n*件までで切り捨てられます。 *n* は整数です。 既定の設定は 0 で、これは一覧表示されるオブジェクトの数に制限がないことを示します。  
   
- **$SqlServerIncludeSystemObjects =** { **$True** |  **$False** }  
+ **$SqlServerIncludeSystemObjects =** { **$True** | **$False** }  
  **$True**の場合、タブ補完と **Get-ChildItem**でシステム オブジェクトが表示されます。 **$False**の場合、システム オブジェクトは表示されません。 既定の設定は **$False**です。  
   
 ## <a name="set-the-sql-server-tab-completion-variables"></a>SQL Server のタブ補完変数の設定  
@@ -42,7 +41,7 @@ ms.locfileid: "62922953"
 ### <a name="example-powershell"></a>例 (PowerShell)  
  次の例では、3 つすべての変数を設定し、設定を一覧表示します。  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
@@ -51,5 +50,3 @@ dir variable:sqlserver*
   
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

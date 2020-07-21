@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 950dbb7a082af95abfe79e48e18e2cb894e71173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63246238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058737"
 ---
-# <a name="sql-server-agent-properties-advanced-page"></a>[SQL Server エージェントのプロパティ] \([詳細設定] ページ)
-  このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの詳細プロパティを表示および変更できます。  
+# <a name="sql-server-agent-properties-advanced-page"></a>SQL Server エージェントのプロパティ ([詳細設定] ページ)
+  このページを使用すると、エージェントサービスの詳細プロパティを表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[SQL Server イベントの転送]**  
  このカテゴリのオプションを使用して、イベントの転送をアクティブにしたり、構成したりします。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "63246238"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが CPU のアイドル スケジュールのジョブを実行する前に、CPU の平均使用量が指定されたレベルを下回っていなければならない時間です。  
   
 ## <a name="see-also"></a>参照  
- [作成し、スケジュールをジョブにアタッチ](create-and-attach-schedules-to-jobs.md)   
+ [スケジュールを作成してジョブにアタッチする](create-and-attach-schedules-to-jobs.md)   
  [イベントの管理](manage-events.md)  
   
   

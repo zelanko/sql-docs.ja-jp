@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_document_types (TRANSACT-SQL) |Microsoft Docs
+title: fulltext_document_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,26 +20,26 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 454b1460b0f1db0da7298e640b7b4cf081bb90b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790543"
 ---
-# <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  フルテキスト インデックス作成操作に使用される各ドキュメントの種類の行を返します。 インスタンスに登録されている IFilter インターフェイスが各行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  フルテキストインデックス作成操作で使用できるドキュメントの種類ごとに1行の値を返します。 各行は、のインスタンスに登録されている IFilter インターフェイスを表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**document_type**|**sysname**|サポートされているドキュメントの種類のファイル拡張子。<br /><br /> この値は、型の列のフルテキスト インデックスの作成中に使用されるフィルターを識別するために使用できます**varbinary (max)** または**イメージ**します。|  
+|**document_type**|**sysname**|サポートされているドキュメントの種類のファイル拡張子。<br /><br /> この値は、 **varbinary (max)** 型または**image**型の列のフルテキストインデックス作成時に使用されるフィルターを識別するために使用できます。|  
 |**class_id**|**uniqueidentifier**|ファイル拡張子をサポートする IFilter クラスの GUID。|  
-|**path**|**nvarchar(260)**|IFilter DLL へのパス。 パスが表示のメンバーにのみ、 **serveradmin**固定サーバー ロール。|  
+|**path**|**nvarchar(260)**|IFilter DLL へのパス。 このパスは、 **serveradmin**固定サーバーロールのメンバーだけに表示されます。|  
 |**version**|**sysname**|IFilter DLL のバージョン。|  
-|**manufacturer**|**sysname**|IFilter 製造元の名前です。<br /><br /> 注:として、製造元のドキュメントのみ[!INCLUDE[msCoName](../../includes/msconame-md.md)]ではサポートされている[!INCLUDE[ssSDS](../../includes/sssds-md.md)]します。|  
+|**manufacturer**|**sysname**|IFilter 製造元の名前。<br /><br /> 注: でサポートされているのは製造元のドキュメントのみ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

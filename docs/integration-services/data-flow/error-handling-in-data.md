@@ -20,14 +20,14 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f2ed70f204fd0a70e6fa123ace6dd11d47414832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215769"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469327"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
 
@@ -62,7 +62,7 @@ ms.locfileid: "68215769"
   
  エラー出力の操作の詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **入力または出力**  
  出力の名前を表示します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68215769"
   
  **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -98,7 +98,7 @@ ms.locfileid: "68215769"
 ## <a name="select-an-error-handling-option"></a>エラー処理オプションの選択  
  変換元、変換、および変換先によるエラーと切り捨ての処理方法を構成できます。 次の表では、このオプションについて説明します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |エラー コンポーネント|エラーまたは切り捨てが発生すると、データ フロー タスクは失敗します。 [失敗] は、エラーおよび切り捨ての既定のオプションです。|  
 |エラーを無視する|エラーまたは切り捨ては無視され、データ行は変換または変換元の出力に送られます。|  
@@ -144,7 +144,7 @@ ms.locfileid: "68215769"
   
     -   追加列にエラーの説明を含めるには、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出す 1 行のスクリプトを使用します。  
   
-    -   追加列に列名を含めるには、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出す 1 行のスクリプトを使用します。  
+    -   追加列に列名を含めるには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) メソッドを呼び出す 1 行のスクリプトを使用します。  
   
      スクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できます。 通常、このスクリプト コンポーネントは、エラー行が出力先に書き込まれる直前に配置します。 これにより、スクリプトは、書き込まれたエラー行についてのみ説明を参照します。 データ フロー内のエラー セグメントによってエラーの一部が修正されることがあり、こうした行は、エラーの出力先には書き込まれません。  
 
@@ -152,7 +152,7 @@ ms.locfileid: "68215769"
  [データ フロー](../../integration-services/data-flow/data-flow.md)   
  [変換を使用してデータを変換する](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)   
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   

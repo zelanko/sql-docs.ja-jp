@@ -1,10 +1,9 @@
 ---
-title: メニューとショートカット キーのカスタマイズ | Microsoft Docs
-ms.custom: ''
+title: メニューとショートカット キーのカスタマイズ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,16 +19,18 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266930"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243918"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>メニューとショートカット キーのカスタマイズ
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-キーボード アクセス キーを使用すると、Alt キーを押しながら  *\<1文字>* を押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
+キーボード アクセス キーを使用すると、Alt キーを押しながら *\<1文字>* を押すことでメニュー コマンドやボタンを選択できます。 たとえば、 **[編集]** メニューを開くには、ALT + E キーを押します。 ツール バーのボタン、メニュー、メニュー コマンドの並べ替えや変更を行うには、 **[ユーザー設定]** ダイアログ ボックスを使用します。 マウスを使用して設定を変更する方法と、キーボードだけを使用して設定を変更する方法を以下に示します。  
   
 Ctrl キーを使用したストアド プロシージャのキーボード ショートカット キーは、 **[ツール]** メニューから開く **[オプション]** / **[キーボード]** ダイアログ ボックスを使用します。  
   
@@ -106,7 +107,7 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
   
 4.  Tab キーを使用して **[コントロール]** 一覧に移動し、方向キーを使用して、変更するコマンドを選択します。  
   
-5.  **Alt + M** キーを押して、 **[選択したボタンの編集]** を選択します。  
+5.  **Alt + M**キーを押して、 **[選択したボタンの編集]** を選択します。  
   
 6.  Tab キーを使用してショートカット メニューの **[名前]** ボックスに移動し、ツール バー ボタンの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
@@ -128,7 +129,7 @@ Ctrl キーを使用したストアド プロシージャのキーボード シ�
   
 5.  Tab キーを使用してショートカット メニューの **[名前]** ボックスに移動し、メニュー コマンドの名前を入力し、キーボード アクセス キーとして使用する文字の前にアンパサンド (&) を付けます。  
   
-6.  **Enter** キーを押します。  
+6.  **Enter**キーを押します。  
   
 7.  **[ユーザー設定]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   

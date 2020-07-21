@@ -16,14 +16,14 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ca3c25c3d5b2df2427543722a4b95809a736b805
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944056"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291222"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
 
@@ -49,7 +49,7 @@ ms.locfileid: "67944056"
   
  入力データには重複する行が含まれる場合があります。重複する行があると、ピボット変換は失敗します。 "重複する行" とは、設定キー列およびピボット列に同じ値を持つ行のことです。 エラーを回避するには、エラー行をエラー出力にリダイレクトするように変換を構成するか、重複する行が存在しないように値を事前に集計しておくことができます。  
   
-##  <a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> [ピボット] ダイアログ ボックスのオプション  
  ピボット操作を構成するには、 **[ピボット]** ダイアログ ボックスのオプションを設定します。 **[ピボット]** ダイアログ ボックスを開くには、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でパッケージにピボット変換を追加し、コンポーネントを右クリックして **[編集]** をクリックします。  
   
  **[ピボット]** ダイアログ ボックスのオプションは次のとおりです。  
@@ -97,7 +97,7 @@ ms.locfileid: "67944056"
   
  次の表は、データが **Year** 列でピボットされる前のデータセットを示しています。  
   
-|Year|製品名|Total|  
+|年|製品名|合計|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -135,7 +135,7 @@ ms.locfileid: "67944056"
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
+ このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   

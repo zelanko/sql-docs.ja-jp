@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 840ae1f66eb9bbc8d578a677f743df679d08eb83
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001635"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380995"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定した検索プロパティを、指定した検索プロパティ リストに追加します。または、指定した検索プロパティを、指定した検索プロパティ リストから削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  
@@ -52,7 +52,10 @@ ALTER SEARCH PROPERTY LIST list_name
 ;  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *list_name*  
  変更するプロパティ リストの名前を指定します。 *list_name* は識別子です。  
   
@@ -106,7 +109,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  *list_name* で指定した検索プロパティ リストから、指定したプロパティを削除します。 プロパティを削除すると登録が解除されるため、このプロパティは検索できなくなります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  それぞれのフルテキスト インデックスは、検索プロパティ リストを 1 つだけ持つことができます。  
   
  指定した検索プロパティのクエリを有効にするには、フルテキスト インデックスの検索プロパティ リストにその検索プロパティを追加した後、インデックスの再作成を行う必要があります。  
@@ -169,10 +172,10 @@ GO
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロパティ リストに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-adding-a-property"></a>A. プロパティを追加する  
  次の例では、いくつかのプロパティ (`Title`、`Author`、`Tags` など) を、`DocumentPropertyList` という名前のプロパティ リストに追加します。  

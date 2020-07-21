@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f020dd812b53e531a3f4634ccba0d2cba980b89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103798"
 ---
 # <a name="monitoring-report-server-performance"></a>レポート サーバーのパフォーマンスの監視
@@ -59,7 +59,7 @@ ms.locfileid: "66103798"
 ## <a name="reporting-services-performance-objects"></a>Reporting Services パフォーマンス オブジェクト  
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] には、次のパフォーマンス オブジェクトが含まれています。  
   
--   **MSRS 2011 Web Service**と`MSRS 2011 SharePoint Mode Web Service`をレポート サーバーのパフォーマンスを監視します。 これらのパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
+-   **MSRS 2011 Web サービス**および`MSRS 2011 SharePoint Mode Web Service`レポートサーバーのパフォーマンスを監視します。 これらのパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
   
 -   スケジュール設定した操作、およびレポートの配信を監視するための `MSRS 2011 Windows Service` および `MSRS 2011 Windows Service SharePoint Mode`。 これらのパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴が含まれます。  
   
@@ -79,10 +79,10 @@ ms.locfileid: "66103798"
  レポート サーバーを SharePoint 統合モードで実行しており、SharePoint 製品を使用するようにレポート環境を構成している場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のパフォーマンス オブジェクトだけでなく、SharePoint のイベントを構成することもできます。 このセクションでは、「SharePoint 統合モードにおけるレポート サーバーのイベント」を基に、SharePoint と統合されたレポート環境で役立てることのできる診断イベントについて確認します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター&#40;ネイティブ モード&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [MSRS 2014 Web サービスおよび MSRS 2014 Windows Service のパフォーマンスオブジェクトのパフォーマンスカウンター &#40;ネイティブモード&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
  レポート サーバー Web サービスで使用するパフォーマンス カウンターについて説明します。  
   
- [MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [MSRS 2014 Web Service SharePoint モードおよび MSRS 2014 Windows Service SharePoint mode パフォーマンスオブジェクトのパフォーマンスカウンター &#40;SharePoint モード&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  レポート サーバー Windows サービスで使用するパフォーマンス カウンターについて説明します。  
   
  [ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター](performance-counters-reportserver-service-performance-objects.md)  
@@ -91,7 +91,7 @@ ms.locfileid: "66103798"
  SharePoint 統合モードにおけるレポート サーバーのイベント  
  レポート環境を SharePoint 製品と組み合わせて実行している場合に役立てることのできる診断イベントについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート サーバー アプリケーションで利用可能なメモリの構成](../report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](reporting-services-report-server-native-mode.md)   
  [Reporting Services ツール](../tools/reporting-services-tools.md)  

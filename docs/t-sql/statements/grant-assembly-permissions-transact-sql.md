@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bdaae424fa90d2332db116d305a0e013c1d54559
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735671"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT (アセンブリの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アセンブリに対する権限を許可します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68065607"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name  
     TO database_principal [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -47,7 +47,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  権限を許可するアセンブリを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれかです。  
+ 権限を許可するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -62,7 +62,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -73,7 +73,7 @@ AS *granting_principal*
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アセンブリは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、アセンブリで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |アセンブリ権限|権限が含まれるアセンブリ権限|権限が含まれるデータベース権限|  

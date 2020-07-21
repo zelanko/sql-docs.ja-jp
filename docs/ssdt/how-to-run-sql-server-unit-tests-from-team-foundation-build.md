@@ -1,23 +1,24 @@
 ---
-title: 方法:Team Foundation ビルドから SQL Server の単体テストを実行する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Team Foundation ビルドから SQL Server の単体テストを実行する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035090"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244291"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Team Foundation ビルドから SQL Server の単体テストを実行する方法
+
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
   
 -   [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -66,7 +67,7 @@ Team Foundation ビルドを使用すると、SQL Server の単体テストを�
   
 これらの問題を解決するには、app.config 内の override セクションを指定して、Team Foundation 環境に固有の構成ファイルで app.config をオーバーライドする必要があります。 詳しくは、このトピックの「[テスト プロジェクトを変更する](#ModifyTestProject)」をご覧ください。  
   
-## <a name="ConfigureX64"></a>x64 ビルド エージェントで SQL Server の単体テストを実行するようにテスト設定を構成する  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>x64 ビルド エージェントで SQL Server の単体テストを実行するようにテスト設定を構成する  
 x64 ビルド エージェントで単体テストを実行するには、事前にテストの設定を構成してホスト プロセス プラットフォームを変更する必要があります。  
   
 #### <a name="to-specify-the-host-process-platform"></a>ホスト プロセスのプラットフォームを指定するには  
@@ -81,9 +82,9 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 4.  詳細ウィンドウの **[ホスト プロセスのプラットフォーム]** で、 **[MSIL]** をクリックし、x64 ビルド エージェントで実行するテストを構成します。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
-## <a name="CreateATestList"></a>テストをテスト カテゴリに割り当てる (省略可能)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>テストをテスト カテゴリに割り当てる (省略可能)  
 単体テストを実行するためのビルド定義を作成するときに、通常は、1 つ以上のテスト カテゴリを指定します。 ビルドが実行されると、指定されたカテゴリ内のすべてのテストが実行されます。  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>テスト カテゴリにテストを割り当てるには  
@@ -100,7 +101,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
     新しいテスト カテゴリがテストに割り当てられ、プロパティを介して他のテストに指定できるようになります。  
   
-## <a name="ModifyTestProject"></a>テスト プロジェクトを変更する  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>テスト プロジェクトを変更する  
 既定では、単体テスト プロジェクトのビルド時に、Team Foundation ビルドによって、プロジェクトの app.config ファイルから構成ファイルが作成されます。 データベース プロジェクトのパスは、app.config ファイルに相対パスとして保存されます。 Visual Studio で機能していた相対パスは機能しなくなります。Team Foundation ビルドでは、単体テストを実行する場所に関連した別の場所に作成済みファイルが配置されるためです。 さらに、app.config ファイルには、テスト対象のデータベースを指定する接続文字列が含まれています。 単体テストで、テスト プロジェクトの作成時に使用したものとは異なるデータベースに接続する必要がある場合は、Team Foundation ビルド用に別の app.config ファイルも必要です。 次の手順で変更を行うことにより、Team Foundation ビルドで別の構成が使用されるように、テスト プロジェクトとビルド サーバーを設定することができます。  
   
 > [!IMPORTANT]  
@@ -166,7 +167,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 9. ソリューション エクスプローラーで、app.config をダブルクリックします。  
   
-10. エディターで、各 \<SqlUnitTesting_*VSVersion*> ノードに `AllowConfigurationOverride="true"` を追加します。 例:  
+10. エディターで、各 \<SqlUnitTesting_*VSVersion*> ノードに `AllowConfigurationOverride="true"` を追加します。 次に例を示します。  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -196,7 +197,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 5.  **[配置ファイルの追加]** ダイアログ ボックスで、作成した *BuildComputer*.sqlunitttest.config ファイルを指定します。  
   
-6.  **[適用]** をクリックします。  
+6.  **[Apply]** をクリックします。  
   
 7.  **[閉じる]** をクリックします。  
   
@@ -204,7 +205,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
     次に、ソリューションをバージョン管理にチェックインします。  
   
-## <a name="CheckInTheTestList"></a>ソリューションをチェックインする  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>ソリューションをチェックインする  
 この手順では、ソリューションのすべてのファイルをチェックインします。 これらのファイルには、テスト カテゴリの関連付けおよびテストを含む、ソリューションのテスト メタデータ ファイルが含まれます。 テストの内容を追加、削除、再構成、または変更すると、テスト メタデータ ファイルは自動的に更新され、これらの変更が反映されます。  
   
 > [!NOTE]  
@@ -233,7 +234,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
     テストは、Team Foundation ビルドで使用できるようになります。 これで、実行するテストを含むビルド定義を作成できます。  
   
-## <a name="CreateBuildDef"></a>ビルド定義を作成する  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>ビルド定義を作成する  
   
 #### <a name="to-create-a-build-definition"></a>ビルド定義を作成するには  
   
@@ -263,11 +264,11 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 10. **[基本]** グループの **[自動テスト]** で、実行するテストを指定します。 既定では、ソリューションの \*test\*.dll という名前のファイルに含まれているテストが実行されます。  
   
-11. **[ファイル]** メニューの ***[ProjectName* の保存]** をクリックします。  
+11. **[ファイル]** メニューの **[** ProjectName*の保存]* をクリックします。  
   
     ビルド定義が作成されました。 次に、テスト プロジェクトを変更します。  
   
-## <a name="RunBuild"></a>新しいビルド定義を実行する  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>新しいビルド定義を実行する  
   
 #### <a name="to-run-the-new-build-type"></a>新しいビルドの種類を実行するには  
   

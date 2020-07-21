@@ -13,55 +13,55 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928644"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761770"
 ---
 # <a name="cellset-object-ado-md"></a>CellSet オブジェクト (ADO MD)
-多次元クエリの結果を表します。 これは、キューブまたはその他のセルセットから選択したセルのコレクションです。  
+多次元クエリの結果を表します。 これは、キューブまたは他のセルセットから選択されたセルのコレクションです。  
   
-## <a name="remarks"></a>コメント  
- 内のデータを**セルセット**、直接の配列に似たアクセスを使用して取得されます。 そのメンバーに関するデータを取得する特定のメンバーをドリルダウンすることができます。 たとえば、次のコード キャプションを返します最初のメンバーの最初の位置でセルセットという名前の最初の軸で`cst`:  
+## <a name="remarks"></a>解説  
+ **セルセット**内のデータは、配列に似た直接アクセスを使用して取得されます。 特定のメンバーにドリルダウンして、そのメンバーに関するデータを取得することができます。 たとえば、次のコードは、という名前のセルセットの最初の軸の最初の位置にある最初のメンバーのキャプションを返し `cst` ます。  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>コメント  
- セル セット内の現在のセルの概念はありません。 代わりに、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ取得[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)セルセットからオブジェクト。 引数、**項目**プロパティを決定するセルを取得します。 セルの序数に基づく一意の値を指定することができます。 セルはセル セットの各軸の位置番号を使用して取得することもできます。 セルを取得する方法についての詳細については、次を参照してください。、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ。  
+## <a name="remarks"></a>解説  
+ セルセット内には、現在のセルの概念はありません。 代わりに、 [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティは、セルセットから特定の[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)オブジェクトを取得します。 **項目**プロパティの引数によって、取得するセルが決まります。 セルの一意の序数値を指定できます。 セルは、セルセットの各軸に沿った位置番号を使用して取得することもできます。 セルの取得の詳細については、 [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティを参照してください。  
   
- コレクション、メソッド、およびプロパティの使用、**セルセット**オブジェクトを次を行うことができます。  
+ **Cellset**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  
   
--   開いている接続を関連付ける、**セルセット**オブジェクトを設定してその[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティ。  
+-   [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)プロパティを設定して、開いている接続を**セルセット**オブジェクトに関連付けます。  
   
--   実行し、多次元クエリの結果を取得、[オープン](../../../ado/reference/ado-md-api/open-method-ado-md.md)メソッド。  
+-   [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)メソッドを使用して多次元クエリの結果を実行および取得します。  
   
--   取得、**セル**から、**セルセット**で、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ。  
+-   [アイテム](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティを使用して、セル**セット**から**セル**を取得します。  
   
--   返す、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)を定義するオブジェクト、**セルセット**で、[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)コレクション。  
+-   [Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)コレクションを使用して**セルセット**を定義する[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)オブジェクトを返します。  
   
--   データをフィルター処理に使用されるディメンションに関する情報を取得、**セルセット**で、 [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)プロパティ。  
+-   [Filteraxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)プロパティを使用して、**セルセット**のデータをフィルター処理するために使用されるディメンションに関する情報を取得します。  
   
--   返すかを定義するためのクエリを指定、**セルセット**で、[ソース](../../../ado/reference/ado-md-api/source-property-ado-md.md)プロパティ。  
+-   [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)プロパティを使用して**セルセット**を定義するために使用するクエリを返します。値の設定もできます。  
   
--   現在の状態を返す、**セルセット**(オープン、クローズを実行する、または接続する) で、[状態](../../../ado/reference/ado-md-api/state-property-ado-md.md)プロパティ。  
+-   [State](../../../ado/reference/ado-md-api/state-property-ado-md.md)プロパティを使用して、**セルセット**(開く、closed、実行中、または接続) の現在の状態を返します。  
   
--   閉じる、開く**セルセット**で、[閉じる](../../../ado/reference/ado-md-api/close-method-ado-md.md)メソッド。  
+-   [Close](../../../ado/reference/ado-md-api/close-method-ado-md.md)メソッドを使用して、開いている**セルセット**を閉じます。  
   
--   プロバイダー固有の情報の取得、**セルセット**標準の ADO を使用した[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+-   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、**セルセット**に関するプロバイダー固有の情報を取得します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axes コレクション (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 軸の例 (VBScript) |Microsoft Docs
+title: Axis の例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53e27109028204739a9de245d28909405cf939e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947388"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765193"
 ---
 # <a name="axis-example-vbscript"></a>Axis の例 (VBScript)
-このアクティブ サーバー ページは、MDX クエリ文字列の OLAP データを表示し、結果のセル セットを HTML テーブル構造に書き込みます。  
+この Active Server ページでは、MDX クエリ文字列の OLAP データを表示し、その結果セットを HTML テーブル構造に書き込みます。  
   
 ```  
 <%@ Language=VBScript %>  

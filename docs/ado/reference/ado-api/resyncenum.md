@@ -13,30 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ResyncEnum enumeration [ADO]
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a53d2c64e961c1b46b2d170de712493cc06f3910
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931241"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756237"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-呼び出して、基になる値を上書きするかどうかを示す[再同期](../../../ado/reference/ado-api/resync-method.md)します。  
+再[同期](../../../ado/reference/ado-api/resync-method.md)の呼び出しによって基になる値を上書きするかどうかを指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|既定値です。 データは上書きされ、保留中の更新は取り消されます。|  
-|**adResyncUnderlyingValues**|1|データは上書きされず、保留中の更新は取り消されません。|  
+|**adResyncAllValues**|2|既定値。 データを上書きします。保留中の更新は取り消されます。|  
+|**adResyncUnderlyingValues**|1|はデータを上書きしません。保留中の更新は取り消されません。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.Resync.ALLVALUES|  
-|AdoEnums.Resync.UNDERLYINGVALUES|  
+|AdoEnums. ALLVALUES|  
+|AdoEnums. UNDERLYINGVALUES|  
   
 ## <a name="applies-to"></a>適用対象  
  [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)

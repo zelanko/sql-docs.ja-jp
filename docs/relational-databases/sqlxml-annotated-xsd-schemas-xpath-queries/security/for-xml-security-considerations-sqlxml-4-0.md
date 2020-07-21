@@ -1,6 +1,6 @@
 ---
-title: XML のセキュリティに関する考慮事項 (SQLXML 4.0) の |マイクロソフトのドキュメント
-ms.custom: ''
+title: FOR XML のセキュリティに関する考慮事項 (SQLXML)
+description: SQLXML 4.0 で FOR XML AUTO モードを指定する際のセキュリティに関する重要な考慮事項について説明します。
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +17,17 @@ helpviewer_keywords:
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 789c3fadeb91833fd4c7099386ab5afb5d646839
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b6786351f99acb34eb407de10150ffc6aeabc28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626867"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>FOR XML のセキュリティに関する注意点 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   FOR XML AUTO モードでは、XML 階層が生成され、要素名はテーブル名に、属性名は列名にマップされます。 この場合、データベースのテーブルと列の情報が公開されます。 AUTO モード (サーバー側の書式設定) を使用する場合は、テーブルと列の別名をクエリで指定することで、データベース情報を隠すことができます。 これらの別名は、結果の XML ドキュメント内に要素名および属性名として返されます。  
   
  たとえば、次のクエリでは AUTO モードを指定しており、XML の書式設定はサーバーで実行されます。  

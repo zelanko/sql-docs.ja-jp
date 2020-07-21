@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab803bcaa5ab6b6187c1a994abef02f81ae105c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62811546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935726"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
@@ -82,7 +81,7 @@ ms.locfileid: "62811546"
   
 4.  **[IPAll]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[TCP ポート]** ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを入力します。複数のポートを指定する場合はコンマで区切ります。 例では、既定のポート 1433 が表示されている場合に入力`,1500`ボックス`1433,1500`、順にクリックします**OK**します。  
+5.  **[TCP ポート]** ボックスで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンするポートを入力します。複数のポートを指定する場合はコンマで区切ります。 この例では、既定のポート1433が一覧表示されている場合は、ボックスに「 `,1500` `1433,1500` 」と入力し、[ **OK]** をクリックします。  
   
     > [!NOTE]  
     >  一部の IP アドレスのポートだけを有効にする場合、[プロパティ] ダイアログ ボックスで、必要なアドレスに対してのみ追加のポートを構成します。 次に、コンソール ペインで、 **[TCP/IP]** を右クリックし、 **[プロパティ]** をクリックします。 **[すべて受信待ち]** ボックスで、 **[いいえ]** を選択します。  
@@ -101,10 +100,10 @@ ms.locfileid: "62811546"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
- [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [GRANT (エンドポイントのアクセス許可の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [NUMA ノードへの TCP/IP ポートのマッピング &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
   
   

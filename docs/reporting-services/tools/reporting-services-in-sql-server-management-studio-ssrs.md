@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio の Reporting Services (SSRS) | Microsoft Docs
+title: SQL Server Management Studio の Reporting Services | Microsoft Docs
 ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8a975ad6d6aecfd701bf4893d5d91b26f998297d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140356"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082156"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
   レポート サーバー管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して次の操作を実行できます。  
   
 -   機能を有効化し、サーバーの既定値を設定して、実行中のジョブを管理する。  
   
--   カスタム レポートを表示する。 オブジェクト エクスプ ローラーでは、ほとんどのノードは、カスタム レポート オプションを表示します。 管理者権限が必要です。 カスタム レポートのスキーマは、インストールされているレポートのスキーマと一致する必要があります。 詳細については、「[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)」と「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
+-   カスタム レポートを表示する。 オブジェクト エクスプローラーでは、ほとんどのノードでカスタム レポート オプションが表示されます。 管理者権限が必要です。 カスタム レポートのスキーマは、インストールされているレポートのスキーマと一致する必要があります。 詳細については、「[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)」と「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
- 次のセクションには使用して、さまざまなレポート タスクを実行する手順が含まれている記事へのリンクが含まれています[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 作成し、web ポータルでの共有スケジュールの管理もできます。  
+ 次のセクションには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してさまざまなレポート タスクを実行する操作手順を説明した記事へのリンクが含まれています。 Web ポータルで共有スケジュールを作成し、管理することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

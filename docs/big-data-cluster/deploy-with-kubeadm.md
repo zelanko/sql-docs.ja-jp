@@ -1,7 +1,7 @@
 ---
 title: Kubeadm を使用して Kubernetes を構成する
-titleSuffix: SQL Server big data clusters
-description: 複数の Ubuntu 16.04 または18.04 マシン (物理または仮想) でデプロイ用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に Kubernetes を構成する方法について説明します。
+titleSuffix: SQL Server Big Data Clusters
+description: SQL Server 2019 ビッグ データ クラスターの展開のために、複数の Ubuntu 16.04 または18.04 マシン (物理または仮想) 上に Kubernetes を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652376"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606548"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために複数のマシン上に Kubernetes を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、 **kubeadm**を使用して複数の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]コンピューターで Kubernetes を構成する方法の例について説明します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
+この記事では、**kubeadm** を使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] の展開のために複数のコンピューター上に Kubernetes を構成する方法の例を示します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
 
 > [!TIP] 
 > Kubernetes を構成するサンプル スクリプトについては、「[Ubuntu 16.04 LTS または 18.04 LTS 上で Kubeadm を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)」を参照してください。
@@ -33,10 +33,13 @@ ms.locfileid: "69652376"
    - 8 個の CPU
    - 64 GB のメモリ
    - 100 GB のストレージ
+ 
+> [!Important] 
+> ビッグ データ クラスターの展開を開始する前に、展開の対象となっているすべての Kubernetes ノード間でクロックが同期されていることを確認します。 ビッグ データ クラスターには、時間の影響を受け、時計のずれが原因で不正な状態になる可能性があるさまざまなサービス用に、正常性プロパティが組み込まれています。
 
 ## <a name="prepare-the-machines"></a>マシンを準備する
 
-各マシンには、必須の前提条件がいくつかあります。 bash 端末で、各マシン上で次のコマンドを実行します。
+各マシンには、必須の前提条件がいくつかあります。 bash ターミナルで、各マシン上で次のコマンドを実行します。
 
 1. 現在のマシンを `/etc/hosts` ファイルに追加します。
 
@@ -61,12 +64,12 @@ ms.locfileid: "69652376"
 1. マシン上に docker と Kubernetes の前提条件を構成します。
 
    ```bash
-   KUBE_DPKG_VERSION=1.15.0-00
-   sudo apt-get update && /
-   sudo apt-get install -y ebtables ethtool && /
-   sudo apt-get install -y docker.io && /
-   sudo apt-get install -y apt-transport-https && /
-   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && /
+   KUBE_DPKG_VERSION=1.15.0-00 #or your other target K8s version, which should be at least 1.13.
+   sudo apt-get update && \
+   sudo apt-get install -y ebtables ethtool && \
+   sudo apt-get install -y docker.io && \
+   sudo apt-get install -y apt-transport-https && \
+   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && \
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  
@@ -86,7 +89,7 @@ ms.locfileid: "69652376"
 
    ```bash
    cat <<EOF > rbac.yaml
-   apiVersion: rbac.authorization.k8s.io/v1beta1
+   apiVersion: rbac.authorization.k8s.io/v1
    kind: ClusterRoleBinding
    metadata:
      name: default-rbac
@@ -101,12 +104,14 @@ ms.locfileid: "69652376"
    EOF
    ```
 
-1. このマシン上で Kubernetes マスターを初期化します。 Kubernetes マスターが正常に初期化されたことを示す出力が表示されます。
+1. このマシン上で Kubernetes マスターを初期化します。 次のサンプル スクリプトでは、Kubernetes バージョン `1.15.0` を指定しています。 使用するバージョンは、Kubernetes クラスターによって異なります。
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   Kubernetes マスターが正常に初期化されたことを示す出力が表示されます。
 
 1. Kubernetes クラスターに参加するために、他のサーバー上で使用する必要がある `kubeadm join` コマンドに注意してください。 後で使用するために、これをコピーします。
 
@@ -126,7 +131,7 @@ ms.locfileid: "69652376"
    kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
    helm init
    kubectl apply -f rbac.yaml
-   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a5f6a00225549c32d95be58bd3987b42494e28a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 679b7aa785d5a662992bd6bdf8d1dc9476aad358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759509"
 ---
 # <a name="null-geometry-data-type"></a>Null (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** 型の NULL インスタンスを提供する、読み取り専用プロパティです。
   
@@ -40,11 +40,11 @@ Null
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **geometry**  
   
- CLR の型:**SqlGeometry**  
+ CLR 型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `geometry` 型の NULL インスタンスを取得する例を次に示します。  
   
 ```  

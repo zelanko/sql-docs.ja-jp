@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2272f23511f955b3509d4a9e357100a96f5f8852
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057679"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>トレース表示の既定値の設定 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] がトレースをトレース ウィンドウに表示する際に使用するフォントの種類やサイズ、スタイルを指定するツール オプションを設定する方法について説明します。 また、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] により、すべての日付と時刻を、オペレーティング システムに構成されている地域設定で表示するよう指定することもできます。  

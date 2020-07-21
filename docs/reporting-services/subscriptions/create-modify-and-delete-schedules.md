@@ -1,5 +1,6 @@
 ---
 title: スケジュールの作成、変更、および削除 | Microsoft Docs
+description: Reporting Services の共有スケジュールを作成、変更、削除します。 ネイティブ モードの場合は、Web ポータルまたは Management Studio を使用します。 SharePoint の場合は、サービス アプリを使用します。
 ms.date: 06/11/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ca14dd80ab00e0a2930ddabdf206f8fbaf6c08eb
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140221"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742271"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   この記事を利用して、[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共有スケジュールを作成、変更、および削除する方法について学習しましょう。  ネイティブ モードの共有スケジュールを管理するには、Web ポータルの [スケジュール] ページまたは [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の [共有スケジュール] フォルダーを使用します。 SharePoint モードの場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを使用します。
@@ -34,7 +35,7 @@ ms.locfileid: "67140221"
 
 -   **Web ポータル:** **[サイトの設定]** の **[スケジュール]** タブ上で、[最終実行] 日付、[次の実行] 日付、[状態] フィールドの値を確認します。 有効期限が切れてスケジュールが実行されなくなった場合、[状態] フィールドに有効期限の日付が表示されます。 詳細については、「 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。
 
--   **SQL Server Management Studio:** 表示、**レポート**指定した共有スケジュールのページ。 このページには、共有スケジュールを使用するすべてのレポートと共有データセットが一覧表示されます。 詳細については、[SQL Server Management Studio の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md) に関する記事をご覧ください。
+-   **SQL Server Management Studio:** 特定の共有スケジュールの **[レポート]** ページを表示する。 このページには、共有スケジュールを使用するすべてのレポートと共有データセットが一覧表示されます。 詳細については、[SQL Server Management Studio の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md) に関する記事をご覧ください。
 
 -  **ログ:** レポート実行ログ ファイルまたはトレース ログを表示して、レポートがスケジュールによって指定された時間に実行されたかどうかを確認する。 詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。
 
@@ -43,7 +44,7 @@ ms.locfileid: "67140221"
 
 複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個々のスケジュールを一元管理する手段は存在しません。 共有スケジュールを削除した場合、それ以降は、各アイテムのスケジュール情報を個別に管理する必要があります。
 
-**注意:**  共有スケジュールが使用されているかどうかが不明な場合は、Web ポータルの代わりに [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で共有スケジュールを削除することを検討してください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] には、レポート マネージャーと同じ共有スケジュール管理機能が備えられていますが、共有スケジュールが使用されている各レポート名を表示するレポート ページが別途用意されています。
+**注:** 共有スケジュールが使用されているかどうかが不明な場合は、Web ポータルの代わりに [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で共有スケジュールを削除することを検討してください。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] には、レポート マネージャーと同じ共有スケジュール管理機能が備えられていますが、共有スケジュールが使用されている各レポート名を表示するレポート ページが別途用意されています。
 
  スケジュールを削除することとスケジュールの有効期限が切れることは違います。 有効期限はスケジュールを停止するために使用されますが、スケジュールは削除されません。 スケジュールは多くの機能を自動化するために使用されるので、自動的に削除されることは決してありません。 有効期限切れのスケジュールが残っていることで、レポート サーバー管理者は自動化された処理が突然停止した理由を知ることができます。 有効期限が切れたスケジュールがないと、レポート サーバー管理者は問題の診断を誤るか、正常に機能していた処理のトラブルシューティングを行おうとして不要な時間を費やしてしまう可能性があります。
 
@@ -52,32 +53,32 @@ ms.locfileid: "67140221"
 
 有効期限の切れたレポート固有スケジュールは、レポートに添付されたままになります。 スケジュールの有効期限が切れたかどうかは、終了日を確認することで判断できます。 有効期限が切れた共有スケジュールは、[共有スケジュール] の一覧に残ります。 スケジュールの有効期限が切れたかどうかは [状態] フィールドに表示されます。 終了日を延長してスケジュールを再設定するか、不要になった場合はそのスケジュールの参照を削除することができます。
 
-## <a name="bkmk_native"></a> 共有スケジュールを作成、削除、または変更する (Web ポータル)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> 共有スケジュールを作成、削除、または変更する (Web ポータル)
  スケジュールの作成と変更は、スケジュールを実行する日時を指定する頻度オプションの設定で構成されます。
 
  スケジュールは、いつでも作成または変更できます。 ただし、変更が完了する前にスケジュールが実行された場合、変更前のスケジュールが使用されます。 変更されたスケジュールは、保存されるまで有効になりません。
 
  共有スケジュールを変更する場合は、変更操作を行う前に一時停止することができます。 変更内容は、スケジュールを再開すると有効になります。
 
-1. Web ポータルで、ツールバーの **[設定]** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) をクリックします。  
+1. Web ポータルで、ツールバーの **[設定]** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) を選択します。  
 
    >[!NOTE]  
    >**[設定]** を利用できない場合は、サイト設定にアクセスする権限がありません。  
 
-1. 選択**サイト設定**ドロップダウン メニューから。
+1. ドロップダウン メニューから **[サイト設定]** を選択します。
 1. **[スケジュール]** タブをクリックします。
-1. 選択 **+ 新しいスケジュール**します。 (既存のスケジュールを変更するには、そのスケジュールの名前を選択します。)
+1. **[+ 新しいスケジュール]** を選択します。 (既存のスケジュールを変更するには、そのスケジュールの名前を選択します。)
 1. わかりやすいスケジュール名を入力します。
 1. **[時間]** 、 **[日]** 、 **[週]** 、または **[月]** をクリックします。 一度だけ実行するスケジュールを作成するには、 **[一度だけ]** をクリックします。 スケジュールの基準を指定すると、新たなオプションが表示されます。
 1. 必要に応じて、スケジュールの開始日を選択します。 既定値は、現在の日付です。 明日以降の日付を入力して、スケジュールの開始日を延期できます。
 1. 必要に応じて、スケジュールの終了日を選択します。 スケジュールの実行は設定日に停止されますが、スケジュールは削除されません。
-1. 実行するスケジュールの時刻を選択します。
+1. スケジュールを実行する時刻を選択します。
 1. **[OK]** を選択します。
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>共有スケジュールを削除するには (Web ポータル)
 
-1. Web ポータルで、ツールバーの **[設定]** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) をクリックします。
-2. 選択**サイト設定**ドロップダウン メニューから。
+1. Web ポータルで、ツールバーの **[設定]** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png) を選択します。
+2. ドロップダウン メニューから **[サイト設定]** を選択します。
 3. **[スケジュール]** タブをクリックします。
 4. 削除する共有スケジュールの隣にあるチェック ボックスをオンにしてから、 **[削除]** を選択します。
 
@@ -114,7 +115,7 @@ ms.locfileid: "67140221"
 
  複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。
 
-##  <a name="bkmk_sharepoint"></a> 共有スケジュールの作成および管理 (SharePoint モード)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 共有スケジュールの作成および管理 (SharePoint モード)
  SharePoint サイトでの共有スケジュールの作成、変更、または削除は、サイト管理者のみが実行できます。
 
  スケジュールは、わかりやすい名前を付けて識別できます。 名前が指定されなかった場合は、反復パターンや実行日時などの情報を基に既定の名前が作成されます。
@@ -142,7 +143,7 @@ ms.locfileid: "67140221"
 4.  スケジュールを選択し、 **[削除]** をクリックします。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スケジュール](../../reporting-services/subscriptions/schedules.md)  
  [共有スケジュールを一時停止および再開する](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)  
  [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  

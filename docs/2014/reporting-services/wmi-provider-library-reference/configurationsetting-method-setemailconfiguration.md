@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 142fd8bf2116d4cc672aeb607938ea8c1c73bf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097985"
 ---
-# <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="setemailconfiguration-method-wmi-msreportserver_configurationsetting"></a>SetEmailConfiguration メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーが電子メール送信に使用する電子メール配信拡張機能を構成します。  
   
 ## <a name="syntax"></a>構文  
@@ -58,15 +58,15 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
- ときに、 *SendUsingSMTPServer*にパラメーターが設定されている`true`、 **SendUsing**レポート サーバーの構成ファイル内のエントリが 1 に設定します。 ときに*SendUsingSMTPServer*に設定されている`false`、 **SendUsing**エントリが構成されていません。  
+## <a name="remarks"></a>解説  
+ *Sendusing Smtpserver*パラメーターがに`true`設定されている場合、レポートサーバー構成ファイルの**sendusing**エントリは1に設定されます。 *Sendusing Smtpserver*がに`false`設定されている場合、 **sendusing**エントリは構成されません。  
   
  このメソッドでは、レポート サーバー構成ファイルの **SendUsing** エントリを 1 以外の値に設定することはできません。 SMTP メール以外を使用するようにレポート サーバーを構成するには、構成ファイルを手動で編集する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

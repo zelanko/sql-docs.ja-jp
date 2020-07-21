@@ -1,5 +1,6 @@
 ---
 title: データベース ユーザーの作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,21 +25,21 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c65d0a8f7e435bb82bcbce43aa1fc27523e006cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094974"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005692"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  このトピックでは、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。 ユーザーには、次の 7 種類があります。 完全な一覧については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 すべての種類の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではデータベース ユーザーがサポートされますが、すべての種類のユーザーがサポートされているとは限りません。  
+  このトピックでは、最も一般的な種類のデータベース ユーザーを作成する方法について説明します。 ユーザーには種類が 7 つあります。 完全な一覧については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 すべての種類の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではデータベース ユーザーがサポートされますが、すべての種類のユーザーがサポートされているとは限りません。  
   
  データベース ユーザーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用します。  
   
-##  <a name="Understanding"></a> ユーザーの種類について  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> ユーザーの種類について  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] は、データベース ユーザーを作成するときに 6 つのオプションを表示します。 次の図に、6 つのオプションを緑色のボックスに示し、それらが何を表すかを示します。  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -54,19 +55,19 @@ ms.locfileid: "68094974"
   
  接続するユーザーが Windows で認証できない場合は、 **SQL Server 認証ログイン** に基づいて **[パスワードを持つ SQL ユーザー]** または **[ログインを持つ SQL ユーザー]** を選択します。 これは、組織外のユーザー (例えば、顧客など) が組織の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に接続するときに一般的です。  
   
-> **ヒント:** 組織内のユーザーの場合は、Windows 認証の方が適切です。これは、別のパスワードを覚える必要がないため、および Windows 認証は Kerberos などの他のセキュリティ機能を提供するためです。  
+> **ヒント!** 組織内のユーザーの場合は、Windows 認証の方が適切です。これは、別のパスワードを覚える必要がないため、および Windows 認証は Kerberos などの他のセキュリティ機能を提供するためです。  
   
-##  <a name="Restrictions"></a> 背景情報  
+##  <a name="background"></a><a name="Restrictions"></a> 背景情報  
  ユーザーは、データベース レベルのセキュリティ プリンシパルです。 データベースに接続するためには、データベース ユーザーにログインをマップする必要があります。 異なるデータベースには、1 つのログインを異なるユーザーとしてマップすることができますが、各データベースでは 1 人のユーザーとしてのみマップできます。 部分的包含データベースでは、ログインを持たないユーザーを作成できます。 包含データベース ユーザーの詳細については、「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」を参照してください。 データベースで guest ユーザーが有効になっている場合は、データベース ユーザーにマップされていないログインでも、guest ユーザーとしてそのデータベースにアクセスすることができます。  
   
 > **重要:** guest ユーザーは無効にするのが一般的です。 必要な場合を除き、guest ユーザーは有効にしないでください。  
   
  セキュリティ プリンシパルとして、ユーザーには権限を許可することができます。 ユーザーのスコープはデータベースです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上の特定のデータベースに接続するには、データベース ユーザーにログインをマップする必要があります。 データベース内の権限を許可したり拒否したりする際に、その対象となるのは、ログインではなく、データベース ユーザーです。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する **ALTER ANY USER** 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SSMS でユーザーを作成する  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> SSMS でユーザーを作成する  
   
  
 1.  オブジェクト エクスプローラーで、 **[データベース]** フォルダーを展開します。  
@@ -125,10 +126,10 @@ ms.locfileid: "68094974"
   
 -   **[拡張プロパティ]** ページでは、カスタム プロパティをデータベース ユーザーに追加できます。 このページで使用できるオプションを次に示します。  
   
-     **データベース**  
+     **[データベース]**  
      選択しているデータベースの名前が表示されます。 このフィールドは読み取り専用です。  
   
-     **[照合順序]**  
+     **Collation**  
      選択されているデータベースに使用する照合順序を表示します。 このフィールドは読み取り専用です。  
   
      **Properties**  
@@ -140,7 +141,7 @@ ms.locfileid: "68094974"
      **削除**  
      選択されている拡張プロパティを削除します。  
   
-##  <a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  
     
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

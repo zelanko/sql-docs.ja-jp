@@ -1,5 +1,5 @@
 ---
-title: getServerName メソッド (SQLServerDataSource) |Microsoft Docs
+title: getServerName メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e0acea2736c7a977603945952117ad0296e579db
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979953"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929196"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>getServerName メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public java.lang.String getServerName()
 ## <a name="return-value"></a>戻り値  
  サーバー名を含む**文字列**です。値が設定されていない場合は null です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー名は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している、ターゲット コンピューターのホスト名です。 getServerName プロパティが設定されていない場合、getServerName は既定値の null が返されます。  
   
 ## <a name="see-also"></a>参照  

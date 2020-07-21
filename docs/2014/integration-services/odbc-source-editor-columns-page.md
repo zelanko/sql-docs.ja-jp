@@ -1,5 +1,5 @@
 ---
-title: Odbc 入力元エディター ([列] ページ) |Microsoft Docs
+title: '[ODBC ソースエディター] ([列] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52e05d125710e8dc5efba7e2efc7420f68686c71
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057168"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424269"
 ---
 # <a name="odbc-source-editor-columns-page"></a>[ODBC ソース エディター] ([列] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (入力元) 列にマップできます。  
@@ -33,7 +32,7 @@ ms.locfileid: "66057168"
   
 3.  **[ODBC 入力元エディター]** で、 **[列]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="available-external-columns"></a>使用できる外部列  
  データ ソース内の使用できる外部列の一覧です。 このテーブルを使用して列を追加または削除することはできません。 入力元から使用する列を選択します。 選択した列は、選択した順序で **[外部列]** の一覧に追加されます。  
@@ -46,8 +45,8 @@ ms.locfileid: "66057168"
 ### <a name="output-column"></a>出力列  
  各出力列の一意の名前を入力します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 入力した名前は、SSIS デザイナーで表示されます。  
   
-## <a name="see-also"></a>参照  
- [ODBC ソース エディター ([接続マネージャー] ページ)](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+## <a name="see-also"></a>関連項目  
+ [ODBC ソースエディター &#40;接続マネージャーのページ&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

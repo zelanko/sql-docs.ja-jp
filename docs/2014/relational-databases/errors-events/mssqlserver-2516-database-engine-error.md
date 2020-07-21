@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 79ed14b5-f53c-40c6-8334-8a083f732207
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e88e90a56da7cb413c66da5f422b2b8f0d1abe91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a963119e19bf1561d3d14bf11cdec3271af1ffb0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914724"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552097"
 ---
-# <a name="mssqlserver2516"></a>MSSQLSERVER_2516
+# <a name="mssqlserver_2516"></a>MSSQLSERVER_2516
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|2516|  
@@ -38,7 +37,7 @@ ms.locfileid: "62914724"
 ## <a name="user-action"></a>ユーザーの操作  
  データベースの完全バックアップを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)  
   
   

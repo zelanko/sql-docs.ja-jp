@@ -1,10 +1,9 @@
 ---
-title: '[色の設定] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[色] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae0c136b1561aa93ff6f83f0bb0f7c7c69a8744
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0a2d44934958703a0cadbf01ac975b7a60ab4da6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262546"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241259"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>[色の設定] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "68262546"
 光度バー  
 スライダーをドラッグして光度 (色の相対的な明るさや暗さ) を変更します。 対応する数値が **[明るさ]** ボックスに表示されます。  
   
-**色**  
+**Color**  
 現在選択されている色を表示します。  
   
-**[色合い]**  
+**Hue**  
 選択された色の色調値。  
   
 **[鮮やかさ]**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58e8c071672c8c3afba8d6c424488899dcf76be7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016379"
 ---
 # <a name="join-a-role"></a>ロールの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインおよびデータベース ユーザーにロールを割り当てる方法について説明します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で権限を効率的に管理するには、ロールを使用します。 ロールに権限を割り当て、そのロールに対してユーザーとログインの追加および削除を行います。 ロールを使用すると、権限をユーザーごとに個別に管理する必要がありません。  
@@ -43,7 +42,7 @@ ms.locfileid: "63011342"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ログインおよびデータベース ユーザーにロールを割り当てるために使用するもの:**  
   
@@ -51,20 +50,20 @@ ms.locfileid: "63011342"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベース ロールの名前を変更しても、ロールの ID 番号、所有者、権限は変わりません。  
   
 -   データベース ロールは、sys.database_role_members および sys.database_principals カタログ ビューで確認できます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
- 必要があります`ALTER ANY ROLE`、データベースに対する権限`ALTER`ロール、またはメンバーシップに対するアクセス許可**db_securityadmin**します。  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
+ `ALTER ANY ROLE`データベースに対する権限、 `ALTER` ロールに対する権限、または**db_securityadmin**のメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>固定サーバー ロールにメンバーを追加するには  
   
@@ -76,9 +75,9 @@ ms.locfileid: "63011342"
   
 4.  編集するロールを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **サーバー ロールのプロパティ -** _server_role_name_  ダイアログ ボックスで、**メンバー**  ページで **追加**します。  
+5.  [**サーバーロールのプロパティ-**_server_role_name_ ] ダイアログボックスの [**メンバー** ] ページで、[**追加**] をクリックします。  
   
-6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照...]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 をクリックして**OK**に戻ります、**サーバー ロールのプロパティ -** _server_role_name_  ダイアログ ボックス。  
+6.  **[サーバー ログインまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このサーバー ロールに追加するログインまたはサーバー ロールを入力します。 または、 **[参照...]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 [ **OK** ] をクリックして、[**サーバーロールのプロパティ-**_server_role_name_ ] ダイアログボックスに戻ります。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,13 +97,13 @@ ms.locfileid: "63011342"
   
 7.  編集するロールを右クリックし、 **[プロパティ]** をクリックします。  
   
-8.  **データベース ロールのプロパティ -** _database_role_name_  ダイアログ ボックスで、**全般** ページで **追加**します。  
+8.  [**データベースロールのプロパティ-**_database_role_name_ ] ダイアログボックスの [**全般**] ページで、[**追加**] をクリックします。  
   
-9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照...]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 をクリックして**OK**に戻る、**データベース ロールのプロパティ -** _database_role_name_  ダイアログ ボックス。  
+9. **[データベース ユーザーまたはロールの選択]** ダイアログ ボックスで、 **[選択するオブジェクト名を入力してください (例)]** に、このデータベース ロールに追加するログインまたはデータベース ロールを入力します。 または、 **[参照...]** をクリックし、 **[オブジェクトの参照]** ダイアログ ボックスに表示されるいずれかのオブジェクトまたはすべてのオブジェクトを選択します。 [ **OK** ] をクリックして、[**データベースロールのプロパティ-**_database_role_name_ ] ダイアログボックスに戻ります。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>固定サーバー ロールにメンバーを追加するには  
   

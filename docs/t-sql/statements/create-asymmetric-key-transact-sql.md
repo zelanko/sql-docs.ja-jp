@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b017b3cccbce4f993723d24f952eb605ce36a376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c28930111b156088648373d208856e273936f6b9
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141095"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392990"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベースに非対称キーを作成します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68141095"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
    [ FROM <asym_key_source> ]  
@@ -69,7 +69,9 @@ CREATE ASYMMETRIC KEY asym_key_name
     PASSWORD = 'password'   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *asym_key_name*  
  データベース内の非対称キーの名前です。 非対称キー名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従うと共に、データベース内で一意である必要があります。  
 
@@ -114,7 +116,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  秘密キーを暗号化するパスワードを指定します。 この句が存在しない場合、秘密キーはデータベースのマスター キーで暗号化されます。 *password* は最大 128 文字です。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  "*非対称キー*" は、データベース レベルのセキュリティ保護可能なエンティティです。 既定の形式では、このエンティティには公開キーと秘密キーの両方が含まれます。 FROM 句を使用せずに CREATE ASYMMETRIC KEY を実行した場合は、新しいキー ペアが作成されます。 FROM 句を使用して CREATE ASYMMETRIC KEY を実行した場合は、ファイルからキー ペアがインポートされるか、アセンブリまたは DLL ファイルから公開キーがインポートされます。  
   
  既定では、秘密キーはデータベースのマスター キーによって保護されます。 データベースのマスター キーが作成されていない場合、秘密キーを保護するにはパスワードが必要です。  
@@ -124,12 +126,12 @@ CREATE ASYMMETRIC KEY asym_key_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CREATE ASYMMETRIC KEY 権限が必要です。 AUTHORIZATION 句を指定する場合は、データベース プリンシパルに対する IMPERSONATE 権限、またはアプリケーション ロールに対する ALTER 権限が必要です。 非対称キーを所有できるのは、Windows ログイン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールによる非対称キーの所有はできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 非対称キーを作成する  
  次の例では、`RSA_2048` アルゴリズムを使って `PacificSales09` という非対称キーを作成し、パスワードで秘密キーを保護します。  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
     WITH ALGORITHM = RSA_2048   
     ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';   
@@ -139,7 +141,7 @@ GO
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. 非対称キーをファイルから作成し、ユーザーを認証する  
  次の例では、ファイルに格納されたキー ペアから非対称キー `PacificSales19` を作成し、その非対称キーの所有権をユーザー `Christina` に割り当てます。 秘密キーは、データベース マスター キーによって保護され、非対称キーを作成する前に作成される必要があります。  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY PacificSales19  
     AUTHORIZATION Christina  
     FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
@@ -149,7 +151,7 @@ GO
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM プロバイダーから非対称キーを作成する  
  次の例では、`EKM_Provider1` という拡張キー管理プロバイダーに格納されているキー ペアから非対称キー `EKM_askey1` を作成し、そのプロバイダー上の `key10_user1` というキーを作成します。  
   
-```  
+```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   
     FROM PROVIDER EKM_Provider1  
     WITH   

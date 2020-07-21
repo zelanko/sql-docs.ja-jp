@@ -1,5 +1,6 @@
 ---
-title: '[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ | Microsoft Docs'
+title: '[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ'
+description: SQL Server Management Studio (SSMS) のポリシーベース管理のための [ポリシーの評価] ダイアログ ボックスの [評価の結果] ページについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,34 +13,34 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b29ebcae533a093bd9a00b8f48320b7755d3ce1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760540"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ポリシーの評価結果を表示したり、ポリシーに準拠していない対象セットにポリシー ベースの管理ポリシーを適用したりできます。  
   
 ## <a name="options"></a>オプション  
- **結果:ポリシー**  
+ **[結果: ポリシー]**  
  評価されるポリシーの名前。 このボックスは読み取り専用です。  
   
- **結果:メッセージ**  
+ **[結果: メッセージ]**  
  エラーが発生した場合に役立つ情報へのリンク。  
   
- **対象の詳細:サーバー**  
+ **[対象の詳細: サーバー]**  
  ポリシーが評価される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス。  
   
- **対象の詳細:対象**  
+ **[対象の詳細: 対象]**  
  ポリシーが評価される対象。  
   
- **対象の詳細:詳細**  
+ **[対象の詳細: 詳細]**  
  ポリシーの評価に関する詳細が表示される **[結果の詳細ビュー]** ダイアログ ボックスへのリンク。  
   
- **対象の詳細:メッセージ**  
+ **[対象の詳細: メッセージ]**  
  エラーが発生した場合に役立つ情報へのリンク。  
   
 ## <a name="see-also"></a>参照  

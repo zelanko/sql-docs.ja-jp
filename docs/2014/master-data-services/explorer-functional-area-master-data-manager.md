@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4461d22e62ebebd71b02fb7132b8ffed081d6d82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971482"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>[エクスプローラー] 機能領域 (マスター データ マネージャー)
   [エクスプローラー] 機能領域では、データを更新し、階層とコレクションを操作できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "65479422"
   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  
   
- [リーフ メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)  
+ [リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)  
   
  [メンバーまたはコレクションを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "65479422"
 ## <a name="hierarchies-and-collections"></a>階層とコレクション  
  [階層 (マスター データ サービス)](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
- [階層内のメンバーを移動&#40;マスター データ サービス&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
+ [階層内のメンバーを移動する &#40;マスターデータサービス&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   
  [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
   
@@ -58,7 +57,7 @@ ms.locfileid: "65479422"
   
  [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

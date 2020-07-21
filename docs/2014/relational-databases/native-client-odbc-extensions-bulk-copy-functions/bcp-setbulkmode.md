@@ -9,18 +9,17 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019329"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
-  bcp_setbulkmode では、1 つの関数の呼び出しですべての列属性を設定、一括コピー操作で列の形式を指定できます。  
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
+  bcp_setbulkmode を使用すると、一括コピー操作で列の形式を指定し、1回の関数呼び出しですべての列の属性を設定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,14 +51,14 @@ cbRow
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *property*  
+ *プロパティ*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
  フィールド ターミネータ値を指すポインターです。  
   
  *cbField*  
- フィールド終端文字の値のバイト単位の長さ。  
+ フィールドターミネータ値の長さ (バイト単位)。  
   
  *pRow*  
  行ターミネータ値を指すポインターです。  
@@ -70,25 +69,25 @@ cbRow
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>コメント  
- bcp_setbulkmode は、一括コピー出力、クエリまたはテーブルのいずれかを使用できます。 Bcp_setbulkmode はクエリ ステートメントの一括コピーに使用する場合は、BCP_HINT を bcp_control を呼び出す前に呼び出す必要があります。  
+## <a name="remarks"></a>Remarks  
+ bcp_setbulkmode を使用すると、クエリまたはテーブルのいずれかから一括コピーできます。 Bcp_setbulkmode を使用してクエリステートメントを一括コピーする場合は、BCP_HINT で bcp_control を呼び出す前に、このステートメントを呼び出す必要があります。  
   
- bcp_setbulkmode が使用する代わりに[bcp_setcolfmt](bcp-setcolfmt.md)と[bcp_columns](bcp-columns.md)、のみ関数呼び出しごとに 1 つの列の形式を指定できます。  
+ bcp_setbulkmode は[bcp_setcolfmt](bcp-setcolfmt.md)と[bcp_columns](bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
   
  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP で-c オプションに対応します。EXE とで bcp_setcolfmt`BCP_FMT_TYPE`プロパティに設定`SQLCHARACTER`します。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応します。EXE とで bcp_setcolfmt`BCP_FMT_TYPE`プロパティに設定`SQLNCHAR`します。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP で-n オプションに対応します。EXE とで bcp_setcolfmt`BCP_FMT_TYPE`プロパティに設定`SQLNCHAR`列の型が文字列 (既定文字列でない場合) の場合。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP で-n オプションに対応します。EXE とで bcp_setcolfmt`BCP_FMT_TYPE`プロパティが既定値に設定します。|  
+|BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP.EXE の-c オプションに対応し、プロパティがに設定されたを bcp_setcolfmt し `BCP_FMT_TYPE` `SQLCHARACTER` ます。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP.EXE の-w オプションと、プロパティがに設定された bcp_setcolfmt に対応し `BCP_FMT_TYPE` `SQLNCHAR` ます。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> BCP.EXE の-N オプション bcp_setcolfmt と、 `BCP_FMT_TYPE` `SQLNCHAR` 列の型が文字列である場合はに設定されたプロパティ (文字列でない場合は既定値) に対応します。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP.EXE の-n オプションと `BCP_FMT_TYPE` 、プロパティが既定値に設定された bcp_setcolfmt に対応します。|  
   
- Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスでは、bcp_setbulkmode を使用しないでください。 たとえば、bcp_control(BCPTEXTFILE) と bcp_setbulkmode をしない呼び出す必要があります。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスと共に bcp_setbulkmode を使用しないでください。 たとえば、bcp_control (BCPTEXTFILE) および bcp_setbulkmode を呼び出すことはできません。  
   
- Bcp_setbulkmode と競合しない bcp_control オプションについては、bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control(BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
+ Bcp_setbulkmode と競合しない bcp_control オプションを bcp_control と bcp_setbulkmode を呼び出すことができます。 たとえば、bcp_control (BCPFIRST) と bcp_setbulkmode を呼び出すことができます。  
   
- Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを持つ bcp_setbulkmode を呼び出すしようとした場合、シーケンス エラーが関数呼び出しの 1 つ戻ります。 エラーを修正する場合は、すべての設定をリセットし、最初からやり直す bcp_init を呼び出します。  
+ Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスを使用して bcp_setbulkmode を呼び出そうとすると、関数呼び出しの1つで、シーケンスエラーエラーが返されます。 エラーの修正を選択した場合は、bcp_init を呼び出してすべての設定をリセットし、最初からやり直してください。  
   
  次の表に、関数のシーケンス エラーが発生する関数呼び出しの例をいくつか示します。  
   

@@ -1,5 +1,6 @@
 ---
-title: '例: 読み取り専用ファイルのオンライン復元 (完全復旧モデル) | Microsoft Docs'
+title: 'オンライン復元: 読み取り専用ファイル (完全復旧モデル)'
+description: この例では、複数のファイル グループを含む完全復旧モデルを使用して、データベースの読み取り専用ファイルを復元する SQL Server でのオンライン復元を示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a446bcd7c90c35176bd9853bec3780386e98310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55cf92ac9a4c2324449e27840782a6930478e953
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747768"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>例:読み取り専用ファイルのオンライン復元 (完全復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、複数のファイルやファイル グループを含む、完全復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
   

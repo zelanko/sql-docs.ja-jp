@@ -1,7 +1,6 @@
 ---
-title: Security Audit イベント カテゴリ (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: セキュリティ監査イベント カテゴリ - プロファイラー
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -14,20 +13,21 @@ ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0849a7180f6ababe9fa1311473ebcfd994d13b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c7f92e7c56cd6b13527d1d2e658dd04f51c4988f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726204"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit イベント カテゴリ (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   **Security Audit** イベント カテゴリには、セキュリティ監査イベントが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Audit Add DB User イベント クラス](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|データベース ユーザーとしてデータベースにログインが追加または削除されたことを示します。|  
 |[Audit Add Login to Server Role イベント クラス](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|固定サーバー ロールにログインが追加または削除されたことを示します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "67911225"
 |[Audit Database Operation イベント クラス](../../relational-databases/event-classes/audit-database-operation-event-class.md)|チェックポイント処理やクエリ通知のサブスクライブなど、さまざまな操作が行われたことを示します。|  
 |[Audit Database Principal Impersonation イベント クラス](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|データベース スコープ内で権限の借用が行われたことを示します。|  
 |[Audit Database Principal Management イベント クラス](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|データベースのプリンシパルが作成、変更、または削除されたことを示します。|  
-|[Audit Database Scope GDR イベント クラス](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
+|[Audit Database Scope GDR イベント クラス](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit DBCC イベント クラス](../../relational-databases/event-classes/audit-dbcc-event-class.md)|DBCC コマンドが発行されたことを示します。|  
 |[Audit Fulltext イベント クラス](../../relational-databases/event-classes/audit-fulltext-event-class.md)|フルテキスト イベントが発生したことを示します。|  
 |[Audit Login Change Password イベント クラス](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|ユーザーが自身の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードを変更したことを示します。|  

@@ -1,7 +1,7 @@
 ---
 title: Point (geography データ型) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3d1859da2743171bd3d3e314455918b361c4f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36b39355ad9d2983945fcc7710d23b5e18e792d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705807"
 ---
 # <a name="point-geography-data-type"></a>Point (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Point** インスタンスを緯度、経度、SRID (spatial reference identifier) で表す **geography** インスタンスを構築します。
   
@@ -39,23 +39,23 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>引数  
  *Lat*  
- 生成される **Point** の x 座標を表す **float** 式です。  
+ 生成される **Point** の y 座標を表す **float** 式です。  
   
  *Long*  
- 生成される **Point** の y 座標を表す **float** 式です。 有効な経度と緯度の値の詳細については、「[Point](../../relational-databases/spatial/point.md)」をご覧ください。  
+ 生成される **Point** の x 座標を表す **float** 式です。 有効な経度と緯度の値の詳細については、「[Point](../../relational-databases/spatial/point.md)」をご覧ください。  
   
  *SRID*  
- 返される **geography** インスタンスの SRID を表す **int** 式です。  
+ 返される **geography** インスタンスの [Spatial Reference Identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) を表す **int** 式です。  
+  
+> [!NOTE]  
+>  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
  CLR の戻り値の型:**SqlGeography**  
   
-> [!NOTE]  
->  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  
-  
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  
@@ -66,5 +66,3 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>参照  
  [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  

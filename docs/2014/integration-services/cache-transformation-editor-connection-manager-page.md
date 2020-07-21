@@ -1,5 +1,5 @@
 ---
-title: キャッシュ変換エディター (接続マネージャー ページ) |Microsoft Docs
+title: '[キャッシュ変換エディター] ([接続マネージャー] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,25 +9,24 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04a127d8d2da6f10053067584b35c650c61bf845
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061066"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439129"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>[キャッシュ変換エディター] ([接続マネージャー] ページ)
   **[キャッシュ変換エディター]** ダイアログ ボックスの **[接続マネージャー]** タブを使用すると、既存のキャッシュ接続マネージャーを選択したり、新しいキャッシュ接続マネージャーを作成したりできます。  
   
  キャッシュ変換の詳細については、「 [Cache Transform](data-flow/transformations/cache-transform.md)」を参照してください。  
   
- キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](connection-manager/cache-connection-manager.md)」を参照してください。  
+ キャッシュ接続マネージャーの詳細については、「 [Cache Connection manager](connection-manager/cache-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **Cache connection manager**  
+## <a name="options"></a>オプション  
+ **キャッシュ接続マネージャー**  
  既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
  **[新規作成]**  

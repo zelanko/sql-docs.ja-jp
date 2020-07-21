@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967285"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764073"
 ---
 # <a name="append-method-adox-procedures"></a>Append メソッド (ADOX Procedures)
-新しく追加[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション。  
+[Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクションに新しい[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,23 +35,23 @@ Procedures.Append Name, Command
   
 #### <a name="parameters"></a>パラメーター  
  *名前*  
- A**文字列**を作成し、追加する手順の名前を指定する値。  
+ 作成および追加するプロシージャの名前を示す**文字列**値です。  
   
- *Command*  
- ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)を作成し、追加する手順を表すオブジェクト。  
+ *コマンド*  
+ 作成および追加するプロシージャを表す ADO[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 指定された属性と名前を持つデータ ソースに新しいプロシージャを作成、**コマンド**オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ **コマンド**オブジェクトで指定された名前と属性を使用して、データソースに新しいプロシージャを作成します。  
   
- ユーザーが指定するコマンド テキストは、プロシージャではなく、ビューを表す場合の動作は使用中のプロバイダーに依存します。 **追加**プロバイダーは永続的なコマンドをサポートしていない場合は失敗します。  
+ ユーザーが指定したコマンドテキストがプロシージャではなくビューを表している場合、その動作は使用されているプロバイダーによって異なります。 プロバイダーがコマンドの永続化をサポートしていない場合、 **Append**は失敗します。  
   
 > [!NOTE]
->  Microsoft Jet OLE DB Provider を使用する場合、**プロシージャ**コレクション**Append**メソッドには、指定することが、**ビュー**なく**プロシージャ**で、*コマンド*パラメーター。 **ビュー**がデータ ソースに追加されに追加されます、**プロシージャ**コレクション。 後に、 **Append**場合、**プロシージャ**と**ビュー**コレクションが更新されると、**ビュー** でしなくなる**プロシージャ**コレクションに表示されますが、**ビュー**コレクション。  
+>  OLE DB Provider for Microsoft Jet を使用する場合、 **Procedures** collection **Append**メソッドを使用すると、*コマンド*パラメーターで**プロシージャ**ではなく**ビュー**を指定できます。 **ビュー**がデータソースに追加され、**プロシージャ**コレクションに追加されます。 **追加**後、**プロシージャ**コレクションと**ビュー**コレクションが更新されると、その**ビュー**は**procedures**コレクションに含まれなくなり、 **views**コレクションに表示されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

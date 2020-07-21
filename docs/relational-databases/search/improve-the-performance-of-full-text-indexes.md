@@ -17,18 +17,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629502"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 このトピックでは、フルテキスト インデントとクエリのパフォーマンス低下の一般的な原因をいくつか説明します。 また、このような問題を軽減し、パフォーマンスを改善する提案もいくつか紹介します。
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>ハードウェア リソースの問題
 フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "68021221"
   
     マスター マージで大量のデータを処理すると、実行時間が長いトランザクションが発生し、チェックポイント時のログの切り捨てが遅れる場合があります。 この場合、完全復旧モデルでは、トランザクション ログが非常に大きくなることがあります。 完全復旧モデルを使用するデータベースで大きなフルテキスト インデックスを再編成する前に、実行時間が長いトランザクションのための十分な領域をトランザクション ログに割り当てることをお勧めします。 詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
   
-##  <a name="tuning"></a> フルテキスト インデックスのパフォーマンスの調整  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> フルテキスト インデックスのパフォーマンスの調整  
 フルテキスト インデックスのパフォーマンスを最大化するには、次に示すベスト プラクティスを実装します。  
   
 -   すべての CPU プロセッサまたはコアを最大限に使用するには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) '**max full-text crawl range**' をシステム上の CPU の数に設定します。 構成オプションの詳細については、「 [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)」を参照してください。  
@@ -70,7 +70,7 @@ ms.locfileid: "68021221"
 
 -   timestamp 列に基づいて増分作成を使用する場合は、**timestamp** 列にセカンダリ インデックスを構築し、増分作成のパフォーマンスを向上します。  
   
-##  <a name="full"></a> 完全作成のパフォーマンスに関するトラブルシューティング  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> 完全作成のパフォーマンスに関するトラブルシューティング  
 ### <a name="review-the-full-text-crawl-logs"></a>フルテキスト クロール ログを確認する
  パフォーマンスの問題を診断するには、フルテキスト クロール ログを調べます。
  
@@ -132,8 +132,8 @@ ms.locfileid: "68021221"
   
 |プラットフォーム|fdhost.exe のメモリ要件の推定 (MB 単位) - *F*^1|max server memory の計算式 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *クロール範囲の数* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *クロール範囲の数* \* 10 \* 8|*M* = *T* - *F* - 500|  
+|x86|*F* = "*クロール範囲の数*" \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = "*クロール範囲の数*" \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **式に関する注意事項**
 1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_ **-** sigma **(** _F_i **)** で計算します。  
@@ -152,7 +152,7 @@ ms.locfileid: "68021221"
   
  #### <a name="example-setting-max-server-memory"></a>例:max server memory の設定  
   
- この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した **M** の値 *を* max server memory `7052`として設定します:  
+ この例では、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した *M* の値 `7052` を **max server memory** として設定します。  
   
 ```  
 USE master;  
@@ -178,7 +178,7 @@ GO
   
      次の表で、主な待機の種類について説明します。  
   
-    |待機の種類|[説明]|解決方法|  
+    |待機の種類|説明|解決方法|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX または _UP)|IO がボトルネックとなっている可能性があります。この場合は通常、平均のディスク キューも長くなります。|別のディスクの別のファイル グループにフルテキスト インデックスを移動すると、IO のボトルネックを軽減できる場合があります。|  
     |PAGELATCH_EX (または _UP)|複数のスレッドが同じデータベース ファイルへの書き込みを試行し、多数の競合が発生している可能性があります。|フルテキスト インデックスが格納されているファイル グループにファイルを追加すると、このような競合を軽減できる場合があります。|  
@@ -195,7 +195,7 @@ GO
   
          断片化を解消するには、クラスター化インデックスを再構成または再構築します。 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
-##  <a name="filters"></a> ドキュメントのインデックス作成が遅い問題のトラブルシューティング
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> ドキュメントのインデックス作成が遅い問題のトラブルシューティング
 
 > [!NOTE]
 > ここでは、他のドキュメントの種類が埋め込まれているドキュメント (Microsoft Word 文書など) のインデックスを作成する場合にのみ影響する問題について説明します。

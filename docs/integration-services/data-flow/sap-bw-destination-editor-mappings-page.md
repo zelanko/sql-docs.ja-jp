@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7b935ea743d052c9efa15fb1598d4cec1818e7b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034183"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298099"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>[SAP BW 変換先エディター] ([マッピング] ページ)
 
@@ -58,7 +58,7 @@ ms.locfileid: "68034183"
   
  変換先列に入力列をマップするには、 **[使用できる変換先列]** の一覧の列に、 **[使用できる入力列]** の一覧から列をドラッグします。  
   
- **[使用できる入力列]**  
+ **使用できる変換先列**  
  使用できる変換先列の一覧を表示します。  
   
  変換先列に入力列をマップするには、 **[使用できる変換先列]** の一覧の列に、 **[使用できる入力列]** の一覧から列をドラッグします。  

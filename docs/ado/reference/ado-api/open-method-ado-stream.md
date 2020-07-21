@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d59fcbbd7edea7ac87b2c080d27160cb98732759
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917834"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762160"
 ---
 # <a name="open-method-ado-stream"></a>Open メソッド (ADO Stream)
-開く、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)バイナリまたはテキスト データのストリームを操作するオブジェクト。  
+[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを開き、バイナリデータまたはテキストデータのストリームを操作します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,29 +34,29 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Source*  
- 任意。 A**バリアント**のデータ ソースを指定する値、 **Stream**します。 *ソース*電子メールまたはファイル システムなどのよく知られているツリー構造で既存のノードを指す絶対 URL 文字列を含めることができます。 URL のキーワードを使用して URL を指定する必要があります ("URL =*スキーム*://*server*/*フォルダー*")。 または、*ソース*既に開いているへの参照を含めることができます[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトに関連付けられている既定のストリームを開き、**レコード**します。 場合*ソース*が指定されていない、 **Stream**はインスタンス化し、開く、既定ではない基になるソースに関連付けられています。 URL スキームと関連するプロバイダーの詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+ *ソース*  
+ 任意。 **ストリーム**のデータソースを指定する**バリアント**値。 *ソース*には、電子メールやファイルシステムなど、よく知られているツリー構造内の既存のノードを指す絶対 URL 文字列を含めることができます。 Url は、url キーワード ("url =*scheme*://*server* / *フォルダー*") を使用して指定する必要があります。 または、*ソース*に既に開いている[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトへの参照が含まれている場合もあります。これにより、**レコード**に関連付けられている既定のストリームが開きます。 *Source*が指定されていない場合、既定では、基になるソースが関連付けられていない**ストリーム**がインスタンス化され、開かれます。 URL スキームとそれに関連付けられているプロバイダーの詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
  *モード*  
- 任意。 A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) 、結果として得られるアクセス モードを指定する値**Stream** (たとえば、読み取り/書き込みまたは読み取り専用)。 既定値は**adModeUnknown**します。 参照してください、[モード](../../../ado/reference/ado-api/mode-property-ado.md)アクセス モードの詳細についての詳細については、プロパティ。 場合*モード*が指定されていない、ソース オブジェクトによって継承されます。 たとえば場合、ソース**レコード**は読み取り専用モードで開かれます、 **Stream**既定では読み取り専用モードで開くこともできます。  
+ 任意。 結果の**ストリーム**のアクセスモード (たとえば、読み取り/書き込みまたは読み取り専用) を指定する[connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値。 既定値は**Admodeunknown**です。 アクセスモードの詳細については、 [Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを参照してください。 *Mode*が指定されていない場合は、ソースオブジェクトによって継承されます。 たとえば、ソース**レコード**が読み取り専用モードで開かれている場合、**ストリーム**も既定で読み取り専用モードで開かれます。  
   
  *OpenOptions*  
- 任意。 A [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md)値。 既定値は**adOpenStreamUnspecified**します。  
+ 任意。 [Streamopenoptionsenum](../../../ado/reference/ado-api/streamopenoptionsenum.md)値。 既定値は**Adopenstreamunspecified**です。  
   
- *UserName*  
- 任意。 A**文字列**値が必要な場合にアクセスするユーザー id を含む、 **Stream**オブジェクト。  
+ *ユーザー名*  
+ 任意。 必要に応じて**ストリーム**オブジェクトにアクセスするユーザー id を表す**文字列**値です。  
   
- *Password*  
- 任意。 A**文字列**値が必要な場合にアクセスするパスワードを含む、 **Stream**オブジェクト。  
+ *パスワード*  
+ 任意。 必要に応じて**ストリーム**オブジェクトにアクセスするパスワードを含む**文字列**値です。  
   
-## <a name="remarks"></a>コメント  
- ときに、**レコード**オブジェクトが、ソースのパラメーターとして渡された、 *UserID*と*パスワード*パラメーターを使用しないためへのアクセス、 **レコード**オブジェクトは既に利用可能です。 同様に、[モード](../../../ado/reference/ado-api/mode-property-ado.md)の**レコード**にオブジェクトが転送される、 **Stream**オブジェクト。 ときに*ソース*が指定されていない、 **Stream**開かれたデータが含まれていないとが、[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)のゼロ (0)。 これに書き込まれたデータの損失を回避するために**Stream**ときに、 **Stream**が閉じると、保存、 **Stream**で、 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)または[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)メソッド、またはメモリの別の場所に保存します。  
+## <a name="remarks"></a>解説  
+ **Record**オブジェクトが source パラメーターとして渡された場合、**レコード**オブジェクトへのアクセスは既に使用可能であるため、 *UserID*パラメーターと*Password*パラメーターは使用されません。 同様に、 **record**オブジェクトの[モード](../../../ado/reference/ado-api/mode-property-ado.md)が**ストリーム**オブジェクトに転送されます。 *Source*が指定されていない場合、開いている**ストリーム**にはデータが含まれず、[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)はゼロ (0) になります。 **ストリーム**が閉じられ**たときにストリームに**書き込まれるデータが失われないようにするには、 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)メソッドまたは[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)メソッドを使用して**ストリーム**を保存するか、別のメモリ位置に保存します。  
   
- *OpenOptions*の値**adOpenStreamFromRecord**の内容を識別、*ソース*パラメーターは既に開いている**レコード**オブジェクト。 既定の動作を扱う方法が*ソース*ファイルなどのツリー構造内のノードを直接指す URL として。 そのノードに関連付けられている既定のストリームが開かれます。  
+ **Adopenstreamfromrecord**の*openoptions*値は、 *Source*パラメーターの内容が既に開いている**レコード**オブジェクトであることを示します。 既定の動作では、*ソース*は、ファイルなどのツリー構造のノードを直接指す URL として扱われます。 そのノードに関連付けられている既定のストリームが開きます。  
   
- 中に、 **Stream**が開いていない場合はのすべての読み取り専用プロパティを読み取ること、 **Stream**します。 場合、 **Stream**を開いたすべての後続の操作では、非同期的に (以外のチェック、[状態](../../../ado/reference/ado-api/state-property-ado.md)およびその他の読み取り専用プロパティ) までブロックされます、**オープン**操作が完了するとします。  
+ **ストリーム**が開かれていなくても、**ストリーム**のすべての読み取り専用プロパティを読み取ることができます。 **ストリーム**が非同期的に開かれている場合は、**開い**ている操作が完了するまで、後続のすべての操作 ([状態](../../../ado/reference/ado-api/state-property-ado.md)のチェックとその他の読み取り専用プロパティを除く) はブロックされます。  
   
- オプションを指定しないで、前に説明しただけでなく*ソース*のインスタンスを作成することができます、 **Stream**基になるソースに関連付けることがなくメモリ内のオブジェクト。 バイナリまたはテキスト データを記述することでデータをストリームに動的に追加することができます、 **Stream**で[書き込み](../../../ado/reference/ado-api/write-method.md)または[WriteText](../../../ado/reference/ado-api/writetext-method.md)、またはファイルからデータを読み込んで[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)します。  
+ 前に説明したオプションに加えて、 *Source*を指定しないことで、ストリームオブジェクトを基になるソースに関連付けずに、メモリ内に**ストリーム**オブジェクトのインスタンスを作成できます。 [書き込み](../../../ado/reference/ado-api/write-method.md)または[WriteText](../../../ado/reference/ado-api/writetext-method.md)を使用して**ストリーム**にバイナリまたはテキストデータを書き込むことによって、または[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)を使用してファイルからデータを読み込むことによって、ストリームにデータを動的に追加できます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

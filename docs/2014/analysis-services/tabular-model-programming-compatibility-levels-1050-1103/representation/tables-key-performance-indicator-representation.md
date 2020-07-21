@@ -9,19 +9,18 @@ ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cc9ec7e6ccae664a6f608c350483ae9744fb49d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62795442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940023"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>主要業績評価指標表現 (テーブル)
-  KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスを測定に使用されます。  
+  KPI は、対象の値に対してベースメジャーによって定義される値のパフォーマンスを測定するために使用されます。  
   
 ## <a name="key-performance-indicator-representation"></a>主要業績評価指標表現  
- 表形式オブジェクトで、主要業績評価指標の kpi をモデル化-グラフィカルに表示するクライアント アプリケーションの追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
+ 表形式オブジェクトモデルでは、主要業績評価指標 (kpi) は、クライアントアプリケーションがグラフィカルに表示するための追加情報を含むメジャーです。 通常、KPI には、取得する目標に関する情報、目標と比較するメジャーの状態、クライアント ツールで状態をグラフィカルに表示する方法に関する情報が含まれています。  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO における主要業績評価指標  
  AMO を使用してテーブル モデル KPI を管理する場合、AMO 内の KPI に一対一で対応するオブジェクトは存在しません。AMO <xref:Microsoft.AnalysisServices.Kpi> オブジェクトは、この目的には使用されません。AMO では、テーブル モデルに対して、<xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> コレクションおよび <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> 内の要素の 1 つで作成された一連のオブジェクトによって KPI が表されます。  
@@ -221,6 +220,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular サンプル  
- AMO を使用して作成し、主要業績評価指標を操作する方法を理解しておくには、表現は、AMO to Tabular サンプル; のソース コードを参照してください。具体的には、次のソース ファイルで確認します。AddKPIs.cs します。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
+ AMO を使用して主要業績評価指標を作成および操作する方法については、AMO to Tabular サンプルのソース コードを参照してください。特に、ソース ファイル "AddKPIs.cs" の内容に注意してください。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   

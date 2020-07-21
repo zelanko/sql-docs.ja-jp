@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 75aaf9cca75ea90e036acb9d11f0793af2835438
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902624"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283689"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>レッスン 1-5:フラット ファイルの変換元を追加し、構成する
 
@@ -46,10 +46,10 @@ ms.locfileid: "67902624"
   
 9. **[プロパティ]** ウィンドウで、 **[LocaleID]** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
+## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 6:参照変換を追加し、構成する](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [フラット ファイル変換元](../integration-services/data-flow/flat-file-source.md)  
 [フラット ファイル接続マネージャー](../integration-services/connection-manager/flat-file-connection-manager.md)  
   

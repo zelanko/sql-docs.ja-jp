@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4670ef04301bb8dc75828db97ee42d3379ecbfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706239"
 ---
 # <a name="operator-precedence-transact-sql"></a>演算子の優先順位 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   複合式に複数の演算子がある場合は、演算子の優先順位によって、操作のシーケンスが決まります。 実行される順序により、結果の値は大きく変わります。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68121920"
 |1|~ (ビットごとの NOT)|  
 |2|* (乗算)、/ (除算)、% (剰余)|  
 |3|+ (正号)、- (負号)、+ (追加)、+ (連結)、- (減算)、& (ビットごとの AND)、^ (ビットごとの排他的 OR)、&#124; (ビットごとの OR)|  
-|4|=、>、\<、>=、<=、<>、!=、!>、!< (比較演算子)|  
+|4|=、>、\<, >=、>=、<=、<>、!=、!>、!< (比較演算子)|  
 |5|NOT|  
 |6|AND|  
 |7|ALL、ANY、BETWEEN、IN、LIKE、OR、SOME|  

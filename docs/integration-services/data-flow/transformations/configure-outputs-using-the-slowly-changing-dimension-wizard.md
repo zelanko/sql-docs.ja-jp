@@ -12,14 +12,14 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e8a20eba0f0452953f7c1bc8b27acc00fb16d638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112734"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291658"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
 
@@ -84,6 +84,6 @@ ms.locfileid: "68112734"
  緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、 **[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
   
 ## <a name="see-also"></a>参照  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [緩やかに変化するディメンション変換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

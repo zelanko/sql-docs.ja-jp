@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7332506666b11e96255c2b903d70b232ae4efa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061448"
 ---
 # <a name="views"></a>ビュー
   ビューとは、クエリによって内容が定義される仮想テーブルです。 ビューは、テーブルと同様に、一連の名前の付いた列とデータ行で構成されます。 インデックスが設定されていないと、データベース内に保存された一連のデータ値としてビューが作成されることはありません。 データは、ビューを定義するクエリが参照するテーブルから取り出され、ビューの行と列はビューを参照したときに動的に作成されます。  
@@ -43,13 +42,13 @@ ms.locfileid: "63191263"
   
 |ビューのタスク|トピック|  
 |----------------|-----------|  
-|ビューを作成する方法について説明します。|[Create Views (ビューの作成)](../views/views.md)|  
-|インデックス付きビューを作成する方法について説明します。|[Create Indexed Views (インデックス付きビューの作成)](../views/create-indexed-views.md)|  
-|ビュー定義を変更する方法について説明します。|[Modify Views (ビューの変更)](../views/modify-views.md)|  
-|ビューでデータを変更する方法について説明します。|[Modify Data Through a View (ビューを使用したデータ変更)](../views/modify-data-through-a-view.md)|  
-|ビューを削除する方法について説明します。|[Delete Views (ビューの削除)](../views/delete-views.md)|  
-|ビュー定義など、ビューに関する情報を返す方法について説明します。|[Get Information About a View (ビューに関する情報の取得)](../views/get-information-about-a-view.md)|  
-|ビューの名前を変更する方法について説明します。|[Rename Views (ビューの名前の変更)](../views/rename-views.md)|  
+|ビューを作成する方法について説明します。|[ビューの作成](../views/views.md)|  
+|インデックス付きビューを作成する方法について説明します。|[インデックス付きビューの作成](../views/create-indexed-views.md)|  
+|ビュー定義を変更する方法について説明します。|[ビューの変更](../views/modify-views.md)|  
+|ビューでデータを変更する方法について説明します。|[ビューを使用したデータ変更](../views/modify-data-through-a-view.md)|  
+|ビューを削除する方法について説明します。|[ビューの削除](../views/delete-views.md)|  
+|ビュー定義など、ビューに関する情報を返す方法について説明します。|[ビューに関する情報の取得](../views/get-information-about-a-view.md)|  
+|ビューの名前を変更する方法について説明します。|[ビューの名前の変更](../views/rename-views.md)|  
   
 ## <a name="see-also"></a>参照  
  [XML 列でのビューの作成](../xml/create-views-over-xml-columns.md)   

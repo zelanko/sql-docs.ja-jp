@@ -1,5 +1,6 @@
 ---
-title: XQuery での検索文字列 |Microsoft Docs
+title: XQuery での文字列検索 |Microsoft Docs
+description: XQuery での文字列検索の例を参照して、XML ドキュメント内のテキストを検索する方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ae897a8a945c477ce201b4037f3b05dbb13160e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765563"
 ---
 # <a name="string-search-in-xquery"></a>XQuery での文字列検索
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックには、XML ドキュメント内のテキストを検索する方法を示すサンプル クエリを掲載しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログから"maintenance"という単語を含む機能説明を検索します。  
+### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログに "maintenance" という単語が含まれている機能の説明を検索します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -44,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 前のクエリで、`where`の結果をフィルター処理、FLOWR 式、`for`式とを満たす要素のみを返す、 **contains()** 条件。  
+ 前のクエリでは、 `where` FLOWR 式のは式の結果をフィルター処理 `for` し、 **contains ()** 条件を満たす要素のみを返します。  
   
  結果を次に示します。  
   
@@ -57,7 +58,7 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

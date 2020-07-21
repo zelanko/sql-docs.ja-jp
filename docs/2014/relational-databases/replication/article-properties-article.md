@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721784"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049542"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
   **[アーティクルのプロパティ]** ダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスでは、すべての種類のアーティクルのプロパティを表示し、設定できます。 パブリケーションを作成するときにのみ設定できるプロパティや、パブリケーションにアクティブなサブスクリプションがない場合にのみ設定できるプロパティがあります。 設定できないプロパティは読み取り専用として表示されます。  
@@ -45,7 +44,7 @@ ms.locfileid: "62721784"
  サブスクライバーにオブジェクトを作成する際に、ユーザー定義のデータ型を基本データ型に変換するかどうかを指定します。 ユーザー定義のデータ型には、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]で導入されたユーザー定義 CLR 型が含まれます。 このようなデータ型を古いバージョンの **にレプリケートする場合には、** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定します。これにより、このデータ型をサブスクライバーで適切に処理できるようになります。  
   
  **[サブスクライバーでスキーマを作成]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたスキーマは、CREATE SCHEMA ステートメントを使用して定義します。 スキーマとは、オブジェクトの所有者です。スキーマは、\<Database>.\<Schema>.\<Object> など、マルチパート名で使用されます。 DBO 以外のスキーマで所有されるデータベースにオブジェクトがある場合、パブリッシュされるオブジェクトが作成されるように、このようなスキーマをサブスクライバーに作成することができます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたスキーマは、CREATE SCHEMA ステートメントを使用して定義します。 スキーマは、オブジェクトの所有者です。これは、 \<Database> .. \<Schema> \<Object> . などのマルチパート名で使用されます。DBO 以外のスキーマによって所有されているデータベース内のオブジェクトがある場合は、パブリッシュされたオブジェクトを作成できるように、これらのスキーマをサブスクライバー側で作成できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合、次の手順に従います。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62721784"
   
 -   各スキーマについて、そのスキーマと同じ名前を持つユーザーをサブスクリプション データベースに追加します。  
   
- **[XML を NTEXT に変換]** 、 **[MAX データ型を NTEXT と IMAGE に変換]** 、 **[新しい datetime を NVARCHAR に変換]** 、 **[FILESTREAM を MAX データ型に変換]** 、 **[大きな CLR を MAX データ型に変換]** 、 **[hierarchyId を MAX データ型に変換]** 、および **[spatial を MAX データ型に変換]**  
+ **[XML を NTEXT に変換]**、 **[MAX データ型を NTEXT と IMAGE に変換]**、 **[新しい datetime を NVARCHAR に変換]**、 **[FILESTREAM を MAX データ型に変換]**、 **[大きな CLR を MAX データ型に変換]**、 **[hierarchyId を MAX データ型に変換]**、および **[spatial を MAX データ型に変換]**  
  名前に示されているようにデータ型と属性を変換するかどうかを指定します。 このようなデータ型を以前のバージョンの **にレプリケートする場合には、** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定します。 これにより、このデータ型をサブスクライバーで適切に処理できるようになります。  
   
  **[対象オブジェクト名]**  
@@ -71,7 +70,7 @@ ms.locfileid: "62721784"
  ピア ツー ピア トランザクション レプリケーションが有効なパブリケーションでは、アーティクルに関するこのオプションは変更できません。  
   
  **[ID 範囲を自動的に管理します]**  
- 既定で、パブリッシャーおよび各サブスクライバーの ID 列はすべてレプリケーションによって管理されます。 特定の ID 値が 1 つのノードでのみ使用されるように、各レプリケーション ノードには幅広い ID 値 ( **[パブリッシャーの範囲サイズ]** および **[サブスクライバーの範囲サイズ]** で指定) が割り当てられています。 詳細については、「[ID 列のレプリケート](publish/replicate-identity-columns.md)」を参照してください。  
+ 既定で、パブリッシャーおよび各サブスクライバーの ID 列はすべてレプリケーションによって管理されます。 特定の ID 値が 1 つのノードでのみ使用されるように、各レプリケーション ノードには幅広い ID 値 ( **[パブリッシャーの範囲サイズ]** および **[サブスクライバーの範囲サイズ]** で指定) が割り当てられています。 詳細については、「[Replicate Identity Columns](publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
 ## <a name="options-for-transactional-publications"></a>トランザクション パブリケーションのオプション  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  
@@ -84,11 +83,11 @@ ms.locfileid: "62721784"
   
  詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
- **[レプリケート]**  
- このオプションは、ストアド プロシージャにのみ適用されます。 ストアド プロシージャの定義 (CREATE PROCEDURE ステートメント) またはその実行をレプリケートするかどうかを指定します。 プロシージャの実行をレプリケートする場合、サブスクリプションが開始されたときにプロシージャの定義がサブスクライバーにレプリケートされます。プロシージャがパブリッシャー上で実行されると、サブスクライバー上の対応するプロシージャが実行されます。 これにより、大規模なバッチ操作を実行する場合のパフォーマンスが大幅に向上します。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」を参照してください。  
+ **レプリケート**  
+ このオプションは、ストアド プロシージャにのみ適用されます。 ストアド プロシージャの定義 (CREATE PROCEDURE ステートメント) またはその実行をレプリケートするかどうかを指定します。 プロシージャの実行をレプリケートする場合、サブスクリプションが開始されたときにプロシージャの定義がサブスクライバーにレプリケートされます。プロシージャがパブリッシャー上で実行されると、サブスクライバー上の対応するプロシージャが実行されます。 これにより、大規模なバッチ操作を実行する場合のパフォーマンスが大幅に向上します。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
 ## <a name="options-for-merge-publications"></a>マージ パブリケーションのオプション  
- マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。 **[プロパティ]** と **[競合回避モジュール]** です。  
+ マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[競合回避モジュール]** という 2 つのタブがあります。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[同期の方向]**  
@@ -96,20 +95,20 @@ ms.locfileid: "62721784"
   
 -   **[双方向]** (既定) : 変更をサブスクライバーにダウンロードし、パブリッシャーにアップロードすることができます。  
   
--   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]** : 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。 トリガーにより、サブスクライバーで変更が作成されなくなります。  
+-   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]**: 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。 トリガーにより、サブスクライバーで変更が作成されなくなります。  
   
--   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]** : 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。  
+-   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]**: 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。  
   
  詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
- **[パーティションのオプション]**  
+ **パーティションのオプション**  
  パラメーター化されたフィルターで作成されるパーティションの種類を指定します。 詳細については、「 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」の「[パーティションのオプション] の設定」を参照してください。  
   
  **[追跡レベル]**  
  同じ行または同じ列に対する変更を競合として扱うかどうかを指定します。  
   
- **[INSERT 権限の確認]** 、 **[UPDATE 権限の確認]** 、 **[DELETE 権限の確認]**  
- パブリケーション データベースにパブリッシュされたテーブルに対する INSERT 権限、UPDATE 権限、または DELETE 権限がサブスクライバーのログインにあるかどうか、同期中にチェックするかどうかを指定します。 マージ レプリケーションではこのような権限を許可する必要がないため、既定では **[False]** になっています。パブリッシュされたテーブルへのアクセスは、パブリケーション アクセス リスト (PAL) により制御されます。 PAL の詳細については、「[パブリッシャーのセキュリティ保護](security/secure-the-publisher.md)」を参照してください。  
+ **[INSERT 権限の確認]**、 **[UPDATE 権限の確認]**、 **[DELETE 権限の確認]**  
+ パブリケーション データベースにパブリッシュされたテーブルに対する INSERT 権限、UPDATE 権限、または DELETE 権限がサブスクライバーのログインにあるかどうか、同期中にチェックするかどうかを指定します。 マージ レプリケーションではこのような権限を許可する必要がないため、既定では **[False]** になっています。パブリッシュされたテーブルへのアクセスは、パブリケーション アクセス リスト (PAL) により制御されます。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](security/secure-the-publisher.md)」を参照してください。  
   
  パブリッシュされたデータに対する特定の変更だけをアップロードするように 1 つ以上のサブスクライバーに許可する場合、権限をチェックするように要求できます。 たとえば、あるサブスクライバーを PAL に追加しながら、パブリケーション データベース内のテーブルに対する権限をそのサブスクライバーに与えないことができます。 その後で [DELETE 権限の確認] を **[True]** に設定すると、そのサブスクライバーでは挿入と更新のアップロードができますが、削除はできなくなります。  
   
@@ -121,12 +120,12 @@ ms.locfileid: "62721784"
   
 ### <a name="resolver-tab"></a>[競合回避モジュール] タブ  
  **[既定の競合回避モジュールを使用する]**  
- 既定の競合回避モジュールを選択した場合、使用されるサブスクリプションのタイプに応じて、各サブスクライバーに割り当てられている優先度、またはパブリッシャーに書き込まれた最初の変更に基づいて競合が回避されます。 詳細については、「[マージ レプリケーションの競合の検出および解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+ 既定の競合回避モジュールを選択した場合、使用されるサブスクリプションのタイプに応じて、各サブスクライバーに割り当てられている優先度、またはパブリッシャーに書き込まれた最初の変更に基づいて競合が回避されます。 詳細については、「 [マージ レプリケーションの競合の検出および解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
  **[ディストリビューターに登録されたカスタム競合回避モジュールを使用する]**  
- アーティクル競合回避モジュール ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供しているモジュールまたは自作のモジュール) の使用を選択した場合、リスト ボックスから競合回避モジュールを選択する必要があります。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
+ アーティクル競合回避モジュール ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] が提供しているモジュールまたは自作のモジュール) の使用を選択した場合、リスト ボックスから競合回避モジュールを選択する必要があります。 詳細については、「[高度なマージレプリケーションの競合の検出と解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
- 競合回避モジュールに入力が必要な場合、 **[競合回避モジュールが必要とする情報の入力]** テキスト ボックスで指定してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタム競合回避モジュールに必要な入力の詳細については、「[Microsoft COM ベースの競合回避モジュール](merge/advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+ 競合回避モジュールに入力が必要な場合、 **[競合回避モジュールが必要とする情報の入力]** テキスト ボックスで指定してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタム競合回避モジュールに必要な入力の詳細については、「 [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md) 」を参照してください。  
   
  **[要求時同期中にサブスクライバーが対話的に競合を解決することを許可する]**  
  サブスクライバーでオン デマンド同期が使用されるとき (マージ レプリケーションの既定の動作)、競合を対話的に解決する場合に、このオプションを選択します。 オン デマンド同期は、サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで指定します。 競合を対話的に解決するには、インタラクティブ競合回避モジュールのユーザー インターフェイスを使用します。 詳細については、「 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)」を参照してください。  
@@ -135,7 +134,7 @@ ms.locfileid: "62721784"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の提供する COM ベース競合回避モジュールはすべて署名済みです。 このオプションを選択すると、同期の際に競合回避モジュールが有効かどうか確認されます。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle パブリケーションのオプション  
- Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。 **[プロパティ]** と **[データのマッピング ]** です。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
+ Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、 **[プロパティ]** と **[データのマッピング]** という 2 つのタブがあります。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  
@@ -170,12 +169,12 @@ ms.locfileid: "62721784"
   
 -   データ型によっては、可能なマッピングが 1 つしかない場合があります。このような場合、プロパティ グリッドの列は読み取り専用になります。  
   
--   データ型によっては、複数のデータ型を選択できる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、アプリケーションに別のマッピングが必要でない限り、既定のマッピングを使うことをお勧めします。 詳細については、「 [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+-   データ型によっては、複数のデータ型を選択できる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、アプリケーションに別のマッピングが必要でない限り、既定のマッピングを使うことをお勧めします。 詳しくは、「 [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
- [初期スナップショットの作成および適用](create-and-apply-the-initial-snapshot.md)   
+ [初期スナップショットを作成して適用する](create-and-apply-the-initial-snapshot.md)   
  [サブスクリプションの再初期化](reinitialize-a-subscription.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)  
   

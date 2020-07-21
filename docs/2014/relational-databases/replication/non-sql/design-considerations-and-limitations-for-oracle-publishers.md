@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2776452e0da93cb1f170b6ee3356d95158df6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005376"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
-  Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
+  Oracle データベースからのパブリッシュは、データベースからのパブリッシュとほぼ同じように機能するように設計されてい [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。 ただし、以下の制限および問題に注意してください。  
   
 -   [Oracle (ゲートウェイ)] を選択すると、[Oracle (完全)] より高いパフォーマンスが得られますが、このオプションは、複数のトランザクション パブリケーションで同じテーブルをパブリッシュする場合は使用できません。 テーブルを表示できるのは、最大で 1 つのトランザクション パブリケーションと、任意の数のスナップショット パブリケーションになります。 複数のトランザクション パブリケーションで同じテーブルをパブリッシュする必要がある場合は、[Oracle (完全)] を選択します。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "63022515"
   
 -   関数ベースのインデックス  
   
--   既定値  
+-   [既定値]  
   
 -   CHECK 制約  
   
@@ -59,7 +58,7 @@ ms.locfileid: "63022515"
   
 -   入れ子になったテーブル  
   
--   Views  
+-   ビュー  
   
 -   パッケージ、パッケージ本体、プロシージャ、およびトリガー  
   
@@ -67,9 +66,9 @@ ms.locfileid: "63022515"
   
 -   シーケンス  
   
--   シノニム  
+-   Synonyms  
   
- サポートされるデータ型の詳細については、「 [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+ サポートされるデータ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
 ## <a name="differences-between-oracle-and-sql-server"></a>Oracle と SQL Server の違い  
   
@@ -88,14 +87,14 @@ ms.locfileid: "63022515"
   
 -   LOB の列に加え、LOB ではない列を行の更新に含めるか、同じ Oracle トランザクションの一部として、その行の LOB ではない列を更新します。 どちらの場合でも、LOB ではない列の更新により、トリガーが起動します。  
   
- LOB の詳細については、「 [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
+ LOB の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="unique-indexes-and-constraints"></a>一意インデックスと制約  
  スナップショット レプリケーションとトランザクション レプリケーションの両方において、一意のインデックスおよび制約 (主キー制約を含む) に含まれる列は、特定の制限事項に従う必要があります。 これらの制限に従わない場合、制約またはインデックスはレプリケートされません。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインデックスに許容される最大列数は 16 です。  
   
--   一意の制約に含まれるすべての列は、サポートされているデータ型である必要があります。 データ型の詳細については、「 [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
+-   一意の制約に含まれるすべての列は、サポートされているデータ型である必要があります。 データ型の詳細については、「[Oracle パブリッシャーのデータ型マッピング](data-type-mapping-for-oracle-publishers.md)」をご覧ください。  
   
 -   一意の制約に含まれるすべての列は、パブリッシュする必要があります (フィルター選択はできません)。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "63022515"
   
  以下の問題についても考慮に入れてください。  
   
--   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
+-   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
   
 -   一意性をテストする場合、フィールドの後続の空白は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では無視されますが、Oracle では無視されません。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "63022515"
   
 -   標準的なトランザクション パブリケーションは、最大 1000 列のテーブルをサポートします。 Oracle のトランザクション パブリケーションがサポートするのは 995 列です (レプリケーションにより、パブリッシュされた各テーブルに 5 列が追加されます)。  
   
--   COLLATE 句は、CREATE TABLE ステートメントに追加され、大文字と小文字を区別する比較を有効にします。この比較は、主キーおよび一意の制約にとって重要です。 この動作はスキーマ オプション 0x1000 で制御されます。このオプションは、[sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) の **@schema_option** パラメーターで指定します。  
+-   COLLATE 句は、CREATE TABLE ステートメントに追加され、大文字と小文字を区別する比較を有効にします。この比較は、主キーおよび一意の制約にとって重要です。 この動作は、スキーマオプション0x1000 で制御されます。このオプションは、 **@schema_option** [Sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)のパラメーターと共に指定します。  
   
 -   ストアド プロシージャを使用して Oracle パブリッシャーを構成またはメンテナンスする場合、プロシージャを明示的なトランザクションに入れないでください。 これは Oracle パブリッシャーへの接続に使用するリンク サーバーではサポートされていません。  
   
@@ -135,21 +134,21 @@ ms.locfileid: "63022515"
   
 -   Oracle パブリケーションに対するサブスクライバーは、バックアップから自動的に初期化することはできません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[Validate Replicated Data](../validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、バイナリと行数の 2 種類の検証をサポートしています。 Oracle パブリッシャーでは、行数検証をサポートしています。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、ネイティブ bcp モードとキャラクター モードの 2 種類のスナップショット形式が用意されています。 Oracle パブリッシャーでは、キャラクター モード スナップショットをサポートしています。  
   
 -   パブリッシュされた Oracle テーブルへのスキーマ変更はサポートされていません。 スキーマ変更を行うには、まずパブリケーションを削除し、変更を行ってから、パブリケーションおよびサブスクリプションを再作成します。  
   
     > [!NOTE]  
-    >  パブリッシュされたテーブルが利用されていないときに、スキーマ変更とその後のパブリケーションおよびサブスクリプションの削除、再作成を一度に行う場合、サブスクリプションに対して [レプリケーションのサポートのみ] オプションを指定できます。 これにより、各サブスクライバーにスナップショットをコピーすることなく、サブスクリプションを同期させることができます。 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
+    >  パブリッシュされたテーブルが利用されていないときに、スキーマ変更とその後のパブリケーションおよびサブスクリプションの削除、再作成を一度に行う場合、サブスクリプションに対して [レプリケーションのサポートのみ] オプションを指定できます。 これにより、各サブスクライバーにスナップショットをコピーすることなく、サブスクリプションを同期させることができます。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 ### <a name="replication-security-model"></a>レプリケーションのセキュリティ モデル  
  Oracle のパブリッシングのセキュリティ モデルは、標準的なトランザクション レプリケーションのセキュリティ モデルと同じですが、以下の点が異なります。  
   
 -   スナップショット エージェントおよびログ リーダー エージェントがディストリビューターからパブリッシャーへの接続に使用するアカウントは、次のいずれかの方法で指定されます。  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、 **@login** と **@password** にも値を指定します)  
+    -   **@security_mode** [Sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)のパラメーター ( **@login** **@password** Oracle 認証が使用されている場合は、との値も指定します)  
   
     -   SQL Server Management Studio の **[サーバーへの接続]** ダイアログ ボックス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを構成するときに、これを使用します。  
   
@@ -157,13 +156,13 @@ ms.locfileid: "63022515"
   
 -   スナップショット エージェントおよびログ リーダー エージェントが接続に使用するアカウントは、[sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) またはプロパティ シートで変更することはできませんが、パスワードは変更できます。  
   
--   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーターに 1 (Windows 統合認証) の値を指定する場合は、次のとおりです。  
+-   Sp_adddistpublisher のパラメーターに 1 (Windows 統合認証) を指定した場合 **@security_mode** [&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   スナップショット エージェントとログ リーダー エージェントの両方で使用するプロセス アカウントおよびパスワード ([sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) および [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) の **@job_login** および **@job_password** パラメーター) は、Oracle パブリッシャーへの接続に使用するアカウントおよびパスワードと同じにする必要があります。  
+    -   スナップショットエージェントとログリーダーエージェントの両方に使用されるプロセスアカウントとパスワード ( **@job_login** **@job_password** [transact-sql&#41;&#40;sp_addpublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)のパラメーターと sp_addlogreader_agent [&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) の両方に、Oracle パブリッシャーへの接続に使用するアカウントとパスワードと同じである必要があります。  
   
-    -   [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) または [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql) から **@job_login** パラメーターを変更することはできませんが、パスワードは変更できます。  
+    -   パラメーターを変更するには、 **@job_login** [Sp_changepublication_snapshot &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)を使用するか、 [transact-sql &#40;を sp_changelogreader_agent](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)しますが、パスワードは変更することができます。  
   
- レプリケーション セキュリティの詳細については、次を参照してください。 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)します。  
+ レプリケーションのセキュリティの詳細については、「 [SQL Server レプリケーションのセキュリティ](../security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの管理上の注意点](administrative-considerations-for-oracle-publishers.md)   

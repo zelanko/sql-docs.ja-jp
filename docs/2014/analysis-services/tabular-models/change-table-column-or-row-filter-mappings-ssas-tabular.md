@@ -1,5 +1,5 @@
 ---
-title: テーブル、列、または行のフィルターのマッピング (SSAS テーブル) の変更 |Microsoft Docs
+title: テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb9da478e240a357fdb38b103db8fb4cab6f3d0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067635"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939913"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)
   このトピックでは、 **の** [テーブルのプロパティの編集] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ダイアログ ボックスを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。  
@@ -25,7 +24,7 @@ ms.locfileid: "66067635"
  現在のテーブルと異なる列を持つテーブルにソースを変更すると、列が異なることを示す警告メッセージが表示されます。 現在のテーブルに含める列を選択し、 **[保存]** をクリックします。 テーブルの左側にあるチェック ボックスをオンにすると、テーブル全体を置換できます。  
   
 > [!NOTE]  
->  テーブルに複数のパーティションがある場合、[テーブルのプロパティの編集] ダイアログ ボックスを使用して、行のフィルターのマッピングを変更することはできません。 複数のパーティションを持つテーブルについて行のフィルターのマッピングを変更するには、パーティション マネージャーを使用します。 詳細については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
+>  テーブルに複数のパーティションがある場合、[テーブルのプロパティの編集] ダイアログ ボックスを使用して、行のフィルターのマッピングを変更することはできません。 複数のパーティションを持つテーブルについて行のフィルターのマッピングを変更するには、パーティション マネージャーを使用します。 詳細については、「 [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>テーブル、列、または行のフィルターのマッピングを変更するには  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66067635"
   
 2.  **[テーブルのプロパティの編集]** ダイアログ ボックスで、フィルターの基準とする条件を含む列を見つけ、列見出しの右側にある下矢印をクリックします。  
   
-3.  **[オートフィルター]** メニューで次のいずれかの操作を行います。  
+3.  [**オートフィルター** ] メニューで、次のいずれかの操作を行います。  
   
     -   列の値の一覧で、フィルター処理の基準にする 1 つ以上の値を選択するか、選択を解除し、[OK] をクリックします。  
   

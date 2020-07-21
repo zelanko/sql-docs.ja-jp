@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058214"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436899"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>レジストリ値を設定して署名ポリシーを実装する
   オプションのレジストリ値を使用して、署名付きパッケージまたは署名がないパッケージを読み込む際の組織のポリシーを管理できます。 このレジストリ キーを使用する場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が実行されるコンピューターおよびポリシーを適用するコンピューターごとにこのレジストリ値を作成する必要があります。 レジストリ値が設定されると、パッケージを読み込む前に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって署名が確認されます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66058214"
   
  次の表に、DWORD データの有効な値、およびそれらに関連付けられたポリシーを示します。  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0|管理制限はありません。|  
 |1|署名が無効なパッケージをブロックします。<br /><br /> この設定では、署名がないパッケージはブロックしません。|  
@@ -46,9 +45,9 @@ ms.locfileid: "66058214"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>パッケージに対する署名ポリシーを実装するには  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
+1.  [**スタート**] メニューの [**ファイル名を指定して実行**] をクリックします。  
   
-2.  実行 ダイアログ ボックスで、次のように入力します。 `Regedit`、 をクリックし、 **OK**します。  
+2.  [実行] ダイアログボックスで、「」と入力し、 `Regedit` [ **OK**] をクリックします。  
   
 3.  レジストリ キー HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS を探します。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058214"
   
 5.  新しい値の名前を「`BlockedSignatureStates`」に更新します。  
   
-6.  右クリック`BlockedSignatureStates`クリック**変更**します。  
+6.  右クリック `BlockedSignatureStates` して、[**変更**] をクリックします。  
   
 7.  **[DWORD 値の編集]** ダイアログ ボックスで、「0」、「1」、「2」、または「3」のいずれかの値を入力します。  
   
@@ -64,8 +63,8 @@ ms.locfileid: "66058214"
   
 9. **[ファイル]** メニューの **[終了]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [セキュリティの概要 (Integration Services)](security/security-overview-integration-services.md)   
+## <a name="see-also"></a>関連項目  
+ [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [デジタル署名を使用してパッケージのソースを特定する](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

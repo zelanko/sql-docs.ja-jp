@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db28891a7e1bed887f3a8d58a5994734d65b9185
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705841"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定した **geography** インスタンスを簡略化したものを返します。これは、指定された許容範囲で、特定のインスタンスに対して Douglas-Peucker アルゴリズムを実行することにより生成されます。  
   
@@ -42,15 +42,15 @@ ms.locfileid: "68101770"
   
 |||  
 |-|-|  
-|項目|定義|  
+|期間|定義|  
 |*tolerance*|**float** 型の値です。 *tolerance* は、Douglas-Peucker アルゴリズムに入力する許容範囲です。 *tolerance* には正の数値を指定する必要があります。|  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コレクション型の場合、このアルゴリズムはインスタンスに含まれている **geography** ごとに個別に実行されます。 このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  
   
  このメソッドでは、**LineString** インスタンスのエンドポイントを保持しようとしますが、有効な結果を保持する目的でそれに失敗する場合があります。  
@@ -63,7 +63,7 @@ ms.locfileid: "68101770"
   
  このメソッドは正確ではありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`Reduce()` を使用してそのインスタンスを簡略化する例を次に示します。  
   
 ```  

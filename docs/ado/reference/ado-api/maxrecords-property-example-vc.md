@@ -1,5 +1,5 @@
 ---
-title: MaxRecords プロパティの例 (vc++) |Microsoft Docs
+title: MaxRecords プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932244"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762523"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords プロパティの例 (VC++)
-この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを開き、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で最も高価な 10 のタイトルを含む、***タイトル***テーブル。  
+この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを使用して、***タイトル***テーブルに最も高価な10個のタイトルを含む[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。  
   
 ## <a name="example"></a>例  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **価格を先頭の 10 タイトル:**  
-**ですがユーザー フレンドリですか。---22.95**  
-**コンピューターの Phobic と非他者と個人:動作のバリエーション---21.59**  
-**タマネギ、Leeks とガーリック トースト:---20.95 地中海の料理のシークレット**  
-**シリコン バレー---20.00 のシークレット**  
-**少数のデータベース ガイド---19.99**  
-**コンピューター---19.99 話題の直線**  
-**シリコン バレー Gastronomic 扱います---19.99**  
-**長期にわたるデータ Deprivation:次の 4 つのケース スタディ---19.99**  
-**寿司、すべてのユーザーですか?---14.99**  
-**バッキンガム Palace 台所---11.95 50 年**   
-## <a name="see-also"></a>関連項目  
+ **価格別の上位10件のタイトル:**  
+**しかし、ユーザーにとってわかりやすいでしょうか。---22.95**  
+**コンピューター Phobic と Phobic 以外のユーザー: 動作のバリエーション---21.59**  
+**タマネギ、Leeks、ニンニク: 地中海---20.95 の料理シークレット**  
+**シリコンバレー---20.00 のシークレット**  
+**忙しい役員のデータベースガイド---19.99**  
+**コンピューター---19.99 についての説明**  
+**シリコンバレー Gastronomic は---19.99 を扱います**  
+**データの長時間分割: 4 つのケーススタディ---19.99**  
+**すし、だれでも---14.99**  
+**Buckingham Palace Kitchens---11.95 の50年**   
+## <a name="see-also"></a>参照  
  [MaxRecords プロパティ (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

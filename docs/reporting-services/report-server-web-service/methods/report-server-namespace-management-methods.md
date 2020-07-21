@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー名前空間管理メソッド | Microsoft Docs
+description: レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ed5267303ad37d76b571c676b2010e8f04c8a09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284602"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509809"
 ---
 # <a name="report-server-namespace-management-methods"></a>レポート サーバー名前空間管理メソッド
   レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|ジョブの実行を取り消します。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|レポート サーバー データベースまたは SharePoint ライブラリにフォルダーを追加します。|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリに新しいアイテムを追加します。 このメソッドが適用されるアイテムの種類は、**Report**、**Model**、**Dataset**、**Component**、**Resource**、**DataSource** です。|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|新しいレポート編集セッションを作成します。|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|新しいレポート編集セッションを作成します。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリからアイテムを削除します。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|指定した検索条件に一致する、レポート サーバー データベースまたは SharePoint ライブラリのアイテムを返します。|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|指定したパラメーターに基づいてイベントをトリガーします。|  

@@ -1,5 +1,6 @@
 ---
 title: レポートでのカスタム アセンブリの使用 | Microsoft Docs
+description: レポート定義ファイル内からアセンブリを参照できるように、Microsoft .NET Framework を利用し、カスタム コード アセンブリを開発します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94fdcbb6219aefb0cf38f0d77c0c3437ccf19915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 526f80fe202c14773aeafce6b5889116b975e3c2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194096"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217053"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>レポートでのカスタム アセンブリの使用
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート アイテムの値、スタイル、および書式設定に関するカスタム コードを記述できます。 たとえば、カスタム コードを使用して、ロケールに基づいて通貨を書式設定したり、特殊な書式設定の特定の値にフラグを設定したり、または企業で実際に使用している他のビジネス ルールを適用したりすることができます。 このコードをレポートに含める方法の 1 つは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用してレポート定義ファイル内から参照できるカスタム コード アセンブリを作成することです。 サーバーは、レポートを実行するときにカスタム アセンブリの関数を呼び出します。 カスタム アセンブリは、レポートで使用する特別な関数を取得するときに使用できます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート アイテムの値、スタイル、および書式設定に関するカスタム コードを記述できます。 たとえば、カスタム コードを使用して、ロケールに基づいて通貨を書式設定したり、特殊な書式設定の特定の値にフラグを設定したり、または企業で実際に使用している他のビジネス ルールを適用したりすることができます。 このコードをご自分のレポートに含める方法の 1 つは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用してお使いのレポート定義ファイルから参照できるカスタム コード アセンブリを作成することです。 サーバーは、レポートを実行するときにカスタム アセンブリの関数を呼び出します。 カスタム アセンブリは、レポートで使用する特別な関数を取得するときに使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [RDL ファイルのアセンブリの参照](../../reporting-services/custom-assemblies/referencing-assemblies-in-an-rdl-file.md)  
@@ -41,7 +42,7 @@ ms.locfileid: "63194096"
  [カスタム アセンブリ オブジェクトの初期化](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)  
  レポートから呼び出されたカスタム アセンブリ オブジェクトの値を初期化する方法について説明します。  
   
- [カスタム アセンブリをデバッグする方法](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
+ [方法: カスタム アセンブリをデバッグする](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
  カスタム アセンブリ コードのデバッグ方法について説明します。  
   
 ## <a name="see-also"></a>参照  

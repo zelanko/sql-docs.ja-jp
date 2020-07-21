@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio で DMX クエリの作成 |Microsoft Docs
+title: SQL Server Management Studio | で DMX クエリを作成します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d20fc7a618f4977058203d8f35d235b543609dd9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085469"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524028"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio で DMX クエリを作成する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、マイニング モデルおよびマイニング構造に対する、予測クエリ、コンテンツ クエリ、およびデータ定義クエリを作成できる一連の機能が用意されています。  
@@ -36,10 +35,10 @@ ms.locfileid: "66085469"
   
  ここでは、メタデータ エクスプローラーと DMX クエリ エディターを使用して、DMX クエリを作成する方法について説明します。  
   
-##  <a name="BKMK_Templates"></a> DMX クエリ テンプレート  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a>DMX クエリテンプレート  
  基本的な DMX クエリを作成するためのテンプレートは、テンプレート エクスプローラーから利用できます。 **DMX** フォルダーには、データ マイニング テンプレートが含まれています。テンプレートは、次のカテゴリに分類されます。  
   
--   **モデル コンテンツ**  
+-   **モデルコンテンツ**  
   
 -   **モデル管理**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66085469"
   
  また、DMX と XMLA での操作の処理方法には、いくつかの重要な違いがあります。 たとえば、XMLA を使用して、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース全体のバックアップなどの管理操作を実行できますが、DMX には [EXPORT (DMX)](/sql/dmx/export-dmx) という簡単なコマンドが用意されています。1 つのマイニング モデルをバックアップする場合は、このコマンドの方が適しています。  
   
-##  <a name="BKMK_Building_Queries"></a> DMX クエリの作成と実行  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a>DMX クエリの作成と実行  
   
 #### <a name="open-a-new-dmx-query-window"></a>新しい DMX クエリ ウィンドウを開く  
   
@@ -84,8 +83,8 @@ ms.locfileid: "66085469"
   
  [マイニング モデルのコンテンツ クエリの作成](create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング クエリ インターフェイス](data-mining-query-tools.md)   
+## <a name="see-also"></a>参照  
+ [データマイニングクエリインターフェイス](data-mining-query-tools.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

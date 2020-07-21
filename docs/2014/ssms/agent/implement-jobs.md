@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c2e85b77997e0bba765a1c877311e1336364eaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63074017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044976"
 ---
 # <a name="implement-jobs"></a>ジョブの実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用すると、定型的な管理作業を自動化して定期的に実行し、管理を効率化できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "63074017"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |ジョブの作成と所有権の割り当てについて説明します。|[ジョブの作成](create-jobs.md)|  
 |ジョブをカテゴリごとに編成するための情報を記載しています。|[ジョブの整理](organize-jobs.md)|  
 |ユーザーが作成できるさまざまな種類のジョブ ステップおよびそれらの管理方法について説明します。|[ジョブ ステップの管理](manage-job-steps.md)|  

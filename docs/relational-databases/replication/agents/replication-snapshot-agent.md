@@ -1,5 +1,6 @@
 ---
 title: レプリケーション スナップショット エージェント | Microsoft Docs
+description: SQL Server では、レプリケーション スナップショット エージェントによってスナップショット ファイルが準備され、フォルダーに格納され、同期ジョブがディストリビューション データベースに記録されます。
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7132154bcb61e84d052891c200589cf157b31f65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730223"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   レプリケーション スナップショット エージェントは、パブリッシュされたテーブルおよびデータベース オブジェクトのスキーマとデータを含むスナップショット ファイルを作成し、これらのファイルをスナップショット フォルダーに格納し、同期ジョブをディストリビューション データベースに記録する実行可能ファイルです。  
   
 > [!NOTE]  
@@ -103,7 +104,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のディストリビューターへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
-|DistributorDeadlockPriority の値|[説明]|  
+|DistributorDeadlockPriority の値|説明|  
 |---------------------------------------|-----------------|  
 |**-1**|ディストリビューター側でデッドロックが発生した場合、スナップショット エージェント以外のアプリケーションが優先されます。|  
 |**0** (既定値)|優先度は割り当てられません。|  
@@ -128,16 +129,16 @@ snapshot [ -?]
  動的スナップショットの生成先の場所です。  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- スナップショット エージェントが接続時に使用する SSL (Secure Sockets Layer) 暗号化レベルです。  
+ 接続確立時にスナップショット エージェントが使用するトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の暗号化レベルです。  
   
-|EncryptionLevel の値|[説明]|  
+|EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|SSL は使用されません。|  
-|**1**|SSL は使用されますが、信頼できる発行者によって SSL サーバー証明が署名されているかどうかを検証しません。|  
-|**2**|SSL が使用され、証明書の確認が行われます。|  
+|**0**|TLS を使用しないことを指定します。|  
+|**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
+|**2**|TLS を使用し、証明書を検証することを指定します。|  
 
  > [!NOTE]  
- >  有効な SSL 証明書には、SQL Server の完全修飾ドメイン名が定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
+ >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。
   
  詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
@@ -147,7 +148,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  スナップショット操作中にログに記録する履歴の量を指定します。 **1**を選択すれば、ログへの履歴の記録がパフォーマンスに与える影響を最小限に抑えることができます。  
   
-|HistoryVerboseLevel の値|[説明]|  
+|HistoryVerboseLevel の値|説明|  
 |-------------------------------|-----------------|  
 |**0**|進行状況メッセージがコンソールまたは出力ファイルに書き込まれます。 履歴レコードは、ディストリビューション データベースのログに記録されません。|  
 |**1**|同じ状態 (startup、progress、success など) を示している以前の履歴メッセージを常に更新します。 前回の記録に同じ状態がない場合は、新しい記録を挿入します。|  
@@ -185,7 +186,7 @@ snapshot [ -?]
  無関係な削除がサブスクライバーに送られたかどうかを示します。 無関係な削除とは、サブスクライバーのパーティションに属さない行に対する DELETE コマンドがサブスクライバーに送られたことを表します。 無関係な削除はデータの整合性や収束には影響しませんが、不要なネットワーク トラフィックを生じます。 **MaxNetworkOptimization** の既定値は **0**です。 **MaxNetworkOptimization** を **1** に設定すると、無関係な削除が発生する可能性が最小限に抑えられ、ネットワーク トラフィックが減少し、最もネットワークが最適化されます。 ただし、このパラメーターを **1** に設定するとメタデータの保存領域が増加するため、複数レベルの結合フィルターと複雑なサブセット フィルターが存在する場合、パブリッシャーのパフォーマンスが低下します。 レプリケーション トポロジを慎重に評価する必要があります。無関係な削除によるネットワーク トラフィックが容認できないほど大きい場合に限り、 **MaxNetworkOptimization** を **1** に設定してください。  
   
 > [!NOTE]
->  このパラメーターを **1** に設定することが役立つのは、マージ パブリケーションの同期最適化オプション ([sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の **@keep_partition_changes** パラメーター) が **true** に設定されている場合のみです。  
+>  このパラメーターを **1** に設定することが役立つのは、マージ パブリケーションの同期最適化オプション ([sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@keep_partition_changes**` パラメーター) が **true** に設定されている場合のみです。  
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
@@ -193,7 +194,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  出力を詳細表示にするかどうかを指定します。  
   
-|OutputVerboseLevel の値|[説明]|  
+|OutputVerboseLevel の値|説明|  
 |------------------------------|-----------------|  
 |**0**|エラー メッセージのみが記録されます。|  
 |**1** (既定値)|すべての進行状況レポート メッセージが出力されます (既定)。|  
@@ -208,7 +209,7 @@ snapshot [ -?]
 **-PrefetchTables** [ **0**| **1**]  
  テーブル オブジェクトがプリフェッチされてキャッシュされるかどうかを指定する、省略可能なパラメーターです。  既定の動作では、内部の計算に基づき SMO コンポーネントを使用して特定のテーブルのプロパティがプリフェッチされます。  このパラメーターは、SMO のプリフェッチ操作の実行にかなりの時間がかかるシナリオで役立つ場合があります。 このパラメーターを使用しない場合は、パブリケーションにアーティクルとして追加されるテーブルの割合に基づいて、実行時にこの決定が行われます。  
   
-|OutputVerboseLevel の値|[説明]|  
+|OutputVerboseLevel の値|説明|  
 |------------------------------|-----------------|  
 |**0**|SMO コンポーネントのプリフェッチ メソッドの呼び出しは無効です。|  
 |**1**|スナップショット エージェントはプリフェッチ メソッドを呼び出し、SMO を使用していくつかのテーブルのプロパティをキャッシュします|  
@@ -222,7 +223,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のパブリッシャーへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
-|PublisherDeadlockPriority の値|[説明]|  
+|PublisherDeadlockPriority の値|説明|  
 |-------------------------------------|-----------------|  
 |**-1**|パブリッシャー側でデッドロックが発生した場合、スナップショット エージェント以外のアプリケーションが優先されます。|  
 |**0** (既定値)|優先度は割り当てられません。|  
@@ -250,12 +251,12 @@ snapshot [ -?]
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルの各行の末尾を示す 1 文字または文字列です。 既定値は \n\<,@g>\n です。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 実行中の同時実行動的スナップショット処理のメンバー数が、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の **@max_concurrent_dynamic_snapshots** プロパティの設定による制限に達している場合に、スナップショット エージェントの最大待機時間を秒単位で指定します。 最大秒数に達したときにスナップショット エージェントがまだ待機している場合、スナップショット エージェントは待機を終了します。 値が 0 の場合は、このエージェントが無期限に待機することを意味しますが、取り消すこともできます。  
+ 実行中の同時実行動的スナップショット処理のメンバー数が、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@max_concurrent_dynamic_snapshots` プロパティの設定による制限に達している場合に、スナップショット エージェントの最大待機時間を秒単位で指定します。 最大秒数に達したときにスナップショット エージェントがまだ待機している場合、スナップショット エージェントは待機を終了します。 値が 0 の場合は、このエージェントが無期限に待機することを意味しますが、取り消すこともできます。  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  このパラメーターは非推奨とされます。旧バージョンとの互換性のためにサポートされています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  ドメイン ユーザー アカウント (既定値) ではなくローカル システム アカウントで実行するように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントをインストールした場合、サービスはローカル コンピューターにだけアクセスできます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント下で実行するスナップショット エージェントで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]へのログイン時に Windows 認証モードを使用するように構成すると、スナップショット エージェントは異常終了します。 既定の設定は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証です。  

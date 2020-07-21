@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2a84a40c5d35335e4fbd73aaa65291ddabe303ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37f68c733094f5883fa295e3f9e02062adb07e19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751016"
 ---
 # <a name="delete-a-trace-transact-sql"></a>トレースの削除 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、ストアド プロシージャを使用してトレースを削除する方法について説明します。  
   
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
 ### <a name="to-delete-a-trace"></a>トレースを削除するには  
   
-1.  **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  `@status = 0` を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
-2.  **@status = 2** を指定して **sp_trace_setstatus** を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
+2.  `@status = 2` を指定して **sp_trace_setstatus** を実行し、トレースを閉じてトレースの情報をサーバーから削除します。  
   
 > [!NOTE]  
 >  トレースを閉じるには、最初にそのトレースを停止する必要があります。  

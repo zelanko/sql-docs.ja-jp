@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream メソッド (SQLServerBlob) |Microsoft Docs
+title: setBinaryStream メソッド (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9d4dd274fd77de831f2ea7484cc759ab4cb771d7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975097"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928836"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream メソッド (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Po*  
+ *Pos*  
   
  書き込みを開始する BLOB 値内の位置です。  
   
@@ -45,8 +45,8 @@ public java.io.OutputStream setBinaryStream(long pos)
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- この setBinaryStream メソッドは、java. Blob インターフェイスの setBinaryStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setBinaryStream メソッドは、java.sql.Blob インターフェイスの setBinaryStream メソッドで指定されています。  
   
  BLOB のデータは、指定された開始位置から出力ストリームによって上書きされ、BLOB の初期データの長さをオーバーランすることができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。  
   

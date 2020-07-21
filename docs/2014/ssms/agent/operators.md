@@ -22,15 +22,14 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d141a2db9a69603701200bc50dcac57ef402968a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064433"
 ---
-# <a name="operators"></a>演算子
+# <a name="operators"></a>オペレーター
   オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
   
 ## <a name="operator-attributes-and-concepts"></a>オペレーターの属性と概念  
@@ -47,9 +46,9 @@ ms.locfileid: "68189019"
  オペレーターの連絡先情報では、オペレーターに通知する方法を定義します。 オペレーターへの通知には、電子メール、ポケットベル、または **net send** コマンドを使用できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+>  ポケットベルと**net send**のオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンでエージェントから削除される予定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
--   **電子メールによる通知**  
+-   **メール通知**  
   
      電子メールによる通知では、電子メール メッセージがオペレーターに送信されます。 電子メールによる通知を使用するには、オペレーターの電子メール アドレスを指定します。  
   
@@ -71,11 +70,11 @@ ms.locfileid: "68189019"
   
          すべてのオペレーターが同じポケットベル プロバイダーを利用している場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、ポケットベル電子メール間システムが要求する特別な電子メール書式を指定できます。 この特別な書式は、プレフィックスまたはサフィックスの形式で、電子メールの次の行に含めることができます。  
   
-         **Subject:**  
+         **件名：**  
   
-         **Cc**:  
+         **CC**:  
   
-         **To**:  
+         **宛先**:  
   
     > [!NOTE]  
     >  容量の小さい英数字のポケットベル システムを使用している場合は、エラーのテキストをポケットベルの通知から除外することで、送信されるテキストを短縮できます。 容量の小さい英数字のポケットベル システムには、1 ページあたりのバイト数が 64 バイトに制限されているものなどがあります。  
@@ -98,7 +97,7 @@ ms.locfileid: "68189019"
   
      プライマリ オペレーターに通知できなかった理由には、ポケットベル アドレスが誤っているか、オペレーターが非番であるなどがあります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが **msdb** データベースのシステム テーブルにアクセスできない場合  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、 **msdb**データベースのシステムテーブルにアクセスできません。  
   
      **sysnotifications** システム テーブルは、警告に関してオペレーターが担う責任を指定します。  
   
@@ -119,9 +118,9 @@ ms.locfileid: "68189019"
 |-|-|  
 |**タスク**|**トピック**|  
 |オペレーターの作成に関連するタスク|[オペレーターの作成](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)<br /><br /> [警告への応答の定義 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)|  
+|警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)<br /><br /> [警告への応答の定義 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)  
   
   

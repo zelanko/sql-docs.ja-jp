@@ -1,10 +1,9 @@
 ---
-title: ジョブ ステップの管理 | Microsoft Docs
-ms.custom: ''
+title: ジョブ ステップの管理
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258038"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256111"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68258038"
   
 -   実行可能プログラムまたはオペレーティング システムのコマンド。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのいずれでもサポートされません。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] タスク。  
   
@@ -162,7 +163,7 @@ Set oServer = nothing
   
 -   ジョブ ステップが実行される OLAP サーバーのデータベースを特定します。  
   
--   実行するステートメントを入力します。 ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** メソッドの XML である必要があります。 ステートメントには、完全な SOAP エンベロープまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** メソッドの XML が含まれていない可能性があります。 SOAP エンベロープおよび [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップではサポートされていません。  
+-   実行するステートメントを入力します。 ステートメントは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** メソッドの XML である必要があります。 ステートメントには、完全な SOAP エンベロープまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** メソッドの XML が含まれていない可能性があります。 SOAP エンベロープおよび [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップではサポートされていません。  
   
 ### <a name="analysis-services-query-job-steps"></a>Analysis Services クエリ ジョブ ステップ  
 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] クエリ ジョブ ステップを作成するには、次の操作を行う必要があります。  
@@ -204,7 +205,7 @@ SSIS カタログにパッケージを配置し、 **[SSIS カタログ]** を�
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |実行可能プログラムを使用してジョブ ステップを作成する方法について説明します。|[CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアクセス許可をリセットする方法について説明します。|[SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップを作成する方法について説明します。|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

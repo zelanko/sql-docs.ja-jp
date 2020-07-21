@@ -20,15 +20,15 @@ ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: adae0818964e55bffb71dd415dde9cb74297f3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a526d3846f98ac247d6e7d18a3670165892769a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906113"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893928"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対応するレジストリ キーの名前を返します。 現在のインスタンスが既定のインスタンスの場合、@@SERVICENAME では 'MSSQLSERVER' が返されます。現在のインスタンスが名前付きインスタンスの場合は、インスタンス名が返されます。  
 
@@ -43,11 +43,11 @@ ms.locfileid: "67906113"
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は MSSQLServer という名前のサービスとして実行されます。  
   
-## <a name="examples"></a>使用例  
- 次に、`@@SERVICENAME` の使用例を示します。  
+## <a name="examples"></a>例  
+ 次の例に、`@@SERVICENAME` の使用方法を示します。  
   
 ```  
 SELECT @@SERVICENAME AS 'Service Name';  

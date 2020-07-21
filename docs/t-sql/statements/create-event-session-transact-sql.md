@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 359f2bdba7722c5ff30490d2648f68bf4b2c3db5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902801"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392730"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 イベントのソース、イベント セッション ターゲット、およびイベント セッション オプションを識別する拡張イベント セッションを作成します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "67902801"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 CREATE EVENT SESSION event_session_name
 ON { SERVER | DATABASE }
 {  
@@ -105,6 +105,8 @@ ON { SERVER | DATABASE }
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 *event_session_name* には、イベント セッションのユーザー定義の名前を指定します。 *event_session_name* には英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
@@ -127,7 +129,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 アクションは、object_type 'action' として sys.dm_xe_objects ビューに表示されます。
 
-WHERE \<predicate_expression> イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 \<predicate_expression> が true の場合、イベントは、セッションのアクションおよびターゲットによって処理されます。 \<predicate_expression> が false の場合、イベントは、セッションのアクションおよびターゲットによって処理される前にセッションによって削除されます。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。
+WHERE \<predicate_expression> では、イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 \<predicate_expression> が true の場合、イベントは、セッションのアクションおよびターゲットによって処理されます。 \<predicate_expression> が false の場合、イベントは、セッションのアクションおよびターゲットによって処理される前にセッションによって削除されます。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。
 
 *event_field_name* は、述語ソースを識別するイベント フィールドの名前です。
 
@@ -158,7 +160,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] } によって、ターゲッ
 > [!IMPORTANT]
 > リング バッファー ターゲットを使用している場合、max_memory ターゲット パラメーターを 2048 KB に設定し、XML 出力のデータの切り捨てを回避することをお勧めします。 さまざまなターゲットの種類の使用について詳しくは、「[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」をご覧ください。
 
-WITH ( \<event_session_options> [ ,...*n*] ) イベント セッションで使用するオプションを指定します。
+WITH ( \<event_session_options> [ ,...*n*] ) では、イベント セッションで使用するオプションを指定します。
 
 MAX_MEMORY =*size* [ KB | **MB** ] によって、イベントのバッファーリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は 4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 最大容量は 2 GB を超える (2048 MB 未満にする) ことはできません。 しかし、GB 域のメモリの値を使用することはお勧めしません。
 
@@ -166,7 +168,7 @@ EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS
 
 **ALLOW_SINGLE_EVENT_LOSS** を指定すると、セッションからイベントを削除できます。 単独のイベントは、すべてのイベント バッファーがいっぱいになった場合にのみ削除されます。 イベント バッファーがいっぱいのときに単独のイベントを削除することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス特性が許容可能な状態になり、処理後のイベント ストリームのデータ損失を最小限に抑えることができます。
 
-ALLOW_MULTIPLE_EVENT_LOSS を指定すると、複数のイベントでいっぱいのイベント バッファーをセッションから削除できます。 削除されるイベントの数は、セッションに割り当てられているメモリ サイズ、メモリのパーティション分割、およびバッファー内のイベントのサイズによって異なります。 このオプションを使用すると、イベント バッファーがすぐにいっぱいになるときにサーバーのパフォーマンスに与える影響を最小限に抑えることができますが、多数のイベントがセッションから削除される可能性があります。
+ALLOW_MULTIPLE_EVENT_LOSS を指定すると、複数のイベントでいっぱいのイベント バッファーをセッションから削除できます。 削除されるイベントの数は、セッションに割り当てられているメモリ サイズ、メモリのパーティション分割、バッファー内のイベントのサイズによって異なります。 このオプションを使用すると、イベント バッファーがすぐにいっぱいになるときにサーバーのパフォーマンスに与える影響を最小限に抑えることができますが、多数のイベントがセッションから削除される可能性があります。
 
 NO_EVENT_LOSS を指定した場合、イベントの削除は許可されません。 このオプションを指定した場合、発生したすべてのイベントが保持されます。 このオプションを使用した場合、イベントを開始するすべてのタスクは、イベント バッファーに空きができるまで待機します。 その結果、イベント セッションがアクティブになっている間、検知できる程度のパフォーマンスの問題が発生することがあります。 バッファーからイベントがフラッシュされるのを待機する間、ユーザーの接続に遅延が生じる可能性があります。
 
@@ -200,7 +202,7 @@ ON の場合、起動時にイベント セッションが開始されます。
 
 **OFF** の場合、起動時にイベント セッションが開始されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 論理演算子の優先順位は、高い方から `NOT`、`AND`、`OR` です。
 
@@ -209,7 +211,7 @@ ON の場合、起動時にイベント セッションが開始されます。
 SQL Server では、`ALTER ANY EVENT SESSION` アクセス許可が必要です。
 SQL Database では、データベースにおける `ALTER ANY DATABASE EVENT SESSION` アクセス許可が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="sql-server-example"></a>SQL Server の例
 

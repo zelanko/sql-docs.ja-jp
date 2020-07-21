@@ -1,5 +1,6 @@
 ---
 title: 型指定された XML と型指定されていない XML の比較 | Microsoft Docs
+description: 型指定された XML と型指定されていない XML の相違点について説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b98cc763b1bfdd47a1d560639a9a6dff5cd49a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775553"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **xml** 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、 **xml** 型の変数、パラメーター、または列に関連付けることができます。 XML スキーマ コレクションを関連付けた場合、この **xml** データ型のインスタンスを *型指定されている*と呼びます。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>適切な形式の XML と xml データ型  
@@ -154,14 +155,12 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 2.  **xs:date** ファセット、 **xs:dateTime** ファセット、または XML スキーマ コレクションの既定値に負の年がある場合は、 **xs:date** 基本型または **xs:dateTime** 基本型で許可されている最も小さな値 (たとえば、 **xs:dateTime**の場合は 0001-01-01T00:00:00.0000000Z) に自動的に更新されます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  負の年が含まれていても、単純な SQL SELECT ステートメントを使用して XML データ型全体を取得することはできます。 負の年は、新たにサポートされた範囲内の年に置き換えるか、要素や属性の型を **xs:string**に変更することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [xml データ型のメソッド](../../t-sql/xml/xml-data-type-methods.md)   
+ [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
- [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

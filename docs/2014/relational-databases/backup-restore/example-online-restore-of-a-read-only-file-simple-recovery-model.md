@@ -1,5 +1,5 @@
 ---
-title: 例:読み取り専用のファイル (単純復旧モデル) のオンライン復元 |Microsoft Docs
+title: '例 : 読み取り専用ファイルのオンライン復元 (単純復旧モデル) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ccbb89a7af71545c3b410356b6ab6b101983798d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d84c920a2cb40866ba106b4d30d8e24c4caea611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876152"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958302"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>例:読み取り専用ファイルのオンライン復元 (単純復旧モデル)
   このトピックは、読み取り専用のファイル グループを含む、単純復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。 単純復旧モデルでは、ファイルが最後に読み取り専用になってから作成されたファイル バックアップが存在する場合、読み取り専用ファイルをオンラインに復元できます。  
@@ -54,7 +53,7 @@ WITH RECOVERY
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;完全復旧モデル&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [ファイルの復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061153"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393160"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   優先順位と、その優先順位を割り当てる [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換を判断するための一連の条件を定義します。 優先順位は、メッセージ交換の優先度で指定されているものと同じコントラクトとサービスの組み合わせを使用するすべてのメッセージ交換のエンドポイントに割り当てられます。 優先度は、1 (低) から 10 (高) までの範囲の値です。 既定値は 5 です。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68061153"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
@@ -55,7 +55,9 @@ FOR CONVERSATION
   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *ConversationPriorityName*  
  メッセージ交換の優先度の名前を指定します。 名前は現在のデータベース内で一意であり、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
@@ -110,7 +112,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  メッセージ交換の優先度で指定されているコントラクトおよびサービスを使用するすべてのメッセージ交換のエンドポイントに割り当てる優先度を指定します。 *PriorityValue* には、1 (最も低い優先度) ～ 10 (最も高い優先度) の整数リテラルを指定する必要があります。 既定値は 5 です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換のエンドポイントに優先順位を割り当てます。 この優先順位によって、エンドポイントに関連付けられている操作の優先度が制御されます。 各メッセージ交換には、2 つのメッセージ交換エンドポイントがあります。  
   
 -   発信側メッセージ交換エンドポイントは、メッセージ交換の一方を発信側サービスおよび発信側キューに関連付けます。 発信側メッセージ交換エンドポイントは、BEGIN DIALOG ステートメントが実行されたときに作成されます。 発信側メッセージ交換エンドポイントに関連付けられる操作には、次のものがあります。  
@@ -161,7 +163,7 @@ FOR CONVERSATION
 ## <a name="permissions"></a>アクセス許可  
  メッセージ交換の優先度を作成する権限は、既定では db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。 データベースに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. メッセージ交換の両方向に優先度レベルを割り当てる  
  この 2 つのメッセージ交換の優先度では、`TargetService` と `InitiatorAService` の間で `SimpleContract` を使用するすべての操作に優先度レベル 3 が割り当てられるようにします。  
@@ -220,7 +222,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. サービスを使用して、1 つの発信先サービスに対して 3 つの優先順位を作成する  
  次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 コントラクトは 1 つですが、各レベルには個別の発信側サービスがあります。 すべての発信側サービスは、中心となる 1 つの発信先サービスと通信します。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +264,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. コントラクトを使用して、複数のサービスに対して 3 つの優先順位を作成する  
  次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 各レベルには、個別のコントラクトがあります。 これらの優先度は、そのコントラクトを使用するメッセージ交換によって参照されるすべてのサービスに適用されます。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

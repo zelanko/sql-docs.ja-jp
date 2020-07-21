@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23782f796bae3dee795fbafacd2d0d4436337f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1dac16634cea0de24e405a3d8017f80ee9a151
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040423"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007973"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS` は、負の値を正の値を変更します `ABS` は、0 または正の値には影響しません)。
   
@@ -37,7 +37,7 @@ ms.locfileid: "68040423"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 ABS ( numeric_expression )  
 ```  
   
@@ -48,7 +48,7 @@ ABS ( numeric_expression )
 ## <a name="return-types"></a>戻り値の型  
 *numeric_expression*と同じ型を返します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、3 つの異なる値に対して `ABS` 関数を使用した結果を示します。
   
 ```sql

@@ -1,5 +1,5 @@
 ---
-title: バッチ操作の実行 |Microsoft Docs
+title: バッチ操作の実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027926"
 ---
 # <a name="performing-batch-operations"></a>バッチ操作の実行

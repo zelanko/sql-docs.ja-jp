@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068053"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルの作成
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のマーケティング部門には 8 人の従業員が勤務しています。 従業員の階層は、次のようになります。  
@@ -64,7 +63,7 @@ ms.locfileid: "66110058"
   
 ### <a name="to-insert-a-subordinate-employee"></a>部下を挿入するには  
   
-1.  **Sariya** は **David**に直属します。 挿入する**Sariya の**ノードを作成する必要が適切な**OrgNode**データ型の値`hierarchyid`します。 次のコードでは、`hierarchyid` データ型の変数を作成して、テーブルのルート OrgNode 値をその変数に代入します。 次に、その変数を [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) メソッドと共に使用して、部下のノードである行を挿入します。 `GetDescendant` は、2 つの引数を受け取ります。 引数値の次のオプションを確認してください。  
+1.  **Sariya** は **David**に直属します。 **Sariya の**ノードを挿入するには、データ型の適切な**orgnode**値を作成する必要があり `hierarchyid` ます。 次のコードでは、`hierarchyid` データ型の変数を作成して、テーブルのルート OrgNode 値をその変数に代入します。 次に、その変数を [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) メソッドと共に使用して、部下のノードである行を挿入します。 `GetDescendant` は、2 つの引数を受け取ります。 引数値の次のオプションを確認してください。  
   
     -   parent が NULL の場合、 `GetDescendant` は NULL を返します。  
   

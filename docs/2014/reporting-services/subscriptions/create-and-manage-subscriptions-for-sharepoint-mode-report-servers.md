@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101009"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
@@ -30,11 +30,11 @@ ms.locfileid: "66101009"
   
  サブスクリプションを作成する場合、配信を指定する方法には次の 3 つがあります。  
   
--   **ドキュメント ライブラリ**:元のレポートには、元のレポートと同じ SharePoint サイト内のライブラリに基づくドキュメントを配信するサブスクリプションを作成することができます。 同じサイト コレクション内の別のサーバーや別のサイト上のライブラリにドキュメントを配信することはできません。 ドキュメントを配信するには、レポートの配信先のライブラリにアイテムを追加する権限が必要です。  
+-   **ドキュメント ライブラリ**: 元のレポートと同じ SharePoint サイト内のライブラリに、元のレポートに基づくドキュメントを配信するためのサブスクリプションを作成できます。 同じサイト コレクション内の別のサーバーや別のサイト上のライブラリにドキュメントを配信することはできません。 ドキュメントを配信するには、レポートの配信先のライブラリにアイテムを追加する権限が必要です。  
   
--   **ファイル フォルダー:** 共有フォルダーにファイル システム上の元のレポートに基づくドキュメントを配信できます。 この場合、ネットワーク接続経由でアクセスできる既存のフォルダーを選択する必要があります。  
+-   **ファイル フォルダー:** 元のレポートに基づくドキュメントを、ファイル システムの共有フォルダーに配信できます。 この場合、ネットワーク接続経由でアクセスできる既存のフォルダーを選択する必要があります。  
   
--   **電子メール:** レポート サーバーの電子メール配信拡張機能を使用するレポート サーバーを構成する場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) をトレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
+-   **電子メール:** レポート サーバーのメール配信拡張機能を使用できるようにレポート サーバーが構成されている場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) を受信トレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
   
  **このトピックの内容:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101009"
   
 -   [サブスクリプションを削除するには](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> サブスクリプションの一般的な要件  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> サブスクリプションの一般的な要件  
  サブスクリプションを作成するには、レポートの表示と警告の作成の権限が必要です。レポートでは、保存された資格情報が使用されている必要があります。  
   
  サブスクリプションを作成する際には、出力ファイル形式を選択できます。 形式によっては正しく機能しないレポートもあります。 サブスクリプションで形式を選択する前に、レポートを開き、別の形式にエクスポートして、期待どおりに表示されることを確認します。  
@@ -66,7 +66,7 @@ ms.locfileid: "66101009"
   
  サブスクリプション用に選択する出力形式は、レポート サーバーにインストールされた表示拡張機能に基づきます。 そのため、レポート サーバーの表示拡張機能によってサポートされる出力形式しか選択できません。  
   
-###  <a name="bkmk_tosharepoint_library"></a> SharePoint ライブラリにレポートを配信するサブスクリプションを作成するには  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> SharePoint ライブラリにレポートを配信するサブスクリプションを作成するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101009"
   
 10. **[パラメーター]** では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 選択したレポートにパラメーターが含まれていない場合、パラメーター セクションはこのページに表示されません。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> 共有フォルダーへの配信のサブスクリプションを作成するには  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> 共有フォルダーへの配信のサブスクリプションを作成するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66101009"
   
 7.  **[表示形式]** では、レポートのアプリケーション形式を選択します。  
   
-8.  **[書き込みモード]** では、 **[なし]**、 **[自動増分]**、 **[上書き]** の中から選択します。 これらのオプションは、後続の配信でファイルを上書きするかどうかを決定します。 以前に配信したファイルを保持する場合、 **[自動増分]** を選択できます。 一意なファイル名を作成するために、新しいファイルには番号が付加されます。 **[なし]** を選択した場合は、配信先の場所に同じ名前のファイルが既に存在すると配信が行われません。  
+8.  **[書き込みモード]** では、 **[なし]** 、 **[自動増分]** 、 **[上書き]** の中から選択します。 これらのオプションは、後続の配信でファイルを上書きするかどうかを決定します。 以前に配信したファイルを保持する場合、 **[自動増分]** を選択できます。 一意なファイル名を作成するために、新しいファイルには番号が付加されます。 **[なし]** を選択した場合は、配信先の場所に同じ名前のファイルが既に存在すると配信が行われません。  
   
 9. **[ファイル拡張子]** で、アプリケーションのファイル形式に対応するファイル名拡張子を追加する場合は **[True]** 、拡張子を付けずにファイルを作成する場合は [False] を選択します。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66101009"
   
 12. **[パラメーター]** では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-###  <a name="bkmk_subscription_for_email"></a> レポート サーバー電子メール配信のサブスクリプションを作成するには  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> レポート サーバー電子メール配信のサブスクリプションを作成するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66101009"
   
 10. **[パラメーター]** では、パラメーター化されたレポートに対するサブスクリプションを作成している場合に、サブスクリプション処理時にレポートと共に使用する値を指定します。 パラメーターの詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-###  <a name="bkmk_to_modify_subscription"></a> サブスクリプションを表示または変更するには  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> サブスクリプションを表示または変更するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66101009"
   
 3.  各サブスクリプションは、配信の種類で識別されます。 サブスクリプションの種類をクリックし、既存のプロパティを表示および変更します。  
   
-###  <a name="bkmk_to_delete_subscription"></a> サブスクリプションを削除するには  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> サブスクリプションを削除するには  
   
 1.  レポートを含む SharePoint ライブラリを参照します。  
   
@@ -161,6 +161,6 @@ ms.locfileid: "66101009"
  [Reporting Services の電子メール配信](e-mail-delivery-in-reporting-services.md)   
  [Reporting Services でのファイル共有の配信](file-share-delivery-in-reporting-services.md)   
  [Reporting Services での SharePoint ライブラリへの配信](sharepoint-library-delivery-in-reporting-services.md)   
- [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [SSRS Configuration Manager &#40;電子メール配信用にレポートサーバーを構成&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: トレーニング データ (データ マイニング ウィザード) の指定 |Microsoft Docs
+title: '[トレーニングデータの指定] (データマイニングウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940263"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>[トレーニング データの指定] (データ マイニング ウィザード)
   **[トレーニング データの指定]** ページを使用すると、マイニング構造に含める列を指定できます。 構造に含める列をすべてのモデルで使用するとは限らない場合でも、それらの列を選択できます。 たとえば、マイニング モデルから列にドリルスルーする場合は、それらの列をモデルには含めずに構造に含めることができます。  
@@ -27,18 +26,18 @@ ms.locfileid: "66068065"
 > [!NOTE]  
 >  マイニング アルゴリズムごとに、異なるキーが使用されます。 各種のキーの詳細については、「[コンテンツの種類 &#40;データ マイニング&#41;](data-mining/content-types-data-mining.md)」を参照してください。  
   
- **詳細情報。**[マイニング構造&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、 [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)  
+ **詳細:** [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>および  
- **テーブル/列**  
+## <a name="options"></a>オプション  
+ **テーブルまたは列**  
  ウィザードの前のページで選択したテーブルおよび列が表示されます。  
   
- **\<チェック ボックス >**  
+ **\<check box>**  
  マイニング構造に含める列を選択します。  
   
  データ ソースに入れ子になったテーブルまたは複数のビューが含まれている場合は、列の一覧を展開して入れ子になったテーブルを表示します。  
   
- **[キー]**  
+ **キー**  
  データの一意識別子として使用される列を選択します。  
   
  ケース テーブルの場合、通常、キーは一意識別子です。  
@@ -51,22 +50,22 @@ ms.locfileid: "66068065"
 > [!NOTE]  
 >  この列を使用できるのは、マイニング モデルをマイニング構造と共に作成する場合のみです。  
   
- **予測可能です**  
+ **[予測可能]**  
  このテーブルまたは列が今後の追加入力に基づいて予測できるようにします。  
   
  入れ子になったテーブルを予測可能として指定すると、入れ子になったテーブル全体が予測可能になります。 入れ子になったテーブル内で入力列または予測可能列として指定されている列がない場合、そのテーブルはマイニング構造に表示されても、モデル内では無視されます。  
   
  **メモ** : この列を使用できるのは、マイニング モデルをマイニング構造と共に作成する場合のみです。  
   
- **お勧めします**  
+ **勧め**  
  クリックすると、 **[関連列の提示]** ダイアログ ボックスが開きます。ここで、サンプル データに基づいて分析を実行し、選択した **[予測可能]** 列に対してエントロピに基づく最大のリレーションシップを持つ入力列を識別します。 この分析は、OLAP ソースに基づく入れ子になったテーブル列またはマイニング構造にも適用されます。  
   
  **メモ** : この列を使用できるのは、マイニング モデルをマイニング構造と共に作成する場合のみです。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [関連列の提示&#40;データ マイニング ウィザード&#41;](suggest-related-columns-data-mining-wizard.md)   
- [テーブル型を指定&#40;データ マイニング ウィザード&#41;](specify-table-types-data-mining-wizard.md)   
- [列のコンテンツおよびデータ型の指定&#40;データ マイニング ウィザード&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [データマイニングウィザードの F1 ヘルプ &#40;Analysis Services データマイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [データマイニングウィザード &#40;関連する列の提案&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [データマイニングウィザード &#40;テーブルの種類の指定&#41;](specify-table-types-data-mining-wizard.md)   
+ [列のコンテンツとデータ型 &#40;データマイニングウィザードを指定し&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

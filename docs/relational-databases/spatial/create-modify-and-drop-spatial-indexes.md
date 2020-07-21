@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751109"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   空間インデックスは、 **geometry** データ型や **geography** データ型の列 ( *空間列*) に対する一部の操作をより効率的に実行できます。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
   
  空間インデックスの作成にはいくつかの制限があります。 詳細については、このトピックの「 [空間インデックスに関する制限](#restrictions) 」を参照してください。  
@@ -33,9 +33,9 @@ ms.locfileid: "68048707"
 > [!NOTE]  
 >  空間インデックスとパーティションやファイル グループとの関係については、「 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)」の「解説」をご覧ください。  
   
-##  <a name="creating"></a> 空間インデックスの作成、変更、および削除  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> 空間インデックスの作成、変更、および削除  
   
-###  <a name="create"></a> 空間インデックスを作成するには  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> 空間インデックスを作成するには  
  **Transact-SQL を使用して空間インデックスを作成するには**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68048707"
   
 7.  インデックスを作成する空間列を指定するには、 **[追加]** をクリックします。  
   
-8.  **[ *\<テーブル名>* から列を選択]** ダイアログ ボックスで、**geometry** 型または **geography** 型の列を選択します (対応するチェック ボックスをオンにします)。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
+8.  [ *\<table name>* **から列を選択**] ダイアログ ボックスで、対応するチェック ボックスをオンにして、**geometry** または **geography** 型の列を選択します。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
   
 9. **[インデックス キー列]** グリッドで、選択した列を確認します。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68048707"
 5.  **[選択された空間インデックス]** ボックスの一覧で新しいインデックスを選択し、右側のグリッドで空間インデックスのプロパティを設定します。 プロパティの詳細については、「[[空間インデックス] ダイアログ ボックス &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)」をご覧ください。  
   
   
-###  <a name="alter"></a> 空間インデックスを変更するには  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> 空間インデックスを変更するには  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048707"
 -   [既存のインデックスの別のファイル グループへの移動](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> 空間インデックスを削除するには  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> 空間インデックスを削除するには  
  **Transact-SQL を使用して空間インデックスを削除するには**  
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048707"
 4.  **[削除]** をクリックします。  
   
   
-##  <a name="restrictions"></a> 空間インデックスに関する制限  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> 空間インデックスに関する制限  
  空間インデックスは、 **geometry** 型または **geography**型の列にのみ作成できます。  
   
 ### <a name="table-and-view-restrictions"></a>テーブルおよびビューの制限  

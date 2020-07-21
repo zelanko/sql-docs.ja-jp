@@ -1,5 +1,5 @@
 ---
-title: getClientConnectionID メソッド (SQLServerConnection) |Microsoft Docs
+title: getClientConnectionID メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 461a3a0e217fb2ad973830eaffc86ff048830b83
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953172"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907618"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +34,8 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 拡張イベントログの診断情報へのアクセスの詳細については、「[拡張イベントログの診断情報へのアクセス](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
+## <a name="remarks"></a>解説  
+ 拡張イベント ログの診断情報へのアクセスの詳細については、「[拡張イベント ログの診断情報へのアクセス](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
  次のサンプルは、接続 ID の取得方法を示しています。  
   

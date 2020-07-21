@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField および SQLGetDescRec (カーソル ライブラリ) |Microsoft Docs
+title: SQLGetDescField と SQLGetDescRec (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - SQLGetDescField function [ODBC], Cursor Library
 - SQLGetDescRec function [ODBC], Cursor Library
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 853a364b61b63d58da93111c75db0d7d723ee49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 49ceea6b6180e1b51f2f103f74412c3e2b4cbe02
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073911"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307833"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField および SQLGetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetDescField**と**SQLGetDescRec**カーソル ライブラリの関数。 これらの関数については、次を参照してください。 [SQLGetDescField 関数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)と[SQLGetDescRec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)します。  
+ このトピックでは、カーソルライブラリで**SQLGetDescField**関数と**Sqlgetdescrec**関数を使用する方法について説明します。 これらの関数の一般的な情報については、「 [SQLGetDescField 関数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)」と「 [Sqlgetdescrec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)」を参照してください。  
   
- カーソル ライブラリを実行します**SQLGetDescRec**ブックマーク列のメタデータを返します。 カーソル ライブラリを実行します**SQLGetDescField**によって返されるのと同じフィールドを返す**SQLGetDescRec**は、SQL_DESC_NAME、SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE SQL_DESC_OCTET_長さ、SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_NULLABLE します。 一貫性を保つのため**SQLGetDescField**も SQL_DESC_UNNAMED を返します。  
+ カーソルライブラリは、 **Sqlgetdescrec**を実行してブックマーク列のメタデータを返します。 カーソルライブラリは**SQLGetDescField**を実行して、 **Sqlgetdescrec**によって返されるのと同じフィールドを返します。これは SQL_DESC_NAME、SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE、SQL_DESC_OCTET_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_NULLABLE です。 一貫性を確保するために、 **SQLGetDescField**も SQL_DESC_UNNAMED を返します。  
   
- カーソル ライブラリを実行します**SQLGetDescField**ブックマーク列をバインドするために設定されているフィールドが、次の値を返すに呼び出されます。SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_LENGTH します。  
+ SQLGetDescField、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_LENGTH のバインドブックマーク SQL_DESC_DATA_PTR 列に設定されている次のフィールドの値を返すために、カーソルライブラリが呼び出されると、 **SQLGetDescField**が実行されます。  
   
- カーソル ライブラリを実行します**SQLGetDescField** SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR フィールドの値を返すに呼び出されます。 これらのフィールドは、ブックマークの行だけでなく、任意の行に対して返されます。  
+ カーソルライブラリは、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR の各フィールドの値を返すために呼び出されると、 **SQLGetDescField**を実行します。 これらのフィールドは、ブックマーク行だけでなく、任意の行に対して返すことができます。  
   
- アプリケーションを呼び出す場合**SQLGetDescField**カーソル ライブラリは、前に説明したもの以外の任意のフィールドの値を取得、ドライバーへの呼び出しを渡します。
+ アプリケーションが**SQLGetDescField**を呼び出して、前に説明した以外のフィールドの値を返す場合、カーソルライブラリは呼び出しをドライバーに渡します。

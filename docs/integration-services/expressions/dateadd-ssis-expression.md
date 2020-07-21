@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25fade61e60a5e2cab4aef67a8ba8e2a836ef02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088812"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290176"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
 
@@ -48,7 +48,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>戻り値の型  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。 日付要素の名前では大文字と小文字が区別されません。  
   
 |datepart|省略形|  
@@ -59,10 +59,10 @@ DATEADD(datepart, number, date)
 |Dayofyear|dy、y|  
 |日|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
-|Hour|Hh|  
-|Minute|mi、n|  
-|第 2 週|ss、s|  
+|平日|dw、w|  
+|時|Hh|  
+|分|mi、n|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  式が解析される際、 *number* 引数が使用できる必要があります。 引数には定数または変数を指定できます。 式が解析される際に既知の値が提供されないため、列の値を使用することはできません。  

@@ -1,26 +1,26 @@
 ---
-title: トレースウィンドウの消去 (SQL Server プロファイラー) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: トレース ウィンドウを消去する
+titleSuffix: SQL Server Profiler
+description: トレース ファイルやテーブルを消去せずに、SQL Server Profiler でイベント データをキャプチャするトレース ウィンドウを消去する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- trace window [SQL Server]
-- clearing trace window
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eece3e8477f215b683b6c460b927eaa8121a2d5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 451e678c2e8a7f0d238e46b99370b7002dd14abc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105603"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151937"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>トレース ウィンドウの消去 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して実行しているトレースのトレース ウィンドウを消去する方法について説明します。  
   

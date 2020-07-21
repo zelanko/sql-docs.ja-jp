@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90ea4731b4004c908cfcd60f31f51205f893431f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5789406fc58eb0c30b072fc7d4243e091027c111
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954947"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922062"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67954947"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[execute ()](../../../connect/jdbc/reference/execute-method.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの SQL ステートメントを実行します。すべての種類の SQL ステートメントを実行することができます。|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  

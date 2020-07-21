@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84282e4d082e4a15fe4b29a0d72b80ca5aa13243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114387"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285214"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>簡単な例によるインポートおよびエクスポート ウィザードの概要
 
@@ -72,7 +72,7 @@ Windows の [スタート] メニューの [Microsoft SQL Server 2016] グルー
 
 |必要な情報|.NET Framework Data Provider for SQL Server プロパティ|
 |---|---|
-|サーバー名|**[データ ソース]**|
+|サーバー名|**データ ソース**|
 |認証 (ログイン) 情報|**[統合セキュリティ]** 、または **[ユーザー ID]** と **[パスワード]**<br/>サーバー上のデータベースのドロップダウン リストを表示する場合は、まず、有効なログイン情報を提供する必要があります。|
 |データベース名|**初期カタログ**|
 
@@ -126,7 +126,7 @@ SQL Server への接続について詳しくは、「[SQL Server データ ソ�
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>ステップ 10 - インポートおよびエクスポート操作を実行する
 次の **[パッケージの保存および実行]** ページで、 **[すぐに実行する]** を有効のままにして、次のページで **[完了]** をクリックしたらすぐにデータをコピーします。 または、 **[パッケージの保存および実行]** ページで **[完了]** をクリックすると、次のページをスキップできます。
 
-![パッケージを実行する](../../integration-services/import-export-data/media/run-the-package.jpg)
+![パッケージの実行](../../integration-services/import-export-data/media/run-the-package.jpg)
 
 ウィザードのこのページについて詳しくは、「[Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)」([パッケージの保存および実行]) をご覧ください。
 

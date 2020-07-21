@@ -1,5 +1,5 @@
 ---
-title: BOF、EOF、および Bookmark プロパティの例 (vc++) |Microsoft Docs
+title: BOF、EOF、および Bookmark プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920361"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762663"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (vc++)
-この例では、最初の関数を使用して、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーでは、最初と最後のレコードのを越えて移動しようとすると、メッセージを表示するプロパティを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)ユーザーが内のレコードにフラグを設定できるプロパティ、**レコード セット**し、後で戻ります。  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (VC + +)
+この例の最初の関数は、ユーザーが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティと[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
   
- 2 番目の関数では、ブックマーク プロパティを使用して、配置、**ブックマーク**から他のすべてのレコードの**レコード セット**配列と、フィルター、配列を使用してレコード セットにします。  
+ 2番目の関数は、Bookmark プロパティを使用して、**レコードセット**の他のすべてのレコードの**ブックマーク**を配列に配置し、配列を使用してレコードセットをフィルター処理します。  
   
 ## <a name="example"></a>例  
   
@@ -205,7 +205,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

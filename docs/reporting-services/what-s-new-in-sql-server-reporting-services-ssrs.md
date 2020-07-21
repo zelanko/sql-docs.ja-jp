@@ -1,5 +1,5 @@
 ---
-title: Reporting Services (SSRS) の新機能 | Microsoft Docs
+title: Reporting Services の新機能 | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,38 +8,67 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/05/2019
+ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893525"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079610"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の新機能について説明します。 この記事では、主要な機能領域を扱います。新しいアイテムがリリースされた場合は更新されます。
-
-最新のリリース ノートについては、「[SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)」を参照してください。 
+SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のさまざまなバージョンの新機能について説明します。 この記事では、主要な機能領域を扱います。新しいアイテムがリリースされた場合は更新されます。
 
 Power BI Report Server については、「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
 
-**ダウンロード** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-SQL Server 2017 Reporting Services をダウンロードするには、「 **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)** 」に移動します。
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 プレビュー Reporting Services
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services は CTP 3.2 では使用できません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。
+**ダウンロード** ![ダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) は、Microsoft ダウンロード センターからダウンロードできます。
+
+### <a name="azure-sql-managed-instance-support"></a>Azure SQL Managed Instance のサポート
+
+VM またはデータ センターでホストされている Azure SQL Managed Instance (MI) で、SQL Server Reporting Services (SSRS) に使用されるデータベース カタログをホストできるようになりました。 サポートは、SQL MI への接続にデータベース資格情報を使用することに限定されています。
+
+### <a name="power-bi-premium-dataset-support"></a>Power BI Premium データセットのサポート
+
+Microsoft レポート ビルダーまたは SQL Server Data Tools (SSDT) を使用して Power BI データセットに接続できます。 次に、SQL Server Analysis Services 接続を使用してこれらのレポートを SSRS 2019 に発行できます。 このシナリオを実行するには、ユーザーが保存されている Windows ユーザー名とパスワードを使用する必要があります。
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>AltText (代替テキスト) のレポート要素のサポート
+
+レポート作成時に、ツールヒントを使用してレポートの各要素のテキストを指定できます。 スクリーン リーダー テクノロジでは、これらのヒントが適切に識別されます。
+
+### <a name="azure-active-directory-application-proxy-support"></a>Azure Active Directory アプリケーション プロキシのサポート
+
+Azure Active Directory アプリケーション プロキシを使用すると、Web アプリやモバイル アプリを介してセキュリティで保護されたアクセスを可能にするために、独自の Web アプリケーション プロキシを管理する必要がなくなります。
+
+### <a name="custom-headers"></a>カスタム ヘッダー
+
+指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用してカスタム ヘッダー値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 詳細については、「 **[サーバーのプロパティ] の [詳細設定] ページ**」の記事の[カスタム ヘッダー](tools/server-properties-advanced-page-reporting-services.md#customheaders)のセクションを参照してください。
+
+### <a name="transparent-database-encryption"></a>Transparent Database Encryption
+
+SQL Server 2019 は、Enterprise および Standard エディションの SSRS カタログ データベースに対して Transparent Data Encryption をサポートするようになりました。 
+
+### <a name="microsoft-report-builder-update"></a>Microsoft レポート ビルダーの更新プログラム
+
+レポート ビルダーの新しくリリースされたバージョンは、Reporting Services のバージョン 2016、2017、および 2019 と完全に互換性があります。 また、Power BI Report Server のすべてのリリースとサポートされているバージョンと互換性があります。
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+**ダウンロード** ![ダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
+
+SQL Server 2017 Reporting Services をダウンロードするには、「 **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)** 」に移動します。
 
 ### <a name="comments-on-reports"></a>レポートのコメント
 
@@ -55,7 +84,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 ### <a name="rest-api-support"></a>REST API のサポート
 
-最新のアプリケーションとカスタマイズを開発できるようにするため、SQL Server Reporting Services は OpenAPI に完全に対応する RESTful API をサポートするようになりました。 API の完全な仕様とドキュメントは、[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) で入手できます。
+最新のアプリケーションとカスタマイズを開発できるようにするため、SQL Server Reporting Services は OpenAPI に完全に対応する RESTful API をサポートするようになりました。 API の完全な仕様とドキュメントは、[SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) で入手できます。
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>レポート ビルダーおよび SQL Server Data Tools での DAX に対するクエリ デザイナーのサポート
 
@@ -66,12 +95,13 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 * [Microsoft SQL Server レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=734968)のダウンロード
 * [SQL Server Data Tools - リリース候補](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)のダウンロード
 
-> **注**: DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
+> [!NOTE]
+> DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016
 
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### <a name="reporting-services-ssrswebportal-non-markdown"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
 新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] を利用できます。 更新された Web ポータルには次が含まれています
 - KPI
@@ -88,19 +118,19 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
-#### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化 
+#### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] のカスタム ブランド化 
 
 ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
 
 カスタムブランド化の詳細については、「 [Web ポータルのブランド化](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
 
-#### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] での主要業績評価指標 (KPI) 
+#### <a name="key-performance-indicators-kpi-in-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] での主要業績評価指標 (KPI) 
 
 現在のフォルダーのコンテキストに適合する KPI を [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 内で直接作成します。 KPI を作成するときに、データセットを選択し、その値を集計できます。 ドリル スルーする関連コンテンツを選択して、詳細を公開することもできます。
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
-詳細については、「 [Reporting Services で KPI を使用する](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
+詳細については、「[Reporting Services で KPI を使用する](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
 
 ### <a name="mobile-reports"></a>モバイル レポート
 
@@ -113,7 +143,7 @@ Reporting Services モバイル レポートは、多様なフォーム ファ�
 
 #### <a name="mobile-report-publisher"></a>Mobile Report Publisher  
 
-[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に公開できます。  
+[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] では、SQL Server モバイル レポートを作成して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]に発行できます。  
 
 ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
 
@@ -131,7 +161,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、SharePoint 2013 および SharePoint 2016 との統合をサポートしています。
 
-詳細については、以下をご覧ください。  
+詳細については、次を参照してください。  
 
 - [SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 
@@ -155,13 +185,13 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 
 **レポートの埋め込み:** モバイルおよびページ分割されたレポートを、URL パラメーターと共に、他の Web ページに (また、iframe を使ってアプリケーションに) 埋め込むことができるようになりました。  
 
-**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 可能な代替手段としては以下の方法があります。
+**レポートアイテムの Power BI ダッシュボードへのピン留め:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]でレポートを表示しているときに、レポート アイテムを選択し、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。   ピン留めできるアイテムは、グラフ、ゲージ パネル、マップ、イメージです。 次のようにすることができます。
 
 1. ピン留めするダッシュボードを含むグループを選択します。
 2. アイテムをピン留めするダッシュボードを選択します。
 3. ダッシュボードのタイルをどのくらいの頻度で更新するかを選択します。
 
-![注:](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
+![注](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -204,12 +234,12 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 |||  
 |-|-|  
-|ボタンを使用して新しい|Previous|  
+|新規|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **カスタム パラメーター ペイン:** ペインをカスタマイズできるようになりました。 レポート ビルダーのデザイン サーフェイスを使用して、パラメーター ペインの特定の列や行にパラメーターをドラッグできます。 列を追加または削除して、ペインのレイアウトを変更することもできます。 詳細については、「 [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)で作成するモバイル レポートで使用できます。  
 
-![レポート データ ペインとパラメーター ペインのパラメーター リスト](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "レポート データ ペインとパラメーター ペインのパラメーター リスト")  
+![[レポート データ] ペインと [パラメーター] ペインのパラメーター一覧](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "[レポート データ] ペインと [パラメーター] ペインのパラメーター一覧")  
 
 **高 DPI のサポート:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] では、高 DPI (インチあたりのドット数) スケーリングと高 DPI デバイスがサポートされます。  高 DPI の詳細については、次の記事をご覧ください。  
 
@@ -217,7 +247,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 - [高 DPI と Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Analysis Services の新機能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [旧バージョンとの互換性](reporting-services-backward-compatibility.md)  

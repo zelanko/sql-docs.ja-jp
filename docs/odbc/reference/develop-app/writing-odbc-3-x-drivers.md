@@ -13,106 +13,106 @@ helpviewer_keywords:
 - backward compatibility [ODBC], drivers
 - compatibility [ODBC], drivers
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078906"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300362"
 ---
 # <a name="writing-odbc-3x-drivers"></a>ODBC 3.x ドライバーの作成
-次の表は、ODBC 3 関数のサポートを示します。*x*ドライバーおよび ODBC アプリケーションでは、マッピング関数が、ODBC 3 に対して呼び出されたときに、ドライバー マネージャーによってを実行します *。x*ドライバー。  
+次の表は、ODBC 3 での関数のサポートを示しています。*x*ドライバーと odbc アプリケーション、および odbc 3 に対して関数が呼び出されたときにドライバーマネージャーによって実行されるマッピング。*x*ドライバー。  
   
-|関数|Supported<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> アプリケーションか。|マップされている/サポートされています<br /><br /> ODBC 3。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
+|関数|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> driver?|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> 適用?|マップ/サポート<br /><br /> ODBC 3.*x*<br /><br /> ドライバーマネージャーから<br /><br /> ODBC 3.*x*ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|いいえ|[1]|[はい]|  
-|**SQLAllocEnv**|いいえ|[1]|はい|  
-|**SQLAllocHandle**|はい|[はい]|いいえ|  
-|**SQLAllocStmt**|いいえ|[1]|はい|  
-|**SQLBindCol**|はい|[はい]|いいえ|  
-|**SQLBindParam**|いいえ|[はい] [2]|はい|  
-|**SQLBindParameter**|はい|[はい]|いいえ|  
-|**SQLBrowseConnect**|はい|[はい]|いいえ|  
-|**SQLBulkOperations**|[はい]|[はい]|いいえ|  
-|**SQLCancel**|はい|[はい]|いいえ|  
-|**SQLCloseCursor**|はい|[はい]|いいえ|  
-|**SQLColAttribute**|はい|[はい]|いいえ|  
-|**SQLColAttributes**|No[3]|いいえ|はい|  
-|**SQLColumnPrivileges**|はい|[はい]|いいえ|  
-|**SQLColumns**|はい|[はい]|いいえ|  
-|**SQLConnect**|[はい]|[はい]|いいえ|  
-|**SQLCopyDesc**|はい|はい|[はい] [4]|  
+|**SQLAllocConnect**|いいえ|いいえ [1]|はい|  
+|**SQLAllocEnv**|いいえ|いいえ [1]|はい|  
+|**SQLAllocHandle**|はい|はい|いいえ|  
+|**SQLAllocStmt**|いいえ|いいえ [1]|はい|  
+|**SQLBindCol**|はい|はい|いいえ|  
+|**SQLBindParam**|いいえ|はい [2]|はい|  
+|**SQLBindParameter**|はい|はい|いいえ|  
+|**SQLBrowseConnect**|はい|はい|いいえ|  
+|**SQLBulkOperations**|はい|はい|いいえ|  
+|**SQLCancel**|はい|はい|いいえ|  
+|**SQLCloseCursor**|はい|はい|いいえ|  
+|**SQLColAttribute**|はい|はい|いいえ|  
+|**SQLColAttributes**|いいえ [3]|いいえ|はい|  
+|**SQLColumnPrivileges**|はい|はい|いいえ|  
+|**SQLColumns**|はい|はい|いいえ|  
+|**SQLConnect**|はい|はい|いいえ|  
+|**SQLCopyDesc**|はい|はい|はい [4]|  
 |**SQLDataSources**|いいえ|はい|はい|  
-|**SQLDescribeCol**|[はい]|[はい]|いいえ|  
-|**SQLDescribeParam**|[はい]|[はい]|いいえ|  
-|**SQLDisconnect**|はい|[はい]|いいえ|  
-|**SQLDriverConnect**|はい|[はい]|いいえ|  
+|**SQLDescribeCol**|はい|はい|いいえ|  
+|**SQLDescribeParam**|はい|はい|いいえ|  
+|**SQLDisconnect**|はい|はい|いいえ|  
+|**SQLDriverConnect**|はい|はい|いいえ|  
 |**SQLDrivers**|いいえ|はい|はい|  
-|**SQLEndTran**|[はい]|[はい]|いいえ|  
-|**Sqlerror 関数**|いいえ|[1]|はい|  
-|**SQLExecDirect**|はい|[はい]|いいえ|  
-|**SQLExecute**|[はい]|[はい]|いいえ|  
-|**SQLExtendedFetch**|[はい]|いいえ|いいえ|  
-|**SQLFetch**|はい|[はい]|いいえ|  
-|**SQLFetchScroll**|[はい]|[はい]|いいえ|  
-|**SQLForeignKeys**|はい|[はい]|いいえ|  
-|**SQLFreeConnect**|いいえ|[はい] [1]|[はい]|  
-|**SQLFreeEnv**|いいえ|[はい] [1]|はい|  
-|**SQLFreeHandle**|はい|[はい]|いいえ|  
-|**SQLFreeStmt**|[はい]|[はい]|いいえ|  
-|**SQLGetConnectAttr**|はい|[はい]|いいえ|  
-|**SQLGetConnectOption**|[5]|[1]|[はい]|  
-|**SQLGetCursorName**|はい|[はい]|いいえ|  
-|**SQLGetData**|[はい]|[はい]|いいえ|  
-|**SQLGetDescField**|はい|[はい]|いいえ|  
-|**SQLGetDescRec**|[はい]|[はい]|いいえ|  
-|**SQLGetDiagField**|はい|[はい]|いいえ|  
-|**SQLGetDiagRec**|はい|[はい]|いいえ|  
-|**SQLGetEnvAttr**|[はい]|[はい]|いいえ|  
-|**SQLGetFunctions**|No[6]|[はい]|[はい]|  
-|**SQLGetInfo**|はい|[はい]|いいえ|  
-|**SQLGetStmtAttr**|はい|[はい]|いいえ|  
-|**SQLGetStmtOption**|[5]|[1]|はい|  
-|**SQLGetTypeInfo**|はい|[はい]|いいえ|  
-|**SQLMoreResults**|はい|[はい]|いいえ|  
-|**SQLNativeSql**|[はい]|[はい]|いいえ|  
-|**SQLNumParams**|はい|[はい]|いいえ|  
-|**SQLNumResultCols**|[はい]|[はい]|いいえ|  
-|**SQLParamData**|[はい]|[はい]|いいえ|  
-|**SQLParamOptions**|いいえ|いいえ|[はい]|  
-|**SQLPrepare**|はい|[はい]|いいえ|  
-|**SQLPrimaryKeys**|[はい]|[はい]|いいえ|  
-|**SQLProcedureColumns**|はい|[はい]|いいえ|  
-|**SQLProcedures**|はい|[はい]|いいえ|  
-|**SQLPutData**|はい|[はい]|いいえ|  
-|**SQLRowCount**|[はい]|[はい]|いいえ|  
-|**SQLSetConnectAttr**|[はい]|[はい]|いいえ|  
-|**SQLSetConnectOption**|[5]|[1]|[はい]|  
-|**SQLSetCursorName**|はい|[はい]|いいえ|  
-|**SQLSetDescField**|はい|[はい]|いいえ|  
-|**SQLSetDescRec**|はい|[はい]|いいえ|  
-|**SQLSetEnvAttr**|はい|[はい]|いいえ|  
-|**SQLSetPos**|[はい]|[はい]|いいえ|  
+|**SQLEndTran**|はい|はい|いいえ|  
+|**SQLError**|いいえ|いいえ [1]|はい|  
+|**SQLExecDirect**|はい|はい|いいえ|  
+|**SQLExecute**|はい|はい|いいえ|  
+|**SQLExtendedFetch**|はい|いいえ|いいえ|  
+|**SQLFetch**|はい|はい|いいえ|  
+|**SQLFetchScroll**|はい|はい|いいえ|  
+|**SQLForeignKeys**|はい|はい|いいえ|  
+|**SQLFreeConnect**|いいえ|はい [1]|はい|  
+|**SQLFreeEnv**|いいえ|はい [1]|はい|  
+|**SQLFreeHandle**|はい|はい|いいえ|  
+|**SQLFreeStmt**|はい|はい|いいえ|  
+|**SQLGetConnectAttr**|はい|はい|いいえ|  
+|**SQLGetConnectOption**|[5]|いいえ [1]|はい|  
+|**SQLGetCursorName**|はい|はい|いいえ|  
+|**SQLGetData**|はい|はい|いいえ|  
+|**SQLGetDescField**|はい|はい|いいえ|  
+|**SQLGetDescRec**|はい|はい|いいえ|  
+|**SQLGetDiagField**|はい|はい|いいえ|  
+|**SQLGetDiagRec**|はい|はい|いいえ|  
+|**SQLGetEnvAttr**|はい|はい|いいえ|  
+|**SQLGetFunctions**|いいえ [6]|はい|はい|  
+|**SQLGetInfo**|はい|はい|いいえ|  
+|**SQLGetStmtAttr**|はい|はい|いいえ|  
+|**SQLGetStmtOption**|[5]|いいえ [1]|はい|  
+|**SQLGetTypeInfo**|はい|はい|いいえ|  
+|**SQLMoreResults**|はい|はい|いいえ|  
+|**SQLNativeSql**|はい|はい|いいえ|  
+|**SQLNumParams**|はい|はい|いいえ|  
+|**SQLNumResultCols**|はい|はい|いいえ|  
+|**SQLParamData**|はい|はい|いいえ|  
+|**SQLParamOptions**|いいえ|いいえ|はい|  
+|**SQLPrepare**|はい|はい|いいえ|  
+|**SQLPrimaryKeys**|はい|はい|いいえ|  
+|**SQLProcedureColumns**|はい|はい|いいえ|  
+|**SQLProcedures**|はい|はい|いいえ|  
+|**SQLPutData**|はい|はい|いいえ|  
+|**SQLRowCount**|はい|はい|いいえ|  
+|**SQLSetConnectAttr**|はい|はい|いいえ|  
+|**SQLSetConnectOption**|[5]|いいえ [1]|はい|  
+|**SQLSetCursorName**|はい|はい|いいえ|  
+|**SQLSetDescField**|はい|はい|いいえ|  
+|**SQLSetDescRec**|はい|はい|いいえ|  
+|**SQLSetEnvAttr**|はい|はい|いいえ|  
+|**SQLSetPos**|はい|はい|いいえ|  
 |**SQLSetParam**|いいえ|いいえ|はい|  
-|**SQLSetScrollOption**|はい|[はい]|いいえ|  
-|**SQLSetStmtAttr**|はい|[はい]|いいえ|  
-|**SQLSetStmtOption**|[5]|[1]|はい|  
-|**SQLSpecialColumns**|はい|[はい]|いいえ|  
-|**SQLStatistics**|はい|[はい]|いいえ|  
-|**SQLTablePrivileges**|はい|[はい]|いいえ|  
-|**SQLTables**|はい|[はい]|いいえ|  
-|**SQLTransact**|いいえ|[1]|はい|  
+|**SQLSetScrollOption**|はい|はい|いいえ|  
+|**SQLSetStmtAttr**|はい|はい|いいえ|  
+|**SQLSetStmtOption**|[5]|いいえ [1]|はい|  
+|**SQLSpecialColumns**|はい|はい|いいえ|  
+|**SQLStatistics**|はい|はい|いいえ|  
+|**SQLTablePrivileges**|はい|はい|いいえ|  
+|**SQLTables**|はい|はい|いいえ|  
+|**SQLTransact**|いいえ|いいえ [1]|はい|  
   
- [1] この関数は、ODBC 3 で非推奨とされます。*x*します。 ODBC 3。*x*アプリケーションは、この関数を使用する必要があります。 ただし、Open Group、または CLI の ISO 準拠のアプリケーションは、この関数を呼び出すことができます。  
+ [1] ODBC 3 では、この関数は非推奨とされます。*x*。 ODBC 3.*x*アプリケーションでは、この関数を使用しないでください。 ただし、Open Group または ISO CLI 準拠アプリケーションでは、この関数を呼び出すことができます。  
   
- [2] ODBC 3。*x*アプリケーションを使用する必要があります**SQLBindParameter**の代わりに**SQLBindParam**します。 ただし、Open Group、または CLI の ISO 準拠のアプリケーションは、この関数を呼び出すことができます。  
+ [2] ODBC 3.*x*アプリケーションでは、 **SQLBindParam**ではなく**SQLBindParameter**を使用する必要があります。 ただし、Open Group または ISO CLI 準拠アプリケーションでは、この関数を呼び出すことができます。  
   
- [3] のドライバーの作成者はに注意してください、ODBC 2。*x*で SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、および SQL_COLUMN_LENGTH をサポートする必要があります列属性**SQLColAttribute**します。  
+ [3] ドライバーライターは ODBC 2 に注意する必要があります。*x*列属性 SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、および SQL_COLUMN_LENGTH は、 **sqlcolattribute**でサポートされている必要があります。  
   
- [4] **SQLCopyDesc**記述子をさまざまなドライバーに属する接続間でコピーするときにドライバー マネージャーによってが部分的に実装します。 ドライバーは、サポートに必要な**SQLCopyDesc**は独自の接続の 2 つの間で。 などの関数**SQLDrivers**、ドライバー マネージャーによってのみ実装されていますが、この一覧に表示されません。  
+ [4] 異なるドライバーに属する接続間で記述子をコピーするときに、ドライバーマネージャーによって**Sqlcopydesc**が部分的に実装されます。 ドライバーは、2つの接続の間で**Sqlcopydesc**をサポートするために必要です。 ドライバーマネージャーによってのみ実装されている**Sqldrivers**などの関数は、この一覧には表示されません。  
   
- [特定の状況下で 5]、ドライバーは、この関数をサポートする必要があります。 詳細については、この関数のリファレンス ページを参照してください。  
+ [5] 特定の状況下で、ドライバーがこの機能をサポートする必要がある場合があります。 詳細については、この関数のリファレンスページを参照してください。  
   
- [6]、ドライバーをサポートするために選択できます**SQLGetFunctions**ドライバーでサポートされる関数のセットは異なる接続から接続する場合。
+ [6] ドライバーがサポートする関数のセットが接続への接続によって異なる場合、ドライバーは**Sqlgetfunctions**のサポートを選択できます。

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675e2d24cb84b2a68922528dcdaa09fb6b675605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067147"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果ペイン (Visual Database Tools)
   結果ペインには、最後に実行された選択クエリの結果が表示されます。 他の種類のクエリ結果は、メッセージ ボックスに表示されます。結果ペインを表示するには、クエリまたはビューを表示または作成するか、テーブルのデータを返します。 結果ペインが既定で表示されない場合は、 **[クエリ デザイナー]** メニューの **[ペイン]** をポイントし、 **[結果]** をクリックします。  
@@ -62,12 +61,12 @@ ms.locfileid: "63067808"
   
  クエリが変更されると、結果ペインの右下端に警告アイコンと "クエリが変更されました。" というテキストが表示され、 ペインの左上端にも警告アイコンが表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [クエリを作成する&#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [ダイアグラム ペイン&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [抽出条件ペイン&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools &#40;クエリの作成&#41;](create-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの実行&#41;](run-queries-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [ダイアグラムペイン &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [抽出条件ペイン &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [結果ペインのデータの操作 (Visual Database Tools)](results-pane-visual-database-tools.md)  
   
   

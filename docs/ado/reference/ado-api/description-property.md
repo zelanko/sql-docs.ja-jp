@@ -1,5 +1,6 @@
 ---
-title: プロパティの説明 |Microsoft Docs
+title: Description プロパティ |Microsoft Docs
+description: エラーの説明を含む文字列値を返す ADO の Error オブジェクトの description プロパティについて説明します。
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,32 +16,32 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bbaa998c419ba1a0af49ffa28e32fe91ffc96b9
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880540"
 ---
 # <a name="description-property"></a>Description プロパティ
-について説明します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  
+[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトについて説明します。  
   
 ## <a name="return-value"></a>戻り値  
- 返します、**文字列**エラーの説明を表す値です。  
+ エラーの説明を含む**文字列**値を返します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**説明**プロパティをエラーの簡単な説明を取得します。 ユーザーができない場合や、処理したくないエラーのアラートを生成するには、このプロパティを表示します。 文字列は、ADO またはプロバイダーから提供されます。  
+## <a name="remarks"></a>Remarks  
+ **Description**プロパティを使用して、エラーの簡単な説明を取得します。 このプロパティを表示して、処理できない、または処理したくないエラーをユーザーに通知します。 文字列は、ADO またはプロバイダーから取得されます。  
   
- プロバイダーは、ADO に特定のエラー テキストを渡す責任を負います。 ADO の追加、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを**エラー**コレクション プロバイダーごとにエラーまたは警告を受信します。 列挙、**エラー**プロバイダーに渡されるエラーをトレースするコレクション。  
+ プロバイダーは、ADO に特定のエラーテキストを渡す役割を担います。 ADO は、受信したプロバイダーエラーまたは警告ごとに[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトを**エラーコレクションに**追加します。 **エラー**コレクションを列挙して、プロバイダーが成功したエラーをトレースします。  
   
 ## <a name="applies-to"></a>適用対象  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>参照  
- [Description、HelpContext、HelpFile、NativeError、数、ソース、および SQLState プロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description、HelpContext、HelpFile、NativeError、数、ソース、および SQLState プロパティの例 (vc++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [HelpContext、HelpFile プロパティ](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number プロパティ (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source プロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)

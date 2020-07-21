@@ -1,5 +1,5 @@
 ---
-title: アップロード ファイル ページ (レポート マネージャー) |Microsoft Docs
+title: '[ファイルのアップロード] ページ (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098866"
 ---
 # <a name="upload-file-page-report-manager"></a>[ファイルのアップロード] ページ (レポート マネージャー)
@@ -22,7 +22,7 @@ ms.locfileid: "66098866"
   
 -   アップロードされた .rdl ファイルは、レポートとしてレポート サーバーにパブリッシュされます。  
   
--   アップロードされた .smdl ファイルにデータ ソース ビュー情報が含まれていた場合、このファイルはレポート モデルとしてパブリッシュされます。 データ ソース ビューへの参照が失われると、アップロード中にエラーが発生します。 データ ソース ビュー情報は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] レポート モデル プロジェクトから .smdl ファイルをアップロードすると失われる場合があります。 レポート モデル プロジェクトでは、データ ソース ビュー情報は、.smdl ファイル自体ではなく、独立したファイルに格納されます。  
+-   アップロードされた .smdl ファイルにデータ ソース ビュー情報が含まれていた場合、このファイルはレポート モデルとしてパブリッシュされます。 データ ソース ビューへの参照が失われると、アップロード中にエラーが発生します。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]レポートモデルプロジェクトから[!INCLUDE[msCoName](../includes/msconame-md.md)] smdl ファイルをアップロードすると、データソースビューの情報が失われる場合があります。 レポート モデル プロジェクトでは、データ ソース ビュー情報は、.smdl ファイル自体ではなく、独立したファイルに格納されます。  
   
      データ ソース ビュー情報を含む (およびアップロードが正常に実行される) モデル ファイルは、以前にレポート サーバーにパブリッシュされて、サーバーからファイル システムのファイルに保存されたものです。 モデルの [全般プロパティ] ページを開き、 **[編集]** をクリックしてモデルを開くと、モデルをファイルに保存できます。その後、そのファイルを新しいモデルとしてレポート サーバーにアップロードすることができます。 次にアップロードした .smdl ファイルには、モデルのパブリケーションに必要な情報がすべて含められます。  
   
@@ -31,9 +31,9 @@ ms.locfileid: "66098866"
  アイテムをアップロードすると、そのアイテムは現在のフォルダーに格納されます。 アップロードの完了後、異なる場所にアイテムを移動できます。  
   
 > [!NOTE]  
->  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ### <a name="to-open-the-upload-file-page"></a>[ファイルのアップロード] ページを開くには  
@@ -42,23 +42,23 @@ ms.locfileid: "66098866"
   
 2.  ツール バーの **[ファイルのアップロード]** をクリックします。  
   
-## <a name="options"></a>および  
- **アップロードするファイル**  
+## <a name="options"></a>オプション  
+ **[アップロードするファイル]**  
  ファイル システムからコピーするファイルへの完全修飾パスを表示します。  
   
- **[参照]**  
+ **参照**  
  ファイル システムからファイルを選択する場合にクリックします。  
   
  **名前**  
- ファイル名を入力します。この名前はレポート サーバーの名前空間に表示されます。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : \@ & = +, $ * \< > |"または/アイテムの名前を指定します。  
+ ファイル名を入力します。この名前はレポート サーバーの名前空間に表示されます。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 名前を指定するときに、; ? : \@ & = +、$ * \< > |項目名を指定する場合は。  
   
- **アイテムが存在する場合は上書き**  
+ **[アイテムが存在する場合は上書きします]**  
  既存のアイテムを新しいバージョンと置き換える場合に、このチェック ボックスをオンにします。 既存のバージョンを上書きするには、新しいアイテムと既存のアイテムの名前が完全に一致している必要があります。  
   
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
- [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [フォルダーへのファイルのアップロード](report-server/upload-files-to-a-folder.md)  
   
   

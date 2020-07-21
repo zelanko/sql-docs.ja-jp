@@ -1,5 +1,6 @@
 ---
-title: WMI Provider for Configuration Management のクラス |Microsoft Docs
+title: WMI Provider for Configuration Management のクラス
+description: Windows Management Instrumentation が提供する機能を検出して実装します。 Configuration Manager には、これらのクラスから選択します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a7ac0d4975890a6aa949bac1050a4bb7cefe00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 044fbfcaefe52f897842684d4224222232577d21
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139405"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888251"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>WMI Provider for Configuration Management のクラス
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   WMI (Windows Management Instrumentation) Provider for Configuration Management は、次のクラスに対して機能を提供します。  
   
  [CInstance クラス](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970744"
 ---
 # <a name="retrieving-udt-data"></a>UDT データの取得
   クライアント側で UDT (ユーザー定義型) を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに UDT として登録されたアセンブリをクライアント アプリケーションで使用できるようにしておく必要があります。 この UDT アセンブリは、アプリケーションと同じディレクトリまたは GAC (グローバル アセンブリ キャッシュ) に配置できます。 また、プロジェクト内で、このアセンブリへの参照を設定することもできます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62874643"
  テーブルの UDT 列からデータをそのまま取得するために、クライアントに UDT アセンブリをコピーする必要はありません。  
   
 > [!NOTE]  
->  **SqlClient**の UDT のバージョンが一致しないまたはその他の問題が発生した場合、UDT の読み込みに失敗します。 この場合、通常のトラブルシューティング メカニズムを使用して、呼び出し元のアプリケーションで UDT を含むアセンブリが検出されない原因を特定します。 詳細については、.NET Framework のドキュメントのトピック「マネージド デバッグ アシスタントによるエラーの診断」を参照してください。  
+>  UDT のバージョンが一致しない場合や他の問題が発生した場合に、 **SqlClient**が udt の読み込みに失敗することがあります。 この場合、通常のトラブルシューティング メカニズムを使用して、呼び出し元のアプリケーションで UDT を含むアセンブリが検出されない原因を特定します。 詳細については、.NET Framework のドキュメントのトピック「マネージド デバッグ アシスタントによるエラーの診断」を参照してください。  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>SqlDataReader による UDT へのアクセス  
  クライアント コードから `System.Data.SqlClient.SqlDataReader` を使用して、UDT 列を含む結果セットを取得することができます。この結果セットは、オブジェクトのインスタンスとして公開されます。  
@@ -157,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>バイト型としての UDT のバインド  
- 場合によっては、UDT 列からそのままデータを取得する必要が生じることもあります。 たとえば、型がローカルに存在しない場合や、UDT のインスタンスを作成したくない場合などです。 使用してバイト配列に生バイトを読み取ることができます、 **GetBytes**のメソッド、`SqlDataReader`します。 このメソッドでは、バイトのストリームを、指定した列オフセットから、指定したバッファー オフセットから始まる配列のバッファーに読み取ることができます。 いずれかを使用することも、 **GetSqlBytes**または**GetSqlBinary**メソッドと 1 つの操作の内容のすべての読み取り。 どちらの場合も、UDT オブジェクトのインスタンスが作成されることはないので、クライアントのアセンブリで UDT への参照を設定する必要はありません。  
+ 場合によっては、UDT 列からそのままデータを取得する必要が生じることもあります。 たとえば、型がローカルに存在しない場合や、UDT のインスタンスを作成したくない場合などです。 の**GetBytes**メソッドを使用して、生バイトをバイト配列に読み取ることができ `SqlDataReader` ます。 このメソッドでは、バイトのストリームを、指定した列オフセットから、指定したバッファー オフセットから始まる配列のバッファーに読み取ることができます。 別の方法として、 **Getsqlbytes**メソッドまたは**getsqlbytes**メソッドのいずれかを使用して、すべての内容を1回の操作で読み取ることもできます。 どちらの場合も、UDT オブジェクトのインスタンスが作成されることはないので、クライアントのアセンブリで UDT への参照を設定する必要はありません。  
   
 ### <a name="example"></a>例  
- この例は、取得する方法を示します、**ポイント**を使用してバイト配列に未処理のバイトとしてのデータを`SqlDataReader`します。 このコードでは、`System.Text.StringBuilder` を使用して、生のバイト列をコンソール ウィンドウに表示する文字列形式に変換します。  
+ この例では、を使用して、 **Point**データを生バイトとしてバイト配列に取得する方法を示し `SqlDataReader` ます。 このコードでは、`System.Text.StringBuilder` を使用して、生のバイト列をコンソール ウィンドウに表示する文字列形式に変換します。  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +265,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>GetSqlBytes メソッドの使用例  
- この例では、取得、**ポイント**を使用して、1 つの操作で未処理のバイトとしてのデータ、 **GetSqlBytes**メソッド。 このコードでは、`StringBuilder` を使用して、生のバイト列をコンソール ウィンドウに表示する文字列形式に変換します。  
+ この例では、 **Getsqlbytes**メソッドを使用して、1回の操作で生バイトとして**ポイント**データを取得する方法を示します。 このコードでは、`StringBuilder` を使用して、生のバイト列をコンソール ウィンドウに表示する文字列形式に変換します。  
   
 ```vb  
 Option Explicit On  
@@ -374,7 +373,7 @@ class GetRawBytes
  ADO.NET コードでは、UDT は入力パラメーターと出力パラメーターのどちらとしても使用することができます。  
   
 ## <a name="using-udts-in-query-parameters"></a>クエリ パラメーターでの UDT の使用  
- UDT は、`SqlParameter` オブジェクトの `System.Data.SqlClient.SqlCommand` を設定する際にパラメーター値として使用できます。 `SqlDbType.Udt` オブジェクトの `SqlParameter` 列挙値は、`Add` コレクションに対して `Parameters` メソッドを呼び出す際、パラメーターが UDT であることを示すために使用します。 `UdtTypeName`のプロパティを`SqlCommand`オブジェクトはデータベースを使用して、UDT の完全修飾名を指定するために使用、 *database.schema_name.object_name*構文。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
+ UDT は、`SqlParameter` オブジェクトの `System.Data.SqlClient.SqlCommand` を設定する際にパラメーター値として使用できます。 `SqlDbType.Udt` オブジェクトの `SqlParameter` 列挙値は、`Add` コレクションに対して `Parameters` メソッドを呼び出す際、パラメーターが UDT であることを示すために使用します。 `UdtTypeName`オブジェクトのプロパティは `SqlCommand` 、データベース内の UDT の完全修飾名を指定するために使用されます。 *schema_name object_name*構文を使用します。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
   
 > [!NOTE]  
 >  クライアント プロジェクトが、UDT アセンブリのローカル コピーを使用できることが前提です。  
@@ -452,7 +451,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO.NET でのユーザー定義型へのアクセス](accessing-user-defined-types-in-ado-net.md)  
   
   

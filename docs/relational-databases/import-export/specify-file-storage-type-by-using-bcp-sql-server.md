@@ -1,6 +1,6 @@
 ---
-title: bcp を使用したファイル ストレージ型の指定 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: bcp を使用したファイル ストレージ型の指定
+description: bcp を使用して、データベース テーブルの型、その文字表現、または暗黙的な型変換がサポートされているデータ型として、データをファイルにエクスポートします。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,15 +17,16 @@ ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062524"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003155"
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="specify-file-storage-type-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、 **smallint** は **int**としてコピーされます。ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>ファイル ストレージ型の bcp プロンプト  
@@ -35,7 +36,7 @@ ms.locfileid: "68062524"
   
  この要求への応答は、次のように、実行するタスクによって異なります。  
   
--   できるだけコンパクトなストレージ型 (ネイティブ データ形式) で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、 **bcp**によって提供される既定のファイル ストレージ型をそのまま使用します。 ネイティブのファイル ストレージ型の一覧については、このトピックの「ネイティブのファイル ストレージ型」を参照してください。  
+-   できるだけコンパクトなストレージ型 (ネイティブ データ形式) で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、**bcp** によって提供される既定のファイル ストレージ型をそのまま使用します。 ネイティブのファイル ストレージ型の一覧については、このトピックの「ネイティブのファイル ストレージ型」を参照してください。  
   
 -   文字形式で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、テーブルのすべての列にファイル ストレージ型として **char** を指定します。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68062524"
     |**nvarchar**|**w**|  
     |**text**|**T** **[ext]**|  
     |**ntext2**|**W**|  
-    |**binary**|**x**|  
+    |**[バイナリ]**|**x**|  
     |**varbinary**|**x**|  
     |**image**|**I** **[mage]**|  
     |**datetime**|**d[ate]**|  
@@ -75,9 +76,9 @@ ms.locfileid: "68062524"
     |**UDT** (ユーザー定義データ型)|**U**|  
     |**XML**|**X**|  
   
-     \* **char** ファイル ストレージ型でエクスポートされた非文字データのデータ ファイルの場合、このファイルに割り当てられる格納領域のサイズは、フィールド長、プレフィックス長、およびターミネータの相互関係で決まります。  
+     \***char** ファイル ストレージ型でエクスポートされた非文字データのデータ ファイルの場合、このファイルに割り当てられる格納領域のサイズは、フィールド長、プレフィックス長、およびターミネータの相互関係で決まります。  
   
-     \*\* **ntext**、 **text**、および **image** データ型は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
+     \*\***ntext**、 **text**、および **image** データ型は、将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンで削除される予定です。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに、 **nvarchar(max)** 、 **varchar(max)** 、 **varbinary(max)** を使用してください。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  

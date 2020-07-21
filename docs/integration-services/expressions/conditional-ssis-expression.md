@@ -1,5 +1,5 @@
 ---
-title: '? :(条件) (SSIS 式) | Microsoft Docs'
+title: '? : (条件) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 21797dffcb3f3343c05658d24199191510fe31b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027547"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290163"
 ---
-# <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -40,15 +40,15 @@ boolean_expression?expression1:expression2
  TRUE、FALSE、または NULL に評価される、任意の有効な式です。  
   
  *expression1*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
  *expression2*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  *expression1* または *expression2*のデータ型です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *boolean_expression* が NULL に評価された場合、式の結果は NULL になります。 選択された式 ( *expression1* または *expression2* のいずれか) が NULL の場合、結果は NULL になります。 選択された式が NULL でなく、選択されていない式が NULL の場合、結果は選択された式の値になります。  
   
  *expression1* と *expression2* のデータ型が同じ場合、結果はそのデータ型になります。 次の追加のルールが結果の型に適用されます。  
@@ -59,11 +59,11 @@ boolean_expression?expression1:expression2
   
  式セットである *expression1* および *expression2*は、有効なデータ型および次のルールのいずれかに従って評価される必要があります。  
   
--   **数値** *expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
+-   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
--   **文字列** *expression1* と *expression2* のいずれも次の文字列データ型にする必要があります。DT_STR または DT_WSTR。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。 DT_WSTR データ型の結果の長さは、長いほうの引数の長さと同じです。  
+-   **文字列***expression1* と *expression2* は、どちらも DT_STR または DT_WSTR の文字列データ型である必要があります。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。 DT_WSTR データ型の結果の長さは、長いほうの引数の長さと同じです。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
+-   **日付、時刻、または日付/時刻***expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  

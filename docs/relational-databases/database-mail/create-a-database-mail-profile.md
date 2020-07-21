@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737608"
 ---
 # <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。 メール プロファイルの詳細については、「 [データベース メール プロファイル](database-mail-configuration-objects.md)」をご覧ください。
   
 -   **はじめに:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
@@ -31,18 +31,18 @@ ms.locfileid: "68134481"
   
 -   **次を使用してデータベース メールのパブリック プロファイルを作成するには:** [データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  プロファイルに対応する 1 つ以上のデータベース メール アカウントを作成します。 データベース メール アカウントの作成方法については、「 [データベース メール アカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  パブリック プロファイルにより、 **msdb** データベースにアクセスできるすべてのユーザーが、このプロファイルを使用して電子メールを送信できます。 プライベート プロファイルを使用できるのは、ユーザーまたはロールです。 プロファイルにロールのアクセス権を付与すると、保守が簡単なアーキテクチャを作成できます。 メールを送信するには、 **msdb** データベースの **DatabaseMailUserRole** のメンバーであることに加えて、少なくとも 1 つのデータベース メール プロファイルへのアクセス許可が必要です。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  プロファイル アカウントを作成し、ストアド プロシージャを実行するユーザーは、sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> データベース メール構成ウィザードの使用  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> データベース メール構成ウィザードの使用  
  **データベース メール プロファイルを作成するには**  
   
 -   オブジェクト エクスプローラーで、データベース メールを構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、サーバー ツリーを展開します。  
@@ -85,7 +85,7 @@ ms.locfileid: "68134481"
   
 ## <a name="using-transact-sql"></a>Transact-SQL の使用  
   
-###  <a name="PrivateProfile"></a> データベース メールのプライベート プロファイルを作成するには  
+###  <a name="to-create-a-database-mail-private-profile"></a><a name="PrivateProfile"></a> データベース メールのプライベート プロファイルを作成するには  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
@@ -93,35 +93,35 @@ ms.locfileid: "68134481"
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Profile Name*'  
+     *\@profile_name* = '<*プロファイル名*>'  
   
-     *@description* = '*Desciption*'  
+     *\@description* = '<*説明*>'  
   
-     *@profile_name* はプロファイルの名前です。 *@description* はプロファイルの説明です。 このパラメーターはオプションです。  
+     *\@profile_name* はプロファイルの名前です。 *\@description* はプロファイルの説明です。 このパラメーターは省略可能です。  
   
 -   アカウントごとに、ストアド プロシージャ [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) を次のように実行します。  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '<*プロファイルの名前*>'  
   
-     *@account_name* = '*Name of the account*'  
+     *\@account_name* = '<*アカウントの名前*>'  
   
-     *@sequence_number* = '*sequence number of the account within the profile.* '  
+     *\@sequence_number* = '<*プロファイル内でのアカウントのシーケンス番号*> '  
   
-     *@profile_name* はプロファイルの名前です。 *@account_name* は、プロファイルに追加するアカウントの名前です。 *@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
+     *\@profile_name* はプロファイルの名前です。 *\@account_name* は、プロファイルに追加するアカウントの名前です。 *\@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
   
 -   このプロファイルを使用してメールを送信する各データベース ロールまたはユーザーについて、プロファイルへのアクセス権を付与します。 そのためには、ストアド プロシージャ [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) を次のように実行します。  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '<*プロファイルの名前*>'  
   
-     *@ principal_name* = '*Name of the database user or role*'  
+     *\@ principal_name* = '<*データベース ユーザーまたはロールの名前*>'  
   
-     *@is_default* = '*Default Profile status* '  
+     *\@is_default* = '<*プロファイルの既定の状態*>'  
   
-     *@profile_name* はプロファイルの名前です。 *@principal_name* はデータベース ユーザーまたはロールの名前です。 *@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
+     *\@profile_name* はプロファイルの名前です。 *\@principal_name* はデータベース ユーザーまたはロールの名前です。 *\@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
   
  次の例ではまず、データベース メール アカウントを作成し、データベース メールのプライベート プロファイルを作成します。その後、アカウントをプロファイルに追加し、そのプロファイルへのアクセス権を、 **msdb** データベースの **DBMailUsers** データベース ロールに与えます。  
   
@@ -153,7 +153,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-###  <a name="PublicProfile"></a> データベース メールのパブリック プロファイルを作成するには  
+###  <a name="to-create-a-database-mail-public-profile"></a><a name="PublicProfile"></a> データベース メールのパブリック プロファイルを作成するには  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
@@ -161,35 +161,35 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Profile Name*'  
+     *\@profile_name* = '<*プロファイル名*>'  
   
-     *@description* = '*Desciption*'  
+     *\@description* = '<*説明*>'  
   
-     *@profile_name* はプロファイルの名前です。 *@description* はプロファイルの説明です。 このパラメーターはオプションです。  
+     *\@profile_name* はプロファイルの名前です。 *\@description* はプロファイルの説明です。 このパラメーターは省略可能です。  
   
 -   アカウントごとに、ストアド プロシージャ [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) を次のように実行します。  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '<*プロファイルの名前*>'  
   
-     *@account_name* = '*Name of the account*'  
+     *\@account_name* = '<*アカウントの名前*>'  
   
-     *@sequence_number* = '*sequence number of the account within the profile.* '  
+     *\@sequence_number* = '<*プロファイル内でのアカウントのシーケンス番号*> '  
   
-     *@profile_name* はプロファイルの名前です。 *@account_name* は、プロファイルに追加するアカウントの名前です。 *@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
+     *\@profile_name* はプロファイルの名前です。 *\@account_name* は、プロファイルに追加するアカウントの名前です。 *\@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
   
 -   パブリック アクセス権を付与するには、ストアド プロシージャ [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md) を次のように実行します。  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Name of the profile*'  
+     *\@profile_name* = '<*プロファイルの名前*>'  
   
-     *@ principal_name* = '**public** or **0**'  
+     *\@ principal_name* = '**public**' または '**0**'  
   
-     *@is_default* = '*Default Profile status* '  
+     *\@is_default* = '<*プロファイルの既定の状態*>'  
   
-     *@profile_name* はプロファイルの名前です。 *@principal_name* は、このプロファイルがパブリック プロファイルであることを示します。 *@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
+     *\@profile_name* はプロファイルの名前です。 *\@principal_name* は、このプロファイルがパブリック プロファイルであることを示します。 *\@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
   
  次の例ではまず、データベース メール アカウントを作成し、データベース メールのプライベート プロファイルを作成します。その後、アカウントをプロファイルに追加し、そのプロファイルへのパブリック アクセス権を与えます。  
   

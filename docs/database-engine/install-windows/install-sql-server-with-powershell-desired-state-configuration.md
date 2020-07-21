@@ -1,8 +1,8 @@
 ---
-title: PowerShell Desired State Configuration での SQL Server をインストールする | Microsoft Docs
+title: インストール:PowerShell Desired State Configuration
 description: PowerShell Desired State Configuration (DSC) を使用して SQL Server をインストールする方法について説明します。
-ms.custom: ''
-ms.date: 10/26/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221967"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75258984"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration での SQL Server をインストールする
 
@@ -28,7 +28,7 @@ ms.locfileid: "63221967"
 
 さらに悪いことは、インストール全体への信頼が揺らぐことです。 "他に何か忘れていないか?" 自問するのではないでしょうか。
 
-[PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview) に関するページを参照してください。 DSC を使用して、数百、数千のサーバーで再利用できる 1 つの構成テンプレートをビルドします。 ビルドによっては、いくつかの設定パラメーターを調整する必要があります。 ただし、すべての標準設定を適切に維持できるため、これは重要な問題ではありません。 この場合、重要なパラメーターの入力を忘れるという可能性は排除されます。
+[PowerShell Desired State Configuration (DSC)](/powershell/scripting/dsc/overview/overview) に関するページを参照してください。 DSC を使用して、数百、数千のサーバーで再利用できる 1 つの構成テンプレートをビルドします。 ビルドによっては、いくつかの設定パラメーターを調整する必要があります。 ただし、すべての標準設定を適切に維持できるため、これは重要な問題ではありません。 この場合、重要なパラメーターの入力を忘れるという可能性は排除されます。
 
 この記事では、**SqlServerDsc** DSC リソースを使用して、Windows Server 2016 上の SQL Server 2017 のスタンドアロン インスタンスの初期設定を参照します。 DSC がどのように動作するかを調べないときは、いくつかの DSC の予備知識があると役立ちます。
 
@@ -38,7 +38,7 @@ ms.locfileid: "63221967"
 - SQL Server 2017 のインストール メディア。
 - **SqlServerDsc** DSC リソース。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ほとんどの場合、DSC を使用して前提条件が処理されます。 ただし、このデモの目的のため、ここでは前提条件を手動で処理します。
 
@@ -143,7 +143,7 @@ Configuration SQLInstall
 }
 ```
 
-## <a name="build-and-deploy"></a>ビルドと配置
+## <a name="build-and-deploy"></a>ビルドとデプロイ
 
 ### <a name="compile-the-configuration"></a>構成のコンパイル
 
@@ -211,9 +211,9 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 1> quit
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Windows PowerShell Desired State Configuration の概要](https://docs.microsoft.com/powershell/dsc/overview)
+[Windows PowerShell Desired State Configuration の概要](/powershell/scripting/dsc/overview/overview)
 
 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

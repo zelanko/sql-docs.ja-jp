@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 674661a385218db1210b1052925db85f282a08db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896114"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79287646"
 ---
 # <a name="security-overview-integration-services"></a>セキュリティの概要 (Integration Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "67896114"
   
  次の表では、リスクの種類と、各リスクを軽減するために必要な予防的措置について説明します。  
   
-|脅威または脆弱性|定義|対策|  
+|脅威または脆弱性|定義|対応策|  
 |-----------------------------|----------------|----------------|  
 |[パッケージ ソース]|パッケージのソースは、パッケージを作成した個人または組織です。 不明なソースや信頼されていないソースのパッケージを実行することは危険な場合があります。|デジタル署名を使用してパッケージのソースを特定し、既知の信頼されているソースのパッケージだけを実行します。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)」を参照してください。|  
 |パッケージの内容|パッケージの内容には、パッケージの要素とそのプロパティが含まれます。 プロパティには、パスワードなどの機密データや接続文字列を含めることができます。 SQL ステートメントなどのパッケージ要素によって、データベースの構造が明らかにされる場合があります。|次の手順を実行して、パッケージとその内容へのアクセスを制御します。<br /><br /> 1) パッケージ自体へのアクセスを制御するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの **msdb** データベースに保存されているパッケージに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のセキュリティ機能を適用します。 ファイル システムに保存されているパッケージには、アクセス制御リスト (ACL) など、ファイル システムのセキュリティ機能を適用します。<br /><br /> 2) パッケージの内容へのアクセスを制御するには、パッケージの保護レベルを設定します。<br /><br /> 詳細については、「[セキュリティの概要 (Integration Services)](../../integration-services/security/security-overview-integration-services.md)」と「[パッケージ内の機微なデータへのアクセス制御](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)」を参照してください。|  
@@ -82,7 +82,7 @@ ms.locfileid: "67896114"
 #### <a name="saving-packages-to-the-msdb-database"></a>msdb データベースへのパッケージの保存  
  パッケージを msdb データベースに保存すると、サーバー レベル、データベース レベル、およびテーブル レベルのセキュリティを実現できます。 msdb データベースでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは sysssispackages テーブルに格納されます。 パッケージは、msdb データベースの sysssispackages テーブルと sysdtspackages テーブルに保存されるため、msdb データベースのバックアップ時に自動的にバックアップされます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに格納されるパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータベース レベルのロールを適用して保護することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージへのアクセスを制御するための、db_ssisadmin、db_ssisltduser、および db_ssisoperator というデータベース レベルの 3 つの固定ロールがあります。 各パッケージにはリーダー ロールおよびライター ロールを関連付けることができます。 また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用する、データベース レベルのカスタム ロールを定義することもできます。 ロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の msdb データベースに保存されるパッケージにのみ実装できます。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースに格納されるパッケージは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータベース レベルのロールを適用して保護することもできます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージへのアクセスを制御するための、db_ssisadmin、db_ssisltduser、および db_ssisoperator というデータベース レベルの 3 つの固定ロールがあります。 各パッケージにはリーダー ロールおよびライター ロールを関連付けることができます。 また、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで使用する、データベース レベルのカスタム ロールを定義することもできます。 ロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内の msdb データベースに保存されるパッケージにのみ実装できます。 詳細については、「[Integration Services のロール &#40;SSIS サービス&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)」を参照してください。  
   
 #### <a name="saving-packages-to-the-file-system"></a>ファイル システムへのパッケージの保存  
  パッケージを msdb データベースではなくファイル システムに格納する場合は、パッケージ ファイル、およびパッケージ ファイルが格納されるフォルダーをセキュリティで保護してください。  
@@ -106,10 +106,10 @@ ms.locfileid: "67896114"
   
  詳細については、「 [Integration Services サービスへのアクセスの制御](#service)」を参照してください。  
 
-## <a name="files"></a> パッケージで使用されるファイルへのアクセス
+## <a name="access-to-files-used-by-packages"></a><a name="files"></a> パッケージで使用されるファイルへのアクセス
   パッケージに格納されないファイルは、パッケージ保護レベルでは保護されません。 このようなファイルには、次のファイルが含まれます。  
   
--   [構成ファイル]  
+-   構成ファイル  
   
 -   チェックポイント ファイル  
   
@@ -117,18 +117,18 @@ ms.locfileid: "67896114"
   
  特に機密情報が含まれている場合、これらのファイルは個別に保護する必要があります。  
   
-### <a name="configuration-files"></a>[構成ファイル]  
+### <a name="configuration-files"></a>構成ファイル  
  ログイン情報やパスワード情報などの機密情報が構成に含まれている場合は、その構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保存することを検討するか、アクセス制御リスト (ACL) を使用して、ファイルを保存する場所またはフォルダーへのアクセスを制限し、特定のアカウントにのみアクセスを許可する必要があります。 通常は、パッケージの実行を許可するアカウント、およびパッケージの管理とトラブルシューティング (構成の内容、チェックポイント、およびログ ファイルの確認) を行うアカウントにアクセス権を許可します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバー レベルおよびデータベース レベルでの保護により、さらに堅牢なセキュリティが提供されます。 構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保存するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成の種類を使用します。 ファイル システムに保存するには、XML 構成の種類を使用します。  
   
  詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」、および「 [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  
   
 ### <a name="checkpoint-files"></a>チェックポイント ファイル  
- 同様に、パッケージで使用するチェックポイント ファイルに機密情報が含まれている場合も、アクセス制御リスト (ACL) を使用して、ファイルが格納されている場所またはフォルダーを保護する必要があります。 チェックポイント ファイルは、パッケージの進行状況に関する現在の状態情報と変数の現在の値を格納します。 たとえば、電話番号を格納するカスタム変数がパッケージに含まれることがあります。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+ 同様に、パッケージで使用するチェックポイント ファイルに機密情報が含まれている場合も、アクセス制御リスト (ACL) を使用して、ファイルが格納されている場所またはフォルダーを保護する必要があります。 チェックポイント ファイルは、パッケージの進行状況に関する現在の状態情報と変数の現在の値を格納します。 たとえば、電話番号を格納するカスタム変数がパッケージに含まれることがあります。 詳細については、「[チェックポイントを使用してパッケージを再開する](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ### <a name="log-files"></a>ログ ファイル  
  ファイル システムに書き込まれるログ エントリも、アクセス制御リスト (ACL) を使用して保護する必要があります。 ログ エントリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティで保護することもできます。 ログ エントリには機密情報が含まれることがあります。たとえば、パッケージに含まれる SQL 実行タスクによって、電話番号を参照する SQL ステートメントが構築される場合、SQL ステートメントのログ エントリにも電話番号が含まれています。 また、SQL ステートメントにより、データベース内のテーブル名や列名に関するプライベートな情報が明らかにされる場合もあります。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
 
-## <a name="service"></a> Integration Services サービスへのアクセスの制御
+## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Integration Services サービスへのアクセスの制御
   パッケージの保護レベルによって、パッケージを編集および実行できるユーザーを制限できます。 サーバーで現在実行中のパッケージの一覧を表示できるユーザー、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で現在実行中のパッケージを停止できるユーザーを制限するには、追加の保護が必要です。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、実行中のパッケージを一覧表示する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが使用されます。 Windows の Administrators グループのメンバーは、実行中のすべてのパッケージを表示および停止できます。 Administrators グループのメンバーではないユーザーは、本人が起動したパッケージのみを表示および停止できます。  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893596"
 ---
 # <a name="expressions-mdx"></a>式 (MDX)
@@ -25,14 +25,14 @@ ms.locfileid: "68893596"
   
  単純式とは、次のような式です。  
   
- 定数  
+ Constant  
  定数は、MDX の単一の特定の値を表す記号です。 文字列、数値、および日付の値は定数として表示できます。 数値定数とは異なり、文字列定数と日付定数は単一引用符 (') で区切る必要があります。  
   
  スカラー関数  
  MDX のスカラー関数は、評価のコンテキスト内で単一の値を返します。 この区別は、MDX がスカラー関数を解決する方法を理解する上で重要です。ほとんどの MDX 式、ステートメント、およびスクリプトは、1つのデータ要素ではなく評価されますが、セルやメンバーなどのデータ要素のグループを反復処理するためです。 ただし、スカラー関数が評価された時点では、通常、この関数は単一のデータ要素を確認します。  
   
  オブジェクト識別子  
- MDX は、多次元データの性質上、オブジェクト指向です。 オブジェクト識別子は、MDX の単純式と見なされます。 識別子の詳細については[、 &#40;「&#41;MDX の識別子](../mdx/identifiers-mdx.md)」を参照してください。  
+ MDX は、多次元データの性質上、オブジェクト指向です。 オブジェクト識別子は、MDX の単純式と見なされます。 識別子の詳細については、「 [MDX &#40;&#41;の識別子](../mdx/identifiers-mdx.md)」を参照してください。  
   
  複合式は、演算子によって結合されたこれらのエンティティの組み合わせから構築できます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68893596"
   
  `FROM [Adventure Works]`  
   
- 式は、のように`[Measures].[Discount Amount] * 1.5`計算することもできます。 次の例では、計算を使用して、MDX の SELECT ステートメントでメンバーを定義する方法を示します。  
+ 式は、のように計算することも`[Measures].[Discount Amount] * 1.5`できます。 次の例では、計算を使用して、MDX の SELECT ステートメントでメンバーを定義する方法を示します。  
   
 ```  
 WITH   
@@ -83,8 +83,8 @@ WHERE [Product].[Category].[Bikes]
 |[スカラー関数の使用](../mdx/using-scalar-expressions.md)|スカラー式を定義します。|  
 |[空の値の操作](../mdx/working-with-empty-values.md)|空の値とは何か、そのような値がどのように処理されるかを説明します。|  
   
-## <a name="see-also"></a>関連項目  
- [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+## <a name="see-also"></a>参照  
+ [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

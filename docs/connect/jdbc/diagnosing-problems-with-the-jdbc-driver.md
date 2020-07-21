@@ -1,5 +1,5 @@
 ---
-title: JDBC driver に関する問題の診断 |Microsoft Docs
+title: JDBC ドライバーに関する問題の診断 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028106"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922428"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーに関する問題の診断
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "69028106"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[エラーの処理](../../connect/jdbc/handling-errors.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から返されたエラーを処理する方法について説明します。|  
 |[ドライバー バージョンの取得](../../connect/jdbc/getting-the-driver-version.md)|インストールされている JDBC ドライバーのバージョンを特定する方法について説明します。|  

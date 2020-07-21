@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b9168d73f2104bafd8efef0e0560911f56f5a68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050681"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -55,7 +54,7 @@ len
  *srvproc*  
  データベース接続を特定するポインターです。  
   
- *field*  
+ *分野*  
  その接続について返すデータを指定します。  
   
 |値|戻り値|  

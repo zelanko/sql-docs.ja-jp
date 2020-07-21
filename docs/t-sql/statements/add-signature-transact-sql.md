@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813168"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ストアド プロシージャ、関数、アセンブリ、またはトリガーにデジタル署名を追加します。 また、ストアド プロシージャ、関数、アセンブリ、またはトリガーに副署名を追加します。  
-  
-  
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+ストアド プロシージャ、関数、アセンブリ、またはトリガーにデジタル署名を追加します。 また、ストアド プロシージャ、関数、アセンブリ、またはトリガーに副署名を追加します。
+
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>構文
+
+```syntaxsql
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>引数  
- *module_class*  
- 署名を追加するモジュールのクラスです。 スキーマ スコープのモジュールの既定値は OBJECT です。  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+
+*module_class*  
+署名を追加するモジュールのクラスです。 スキーマ スコープのモジュールの既定値は OBJECT です。  
   
  *module_name*  
  署名または副署名の対象となるストアド プロシージャ、関数、アセンブリ、またはトリガーの名前を指定します。  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名または副署名に使用する非対称キーの名前です。  
   
-## <a name="remarks"></a>Remarks  
- 署名または副署名されるモジュールと、署名に使用する証明書または非対称キーは、あらかじめ存在している必要があります。 署名の確認で、モジュールのすべての文字が確認されます。 これには、先頭のキャリッジ リターンとライン フィードも含まれます。  
+## <a name="remarks"></a>解説
+
+署名または副署名されるモジュールと、署名に使用する証明書または非対称キーは、あらかじめ存在している必要があります。 署名の確認で、モジュールのすべての文字が確認されます。 これには、先頭のキャリッジ リターンとライン フィードも含まれます。  
   
  モジュールには、任意の数の証明書と非対称キーを使用して署名や副署名を行うことができます。  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  モジュールに EXECUTE AS 句が含まれる場合、署名の処理の一部としてプリンシパルのセキュリティ ID (SID) も含まれます。  
   
-> [!CAUTION]  
->  モジュールの署名は権限の許可のみに使用し、権限の拒否または取り消しには使用しないでください。  
+> [!CAUTION]
+> モジュールの署名は権限の許可のみに使用し、権限の拒否または取り消しには使用しないでください。  
   
  インライン テーブル値関数には署名できません。  
   
  署名に関する情報は、sys.crypt_properties カタログ ビューで確認できます。  
   
-> [!WARNING]  
+> [!WARNING]
 >  署名のプロシージャを再作成する場合は、元のバッチ内のすべてのステートメントが再作成のバッチと一致する必要があります。 バッチの一部が異なる場合は、スペースやコメントの違いだけであっても、異なる署名になります。  
   
 ## <a name="countersignatures"></a>副署名  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   procSelectT1 に署名して procSelectT1 が T1 にアクセスできるようにすると、Alice は procSelectT1 を直接呼び出すことができるようになり、ProcSelectT1ForAlice を呼び出す必要がありません。  
   
--   procSelectT1 に対する EXECUTE 権限を Alice に付与しないということもできますが、Alice は ProcSelectT1ForAlice を使用して procSelectT1 を呼び出すこともできなくなります。  
+-   procSelectT1 に対する EXECUTE 権限を Alice に付与しないということもできますが、Alice は ProcSelectT1ForAlice を使用して procSelectT1 を呼び出すことができなくなります。
   
 -   ProcSelectT1ForAlice への署名は procSelectT1 の呼び出し時に失われるので、この署名だけでは効果がありません。  
   
 ただし、ProcSelectT1ForAlice への署名に使用した証明書と同じ証明書を使用して procSelectT1 に副署名すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] において呼び出しチェーン全体で署名が保持され、T1 にアクセスできるようになります。 Alice が procSelectT1 を直接呼び出そうとしても、副署名では権限は付与されないので、T1 にはアクセスできません。 以下の例 C で、この例の [!INCLUDE[tsql](../../includes/tsql-md.md)] を示します。  
   
 ## <a name="permissions"></a>アクセス許可  
- オブジェクトに対する ALTER 権限と、証明書または非対称キーに対する CONTROL 権限が必要です。 関連付けられている秘密キーがパスワードで保護されている場合、ユーザーはそのパスワードも保持している必要があります。  
+
+オブジェクトに対する ALTER 権限と、証明書または非対称キーに対する CONTROL 権限が必要です。 関連付けられている秘密キーがパスワードで保護されている場合、ユーザーはそのパスワードも保持している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 証明書を使用してストアド プロシージャに署名する  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. 証明書を使用してストアド プロシージャに署名する
+
  次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeeLogin` に対して、証明書 `HumanResourcesDP` を使用して署名を行います。  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 署名付き BLOB を使用してストアド プロシージャに署名する  
- 次の例では、新しいデータベースを作成し、この例で使用する証明書を作成します。 まず、単純なストアド プロシージャを作成して署名し、`sys.crypt_properties` から署名付き BLOB を取得します。 その後、署名は削除され、再度追加されます。 次の例では、WITH SIGNATURE 構文を使用して、このプロシージャに署名します。  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. 署名付き BLOB を使用してストアド プロシージャに署名する
+
+次の例では、新しいデータベースを作成し、この例で使用する証明書を作成します。 まず、単純なストアド プロシージャを作成して署名し、`sys.crypt_properties` から署名付き BLOB を取得します。 その後、署名は削除され、再度追加されます。 次の例では、WITH SIGNATURE 構文を使用して、このプロシージャに署名します。  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 副署名を使用してプロシージャにアクセスする  
- 次の例では、副署名によってオブジェクトへのアクセスを制御する方法を示します。  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 副署名を使用してプロシージャにアクセスする
+
+次の例では、副署名によってオブジェクトへのアクセスを制御する方法を示します。  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>参照  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

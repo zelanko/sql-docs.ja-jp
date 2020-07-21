@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: c6294e6313178c17edce2b85aab947a52aaa3fbc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1189098b494eb0de48c00f1a37b282a4f5395edf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892574"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242557"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft ビジネス インテリジェンス (BI) ツールでの分析とレポート
 
@@ -27,16 +27,16 @@ ms.locfileid: "68892574"
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
-|ワークロード|ユーザー|||BI ツール|||  
+|ワークロード|User|||BI ツール|||  
 |---------------|----------|-|-|--------------|-|-|  
 |||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**セルフサービス BI**|アナリスト/エンド ユーザー||||||  
-|パブリック データと企業データの検出とアクセスの簡素化||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure データ カタログ](https://azure.microsoft.com/services/data-catalog/)||  
+|パブリック データと企業データの検出とアクセスの簡素化||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
 |強力なデータ モデルの作成||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |セルフサービスの予測分析の実行||||||[Excel 用データ マイニング アドイン](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |データの視覚化と探索||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D マップ](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |自然言語クエリを使用した問い合わせの実施|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
-|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (< 250 MB ファイルの表示をサポート)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10 用 Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (< 250 MB ファイルの表示をサポート)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Windows 10 用 Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |コラボレーションと共有|||[SharePoint サイト](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint チーム サイト](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI サイト](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**企業 BI**|IT プロフェッショナル||||||  
 |多次元/表形式ビジネス モデルの作成||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
@@ -49,4 +49,3 @@ ms.locfileid: "68892574"
 |データ マイニング アルゴリズムの使用||||||[Analysis Services 内でのデータ マイニング](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R サービス](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
- \* Reporting Services には、最新のページ分割されたレポートなど、運用レポートとカスタム レポートの配信をサポートする多数の機能があります。

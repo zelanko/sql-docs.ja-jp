@@ -19,15 +19,15 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8390690ebbdef66d0a5c754e7a0e5db2f31437de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 081be4045a04ac665a83d8fabf8f12e6e0abc7c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727061"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
   
 > [!IMPORTANT]  
@@ -45,14 +45,14 @@ ms.locfileid: "68123517"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **sys.sql_expression_dependencies** を使用して関数のすべての依存関係を検索するには、データベースに対する VIEW DEFINITION 権限とデータベースの **sys.sql_expression_dependencies** に対する SELECT 権限が必要です。 OBJECT_DEFINITION で返されるようなシステム オブジェクトの定義は公開されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>ユーザー定義関数のプロパティを表示するには  
   
@@ -70,50 +70,48 @@ ms.locfileid: "68123517"
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
+     **[関数のプロパティ -** function_name _]_ ダイアログ ボックスに、次のプロパティが表示されます。  
   
-     **Database**  
-     The name of the database containing this function.  
+     **[データベース]**  
+     この関数を含むデータベースの名前です。  
   
-     **Server**  
-     The name of the current server instance.  
+     **[サーバー]**  
+     現在のサーバー インスタンスの名前です。  
   
      **User**  
-     The name of the user of this connection.  
+     この接続のユーザーの名前です。  
   
-     **Created date**  
-     Displays the date the function was created.  
+     **[作成日]**  
+     関数が作成された日付を表示します。  
   
-     **Execute As**  
-     Execution context for the function.  
+     **[実行時の権限]**  
+     関数の実行コンテキストです。  
   
      **Name**  
-     The name of the current function.  
+     現在の関数の名前です。  
   
-     **Schema**  
-     Displays the schema that owns the function.  
+     **[スキーマ]**  
+     関数を所有するスキーマを表示します。  
   
-     **System object**  
-     Indicates whether the function is a system object. Values are True and False.  
+     **[システム オブジェクト]**  
+     関数がシステム オブジェクトかどうかを指定します。 値は True と False です。  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **[ANSI NULL]**  
+     オブジェクトが ANSI NULL オプションで作成されたかどうかを指定します。  
   
      **Encrypted**  
-     Indicates whether the function is encrypted. Values are True and False.  
+     関数が暗号化されているかどうかを指定します。 値は True と False です。  
   
-     **Function Type**  
-     The type of user defined function.  
+     **[関数の種類]**  
+     ユーザー定義関数の種類です。  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **[引用符で囲まれた識別子]**  
+     オブジェクトが引用符で囲まれた識別子オプションで作成されたかどうかを指定します。  
   
-     **Schema bound**  
-     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **[スキーマ バインド]**  
+     関数がスキーマ バインドされているかどうかを指定します。 値は True と False です。 スキーマ バインド関数の詳細については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の SCHEMABINDING のセクションを参照してください。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>関数の定義およびプロパティを取得するには  
   

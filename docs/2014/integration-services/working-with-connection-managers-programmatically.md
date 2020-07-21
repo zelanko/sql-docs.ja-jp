@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6e9725f7ecdbc1625c74f4c650f6f3215dc64ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877703"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419909"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>プログラムによる接続マネージャーの操作
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、関連付けられた接続マネージャー クラスの AcquireConnection メソッドは、マネージド コードで接続マネージャーを操作する場合に呼び出すことの多いメソッドです。 マネージド コードを記述する場合、接続マネージャーの機能を使用するには AcquireConnection メソッドを呼び出す必要があります。 このメソッドは、マネージド コードを記述する場所がスクリプト タスク、スクリプト コンポーネント、カスタム オブジェクト、またはカスタム アプリケーションのいずれであっても、呼び出す必要があります。  
@@ -55,21 +54,21 @@ ms.locfileid: "62877703"
 |接続マネージャーの種類|接続マネージャー名|戻り値の型|追加情報|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|[!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続マネージャー|`System.Data.SqlClient.SqlConnection`||  
-|FILE|ファイル接続マネージャー|`System.String`|ファイルへのパス。|  
+|ファイル|ファイル接続マネージャー|`System.String`|ファイルへのパス。|  
 |FLATFILE|フラット ファイル接続マネージャー|`System.String`|ファイルへのパス。|  
-|MSMQ (MSMQ)|MSMQ 接続マネージャー|`System.Messaging.MessageQueue`||  
+|MSMQ|MSMQ 接続マネージャー|`System.Messaging.MessageQueue`||  
 |MULTIFILE|複数ファイル接続マネージャー|`System.String`|いずれかのファイルへのパス。|  
 |MULTIFLATFILE|複数フラット ファイル接続マネージャー|`System.String`|いずれかのファイルへのパス。|  
 |SMOServer|SMO 接続マネージャー|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP (SMTP)|SMTP 接続マネージャー|`System.String`|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
-|WMI (WMI)|WMI 接続マネージャー|`System.Management.ManagementScope`||  
+|SMTP|SMTP 接続マネージャー|`System.String`|例: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|WMI|WMI 接続マネージャー|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 接続マネージャー|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>関連項目  
- [スクリプト タスクでのデータ ソースへの接続](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [スクリプト コンポーネントでのデータ ソースへの接続](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [スクリプトタスクでのデータソースへの接続](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [スクリプトコンポーネントでのデータソースへの接続](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [カスタム タスクでのデータ ソースへの接続](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   

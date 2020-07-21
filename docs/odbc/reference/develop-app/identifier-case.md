@@ -1,5 +1,5 @@
 ---
-title: 識別子のケース |Microsoft Docs
+title: 識別子の Case |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - identifiers [ODBC], case
 - interoperability of SQL statements [ODBC], identifier case
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70728908f081ab89e08cad1265f04394f29b66ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 940d96ece6b2c344fa02e0daadd6248270f4d19e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138971"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300152"
 ---
 # <a name="identifier-case"></a>識別子の大文字と小文字の区別
-SQL ステートメントとカタログ関数の引数では、識別子と引用符で囲まれた識別子できますか大文字か、アプリケーションを呼び出すことによって判断できますが、 **SQLGetInfo** SQL_IDENTIFIER_CASE SQL_QUOTED_ とIDENTIFIER_CASE オプション。  
+SQL ステートメントとカタログ関数の引数では、識別子と引用符で囲まれた識別子は大文字と小文字を区別するかどうかを指定できます。この場合、アプリケーションは、SQL_IDENTIFIER_CASE オプションと SQL_QUOTED_IDENTIFIER_CASE オプションを指定して**SQLGetInfo**を呼び出すことによって判断できます。  
   
- これらの各オプションは、4 つの戻り値: 1 つを示す識別子または引用符で囲まれた識別子のケースが区別されると、3 つを示すは区別されません。 さらに、小文字は区別されません、3 つの値には、識別子がシステム カタログに格納されているケースがについて説明します。 アプリケーションが、カタログ関数の結果を表示する場合など、表示目的でのみに関連がシステム カタログの識別子を格納する方法識別子の大文字小文字の区別は変更されません。
+ これらの各オプションには、次の4つの戻り値があります。1つは、識別子または引用符で囲まれた識別子の大文字と小文字が区別され、3番目は機密性がないことを示します。 大文字と小文字が区別されない3つの値は、識別子がシステムカタログに格納されるケースを示します。 識別子がシステムカタログに格納される方法は、アプリケーションがカタログ関数の結果を表示する場合など、表示目的のみに関連します。識別子の大文字と小文字の区別は変更されません。

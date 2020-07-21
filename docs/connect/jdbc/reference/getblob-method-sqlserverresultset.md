@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c17e74c6844fa794dadb09e30f0be6822b66eb69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4197b3717045550b7e33fe9c2ab91728a6293f8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953734"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920489"
 ---
 # <a name="getblob-method-sqlserverresultset"></a>getBlob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67953734"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getBlob (int)](../../../connect/jdbc/reference/getblob-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の BLOB オブジェクトとして取得されます。|  
 |[getBlob (java.lang.String)](../../../connect/jdbc/reference/getblob-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の BLOB オブジェクトとして取得します。|  

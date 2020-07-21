@@ -1,5 +1,5 @@
 ---
-title: restorefile (TRANSACT-SQL) |Microsoft Docs
+title: restorefile (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,34 +17,34 @@ helpviewer_keywords:
 - restoring files [SQL Server], restorefile system table
 - file restores [SQL Server], restorefile system table
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 82f338a31cf23b6ab151e2dc731f2a15d9f4de66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881461"
 ---
-# <a name="restorefile-transact-sql"></a>restorefile (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="restorefile-transact-sql"></a>restorefile (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  復元されたファイルごとに 1 行のデータを格納します。復元されたファイルには、ファイル グループ名から間接的に復元されたものも含まれます。 このテーブルに格納されます、 **msdb**データベース。  
+  復元されたファイルごとに 1 行のデータを格納します。復元されたファイルには、ファイル グループ名から間接的に復元されたものも含まれます。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|対応する復元操作を特定するための一意な識別番号。 参照**restorehistory (restore_history_id)** します。|  
-|**file_number**|**numeric(10,0)**|復元されたファイルのファイル識別番号。 この数は、各データベース内で一意である必要があります。 NULL にすることができます。<br /><br /> データベースは、データベース スナップショットに戻す、この値は、完全な復元と同じ方法で指定されます。|  
-|**destination_phys_drive**|**nvarchar(260)**|ドライブまたはパーティションのファイルの復元します。 NULL にすることができます。<br /><br /> データベースは、データベース スナップショットに戻す、この値は、完全な復元と同じ方法で指定されます。|  
-|**destination_phys_name**|**nvarchar(260)**|ファイルの復元先のファイル名。ドライブやパーティション情報は含みません。 NULL にすることができます。<br /><br /> データベースは、データベース スナップショットに戻す、この値は、完全な復元と同じ方法で指定されます。|  
+|**restore_history_id**|**int**|対応する復元操作を特定するための一意な識別番号。 **Restorehistory (restore_history_id)** を参照します。|  
+|**file_number**|**numeric (10, 0)**|復元されたファイルのファイル識別番号。 この値は、各データベース内で一意である必要があります。 NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻すと、完全復元の場合と同じ方法でこの値が設定されます。|  
+|**destination_phys_drive**|**nvarchar(260)**|ファイルが復元されたドライブまたはパーティション。 NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻すと、完全復元の場合と同じ方法でこの値が設定されます。|  
+|**destination_phys_name**|**nvarchar(260)**|ファイルの復元先のファイル名。ドライブやパーティション情報は含みません。 NULL にすることができます。<br /><br /> データベースをデータベーススナップショットに戻すと、完全復元の場合と同じ方法でこの値が設定されます。|  
   
-## <a name="remarks"></a>コメント  
- このテーブルおよびその他のバックアップと履歴テーブルの行の数を減らすためには、実行、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアド プロシージャ。  
+## <a name="remarks"></a>Remarks  
+ このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)ストアドプロシージャを実行します。  
   
-## <a name="see-also"></a>参照  
- [バックアップし、復元テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [restorefilegroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
- [restorehistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/restorehistory-transact-sql.md)   
- [システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [Transact-sql&#41;&#40;のテーブルのバックアップと復元](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [restorefilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)   
+ [restorehistory &#40;Transact-sql&#41;](../../relational-databases/system-tables/restorehistory-transact-sql.md)   
+ [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

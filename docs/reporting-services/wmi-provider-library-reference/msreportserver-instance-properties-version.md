@@ -11,13 +11,13 @@ ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 059f517b3309b059f3944f04131e02e8722e7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571066"
 ---
-# <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance プロパティ - Version
+# <a name="msreportserver_instance-properties---version"></a>MSReportServer_Instance プロパティ - Version
   Major.Minor.Build.Revision 形式でレポート サーバーのバージョンを返します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  

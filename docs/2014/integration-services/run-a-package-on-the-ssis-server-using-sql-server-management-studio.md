@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio を使用して SSIS サーバー上でパッケージの実行 |Microsoft Docs
+title: SQL Server Management Studio | を使用して SSIS サーバーでパッケージを実行するMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56dc1bf8-99d4-41dc-bdc4-f64f1ccfd688
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d17009988dea54621d4fd7ef542cf452bfe95c6e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056378"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422959"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した SSIS サーバーでのパッケージの実行
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置した後は、サーバーでパッケージを実行できます。  
@@ -32,7 +31,7 @@ ms.locfileid: "66056378"
   
 4.  **[パッケージの実行]** ダイアログ ボックスの **[パラメーター]** タブ、 **[接続マネージャー]** タブ、 **[詳細設定]** タブの設定を使用して、パッケージの実行を構成します。  
   
-5.  **[OK]** をクリックしてパッケージを実行します。  
+5.  [ **OK** ] をクリックしてパッケージを実行します。  
   
      \- または -  
   

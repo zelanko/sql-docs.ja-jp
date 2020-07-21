@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f927d11df6fa0e01004213e8d2336aa3fefe13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902242"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Service Broker の権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト、メッセージ型、リモート サービス バインド、ルート、またはサービスに対する権限を拒否します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67984424"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON  
     {    
        [ CONTRACT :: contract_name ]   
@@ -73,7 +73,7 @@ DENY permission  [ ,...n ] ON
  権限を拒否するサービスを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれかです。  
+ 権限を拒否するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール  
@@ -88,7 +88,7 @@ CASCADE
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
 *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール  
@@ -99,7 +99,7 @@ CASCADE
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="service-broker-contracts"></a>Service Broker コントラクト  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  

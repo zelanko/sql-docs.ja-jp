@@ -1,8 +1,10 @@
 ---
-title: 自動実行アカウントの構成 (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 05/31/2016
+title: 自動実行アカウントの構成 (構成マネージャー) | Microsoft Docs
+description: Reporting Services には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502927"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866319"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
   
--   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、SQL Server オンライン ブックの「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」を参照してください。  
-  
+-   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。
+
 -   レポートに使用する外部の画像ファイルの取得。 匿名アクセスでアクセスできない画像ファイルを使用する場合は、自動レポート処理アカウントを構成し、アカウントに対してファイルへのアクセス許可を与えます。  
   
  自動レポート処理とは、ユーザーの要求ではなく、イベント (スケジュール ドリブンのイベントまたはデータ更新イベント) によって起動されたレポート実行処理を示します。 レポート サーバーは、自動レポート処理アカウントを使用して、外部データ ソースをホストしているコンピューターにログオンします。 レポート サーバー サービス アカウントの資格情報は他のコンピューターへの接続に使用されないため、このアカウントは必要です。  
@@ -46,7 +48,7 @@ ms.locfileid: "65502927"
 3.  アカウントとパスワードを入力し、パスワードを再入力して、 **[適用]** をクリックします。  
   
 ### <a name="using-rsconfig-utility"></a>RSCONFIG ユーティリティの使用  
- アカウントを設定するもう 1 つの方法は、 **rsconfig** ユーティリティを使用することです。 アカウントを指定するには、 **rsconfig** の **-e**引数を使用します。 **rsconfig** に **-e** 引数を指定すると、構成ファイルにアカウント情報を書き込むようユーティリティに指示できます。 RSreportserver.config へのパスを指定する必要はありません。アカウントを構成するには、次の手順を実行します。  
+ アカウントを設定するもう 1 つの方法は、 **rsconfig** ユーティリティを使用することです。 アカウントを指定するには、 **rsconfig** の **-e**引数を使用します。 **rsconfig** に **-e** 引数を指定すると、構成ファイルにアカウント情報を書き込むようユーティリティに指示できます。 RSreportserver.config へのパスを指定する必要はありません。アカウントを構成するには、次の手順に従います。  
   
 1.  レポート サーバーにデータまたはサービスを提供するコンピューターおよびサーバーに対してアクセス権を持つ、ドメイン アカウントを作成または選択します。 少ない権限を持つアカウントを使用することをお勧めします (たとえば、読み取り専用権限)。  
   
@@ -56,8 +58,8 @@ ms.locfileid: "65502927"
   
      **rsconfig -e -u\<ドメイン/ユーザー名> -p\<パスワード>**  
   
- **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例については、SQL Server オンライン ブックの「[rsconfig ユーティリティ (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。  
-  
+ **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例の表示方法については、「[rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。
+ 
 ### <a name="how-account-information-is-stored"></a>アカウント情報の保存方法  
  アカウントを設定すると、ローカルまたはリモートのレポート サーバー インスタンス上の RSreportserver.config ファイル内で、暗号化された値として次の設定が指定されます。  
   
@@ -99,11 +101,11 @@ ms.locfileid: "65502927"
   
 2.  [実行アカウント] ページで、 **[実行アカウントの指定]** をオフにします。  
   
-3.  **[適用]** をクリックします。  
+3.  **[Apply]** をクリックします。  
   
  アカウント情報が RSReportServer.config ファイルから削除されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server セットアップ ログ ファイルの表示と読み取り | Microsoft Docs
+description: この記事では、SQL Server セットアップで作成されるログ ファイルについて説明します。 ログファイルは、日付と時刻を名前に含むフォルダーに配置されます。
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,26 +19,26 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "67906770"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900169"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 内の日付と時刻を名前に含むフォルダーに、ログ ファイルが作成されます。*nnn* は、インストールされている SQL Server のバージョンに対応する番号です。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
 
-   | ファイル           | [パス] |
+   | ファイル           | Path |
    | :------        | :----------------------------- |
    | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
-   | **Summary_\<コンピューター名>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
    | **データストア** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
-   | **MSI ログ ファイル** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<名前>.log|
+   | **MSI ログ ファイル** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
    | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **無人インストールの場合** | %temp%\sqlsetup*.log |
@@ -82,7 +83,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
 
 
   >[!NOTE]
-  > 修正プログラムの適用時、似たような一連のファイルが含まれるサブフォルダーがたくさん存在することがあります (修正プログラムが適用されるインスタンスごとにサブフォルダーが 1 つ、共有機能のために 1 つ) (すなわち、%programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER)。 
+  > 修正プログラムの適用時、似たような一連のファイルが含まれるサブフォルダーが多数存在することがあります (修正プログラムが適用されるインスタンスごとにサブフォルダーが 1 つ、共有機能のために 1 つ) (すなわち、%programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER)。 
   
 ### <a name="location"></a>場所  
  summary.txt は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\ 内にあります。
@@ -115,9 +116,9 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
   
  MSI ログ ファイルの種類
   
--   \<機能>_\<アーキテクチャ>\_\<相互作用>.log   
--   \<機能>_\<アーキテクチャ>\_\<言語>\_\<相互作用>.log   
--   \<機能>_\<アーキテクチャ>\_\<相互作用>\_\<ワークフロー>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>場所  
  MSI ログ ファイルは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log にあります。  
@@ -142,5 +143,5 @@ SystemConfigurationCheck_Report.htm は %programfiles%\\[!INCLUDE[msCoName](../.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2017 のインストール](../../database-engine/install-windows/install-sql-server.md)

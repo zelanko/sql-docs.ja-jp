@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0b4363e41169ccec1da20780cc18ca3c3f57dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682666"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は証明書の秘密キーを使用し、暗号化データを復号します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68118951"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
@@ -55,19 +55,19 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 証明書の秘密キーの復号に使用されるパスワード。 *cert_password* のデータ形式は Unicode にする必要があります。  
   
  @cert_password  
-証明書の秘密キーの復号に使用されるパスワードを含む、型 **nchar** または **nvarchar** の変数。 *@cert_password* のデータ形式は Unicode にする必要があります。  
+証明書の秘密キーの復号に使用されるパスワードを含む、型 **nchar** または **nvarchar** の変数。 *\@cert_password* のデータ形式は Unicode にする必要があります。  
 
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 この関数では、証明書の秘密キーを使ってデータの暗号化を解除します。 非対称キーを使用する暗号化変換では、リソースが大幅に消費されます。 そのため、日常的なユーザー データの暗号化/復号については、[ENCRYPTBYCERT](./encryptbycert-transact-sql.md) と DECRYPTBYCERT の使用を避けるように開発者に提案しています。  
 
 ## <a name="permissions"></a>アクセス許可  
 `DECRYPTBYCERT` には、証明書に対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
-この例では、証明書 `JanainaCert02` によって最初に暗号化されたデータとしてマークされている、`[AdventureWorks2012].[ProtectedData04]` からの行が選択されます。 最初に、証明書 `pGFD4bb925DGvbd2439587y` のパスワードで証明書 `JanainaCert02` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
+## <a name="examples"></a>例  
+この例では、証明書 `[AdventureWorks2012].[ProtectedData04]` によって最初に暗号化されたデータとしてマークされている、`JanainaCert02` からの行が選択されます。 最初に、証明書 `JanainaCert02` のパスワードで証明書 `pGFD4bb925DGvbd2439587y` の秘密キーが復号されます。 次に、この秘密キーで暗号化テキストが復号されます。 暗号化データが **varbinary** から **nvarchar** に変換されます。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

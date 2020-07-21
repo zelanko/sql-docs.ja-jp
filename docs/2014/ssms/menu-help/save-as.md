@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62510321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062013"
 ---
 # <a name="save-as"></a>[名前を付けて保存]
-  このダイアログ ボックスを使用すると、現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 このダイアログ ボックスを表示するには、次のようにクリックします**保存** *\<ファイル >* **として**上、**ファイル**メニュー (場所 *。\<ファイル >* は現在の項目の名前です)、または alt キーを押しながら F キーをコード エディターでキーを押します。  
+  このダイアログ ボックスを使用すると、現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 このダイアログボックスを表示するには、[ファイル] メニューの [名前を付けて**保存**] をクリックする *\<file>* **As**か ( **File** *\<file>* は現在の項目の名前)、コードエディターで ALT キーを押しながら F キーを押します。  
   
 ## <a name="central-panel"></a>中央のパネル  
  **[保存先]**  
@@ -51,7 +50,7 @@ ms.locfileid: "62510321"
  コンピューターの **[マイ コンピューター]** を表示します。  
   
 ## <a name="see-also"></a>参照  
- [保存の詳細オプション](advanced-save-options.md)   
+ [保存オプションの詳細設定](advanced-save-options.md)   
  [エンコーディングによるファイルの管理](../solution/manage-files-with-encoding.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: データベース マスター キーのバックアップ | Microsoft Docs
+description: Transact-SQL を使用して SQL Server でデータベース マスター キーをバックアップする方法について説明します。 この重要なキーにより、他のキーと証明書が暗号化されます。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997675"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892432"
 ---
 # <a name="back-up-a-database-master-key"></a>データベース マスター キーのバックアップ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してデータベース マスター キーをバックアップする方法について説明します。 データベース マスター キーは、データベース内の他のキーや証明書を暗号化する際に使用します。 データベース マスター キーが削除されるか破損すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、暗号化されたキーの暗号化を解除できなくなる場合があります。さらに、そのキーを使用して暗号化されたデータは事実上失われます。 このため、データベース マスター キーはバックアップして、安全な別の場所に保存しておく必要があります。  
   
 ## <a name="before-you-begin"></a>はじめに  
@@ -30,7 +31,7 @@ ms.locfileid: "67997675"
   
 - マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可
 データベースに対する CONTROL 権限が必要です。  

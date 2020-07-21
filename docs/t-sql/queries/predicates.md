@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e0b4708c30f1fdbcc6246ffc6e24e95cadb58cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92a1535156e4190238dad6a3274f684053b73ddf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706016"
 ---
 # <a name="predicates"></a>述語
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   TRUE、FALSE または、UNKNOWN を評価する式です。 述語は [WHERE](../../t-sql/queries/where-transact-sql.md) 句と [HAVING](../../t-sql/queries/select-having-transact-sql.md) 句の検索条件、[FROM](../../t-sql/queries/from-transact-sql.md) 句の結合条件、および、ブール値が必要なその他の構成要素で使用されます。  
   

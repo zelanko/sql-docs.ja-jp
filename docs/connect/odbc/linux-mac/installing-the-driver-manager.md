@@ -1,5 +1,6 @@
 ---
-title: Installing the Driver Manager (ODBC Driver for SQL Server) |Microsoft Docs
+title: ドライバー マネージャーのインストール
+description: この記事では、Microsoft ODBC Driver for SQL Server on Linux および macOS のすべてのバージョンで使用するための unixODBC ドライバー マネージャーをインストールする手順を説明します。
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba758f3c95ef3285424cafe676df46e5d3df7b34
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008795"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528246"
 ---
 # <a name="installing-the-driver-manager"></a>ドライバー マネージャーのインストール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,10 @@ ms.locfileid: "68008795"
 > unixODBC ドライバー マネージャーをインストールする前に、お使いのコンピューターにインストールされているドライバー マネージャー パッケージを削除します。 unixODBC ドライバー マネージャーをインストールすると、既存のドライバー マネージャーのエラーが発生する可能性があります。  
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Microsoft ODBC Driver 13、13.1、17 のドライバー マネージャーのインストール
-ドライバー マネージャーの依存関係が自動的に解決、パッケージ管理システムで次の手順で Microsoft ODBC Driver 13、13.1、または 17 for Linux または macOS 上の SQL Server をインストールするときに[Microsoft ODBC Driver をインストールします。Linux または macOS 上の SQL Server の](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。 
+次の記事の手順に従って、SQL Server on Linux または SQL Server on macOS 用の Microsoft ODBC Driver 13、13.1、または 17 をインストールすると、ドライバー マネージャーの依存関係は、パッケージ管理システムによって自動的に解決されます。
+
+- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server のドライバー マネージャーのインストール  
 
@@ -57,7 +61,7 @@ ms.locfileid: "68008795"
 
 7.  スクリプトの実行が停止したら、画面の指示に従って unixODBC ドライバー マネージャーをインストールします。
 
-これで、ドライバーをインストールする準備ができました。 詳細については、次を参照してください。 [Linux と macOS での SQL Server 用 Microsoft ODBC Driver をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。  
+これで、ドライバーをインストールする準備ができました。 詳細については、[Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) または [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) での ODBC ドライバーのインストール手順を参照してください。
 
 **手動インストール**
 
@@ -71,7 +75,7 @@ ms.locfileid: "68008795"
   
 4.  unixODBC-2.3.0 ディレクトリに変更します。  
   
-5.  コマンド プロンプトでコマンドを実行します: **CPPFLAGS ="-DSIZEOF_LONG_INT = 8"** します。  
+5.  コマンド プロンプトで、次のコマンドを実行します: **CPPFLAGS="-DSIZEOF_LONG_INT=8"** 。  
   
 6.  コマンド プロンプトでコマンドを実行します:**export CPPFLAGS**します。  
   
@@ -81,11 +85,10 @@ ms.locfileid: "68008795"
   
 9. (root としてログインして) コマンド プロンプトでコマンド **make install** を実行します。  
 
-これで、ドライバーをインストールする準備ができました。 詳細については、次を参照してください。 [Linux と macOS での SQL Server 用 Microsoft ODBC Driver をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。  
+これで、ドライバーをインストールする準備ができました。 詳細については、[Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) または [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) での ODBC ドライバーのインストール手順を参照してください。
   
 ## <a name="see-also"></a>参照
-[Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-[このバージョンのドライバーの既知の問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-
-[リリース ノート](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [リリース ノート](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

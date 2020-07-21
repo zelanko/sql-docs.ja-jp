@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918011"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762383"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset メソッドの例 (VB)
-この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドの 3 つの異なるから成る複合コマンド ステートメントを使用してレコード セット内のデータを表示する**選択**ステートメント。  
+この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドを使用して、3つの個別の**SELECT**ステートメントで構成された複合コマンドステートメントを使用するレコードセットのデータを表示します。  
   
 ```  
 'BeginNextRecordsetVB  
@@ -94,6 +94,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [NextRecordset メソッド (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

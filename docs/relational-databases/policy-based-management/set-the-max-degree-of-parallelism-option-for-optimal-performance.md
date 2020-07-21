@@ -1,6 +1,7 @@
 ---
-title: 最適なパフォーマンスを実現するための max degree of parallelism オプションの設定 | Microsoft Docs
-ms.custom: ''
+title: 並列処理の最大限度と最大ポリシーベースの管理
+description: SQL Server のポリシーベース管理の並列処理の最大限度値を検証するポリシーの構成について説明します。
+ms.custom: seo-lt-2019
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00123da615c420fa3d58daae9a287ce3c13b8329
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 9f2cd688ca16baad21ec295105eeb0fdbbbda967
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774187"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>最適なパフォーマンスを実現するための max degree of parallelism オプションの設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このルールでは、値の max degree of parallelism (MAXDOP) オプションが 8 より大きいかどうかを確認します。 このオプションを大きな値に設定すると、多くの場合、不要なリソース消費やパフォーマンスの低下が発生します。  
   
-## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  
- sp_configure を使用して max degree of parallelism オプションを 8 以下に設定してください。  
+## <a name="best-practice-recommendations"></a>ベスト プラクティスの推奨事項  
+ max degree of parallelism (MAXDOP) 構成オプションを使用すると、並列プランでクエリを実行する場合に使用するプロセッサの個数を制御できます。 このオプションでは、並列処理を実行するクエリ プラン演算子のために使用されるスレッドの数が決定されます。 対称型マルチプロセッシング (SMP) コンピューター、Non-Uniform Memory Access (NUMA) コンピューター、またはハイパー スレッディング対応プロセッサのいずれで SQL Server が設定されているかに応じて、max degree of parallelism オプションを適切に構成する必要があります。 
+ 
+ MAXDOP を構成する上での推奨事項は、使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 バージョン固有のガイドラインについては、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」を参照し、max degree of parallelism の値を適宜検証するポリシーを構成してください。     
   
 ## <a name="for-more-information"></a>詳細情報  
- [SQL Server の max degree of parallelism 構成オプションの推奨事項とガイドライン](https://go.microsoft.com/fwlink/?linkid=117786)  
-  
- [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
-  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
+ [SQL Server での max degree of parallelism configuration 構成オプションの推奨事項とガイドライン](https://go.microsoft.com/fwlink/?linkid=117786)    
+ [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)     
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)     
   

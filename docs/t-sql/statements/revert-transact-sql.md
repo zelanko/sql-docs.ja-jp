@@ -22,15 +22,16 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: caa5127a1721d63d86c8f854e630d6b94a81f016
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082399"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998554"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
 
   実行コンテキストを、最後の EXECUTE AS ステートメントの呼び出し元に戻します。  
   
@@ -46,9 +47,9 @@ REVERT
   
 ## <a name="arguments"></a>引数  
  WITH COOKIE = @*varbinary_variable*  
- 対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *@varbinary_variable* は **varbinary(100)** です。  
+ 対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *\@varbinary_variable* は **varbinary(100)** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内で、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャでは、`EXECUTE AS` ステートメントの後に `REVERT` ステートメントが実行されます。  
   
 ```  
@@ -77,14 +78,14 @@ EXECUTE dbo.usp_myproc;
  スタンドアロンのステートメントとして指定した場合、REVERT はバッチまたはセッション内で定義された EXECUTE AS に適用されます。 対応する EXECUTE AS ステートメントに WITH NO REVERT 句が含まれている場合、REVERT は無効です。 この場合、実行コンテキストはセッションが削除されるまで有効です。  
   
 ## <a name="using-revert-with-cookie"></a>REVERT WITH COOKIE の使用  
- セッションの実行コンテキストの設定に使われる EXECUTE AS ステートメントには、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定できます。 このステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではクッキーが @*varbinary_variable* に渡されます。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、適切な *@varbinary_variable* 値が含まれている場合だけです。  
+ セッションの実行コンテキストの設定に使われる EXECUTE AS ステートメントには、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定できます。 このステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではクッキーが @*varbinary_variable* に渡されます。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、適切な *\@varbinary_variable* 値が含まれている場合だけです。  
   
- このメカニズムは、接続プールが使用される環境で役立ちます。 接続プールには、複数のエンド ユーザーがアプリケーションで再利用するデータベース接続のグループが管理されています。 *@varbinary_variable* に渡される値は、EXECUTE AS ステートメントの呼び出し元 (この場合はアプリケーション) だけが認識できるため、呼び出し元が確立した実行コンテキストは、アプリケーションを呼び出すエンド ユーザーによって変更されることはありません。 実行コンテキストが戻された後、アプリケーションではコンテキストを他のプリンシパルに切り替えることができます。  
+ このメカニズムは、接続プールが使用される環境で役立ちます。 接続プールには、複数のエンド ユーザーがアプリケーションで再利用するデータベース接続のグループが管理されています。 *\@varbinary_variable* に渡される値は、EXECUTE AS ステートメントの呼び出し元 (この場合はアプリケーション) だけが認識できるため、呼び出し元が確立した実行コンテキストは、アプリケーションを呼び出すエンド ユーザーによって変更されることはありません。 実行コンテキストが戻された後、アプリケーションではコンテキストを他のプリンシパルに切り替えることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  権限は必要ありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
  次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 REVERT ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 REVERT ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  

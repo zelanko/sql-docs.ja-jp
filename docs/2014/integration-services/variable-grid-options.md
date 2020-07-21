@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf956c2a29e03095b12cc323d267ebc0c43ae3e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054675"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420129"
 ---
 # <a name="variable-grid-options"></a>可変グリッドのオプション
   **[可変グリッドのオプション]** ダイアログ ボックスを使用して、 **[変数]** ウィンドウに表示される列を選択したり、変数の一覧に適用するフィルターを選択したりします。 対応する変数のプロパティの詳細については、「 [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
@@ -33,28 +32,28 @@ ms.locfileid: "66054675"
  **すべてのスコープの変数を表示する**  
  選択すると、パッケージのスコープ内の変数、および、パッケージにあるコンテナー、タスク、およびイベント ハンドラーのスコープ内の変数が表示されます。 このオプションをオフにすると、パッケージのスコープ内の変数、および、選択されたコンテナー、タスク、またはイベント ハンドラーのスコープ内の変数のみが表示されます。  
   
- 変数のスコープの詳細については、「 [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
+ 変数のスコープの詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)領域の下にあります。  
   
 ## <a name="options-for-columns"></a>列のオプション  
  **[変数]** ウィンドウに表示する列を選択します。  
   
 -   **スコープ**  
   
--   **Data type**  
+-   **データの種類**  
   
--   **[値]**  
+-   **Value**  
   
--   **Namespace**  
+-   **名前空間**  
   
 -   **[変数値の変化時にイベントを発生]**  
   
--   **[説明]**  
+-   **説明**  
   
--   **[式]**  
+-   **式**  
   
 ## <a name="see-also"></a>関連項目  
- [[変数] ウィンドウ](../../2014/integration-services/variables-window.md)   
- [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
+ [変数ウィンドウ](../../2014/integration-services/variables-window.md)   
+ [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services (SSIS) のイベント ハンドラー](integration-services-ssis-event-handlers.md)  
   

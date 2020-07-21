@@ -1,7 +1,7 @@
 ---
-title: Data Migration Assistant の設定を構成する (SQL Server) |Microsoft Docs
+title: Data Migration Assistant の設定を構成する
 description: 構成ファイルの値を更新して Data Migration Assistant の設定を構成する方法について説明します。
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345238"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885999"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant の設定を構成する
 
@@ -29,19 +29,19 @@ Data Migration Assistant の特定の動作を微調整するには、machine.co
 
 - デスクトップアプリケーション
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dma. .config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dma. .config
 
 - コマンドラインユーティリティ
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd .exe. .config 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ dmacmd .exe. .config 
 
 変更を加える前に、元の構成ファイルのコピーを保存してください。 変更を行った後、Data Migration Assistant を再起動して、新しい構成値を有効にします。
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>並列で評価するデータベースの数
 
-Data Migration Assistant は、複数のデータベースを並行して評価します。 評価時に、データベーススキーマを理解するためにデータ層アプリケーション (dacpac) を抽出 Data Migration Assistant ます。 同じサーバー上の複数のデータベースが同時に評価されると、この操作はタイムアウトすることがあります。 
+Data Migration Assistant は、複数のデータベースを並行して評価します。 評価時に、データベーススキーマを理解するためにデータ層アプリケーション (dacpac) を抽出 Data Migration Assistant ます。同じサーバー上の複数のデータベースが同時に評価されると、この操作はタイムアウトすることがあります。 
 
-Data Migration Assistant v2.0 以降では、parallelDatabases 構成値を設定することによってこれを制御できます。 既定値は8です。
+Data Migration Assistant v2.0 以降では、parallelDatabases 構成値を設定することによってこれを制御できます。 既定値は 8 です。
 
 ```
 <advisorGroup>
@@ -82,19 +82,19 @@ Data Migration Assistant v2.0 以降では、この問題が発生した場合�
 評価時に、Data Migration Assistant はデータ層アプリケーション (dacpac) を抽出してデータベーススキーマを理解します。 この操作は、非常に大規模なデータベースのタイムアウトが発生した場合、またはサーバーに負荷がかかっている場合に失敗することがあります。 Data Migration v1.0 以降では、エラーを回避するために、次の構成値を変更できます。 
 
 > [!NOTE]
-> 既定で&lt;は、&gt; dacfx エントリ全体にコメントが付いています。 コメントを削除し、必要に応じて値を変更します。
+> &lt;既定では、dacfx エントリ全体に &gt; コメントが付いています。 コメントを削除し、必要に応じて値を変更します。
 
 - commandTimeout
 
-   このパラメーターは、IDbCommand プロパティを*秒*単位で設定します。 (既定値 = 60)
+   このパラメーターは、IDbCommand プロパティを*秒*単位で設定します。(既定値 = 60)
 
 - databaseLockTimeout
 
-   このパラメーターは、 [SET LOCK\_timeout\_timeout 期間](../t-sql/statements/set-lock-timeout-transact-sql.md) *(ミリ秒単位)* に相当します。 (既定値は 5000)
+   このパラメーターは、 [SET LOCK \_ timeout timeout \_ 期間](../t-sql/statements/set-lock-timeout-transact-sql.md) *(ミリ秒単位)* に相当します。(既定値は 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  このパラメーターは、使用する SQL 接続プール接続の数を設定します。 (既定値 = 8)
+  このパラメーターは、使用する SQL 接続プール接続の数を設定します。(既定値 = 8)
 
 ```
 <advisorGroup>
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database:推奨しきい値
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 推奨設定のしきい値
 
 [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)を使用すると、Microsoft SQL Server 2016 から Azure にウォームおよびコールドトランザクションデータを動的に拡張できます。 Stretch Database は、大量のコールドデータを含むトランザクションデータベースを対象としています。 Stretch Database 推奨事項では、ストレージ機能の推奨事項の下で、この機能によってメリットが得られるテーブルを特定し、この機能のためにテーブルを有効にするために必要な変更を特定します。
 

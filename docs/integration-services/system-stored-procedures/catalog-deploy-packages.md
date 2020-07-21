@@ -8,28 +8,31 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a6295d1ccfe06c1c4cb3a353ee071af7d04f0c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 96de2a2f26ce85918c93bba32a1652de781f241b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722578"
 ---
-# <a name="catalogdeploypackages"></a>catalog.deploy_packages 
+# <a name="catalogdeploy_packages"></a>catalog.deploy_packages 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内のフォルダーにパッケージを 1 つ以上展開するか、既に展開されている既存のパッケージを更新します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-[catalog].[deploy_packages]     [ @folder_name = ] folder_name,    [ @project_name = ] project_name,    [ @packages_table = ] packages_table,     [ @operation_id OUTPUT ] operation_id OUTPUT ]  
+catalog.deploy_packages [ @folder_name = ] folder_name
+    , [ @project_name = ] project_name
+    , [ @packages_table = ] packages_table
+    [, [ @operation_id OUTPUT = ] operation_id OUTPUT]
 ```  
   
 ## <a name="arguments"></a>引数  

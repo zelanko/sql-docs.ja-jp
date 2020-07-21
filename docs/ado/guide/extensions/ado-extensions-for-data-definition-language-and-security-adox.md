@@ -1,5 +1,5 @@
 ---
-title: ADO 拡張機能のデータ定義言語およびセキュリティ (ADOX) |Microsoft Docs
+title: データ定義言語およびセキュリティ用の ADO 拡張機能 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -8,18 +8,18 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70400206f0fc7628586b13e93681f349237cda52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5932a53218913ef91687744f819a5e67a3ae699
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923304"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748198"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>データ定義言語とセキュリティの ADO 拡張機能 (ADOX)
 このセクションでは、次のトピックを扱います。  
   
 -   [ADOX の基礎](../../../ado/guide/extensions/adox-fundamentals.md)  
   
--   [ADOX のプロバイダーのサポート](../../../ado/guide/extensions/provider-support-for-adox-ado.md)
+-   [ADOX のプロバイダーサポート](../../../ado/guide/extensions/provider-support-for-adox-ado.md)

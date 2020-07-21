@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939202"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897885"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   「 [レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
   
 ## <a name="database-design"></a>データベースの設計  
   
 -   行フィルターおよび結合フィルター内で使用される列にインデックスを作成する。  
   
-     パブリッシュされたアーティクルに行フィルターを使用する際には、フィルターの WHERE 句で使用する各列にインデックスを作成します。 インデックスがない場合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、行をパーティション内に含めるかどうかを決定するためにテーブル内の各行を読み取る必要があります。 インデックスがあると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、含める行をすばやく見つけられます。 レプリケーションがインデックスのみを基にフィルターの WHERE 句を完全に解決できる場合、最高の処理速度になります。  
+     パブリッシュされたアーティクルに行フィルターを使用する際には、フィルターの WHERE 句で使用する各列にインデックスを作成します。 インデックスがない場合、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、行をパーティション内に含めるかどうかを決定するためにテーブル内の各行を読み取る必要があります。 インデックスがあると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、含める行をすばやく見つけられます。 レプリケーションがインデックスのみを基にフィルターの WHERE 句を完全に解決できる場合、最高の処理速度になります。  
   
      また、結合フィルターで使用するすべての列に対してもインデックスを作成することが重要です。 マージ エージェントは、実行時にベース テーブルを検索して、パーティションに含める親テーブルの行と関連テーブルの行を判断します。 結合された列のインデックスを作成すれば、マージ エージェントを実行するたびに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がテーブルの各行を読み取る必要はなくなります。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67939202"
   
 -   サブスクリプションが高速接続を介して同期され、パブリッシャーおよびサブスクライバーから変更が送信される場合は、マージ エージェントに対して **-ParallelUploadDownload** パラメーターを使用する。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **–ParallelUploadDownload**が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **–ParallelUploadDownload**が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
     -   [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67939202"
   
 -   LOB 列を含む行など、大量のデータを含むデータ行を同期すると、Web 同期から追加メモリの割り当てが要求され、パフォーマンスが低下する場合があります。 この動作は、マージ エージェントから生成された XML メッセージに、大量のデータを含むデータ行が過剰に含まれている場合に発生します。 マージ エージェントが Web 同期中に使用するリソースが多すぎる場合は、次のいずれかの方法を使用して、1 つのメッセージで送信される行の数を減らします。  
   
-    -   マージ エージェントで低速リンク エージェント プロファイルを使用する。 詳しくは、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
+    -   マージ エージェントで低速リンク エージェント プロファイルを使用する。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
     -   マージ エージェントの **-DownloadGenerationsPerBatch** パラメーターと **-UploadGenerationsPerBatch** パラメーターの値を 10 未満に減らす。 これらのパラメーターの既定値は 50 です。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "67939202"
   
 -   必要な場合、マージ レプリケーションのシステム テーブルのインデックスを再度作成する。  
   
-     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションと関連するシステム テーブルが拡大しているかを時々確認してください(**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**)。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションに関連付けられたシステム テーブル **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**の増大を必要に応じて確認します。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
 -   レプリケーション モニターの **[同期の履歴]** タブを使用して、同期のパフォーマンスを監視する。  
   

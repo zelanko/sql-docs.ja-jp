@@ -10,20 +10,19 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ad905027458e7594a46e3ab416aaa1f4f43cbc59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061237"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
   FOR XML クエリによって SELECT 句で `xml` 型の列が指定された場合、ELEMENTS ディレクティブを指定したかどうかにかかわらず、返された XML では列の値が要素としてマップされます。 `xml` 型の列内の XML 宣言はシリアル化されません。  
   
- たとえば、顧客の連絡先情報の取得、次のクエリなど、 `BusinessEntityID`、 `FirstName`、および`LastName`列、およびからの電話番号、`AdditionalContactInfo`の列`xml`型。  
+ たとえば、次のクエリでは、 `BusinessEntityID` 、、およびの各列、および `FirstName` `LastName` 型の列からの電話番号など、顧客の連絡先情報を取得し `AdditionalContactInfo` `xml` ます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -203,7 +202,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [各種 SQL Server データ型の FOR XML サポート](for-xml-support-for-various-sql-server-data-types.md)  
   
   

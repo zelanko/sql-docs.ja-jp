@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd163c5d3bc7a2cd9051b8d37b8127a1cc88c30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050345"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
   リソース プールは、管理できる物理リソースのサブセットを表します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースは既定のリソース プールにバインドされてリソースを使用します。 1 つ以上のメモリ最適化テーブルによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースが消費されたり、メモリ最適化テーブルに必要なメモリが他のメモリ ユーザーによって消費されたりするのを防ぐために、別のリソース プールを作成して、メモリ最適化テーブルを持つデータベースのメモリ消費量を管理することをお勧めします。  
@@ -31,7 +30,7 @@ ms.locfileid: "63158802"
  データベースとリソース プールは、任意の順序で作成できます。 重要なのは、データベースをリソース プールにバインドする前に、両方が存在することです。  
   
 ### <a name="create-the-database"></a>データベースの作成  
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] は、IMOLTP_DB という名前のデータベースを作成します。このデータベースに、1 つ以上のメモリ最適化テーブルを格納します。 パス \<driveAndPath> は、このコマンドを実行する前に存在している必要があります。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] は、IMOLTP_DB という名前のデータベースを作成します。このデータベースに、1 つ以上のメモリ最適化テーブルを格納します。 このパスは、 \<driveAndPath> このコマンドを実行する前に存在している必要があります。  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -41,7 +40,7 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の最小値の決定  
+### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の最小値の決定  
  メモリ最適化テーブルに必要なメモリを確認したら、使用可能なメモリの何パーセントが必要になるかを特定し、メモリの割合をその値以上に設定する必要があります。  
   
  **例:**    
@@ -63,7 +62,7 @@ GO
 ### <a name="create-a-resource-pool-and-configure-memory"></a>リソース プールの作成とメモリの構成  
  メモリ最適化テーブルのメモリを構成するときは、MAX_MEMORY_PERCENT ではなく MIN_MEMORY_PERCENT に基づいてキャパシティ プランニングを実施する必要があります。  MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT については、「[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql)」を参照してください。 この結果、メモリ最適化テーブルが使用できるメモリをより適切に予測することができます。MIN_MEMORY_PERCENT を指定すると、他のリソース プールにメモリの制約を加えて、この値に応じたメモリが確保されるためです。 メモリを確実に使用できるようにし、さらにメモリ不足が発生しないようにするには、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT を同じ値にします。 コミットされたメモリの量に対してメモリ最適化テーブルで使用できるメモリの割合については、後の「 [メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) 」をご覧ください。  
   
- 参照してください[ベスト プラクティス。VM 環境でのインメモリ OLTP を使用して](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)詳細については、VM 環境で作業する場合。  
+ VM 環境での操作の詳細については、「 [ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 」をご覧ください。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、使用可能なメモリを 50% に指定して、Pool_IMOLTP という名前のリソース プールを作成します。  プールが作成された後、Pool_IMOLTP が含まれるようにリソース ガバナーが再構成されます。  
   
@@ -118,14 +117,14 @@ GO
   
  これで、データベースがリソース プールにバインドされました。  
   
-## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>最小メモリの割合と、既存のプールの最大メモリの割合を変更します。  
- サーバーにメモリを追加した場合や、メモリ最適化テーブルに必要なメモリの量が変わった場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する必要があることがあります。 次の手順では、リソース プールで MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する方法を示します。 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT に使用する値については、以下のセクションをご覧ください。  トピックを参照して[ベスト プラクティス。VM 環境でのインメモリ OLTP を使用して](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)詳細についてはします。  
+## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>既存のプールの最小メモリの割合と最大メモリの割合を変更する  
+ サーバーにメモリを追加した場合や、メモリ最適化テーブルに必要なメモリの量が変わった場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する必要があることがあります。 次の手順では、リソース プールで MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する方法を示します。 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT に使用する値については、以下のセクションをご覧ください。  詳細については、「[ベストプラクティス: VM 環境でのインメモリ OLTP の使用](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)」を参照してください。  
   
 1.  `ALTER RESOURCE POOL` を使用して MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の両方の値を変更します。  
   
 2.  新しい値を使用してリソース ガバナーを再構成するには、 `ALTER RESURCE GOVERNOR` を使用します。  
   
- **サンプル コード**  
+ **サンプルコード**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -142,7 +141,7 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合  
  メモリ最適化テーブルを持つデータベースと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ワークロードを同じリソース プールにマップした場合は、プールのユーザー間でプール使用に関する競合が生じないように、リソース ガバナーによって [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 用の内部しきい値が設定されます。 一般に、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 用のしきい値はプールの約 80% です。 さまざまなメモリ サイズに対する実際のしきい値を次の表に示します。  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] データベースの専用リソース プールを作成するときは、行のバージョンとデータの増加を確認した後で、インメモリ テーブルに必要な物理メモリ量を推定する必要があります。 必要なメモリ量を推定したら、DMV の `sys.dm_os_sys_info` の列 "committed_target_kb" を反映する SQL インスタンスのコミット ターゲット メモリの割合でリソース プールを作成します ([sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql) を参照)。 たとえば、インスタンスで使用できる合計メモリ量の 40% を含むリソース プール P1 を作成できます。 この 40% から、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンは [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] データを格納するためにこれより少ない割合のメモリを取得します。  この処理は、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] がこのプールのすべてのメモリを消費しないようにするために行います。  この少ない割合の値は、ターゲットのコミット済みメモリによって異なります。 次の表に、OOM のエラーが発生する前にリソース プール (既定または名前付き) の [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] データベースに使用可能なメモリを示します。  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] データベースの専用リソース プールを作成するときは、行のバージョンとデータの増加を確認した後で、インメモリ テーブルに必要な物理メモリ量を推定する必要があります。 必要なメモリを推定したら、DMV の列 ' committed_target_kb ' によって反映された SQL インスタンスのコミットターゲットメモリの割合を使用してリソースプールを作成します `sys.dm_os_sys_info` (「 [dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)」を参照してください)。 たとえば、インスタンスで使用できる合計メモリ量の 40% を含むリソース プール P1 を作成できます。 この 40% から、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] エンジンは [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] データを格納するためにこれより少ない割合のメモリを取得します。  この処理は、 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] がこのプールのすべてのメモリを消費しないようにするために行います。  この少ない割合の値は、ターゲットのコミット済みメモリによって異なります。 次の表に、OOM のエラーが発生する前にリソース プール (既定または名前付き) の [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] データベースに使用可能なメモリを示します。  
   
 |ターゲットのコミット済みメモリ|インメモリ テーブルで使用可能な割合|  
 |-----------------------------|---------------------------------------------|  
@@ -185,12 +184,12 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  ご利用のデータベースを名前付きリソース プールにバインドしない場合、そのデータベースは "既定の" プールにバインドされます。 既定のリソース プールは他のほとんどの割り当ての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるため、正確に対象のデータベースに対して DMV sys.dm_resource_governor_resource_pools を使用して、メモリ最適化テーブルで消費されたメモリを監視することはできません。  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
+ [sp_xtp_bind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+ [sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [リソース ガバナー](../resource-governor/resource-governor.md)   
  [リソース ガバナー リソース プール](../resource-governor/resource-governor-resource-pool.md)   
- [リソース プールの作成](../resource-governor/create-a-resource-pool.md)   
- [リソース プールの設定の変更](../resource-governor/change-resource-pool-settings.md)   
+ [リソースプールを作成する](../resource-governor/create-a-resource-pool.md)   
+ [リソースプールの設定を変更する](../resource-governor/change-resource-pool-settings.md)   
  [リソース プールの削除](../resource-governor/delete-a-resource-pool.md)  
   
   

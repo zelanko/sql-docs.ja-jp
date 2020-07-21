@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e67b6e058304cf898d2818ab5a6ea2675e0c9825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071121"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009264"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行をテーブルやビューに追加します。 例については、「[例](#InsertExamples)」を参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "68071121"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -143,14 +143,14 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  INSERT キーワードと対象のテーブルとの間で使用できるキーワードで、省略可能です。  
   
  *server_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  テーブルまたはビューが配置されているリンク サーバーの名前です。 *server_name* は、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)名として指定することも、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用して指定することもできます。  
   
  *server_name* をリンク サーバーとして指定する場合は、*database_name* と *schema_name* が必要です。 *server_name* を OPENDATASOURCE で指定する場合は、*database_name* および *schema_name* がすべてのデータ ソースに適用されるとは限らず、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
  *database_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  データベースの名前です。  
   
@@ -165,7 +165,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  *table_or_view_name* によって参照されるビューは更新可能であることが必要です。また、そのビューの FROM 句ではベース テーブルを 1 つだけ参照している必要があります。 たとえば、複数のテーブルを参照するビューに対して INSERT を実行するには、1 つのベース テーブルの列のみを参照する *column_list* を使用する必要があります。 更新可能なビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
  *rowset_function_limited*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 関数を指定します。 これらの関数の使用は、リモート オブジェクトにアクセスする OLE DB プロバイダーの機能により制限されます。  
   
@@ -199,7 +199,7 @@ ID 列に値を明示的に挿入するときは *column_list* を使用する�
 OUTPUT 句  
  挿入操作の一部として、挿入された行を返します。 処理中のアプリケーションに結果を返すことも、テーブルまたはテーブル変数に結果を挿入して処理を続行することもできます。  
   
- [OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)は、ローカル パーティション ビュー、分散パーティション ビュー、リモート テーブルのいずれかを参照する DML ステートメントではサポートされていません。また、*execute_statement* が含まれる INSERT ステートメントでもサポートされていません。 OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。 
+ OUTPUT 句は、ローカル パーティション ビュー、分散パーティション ビュー、またはリモート テーブルのいずれかを参照する DML ステートメントではサポートされていません。また、*execute_statement* が含まれる INSERT ステートメントでもサポートされていません。 OUTPUT INTO 句は、\<dml_table_source> 句を含む INSERT ステートメントではサポートされません。 この句の引数と動作について詳しくは、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」をご覧ください。
   
  VALUES  
  追加するデータ値のリストを 1 つ以上指定します。 *column_list* (指定されている場合) またはテーブル内の各列ごとに 1 つのデータ値が必要です。 値リストは、かっこで囲む必要があります。  
@@ -257,30 +257,30 @@ OUTPUT 句
  影響を受ける行を OUTPUT 句で返す有効な INSERT、UPDATE、DELETE、または MERGE ステートメントです。 このステートメントには WITH 句を指定できず、リモート テーブルまたはパーティション ビューを対象にすることもできません。 UPDATE または DELETE を指定する場合、カーソルベースの UPDATE または DELETE は指定できません。 ソース行を、入れ子になった DML ステートメントとして参照することはできません。  
   
  WHERE \<search_condition>  
- \<dml_statement_with_output_clause> で返された行をフィルター処理する有効な \<search_condition> を含んだ WHERE 句です。 詳しくは、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」をご覧ください。 このコンテキストで使用される \<search_condition> には、サブクエリ、データにアクセスするスカラー ユーザー定義関数、集計関数、TEXTPTR、またはフルテキスト検索述語を含めることができません。 
+ \<dml_statement_with_output_clause> から返される行をフィルター処理する有効な \<search_condition> を含む WHERE 句です。 詳しくは、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」をご覧ください。 このコンテキストで使用される \<search_condition> には、サブクエリ、データにアクセスするスカラー ユーザー定義関数、集計関数、TEXTPTR、またはフルテキスト検索述語を含めることができません。 
   
  DEFAULT VALUES  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  新しい行が、各列に対して定義されている既定値で構成されることを指定します。  
   
  BULK  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  外部ツールでバイナリ データ ストリームをアップロードする際に使用されます。 このオプションは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、SQLCMD、OSQL などのツールや、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client などのデータ アクセス アプリケーション プログラミング インターフェイスで使用することは想定されていません。  
   
  FIRE_TRIGGERS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、変換先テーブルで定義されている挿入トリガーを実行することを指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  CHECK_CONSTRAINTS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、対象テーブルまたはビューに対するすべての制約を検証します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  KEEPNULLS  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリームのアップロード処理中に、空の列の NULL 値を保持します。 詳細については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」をご覧ください。  
   
@@ -288,14 +288,14 @@ OUTPUT 句
  バッチあたりのデータの概算キロバイト数 (KB) を *kilobytes_per_batch* として指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
  ROWS_PER_BATCH =*rows_per_batch*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  バイナリ データ ストリーム内のデータ行の概算数を指定します。 詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
 > [!NOTE]
 >  列リストが指定されていない場合、構文エラーが発生します。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 SQL グラフ テーブルへのデータの挿入に固有の情報については、「[INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)」をご覧ください。 
 
 ## <a name="best-practices"></a>ベスト プラクティス  
@@ -303,37 +303,43 @@ SQL グラフ テーブルへのデータの挿入に固有の情報について
   
 ### <a name="best-practices-for-bulk-importing-data"></a>データの一括インポートに関するベスト プラクティス  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>INSERT INTO...SELECT を使用したデータ一括インポート時の最小ログ記録  
- `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用すると、最小ログ記録を行って、1 つのテーブル (ステージング テーブルなど) から別のテーブルに多数の行を効率的に転送できます。 最小ログ記録を行うと、ステートメントのパフォーマンスが向上します。また、トランザクションの実行中に、使用可能なトランザクション ログ領域がこの操作でいっぱいになる可能性を低減します。  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>INSERT INTO...SELECT を使用したデータ一括インポート時の最小ログ記録と並列処理 
+`INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用すると、最小ログ記録を行って、1 つのテーブル (ステージング テーブルなど) から別のテーブルに多数の行を効率的に転送できます。 最小ログ記録を行うと、ステートメントのパフォーマンスが向上します。また、トランザクションの実行中に、使用可能なトランザクション ログ領域がこの操作でいっぱいになる可能性を低減します。  
   
- このステートメントの最小ログ記録には、次の要件があります。  
-  
+このステートメントの最小ログ記録には、次の要件があります。  
 -   データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている。  
-  
 -   対象テーブルが、空のヒープか、空でないヒープである。  
-  
 -   対象テーブルがレプリケーションで使用されない。  
-  
--   対象テーブルに TABLOCK ヒントが指定されている。  
+-   対象テーブルに対して `TABLOCK` のヒントが指定されている。  
   
 MERGE ステートメントでの挿入操作の結果としてヒープに挿入される行についても、最小ログ記録が行われる場合があります。  
   
- より制限の少ない一括更新ロックを保持する BULK INSERT ステートメントとは異なり、TABLOCK ヒントが指定された INSERT INTO...SELECT は、テーブルに対する排他的な (X) ロックを保持します。 したがって、並列挿入操作を使用して行を挿入することはできません。  
+制限の緩い一括更新 (BU) ロックを保持する `BULK INSERT` ステートメントとは異なり、`TABLOCK` ヒントが指定された `INSERT INTO … SELECT` を使用すると、テーブルに対する排他 (X) ロックが保持されます。 つまり、複数の挿入操作を同時に実行して行を挿入することはできません。 
+
+ただし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入するときに、1 つの `INSERT INTO … SELECT` ステートメントを並列実行できるようになりました。 `TABLOCK` ヒントを使用すると、並列挿入を行うことができます。  
+
+上記のステートメントの並列処理には、最小ログ記録の要件と同様の次の要件があります。  
+-   対象テーブルが、空のヒープか、空でないヒープである。  
+-   対象テーブルにクラスター化列ストア インデックス (CCI) はあるが非クラスター化インデックスはない。  
+-   対象テーブルに IDENTITY_INSERT が OFF に設定された ID 列がない。  
+-   対象テーブルに対して `TABLOCK` のヒントが指定されている。
+
+最小ログ記録と並列挿入の要件が満たされているシナリオでは、両方の機能強化が連携し、データ ロード操作の最大スループットが確保されます。
+
+> [!NOTE]
+> ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>OPENROWSET および BULK によるデータの一括インポート  
  OPENROWSET 関数では次のテーブル ヒントを使用できます。これらのテーブル ヒントにより、一括読み込みの最適化を INSERT ステートメントで利用できます。  
   
--   TABLOCK ヒントを使用すると、挿入操作のログ レコード数を最小化できます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要があります。また、対象テーブルはレプリケーションで使用できません。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
+-   `TABLOCK` ヒントを使用すると、挿入操作のログ レコード数を最小化できます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要があります。また、対象テーブルはレプリケーションで使用できません。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
+-   `TABLOCK` ヒントを使用すると、並列挿入操作を行うことができます。 対象テーブルは、非クラスター化インデックスのないヒープまたはクラスター化列ストア インデックス (CCI) であり、対象テーブルに ID 列を指定することはできません。  
+-   `IGNORE_CONSTRAINTS` ヒントを使用すると、FOREIGN KEY および CHECK 制約チェックを一時的に無効にすることができます。  
+-   `IGNORE_TRIGGERS` ヒントを使用すると、トリガーの実行を一時的に無効にすることができます。  
+-   `KEEPDEFAULTS` ヒントを使用すると、データ レコードにテーブルの列値が含まれていない場合に、NULL の代わりにテーブル列の既定値を挿入できます。  
+-   `KEEPIDENTITY` ヒントを使用すると、インポートしたデータ ファイルの ID 値を対象テーブルの ID 列に使用できます。  
   
--   IGNORE_CONSTRAINTS ヒントを使用すると、FOREIGN KEY および CHECK の制約チェックを一時的に無効にできます。  
-  
--   IGNORE_TRIGGERS ヒントを使用すると、トリガーの実行を一時的に無効にできます。  
-  
--   KEEPDEFAULTS ヒントを使用すると、データ レコードにテーブルの列値が含まれていない場合に、NULL の代わりにテーブル列の既定値を挿入できます。  
-  
--   KEEPIDENTITY ヒントを使用すると、インポートしたデータ ファイルの ID 値を対象テーブルの ID 列に使用できます。  
-  
-これらは、BULK INSERT コマンドで使用可能な最適化と似ています。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+これらの最適化は、`BULK INSERT` コマンドで使用できるものと似ています。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
 ## <a name="data-types"></a>データ型  
  行の挿入時には、次のデータ型の動作を考慮してください。  
@@ -385,7 +391,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
  INSERT ステートメントの中で、式の評価中に算術エラー (オーバーフロー、0 による除算、またはドメイン エラー) が発生すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、SET ARITHABORT が ON に設定されている場合と同様に、これらのエラーが処理されます。 バッチは停止し、エラー メッセージが返されます。 SET ARITHABORT と SET ANSI_WARNINGS を OFF に設定して式を評価中に、INSERT、DELETE、または UPDATE ステートメントで算術演算エラー、オーバーフロー、0 除算、またはドメイン エラーが検出されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL 値が挿入または更新されます。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが返されます。  
   
 ## <a name="interoperability"></a>相互運用性  
- テーブルやビューを対象とする INSERT 操作で INSTEAD OF トリガーが定義されている場合は、INSERT ステートメントの代わりにトリガーが実行されます。 INSTEAD OF トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ テーブルやビューを対象とする INSERT 操作で `INSTEAD OF` トリガーが定義されている場合は、INSERT ステートメントの代わりにトリガーが実行されます。 `INSTEAD OF` トリガーの詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  リモート テーブルに値を挿入するとき、すべての列のすべての値が指定されている場合を除いて、指定された値をどの列に挿入するかをユーザーが指定する必要があります。  
@@ -399,7 +405,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 ## <a name="logging-behavior"></a>ログ記録の動作  
  INSERT ステートメントは、常に完全にログに記録されます。ただし、BULK キーワードを指定して OPENROWSET 関数を使用している場合、または `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` を使用している場合は除きます。 これらの操作のログへの記録は最小限にできます。 詳細については、前の「データの一括読み込みの推奨事項」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  リンク サーバーに接続する場合、送信側サーバーは受信側サーバーに接続するためにログイン名とパスワードをリンク サーバーに代わって提供します。 この接続を機能させるには、[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md) を使用して、リンク サーバー間でログイン マッピングを作成する必要があります。  
   
  OPENROWSET(BULK...) を使用するにあたっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で権限借用がどのように処理されるかを理解しておくことが重要です。 詳しくは、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」の「セキュリティに関する考慮事項」をご覧ください。  
@@ -407,11 +413,11 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 ### <a name="permissions"></a>アクセス許可  
  対象のテーブルに対する INSERT 権限が必要です。  
   
- INSERT 権限は、既定では **sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、および **db_datawriter** 固定データベース ロールのメンバーと、テーブル所有者に与えられています。 **sysadmin**、**db_owner**、および **db_securityadmin** ロールのメンバー、およびテーブル所有者は、他のユーザーに権限を譲渡できます。  
+ INSERT 権限は、既定では `sysadmin` 固定サーバー ロール、`db_owner` および `db_datawriter` 固定データベース ロールのメンバー、およびテーブル所有者に与えられています。 `sysadmin`、`db_owner`、`db_securityadmin` ロールのメンバーと、テーブル所有者は、他のユーザーに権限を譲渡できます。  
   
- OPENROWSET 関数の BULK オプションで INSERT を実行するには、**sysadmin** 固定サーバー ロールまたは **bulkadmin** 固定サーバー ロールのメンバーであることが必要です。  
+ OPENROWSET 関数の BULK オプションで INSERT を実行するには、`sysadmin` 固定サーバー ロールまたは `bulkadmin` 固定サーバー ロールのメンバーであることが必要です。  
   
-##  <a name="InsertExamples"></a> 使用例  
+##  <a name="examples"></a><a name="InsertExamples"></a> 使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -424,7 +430,7 @@ Parallel Data Warehouse では、ORDER BY 句は、TOP も一緒に指定しな�
 |[ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする](#TableHints)|テーブル ヒント|  
 |[INSERT ステートメントの結果をキャプチャする](#CaptureResults)|OUTPUT 句|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して INSERT ステートメントの基本機能を示します。  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 1 行のデータを挿入する  
@@ -453,7 +459,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> 列の値を処理する  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> 列の値を処理する  
  このセクションの例では、IDENTITY プロパティ、DEFAULT 値、または **uniqueidentifer** 列やユーザー定義型の列などのデータ型で定義された列に値を挿入する方法を示します。  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 列が既定値に設定されているテーブルにデータを挿入する  
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. ユーザー定義型の列にデータを挿入する  
@@ -529,7 +534,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> 他のテーブルのデータを挿入する  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> 他のテーブルのデータを挿入する  
  このセクションの例では、あるテーブルの行を別のテーブルに挿入する方法を示します。  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. SELECT および EXECUTE オプションを使用して他のテーブルのデータを挿入する  
@@ -666,7 +671,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> 標準的なテーブル以外の対象オブジェクトを指定する  
  このセクションの例では、ビューまたはテーブル変数を指定して行を挿入する方法を示します。  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. ビューを指定してデータを挿入する  
@@ -712,13 +717,13 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> リモート テーブルに行を挿入する  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルに行を挿入する  
  このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルに行を挿入する方法を示します。  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. リンク サーバーを使用してリモート テーブルにデータを挿入する  
  次の例では、リモート テーブルに行を挿入します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 USE master;  
@@ -744,10 +749,10 @@ VALUES (N'Public Relations', N'Executive General and Administration');
 GO  
 ```  
   
-#### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. OPENQUERY 関数を使用してリモート テーブルにデータを挿入する  
+#### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>北 OPENQUERY 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 この例では、前の例で作成したリンク サーバー名を使用します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -760,7 +765,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. OPENDATASOURCE 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -804,7 +809,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> テーブルまたはデータ ファイルのデータを一括読み込みする  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> テーブルまたはデータ ファイルのデータを一括読み込みする  
  このセクションの例では、INSERT ステートメントを使用してテーブルにデータを一括読み込みする 2 つの方法を示します。  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 最小ログ記録を行ってヒープにデータを挿入する  
@@ -853,7 +858,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. OPENROWSET 関数を BULK を指定して使用し、テーブルにデータを一括読み込みする  
  次の例は、OPENROWSET 関数を指定することによって、テーブルにデータ ファイルからの行を挿入します。 パフォーマンスを最適化するために、IGNORE_TRIGGERS テーブル ヒントを指定しています。 他の例については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -864,7 +869,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> ヒントを使用してクエリ オプティマイザーの既定の動作をオーバーライドする  
  このセクションの例では、[テーブル ヒント](../../t-sql/queries/hints-transact-sql-table.md)を使用して、INSERT ステートメントを処理する際のクエリ オプティマイザーの既定の動作を一時的にオーバーライドする方法を示します。  
   
 > [!CAUTION]  
@@ -881,7 +886,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、INSERT ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. OUTPUT を INSERT ステートメントで使用する  
@@ -970,7 +975,7 @@ GO
 SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
 ```  
 
-#### <a name="w-inserting-data-using-the-select-option"></a>W. SELECT オプションを使用してデータを挿入する  
+#### <a name="w-inserting-data-using-the-select-option"></a>西 SELECT オプションを使用してデータを挿入する  
  次の例では、INSERT ステートメントと SELECT オプションを使って複数のデータ行を挿入する方法を示します。 1 番目の `INSERT` ステートメントでは、`SELECT` ステートメントを使用して、コピー元のテーブルからデータを直接取得し、結果セットを `EmployeeTitles` テーブルに格納します。  
   
 ```sql

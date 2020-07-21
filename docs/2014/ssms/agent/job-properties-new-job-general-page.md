@@ -1,5 +1,5 @@
 ---
-title: ジョブのプロパティと新しいジョブ (全般 ページ) |Microsoft Docs
+title: '[ジョブのプロパティ] と [新しいジョブ] ([全般] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,31 +11,30 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062300"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>ジョブのプロパティと新しいジョブ ([全般] ページ)
-  このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの全般プロパティを表示したり、変更したりできます。  
+  このページを使用すると、エージェントジョブの全般プロパティを表示および変更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  ジョブの名前を変更します。  
   
- **[所有者]**  
+ **所有者**  
  ジョブの所有者を選択します。  
   
  **カテゴリ**  
  ジョブのカテゴリを選択します。  
   
- **[[...]]**  
+ **...**  
  選択したカテゴリのジョブを表示します。  
   
- **[説明]**  
+ **説明**  
  ジョブの説明を変更します。  
   
  **有効**  
@@ -53,11 +52,11 @@ ms.locfileid: "68211389"
  **[最終実行]**  
  ジョブの最後の実行の開始日時を表示します。 **[ジョブのプロパティ] の [全般]** ページでのみ表示されます。  
   
- **[ジョブ履歴の表示]**  
+ **ジョブ履歴の表示**  
  ジョブ履歴を表示します。 **[ジョブのプロパティ] の [全般]** ページでのみ表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ジョブの実装](implement-jobs.md)   
- [ジョブ カテゴリ:ジョブ カテゴリを管理します。](job-categories-manage-job-categories.md)  
+ [[ジョブ カテゴリ]:ジョブ カテゴリの管理](job-categories-manage-job-categories.md)  
   
   

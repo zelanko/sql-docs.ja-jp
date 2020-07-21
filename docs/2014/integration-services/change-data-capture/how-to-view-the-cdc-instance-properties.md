@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa99a4f25d0bf6581ac434ea64c10acd723740de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835568"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438629"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを表示する方法
   この手順では、インスタンスの操作を管理するために作成するインスタンスの情報を、CDC デザイナー コンソールを使用して表示する方法について説明します。  
@@ -30,7 +29,7 @@ ms.locfileid: "62835568"
   
      インスタンスに関する情報は、CDC デザイナー コンソールの中央部分に表示されます。 この部分は 4 つのタブに分かれています。 タブはいずれも読み取り専用です。  
   
-     **ステータス**  
+     **状態**  
      このタブには、インスタンスの変更データ キャプチャの現在の状態に関する情報が表示されます。 このタブに表示される内容の詳細については、「 **Manage a CDC Instance** 」の「 [ビューアーのタブ](manage-a-cdc-instance.md)」を参照してください。  
   
      **Oracle**  
@@ -39,7 +38,7 @@ ms.locfileid: "62835568"
      **テーブル**  
      このタブには、変更データ キャプチャに含まれるテーブルに関する情報が表示されます。 キャプチャされる列も表示されます。 このタブに表示される内容の詳細については、「 [Edit Tables](edit-tables.md)」を参照してください。  
   
-     **詳細設定**  
+     **詳細**  
      このタブには、プロパティ エディターで定義する詳細プロパティの一覧が表示されます。 このタブに表示される内容の詳細については、「 [Edit the Advanced Properties](edit-the-advanced-properties.md)」を参照してください。  
   
   

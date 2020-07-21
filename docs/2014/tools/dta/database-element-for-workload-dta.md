@@ -1,5 +1,5 @@
 ---
-title: 要素をデータベースのワークロード (DTA) |Microsoft Docs
+title: ワークロードの Database 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63185407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000386"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload の Database 要素 (DTA)
   ワークロード トレース テーブルのあるデータベースを指定します。  
@@ -36,7 +35,7 @@ ms.locfileid: "63185407"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -49,13 +48,13 @@ ms.locfileid: "63185407"
 |**親要素**|[Workload 要素 &#40;DTA&#41;](workload-element-dta.md)|  
 |**子要素**|[Database の Name 要素 &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Database の Schema 要素 &#40;DTA&#41;](schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **DatabaseDetailsTypecomplexType** の名前です。 この `Database` 要素を、ルートの親要素が `Configuration` 要素である他の要素と混同しないでください。 (「[Configuration の Database 要素 &#40;DTA&#41;](database-element-for-configuration-dta.md)」を参照)。  
   
 ## <a name="example"></a>例  
- この使用例については`Database`要素のコード例を参照してください。 [Workload 要素&#40;DTA&#41;](workload-element-dta.md)します。  
+ この要素の使用例につい `Database` ては、「[ワークロード要素 &#40;DTA&#41;](workload-element-dta.md)」のコード例を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

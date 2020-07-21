@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 252c9748dff3ea1c2f8763b46f0fa818eea0003a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62931624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005687"
 ---
 # <a name="choose-a-resolver"></a>競合回避モジュールの選択
   競合回避モジュールを選択するときには、アプリケーションでの競合解決の重要性、および既定の優先度ベースの競合回避モジュールを使用できるかどうか、アーティクル競合回避モジュールを使用する必要があるかどうかを考慮します。  
@@ -34,7 +33,7 @@ ms.locfileid: "62931624"
   
 |競合解決に際して考慮すべき問題|推奨|  
 |-------------------------------|--------------------|  
-|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> \- または -<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
+|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> -または-<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
 |最初に変更されたデータが優先される競合解決方法が必要な場合|既定の競合回避モジュールを使用して、クライアント サブスクリプションを作成する。|  
 |同じ行に対する変更の競合がない限り、複数のユーザーが同じデータ行を変更することを認める場合|既定の競合回避モジュール、または列レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  
 |行の値に対して複数の変更が発生したときに競合のフラグを付ける場合|既定の競合回避モジュール、または行レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  
@@ -42,8 +41,8 @@ ms.locfileid: "62931624"
 |競合の結果データが元の競合データと異なっている必要がある場合|新しい値を計算するアーティクル競合回避モジュールを使用する。|  
   
 ## <a name="see-also"></a>参照  
- [論理レコードの競合の検出および解決](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [マージ レプリケーションの競合検出および解決の詳細](advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [データの再パブリッシュ](../republish-data.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: 'T-SQL のチュートリアル: データベース オブジェクトに対するアクセス許可の構成 | Microsoft Docs'
-ms.custom: ''
+title: チュートリアル:db オブジェクトに対するアクセス許可の構成
+ms.custom: seo-lt-2019
 ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
@@ -12,24 +12,24 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791517685f4204f87f9c0cb96f48fe48d6828c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122867"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75244754"
 ---
-# <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2:データベース オブジェクトに対するアクセス許可の構成
+# <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対するアクセス許可の構成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 データベースへのアクセス権をユーザーに付与するには、次の 3 つの手順があります。 まず、ログインを作成します。 ユーザーはこのログインを使用して、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]に接続できます。 次に、指定したデータベースでユーザーとしてログインを構成します。 最後に、データベース オブジェクトに対する権限をユーザーに付与します。 このレッスンではこれらの 3 つの手順を紹介し、ビューとストアド プロシージャをオブジェクトとして作成する方法について説明します。  
 
   >[!NOTE]
   > このレッスンでは、[レッスン 1: データベース オブジェクトの作成](lesson-1-creating-database-objects.md)で作成されたオブジェクトを使用します。 レッスン 2 に進む前に、レッスン 1 を完了してください。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 - **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
@@ -104,7 +104,7 @@ Mary にアクセス権を与えるには、 **TestData** データベースに�
 ### <a name="about-grant"></a>GRANT について  
 ストアド プロシージャを実行するには、EXECUTE 権限が必要です。 データにアクセスしたり、データを変更するには、SELECT、INSERT、UPDATE、および DELETE 権限が必要です。 GRANT ステートメントは、テーブルを作成する権限など、他の権限にも使用されます。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 次の記事では、他のレッスンで作成されたデータベース オブジェクトを削除する方法について説明します。 
 
 詳細については、次の記事に進んでください

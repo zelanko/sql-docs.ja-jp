@@ -14,15 +14,15 @@ ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b792338b5576926f1012bed59ac60c4d88fb11f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84bba0878de02f04b64e7406fc62e6a9d05d3647
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101393"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002144"
 ---
 # <a name="change-column-order-in-a-table"></a>テーブル内の列の順序の変更
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、テーブル デザイナーで列の順序を変更できます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68101393"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-change-the-column-order"></a>列の順序を変更するには  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68101393"
   
 3.  その列をテーブル内の別の場所にドラッグします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **列の順序を変更するには**  
   
- Transact-SQL ステートメントを使用して、このタスクを実行することはできません。  
+ このタスクは、Transact-SQL ステートメントを使用した場合はサポートされません。  
   
 ###  <a name="TsqlExample"></a>  

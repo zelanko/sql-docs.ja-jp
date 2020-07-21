@@ -1,5 +1,5 @@
 ---
-title: 複数の列 (Visual Database Tools) に対して複数の検索条件の指定 |Microsoft Docs
+title: 複数の列に対して複数の検索条件を指定する方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0e882c95511bc91e453c0b7297b5780cd098e88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000870"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>複数の列に対して複数の検索条件を指定する (Visual Database Tools)
   検索条件に複数のデータ列を指定して、クエリの範囲を広くしたり狭くしたりできます。 たとえば、次の場合です。  
@@ -76,9 +75,9 @@ ms.locfileid: "63204949"
 4.  条件を追加するたびに、手順 2. および手順 3. を繰り返します。  
   
 ## <a name="see-also"></a>参照  
- [AND が優先する場合の条件を結合&#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
- [OR が優先する場合の条件を結合&#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [抽出条件ペインで検索条件を結合するための規則&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Visual Database Tools &#40;とが優先される場合の条件の結合&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
+ [Visual Database Tools &#40;またはが優先される場合に条件を結合&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [抽出条件ペインで検索条件を組み合わせる場合の規則 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

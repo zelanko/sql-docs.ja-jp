@@ -1,6 +1,6 @@
 ---
-title: 未使用データを使用して、sql:overflow を取得する-(SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 'Sql: overflow フィールドを使用した未使用データの取得 (SQLXML)'
+description: 'SQLXML 4.0 の sql: overflow フィールドを使用して、OPENXML 関数によって使用されていないデータを取得する方法について説明します。'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,28 +17,29 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292c07e1ab55313f0eedf7f4cb0c3f4a155aff30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb675f7440f0718e2b981992a129bb2b3b97fd41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764905"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field を使用した、未使用データの取得 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 関数を使用して XML ドキュメントからデータベースにレコードを挿入するときに、ソース XML ドキュメントのすべての未使用データを 1 つの列に格納することができます。 注釈付きスキーマを使用して、データベースからデータを取得するときに指定できます、 **sql:overflow-フィールド**オーバーフロー データが格納されているテーブル内の列を識別する属性。 **Sql:overflow-フィールド**属性に指定できる **\<要素 >** します。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 関数を使用して XML ドキュメントからデータベースにレコードを挿入するときに、ソース XML ドキュメントのすべての未使用データを 1 つの列に格納することができます。 注釈付きスキーマを使用してデータベースからデータを取得する場合は、 **sql: overflow フィールド**属性を指定して、オーバーフローデータが格納されるテーブル内の列を識別できます。 **Sql: overflow-field**属性は、で指定でき **\<element>** ます。  
   
  データは次のように取得されます。  
   
--   オーバーフロー列に格納されている属性を含む要素に追加されます、 **sql:overflow-フィールド**注釈。  
+-   オーバーフロー列に格納されている属性は、 **sql: overflow フィールド**注釈を含む要素に追加されます。  
   
 -   データベースのオーバーフロー列に格納された子要素とその子孫が、スキーマで明示的に指定されたコンテンツの後に子要素として追加されます。 このとき、順序は維持されません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. 要素に sql:overflow-field を指定する  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A: 要素に sql:overflow-field を指定する  
  この例では、次のスクリプトを実行して tempdb データベースにテーブル Customers2 が作成済みであることを前提としています。  
   
 ```  
@@ -62,7 +63,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- さらに、tempdb データベース用の仮想ディレクトリを作成する必要があります-のテンプレート仮想名と**テンプレート**"template"という名前の型。  
+ さらに、tempdb データベースの仮想ディレクトリと、"template" という名前の**テンプレート**の種類のテンプレート仮想名を作成する必要があります。  
   
  次の例では、マッピング スキーマで、Customers2 テーブルの AddressOverflow 列に格納されている未使用データを取得します。  
   
@@ -101,11 +102,9 @@ GO
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

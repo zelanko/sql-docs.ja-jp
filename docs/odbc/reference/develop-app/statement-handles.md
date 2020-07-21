@@ -1,5 +1,5 @@
 ---
-title: ステートメント ハンドル |Microsoft Docs
+title: ステートメントハンドル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1be90fe10d10a0b087d1c9724fed249805eb4dba
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107257"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299678"
 ---
 # <a name="statement-handles"></a>ステートメント ハンドル
-A*ステートメント*が最も簡単に考えるの SQL ステートメントなど**選択\*から従業員**します。 ただし、ステートメントが SQL ステートメントでは単 - のすべての結果セットが、ステートメントによって作成された、ステートメントの実行で使用されるパラメーターなど、その SQL ステートメントに関連付けられた情報で構成されます。 ステートメントは、アプリケーション定義の SQL ステートメントもは必要ありません。 カタログなどの関数とではたとえば、 **SQLTables**が実行されるステートメントでテーブル名の一覧を返す定義済みの SQL ステートメントを実行します。  
+*ステートメント*は、"**従業員から選択\* **" などの SQL ステートメントとして最も簡単に考えることができます。 ただし、ステートメントは SQL ステートメントだけではなく、ステートメントの実行時に使用されるステートメントやパラメーターによって作成された結果セットなど、その SQL ステートメントに関連付けられているすべての情報で構成されます。 ステートメントには、アプリケーション定義の SQL ステートメントも必要ありません。 たとえば、ステートメントで**Sqltables**などのカタログ関数が実行されると、テーブル名のリストを返す定義済みの SQL ステートメントが実行されます。  
   
- 各ステートメントは、ステートメント ハンドルによって識別されます。 ステートメントが 1 つの接続に関連付けられていると、その接続で複数のステートメントがあります。 一部のドライバー サポート; のアクティブなステートメントの数を制限します。オプション、SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo**ドライバーが 1 つの接続でサポートする数のアクティブなステートメントを指定します。 ステートメントは、定義*active*結果保留中の場合は、結果が結果セットまたは影響を受ける行の数、**INSERT**、 **UPDATE**、または**DELETE**ステートメント、またはデータが複数の呼び出しに送信される**SQLPutData**します。  
+ 各ステートメントは、ステートメントハンドルによって識別されます。 ステートメントは単一の接続に関連付けられており、その接続には複数のステートメントが存在する場合があります。 一部のドライバーでは、サポートするアクティブなステートメントの数が制限されています。**SQLGetInfo**の SQL_MAX_CONCURRENT_ACTIVITIES オプションは、1つの接続でドライバーがサポートするアクティブなステートメントの数を指定します。 ステートメントは、結果が保留になっている場合に*アクティブ*になるように定義されています。結果には、結果セットまたは**INSERT**、 **UPDATE**、または**DELETE**ステートメントの影響を受ける行の数が含まれます。または、複数の呼び出しで**sqlputdata**を使用してデータが送信されます。  
   
- ODBC ドライバー マネージャー (ドライバー) を実装するコード内では、ステートメント ハンドルは、ステートメントの情報を含む構造体を識別します。  
+ ODBC (ドライバーマネージャーまたはドライバー) を実装するコード内では、ステートメントハンドルによって、ステートメント情報を含む構造体が識別されます。次に例を示します。  
   
 -   ステートメントの状態  
   
--   現在のステートメント レベルの診断  
+-   現在のステートメントレベルの診断  
   
--   アプリケーション変数のアドレスは、ステートメントのパラメーターにバインドされ、結果セット列  
+-   ステートメントのパラメーターと結果セットの列にバインドされているアプリケーション変数のアドレス  
   
 -   各ステートメント属性の現在の設定  
   
- ステートメント ハンドルは、ほとんどの ODBC 関数で使用されます。 特に、パラメーターをバインドし、結果セット列、関数で使用されます (**SQLBindParameter**と**SQLBindCol**)、準備し、ステートメントの実行 (**SQLPrepare**、 **SQLExecute**、および**SQLExecDirect**)、メタデータの取得 (**SQLColAttribute**と**SQLDescribeCol**)、フェッチ結果 (**SQLFetch**)、および診断の取得 (**SQLGetDiagField**と**SQLGetDiagRec**)。 カタログ関数でも使用されます (**SQLColumns**、 **SQLTables**など) とその他の関数の番号。  
+ ステートメントハンドルは、ほとんどの ODBC 関数で使用されます。 特に、これらの関数では、パラメーターと結果セットの列 (**SQLBindParameter**および**SQLBindCol**) のバインド、ステートメントの準備と実行 (**SQLPrepare**、 **sqlexecute**、および**SQLExecDirect**)、メタデータの取得 (**Sqlcolattribute**と**SQLDescribeCol**)、フェッチ結果 (**sqlexecute**)、および診断の取得 (**SQLGetDiagField**および**SQLGetDiagRec**) を使用しています。 また、カタログ関数 (**Sqlcolumns**、 **sqlcolumns**など) とその他の多くの関数でも使用されます。  
   
- ステートメント ハンドルがで割り当てられた**SQLAllocHandle**およびに解放された**SQLFreeHandle**します。
+ ステートメントハンドルは**SQLAllocHandle**で割り当てられ、 **sqlfreehandle**で解放されます。

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f45c0a04a0d7cc627901d8de24175f1d63a99fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934893"
 ---
 # <a name="server-properties-security-page"></a>[サーバーのプロパティ] ([セキュリティ] ページ)
   このページを使用すると、サーバー セキュリティ オプションを表示したり変更したりできます。  
@@ -36,7 +35,7 @@ ms.locfileid: "62809006"
 >  セキュリティ構成を変更するには、サービスを再起動する必要があります。 [サーバー認証] を [SQL Server 認証モードと Windows 認証モード] に変更する場合、SA アカウントは自動的に有効にはなりません。 SA アカウントを使用するには、ENABLE オプションを指定して [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) を実行します。  
   
 ## <a name="login-auditing"></a>[ログインの監査]  
- **None**  
+ **なし**  
  ログインの監査をオフにします。  
   
  **[失敗したログインのみ]**  
@@ -61,10 +60,10 @@ ms.locfileid: "62809006"
  **[プロキシ アカウント]**  
  使用されるプロキシ アカウントを指定します。  
   
- **Password**  
+ **パスワード**  
  プロキシ アカウントのパスワードを指定します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[C2 監査トレースを有効にする]**  
  ステートメントおよびオブジェクトへのアクセスの試行をすべて監査し、\MSSQL\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスの場合)、または \MSSQL$*instancename*\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスの場合) のファイルに記録します。 詳細については、「 [c2 audit mode サーバー構成オプション](c2-audit-mode-server-configuration-option.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: nodes() メソッド (xml データ型) | Microsoft Docs
+title: nodes() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051272"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393060"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() メソッド (xml データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Nodes()** メソッドは、細分化する場合に便利な **xml** データ型のインスタンスをリレーショナル データにします。 新しい行にマップされるノードを特定できます。  
   
@@ -39,14 +39,16 @@ ms.locfileid: "68051272"
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *XQuery*  
 XQuery 式の文字列リテラルです。 このクエリ式でノードが構築されると、構築されるノードが結果の行セットで公開されます。 クエリ式の結果が空のシーケンスの場合、行セットも空になります。 クエリ式で、ノードではなくアトミック値が含まれたシーケンスが静的に返される場合は、静的エラーが発生します。  
   
 *テーブル*(*列*)  
 結果の行セットのテーブル名と列名です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 たとえば、次のテーブルがあるとします。  
   
 ```sql
@@ -143,7 +145,7 @@ DROP FUNCTION XTest;
 GO  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>xml 型の変数に対する nodes() メソッドの使用  
 次の例では、<`Root`> 最上位要素と 3 つの <`row`> 子要素が含まれる XML ドキュメントを使用します。 このクエリでは、`nodes()` メソッドを使用して、各 <`row`> 要素に 1 つずつ別のコンテキスト ノードを設定します。 `nodes()` メソッドにより、3 つの行を持つ行セットが返されます。 各行には元の XML の論理コピーが含まれ、それぞれのコンテキスト ノードで元のドキュメントの異なる <`row`> 要素が識別されます。  

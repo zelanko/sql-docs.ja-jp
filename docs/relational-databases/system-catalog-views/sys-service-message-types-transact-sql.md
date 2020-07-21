@@ -1,5 +1,5 @@
 ---
-title: sys.service_message_types (TRANSACT-SQL) |Microsoft Docs
+title: service_message_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,28 +17,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_message_types catalog view
 ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f210ddee531fe48e7bf2861fe353b1b04ac442
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883191"
 ---
-# <a name="sysservicemessagetypes-transact-sql"></a>sys.service_message_types (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysservice_message_types-transact-sql"></a>service_message_types (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このカタログ ビューには、service broker に登録されているメッセージの種類ごとに 1 行が含まれています。
+  このカタログビューには、service broker に登録されているメッセージの種類ごとに1行が含まれています。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|メッセージ型の名前。データベース内で一意です。 Null を許容しません。|  
-|**message_type_id**|**int**|メッセージ型の識別子。データベース内で一意です。 Null を許容しません。|  
-|**principal_id**|**int**|このメッセージ型を所有するデータベース プリンシパルの識別子。 NULL 値を許容します。|  
-|**validation**|**char(2)**|この種類のメッセージを送信する前にブローカーで実行される検証。 Null を許容しません。 次のいずれかです。<br /><br /> N = なし<br /><br /> X = XML<br /><br /> E = 空|  
-|**validation_desc**|**nvarchar(60)**|この型のメッセージを送信する前に、ブローカーで実行される検証の説明。 NULL 値を許容します。 次のいずれかです。<br /><br /> なし<br /><br /> XML<br /><br /> EMPTY|  
-|**xml_collection_id**|**int**|XML スキーマを使用する検証の場合、使用されるスキーマ コレクションの識別子。<br /><br /> それ以外の場合は NULL です。|  
+|**name**|**sysname**|メッセージ型の名前。データベース内で一意です。 NULL 値は許容されません。|  
+|**message_type_id**|**int**|メッセージ型の識別子。データベース内で一意です。 NULL 値は許容されません。|  
+|**principal_id**|**int**|このメッセージ型を所有するデータベースプリンシパルの識別子。 NULLABLE.|  
+|**検査**|**char(2)**|この型のメッセージを送信する前に、ブローカーによって実行される検証。 NULL 値は許容されません。 つぎのいずれかです。<br /><br /> N = なし<br /><br /> X = XML<br /><br /> E = 空|  
+|**validation_desc**|**nvarchar(60)**|この型のメッセージを送信する前に、ブローカーで実行される検証の説明。 NULLABLE. つぎのいずれかです。<br /><br /> なし<br /><br /> XML<br /><br /> EMPTY|  
+|**xml_collection_id**|**int**|XML スキーマを使用する検証の場合、使用されるスキーマ コレクションの識別子。<br /><br /> それ以外の場合は NULL。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

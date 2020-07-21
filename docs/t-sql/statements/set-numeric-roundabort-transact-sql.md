@@ -24,28 +24,28 @@ ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0852c01f37e8dbf324e18d140bd30a510fd14c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8dccf50490a8304507d621fc1e7fcdb06fb33a13
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008969"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999360"
 ---
-# <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 式の丸め処理で精度が低下するときに作成されるエラー レポートのレベルを指定します。  
   
-![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 SET NUMERIC_ROUNDABORT が ON の場合には、式の精度が低下するとエラーが生成されます。 OFF に設定すると、精度の低下によるエラー メッセージは生成されません。 結果は、結果を格納する列または変数の有効桁数に丸められます。  
   
 精度の損失は、固定精度の列または精度の低い変数に固定精度を持つ値を格納しようとしたときに発生します。  
@@ -80,7 +80,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、小数点以下 4 桁の精度を持つ 2 つの値を示します。 それらは加算され、小数点以下 2 桁の精度の変数に格納されます。 この式は、`SET NUMERIC_ROUNDABORT` と `SET ARITHABORT` の 2 つの設定の結果を示します。  
   
 ```sql

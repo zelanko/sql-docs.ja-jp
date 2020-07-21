@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f8e4abbb2620931f8d58ced30ae4658a9c0d15bb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864109"
 ---
-# <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ジョブを削除します。  
   
@@ -42,20 +42,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` 削除するジョブの id 番号です。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id`削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` 削除するジョブの名前です。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'`削除するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要があります。両方を指定することはできません。  
   
-`[ @originating_server = ] 'server'` 内部で使用します。  
+`[ @originating_server = ] 'server'`内部使用。  
   
-`[ @delete_history = ] delete_history` ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**、既定値は**1**します。 ときに*delete_history*は**1**ジョブのジョブ履歴は削除します。 ときに*delete_history*は**0**、ジョブ履歴は削除されません。  
+`[ @delete_history = ] delete_history`ジョブの履歴を削除するかどうかを指定します。 *delete_history*は**ビット**,、既定値は**1**です。 *Delete_history*が**1**の場合、ジョブのジョブ履歴は削除されます。 *Delete_history*が**0**の場合、ジョブ履歴は削除されません。  
   
- ジョブの削除し、履歴は削除されませんが、ジョブの履歴情報が表示されないように注意してください、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント グラフィカル ユーザー インターフェイスのジョブ履歴が、この情報は存在、 **sysjobhistory**テーブルに、 **msdb**データベース。  
+ ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報はエージェントのグラフィカルユーザーインターフェイスのジョブ履歴に表示されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、情報は**msdb**データベースの**sysjobhistory**テーブルに残ります。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` かどうか、スケジュールを削除するジョブにアタッチされたこの、他のジョブにアタッチされていない場合を指定します。 *@delete_unused_schedule*は**ビット**、既定値は**1**します。 ときに *@delete_unused_schedule*は**1**、他のジョブにスケジュールが参照されていない場合、このジョブにアタッチされたスケジュールは削除されます。 ときに *@delete_unused_schedule*は**0**スケジュールは削除されません。  
+`[ @delete_unused_schedule = ] delete_unused_schedule`他のジョブにアタッチされていない場合に、このジョブにアタッチされているスケジュールを削除するかどうかを指定します。 *delete_unused_schedule*は**ビット**,、既定値は**1**です。 *Delete_unused_schedule*が**1**の場合、そのスケジュールを参照するジョブが他にない場合、このジョブにアタッチされているスケジュールは削除されます。 *Delete_unused_schedule*が**0**の場合、スケジュールは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -63,17 +63,17 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **@originating_server** 引数は内部使用のため予約されています。  
+## <a name="remarks"></a>解説  
+ ** \@ Originating_server**引数は、内部使用のために予約されています。  
   
- **@delete_unused_schedule** 引数が自動的にすべてのジョブにアタッチされていないスケジュールを削除して以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、値を指定する必要があります**0**として、 **@delete_unused_schedule** 引数。  
+ ** \@ Delete_unused_schedule**引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 ** \@ delete_unused_schedule**引数として値**0**を指定する必要があります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
  このストアド プロシージャでは、メンテナンス プランやメンテナンス プランの一部であるジョブを削除できません。 代わりに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、メンテナンス プランを削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -98,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

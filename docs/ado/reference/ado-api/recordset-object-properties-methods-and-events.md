@@ -1,5 +1,5 @@
 ---
-title: レコード セット オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Recordset オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89d125cd100d380f7d20c64ed23a2087cf4e949
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917328"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761860"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>レコード セット オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="recordset-object-properties-methods-and-events"></a>Recordset オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [AbsolutePage プロパティ](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
  [AbsolutePosition プロパティ](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
   
- [ActiveCommand プロパティ](../../../ado/reference/ado-api/activecommand-property-ado.md)  
+ [ActiveCommand のプロパティ](../../../ado/reference/ado-api/activecommand-property-ado.md)  
   
  [ActiveConnection プロパティ](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
@@ -35,13 +35,13 @@ ms.locfileid: "67917328"
   
  [CacheSize プロパティ](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
- [CursorLocation プロパティ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [カーソル位置プロパティ](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
  [CursorType プロパティ](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
  [DataMember プロパティ](../../../ado/reference/ado-api/datamember-property.md)  
   
- [データ ソースのプロパティ](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [DataSource プロパティ](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67917328"
   
  [Move メソッド](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [NextRecordset メソッド](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -127,13 +127,13 @@ ms.locfileid: "67917328"
   
  [FetchProgress イベント](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
- [WillChangeField および FieldChangeComplete イベント](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [Changefield および FieldChangeComplete イベント](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [WillChangeRecord および RecordChangeComplete イベント](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [Changerecord イベントと RecordChangeComplete イベントを発生させる](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [WillChangeRecordset および RecordsetChangeComplete イベント](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [WillChangeRecordset イベントと RecordsetChangeComplete イベント](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [WillMove および MoveComplete イベント](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [移動イベントと MoveComplete イベントを発生させる](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

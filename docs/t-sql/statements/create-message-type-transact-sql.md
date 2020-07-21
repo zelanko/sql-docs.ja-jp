@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006542"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393190"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   新しいメッセージ型を作成します。 メッセージ型によって、メッセージの名前と、その名前を持つメッセージに対し [!INCLUDE[ssSB](../../includes/sssb-md.md)] が実行する検証方法が定義されます。 メッセージ交換の両側で、同じメッセージ型を定義する必要があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68006542"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  
@@ -55,7 +55,9 @@ CREATE MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *message_type_name*  
  作成するメッセージ型の名前を指定します。 新しいメッセージ型が現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *Message_type_name* には、最大 128 文字までを使用することができます。  
   
@@ -65,7 +67,7 @@ CREATE MESSAGE TYPE message_type_name
  VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。 この句を指定しない場合、検証は既定で NONE に設定されます。  
   
- なし  
+ NONE  
  検証を実行しないことを指定します。 メッセージの本文にはなんらかのデータが含まれているか、NULL の可能性があります。  
   
  EMPTY  
@@ -77,7 +79,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  メッセージの本文に、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があることを指定します。*schema_collection_name* は、既存の XML スキーマ コレクションの名前にする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では受信メッセージが検証されます。 メッセージに、指定された検証の種類に準拠しないメッセージの本文が含まれている場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって無効なメッセージが破棄され、メッセージを送信したサービスにエラー メッセージが返されます。  
   
  メッセージ交換の両側で、メッセージ型に同じ名前を定義する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換の両側で同じ検証を使用する必要はありませんが、トラブルシューティングで役立つように、通常はメッセージ交換の両側でメッセージ型に同じ検証を指定します。  
@@ -91,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
   
  CREATE MESSAGE TYPE ステートメントがスキーマ コレクションを指定する場合、ステートメントを実行するユーザーは、指定されているスキーマ コレクションに対する REFERENCES 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 整形式の XML を含むメッセージ型を作成する  
  次の例では、整形式の XML が含まれる新しいメッセージ型を作成します。  

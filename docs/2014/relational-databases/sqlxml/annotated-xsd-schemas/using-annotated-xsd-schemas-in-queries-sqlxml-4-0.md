@@ -1,5 +1,5 @@
 ---
-title: クエリ (SQLXML 4.0) での XSD スキーマを使用して注釈が付けられた |Microsoft Docs
+title: クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,21 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], queries
 - templates [SQLXML], annotated XSD schemas in queries
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: caee73995b56e248a91872117a51e809c6eea976
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065678"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
   注釈付きスキーマに対してクエリを指定し、XSD スキーマに対してテンプレートで XPath クエリを指定して、データベースからデータを取得することができます。  
   
- **\<Sql:xpath-クエリ >** 要素では、注釈付きスキーマで定義されている XML ビューに対して XPath クエリを指定することができます。 使用して実行するのには、XPath クエリ対象となる注釈付きスキーマが識別される、`mapping-schema`の属性、  **\<sql:xpath-クエリ >** 要素。  
+ **\<sql:xpath-query>** 要素を使用すると、注釈付きスキーマで定義されている XML ビューに対して XPath クエリを指定できます。 XPath クエリの実行対象となる注釈付きスキーマは、要素の属性を使用して識別され `mapping-schema` **\<sql:xpath-query>** ます。  
   
- テンプレートは、1 つ以上のクエリを含む有効な XML ドキュメントです。 FOR XML クエリと XPath クエリでは、ドキュメント フラグメントが返されますが、 テンプレートは、ドキュメント フラグメントのコンテナーとして機能します。テンプレートは、そのため、1 つの最上位の要素を指定する方法を提供します。  
+ テンプレートは、1 つ以上のクエリを含む有効な XML ドキュメントです。 FOR XML クエリと XPath クエリでは、ドキュメント フラグメントが返されますが、 テンプレートは、ドキュメントフラグメントのコンテナーとして機能します。そのため、1つの最上位要素を指定する方法が用意されています。  
   
  このトピックの例では、テンプレートを使用して注釈付きスキーマに対する XPath クエリを指定し、データベースからデータを取得します。  
   
@@ -62,12 +61,12 @@ ms.locfileid: "66014466"
 </sql:xpath-query>  
 ```  
   
- SQLXML 4.0 のテスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用すると、テンプレート ファイルの一部としてクエリを実行できます。 詳細については、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
+ SQLXML 4.0 のテスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用すると、テンプレート ファイルの一部としてクエリを実行できます。 詳細については、「 [SQLXML 4.0&#41;で非推奨とされた注釈付き XDR スキーマ &#40;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="using-inline-mapping-schemas"></a>インライン マッピング スキーマの使用  
  注釈付きスキーマはテンプレートに直接含めることができます。このテンプレートで、インライン スキーマに対する XPath クエリを指定できます。 テンプレートはアップデートグラムとしても使用できます。  
   
- テンプレートには複数のインライン スキーマを含めることができます。 テンプレートに含まれているインライン スキーマを使用する指定、 **id**属性の一意の値に、  **\<xsd:schema >** 要素、およびしを使用して **#idvalue**インライン スキーマを参照します。 **Id**属性の動作と同じですが、 **sql:id** ({urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-sql} id) XDR スキーマで使用します。  
+ テンプレートには複数のインライン スキーマを含めることができます。 テンプレートに含まれているインラインスキーマを使用するには、要素に一意の値を指定して**id**属性を指定 **\<xsd:schema>** し、 **#idvalue**を使用してインラインスキーマを参照します。 **Id**属性は、XDR スキーマで使用される**sql: id** ({urn: schema-microsoft-com: xml} id) と同じ動作です。  
   
  たとえば、次のテンプレートでは、2 つのインライン注釈付きスキーマを指定しています。  
   
@@ -114,23 +113,23 @@ ms.locfileid: "66014466"
 </ROOT>  
 ```  
   
- このテンプレートでは 2 つの XPath クエリも指定しています。 各、  **\<xpath クエリ >** を指定して、マッピング スキーマを一意に識別する要素、`mapping-schema`属性。  
+ このテンプレートでは 2 つの XPath クエリも指定しています。 各要素は、 **\<xpath-query>** 属性を指定することによって、マッピングスキーマを一意に識別し `mapping-schema` ます。  
   
- テンプレートでは、インライン スキーマを指定するときに、`sql:is-mapping-schema`注釈はでも指定する必要があります、  **\<xsd:schema >** 要素。 `sql:is-mapping-schema` はブール値 (0 = false、1=true) をとります。 インライン スキーマ**sql: はマッピング スキーマ =「1」** はインライン注釈付きスキーマとして扱われ、XML ドキュメントでは返されません。  
+ テンプレートでインラインスキーマを指定する場合は、 `sql:is-mapping-schema` 要素で注釈も指定する必要があり **\<xsd:schema>** ます。 `sql:is-mapping-schema` はブール値 (0 = false、1=true) をとります。 **Sql:-mapping-schema = "1"** のインラインスキーマは、インライン注釈が付けられたスキーマとして扱われ、XML ドキュメントでは返されません。  
   
  `sql:is-mapping-schema` 注釈は、テンプレートの名前空間 `urn:schemas-microsoft-com:xml-sql` に属しています。  
   
- この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+ この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 指定するだけでなく、`mapping-schema`属性を **\<sql:xpath-クエリ >** 要素 (XPath クエリがある) 場合のテンプレート、または **\<updg:sync >** アップデート グラム内の要素、次の操作を行うことができます。  
+ `mapping-schema` **\<sql:xpath-query>** テンプレート内の要素 (XPath クエリがある場合) またはアップデートグラムの要素に属性を指定することに加えて、 **\<updg:sync>** 次の操作を実行できます。  
   
--   指定、`mapping-schema`属性を **\<ルート >** テンプレート内の要素 (グローバル宣言)。 ここで指定したマッピング スキーマは、すべての XPath およびアップデートグラム ノードで、明示的に `mapping-schema` 注釈が指定されていない場合に既定のスキーマとして使用されます。  
+-   テンプレートの `mapping-schema` **\<ROOT>** 要素 (グローバル宣言) に属性を指定します。 ここで指定したマッピング スキーマは、すべての XPath およびアップデートグラム ノードで、明示的に `mapping-schema` 注釈が指定されていない場合に既定のスキーマとして使用されます。  
   
--   指定、 `mapping schema` 、ADO を使用して属性`Command`オブジェクト。  
+-   `mapping schema`ADO オブジェクトを使用して属性を指定し `Command` ます。  
   
- `mapping-schema`属性で指定されている、  **\<xpath クエリ >** または **\<updg:sync >** 要素が最高の優先順位、ADO `Command`オブジェクトは、最低の優先順位を持ちます。  
+ `mapping-schema`要素または要素で指定された属性の **\<xpath-query>** **\<updg:sync>** 優先順位は最も高くなります。 ADO `Command` オブジェクトの優先順位は最も低くなります。  
   
- テンプレートの XPath クエリを指定し、XPath クエリの実行対象となるマッピング スキーマを指定しない場合、XPath クエリとして扱われます、 **dbobject**型のクエリ。 たとえば、次のテンプレートを考えてみます。  
+ テンプレートで XPath クエリを指定し、XPath クエリの実行対象となるマッピングスキーマを指定しない場合、XPath クエリは**dbobject**型クエリとして扱われることに注意してください。 たとえば、次のテンプレートを考えてみます。  
   
 ```  
 <sql:xpath-query   
@@ -139,6 +138,6 @@ ms.locfileid: "66014466"
 </sql:xpath-query>  
 ```  
   
- このテンプレートでは、XPath クエリが指定されていますが、マッピング スキーマが指定されていません。 したがって、このクエリとして扱う、 **dbobject**を Production.ProductPhoto はテーブル名の種類のクエリと@ProductPhotoID= '100' は ID 値 100 の製品の写真を検索する述語です。 @LargePhoto 元の値を取得する列です。  
+ このテンプレートでは、XPath クエリが指定されていますが、マッピング スキーマが指定されていません。 したがって、このクエリは**dbobject**型クエリとして扱われます。 productphoto はテーブル名、 @ProductPhotoID = ' 100 ' は、ID 値が100の製品写真を検索する述語です。 @LargePhoto値の取得元の列を指定します。  
   
   

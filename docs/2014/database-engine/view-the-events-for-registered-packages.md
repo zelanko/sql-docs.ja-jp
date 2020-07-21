@@ -1,5 +1,5 @@
 ---
-title: 登録パッケージのイベントの表示 |Microsoft Docs
+title: 登録されているパッケージのイベントを表示する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e3665a695bd3f40407a8680872c9b0dc79fbc53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927405"
 ---
 # <a name="view-the-events-for-registered-packages"></a>登録パッケージのイベントの表示
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、登録パッケージで提供されているイベントを確認すると役立つことがあります。 詳細については、「 [SQL Server 拡張イベント パッケージ](../relational-databases/extended-events/sql-server-extended-events-packages.md)」を参照してください。  
@@ -71,8 +70,8 @@ ms.locfileid: "66089629"
     ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 拡張イベント パッケージ](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
+ [拡張イベントパッケージの SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [dm_xe_objects &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   
   

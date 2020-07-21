@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055234"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901528"
 ---
-# <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ジョブ、警告、またはオペレーターについて、指定されたクラスの情報を提供します。  
    
@@ -42,53 +42,53 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'` に関する情報が要求されたクラスです。 *クラス*は**varchar (8)** の既定値を持つ**ジョブ**します。 *クラス*これらの値のいずれかを指定できます。  
+`[ @class = ] 'class'`要求する情報に関するクラス。 *クラス*は**varchar (8)**,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**JOB**|ジョブ カテゴリに関する情報を提供します。|  
-|**アラートを生成します。**|警告カテゴリに関する情報を提供します。|  
-|**演算子**|オペレーター カテゴリに関する情報|  
+|**補足**|ジョブカテゴリに関する情報を提供します。|  
+|**アラート**|アラートカテゴリに関する情報を提供します。|  
+|**OPERATOR**|オペレーター カテゴリに関する情報|  
   
-`[ @type = ] 'type'` 情報を要求する対象のカテゴリの種類。 *型*は**varchar (12)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'`情報を要求するカテゴリの種類。 *型*は**varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**LOCAL**|ローカル ジョブ カテゴリ。|  
-|**複数のサーバー**|マルチ サーバー ジョブ カテゴリ。|  
-|**NONE**|以外のクラスのカテゴリ**ジョブ**します。|  
+|**地元の**|ローカルジョブカテゴリ。|  
+|**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
+|**NONE**|**JOB**以外のクラスのカテゴリ。|  
   
-`[ @name = ] 'name'` 情報を要求する対象のカテゴリの名前。 *名前* は **sysname** 、既定値は NULL です。  
+`[ @name = ] 'name'`情報が要求されるカテゴリの名前。 *名前*は**sysname**,、既定値は NULL です。  
   
-`[ @suffix = ] suffix` 指定するかどうか、 **category_type**結果セット内の列が ID と名前。 *サフィックス*は**ビット**、既定値は**0**します。 **1**を示しています、 **category_type** 、名前と、 **0** ID として表示します。  
+`[ @suffix = ] suffix`結果セットの**category_type**列が ID と名前のどちらであるかを指定します。 *サフィックス*は**ビット**,、既定値は**0**です。 **1**は**category_type**を名前として示し、 **0**は ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ときに **@suffix** は**0**、 **sp_help_category**次の結果セットを返します。  
+ ** \@ サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
-|**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチ サーバー<br /><br /> **3** = なし|  
-|**name**|**sysname**|カテゴリ名。|  
+|**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
+|**name**|**sysname**|カテゴリ名|  
   
- ときに **@suffix** は**1**、 **sp_help_category**次の結果セットを返します。  
+ ** \@ サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
-|**category_type**|**sysname**|カテゴリの種類。 いずれかの**ローカル**、 **MULTI-SERVER**、または**NONE**|  
-|**name**|**sysname**|カテゴリ名。|  
+|**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
+|**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>コメント  
- **sp_help_category**から実行する必要があります、 **msdb**データベース。  
+## <a name="remarks"></a>注釈  
+ **sp_help_category**は、 **msdb**データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -98,9 +98,9 @@ sp_help_category [ [ @class = ] 'class' ]
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-returning-local-job-information"></a>A. ローカル ジョブ情報を返す  
+### <a name="a-returning-local-job-information"></a>A. ローカルジョブ情報を返す  
  次の例では、ローカルで管理されるジョブに関する情報を返します。  
   
 ```  
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. アラートの情報を返す  
+### <a name="b-returning-alert-information"></a>B: アラート情報を返す  
  次の例では、レプリケーションの警告カテゴリに関する情報を返します。  
   
 ```  
@@ -126,9 +126,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

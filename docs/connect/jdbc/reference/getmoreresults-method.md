@@ -1,5 +1,5 @@
 ---
-title: getMoreResults メソッド () |Microsoft Docs
+title: getMoreResults () メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 220f8144045e159a18a6d538718e9e5bd13483bb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981737"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905988"
 ---
 # <a name="getmoreresults-method-"></a>getMoreResults () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final boolean getMoreResults()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMoreResults メソッドは、java. .sql. ステートメントインターフェイスの getMoreResults メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getMoreResults メソッドは、java.sql.Statement インターフェイスの getMoreResults メソッドで指定されています。  
   
  getMoreResults メソッドを呼び出すと、[getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) メソッドを使用して取得された現在開いているすべての結果セット オブジェクトが暗黙的に閉じます。  
   

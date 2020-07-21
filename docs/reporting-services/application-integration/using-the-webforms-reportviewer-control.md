@@ -1,28 +1,30 @@
 ---
-title: WebForms ReportViewer コントロールの使用 | Microsoft Docs
+title: WebForms ReportViewer コントロールの使用
+description: レポート サーバーに配置されたレポートまたはローカル ファイル システム上のレポートを表示するには、WebForms ReportViewer コントロールを使用して Web アプリケーションでレポートを表示します。
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 4339aca9735937e8747968b0060ce8eb2a24f486
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194799"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198459"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
+# <a name="use-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WebForms ReportViewer コントロールを使用して Web アプリケーションにレポートを表示します。  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Web アプリケーションで ReportViewer コントロールを使用するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] を使用して、新しい [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET Web サイトを作成します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] または [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用して、新しい [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ASP.NET Web サイトを作成します。  
   
      \- または -  
   
@@ -36,11 +38,11 @@ ms.locfileid: "63194799"
   
      reportViewer1 という名前の **ReportViewer** コントロールがフォームに追加されます。  
   
- コントロールがフォームに追加されると、 **[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。 表示するレポートがレポート サーバーに配置されている場合は、 **[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
+ コントロールがフォームに追加されると、 **[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 **[\<サーバー レポート>]** オプションを選択すると、 **[レポート サーバー URL]** および **[レポートのパス]** という 2 つの追加プロパティが表示されます。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
   
- レポートをローカル モードで表示する場合は、 **[新しいレポートをデザインします]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。 レポートを選択した後、ReportViewer コントロールの **[レポートのパス]** プロパティにレポート RDLC ファイルの名前を入力してください。 このプロパティは、 **[プロパティ]** ウィンドウの **[LocalReport]** ノードの下に表示されます。  
+ レポートをローカル モードで表示する場合は、 **[新しいレポートをデザインします]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。 レポートを選択した後、ReportViewer コントロールの **[レポートのパス]** プロパティにレポート RDLC ファイルの名前を入力してください。 このプロパティは、**[プロパティ]** ウィンドウの **[LocalReport]** ノードの下に表示されます。  
   
- レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツール バーの項目を非表示にするには、 **[プロパティ]** ウィンドウで次の ReportViewer プロパティを **False** に設定します。  
+ レポートを表示するときに ReportViewer ツール バーの項目を隠すことができます。 たとえば、印刷ボタンを隠すことができます。 ツール バーの項目を非表示にするには、**[プロパティ]** ウィンドウで次の ReportViewer プロパティを **False** に設定します。  
   
 -   **ShowBackButton**  
   

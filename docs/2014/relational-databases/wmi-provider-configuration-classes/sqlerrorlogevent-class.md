@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b0633f1dc56cc4060af34336fc69292dde9d57b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047064"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent クラス
   指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル内のイベントの表示に関するプロパティを提供します。  
@@ -37,27 +36,27 @@ class SQLErrorLogEvent
 };  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  SQLErrorLogEvent クラスは、次のプロパティを定義します。  
   
 |||  
 |-|-|  
-|FileName|データ型: `string`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> <br /><br /> エラー ログ ファイルの名前です。|  
-|InstanceName|データ型: `string`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> 修飾子:キー<br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
-|よう|データ型: `datetime`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> 修飾子:キー<br /><br /> <br /><br /> イベントがログ ファイルに記録された日時。|  
-|メッセージ|データ型: `string`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> <br /><br /> イベント メッセージ。|  
-|ProcessInfo|データ型: `string`<br /><br /> アクセスの種類:読み取り専用です。<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
+|FileName|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> エラー ログ ファイルの名前です。|  
+|InstanceName|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
+|LogDate|データ型: `datetime`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> イベントがログ ファイルに記録された日時。|  
+|メッセージ|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベント メッセージ。|  
+|ProcessInfo|データ型: `string`<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> イベントのソース サーバー プロセス ID (SPID) に関する情報。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmproviderxpsp2up.mof|  
-|DLL|Sqlmgmprovider.dll|  
-|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
+|[DLL]|Sqlmgmprovider.dll|  
+|名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>例  
- 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 例を実行する\< *Instance_Name*> のインスタンスの名前を持つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を 'Instance1' など 'を 'errorlog.1' など、エラー ログ ファイルの名前を持つ ' File_Name' に置き換えます。  
+ 次の例では、指定したログ ファイルに記録されたすべてのイベントの値を取得する方法を示します。 この例を実行するには、を \<*Instance_Name*> のインスタンスの名前 (' Instance1 ' など) に置き換え、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' File_Name ' をエラーログファイルの名前 (' log. 1 ' など) に置き換えます。  
   
 ```  
 on error resume next  
@@ -78,22 +77,22 @@ Next
 ```  
   
 ## <a name="comments"></a>コメント  
- ときに*InstanceName*または*FileName*クエリが既定のインスタンスと現在の情報を返す WQL ステートメントで提供されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイル。 たとえば、次の WQL ステートメントは既定のインスタンス (MSSQLSERVER) の現在のログ ファイル (ERRORLOG) からすべてのログ イベントを返します。  
+ WQL ステートメントで*InstanceName*または*FileName*が指定されていない場合、クエリは既定のインスタンスと現在のログファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) 上の現在のログ ファイル (ERRORLOG) に含まれるすべてのログ イベントを返します。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
-## <a name="security"></a>セキュリティ  
- 接続するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルは、WMI からはローカルおよびリモートの両方のコンピューターで次のアクセス許可が必要があります。  
+## <a name="security"></a>Security  
+ WMI を使用してログファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
--   読み取りアクセス、 **root \microsoft\sqlserver\computermanagement10** WMI 名前空間。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
+-   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
   
--   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラー ログは、次のパスにあります (ここ\<*ドライブ >* インストール先ドライブを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と\< *InstanceName*> は、インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
+-   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあり \<*Drive> ます (* は、がインストールされているドライブを表し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> はのインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )。  
   
-     **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL12** **.\<InstanceName > \MSSQL\Log**  
+     ** \<Drive> : Server\MSSQL12** **。 \<InstanceName>\MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](https://go.microsoft.com/fwlink/?LinkId=178848)します。  
+ ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogFile クラス](sqlerrorlogfile-class.md)   

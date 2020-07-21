@@ -1,5 +1,5 @@
 ---
-title: ODBC ドライバー パフォーマンスのプロファイリング |Microsoft Docs
+title: ODBC ドライバーのパフォーマンスのプロファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,19 +17,17 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 35d920f13329b336969dbfd91da2265917f2fbe4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913149"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009721"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の 2 種類のパフォーマンス データをプロファイルできます。  
   
@@ -45,7 +43,7 @@ ms.locfileid: "67913149"
   
 -   ログ記録が指定されているデータ ソースに接続する。  
   
--   呼び出す[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)プロファイルを制御するドライバー固有の属性を設定します。  
+-   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、プロファイルを制御するドライバー固有の属性を設定します。  
   
  各アプリケーション プロセスは、個別に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのコピーを取得しますが、プロファイルは、ドライバーのコピーとアプリケーション プロセスの組み合わせに対してグローバルに実行されます。 アプリケーションによってプロファイルが有効になると、ドライバー内でアクティブになっている、そのアプリケーションからの全接続に関する情報が、プロファイルによって記録されます。 特にプロファイルを要求していない接続も、プロファイルの対象に含まれます。  
   
@@ -53,7 +51,7 @@ ms.locfileid: "67913149"
   
  あるアプリケーションが任意のログ ファイルに対してプロファイルの記録を開始し、別のアプリケーションが同じログ ファイルに対してプロファイルの記録を開始しようとすると、2 番目のアプリケーションはプロファイル データをログに記録できません。 最初のアプリケーションがドライバーをアンロードした後に、2 番目のアプリケーションがプロファイルを開始した場合、最初のアプリケーションのデータを記録しているログ ファイルは、2 番目のアプリケーションによって上書きされます。  
   
- アプリケーションから呼び出す場合、アプリケーションは、プロファイルが有効にするデータ ソースに接続している場合、ドライバーは SQL_ERROR を返します**SQLSetConnectOption**をログ記録を開始します。 呼び出し**SQLGetDiagRec**し、次を返します。  
+ アプリケーションがプロファイルが有効になっているデータソースに接続する場合、アプリケーションが**SQLSetConnectOption**を呼び出してログ記録を開始すると、ドライバーは SQL_ERROR を返します。 **SQLGetDiagRec**を呼び出すと、次の値が返されます。  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -68,7 +66,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   アプリケーション プロファイル  
   
--   接続  
+-   Connection  
   
 -   ネットワーク  
   
@@ -86,9 +84,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|SQL_PERF_START 以降に処理された SELECT ステートメントの数。|  
 |SQLSelectRows|SQL_PERF_START 以降に選択された行数。|  
 |トランザクション|SQL_PERF_START 以降のユーザー トランザクションの数。ロールバックの数も含まれます。 SQL_AUTOCOMMIT_ON の状態で ODBC アプリケーションが実行されている場合は、各コマンドがトランザクションと見なされます。|  
-|SQLPrepares|数[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)sql_perf_start 後呼び出し。|  
-|ExecDirects|数**SQLExecDirect** sql_perf_start 後呼び出し。|  
-|SQLExecutes|数**SQLExecute** sql_perf_start 後呼び出し。|  
+|SQLPrepares|SQL_PERF_START 後の[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)呼び出しの数。|  
+|ExecDirects|SQL_PERF_START 後の**SQLExecDirect**呼び出しの数。|  
+|SQLExecutes|SQL_PERF_START 後の**Sqlexecute**呼び出しの数。|  
 |CursorOpens|SQL_PERF_START 以降にドライバーがサーバー カーソルを開いた回数。|  
 |CursorSize|SQL_PERF_START 以降にカーソルによって開かれた結果セット内の行数。|  
 |CursorUsed|SQL_PERF_START 以降に実際にドライバーによってカーソルから取得された行数。|  
@@ -101,13 +99,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|ドライバー内で開かれているすべての接続上で、現在開いているステートメント ハンドルの数。|  
 |MaxOpenStmt|SQL_PERF_START 以降に同時に開かれたステートメント ハンドルの最大数。|  
 |SumOpenStmt|SQL_PERF_START 以降に開かれたステートメント ハンドルの数。|  
-|**接続の統計情報:**||  
+|**接続統計情報 :**||  
 |CurrentConnectionCount|アプリケーションがサーバーに対して開いている現在アクティブな接続ハンドルの数。|  
 |MaxConnectionsOpened|SQL_PERF_START 以降に開かれたコンカレント接続ハンドルの最大数。|  
 |SumConnectionsOpened|SQL_PERF_START 以降に開かれた接続ハンドルの合計数。|  
 |SumConnectionTime|SQL_PERF_START 以降に開かれたすべての接続の接続時間の合計。 たとえば、アプリケーションが接続を 10 開いていて、各接続を 5 秒間保持していた場合、SumConnectionTime は 50 秒になります。|  
 |AvgTimeOpened|SumConnectionsOpened/ SumConnectionTime の計算結果になります。|  
-|**ネットワークの統計情報:**||  
+|**ネットワーク統計情報 :**||  
 |ServerRndTrips|ドライバーがサーバーにコマンドを送信し、応答を受け取った回数。|  
 |BuffersSent|SQL_PERF_START 以降にドライバーから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信された表形式データ ストリーム (TDS) パケットの数。 大量の処理を伴うコマンドは複数のバッファーを使用する可能性があるので、このようなコマンドがサーバーに送信され、6 個のパケットを使用する場合、ServerRndTrips は 1 ずつ増加しますが、BuffersSent は 6 ずつ増加します。|  
 |BuffersRec|アプリケーションがドライバーの使用を開始した後に、ドライバーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から受信した TDS パケットの数。|  
@@ -116,13 +114,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計情報  
   
-|SQLPERF のフィールド|説明|  
+|SQLPERF フィールド|説明|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 以降、ドライバーが処理に要した累積時間。サーバーからの応答の待ち時間も含まれます。|  
 |msNetworkServerTime|ドライバーがサーバーからの応答待ちに要した累積時間。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [ODBC ドライバーのパフォーマンスに関するトピックをプロファイリング&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

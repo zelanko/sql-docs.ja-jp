@@ -13,16 +13,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 056115b494d7b2b7aa45505f8f1960032ac028e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 13ab80fe810559105027070e15ca64c87ddc4161
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112591"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903930"
 ---
-# <a name="derive-column-values-by-using-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
+# <a name="derive-column-values-with-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -68,6 +68,6 @@ ms.locfileid: "68112591"
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
  [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   

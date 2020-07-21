@@ -1,5 +1,5 @@
 ---
-title: CreateObject (VBScript) を使用して RDSServer.DataFactory オブジェクトの作成 |Microsoft Docs
+title: CreateObject (VBScript) を使用して DataFactory オブジェクトを作成する RDSServerMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa54e59af5187bf9b4daaa898bbaabfa614a4286
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964363"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752648"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory オブジェクト、Query メソッド、および CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- この例で作成、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して、 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)のメソッド、 [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 この例をテストする切り取りし、の間には、このコードを貼り付け、\<本文 > と\</Body > の通常の HTML タグを文書化し、名前を**DataFactoryVBS.asp**します。 ASP スクリプトは、サーバーで識別されます。  
+ この例では、RDS の[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを作成し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 この例をテストするには、 \< 通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、 \< **DataFactoryVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -136,10 +136,10 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
+ [領域スペースオブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Query メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

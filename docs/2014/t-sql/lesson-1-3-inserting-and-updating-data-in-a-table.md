@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0646019f166e1c2cc126a4cc7d2ed8f27a7bd2f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048456"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>テーブルのデータの挿入と更新 (チュートリアル)
   **Products** テーブルを作成したので、INSERT ステートメントを使用してデータをテーブルに挿入する準備ができました。 データを挿入した後は、UPDATE ステートメントを使用して行の内容を変更します。 更新を 1 つの行に制限するには、UPDATE ステートメントの WHERE 句を使用します。 4 つのステートメントによって、次のデータが入力されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "63250131"
 |75|Tire Bar||Tool for changing tires|  
 |3000|3mm Bracket|.52||  
   
- 基本構文は次のとおりです。INSERT、テーブル名、列リスト、値、およびし、値のリストを挿入します。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
+ 基本的な構文は、INSERT、テーブル名、列一覧、VALUES、および挿入する値の一覧です。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
   
 ### <a name="to-insert-data-into-a-table"></a>データをテーブルに挿入するには  
   

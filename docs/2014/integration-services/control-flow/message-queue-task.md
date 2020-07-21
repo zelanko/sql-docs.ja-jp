@@ -14,18 +14,17 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4a9cc34a1aee631b4b28c6eba845308ac5b2c79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831479"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438269"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
+  メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
   
  メッセージ キュー タスクを使用することにより、企業の組織全体の操作を調整できます。 送信先が使用できない場合やビジーの場合、メッセージをキューに入れ、後で配信できます。たとえば、送信先が販売担当者のオフラインのラップトップ コンピューターの場合、キューにメッセージが入れられ、販売担当者はネットワークに接続したときに受信できます。 メッセージ キュー タスクは、次の目的で使用できます。  
   
@@ -88,11 +87,11 @@ ms.locfileid: "62831479"
 ## <a name="configuration-of-the-message-queue-task"></a>メッセージ キュー タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[メッセージ キュー タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[メッセージ キュー タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [[メッセージ キュー タスク エディター] &#40;[受信] ページ&#41;](../message-queue-task-editor-receive-page.md)  
+-   [メッセージ キュー タスク エディター ([受信] ページ)](../message-queue-task-editor-receive-page.md)  
   
--   [[メッセージ キュー タスク エディター] &#40;[送信] ページ&#41;](../message-queue-task-editor-send-page.md)  
+-   [[メッセージ キュー タスク エディター] ([送信] ページ)](../message-queue-task-editor-send-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

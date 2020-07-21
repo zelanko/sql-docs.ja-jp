@@ -1,5 +1,5 @@
 ---
-title: バインドと変換 (OLE DB) |マイクロソフトのドキュメント
+title: バインドと変換 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 140be806cfb79996c68b7c413c7998fcc0c20ebe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043884"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>バインドと変換 (OLE DB)
   ここでは、`datetime` 値と `datetimeoffset` 値との間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
@@ -28,7 +27,7 @@ ms.locfileid: "62638209"
   
 -   `datetime` 型の文字列と `datetimeoffset` 型の文字列の形式は次のとおりです。  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ?? *hh*:*mm*]]  
+     *yyyy* -*mm* -*dd*[ *hh*:*mm*:*ss*[.*9999999*] [?? *hh*:*mm*]]  
   
 -   `time` 型の文字列の形式は次のとおりです。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62638209"
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 以降によって実行された変換には、OLE DB 仕様と異なるものがあります。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、次を参照してください。、"データ形式。文字列とリテラル」のセクション[OLE DB の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-ole-db-date-and-time-improvements.md)します。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「データ型のサポート」の「データ形式: 文字列とリテラル」を参照してください。 [OLE DB の日付と時刻の機能強化に関するセクションを](data-type-support-for-ole-db-date-and-time-improvements.md)参照してください。  
   
  一般的な変換規則を次に示します。  
   

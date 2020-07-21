@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62871539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965845"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム データベースを移動する方法について説明します。 システム データベースの移動は、次の状況で便利な場合があります。  
@@ -50,21 +49,21 @@ ms.locfileid: "62871539"
 > [!IMPORTANT]  
 >  システム データベースを移動した後に master データベースを再構築すると、すべてのシステム データベースがそれぞれ既定の場所にインストールされるため、システム データベースを再度移動する必要があります。  
   
-##  <a name="Intro"></a> **このトピックの「**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**このトピックの**内容  
   
--   [計画的再配置とスケジュールされたディスク メンテナンスの手順](#Planned)  
+-   [計画に従った再配置とスケジュールされたディスク メンテナンスの手順](#Planned)  
   
 -   [障害復旧の手順](#Failure)  
   
--   [Master データベースの移動](#master)  
+-   [master データベースの移動](#master)  
   
 -   [Resource データベースの移動](#Resource)  
   
--   [補足情報:すべてのシステム データベースを移動した後](#Follow)  
+-   [補足情報: すべてのシステム データベースを移動した後](#Follow)  
   
 -   [使用例](#Examples)  
   
-##  <a name="Planned"></a> 計画に従った再配置とスケジュールされたディスク メンテナンスの手順  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>計画された再配置とスケジュールされたディスクメンテナンスの手順  
  計画に従った再配置やスケジュールされたメンテナンス操作の中でシステム データベースのデータ ファイルやログ ファイルを移動するには、次の手順を実行します。 この手順は、master データベースと Resource データベース以外のすべてのシステム データベースに適用されます。  
   
 1.  移動対象のそれぞれのファイルに対して、次のステートメントを実行します。  
@@ -73,11 +72,11 @@ ms.locfileid: "62871539"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  メンテナンスを行うため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを停止するか、システムをシャットダウンします。 詳しくは、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
+2.  メンテナンスを行うため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを停止するか、システムをシャットダウンします。 詳細については、「 [Start、Stop、Pause、Resume、データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
 3.  ファイルを新しい場所に移動します。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳細については、「 [Start、Stop、Pause、Resume、データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
 5.  次のクエリを実行して、ファイルが変更されたことを確認します。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "62871539"
   
 2.  テスト メールを送信して、データベース メールが動作していることを確認します。  
   
-##  <a name="Failure"></a> 障害復旧の手順  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a>障害復旧手順  
  ハードウェア障害が原因でファイルを移動する必要がある場合、次の手順に従って別の場所にファイルを再配置します。 この手順は、master データベースと Resource データベース以外のすべてのシステム データベースに適用されます。  
   
 > [!IMPORTANT]  
@@ -123,7 +122,7 @@ ms.locfileid: "62871539"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     詳しくは、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」をご覧ください。  
+     詳細については、「 [Start、Stop、Pause、Resume、データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
 3.  移動対象の各ファイルに対して、 **sqlcmd** コマンドか [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して、次のステートメントを実行します。  
   
@@ -149,20 +148,20 @@ ms.locfileid: "62871539"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> master データベースの移動  
+##  <a name="moving-the-master-database"></a><a name="master"></a>Master データベースの移動  
  master データベースを移動するには、次の手順を実行します。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[構成ツール]** の順にポイントし、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントし、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]** ) を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server のサービス]** ノードで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (たとえば、 **[SQL Server (MSSQLSERVER)]**) を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[SQL Server (***instance_name***) のプロパティ]** ダイアログ ボックスで、 **[起動時のパラメーター]** タブをクリックします。  
   
-4.  **[既存のパラメーター]** ボックスで -d パラメーターを選択して、マスター データ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
+4.  [**既存のパラメーター** ] ボックスで-d パラメーターを選択して、マスターデータファイルを移動します。 **[更新]** をクリックして変更を保存します。  
   
      **[起動時のパラメーターの指定]** ボックスで、パラメーターを master データベースの新しいパスに変更します。  
   
-5.  **[既存のパラメーター]** ボックスで -l パラメーターを選択して、マスター ログ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
+5.  [**既存のパラメーター** ] ボックスで、-l パラメーターを選択してマスターログファイルを移動します。 **[更新]** をクリックして変更を保存します。  
   
      **[起動時のパラメーターの指定]** ボックスで、パラメーターを master データベースの新しいパスに変更します。  
   
@@ -193,10 +192,10 @@ ms.locfileid: "62871539"
     GO  
     ```  
   
-##  <a name="Resource"></a> Resource データベースの移動  
- Resource データベースの既定の場所は、\<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\ です。 データベースを移動することはできません。  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Resource データベースの移動  
+ リソースデータベースの場所は、 \<*drive*> 次のとおり \<version> \<*instance_name*> です。\MSSQL\Binn \\ 。 データベースを移動することはできません。  
   
-##  <a name="Follow"></a> 補足情報:すべてのシステム データベースを移動した後  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>補足情報: すべてのシステムデータベースを移動した後  
  すべてのシステム データベースを、新しいドライブやボリューム、または別のドライブ文字を使用した別のサーバーに移動した場合は、次の更新を行います。  
   
 -   SQL Server エージェントのログ パスを変更します。 このパスを更新しないと、SQL Server エージェントは起動しません。  
@@ -209,7 +208,7 @@ ms.locfileid: "62871539"
   
 2.  **[エラー ログ]** を右クリックし、 **[構成]** をクリックします。  
   
-3.  **SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は C:\Program files \microsoft SQL Server\MSSQL12。 < instance_name > \MSSQL\Log\\します。  
+3.  **[SQL Server エージェント エラー ログの構成］** ダイアログ ボックスで、SQLAGENT.OUT ファイルの新しい場所を指定します。 既定の場所は、C:\Program Server\MSSQL12. SQL <instance_name> \MSSQL\Log \\ です。  
   
 #### <a name="change-the-database-default-location"></a>データベースの既定の場所の変更  
   
@@ -221,7 +220,7 @@ ms.locfileid: "62871539"
   
 4.  変更を完了するため、SQL Server サービスをいったん停止してから開始します。  
   
-##  <a name="Examples"></a> 使用例  
+##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. tempdb データベースを移動する  
  次の例では、計画に従った再配置の一環として、 `tempdb` データ ファイルとログ ファイルを新しい場所に移動します。  
@@ -269,9 +268,9 @@ ms.locfileid: "62871539"
  [master データベース](master-database.md)   
  [msdb データベース](msdb-database.md)   
  [model データベース](model-database.md)   
- [ユーザー データベースの移動](move-user-databases.md)   
- [データベース ファイルの移動](move-database-files.md)   
- [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [ユーザーデータベースの移動](move-user-databases.md)   
+ [データベースファイルの移動](move-database-files.md)   
+ [データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスの開始、停止、一時停止、再開、再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [システム データベースの再構築](system-databases.md)  
   

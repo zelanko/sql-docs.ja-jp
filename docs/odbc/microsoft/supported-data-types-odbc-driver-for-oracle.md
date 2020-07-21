@@ -11,39 +11,39 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915668"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301117"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>サポートされるデータ型 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- ODBC Driver for Oracle は Oracle 7.3 のすべてのデータ型をサポートしていますただし、ここに表示されている、新しい Oracle8 データ型のいずれかのこともできません。  
+ ODBC Driver for Oracle は、Oracle 7.3 のすべてのデータ型をサポートしています。ただし、ここに記載されている新しい Oracle8 データ型はサポートされていません。  
   
-|データ型|Oracle 7.3|Oracle8|  
+|データの種類|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
-|BFILE|n/a|サポートされていません|  
-|BLOB|n/a|サポートされていません|  
-|CHAR|Supported|Supported|  
-|CLOB|n/a|サポートされていません|  
-|DATE|Supported|Supported|  
-|FLOAT|Supported|Supported|  
-|INTEGER|Supported|Supported|  
-|LONG|Supported|Supported|  
-|LONG RAW|Supported|Supported|  
-|NCHAR|n/a|サポートされていません|  
-|NCLOB|n/a|サポートされていません|  
-|NUMBER|Supported|Supported|  
-|NVARCHAR2|n/a|サポートされていません|  
-|RAW|Supported|Supported|  
-|VARCHAR2|Supported|Supported|  
+|BFILE|該当なし|サポートされていません|  
+|BLOB|該当なし|サポートされていません|  
+|CHAR|サポートされています|サポートされています|  
+|CLOB|該当なし|サポートされていません|  
+|DATE|サポートされています|サポートされています|  
+|FLOAT|サポートされています|サポートされています|  
+|INTEGER|サポートされています|サポートされています|  
+|LONG|サポートされています|サポートされています|  
+|LONG RAW|サポートされています|サポートされています|  
+|NCHAR|該当なし|サポートされていません|  
+|NCLOB|該当なし|サポートされていません|  
+|NUMBER|サポートされています|サポートされています|  
+|NVARCHAR2|該当なし|サポートされていません|  
+|RAW|サポートされています|サポートされています|  
+|VARCHAR2|サポートされています|サポートされています|  
 |MLSLABEL|サポートされていません。|サポートされていません。|  
   
 > [!NOTE]  
->  VARCHAR 列の許容サイズの詳細については、次を参照してください。 [VARCHAR 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)このガイドでします。
+>  許容される VARCHAR 列のサイズの詳細については、このガイドの「 [Varchar 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)」を参照してください。

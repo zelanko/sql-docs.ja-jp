@@ -1,5 +1,5 @@
 ---
-title: 列 (SSAS テーブル) の削除 |Microsoft Docs
+title: 列の削除 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c76256e03a7ad9a14f877ee1220a8dd6ced2ed8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939743"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>列の削除 (SSAS テーブル)
   このトピックでは、テーブル モデルのテーブルから列を削除する方法について説明します。  
@@ -38,7 +37,7 @@ ms.locfileid: "66067272"
 3.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、削除する列をオフにしてから、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [列のテーブルへの追加 (SSAS テーブル)](add-columns-to-a-table-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;テーブルへの列の追加](add-columns-to-a-table-ssas-tabular.md)   
  [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)  
   
   

@@ -12,29 +12,29 @@ helpviewer_keywords:
 - statement options [ODBC]
 - ODBC driver for Oracle [ODBC], statement options
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca40765dff98e9102fbe36e88c7e79535f311d97
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948833"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299212"
 ---
 # <a name="statement-options"></a>ステートメントのオプション
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- これらのオプションは、アプリケーション内の特定の実行ステートメントのカスタマイズを許可します。  
+ これらのオプションを使用すると、アプリケーション内の特定の実行ステートメントをカスタマイズできます。  
   
-|ステートメント オプション|注|  
+|Statement オプション|メモ|  
 |----------------------|-----------|  
-|SQL_BIND_TYPE|2,147, 483,647 バイトまたは使用可能なメモリを超えることはできません。|  
-|SQL_CONCURRENCY|使用できる値は、次を参照してください。、[カーソルの種類および同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)します。|  
-|SQL_CURSOR_TYPE|ドライバーでは、SQL_CURSOR_DYNAMIC は許可されません。 参照してください[SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)詳細についてはします。 使用できる値は、次を参照してください。、[カーソルの種類および同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)します。|  
-|SQL_GET_BOOKMARK|現在のレコード数のブックマークは、32 ビット整数値を返します。 Get だけです。設定できません。|  
-|SQL_KEYSET_SIZE|0 に設定できます。|  
-|SQL_MAX_ROWS|結果から返される行の最大数を設定します。|  
-|SQL_ROW_NUMBER|結果セット内の現在の行の位置を指定する 32 ビット整数を返します。 Get だけです。設定できません。|  
-|SQL_ROWSET_SIZE|4,294,967,296 行を超えることはできません。ただし、要求を処理するために、コンピューターに十分な仮想メモリが必要です。|  
-|SQL_USE_BOOKMARKS|SQL_UB_ON に SQL_USE_BOOKMARKS の設定をサポートし、固定長のブックマークを公開します。|
+|SQL_BIND_TYPE|2147483647バイトまたは使用可能なメモリを超えることはできません。|  
+|SQL_CONCURRENCY|使用できる値については、「[カーソルの種類と同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)」を参照してください。|  
+|SQL_CURSOR_TYPE|ドライバーで SQL_CURSOR_DYNAMIC が許可されていません。 詳細については、「 [SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 」を参照してください。 使用できる値については、「[カーソルの種類と同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)」を参照してください。|  
+|SQL_GET_BOOKMARK|現在のレコード番号のブックマークである32ビット整数値を返します。 Get のみ。を設定できません。|  
+|SQL_KEYSET_SIZE|0のみに設定できます。|  
+|SQL_MAX_ROWS|結果セットから返される行の最大数。|  
+|SQL_ROW_NUMBER|結果セット内の現在の行の位置を指定する32ビット整数を返します。 Get のみ。を設定できません。|  
+|SQL_ROWSET_SIZE|4294967296行を超えることはできません。ただし、要求を処理するには、コンピューターに十分な仮想メモリが必要です。|  
+|SQL_USE_BOOKMARKS|SQL_UB_ON に SQL_USE_BOOKMARKS を設定し、固定長のブックマークを公開することをサポートしています。|

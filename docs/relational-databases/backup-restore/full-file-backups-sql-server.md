@@ -1,5 +1,6 @@
 ---
 title: ファイルの完全バックアップ (SQL Server) | Microsoft Docs
+description: SQL Server では、各ファイルを個別に指定する代わりにファイル グループ全体をバックアップし、復元することができます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 500abb4eca30e502d7a32e23e3b14300258453b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718034"
 ---
 # <a name="full-file-backups-sql-server"></a>ファイルの完全バックアップ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックは、複数のファイルまたはファイル グループが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のファイルは、個別にバックアップおよび復元できます。 また、構成する各ファイルを個別に指定する代わりにファイル グループ全体を指定できます。 ファイル グループにオフラインのファイルが含まれている場合 (たとえば、ファイルが復元中である場合)、ファイル グループ全体がオフラインになり、バックアップできないことに注意してください。  
@@ -49,7 +50,7 @@ ms.locfileid: "67939610"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Benefits"></a> ファイル バックアップの利点  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> ファイル バックアップの利点  
  ファイル バックアップは、データベース バックアップよりも次の点で優れています。  
   
 -   ファイル バックアップを使用すると、残りのデータベースを復元しないで損傷したファイルだけを復元できるので、復旧を高速化できます。  
@@ -58,13 +59,13 @@ ms.locfileid: "67939610"
   
 -   ファイル バックアップでは、データベースの完全バックアップよりもスケジュール設定とメディア処理を柔軟に行うことができます。非常に大規模なデータベースの場合、データベースの完全バックアップは管理しきれません。 柔軟性に優れたファイルまたはファイル グループのバックアップは、さまざまな更新特性を備えたデータを含む大規模なデータベースでも役に立ちます。  
   
-##  <a name="Disadvantages"></a> ファイル バックアップの欠点  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> ファイル バックアップの欠点  
   
 -   データベースの完全バックアップと比較した場合のファイル バックアップの大きな欠点は、管理の複雑さです。 これらのバックアップの完全なセットを保持および追跡するタスクは、データベースの完全バックアップの領域要件よりも重要な、時間のかかるタスクであることがあります。  
   
 -   破損したファイルのバックアップがない場合、メディア障害が発生したときに、データベース全体を復旧できなくなります。 したがって、ファイル バックアップの完全なセットを保持しておく必要があります。また、完全復旧モデルまたは一括ログ復旧モデルの場合は、1 つ以上のログ バックアップが、最低でも、最初のファイルの完全バックアップと最新のファイルの完全バックアップの間に対応している必要があります。  
   
-##  <a name="Overview"></a> ファイル バックアップの概要  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> ファイル バックアップの概要  
  ファイルの完全バックアップでは、1 つ以上のファイルまたはファイル グループに含まれるすべてのデータがバックアップされます。 ファイル バックアップには、バックアップ操作の最後までロール フォワードできる十分なログ レコードが既定で含まれています。  
   
  読み取り専用ファイルまたはファイル グループのバックアップはすべての復旧モデルで同じです。 完全復旧モデルでは、ファイルの完全バックアップの完全なセットと、ファイル バックアップのすべての範囲に対応したログ バックアップを併用することで、データベースの完全バックアップに等しくなります。  
@@ -87,7 +88,7 @@ ms.locfileid: "67939610"
 > [!NOTE]  
 >  完全復旧モデルで読み取り/書き込みファイルのバックアップを復元する際には、そのファイルとデータベースのそれ以外の部分との一貫性を確保するために、トランザクション ログをロールフォワードする必要があります。 トランザクション ログのバックアップをロールフォワードする数が多くなりすぎないようにするには、ファイルの差分バックアップの使用を検討してください。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ファイルまたはファイル グループのバックアップを作成するには**  
   
 -   [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  

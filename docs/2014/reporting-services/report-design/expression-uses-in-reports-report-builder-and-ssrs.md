@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105901"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
@@ -24,12 +24,12 @@ ms.locfileid: "66105901"
   
  式には単純式と複合式があります。 *単純式* には、1 つのデータセット フィールド、パラメーター、または組み込みフィールドへの参照が含まれます。 複合式には、複数の組み込み参照、演算子、および関数呼び出しを含めることができます。 たとえば、複合式には売上フィールドに適用される Sum 関数が含まれる場合があります。  
   
- 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]に書き込まれます。 式は等号 (=) で始まり、データセット フィールドとパラメーター、定数、関数、および演算子などの組み込みコレクションへの参照が後に続きます。  
+ 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] に書き込まれます。 式は等号 (=) で始まり、データセット フィールドとパラメーター、定数、関数、および演算子などの組み込みコレクションへの参照が後に続きます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> 単純式の使用  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> 単純式の使用  
  単純式は、角かっこで囲まれたデザイン画面やダイアログ ボックスに表示されます。たとえば、データセット フィールドは `[ProductID]`と表示されます。 単純式は、データセットからフィールドをテキスト ボックスにドラッグすると自動的に作成されます。 プレースホルダーが作成され、式により基になる値が定義されます。 デザイン画面とダイアログ ボックスでは、データ領域のセルかテキスト ボックスに式を直接入力することもできます (たとえば、 `[ProductID]`)。  
   
  次の表は、単純式の使用例を示します。 機能、設定プロパティ、プロパティの設定に通常使用するダイアログ ボックス、およびプロパティの値を示しています。 あらゆる式と同様に、デザイン画面、ダイアログ ボックス、プロパティ ペインに直接単純式を入力したり、[式] ダイアログ ボックスで単純式を編集できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "66105901"
   
  
   
-##  <a name="Complex"></a> 複合式の使用  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> 複合式の使用  
  複合式には、複数の組み込み参照、演算子、関数呼び出しを含めることができ、デザイン画面には `<<Expr>>`として表示されます。 式のテキストを表示、または変更するには、 **[式]** ダイアログ ボックスを開くか、プロパティ ペインに直接入力する必要があります。 次の表には、設定プロパティ、プロパティの設定に通常使用するダイアログ ボックス、およびプロパティの値など、複合式を使用してデータを表示または編成したり、レポートの外観を変更したりする方法を示します。 ダイアログ ボックス、デザイン画面、またはプロパティ ペインに直接式を入力できます。  
   
 |機能|プロパティ、コンテキスト、およびダイアログ ボックス|プロパティ値|  
@@ -72,14 +72,14 @@ ms.locfileid: "66105901"
   
  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
- [フィルター式の例 (レポート ビルダーおよび SSRS)](filter-equation-examples-report-builder-and-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)   
- [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)   
+ [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [アイテムを非表示にする (レポート ビルダーおよび SSRS)](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

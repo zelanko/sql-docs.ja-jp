@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,22 +14,20 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a506597e3f702f36996da687fe0cf4058fc2ca
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019791"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007931"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
-[!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
+
+[!INCLUDE [sqlserver2019-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
 この関数は、グループ内の一意の非 null 値の概数を返します。 
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT はパブリック プレビューの機能です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +44,7 @@ APPROX_COUNT_DISTINCT ( expression )
 ## <a name="return-types"></a>戻り値の型
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `APPROX_COUNT_DISTINCT( expression )` はグループ内の各行に対して式を評価し、グループ内の一意の非 null 値の概数を返します。 この関数は、絶対的な精度よりも応答性が重要となる場合に、大規模なデータ セット全体の集計を提供するために設計されています。  
 
 `APPROX_COUNT_DISTINCT` はビッグ データのシナリオで使用するために設計されており、次の条件に向けて最適化されています。
@@ -58,11 +56,11 @@ APPROX_COUNT_DISTINCT ( expression )
 `APPROX_COUNT_DISTINCT` に必要なメモリは、完全な COUNT DISTINCT 操作よりも少なくて済みます。  メモリの使用量が少ないため、`APPROX_COUNT_DISTINCT` がメモリをディスクに書き込む可能性は、正確な COUNT DISTINCT 操作に比べて小さくなります。 これを実現するために使用されるアルゴリズムの詳細については、「[HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog)」をご覧ください。
 
 > [!NOTE]
-> 照合順序に依存する文字列では、APPROX_COUNT_DISTINCT のパブリック プレビュー バージョンではバイナリ一致が使用され、BIN 照合順序がある場合 (BIN2 はなし) に生成されるのと同じ結果が提供されます。 
+> 照合順序に依存する文字列では、APPROX_COUNT_DISTINCT ではバイナリ一致が使用され、BIN 照合順序がある場合 (BIN2 はなし) に生成されるのと同じ結果が提供されます。 
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-approxcountdistinct"></a>A. APPROX_COUNT_DISTINCT を使用する 
+### <a name="a-using-approx_count_distinct"></a>A. APPROX_COUNT_DISTINCT を使用する 
 この例では、orders テーブルのさまざまな順序キーの概数が返されます。
   
 ```sql
@@ -78,7 +76,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. GROUP BY と共に APPROX_COUNT_DISTINCT を使用する 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. GROUP BY と共に APPROX_COUNT_DISTINCT を使用する 
 この例では、orders テーブルのさまざまな順序キーの概数が、順序のステータスによって返されます。 
   
 ```sql

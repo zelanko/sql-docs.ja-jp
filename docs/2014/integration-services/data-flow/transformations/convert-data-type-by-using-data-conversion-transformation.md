@@ -1,5 +1,5 @@
 ---
-title: データ変換の変換を使用してデータを別のデータ型に変換 |Microsoft Docs
+title: データ変換の変換を使用してデータを別のデータ型に変換する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 13faac66894298c4d08cd40a1eab9d3d823fd0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be66d40f5009a87859d5b55c8b46a4b67950f94a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900872"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430929"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>データ変換の変換を使用してデータを別のデータ型に変換する
   データ変換の変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -53,11 +52,11 @@ ms.locfileid: "62900872"
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Data Conversion Transformation](data-conversion-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
  [Integration Services のデータ型](../integration-services-data-types.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)  
   
   

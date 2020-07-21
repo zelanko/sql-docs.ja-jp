@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d4357c3ca7290484d1dc38e54f677a8cd987fd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054923"
 ---
-# <a name="examples-using-path-mode"></a>例 :PATH モードの使用
+# <a name="examples-using-path-mode"></a>例 : PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>PATH モードの単純なクエリの指定  
@@ -55,7 +54,7 @@ GO
   
  `</row>`  
   
- 次の結果は、`RAW` オプションを指定した `ELEMENTS` モードのクエリと同じです。 返される結果は、結果セットの各行に既定の <`row`> 要素が追加された要素中心の XML です。  
+ 次の結果は、 `RAW` オプションを指定した `ELEMENTS` モードのクエリと同じです。 返される結果は、結果セットの各行に既定の <`row`> 要素が追加された要素中心の XML です。  
   
 ```  
 USE AdventureWorks2012;  
@@ -200,7 +199,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 次に結果の一部を示します。 XML がによって返される列名として ManuInstr が指定、ため、`query()`にメソッドがラップされて、<`ManuInstr`> タグを次に示すように。  
+ 次に結果の一部を示します。 クエリでは列名として ManuInstr が指定されているため、メソッドによって返される XML `query()` は、 `ManuInstr` 次に示すように <> タグでラップされます。  
   
  `<Root>`  
   
@@ -315,7 +314,7 @@ FOR XML PATH('ProductModelData');
   
 -   最初の `SELECT` サブクエリは、列名として `data()` を使用することで ProductID の一覧を返しています。 `FOR XML PATH`の行要素名として空文字列が指定されているので、要素は生成されません。 代わりに、値リストが `ProductID` 属性に割り当てられています。  
   
--   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductNames` を指定しているので、生成した <`ProductName`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
+-   2 番目の `SELECT` サブクエリは、該当する製品モデルに含まれる製品名を取得します。 列名として `ProductName` を指定しているので、生成した <`ProductNames`> 要素は <`ProductNames`> 要素に囲まれた状態で返しています。  
   
  結果の一部を次に示します。  
   
@@ -393,7 +392,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- <`English`> 要素に追加されている `@xml:lang` 属性は、定義済みの XML 名前空間で定義されています。  
+ <`@xml:lang`> 要素に追加されている `English` 属性は、定義済みの XML 名前空間で定義されています。  
   
  結果を次に示します。  
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea401d3adb8dd6278d133d2ea84c4be429455f4b
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893302"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292158"
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  パーティション処理変換先は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションを読み込んで処理します。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)」を参照してください。  
+  パーティション処理変換先では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパーティションが読み込まれ処理されます。 パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)」を参照してください。  
   
  パーティション処理変換先には、次の機能が含まれます。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68893302"
 >  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
   
 ## <a name="configuration-of-the-partition-processing-destination"></a>パーティション処理変換先の構成  
- パーティション処理変換先は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを接続して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または変換先が処理するキューブとパーティションを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳細については、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」を参照してください。  
+ パーティション処理変換先は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを接続して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト、または変換先が処理するキューブとパーティションを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
  この変換先は 1 つの入力をとります。 エラー出力はサポートされていません。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68893302"
  データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="partition-processing-destination-editor-connection-manager-page"></a>[パーティション処理変換先エディター] ([接続マネージャー] ページ)
-  **[パーティション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスへの接続を指定できます。  
+  **[パーティション処理変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスへの接続を指定できます。  
   
 > [!NOTE]  
 >  ここで説明されているタスクは、Analysis Services テーブル モデルには適用されません。  テーブル モデルで入力列をパーティション列にマップすることはできません。 代わりに Analysis Services DDL 実行タスク [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) を使用してパーティションを処理することができます。  
@@ -80,7 +80,7 @@ ms.locfileid: "68893302"
  **[処理方法]**  
  処理方法を選択します。 このオプションの既定値は **[完全]** です。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |[追加 (増分)]|パーティションの増分処理を実行します。|  
 |[完全]|パーティションの完全処理を実行します。|  
@@ -118,7 +118,7 @@ ms.locfileid: "68893302"
  **[キー エラー アクション]**  
  許容されないキー値を持つレコードを処理する方法を指定します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|不正なキー値を不明な値に変換します。|  
 |**DiscardRecord**|レコードを破棄します。|  
@@ -135,7 +135,7 @@ ms.locfileid: "68893302"
  **[エラー時のアクション]**  
  **[エラー時に停止する]** を選択した場合は、エラーのしきい値に達した場合に実行する操作を指定します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**StopProcessing**|処理を停止します。|  
 |**StopLogging**|ログ記録エラーを停止します。|  
@@ -143,7 +143,7 @@ ms.locfileid: "68893302"
  **[見つからないキー]**  
  見つからないキーのエラーに対する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -152,7 +152,7 @@ ms.locfileid: "68893302"
  **[重複キー]**  
  重複キーのエラーに対する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|Value|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -161,7 +161,7 @@ ms.locfileid: "68893302"
  **[不明な種類に変換された NULL キー]**  
  NULL キーが不明な値に変換された場合に実行する操作を指定します。 既定では、この値は **IgnoreError**です。  
   
-|Value|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -170,7 +170,7 @@ ms.locfileid: "68893302"
  **[許可されていない NULL キー]**  
  NULL キーが許可されていない場合に NULL キーが検出されたときに実行する操作を指定します。 既定では、この値は **[ReportAndContinue]** です。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**IgnoreError**|エラーを無視して処理を続行します。|  
 |**[ReportAndContinue]**|エラーを報告して処理を続行します。|  
@@ -183,4 +183,4 @@ ms.locfileid: "68893302"
  エラー ログのパスを選択します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   

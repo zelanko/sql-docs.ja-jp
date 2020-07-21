@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935957"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask サーバー構成オプション
     
@@ -59,7 +58,7 @@ ms.locfileid: "62814036"
   
  存在しない CPU にマップしているような関係マスクを指定した場合、RECONFIGURE コマンドによりクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログの両方にエラー メッセージが報告されます。 この場合、RECONFIGURE WITH OVERRIDE オプションを使用しても影響がなく、同じ構成エラーが再度報告されます。  
   
- Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 オペレーティング システムにより特定のワークロード割り当てが割り当てられているプロセッサから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を除外することもできます。 プロセッサを表すビットを 1 に設定している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンは、このプロセッサをスレッド割り当ての対象として選択します。 設定すると`affinity mask`0 (既定)、Microsoft Windows 2000 または Windows Server 2003 のスケジューリング アルゴリズムで、スレッドの関係が設定されます。 `affinity mask` を 0 以外の値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の関係 (affinity) により、選択可能なプロセッサを指定するビット マスクとしてその値が解釈されます。  
+ Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 オペレーティング システムにより特定のワークロード割り当てが割り当てられているプロセッサから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を除外することもできます。 プロセッサを表すビットを 1 に設定している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンは、このプロセッサをスレッド割り当ての対象として選択します。 `affinity mask`を 0 (既定値) に設定すると、Microsoft Windows 2000 または Windows Server 2003 のスケジューリングアルゴリズムによってスレッドのアフィニティが設定されます。 `affinity mask` を 0 以外の値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の関係 (affinity) により、選択可能なプロセッサを指定するビット マスクとしてその値が解釈されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドを特定のプロセッサ上の実行から隔離すると、Microsoft Windows&#xA0;2000 または Windows&#xA0;Server&#xA0;2003 では、システムによる Windows 固有のプロセス処理を評価しやすくなります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 2 つ (インスタンス A および B) を実行する 8 CPU サーバーで、システム管理者は affinity mask オプションを使用して最初の 4 個の CPU をインスタンス A に割り当て、残りの 4 個をインスタンス B に割り当てることができます。33 プロセッサ以上を構成する場合は、affinity mask および affinity64 mask の両方を設定します。 `affinity mask` の値は、以下のとおりです。  
   
@@ -114,7 +113,7 @@ GO
 |127|01111111|0、1、2、3、4、5、および 6|  
 |255|11111111|0、1、2、3、4、5、6、および 7|  
   
- affinity mask オプションは拡張オプションです。 設定を変更する、sp_configure システム ストアド プロシージャを使用する場合は、変更`affinity mask`場合にのみ**詳細オプションの表示**が 1 に設定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行が完了すると、新しい設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動しなくてもすぐに有効になります。  
+ affinity mask オプションは拡張オプションです。 Sp_configure システムストアドプロシージャを使用して設定を変更する場合は、 `affinity mask` **show advanced options**が1に設定されている場合にのみ変更できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行が完了すると、新しい設定は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動しなくてもすぐに有効になります。  
   
 ## <a name="non-uniform-memory-access-numa"></a>NUMA (Non-uniform Memory Access)  
  NUMA (non-uniform memory access) ベースのハードウェアを使用し、affinity mask を設定する場合、ノード内のすべてのスケジューラがそのノードの CPU に関連付けられます。 affinity mask を設定しない場合、各スケジューラは NUMA ノード内の CPU のグループに関連付けられ、NUMA ノード N1 にマップされたスケジューラはノード内の任意の CPU で作業をスケジュールできますが、他のノードに関連付けられた CPU ではスケジュールできません。  
@@ -124,10 +123,10 @@ GO
 ## <a name="licensing-issues"></a>ライセンスに関する問題点  
  動的関係は、CPU ライセンスにより厳密に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ライセンス ポリシーに違反する関係マスク オプションの構成が許可されていません。  
   
-### <a name="startup"></a>起動時  
+### <a name="startup"></a>起動  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時またはデータベースのアタッチ時に、指定された関係マスクがライセンス ポリシーに違反する場合、エンジン層により起動処理や、データベースのアタッチおよび復元操作は完了されますが、その後、関係マスクの sp_configure 実行値が 0 にリセットされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにエラー メッセージが記録されます。  
   
-### <a name="reconfigure"></a>再構成時  
+### <a name="reconfigure"></a>再構成  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] の RECONFIGURE コマンドの実行時に、指定された関係マスクがライセンス ポリシーに違反する場合は、エラー メッセージがクライアント セッションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに報告されます。データベース管理者による関係マスクの再構成作業が必要になります。 この場合、RECONFIGURE WITH OVERRIDE コマンドの実行が許可されません。  
   
 ## <a name="see-also"></a>参照  

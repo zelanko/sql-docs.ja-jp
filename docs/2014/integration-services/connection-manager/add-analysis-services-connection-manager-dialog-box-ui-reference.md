@@ -11,22 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4523c5065b0b6442966a1a87a3d4480e63766d12
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833755"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434609"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
-   **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]が動作しているサーバーへの接続を作成したり、接続プロパティを編集したりできます。  
+  **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が動作しているサーバーへの接続を作成したり、接続プロパティを編集したりできます。  
   
  Analysis Services 接続マネージャーの詳細については、「 [Analysis Services Connection Manager](analysis-services-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[Analysis Services を実行しているコンピューターへの接続を作成する]**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスが動作しているサーバーへの既定の接続を使用するか、 **[編集]** をクリックして新しい接続を作成します。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62833755"
  **[Analysis Services プロジェクト]**  
  一覧から [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)   
  [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 値の |Microsoft Docs
+title: Parameterdirection Enum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,36 +13,36 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88754f7dbd0064c765314d88b0fcc0d06f05bbb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917741"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763403"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-指定するかどうか、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)表します入力パラメーター、出力パラメーター、両方の入力と出力パラメーター、またはストアド プロシージャからの戻り値。  
+[パラメーター](../../../ado/reference/ado-api/parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|既定値です。 パラメーターが入力パラメーターを表すことを示します。|  
-|**adParamInputOutput**|3|パラメーターが入力と出力の両方のパラメーターを表すことを示します。|  
+|**adParamInput**|1|既定値。 パラメーターが入力パラメーターを表すことを示します。|  
+|**adParamInputOutput**|3|パラメーターが入力パラメーターと出力パラメーターの両方を表すことを示します。|  
 |**adParamOutput**|2|パラメーターが出力パラメーターを表すことを示します。|  
 |**adParamReturnValue**|4|パラメーターが戻り値を表すことを示します。|  
-|**adParamUnknown**|0|パラメーターの方向が既知であることを示します。|  
+|**adParamUnknown**|0|パラメーターの方向が不明であることを示します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.ParameterDirection.INPUT|  
-|AdoEnums.ParameterDirection.INPUTOUTPUT|  
-|AdoEnums.ParameterDirection.OUTPUT|  
-|AdoEnums.ParameterDirection.RETURNVALUE|  
-|AdoEnums.ParameterDirection.UNKNOWN|  
+|AdoEnums ParameterDirection|  
+|AdoEnums. ParameterDirection. INPUTOUTPUT|  
+|AdoEnums ParameterDirection|  
+|AdoEnums ParameterDirection|  
+|AdoEnums. ParameterDirection. 不明|  
   
 ## <a name="applies-to"></a>適用対象  
   

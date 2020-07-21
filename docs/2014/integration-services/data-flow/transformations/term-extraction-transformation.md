@@ -22,15 +22,14 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e6ab9017c28d722904d4e5efc22652d5b5a65a2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62899935"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430139"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -44,7 +43,7 @@ ms.locfileid: "62899935"
   
  用語抽出変換は、抽出する各用語のスコアを生成します。 スコアには、TFIDF 値または生の頻度のどちらかを設定できます。生の頻度とは、正規化された用語が入力内に出現する回数のことです。 どちらの場合も、スコアは 0 より大きい実数で表されます。 たとえば、TFIDF スコアの値は 0.5、頻度は 1.0 または 2.0 などのように表されます。  
   
- 用語抽出変換の出力には、2 つの列のみが含まれます。 1 つの列には抽出した用語が含まれ、もう 1 つの列にはスコアが含まれます。 既定の列の名前は**用語**と`Score`します。 入力のテキスト列には複数の用語が含まれる場合があるため、通常、用語抽出変換の出力には、入力よりも多くの行が含まれます。  
+ 用語抽出変換の出力には、2 つの列のみが含まれます。 1 つの列には抽出した用語が含まれ、もう 1 つの列にはスコアが含まれます。 列の既定の名前は**Term**と `Score` です。 入力のテキスト列には複数の用語が含まれる場合があるため、通常、用語抽出変換の出力には、入力よりも多くの行が含まれます。  
   
  抽出した用語がテーブルに書き込まれると、用語参照変換、あいまい参照変換、参照変換など、他の参照変換で使用できます。  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62899935"
   
 -   数字、句読点、および英文字の組み合わせ。 たとえば、 *A23B#99* は、用語 *A23B*を返します。  
   
--   %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
+-   文字、%、@、&、$、#、、 \* :、;、.、、 **、** !,?, \<, > 、+、=、^、~、|、 \\ 、/、(、)、[,]、{、}、"、および '。  
   
     > [!NOTE]  
     >  1 つ以上のピリオド (.) が含まれる頭字語は、複数の文に分割されません。  
@@ -185,6 +184,6 @@ ms.locfileid: "62899935"
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   
- データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
   

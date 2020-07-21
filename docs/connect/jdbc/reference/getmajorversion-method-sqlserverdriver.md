@@ -1,5 +1,5 @@
 ---
-title: getMajorVersion メソッド (SQLServerDriver) |Microsoft Docs
+title: getMajorVersion メソッド (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7439a62f8bdb987bf50d76c12277c5341c0dd354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ac7754008694c49a09c4e2db2d3ca0a8e10d750
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982424"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921284"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>getMajorVersion メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +37,8 @@ public int getMajorVersion()
 ## <a name="return-value"></a>戻り値  
  JDBC ドライバーのメジャー バージョン番号を含む **int** です。  
   
-## <a name="remarks"></a>Remarks  
- この getMajorVersion メソッドは、java. .sql. Driver インターフェイスの getMajorVersion メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getMajorVersion メソッドは、java.sql.Driver インターフェイスの getMajorVersion メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

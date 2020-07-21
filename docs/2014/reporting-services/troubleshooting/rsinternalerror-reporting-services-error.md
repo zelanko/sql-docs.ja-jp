@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 302772c87a1e1d4e5cf3ab1e7c5a304e6100b785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099154"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services エラー
@@ -46,6 +46,6 @@ ms.locfileid: "66099154"
 ## <a name="internal-only"></a>内部使用のみ  
   
 ## <a name="see-also"></a>参照  
- [Start and Stop the Report Server Service](../report-server/start-and-stop-the-report-server-service.md)  
+ [レポート サーバー サービスの開始と停止](../report-server/start-and-stop-the-report-server-service.md)  
   
   

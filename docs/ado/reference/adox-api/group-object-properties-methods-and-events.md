@@ -1,5 +1,5 @@
 ---
-title: オブジェクトのプロパティ、メソッド、およびイベントをグループ化 |Microsoft Docs
+title: Group オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - group object [ADOX], members
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3521c85e8666ee5386ac38c3158331c3f882cb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1c2dd2d773ff0a4605793e1815d051e35e78550
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966235"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761750"
 ---
 # <a name="group-object-properties-methods-and-events"></a>Group オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -25,7 +25,7 @@ ms.locfileid: "67966235"
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [ユーザー コレクション](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users コレクション](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="methods"></a>メソッド  
  [GetPermissions メソッド](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
@@ -35,5 +35,5 @@ ms.locfileid: "67966235"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

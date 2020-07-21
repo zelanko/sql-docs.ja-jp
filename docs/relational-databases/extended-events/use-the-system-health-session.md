@@ -1,6 +1,6 @@
 ---
-title: system_health セッションの使用 | Microsoft Docs
-ms.custom: ''
+title: system_health セッションの使用
+description: system_health 拡張イベント セッションは、SQL Server に含まれています。 このセッションでは、システム データを収集して、データベース エンジンのパフォーマンスをトラブルシューティングします。
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +16,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d58b32c64ff8114b21f815617ce2daa8b54fc242
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756799"
 ---
-# <a name="use-the-systemhealth-session"></a>system_health セッションの使用
+# <a name="use-the-system_health-session"></a>system_health セッションの使用
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 system_health セッションは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に含まれている拡張イベント セッションです。 このセッションは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の起動時に自動的に開始されます。実行中にパフォーマンスに大きな影響が及ぶことはありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のパフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 
 
 > [!IMPORTANT]
-> このシステム正常性セッションを停止、変更、または削除しないことをお勧めします。  
+> この system_health セッションを停止、変更、または削除しないことをお勧めします。 system_health セッション設定に加えられた変更は、今後の製品の更新プログラムによって上書きされる可能性があります。
   
 このセッションでは、次の情報を収集します。  
   
@@ -82,7 +82,7 @@ WHERE xe.name = 'system_health'
   
 イベント ファイルからセッション データを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で利用できる拡張イベント ユーザー インターフェイスを使用します。 詳細については、「 [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)」 (SQL Server での拡張イベントからのターゲット データの詳細表示) を参照してください。
   
-## <a name="restoring-the-systemhealth-session"></a>system_health セッションの復元  
+## <a name="restoring-the-system_health-session"></a>system_health セッションの復元  
 system_health セッションを削除した場合、クエリ エディターで **u_tables.sql** ファイルを実行することでそのセッションを復元できます。 このファイルは次のフォルダーにあります (**C:** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラム ファイルのインストール先ドライブを表し、**MSSQL1x** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメジャー バージョンを表します)。  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

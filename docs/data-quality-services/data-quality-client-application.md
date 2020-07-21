@@ -1,6 +1,5 @@
 ---
-title: Data Quality Client アプリケーション | Microsoft Docs
-ms.custom: ''
+title: Data Quality Client アプリケーション
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: b63c81595cc25820a537a931dafe1e489a49b59f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992216"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899121"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用すると、スタンドアロンのツールを使用してデータ品質に関する操作を実行できます。 このアプリケーションでは、ナレッジ ベースを作成し、データ品質プロジェクトを作成して実行し、管理タスクを実行できます。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "67992216"
 |コンテンツの説明|トピック|  
 |-------------------------|-----------|  
 |DQS でナレッジ ベースとドメインを使用する方法について説明します。|[DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|DQS でデータをクレンジングする方法について説明します。|[データ クレンジング](../data-quality-services/data-cleansing.md)|  
+|DQS でデータをクレンジングする方法について説明します。|[データクレンジング](../data-quality-services/data-cleansing.md)|  
 |DQS で照合を実行する方法について説明します。|[データ照合](../data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
   

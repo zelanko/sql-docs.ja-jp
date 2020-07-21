@@ -1,4 +1,4 @@
-- name: データ コレクション
+- name: データ収集
   href: data-collection.md
 - name: データ コレクションの管理
   href: manage-data-collection.md

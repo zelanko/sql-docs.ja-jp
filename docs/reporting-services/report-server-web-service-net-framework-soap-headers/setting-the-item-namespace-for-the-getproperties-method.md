@@ -1,5 +1,6 @@
 ---
 title: GetProperties メソッドのアイテム名前空間の設定 | Microsoft Docs
+Description: GetProperties メソッドと ItemNamespaceHeader SOAP ヘッダーを使用して、項目のパスまたは ID に基づいてプロパティを取得する方法について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d415d1f8b8dc25143fc704c19b3d1d0c755aa02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: bc0dee4442b18913521deb97c0c9655188f64631
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026156"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216251"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties メソッドのアイテム名前空間の設定
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で <xref:ReportService2010.ItemNamespaceHeader> SOAP ヘッダーを使用すると、アイテムの完全なパスとアイテムの ID という 2 つの異なる識別子に基づいてアイテムのプロパティを取得できます。  

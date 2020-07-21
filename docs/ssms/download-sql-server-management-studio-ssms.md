@@ -1,8 +1,8 @@
 ---
-title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
+title: SQL Server Management Studio (SSMS) のダウンロード
+description: 最新バージョンの SQL Server Management Studio (SSMS) をダウンロードします。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,14 +21,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-ms.custom: ''
-ms.date: 07/26/2019
-ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.reviewer: sstein, maghan
+ms.custom: seo-lt-2019
+ms.date: 04/07/2020
+ms.openlocfilehash: 294a1ee5cf728498f9564f93ac1f61815ed574f1
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68823124"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138267"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -40,60 +41,78 @@ SSMS を使用すると、データベースとデータ ウェアハウスが�
 
 SSMS は無料です。
 
-## <a name="download-ssms-182"></a>SSMS 18.2 のダウンロード
+## <a name="download-ssms"></a>SSMS のダウンロード
 
-**SSMS 18.2 をご利用いただけるようになりました。これは "*SQL Server Management Studio*" の GA (一般提供) 最新版であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対応しています。**
+**[![ダウンロード](media/download-icon.png) SQL Server Management Studio (SSMS) のダウンロード](https://aka.ms/ssmsfullsetup)**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.2 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2099720)**
+SSMS 18.5 は、最新の一般提供 (GA) バージョンの SSMS です。 以前の GA バージョンの SSMS 18 がインストールされている場合は、SSMS 18.5 をインストールするとそれが 18.5 にアップグレードされます。
 
-SSMS 18.2 は SSMS の GA (一般提供) 最新版です。 以前の GA バージョンの SSMS 18 がインストールされている場合、SSMS 18.2 をインストールすると、18.2 にアップグレードされます。 以前の "*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.2 をインストールしてください。
+### <a name="version-information"></a>バージョン情報
 
-**バージョン情報**
-
-- リリース番号:18.2  
-- ビルド番号:15.0.18142.0  
-- リリース日:2019 年 7 月 25 日  
+- リリース番号:18.5  
+- ビルド番号:15.0.18330.0  
+- リリース日: 2020 年 4 月 7 日  
 
 コメントや提案がある場合、または問題を報告する場合、SSMS チームに連絡する最適な方法は [UserVoice](https://aka.ms/sqlfeedback) です。
 
-SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 18.x は以前のバージョンとは別にサイド バイ サイドでインストールされるので、両方のバージョンを使用できます。
+SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 18.x は以前のバージョンとは別にサイド バイ サイドでインストールされるので、両方のバージョンを使用できます。 ただし、"*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.5 をインストールする必要があります。 プレビュー版がインストールされているかどうかを確認するには、 **[ヘルプ]、[バージョン情報]** の順に移動します。
 
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、**Microsoft SQL Server Management Studio 18** というラベルが付いています。
 
-## <a name="available-languages-ssms-182"></a>使用できる言語 (SSMS 18.2)
+> [!Note]
+> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版](https://aka.ms/downloadssmsusenglish)をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
+
+## <a name="available-languages"></a>使用できる言語
 
 SSMS の今回のリリースは、次の言語でインストールできます。
 
-SQL Server Management Studio 18.2:  
-[中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
+SQL Server Management Studio 18.5:  
+[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールです。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
 
-## <a name="new-in-this-release-ssms-182"></a>このリリースの新機能 (SSMS 18.2)
+## <a name="whats-new"></a>新機能
 
-|  新しい項目  |  詳細  |
-|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Always Encrypted | Azure の構成証明をサポートするように、エンクレーブ プロバイダーを更新しました。 |
-| Intellisense/エディター | データ分類に対するサポートを追加しました。  |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS インデックス ダイアログ - 新しいインデックス オプション OPTIMIZE_FOR_SEQUENTIAL_KEY を追加しました。 |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | Intellisense サポートを追加しました。 |
-| クエリの実行または結果 | 指定したクエリでその実行を完了したときに、追跡するメッセージに "完了時刻" を追加しました。 |
-| クエリの実行または結果  | より多くのデータを表示し (結果をテキストで表示)、セルに格納することを許可します (結果をグリッドに表示)。 SSMS では、どちらも最大 200 万文字まで許可されるようになりました (それぞれ 256 および 64,000 から増加)。 これにより、ユーザーがグリッドのセルから 43,680 文字を超えて取得できないという問題にも対処しました。 |
-| プラン表示 | インライン スカラー UDF 機能が有効な場合、QueryPlan に新しい属性を追加しました (ContainsInlineScalarTsqlUdfs)。 |
-| SMO | "機能の制限"* に対するサポートが追加されました。 この機能自体については、「[機能の制限](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)」を参照してください。 評価拡張機能については、「[Introducing SQL Assessment API](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570)」(SQL Assessment API の概要) を参照してください。 |
-| Integration Services (SSIS) | Azure の SSIS パッケージ スケジューラに対するパフォーマンスの最適化 |
-|  |  |
+このリリースの新機能の詳細については、「[SSMS リリース ノート](release-notes-ssms.md)」を参照してください。
 
-このリリースの新機能の詳細については、[SSMS のリリース ノート](release-notes-ssms.md)に関するページをご覧ください。
+このリリースには、[既知の問題](release-notes-ssms.md#known-issues-185)がいくつかあります。
 
-## <a name="supported-sql-offerings-ssms-182"></a>サポートされる SQL 製品 (SSMS 18.2)
+## <a name="previous-versions"></a>以前のバージョン
 
-* このバージョンの SSMS は、すべての[サポート対象バージョンである SQL Server 2008 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するための最大レベルのサポートを提供します。
-* また、SSMS 18.x は、SSMS 17.x、SSMS 16.x または SQL Server 2014 SSMS 以前とサイドバイサイドでインストールできます。
-* SQL Server Integration Services (SSIS) - SSMS バージョン 17.x 以降では、レガシ SQL Server Integration Services サービスへの接続はサポートされません。 以前のバージョンのレガシ Integration Services に接続するには、SQL Server のバージョンに対応する SSMS のバージョンを使用します。 たとえば、レガシ SQL Server 2016 Integration Services サービスに接続する場合は、SSMS 16.x を使用します。 SSMS 17.x および SSMS 16.x は、同じコンピューターにサイドバイサイドでインストールすることができます。 SQL Server 2012 のリリース以降では、SSIS カタログ データベースである SSISDB を使用して、Integration Services パッケージの格納、管理、実行、監視を行うことをお勧めします。 詳細については、「[SSIS カタログ](../integration-services/catalog/ssis-catalog.md)」をご覧ください。
+この記事は、最新バージョンの SSMS のみを対象としています。 以前のバージョンの SSMS をダウンロードするには、「[Previous SSMS releases](../ssms/release-notes-ssms.md#previous-ssms-releases)」 (以前の SSMS リリース) を参照してください。
 
-## <a name="supported-operating-systems-ssms-182"></a>サポートされるオペレーティング システム (SSMS 18.2)
+## <a name="unattended-install"></a>無人インストール
+
+コマンド プロンプト スクリプトを使用して SSMS をインストールすることもできます。
+
+GUI プロンプトを使用しないでバックグラウンドで SSMS をインストールしたい場合は、次の手順に従います。
+
+1. 管理者特権を使用してコマンド プロンプトを起動します。
+
+2. コマンド プロンプトで、次のコマンドを入力します。
+
+    ```console
+    start "" <path where SSMS-ENU.exe file is located> /Quiet SSMSInstallRoot=<path where you want to install SSMS>
+    ```
+
+    例:
+
+    ```console
+    start "" %systemdrive%\SSMSfrom\SSMS-Setup-ENU.exe /Quiet SSMSInstallRoot=%systemdrive%\SSMSto
+    ```
+
+    */Quiet* ではなく、 */Passive* を渡して、セットアップ UI を表示することもできます。
+
+3. すべて正常に進んだ場合、例に基づいて %systemdrive%\SSMSto\Common7\IDE\Ssms.exe" にインストールされた SSMS を確認できます。 何らかの問題が発生した場合は、返されたエラー コードを調べたり、%TEMP%\SSMSSetup でログ ファイルを確認したりすることが可能です。
+
+## <a name="supported-sql-offerings-ssms-185"></a>サポートされる SQL オファリング (SSMS 18.5)
+
+- このバージョンの SSMS は、すべての[サポート対象バージョンである SQL Server 2008 から [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) で動作し、Azure SQL Database および Azure SQL Data Warehouse で最新のクラウド機能と連携するための最大レベルのサポートを提供します。
+- また、SSMS 18.x は、SSMS 17.x、SSMS 16.x または SQL Server 2014 SSMS 以前とサイドバイサイドでインストールできます。
+- SQL Server Integration Services (SSIS) - SSMS バージョン 17.x 以降では、レガシ SQL Server Integration Services サービスへの接続はサポートされません。 以前のバージョンのレガシ Integration Services に接続するには、SQL Server のバージョンに対応する SSMS のバージョンを使用します。 たとえば、レガシ SQL Server 2016 Integration Services サービスに接続する場合は、SSMS 16.x を使用します。 SSMS 17.x および SSMS 16.x は、同じコンピューターにサイドバイサイドでインストールすることができます。 SQL Server 2012 のリリース以降では、SSIS カタログ データベースである SSISDB を使用して、Integration Services パッケージの格納、管理、実行、監視を行うことをお勧めします。 詳細については、「[SSIS カタログ](../integration-services/catalog/ssis-catalog.md)」をご覧ください。
+
+## <a name="supported-operating-systems-ssms-185"></a>サポートされるオペレーティング システム (SSMS 18.5)
 
 SSMS の今回のリリースでは、最新の Service Pack を使用した次の 64 ビット プラットフォームがサポートされます。
 
@@ -108,25 +127,17 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 <sup>*</sup> バージョン 1607 (10.0.14393) 以降が必要
 
 > [!NOTE]
-> SSMS は Windows 上でのみ実行されます。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行される新しいクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
-
-## <a name="release-notes-ssms-182"></a>リリース ノート (SSMS 18.2)
-
-このリリースには、[既知の問題](release-notes-ssms.md#known-issues-181)がいくつかあります。
-
-このリリースの詳細については、[SSMS のリリース ノート](release-notes-ssms.md)に関するページをご覧ください。
-
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-[SQL Server Management Studio の以前のリリース](../ssms/release-notes-ssms.md#previous-ssms-releases)
+> SSMS は Windows (AMD または Intel) 上でのみ動作します。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行される新しいクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [チュートリアル: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [チュートリアル:SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio のドキュメント](sql-server-management-studio-ssms.md)
-- [追加の更新プログラムとサービス パック](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [最新の更新プログラム](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Azure データ アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

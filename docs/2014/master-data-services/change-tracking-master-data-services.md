@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4092257bb593439ef4851eca8b554f0f5ae7ade
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972002"
 ---
 # <a name="change-tracking-master-data-services"></a>変更の追跡 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、変更の追跡グループを使用して、属性の値が変化したときにアクションを実行できます。 新しい値がどうなるかわからないけれども、変更が発生した場合にそれを知りたいときに、変更の追跡を使用します。  

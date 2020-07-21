@@ -1,11 +1,7 @@
 ---
-title: 方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 名前の変更とリファクタリングによってデータベース オブジェクトを変更する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097472"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244237"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法
+
 Transact\-SQL エディターの [リファクター] コンテキスト メニューを使用すると、オブジェクトの名前を変更することも別のスキーマに移動することもできます。また、変更をコミットする前に、影響を受ける領域をすべてプレビューすることもできます。 [リファクター] メニューでは、データベース オブジェクトへのすべての参照を完全修飾することも、データベース プロジェクト内の `SELECT` ステートメントに含まれるワイルドカード文字を展開することもできます。  
   
 > [!NOTE]  
@@ -31,7 +32,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-rename-a-type"></a>型名を変更するには  
   
-1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、 **[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
+1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、**[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
   
 2.  スクリプト内の `[Products]` を右クリックし、 **[リファクター]** をポイントして **[名前の変更]** をクリックします。  
   
@@ -39,7 +40,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 4.  次の画面では、この名前変更操作による影響を受けるスクリプトの一覧をプレビューできます。 具体的には、`Products` を参照しているすべての箇所が強調表示されます。 この操作は、前の手順で学習した [すべての参照の検索] で行われるタスクによく似ています。 上のペインで任意の部分をクリックし、スクリプト内の実際の変更 (緑色で強調表示されます) を下のペインで確認します。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
 6.  テーブル デザイナーまたは Transact\-SQL エディターで既に開いていたスクリプト ファイルについても、変化が生じた箇所は、Transact\-SQL エディターの左側の緑色のバーで強調表示されています。  
   

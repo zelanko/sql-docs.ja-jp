@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072398"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -53,7 +53,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  文字列を返す式を指定します。 連結したリテラル値、関数、および変数を含むことができます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  メッセージ文字列は、Unicode 以外の文字列の場合は 8,000 バイトまで指定でき、Unicode 文字列の場合は 4,000 バイトまで指定できます。 これより長い文字列は切り詰められます。 **Varchar (max)** と **nvarchar (max)** データ型は、**varchar(8000)** および **nvarchar(4000)** ではなくなったデータ型に切り詰められます。  
   
  RAISERROR を使用してメッセージを返すこともできます。 RAISERROR には、PRINT にはない次のような利点があります。  
@@ -64,7 +64,7 @@ PRINT msg_str | @local_variable | string_expr
   
 -   RAISERROR は、sp_addmessage システム ストアド プロシージャを使用して作成したユーザー定義メッセージを返すために使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-conditionally-executing-print-if-exists"></a>A. 条件付きで PRINT を実行する (IF EXISTS)  
  次の例では、`PRINT` ステートメントを使用して条件に応じてメッセージを返します。  
@@ -98,7 +98,7 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-conditionally-executing-print"></a>C. 条件付きで PRINT を実行する  
  次の例では、`PRINT` ステートメントを使用して条件に応じてメッセージを返します。  

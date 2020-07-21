@@ -1,6 +1,6 @@
 ---
-title: '[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ) | Microsoft Docs'
-ms.custom: ''
+title: '[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e94b298c6514a9d03c8b6cb45f0e1614a1ffa91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: bb8af410d7be3def6f5ddcad84f80d33147ebe4d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024230"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306700"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

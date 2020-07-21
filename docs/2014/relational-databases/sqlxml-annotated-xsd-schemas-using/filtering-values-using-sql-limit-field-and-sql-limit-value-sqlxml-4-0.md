@@ -1,5 +1,5 @@
 ---
-title: Sql:limit の値を使用してフィルター処理、および -(SQLXML 4.0) |マイクロソフトのドキュメント
+title: 'Sql: limit-field および sql: limit-value を使用した値のフィルター処理 (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,27 +15,26 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062998"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field および sql:limit-value を使用した、値のフィルター選択 (SQLXML 4.0)
   データベース クエリから返される行を、一定の制限値に基づいて制限することができます。 制限の対象となるデータベース列を識別し、返されるデータのフィルター選択に使用する制限値を指定するには、`sql:limit-field` 注釈と `sql:limit-value` 注釈を使用します。  
   
  `sql:limit-field` 注釈では、制限の対象となる列を指定します。この注釈は、マップされる要素または属性ごとに使用できます。  
   
- `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 `sql:limit-value` 注釈は省略可能です。 場合`sql:limit-value`が指定されていない場合、NULL 値が使用されます。  
+ `sql:limit-value` 注釈では、`sql:limit-field` 注釈で指定された列に適用する制限値を指定します。 `sql:limit-value` 注釈は省略可能です。 `sql:limit-value`を指定しない場合は、NULL 値が想定されます。  
   
 > [!NOTE]  
 >  マップされる SQL 列が `sql:limit-field` 型の場合に `real` を指定すると、SQLXML 4.0 では XML スキーマで指定されているとおり、`sql:limit-value` 指定値として `nvarchar` が変換されます。 ここで、10 進数の制限値を完全な科学的表記法で指定する必要があります。 詳細については、後の例 B を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例を使用して実際のサンプルを作成するには、次がインストールされている必要があります。  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
@@ -53,7 +52,7 @@ ms.locfileid: "66013808"
   
  顧客には、発送先住所と請求先住所のいずれかまたは両方が設定されています。 AddressType 列の値は Shipping と Billing です。  
   
- これは、マッピング スキーマで、 **ShipTo**スキーマ属性が Addresses リレーションの StreetAddress 列にマップされます。 この属性に対して返される値は指定することでのみ出荷先住所に制限されます、`sql:limit-field`と`sql:limit-value`注釈。 同様に、 **BillTo**スキーマ属性が顧客の請求先住所だけを返します。  
+ これは、 **ShipTo** schema 属性が Addresses 関係の StreetAddress 列にマップされるマッピングスキーマです。 この属性に対して返される値は、注釈と注釈を指定することによって、出荷先住所に限定され `sql:limit-field` `sql:limit-value` ます。 同様に、 **BillTo** schema 属性では、顧客の請求先住所のみが返されます。  
   
  スキーマは次のようになります。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66013808"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   
-1.  2 つのテーブルを作成、 **tempdb**データベース。  
+1.  **Tempdb**データベースに2つのテーブルを作成します。  
   
     ```  
     USE tempdb  
@@ -146,9 +145,9 @@ ms.locfileid: "66013808"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -170,7 +169,7 @@ ms.locfileid: "66013808"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- これは、マッピング スキーマで、 **OrderID**注文の詳細属性が orders リレーションの OrderID 列にマップされます。 この属性に対して返される値は 2.0000000 値を持つもののみに制限されています-001 (0.2) が指定されて、**割引**属性を使用して、`sql:limit-field`と`sql:limit-value`注釈。  
+ これは、注文の詳細の**orderid**属性が orders リレーションシップの orderid 列にマップされるマッピングスキーマです。 この属性に対して返される値は、および注釈を使用して、**割引**属性に対して指定されている 2.0000000 e-001 (0.2) の値のみに制限され `sql:limit-field` `sql:limit-value` ます。  
   
  スキーマは次のようになります。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "66013808"
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   
-1.  2 つのテーブルを作成、 **tempdb**データベース。  
+1.  **Tempdb**データベースに2つのテーブルを作成します。  
   
     ```  
     USE tempdb  
@@ -287,7 +286,7 @@ ms.locfileid: "66013808"
   
 5.  Windows エクスプローラーで TestQuery.vbs ファイルをクリックして実行します。  
   
-     これは、結果です。  
+     結果を次に示します。  
   
     ```  
     <root>  
@@ -305,9 +304,9 @@ ms.locfileid: "66013808"
     ```  
   
 ## <a name="see-also"></a>参照  
- [float、real および #40 です。TRANSACT-SQL と #41 です。](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar および nvarchar &#40;Transact SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
- [SQL Server Native Client をインストールします。](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [クエリでの XSD スキーマを使用して注釈が付けられた&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Transact-sql&#41;の float 型と real 型の &#40;](/sql/t-sql/data-types/float-and-real-transact-sql)   
+ [nchar および nvarchar &#40;Transact-sql&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+ [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
+ [クエリでの注釈付き XSD スキーマの使用 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

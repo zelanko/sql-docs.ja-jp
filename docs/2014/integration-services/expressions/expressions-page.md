@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba4e73ea495456e8f9e452108ab09106a65543ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898034"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428719"
 ---
 # <a name="expressions-page"></a>[式] ページ
   **[式]** ページを使用すると、プロパティ式を編集でき、 **[プロパティ式エディター]** ダイアログ ボックスや **[式ビルダー]** ダイアログ ボックスにアクセスできます。  
@@ -28,15 +27,15 @@ ms.locfileid: "62898034"
   
  式の作成とプロパティ式の使用の詳細については、「 [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md) ダイアログ ボックスや [パッケージでプロパティ式を使用する](use-property-expressions-in-packages.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **式 (...)**  
  [...] をクリックすると、 **[プロパティ式エディター]** ダイアログ ボックスが表示されます。 詳細については、「 [プロパティ式エディター](property-expressions-editor.md)」を参照してください。  
   
- **\<プロパティ名>**  
+ **\<property name>**  
  [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [式ビルダー](expression-builder.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; 変数の Integration Services &#40;](../integration-services-ssis-variables.md)   
  [システム変数](../system-variables.md)   
  [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)  
   

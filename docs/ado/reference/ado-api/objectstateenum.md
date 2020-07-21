@@ -13,36 +13,36 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectStateEnum enumeration [ADO]
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f233104501a17f384eb837d5e7390705a44ddc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931923"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762301"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
-オブジェクトがオープンかクローズは、コマンドの実行またはデータを取得するデータ ソースに接続するかどうかを指定します。  
+オブジェクトが開いているか閉じられているか、データソースに接続しているか、コマンドを実行しているか、データを取得しているかを指定します。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adStateClosed**|0|オブジェクトが閉じられたことを示します。|  
-|**adStateOpen**|1|オブジェクトが開かれていることを示します。|  
-|**adStateConnecting**|2|オブジェクトが接続することを示します。|  
-|**adStateExecuting**|4|オブジェクトのコマンドが実行されていることを示します。|  
+|**adStateClosed**|0|オブジェクトが閉じていることを示します。|  
+|**adStateOpen**|1|オブジェクトが開いていることを示します。|  
+|**adStateConnecting**|2|オブジェクトが接続していることを示します。|  
+|**adStateExecuting**|4|オブジェクトがコマンドを実行していることを示します。|  
 |**adStateFetching**|8|オブジェクトの行が取得されていることを示します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
 |定数|  
 |--------------|  
-|AdoEnums.ObjectState.CLOSED|  
-|AdoEnums.ObjectState.OPEN|  
-|AdoEnums.ObjectState.CONNECTING|  
-|AdoEnums.ObjectState.EXECUTING|  
-|AdoEnums.ObjectState.FETCHING|  
+|AdoEnums を終了しました。|  
+|AdoEnums を開きます。|  
+|AdoEnums。接続しています。|  
+|AdoEnums を実行しています。|  
+|AdoEnums を取得します。|  
   
 ## <a name="applies-to"></a>適用対象  
   

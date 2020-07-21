@@ -1,5 +1,5 @@
 ---
-title: イミディ エイト AddNew とバッチ モードの使用 |Microsoft Docs
+title: イミディエイトモードとバッチモードで AddNew を使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 93fc9cb388440a8efd9099d6ae82b110cb60b2d0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923625"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763073"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>イミディエイト モードとバッチ モードで AddNew を使用する
-動作、 **AddNew**メソッドの更新モードによって異なります、 **Recordset**オブジェクトとかどうかを渡す、 *FieldList*と*値*引数。  
+**AddNew**メソッドの動作は、**レコードセット**オブジェクトの更新モードと、 *FieldList*引数と*Values*引数を渡すかどうかによって異なります。  
   
- 即時更新モードで (これで、プロバイダーに変更を書き込みます、基になるデータ ソースを呼び出す、**更新**メソッド) を呼び出すと、 **AddNew**メソッドの引数を設定せず、 **EditMode**プロパティを**adEditAdd します。** プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、 **Update**メソッドは、データベースに新しいレコードをポストし、リセット、 **EditMode**プロパティを**adEditNone します。** 渡す場合、 *FieldList*と*値*引数、ADO はすぐに、新しいレコードをデータベースに投稿 (ありません**Update**呼び出しが必要)、 **EditMode**プロパティの値が変更されない (**adEditNone**)。  
+ **Update**メソッドを呼び出した後、プロバイダーが基になるデータソースに変更を書き込む即時更新モードでは、引数を指定せずに**AddNew**メソッドを呼び出すと、 **EditMode**プロパティが adEditAdd に設定され**ます。** プロバイダーは、フィールド値の変更をローカルにキャッシュします。 **Update**メソッドを呼び出すと、新しいレコードがデータベースにポストされ、 **EditMode**プロパティが adEditNone にリセットされ**ます。** *FieldList*引数と*Values*引数を渡すと、ADO はすぐに新しいレコードをデータベースにポストします (**更新**呼び出しは必要ありません)。**EditMode**プロパティ値は変更されません (**adEditNone**)。  
   
- バッチ更新モードで呼び出して、 **AddNew**メソッドの引数を設定せず、 **EditMode**プロパティを**adEditAdd**。 プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、**更新**メソッドは、現在、新しいレコードを追加します**レコード セット**をリセットし、 **EditMode**プロパティを**adEditNone**が、呼び出すまで、プロバイダーが基になるデータベースへの変更を投稿できません、 **UpdateBatch**メソッド。 渡す場合、 *FieldList*と*値*引数、ADO の記憶域のキャッシュ プロバイダーに新しいレコードを送信する; を呼び出す必要があります、 **UpdateBatch**メソッドを新しい投稿基になるデータベースに記録します。 詳細については**Update**と**UpdateBatch**を参照してください[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)します。
+ バッチ更新モードでは、引数を指定せずに**AddNew**メソッドを呼び出すと、 **EditMode**プロパティが**adEditAdd**に設定されます。 プロバイダーは、フィールド値の変更をローカルにキャッシュします。 **Update**メソッドを呼び出すと、新しいレコードが現在の**レコードセット**に追加され、 **EditMode**プロパティが**adEditNone**にリセットされます。ただし、プロバイダーは、 **UpdateBatch**メソッドを呼び出すまで、基になるデータベースに変更を送信しません。 *FieldList*引数と*Values*引数を渡すと、ADO はキャッシュ内のストレージ用に新しいレコードをプロバイダーに送信します。新しいレコードを基になるデータベースにポストするには、 **UpdateBatch**メソッドを呼び出す必要があります。 **Update**と**UpdateBatch**の詳細については、「[データの更新と永続](../../../ado/guide/data/updating-and-persisting-data.md)化」を参照してください。

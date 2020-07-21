@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102588"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
@@ -41,9 +41,9 @@ ms.locfileid: "66102588"
      レポートを閉じても、レポートはブラウザーのキャッシュから削除されません。 レポートへの接続を切断するには、ブラウザーを閉じる必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポートおよび他のアイテムの検索 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートやその他のアイテム &#40;レポートビルダーおよび SSRS&#41;を検索する](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../contents-page-report-manager.md)   
+ [レポートの検索、表示、および管理 &#40;レポートビルダーと SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

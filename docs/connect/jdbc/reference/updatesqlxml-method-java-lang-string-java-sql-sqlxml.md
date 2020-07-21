@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 60021881-ef83-499b-9977-e20ff23c1312
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e2772b43c084e1780b8e65cd6425b67d01092f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac198bb6b235768eb6c6223dc7cddfc93ff9b9ae
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998288"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919615"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>updateSQLXML (java.lang.String, java.sql.SQLXML) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +37,13 @@ public void updateSQLXML(java.lang.String columnLabel,
   
  *xmlObject*  
   
- SQLXML オブジェクト。  
+ SQLXML オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- このアップデートの Qlxml メソッドは、java. ResultSet インターフェイスのアップデートの Qlxml メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateSQLXML メソッドは、java.sql.ResultSet インターフェイスの updateSQLXML メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateSQLXML メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

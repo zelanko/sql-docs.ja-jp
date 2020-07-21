@@ -18,18 +18,18 @@ helpviewer_keywords:
 - row distribution [SQL Server]
 - NTILE function
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66841ba6ac7e278cc2353a126675cbb2cc57c48f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914903"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010858"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   順序付けられたパーティションの行を、指定した数のグループに分散します。 グループには、1 から始まる番号が付けられます。 行ごとに、NTILE はその行が属しているグループの番号を返します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67914903"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -49,17 +49,17 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 PARTITION BY の構文については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
   
  \<order_by_clause>  
- NTILE 値がパーティション内の行に割り当てられる順序を決定します。 \<<order_by_clause> が順位付け関数で使用される場合、整数値で列を表すことはできません。  
+ NTILE 値がパーティション内の行に割り当てられる順序を決定します。 \<order_by_clause> が順位付け関数で使用される場合、整数値で列を表すことはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パーティション内の行の数がで割り切れるかどうか *であれば、任意,* 、2 つのサイズが異なる 1 つのメンバーによってグループが生成されます。 OVER 句で指定される順序では、大きいグループが小さいグループよりも前になります。 たとえば、行の総数が 53 でグループの数が 5 の場合、最初の 3 つのグループに 11 行が割り当てられ、残りの 2 つのグループにはそれぞれ 10 行が割り当てられます。 一方、行の総数がグループの数で割り切れる場合、行はそれらのグループに均等に割り当てられます。 たとえば、行の総数が 50 で、5 つのグループがある場合、各グループに 10 行ずつ割り当てられます。  
   
  NTILE は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dividing-rows-into-groups"></a>A. 行をグループに分割する  
  次の例では、年度累計の売上高に基づいて、行を 4 つの従業員グループに分割します。 行の総数がグループの数で割り切れないため、最初の 2 つのグループに 4 つの行が割り当てられ、残りのグループにはそれぞれ 3 つの行が割り当てられます。  
@@ -69,7 +69,7 @@ USE AdventureWorks2012;
 GO  
 SELECT p.FirstName, p.LastName  
     ,NTILE(4) OVER(ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     , a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -115,7 +115,7 @@ DECLARE @NTILE_Var int = 4;
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
-    ,CONVERT(nvarchar(20),s.SalesYTD,1) AS SalesYTD  
+    ,CONVERT(NVARCHAR(20),s.SalesYTD,1) AS SalesYTD  
     ,a.PostalCode  
 FROM Sales.SalesPerson AS s   
 INNER JOIN Person.Person AS p   
@@ -150,7 +150,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. 行をグループに分割する  
  次の例では、各自に割り当てられた 2003 年度の販売ノルマに基づいて、一連の販売員を 4 つのグループに分割します。 行の総数がグループの数で割り切れないため、最初のグループに 5 つの行が割り当てられ、残りのグループにはそれぞれ 4 つの行が割り当てられます。  
@@ -159,7 +159,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   
     ON e.EmployeeKey = sq.EmployeeKey  
@@ -199,7 +199,7 @@ Tsoflias          4          867,000.00
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
-       CONVERT (varchar(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
+       CONVERT (VARCHAR(13), SUM(SalesAmountQuota), 1) AS SalesQuota  
    ,st.SalesTerritoryCountry  
 FROM dbo.DimEmployee AS e   
 INNER JOIN dbo.FactSalesQuota AS sq   
@@ -239,7 +239,7 @@ Ansman-Wolfe      2        1,183,000.00     United States
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
  [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [順位付け関数 &#40;TRANSACT-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

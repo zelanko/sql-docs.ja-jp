@@ -1,5 +1,5 @@
 ---
-title: SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する | Microsoft Docs
+title: データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0caaa512c365853eb2c6eb6149cc3fbdf0bf6fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4598eba24c44bddb66ef97120d4c1decc9ca7d63
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114512"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903939"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する
 
@@ -31,7 +31,7 @@ ms.locfileid: "68114512"
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
 -   [フラット ファイル (テキスト ファイル)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
--   [アクセス](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
+-   [Access (アクセス)](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Azure Blob Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
@@ -40,7 +40,7 @@ ms.locfileid: "68114512"
 ## <a name="connect-to-other-data-providers"></a>他のデータ プロバイダーへの接続
 この一覧にないデータ ソースに接続する方法については、「[The Connection Strings Reference](https://www.connectionstrings.com/)」(接続文字列リファレンス) をご覧ください。 このサード パーティのサイトには、接続文字列のサンプルと、データ プロバイダーおよび必要な接続情報に関する詳細な情報が記載されています。
 
-## <a name="related"></a> 関連タスクとコンテンツ  
+## <a name="related-tasks-and-content"></a><a name="related"></a> 関連タスクとコンテンツ  
 その他の基本的なタスクは次のとおりです。
 -   **ウィザードのしくみの簡単な例を参照してください。**
 

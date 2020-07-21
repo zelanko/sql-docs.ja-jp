@@ -1,5 +1,5 @@
 ---
-title: カーソル (ODBC) を使用して、|マイクロソフトのドキュメント
+title: カーソルの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63718cf227197cfe6c009311339924a05fd6c665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200485"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018907"
 ---
 # <a name="use-cursors-odbc"></a>カーソルの使用 (OLE DB)
     
@@ -43,7 +42,7 @@ ms.locfileid: "63200485"
   
      列方向のバインドを使用します。  
   
-     \- - または -  
+     \- または  
   
      行方向のバインドを使用します。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63200485"
   
      使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [カーソルの操作方法に関するトピックを使用して&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>参照  
+ [カーソルの使用方法に関するトピック &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

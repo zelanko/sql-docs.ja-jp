@@ -11,14 +11,14 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 486babd40e6afdb576772dc825b8d080c67d13dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c28f8dbaa649e0755c6f18f7cc0f1485f022e4a6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051191"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289558"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 式)
 
@@ -41,7 +41,7 @@ HEX(integer_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *integer_expression* が null の場合、HEX は null を返します。  
   
  *integer_expression* 引数は整数に評価される必要があります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  

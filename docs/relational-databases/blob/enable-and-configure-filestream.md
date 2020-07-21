@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM の有効化と構成 | Microsoft Docs
+description: FILESTREAM を使用するには、まず、それを SQL Server データベース エンジン インスタンスで有効にします。 SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法を学習します。
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d0d82135fae0c05c4ad5b33868f66a74db847df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767983"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   FILESTREAM の使用を開始するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで FILESTREAM を有効にする必要があります。 このトピックでは、SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法について説明します。  
   
-##  <a name="enabling"></a> FILESTREAM の有効化  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> FILESTREAM の有効化  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM の設定の有効化と変更  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68085377"
   
 8.  この共有に格納された FILESTREAM データにリモート クライアントからアクセスする必要がある場合は、 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]** を選択します。  
   
-9. **[適用]** をクリックします。  
+9. **[Apply]** をクリックします。  
   
 10. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[新しいクエリ]** をクリックしてクエリ エディターを表示します。  
   
@@ -58,11 +59,9 @@ ms.locfileid: "68085377"
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再開します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="best"></a> ベスト プラクティス  
+##  <a name="best-practices"></a><a name="best"></a> ベスト プラクティス  
   
-###  <a name="config"></a> 物理的な構成と保守  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> 物理的な構成と保守  
  FILESTREAM ストレージ ボリュームを設定する場合は、次のガイドラインを考慮してください。  
   
 -   FILESTREAM コンピューター システム上で短いファイル名を無効にします。 短いファイル名の作成には、長い時間がかかります。 短いファイル名を無効にするには、Windows **fsutil** ユーティリティを使用します。  
@@ -79,14 +78,14 @@ ms.locfileid: "68085377"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID レベル|書き込みパフォーマンス|読み取りパフォーマンス|フォールト トレランス|Remarks|  
-|RAID 5|標準|標準|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
+|RAID レベル|書き込みパフォーマンス|読み取りパフォーマンス|フォールト トレランス|解説|  
+|RAID 5|Normal|Normal|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
 |RAID 0|[非常に良い]|[非常に良い]|なし||  
 |RAID 5 + ストライピング|[非常に良い]|[非常に良い]|[非常に良い]|最も高価なオプションです。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> 物理的なデータベース設計  
+###  <a name="physical-database-design"></a><a name="database"></a> 物理的なデータベース設計  
  FILESTREAM データベースを設計するときは、次のガイドラインを考慮してください。  
   
 -   FILESTREAM 列には対応する **uniqueidentifier**ROWGUID 列が存在する必要があります。 また、この種のテーブルには、一意なインデックスが存在する必要があります。 通常、このインデックスは、クラスター化インデックスではありません。 データベースのビジネス ロジックでクラスター化インデックスが求められる場合は、インデックスに格納されている値がランダムでないことを確認する必要があります。 格納されている値がランダムである場合、テーブルの行が追加または削除されるたびにインデックスの並べ替えが発生します。  

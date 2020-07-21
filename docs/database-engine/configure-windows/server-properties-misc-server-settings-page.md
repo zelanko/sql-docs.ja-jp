@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([その他のサーバーの設定] ページ) | Microsoft Docs
+description: SQL Server のサーバー設定について説明します。 新しいユーザーの既定の言語、クエリのタイムアウトなどの動作を制御するオプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd0f964c344901da4309605949ecb31d8c893adc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726609"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>[サーバーのプロパティ] - [その他のサーバーの設定] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、サーバーの設定を表示したり、変更したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ユーザーの既定の言語]**  
  新しく作成するすべてのログインの既定の言語を指定します。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68030834"
  クエリを実行する最大時間を指定します。 クエリ コストとは、特定のハードウェア構成でクエリを実行するために必要とされる予測所要時間を秒単位で表したものです。 既定では、クエリ カバナはオフになっており、すべてのクエリは実行が許可されています。 このオプションをオンにする場合は、下のテキスト ボックスに時間制限を入力する必要があります。 0 以外の正の値を指定すると、クエリ ガバナーは、見積コストがこの値を超えるクエリの実行を許可しません。  
   
  **[2 桁の年を以下の間にある年として解釈]**  
- 2 桁の年の値を解釈するために 100 年の日付範囲を指定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、2 桁の日付値を解釈するときに、その 2 桁が下 2 桁となる年を、指定された範囲の中から参照します。  
+ 2 桁の年の値を解釈するために 100 年の日付範囲を指定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、2 桁の日付値を解釈するときに、その 2 桁で終わる年を、指定された範囲の中から参照します。  
   
  右のボックスで終了年を設定します。 終了年が保存されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の左のボックスに自動的に開始年が入力されます。  
   

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab1c1ec84672a4ab199113549cff55852b96491
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715454"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|4186|  
 |イベント ソース|MSSQLSERVER|  
@@ -41,7 +41,7 @@ ms.locfileid: "68123097"
   
 -   ユーザー データやシステム データにアクセスするユーザー定義関数を定義に含む計算列  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
 **サブクエリで定義されたビュー列**  
   
 次の例では、選択リストでサブクエリを使用して `State` 列を定義するビューを作成します。 次に、UPDATE ステートメントで OUTPUT 句の `State` 列を参照すると、選択リストのサブクエリが原因でエラーが発生します。  

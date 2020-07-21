@@ -1,5 +1,5 @@
 ---
-title: オプション (SQL Server オブジェクト エクスプ ローラーのコマンド) |Microsoft Docs
+title: オプション (SQL Server オブジェクトエクスプローラーコマンド) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27aeece212883fbfe28fe5eed408e594052fa204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058543"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>オプション (SQL Server オブジェクト エクスプ ローラーのコマンド)
+# <a name="options-sql-server-object-explorer-commands"></a>オプション (SQL Server オブジェクトエクスプローラーコマンド)
   オブジェクト エクスプローラーでテーブルまたはビューを右クリックすると、テーブルでの行の表示に関する次の 2 つのオプションが表示されます。  
   
 -   **[上位 1000 行を選択]**  
@@ -33,16 +32,16 @@ ms.locfileid: "62999304"
  開く行数を変更する場合は、 **[全般スクリプト作成オプション]** ダイアログ ボックスを使用します。  
   
 ## <a name="general-scripting-options"></a>[全般スクリプト作成オプション]  
- **Select Top の値\<n > 監査レコード コマンド**  
+ **[上位 \<n> 個の監査レコードの選択コマンドの値]**  
  返す監査の行数を指定します。 既定値は 1000 行です。  
   
- **編集のトップ値\<n > 行のコマンド**  
+ **[上位 \<n> 行を編集コマンドの値]**  
  テーブルの行を編集するときに返す行数を指定します。 既定値は 200 行です。  
   
- **Select Top の値\<n > 行のコマンド**  
+ **[上位 \<n> 行を選択コマンドの値]**  
  作成するクエリ エディター スクリプトで指定する、返す行数を指定します。 既定値は 1000 行です。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+## <a name="see-also"></a>参照  
+ [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

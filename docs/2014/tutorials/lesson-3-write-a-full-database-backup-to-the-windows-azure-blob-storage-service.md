@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップの書き込み |Microsoft Docs'
+title: 'レッスン 3: Azure Blob Storage サービスにデータベースの完全バックアップを書き込む |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 627c21a9c2220bcaea76f771624f79618dcf56fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054294"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>レッスン 3: Windows Azure BLOB ストレージ サービスに対するデータベースの完全バックアップの書き込み
-  このレッスンでは、TSQL ステートメントを使用して Windows Azure BLOB ストレージ サービスにデータベースの完全バックアップを実行する方法を紹介します。  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>レッスン 3:Azure Blob Storage サービスに対するデータベースの完全バックアップの書き込み
+  このレッスンでは、tsql ステートメントを使用して、Azure Blob ストレージサービスへのデータベースの完全バックアップを実行する方法を示します。  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスに対するデータベースの完全バックアップの実行  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Azure Blob Storage サービスへのデータベースの完全バックアップを実行する  
  データベースの完全バックアップを実行するには、次の手順を実行します。  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]に接続します。  
@@ -44,6 +43,6 @@ ms.locfileid: "62653684"
 5.  オブジェクト エクスプローラーで、Azure ストレージに接続します。 コンテナーと、新しく作成したバックアップ ファイルを参照して指定します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4:データベースの完全バックアップから復元を実行](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)します。  
+ [レッスン 4: データベースの完全バックアップから復元を実行する](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
   
   

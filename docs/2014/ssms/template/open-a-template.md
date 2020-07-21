@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b00a531c3b8abde6e9728039ece1de6a1866d3d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad12b20233cb753b28c4618ce53cd28ed850984c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63071871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061946"
 ---
 # <a name="open-a-template"></a>テンプレートを開く
   テンプレート エクスプローラーからテンプレートを開くことができます。  
@@ -43,7 +42,7 @@ ms.locfileid: "63071871"
  テンプレートを開いて新しいエディター ウィンドウが起動する場合、そのウィンドウは、現在のアクティブな接続の資格情報によって開きます。 たとえば、CREATE DATABASE テンプレートを開くときに、オブジェクト エクスプローラーで [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスにフォーカスがあると、そのインスタンスへの接続を使用して新しいエディター ウィンドウが開きます。 アクティブな接続がない場合は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] によってログイン ダイアログが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [テンプレート エクスプ ローラー](template-explorer.md)   
+ [テンプレートエクスプローラー](template-explorer.md)   
  [テンプレート パラメーターの置換](replace-template-parameters.md)  
   
   

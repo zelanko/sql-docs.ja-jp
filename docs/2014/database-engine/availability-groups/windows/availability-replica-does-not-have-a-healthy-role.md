@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48dc4150c79225e069ea4e340e82458b42b4be6d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937083"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>正常なロールのない可用性レプリカ
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  
-|**ポリシー名**|可用性レプリカのロールの状態|  
-|**問題**|可用性レプリカに正常なロールがありません。|  
+|**[ポリシー名]**|可用性レプリカのロールの状態|  
+|**問題点**|可用性レプリカに正常なロールがありません。|  
 |**カテゴリ**|**重大**|  
-|**ファセット**|可用性レプリカ|  
+|**面し**|可用性レプリカ|  
   
 ## <a name="description"></a>説明  
  このポリシーは、可用性レプリカのロールの状態をチェックします。 可用性レプリカのロールがプライマリでもセカンダリでもない場合、ポリシーは異常な状態です。 それ以外の場合、ポリシーは正常な状態です。  
@@ -41,10 +40,10 @@ ms.locfileid: "62815599"
 ## <a name="possible-causes"></a>考えられる原因  
  この可用性レプリカのロールが正常ではありません。 このレプリカにはプライマリ ロールもセカンダリ ロールも割り当てられていません。  
   
-## <a name="possible-solution-informationstilltocome"></a>考えられる解決方法:Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>考えられる解決方法: ここに情報を挿入  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

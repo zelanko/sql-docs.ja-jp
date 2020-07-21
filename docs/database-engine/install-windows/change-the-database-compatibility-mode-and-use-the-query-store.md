@@ -1,7 +1,8 @@
 ---
-title: データベース互換性レベルの変更とクエリ ストアの使用 | Microsoft Docs
-ms.custom: ''
-ms.date: 02/06/2019
+title: アップグレード後のクエリ ストアの使用
+description: この記事では、SQL Server アップグレード時の、ベースラインを確立するためのクエリ ストアの使用場所と、データベース互換レベルの変更について説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,18 +15,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034512"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895395"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>データベース互換性レベルの変更とクエリ ストアの使用
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、一部の変更は、[データベースの互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が変更された後に有効になります。 これは、次の理由のためです。  
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、一部の変更は、[データベースの互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が変更された後に有効になります。 これは、次の理由のためです。  
   
 - アップグレードは一方向の操作である (ファイル形式をダウン グレードできない) ため、データベース内で新機能を有効にする操作を別の操作に分離することが重要です。 以前のデータベース互換性レベルに設定を戻すことができます。  新しいモデルでは、停止期間中に発生する処理の数が減ります。  
   

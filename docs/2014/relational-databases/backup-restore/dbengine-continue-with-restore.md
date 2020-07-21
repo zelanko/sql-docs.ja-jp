@@ -1,5 +1,5 @@
 ---
-title: 復元の続行 |Microsoft Docs
+title: Restore | を続行するMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,13 +8,12 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b342941c163208703d6cef932cb52cac3694d8e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d0dff2366370209296b1cd07b3c3bb9aa112f97
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958572"
 ---
 # <a name="continue-with-restore"></a>[復元の続行]
-参照してください[復元の続行](../../database-engine/continue-with-restore.md)します。
+「[復元の続行」を](../../database-engine/continue-with-restore.md)参照してください。

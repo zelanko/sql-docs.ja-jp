@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f410856e3be5f7d80acda994cc7eab0ad8e477be
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62915463"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553687"
 ---
-# <a name="mssqlserver17084"></a>MSSQLSERVER_17084
+# <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|17084|  
@@ -36,7 +35,7 @@ ms.locfileid: "62915463"
  BEGIN ATOMIC ステートメントの WITH 句で、オプションの値が指定されませんでした。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- `ATOMIC` ブロックでは、`WITH` オプションの `TRANSACTION ISOLATION LEVEL` および `LANGUAGE` に値が必要です。 例:  
+ `ATOMIC` ブロックでは、`WITH` オプションの `TRANSACTION ISOLATION LEVEL` および `LANGUAGE` に値が必要です。 次に例を示します。  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

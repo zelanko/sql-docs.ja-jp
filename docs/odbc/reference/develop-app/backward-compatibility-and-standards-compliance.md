@@ -1,5 +1,5 @@
 ---
-title: 下位互換性と標準への準拠 |Microsoft Docs
+title: 旧バージョンとの互換性および標準への準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - compatibility [ODBC], standards compliance
 - standards compliance [ODBC]
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b46b9f5b72117fd978a78b765d09aafd5dc84b8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909868"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283682"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>旧バージョンとの互換性と標準準拠
-旧バージョンとの互換性は、以前の ODBC コンポーネントを使用する新しい ODBC コンポーネントの機能です。 次のセクションでは、これらのコンポーネントが ODBC での変更によって影響を受ける方法について説明します*3.x*します。 主に、それらに含まれる情報は、ODBC の書き込み*3.x*アプリケーションとの ODBC ドライバーで互換性の問題を処理する方法は、後方します。 どの旧バージョンとの互換性に関する特定のガイドラインについては問題に影響を与える、ODBC の書き込み*3.x*ドライバーを参照してください[付録 g:旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)します。  
+旧バージョンとの互換性は、古い ODBC コンポーネントで動作する新しい ODBC コンポーネントの機能です。 以降のセクションでは、これらのコンポーネントが ODBC 3.x の変更にどのように影響するかについて説明*します。* これらの情報は、主に ODBC 3.x アプリケーションの記述と *、odbc ドライバー*によって下位互換性の問題がどのように処理されるかに対応しています。 旧バージョンとの互換性の問題*が ODBC 3.x*ドライバーの書き込みに与える影響に関する具体的なガイドラインについては、「[付録 G: 旧バージョンとの互換性のためのドライバーガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67909868"
   
 -   [アプリケーション/ドライバーの互換性](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)  
   
--   [新しい機能](../../../odbc/reference/develop-app/new-features.md)  
+-   [新機能](../../../odbc/reference/develop-app/new-features.md)  
   
 -   [重複する機能](../../../odbc/reference/develop-app/duplicated-features.md)  
   

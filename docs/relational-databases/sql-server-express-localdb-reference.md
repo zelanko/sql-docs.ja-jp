@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc2c9a8ebd5d60dbd9c3ed302b76a3c248941439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e25cbe03721070bddf4c079118a74ab9bceeeff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666227"
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB リファレンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   ここでは、SQL Server Express LocalDB について説明します。  
   
 -   [SQL Server Express LocalDB のエラー メッセージ リファレンス](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  

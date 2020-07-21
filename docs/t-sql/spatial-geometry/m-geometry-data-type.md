@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e23b5332ca419637749ce029a5698257a6fb835d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0acb70b63e0c488913bd5633606acb63fa31b2b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759539"
 ---
 # <a name="m-geometry-data-type"></a>M (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geometry** インスタンスの **M** (メジャー) 値。 メジャー値のセマンティクスはユーザー定義です。  
 
@@ -41,16 +41,16 @@ ms.locfileid: "68101211"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが **Point** ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
   
  このプロパティは読み取り専用です。  
   
  **M** 値は、ライブラリによる計算で使用されていないと、ライブラリによる計算によって渡されることはありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Z (標高) 値と M (メジャー) 値を含む `Point` インスタンスを作成し、`M` を使用してインスタンスの M 値をフェッチします。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: ファイルの最大アップロード サイズ (PowerPivot for SharePoint) の構成 |Microsoft Docs
+title: ファイルの最大アップロードサイズの構成 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7a43ec4c52de9be2c0345e520743cc2a9fb14a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071823"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547562"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>アップロードするファイルの最大サイズの構成 (PowerPivot for SharePoint)
   PowerPivot ブックには大量のデータが含まれる場合が多く、SharePoint のアップロードで許容されるファイルの最大サイズを超過することがあります。 最大サイズを超過したファイルをアップロードしようとすると、SharePoint で次のエラーが発生します。  
@@ -28,7 +27,7 @@ ms.locfileid: "66071823"
   
 ### <a name="configure-maximum-file-size-for-excel-services"></a>Excel Services に対するファイルの最大サイズの構成  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
 2.  Excel Services アプリケーションの名前をクリックします。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66071823"
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>SharePoint Web アプリケーションに対するファイルの最大サイズの構成  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[Web アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [ **web アプリケーションの管理**] をクリックします。  
   
     > [!NOTE]  
     >  以下の手順は、Excel Services の [ブックの最大サイズ] を大きい値に設定した場合にのみ実行してください。  
@@ -57,7 +56,7 @@ ms.locfileid: "66071823"
   
 3.  [Web アプリケーション] リボンで、[全般設定] ボタンの下矢印をクリックします。  
   
-4.  **[全般設定]** をクリックします。  
+4.  [**全般設定**] をクリックします。  
   
 5.  **[アップロードの最大サイズ]** までスクロールします。  
   

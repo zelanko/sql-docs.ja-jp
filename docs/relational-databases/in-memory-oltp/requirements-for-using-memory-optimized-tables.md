@@ -1,5 +1,6 @@
 ---
 title: メモリ最適化テーブルを使用するための要件 | Microsoft Docs
+description: インメモリ OLTP を使用するための要件について説明します。これには SQL Database のバージョン、メモリとストレージに関する考慮事項、インストールが含まれます。
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a8830fbf4b9418f80cf07c7586e71689001d455
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722367"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Azure DB でのインメモリ OLTP の使用については、「 [SQL Database でのインメモリ (プレビュー) の使用](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)」を参照してください。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68109615"
   
      レポートの生成 (「[テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)」) と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでインメモリ OLTP を管理する場合) をインストールするには、[SQL Server Management Studio (SSMS) をダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)します。   
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
+## <a name="important-notes-on-using-hek_2"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、メモリ最適化テーブルのサイズには空きメモリのサイズ以外の制限がありません。 
 

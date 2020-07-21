@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e5a0920c0e56685885345d730f481bb7eba1ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736197"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** インスタンスから各地点までの距離が指定した許容範囲内にある、すべての地点値の和集合を表すジオメトリック オブジェクトを返します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68066541"
 _distance_  
 バッファー計算の対象となる **geography** インスタンスからの距離を指定する **float** 式です。  
   
-バッファーの最大距離は、0.999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 地球の円周の 1/2) または全球を超えることはできません。  
+バッファーの最大距離は、0.999 \* _π_  * minorAxis \* minorAxis / majorAxis (~0.999 \*  地球の円周の 1/2) または全球を超えることはできません。  
   
 _tolerance_  
 バッファー距離の許容範囲を指定する **float** 式です。  
@@ -59,9 +59,9 @@ _tolerance_ の値が相対値か絶対値かを指定する **bit** です。 �
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-CLR の戻り値の型:**SqlGeography**  
+CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 _distance_ が数値ではない (NAN) 場合、または _distance_ が正か負の無限大の場合、このメソッドは **ArgumentException** をスローします。  _tolerance_ が 0、数値ではない (NaN)、負、または正か負の無限大の場合も、このメソッドは **ArgumentException** をスローします。  
   
 `STBuffer()` は、**FullGlobe** インスタンスを返すことがあります。たとえば、バッファーの距離が赤道から極地までの距離を超えている場合、`STBuffer()` は 2 つの極地の **FullGlobe** インスタンスを返します。  
@@ -74,7 +74,7 @@ _distance_ が数値ではない (NAN) 場合、または _distance_ が正か�
   
 このメソッドは正確ではありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 `Point` インスタンスを作成し、`BufferWithTolerance()` を使用して、インスタンスの周りの大まかなバッファーを取得する例を次に示します。  
   
 ```  

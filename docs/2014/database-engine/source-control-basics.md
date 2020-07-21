@@ -1,5 +1,5 @@
 ---
-title: ソース管理の基本事項 |Microsoft Docs
+title: ソース管理の基本 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928936"
 ---
 # <a name="source-control-basics"></a>ソース管理の基礎
   ソース管理とは、サーバー ソフトウェアの主要部分がファイルのバージョンを格納および追跡し、ファイルへのアクセスを制御するシステムです。 標準的なソース管理システムは、1 つのソース管理プロバイダー、および 2 つ以上のソース管理クライアントで構成されます。  
   
 ## <a name="source-control-benefits"></a>ソース管理の利点  
- ソース管理下にあるファイルを配置できるようになります  
+ ファイルをソース管理下に配置することで、  
   
 -   1 人の作業者から別の作業者に項目の制御を渡すプロセスを管理します。 ソース管理プロバイダーでは、共有ファイル アクセスと排他ファイル アクセスの両方がサポートされています。 プロジェクト ファイルへのアクセスが排他的である場合、ソース管理プロバイダーによってファイルのチェックアウトおよび変更が許可されるユーザーは、一度に 1 人だけです。 共有アクセスの場合は、複数のユーザーがスクリプト ファイルをチェックアウトできます。ソース管理プロバイダーには、ファイルをチェックインしたときに各バージョンをマージするメカニズムがあります。  
   
@@ -51,9 +50,9 @@ ms.locfileid: "62842987"
   
 |||  
 |-|-|  
-|**タスク**|**トピック**|  
+|**Task**|**トピック**|  
 |ソース管理オプションの設定|[ソース管理のオプションの設定](../../2014/database-engine/set-source-control-options.md)|  
 |ソース管理接続の変更|[ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)|  
-|ソース管理からファイルを除外します。|[ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)|  
+|ソース管理からファイルを除外する|[ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

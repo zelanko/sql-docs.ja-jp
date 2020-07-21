@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919081"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755313"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord メソッド (ADO)
-によって表されるエンティティを削除する[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。  
+[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,19 +34,19 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Source*  
- 任意。 A**文字列**を削除する (たとえば、ファイルまたはディレクトリ) のエンティティを識別する URL を含む値です。 場合*ソース*を省略するか、空の文字列を現在によって表されるエンティティを指定します[レコード](../../../ado/reference/ado-api/record-object-ado.md)は削除されます。 場合は、レコードがコレクションのレコード ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)の**adCollectionRecord**、ディレクトリなど) (たとえば、サブディレクトリ) のすべての子も削除されます。  
+ *ソース*  
+ 任意。 削除するエンティティ (ファイルやディレクトリなど) を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、現在の[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティが削除されます。 レコードがコレクションレコード (ディレクトリなどの**Adcollectionrecord**の[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) ) である場合は、すべての子 (サブディレクトリなど) も削除されます。  
   
  *Async*  
- 任意。 A**ブール**値と**True**、削除操作を非同期に指定します。  
+ 任意。 **ブール**値。 **True**の場合、削除操作が非同期であることを指定します。  
   
-## <a name="remarks"></a>コメント  
- これによって表されるオブジェクトで操作**レコード**メソッドの完了後に失敗する可能性があります。 呼び出した後**DeleteRecord**、**レコード**ために閉じる必要がありますの動作、**レコード**予測によって、プロバイダーを更新したときになる可能性があります、**レコード**データ ソースとします。  
+## <a name="remarks"></a>Remarks  
+ このメソッドの完了後に、この**レコード**によって表されるオブジェクトに対する操作が失敗する可能性があります。 **DeleteRecord**を呼び出した後は、レコードがデータソースで**レコード**を更新するタイミングによってはレコードの動作が予測不能に**なる可能性が**あるため、**レコード**を閉じる必要があります。  
   
- 場合は、この**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、この操作の結果はすぐに反映されませんし、**レコード セット**します。 更新、**レコード セット**を閉じてから再度開くこと、または実行することによって、**レコード セット** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッド、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド、または[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド。  
+ この**レコード**が[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得された場合、この操作の結果は**レコードセット**にすぐには反映されません。 レコードセットを閉じて再度開くか、**レコードセットの** [Requery](../../../ado/reference/ado-api/requery-method.md)メソッド、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド、または[Resync](../../../ado/reference/ado-api/resync-method.md)メソッドを実行して、**レコードセット**を更新します。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

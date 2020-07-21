@@ -1,5 +1,5 @@
 ---
-title: sys.endpoints (TRANSACT-SQL) |Microsoft Docs
+title: sys. エンドポイント (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,38 +17,38 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoints catalog view
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 297142bceb77c9f90f7496b00c0e9549a5f39a3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061409"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893234"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  システムで作成されたエンドポイントごとに 1 行が含まれています。 システムの 1 つのエンドポイントは常にします。  
+  システム内に作成されるエンドポイントごとに1行のレコードを格納します。 システムエンドポイントは常に1つだけ存在します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|エンドポイントの名前。 サーバー内で一意です。 NULL 値は許可されません。|  
-|**endpoint_id**|**int**|エンドポイントの ID。 サーバー内で一意です。 65536 より小さい ID のエンドポイントは、システム エンドポイントです。 NULL 値は許可されません。|  
-|**principal_id**|**int**|作成してこのエンドポイントを所有しているサーバー プリンシパルの ID。 NULL 値が許可されます。|  
-|**プロトコル**|**tinyint**|エンドポイントのプロトコル。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 名前付きパイプ<br /><br /> 4 = 共有メモリ<br /><br /> 5 = 仮想インターフェイス アダプター (VIA)<br /><br /> NULL 値は許可されません。|  
-|**protocol_desc**|**nvarchar(60)**|エンドポイントのプロトコルの説明です。 NULL 値を許容します。 次のいずれかの値です。<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **使用して**に注意してください。VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**name**|**sysname**|エンドポイントの名前。 はサーバー内で一意です。 NULL 値は許可されません。|  
+|**endpoint_id**|**int**|エンドポイントの ID。 はサーバー内で一意です。 65536 より小さい ID のエンドポイントは、システム エンドポイントです。 NULL 値は許可されません。|  
+|**principal_id**|**int**|このエンドポイントを作成して所有しているサーバープリンシパルの ID。 NULL 値が許可されます。|  
+|**protocol**|**tinyint**|エンドポイントプロトコル。<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 名前付きパイプ<br /><br /> 4 = 共有メモリ<br /><br /> 5 = 仮想インターフェイスアダプター (VIA)<br /><br /> NULL 値は許可されません。|  
+|**protocol_desc**|**nvarchar(60)**|エンドポイントプロトコルの説明。 NULLABLE. 次のいずれかの値です。<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA**注: VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|エンドポイントのペイロードの種類。<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> NULL 値は許可されません。|  
-|**type_desc**|**nvarchar(60)**|エンドポイント ペイロードの種類の説明です。 NULL 値が許可されます。 次のいずれかの値です。<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**state**|**tinyint**|エンドポイントの状態。<br /><br /> 0 = STARTED、リッスンしていると、要求を処理します。<br /><br /> 1 = STOPPED、リッスンしている場合が、要求を処理しません。<br /><br /> 2 = 無効、リッスンしていません。<br /><br /> 既定の状態には 1 です。 NULL 値が許可されます。|  
-|**state_desc**|**nvarchar(60)**|エンドポイントの状態の説明です。<br /><br /> 開始 = リスニングおよび要求を処理します。<br /><br /> STOPPED = 要求のリスニング中で、処理は行っていません。<br /><br /> DISABLED = リスニングしていません。<br /><br /> 既定の状態は STOPPED です。<br /><br /> NULL 値が許可されます。|  
-|**is_admin_endpoint**|**bit**|エンドポイントを使用して管理するかどうかを示します。<br /><br /> 0 = 管理者用以外のエンドポイント。<br /><br /> 1 = エンドポイントは、管理エンドポイントです。<br /><br /> NULL 値は許可されません。|  
+|**type_desc**|**nvarchar(60)**|エンドポイントのペイロードの種類の説明。 NULL 値が許可されます。 次のいずれかの値です。<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**状態**|**tinyint**|エンドポイントの状態。<br /><br /> 0 = 要求を開始し、リッスンし、処理します。<br /><br /> 1 = 要求を停止、リッスン、処理していません。<br /><br /> 2 = 無効、リッスンしていません。<br /><br /> 既定の状態は1です。 NULL 値が許可されます。|  
+|**state_desc**|**nvarchar(60)**|エンドポイントの状態の説明。<br /><br /> 開始 = 要求をリッスンして処理しています。<br /><br /> STOPPED = 要求のリスニング中で、処理は行っていません。<br /><br /> DISABLED = リッスンしていません。<br /><br /> 既定の状態は STOPPED です。<br /><br /> NULL 値が許可されます。|  
+|**is_admin_endpoint**|**bit**|エンドポイントが管理用であるかどうかを示します。<br /><br /> 0 = 管理者用以外のエンドポイント。<br /><br /> 1 = エンドポイントは管理エンドポイントです。<br /><br /> NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [エンドポイントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

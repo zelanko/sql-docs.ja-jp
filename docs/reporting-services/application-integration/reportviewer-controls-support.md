@@ -1,20 +1,21 @@
 ---
-title: レポート ビューアー Current Branch のサポート
+title: レポート ビューアー コントロール バージョンのサポート
+description: Microsoft Report Viewer コントロールは、最新のサポート ライフサイクル ポリシーに従う、SQL Server Reporting Services と Power BI Report Server に対応しています。
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 671aacd4855afe4d4d5d0a8012fe5565420ff3e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266937"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198489"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>レポート ビューアー Current Branch のサポート
 

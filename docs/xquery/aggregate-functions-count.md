@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643720"
 ---
 # <a name="aggregate-functions---count"></a>集計関数 - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  指定されたシーケンス内に含まれる項目の数を返します *$arg*します。  
+  *$Arg*によって指定されたシーケンスに含まれる項目の数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +38,14 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  カウントするアイテム。  
   
-## <a name="remarks"></a>コメント  
- 0 を返します *$arg*は空のシーケンスです。  
+## <a name="remarks"></a>Remarks  
+ *$Arg*が空のシーケンスの場合は0を返します。  
   
 ## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count() XQuery 関数を使用して製品モデルの製造作業センターの場所の数をカウントするには  
- 次のクエリは、製品モデルの製造プロセス内でのワーク センターの場所の数をカウント (ProductModelID = 7)。  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A: Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
+ 次のクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の数をカウントします (ProductModelID = 7)。  
   
 ```  
 SELECT Production.ProductModel.ProductModelID,   
@@ -62,11 +62,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   **名前空間**キーワード[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)名前空間プレフィックスを定義します。 プレフィックスは、XQuery の本文では使用されます。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の**namespace**キーワードは、名前空間プレフィックスを定義します。 次に、このプレフィックスが XQuery 本体で使用されます。  
   
--   クエリに XML を構築、<`NoOfWorkStations`> 要素。  
+-   このクエリでは、<> 要素を含む XML が構築され `NoOfWorkStations` ます。  
   
--   **Count()** 関数、XQuery の本文のカウント数 <`Location`> 要素。  
+-   XQuery 本文の**count ()** 関数は、<> 要素の数をカウント `Location` します。  
   
  結果を次に示します。  
   
@@ -98,7 +98,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- XML 以外にも、次のクエリで示すように xml 以外の型で値を返すことができます。 クエリを使用して、 [value() メソッド (xml データ型)](../t-sql/xml/value-method-xml-data-type.md)作業センターの場所の数を取得します。  
+ XML 以外にも、次のクエリで示すように xml 以外の型で値を返すことができます。 このクエリでは、 [value () メソッド (xml データ型)](../t-sql/xml/value-method-xml-data-type.md)を使用して、ワークセンターの場所の数を取得します。  
   
 ```  
 SELECT  ProductModelID,   

@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c81885e5a3aaec197b8963c2e868b6f65a0b0544
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42d79ed13a691c3d39a28e7ab35a740a9f613fac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066675"
 ---
-# <a name="set-the-autoshrink-database-option-to-off"></a>AUTO_SHRINK データベース オプションを OFF に設定
+# <a name="set-the-auto_shrink-database-option-to-off"></a>AUTO_SHRINK データベース オプションを OFF に設定
   このルールでは、AUTO_SHRINK データベース オプションが OFF に設定されているかどうかをチェックします。 データベースの圧縮と拡張により、物理的な断片化が発生することがよくあります。  
   
 ## <a name="best-practices-recommendations"></a>ベスト プラクティスと推奨事項  
@@ -29,6 +28,6 @@ ms.locfileid: "62691511"
  サポート技術情報の資料 [315512](https://go.microsoft.com/fwlink/?linkid=117750)  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [ポリシーベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

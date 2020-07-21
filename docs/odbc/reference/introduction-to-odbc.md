@@ -11,19 +11,19 @@ helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1792161b472e42c42ea2bfc895bf013802cb656c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a92e671169fa375169a37ca01e1d55729167b1e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093779"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295972"
 ---
 # <a name="introduction-to-odbc"></a>ODBC の概要
-このセクションでは、構造化照会言語と、ODBC の簡単な歴史を示し、ODBC インターフェイスの概念に関する情報が含まれています。  
+このセクションでは、構造化照会言語と ODBC の簡単な履歴と、ODBC インターフェイスに関する概念について説明します。  
   
- このセクションでは、次のトピックについて説明します。  
+ このセクションのトピックは次のとおりです。  
   
 -   [ODBC の概要](../../odbc/reference/odbc-overview.md)  
   

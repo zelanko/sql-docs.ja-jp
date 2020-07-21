@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192673590f5dccfcee3f7c49de7cda659f97b8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970805"
 ---
 # <a name="clr-table-valued-functions"></a>CLR テーブル値関数
   テーブル値関数とは、テーブルを返すユーザー定義関数です。  
@@ -45,7 +44,7 @@ ms.locfileid: "62874548"
  テーブル値パラメーターとは、プロシージャや関数に渡されるユーザー定義のテーブル型です。テーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 さらに、サーバーへのラウンド トリップの回数を減らすのにも有用です。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データをテーブル値パラメーターとしてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 テーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>出力パラメーターとテーブル値関数  
- 出力パラメーターを使用すると、テーブル値関数から情報を返すことができます。 実装コードのテーブル値関数の対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 参照によって、パラメーターを指定して、適用する必要があります、 \<Out() > 属性を次のように、出力パラメーターを表します。  
+ 出力パラメーターを使用すると、テーブル値関数から情報を返すことができます。 実装コードのテーブル値関数の対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 次に示すように、パラメーターを参照によって指定し、属性を適用し \<Out()> て出力パラメーターを表す必要があります。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -54,7 +53,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL のテーブル値関数の定義  
- CLR テーブル値関数を定義するための構文は [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値関数の構文と似ていますが、`EXTERNAL NAME` 句が追加されています。 以下に例を示します。  
+ CLR テーブル値関数を定義するための構文は [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値関数の構文と似ていますが、`EXTERNAL NAME` 句が追加されています。 次に例を示します。  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -76,7 +75,7 @@ select * from table t cross apply function(t.column);
   
 -   外部データから生成した場合。 たとえば、イベント ログを読み取り、テーブルとして公開するテーブル値関数などです。  
   
- **注**テーブル値関数が実行できるは、によってデータ アクセスのみを[!INCLUDE[tsql](../../includes/tsql-md.md)]でクエリを実行、`InitMethod`メソッドではなく、`FillRow`メソッド。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行する場合は、`InitMethod` を `SqlFunction.DataAccess.Read` 属性プロパティに指定してください。  
+ **メモ**テーブル値関数は、メソッドでは [!INCLUDE[tsql](../../includes/tsql-md.md)] なく、メソッド内のクエリを通じてのみデータアクセスを実行でき `InitMethod` `FillRow` ます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行する場合は、`InitMethod` を `SqlFunction.DataAccess.Read` 属性プロパティに指定してください。  
   
 ## <a name="a-sample-table-valued-function"></a>テーブル値関数のサンプル  
  次のテーブル値関数は、システム イベント ログから情報を返します。 読み取るイベント ログの名前を含んだ文字列引数を 1 つ受け取ります。  
@@ -174,8 +173,8 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>サンプル:SQL Server クエリの結果を返す  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対してクエリを実行するテーブル値関数を示します。 この例では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の AdventureWorks Light データベースを使用します。 参照してください[ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks のダウンロードの詳細についてはします。  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>サンプル: SQL Server クエリの結果を返す  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対してクエリを実行するテーブル値関数を示します。 この例では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の AdventureWorks Light データベースを使用します。 [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843)AdventureWorks のダウンロードの詳細については、「」を参照してください。  
   
  ソース コード ファイルに FindInvalidEmails.cs または FindInvalidEmails.vb という名前を付けます。  
   
@@ -414,5 +413,4 @@ go
 SELECT * FROM FindInvalidEmails('2000-01-01');  
 go  
 ```  
-  
   

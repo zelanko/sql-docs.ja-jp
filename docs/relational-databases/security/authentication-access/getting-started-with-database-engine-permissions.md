@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンの権限の概要 | Microsoft Docs
+description: SQL Server でのいくつかの基本的なセキュリティ概念を確認し、データベース エンジンのアクセス許可の一般的な実装について説明します。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 577a716298727fad13a68ede37b330d461cc377b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116845"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005650"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の権限は、サーバー レベルではログインとサーバー ロール、データベース レベルではデータベース ユーザーとデータベース ロールを通じて管理されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のモデルでは各データベース内に同じシステムを公開していますが、サーバー レベルの権限を使用できません。 このトピックでは、セキュリティの基本的な概念についていくつか確認し、権限の一般的な実装について説明します。  
   
@@ -65,8 +66,6 @@ ms.locfileid: "68116845"
 2.  作業単位と職務を表す Windows グループを作成します。  
   
 3.  Windows ユーザーを Windows グループに追加します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>接続するユーザーが多数のデータベースに接続する場合  
   
@@ -227,16 +226,16 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  開始に役立つトピックについては、次を参照してください。  
   
--   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [チュートリアル:データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [データベースの作成 (チュートリアル)](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [チュートリアル: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [チュートリアル:SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [チュートリアル: Transact-SQL ステートメントの作成](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [チュートリアル:Transact-SQL ステートメントの作成](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>参照  
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

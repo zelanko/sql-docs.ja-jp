@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 26d9b64d-4299-4b55-92d0-0a32a3688c0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42b4a39678e4b85e581bca7e1b9e085c6f4620f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac0209030531f0c56a1a071ba54282f10d4b7db9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870674"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552407"
 ---
-# <a name="mssqlserver10502"></a>MSSQLSERVER_10502
+# <a name="mssqlserver_10502"></a>MSSQLSERVER_10502
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|10502|  
@@ -38,8 +37,8 @@ ms.locfileid: "62870674"
 ## <a name="user-action"></a>ユーザーの操作  
  新しいプラン ガイドを作成する前に、既存のプラン ガイドを削除します。  
   
-## <a name="see-also"></a>関連項目  
- [プラン ガイド](../performance/plan-guides.md)   
+## <a name="see-also"></a>参照  
+ [プランガイド](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

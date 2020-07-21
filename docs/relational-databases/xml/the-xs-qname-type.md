@@ -1,5 +1,6 @@
 ---
 title: Xs:QName 型 | Microsoft Docs
+description: XML スキーマ制約要素として、または共用体のメンバー型として xs:QName 型を使用する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 879ec2e1e4aaebfde4b3597df3d244380f2b4165
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758518"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML スキーマ制約要素を使用する **xs:QName** から派生した型はサポートしません。 また、現在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メンバー型に **QName** を指定した共用体型をサポートしません。  
   
 ## <a name="example"></a>例  

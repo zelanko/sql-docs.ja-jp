@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781107"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933461"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 統合のカスタム属性の概要
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の CLR (共通言語ランタイム) では、属性という説明用のキーワードを使用できます。 これらの属性は、メソッドやクラスなどの多くの要素に関する追加情報を提供します。 属性はオブジェクトのメタデータと共にアセンブリに保存され、記述したコードを他の開発ツールに説明したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部での実行時の動作に影響することを説明するために使用できます。  
   
- CLR ルーチンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録すると、そのルーチンに関する一連のプロパティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により抽出されます。 これらのプロパティによって、ルーチンにインデックスを作成できるかどうかなど、そのルーチンの機能が決まります。 たとえば、`DataAccess` プロパティを `DataAccessKind.Read` に設定すると、CLR 関数内から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー テーブルのデータにアクセスできるようになります。 次の例を単純なケースを示しています、`DataAccess`ユーザー テーブルからのデータ アクセスを容易に設定されて**table1**します。  
+ CLR ルーチンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録すると、そのルーチンに関する一連のプロパティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により抽出されます。 これらのプロパティによって、ルーチンにインデックスを作成できるかどうかなど、そのルーチンの機能が決まります。 たとえば、`DataAccess` プロパティを `DataAccessKind.Read` に設定すると、CLR 関数内から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー テーブルのデータにアクセスできるようになります。 次の例は、 `DataAccess` ユーザーテーブル**table1**からのデータアクセスを容易にするために、プロパティが設定されている単純なケースを示しています。  
   
 ```csharp  
 using System;  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fa3f29b6174342f0ec298df5bc49b30f7c0cbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027962"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog イベント クラス
   TransactionLog イベント クラスは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスのトランザクション ログの利用状況を監視するために使用します。  
@@ -28,7 +27,7 @@ ms.locfileid: "63011993"
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|[はい]|  
+|ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BinaryData|`image`|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|2|はい|  
 |ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによってクライアント プロセスが指定された場合、このデータ列にデータが格納されます。|9|はい|  
 |DatabaseID|`int`|データがログ記録されているデータベースの ID。|3|はい|  
@@ -37,7 +36,7 @@ ms.locfileid: "63011993"
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |EventSubClass|`int`|イベント サブクラスの種類。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
-|HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|[はい]|  
+|HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IndexID|`int`|イベントの影響を受けるオブジェクトに付けられたインデックス用の ID。 オブジェクトのインデックス ID を特定するには、sys.indexes カタログ ビューの index_id 列を使用します。|24|はい|  
 |IntegerData|`int`|トレースでキャプチャされたイベント クラスに依存する整数値。|25|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
@@ -45,8 +44,8 @@ ms.locfileid: "63011993"
 |LoginSid|`image`|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
-|ObjectID|`int`|システムによって割り当てられたオブジェクト ID。|22|[はい]|  
-|RequestID|`int`|ステートメントが含まれている要求の ID。|49|[はい]|  
+|ObjectID|`int`|システムによって割り当てられたオブジェクト ID。|22|はい|  
+|RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
@@ -54,7 +53,7 @@ ms.locfileid: "63011993"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
   
 ## <a name="see-also"></a>参照  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)  
   
   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0ae09d76c2642e23c56afcdd5ae4e1e468ef5883
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025765"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために列に関する統計を使用します。 統計はデータベースのテーブルから収集され、データベース メタデータに格納されます。  
@@ -24,13 +23,13 @@ ms.locfileid: "63155795"
   
  テーブル データは通常、時間の経過に伴い、行が挿入、更新、または削除されて変化します。 これは、統計を定期的に更新する必要があることを意味します。 既定では、ディスク ベース テーブルの統計は、オプティマイザーが統計が古くなったと判断したときに自動的に更新されます。  
   
- メモリ最適化テーブルの統計は、既定では更新されません。 手動で更新する必要があります。 使用[UPDATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql)の個々 の列、インデックス、またはテーブル。 使用[sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)と、すべてのユーザーとデータベースの内部テーブルの統計を更新します。  
+ メモリ最適化テーブルの統計は、既定では更新されません。 手動で更新する必要があります。 個々の列、インデックス、またはテーブルに対して、 [transact-sql&#41;&#40;UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql)を使用します。 [Sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)を使用して、データベース内のすべてのユーザーと内部テーブルの統計を更新します。  
   
- 使用する場合[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を指定する必要があります`NORECOMPUTE`自動統計を無効にするにはメモリ最適化テーブルを更新します。 ディスク ベース テーブルでは、 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)テーブルが前回変更された場合のみの統計を更新[sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)します。 メモリ最適化テーブルでは、 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)常に更新された統計情報を生成します。 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)はメモリ最適化テーブルに適したオプションは、それ以外の場合に個別に統計を更新できるように、どのテーブルが大幅に変更する必要があります。  
+ [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を使用する場合は、 `NORECOMPUTE` メモリ最適化テーブルの統計の自動更新を無効にするように指定する必要があります。 ディスクベーステーブルの場合、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は、最後の[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)以降にテーブルが変更されている場合にのみ統計を更新します。 メモリ最適化テーブルの場合、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は常に更新された統計を生成します。 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)は、メモリ最適化テーブルに適したオプションです。それ以外の場合は、統計を個別に更新できるように、重要な変更が加えられているテーブルを把握しておく必要があります。  
   
- 統計情報は、データのサンプリングまたはフル スキャンを実行するのいずれかで生成するか。 サンプリング統計は、データ分布を推定するためにテーブル データのサンプルのみを使用します。 フルスキャン統計は、データの分布を調べるためにテーブル全体をスキャンします。 通常、フルスキャン統計の方が正確ですが、計算にかかる時間が長くなります。 サンプリング統計はより速く収集できます。  
+ 統計は、データのサンプリングまたはフルスキャンの実行によって生成できます。 サンプリング統計は、データ分布を推定するためにテーブル データのサンプルのみを使用します。 フルスキャン統計は、データの分布を調べるためにテーブル全体をスキャンします。 通常、フルスキャン統計の方が正確ですが、計算にかかる時間が長くなります。 サンプリング統計はより速く収集できます。  
   
- ディスク ベース テーブルでは、既定ではサンプリング統計が使用されます。 メモリ最適化テーブルでは、フルスキャン統計のみをサポートしています。 使用する場合[CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)、指定する必要があります、`FULLSCAN`オプションは、メモリ最適化テーブル。  
+ ディスク ベース テーブルでは、既定ではサンプリング統計が使用されます。 メモリ最適化テーブルでは、フルスキャン統計のみをサポートしています。 [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)または[UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)を使用する場合は、 `FULLSCAN` メモリ最適化テーブルのオプションを指定する必要があります。  
   
  メモリ最適化テーブルの統計に関するその他の注意点を次に示します。  
   
@@ -64,11 +63,11 @@ ms.locfileid: "63155795"
   
  統計を更新するには:  
   
--   使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に[メンテナンス プランの作成](../maintenance-plans/create-a-maintenance-plan.md)で、[統計の更新タスク](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][統計の更新タスク](../maintenance-plans/update-statistics-task-maintenance-plan.md)を使用して[メンテナンスプランを作成](../maintenance-plans/create-a-maintenance-plan.md)するには、を使用します  
   
 -   または、後で説明する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを使用して統計を更新します。  
   
- 1 つのメモリ最適化テーブルの統計を更新する (*myschema*します。 *Mytable*)、次のスクリプトを実行します。  
+ 1つのメモリ最適化テーブル (*myschema.xml*) の統計を更新するには *Mytable*)、次のスクリプトを実行します。  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +85,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- データベース内のすべてのテーブルの統計を更新する実行[sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)します。  
+ データベース内のすべてのテーブルの統計を更新するには、 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)を実行します。  
   
  次のサンプルでは、メモリ最適化テーブルの最終更新日を報告します。 この情報は、統計を更新する必要があるかどうかを判断するのに役立ちます。  
   

@@ -1,5 +1,6 @@
 ---
 title: '[バックアップ デバイス] ([メディアの内容] ページ) | Microsoft Docs'
+description: '[バックアップ デバイス] ダイアログ ボックスを使用すると、バックアップ情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43bb11503e312ca9a92251c1e77524e68077ccd9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987763"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728520"
 ---
-# <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] \([メディアの内容] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] ([メディアの内容] ページ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[バックアップ デバイス]** ダイアログ ボックスを使用すると、バックアップの情報が表示されます。 ここでは、デバイス、メディア、メディア セット、バックアップ セットの情報が得られます。  
   
  **SQL Server Management Studio を使用してバックアップ デバイスの内容を表示するには**  
@@ -29,10 +30,10 @@ ms.locfileid: "67987763"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  個々のメディア、メディア セット、バックアップ セットに関する情報を表示します。  
   
- **[メディア]**  
+ **メディア**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
  **[メディア シーケンス]**  
@@ -44,10 +45,10 @@ ms.locfileid: "67987763"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **[名前]**  
+ **名前**  
  メディア セットの名前を表示します (メディア セットが存在する場合)。  
   
- **[説明]**  
+ **説明**  
  メディア セットの説明を表示します (メディア セットが存在する場合)。  
   
  **[メディア ファミリ数]**  
@@ -56,20 +57,20 @@ ms.locfileid: "67987763"
  **[バックアップ セット]**  
  メディアに収められているバックアップ セットに関する情報を表示します。 バックアップ セットとは、正常に完了したバックアップ操作の結果です。バックアップ セットの内容は、一連のバックアップ デバイスのメディアに分散されます。  
   
-|[ヘッダー]|値|  
+|ヘッダー|値|  
 |------------|------------|  
-|**[名前]**|バックアップ セットの名前です。|  
-|**型**|バックアップされるオブジェクト: [データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用)。|  
+|**名前**|バックアップ セットの名前です。|  
+|**Type**|バックアップされるオブジェクト: [データベース]、[ファイル]、または *\<blank>* (トランザクション ログ用)。|  
 |**コンポーネント**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
-|**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
+|**サーバー**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
-|**[位置]**|ボリューム内でのバックアップ セットの位置。|  
+|**Position**|ボリューム内でのバックアップ セットの位置。|  
 |**Date**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
 |**[サイズ]**|バックアップ セットのサイズ (バイト単位) です。|  
-|**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
+|**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
 |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

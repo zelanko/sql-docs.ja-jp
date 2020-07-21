@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921324"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760728"
 ---
 # <a name="addnew-method-ado"></a>AddNew メソッド (ADO)
-更新可能なに対して新しいレコードを作成します。 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+更新可能な[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの新しいレコードを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,30 +34,30 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *recordset*  
- A **Recordset**オブジェクト。  
+ *レコードセット*  
+ **レコードセット**オブジェクトです。  
   
  *FieldList*  
- 任意。 1 つの名前または名前の配列または新しいレコードのフィールドの序数位置。  
+ 任意。 単一の名前、または新しいレコード内のフィールドの名前または序数の配列。  
   
  *値*  
- 任意。 1 つの値、または新しいレコードのフィールドの値の配列。 場合*Fieldlist* 、配列は、*値*配列である必要があります、同じメンバーの数。 それ以外の場合、エラーが発生します。 フィールド名の順序は、各配列内のフィールド値の順序と一致する必要があります。  
+ 任意。 単一の値、または新しいレコードのフィールドの値の配列。 *Fieldlist*が配列の場合、*値*も同じメンバー数の配列である必要があります。それ以外の場合は、エラーが発生します。 フィールド名の順序は、各配列のフィールド値の順序と一致している必要があります。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **AddNew**メソッドを作成し、新しいレコードを初期化します。 使用して、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッド**adAddNew** (、 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)値) を現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ **AddNew**メソッドを使用して、新しいレコードを作成して初期化します。 現在の**レコードセット**オブジェクトにレコードを追加できるかどうかを確認するには、 **Adaddnew**で[サポート](../../../ado/reference/ado-api/supports-method.md)メソッド ([カーソルオプションの列挙](../../../ado/reference/ado-api/cursoroptionenum.md)値) を使用します。  
   
- 呼び出した後、 **AddNew**メソッドでは、新しいレコードが現在のレコードになり、を呼び出した後は、最新の状態、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。 新しいレコードが追加されますので、 **Recordset**への呼び出し**MoveNext**の末尾を越えた移動は次の更新プログラム、**レコード セット**、 **EOF** True です。 場合、 **Recordset**オブジェクトは、ブックマークをサポートしていない、別のレコードに移動すると、新しいレコードにアクセスすることはできません。 呼び出す必要があります、カーソルの種類に応じて、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを新しいレコードにアクセスできるようにします。  
+ **AddNew**メソッドを呼び出すと、新しいレコードが現在のレコードになり、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出した後も最新の状態が維持されます。 新しいレコードは**レコードセット**に追加されるため、更新後の**MoveNext**への呼び出しは、**レコードセット**の末尾を越えて移動され、 **EOF**が True になります。 **Recordset**オブジェクトがブックマークをサポートしていない場合、別のレコードに移動すると、新しいレコードにアクセスできなくなることがあります。 カーソルの種類によっては、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを呼び出して、新しいレコードにアクセスできるようにすることが必要になる場合があります。  
   
- 呼び出す場合**AddNew** ADO を呼び出し、現在のレコードを編集している間、または新しいレコードを追加するときに、 **Update**を保存する方法の変更し、新しいレコードを作成します。  
+ 現在のレコードを編集しているとき、または新しいレコードを追加しているときに**AddNew**を呼び出した場合、ADO は**Update**メソッドを呼び出して変更を保存し、新しいレコードを作成します。  
   
- 動作、 **AddNew**メソッドの更新モードによって異なります、 **Recordset**オブジェクトとかどうかを渡す、 *Fieldlist*と*値*引数。  
+ **AddNew**メソッドの動作は、**レコードセット**オブジェクトの更新モードと、 *Fieldlist*引数と*Values*引数を渡すかどうかによって異なります。  
   
- *即時更新モード*(をプロバイダーに変更を書き込みます、基になるデータ ソースを呼び出すと、**更新**メソッド) を呼び出すと、 **AddNew**メソッドなし引数のセット、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)プロパティを**adEditAdd** (、 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)値)。 プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、 **Update**メソッドは、データベースに新しいレコードをポストし、リセット、 **EditMode**プロパティを**adEditNone** (、 **EditModeEnum**値)。 渡す場合、 *Fieldlist*と*値*引数、ADO はすぐに、新しいレコードをデータベースに投稿 (ありません**Update**呼び出しが必要)、 **EditMode**プロパティの値が変更されない (**adEditNone**)。  
+ **Update**メソッドを呼び出した後、プロバイダーが基になるデータソースに変更を書き込む*即時更新モード*では、引数を指定せずに**AddNew**メソッドを呼び出すと、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)プロパティが**adEditAdd** ( [editmodeenum](../../../ado/reference/ado-api/editmodeenum.md)値) に設定されます。 プロバイダーは、フィールド値の変更をローカルにキャッシュします。 **Update**メソッドを呼び出すと、新しいレコードがデータベースにポストされ、 **EditMode**プロパティが**adEditNone** ( **editmodeenum**値) にリセットされます。 *Fieldlist*引数と*Values*引数を渡すと、ADO はすぐに新しいレコードをデータベースにポストします (**更新**呼び出しは必要ありません)。**EditMode**プロパティ値は変更されません (**adEditNone**)。  
   
- *バッチ更新モード*(をプロバイダーが複数の変更をキャッシュし、呼び出すときにのみ、基になるデータ ソースに書き込む、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド) を呼び出すと、 **AddNew**メソッドの引数を設定せず、 **EditMode**プロパティを**adEditAdd**します。 プロバイダーは、ローカル フィールド値の変更をキャッシュします。 呼び出す、 **Update**メソッドは、現在、新しいレコードを追加**レコード セット**、プロバイダーが基になるデータベースへの変更を投稿またはリセットしていませんが、 **EditMode** **adEditNone**を呼び出すまで、 **UpdateBatch**メソッド。 渡す場合、 *Fieldlist*と*値*引数、ADO プロバイダーに送信、新しいレコードの記憶域のキャッシュとセット、 **EditMode**に**adEditAdd**; を呼び出す必要があります、 **UpdateBatch**メソッドを基になるデータベースに新しいレコードを投稿します。  
+ *バッチ更新モード*(プロバイダーによって複数の変更がキャッシュされ、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを呼び出したときに基になるデータソースに書き込まれる) では、引数を指定せずに**AddNew**メソッドを呼び出すと、 **EditMode**プロパティが**adEditAdd**に設定されます。 プロバイダーは、フィールド値の変更をローカルにキャッシュします。 **Update**メソッドを呼び出すと、現在のレコード**セット**に新しいレコードが追加されますが、プロバイダーは、基になるデータベースに変更を送信したり、 **adEditNone**をリセットしてから、 **UpdateBatch**メソッドを呼び出さ**ないように**したりします。 *Fieldlist*引数と*Values*引数を渡すと、ADO はキャッシュ内のストレージとして新しいレコードをプロバイダーに送信し、 **EditMode**を**adEditAdd**に設定します。新しいレコードを基になるデータベースにポストするには、 **UpdateBatch**メソッドを呼び出す必要があります。  
   
 ## <a name="example"></a>例  
- 次の例では、配列としてフィールドの一覧と値のリストを追加する方法についてに含まれる値のリストとフィールドの一覧で AddNew メソッドを使用する方法を示します。  
+ 次の例は、フィールドリストと値リストを含む AddNew メソッドを使用して、フィールドリストと値リストを配列として含める方法を示しています。  
   
 ```  
 create table aa1 (intf int, charf char(10))  
@@ -85,13 +85,13 @@ rs.Update
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AddNew メソッドの例 (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew メソッドの例 (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
- [AddNew メソッドの例 (vc++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
+ [AddNew メソッドの例 (VC + +)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
  [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
  [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)   
- [メソッドをサポートしています](../../../ado/reference/ado-api/supports-method.md)   
+ [サポートメソッド](../../../ado/reference/ado-api/supports-method.md)   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)   
  [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)

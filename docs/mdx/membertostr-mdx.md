@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001468"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  指定されたメンバーに対応する MDX 形式の文字列を返します。  
+  指定されたメンバーに対応する多次元式 (MDX) 形式の文字列を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,14 +28,14 @@ MemberToStr(Member_Expression)
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- この関数は、メンバーの一意の名前を含む文字列を返します。 メンバーの一意の名前を外部関数に渡すには、通常使用されます。  
+## <a name="remarks"></a>Remarks  
+ この関数は、メンバーの uniquename を含む文字列を返します。 通常は、メンバーの uniquename を外部関数に渡すために使用されます。  
   
 ## <a name="example"></a>例  
- 次の例では、文字列 [Geography] を返します。[Geography] です。[Country] です。 (& a) [United States]。  
+ 次の例では、文字列 [Geography] が返されます。[Geography]。[Country] です。 & [米国]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   
@@ -45,7 +45,7 @@ MemberToStr(Member_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

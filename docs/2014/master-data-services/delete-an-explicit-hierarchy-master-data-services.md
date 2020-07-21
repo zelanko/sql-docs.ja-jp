@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 048d0c4bc88f28274dc7efd686ad075242e926ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db4a6a51164fbcdfd62a542cba9e48a58438d0ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950722"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>明示的階層を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になった明示的階層を削除します。  
@@ -29,9 +28,9 @@ ms.locfileid: "65483094"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-an-explicit-hierarchy"></a>明示的階層を削除するには  
   
@@ -45,16 +44,16 @@ ms.locfileid: "65483094"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティの編集**] ページの [、**明示的階層**ウィンドウで、削除する明示的階層をクリックします。  
+6.  [**エンティティの編集**] ページの [**明示的階層**] ペインで、削除する明示的階層をクリックします。  
   
-7.  クリックして**選択した階層を削除**します。  
+7.  [**選択した階層の削除**] をクリックします。  
   
 8.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 9. 追加の確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [明示的階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

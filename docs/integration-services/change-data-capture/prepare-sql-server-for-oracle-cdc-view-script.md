@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6f89b0cd9d3e5680fdcd4e8b594223fe4d1ddd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77f3575375ec991119462a5933e85df13de80795
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084390"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298687"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC 表示スクリプト用の SQL Server の準備
 
@@ -29,7 +29,7 @@ ms.locfileid: "68084390"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にスクリプトを貼り付けることによって、後でスクリプトを実行することができます。  
   
- **[コピー]**  
+ **Copy** に設定する必要があります  
  スクリプトをクリップボードにコピーします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にスクリプトを貼り付けて実行し、MSXDBCDC データベースを作成することができます。  
   
 ## <a name="see-also"></a>参照  

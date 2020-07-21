@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 055599b3aba3fb84c3b3e2c5e3d710ac32a434f4
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122275"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159750"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 セッション ID または作業単位 (UOW) に基づいてユーザーのプロセスを終了します。 指定したセッション ID または UOW に元に戻す作業が多く含まれている場合、KILL ステートメントは、完了するまで時間がかかる可能性があります。 特に、プロセスに長いトランザクションのロールバックが含まれている場合、このプロセスは完了するまで時間がかかります。  
   
@@ -52,13 +52,13 @@ KILL は通常の接続を終了します。これにより、指定されたセ
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 KILL { session ID | UOW } [ WITH STATUSONLY ]   
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 KILL 'session_id'  
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**適用対象**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 分散トランザクションの作業単位 ID (UOW) を指定します。 _UOW_ は、sys.dm_tran_locks 動的管理ビューの request_owner_guid column から取得できる GUID です。 _UOW_ は、エラー ログや MS DTC モニターからも取得できます。 分散トランザクションの監視の詳細については、MS DTC のドキュメントを参照してください。  
   
@@ -87,7 +87,7 @@ _UOW_
 WITH STATUSONLY  
 指定した_セッション ID_ または _UOW_の、前の KILL ステートメントに従って実行されているロールバックの進行状況レポートを生成します。 KILL WITH STATUSONLY では、_セッション ID_ または _UOW_ の終了もロールバックも実行されません。 このコマンドは、ロールバックの現在の進行状況のみを表示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 KILL は、通常は、他の重要なプロセスをロックを使用してブロックしているプロセスを終了するために使用されます。 KILL は、必要なシステム リソースを使用しているクエリを実行しているプロセスを停止するためにも使用できます。 システム プロセスと拡張ストアド プロシージャを実行しているプロセスは終了できません。  
   
 重要なプロセスが実行している場合は特に、KILL の使用には注意してください。 ユーザー自身のプロセスは終了できません。 次のプロセスも、終了すべきではありません。  
@@ -127,7 +127,7 @@ WITH STATUSONLY オプションを設定しない状態で同じ KILL  _ID_|_UOW
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** KILL DATABASE CONNECTION 権限が必要です。 サーバー レベル プリンシパル ログインが、KILL DATABASE CONNECTION です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-kill-to-stop-a-session"></a>A. KILL を使用してセッションを停止する  
  次の例は、セッション ID `53` を停止する方法を示しています。  

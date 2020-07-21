@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fbb9a65610730ba23e157aabf81c04c1f4af8eec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7cce1ff00f5dcda9d832ec9c3945d75c750d97c9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980585"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925143"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>getRef (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,11 +45,11 @@ public java.sql.Ref getRef(java.lang.String colName)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getRef メソッドは、java.sql.ResultSet インターフェイスの getRef メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getRef メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [getRef メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Precision property [ADOX], Visual Basic example
 - NumericScale property [ADOX], Visual Basic example
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 671e7f144ff70bedf1556b506ead6c51d05ebd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38204684695f166032c61898457e697f60659723
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952167"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764193"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX のコード例: NumericScale および Precision プロパティの例 (VB)
-この例では、 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)と[精度](../../../ado/reference/adox-api/precision-property-adox.md)のプロパティ、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクト。 このコードは、その値を表示、 **Order Details**のテーブル、 *Northwind*データベース。  
+この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの[Numericscale](../../../ado/reference/adox-api/numericscale-property-adox.md)プロパティと[Precision](../../../ado/reference/adox-api/precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind*データベースの**Order Details**テーブルの値が表示されます。  
   
 ```  
 ' BeginNumericScalePrecVB  
@@ -75,7 +75,7 @@ End Sub
 ' EndNumericScalePrecVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+## <a name="see-also"></a>参照  
+ [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [NumericScale プロパティ (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md)   
  [Precision プロパティ (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md)

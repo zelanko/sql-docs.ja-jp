@@ -1,5 +1,5 @@
 ---
-title: Execute、Requery、および Clear のメソッドの例 (JScript) |Microsoft Docs
+title: Execute、Requery、および Clear メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4c5ca02f8f3ca6b8b525bdc3fb7875c3f1638640
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918821"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754968"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、Requery、および Clear のメソッドの例 (JScript)
-この例では、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と[オフ](../../../ado/reference/ado-api/clear-method-ado.md)メソッドの内容を消去する、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 (、**エラー**コレクションへのアクセスを使用して、**接続**のオブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md))。ファイルに名前を**ExecuteJS.asp**します。  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、Requery、および Clear メソッドの例 (JScript)
+この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用して[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの内容をクリアします。 (**エラー**コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの**Connection**オブジェクトを使用してアクセスします)。ファイルに「 **Executejs. asp**」という名前を指定します。  
   
 ```  
 <!-- BeginExecuteJS -->  
@@ -178,12 +178,12 @@ BODY {
 <!-- EndExecuteJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)   
- [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)

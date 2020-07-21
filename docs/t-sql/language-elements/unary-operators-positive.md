@@ -21,10 +21,10 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68086155"
 ---
 # <a name="unary-operators---positive"></a>単項演算子 - 正号
@@ -56,10 +56,10 @@ ms.locfileid: "68086155"
 ## <a name="result-types"></a>戻り値の型  
  データ型を返す *numeric_expression*です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  単項プラスは任意の数値式の前に付けることができますが、その式が返す値に対して何の操作も行いません。 つまり、負の式の値を正の値にして返すわけではありません。 負の式の値を正の値として返すには、[ABS](../../t-sql/functions/abs-transact-sql.md) 関数を使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-setting-a-variable-to-a-positive-value"></a>A. 変数に正の値を設定する  
  次の例では、変数を正の値に設定します。  

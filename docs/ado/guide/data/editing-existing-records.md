@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], existing records
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71d8b825766ca94984ca2dc0b51577488178920f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925439"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761028"
 ---
 # <a name="editing-existing-records"></a>既存のレコードの編集
-既存のレコードを編集するには、編集し、変更する行に移動、**値**を変更するフィールドのプロパティ。 詳細については、**フィールド**オブジェクトの**値**プロパティを参照してください[データを調べる](../../../ado/guide/data/examining-data.md)します。 カーソルの種類によってを使用して**Update**または**UpdateBatch**変更をデータ ソースに送信します。 詳細については、次を参照してください。[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)します。  
+既存のレコードを編集するには、編集する行に移動し、変更するフィールドの [**値**] プロパティを変更します。 **フィールド**オブジェクトの**値**プロパティの詳細については、「[データの検査](../../../ado/guide/data/examining-data.md)」を参照してください。 カーソルの種類によっては、 **Update**または**UpdateBatch**を使用して、変更をデータソースに送り返すことができます。 詳細については、「[データの更新と永続](../../../ado/guide/data/updating-and-persisting-data.md)化」を参照してください。  
   
- コマンド オブジェクトでストアド プロシージャを使用して、ストアド プロシージャは、カーソルは作成を要求していないために、その他の操作を実行するため、更新を実行する方が効率的になります。 カーソルの詳細については、次を参照してください。[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)します。
+ 通常、ストアドプロシージャではカーソルを作成する必要がないので、コマンドオブジェクトを使用してストアドプロシージャを使用し、更新を実行したり、他の操作を実行したりする方が効率的です。 カーソルの詳細については、「[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)について」を参照してください。

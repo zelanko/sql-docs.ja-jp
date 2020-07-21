@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787387"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server エージェントの JobSteps オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **JobSteps** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップについての情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
  次の表は、 **SQLAgent:JobSteps** カウンターの一覧です。  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**Active steps**|このカウンターは、現在実行中のジョブ ステップの数を報告します。|  
 |**Queued steps**|このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行する準備が整っているジョブ ステップで、まだ実行が開始されていないジョブ ステップの数を報告します。|  
@@ -34,7 +34,7 @@ ms.locfileid: "68093627"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|インスタンス|[説明]|  
+|インスタンス|説明|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブ ステップの情報です。|  
 |**ActiveScripting**|**ActiveScripting** サブシステムを使用するジョブ ステップの情報です。|  
@@ -44,7 +44,7 @@ ms.locfileid: "68093627"
 |**Distribution**|**Distribution** サブシステムを使用するジョブ ステップの情報です。|  
 |**Dts**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サブシステムを使用するジョブ ステップの情報です。|  
 |**LogReader**|**LogReader** サブシステムを使用するジョブ ステップの情報です。|  
-|**Merge**|**Merge** サブシステムを使用するジョブ ステップの情報です。|  
+|**[マージ]**|**Merge** サブシステムを使用するジョブ ステップの情報です。|  
 |**PowerShell**|**PowerShell** サブシステムを使用するジョブ ステップの情報です。|  
 |**QueueReader**|**QueueReader** サブシステムを使用するジョブ ステップの情報です。|  
 |**スナップショット**|**Snapshot** サブシステムを使用するジョブ ステップの情報です。|  

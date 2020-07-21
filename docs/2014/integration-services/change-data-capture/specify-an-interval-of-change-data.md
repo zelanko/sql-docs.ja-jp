@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70b9c14d609f2db69ee5751eca18acb5262a07a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771220"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435429"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、最初のタスクは、変更間隔のエンドポイントを計算することです。 このエンドポイントは `datetime` 値で、パッケージで後から使用するためにパッケージ変数に格納されます。  
@@ -73,7 +72,7 @@ ms.locfileid: "62771220"
   
 -   **開始日時の計算**。 前の読み込みの終了日時を現在の開始日時として使用します。 増分読み込みの間隔が一定である場合は、Transact-SQL または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語の `datetime` 関数を使用してこの値を計算できます。 一定でない場合は、実行のたびにエンドポイントを保存し、SQL 実行タスクまたはスクリプト タスクを使用して前のエンドポイントを読み込むことが必要になる場合があります。  
   
--   **終了日時の計算**。 増分読み込みの間隔が一定である場合は、現在の終了日時を開始日時からのオフセットとして計算します。 使用して、この値を計算する、もう一度、`datetime`または TRANSACT-SQL の関数、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語です。  
+-   **終了日時の計算**。 増分読み込みの間隔が一定である場合は、現在の終了日時を開始日時からのオフセットとして計算します。 ここでも、 `datetime` transact-sql または式言語の関数を使用して、この値を計算でき [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ます。  
   
  次の手順では、変更間隔が一定で、増分読み込みパッケージが例外なく毎日実行されることを前提としています。 それ以外の場合、対象外の間隔の変更データは失われます。 間隔の開始時点は一昨日の午前 0 時 (24 ～ 48 時間前) です。 間隔の終了時点は昨日の午前 0 時 (0 ～ 24 時間前の昨晩) です。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "62771220"
   
 ## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](../use-variables-in-packages.md)   
- [Integration Services (SSIS) 式](../expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS&#41; 式](../expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   
  [スクリプト タスク](../control-flow/script-task.md)  
   

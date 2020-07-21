@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a2ccf9973cf545168f6778576ff27eae5e630d5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835691"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438709"
 ---
 # <a name="edit-the-advanced-properties"></a>詳細プロパティの編集
   **[詳細設定]** タブを使用すると、CDC インスタンスに特殊なプロパティを追加できます。  
@@ -33,6 +32,6 @@ ms.locfileid: "62835691"
   
  入力可能なプロパティの説明については、「 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config)」の使用可能なオプションの表を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [CDC インスタンスのプロパティを編集する方法](how-to-edit-the-cdc-instance-properties.md)  

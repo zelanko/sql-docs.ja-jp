@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107398"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
@@ -34,10 +34,10 @@ ms.locfileid: "66107398"
   
 |要素|説明|  
 |----------|-----------------|  
-|名前|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
+|Name|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
 |説明|レポート マネージャーでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
 |接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。|  
-|[接続文字列]|データベースの接続文字列です。 詳細については、および頻繁に使用されるデータ ソースへの接続文字列の例を表示するのには、「[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。|  
+|接続文字列|データベースの接続文字列です。 頻繁に使用されるデータソースに対する接続文字列の例については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。|  
 |資格情報の種類|接続に必要な資格情報をどのように取得するか、および、接続の確立後もそれらを使用するかどうかを指定します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../integration-services/connection-manager/data-sources.md)」をご覧ください。|  
   
  共有データ ソースには、データの取得に使用するクエリ情報が含まれません。 クエリは、常にレポート定義内に保持されます。  
@@ -55,8 +55,8 @@ ms.locfileid: "66107398"
   
  レポート サーバーのフォルダー階層で共有データ ソースへのアクセスを制御する方法の詳細については、「 [共有データ ソース アイテムをセキュリティで保護する](../security/secure-shared-data-source-items.md)」を参照してください。  
   
-## <a name="deleting-a-shared-data-source"></a>共有データ ソースを削除します。  
- 共有データ ソースは、レポート サーバーからアイテムを削除するときと同じ方法で削除できます。 レポート マネージャーでフォルダーを開き、詳細ビューで、項目を選択 をクリックして**削除**します。 SharePoint サイトでアプリケーション ページでは、開いて、SharePoint ライブラリ、アイテムを選択する をクリックして**削除**します。  
+## <a name="deleting-a-shared-data-source"></a>共有データソースの削除  
+ 共有データ ソースは、レポート サーバーからアイテムを削除するときと同じ方法で削除できます。 レポートマネージャーで、詳細ビューでフォルダーを開き、項目を選択して、[**削除**] をクリックします。 SharePoint サイトのアプリケーションページで、SharePoint ライブラリを開き、アイテムを選択して、[**削除**] をクリックします。  
   
  共有データ ソースを削除すると、それを使用しているレポート、モデル、またはデータ ドリブン サブスクリプションがすべて非アクティブ化されます。 データ ソース接続情報がなければ、アイテムを実行することはできません。 これらのアイテムをアクティブ化するには、各アイテムを開いて、以下の操作を行います。  
   
@@ -68,14 +68,14 @@ ms.locfileid: "66107398"
   
  共有データ ソースの削除操作を元に戻すことはできません。 ただし、共有データ ソースをうっかり削除してしまったとしても、削除したデータ ソースと同じプロパティ値で新たに作成し直すことは可能です。 レポート、モデル、またはデータ ドリブン サブスクリプションを 1 つずつ開いて、共有データ ソースと、それを使用しているアイテムとを再バインドする必要はありますが、データ ソースのプロパティが以前と同じであれば、引き続き以前と同じようにそれらを使用できます。  
   
-## <a name="see-also"></a>関連項目  
- [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [レポート データ ソースを管理する](manage-report-data-sources.md)   
+## <a name="see-also"></a>参照  
+ [SharePoint 統合モードで Reporting Services &#40;共有データソースを作成および管理&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [レポートデータソースの管理](manage-report-data-sources.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [[データ ソース] プロパティ ページ (レポート マネージャー)](../data-sources-properties-page-report-manager.md)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [埋め込みデータ接続または共有データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [[データソース] プロパティページ &#40;レポートマネージャー&#41;](../data-sources-properties-page-report-manager.md)   
+ [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル パーティション (SSAS テーブル) の処理 |Microsoft Docs
+title: テーブルモデルパーティションの処理 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4cabfe4f0d28bb74ae1fae0b84de758e7dca565
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96845e99f9d183df8545b1da379ced41496923c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938733"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティションの処理 (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 このトピックのタスクでは、 **で** [パーティションの処理] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、モデル データベースでパーティションを処理する方法について説明します。  
   
-###  <a name="bkmk_create_new"></a> パーティションを処理するには  
+###  <a name="to-process-a-partition"></a><a name="bkmk_create_new"></a> パーティションを処理するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、処理対象のパーティションが存在するテーブルを右クリックして **[パーティション]** をクリックします。  
   
 2.  **[パーティション]** ダイアログ ボックスの **[パーティション]** で、[処理] ボタンをクリックします。  
   
-3.  **パーティションの処理**  ダイアログ ボックスで、**モード**ボックスの一覧で、次のプロセス モードのいずれかを選択します。  
+3.  [**パーティションの処理**] ダイアログボックスの [**モード**] ボックスのリストで、次のプロセスモードのいずれかを選択します。  
   
     |モード|説明|  
     |----------|-----------------|  
@@ -39,7 +38,7 @@ ms.locfileid: "66066832"
 4.  **[処理]** チェックボックス列で、選択したモードで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル パーティション (SSAS テーブル)](partitions-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;テーブルモデルパーティション](partitions-ssas-tabular.md)   
  [テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

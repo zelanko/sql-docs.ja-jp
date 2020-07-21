@@ -1,5 +1,5 @@
 ---
-title: Cancel メソッドの例 (vc++) |Microsoft Docs
+title: Cancel メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Cancel method [ADO], VC++ example
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0d09659e486d58aec60609395f9a16cecfad8177
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920176"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763183"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel メソッドの例 (VC++)
-この例では、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)でコマンドの実行をキャンセルするメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのかどうか、接続がビジー状態です。  
+この例では、接続がビジーの場合に、 [cancel](../../../ado/reference/ado-api/cancel-method-ado.md)メソッドを使用して、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトで実行されているコマンドを取り消します。  
   
 ```  
 // CancelMethodExample.cpp  
@@ -140,6 +140,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f9493d8002ef8dac72cf4a2b94fba7f84c64e798
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732610"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ A
 * **varbinary(***n***)**
 * **varchar(max)**
 
-内の複数の
+or
 
 * **varchar(***n***)**
 
@@ -57,12 +57,12 @@ expression。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sq
 ## <a name="return-types"></a>戻り値の型
 圧縮された入力内容を表す **varbinary (max)** 。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 圧縮されたデータにインデックスを付けることはできません。
   
 `COMPRESS` 関数は入力式のデータを圧縮します。 圧縮するデータ セクションごとに、この関数を呼び出す必要があります。 ストレージ中の行またはページ レベルでの自動データ圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-compress-data-during-the-table-insert"></a>A. 表の挿入中にデータを圧縮する  
 この例では、テーブルに挿入されるデータを圧縮する方法を示します。

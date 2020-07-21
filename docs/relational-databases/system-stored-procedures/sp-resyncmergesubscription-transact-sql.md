@@ -1,5 +1,5 @@
 ---
-title: sp_resyncmergesubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_resyncmergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899221"
 ---
-# <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定した既知の検証の状態へのマージ サブスクリプションを再同期化します。 これによって、サブスクリプション データベースを、正常終了した前回の検証時や指定の日時など、特定の時点に強制的に集約または同期できます。 このメソッドを使用してサブスクリプションを再同期する場合、スナップショットが再適用されません。 このストアド プロシージャは、スナップショット レプリケーション サブスクリプションまたはトランザクション レプリケーション サブスクリプションでは使用しません。 このストアド プロシージャは、パブリッシャーのパブリケーション データベースまたはサブスクライバーのサブスクリプション データベースに対して実行されます。  
+  指定した既知の検証状態にマージサブスクリプションを再同期します。 これによって、サブスクリプション データベースを、正常終了した前回の検証時や指定の日時など、特定の時点に強制的に集約または同期できます。 この方法を使用してサブスクリプションを再同期する場合、スナップショットは再適用されません。 このストアド プロシージャは、スナップショット レプリケーション サブスクリプションまたはトランザクション レプリケーション サブスクリプションでは使用しません。 このストアドプロシージャは、パブリッシャー、パブリケーションデータベース、またはサブスクライバー側のサブスクリプションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,36 +43,36 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。 NULL の値がストアド プロシージャがパブリッシャーで実行される場合に有効です。 ストアド プロシージャをサブスクライバー側で実行する場合は、パブリッシャーを指定する必要があります。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 ストアドプロシージャがパブリッシャーで実行されている場合は、NULL 値が有効です。 ストアド プロシージャをサブスクライバー側で実行する場合は、パブリッシャーを指定する必要があります。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 NULL 値がストアド プロシージャをパブリッシャー側のパブリケーション データベースで実行される場合に有効です。 ストアド プロシージャをサブスクライバー側で実行する場合は、パブリッシャーを指定する必要があります。  
+`[ @publisher_db = ] 'publisher_db'`パブリケーションデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は NULL です。 NULL の値は、ストアドプロシージャがパブリッシャー側のパブリケーションデータベースで実行されている場合に有効です。 ストアド プロシージャをサブスクライバー側で実行する場合は、パブリッシャーを指定する必要があります。  
   
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー* は **sysname** 、既定値は NULL です。 NULL の値がストアド プロシージャがサブスクライバーで実行される場合に有効です。 ストアド プロシージャは、パブリッシャー側で実行される場合、サブスクライバーを指定する必要があります。  
+`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*の**sysname**,、既定値は NULL です。 NULL の値は、ストアドプロシージャがサブスクライバーで実行されている場合に有効です。 ストアドプロシージャをパブリッシャーで実行する場合は、サブスクライバーを指定する必要があります。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *subscription_db*は**sysname**、既定値は NULL です。 ストアド プロシージャをサブスクリプション データベースのサブスクライバー側で実行する場合は、NULL の値が有効です。 ストアド プロシージャは、パブリッシャー側で実行される場合、サブスクライバーを指定する必要があります。  
+`[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscription_db*は**sysname**,、既定値は NULL です。 ストアド プロシージャをサブスクリプション データベースのサブスクライバー側で実行する場合は、NULL の値が有効です。 ストアドプロシージャをパブリッシャーで実行する場合は、サブスクライバーを指定する必要があります。  
   
-`[ @resync_type = ] resync_type` ときに、再同期の開始位置を定義します。 *resync_type*は**int**値は次のいずれかを指定できます。  
+`[ @resync_type = ] resync_type`再同期が開始されるタイミングを定義します。 *resync_type*は**int**,、値は次のいずれかを指定することができます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**0**|初期スナップショットの後から同期を開始します。 これは、初期スナップショット以降のすべての変更がサブスクライバーに再適用するために、リソースを消費するオプションです。|  
-|**1**|同期が成功した前回の検証が開始されます。 サブスクライバーには、元の最後の検証に成功した後、すべての新しいまたは不完全なジェネレーションが再適用されます。|  
-|**2**|指定した日付から同期を開始*resync_date_str*します。 指定の日付以降の、すべての新しい生成結果または完了していない生成結果がサブスクライバーに再適用されます。|  
+|**0**|初期スナップショットの後から同期が開始されます。 初期スナップショット以降のすべての変更がサブスクライバーに再適用されるため、これは最もリソースを大量に消費するオプションです。|  
+|**1**|前回の検証が正常に完了した後に同期が開始されます。 最後に検証が正常に完了した後に発生した、新規または不完全なすべてのジェネレーションがサブスクライバーに再適用されます。|  
+|**2**|同期は、 *resync_date_str*で指定された日付から開始されます。 指定の日付以降の、すべての新しい生成結果または完了していない生成結果がサブスクライバーに再適用されます。|  
   
-`[ @resync_date_str = ] resync_date_string` 再同期を開始する日付を定義します。 *resync_date_string*は**nvarchar (30)** 、既定値は NULL です。 このパラメーターが使用されるときに、 *resync_type*の値は、 **2**します。 指定した日付は、それと同等に変換されます**datetime**値。  
+`[ @resync_date_str = ] resync_date_string`再同期を開始する日付を定義します。 *resync_date_string*は**nvarchar (30)**,、既定値は NULL です。 このパラメーターは、 *resync_type*の値が**2**の場合に使用されます。 指定された日付は、対応する**datetime**値に変換されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_resyncmergesubscription**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_resyncmergesubscription**は、マージレプリケーションで使用します。  
   
- 値**0**の*resync_type*リソースを消費可能性がある多くよりも小さい、全体を再初期化を初期スナップショット以降のすべての変更を再適用、パラメーターとして使用することがあります。 たとえば場合は、初期スナップショットは、1 か月前に配信された、この値のデータが再適用されるように、過去 1 か月です。 初期スナップショットには、データの 1 ギガバイト (GB) が含まれている場合は、過去 1 か月の変更の量は、変更されたデータの 2 つメガバイト (MB) で構成されている、完全な 1 GB のスナップショットを再適用するよりもデータを再適用する方が効率的でしょう。  
+ *Resync_type*パラメーターの値が**0**の場合、初期スナップショット以降のすべての変更が再適用されますが、リソースを大量に消費する可能性がありますが、完全な再初期化よりもかなり少なくなる可能性があります。 たとえば、初期スナップショットが1か月前に配信された場合、この値によって過去1か月のデータが再適用されます。 初期スナップショットに 1 gb のデータが含まれていても、過去1か月の変更量が2メガバイト (MB) の変更されたデータである場合は、1 GB の完全なスナップショットを再適用するよりもデータを再適用する方が効率的です。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_resyncmergesubscription**します。  
+ **Sp_resyncmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

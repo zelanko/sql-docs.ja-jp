@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07934e74138f17317eb0258e2b3ad0fa6d26254a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106320"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)

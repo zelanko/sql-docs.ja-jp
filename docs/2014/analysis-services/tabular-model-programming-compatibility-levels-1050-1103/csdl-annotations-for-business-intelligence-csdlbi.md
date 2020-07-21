@@ -1,5 +1,5 @@
 ---
-title: Business Intelligence (CSDLBI) 向けの CSDL 注釈 |Microsoft Docs
+title: ビジネスインテリジェンスの CSDL 注釈 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3414b0d8b2614e83f62e85c4f750ee0e8c7397d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940173"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、ビジネス インテリジェンス注釈付き概念スキーマ定義言語 (CSDLBI) と呼ばれる XML 形式でのテーブル モデルの定義の表示をサポートします。  
@@ -31,18 +30,18 @@ ms.locfileid: "62757960"
   
 -   [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
--   [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+-   [PowerPivot BI セマンティックモデル接続 &#40;。 bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
- CSDLBI スキーマは、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] などのクライアントからのモデル定義の要求に対して、Analysis Services サーバーで生成されます。 クライアント アプリケーションは、モデル データをホストする Analysis Services サーバーに XML クエリを送信します。 その応答として、サーバーはモデル内のエンティティの定義を含む XML メッセージを CSDLBI 注釈を使用して送信します。 レポート クライアントは、この情報を使用して、フィールド、集計、およびモデルで使用できるメジャーを表示します。 CSDLBI 注釈は、データのグループ化、並べ替え、および書式設定の方法に関する情報も提供します。  
+ CSDLBI スキーマは、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] などのクライアントからのモデル定義の要求に対して、Analysis Services サーバーで生成されます。 クライアント アプリケーションは、モデル データをホストする Analysis Services サーバーに XML クエリを送信します。 その応答として、サーバーはモデル内のエンティティの定義を含む XML メッセージを CSDLBI 注釈を使用して送信します。 レポートクライアントは、この情報を使用して、モデルで使用できるフィールド、集計、およびメジャーを表示します。 CSDLBI 注釈は、データのグループ化、並べ替え、および書式設定の方法に関する情報も提供します。  
   
- CSDLBI の全般については、次を参照してください。 [CSDLBI の概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)します。  
+ CSDLBI の一般的な情報については、「 [CSDLBI の概念](/analysis-services/csdlbi/csdlbi-concepts)」を参照してください。  
   
 ### <a name="working-with-csdl"></a>CSDL の操作  
  特定のテーブル モデルを表す CSDLBI 注釈のセットは、単純型と複合型の両方のエンティティのコレクションを含む XML ドキュメントです。 エンティティは、計算列、メジャーまたは KPI に含まれるテーブル (またはディメンション)、列 (属性)、関連付け (リレーションシップ) および式を定義します。  
   
  これらのオブジェクトを直接変更することはできません。テーブル モデルを操作するには、クライアント ツールおよびアプリケーション プログラミング インターフェイス (API) を使用してください。  
   
- モデルの CSDL を取得するには、モデルをホストするサーバーに DISCOVER 要求を送信します。 この要求は、サーバーとモデルのほか、必要に応じてビューまたはパースペクティブを指定して修飾する必要があります。 返されるメッセージは、XML 文字列です。 一部の要素は言語に依存しているため、現在の接続の言語に応じて異なる値が返される可能性があります。 詳細については、次を参照してください。 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)します。  
+ モデルの CSDL を取得するには、モデルをホストするサーバーに DISCOVER 要求を送信します。 この要求は、サーバーとモデルのほか、必要に応じてビューまたはパースペクティブを指定して修飾する必要があります。 返されるメッセージは、XML 文字列です。 一部の要素は言語に依存しているため、現在の接続の言語に応じて異なる値が返される可能性があります。 詳細については、「 [DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)」を参照してください。  
   
 ### <a name="csdlbi-versions"></a>CSDLBI のバージョン  
  元の CSDL 仕様 (Entity Data Framework に基づく) では、モデリングのサポートに必要なエンティティとプロパティの大半が規定されています。 BI 注釈は、テーブル モデルの特殊な要件、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] などのクライアントに必要なレポート プロパティ、および多次元モデルに必要な追加のメタデータをサポートします。 このセクションでは、各バージョンでの更新内容を説明します。  
@@ -71,12 +70,12 @@ ms.locfileid: "62757960"
   
 -   パースペクティブのサポート。  
   
- CSDLBI 注釈の個々 の要素の詳細については、次を参照してください。 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)します。 CSDL のコア仕様については、次を参照してください。、 [CSDL v3 仕様](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)します。  
+ CSDLBI 注釈の個々の要素の詳細については、「 [CSDL への BI 注釈のテクニカルリファレンス](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)」を参照してください。 CSDL のコア仕様の詳細については、 [csdl v3 の仕様](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)を参照してください。  
   
   
 ## <a name="see-also"></a>参照  
- [表形式オブジェクト モデルをについてください。](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [CSDLBI の概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [表形式オブジェクトモデルについて](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [CSDLBI の概念](/analysis-services/csdlbi/csdlbi-concepts)   
  [テーブル オブジェクト モデルについて](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

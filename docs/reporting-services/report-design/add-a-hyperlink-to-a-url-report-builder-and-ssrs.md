@@ -1,5 +1,5 @@
 ---
-title: URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: URL へのハイパーリンクの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574827"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080719"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  のページ分割されたレポートでテキスト ボックス、画像、グラフ、ゲージにハイパーリンク アクションを追加する方法について説明します。 リンクで他のレポート、レポート内のブックマーク、静的または動的な URL に移動できます。 
@@ -26,7 +26,7 @@ ms.locfileid: "65574827"
  
  *  また、同じレポートの **特定の場所にブックマークを追加** できます。 
   
-「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」で、サンプル データを利用し、ハイパーリンクの追加をお試しください。  
+サンプル データを利用し、ハイパーリンクの追加をお試しください。詳細については「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
@@ -73,9 +73,9 @@ ms.locfileid: "65574827"
   
 4.  **[Select URL]** ボックスで、URL または URL に評価される式を入力または選択するか、下矢印をクリックして URL が格納されているフィールドの名前をクリックします。 
 
-    ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、 `https://<servername>/images/image1.jpg`のようにします。 
+    ネイティブ モード用に構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全パスまたは相対パスを指定します。 たとえば、「 `https://<servername>/images/image1.jpg` 」のように入力します。 
     
-    SharePoint 統合モードで構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全修飾 URL を指定します。 たとえば、 `https://<SharePointservername>/<site>/Documents/images/image1.jpg`のようにします。
+    SharePoint 統合モードで構成されているレポート サーバーにアイテムをパブリッシュする場合は、完全修飾 URL を指定します。 たとえば、「 `https://<SharePointservername>/<site>/Documents/images/image1.jpg` 」のように入力します。
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

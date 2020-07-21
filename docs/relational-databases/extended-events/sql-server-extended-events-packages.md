@@ -1,6 +1,6 @@
 ---
-title: SQL Server 拡張イベント パッケージ | Microsoft Docs
-ms.custom: ''
+title: SQL Server 拡張イベント パッケージ
+description: パッケージは、SQL Server 拡張イベント オブジェクトのコンテナーです。 この記事では、パッケージに含めることができるオブジェクトについて説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,16 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce93ba3d2049315911ec7297991bf7ce416fab64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756855"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   パッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "68009387"
   
  パッケージには、次のいずれかまたはすべてのオブジェクトを含めることができます。この点については、このトピックの後半で詳しく説明します。  
   
--   イベント  
+-   events  
   
 -   対象サーバー  
   
--   アクション  
+-   Actions  
   
 -   型  
   
@@ -57,9 +57,9 @@ ms.locfileid: "68009387"
 ## <a name="package-contents"></a>パッケージの内容  
  次の図は、パッケージ内に存在することのできるオブジェクトを示しています。これらは、モジュール内に格納されます。 モジュールは、実行可能ファイルかダイナミック リンク ライブラリ (DLL) です。  
   
- ![モジュール、パッケージ、オブジェクトの関係](../../relational-databases/extended-events/media/xepackagesobjects.gif "モジュール、パッケージ、オブジェクトの関係")  
+ ![モジュール、パッケージ、およびオブジェクトの関係](../../relational-databases/extended-events/media/xepackagesobjects.gif "モジュール、パッケージ、およびオブジェクトの関係")  
   
-### <a name="events"></a>イベント  
+### <a name="events"></a>events  
  イベントは、プログラム ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など) の実行パスにおける、監視対象となる地点です。 イベントは、監視対象の地点まで到達したという事実のほか、イベントが生成された時点の状態情報を伴って発生します。  
   
  イベントは、トレースを行う目的、またはアクションのトリガーを起動する目的でのみ使用できます。 これらのアクションは同期的に実行される場合と非同期的に実行される場合とがあります。  
@@ -78,10 +78,10 @@ ms.locfileid: "68009387"
   
  チャネルは、イベントの対象ユーザーを識別します。 次の表でこれらのチャネルについて説明します。  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
-|管理|管理イベントの対象は、主にエンド ユーザー、管理者、およびサポートです。 管理チャネルのイベントは、管理者が対応できる明確な解決策が存在する問題を示します。 たとえば、アプリケーションがプリンターに接続できなかった場合に発生するイベントなどがあります。 これらのイベントには、詳しい解説が付属するか、問題の解決方法をユーザーに伝えるメッセージが関連付けられています。|  
-|運用|運用イベントは、問題や事象の分析および診断のために使用されます。 問題や事象に応じたツールまたはタスクを起動する目的で使用できます。 たとえば、プリンターがシステムに追加されたり、システムから削除された場合に発生するイベントなどがあります。|  
+|[Admin]|管理イベントの対象は、主にエンド ユーザー、管理者、およびサポートです。 管理チャネルのイベントは、管理者が対応できる明確な解決策が存在する問題を示します。 たとえば、アプリケーションがプリンターに接続できなかった場合に発生するイベントなどがあります。 これらのイベントには、詳しい解説が付属するか、問題の解決方法をユーザーに伝えるメッセージが関連付けられています。|  
+|運用時|運用イベントは、問題や事象の分析および診断のために使用されます。 問題や事象に応じたツールまたはタスクを起動する目的で使用できます。 たとえば、プリンターがシステムに追加されたり、システムから削除された場合に発生するイベントなどがあります。|  
 |分析|非常に多くの分析イベントが公開されています。 プログラムの動作を説明するもので、主にパフォーマンス調査に用いられます。|  
 |デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> デバッグ チャネルのイベントでは、実装固有の内部状態データが返されます。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
   
@@ -100,7 +100,7 @@ where name = 'keyword_map'
 ### <a name="targets"></a>対象サーバー  
  ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
   
-### <a name="actions"></a>アクション  
+### <a name="actions"></a>Actions  
  アクションは、プログラムがイベントに呼応して実行する特定の (または一連の) 応答です。 アクションはイベントに関連付けられます。各イベントには、それぞれ異なる一連のアクションが関連付けられる場合もあります。  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ where name = 'keyword_map'
   
 -   イベント  
   
--   アクション (action)  
+-   action  
   
 -   ターゲット (target)  
   
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   型  
+-   type  
   
  詳細については、「[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)」を参照してください。  
   

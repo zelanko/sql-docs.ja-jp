@@ -13,14 +13,14 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f6b7846dbf4c9c1ae89914252887aeecec6b89cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968073"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297449"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67968073"
   
  次の表に、演算子に関するこのセクションのトピックの一覧を示します。  
   
-|演算子|[説明]|  
+|演算子|説明|  
 |--------------|-----------------|  
 |[キャスト (SSIS 式)](../../integration-services/expressions/cast-ssis-expression.md)|式をあるデータ型から別のデータ型に変換します。|  
 |[() (括弧) (SSIS 式)](../../integration-services/expressions/parentheses-ssis-expression.md)|式の評価順序を特定します。|  
@@ -49,18 +49,18 @@ ms.locfileid: "67968073"
 |[^ (ビット演算子排他的 OR) (SSIS 式)](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)|2 つの整数値の排他的 OR 演算をビット単位で実行します。|  
 |[& (ビット演算子 AND) (SSIS 式)](../../integration-services/expressions/bitwise-and-ssis-expression.md)|2 つの整数値の AND 演算をビット単位で実行します。|  
 |[~ &#40;ビット演算子 NOT&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/bitwise-not-ssis-expression.md)|整数の否定のビット演算を実行します。|  
-|[== (等しい) (SSIS 式)](../../integration-services/expressions/equal-ssis-expression.md)|2 つの式が等しいかどうかを判別するための比較を実行します。|  
+|[== &#40;等しい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/equal-ssis-expression.md)|2 つの式が等しいかどうかを判別するための比較を実行します。|  
 |[\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/unequal-ssis-expression.md)|2 つの式が等しくないかどうかを判別するための比較を実行します。|  
-|[> (より大きい) (SSIS 式)](../../integration-services/expressions/greater-than-ssis-expression.md)|最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。|  
-|[&#60; (より小さい) (SSIS 式)](../../integration-services/expressions/less-than-ssis-expression.md)|最初の式が 2 番目の式未満かどうかを判別するための比較を実行します。|  
-|[&#62;= (以上) (SSIS 式)](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。|  
-|[&#60;= (以下) (SSIS 式)](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)|最初の式が 2 番目の式以下かどうかを判別するための比較を実行します。|  
+|[&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)|最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。|  
+|[&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/less-than-ssis-expression.md)|最初の式が 2 番目の式未満かどうかを判別するための比較を実行します。|  
+|[&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)|最初の式が 2 番目の式以上かどうかを判別するための比較を実行します。|  
+|[&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)|最初の式が 2 番目の式以下かどうかを判別するための比較を実行します。|  
 |[? : &#40;条件&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/conditional-ssis-expression.md)|ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。|  
   
  優先順位の階層内における各演算子の配置の詳細については、「 [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)   
+ [関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
  [Integration Services 式の詳細の例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   

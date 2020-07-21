@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c5409f63971fe626e1692e2086af1b2557ae9fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f13e8eae235eb040e92baa15247b6094e9aa1075
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101732"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294699"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC 用に SQL Server を準備する方法
 
@@ -34,7 +34,7 @@ ms.locfileid: "68101732"
   
 2.  左ペインで **[ローカルの CDC Service]** を選択してから、 **[アクション]** ペインの **[SQL Server の準備]** をクリックします。  
   
-     または、 **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]** をクリックします。  
+     **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]** をクリックすることもできます。  
   
 3.  [Oracle CDC 用 SQL Server インスタンスの準備] ダイアログ ボックスに必要な情報を入力します。 このダイアログ ボックスに必要な情報を入力する方法については、「 [Prepare SQL Server for CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)」を参照してください。  
   

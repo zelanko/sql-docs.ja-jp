@@ -1,5 +1,6 @@
 ---
 title: XML データへのビジネス ロジックの追加 | Microsoft Docs
+description: XSL 変換を適用するか、データに対してドメイン固有の制約を使用するか、検証規則をトリガーすることによって、XML データにビジネス ロジックを追加する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a282e3e9493bb1cfbcc57186a8e1b9f53faf22f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 524be57031368538271d1bde0016121644b9fed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729158"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML データへのビジネス ロジックの追加
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML データにはいくつかの方法でビジネス ロジックを追加できます。  
   
 -   XML データの挿入や変更のときに領域固有の制約を強制する行制約または列制約を記述できます。  

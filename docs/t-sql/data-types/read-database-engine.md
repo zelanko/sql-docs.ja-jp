@@ -1,7 +1,7 @@
 ---
 title: Read (データベース エンジン) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,21 +17,28 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee08e8278b2b302f91360a8f74690050c28ba556
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000607"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644018"
 ---
-# <a name="read-database-engine"></a>Read (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="read-database-engine-by-using-csharp"></a>CSharp を使用した Read (データベース エンジン)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 読み取り のバイナリ表現を読み込む **SqlHierarchyId** から渡されるで **BinaryReader** し、設定、 **SqlHierarchyId** オブジェクトをその値にします。 読み取り [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して呼び出すことができない です。 代わりに、CAST または CONVERT を使用してください。
   
 ## <a name="syntax"></a>構文  
-  
-```sql
+
+<!--
+This is not T-SQL, despite the ```sql colorizer specified.
+Neither should this be ```syntaxsql.
+Rather, this is C# (or C# syntax).  Same for the later code blocks.
+I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
+-->
+
+```csharp
 void Read( BinaryReader r )   
 ```  
   
@@ -42,16 +49,16 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>戻り値の型
  **CLR の戻り値の型: void**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  読み取り は、入力は検証されません。 無効なバイナリの入力を指定した場合 読み取り で例外が発生します。 または、成功し、生成、無効な場合があります、 **SqlHierarchyId** オブジェクト メソッドを持つ予期しない結果が得られますか、例外が発生します。  
   
  読み取りは、新しく作成された **SqlHierarchyId** オブジェクトでのみ呼び出すことができます。  
   
  読み取り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合、ようにデータを書き込む場合 **hierarchyid** 列です。 読み取り 間で変換が行われるときに内部的に呼び出されますも **varbinary** と **hierarchyid**です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-```sql
+```csharp
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  

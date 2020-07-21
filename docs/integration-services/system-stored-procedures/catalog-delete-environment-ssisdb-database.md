@@ -8,28 +8,28 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c1a64177a3e7a57d41b644e576877c7f9d8d7fda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37c0eb073ee8284f349a4efb269491734bcf524e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749623"
 ---
-# <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (SSISDB データベース)
+# <a name="catalogdelete_environment-ssisdb-database"></a>catalog.delete_environment (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーから環境を削除します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
+catalog.delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
 ```  
   
 ## <a name="arguments"></a>引数  

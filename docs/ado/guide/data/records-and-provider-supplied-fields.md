@@ -1,5 +1,5 @@
 ---
-title: レコードおよびフィールドのプロバイダーが指定した |Microsoft Docs
+title: レコードとプロバイダーが指定したフィールド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,71 +11,71 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924514"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764793"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
-ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、オープンの現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL を開くと組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  
+[Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが開かれている場合、そのソースは、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の行、絶対 url、または開いている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトと組み合わせた相対 url にすることができます。  
   
- 場合、**レコード**から開かれる、**レコード セット**、**レコード**オブジェクト[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションは、のすべてのフィールドを含める**レコード セット**、さらに、基になるプロバイダーによって追加されたすべてのフィールド。  
+ **レコードがレコード****セット**から開かれた場合、**レコード**オブジェクト[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションには、レコード**セット**のすべてのフィールドに加えて、基になるプロバイダーによって追加されたすべてのフィールドが含まれます。  
   
- プロバイダーの補助特性として機能する追加のフィールドを挿入、**レコード**します。 その結果、**レコード**ではなく、一意のフィールドを必要があります、**レコード セット**全体またはそのいずれかとして**レコード**の別の行から派生した、 **Recordset**.  
+ プロバイダーは、**レコード**の補助特性として機能する追加のフィールドを挿入する場合があります。 その結果、**レコード**は、レコード**セット**全体またはレコード**セット**の別の行から派生した**レコード**ではなく、一意のフィールドを持つことができます。  
   
- すべての行など、 **Recordset**データ ソースがこのような From の列がある可能性があり、件名の電子メールから派生します。 A**レコード**そこから派生した**Recordset**フィールドを同じになります。 ただし、**レコード**をによって表される特定のメッセージに固有の他のフィールドがありますも**レコード**、添付ファイルと Cc (カーボン コピー) など。  
+ たとえば、電子メールデータソースから派生した**レコードセット**のすべての行に、From、To、Subject などの列が含まれている場合があります。 そのレコード**セット**から派生した**レコード**のフィールドは同じになります。 ただし、**レコード**には、添付ファイルや cc (カーボンコピー) など、その**レコード**によって表される特定のメッセージに固有の他のフィールドが存在する場合もあります。  
   
- ですが、**レコード**オブジェクトとの現在の行、**レコード セット**、同じフィールドがあるとは異なるため、**レコード**と**レコードセット**オブジェクトは、さまざまなメソッドおよびプロパティがあります。  
+ **レコードオブジェクトと**レコード**セット**の現在の行のフィールドは同じですが、**レコード**および**レコードセット**オブジェクトのメソッドとプロパティが異なるため、これらは異なります。  
   
- 保持している共通のフィールド、**レコード**と**Recordset**いずれかのオブジェクトで変更できます。 フィールドを削除することはできませんただし、**レコード**オブジェクトを基になるプロバイダーが、フィールドを null に設定をサポートします。  
+ **レコード**とレコード**セット**によって共通して保持されているフィールドは、どちらのオブジェクトでも変更できます。 ただし、**レコード**オブジェクトでフィールドを削除することはできませんが、基になるプロバイダーでは、フィールドを null に設定することがサポートされている場合があります。  
   
- 後に、**レコード**が開かれると、プログラムでフィールドを追加できます。 追加したフィールドを削除することもできますが、元のフィールドを削除することはできません、 **Recordset**します。  
+ **レコード**を開いた後、プログラムを使用してフィールドを追加できます。 追加したフィールドを削除することもできますが、元の**レコードセット**からフィールドを削除することはできません。  
   
- 開くことも、**レコード**URL から直接オブジェクト。 ここでは、フィールドに追加、**レコード**基になるプロバイダーによって異なります。 現時点では、ほとんどのプロバイダーの追加によって表されるエンティティを記述するフィールドのセットを**レコード**します。 単純なファイルなどのバイトのストリームのエンティティが構成されている場合、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)通常からオブジェクトを開くことができます、**レコード**します。  
+ また、URL から直接**レコード**オブジェクトを開くこともできます。 この場合、**レコード**に追加されるフィールドは、基になるプロバイダーによって異なります。 現在、ほとんどのプロバイダーは、**レコード**によって表されるエンティティを記述するフィールドのセットを追加します。 エンティティが、単純ファイルなどのバイトストリームで構成されている場合は、通常、**レコード**から[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトを開くことができます。  
   
-## <a name="special-fields-for-document-source-providers"></a>ドキュメントの特別なフィールドのソース プロバイダー  
- 特殊なクラスと呼ばれるプロバイダーの*ソース プロバイダーのドキュメント*フォルダーを管理および文書化します。 ときに、**レコード**オブジェクトが表す文書または**レコード セット**オブジェクトは、ドキュメントのフォルダーを表し、ドキュメントのソース プロバイダーがそれらのオブジェクトを記述するフィールドの一意のセットを設定します特性のドキュメントの代わりに、実際のドキュメント自体にします。 通常、1 つのフィールドへの参照が含まれます。、 **Stream**ドキュメントを表します。  
+## <a name="special-fields-for-document-source-providers"></a>ドキュメントソースプロバイダーの特別なフィールド  
+ *ドキュメントソースプロバイダー*と呼ばれる特殊なプロバイダーのクラスは、フォルダーとドキュメントを管理します。 **レコード**オブジェクトがドキュメントを表す場合、または**レコードセット**オブジェクトがドキュメントのフォルダーを表す場合、ドキュメントソースプロバイダーは、実際のドキュメントそのものではなく、ドキュメントの特性を記述するフィールドの一意のセットをそれらのオブジェクトに挿入します。 通常、1つのフィールドには、ドキュメントを表す**ストリーム**への参照が含まれます。  
   
- これらのフィールドを構成して、リソース**レコード**または**recordset**でそれらをサポートする特定のプロバイダーの一覧表示と[付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。  
+ これらのフィールドは、リソース**レコード**または**レコードセット**を構成し、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)でサポートされている特定のプロバイダーに対して一覧表示されます。  
   
- 2 つの定数のインデックス、**フィールド**リソースのコレクション**レコード**または**レコード セット**をよく使用されるフィールドのペアを取得します。 **フィールド**オブジェクト[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、目的のコンテンツを返します。  
+ 2つの定数は、リソース**レコード**または**レコードセット**の**フィールド**コレクションのインデックスを作成して、よく使用されるフィールドのペアを取得します。 **Field**オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、必要なコンテンツを返します。  
   
--   使用してアクセスするフィールド、 **adDefaultStream**定数に関連付けられている既定のストリームが含まれています、**レコード**または**Recordset**オブジェクト。 プロバイダーは、既定のストリームをオブジェクトに代入します。  
+-   **Addefaultstream**定数でアクセスされるフィールドには、**レコード**または**レコードセット**オブジェクトに関連付けられた既定のストリームが含まれています。 プロバイダーは、オブジェクトに既定のストリームを割り当てます。  
   
--   使用してアクセスするフィールド、 **adRecordURL**定数には、ドキュメントを識別する絶対 URL が含まれています。  
+-   **AdRecordURL**定数でアクセスされるフィールドには、ドキュメントを識別する絶対 URL が含まれています。  
   
- ドキュメントのソース プロバイダーがサポートしていません、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション**レコード**と**フィールド**オブジェクト。 コンテンツ、**プロパティ**コレクションがこのようなオブジェクトは null です。  
+ ドキュメントソースプロバイダーは、**レコード**および**フィールド**オブジェクトの[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションをサポートしていません。 このようなオブジェクトの場合、 **Properties**コレクションの内容は null になります。  
   
- ドキュメントのソース プロバイダーがなど、プロバイダー固有のプロパティを追加することがあります**データ ソースの種類**ドキュメントのソース プロバイダーがあるかどうかを識別するためにします。 プロバイダーの種類を決定する方法の詳細については、プロバイダーのマニュアルを参照してください。  
+ ドキュメントソースプロバイダーは、 **Datasource 型**などのプロバイダー固有のプロパティを追加して、ドキュメントソースプロバイダーであるかどうかを識別できます。 プロバイダーの種類を確認する方法の詳細については、プロバイダーのドキュメントを参照してください。  
   
-## <a name="resource-recordset-columns"></a>リソース レコード セットの列  
- A*リソース レコード セット*次の列で構成されています。  
+## <a name="resource-recordset-columns"></a>リソースレコードセットの列  
+ *リソースレコードセット*は、次の列で構成されます。  
   
-|列名|型|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|AdVarWChar|読み取り専用。 リソースの URL を示します。|  
-|RESOURCE_PARENTNAME|AdVarWChar|読み取り専用。 親レコードの絶対 URL を示します。|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用。 PARENTNAME、PARSENAME を連結したものであると、リソースの絶対 URL を示します。|  
-|RESOURCE_ISHIDDEN|adBoolean|リソースが非表示の場合は true。 行セットを明示的に作成するコマンドが RESOURCE_ISHIDDEN が True である行を選択しない限り、行は返されません。|  
-|RESOURCE_ISREADONLY|adBoolean|リソースが読み取り専用である場合は true。 開こうとして DBBINDFLAG_WRITE されのこのリソースは、DB_E_READONLY で失敗します。 読み取り専用リソースで開かれた場合でも、このプロパティを編集できます。|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントの使用方法を示します-たとえば、弁護士の簡単な。 これは、ドキュメントの作成に使用した Office テンプレートに対応可能性があります。|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|などの形式を示す、ドキュメントの MIME の種類を示す"`text/html`"。|  
-|RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納されている言語を示します。|  
-|RESOURCE_CREATIONTIME|adFileTime|読み取り専用。 リソースが作成された時刻を格納する FILETIME 構造体を示します。 時刻は世界協定時刻 (UTC) 形式で報告されます。|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用。 リソースの最終アクセス時刻が含まれる FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは 0 です。|  
-|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用。 リソースの最終書き込み時刻を表す FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは 0 です。|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用。 リソースの既定のストリームにバイト単位のサイズを示します。|  
-|RESOURCE_ISCOLLECTION|adBoolean|読み取り専用。 True の場合、リソースがディレクトリなどのコレクション。 リソースが単純なファイルの場合は false です。|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|リソースが構造化ドキュメントの場合は true。 リソースは、構造化されたドキュメントではない場合は false。 コレクションまたは単純なファイルが考えられます。|  
-|DEFAULT_DOCUMENT|AdVarWChar|読み取り専用。 このリソースに、フォルダーの既定の単純なドキュメントまたは構造化ドキュメントの URL が含まれていることを示します。 既定のストリームが、そのリソースから要求されたときに使用されます。 このプロパティは、単純なファイルの場合は空白です。|  
-|CHAPTERED_CHILDREN|adChapter|読み取り専用。 任意。 リソースの子を含む行セットのチャプターを示します。 (、 *OLE DB Provider for Internet Publishing*この列は使用しません)。|  
-|RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用。 リソースの表示名を示します。|  
-|RESOURCE_ISROOT|adBoolean|読み取り専用。 リソース コレクションまたは構造化されたドキュメントのルートである場合は true。|  
+|RESOURCE_PARSENAME|AdVarWChar|読み取り専用です。 リソースの URL を示します。|  
+|RESOURCE_PARENTNAME|AdVarWChar|読み取り専用です。 親レコードの絶対 URL を示します。|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用です。 PARENTNAME と PARSENAME の連結であるリソースの絶対 URL を示します。|  
+|RESOURCE_ISHIDDEN|AdBoolean|リソースが非表示の場合は True。 行が返されるのは、行セットを作成するコマンドが RESOURCE_ISHIDDEN が True の行を明示的に選択した場合だけです。|  
+|RESOURCE_ISREADONLY|AdBoolean|リソースが読み取り専用の場合は True。 DBBINDFLAG_WRITE を使用してこのリソースを開こうとすると、DB_E_READONLY で失敗します。 このプロパティは、リソースが読み取り用に開かれている場合でも編集できます。|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントが使用されている可能性があることを示します。たとえば、弁護士の brief などです。 これは、ドキュメントの作成に使用された Office テンプレートに対応する場合があります。|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|ドキュメントの MIME の種類を示します。 "" などの形式を示し `text/html` ます。|  
+|RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納される言語を示します。|  
+|RESOURCE_CREATIONTIME|adFileTime|読み取り専用です。 リソースが作成された時刻を含む FILETIME 構造体を示します。 時刻は協定世界時 (UTC) 形式で報告されます。|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用です。 リソースが最後にアクセスされた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  
+|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用です。 リソースが最後に書き込まれた時刻を含む FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは0になります。|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用です。 リソースの既定のストリームのサイズ (バイト単位) を示します。|  
+|RESOURCE_ISCOLLECTION|AdBoolean|読み取り専用です。 リソースがディレクトリなどのコレクションである場合は True。 リソースが単純なファイルの場合は False。|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|リソースが構造化ドキュメントである場合は True。 リソースが構造化ドキュメントでない場合は False。 コレクションまたは単純なファイルを指定できます。|  
+|DEFAULT_DOCUMENT|AdVarWChar|読み取り専用です。 このリソースに、フォルダーまたは構造化ドキュメントの既定の単純ドキュメントへの URL が含まれていることを示します。 リソースから既定のストリームが要求されるときに使用されます。 単純なファイルの場合、このプロパティは空白になります。|  
+|CHAPTERED_CHILDREN|AdChapter|読み取り専用です。 任意。 リソースの子を含む行セットのチャプターを示します。 (*インターネット発行用の OLE DB プロバイダー*では、この列は使用されません)。|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用です。 リソースの表示名を示します。|  
+|RESOURCE_ISROOT|AdBoolean|読み取り専用です。 リソースがコレクションまたは構造化ドキュメントのルートである場合は True。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

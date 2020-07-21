@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103584"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
@@ -25,7 +25,7 @@ ms.locfileid: "66103584"
   
  レポートのキャッシュを事前に読み込むには 2 つの方法があります。  
   
-1.  レポートのキャッシュ更新計画を作成します。 これは推奨される方法です。  
+1.  レポートのキャッシュ更新計画を作成します。 可能であればこの方法の使用をお勧めします。  
   
 2.  データ ドリブン サブスクリプションを使用して、パラメーター化されたレポートのインスタンスをキャッシュに事前に読み込みます。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]でキャッシュを事前に読み込む唯一の方法でした。 詳細については、「 [レポートのキャッシュ (SSRS)](caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66103584"
   
 7.  共有スケジュールを使用する場合は、 **[共有スケジュール]** をクリックして、使用するスケジュールの名前を選択します。  
   
-     カスタム スケジュールを使用する場合は、 **[アイテム固有のスケジュール]** 、 **[構成]** の順にクリックします。  
+     カスタム スケジュールを使用する場合は、 **[アイテム固有のスケジュール]**、 **[構成]** の順にクリックします。  
   
 8.  スケジュールを構成します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66103584"
   
 8.  **[次へ]** をクリックします。  
   
-9. サブスクライバー データを取得するクエリまたはコマンドを指定します。 必要に応じて、処理に時間のかかるクエリのタイムアウト値を増やします。 以下に例を示します。  
+9. サブスクライバー データを取得するクエリまたはコマンドを指定します。 必要に応じて、処理に時間のかかるクエリのタイムアウト値を増やします。 次に例を示します。  
   
     ```  
     Select * from UserInfo  
@@ -113,16 +113,16 @@ ms.locfileid: "66103584"
   
 17. 次の 2 つのキャッシュ オプションのいずれかを選択し、以下のように有効期限を構成します。  
   
-    -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます** をクリックします。 レポートの有効期限を分単位で入力します。  
+    -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、 **[レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます。]** をクリックします。 レポートの有効期限を分単位で入力します。  
   
     -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるようにするには、 **[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
   
 18. **[適用]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [データ ドリブン サブスクリプション](../subscriptions/data-driven-subscriptions.md)   
- [データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../create-a-data-driven-subscription-ssrs-tutorial.md)   
- [パフォーマンス、スナップショット、キャッシュ (Reporting Services)](performance-snapshots-caching-reporting-services.md)   
+## <a name="see-also"></a>参照  
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
+ [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [パフォーマンス、スナップショット、キャッシュ &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [レポート処理プロパティの設定](set-report-processing-properties.md)   
  [レポートのキャッシュ (SSRS)](caching-reports-ssrs.md)  
   

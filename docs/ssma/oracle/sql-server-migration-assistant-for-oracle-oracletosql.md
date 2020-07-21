@@ -1,36 +1,36 @@
 ---
-title: SQL Server Migration Assistant (OracleToSQL) に Oracle for |Microsoft Docs
+title: Oracle の SQL Server Migration Assistant (OracleToSQL) |Microsoft Docs
+description: SSMA for Oracle の詳細については、SQL Server に Oracle データベースを移行するための詳細な手順に関するページを参照してください。
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 10/10/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
-author: Shamikg
-ms.author: Shamikg
+author: Jtoland
+ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: fefccd8e57f3e6772da391421fbbba133200de05
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af779e1c68e4ab7db113072fc7b0d97a252b5f80
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266493"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294059"
 ---
-# <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server の Migration Assistant for Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle は Oracle データベースへの移行のためのツール[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 では、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows と Linux (プレビュー) と Azure SQL DB で 2017。 SSMA for Oracle が Oracle データベースのオブジェクトを変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でこれらのオブジェクトを作成します。 データベース オブジェクトを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle からデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+# <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle の SQL Server Migration Assistant (OracleToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)]Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用の Migration Assistant (SSMA) は、oracle データベースをに移行する [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ためのツールです。2012、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 on Windows および linux、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows および linux での2019、Azure SQL Database。 SSMA for Oracle は、Oracle データベースオブジェクトをデータベースオブジェクトに変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、それらのオブジェクトをで作成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] した後、oracle からにデータを移行し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-このドキュメントは、SSMA for Oracle を紹介し、Oracle データベースへの移行の手順について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 次の表は、詳細を学習に役立つトピックを示しています。  
+このドキュメントでは、SSMA for Oracle について説明し、Oracle データベースをに移行するための詳細な手順について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の表に、詳細を学習するのに役立つ記事を示します。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
-|セクション|説明|  
-|-----------|---------------|  
-|[SSMA for Oracle の新機能新機能](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|SSMA for Oracle のこのバージョンの新機能新機能|  
-|[SSMA for Oracle のインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|前提条件と SSMA for Oracle クライアント コンポーネントと必要なコンポーネントを実行しているコンピューターにインストールするための手順を説明するトピックが含まれています[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|[Ssma for Oracle 作業の開始&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|ユーザー インターフェイス、プロジェクト、および構成オプションをについて説明します。|  
-|[SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|変換プロセスと、プロセスの各手順に関する詳細情報の概要を示します。|  
-|[ユーザー インターフェイス リファレンス&#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|SSMA for Oracle ダイアログ ボックスのドキュメントが含まれています。|  
-|[SSMA for Oracle コンソールの操作](working-with-ssma-for-oracle-console-oracletosql.md)|SSMA コンソールのアプリケーションに関するドキュメントします。|  
-|[Oracle のサポートの SSMA の取得](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|に関する追加情報についてを説明します。|  
-  
+|Section|説明|
+|-----------|---------------|
+|[SSMA for Oracle の新機能](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|このバージョンの SSMA for Oracle の新機能|  
+|[SSMA for Oracle &#40;OracleToSQL のインストール&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|SSMA for Oracle クライアントおよび必須コンポーネントをを実行しているコンピューターにインストールするための前提条件と手順を説明する記事が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|[SSMA for Oracle &#40;OracleToSQL によるはじめに&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|ユーザーインターフェイス、プロジェクト、および構成オプションについて説明します。|  
+|[Oracle データベースの SQL Server &#40;OracleToSQL&#41;への移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|変換プロセスの概要と、プロセスの各手順に関する詳細情報について説明します。|  
+|[ユーザーインターフェイスリファレンス &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|SSMA for Oracle のダイアログボックスのドキュメントが含まれています。|  
+|[SSMA for Oracle コンソールの操作](working-with-ssma-for-oracle-console-oracletosql.md)|SSMA コンソールアプリケーションに関するドキュメントが含まれています。|  
+|[SSMA for Oracle のサポートを取得する](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|追加のサポートを受ける方法について説明します。|  

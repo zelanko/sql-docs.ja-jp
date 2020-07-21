@@ -21,28 +21,27 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970292"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
-  ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
+  ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから [!INCLUDE[ssDE](../../includes/ssde-md.md)] または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
   
--   **作業を開始する準備:** [SQL Server ユーティリティ](#SQLUtility)、[オプションと設定をデータベース](#DBOptSettings)、[事項と制約事項](#LimitationsRestrictions)、[の前提条件](#Prerequisites)、[セキュリティ](#Security)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:**  [SQL Server ユーティリティ](#SQLUtility)、 [データベースのオプションと設定](#DBOptSettings)、 [制限事項と制約事項](#LimitationsRestrictions)、 [前提条件](#Prerequisites)、 [セキュリティ](#Security)、 [権限](#Permissions)  
   
--   **DAC の配置に使用します。** [データ層アプリケーションのウィザードの展開](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
+-   **DAC を配置するために使用するもの:**  [データ層アプリケーションの配置ウィザード](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
   
-##  <a name="BeforeBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> はじめに  
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
-###  <a name="SQLUtility"></a> SQL Server ユーティリティ  
- データベース エンジンのマネージド インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+###  <a name="sql-server-utility"></a><a name="SQLUtility"></a>SQL Server ユーティリティ  
+ データベース エンジンのマネージド インスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は  の**ユーティリティ エクスプローラー**の [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、**[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
-###  <a name="DBOptSettings"></a> データベースのオプションと設定  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a>データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  
   
 -   データベースの照合順序および互換性レベルは、DAC パッケージで定義された値に設定されます。 SQL Server 開発者ツールでデータベース プロジェクトから構築された DAC パッケージでは、データベース プロジェクトに設定された値が使用されます。 既存のデータベースから抽出されたパッケージでは、元のデータベースの値が使用されます。  
@@ -51,49 +50,49 @@ ms.locfileid: "62918192"
   
  TRUSTWORTHY、DB_CHAINING、HONOR_BROKER_PRIORITY など、データベース オプションによっては、配置作業中の調整はできない場合があります。 ファイル グループの数、ファイルの数やサイズなどの物理プロパティは、配置作業中に変更することはできません。 配置が完了すれば、ALTER DATABASE ステートメント、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell を使用して、データベースを調整できます。  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  DAC を配置できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスです。 新しいバージョンを使用して DAC を作成した場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうしたパッケージには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生したりする、悪意のあるコードが含まれている可能性があります。 パッケージのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードもご確認ください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  セキュリティを強化するために、SQL Server 認証のログインは、パスワードなしで DAC パッケージに格納されます。 パッケージが配置またはアップグレードされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限を持つユーザーとしてログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DAC を配置できるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、 **dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) でも DAC を配置できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれる DAC を配置するには、loginmanager ロールまたは serveradmin ロールのメンバーシップが必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] へのログインが含まれない DAC を配置するには、dbmanager ロールまたは serveradmin ロールのメンバーシップが必要です。  
   
-##  <a name="UsingDeployDACWizard"></a> 使用して、データ層アプリケーションのウィザードの展開  
+##  <a name="using-the-deploy-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a>データ層アプリケーションの配置ウィザードの使用  
  **ウィザードを使用して DAC を配置するには**  
   
 1.  **オブジェクト エクスプローラー**で、DAC を配置するインスタンスのノードを展開します。  
   
-2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]** をクリックします。  
+2.  **[データベース]** ノードを右クリックし、**[データ層アプリケーションの配置]** をクリックします。  
   
 3.  ウィザードの各ダイアログの手順を実行します。  
   
     -   [[説明] ページ](#Introduction)  
   
-    -   [DAC パッケージ ページを選択します。](#Select_dac_package)  
+    -   [[DAC パッケージの選択] ページ](#Select_dac_package)  
   
     -   [[ポリシーの確認] ページ](#Review_policy)  
   
-    -   [更新プログラムの構成 ページ](#Update_configuration)  
+    -   [[構成の更新] ページ](#Update_configuration)  
   
     -   [[概要] ページ](#Summary)  
   
     -   [[配置] ページ](#Deploy)  
   
-##  <a name="Introduction"></a> [説明] ページ  
+##  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページでは、データ層アプリケーションを配置する手順について説明します。  
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
   
- **[次へ >]** : **[DAC パッケージの選択]** ページに進みます。  
+ **[次へ >]**: **[DAC パッケージの選択]** ページに進みます。  
   
- **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
+ **[キャンセル]**: DAC を配置せずにウィザードを終了します。  
   
-##  <a name="Select_dac_package"></a> DAC パッケージ ページを選択します。  
+##  <a name="select-dac-package-page"></a><a name="Select_dac_package"></a>[DAC パッケージの選択] ページ  
  このページでは、配置するデータ層アプリケーションを含む DAC パッケージを指定できます。 このページは、3 つの状態を遷移します。  
   
 ### <a name="select-the-dac-package"></a>DAC パッケージの選択  
@@ -107,7 +106,7 @@ ms.locfileid: "62918192"
   
  **[説明]** : DAC が作成されたとき、またはデータベースから抽出されたときに記述された説明が表示される読み取り専用のボックスです。  
   
- **\< [戻る]** : **概要** ページに進みます。  
+ ** \< Previous** -[**概要**] ページに戻ります。  
   
  **[次へ]** : 選択したファイルが有効な DAC パッケージかどうかが確認され、進捗状況バーが表示されます。  
   
@@ -118,13 +117,13 @@ ms.locfileid: "62918192"
   
  **[DAC パッケージの内容を検証しています]** : 検証プロセスの現在の状態を示す進捗状況バーです。  
   
- **\< 以前**-の初期状態に戻り、**パッケージの選択**ページ。  
+ [ ** \< 戻る** **]: [パッケージの選択**] ページの初期状態に戻ります。  
   
- **[次へ >]** : **[パッケージの選択]** ページの最終状態に進みます。  
+ **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
-##  <a name="Review_policy"></a> [ポリシーの確認] ページ  
+##  <a name="review-policy-page"></a><a name="Review_policy"></a>[ポリシーの確認] ページ  
  このページでは、DAC にポリシーが含まれている場合に DAC サーバーの選択ポリシーを評価した結果を確認します。 DAC サーバーの選択ポリシーは、省略可能で、Visual Studio で DAC を作成するときに割り当てられます。 このポリシーでは、サーバーの選択ポリシーのファセットを使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスで DAC をホストするために満たす必要がある条件を指定します。  
   
  **[ポリシー条件の評価結果]** : DAC 配置ポリシーの条件が満たされたかどうかを示す読み取り専用のレポートです。 各条件の評価結果が、レポートの各行に表示されます。  
@@ -133,13 +132,13 @@ ms.locfileid: "62918192"
   
  **[ポリシー違反を無視します]** : ポリシー条件が満たされていない場合に配置を続行するには、このチェック ボックスを使用します。 すべての条件が満たされていなくても DAC を正常に操作できるようにする場合のみ、このチェック ボックスをオンにしてください。  
   
- **\< 以前**-を返します、**パッケージの選択**ページ。  
+ [ ** \< 戻る** **]: [パッケージの選択**] ページに戻ります。  
   
- **[次へ >]** : **[構成の更新]** ページに進みます。  
+ **[次へ >]**: **[構成の更新]** ページに進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
-##  <a name="Update_configuration"></a> 更新プログラムの構成 ページ  
+##  <a name="update-configuration-page"></a><a name="Update_configuration"></a>[構成の更新] ページ  
  このページでは、配置された DAC インスタンスと配置によって作成されたデータベースの名前を指定し、データベース オプションを設定します。  
   
  **[データベース名]** : 配置によって作成されるデータベースの名前を指定します。 既定では、DAC の抽出元であるソース データベースの名前です。 この名前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内で一意であり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別子のルールに従っている必要があります。  
@@ -158,24 +157,24 @@ ms.locfileid: "62918192"
   
  **[ログ ファイルのパスと名前]** : ログ ファイルの完全パスとファイル名を指定します。 このボックスには、既定のパスとファイル名が表示されます。 ボックス内の文字列を編集して既定値を変更するか、 **[参照]** をクリックしてログ ファイルを配置するフォルダーに移動してください。  
   
- **\< 以前**-を返します、 **DAC パッケージの**ページ。  
+ [ ** \< 戻る** **]: [DAC パッケージの選択**] ページに戻ります。  
   
  **[次へ]** : **[概要]** ページに進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
-##  <a name="Summary"></a> [概要] ページ  
+##  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページでは、DAC の配置時にウィザードが行うアクションを確認します。  
   
  **[次の設定を使用して DAC を配置します。]** : 表示された情報を確認し、実行されるアクションが正しいかどうかを確認します。 このウィンドウには、選択した DAC パッケージと、配置される DAC インスタンス用に選択した名前が表示されます。 また、DAC に関連付けられたデータベースを作成する際に使用される設定も表示されます。  
   
- **\< 以前**-に戻り、**更新の構成**ページの選択を変更します。  
+ [ ** \< 前**へ]-[**構成の更新**] ページに戻り、選択内容を変更します。  
   
- **[次へ >]** : DAC を配置し、 **[DAC の配置]** ページに結果を表示します。  
+ **[次へ >]**: DAC を配置し、**[DAC の配置]** ページに結果を表示します。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
-##  <a name="Deploy"></a> [配置] ページ  
+##  <a name="deploy-page"></a><a name="Deploy"></a>[配置] ページ  
  このページには、配置操作の成功または失敗が表示されます。  
   
  **[DAC を配置しています]** : DAC を配置するために行った各アクションの成功または失敗が表示されます。 内容を確認して、各アクションの成功または失敗を判断します。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
@@ -184,8 +183,8 @@ ms.locfileid: "62918192"
   
  **[完了]** : ウィザードを終了します。  
   
-##  <a name="DeployDACPowerShell"></a> PowerShell の使用  
- **PowerShell スクリプトで Install() メソッドを使用して DAC を配置するには**  
+##  <a name="using-powershell"></a><a name="DeployDACPowerShell"></a> PowerShell の使用  
+ **PowerShell スクリプトから Install() メソッドを使用して DAC を配置するには**  
   
 1.  SMO サーバー オブジェクトを作成し、DAC を配置するインスタンスに設定します。  
   
@@ -195,7 +194,7 @@ ms.locfileid: "62918192"
   
 4.  `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC 配置イベントをサブスクライブします。  
   
-5.  設定、`DatabaseDeploymentProperties`します。  
+5.  を設定 `DatabaseDeploymentProperties` します。  
   
 6.  `DacStore.Install` メソッドを使用して DAC を配置します。  
   
@@ -204,10 +203,10 @@ ms.locfileid: "62918192"
 ### <a name="example-powershell"></a>例 (PowerShell)  
  次の例では、MyApplication.dacpac パッケージから DAC 定義を使用して、MyApplication という名前の DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスに配置します。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -232,8 +231,6 @@ $fileStream.Close()
 ```  
   
 ## <a name="see-also"></a>参照  
- [[データ層アプリケーション]](data-tier-applications.md)   
- [データベースからの DAC の抽出](extract-a-dac-from-a-database.md)   
+ [データ層アプリケーション](data-tier-applications.md)   
+ [データベースから DAC を抽出する](extract-a-dac-from-a-database.md)   
  [データベース識別子](../databases/database-identifiers.md)  
-  
-  

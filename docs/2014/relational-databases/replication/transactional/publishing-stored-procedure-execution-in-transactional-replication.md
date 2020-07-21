@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997845"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
   パブリッシャー側で実行され、パブリッシュされたテーブルに影響を与えるストアド プロシージャがある場合、それらのストアド プロシージャをストアド プロシージャ実行アーティクルとしてパブリケーションに含めることを検討してください。 プロシージャの定義 (CREATE PROCEDURE ステートメント) はサブスクリプションが初期化されるときにサブスクライバーにレプリケートされます。プロシージャがパブリッシャーで実行されるときに、レプリケーションは対応するプロシージャをサブスクライバーで実行します。 これにより、各行の個別の変更のレプリケーションが回避されてプロシージャの実行のみがレプリケートされるため、大量のバッチ操作が実行される場合にはパフォーマンスが著しく向上します。 たとえば、パブリケーション データベースで次のストアド プロシージャを作成するとします。  
@@ -50,9 +49,9 @@ EXEC give_raise
   
  **ストアド プロシージャの実行をパブリッシュするには**  
   
--   SQL Server Management Studio:[トランザクション パブリケーションでのストアド プロシージャの実行のパブリッシュ (SQL Server Management Studio)](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
+-   SQL Server Management Studio: [トランザクション パブリケーションでストアド プロシージャの実行をパブリッシュする方法 &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   レプリケーション Transact-SQL プログラミング: [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) を実行し、パラメーター **@type** に対して「serializable proc exec」(推奨) または「proc exec」の値を指定します。 アーティクルの定義の詳細については、「[Define an Article](../publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
+-   レプリケーション Transact-sql プログラミング: [transact-sql&#41;を実行 sp_addarticle &#40;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 、パラメーターに ' serializable proc exec ' (推奨) または ' proc exec ' の値を指定し **@type** ます。 アーティクルの定義の詳細については、「[Define an Article](../publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>サブスクライバーでのプロシージャの変更  
  既定では、パブリッシャー上のストアド プロシージャの定義は各サブスクライバーに反映されます。 ただし、サブスクライバーでストアド プロシージャを変更することもできます。 これは、パブリッシャーとサブスクライバーで異なるロジックを実行する場合に便利です。 たとえば、2 つの関数を持つパブリッシャー上のストアド プロシージャ、 **sp_big_delete**を考えてみます。このストアド プロシージャはレプリケートされたテーブル **big_table1** から 100 万行を削除し、レプリケートされていないテーブル **big_table2**を更新します。 ネットワーク リソースの需要を削減するには、 **sp_big_delete**をパブリッシュすることによって、100 万行の削除をストアド プロシージャとして反映する方が効率的です。 サブスクライバーでは、100 万行だけを削除し、 **big_table2** への更新を実行しないように **sp_big_delete**を変更できます。  
@@ -88,12 +87,12 @@ COMMIT TRANSACTION T2
   
  シリアル化可能なトランザクション内でプロシージャを実行するときにはロックがより長く保持されるので、コンカレンシーが少なくなることもあります。  
   
-## <a name="the-xactabort-setting"></a>XACT_ABORT の設定  
+## <a name="the-xact_abort-setting"></a>XACT_ABORT の設定  
  ストアド プロシージャの実行をレプリケートする場合、ストアド プロシージャを実行するセッションの設定では XACT_ABORT を ON に指定する必要があります。 XACT_ABORT が OFF に設定されていて、パブリッシャーでプロシージャの実行中にエラーが発生した場合、サブスクライバーでも同じエラーが発生し、ディストリビューション エージェントは失敗します。 XACT_ABORT を  ON に指定すると、パブリッシャーでプロシージャの実行中にエラーが発生した場合、実行全体がロールバックされ、ディストリビューション エージェントの失敗を回避できます。 XACT_ABORT 設定の詳細については、「[SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql)」を参照してください。  
   
  XACT_ABORT を OFF に設定する必要がある場合は、ディストリビューション エージェントの **-SkipErrors** パラメーターを指定してください。 これで、エラーが発生した場合でも、エージェントは引き続きサブスクライバーに変更を適用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

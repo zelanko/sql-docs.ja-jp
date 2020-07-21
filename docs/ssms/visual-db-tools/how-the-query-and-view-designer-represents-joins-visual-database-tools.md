@@ -1,10 +1,9 @@
 ---
-title: クエリおよびビュー デザイナーでの結合の表示方法 | Microsoft Docs
-ms.custom: ''
+title: クエリおよびビュー デザイナーでの結合の表示方法
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6318dfe2cc886e3ea2ea10d089023325ff074c95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254438"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255869"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>クエリおよびビュー デザイナーでの結合の表示方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +33,13 @@ ms.locfileid: "68254438"
   
 複数の結合条件を使用してテーブルが結合されている場合は、次の図に示すように、複数の結合線が表示されます。  
   
-![複数の結合条件を使用して結合されたテーブル](../../ssms/visual-db-tools/media/dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
+![複数の結合条件で結合されたテーブル](../../ssms/visual-db-tools/media/dv3w9n1.gif "複数の結合条件を使用して結合されたテーブル")  
   
 結合されたデータ列が表示されていない場合 (テーブルまたはテーブル構造オブジェクトを表す四角形が最小化されている場合や、結合に式が含まれる場合など)、クエリおよびビュー デザイナーは、テーブルまたはテーブル構造オブジェクトを表す四角形のタイトル バーに結合線を表示します。  
   
 結合線の中央に表示されるアイコンの形は、テーブルまたはテーブル構造オブジェクトの結合方法を示しています。 等号 (=) 以外の演算子が結合句で使用されている場合は、その演算子が結合線のアイコンに表示されます。 結合線に表示されるアイコンは、次の表のとおりです。  
   
-|**結合線のアイコン**|**[説明]**|  
+|**結合線のアイコン**|**説明**|  
 |----------------------|-------------------|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools のアイコン")|内部結合 (等号を使用して作成)。|  
 |![Visual Database Tools のアイコン](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools のアイコン")|"大なり" 演算子 (>) による内部結合|  

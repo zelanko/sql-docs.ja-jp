@@ -1,5 +1,5 @@
 ---
-title: SQL Server Reporting Services (SSRS) とは | Microsoft Docs
+title: SQL Server Reporting Services とは | Microsoft Docs
 description: オンプレミスのモバイル レポートやページ分割された Reporting Services レポートに使用するツールやサービスについて説明します。
 ms.date: 05/06/2019
 ms.prod: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571565"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082627"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
@@ -30,7 +30,7 @@ Power BI Report Server が見つからない場合は、 「[Power BI Report Ser
 
 SQL Server Reporting Services (SSRS) では、モバイルおよびページ分割されたレポートの作成、配置、管理を行う一連のオンプレミス ツールおよびサービスを提供しています。
 
-![SQL Server Reporting Services 一式](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 一式")
+![SQL Server Reporting Services 全体](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 全体")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>モバイル レポートやページ分割されたレポートを作成、配置、管理する
 
@@ -110,13 +110,13 @@ SharePoint 統合モードで Reporting Services にレポートをパブリッ�
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
+## <a name="ssrsnoversion-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能を活用し、レポート作成機能を拡張およびカスタマイズできます。 SSRS API を使用してカスタム アプリケーションのデータ処理とレポート処理を統合または拡張します。
 
 詳しくは、「 [開発者ガイド (Reporting Services)](../reporting-services/reporting-services-developer-documentation.md)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)
 * [SQL Server Data Tools (SSDT) のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)

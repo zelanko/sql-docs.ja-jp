@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_array |Microsoft Docs
+title: sqlsrv_fetch_array | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015035"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 次のデータ行を数値インデックス配列、連想配列、またはその両方として取得します。  
@@ -41,7 +41,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [省略可能]: 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|次のデータ行は数値の配列として返されます。|  
 |SQLSRV_FETCH_ASSOC|次のデータ行は連想配列として返されます。 配列キーは、結果セットの列名です。|  
@@ -65,7 +65,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* パラメーターの値に基づき、返される **配列** は数値インデックス **配列**、連想 **配列**、またはその両方になる可能性があります。 既定では、数値キーと連想キーの両方の **配列** が返されます。 返される配列の値のデータ型は、既定の PHP データ型になります。 既定の PHP データ型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 名前のない列が返された場合、配列要素の連想キーは空の文字列 ("") になります。 たとえば、データベース テーブルに値を挿入し、サーバーが生成したプライマリ キーを取得する、この Transact-SQL ステートメントがあります。  
   
 ```

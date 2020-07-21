@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f95392c4805df824418f3f9682f2f53b9589ea9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010510"
 ---
 # <a name="join-filters"></a>結合フィルター
   結合フィルターを使用すると、パブリケーションにおける関連するテーブルのフィルター方法に基づいて、テーブルにフィルターを適用できます。 通常、親テーブルにはパラメーター化されたフィルターが使用されます。そのため、テーブル間の結合を定義する場合とほぼ同じ方法で 1 つ以上の結合フィルターを定義できます。 結合フィルターは、結合フィルター句に一致した場合のみ関連テーブルのデータがレプリケートされるように、パラメーター化されたフィルターを拡張します。  
@@ -43,7 +42,7 @@ ms.locfileid: "62629750"
 LoginID = SUSER_SNAME()  
 ```  
   
- このフィルターを指定すると、各従業員のサブスクリプションには、当該従業員に関連する **HumanResources.Employee** テーブルのデータのみ (この例では単一の行) が格納されます。 詳細については、「 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ このフィルターを指定すると、各従業員のサブスクリプションには、当該従業員に関連する **HumanResources.Employee** テーブルのデータのみ (この例では単一の行) が格納されます。 詳しくは、「 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  次の手順で、このフィルターを各関連テーブルに拡張します。フィルターの拡張に使用する構文は、2 つのテーブルの結合の指定に使用する構文とほぼ同じです。 最初の結合フィルター句を次のように指定します。  
   
@@ -87,7 +86,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
      上記のようなロジックを使用する場合、サブクエリではなく結合フィルターを使用することを強くお勧めします。 アプリケーションでサブクエリを使用する行フィルターが必要な場合は、サブクエリが参照するデータが変更されない読み取り専用データであることを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーション用にパブリッシュされたデータのフィルター選択](filter-published-data-for-merge-replication.md)   
+ [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](filter-published-data-for-merge-replication.md)   
  [パラメーター化された行フィルター](parameterized-filters-parameterized-row-filters.md)  
   
   

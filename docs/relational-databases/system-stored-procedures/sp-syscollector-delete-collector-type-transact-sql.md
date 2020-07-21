@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_delete_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_delete_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000862"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892920"
 ---
-# <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   コレクター型の定義を削除します。  
   
@@ -41,20 +41,20 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @collector_type_uid = ] 'collector_type_uid'` コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**場合、値が必要と*名前*は NULL です。  
+`[ @collector_type_uid = ] 'collector_type_uid'`コレクター型の GUID を示します。 *collector_type_uid*は**uniqueidentifier**で、 *name*が NULL の場合は値を持つ必要があります。  
   
-`[ @name = ] 'name'` コレクター型の名前です。 *名前*は**sysname**場合、値が必要と*collector_type_uid*は NULL です。  
+`[ @name = ] 'name'`コレクター型の名前を指定します。 *名前*は**sysname**であり、 *collector_type_uid*が NULL の場合は値を持つ必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- いずれか*collector_type_uid*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。  
+## <a name="remarks"></a>Remarks  
+ *Collector_type_uid*または*名前*には値を指定する必要があります。どちらも NULL にすることはできません。  
   
- このコレクション型のコレクション アイテムが存在しない場合、この手順はエラーをスローします。  
+ このコレクション型のコレクションアイテムが存在する場合、このプロシージャはエラーをスローします。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
+ このプロシージャを実行するには、 **dc_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
  次の例では、ジェネリック T-SQL Query コレクター型を削除します。  
@@ -66,7 +66,7 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [データコレクション](../../relational-databases/data-collection/data-collection.md)  
   
   

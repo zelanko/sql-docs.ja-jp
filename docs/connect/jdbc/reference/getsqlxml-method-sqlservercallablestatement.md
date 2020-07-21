@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0596c93f17b2a5179e51055152cc2e126ade1e1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f712130d5d4f8c3a10b938b0a629f15b0c57f26a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979652"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911978"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>getSQLXML メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "67979652"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
-|[getSQLXML メソッド&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
+|[getSQLXML メソッド &#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
 |[getSQLXML メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|渡されたパラメーター名を使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  

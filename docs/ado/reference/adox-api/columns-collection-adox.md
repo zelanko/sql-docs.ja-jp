@@ -1,5 +1,5 @@
 ---
-title: 列のコレクション (ADOX) |Microsoft Docs
+title: Columns コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,44 +16,44 @@ f1_keywords:
 helpviewer_keywords:
 - Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966845"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759338"
 ---
 # <a name="columns-collection-adox"></a>Columns コレクション (ADOX)
-すべてを含む[列](../../../ado/reference/adox-api/column-object-adox.md)テーブル、インデックス、またはキーのオブジェクト。  
+テーブル、インデックス、またはキーのすべての[Column](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- [Append](../../../ado/reference/adox-api/append-method-adox-columns.md)のメソッド、**列**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
+## <a name="remarks"></a>解説  
+ **Columns**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-columns.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   使用して、コレクションに新しい列を追加、 **Append**メソッド。  
+-   **追加**メソッドを使用して、新しい列をコレクションに追加します。  
   
- 残りのプロパティとメソッドは、ADO のコレクションに標準的です。 可能な代替手段としては以下の方法があります。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
--   使用して、コレクション内の列へのアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内の列にアクセスします。  
   
--   使用して、コレクションに含まれる列の数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクションに含まれる列の数を返します。  
   
--   使用して、コレクションから列を削除、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッド。  
+-   [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、コレクションから列を削除します。  
   
--   現在のデータベースのスキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベースのスキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
 > [!NOTE]
->  追加するときにエラーが発生する**列**を**列**のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)場合、**列**に存在しません[テーブル](../../../ado/reference/adox-api/table-object-adox.md)に既に追加されて、[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。  
+>  [テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに既に追加されている[テーブル](../../../ado/reference/adox-api/table-object-adox.md)**に列が**存在しない場合、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Columns コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [SortOrder プロパティの例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+ [順序のプロパティの例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

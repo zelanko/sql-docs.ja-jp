@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33904b979bca1162b8f30009dcde3ac8ce5fd006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105298"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct 関数 (レポート ビルダーおよび SSRS)
@@ -43,7 +43,7 @@ CountDistinct(expression, scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  `Integer` 値を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   
  *Expression* には、入れ子になった集計関数への呼び出しを含めることができます。ただし、次に示すように、これには例外および条件があります。  
@@ -52,7 +52,7 @@ CountDistinct(expression, scope, recursive)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   

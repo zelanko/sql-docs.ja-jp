@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4f57b300cb402f422b92330bfe33f1e3c61cf4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 995cede3675199112253311089d59cfadd8f208d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984191"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923252"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,8 +43,8 @@ public java.lang.String getCursorName()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Getカーソル名メソッドは、java. ResultSet インターフェイスの Getカーソル名メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getCursorName メソッドは、java.sql.ResultSet インターフェイスの getCursorName メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

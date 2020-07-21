@@ -1,5 +1,5 @@
 ---
-title: ODBC ステートメント ハンドルの解放 |Microsoft Docs
+title: ステートメントハンドルを解放する ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - handles [ODBC], statement
 - freeing statement handles [ODBC]
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 638cf9fb3c7af73130cf1413559b9baee2a354c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01e4cb46edf1b1a0f1c6dfaa0273c1dd5b392686
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069777"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305617"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>ステートメント ハンドルの解放 (ODBC)
-前述のようよりにドロップし、新しいものを割り当てるステートメントを再利用するより効率的です。 ステートメントで新しい SQL ステートメントを実行する前にアプリケーションを現在のステートメントの設定が適切であることを確認する必要があります。 確認する設定には、ステートメント属性、パラメーター バインド、結果セットのバインドがあります。 パラメーターと、古い SQL ステートメントの結果セットが一般に、バインドする必要が (呼び出して**SQLFreeStmt** SQL_RESET_PARAMS と SQL_UNBIND オプションを使用して) と、新しい SQL ステートメントの再バインドします。  
+既に説明したように、ステートメントを再利用して新しいステートメントを割り当てるよりも効率的です。 ステートメントで新しい SQL ステートメントを実行する前に、アプリケーションで現在のステートメントの設定が適切であることを確認する必要があります。 確認する設定には、ステートメント属性、パラメーター バインド、結果セットのバインドがあります。 通常、古い SQL ステートメントのパラメーターと結果セットは、(SQL_RESET_PARAMS と SQL_UNBIND のオプションを指定して**SQLFreeStmt**を呼び出し、新しい sql ステートメントに対して再バインドすることによって) バインド解除する必要があります。  
   
- 呼び出しステートメントを使用するが、アプリケーションが完了したら、 **SQLFreeHandle**ステートメントを解放します。 これは、ステートメントを解放した後、ODBC 関数呼び出しでステートメントのハンドルを使用するアプリケーション プログラミング エラーこれには結果が未定義であるが、致命的な可能性があります。  
+ ステートメントを使用してアプリケーションが終了すると、 **Sqlfreehandle**を呼び出してステートメントを解放します。 ステートメントを解放すると、ODBC 関数の呼び出しでステートメントのハンドルを使用するアプリケーションプログラミングエラーになります。この操作を行うと、未定義になりますが、致命的な結果になります。  
   
- ときに**SQLFreeHandle**を呼び出すと、ドライバーのリリースのステートメントについての情報を格納する構造体を使用します。  
+ **Sqlfreehandle**が呼び出されると、ドライバーはステートメントに関する情報を格納するために使用される構造体を解放します。  
   
- **SQLDisconnect**接続ですべてのステートメントを自動的に解放します。
+ **Sqldisconnect**は、接続上のすべてのステートメントを自動的に解放します。

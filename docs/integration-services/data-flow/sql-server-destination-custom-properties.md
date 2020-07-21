@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 533a9feb545466a6892af1e59e37f6d259b73cf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dd60d40c612df33b46ea7394d3bf9b1e53e24df6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019605"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291776"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 変換先のカスタム プロパティ
 
@@ -26,7 +26,7 @@ ms.locfileid: "68019605"
   
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
-|プロパティ名|データ型|[説明]|  
+|プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AlwaysUseDefaultCodePage|Boolean|DefaultCodePage プロパティ値を強制的に使用します。 このプロパティの既定値は **False**です。|  
 |BulkInsertCheckConstraints|Boolean|一括挿入で制約をチェックするかどうかを指定する値。 このプロパティの既定値は **True**です。|  
@@ -41,7 +41,7 @@ ms.locfileid: "68019605"
 |BulkInsertTablock|Boolean|一括挿入中にテーブルをロックするかどうかを指定する値。 このプロパティの既定値は **True**です。|  
 |DefaultCodePage|Integer|コード ページに関する情報をデータ ソースから取得できない場合に使用するコード ページ。|  
 |MaxInsertCommitSize|Integer|バッチに挿入する行の最大数を示す値。 値がゼロのときは、単一のバッチにすべての行が挿入されます。|  
-|Timeout|Integer|挿入できるデータがない場合、終了前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先が待機する秒数を指定する値。 値を 0 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先はタイムアウトしません。このプロパティの既定値は 30 です。|  
+|タイムアウト|Integer|挿入できるデータがない場合、終了前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先が待機する秒数を指定する値。 値を 0 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先はタイムアウトしません。このプロパティの既定値は 30 です。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の入力および入力列には、カスタム プロパティはありません。  
   

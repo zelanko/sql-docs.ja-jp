@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_reconcile_batch (TRANSACT-SQL) |Microsoft Docs
+title: sp_rda_reconcile_batch (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,23 +14,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905094"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053175"
 ---
-# <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_rda_reconcile_batch-transact-sql"></a>sp_rda_reconcile_batch (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  リモートの Azure テーブルに格納されているバッチ ID を持つ、Stretch 対応 SQL Server テーブルに格納されているバッチ ID を調整します。  
+  Stretch が有効な SQL Server テーブルに格納されているバッチ ID と、リモート Azure テーブルに格納されているバッチ ID を調整します。  
   
- 通常のみ実行する必要が**sp_rda_reconcile_batch**リモート テーブルから、最近に移行されたデータを手動で削除した場合。 リモート データを最新バッチを含むを手動で削除すると、バッチ Id は、同期し、移行が停止します。  
+ 通常は、リモートテーブルから最後に移行されたデータを手動で削除した場合にのみ**sp_rda_reconcile_batch**を実行する必要があります。 最新のバッチを含むリモートデータを手動で削除すると、バッチ Id は同期されなくなり、移行が停止します。  
  
- 既に Azure に移行されたデータを削除するのには、このページで、「解説」を参照してください。
+ Azure に既に移行されているデータを削除する方法については、このページの「解説」を参照してください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
@@ -43,22 +42,22 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- \@objname = ' *\@objname*'  
- Stretch 対応 SQL Server テーブルの名前。  
+ \@objname = '* \@ objname*'  
+ Stretch が有効な SQL Server テーブルの名前。  
   
 ## <a name="permissions"></a>アクセス許可  
- Db_owner アクセス許可が必要です。  
+ Db_owner のアクセス許可が必要です。  
   
-## <a name="remarks"></a>コメント  
- 既に Azure に移行するデータを削除する場合は、次のことを行います。  
+## <a name="remarks"></a>注釈  
+ Azure に既に移行されているデータを削除する場合は、次の操作を行います。  
   
-1.  データ移行の一時停止します。 詳細については、「[データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」を参照してください。  
+1.  データ移行を一時停止します。 詳細については、「[データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」を参照してください。  
   
-2.  STAGE_ONLY ヒントと DELETE コマンドを実行して、SQL Server のステージング テーブルからデータを削除します。 詳細については、次を参照してください。[管理更新と削除を行う](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints)します。
+2.  STAGE_ONLY ヒントと共に DELETE コマンドを実行して、SQL Server ステージングテーブルからデータを削除します。 詳細については、「[管理者の更新と削除を行う](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints)」を参照してください。
   
-3.  REMOTE_ONLY ヒントと DELETE コマンドを実行して、リモート Azure テーブルから同じデータを削除します。  
+3.  REMOTE_ONLY ヒントと共に DELETE コマンドを実行して、リモート Azure テーブルから同じデータを削除します。  
   
-4.  実行**sp_rda_reconcile_batch**します。  
+4.  **Sp_rda_reconcile_batch**を実行します。  
   
 5.  データ移行を再開します。 詳細については、「[データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」を参照してください。  
   

@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c521ac453cc0f82577c1d87a78e68d8ddf9cb78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c755b24da3157a5e4ba1612de72713b08513333
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953223"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907661"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream メソッド (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Java の .sql オブジェクトとして指定された**clob**値を取得します。  
+  java.sql.Clob オブジェクトによって指定された **Clob** 値を java.io.Reader オブジェクトとして取得します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getCharacterStream &#40;&#41; メソッド](../../../connect/jdbc/reference/getcharacterstream-method.md)|Clob データを、java.io.Reader オブジェクトまたは文字のストリームとして返します。|  
 |[getCharacterStream &#40;long, long&#41; メソッド](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|指定された位置と長さを使用して、Clob データを java.io.Reader オブジェクトまたは文字のストリームとして返します。|  

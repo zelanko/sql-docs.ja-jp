@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 63becb9b07114b6e0ae0589664ae80d82f8babb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b595cf760fb0a01e2f9aeebf788355aa328de873
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63023385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065805"
 ---
-# <a name="mssqleng021331"></a>MSSQL_ENG021331
+# <a name="mssql_eng021331"></a>MSSQL_ENG021331
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -39,7 +38,7 @@ ms.locfileid: "63023385"
  スナップショット フォルダーに対して正しいパスが指定されていること、およびパブリッシャーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの実行に使用されるアカウントが十分な権限を持っていることを確認します。  
   
 ## <a name="see-also"></a>参照  
- [既定のスナップショットの場所を指定します。](snapshot-options.md#snapshot-folder-locations)   
+ [既定のスナップショットの場所の指定](snapshot-options.md#snapshot-folder-locations)   
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)   
  [スナップショットを使用しないトランザクション サブスクリプションの初期化](initialize-a-transactional-subscription-without-a-snapshot.md)  
   

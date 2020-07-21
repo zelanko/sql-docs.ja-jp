@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d8ff79cbcd5f243ef80c2be49bff7be78db4e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114452"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296334"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング
 
@@ -23,15 +23,15 @@ ms.locfileid: "68114452"
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、列の名前、データ型、およびデータ型プロパティを新しい変換先テーブルとファイルに設定できますが、列の値についてカスタム変換を指定することはできません。 このため、変換元から変換先へのデータ型の組み込みマッピングが重要になります。  
   
-##  <a name="wizardMapping"></a> ウィザードが変換元と変換先の間でデータ型をマップする方法
-ウィザードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってインストールされたマッピング ファイルを使用して、データベース システムまたはバージョン間でデータ型をマップします。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から Oracle データ型にマップできます。 既定では、XML 形式のマッピング ファイルは次のフォルダにインストールされます。
+##  <a name="how-does-the-wizard-map-data-types-between-source-and-destination"></a><a name="wizardMapping"></a> ウィザードが変換元と変換先の間でデータ型をマップする方法
+ウィザードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってインストールされたマッピング ファイルを使用して、データベース システムまたはバージョン間でデータ型がマップされます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から Oracle データ型にマップできます。 既定では、XML 形式のマッピング ファイルは次のフォルダにインストールされます。
 -   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (64 ビットの場合)
 -   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (32 ビットの場合)。  
   
  既存のマッピング ファイルを編集した、または新しいマッピング ファイルをフォルダーに追加した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を終了してから再度開いて、新しいファイルまたは更新したファイルを読み込む必要があります。  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>既存のマッピング ファイルを変更できる
-既定と異なるデータ型のマッピングが必要な場合は、マッピング ファイルを更新して、ウィザードによって使用されるマッピングを変更できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** **データ型を DB2** データ型ではなく DB2 **VARデータ型を DB2** GRAPHIC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にマップするには、 **SqlClientToIBMDB2.xml** マッピング ファイルで **nchar** マッピングを変更して、 **データ型を DB2** ではなく **VARデータ型を DB2**から DB2 にデータを転送するときに、  
+既定と異なるデータ型のマッピングが必要な場合は、マッピング ファイルを更新して、ウィザードによって使用されるマッピングを変更できます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から DB2 にデータを転送するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** データ型を DB2 **VARGRAPHIC** データ型ではなく DB2 **GRAPHIC** データ型にマップするには、 **SqlClientToIBMDB2.xml** マッピング ファイルで **nchar** マッピングを変更して、**VARGRAPHIC.** ではなく **GRAPHIC** を使用します。  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>新しいマッピング ファイルを追加できる
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、一般的な変換元と変換先の組み合わせのマッピングをインストールします。 他の変換元と変換先の組み合わせをサポートする新しいマッピング ファイルを **MappingFiles** ディレクトリに追加することもできます。 新しいマッピング ファイルは、公開されている XSD スキーマおよび変換元と変換先の一意の組み合わせ間でのマッピングに準拠する必要があります。 マッピング ファイルのスキーマである **DataTypeMapping.xsd**は、 [こちら](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd)に公開されています。

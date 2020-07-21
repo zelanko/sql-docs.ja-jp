@@ -24,12 +24,12 @@ ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb582717e0a98e8aaba60b4d7a100a09d0076f1a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034955"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634690"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "68034955"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET NOCOUNT が ON の場合、カウントは返されません。 SET NOCOUNT が OFF の場合、行数が返されます。  
   
  SET NOCOUNT が ON の場合でも、@@ROWCOUNT 関数は更新されます。  
@@ -56,7 +56,7 @@ SET NOCOUNT { ON | OFF }
   
  この設定の現在の設定を表示するには、次のクエリを実行します。  
   
-```  
+```sql
 DECLARE @NOCOUNT VARCHAR(3) = 'OFF';  
 IF ( (512 & @@OPTIONS) = 512 ) SET @NOCOUNT = 'ON';  
 SELECT @NOCOUNT AS NOCOUNT;  
@@ -66,10 +66,10 @@ SELECT @NOCOUNT AS NOCOUNT;
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、影響を受けた行数に関するメッセージを表示しないようにします。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT OFF;  

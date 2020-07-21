@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a8d3d3f24bcbd2b94dd8d4c0c84eff9d513e6cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790031"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 指定したデータベース用のディスク領域の割り当て構造について一貫性をチェックします。
   
@@ -42,7 +42,7 @@ ms.locfileid: "68102135"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -79,7 +79,7 @@ DBCC CHECKALLOC
  構文は、旧バージョンとの互換性のためにのみ残されています。 修復操作は実行されません。
 
  REPAIR_REBUILD  
- 該当なし。  
+ 適用不可。  
  REPAIR オプションは、最後の手段としてのみ使用してください。 エラーの修復では、バックアップから復元することをお勧めします。 修復操作では、テーブルまたはテーブル間に制約があっても考慮されません。 指定したテーブルに 1 つでも関連する制約がある場合は、修復操作の後に DBCC CHECKCONSTRAINTS を実行することをお勧めします。 REPAIR を使用する必要がある場合は、修復オプションを指定せずに DBCC CHECKDB を実行して、使用する修復レベルを確認してください。 REPAIR_ALLOW_DATA_LOSS レベルを使用する場合は、このオプションを指定して DBCC CHECKDB を実行する前に、データベースをバックアップすることをお勧めします。
 
  WITH  
@@ -94,10 +94,10 @@ DBCC CHECKALLOC
  TABLOCK  
  DBCC コマンドでデータベースを排他的にロックします。
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  他のすべてのオプションを指定したときに、DBCC CHECKALLOC の実行に必要な tempdb 領域の予測サイズを表示します。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC CHECKALLOC では、ページの種類やページが属するオブジェクトの種類に関係なく、データベースのすべてのページの割り当てがチェックされます。 また、ページとページ間の関係の追跡に使用されるさまざまな内部構造も検証されます。
 NO_INFOMSGS を指定しない場合、DBCC CHECKALLOC ではデータベースのすべてのオブジェクトに関する領域の使用情報が収集されます。 この情報は、検出されたエラーと共に出力されます。
   
@@ -113,7 +113,7 @@ DBCC CHECKALLOC では、内部データベースのスナップショットを�
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKALLOC コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
-|状態|[説明]|  
+|State|説明|  
 |---|---|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
@@ -133,7 +133,7 @@ DBCC CHECKALLOC でエラーがレポートされた場合は、修復を実行�
 ## <a name="result-sets"></a>結果セット  
 次の表は、DBCC CHECKALLOC によって返される情報です。
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |---|---|  
 |FirstIAM|内部使用のみです。|  
 |Root|内部使用のみです。|  
@@ -143,7 +143,7 @@ DBCC CHECKALLOC でエラーがレポートされた場合は、修復を実行�
   
 DBCC CHECKALLOC では、各ファイルのインデックスとパーティションの割り当ての概要もレポートされます。 この概要では、データの分布が示されます。
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |---|---|  
 |Reserved pages|インデックスに割り当てられているページ、および割り当てられているエクステント内の未使用ページ。|  
 |Used pages|インデックスによって割り当てられ、使用中のページ。|  
@@ -230,8 +230,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
-次の例では、現在のデータベースと `AdventureWorks2012` データベースに対して `DBCC CHECKALLOC` を実行します。
+## <a name="examples"></a>例  
+次の例では、現在のデータベースと `DBCC CHECKALLOC` データベースに対して `AdventureWorks2012` を実行します。
   
 ```sql  
 -- Check the current database.  

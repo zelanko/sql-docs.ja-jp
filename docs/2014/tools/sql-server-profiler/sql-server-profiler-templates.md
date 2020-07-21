@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler テンプレート |Microsoft Docs
+title: SQL Server プロファイラーテンプレート |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26082eaf429aae38012c7da31cfebff7434edd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68186146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999801"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、トレースに含めるイベント クラスとデータ列を定義するテンプレートを作成できます。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
@@ -47,7 +46,7 @@ ms.locfileid: "68186146"
 |TSQL_Locks|クライアントから [!INCLUDE[tsql](../../includes/tsql-md.md)] に送信されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを例外ロック イベントと共にキャプチャします。 デッドロック、ロック タイムアウト、およびロックのエスカレーションの各イベントをトラブルシューティングするために使用します。|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Lock:Timeout (timeout>0)**|  
 |TSQL_Replay|トレースの再生に必要な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する詳細情報をキャプチャします。 ベンチマーク テストなどの反復チューニングを実行するために使用します。|**CursorClose**<br /><br /> **CursorExecute**<br /><br /> **CursorOpen**<br /><br /> **CursorPrepare**<br /><br /> **CursorUnprepare**<br /><br /> **Audit Login**<br /><br /> **Audit Logout**<br /><br /> **Existing Connection**<br /><br /> **RPC Output Parameter**<br /><br /> **RPC:Completed**<br /><br /> **RPC:Starting**<br /><br /> **Exec Prepared SQL**<br /><br /> **Prepare SQL**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_SPs|実行中のすべてのストアド プロシージャに関する詳細情報をキャプチャします。 ストアド プロシージャを構成するステップを分析するために使用します。 プロシージャが再コンパイルされる可能性がある場合は、 **SP:Recompile** イベントを追加します。|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SP:Completed**<br /><br /> **SP:Starting**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:BatchStarting**|  
-|Tuning|ストアド プロシージャと [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの実行に関する情報をキャプチャします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでデータベースをチューニングするためのワークロードとして使用できるトレース出力を生成するために使用します。|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
+|チューニング|ストアド プロシージャと [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの実行に関する情報をキャプチャします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでデータベースをチューニングするためのワークロードとして使用できるトレース出力を生成するために使用します。|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
   
  イベント クラスの詳細については、「 [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68186146"
 > [!NOTE]  
 >  既定のテンプレートは、サーバーの特定の種類固有のテンプレートです。 あるサーバーの種類の既定のテンプレートを変更しても、他のサーバーの種類の既定のテンプレートには影響しません。 特定のサーバーの既定のテンプレートを設定する方法の詳細については、「[トレース定義の既定値の設定 &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   

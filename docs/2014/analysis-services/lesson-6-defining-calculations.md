@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 5ac7db8cdf02b2d38004aadfe67d0e154fc5d450
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542504"
 ---
 # <a name="lesson-6-defining-calculations"></a>レッスン 6: 計算の定義
   このレッスンでは、多次元式 (MDX) の式またはスクリプトである計算を定義する方法について学習します。 計算を使用すると、計算されるメンバーや名前付きセットを定義できます。また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの機能を拡張するさまざまなスクリプト コマンドを実行できます。 たとえば、サブキューブを定義し、計算をサブキューブ内のセルに割り当てるスクリプト コマンドを実行できます。  
@@ -52,11 +51,11 @@ ms.locfileid: "69530840"
  この作業では、名前付きセットを定義する方法について学習します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 7: 主要業績評価指標&#40;kpi の定義&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [レッスン 7: 主要業績評価指標 (KPI) の定義](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [名前付きセットの作成](multidimensional-models/create-named-sets.md)   
  [計算されるメンバーの作成](multidimensional-models/create-calculated-members.md)  
   

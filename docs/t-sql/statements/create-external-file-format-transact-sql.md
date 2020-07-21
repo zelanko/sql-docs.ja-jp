@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -20,19 +20,19 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902702"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518642"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Hadoop、Azure Blob Storage、または Azure Data Lake Store に格納される外部データを定義する外部ファイル形式オブジェクトを作成します。 外部ファイル形式の作成は、外部テーブルを作成するための前提条件です。 外部ファイル形式を作成することで、外部テーブルによって参照されるデータの実際のレイアウトを指定します。  
+  Hadoop、Azure Blob Storage、Azure Data Lake Store に格納される外部データを定義する、または外部ストリームに関連付けられている入力および出力ストリーム用の外部ファイル形式オブジェクトを作成します。 外部ファイル形式の作成は、外部テーブルを作成するための前提条件です。 外部ファイル形式を作成することで、外部テーブルによって参照されるデータの実際のレイアウトを指定します。  
   
- PolyBase では、次のファイル形式がサポートされています。
+次のファイル形式がサポートされています。
   
 -   区切りテキスト  
   
@@ -40,15 +40,18 @@ ms.locfileid: "67902702"
   
 -   Hive ORC
   
--   Parquet  
-  
+-   Parquet
+
+-   JSON - Azure SQL Edge にのみ適用されます。
+
+
 外部テーブルの作成については、「[CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)」をご覧ください。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文
   
-```
+```syntaxsql
 -- Create an external file format for PARQUET files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -87,7 +90,17 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-  
+
+-- Create an external file format for JSON files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+    FORMAT_TYPE = JSON  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      
+      | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+ 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
@@ -119,6 +132,8 @@ WITH (
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
    -   DELIMITEDTEXT: フィールド ターミネータとも呼ばれる、列の区切り記号付きのテキスト形式を指定します。
+   
+   -  JSON: JSON 形式を指定します。 Azure SQL Edge にのみ適用されます。 
   
  FIELD_TERMINATOR = *field_terminator*  
 区切りテキスト ファイルにのみ適用されます。 フィールド ターミネータは、テキスト区切りファイルでの各フィールド (列) の終了を示す 1 つ以上の文字を指定します。 既定値はパイプ文字 ꞌ|ꞌ です。 サポートが保証されるよう、1 つまたは複数の Ascii 文字を使うことをお勧めします。
@@ -182,16 +197,16 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
 -   AM/PM (tt) は、必須ではありません。 既定値は AM です。
   
-|日付型|例|[説明]|  
+|日付型|例|説明|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|年、月、日に加えて、この日付形式には、00-24 の時、00-59 の分、00-59 の秒、3 桁のミリ秒が含まれます。|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|年、月、日に加えて、この日付形式には、00-12 の時、00-59 の分、00-59 の秒、3 桁のミリ秒、および AM/am/PM/pm が含まれます。 |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分が含まれます。|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、AM/am/PM/pm が含まれ、秒は含まれません。|  
-|date|DATE_FORMAT =  'yyyy-MM-dd'|年、月、日。 時刻要素は含まれていません。|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月、日。 3 つの M を使用して月を指定する場合、入力値は 1 つです。つまり、1 月、2 月、3 月、4 月、6 月、7 月、8 月、9 月、10 月、11 月、または 12 月という文字列です。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒が含まれます。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および AM/am/PM/pm が含まれます。|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|年、月、日。 時刻要素は含まれていません。|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月、日。 3 つの M を使用して月を指定する場合、入力値は 1 つです。つまり、1 月、2 月、3 月、4 月、6 月、7 月、8 月、9 月、10 月、11 月、または 12 月という文字列です。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒が含まれます。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および AM/am/PM/pm が含まれます。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および `{+&#124;-}HH:ss` として入力ファイルに格納するタイムゾーンのオフセットが含まれます。 たとえば、ロサンゼルス時間 (夏時間なし) は、UTC よりも 8 時間遅くなるので、入力ファイル内の値 -08:00 によってロサンゼルスのタイムゾーンが指定されます。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、AM/am/PM/pm、およびタイムゾーンのオフセットが含まれます。 前の行の説明を参照してください。|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|日付の値はありません。00 から 23 時、00 から 59 分、00 から 59 秒のみです。|  
@@ -270,6 +285,14 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+ JSON ファイル形式の種類では、次の圧縮方法がサポートされています。
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY EXTERNAL FILE FORMAT アクセス許可が必須です。
@@ -301,7 +324,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
  Gzip で圧縮されたテキスト ファイルは分割可能ではありません。 Gzip で圧縮されたテキスト ファイルのパフォーマンスを向上させるには、複数のファイルを生成し、そのすべてを外部データ ソースの同じディレクトリに格納することをお勧めします。 このようなファイル構造にすると、PolyBase は、複数のリーダー プロセスと圧縮解除プロセスを使って、より速くデータを圧縮解除できます。 圧縮されたファイルの理想的な数は、計算ノードあたりのデータ リーダー プロセスの最大数です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、データ リーダー プロセスの最大数はノードあたり 8 個です。ただし、Azure SQL Data Warehouse Gen2 のリーダー数はノードあたり 20 個です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ノードごとのデータ リーダー プロセスの最大数は SLO によって変化します。 詳しくは、「[Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) をご覧ください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-create-a-delimitedtext-external-file-format"></a>A. DELIMITEDTEXT 外部ファイル形式を作成する  
  この例では、テキスト区切りファイル用に *textdelimited1* という名前の外部ファイル形式を作成します。 FORMAT\_OPTIONS のオプション リストでは、ファイルのフィールドをパイプ文字 "|" を使って区切ることが指定されています。 テキスト ファイルはまた、Gzip コーデックを使用して圧縮されます。 DATA\_COMPRESSION を指定しないと、テキスト ファイルは圧縮されません。
@@ -365,6 +388,16 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+### <a name="f-create-a-json-external-file-format"></a>F. JSON 外部ファイル形式を作成する  
+ この例では、org.apache.io.compress.SnappyCodec データ圧縮方法でデータを圧縮する JSON ファイルの外部ファイル形式を作成します。 DATA_COMPRESSION を指定しない場合の既定の設定は非圧縮です。 この例は Azure SQL Edge に適用されます。他の SQL 製品では現在サポートされていません。 
+  
+```  
+CREATE EXTERNAL FILE FORMAT jsonFileFormat  
+WITH (  
+    FORMAT_TYPE = JSON,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);  
+```  
 
 ## <a name="see-also"></a>参照
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

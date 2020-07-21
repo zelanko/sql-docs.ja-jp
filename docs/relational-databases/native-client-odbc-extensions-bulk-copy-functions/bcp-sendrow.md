@@ -15,19 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a8e4c35d752e8ee8bf34ac3ee754e57173f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 0f97923316e40cd2742b9d3bba88abda1a11baa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099456"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010055"
 ---
-# <a name="bcpsendrow"></a>bcp_sendrow
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# <a name="bcp_sendrow"></a>bcp_sendrow
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   プログラム変数から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータ行を送信します。  
   
@@ -47,15 +45,15 @@ RETCODE bcp_sendrow (
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- **Bcp_sendrow**関数は、プログラム変数からの行をビルドしに送信します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+ **Bcp_sendrow**関数は、プログラム変数から行を作成し、に送信し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- 呼び出しの前に**bcp_sendrow**への呼び出しを行う必要があります[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)行のデータを格納しているプログラム変数を指定します。  
+ **Bcp_sendrow**を呼び出す前に、行データを含むプログラム変数を指定するために[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の呼び出しを行う必要があります。  
   
- 場合**bcp_bind**長い可変長データ型を指定すると呼ばれますが、 *eDataType* SQLTEXT と NULL 以外のパラメーター *pData*パラメーター、 **bcp_sendrow**は他のデータ型の場合と同様に、すべてのデータ値を送信します。 場合、ただし、 **bcp_bind** null になります*pData*パラメーター、 **bcp_sendrow**に指定したデータを持つすべての列を送信した後すぐに、アプリケーションにコントロールを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. アプリケーションを呼び出して[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 、長い可変長データを送信するには、繰り返し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、一度にチャンクです。 詳細については、次を参照してください。 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)します。  
+ Long 型の可変長データ型を指定して**bcp_bind**が呼び出された場合 (たとえば、SQLTEXT の*EDATATYPE*パラメーターと NULL 以外の*pData*パラメーター)、 **bcp_sendrow**は他のデータ型の場合と同様に、データ値全体を送信します。 ただし、 **bcp_bind**に*PDATA*パラメーターが NULL の場合は、指定されたデータを含むすべての列がに送信された直後に、 **bcp_sendrow**制御がアプリケーションに返され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 その後、アプリケーションは[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を繰り返し呼び出して、長い可変長データをチャンクとして一度に送信でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)」を参照してください。  
   
- ときに**bcp_sendrow**一括にプログラム変数から行をコピーするために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、行はコミットされた場合にのみユーザーを呼び出して[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)または[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). 呼び出して、ユーザーが選択できます**bcp_batch**したらすべて*n*行または着信データの期間の間で転送がある場合。 場合**bcp_batch**は呼び出されず、行がコミットされたときに**bcp_done**が呼び出されます。  
+ プログラム変数からテーブルに行を一括コピーするために**bcp_sendrow**を使用する場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ユーザーが[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)または[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)を呼び出したときにのみ行がコミットされます。 ユーザーは、 *n*行ごとに**bcp_batch**を呼び出すことも、受信データの期間間になどがあるときに呼び出すこともできます。 **Bcp_batch**が呼び出されない場合、 **bcp_done**が呼び出されたときに行がコミットされます。  
   
- 以降では一括コピーでの変更については、互換性に影響する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を参照してください[一括コピー操作を実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)します。  
+ での一括コピーの重大な変更については [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、「 [ODBC&#41;&#40;の一括コピー操作の実行](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

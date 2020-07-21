@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f74a564bf3cc3f70ef685c3adf23fd5a117711cc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831632"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433029"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
   データ プロファイルとクリーンアップは、初期段階で自動化されるプロセスの対象にはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、データ プロファイル タスクを出力する場合、通常、視覚的な分析とユーザーの判断によって、報告された違反が意味のあるものか過剰であるかを判断する必要があります。 データ品質の問題を認識した後でも、クリーンアップに最適な方法に取り組む綿密な計画が必要です。  
@@ -45,7 +44,7 @@ ms.locfileid: "62831632"
   
  データ プロファイル タスクをパッケージのワークフローに組み込む場合は、このタスクの次の 2 つの機能に注意してください。  
   
--   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
+-   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
   
     > [!NOTE]  
     >  Data Profile Viewer に表示されるプロファイルの結果には、出力で直接見つからない、計算された値もあります。 たとえば、列の NULL 比プロファイルの出力には、行の総数と、NULL 値を含む行の総数が含まれます。 列の NULL 比を取得するには、この 2 つの値に対してクエリを実行してから、NULL 値を含む行の比率を計算します。  
@@ -85,7 +84,7 @@ ms.locfileid: "62831632"
   
 2.  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加します。 この接続マネージャーを、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用して、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの使用可能なインスタンスに接続するように構成します。  
   
-     既定では、接続マネージャーの名前は \<server name>.AdventureWorks1 となります。  
+     既定では、接続マネージャーにはという名前が付いてい \<server name> ます。AdventureWorks1.  
   
 3.  ファイル接続マネージャーをパッケージに追加します。 この接続マネージャーを、データ プロファイル タスクの出力ファイルを作成するように構成します。  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831632"
   
 -   **[変数]** ウィンドウで、次の 2 つのパッケージ変数を追加して構成します。  
   
-    -   名前を入力します`ProfileConnectionName`、変数のいずれかの設定には、この変数の型と**文字列**。  
+    -   変数の1つに名前として「」を入力 `ProfileConnectionName` し、この変数の型を**String**に設定します。  
   
-    -   名前を入力します`AddressLine2NullRatio`、その他の変数および設定するには、この変数の型**二重**。  
+    -   他の変数の名前として「」を入力 `AddressLine2NullRatio` し、この変数の型を**Double**に設定します。  
   
 ### <a name="configure-the-data-profiling-task"></a>データ プロファイル タスクの構成  
  データ プロファイル タスクは、次のように構成する必要があります。  
@@ -142,9 +141,9 @@ ms.locfileid: "62831632"
   
 4.  **[スクリプト]** ページで、使用するプログラミング言語を選択します。 次に、2 つのパッケージ変数をスクリプトで使用できるようにします。  
   
-    1.  `ReadOnlyVariables`、`ProfileConnectionName`します。  
+    1.  `ReadOnlyVariables`では、を選択し `ProfileConnectionName` ます。  
   
-    2.  **ReadWriteVariables**、`AddressLine2NullRatio`します。  
+    2.  **ReadWriteVariables**の場合は、を選択し `AddressLine2NullRatio` ます。  
   
 5.  **[スクリプトの編集]** を選択して、スクリプト開発環境を開きます。  
   
@@ -270,7 +269,7 @@ ms.locfileid: "62831632"
   
 -   スクリプト タスク エディターで、プロファイル出力を格納するパッケージ変数の名前を、タスクの `ReadOnlyVariables` リストに追加します。  
   
--   次のコード例で示すように、変数の文字列値を `LoadXML` メソッドに渡します (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
+-   次のコード例で示すように、変数の文字列値を `LoadXML` メソッドに渡します  (この例では、プロファイル出力を格納するパッケージ変数の名前として "ProfileOutput" を使用しています)。  
   
     ```vb  
     Dim outputString As String  
@@ -329,6 +328,6 @@ ms.locfileid: "62831632"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスクのセットアップ](data-profiling-task.md)   
- [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)  
+ [Data Profile Viewer](data-profile-viewer.md)  
   
   

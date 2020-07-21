@@ -10,40 +10,40 @@ ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076981"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288298"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日付、時刻、およびタイムスタンプのリテラル
-日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスは、します。  
+日付、時刻、およびタイムスタンプリテラルのエスケープシーケンスは、  
   
- **{** _-型_ **'** _値_ **'}**  
+ **{**  _-型_ **'** _value_ **'}**  
   
- 場所*リテラル型*は、値の 1 つは、次の表に表示されています。  
+ ここで、*リテラル型*は次の表に示すいずれかの値です。  
   
-|*リテラル型*|説明|書式設定*値*|  
+|*リテラル-型*|説明|*値*の形式|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*mm*-*dd*|  
-|**t**|Time*|*hh*:*mm*:*ss*[1]|  
-|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.* ] [1]|  
+|**d**|日付|*yyyy*-*mm*mm-*dd*|  
+|**\t**|ごと|*hh*:*mm*:*ss*[1]|  
+|**ts**|Timestamp|*yyyy*-*mm*mm-*dd* *hh*:*mm*:*ss*[.*f...*]1|  
   
- [秒コンポーネントを含むリテラル、時刻、またはタイムスタンプ間隔で小数点の右側にある数字の 1] の番号は SQL_DESC_PRECISION の記述子フィールドに含まれる秒の有効桁数に依存します。 (詳細については、次を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)。  
+ [1] 秒の部分を含む時間またはタイムスタンプの間隔リテラルの小数点の右側の桁数は、SQL_DESC_PRECISION 記述子フィールドに含まれる秒の有効桁数に依存します。 (詳細については、「 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)」を参照してください)。  
   
- 詳細については、日付、時刻、およびタイムスタンプ エスケープ シーケンスは、次を参照してください[日付、時刻、およびタイムスタンプ エスケープ シーケンス](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)付録 c:。SQL 文法。  
+ 日付、時刻、およびタイムスタンプエスケープシーケンスの詳細については、「付録 C: SQL 文法」の「[日付、時刻、およびタイムスタンプエスケープシーケンス](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md)」を参照してください。  
   
- たとえば、次の SQL ステートメントの両方、Orders テーブルの販売注文 1023 の開いている日付を更新します。 最初のステートメントでは、エスケープ シーケンスの構文を使用します。 2 番目のステートメントでは、日付列の Oracle Rdb ネイティブ構文を使用して、相互運用可能ではありません。  
+ たとえば、次の SQL ステートメントはどちらも、Orders テーブルの sales order 1023 の open date を更新します。 最初のステートメントでは、エスケープシーケンス構文を使用します。 2番目のステートメントでは、DATE 列に対して Oracle Rdb ネイティブ構文を使用し、相互運用できません。  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- 日付、時刻、またはタイムスタンプのリテラルのエスケープ シーケンスは、日付、時刻、またはタイムスタンプ パラメーターにバインドされている文字変数にも配置できます。 たとえば、次のコードでは、文字変数にバインドされている日付パラメーターを使用して、Orders テーブルの販売注文 1023 の開いている日付を更新します。  
+ 日付、時刻、またはタイムスタンプリテラルのエスケープシーケンスは、日付、時刻、またはタイムスタンプパラメーターにバインドされた文字変数に配置することもできます。 たとえば、次のコードでは、文字変数にバインドされた日付パラメーターを使用して、Orders テーブルの sales order 1023 の open date を更新しています。  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- ただし、日付構造体に直接、パラメーターをバインドする方が効率的です。  
+ ただし、通常は、パラメーターを日付構造体に直接バインドする方が効率的です。  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- アプリケーションを呼び出すドライバーが、日付、時刻、またはタイムスタンプのリテラルの ODBC エスケープ シーケンスをサポートするかどうかを判断する**SQLGetTypeInfo**します。 データ ソースは、日付、時刻、またはタイムスタンプのデータ型をサポートする場合、対応するエスケープ シーケンスもサポートする必要があります。  
+ ドライバーで日付、時刻、またはタイムスタンプのリテラルの ODBC エスケープシーケンスがサポートされているかどうかを判断するために、アプリケーションは**SQLGetTypeInfo**を呼び出します。 データソースが日付、時刻、またはタイムスタンプデータ型をサポートしている場合は、対応するエスケープシーケンスもサポートする必要があります。  
   
- データ ソースには、日付、時刻、またはタイムスタンプのリテラルの ODBC エスケープ シーケンスは、異なるは、ANSI sql-92 仕様で定義されている datetime リテラルもサポートできます。 データ ソースが ANSI リテラルをサポートしているかどうかを決定するには、アプリケーションを呼び出す**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS オプションを使用します。  
+ データソースは、ANSI SQL-92 仕様で定義されている datetime リテラルをサポートすることもできます。これは、日付、時刻、またはタイムスタンプリテラルの ODBC エスケープシーケンスとは異なります。 データソースが ANSI リテラルをサポートしているかどうかを判断するために、アプリケーションは SQL_ANSI_SQL_DATETIME_LITERALS オプションを指定して**SQLGetInfo**を呼び出します。  
   
- アプリケーションを呼び出すドライバーが interval のリテラルの ODBC エスケープ シーケンスをサポートするかどうかを判断する**SQLGetTypeInfo**します。 データ ソースは、datetime 間隔のデータ型をサポートする場合、対応するエスケープ シーケンスもサポートする必要があります。  
+ ドライバーが interval リテラルの ODBC エスケープシーケンスをサポートするかどうかを判断するために、アプリケーションは**SQLGetTypeInfo**を呼び出します。 データソースが datetime interval データ型をサポートしている場合は、対応するエスケープシーケンスもサポートする必要があります。  
   
- データ ソースは、ANSI sql-92 仕様で定義されている datetime interval のリテラルの ODBC エスケープ シーケンスとは異なる日付時刻リテラルもサポートできます。 データ ソースが ANSI リテラルをサポートしているかどうかを決定するには、アプリケーションを呼び出す**SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS オプションを使用します。
+ データソースは、ANSI SQL-92 仕様で定義されている datetime リテラルをサポートすることもできます。これは、datetime interval リテラルの ODBC エスケープシーケンスとは異なります。 データソースが ANSI リテラルをサポートしているかどうかを判断するために、アプリケーションは SQL_ANSI_SQL_DATETIME_LITERALS オプションを指定して**SQLGetInfo**を呼び出します。

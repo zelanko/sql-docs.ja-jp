@@ -1,21 +1,20 @@
 ---
 title: チュートリアル:拡張機能を作成する
-titleSuffix: Azure Data Studio
 description: このチュートリアルでは、カスタム機能を Azure Data Studio に追加する拡張機能を作成する方法について説明します。
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.date: 12/10/2019
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: tutorial
-author: kevcunnane
-ms.author: kcunnane
-ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 668e2f4292fb20a85329bbb0716e6945d44e8e02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719042"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>チュートリアル:Azure Data Studio 拡張機能を作成する
 
@@ -30,7 +29,7 @@ ms.locfileid: "67959082"
 > * 拡張機能をパッケージ化する
 > * 拡張機能をマーケットプレースに公開する
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 Azure Data Studio は Visual Studio Code と同じフレームワーク上に構築されるため、Azure Data Studio の拡張機能は Visual Studio Code を使用して構築されます。 開始するには、次のコンポーネントが必要です。
 
@@ -161,9 +160,9 @@ Azure Data Studio Debug 拡張機能を、確実に Visual Studio Code にイン
 Azure Data Studio 拡張機能マーケットプレースはまだ完全には実装されておらず、現行のプロセスは、拡張機能 VSIX をどこか (GitHub リリース ページなど) でホストし、その後、PR を送信し、[この JSON ファイル](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json)を自分の拡張機能情報で更新するというものです。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、次の方法を学習しました。
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * 拡張機能プロジェクトを作成する
 > * 拡張機能ジェネレーターをインストールする

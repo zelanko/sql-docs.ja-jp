@@ -16,13 +16,13 @@ ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572219"
 ---
-# <a name="msreportserverinstance-members"></a>MSReportServer_Instance メンバー
+# <a name="msreportserver_instance-members"></a>MSReportServer_Instance メンバー
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
   
 ## <a name="public-properties"></a>パブリック プロパティ  
@@ -40,6 +40,6 @@ ms.locfileid: "65572219"
   
 |||  
 |-|-|  
-|[GetReportServerUrls メソッド (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
+|[GetReportServerUrls メソッド &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
   
   

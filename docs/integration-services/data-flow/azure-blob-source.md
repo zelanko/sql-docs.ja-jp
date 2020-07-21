@@ -11,21 +11,21 @@ f1_keywords:
 - sql13.dts.designer.afpblobsrc.f1
 - sql14.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b90f56f69aed9da7194f2a95b0fa9598db0da50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8342fc3595f695225ee5ea3e4a12259c2bb8301a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045452"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293460"
 ---
 # <a name="azure-blob-source"></a>Azure BLOB Source
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV と AVRO です。
+  **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV および AVRO です。
   
   Azure BLOB Source のエディターを表示するには、データ フロー デザイナー上に **Azure Blob Source** をドラッグ アンド ドロップし、これをダブルクリックしてエディターを開きます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68045452"
 
 6.  ファイルが圧縮されている場合は、 **[Decompress the file]** (ファイルの圧縮解除) を選択します。
 
-7.  ファイルが圧縮されている場合は、 **[圧縮の種類]** として次のいずれかを選択します: **[GZIP]** 、 **[DEFLATE]** 、 **[BZIP2]** 。 Zip 形式はサポートされていません。
+7.  ファイルが圧縮されている場合は、 **[圧縮の種類]** として **[GZIP]** 、 **[DEFLATE]** 、または **[BZIP2]** を選択します。 Zip 形式はサポートされていません。
   
 8.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
   

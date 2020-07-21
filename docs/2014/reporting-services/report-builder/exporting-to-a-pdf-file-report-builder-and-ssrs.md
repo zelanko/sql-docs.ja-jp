@@ -11,23 +11,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107921"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
   
- PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体字中国語、簡体字中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)します。  
+ PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体中国語、簡体中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限の詳細については、「[レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  PDF レンダラーは物理的なページ レンダラーなので、HTML や Excel などの他のレンダラーとは異なり、改ページ機能があります。 ここでは、PDF レンダラー固有の情報を提供し、規則の例外について説明します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> フォント埋め込み  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>フォントの埋め込み  
  PDF 表示拡張機能は、可能な場合、レポートを PDF ファイルで表示するために必要な各フォントのサブセットを埋め込みます。 レポートに使用されているフォントが、レポート サーバーにインストールされている必要があります。 レポート サーバーは、レポートを PDF 形式で生成する際に、レポートで参照されるフォントに保存されている情報を使用して、PDF ファイル内の文字マッピングを作成します。 参照されているフォントがレポート サーバーにインストールされていないと、結果の PDF ファイルに適切なマッピングが作成されず、正しく表示されなくなる可能性があります。  
   
  フォントは、次の条件が該当する場合、PDF ファイルに埋め込まれます。  
@@ -57,7 +57,7 @@ ms.locfileid: "66107921"
   
  PDF ファイルに埋め込まれているフォントは、ファイルと共に保存される Fonts プロパティにメタデータとして追加されます。  
   
-##  <a name="Metadata"></a> メタデータ  
+##  <a name="metadata"></a><a name="Metadata"></a>Metadata  
  PDF 表示拡張機能では、レポート レイアウトに加えて PDF ドキュメント情報ディクショナリに次のメタデータを書き込みます。  
   
 |PDF プロパティ|作成元|  
@@ -71,7 +71,7 @@ ms.locfileid: "66107921"
   
   
   
-##  <a name="Interactivity"></a> 対話性  
+##  <a name="interactivity"></a><a name="Interactivity"></a>双  
  PDF では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -80,7 +80,7 @@ ms.locfileid: "66107921"
 ### <a name="document-map"></a>ドキュメント マップ  
  ドキュメント マップ ラベルがレポートに存在する場合、PDF ファイルにドキュメント アウトラインが追加されます。 各ドキュメント マップ ラベルは、ドキュメント アウトラインのエントリとして、レポートに表示される順番で表示されます。 Acrobat で、対象のブックマークがドキュメント アウトラインに追加されるのは、そのブックマークが存在するページが表示されている場合のみです。  
   
- 1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメント アウトラインは、Acrobat の [しおり] タブからアクセスできます。ドキュメント アウトライン内のエントリをクリックすると、ドキュメントでブックマークが設定された場所に移動できます。  
+ 1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメントアウトラインは、Acrobat の [ブックマーク] タブに表示されます。ドキュメントアウトライン内のエントリをクリックすると、ドキュメントはブックマークが付けられた場所に移動します。  
   
 ### <a name="bookmarks"></a>ブックマーク  
  PDF 表示では、ブックマークはサポートされていません。  
@@ -93,7 +93,7 @@ ms.locfileid: "66107921"
   
   
   
-##  <a name="Compression"></a> 圧縮  
+##  <a name="compression"></a><a name="Compression"></a>機能  
  画像の圧縮は、画像の元のファイルの種類に基づいて行われます。 PDF 表示拡張機能は、既定で PDF ファイルを圧縮します。  
   
  PDF ファイルに含まれる画像の圧縮を可能な限り保持するために、JPEG 画像は JPEG として保存され、その他の種類の画像はすべて BMP として保存されます。  
@@ -103,16 +103,16 @@ ms.locfileid: "66107921"
   
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>デバイス情報の設定  
  デバイス情報設定を変更することによって、このレンダラーの既定の設定の一部を変更することができます。 詳細については、「 [PDF Device Information Settings](../pdf-device-information-settings.md)」を参照してください。  
   
   
   
 ## <a name="see-also"></a>参照  
- [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レンダリング動作](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポートビルダーと SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;レポートアイテムのレンダリング](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

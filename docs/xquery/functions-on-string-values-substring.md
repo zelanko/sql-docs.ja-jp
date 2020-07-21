@@ -1,5 +1,6 @@
 ---
 title: substring 関数 (XQuery) |Microsoft Docs
+description: ソース文字列の指定部分を返す XQuery 関数 substring () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a4881fc4710ba56439eb98b5b196af93247c11f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768161"
 ---
 # <a name="functions-on-string-values---substring"></a>文字列値に使用する関数 - substring
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  値の部分を返します *$sourceString*の値で示される位置から始まる、 *$startingLoc、* の値によって示される文字数を継続して *$長さ*します。  
+  *$StartingLoc*の値によって示される位置から開始し、 *$sourceString*の値の一部を返します。 *$length*の値によって示される文字数に対して続行されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,35 +45,35 @@ fn:substring($sourceString as xs:string?,
  ソース文字列。  
   
  *$startingLoc*  
- 部分文字列の開始元となるソース文字列の開始点です。 この値が負の値や 0 の場合、0 より後の位置にある文字のみが返されます。 長さより大きい場合に、 *$sourceString*長さ 0 の文字列が返されます。  
+ 部分文字列の開始位置となるソース文字列内の開始点。 この値が負の値や 0 の場合、0 より後の位置にある文字のみが返されます。 *$SourceString*の長さよりも大きい場合は、長さ0の文字列が返されます。  
   
  *$length*  
- [省略可能]取得する文字の数。 指定されていない場合で指定された場所からすべての文字を返します *$startingLoc*文字列の末尾までです。  
+ optional取得する文字数。 指定しない場合は、 *$startingLoc*で指定された位置から文字列の末尾までのすべての文字が返されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この関数で引数を 3 つとも指定した場合、`$sourceString` 内で、次の範囲内の位置 `$p` から文字列が返されます。  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
   
- 値 *$length*の値の文字数よりも大きくすること *$sourceString*開始位置以降します。 この場合、部分文字列がの末尾までの文字を返します *$sourceString*します。  
+ *$Length*の値は、開始位置 *$sourceString*の値の文字数よりも大きくすることができます。 この場合、部分文字列は *$sourceString*の末尾までの文字を返します。  
   
- 文字列の最初の文字は、位置 1 であります。  
+ 文字列の最初の文字は、位置1にあります。  
   
- 場合の値 *$sourceString*空のシーケンスでは、長さ 0 の文字列として処理されます。 それ以外の場合、いずれか *$startingLoc*または *$length*空のシーケンスでは、空のシーケンスが返されます。  
+ *$SourceString*の値が空のシーケンスの場合、長さが0の文字列として処理されます。 それ以外の場合、 *$startingLoc*または *$length*のいずれかが空のシーケンスの場合は、空のシーケンスが返されます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- XQuery 関数におけるサロゲート ペアの動作は、データベースの互換性レベルに左右されます。場合によっては、関数の既定の名前空間 URI に左右されることもあります。 詳細については、のトピックでは、「XQuery 関数はサロゲート対応」のセクションを参照してください。 [SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)します。 参照してください[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)と[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)します。  
+ XQuery 関数のサロゲートペアの動作は、データベースの互換性レベルと、場合によっては、関数の既定の名前空間 URI に依存します。 詳細については、「 [SQL Server 2016 のデータベースエンジン機能の重大な変更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」の「XQuery 関数はサロゲート対応」を参照してください。 「 [ALTER DATABASE Compatibility Level &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 」と「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」も参照してください。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
- SQL Server が必要です、 *$startingLoc*と *$length パラメーター*型が xs:double ではなく xs:decimal であります。  
+ SQL Server には、xs: double ではなく、xs: decimal 型の *$startingLoc*および *$length パラメーター*が必要です。  
   
- SQL Server で *$startingLoc*と *$length*に空のシーケンスが () にマップされる動的エラーの結果として使用可能な値であるため、空のシーケンス。  
+ SQL Server を使用すると、 *$startingLoc*と *$length*を空のシーケンスにすることができます。これは、空のシーケンスが () にマップされる動的エラーの結果として有効な値であるためです。  
   
 ## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
+ このトピックでは、データベース内のさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Substring() XQuery 関数を使用して、製品モデルの概要説明の一部を取得するには  
- クエリでは、製品モデルを説明するテキストの最初の 50 文字の取得、<`Summary`> ドキュメント内の要素。  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A: Substring () XQuery 関数を使用した部分的な概要の製品モデルの説明の取得  
+ このクエリでは、製品モデルを説明するテキストの最初の50文字、ドキュメント内の <> 要素が取得され `Summary` ます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -85,11 +86,11 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  上のクエリに関して、次の点に注意してください。  
   
--   **String()** 関数の文字列値を返します、<`Summary`> 要素。 この関数が使用されます、<`Summary`> 要素には、テキストとサブ要素 (html 要素の書式設定、) の両方が含まれます。 これらの要素をスキップし、すべてのテキストを取得するため。  
+-   **String ()** 関数は、<> 要素の文字列値を返し `Summary` ます。 この関数は、<の `Summary`> 要素にテキストとサブ要素 (html 書式設定要素) の両方が含まれており、これらの要素をスキップしてすべてのテキストを取得するため、使用されます。  
   
--   **Substring()** 関数によって取得された文字列値からの最初の 50 文字の取得、 **string()** します。  
+-   **Substring ()** 関数は、**文字列 ()** によって取得された文字列値から最初の50文字を取得します。  
   
- これは、結果の一部です。  
+ 結果の一部を次に示します。  
   
 ```  
 ProductModelID Result  

@@ -1,28 +1,29 @@
 ---
-title: 記憶域プール内の HDFS データにクエリを実行する
-titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]で HDFS データを照会する方法について説明します。 記憶域プール内のデータに対して外部テーブルを作成し、クエリを実行します。
+title: 'HDFS データにクエリを実行する: 記憶域プール'
+titleSuffix: SQL Server Big Data Clusters
+description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター内の HDFS データにクエリを実行する方法について説明します。 記憶域プール内のデータに対して外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 8f0e9e6c84d1c465e05aab5ac7f47f9218888159
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652442"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605824"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスター内の HDFS にクエリを実行する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]で HDFS データを照会する方法について説明します。
+このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の HDFS データにクエリを実行する方法について説明します。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、以下の内容を学習します。
 
 > [!div class="checklist"]
 > * ビッグ データ クラスター内の HDFS データを指す外部テーブルを作成する。
@@ -31,13 +32,17 @@ ms.locfileid: "69652442"
 > [!TIP]
 > 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)を参照してください。
 
-## <a id="prereqs"></a> 前提条件
+この 7 分間のビデオでは、ビッグ データ クラスターの HDFS データにクエリを実行する手順について説明します。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
+
+## <a name="prerequisites"></a><a id="prereqs"></a> 前提条件
 
 - [ビッグ データ ツール](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
-- [ビッグ データ クラスターへのサンプル データの読み込み](tutorial-load-sample-data.md)
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>HDFS に対する外部テーブルを作成する
 

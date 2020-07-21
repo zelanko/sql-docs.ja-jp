@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7712605a27a5cec798633bf9846a23a31e95a17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057718"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 入力ファイル リファレンス (データベース エンジン チューニング アドバイザー)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーでは、XML 入力ファイルを使用してデータベースをチューニングできます。 この XML ファイルでは、チューニング セッションで使用するデータベース、テーブル、ワークロード ファイルまたはワークロード テーブル、およびチューニング オプションを指定します。 このファイルを使用して、ユーザー指定の構成を指定し、"what-if" 分析を実行することもできます。  
@@ -116,7 +115,7 @@ ms.locfileid: "62509984"
   
 -   [Schema の Table 要素 &#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [Table の Name 要素 &#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [Table の Name 要素 (DTA) &#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>参照  
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  

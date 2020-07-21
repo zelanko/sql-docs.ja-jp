@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - ツール オプション (全般オプション ページ) |Microsoft Docs
+title: SQL Server プロファイラーツール-[オプション] ([全般オプション] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7845a84c45015ba3346538030725eb2973490d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928553"
 ---
-# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - ツール オプション (全般オプション ページ)
+# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server プロファイラー-[オプション] ([全般オプション] ページ)
   **[全般オプション]** ダイアログ ボックスを使用すると、以下のオプションを確認または指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="display-options"></a>[表示オプション]  
- **[フォント名]**  
+ **フォント名**  
  トレースの実行中にトレース結果グリッドで使用されるフォントの名前を表示します。  
   
- **[フォント サイズ]**  
+ **フォント サイズ**  
  トレースの実行中にトレース結果グリッドで使用されるフォントのサイズを表示します。  
   
  **[フォントの選択]**  
@@ -73,12 +72,12 @@ ms.locfileid: "66089618"
  再生中のヘルス モニターのポーリング間隔を秒単位で指定します。 既定値は 60 秒です。 ユーザーはこの値を指定することで、終了するプロセスを決定するためにヘルス モニターがポーリングする頻度を設定できます。  
   
 ## <a name="see-also"></a>参照  
- [サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [トレース表示の既定値の設定 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
- [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
+ [サーバー &#40;SQL Server プロファイラーに接続した後、トレースを自動的に開始&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [トレース表示の既定値 &#40;SQL Server プロファイラー&#41;を設定します](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [トレーステーブル &#40;SQL Server プロファイラーの再生&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [トレースファイル &#40;SQL Server プロファイラーを再生する&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [トレースの再生](../tools/sql-server-profiler/replay-traces.md)   
- [グローバル トレース オプションを設定&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
+ [グローバルトレースオプション &#40;SQL Server プロファイラー&#41;を設定します](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

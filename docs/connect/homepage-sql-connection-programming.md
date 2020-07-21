@@ -1,7 +1,7 @@
 ---
-title: SQL クライアントのプログラミングのホームページ |Microsoft Docs
-description: ダウンロードし、言語および SQL Server または Azure SQL Database に接続するためのオペレーティング システムの組み合わせを多数のドキュメントへの注釈付きのリンクの [ハブ] ページ。
-author: MightyPen
+title: SQL クライアント プログラミングのホームページ | Microsoft Docs
+description: SQL Server または Azure SQL Database に接続するための、さまざまな言語とオペレーティング システムのドキュメントを参照およびダウンロードできるページへの注釈付きリンクが記載されているページ。
+author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,59 +9,59 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
-ms.author: genemi
-ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.author: v-daenge
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63182204"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529046"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server に対するクライアント プログラミングのホーム ページ
 
 
-クライアントは、Microsoft SQL Server とクラウドでの Azure SQL Database を操作するプログラミングの詳細について、ホーム ページへようこそ。 この記事では、次の情報を提供します。
+Microsoft SQL Server を操作するための、およびクラウドで Azure SQL Database を操作するためのクライアント プログラミングに関するホームページへようこそ。 この記事には以下の情報が含まれています。
 
-- 使用可能な言語とドライバーの組み合わせを示しています。
-    - Linux (Ubuntu など)、MacOS、および Windows のオペレーティング システムの情報が提供されます。
+- 使用できる言語とドライバーの組み合わせについて説明します。
+  - Linux (Ubuntu など)、macOS、および Windows のオペレーティング システムに関する情報が提供されています。
 - 各組み合わせの詳細なドキュメントへのリンクを提供します。
-- 適切な場所は、領域と特定の言語の階層的なドキュメントのサブエリアを表示します。
+- 特定の言語の階層型ドキュメントの区分とサブ区分を表示します (該当する場合)。
 
 
 #### <a name="azure-sql-database"></a>Azure SQL データベース
 
-、任意の言語では、SQL Server に接続するコードは、Azure SQL Database に接続するためのコードとほぼ同じです。
+特定の言語については、SQL Server に接続するコードは、Azure SQL Database に接続するためのコードとほぼ同じです。
 
-詳細については、Azure SQL Database に接続するための接続文字列を参照してください。
+Azure SQL Database に接続するための接続文字列の詳細については、以下を参照してください。
 
-- [.NET Core (c#) を使用して Azure SQL データベースに対してクエリを](/azure/sql-database/sql-database-connect-query-dotnet-core)します。
-- 他の言語についての内容のテーブルの前の記事の近くにあるその他の Azure SQL Database には。 たとえばを参照してください[PHP Azure SQL データベースに対してクエリを使用した](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)します。
+- [.NET Core (C#) を使用して Azure SQL データベースに照会する](/azure/sql-database/sql-database-connect-query-dotnet-core)。
+- 目次の前の記事の近くにある、他の言語に関するその他の Azure SQL Database の記事。 たとえば、「[PHP を使用して Azure SQL データベースに照会する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)」を参照してください。
 
 
-#### <a name="build-an-app-webpages"></a>ビルドのアプリ、web ページ
+#### <a name="build-an-app-webpages"></a>Build-an-app の Web ページ
 
-当社 *- アプリをビルド*web ページが別の形式でのコード例については、構成の情報と共にを提示します。 詳細については、この記事の後半を参照してください、[というラベルの付いたセクション*ビルド-アプリ、web サイト*](#an-204-aka-ms-sqldev)します。
+*Build-an-app* の Web ページには、コード例と構成情報を別の形式で示されています。 詳細については、この記事で後述する ["*Build-an-app の Web サイト*" に関するセクション](#an-204-aka-ms-sqldev)をご覧ください。
 
 
 
 <a name="an-050-languages-clients" />
 
-## <a name="languages-and-drivers-for-client-programs"></a>言語およびクライアント プログラムのドライバー
+## <a name="languages-and-drivers-for-client-programs"></a>クライアント プログラムの言語とドライバー
 
 
-次の表では、各言語のイメージは、SQL Server での言語の使用に関する詳細情報へのリンクは。 各リンクは、この記事では、後のセクションにジャンプします。
+次の表の各言語のイメージは、その言語と SQL Server の使用に関する詳細情報にリンクされています。 各リンクをクリックすると、この記事に示されているその言語のセクションに移動します。
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp; [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM の Entity Framework、.NET Framework の][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java のロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework の ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java のロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
 | &nbsp; [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python ロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![Python のロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
-#### <a name="downloads-and-installs"></a>ダウンロードおよびインストール
+#### <a name="downloads-and-installs"></a>ダウンロードとインストール
 
-次の記事では、ダウンロードに使用して、プログラミング言語で使用するためのさまざまな SQL 接続ドライバーをインストールします。
+次の記事では、プログラミング言語で使用するさまざまな SQL 接続ドライバーのダウンロードとインストールについて説明します。
 
 - [SQL Server ドライバー](sql-server-drivers.md)
 
@@ -69,27 +69,27 @@ ms.locfileid: "63182204"
 
 <a name="an-110-ado-net-docu" />
 
-## <a name="c-logoimage-ref-320-csharp-c-using-adonet"></a>![C# のロゴ][image-ref-320-csharp] ADO.NET を使用して C#
+## <a name="c-logoimage-ref-320-csharp-c-using-adonet"></a>![C# ロゴ][image-ref-320-csharp] ADO.NET が使用されている C#
 
-C# および Visual Basic の場合など、.NET マネージ言語とは、ADO.NET の最も一般的なユーザーです。 *ADO.NET*は .NET Framework クラスのサブセットのカジュアル名です。
+ADO.NET を最もよく使用するのが、C#、Visual Basic などの .NET マネージド言語です。 *ADO.NET* は、.NET Framework クラスのサブセットの名前です。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
-| [ADO.NET を使用した SQL への接続を概念実証する](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
-| [ADO.NET で SQL に弾性的に接続する](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | 接続の接続が失われるまでに時間が発生することができますので、コード例では、ロジックを再試行してください。<br /><br />再試行ロジックは、Azure SQL Database になどに任意のクラウド データベースのインターネットを介して維持接続にも適用されます。 |
-| [接続し、クエリに Windows/Linux と macOS で .NET Core を使用して c# プログラムを作成する方法のデモを azure SQL Database:](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database の例です。 |
-| [C#、ADO.NET、Windows アプリをビルドします。](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | コード例も構成情報。 |
+| [ADO.NET を使用した SQL への接続を概念実証する](./ado-net/step-3-connect-sql-ado-net.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
+| [ADO.NET で SQL に弾性的に接続する](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | コード例の再試行ロジック (接続が失われる可能性があるため)。<br /><br />再試行ロジックは、インターネットを介して維持される、任意のクラウド データベース (Azure SQL Database など) への接続に適切に適用されます。 |
+| [Azure SQL Database: Windows/Linux/macOS で .NET Core を使用して C# プログラムを作成し、接続およびクエリを実行する方法のデモ](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database の例。 |
+| [Build-an-app: C#、ADO.NET、Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>ドキュメント
 
 |||
 | :-- | :-- |
-| [ADO.NET を使用して C#](./ado-net/index.md)| ドキュメントのルートです。 |
-| [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET を使用するクラスのセット。 |
-| [名前空間: System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.SqlClient) | 最も直接的な ADO.NET のセンターではクラスのセット。 |
+| [ADO.NET が使用されている C#](./ado-net/index.md)| ドキュメントのルート。 |
+| [名前空間: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | ADO.NET に使用されるクラスのセット。 |
+| [名前空間: Microsoft.Data.SqlClient](https://docs.microsoft.com/dotnet/api/microsoft.data.SqlClient) | Microsoft .NET Data Provider for SQL Server に使用されるクラスのセット |
 | &nbsp; | <br /> |
 
 
@@ -98,31 +98,31 @@ C# および Visual Basic の場合など、.NET マネージ言語とは、ADO.
 
 ## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework のロゴ][image-ref-333-ef] C# では、Entity Framework(EF)
 
-Entity Framework (EF) は、オブジェクト リレーショナル マッピング (ORM) を提供します。 ORM によって、リレーショナル SQL database から取得されたデータを操作するオブジェクト指向プログラミング (OOP) ソース コードを簡単にできます。
+Entity Framework (EF) は、オブジェクト リレーショナル マッピング (ORM) を提供します。 ORM を使用すると、リレーショナル SQL データベースから取得したデータを、オブジェクト指向プログラミング (OOP) のソース コードで操作しやすくなります。
 
-EF では、次のテクノロジとの直接的または間接的なリレーションシップがあります。
+EF には、次のテクノロジと直接的または間接的なリレーションシップがあります。
 
 - .NET Framework
-- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)、または[LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 言語の構文の機能強化など、 **=>** (C#) 演算子。
-- SQL データベースのテーブルにマップされるクラスのソース コードを生成する便利なプログラムです。 たとえば、 [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)します。
+- [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/) または [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
+- 言語構文の拡張機能。C# の **=>** 演算子など。
+- SQL データベースのテーブルにマップされるクラスのソース コードを生成する便利なプログラム。 [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe) など。
 
 
 #### <a name="original-ef-and-new-ef"></a>元の EF と新しい EF
 
-[Entity Framework 用のスタート ページ](https://docs.microsoft.com/ef/)次のような説明と EF が導入されています。
+[Entity Framework の開始ページ](https://docs.microsoft.com/ef/)では、EF が次のように説明されています。
 
-- Entity Framework は、.NET オブジェクトを使用してデータベースを使用する開発者は .NET オブジェクト リレーショナル マッパー (O/RM)。 ほとんどの開発者は通常、記述する必要があるデータ アクセスのソース コードの必要はありません。
+- Entity Framework は、.NET 開発者が .NET オブジェクトを使用してデータベースを操作できるようにする、オブジェクト リレーショナル マッパー (O/RM) です。 これにより、開発者が通常は記述する必要のあるデータアクセス ソース コードの大部分が不要になります。
 
-*Entity Framework*別のソース コードの 2 つの分岐によって共有の名前を指定します。 EF の 1 つの分岐の方が古いと、そのソース コードは、パブリック管理ようになりましたことができます。 その他の EF は追加されました。 2 つの EFs は次のとおりです。
+*Entity Framework* は、2 つの異なるソース コード分岐によって共有される名前です。 一方の EF 分岐は古く、そのソース コードはパブリックで管理できるようになりました。 もう一方は新しい EF です。 この 2 つの EF について次に説明します。
 
 |     |     |
 | :-- | :-- |
-| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | まず、Microsoft では、EF が 2008 年 8 月にリリースしました。 Microsoft では 2015 年 3 月に発表する EF 6.x は Microsoft が開発、最終バージョンでしたが。 Microsoft では、パブリック ドメインにソース コードをリリースしました。<br /><br />最初に EF には、.NET Framework の一部がでした。 EF 6.x は、.NET Framework から削除されました。<br /><br />[EF 6.x のソース コード リポジトリ、Github の*aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
-| [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft は、2016 年 6 月で、新しく作成した EF Core をリリースしました。 EF Core は、柔軟性と移植性の向上のために設計されています。 EF Core は、Microsoft Windows だけ以外のオペレーティング システムで実行できます。 EF Core は、Microsoft SQL Server だけを超えるデータベースおよびその他のリレーショナル データベースと対話できます。<br /><br />**C&#x23;のコード例。**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[既存のデータベースでの .NET Framework での EF Core の概要](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft が最初に EF をリリースしたのは 2008 年 8 月です。 そして 2015 年 3 月、Microsoft は、最後の Microsoft 開発バージョンとして EF 6.x を発表し、 ソース コードをパブリック ドメインに公開しました。<br /><br />当初、EF は .NET Framework に含まれていましたが、 EF 6 は .NET Framework から削除されました。<br /><br />[GitHub の *aspnet/EntityFramework6* リポジトリの EF 6.x ソース コード](https://github.com/aspnet/EntityFramework6) |
+| [EF Core](https://docs.microsoft.com/ef/core/) | 2016 年 6 月、Microsoft は新しく開発された EF Core をリリースしました。 EF Core は、柔軟性と移植性の向上を目指して設計されたもので、 Microsoft Windows 以外のオペレーティング システムで実行できます。 また、EF Core では、Microsoft SQL Server やその他のリレーショナル データベース以外のデータベースを操作することもできます。<br /><br />**C&#x23; のコード例:**<br />[Entity Framework Core の概要](https://docs.microsoft.com/ef/core/get-started/index)<br />[既存のデータベースを使用した .NET Framework 上の EF Core の概要](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
-EF と関連テクノロジは、強力であり、領域全体を習得する開発者の多くは。
+EF とその関連テクノロジは強力で、すべての区分を習得したいと考えている開発者にとっては学習するべきものが多くあります。
 
 &nbsp;
 
@@ -132,28 +132,28 @@ EF と関連テクノロジは、強力であり、領域全体を習得する�
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java のロゴ][image-ref-330-java] Java と JDBC
 
-Microsoft では、SQL Server (または Azure SQL database では、コースの) の使用の Java Database Connectivity (JDBC) ドライバーを提供します。 これは Type 4 JDBC ドライバーであり、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続を提供します。
+Microsoft からは、SQL Server (または Azure SQL Database) で使用するための Java Database Connectivity (JDBC) ドライバーが提供されています。 これは Type 4 JDBC ドライバーであり、標準の JDBC アプリケーション プログラム インターフェイス (API) によってデータベース接続を提供します。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
-| [コード例](./jdbc/code-samples/index.md) | データ型、結果セット、および大規模なデータについて学習できるコード例です。 |
-| [接続 URL のサンプル](./jdbc/connection-url-sample.md) | 接続 URL を使用して、SQL Server に接続する方法について説明します。 使用して、データを取得するのに SQL ステートメントを使用します。 |
-| [データ ソースのサンプル](./jdbc/data-source-sample.md) | データ ソースを使用して、SQL Server に接続する方法について説明します。 ストアド プロシージャを使用して、データを取得します。 |
-| [Java を使用して Azure SQL database のクエリ](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database の例です。 |
-| [Ubuntu 上で SQL Server を使用して Java アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | コード例も構成情報。 |
+| [コード例](./jdbc/code-samples/index.md) | データ型、結果セット、および大きなデータについて学習するためのコード例。 |
+| [接続 URL のサンプル](./jdbc/connection-url-sample.md) | 接続 URL を使用して SQL Server に接続する方法について説明します。 その後、これを使って SQL ステートメントを使用し、データを取得します。 |
+| [データ ソースのサンプル](./jdbc/data-source-sample.md) | データ ソースを使用して SQL Server に接続する方法について説明します。 その後、ストアド プロシージャを使用してデータを取得します。 |
+| [Java を使用して Azure SQL データベースに照会する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database の例。 |
+| [Ubuntu で SQL Server を使用して Java アプリを作成する](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>ドキュメント
 
-JDBC のドキュメントには、次の主要な領域が含まれています。
+JDBC ドキュメントに含まれる主な区分を次に示します。
 
 |||
 | :-- | :-- |
-| [Java Database Connectivity (JDBC)](./jdbc/index.md) | JDBC ドキュメントのルートです。 |
+| [Java Database Connectivity (JDBC)](./jdbc/index.md) | JDBC ドキュメントのルート。 |
 | [リファレンス](./jdbc/reference/index.md) | インターフェイス、クラス、およびメンバー。 |
-| [JDBC SQL ドライバーのプログラミング ガイド](./jdbc/programming-guide-for-jdbc-sql-driver.md) | コード例も構成情報。 |
+| [JDBC SQL ドライバーのプログラミング ガイド](./jdbc/programming-guide-for-jdbc-sql-driver.md) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 
@@ -162,73 +162,73 @@ JDBC のドキュメントには、次の主要な領域が含まれています
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js のロゴ][image-ref-340-node] Node.js
 
-Windows、Linux、またはファルダから Node.js を使用した SQL Server に接続できます。 Node.js ドキュメントのルートは[ここ](./node-js/index.md)します。
+Node.js を使用すると、Windows、Linux、または macOS から SQL Server に接続できます。 Node.js ドキュメントのルートについては、[こちら](./node-js/index.md)をご覧ください。
 
-SQL Server 用 Node.js 接続ドライバーは、JavaScript に実装されます。 ドライバーは、すべての最新バージョンの SQL Server でサポートされている TDS プロトコルを使用します。 ドライバーはオープン ソース プロジェクト、 [Github で入手できます](https://tediousjs.github.io/tedious/)します。
+SQL Server 用の Node.js 接続ドライバーは JavaScript で実装されます。 このドライバーで使用される TDS プロトコルは、最新バージョンのすべての SQL Server でサポートされています。 このドライバーはオープンソース プロジェクトであり、[GitHub で入手できます](https://tediousjs.github.io/tedious/)。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
-| [Node.js を使用した SQL への接続を概念実証する](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | ベア ボーンのソース コード、SQL Server への接続およびクエリを実行します。 |
-| [Azure SQL database: Node.js クエリを使用して](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | クラウドでの Azure SQL Database の例です。 |
-| [MacOS での SQL Server を使用する Node.js アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | コード例も構成情報。 |
+| [Node.js を使用した SQL への接続を概念実証する](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | SQL Server に接続してクエリを実行するための最小限のソース コード。 |
+| [Azure SQL データベース: Node.js を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | クラウドの Azure SQL Database の例。 |
+| [Node.js アプリを作成して macOS で SQL Server を使用する](https://www.microsoft.com/sql-server/developer-get-started/node/mac/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>C++ 用の ODBC 
+## <a name="odbc-for-c"></a>C++ 用の ODBC
 
-![ODBC のロゴ][image-ref-350-odbc] ![cpp ビッグ プラス][image-ref-322-cpp]
+![ODBC のロゴ][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
-オープン データベース コネクティビティ (ODBC)、1990 年代に開発され、.NET Framework が復帰させる方します。 ODBC は、任意の特定のデータベース システムに依存しないオペレーティング システムから独立して設計されています。
+1990 年代に開発された Open Database Connectivity (ODBC) は、.NET Framework より前に登場しました。 ODBC は、特定のデータベース システムにもオペレーティング システムにも依存しないように設計されています。
 
-長年にわたり多数の ODBC ドライバーに作成およびマイクロソフトの内外でのグループがリリースされます。 ドライバーの範囲には、いくつかのクライアント プログラミング言語が含まれます。 データ ターゲットの一覧は、SQL Server よりも移動します。
+長年にわたって、多数の ODBC ドライバーが Microsoft 内外のグループによって作成およびリリースされ、 そのドライバー範囲には、クライアント プログラミング言語が複数含まれます。 データ ターゲットのリストは、SQL Server をはるかに超えています。
 
-その他のいくつかの接続ドライバーは ODBC を内部的に使用します。
+他の接続ドライバーの中には、ODBC が内部的に使用されるものもあります。
 
 #### <a name="code-example"></a>コードの例
 
 - [ODBC を使用する C++ コードの例](../odbc/reference/sample-odbc-program.md)
 
-#### <a name="documentation-outline"></a>ドキュメント アウトライン
+#### <a name="documentation-outline"></a>ドキュメントの概要
 
-このセクションでは、ODBC のコンテンツは、C から SQL Server または Azure SQL Database では、いずれかへのアクセスに焦点を当てています。 次の表では、ODBC 用の主要なドキュメントのおおよそのアウトラインを示します。
+このセクションの ODBC コンテンツは、C++ から SQL Server または Azure SQL Database にアクセスすることに重点を置いています。 次の表は、ODBC の主要ドキュメントの概要を示しています。
 
 
-| 領域 | サブ区分 | [説明] |
+| 領域 | サブ区分 | 説明 |
 | :--- | :------ | :---------- |
-| [C++ 用の ODBC](./odbc/index.md) | ドキュメントのルートです。 |
-| [Linux、Mac](./odbc/linux-mac/index.md) | &nbsp; | Linux または MacOS オペレーティング システムで ODBC を使用する方法の詳細についてはします。 |
-| [Windows](./odbc/windows/index.md)     | &nbsp; | Windows オペレーティング システム上の ODBC の使用方法の詳細についてはします。 |
-| [管理](../odbc/admin/index.md) | &nbsp; | ODBC データ ソースを管理するための管理ツールです。 |
-| [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | 作成され、Microsoft によって提供されるさまざまな ODBC ドライバー。 |
-| [概念とリファレンス](../odbc/reference/index.md) | &nbsp; | 従来の参照だけでなく、ODBC インターフェイスに関する概念情報。 |
-| &nbsp; " | [付録](../odbc/reference/appendixes/index.md)    | 状態遷移テーブル、ODBC カーソル ライブラリ、および詳細。 |
-| &nbsp; " | [アプリを開発します。](../odbc/reference/develop-app/index.md)  | 関数、ハンドル、およびその他。 |
-| &nbsp; " | [ドライバーの開発](../odbc/reference/develop-driver/index.md) | 特殊なデータ ソースがある場合は、ODBC ドライバーを開発する方法。 |
-| &nbsp; " | [インストール](../odbc/reference/install/index.md) | ODBC のインストール、サブキー、および詳細。 |
-| &nbsp; " | [構文](../odbc/reference/syntax/index.md)   | セットアップ、インストーラー、翻訳、およびデータ アクセス用の Api。 |
+| [C++ 用の ODBC](./odbc/index.md) | ドキュメントのルート。 |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Linux または macOS オペレーティング システムでの ODBC の使用に関する情報。 |
+| [Windows](./odbc/windows/index.md)     | &nbsp; | Windows オペレーティング システムでの ODBC の使用に関する情報。 |
+| [管理](../odbc/admin/index.md) | &nbsp; | ODBC データ ソースを管理するための管理ツール。 |
+| [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Microsoft によって作成および提供される各種 ODBC ドライバー。 |
+| [概念とリファレンス](../odbc/reference/index.md) | &nbsp; | 従来のリファレンスのほか、ODBC インターフェイスに関する概念情報。 |
+| &nbsp; " | [付録](../odbc/reference/appendixes/index.md)    | 状態遷移テーブル、ODBC カーソル ライブラリなど。 |
+| &nbsp; " | [アプリの開発](../odbc/reference/develop-app/index.md)  | 関数、ハンドルなど。 |
+| &nbsp; " | [ドライバーの開発](../odbc/reference/develop-driver/index.md) | 独自の ODBC ドライバーを開発する方法 (特別なデータ ソースがある場合)。 |
+| &nbsp; " | [インストール](../odbc/reference/install/index.md) | ODBC のインストール、サブキーなど。 |
+| &nbsp; " | [構文](../odbc/reference/syntax/index.md)   | セットアップ、インストーラー、翻訳、およびデータ アクセスのための API。 |
 | &nbsp; | &nbsp; | <br /> |
 
 
 
 <a name="an-170-php-docu" />
 
-## <a name="php-logoimage-ref-360-php-php"></a>![PHP のロゴ][image-ref-360-php] PHP (PHP)
+## <a name="php-logoimage-ref-360-php-php"></a>![PHP のロゴ][image-ref-360-php] PHP
 
-PHP を使用すると、SQL Server と対話します。 PHP ドキュメントのルートは[ここ](./php/index.md)します。
+PHP を使用して SQL Server と対話できます。 PHP ドキュメントのルートについては、[こちら](./php/index.md)をご覧ください。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
-| [PHP を使用した SQL への接続を概念実証する](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
-| [PHP で SQL に弾性的に接続する](./php/step-4-connect-resiliently-to-sql-with-php.md) | インターネットと、クラウド経由で接続の接続が失われるまでに時間が発生することができますので、コード例では、ロジックを再試行してください。 |
-| [Azure SQL database: PHP クエリを使って](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database の例です。 |
-| [RHEL で SQL Server を使用する PHP アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | コード例も構成情報。 |
+| [PHP を使用した SQL への接続を概念実証する](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
+| [PHP で SQL に弾性的に接続する](./php/step-4-connect-resiliently-to-sql-with-php.md) | コード例の再試行ロジック (インターネットおよびクラウドを介した接続が失われる可能性があるため)。 |
+| [Azure SQL データベース: PHP を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database の例。 |
+| [PHP アプリを作成して RHEL で SQL Server を使用する](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 
@@ -238,24 +238,24 @@ PHP を使用すると、SQL Server と対話します。 PHP ドキュメント
 ## <a name="python-logoimage-ref-370-python-python"></a>![Python ロゴ][image-ref-370-python] Python
 
 
-Python を使用することで、SQL Server にやり取りすることができます。
+Python を使用して SQL Server と対話できます。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
-| [Pyodbc を使用して Python を使用した SQL 接続の概念実証](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
-| [Azure SQL database: Python クエリを使用](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database の例です。 |
-| [SLES での SQL Server を使用する PHP アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | コード例も構成情報。 |
+| [pyodbc と Python を使用した SQL への接続の概念実証](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
+| [Azure SQL データベース: Python を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database の例。 |
+| [PHP アプリを作成して SLES で SQL Server を使用する](https://www.microsoft.com/sql-server/developer-get-started/python/sles/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 #### <a name="documentation"></a>ドキュメント
 
-| 領域 | [説明] |
+| 領域 | 説明 |
 | :--- | :---------- |
-| [SQL Server への Python](./python/index.md) | ドキュメントのルートです。 |
-| [pymssql ドライバー](./python/pymssql/index.md) | マイクロソフトは維持または pymssql ドライバーをテストできません。<br /><br />Pymssql 接続ドライバーは、Python プログラムで使用するための SQL データベースへの単純なインターフェイスです。 Pymssql は FreeTDS を Microsoft SQL Server Python DB API (PEP 249) インターフェイスを提供する上に構築します。 |
-| [pyodbc ドライバー](./python/pyodbc/index.md)   | Pyodbc 接続ドライバーでは、簡単にアクセスする ODBC データベースをオープン ソース Python モジュールです。 DB API 2.0 の仕様を実装するが、さらに多くのらしい利便性が詰め込まれています。 |
+| [Python から SQL Server](./python/index.md) | ドキュメントのルート。 |
+| [pymssql ドライバー](./python/pymssql/index.md) | Microsoft では、pymssql ドライバーを保守またはテストしません。<br /><br />pymssql 接続ドライバーは、Python プログラムで使用するための、SQL データベースに対するシンプルなインターフェイスです。 pymssql は FreeTDS を基盤として構築され、Python DB-API (PEP-249) インターフェイスを Microsoft SQL Server に提供します。 |
+| [pyodbc ドライバー](./python/pyodbc/index.md)   | pyodbc 接続ドライバーは、ODBC データベースに容易にアクセスできるようにするオープンソースの Python モジュールです。 DB API 2.0 仕様を実装していますが、より Python らしい利便性を備えています。 |
 | &nbsp; | <br /> |
 
 
@@ -263,99 +263,99 @@ Python を使用することで、SQL Server にやり取りすることがで�
 
 ## <a name="ruby-logoimage-ref-380-ruby-ruby"></a>![Ruby のロゴ][image-ref-380-ruby] Ruby
 
-Ruby を使用して、SQL Server にやり取りすることができます。 Ruby のドキュメントのルートは[ここ](./ruby/index.md)します。
+Ruby を使用して SQL Server と対話できます。 Ruby ドキュメントのルートについては、[こちら](./ruby/index.md)をご覧ください。
 
 #### <a name="code-examples"></a>コード例
 
 |||
 | :-- | :-- |
-| [Ruby を使用した SQL への接続を概念実証する](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小規模なコード例は、接続して、SQL Server へのクエリに重点を置いています。 |
-| [Azure SQL database: Ruby クエリを使用](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例です。 |
-| [MacOS での SQL Server を使用する Ruby アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | コード例も構成情報。 |
+| [Ruby を使用した SQL への接続を概念実証する](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | SQL Server の接続とクエリに重点を置いた小さなコード例。 |
+| [Azure SQL データベース: Ruby を使用してクエリを実行する](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database の例。 |
+| [Ruby アプリを作成して macOS で SQL Server を使用する](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 構成情報とコード例。 |
 | &nbsp; | <br /> |
 
 
 
 <a name="an-204-aka-ms-sqldev" />
 
-## <a name="build-an-app-website-for-sql-client-developmenthttpswwwmicrosoftcomsql-serverdeveloper-get-started"></a>[ビルドのアプリを web サイト、SQL クライアント開発](https://www.microsoft.com/sql-server/developer-get-started/)
+## <a name="build-an-app-website-for-sql-client-development"></a>[Build-an-app の Web サイト (SQL クライアント開発用)](https://www.microsoft.com/sql-server/developer-get-started/)
 
 
-[ *- アプリをビルド*](https://www.microsoft.com/sql-server/developer-get-started/) web ページのプログラミング言語が SQL Server に接続するための長い一覧から選択できます。 また、クライアント プログラムのさまざまなオペレーティング システムを実行できます。
+[*Build-an-app*](https://www.microsoft.com/sql-server/developer-get-started/) の Web ページには、SQL Server に接続するためのプログラミング言語が多数用意されており、ユーザーは必要な言語をこの一覧から選択できます。 また、お使いのクライアント プログラムでは、さまざまなオペレーティング システムを実行できます。
 
-*アプリをビルド*始めたばかりの開発者のシンプルさと完全性を強調しています。 手順では、次のタスクについて説明します。
+*Build-an-app* が重視しているのは、作業を開始したばかりの開発者にとってのわかりやすさと完全性です。 この手順では次のタスクについて説明します。
 
-1. Microsoft SQL Server をインストールする方法
-2. ダウンロードし、ツールやドライバーをインストールする方法。
-3. 選択したオペレーティング システムに応じて、いずれのために必要な構成を作成する方法。
-4. 指定されたソース コードをコンパイルする方法。
-5. プログラムを実行する方法。
+1. Microsoft SQL Server のインストール方法
+2. ツールとドライバーのダウンロードおよびインストール方法。
+3. 選択したオペレーティング システムに応じて、必要な構成を行う方法。
+4. 提供されたソース コードをコンパイルする方法。
+5. プログラムの実行方法。
 
-Web サイトで提供される詳細情報のおおよそのアウトラインをいくつかを次には。
+次に Web サイトで提供されている詳細情報の概略をいくつか示します。
 
-#### <a name="java-on-ubuntu"></a>Ubuntu 上で Java:
+#### <a name="java-on-ubuntu"></a>Ubuntu 上の Java
 
-1. 環境を設定します。
+1. 環境の設定方法
     - 手順 1.1 SQL Server をインストールする
-    - 手順 1.2 インストール Java
-    - 手順 1.3 Java Development Kit (JDK) をインストールします。
-    - 手順 1.4 インストール Maven
-2. SQL Server での Java アプリケーションを作成します。
-    - 手順 2.1 は、SQL Server に接続し、クエリを実行する Java アプリを作成します。
-    - 手順 2.2 休止状態の人気のフレームワークを使用して SQL Server に接続する Java アプリケーションを作成します。
-3. 最大 100 倍 Java アプリを高速化します。
-    - 列ストア インデックスを示すために手順 3.1 を作成する Java アプリ
+    - 手順 1.2 Java をインストールする
+    - 手順 1.3 Java Development Kit (JDK) をインストールする
+    - 手順 1.4 Maven をインストールする
+2. SQL Server を使用して Java アプリケーションを作成します
+    - 手順 2.1 SQL Server に接続してクエリを実行する Java アプリを作成する
+    - 手順 2.2 一般的なフレームワーク Hibernate を使用して SQL Server に接続する Java アプリを作成する
+3. Java アプリを最大 100 倍高速化する
+    - 手順3.1 Java アプリを作成して列ストア インデックスを示す
 
-#### <a name="python-on-windows"></a>Windows での Python:
+#### <a name="python-on-windows"></a>Windows 上の Python
 
-1. 環境を設定します。
+1. 環境の設定方法
     - 手順 1.1 SQL Server をインストールする
-    - 手順 1.2 Python をインストールします。
-    - 手順 1.3 SQL Server 用 ODBC ドライバーと SQL コマンド ライン ユーティリティをインストールします。
-2. SQL Server での Python アプリケーションを作成します。
-    - 手順 2.1 では、SQL Server 用 Python ドライバーをインストールします。
-    - 手順 2.2 アプリケーションのデータベースを作成します。
-    - 手順 2.3 SQL Server に接続し、クエリを実行する Python アプリを作成します。
-3. 最大 100 倍して Python アプリを高速化します。
-    - 手順 3.1 で 500万 sqlcmd を使用して新しいテーブルを作成します。
-    - 手順 3.2 は、このテーブルにクエリを実行し、実行時間を測定する Python アプリを作成します。
-    - 手順 3.3、クエリの実行にかかる時間を測定します。
-    - 手順 3.4 追加テーブルに列ストア インデックス
-    - 列ストア インデックスを持つクエリを実行するのにかかる手順 3.5 の測定します。
+    - 手順 1.2 Python をインストールする
+    - 手順 1.3 SQL Server 用の ODBC ドライバーと SQL コマンド ライン ユーティリティをインストールする
+2. SQL Server を使用して Python アプリケーションを作成します
+    - 手順 2.1 Python Driver for SQL Server をインストールする
+    - 手順 2.2 お使いのアプリケーション用のデータベースを作成する
+    - 手順 2.3 SQL Server に接続してクエリを実行する Python アプリを作成する
+3. Python アプリを最大 100 倍高速化する
+    - 手順 3.1 sqlcmd を使用して 500 万を含む新しいテーブルを作成する
+    - 手順 3.2 このテーブルに対してクエリを実行し、所要時間を測定する Python アプリを作成する
+    - 手順 3.3 クエリの実行にかかる時間を測定する
+    - 手順 3.4 列ストア インデックスをお使いのテーブルに追加する
+    - 手順 3.5 列ストアでのクエリの実行にかかる時間を測定する
 
-次のスクリーン ショットでは、SQL、開発ドキュメントの web サイトがどのように見えるかが理解できます。
+次のスクリーンショットは、SQL 開発ドキュメントの Web サイトがどのように表示されるかを示しています。
 
-#### <a name="choose-a-language"></a>言語の選択:
+#### <a name="choose-a-language"></a>言語の選択
 
-![SQL デベロッパー web サイトを開始します。][image-ref-390-aka-ms-sqldev-choose-language]
+![SQL Dev Web サイト、概要][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>オペレーティング システムを選択します。
+#### <a name="choose-an-operating-system"></a>オペレーティング システムの選択
 
-![SQL デベロッパー web サイト、Java の Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
+![SQL Dev Web サイト、Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 
 &nbsp;
 
 
 
-## <a name="other-development"></a>その他の開発
+## <a name="other-development"></a>他の開発
 
 
-このセクションでは、その他の開発オプションについてのリンクを示します。 これらは、Azure 向け開発用これらと同じ言語を使用すると、一般に含まれます。 情報は、Azure SQL Database と Microsoft SQL Server だけを対象とするをを超えてとします。
+このセクションでは、その他の開発オプションに関するリンクを示します。 これには Azure 開発全般に同じ言語を使用することが含まれます。 この情報は、Azure SQL Database と Microsoft SQL Server のみを対象とするものではありません。
 
-#### <a name="developer-hub-for-azure"></a>Azure の開発者のハブ
+#### <a name="developer-hub-for-azure"></a>Azure 用の開発者ハブ
 
-- [Azure の開発者のハブ](https://docs.microsoft.com/azure/)
+- [Azure 用の開発者ハブ](https://docs.microsoft.com/azure/)
 - [Azure for .NET 開発者](https://docs.microsoft.com/dotnet/azure/)
-- [Java 開発者向けの azure](https://docs.microsoft.com/java/azure/)
-- [Node.js 開発者向けの azure](https://docs.microsoft.com/nodejs/azure/)
-- [Python 開発者向けの azure](https://docs.microsoft.com/python/azure/)
-- [Azure での PHP web アプリを作成します。](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [Java 開発者向けの Azure](https://docs.microsoft.com/java/azure/)
+- [Node.js 開発者向けの Azure](https://docs.microsoft.com/nodejs/azure/)
+- [Python 開発者向けの Azure](https://docs.microsoft.com/python/azure/)
+- [Azure に PHP Web アプリを作成する](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### <a name="other-languages"></a>その他の言語
 
-- [Windows 上の SQL Server を使用して、Go アプリを作成します。](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+- [Windows で SQL Server を使用して Go アプリを作成する](https://www.microsoft.com/sql-server/developer-get-started/go/windows/)
 
 
 

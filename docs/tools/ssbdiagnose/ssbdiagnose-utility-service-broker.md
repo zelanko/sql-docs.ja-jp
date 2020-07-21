@@ -1,10 +1,8 @@
 ---
-title: ssbdiagnose ユーティリティ (Service Broker) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: ssbdiagnose ユーティリティ (Service Broker)
+description: ssbdiagnose ユーティリティからは、Service Broker のメッセージ好感や Service Broker サービスの構成の問題が報告されます。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +23,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d64a92f5576d623402534d78b695c25bf9a9246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 9454e30cefa778a45b4fda2a1db7e3ef9c60eb7a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986094"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150556"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+**ssbdiagnose** ユーティリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換または [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの構成に関する問題を報告します。 構成チェックは 2 つまたは 1 つのサービスに対して実行できます。 問題点は、コマンド プロンプト ウィンドウにユーザーが解釈できる形式で報告されるか、ファイルまたは別のプログラムにリダイレクトできる XML 形式で報告されます。
 
 ## <a name="syntax"></a>構文  
   
@@ -157,16 +161,16 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  指定されたレベルの暗号化向けにダイアログが正しく構成されているかどうかを検証するように要求します。  
   
- **ON**: 既定の設定。 完全ダイアログ セキュリティが構成されているかどうかを検証します。 証明書がダイアログの両側に配置されていること、リモート サービス バインドが存在すること、および発信先サービスに対する GRANT SEND ステートメントで発信側ユーザーを指定していることを確認します。  
+ **ON**:既定の設定 完全ダイアログ セキュリティが構成されているかどうかを検証します。 証明書がダイアログの両側に配置されていること、リモート サービス バインドが存在すること、および発信先サービスに対する GRANT SEND ステートメントで発信側ユーザーを指定していることを確認します。  
   
- **OFF**: ダイアログ セキュリティが構成されていないかどうかを検証します。 証明書が配置されていないこと、リモート サービス バインドが作成されていないこと、および発信側サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
+ **OFF**:ダイアログ セキュリティが構成されていないかどうかを検証します。 証明書が配置されていないこと、リモート サービス バインドが作成されていないこと、および発信側サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
   
- **ANONYMOUS**: 匿名ダイアログ セキュリティが構成されているかどうかを検証します。 一方の証明書が配置されていること、リモート サービス バインドで匿名句が指定されていること、および発信先サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
+ **ANONYMOUS**:匿名ダイアログ セキュリティが構成されているかどうかを検証します。 一方の証明書が配置されていること、リモート サービス バインドで匿名句が指定されていること、および発信先サービスに対する GRANT SEND ステートメントで **public** ロールを指定していることを確認します。  
   
  **RUNTIME**  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、**ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の実行時エラーの原因である問題に関するレポートを要求します。 **-NEW** も **-ID** も指定されていない場合、 **ssbdiagnose** では、接続オプションで指定されたすべてのデータベース内のメッセージ交換をすべて監視します。 **-NEW** または **-ID** が指定されている場合、 **ssbdiagnose** では、パラメーターで指定された ID の一覧が作成されます。  
   
- **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す**  イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
+ **ssbdiagnose[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、実行中に、実行時エラーを示す ** イベントをすべて記録します。 また、指定された ID に対して発生するイベントに加え、システムレベルのイベントも記録します。 実行時エラーが検出されると、 **ssbdiagnose** では、関連付けられている構成に対して構成レポートを実行します。  
   
  既定では、出力レポートに実行時エラーは含まれず、構成の分析結果のみが含まれます。 レポートに実行時エラーを含めるには、 **-SHOWEVENTS** を使用してください。  
   
@@ -215,7 +219,7 @@ WHERE database_id = DB_ID();
   
  **-E** オプションが **-U** オプションまたは **-P** オプションと共に使用されると、エラー メッセージが生成されます。  
   
- **ｰU** _login_id_  
+ **-U** _login_id_  
  指定されたログイン ID を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証接続を開きます。 ログインは **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
  **-E** も **ｰU** も指定されていない場合、 **ssbdiagnose** では、SQLCMDUSER 環境変数の値を使用します。 SQLCMDUSER も設定されていない場合、 **ssbdiagnose** では、 **ssbdiagnose**を実行しているユーザーの Windows アカウントに基づいた Windows 認証モードを使用して接続を試行します。  
@@ -231,7 +235,7 @@ WHERE database_id = DB_ID();
  パスワードなしで **-P** オプションが指定されている場合、 **ssbdiagnose** では既定のパスワード (NULL) を使用します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 詳細については、「 [Strong Passwords](../../relational-databases/security/strong-passwords.md)」を参照してください。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」を参照してください。  
   
  パスワード プロンプトは、次のようにパスワード プロンプトをコンソールに出力することによって表示されます。 `Password:`  
   
@@ -255,7 +259,7 @@ WHERE database_id = DB_ID();
  **-?**  
  コマンド ライン ヘルプを表示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ssbdiagnose** を使用すると、次の操作を実行できます。  
   
 -   新しく構成された [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに構成エラーがないことを確認する。  
@@ -300,7 +304,7 @@ WHERE database_id = DB_ID();
  **診断**  
  構成上の問題を報告します。 これには、 **CONFIGURATION** レポートの実行中または **RUNTIME** レポートの構成フェーズ中に見つかった問題が含まれます。 **ssbdiagnose** は、構成上の各問題を一度だけ報告します。  
   
- **イベント**  
+ **Event**  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] RUNTIME **レポートの実行中に監視されるメッセージ交換で問題が検出されたことを示す** イベントを報告します。 **ssbdiagnose** は、イベントが生成されるたびにイベントを報告します。 複数のメッセージ交換で問題が検出される場合は、イベントが複数回報告されます。  
   
  **問題**  
@@ -312,7 +316,7 @@ WHERE database_id = DB_ID();
 ## <a name="permissions"></a>アクセス許可  
  各 **connectionoptions** 句では、 **-E** または **-U** のいずれかで指定されたログインが、 **-S** で指定されたインスタンスの **sysadmin**固定サーバー ロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  ここでは、コマンド プロンプトでの **ssbdiagnose** の使用例を示します。  
   
 ### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. 同じデータベース内の 2 つのサービスの構成を確認する  

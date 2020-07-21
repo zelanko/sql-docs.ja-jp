@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b1a820bc4f951fcbe294060825979d83a34f8969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f3e3296ec37048fbb2bf6ba20d75db0f3b46283
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762210"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスの内部にある任意の地点を返します。
   
@@ -39,14 +39,14 @@ ms.locfileid: "68066374"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**Point**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  インスタンスが空の場合、このメソッドは NULL を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Polygon` インスタンスを作成し、`STPointOnSurface()` を使用してインスタンス上の地点を探す例を次に示します。  
   
 ```  

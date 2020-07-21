@@ -20,17 +20,17 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: e7d813bf74f1779a2f9c04a2f78988cbab121c61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784376"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   指定したシーケンス オブジェクトからシーケンス番号を生成します。  
   
@@ -57,12 +57,12 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  番号を生成するシーケンス オブジェクトの名前を指定します。  
   
  *over_order_by_clause*  
- シーケンス値がパーティション内の行に割り当てられる順序を決定します。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
+ シーケンス値がパーティション内の行に割り当てられる順序を決定します。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
  シーケンスの型を使用して数値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **NEXT VALUE FOR** 関数は、ストアド プロシージャやトリガーで使用できます。  
   
  ときに、 **NEXT VALUE FOR** 関数を使用するクエリや既定の制約で同じシーケンス オブジェクトが 2 回以上使用するかどうか、同じシーケンス オブジェクトは、または両方で使用される、値を提供するステートメントでと、結果セット内の行で同じシーケンスを参照するすべての列に対して実行されている既定の制約で同じ値が返されます。  
@@ -146,7 +146,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   別のプロセスが同時にシーケンス オブジェクトにアクセスしている場合は、非連続的な番号が返される可能性があります。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  シーケンスに関する情報を取得するには、[sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md) カタログ ビューに対してクエリを実行します。  
   
 ## <a name="security"></a>Security  
@@ -163,10 +163,10 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   既定の制約の所有者がシーケンス オブジェクトと異なる場合、既定の制約を使用してシーケンス オブジェクトを呼び出す際にも、シーケンス オブジェクトに対する権限が必要です。  
   
-### <a name="audit"></a>監査  
+### <a name="audit"></a>Audit  
  **NEXT VALUE FOR** 関数を監査するには、SCHEMA_OBJECT_ACCESS_GROUP を監視します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  シーケンスの作成と、**NEXT VALUE FOR** 関数を使用したシーケンス番号の生成の両方の使用例については、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
  次の例では、`CountBy1` という名前のスキーマの `Test` という名前のシーケンスを使用します。 次のステートメントを実行して、`Test.CountBy1` シーケンスを作成します。 例 C および E では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。そのため、`CountBy1` シーケンスはそのデータベースに作成されます。  
@@ -294,7 +294,7 @@ GO
 ```  
   
 ### <a name="f-granting-permission-to-execute-next-value-for"></a>F. NEXT VALUE FOR を実行する権限を付与する  
- 次の例では、`Test.CounterSeq` シーケンスを使用して、`NEXT VALUE FOR` を実行できるように、 という名前のユーザーに **UPDATE** `AdventureWorks\Larry`権限を付与します。  
+ 次の例では、`Test.CounterSeq` シーケンスを使用して、`NEXT VALUE FOR` を実行できるように、 という名前のユーザーに **UPDATE**`AdventureWorks\Larry`権限を付与します。  
   
 ```  
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  

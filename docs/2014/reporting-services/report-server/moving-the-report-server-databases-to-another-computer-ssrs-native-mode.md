@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103717"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
-  インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] で使用されているレポート サーバー データベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
+  インストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]で使用されているレポートサーバーデータベースは、別のコンピューター上のインスタンスに移動できます。 reportserver と reportservertempdb データベースは、一緒に移動またはコピーする必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の使用環境には、両方のデータベースが必要です。reportservertempdb データベースは、移動する reportserver プライマリ データベースに名前を関連付ける必要があります。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード。  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
  データベースの移動は、レポート サーバー アイテムに現在定義されているスケジュールされた操作には影響しません。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66103717"
   
 2.  レポート サーバー サービスを停止します。 サービスは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して停止できます。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続を開きます。  
+3.  を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]起動し、レポートサーバーデータベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をホストするインスタンスへの接続を開きます。  
   
 4.  レポート サーバー データベースを右クリックし、[タスク] をポイントして **[デタッチ]** をクリックします。 レポート サーバーの一時データベースに対しても、この手順を行います。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66103717"
   
 8.  **[追加]** をクリックして、アタッチするレポート サーバー データベースの .mdf ファイルおよび .ldf ファイルを選択します。 レポート サーバーの一時データベースに対しても、この手順を行います。  
   
-9. データベースが接続されると、ことを確認します。、`RSExecRole`がデータベース ロール、レポート サーバー データベースと一時データベースにします。 `RSExecRole` 必要があります、レポート サーバー データベースのテーブルに select、insert、update、delete、および参照を行う権限があるし、ストアド プロシージャに対する execute 権限。 詳細については、「 [RSExecRole の作成](../security/create-the-rsexecrole.md)」をご覧ください。  
+9. データベースがアタッチされたら、 `RSExecRole`がレポートサーバーデータベースと一時データベースのデータベースロールであることを確認します。 `RSExecRole`には、レポートサーバーデータベースのテーブルに対する select、insert、update、delete、および reference 権限、およびストアドプロシージャに対する実行権限が必要です。 詳細については、「 [RSExecRole の作成](../security/create-the-rsexecrole.md)」をご覧ください。  
   
 10. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスへの接続を開きます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66103717"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>レポート サーバー データベースのバックアップと復元  
  レポート サーバーをオフラインにできない場合は、バックアップと復元を使用して、レポート サーバー データベースを再配置できます。 バックアップと復元を実行するには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用する必要があります。 データベースを復元した後、新しいサーバー インスタンスのデータベースを使用できるように、レポート サーバーを構成する必要があります。 詳細については、このトピックの最後にある手順を参照してください。  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>レポート サーバー データベースをバックアップする BACKUP および COPY_ONLY の使用  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>レポート サーバー データベースをバックアップする BACKUP および COPY_ONLY の使用  
  データベースをバックアップする場合、COPY_ONLY 引数を設定します。 データベースとログ ファイルの両方を必ずバックアップしてください。  
   
 ```  
@@ -217,13 +217,13 @@ GO
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスに `RSExecRole` ロールが含まれている必要があります。 ロールの作成、ログインの登録、およびロールの割り当ては、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールでレポート サーバー データベースの接続を設定する際に行います。 別の方法 (特に、rsconfig.exe コマンド プロンプト ユーティリティを使用する場合) で接続を構成する場合は、レポート サーバーが非動作状態になります。 場合によっては、レポート サーバーを利用可能な状態にするための WMI コードを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [RSExecRole の作成](../security/create-the-rsexecrole.md)   
+ [RSExecRole を作成する](../security/create-the-rsexecrole.md)   
  [Start and Stop the Report Server Service](start-and-stop-the-report-server-service.md)   
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [自動実行アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;レポートサーバーデータベース接続の構成&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;自動実行アカウントを構成&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig ユーティリティ &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
- [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [SSRS Configuration Manager &#40;暗号化キーの構成と管理&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](report-server-database-ssrs-native-mode.md)  
   
   

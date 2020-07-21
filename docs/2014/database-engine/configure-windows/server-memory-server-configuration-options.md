@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934993"
 ---
 # <a name="server-memory-configuration-options"></a>サーバー メモリの構成オプション
   **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
@@ -34,13 +33,13 @@ ms.locfileid: "69028687"
  **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
 > [!NOTE]  
-> **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **-f** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
+> **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後にを開始できない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-f**スタートアップオプションを使用して起動し、 **max server memory**を前の値にリセットします。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
   
  メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
  現在使用されているメモリを返すクエリについては、例 B を参照してください。 **max server memory** は、バッファー プール、コンパイル メモリ、すべてのキャッシュ、qe メモリ許可、ロック マネージャーのメモリ、および clr メモリ (基本的に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sys.dm_os_memory_clerks **でクラークが見つけたすべてのメモリ) を含む**メモリ割り当てを制御します。 スレッド スタックのメモリ、メモリ ヒープ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のリンクされているサーバーのプロバイダー、および非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL によって割り当てられたメモリは、最大サーバー メモリによって制御されません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メモリ通知 API **QueryMemoryResourceNotification** を使用して、いつ SQL Server Memory Manager がメモリの割り当てまたは解放を行うことができるかを判断します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、メモリ通知 API **QueryMemoryResourceNotification**を使用して、SQL Server メモリマネージャーがいつメモリを割り当て、メモリを解放するかを判断します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメモリを動的に使用できるようにする方法をお勧めしますが、手動でメモリ オプションを設定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアクセスできるメモリの量を制限することもできます。 この場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用のメモリ量を設定する前に、OS および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のインスタンス (およびコンピューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]専用でない場合は他のシステム) が使用するメモリの量を物理メモリ全体から差し引いて適切なメモリ設定を決定します。 この差が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に割り当てることができる最大メモリ量です。  
   
@@ -50,14 +49,14 @@ ms.locfileid: "69028687"
 > [!NOTE]
 > **min server memory** および **max server memory** は拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用してこれらの設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 これらの設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-<a name="min_server_memory"></a> **min_server_memory** を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager で使用できる最小メモリ量を確保できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **min server memory** で指定されたメモリ量を起動時にすぐに割り当てるわけではありません。 ただし、クライアントの負荷によってメモリの使用量がこの値に達すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **の値を小さくしない限り、** はメモリを解放できません。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスが同じホストに同時に存在するとき、インスタンスのメモリを予約する目的で、max_server_memory の代わりに min_server_memory パラメーターを設定します。 また、基礎をなすホストからのメモリ負荷が高いために、ゲスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想マシン (VM) のバッファー プールから十分なパフォーマンスに必要な量を超えるメモリが割り当て解除される事態を回避するために、min_server_memory 値の設定は仮想環境で必要不可欠となります。
+<a name="min_server_memory"></a>**min_server_memory** を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager で使用できる最小メモリ量を確保できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 **min server memory**で指定されたメモリ量を起動時にすぐに割り当てるわけではありません。 ただし、クライアントの負荷によってメモリの使用量がこの値に達すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **の値を小さくしない限り、** はメモリを解放できません。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスが同じホストに同時に存在するとき、インスタンスのメモリを予約する目的で、max_server_memory の代わりに min_server_memory パラメーターを設定します。 また、基礎をなすホストからのメモリ負荷が高いために、ゲスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想マシン (VM) のバッファー プールから十分なパフォーマンスに必要な量を超えるメモリが割り当て解除される事態を回避するために、min_server_memory 値の設定は仮想環境で必要不可欠となります。
  
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**min server memory** で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **min server memory**で指定されたメモリ量を割り当てることは保証されていません。 サーバーの負荷が**min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリが少ない状態で実行されます。  
   
-<a name="max_server_memory"></a> **max_server_memory** を利用し、OS に好ましくないメモリ負荷が発生しないようにします。 最大サーバー メモリ構成を設定するには、メモリ要件を判断する目的で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の全体的使用量を観察します。 単一インスタンスでこのような計算をより精確に行うには:
+<a name="max_server_memory"></a>**max_server_memory** を利用し、OS に好ましくないメモリ負荷が発生しないようにします。 最大サーバー メモリ構成を設定するには、メモリ要件を判断する目的で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の全体的使用量を観察します。 単一インスタンスでこのような計算をより精確に行うには:
  -  OS のメモリ合計から、1GB ～ 4GB を OS 自体に予約します。
- -  次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、 **_スタック サイズ<sup>1</sup>\* に計算した最大ワーカー スレッド<sup>2</sup> を掛けたものにスタートアップ パラメーター<sup>3</sup> の -g を足して_** 求められます ( *-g* が設定されていない場合、既定で 256MB を足します)。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
+ -  次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、**_スタック サイズ<sup>1</sup> \* に計算した最大ワーカー スレッド<sup>2</sup> を掛けたものにスタートアップ パラメーター<sup>3</sup> の -g を足して_** 求められます (*-g* が設定されていない場合、既定で 256MB を足します)。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
  
 <sup>1</sup> アーキテクチャあたりのスレッド スタック サイズについては、「[メモリ管理アーキテクチャ ガイド](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes)」を参照してください。
 
@@ -82,7 +81,7 @@ ms.locfileid: "69028687"
   
 3.  **[サーバー メモリ オプション]** で、 **[最小サーバー メモリ]** と **[最大サーバー メモリ]** に必要な数値を入力します。  
   
-     既定の設定を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更できるようになります。 **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。  
+     既定の設定を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更できるようになります。 **Min server memory**の既定の設定は0で、 **max server memory**の既定の設定は2147483647メガバイト (mb) です。  
   
 ## <a name="maximize-data-throughput-for-network-applications"></a>ネットワーク アプリケーションのデータ スループットの最大化  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム メモリ使用量を最適化するには、ファイルのキャッシュに使用されるメモリ量を制限する必要があります。 ファイル システム キャッシュを制限するには、 **[ファイル共有のデータ スループットを最大にする]** が選択されていないことを確認します。 最小のファイル システム キャッシュを指定するには、 **[メモリの使用を最小にする]** または **[バランスをとる]** を選択します。  
@@ -96,14 +95,14 @@ ms.locfileid: "69028687"
 3.  **[ネットワーク アプリケーションのデータ スループットを最大にする]** が選択されている場合は、他のオプションを選択して **[OK]** をクリックし、すべてのダイアログ ボックスを閉じます。  
   
 ## <a name="lock-pages-in-memory"></a>lock pages in memory  
- この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。 メモリ内のページをロックすると、ディスクへのメモリのページングが発生した際に、サーバーの応答性を維持できます。 Sqlservr.exe を実行する特権を持つアカウントに Windows の "Locked pages in memory" (LPIM) ユーザー [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]権利が付与されている場合、Standard edition 以降の32ビットおよび64ビットのインスタンスで SQL Server **Lock pages in memory**オプションは ON に設定されます。 それよりも前のバージョンの SQL Server の場合、SQL Server の 32 ビット インスタンスで Lock Pages オプションを設定するには、sqlservr.exe の実行権限があるアカウントに LPIM のユーザー権利があること、さらに、'awe_enabled' 構成オプションがオンに設定されていることが必要となります。  
+ この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。 メモリ内のページをロックすると、ディスクへのメモリのページングが発生した際に、サーバーの応答性を維持できます。 sqlservr.exe を実行する権限を持つアカウントに Windows の "Locked Pages in Memory" (LPIM) ユーザー権利が付与されている場合、Standard edition 以降の32ビットおよび64ビットのインスタンスでは、SQL Server **Lock pages In memory**オプションが ON に設定されてい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ます。 それよりも前のバージョンの SQL Server の場合、SQL Server の 32 ビット インスタンスで Lock Pages オプションを設定するには、sqlservr.exe の実行権限があるアカウントに LPIM のユーザー権利があること、さらに、'awe_enabled' 構成オプションがオンに設定されていることが必要となります。  
   
- の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Lock pages in memory**オプションを無効にするには、SQL Server 開始アカウントに対する "Locked pages in memory" ユーザー権利を削除します。  
+ の**Lock Pages In memory**オプションを無効にするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 開始アカウントに対する "Locked pages in memory" ユーザー権利を削除します。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Lock Pages in Memory を無効にするには  
  **Lock pages in memory オプションを無効にするには、次のようにします。**  
   
-1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[名前]** ボックスに「 `gpedit.msc`」と入力します。  
+1.  [**スタート**] メニューの [**ファイル名を指定して実行**] をクリックします。 [**名前**] ボックスに「」と入力 `gpedit.msc` します。  
   
      **[グループ ポリシー]** ダイアログ ボックスが開きます。  
   
@@ -147,11 +146,11 @@ ms.locfileid: "69028687"
 |-|-------------|-------------|  
 |コンベンショナル メモリ|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでプロセス仮想アドレス空間制限まで:<br /><br /> 2 GB<br /><br /> 3 GB ( **/3gb**ブートパラメーター *)<br /><br /> 4 GB (WOW64)\*\*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでプロセス仮想アドレス空間制限まで:<br /><br /> 8 TB (x64 アーキテクチャの場合)|  
   
- * **/3gb** は、オペレーティング システムのブート パラメーターです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
+ ***/3gb**は、オペレーティングシステムのブートパラメーターです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
- \* * WOW64 (windows on windows 64) は、32 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ビットが64ビットオペレーティングシステムで実行されるモードです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
+ * * WOW64 (Windows on Windows 64) は、32ビットが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビットオペレーティングシステムで実行されるモードです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example-a"></a>例 A  
  次の例では、 `max server memory` オプションを 4 GB に設定します。  
@@ -180,7 +179,7 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

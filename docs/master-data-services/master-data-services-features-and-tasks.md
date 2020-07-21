@@ -1,5 +1,5 @@
 ---
-title: マスター データ サービスの機能とタスク | Microsoft Docs
+title: 機能とタスク
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6a40e380b883e7a6fb160cdfc0f787d0ec3bdd2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a89ed871f18f52efa32b088e02d4432166866cb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812909"
 ---
 # <a name="master-data-services-features-and-tasks"></a>マスター データ サービスの機能とタスク
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を使用して組織のマスター データを管理する方法について説明します。 データのコンテナーとなるモデル プロジェクトを作成し操作する方法を説明します。 マスター データ自体を編成して管理する方法を説明します。 マスター データおよび、テスト環境と運用環境間の共有モデルをインポートおよびエクスポートする方法を説明します。 最後に、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web サービスにアクセスするカスタム アプリケーションを開発する方法を説明します。  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67896850"
   
 -   [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
-## <a name="move-data"></a>データの移動  
+## <a name="move-data"></a>データを移動する  
   
--   [概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+-   [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
--   [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   

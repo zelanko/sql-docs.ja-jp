@@ -1,5 +1,5 @@
 ---
-title: SAP BW 接続マネージャー エディター |Microsoft Docs
+title: SAP BW 接続マネージャーエディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26425e367512ae9fc778afa24e3cade04fb826f3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056276"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422509"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 接続マネージャー エディター
   SAP Netweaver BW Version 7 システムへの接続に使用するプロパティを指定するには、 **[SAP BW 接続マネージャー エディター]** を使用します。  
@@ -37,7 +36,7 @@ ms.locfileid: "66056276"
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]** を選択します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 > [!NOTE]  
 >  接続マネージャーを構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -45,13 +44,13 @@ ms.locfileid: "66056276"
  **クライアント**  
  システムのクライアント数を指定します。  
   
- **言語**  
+ **Language**  
  システムが使用する言語を指定します。 たとえば、英語の場合は、 **[EN]** を指定します。  
   
  **ユーザー名**  
  システムへの接続に使用するユーザー名を指定します。  
   
- **Password**  
+ **パスワード**  
  そのユーザー名のパスワードを指定します。  
   
  **単一のアプリケーション サーバーを使用する**  
@@ -59,7 +58,7 @@ ms.locfileid: "66056276"
   
  負荷分散されたサーバーのグループに接続するには、 **[負荷分散を使用する]** オプションを使用します。  
   
- **ホスト**  
+ **Host**  
  単一のアプリケーション サーバーに接続する場合、ホスト名を指定します。  
   
 > [!NOTE]  
@@ -82,7 +81,7 @@ ms.locfileid: "66056276"
 > [!NOTE]  
 >  このオプションは、 **[負荷分散を使用する]** オプションを選択している場合にのみ使用できます。  
   
- **[グループ]**  
+ **グループ**  
  負荷分散されたサーバーのグループに接続する場合は、サーバー グループの名前を指定します。  
   
 > [!NOTE]  
@@ -106,13 +105,13 @@ ms.locfileid: "66056276"
   
  ログ ディレクトリを選択しないと、ログ記録は有効になりません。  
   
- **[参照]**  
+ **参照**  
  ログ ディレクトリのフォルダーを参照して選択します。  
   
- **[接続テスト]**  
+ **接続をテスト**  
  指定した値を使用して接続をテストします。 **[接続テスト]** をクリックすると、接続が成功または失敗したかを示すメッセージ ボックスが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

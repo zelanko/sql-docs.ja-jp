@@ -1,5 +1,6 @@
 ---
 title: SQL Server Browser サービス (データベース エンジンと SSAS) | Microsoft Docs
+description: SQL Server Browser について説明します。 このサービスにより、SQL Server リソースの要求がリッスンされ、インストールされている SQL Server インスタンスに関する情報が提供されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57d41e12084ca4a9873abeaeb3275ee671ae45d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789750"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser サービス (データベース エンジンと SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は次の操作に役立ちます。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser プログラムは Windows サービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は次の操作に役立ちます。  
   
 -   使用可能なサーバーの一覧の参照  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68028630"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスをインストールする場合  
   
-## <a name="background"></a>背景情報  
+## <a name="background"></a>バックグラウンド  
  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]より前は、コンピューターにインストールできる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは 1 つだけでした。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、公式の Internet Assigned Numbers Authority (IANA) によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられたポート 1433 で着信要求を待ちます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスしかポートを使用できないので、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の複数のインスタンスをサポートするようになったとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) が開発され、UDP ポート 1434 で受信待ちするようになりました。 このリスナー サービスは、インストールされているインスタンスの名前と、そのインスタンスが使用しているポートまたは名前付きパイプでクライアント要求に応答していました。 SSRP システムの制限を解消するため、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では SSRP の代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを導入しています。  
   
 ## <a name="how-sql-server-browser-works"></a>SQL Server Browser のしくみ  
@@ -52,7 +53,7 @@ ms.locfileid: "68028630"
   
  起動時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が開始されて UDP ポート 1434 が要求されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser はレジストリを読み取って、コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインスタンスを識別し、使用されているポートと名前付きパイプを確認します。 サーバーに複数のネットワーク カードがある場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が最初に検出したポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では ipv6 と ipv4 をサポートしています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースを要求すると、ポート 1434 を使用しているサーバーにクライアント ネットワーク ライブラリが UDP メッセージを送信します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、要求されたインスタンスの TCP/IP ポートまたは名前付きパイプで応答します。 その後、クライアント アプリケーションのネットワーク ライブラリが、目的のインスタンスのポートまたは名前付きパイプを使用しているサーバーに要求を送って接続を完了します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では既定のインスタンスのポート情報は返されません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースを要求すると、ポート 1434 を使用しているサーバーにクライアント ネットワーク ライブラリが UDP メッセージを送信します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、要求されたインスタンスの TCP/IP ポートまたは名前付きパイプで応答します。 その後、クライアント アプリケーションのネットワーク ライブラリが、目的のインスタンスのポートまたは名前付きパイプを使用しているサーバーに要求を送って接続を完了します。 
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの開始と停止の詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "68028630"
   
 -   各インスタンスに対して選択したポートがサーバー上の別のサービスまたはアプリケーションによって使用されている場合があります。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは使用できません。  
   
-## <a name="clustering"></a>クラスター  
+## <a name="clustering"></a>クラスタリング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser はクラスター化されたリソースではなく、クラスター ノード間のフェールオーバーはサポートしません。 そのため、クラスターの場合は、クラスターのノードごとに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser をインストールして有効にする必要があります。 クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は IP_ANY で受信待ちします。  
   
 > [!NOTE]  
@@ -96,7 +97,7 @@ ms.locfileid: "68028630"
 <drive>\<path>\sqlbrowser.exe -c  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="account-privileges"></a>アカウントの権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は UDP ポートで受信待ちし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol (SSRP) を使用して、認証されていない要求を受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser を権限が制限されているユーザーのセキュリティ コンテキストで実行することにより、悪意のある攻撃にさらされる危険性を最小限に抑える必要があります。 ログオン アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser の最小限のユーザー権限は次のとおりです。  

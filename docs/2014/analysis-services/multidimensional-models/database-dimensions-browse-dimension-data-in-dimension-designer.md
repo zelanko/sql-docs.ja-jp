@@ -1,5 +1,5 @@
 ---
-title: ディメンション デザイナーでディメンション データの参照 |Microsoft Docs
+title: ディメンションデザイナーでのディメンションデータの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb2a149c9e96af29b32f41153b340c2ab653c968
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547160"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>ディメンション デザイナーでのディメンション データの参照
   ディメンションのデータを参照するには、ディメンション デザイナーの **[ブラウザー][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ビューを使用します。ディメンション デザイナーには、** からアクセスできます。  
   
- ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+ ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを参照するには  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66075987"
     >  選択した言語のディメンションで翻訳が定義されている必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ディメンションの概要 &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [ディメンションの概要 &#40;Analysis Services-多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](dimensions-in-multidimensional-models.md)  
   
   

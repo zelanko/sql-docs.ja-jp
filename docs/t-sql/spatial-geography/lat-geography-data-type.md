@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7da6aca6ccc5180d379ff853267d2de9f682cfb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13480e616b9c405e6b740d1632f62827cb33a3e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040096"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731110"
 ---
 # <a name="lat-geography-data-type"></a>Lat (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスの緯度プロパティです。  
   
@@ -38,12 +38,12 @@ ms.locfileid: "68040096"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  OpenGIS モデルでは、Lat は単一地点のデータで構成される **geography** インスタンスにのみ定義されます。 **geography** インスタンスに複数の地点が含まれる場合、このプロパティは NULL を返します。 このプロパティは正確で、読み取り専用です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、ある地点を作成して、その地点の緯度を返します。  
   
 ```  

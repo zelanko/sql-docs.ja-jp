@@ -1,10 +1,9 @@
 ---
-title: 行を含めるまたは除外する (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 行の追加または除外
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,14 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919ce01ce2e2ec6f91e5bd3d2bb6a40a2b8229a9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38dfe12c0690e87ee0e57555a2d8ff67e6ff7673
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254160"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253516"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>行を含めるまたは除外する (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ region = 'UK' OR region = 'US'
   
 -   [OR が優先する場合の条件を結合する (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次に、さまざまな演算子と行抽出条件を使用したクエリの例を示します。  
   
 -   **リテラル** 単独のテキスト、数値、日付、または論理値です。 次の例では、リテラルを使って、イギリス内の従業員に関する行をすべて検索します。  

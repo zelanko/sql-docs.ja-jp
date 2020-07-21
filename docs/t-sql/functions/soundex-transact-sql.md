@@ -19,18 +19,18 @@ helpviewer_keywords:
 - strings [SQL Server], comparing
 - SOUNDEX values
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55486ff2c68d47248f7980bbe5269cf665638221
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907076"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000475"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   2 つの文字列の類似性を評価する 4 文字 (SOUNDEX) コードを返します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67907076"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SOUNDEX ( character_expression )  
 ```  
   
@@ -49,7 +49,7 @@ SOUNDEX ( character_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SOUNDEX では、英数字の文字列が、読み上げ時の文字列の発音方法に基づいた 4 文字コードに変換されます。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字コードを生成するために、必要に応じて、末尾にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
   
  さまざまな文字列からの SOUNDEX コードを比較して、読み上げ時の文字列の発音がどの程度類似しているかを確認できます。 DIFFERENCE 関数では 2 つの文字列に対して SOUNDEX が実行され、これらの文字列について SOUNDEX コードがどの程度類似しているかを示す整数が返されます。  
@@ -67,10 +67,10 @@ SOUNDEX ( character_expression )
   
 -   SOUNDEX で定義された保存される計算列を含むインデックス (インデックス付きビューを含む) は、`ALTER INDEX ALL ON <object> REBUILD` ステートメントを実行してインデックスが再構築されるまでクエリできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、SOUNDEX 関数、およびこれに関連した DIFFERENCE 関数を示しています。 最初の例では、標準 `SOUNDEX` 値がすべての子音に対して返されます。 母音、文字 `SOUNDEX`、2 文字の連続、および文字 `Smith` は含まれないため、`Smythe` と `y` に対する `h` では同じ結果が返されます。  
   
-```  
+```sql
 -- Using SOUNDEX  
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
@@ -78,16 +78,12 @@ SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General の照合順序に有効です。  
   
 ```  
-  
------ -----   
 S530  S530    
-  
-(1 row(s) affected)  
 ```  
   
  `DIFFERENCE` 関数は、`SOUNDEX` パターンの結果を比較します。 次の例では、母音のみが異なる 2 つの文字列を示します。 返される値は、類似性が最も高い `4` です。  
   
-```  
+```sql
 -- Using DIFFERENCE  
 SELECT DIFFERENCE('Smithers', 'Smythers');  
 GO  
@@ -96,15 +92,12 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General の照合順序に有効です。  
   
 ```  
------------   
 4             
-  
-(1 row(s) affected)  
 ```  
   
  次の例では子音が異なるため、類似性が低い `2` が返されます。  
   
-```  
+```sql
 SELECT DIFFERENCE('Anothers', 'Brothers');  
 GO  
 ```  
@@ -112,10 +105,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Latin1_General の照合順序に有効です。  
   
 ```  
------------   
 2             
-  
-(1 row(s) affected)  
 ```  
   
 ## <a name="see-also"></a>参照  

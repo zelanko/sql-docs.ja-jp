@@ -1,5 +1,5 @@
 ---
-title: 変更または Analysis Services データベースの削除 |Microsoft Docs
+title: Analysis Services データベースを変更または削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27b3e2e27b3e24a448e4f164ffdf78bb5b669a40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546114"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Analysis Services データベースの変更または削除
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの名前と説明は、配置前には [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、配置後には [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で変更できます。 また、環境に応じて [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの追加の設定を調整することもできます。  
@@ -34,7 +33,7 @@ ms.locfileid: "66073692"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの配置後は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データベース内のデータ ソースに接続するときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用される権限借用モードを変更できます。 権限借用モードを使用すると、処理、参照、またはドリルスルーの目的でデータ ソースに接続するときに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用されるセキュリティ コンテキストを指定できます。  
   
 ## <a name="modifying-databases-using-sql-server-data-tools"></a>SQL Server データ ツールを使用したデータベースの変更  
- プロジェクト モードで [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用すると、データベースの定義に使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのキャプションや説明の翻訳を変更できます。 翻訳の使用の詳細については、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースを参照してください[Analysis Services 多次元のグローバリゼーションのシナリオ](../globalization-scenarios-for-analysis-services-multiidimensional.md)します。  
+ プロジェクト モードで [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用すると、データベースの定義に使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのキャプションや説明の翻訳を変更できます。 データベースでの翻訳の使用の詳細につい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ては、「 [Analysis Services multiidimensional のグローバリゼーションのシナリオ](../globalization-scenarios-for-analysis-services-multiidimensional.md)」を参照してください。  
   
  データベースに含まれているディメンションの勘定科目属性で使用される勘定科目の種類に関連付けられている別名や集計関数を設定することもできます。 別名を使用すると、勘定科目一覧表の勘定科目の種類に対して組織が使用するビジネス固有の用語を選択できます。 勘定科目属性のメンバーは、勘定科目の種類を使用して、各メンバーのメジャーを集計する方法を示します。集計は、データベース内の各勘定科目の種類に指定されている集計関数を使用して行います。 勘定科目属性の詳細については、「 [属性と属性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」をご覧ください。  
   

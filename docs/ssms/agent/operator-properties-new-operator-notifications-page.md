@@ -1,10 +1,7 @@
 ---
-title: オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: '[新しいオペレーター] ([通知] ページ)'
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7eab713ea833832b46b36bbd8a7e4af17d33124
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bad4791f749e8932b4a4ccfe84ff0522476f694
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260049"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247650"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -28,7 +30,7 @@ ms.locfileid: "68260049"
 
 このページを使用すると、オペレーターに通知する警告およびジョブを設定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **警告**  
 インスタンス内の警告を表示します。  
   

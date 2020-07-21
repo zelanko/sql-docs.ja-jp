@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 11fe7041212c668855c86664362d555696f36bbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6d1cac186583ea5b3eea58d92946f959d4c6105
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700935"
 ---
 # <a name="asgml-geometry-data-type"></a>AsGml (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスの Geography Markup Language (GML) 表現を返します。
   
@@ -43,11 +43,11 @@ GML (Geography Markup Language) の詳細については、Open Geospatial Conso
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **xml**  
   
- CLR の戻り値の型:**SqlXml**  
+ CLR 戻り値の型: **SqlXml**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`AsGML()` を使用して、インスタンスの GML 表現を返す例を次に示します。  
   
 ```  

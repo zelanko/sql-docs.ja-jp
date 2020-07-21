@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b019fc4469032f4cda2dc95f4bbad9e85aa19bfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fe58999c34e67ee0cf9b5c6fd92ad91b3796ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044054"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895126"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   既存のキューを削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68044054"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP QUEUE <object>  
 [ ; ]  
@@ -56,13 +56,13 @@ DROP QUEUE <object>
  *queue_name*  
  削除するキューの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービスでキューが参照されている場合は、キューを削除できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  キューを削除する権限は、既定ではキューの所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のデータベースから **ExpenseQueue** キューを削除します。  
   
 ```  

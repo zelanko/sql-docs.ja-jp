@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810969"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892284"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux の VDI クライアント SDK の仕様
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このドキュメントでは、SQL Server on Linux の仮想デバイス インターフェイス (VDI) クライアント SDK によって提供されるインターフェイスについて説明します。 独立系ソフトウェア ベンダー (ISV) は、仮想バックアップ デバイス アプリケーション プログラミング インターフェイス (API) を使用して、自社の製品に SQL Server を統合することができます。 全般的に、Linux 上の VDI は Windows 上の VDI と同様に動作しますが、次の点が変更されます。
 
@@ -65,7 +65,7 @@ Linux では、POSIX プリミティブは、それを作成したユーザー�
 - 関数の構文
 - パラメーター リスト
 - 戻り値
-- Remarks
+- 解説
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -161,7 +161,7 @@ Linux では、POSIX プリミティブは、それを作成したユーザー�
 | パラメーター | 引数 | 説明
 | ----- | ----- | ------ |
 | |**timeout** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE を使用します。 コマンドをポーリングするには、0 を使用します。 現在使用できるコマンドがない場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
-| |**Timeout** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 タイムアウトするまでにいずれのコマンドも使用可能にならなかった場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
+| |**タイムアウト** |これは、ミリ秒単位の待機時間です。 無期限に待機するには、INFINTE または負の値を使用します。 コマンドをポーリングするには、0 を使用します。 タイムアウトするまでにいずれのコマンドも使用可能にならなかった場合は、VD_E_TIMEOUT が返されます。 タイムアウトが発生した場合は、クライアントによって次のアクションが決定されます。
 | |**ppCmd** |コマンドが正常に返された場合は、このパラメーターによって、実行するコマンドのアドレスが返されます。 返されるメモリは読み取り専用です。 コマンドが完了すると、このポインターは CompleteCommand ルーチンに渡されます。 各コマンドの詳細については、このドキュメントで後述する「コマンド」を参照してください。
         
 | 戻り値 | 引数 | 説明

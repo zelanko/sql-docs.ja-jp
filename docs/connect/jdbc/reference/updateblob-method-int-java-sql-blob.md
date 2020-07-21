@@ -1,5 +1,5 @@
 ---
-title: updateBlob (int, java. Blob) メソッド |Microsoft Docs
+title: updateBlob (int, java.sql.Blob) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ce5c1c2e8ce635e5b53f5b5e609666e39e36bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f255906e3e8397caa1199cd1988fe8fb36d2645
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997141"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903324"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>updateBlob (int, java.sql.Blob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateBlob(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
@@ -47,7 +47,7 @@ public void updateBlob(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,6 +1,6 @@
 ---
-title: 大きな XML スキーマ コレクションとメモリ不足状態 | Microsoft Docs
-ms.custom: ''
+title: メモリ不足状態と大きな XML スキーマ コレクション | Microsoft Docs
+description: 大きな XML スキーマ コレクションの読み込みまたは削除を行うときに、メモリ不足状態を処理するためのソリューションについて学習します。
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ed4c37b0768fa0869209f8795c81a57e76b5b93b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d41a1899f496056af6c98b123decacf5357ef361
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738421"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大きな XML スキーマ コレクションとメモリ不足状態
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   大きな XML スキーマ コレクションで組み込み XML_SCHEMA_NAMESPACE() 関数を呼び出しているとき、または大きな XML スキーマ コレクションを削除するときに、メモリが不足することがあります。 次に示すのは、このような状態に対処する際に使用できる解決策です。  
   
 -   システムの負荷が低い場合は、DROP_XML_SCHEMA_COLLECTION コマンドを使用します。 この操作が失敗する場合は、ALTER DATABASE ステートメントを使用し、DROP XML SCHEMA COLLECTION を再試行してデータベースをシングル ユーザー モードにします。 XML スキーマ コレクションが **master**、 **model**、または **tempdb**に存在する場合は、シングル ユーザー モードにするためにサーバーを再起動する必要があります。  

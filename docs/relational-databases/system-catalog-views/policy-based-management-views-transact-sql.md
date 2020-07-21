@@ -1,5 +1,5 @@
 ---
-title: ポリシー ベースの管理ビュー (TRANSACT-SQL) |Microsoft Docs
+title: ポリシーベースの管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aed4c953f7f9c14b899f034d58f74d2ceb22862a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720412"
 ---
-# <a name="policy-based-management-views-transact-sql"></a>ポリシー ベースの管理ビュー (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="policy-based-management-views-transact-sql"></a>ポリシーベースの管理ビュー (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ポリシー ベースの管理には、ポリシー ベースの管理のポリシー、条件、式、グループ、およびフィルターに関する情報を表示するための次のビューがあります。 これらのビューは、msdb データベースし、dbo スキーマが所有します。  
+  ポリシー ベースの管理には、ポリシー ベースの管理のポリシー、条件、式、グループ、およびフィルターに関する情報を表示するための次のビューがあります。 これらのビューは msdb データベースにあり、dbo スキーマが所有しています。  
   
 |||  
 |-|-|  

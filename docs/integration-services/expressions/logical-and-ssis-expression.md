@@ -12,14 +12,14 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6af08121e05227d066a712970ae0b22b8a644507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cda41d0db42f72b56c84b184138ade1e345fdaa9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027461"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289056"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (論理 AND) (SSIS 式)
 
@@ -42,7 +42,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表は、&& 演算子の結果を示します。  
   
 |結果|式|式|  

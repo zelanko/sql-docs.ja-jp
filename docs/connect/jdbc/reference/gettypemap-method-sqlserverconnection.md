@@ -1,5 +1,5 @@
 ---
-title: getTypeMap メソッド (SQLServerConnection) |Microsoft Docs
+title: getTypeMap メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9733494af58ef9fe12655281224be5081c72e205
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d42a24db0e1e0aad38adbdf1b2ca0ca686a76de
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978502"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911038"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>getTypeMap メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +38,13 @@ public java.util.Map getTypeMap()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- マップオブジェクト。  
+ Map オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getTypeMap メソッドは、java. .sql. 接続インターフェイスの getTypeMap メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getTypeMap メソッドは、java.sql.Connection インターフェイスの getTypeMap メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

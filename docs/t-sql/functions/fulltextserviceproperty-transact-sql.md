@@ -18,17 +18,17 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 385bdc1eef159fab35808516f3b5f55626235bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752371"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Full-Text Engine のプロパティに関する情報を返します。 これらのプロパティは、**sp_fulltext_service** を使用して設定および取得できます。  
   
@@ -46,9 +46,9 @@ FULLTEXTSERVICEPROPERTY ('property')
  フルテキスト サービス レベルのプロパティ名を含む式です。 次の表は、プロパティと、返される情報についての説明の一覧です。  
   
 > [!NOTE]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のリリースで削除される予定のプロパティは次のとおりです: **ConnectTimeout**、**DataTimeout**、**ResourceUsage**。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
+>  次のプロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage** の将来のリリースで削除される予定です。 新しい開発作業では、これらのプロパティの使用は避け、現在これらのプロパティのいずれかを使用しているアプリケーションは修正するようにしてください。  
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |--------------|-----------|  
 |**ResourceUsage**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
 |**ConnectTimeout**|0 を返します。 旧バージョンとの互換性のためにのみサポートされています。|  
@@ -60,7 +60,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、署名付きバイナリのみが読み込まれるかどうかを確認し、戻り値は、この検証が行われていないことを示します。  
   
 ```  

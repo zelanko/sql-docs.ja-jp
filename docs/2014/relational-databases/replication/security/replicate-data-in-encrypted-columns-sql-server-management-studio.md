@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e1528d81faa352fdcdf37abe9ad93fda190445c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62955845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004854"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>暗号化された列のデータをレプリケートする (SQL Server Management Studio)
   レプリケーションでは、暗号化された列データをパブリッシュできます。 このデータの暗号化を解除してサブスクライバーで使用するには、パブリッシャーでのデータの暗号化に使用されたキーがサブスクライバーにも存在する必要があります。 レプリケーションでは、暗号化キーを送信する安全なメカニズムは提供されません。 このため、暗号化キーはサブスクライバーで手動で再作成する必要があります。 このトピックでは、パブリッシャーで列を暗号化し、暗号化キーをサブスクライバーで使用できるようにする方法について説明します。  
@@ -60,7 +59,7 @@ ms.locfileid: "62955845"
   
 6.  パブリケーションにサブスクライブします。 詳細については、「[プル サブスクリプションの作成](../create-a-pull-subscription.md)」または「[プッシュ サブスクリプションの作成](../create-a-push-subscription.md)」を参照してください。  
   
-7.  サブスクリプションを初期化します。 詳しくは、「 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
+7.  サブスクリプションを初期化します。 詳しくは、「 [初期スナップショットの作成および適用](../create-and-apply-the-initial-snapshot.md)」をご覧ください。  
   
 8.  手順 1 と同じ値を ALGORITHM、KEY_SOURCE、および IDENTITY_VALUE に使用して、サブスクライバーで [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) を実行します。 ENCRYPTION BY には別の値を指定することもできます。  
   
@@ -87,6 +86,6 @@ ms.locfileid: "62955845"
   
 ## <a name="see-also"></a>参照  
  [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)   
- [2 台のサーバーでの同じ対称キーの作成](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
+ [2つのサーバーに同一の対称キーを作成する](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

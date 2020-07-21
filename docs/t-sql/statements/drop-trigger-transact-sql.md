@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66652cac6436c399487c33f35ab94d408f0b6f1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766038"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   1 つ以上の DML トリガーまたは DDL トリガーを現在のデータベースから削除します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68042040"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] [schema_name.]trigger_name [ ,...n ] [ ; ]  
@@ -74,14 +74,14 @@ ON ALL SERVER
  DDL トリガーのスコープが現在のデータベースに適用されることを示します。 トリガーを作成または変更したときに DATABASE を指定した場合は、同じく DATABASE を指定する必要があります。  
   
  ALL SERVER  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  DDL トリガーのスコープが現在のサーバーに適用されることを示します。 トリガーを作成または変更したときに ALL SERVER を指定した場合は、同じく ALL SERVER を指定する必要があります。 ALL SERVER はログオン トリガーにも適用されます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DML トリガーを削除するには、DML トリガー自体またはトリガー テーブルを削除します。 テーブルを削除した場合、関係付けられているすべてのトリガーも削除されます。  
   
  トリガーが削除されると、トリガーに関する情報が **sys.objects**、**sys.triggers**、および **sys.sql_modules** カタログ ビューから削除されます。  
@@ -101,10 +101,10 @@ ON ALL SERVER
   
  サーバー スコープ (ON ALL SERVER) で定義されている DDL トリガー、またはログオン トリガーを削除するには、サーバーでの CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) で定義されている DDL トリガーを削除するには、現在のデータベースでの ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML トリガーを削除する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `employee_insupd` トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
+ 次の例では、`employee_insupd` データベースにある [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

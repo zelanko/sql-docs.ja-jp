@@ -1,5 +1,6 @@
 ---
 title: リモート BLOB ストア (RBS) [SQL Server] | Microsoft Docs
+description: SQL Server リモート BLOB ストア (RBS) では、バイナリ ラージ オブジェクトを、主なデータベース サーバーではなく、汎用的なストレージに格納します。 このアドオン コンポーネントについて学習します。
 ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
@@ -13,19 +14,28 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2cb41bdf37c1f748178f98a56b7f8df857a377e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92b7abe9bee2ac7d8d7058f2fcc03a551b64e200
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765484"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート BLOB ストア (RBS) はオプションのアドオン コンポーネントです。これを使用すると、データベース管理者は、バイナリ ラージ オブジェクトを、主なデータベース サーバーに直接格納するのではなく、汎用的なストレージ ソリューションに格納できます。  
   
- RBS は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール メディアに含まれていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムではインストールされません。  
+ RBS は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアに含まれていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムではインストールされません。 インストール メディアで RBS.msi を検索し、セットアップ ファイルを見つけます。
+
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアがない場合は、次のいずれかの場所で RBS をダウンロードできます。
+
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン | RBS のダウンロード場所 |
+|:---|:---|
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS ダウンロード ページ](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| &nbsp; | &nbsp; |
   
  
   
@@ -73,7 +83,7 @@ ms.locfileid: "68092984"
  RBS を使用する場合、資格情報ストアの対称キーを定期的にローテーションする必要があります。 これは、組織のセキュリティ ポリシーを満たすための一般的なセキュリティに関するベスト プラクティスです。  RBS 資格情報ストアの対称キーをローテーションする 1 つの方法は、RBS データベースで [後述のスクリプト](#Key_rotation) を使用することです。  このスクリプトを使用して、アルゴリズムやキーの長さなど、より強力な暗号化強度プロパティに移行することもできます。 キー ローテーションを行う前に、データベースをバックアップしておいてください。  スクリプトの最後に、確認手順がいくつかあります。  
 セキュリティ ポリシーで指定されたものとは異なるキー プロパティ (アルゴリズムやキーの長さなど) が求められている場合、スクリプトをテンプレートとして使用できます。 次の 2 つの場所でキー プロパティを変更します。1) 一時キーの作成 2) 永続キーの作成。  
   
-##  <a name="rbsresources"></a> RBS リソース  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> RBS リソース  
   
  **RBS サンプル**  
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) で入手できる RBS サンプルでは、RBS アプリケーションの開発方法とカスタム RBS プロバイダーの開発およびインストール方法を示します。  
@@ -81,7 +91,7 @@ ms.locfileid: "68092984"
  **RBS ブログ**  
  [RBS ブログ](https://go.microsoft.com/fwlink/?LinkId=210315) には、RBS の理解、配置、および維持に役立つ追加情報が含まれています。  
   
-##  <a name="Key_rotation"></a> キー ローテーションのスクリプト  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> キー ローテーションのスクリプト  
  この例では、 `sp_rotate_rbs_symmetric_credential_key` というストアド プロシージャを作成し、現在使用している RBS 資格情報ストアの対称キーを、  
 任意の対称キーに置き換えます。  セキュリティ ポリシーで定期的なキー ローテーションが求められている場合、または特定のアルゴリズム要件がある場合は、   
 この操作が必要になることがあります。  

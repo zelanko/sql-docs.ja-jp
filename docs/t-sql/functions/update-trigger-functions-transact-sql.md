@@ -23,17 +23,17 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714532"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブルまたはビューの指定された列で、INSERT または UPDATE が行われたかどうかを示すブール値を返します。 UPDATE() は [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。  
   
@@ -53,7 +53,7 @@ UPDATE ( column )
 ## <a name="return-types"></a>戻り値の型  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  INSERT または UPDATE が成功するかどうかにかかわらず、UPDATE() は TRUE を返します。  
   
  複数の列で INSERT 動作または UPDATE 動作をテストするには、最初の UPDATE(*column*) 句に続けて、別の UPDATE(column) 句を指定します。 COLUMNS_UPDATED を使用しても、複数の列で INSERT 動作または UPDATE 動作をテストできます。 これは、挿入または更新された列を示すビット パターンを返します。  
@@ -67,7 +67,7 @@ UPDATE ( column )
  
 トリガーを列に適用すると、列の値が更されない場合でも、`UPDATED` 値が `true` または `1` として返されます。 これは意図されたもので、トリガーでは挿入/更新/削除操作を許容するかどうかを決定するビジネス ロジックを実装する必要があります。 
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`StateProvinceID` テーブルの `PostalCode` 列または `Address` 列を更新しようとするときにクライアントへのメッセージを出力する、トリガーを作成します。  
   
 ```sql  

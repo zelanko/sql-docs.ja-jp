@@ -1,6 +1,6 @@
 ---
-title: XML アップデート グラム (SQLXML 4.0) を使用してデータの更新 |マイクロソフトのドキュメント
-ms.custom: ''
+title: XML アップデートグラムを使用したデータの更新 (SQLXML)
+description: SQLXML 4.0 の XML アップデートグラムを使用して既存のデータを更新する方法について説明します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,17 +26,18 @@ helpviewer_keywords:
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7da3eda9962feae31a07048f2ed1f14cd1a296f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733661"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  既存のデータを更新するときに、両方を指定する必要があります、 **\<する前に >** と **\<後 >** ブロックします。 指定した要素、 **\<する前に >** と **\<後 >** ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >** データベースの既存のレコードを識別するためにブロックします。 内で、対応する要素、 **\<後 >** ブロックは、更新操作を実行した後、レコードの表示方法を示します。 アップデート グラムからこの情報は、一致する SQL ステートメントが作成、 **\<後 >** ブロックします。 そのステートメントによってデータベースが更新されます。  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  既存のデータを更新する場合は、ブロックとブロックの両方を指定する必要があり **\<before>** **\<after>** ます。 およびブロックで指定された要素は、 **\<before>** **\<after>** 必要な変更を記述します。 アップデートグラムでは、ブロックに指定されている要素を使用して、 **\<before>** データベース内の既存のレコードを識別します。 ブロック内の対応する要素は、 **\<after>** 更新操作の実行後にレコードがどのように表示されるかを示します。 この情報から、アップデートグラムでは、ブロックと一致する SQL ステートメントが作成され **\<after>** ます。 そのステートメントによってデータベースが更新されます。  
   
  更新操作のアップデートグラムの形式は次のとおりです。  
   
@@ -56,44 +57,44 @@ ms.locfileid: "68018479"
 ```  
   
  **\<updg:before>**  
- 内の要素、 **\<する前に >** ブロックが、データベース テーブル内の既存のレコードを識別します。  
+ ブロック内の要素は、 **\<before>** データベーステーブル内の既存のレコードを識別します。  
   
  **\<updg:after>**  
- 内の要素、 **\<後 >** ブロックでは、レコードに指定する方法について説明します、 **\<する前に >** ブロックは、更新プログラムが適用された後になります。  
+ ブロック内の要素は、 **\<after>** ブロックに指定されたレコードが **\<before>** 更新プログラムが適用された後にどのように表示されるかを示します。  
   
- **マッピング スキーマ**属性は、アップデート グラムで使用するマッピング スキーマを識別します。 要素と属性名がで指定された、アップデート グラムでは、マッピング スキーマを指定する場合、 **\<する前に >** と **\<後 >** ブロックは、スキーマの名前と一致する必要があります。 マッピング スキーマでは、これらの要素または属性の名前がデータベース テーブルと列の名前にマップされます。  
+ **マッピングスキーマ**属性は、アップデートグラムによって使用されるマッピングスキーマを識別します。 アップデートグラムでマッピングスキーマを指定する場合は、およびブロックで指定された要素名と属性名 **\<before>** **\<after>** が、スキーマ内の名前と一致している必要があります。 マッピング スキーマでは、これらの要素または属性の名前がデータベース テーブルと列の名前にマップされます。  
   
- アップデートグラムにスキーマを指定しない場合は、アップデートグラムで既定のマッピングが使用されます。 既定のマッピングで、  **\<ElementName >** データベース テーブルには、アップデート グラム マップで子要素または属性がデータベース列にマップを指定します。  
+ アップデートグラムにスキーマを指定しない場合は、アップデートグラムで既定のマッピングが使用されます。 既定のマッピングでは、 **\<ElementName>** アップデートグラムで指定したがデータベーステーブルにマップされ、子要素または属性がデータベース列にマップされます。  
   
- 内の要素、 **\<する前に >** ブロックは、データベース内の 1 つのテーブルの行と一致する必要があります。 要素は、複数のテーブル行と一致するか、または任意のテーブルの行と一致しません、アップデート グラムではエラーが返され、全体を取り消します **\<同期 >** ブロックします。  
+ ブロック内の要素は **\<before>** 、データベース内の1つのテーブル行にのみ一致する必要があります。 要素が複数のテーブル行に一致するか、テーブル行と一致しない場合、アップデートグラムはエラーを返し、ブロック全体を取り消し **\<sync>** ます。  
   
- アップデート グラムは、複数を含めることができます **\<同期 >** ブロックします。 各 **\<同期 >** ブロックがトランザクションとして扱われます。 各 **\<同期 >** ブロックでは複数 **\<する前に >** と **\<後 >** ブロックします。 たとえば、2 つの既存のレコードを更新する場合でした指定した 2 つ **\<する前に >** と **\<後 >** 更新するレコードごとに 1 つのペアします。  
+ アップデートグラムには、複数のブロックを含めることができ **\<sync>** ます。 各 **\<sync>** ブロックはトランザクションとして扱われます。 各 **\<sync>** ブロックには、複数のおよびブロックを含めることができ **\<before>** **\<after>** ます。 たとえば、既存の2つのレコードを更新する場合は、 **\<before>** **\<after>** 更新するレコードごとに1つずつ、2つのペアを指定できます。  
   
 ## <a name="using-the-updgid-attribute"></a>updg:id 属性の使用  
- 複数の要素が指定されている場合、 **\<する前に >** と **\<後 >** ブロックを使用して、 **updg:id**内の行をマークする属性、 **\<する前に >** と **\<後 >** ブロックします。 処理ロジックでは、この情報を使用して、内のレコードの確認、 **\<する前に >** ブロックの組内のレコードと、 **\<後 >** ブロック。  
+ とブロックに複数の要素が指定されている場合は、 **\<before>** **\<after>** **updg: id**属性を使用して、ブロックおよびブロック内の行をマークし **\<before>** **\<after>** ます。 処理ロジックでは、この情報を使用して、ブロック内のどのレコードがブロック内のどのレコードであるかを判断し **\<before>** **\<after>** ます。  
   
- **Updg:id**属性は、次のいずれかが存在する場合 (推奨) が必要ないです。  
+ 次のいずれかが存在する場合は、 **updg: id**属性は必要ありません (推奨されます)。  
   
--   指定したマッピング スキーマ内の要素が、 **sql:key-フィールド**に定義されている属性。  
+-   指定されたマッピングスキーマ内の要素には、 **sql: キーフィールド**属性が定義されています。  
   
 -   アップデートグラムのキー フィールドに特定の値が 1 つ以上提供されている。  
   
- かどうかかは、アップデート グラムで指定されているキーの列を使用して、 **sql:key-フィールド**内の要素を組み合わせる、 **\<する前に >** と **\<後 >** ブロックします。  
+ どちらの場合も、アップデートグラムでは、 **sql: キーフィールド**に指定されているキー列を使用 **\<before>** して、ブロックとブロックの要素をペアにし **\<after>** ます。  
   
- マッピング スキーマでキー列が識別されない場合 (を使用して**sql:key-フィールド**) を指定する必要があります、アップデート グラムでは、キー列の値を更新する場合または**updg:id**します。  
+ マッピングスキーマでキー列 ( **sql: キーフィールド**を使用) が識別されない場合、またはアップデートグラムでキー列の値が更新されている場合は、 **updg: id**を指定する必要があります。  
   
- 指定されているレコード、 **\<する前に >** と **\<後 >** ブロックには、同じ順序である必要はありません。 **Updg:id**属性で指定されている要素の間の関連付けの強制、 **\<する前に >** と **\<後 >** ブロックします。  
+ およびブロックで識別されるレコードは、 **\<before>** **\<after>** 同じ順序である必要はありません。 **Updg: id**属性は、およびブロックで指定されている要素間の関連付けを強制し **\<before>** **\<after>** ます。  
   
- 1 つの要素を指定する場合、 **\<する前に >** ブロックと 1 つだけの対応する要素、 **\<後 >** の使用をブロックします**updg:id** 。必要はありません。 ただし、これは推奨を指定すること**updg:id**もあいまいにならないようにします。  
+ ブロック内に1つの要素を指定し、 **\<before>** ブロック内に対応する要素を1つだけ指定する場合 **\<after>** は、 **updg: id**を使用する必要はありません。 ただし、あいまいさを避けるために、 **updg: id**を指定することをお勧めします。  
   
 ## <a name="examples"></a>使用例  
  アップデートグラムの例を使用する前に、次のことに注意してください。  
   
--   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+-   ほとんどの例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
 -   ほとんどの例では、AdventureWorks サンプル データベースを使用します。 すべての更新内容は、このデータベースのテーブルに適用されます。 AdventureWorks データベースは復元できます。  
   
-### <a name="a-updating-a-record"></a>A. レコードを更新する  
+### <a name="a-updating-a-record"></a>A: レコードを更新する  
  次のアップデートグラムでは、AdventureWorks データベースの Person.Contact テーブルで、従業員の姓を Fuller に更新します。 アップデートグラムにマッピング スキーマは指定しないので、既定のマッピングが使用されます。  
   
 ```  
@@ -109,9 +110,9 @@ ms.locfileid: "68018479"
 </ROOT>  
 ```  
   
- 記述するレコード、 **\<する前に >** ブロックは、データベースの現在のレコードを表します。 指定された列の値をすべて使用するアップデート グラムで、 **\<する前に >** レコードを検索するブロック。 このアップデート グラムで、 **\<する前に >** ブロックは、ContactID 列だけを提供します。 そのため、アップデート グラムでは、レコードを検索する値だけを使用します。 仮に、このブロックに LastName 値を追加した場合は、検索に ContactID と LastName の両方の値が使用されます。  
+ ブロックに記述されているレコードは、 **\<before>** データベース内の現在のレコードを表します。 アップデートグラムでは、ブロックで指定されたすべての列の値を使用して **\<before>** 、レコードを検索します。 このアップデートグラムでは、 **\<before>** ブロックは ContactID 列のみを提供します。そのため、アップデートグラムでは、値のみを使用してレコードが検索されます。 仮に、このブロックに LastName 値を追加した場合は、検索に ContactID と LastName の両方の値が使用されます。  
   
- このアップデート グラムで、 **\<後 >** が変更されている唯一の値は、このため、ブロックが LastName 列の値のみを提供します。  
+ このアップデートグラムでは、 **\<after>** 変更されている唯一の値であるため、block は LastName 列の値のみを提供します。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -119,18 +120,16 @@ ms.locfileid: "68018479"
   
 2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. updg:id 属性を使用して複数のレコードを更新する  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B: updg:id 属性を使用して複数のレコードを更新する  
  この例では、アップデートグラムで、AdventureWorks データベースの HumanResources.Shift テーブルに次の 2 つの更新操作を行います。  
   
 -   7:00AM から始まる勤務時間の名前を "Day" から "Early Morning" に変更する。  
   
 -   10:00AM から始まる、"Late Morning" という名前の新しい勤務時間を挿入する。  
   
- アップデート グラムで、 **updg:id**属性内の要素間の関連付けの作成、 **\<する前に >** と **\<後 >** ブロック。  
+ アップデートグラムでは、 **updg: id**属性によって、ブロックとブロックの要素間の関連付けが作成され **\<before>** **\<after>** ます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -149,7 +148,7 @@ ms.locfileid: "68018479"
 </ROOT>  
 ```  
   
- 通知方法、 **updg:id**属性のペアの最初のインスタンス、 \<HumanResources.Shift > 内の要素、 **\<する前に >** の2つ目のインスタンスのブロック\<HumanResources.Shift > 内の要素、 **\<後 >** ブロックします。  
+ **Updg: id**属性によって、ブロック内の要素の最初のインスタンスと \<HumanResources.Shift> ブロック内の要素の2番目のインスタンスがペアになっていることに注意して **\<before>** \<HumanResources.Shift> **\<after>** ください。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -157,15 +156,15 @@ ms.locfileid: "68018479"
   
 2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. 複数を指定する\<する前に > と\<後 > ブロック  
- あいまいさを避けるためには、書き込めるアップデート グラムで例 B の複数を使用して **\<する前に >** と **\<後 >** ブロックの組。 指定する **\<する前に >** と **\<後 >** ペアは混乱を最小限に抑えて複数の更新プログラムを指定する方法の 1 つ。 また、各場合の **\<する前に >** と **\<後 >** ブロックは、最大で 1 つの要素を指定を使用する必要はありません、 **updg:id**属性.  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C: 複数 \<before> のブロックとブロックの指定 \<after>  
+ あいまいさを避けるために、複数のおよびブロックのペアを使用して、例 B でアップデートグラムを記述でき **\<before>** **\<after>** ます。 **\<before>** とのペアを指定する **\<after>** ことは、少なくとも混乱を最小限に抑えて複数の更新プログラムを指定する方法の1つです。 また、との各 **\<before>** ブロックが **\<after>** 1 つの要素のみを指定している場合は、 **updg: id**属性を使用する必要はありません。  
   
 > [!NOTE]  
->  組を作る、 **\<後 >** タグは、それに対応するすぐに従う必要があります **\<する前に >** タグ。  
+>  ペアを形成するには、 **\<after>** タグが対応するタグの直後にある必要があり **\<before>** ます。  
   
- 次のアップデート グラムでは、最初の **\<する前に >** と **\<後 >** ペアは、勤務時間のシフト名を更新します。 2 番目の組によって新しい勤務時間のレコードが挿入されます。  
+ 次のアップデートグラムでは、最初のとのペアによって、 **\<before>** **\<after>** 日シフトのシフト名が更新されます。 2 番目の組によって新しい勤務時間のレコードが挿入されます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -194,16 +193,16 @@ ms.locfileid: "68018479"
   
 2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D. 複数を指定する\<sync > ブロック  
- 複数を指定する **\<同期 >** アップデート グラムでブロックします。 各 **\<同期 >** 指定されているブロックが独立したトランザクション。  
+### <a name="d-specifying-multiple-sync-blocks"></a>D: 複数の \<sync> ブロックの指定  
+ アップデートグラムでは、複数のブロックを指定でき **\<sync>** ます。 指定された各 **\<sync>** ブロックは、独立したトランザクションです。  
   
- 次のアップデート グラムでは、最初の **\<同期 >** ブロックは、Sales.Customer テーブル内のレコードを更新します。 簡素化するため、アップデートグラムでは ID 値 (CustomerID) と更新する値 (SalesPersonID) の 2 つの必要な値だけを指定します。  
+ 次のアップデートグラムでは、最初の **\<sync>** ブロックが Sales. Customer テーブルのレコードを更新します。 簡素化するため、アップデートグラムでは ID 値 (CustomerID) と更新する値 (SalesPersonID) の 2 つの必要な値だけを指定します。  
   
- 2 番目の **\<同期 >** ブロックは Sales.SalesOrderHeader テーブルに 2 つのレコードを追加します。 このテーブルで、SalesOrderID は IDENTITY 型の列です。 そのため、アップデート グラムでは指定しない SalesOrderID の値のそれぞれで、 \<Sales.SalesOrderHeader > 要素。  
+ 2番目のブロックは、 **\<sync>** SalesOrderHeader テーブルに2つのレコードを追加します。 このテーブルで、SalesOrderID は IDENTITY 型の列です。 そのため、アップデートグラムでは、各要素の SalesOrderID の値が指定されていません \<Sales.SalesOrderHeader> 。  
   
- 複数を指定する **\<同期 >** ブロックが役にため場合、2 つ目 **\<同期 >** Sales.SalesOrderHeader テーブルにレコードを追加するブロック (トランザクション) に失敗、最初 **\<同期 >** ブロックは、Sales.Customer テーブル内の顧客レコードを更新できます。  
+ 複数のブロックを指定する **\<sync>** と便利です。これは、2つ目の **\<sync>** ブロック (トランザクション) が SalesOrderHeader テーブルにレコードを追加できなかった場合でも、最初の **\<sync>** ブロックが sales. customer テーブルの customer レコードを更新する可能性があるためです。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -260,14 +259,14 @@ ms.locfileid: "68018479"
   
 2.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ### <a name="e-using-a-mapping-schema"></a>E. マッピング スキーマを使用する  
- この例で、アップデート グラムを使用して、マッピング スキーマを指定します、**マッピング スキーマ**属性。 ここでは既定のマッピングはなく、アップデートグラム内の要素および属性と、データベースのテーブルおよび列の間の必要なマッピングはマッピング スキーマによって指定します。  
+ この例では、アップデートグラム**でマッピングスキーマ属性を**使用してマッピングスキーマを指定しています。 ここでは既定のマッピングはなく、アップデートグラム内の要素および属性と、データベースのテーブルおよび列の間の必要なマッピングはマッピング スキーマによって指定します。  
   
  アップデートグラムで指定する要素と属性は、マッピング スキーマ内の要素と属性を参照します。  
   
- 次の XSD マッピング スキーマには **\<顧客 >** 、 **\<順序 >** 、および **\<OD >** にマップされる要素、データベースの Sales.Customer、Sales.SalesOrderHeader、および Sales.SalesOrderDetail テーブル。  
+ 次の XSD マッピングスキーマには **\<Customer>** 、 **\<Order>** データベースの **\<OD>** sales. Customer、SalesOrderHeader、および SalesOrderDetail テーブルにマップされる、、およびの各要素があります。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -320,7 +319,7 @@ ms.locfileid: "68018479"
 </xsd:schema>  
 ```  
   
- このマッピング スキーマ (UpdategramMappingSchema.xml) を次のアップデートグラムで指定します。 このアップデートグラムでは、Sales.SalesOrderDetail テーブルの特定の注文アイテムに、注文明細アイテムを追加します。 アップデート グラムには、入れ子になった要素が含まれています。  **\<OD >** 要素内にネスト、 **\<順序 >** 要素。 これら 2 つの要素の主キーと外部キーのリレーションシップは、マッピング スキーマで指定されます。  
+ このマッピング スキーマ (UpdategramMappingSchema.xml) を次のアップデートグラムで指定します。 このアップデートグラムでは、Sales.SalesOrderDetail テーブルの特定の注文アイテムに、注文明細アイテムを追加します。 このアップデートグラムには、入れ子になった要素 (要素の内側に入れ子になった要素) が含まれ **\<OD>** **\<Order>** ます。 これら 2 つの要素の主キーと外部キーのリレーションシップは、マッピング スキーマで指定されます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -346,9 +345,9 @@ ms.locfileid: "68018479"
   
 3.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+ マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
 ### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>F. マッピング スキーマを IDREFS 属性と共に使用する  
  この例では、アップデートグラムでマッピング スキーマ内の IDREFS 属性を使用して、複数のテーブルのレコードを更新する方法を示します。 この例では、データベースは次のテーブルから構成されるものとします。  
@@ -361,7 +360,7 @@ ms.locfileid: "68018479"
   
  学生 (Student) は複数の講座 (Course) に登録できるので、Course には複数の Student を含めることができます。3 番目のテーブル Enrollment は、この M:N リレーションシップを表すために必要です。  
   
- 次の XSD マッピング スキーマを使用して、テーブルの XML ビューを提供する、  **\<Student >** 、 **\<コース >** 、および **\<登録>** 要素。 **IDREFS**マッピング スキーマ内の属性は、これらの要素間のリレーションシップを指定します。 **StudentIDList**属性を **\<コース >** 要素は、 **IDREFS**型属性で、Enrollment テーブルの StudentID 列を指します。 同様に、 **EnrolledIn**属性を **\<Student >** 要素は、 **IDREFS**登録での CourseID 列を参照する型の属性テーブルです。  
+ 次の XSD マッピングスキーマでは、、、およびの各要素を使用して、テーブルの XML ビューを提供し **\<Student>** **\<Course>** **\<Enrollment>** ます。 マッピングスキーマ内の**IDREFS**属性は、これらの要素間のリレーションシップを指定します。 要素の**StudentIDList**属性 **\<Course>** は、登録テーブルの StudentID 列を参照する**IDREFS**型の属性です。 同様に、要素の**EnrolledIn**属性 **\<Student>** は**IDREFS**型の属性であり、登録テーブルの CourseID 列を参照します。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -458,7 +457,7 @@ ms.locfileid: "68018479"
   
 5.  SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してアップデートグラムを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 6.  上の手順の説明どおり、次のアップデートグラムを保存して実行します。 このアップデートグラムでは、Enrollment テーブルにレコードを追加し、講義 CS102 に StudentID="1" の学生をもう一度追加します。  
   
@@ -498,7 +497,7 @@ ms.locfileid: "68018479"
     </ROOT>  
     ```  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -556,9 +555,9 @@ ms.locfileid: "68018479"
 </Schema>  
 ```  
   
- マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
+ マッピングスキーマを使用するアップデートグラムの例については、「[アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>関連項目  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

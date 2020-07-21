@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050315"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>メモリ最適化テーブルが含まれるデータベースのバックアップ
   メモリ最適化されたテーブルは、通常のデータベースのバックアップの一部としてバックアップされます。 ディスク ベース テーブルについては、ストレージの破損を検出するために、データベース バックアップの一部としてデータのチェックサムおよびデルタ ファイルのペアが検証されます。  
@@ -32,14 +31,14 @@ ms.locfileid: "62468328"
 |--------------------------------|------------|  
 |PRECREATED|ファイルのメタデータのみ|  
 |UNDER CONSTRUCTION|ファイルのメタデータのみ|  
-|Active|ファイルのメタデータと使用されているバイト|  
+|アクティブ|ファイルのメタデータと使用されているバイト|  
 |Merge source|ファイルのメタデータと使用されているバイト|  
 |Merge target|ファイルのメタデータのみ|  
 |REQUIRED FOR BACKUP/HA|ファイルのメタデータと使用されているバイト|  
 |IN TRANSITION TO TOMBSTONE|ファイルのメタデータのみ|  
 |TOMBSTONE|ファイルのメタデータのみ|  
   
- データベースのバックアップと 1 つ以上のメモリ最適化テーブルのサイズはメモリ内のサイズより大きく、ディスク上ストレージよりも小さい。 追加のサイズは、削除された行の数と、ワークロードに間接的に依存する Merge source および REQUIRED FOR BACKUP/HA という状態にあるチェックポイント ファイル ペアの数によって異なります。 チェックポイント ファイル ペアの状態の説明については、次を参照してください。 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)します。  
+ 1つ以上のメモリ最適化テーブルを持つデータベースバックアップのサイズは、通常、メモリ内のサイズより大きくなりますが、ディスク上の記憶域よりも小さくなります。 追加のサイズは、削除された行の数と、ワークロードに間接的に依存する Merge source および REQUIRED FOR BACKUP/HA という状態にあるチェックポイント ファイル ペアの数によって異なります。 チェックポイントファイルペアの状態の詳細については、「 [sys. dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)」を参照してください。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>データベースの完全バックアップの推計サイズ  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62468328"
   
  最初のワークロードのシナリオは、(ほとんどが) 挿入の場合です。 このシナリオでは、ほとんどのデータ ファイルは Active 状態で、完全読み込みであり、削除済みの行はごくわずかです。 データベースのバックアップのサイズは、メモリ内にあるデータのサイズに近づきます。  
   
- 2 番目のワークロードのシナリオでは、頻繁な insert、delete、および更新操作には。最悪のケースでは、削除された行を考慮に入れた後、各チェックポイント ファイル ペアは 50% が読み込み済みになります。 したがって、データベースのバックアップのサイズは、メモリ内にあるデータのサイズの少なくとも 2 倍になります。 また、データベースのバックアップのサイズを大きくする Merge source および Required for backup/high availability という状態にあるチェックポイント ファイル ペアはわずかです。  
+ 2 番目のワークロードのシナリオは、INSERT、DELETE、UPDATE の各操作が頻繁に実行される場合です。最悪のケースでは、削除された行を考慮に入れた後、各チェックポイント ファイル ペアは 50% が読み込み済みになります。 したがって、データベースのバックアップのサイズは、メモリ内にあるデータのサイズの少なくとも 2 倍になります。 また、データベースのバックアップのサイズを大きくする Merge source および Required for backup/high availability という状態にあるチェックポイント ファイル ペアはわずかです。  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを含むデータベースの差分バックアップ  
  メモリ最適化テーブルのストレージは、「 [メモリ最適化テーブルの持続性](memory-optimized-tables.md)」で説明しているようにデータ ファイルとデルタ ファイルで構成されます。 メモリ最適化テーブルが含まれるデータベースの差分バックアップには、次のデータが含まれています。  

@@ -1,5 +1,5 @@
 ---
-title: ドライバーでの処理 |Microsoft Docs
+title: ドライバーのタスク |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b30df63a3c955d2ed074ab13649ea55c21a6da7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915460"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294202"
 ---
 # <a name="driver-tasks"></a>ドライバーでの処理
 ドライバーによって実行される特定のタスクは次のとおりです。  
   
--   接続して、データ ソースから切断しています。  
+-   データソースへの接続と切断。  
   
--   ドライバー マネージャーによってオフ関数のエラーを確認しています。  
+-   ドライバーマネージャーによってチェックされていない関数エラーを確認しています。  
   
--   トランザクションを開始します。これは、アプリケーションに対して透過的です。  
+-   トランザクションの開始これは、アプリケーションに対して透過的です。  
   
--   実行のデータ ソースを SQL ステートメントを送信しています。 ドライバーは DBMS 固有の sql; ODBC SQL を変更する必要があります。多くの場合、これは、DBMS に固有の SQL を使用した ODBC で定義されたエスケープ句を置き換えるに制限されています。  
+-   実行用のデータソースに SQL ステートメントを送信しています。 ドライバーは、ODBC SQL を DBMS 固有の SQL に変更する必要があります。これは、多くの場合、ODBC で定義されている、DBMS 固有の SQL を使用したエスケープ句の置換に限定されます。  
   
--   データを送信し、アプリケーションによって指定されたデータ型を変換する場合など、データ ソースからデータを取得します。  
+-   データソースとの間でのデータの送受信 (アプリケーションで指定されたデータ型の変換を含む)。  
   
--   ODBC SQLSTATEs DBMS 固有のエラーにマップします。
+-   DBMS 固有のエラーを ODBC SQLSTATEs にマップしています。

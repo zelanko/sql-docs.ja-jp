@@ -1,5 +1,5 @@
 ---
-title: サービス サーバーの表示と、統合で実行中のパッケージの停止 |Microsoft Docs
+title: Integration Services サーバーで実行されているパッケージの表示と停止 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e63839d4ab5d8d50f7d86eea05c8d58107d6799
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054596"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439869"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services サーバーで実行中のパッケージの表示と停止
   `SSISDB` データベースでは、ユーザーに表示されない内部テーブルに実行履歴を格納します。 ただし、必要な情報は、パブリック ビューに対してクエリを実行することで公開されます。 また、パッケージに関連した一般的なタスクを実行するために呼び出すことができるストアド プロシージャも用意されています。  
@@ -50,7 +49,7 @@ ms.locfileid: "66054596"
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
 ## <a name="viewing-the-history-of-packages-that-have-run"></a>実行したパッケージの履歴の表示  
- 実行したパッケージの履歴を [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で確認するには、 **[すべての実行]** レポートを使用します。 **[すべての実行]** レポートとその他の標準レポートの詳細については、「[Integration Services サーバーのレポート](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
+ 実行したパッケージの履歴を [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で確認するには、 **[すべての実行]** レポートを使用します。 **[すべての実行]** レポートとその他の標準レポートの詳細については、「 [Integration Services サーバーのレポート](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
   
  実行中のパッケージの履歴を表示するその他の方法については、次のトピックをご覧ください。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66054596"
  マネージド API を使用したプログラムによるアクセス  
  <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間とそのクラスのトピックをご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)   
  [パッケージ実行のレポートのトラブルシューティング](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   

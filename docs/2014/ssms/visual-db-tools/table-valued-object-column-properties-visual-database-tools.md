@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d56f2fd8e72e0cb00555f18288180f674645056e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044146"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
   クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "63204530"
  **[IDENTITY] カテゴリ**  
  展開すると、 **[名前]** プロパティが表示されます。  
   
- **名前**  
+ **Name**  
  選択した列の名前が表示されます。  
   
  **クエリ デザイナー カテゴリ**  
@@ -40,10 +39,10 @@ ms.locfileid: "63204530"
  **[NULL を許容]**  
  列のデータ型で NULL が許容されるかどうかが表示されます。  
   
- **照合順序**  
+ **Collation**  
  選択した列における照合順序の設定が表示されます。 照合順序は、Table Designer の [列のプロパティ] タブで設定できます。  
   
- **データ型**  
+ **[データ型]**  
  選択した列のデータ型が表示されます。  
   
  **[データ型]**  
@@ -55,7 +54,7 @@ ms.locfileid: "63204530"
  **[精度]**  
  数値データ型で許容される最大桁数が表示されます。 数値データ型でないデータ型の場合、このプロパティには **0** と表示されます。  
   
- **[スケール]**  
+ **スケール**  
  数値データ型の小数点の右側にある桁数の最大数が表示されます。 この値は、有効桁数以下である必要があります。 数値データ型でないデータ型の場合、このプロパティには **0** と表示されます。  
   
  **[サイズ]**  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ba4b2f081047f25fa775e0c8754caa4ce643e70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004171"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>サーバー インスタンスでのフルテキスト検索の管理と監視
   サーバー インスタンスのフルテキスト検索の管理には次の作業があります。  
@@ -29,7 +28,7 @@ ms.locfileid: "66011169"
   
 -   フルテキスト検索を行うためのユーザー データベースの構成。 データベース用のフルテキスト カタログを 1 つ以上作成し、フルテキスト クエリを実行する各テーブルまたは各インデックス付きビューにフルテキスト インデックスを定義します。  
   
-##  <a name="props"></a> フルテキスト検索のサーバー プロパティを表示および変更する  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> フルテキスト検索のサーバー プロパティを表示および変更する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのフルテキスト プロパティは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で表示できます。  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>フルテキスト検索のサーバー プロパティを表示および変更するには  
@@ -56,29 +55,29 @@ ms.locfileid: "66011169"
   
          フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] データベースでのみ使用できます。  
   
-         **Rebuild**  
+         **リビルド**  
          フルテキスト カタログは、導入された新しい拡張機能であるワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後にかなりの量の CPU とメモリが必要になる可能性があります。  
   
          **リセット**  
          フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。  
   
-         フルテキスト アップグレード オプションを選択する方法の詳細については、次を参照してください。 [、フルテキスト検索のアップグレード](upgrade-full-text-search.md)します。  
+         フルテキストアップグレードオプションの選択の詳細については、「[フルテキスト検索のアップグレード](upgrade-full-text-search.md)」を参照してください。  
   
         > [!NOTE]  
         >  フルテキスト アップグレード オプションは、[sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade_option** 操作を使用して設定することもできます。  
   
-##  <a name="metadata"></a> その他のフルテキスト サーバー プロパティの表示  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> その他のフルテキスト サーバー プロパティの表示  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数を使用すると、フルテキスト検索のさまざまなサーバー レベルのプロパティの値を取得できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバー インスタンスのフルテキスト プロパティと各プロパティに関連する [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数の一覧を次の表に示します。  
   
-|プロパティ|説明|機能|  
+|プロパティ|説明|Function|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|フルテキスト コンポーネントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の現在のインスタンスと共にインストールされているかどうかを示します。|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|オペレーティング システムのワード ブレーカーやフィルターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに登録され、使用されているかどうかを示します。|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Full-Text Engine に署名付きバイナリのみを読み込むかどうかを指定します。|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> フルテキスト検索の利用状況の監視  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a>フルテキスト検索の利用状況の監視  
  サーバー インスタンスでのフルテキスト検索の実行状況を監視する場合は、以下の動的管理ビューと関数が役立ちます。  
   
  **作成操作が進行中のフルテキスト カタログに関する情報を表示するには**  

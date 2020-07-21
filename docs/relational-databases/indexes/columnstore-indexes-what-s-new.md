@@ -1,7 +1,7 @@
 ---
 title: 列ストア インデックス - 新機能 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b25d7c767be077764407d3eb47704f35146c94c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025013"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279266"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンで利用可能な列ストア機能の概要と、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の最新リリース。  
 
@@ -49,6 +49,15 @@ ms.locfileid: "68025013"
 |列ストア インデックスは保存されない計算列を使用できる||||はい|||   
   
  <sup>1</sup> 読み取り専用の非クラスター化列ストア インデックスを作成するには、読み取り専用ファイル グループにインデックスを格納します。  
+ 
+> [!NOTE]
+> [バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)操作の並列処理の度合い (DOP) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition では 2 DOP、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web Edition および Express Edition では 1 DOP に制限されます。 これは、ディスク ベース テーブルとメモリ最適化テーブルで作成された列ストア インデックスに当てはまります。
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] での新機能は次のとおりです。
+
+### <a name="functional"></a>機能
+- [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、組ムーバーは、内部しきい値によってしばらくの間存在していると判断された小さな OPEN デルタ行グループを自動的に圧縮するか、多数の行が削除されている COMPRESSED 行グループをマージするバックグラウンド マージ タスクによってサポートされています。 行グループを部分的に削除されたデータとマージするには、以前はインデックスの再編成操作が必要でした。 これにより、時間の経過とともに、列ストア インデックスの品質が向上します。 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] での新機能は次のとおりです。
@@ -79,24 +88,28 @@ ms.locfileid: "68025013"
   
 -   列ストアでは、削除された行を取り除くことでインデックス最適化をサポートしており、明示的にインデックスを再構築する必要はありません。 `ALTER INDEX ... REORGANIZE` ステートメントは、オンライン操作として、内部的に定義されたポリシーに基づいて、削除された行を列ストアから削除します。  
   
--   列ストア インデックスには、AlwaysOn の読み取り可能なセカンダリ レプリカでアクセスできます。 AlwaysOn セカンダリ レプリカに分析クエリをオフロードすることで、運用分析のパフォーマンスを向上させることができます。  
+-   列ストア インデックスには、Always On の読み取り可能なセカンダリ レプリカでアクセスできます。 Always On セカンダリ レプリカに分析クエリをオフロードすることで、運用分析のパフォーマンスを向上させることができます。  
   
--   パフォーマンスを高めるために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データ型で使われているバイト数が 8 バイト以下で、かつデータ型が文字列でない場合、テーブルのスキャン中に集計関数 `MIN`、`MAX`、`SUM`、`COUNT`、`AVG` を計算します。 クラスター化列ストア インデックスおよび非クラスター化列ストア インデックスの両方で、Group By 句を使用するかどうかに関係なく集計プッシュ ダウンがサポートされています。  
+-   集計プッシュダウンでは、データ型で使われているバイト数が 8 バイト以下で、かつ文字列でない場合は、テーブル スキャン中に集計関数 `MIN`、`MAX`、`SUM`、`COUNT`、`AVG` が計算されます。 クラスター化列ストア インデックスおよび非クラスター化列ストア インデックスの両方で、`GROUP BY` 句を使用するかどうかに関係なく、集計プッシュダウンがサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この拡張機能は Enterprise edition 用に予約されています。
   
--   述語のプッシュ ダウンは、[v]archar 型または n[v]archar 型の文字列を比較するクエリを高速化します。 これは、一般的な比較演算子に適用され、ビットマップ フィルターを使用する演算子 (LIKE など) が含まれます。 SQL Server がサポートするすべての照合順序で動作します。  
+-   文字列述語のプッシュダウンは、VARCHAR/CHAR 型または NVARCHAR/NCHAR 型の文字列を比較するクエリを高速化します。 これは、一般的な比較演算子に適用され、ビットマップ フィルターを使用する演算子 (`LIKE` など) が含まれます。 サポートされるすべての照合順序で機能します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この拡張機能は Enterprise edition 用に予約されています。 
+
+-   ベクターベースのハードウェア機能を活用したバッチ モード操作の機能強化。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] によって、AVX 2 (Advanced Vector Extensions) と SSE 4 (Streaming SIMD Extensions 4) のハードウェア拡張機能の CPU サポート レベルが検出されます。サポートされている場合、これらが使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この拡張機能は Enterprise edition 用に予約されています。
   
 ### <a name="performance-for-database-compatibility-level-130"></a>データベースの互換性レベルが 130 の場合のパフォーマンス  
   
 -   次のいずれかの操作を使用して、クエリの新しいバッチ モード実行をサポートします。  
-    -   SORT  
-    -   複数の異なる関数では集計します。 例: `COUNT/COUNT`、`AVG/SUM`、`CHECKSUM_AGG`、`STDEV/STDEVP`。  
-    -   ウィンドウ集計関数: `COUNT`、`COUNT_BIG`、`SUM`、`AVG`、`MIN`、`MAX`、`CLR`。  
-    -   ユーザー定義のウィンドウ集計関数: `CHECKSUM_AGG`、`STDEV`、`STDEVP`、`VAR`、`VARP`、`GROUPING`。  
-    -   ウィンドウ集計分析関数: `LAG`、`LEAD`、`FIRST_VALUE`、`LAST_VALUE`、`PERCENTILE_CONT`、`PERCENTILE_DISC`、`CUME_DIST`、`PERCENT_RANK`。  
+    -   `SORT`  
+    -   複数の異なる関数では集計します。 例: `COUNT/COUNT`、`AVG/SUM`、`CHECKSUM_AGG`、`STDEV/STDEVP`  
+    -   ウィンドウ集計関数: `COUNT`、`COUNT_BIG`、`SUM`、`AVG`、`MIN`、`MAX`、`CLR`  
+    -   ユーザー定義のウィンドウ集計関数: `CHECKSUM_AGG`、`STDEV`、`STDEVP`、`VAR`、`VARP`、`GROUPING`  
+    -   ウィンドウ集計分析関数: `LAG`、`LEAD`、`FIRST_VALUE`、`LAST_VALUE`、`PERCENTILE_CONT`、`PERCENTILE_DISC`、`CUME_DIST`、`PERCENT_RANK`  
+
 -   `MAXDOP 1` または直列クエリ プランで実行されるシングル スレッド クエリは、バッチ モードで実行されます。 以前は、マルチ スレッド クエリのみがバッチ モードで実行されていました。  
--   メモリ最適化テーブル クエリでは、行ストア インデックスまたは列ストア インデックス内のデータにアクセスする際に、並列プランを SQL 相互運用モードで使用できます。  
+
+-   メモリ最適化テーブル クエリでは、行ストア インデックス内または列ストア インデックス内のデータにアクセスする際に、並列プランを SQL 相互運用モードで使用できます。
   
-### <a name="supportability"></a>サポート性  
+### <a name="supportability"></a>サポート  
 次に、列ストア用の新しいシステム ビューを示します。  
 
 ||| 
@@ -114,10 +127,7 @@ ms.locfileid: "68025013"
 |[sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md)|[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|  
 |[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|  
   
-### <a name="limitations"></a>制限事項  
-  
-
-  
+### <a name="limitations"></a>制限事項    
 -   インメモリ テーブルの場合、列ストア インデックスにはすべての列が含まれている必要があります。列ストア インデックスにフィルター適用条件を含めることはできません。  
 -   インメモリ テーブルの場合、列ストア インデックスに対するクエリは相互運用モードでのみ実行され、インメモリ ネイティブ モードでは実行されません。 並列実行がサポートされています。  
   
@@ -144,7 +154,5 @@ ms.locfileid: "68025013"
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md) 
-  
-  
+ [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

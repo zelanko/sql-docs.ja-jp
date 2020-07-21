@@ -25,15 +25,15 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0453d96d1d80d0917f5cb79cb1713d681963363b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075266"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007413"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   行が存在するかどうかをテストするサブクエリを指定します。  
   
@@ -55,7 +55,7 @@ EXISTS ( subquery )
 ## <a name="result-values"></a>結果の値  
  サブクエリが行を含む場合は、TRUE を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. サブクエリで NULL を使用しても結果セットを返すようにする  
  次の例では、サブクエリに `NULL` を指定しても、`EXISTS` により TRUE と評価されるので、結果が返されます。  
@@ -81,7 +81,7 @@ WHERE EXISTS
 (SELECT *   
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -96,7 +96,7 @@ WHERE a.LastName IN
 (SELECT a.LastName  
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -156,7 +156,7 @@ WHERE EXISTS
     JOIN HumanResources.EmployeeDepartmentHistory AS edh  
        ON d.DepartmentID = edh.DepartmentID  
     WHERE e.BusinessEntityID = edh.BusinessEntityID  
-    AND d.Name LIKE 'P%');  
+    AND d.Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -173,7 +173,7 @@ JOIN HumanResources.EmployeeDepartmentHistory AS edh
 WHERE edh.DepartmentID IN  
 (SELECT DepartmentID  
    FROM HumanResources.Department  
-   WHERE Name LIKE 'P%');  
+   WHERE Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -296,7 +296,7 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>F. EXISTS を使用する  
  次の例では、`ProspectiveBuyer` テーブルの行が `DimCustomer` テーブルの行と一致するかどうかを示しています。 2 つのテーブルの `LastName` と `BirthDate` の両方の値が一致する場合にのみ、クエリは行を返します。  
@@ -309,7 +309,7 @@ FROM DimCustomer AS a
 WHERE EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS を使用する  
@@ -323,7 +323,7 @@ FROM DimCustomer AS a
 WHERE NOT EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ## <a name="see-also"></a>参照  

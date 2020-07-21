@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpcreatecltask.f1
 - sql11.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2e0d73034bc131b0cc65d475f00efd4f54612b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028631"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433919"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight Create Cluster Task
 **Azure HDInsight Create Cluster Task** を使用すると、指定された Azure サブスクリプションとリソース グループの Azure HDInsight クラスターを SSIS パッケージで作成できます。
@@ -33,12 +32,12 @@ ms.locfileid: "69028631"
   
 |||  
 |-|-|  
-|**フィールド**|**[説明]**|  
+|**フィールド**|**説明**|  
 |AzureResourceManagerConnection|既存の Azure Resource Manager 接続マネージャーを選択するか、HDInsight クラスターを作成するために使用する新しいものを作成します。|  
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを選ぶか、HDInsight クラスターに関連付けられている Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。|
 |SubscriptionId|HDInsight クラスターが作成されるサブスクリプションの ID を指定します。|
 |ResourceGroup|HDInsight クラスターが作成される Azure リソース グループを指定します。|
-|Location|HDInsight クラスターの場所を指定します。 クラスターは、指定された Azure ストレージ アカウントと同じ場所に作成する必要があります。|  
+|場所|HDInsight クラスターの場所を指定します。 クラスターは、指定された Azure ストレージ アカウントと同じ場所に作成する必要があります。|  
 |ClusterName|作成する HDInsight クラスターの名前を指定します。|  
 |ClusterSize|クラスターに作成するノードの数を指定します。|  
 |BlobContainer|HDInsight クラスターに関連付けられる既定のストレージ コンテナーの名前を指定します。|  

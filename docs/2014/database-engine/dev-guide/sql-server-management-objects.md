@@ -9,14 +9,13 @@ ms.topic: reference
 ms.assetid: ea830e74-5271-48be-9099-7a7dc8425d9e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81f996b167cfbf4b22f7d6d2420cdb9720c59574
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38b67ef6660c54fcae0f8eb002c3f3fd5700aacf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933313"
 ---
 # <a name="sql-server-management-objects"></a>SQL Server 管理オブジェクト
 
-[SQL Server 管理オブジェクトのプログラミング ガイドを参照してください。](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)します。
+[SQL Server 管理オブジェクトプログラミングガイドを参照してください](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。

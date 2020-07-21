@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd19ebcedda06703058d96313ab477d660393d5
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065596"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301879"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   フルテキスト カタログのプロパティを変更します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68065596"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER FULLTEXT CATALOG catalog_name   
 { REBUILD [ WITH ACCENT_SENSITIVITY = { ON | OFF } ]  
@@ -47,7 +47,9 @@ ALTER FULLTEXT CATALOG catalog_name
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *catalog_name*  
  変更するカタログの名前を指定します。 指定した名前のカタログが存在しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返され、ALTER 操作は実行されません。  
   
@@ -57,7 +59,7 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  変更するカタログのフルテキスト インデックス作成とクエリ処理において、アクセントを区別するかしないかを指定します。  
   
- フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 この関数で '1' が返された場合、フルテキスト カタログではアクセントが区別され、'0' が返された場合、アクセントは区別されません。  
+ フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、**catalog_name** に対して、FULLTEXTCATALOGPROPERTY 関数を *accentsensitivity* プロパティ値と共に使用します。 この関数で '1' が返された場合、フルテキスト カタログではアクセントが区別され、'0' が返された場合、アクセントは区別されません。  
   
  アクセントの区別は、既定ではカタログとデータベースで同じになっています。  
   
@@ -77,8 +79,8 @@ ALTER FULLTEXT CATALOG catalog_name
 > [!NOTE]  
 >  ALTER FULLTEXT CATALOG AS DEFAULT を使用するには、フルテキスト カタログに対する ALTER 権限およびデータベースに対する CREATE FULLTEXT CATALOG 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、アクセントを区別する既定のフルテキスト カタログ `ftCatalog` の `accentsensitivity` プロパティを変更します。  
+## <a name="examples"></a>例  
+ 次の例では、アクセントを区別する既定のフルテキスト カタログ `accentsensitivity` の `ftCatalog` プロパティを変更します。  
   
 ```  
 --Change to accent insensitive  

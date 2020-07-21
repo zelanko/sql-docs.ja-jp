@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetDiagRec function [ODBC]
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911315"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285382"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 3.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLGetDiagRec**エラー、警告、およびステータス情報を含む診断レコードの複数のフィールドの現在の値を返します。 異なり**SQLGetDiagField**、呼び出しごとに 1 つの診断フィールドを返す**SQLGetDiagRec**いくつかのよく使用される、SQLSTATE、ネイティブ エラー コードを含む、診断レコードのフィールドを返しますと診断メッセージのテキスト。  
+ **SQLGetDiagRec**は、エラー、警告、および状態の情報を含む診断レコードの複数のフィールドの現在の値を返します。 呼び出しごとに1つの診断フィールドを返す**SQLGetDiagField**とは異なり、 **SQLGETDIAGREC**は、SQLSTATE、ネイティブエラーコード、診断メッセージテキストなど、診断レコードの一般的に使用されるいくつかのフィールドを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,92 +50,92 @@ SQLRETURN SQLGetDiagRec(
   
 ## <a name="arguments"></a>引数  
  *HandleType*  
- [入力]診断が必要なハンドルの型を記述するハンドル型の識別子です。 次のいずれかを指定する必要があります。  
+ 代入診断が必要なハンドルの種類を記述するハンドル型識別子。 次のいずれかである必要があります。  
   
--   SQL_HANDLE_DBC として  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
 -   SQL_HANDLE_DESC  
   
--   SQL_HANDLE_ENV として  
+-   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT として  
+-   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
+ SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバーマネージャーとドライバーによってのみ使用されます。 アプリケーションでは、このハンドルの種類を使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、「 [ODBC ドライバーでの接続プールの認識の開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)」を参照してください。  
   
  *Handle*  
- [入力]診断データの構造で示される型のハンドルを*HandleType*します。 場合*HandleType* sql_handle_env としてでは、*処理*共有または共有されていない環境ハンドルのいずれかにすることができます。  
+ 代入*Handletype*によって示される型の診断データ構造体のハンドル。 *Handletype*が SQL_HANDLE_ENV の場合、*ハンドル*は共有環境ハンドルまたは非共有環境ハンドルのどちらかになります。  
   
  *RecNumber*  
- [入力]アプリケーションが情報をシークする元の状態レコードを示します。 状態レコードは、1 から番号が付けられます。  
+ 代入アプリケーションが情報を検索するときに使用するステータスレコードを示します。 ステータスレコードには1から番号が付けられます。  
   
  *SQLState*  
- [出力]診断レコードの 5 文字の SQLSTATE コード (および終端の NULL) を返すバッファーへのポインター *RecNumber*します。 最初の 2 つの文字は、クラスを示します。次の 3 つは、サブクラスを示します。 この情報は、SQL_DIAG_SQLSTATE 診断フィールドに含まれます。 詳細については、次を参照してください。 [SQLSTATEs](../../../odbc/reference/develop-app/sqlstates.md)します。  
+ Output診断レコード*Recnumber*の5文字の SQLSTATE コード (および終了 NULL) を返すバッファーへのポインター。 最初の2文字はクラスを示しています。次の3つはサブクラスを示しています。 この情報は、SQL_DIAG_SQLSTATE 診断フィールドに含まれています。 詳細については、「 [Sqlstates](../../../odbc/reference/develop-app/sqlstates.md)」を参照してください。  
   
- *NativeErrorPtr*  
- [出力]データ ソースに固有のネイティブ エラー コードを返すバッファーへのポインター。 この情報は、SQL_DIAG_NATIVE 診断フィールドに含まれます。  
+ *すべてのエラー Ptr*  
+ Outputデータソースに固有のネイティブエラーコードを返すバッファーへのポインター。 この情報は、SQL_DIAG_NATIVE 診断フィールドに含まれています。  
   
  *[MessageText]*  
- [出力]診断メッセージのテキスト文字列を返すバッファーへのポインター。 この情報は、SQL_DIAG_MESSAGE_TEXT 診断フィールドに含まれます。 文字列の形式では、次を参照してください。[診断メッセージ](../../../odbc/reference/develop-app/diagnostic-messages.md)します。  
+ Output診断メッセージのテキスト文字列を返すバッファーへのポインター。 この情報は、SQL_DIAG_MESSAGE_TEXT 診断フィールドに含まれています。 文字列の形式については、「[診断メッセージ](../../../odbc/reference/develop-app/diagnostic-messages.md)」を参照してください。  
   
- 場合*MessageText*が null の場合、 *TextLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*MessageText*します。  
+ *Messagetext*が NULL の場合でも、 *textlength Ptr*は、 *messagetext*が指すバッファーで返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
   
  *BufferLength*  
- [入力]長さ、**MessageText*文字バッファー。 診断メッセージのテキストの最大長はありません。  
+ 代入**Messagetext*バッファーの長さ (文字数)。 診断メッセージテキストの最大長はありません。  
   
- *TextLengthPtr*  
- [出力]文字 (null 終端文字のために必要な文字の数を除く) の合計数を返すバッファーへのポインターで返される使用可能な *\*MessageText*します。 返される使用できる文字数がより大きい場合*BufferLength*、診断メッセージのテキストで *\*MessageText*に切り捨てられます*BufferLength* null 終了文字の長さマイナスです。  
+ *Textlength Ptr*  
+ Output* \*Messagetext*で返すことができる文字の合計数 (null 終端文字に必要な文字数を除く) を返すバッファーへのポインター。 返すことのできる文字数が*bufferlength*よりも大きい場合、 * \*messagetext*の診断メッセージテキストは*bufferlength*に切り捨てられ、null 終了文字の長さを超えます。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLGetDiagRec**自体の診断レコードは通知されません。 次の戻り値を使用して、独自の実行の結果を報告します。  
+ **SQLGetDiagRec**は自身の診断レコードを通知しません。 次の戻り値を使用して、独自の実行結果を報告します。  
   
--   SQL_SUCCESS:関数には、診断情報が正常に返されます。  
+-   SQL_SUCCESS: 関数は正常に診断情報を返しました。  
   
--   SQL_SUCCESS_WITH_INFO:\* *MessageText*バッファーが小さすぎるため、要求された診断メッセージを保持します。 診断レコードは生成されませんでした。 切り捨てが発生したことは、アプリケーションを比較する必要がありますを決定する*BufferLength*実際に記述されている、使用可能なバイト数へ **StringLengthPtr*します。  
+-   SQL_SUCCESS_WITH_INFO: \* *messagetext*バッファーが小さすぎて、要求された診断メッセージを保持できませんでした。 診断レコードが生成されませんでした。 切り捨てが発生したことを確認するには、アプリケーションで*Bufferlength*と実際に使用可能なバイト数を比較する必要があります。これは **stringlength ptr*に書き込まれます。  
   
--   SQL_INVALID_HANDLE:によって示されるハンドル*HandleType*と*処理*が有効なハンドル。  
+-   SQL_INVALID_HANDLE: *Handletype*と*handle*によって示されたハンドルが有効なハンドルではありませんでした。  
   
--   SQL_ERROR:次のいずれかが発生しました。  
+-   SQL_ERROR: 次のいずれかが発生しました。  
   
-    -   *RecNumber*が負または 0。  
+    -   *Recnumber*が負または0でした。  
   
-    -   *BufferLength* 0 未満でした。  
+    -   *Bufferlength*が0未満でした。  
   
-    -   非同期通知を使用する場合、ハンドルに対して非同期操作は完了しませんでした。  
+    -   非同期通知を使用すると、ハンドルの非同期操作が完了しませんでした。  
   
--   SQL_NO_DATA:*RecNumber*診断レコードで指定したハンドルに存在していた数よりも大きかった*を処理します。* 関数が SQL_NO_DATA を任意の正のも返します*RecNumber*に対する診断レコードがない場合*処理*します。  
+-   SQL_NO_DATA: *recnumber*が、handle に指定されたハンドルに存在する診断レコードの数を超えてい*ます。* また、*ハンドル*の診断レコードが存在しない場合は、正の*値*に対しても SQL_NO_DATA が返されます。  
   
-## <a name="comments"></a>コメント  
- アプリケーションを呼び出す通常**SQLGetDiagRec** SQL_ERROR または sql_success_with_info が以前の ODBC 関数呼び出しが返される場合。 ただし、任意の ODBC 関数では、それが呼び出されるたびに 0 個以上の診断レコードを投稿できます、ため、アプリケーションを呼び出せる**SQLGetDiagRec**任意の ODBC 関数呼び出しの後にします。 アプリケーションが呼び出すことができます**SQLGetDiagRec**診断データの構造の一部またはすべてのレコードを返すを複数回です。 ODBC では、いつでも格納できる診断レコードの数に制限はありません。  
+## <a name="comments"></a>説明  
+ 通常、アプリケーションは、ODBC 関数の前回の呼び出しが SQL_ERROR または SQL_SUCCESS_WITH_INFO を返したときに、 **SQLGetDiagRec**を呼び出します。 ただし、任意の ODBC 関数が呼び出されるたびに0個以上の診断レコードをポストすることができるため、アプリケーションは、任意の ODBC 関数呼び出しの後に**SQLGetDiagRec**を呼び出すことができます。 アプリケーションは**SQLGetDiagRec**を複数回呼び出して、診断データ構造内のレコードの一部またはすべてを返すことができます。 ODBC では、一度に保存できる診断レコードの数に制限はありません。  
   
- **SQLGetDiagRec**診断データの構造体のヘッダーからフィールドを返すには使用できません。 (、 *RecNumber*引数は、0 より大きくなければなりません)。アプリケーションを呼び出す必要があります**SQLGetDiagField**この目的のためです。  
+ **SQLGetDiagRec**を使用して、診断データ構造のヘッダーからフィールドを返すことはできません。 ( *Recnumber*引数には0より大きい値を指定する必要があります)。アプリケーションは、この目的で**SQLGetDiagField**を呼び出す必要があります。  
   
- **SQLGetDiagRec**最も最近の指定したハンドルに関連付けられている診断情報だけを取得、*処理*引数。 アプリケーションが別の ODBC 関数を呼び出す場合を除く**SQLGetDiagRec**、 **SQLGetDiagField**、または**SQLError**、前の呼び出しから診断情報がすべて、同じハンドルが失われます。  
+ **SQLGetDiagRec**は、 *handle*引数で指定されたハンドルに最後に関連付けられた診断情報のみを取得します。 アプリケーションが別の ODBC 関数 ( **SQLGetDiagRec**、 **SQLGetDiagField**、または**SQLError**を除く) を呼び出す場合、同じハンドルでの以前の呼び出しの診断情報は失われます。  
   
- アプリケーションをスキャンできます診断のすべてのレコードをループしてインクリメント*RecNumber*限り**SQLGetDiagRec** SQL_SUCCESS を返します。 呼び出す**SQLGetDiagRec**ヘッダーとレコードのフィールドを非破壊的なは。 アプリケーションを呼び出して**SQLGetDiagRec**を除くその他の関数の限りレコードからフィールドを取得するには、後でもう一度**SQLGetDiagRec**、 **SQLGetDiagField**、または**SQLError**がそれまでの間で呼び出されました。 呼び出すことによって、アプリケーションで使用できる診断レコードの合計数のカウントが取得できますも**SQLGetDiagField** SQL_DIAG_NUMBER のフィールドと、呼び出し元の値を取得する**SQLGetDiagRec**その回数だけです。  
+ アプリケーションでは、 **SQLGetDiagRec**が SQL_SUCCESS を返す限り、ループし、 *recnumber*をインクリメントして、すべての診断レコードをスキャンできます。 **SQLGetDiagRec**への呼び出しは、ヘッダーフィールドとレコードフィールドに対して非破壊です。 アプリケーションでは、 **SQLGetDiagRec**、 **SQLGetDiagField**、または**SQLError**を除く他の関数が中間で呼び出されている限り、後で**SQLGetDiagRec**を再度呼び出して、レコードからフィールドを取得できます。 また、 **SQLGetDiagField**を呼び出して [SQL_DIAG_NUMBER] フィールドの値を取得し、その回数が多くなる**SQLGetDiagRec**を呼び出すことによって、使用可能な診断レコードの合計数を取得することもできます。  
   
- 診断データの構造体のフィールドの説明は、次を参照してください。 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。 詳細については、次を参照してください。[を使用して SQLGetDiagRec および SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)と[実装 SQLGetDiagRec および SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)します。  
+ 診断データ構造のフィールドの説明については、「 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)」を参照してください。 詳細については、「 [SQLGetDiagRec と SQLGetDiagField の使用](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md)」および「 [SQLGetDiagRec と SQLGetDiagField の実装](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)」を参照してください。  
   
- HY010 が生成されますが、非同期的に実行されているものと異なる API を呼び出す「関数のシーケンス エラーです」。 ただし、非同期操作が完了する前に、エラー レコードを取得できません。  
+ 非同期に実行されている API 以外の API を呼び出すと、HY010 "関数シーケンスエラー" が生成されます。 ただし、非同期操作が完了する前にエラーレコードを取得することはできません。  
   
 ## <a name="handletype-argument"></a>HandleType 引数  
- 各ハンドル型には、関連付けられている診断情報を持つことができます。 *HandleType*引数のハンドル型を示します、*処理*引数。  
+ 各ハンドルの種類には、関連付けられた診断情報を含めることができます。 *Handletype*引数は、 *handle*引数のハンドル型を表します。  
   
- いくつかのヘッダーとレコード フィールドは、環境、接続、ステートメント、および記述子ハンドル返されることはできません。 フィールドが適用されていないそれらのハンドルが「ヘッダー フィールド」と「レコードのフィールド」のセクションで示される[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。  
+ 環境、接続、ステートメント、記述子ハンドルに対して、一部のヘッダーフィールドとレコードフィールドを返すことはできません。 フィールドが適用されないハンドルは、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)の "ヘッダーフィールド" セクションと "レコードフィールド" セクションに示されます。  
   
- 呼び出し**SQLGetDiagRec**場合 SQL_INVALID_HANDLE が返さ*HandleType*は SQL_HANDLE_SENV で、共有環境ハンドルを表します。 ただし場合、 *HandleType* sql_handle_env としてでは、*処理*共有または共有されていない環境ハンドルのいずれかにすることができます。  
+ *Handletype*が SQL_HANDLE_SENV の場合、 **SQLGetDiagRec**を呼び出すと SQL_INVALID_HANDLE が返されます。これは、共有環境ハンドルを表します。 ただし、 *Handletype*が SQL_HANDLE_ENV の場合、*ハンドル*は共有環境ハンドルまたは非共有環境ハンドルのいずれかになります。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|診断レコードのフィールドまたは診断のヘッダーのフィールドを取得します。|[SQLGetDiagField 関数](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
+|診断レコードのフィールドまたは診断ヘッダーのフィールドを取得する|[SQLGetDiagField 関数](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC のサンプル プログラム](../../../odbc/reference/sample-odbc-program.md)

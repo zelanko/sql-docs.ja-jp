@@ -1,5 +1,5 @@
 ---
-title: リレーションシップ (SSAS テーブル) の削除 |Microsoft Docs
+title: リレーションシップの削除 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9fd6535c8f2c0f77efc1cc2871de77d29cd6615
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067327"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939724"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>リレーションシップの削除 (SSAS テーブル)
-  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ &#40;SSAS テーブル&#41;](relationships-ssas-tabular.md)」を参照してください。  
+  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ (SSAS テーブル)](relationships-ssas-tabular.md)」を参照してください。  
   
 ## <a name="considerations-for-deleting-relationships"></a>リレーションシップの削除に関する注意事項  
  リレーションシップを削除するかどうかを判断する際には、以下の点に注意してください。  
@@ -52,7 +51,7 @@ ms.locfileid: "66067327"
 4.  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [リレーションシップ &#40;SSAS テーブル&#41;](relationships-ssas-tabular.md)   
+ [SSAS 表形式のリレーションシップ &#40;&#41;](relationships-ssas-tabular.md)   
  [2 つのテーブル間のリレーションシップの作成 &#40;SSAS テーブル&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

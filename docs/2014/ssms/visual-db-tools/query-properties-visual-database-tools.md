@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a1f0074aa7937e10589327bae51c24a0a903a38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064960"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
   クエリおよびビュー デザイナーでクエリを開くと、これらのプロパティが [プロパティ] ウィンドウに表示されます。 特に断りのない限り、このプロパティを [プロパティ] ウィンドウで編集できます。  
@@ -26,11 +25,11 @@ ms.locfileid: "63011477"
 > [!NOTE]  
 >  このトピックでは、アルファベット順ではなくカテゴリ別にプロパティが示されています。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[IDENTITY] カテゴリ**  
  展開して **[オブジェクト名]** プロパティを表示します。  
   
- **名前**  
+ **Name**  
  現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
  **データベース名**  
@@ -42,7 +41,7 @@ ms.locfileid: "63011477"
  **[クエリ デザイナー] カテゴリ**  
  展開すると、その他のプロパティが表示されます。  
   
- **[ターゲット テーブル]**  
+ **ターゲット テーブル**  
  データを挿入するテーブルの名前を指定します。 この一覧は、INSERT クエリまたは MAKE TABLE クエリを作成する場合に表示されます。 INSERT クエリの場合は、一覧でテーブル名を選択します。  
   
  MAKE TABLE クエリの場合は、新しいテーブルの名前を入力します。 テーブルを別のデータ ソースに作成する場合は、データ ソースの名前、所有者 (必要な場合)、テーブルの名前を含めた、完全修飾テーブル名を指定します。  
@@ -68,7 +67,7 @@ ms.locfileid: "63011477"
  **[Top の指定] カテゴリ**  
  展開すると、 **[Top]** 、 **[パーセント]** 、 **[式]** 、および **[With Ties]** の各プロパティが表示されます。  
   
- **[[(Top)]]**  
+ **[(Top)]**  
  クエリに TOP 句が含まれるように指定します。この場合、最初の *n* 行または最初の *n* % の行だけが結果セットに返されます。 既定では、クエリは最初の 10 行を結果セットに返します。  
   
  このボックスは、返される行数を変更するか、異なるパーセントを指定する場合に使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降だけに適用されます。  
@@ -83,7 +82,7 @@ ms.locfileid: "63011477"
  ビューに WITH TIES 句を含むことを指定します。 WITH TIES は、ビューに ORDER BY 句とパーセンテージに基づく TOP 句が含まれる場合に便利です。 このオプションを設定すると、ORDER BY 句の列で同一の値を持つ行がセットになり、セットの一部の行がパーセンテージによる制限で切り捨てられてしまう場合は、すべての行が含まれるように、クエリで指定されるパーセンテージが増やされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降だけに適用されます。  
   
 ## <a name="see-also"></a>参照  
- [パラメーターを持つクエリ&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Visual Database Tools &#40;パラメーターを使用したクエリ&#41;](visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

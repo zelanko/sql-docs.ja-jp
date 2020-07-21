@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5b25db014397545cc2d510d96d09bbc156a68d1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065309"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295867"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW のコンポーネント
 
@@ -37,13 +37,13 @@ ms.locfileid: "68065309"
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW 接続マネージャー](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  SAP BW 接続マネージャーについて説明します。 SAP BW 接続マネージャーは、SAP Netweaver BW Version 7 システムに SAP BW 変換元または SAP BW 変換先を接続します。  
   
- [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
+ [SAP BW 転送元](../integration-services/data-flow/sap-bw-source.md)  
  SAP Netweaver BW システムからデータを抽出できる SAP BW 変換元について説明します。  
   
- [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
+ [SAP BW 転送先](../integration-services/data-flow/sap-bw-destination.md)  
  SAP Netweaver BW システムにデータを読み込める SAP BW 変換先について説明します。  
   
   

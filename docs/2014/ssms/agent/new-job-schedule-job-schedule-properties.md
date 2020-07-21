@@ -1,5 +1,5 @@
 ---
-title: '[新しいジョブ スケジュール]:ジョブ スケジュールのプロパティ |Microsoft Docs'
+title: '[新しいジョブスケジュール]: [ジョブスケジュールのプロパティ] |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064404"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>[新しいジョブ スケジュール]:[ジョブ スケジュールのプロパティ]
   このページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **名前**  
  スケジュールの新しい名前を入力します。  
   
@@ -92,11 +91,11 @@ ms.locfileid: "62704623"
  **Date**  
  ジョブを実行する日付を選択します。  
   
- **[時刻]**  
+ **Time**  
  ジョブを実行する時刻を選択します。  
   
 ## <a name="see-also"></a>参照  
- [作成し、スケジュールをジョブにアタッチ](create-and-attach-schedules-to-jobs.md)   
+ [スケジュールを作成してジョブにアタッチする](create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール設定](schedule-a-job.md)  
   
   

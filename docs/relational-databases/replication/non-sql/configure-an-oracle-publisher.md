@@ -12,26 +12,24 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2b277707c8da44d141036c7e19055383c6c56a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900017"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle パブリッシャーの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Oracle パブリッシャーからパブリケーションを作成する方法は、通常のスナップショットおよびトランザクション パブリケーションを作成する方法と同じですが、Oracle パブリッシャーからパブリケーションを作成する前に、次の手順を実行する必要があります (手順 1、3、および 4 については、このトピックで詳しく説明します)。  
   
 1.  提供されているスクリプトを使用して Oracle データベース内にレプリケーション管理ユーザーを作成します。  
   
 2.  パブリッシュするテーブルに、各テーブルの SELECT アクセス許可を、手順 1. で作成した Oracle 管理ユーザーに対して直接 (ロールを通じてではなく) 許可します。  
   
-3.  Oracle クライアント ソフトウェアと OLE DB プロバイダーを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにインストールしてから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。 ディストリビューターを 64 ビットのプラットフォームで実行している場合は、64 ビット バージョンの Oracle OLE DB プロバイダーを使用する必要があります。  
+3.  Oracle クライアント ソフトウェアと OLE DB プロバイダーを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにインストールしてから、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。 ディストリビューターを 64 ビットのプラットフォームで実行している場合は、64 ビット バージョンの Oracle OLE DB プロバイダーを使用する必要があります。  
   
 4.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle データベースをパブリッシャーとして構成します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクション レプリケーションとスナップショット レプリケーションに対する次の異種シナリオをサポートします。  
   
@@ -53,12 +51,12 @@ ms.locfileid: "68020034"
 >  パブリッシャーまたはディストリビューターを有効にし、Oracle パブリケーションまたは Oracle パブリケーションのサブスクリプションを作成するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Oracle データベース内でのレプリケーション管理ユーザー スキーマの作成  
- レプリケーション エージェントは、Oracle データベースに接続して、ユーザー スキーマのコンテキストで操作を実行します。このユーザー スキーマは作成する必要があります。 このスキーマには多くの権限を許可する必要があります。この権限については、次のセクションに示します。 このスキーマは、Oracle パブリッシャーでの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション プロセスで作成されたすべてのオブジェクト (パブリック シノニム **MSSQLSERVERDISTRIBUTOR**は除く) を所有します。 Oracle データベースで作成したオブジェクトの詳細については、「 [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)」を参照してください。  
+ レプリケーション エージェントは、Oracle データベースに接続して、ユーザー スキーマのコンテキストで操作を実行します。このユーザー スキーマは作成する必要があります。 このスキーマには多くの権限を許可する必要があります。この権限については、次のセクションに示します。 このスキーマは、Oracle パブリッシャーでの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション プロセスで作成されたすべてのオブジェクト (パブリック シノニム **MSSQLSERVERDISTRIBUTOR** は除く) を所有します。 Oracle データベースで作成したオブジェクトの詳細については、「 [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)」を参照してください。  
   
 > [!NOTE]  
 >  **MSSQLSERVERDISTRIBUTOR** パブリック シノニムと、 **CASCADE** オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。  
   
- Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、 *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
+ Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後に、 *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
   
  DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報を提供する必要があるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
   
@@ -91,7 +89,7 @@ ms.locfileid: "68020034"
   
  Oracle Universal Installer で、次の情報を指定する必要があります。  
   
-|[情報]|[説明]|  
+|Information|説明|  
 |-----------------|-----------------|  
 |Oracle ホーム|Oracle ソフトウェアのインストール ディレクトリのパスです。 既定値 (C:\oracle\ora90 など) をそのまま使用するか、別のパスを入力します。 Oracle ホームの詳細については、このトピックの「Oracle ホームに関する注意点」を参照してください。|  
 |Oracle ホーム名|Oracle ホーム パスの別名|  
@@ -99,7 +97,7 @@ ms.locfileid: "68020034"
   
  Oracle Universal Installer が完了したら、Net Configuration Assistant を使用してネットワーク接続を構成します。 ネットワーク接続を構成するには、4 つの情報を指定する必要があります。 Oracle データベース管理者は、データベースとリスナーをセットアップするときにネットワークを構成しています。この情報が不明な場合は、管理者に問い合わせてください。 以下の操作を行う必要があります。  
   
-|操作|[説明]|  
+|アクション|説明|  
 |------------|-----------------|  
 |データベースを識別する|データベースは 2 とおりの方法で識別できます。 1 つ目は、SID (Oracle System Identifier) を使用する方法で、すべての Oracle リリースで使用できます。 2 つ目は、サービス名を使用する方法で、Oracle リリース 8.0 以降で使用できます。 どちらの方法も、データベースの作成時に構成される値を使用します。データベースのリスナーの構成時に管理者が使用したものと同じ命名方法を、クライアント ネットワーク構成でも使用することが重要です。|  
 |データベースのネットワークの別名を識別する|Oracle データベースへのアクセスに使用するネットワークの別名を指定する必要があります。 Oracle データベースを、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでパブリッシャーとして識別するときに、この別名を指定します。 ネットワークの別名とは、基本的にはデータベースの作成時に構成されたリモート SID またはサービス名へのポインターです。ネットワークの別名は、各種の Oracle リリースや製品では、ネット サービス名や TNS 別名など、複数の名前で呼ばれています。 SQL*Plus では、ログイン時に "ホスト文字列" パラメーターとしてこの別名の入力画面が表示されます。|  
@@ -118,7 +116,7 @@ ms.locfileid: "68020034"
   
 2.  「 `cmd` 」と入力して **[OK]** をクリックします。  
   
-3.  コマンド プロンプトで、次のように入力します。  
+3.  コマンド プロンプトに、次のコマンドを入力します。  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -147,8 +145,8 @@ ms.locfileid: "68020034"
   
 ## <a name="see-also"></a>参照  
  [Administrative Considerations for Oracle Publishers (Oracle パブリッシャーの管理上の注意点)](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers (Oracle パブリッシャーのデータ型マッピング)](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Glossary of Terms for Oracle Publishing (Oracle パブリッシングの用語)](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Oracle パブリッシングの用語](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

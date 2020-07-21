@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab592ba35ebc0b012a41aea2f05e27a76c0a7e0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065408"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性ソリューション (SQL Server)
   このトピックでは、サーバーやデータベースの可用性を向上する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の高可用性ソリューションをいくつか紹介します。 高可用性ソリューションは、ハードウェアやソフトウェアで問題が発生した場合でもその影響が現れないようにし、アプリケーションの可用性を維持しながら、ユーザーに影響するダウンタイムを最小限に抑えます。  
@@ -30,16 +29,16 @@ ms.locfileid: "63193044"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのエディションで特定の高可用性ソリューションがサポートされているかについては、「[SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「高可用性 (AlwaysOn)」のセクションを参照してください。  
 (#RecommendedSolutions)  
   
-##  <a name="TermsAndDefinitions"></a> SQL Server の高可用性ソリューションの概要  
+##  <a name="overview-of-sql-server-high-availability-solutions"></a><a name="TermsAndDefinitions"></a>SQL Server 高可用性ソリューションの概要  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サーバーやデータベースの高可用性を実現するために複数の方法が用意されています。 高可用性を実現するには以下の方法があります。  
   
  AlwaysOn フェールオーバー クラスター インスタンス  
- 一部として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 製品、AlwaysOn フェールオーバー クラスター インスタンスは、レベル、サーバー インスタンスでの冗長性によるローカル高可用性を提供する Windows Server フェールオーバー クラスタ リング (WSFC) の機能を活用して*フェールオーバー クラスター インスタンス*(FCI)。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
+ Alwayson サービスの一部として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Alwayson フェールオーバークラスターインスタンスでは、Windows Server フェールオーバークラスタリング (WSFC) の機能を利用して、サーバーインスタンスレベル (*フェールオーバークラスターインスタンス*(fci)) での冗長性によるローカル高可用性を実現します。 FCI は、Windows Server フェールオーバー クラスタリング (WSFC) ノード全体、場合によっては複数のサブネットにインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスです。 FCI は、ネットワーク上では 1 台のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのように見えますが、現在のノードが使用できなくなった場合には、1 つの WSFC ノードから別の WSFC ノードにフェールオーバーする機能を備えています。  
   
  詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、次を参照してください。 [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)します。  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された、エンタープライズ レベルの高可用性およびディザスター リカバリー ソリューションです。このソリューションによって、1 つ以上のユーザー データベースの可用性が最大限に高まります。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。 詳細については、「 [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 >  FCI は、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ #40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "63193044"
  ログ配布  
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] およびデータベース ミラーリングと同様、ログ配布はデータベース レベルで機能します。 ログ配布を使用して、1 つの運用データベース (*プライマリ データベース*) に対応する 1 つ以上のウォーム スタンバイ データベース (*セカンダリ データベース*) を管理できます。 ログ配布の詳細については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-##  <a name="RecommendedSolutions"></a> SQL Server を使用してデータを保護するための推奨されるソリューション  
+##  <a name="recommended-solutions-for-using-sql-server-to-protect-data"></a><a name="RecommendedSolutions"></a> SQL Server を使用してデータを保護するための推奨されるソリューション  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境にデータ保護を確立するための推奨事項は次のとおりです。  
   
 -   データ保護、サードパーティ共有ディスク ソリューション (SAN) を通じて、AlwaysOn フェールオーバー クラスター インスタンスを使用することをお勧めします。  
@@ -64,8 +63,8 @@ ms.locfileid: "63193044"
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしないエディションの [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]を実行している場合は、ログ配布をお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のどのエディションで[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]がサポートされているかについては、「[SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「高可用性 (AlwaysOn)」のセクションを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [データベース ミラーリング:相互運用性と共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Windows Server フェールオーバークラスタリング &#40;WSFC&#41; SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [データベースミラーリング: 相互運用性と共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [SQL Server 2014 データベース エンジンの非推奨の機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

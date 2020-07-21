@@ -1,5 +1,5 @@
 ---
-title: レベル 1 API 関数 (ODBC Driver for Oracle) |Microsoft Docs
+title: レベル1の API 関数 (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb1771f88987073b1ef0bcc106f8de28549affe6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085474"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299952"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>レベル 1 API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- このレベルの提供するコア インターフェイスの適合性の関数の他のトランザクションなどの追加機能をサポートします。  
+ このレベルの関数は、コアインターフェイスの準拠に加えて、トランザクションサポートなどの追加機能を提供します。  
   
-|API 関数|注|  
+|API 関数|メモ|  
 |------------------|-----------|  
-|**SQLColumns**|結果の指定したテーブルの列の一覧は、テーブルまたはテーブルのセットを作成します。 パブリック シノニムの列を要求するときに SYNONYMCOLUMNS 接続属性を設定し、空の文字列として指定された、 *szTableOwner*引数。 パブリック シノニムの列を返すときに、ドライバーはテーブル名の列を空の文字列に設定します。 結果セットには、追加の列各行の末尾の序数位置にはが含まれています。 この値は、テーブル内の列の序数位置です。|  
-|**SQLDriverConnect**|既存のデータ ソースに接続します。 詳細については、次を参照してください。[接続文字列の形式と属性](../../odbc/microsoft/connection-string-format-and-attributes.md)します。|  
-|**SQLGetConnectOption**|接続オプションの現在の設定を返します。 この関数は部分的にサポートされています。 ドライバーのすべての値をサポートする、 *fOption*引数がいくつかサポートしていません*vParam*の値を*fOption*引数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). 詳細については、次を参照してください。[接続オプション](../../odbc/microsoft/connect-options.md)します。|  
-|**SQLGetData**|指定された結果セットの現在のレコードの 1 つのフィールドの値を取得します。|  
-|**SQLGetFunctions**|サポートされているすべての関数の場合は TRUE を返します。 ドライバー マネージャーによって実装されています。|  
-|**SQLGetInfo**|SQLHDBC、SQLUSMALLINT、SQLPOINTER、SQLSMALLINT、SQLSMALLINT などの情報を返します\*、ODBC Driver for Oracle データ ソース、接続ハンドルに関連付けられているについて*hdbc*します。|  
-|**SQLGetStmtOption**|ステートメント オプションの現在の設定を返します。 詳細については、次を参照してください。[ステートメント オプション](../../odbc/microsoft/statement-options.md)します。|  
-|**SQLGetTypeInfo**|データ ソースでサポートされるデータ型に関する情報を返します。 ドライバーは、SQL 結果セット内の情報を返します。|  
-|**SQLParamData**|組み合わせて使用**SQLPutData**ステートメントの実行時にパラメーターのデータを指定します。|  
-|**SQLPutData**|ステートメントの実行時にドライバーをパラメーターまたは列のデータを送信するアプリケーションをできるようにします。|  
-|**SQLSetConnectOption**|接続の側面を制御するオプションへのアクセスを提供します。 この関数は部分的にサポートされています。ドライバーのすべての値をサポートする、 *fOption*引数がいくつかサポートしていません*vParam*の値を*fOption*引数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). 詳細については、次を参照してください。[接続オプション](../../odbc/microsoft/connect-options.md)します。|  
-|**SQLSetStmtOption**|ステートメント ハンドルに関連するオプションを設定*hstmt*します。 詳細については、次を参照してください。[ステートメント オプション](../../odbc/microsoft/statement-options.md)します。|  
-|**SQLSpecialColumns**|テーブルの行を一意に識別する最適な列のセットを取得します。|  
-|**SQLStatistics**|1 つのテーブルとインデックス、またはテーブルに関連付けられているタグの名前に関する統計情報の一覧を取得します。 ドライバーは、その結果、情報を設定を返します。|  
-|**SQLTables**|内のパラメーターで指定されたテーブル名の一覧を返します、 **SQLTables**ステートメント。 パラメーターが指定されていない場合は、現在のデータ ソースに格納されているテーブル名を返します。 ドライバーは、その結果、情報を設定を返します。<br /><br /> 列挙型の呼び出しでは、リモート ビューまたはローカルのパラメーター化されたビューの結果セットのエントリは表示されません。 ただし、呼び出しを**SQLTables**一意テーブルの名前指定子は、検索のようなビューでは、その名前を持つ、存在する場合は、これにより、新しいテーブルを作成する前に、名前の競合をチェックする API。<br /><br /> パブリック シノニムがの TABLE_OWNER 値と共に返されます""です。<br /><br /> SYS またはシステムによって所有されているビューは、システム ビューとして識別されます。|
+|**SQLColumns**|指定されたテーブルの列リストであるテーブルの結果セットを作成します。 パブリックシノニムの列を要求する場合は、SYNONYMCOLUMNS 接続属性を設定し、 *Sztableowner*引数として空の文字列を指定する必要があります。 パブリックシノニムの列を返す場合、ドライバーはテーブル名列を空の文字列に設定します。 結果セットには、各行の末尾に位置を示す追加の列が含まれています。 この値は、テーブル内の列の序数位置です。|  
+|**SQLDriverConnect**|既存のデータソースに接続します。 詳細については、「[接続文字列の形式と属性](../../odbc/microsoft/connection-string-format-and-attributes.md)」を参照してください。|  
+|**SQLGetConnectOption**|接続オプションの現在の設定を返します。 この関数は部分的にサポートされています。 ドライバーは*foption*引数のすべての値をサポートしますが、 *foption*引数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)の一部の*vparam*値をサポートしていません。 詳細については、「 [Connect Options](../../odbc/microsoft/connect-options.md)」を参照してください。|  
+|**SQLGetData**|指定された結果セットの現在のレコード内の1つのフィールドの値を取得します。|  
+|**SQLGetFunctions**|サポートされているすべての関数に対して TRUE を返します。 ドライバーマネージャーによって実装されます。|  
+|**SQLGetInfo**|ODBC Driver for Oracle および接続ハンドル*hdbc*に関連付けられているデータソースについて\*、SQLHDBC、sqlus悪意のある SQLPOINTER、SQLSMALLINT、sqlsmallint などの情報を返します。|  
+|**SQLGetStmtOption**|ステートメントオプションの現在の設定を返します。 詳細については、「[ステートメントオプション](../../odbc/microsoft/statement-options.md)」を参照してください。|  
+|**SQLGetTypeInfo**|データソースでサポートされているデータ型に関する情報を返します。 ドライバーは、SQL 結果セットの情報を返します。|  
+|**SQLParamData**|ステートメントの実行時にパラメーターデータを指定するために、 **Sqlputdata**と組み合わせて使用されます。|  
+|**SQLPutData**|ステートメントの実行時に、アプリケーションからドライバーにパラメーターまたは列のデータを送信できるようにします。|  
+|**SQLSetConnectOption**|接続の側面を制御するオプションへのアクセスを提供します。 この関数は部分的にサポートされています。ドライバーは*foption*引数のすべての値をサポートしていますが、 *foption*引数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)の一部の*vparam*値をサポートしていません。 詳細については、「 [Connect Options](../../odbc/microsoft/connect-options.md)」を参照してください。|  
+|**SQLSetStmtOption**|ステートメントハンドルの*hstmt*に関連するオプションを設定します。 詳細については、「[ステートメントオプション](../../odbc/microsoft/statement-options.md)」を参照してください。|  
+|**SQLSpecialColumns**|テーブル内の行を一意に識別する最適な列のセットを取得します。|  
+|**SQLStatistics**|テーブルに関連付けられた1つのテーブルとインデックス (またはタグ名) に関する統計の一覧を取得します。 ドライバーは、結果セットとして情報を返します。|  
+|**SQLTables**|**Sqltables**ステートメント内のパラメーターによって指定されたテーブル名の一覧を返します。 パラメーターが指定されていない場合は、現在のデータソースに格納されているテーブル名を返します。 ドライバーは、結果セットとして情報を返します。<br /><br /> 列挙型の呼び出しは、リモートビューまたはローカルのパラメーター化されたビューに対して結果セットのエントリを受け取りません。 ただし、一意のテーブル名指定子を使用して**Sqltables**を呼び出すと、そのようなビューの一致が検出されます (存在する場合)。これにより、API は、新しいテーブルを作成する前に名前の競合を確認できます。<br /><br /> パブリックシノニムは、TABLE_OWNER 値が "" で返されます。<br /><br /> SYS または SYSTEM が所有するビューは、システムビューとして識別されます。|

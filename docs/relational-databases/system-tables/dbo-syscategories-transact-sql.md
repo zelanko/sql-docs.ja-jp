@@ -1,5 +1,5 @@
 ---
-title: dbo.syscategories (TRANSACT-SQL) |Microsoft Docs
+title: dbo.sysのカテゴリ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ dev_langs:
 helpviewer_keywords:
 - syscategories system table
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 92d4883df378521af717266c31a0decfaa403c5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084671"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890538"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、ジョブ、警告、オペレーターの分類に使用されるカテゴリを格納します。 このテーブルに格納されます、 **msdb**データベース。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、ジョブ、警告、オペレーターの分類に使用されるカテゴリを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリの ID。|  
-|**category_class**|**int**|カテゴリ内のアイテムの種類。<br /><br /> **1**ジョブを =<br /><br /> **2** = 警告<br /><br /> **3** = 演算子|  
-|**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチ サーバー<br /><br /> **3** = なし|  
+|**category_class**|**int**|カテゴリ内のアイテムの種類。<br /><br /> **1** = ジョブ<br /><br /> **2** = アラート<br /><br /> **3** = 演算子|  
+|**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリの名前。|  
   
   

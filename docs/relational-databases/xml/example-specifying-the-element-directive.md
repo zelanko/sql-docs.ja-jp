@@ -1,5 +1,6 @@
 ---
 title: 例:ELEMENT ディレクティブの指定 | Microsoft Docs
+description: SQL クエリで ELEMENT ディレクティブを指定して、要素中心の XML を生成する方法の例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632621"
 ---
 # <a name="example-specifying-the-element-directive"></a>例:ELEMENT ディレクティブの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   この例では、次に示すように従業員情報を取得し、要素中心の XML を生成します。  
   
 ```  

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3376b682b9d461547356920f837e62554640fe1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63144498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024698"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [ログ ファイルの表示] を使用すると、次のログに記録されたエラーおよびイベントに関する情報にアクセスできます。  
   
 -   監査コレクション  
   
--   データ コレクション  
+-   データ収集  
   
 -   データベース メール  
   
@@ -40,12 +39,12 @@ ms.locfileid: "63144498"
   
  [ログ ファイルの表示] は、表示する情報に応じていくつかの方法で開くことができます。  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permissions  
  オンラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
  オフラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、およびログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「 [オフライン ログ ファイルの表示](view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  
   
-### <a name="security"></a>セキュリティ  
+### <a name="security"></a>Security  
  securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
 ### <a name="view-log-files"></a>ログ ファイルの表示  

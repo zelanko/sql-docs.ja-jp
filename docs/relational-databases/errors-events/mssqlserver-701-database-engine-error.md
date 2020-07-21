@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 678aae5ea4fdb2a5529b22b560522ca183ab4185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0ad5eb99009a6f9f980edc062c10a5c98831984
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780234"
 ---
-# <a name="mssqlserver701"></a>MSSQLSERVER_701
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_701"></a>MSSQLSERVER_701
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|701|  
 |イベント ソース|MSSQLSERVER|  
@@ -33,7 +33,7 @@ ms.locfileid: "67951618"
 |メッセージ テキスト|システム メモリが不足しているため、このクエリを実行できません。|  
   
 ## <a name="explanation"></a>説明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリを実行するために必要なメモリを割り当てることができませんでした。 このエラーはさまざまな理由で発生しますが、その原因としてはオペレーティング システムの設定、使用可能な物理メモリ容量、現在のワークロードに対するメモリ制限などが考えられます。 多くの場合、失敗したトランザクション自体がエラーの原因ではありません。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリを実行するために必要なメモリを割り当てることができませんでした。 この原因としては、オペレーティング システムの設定、物理メモリの可用性、現在のワークロードのメモリ制限など、さまざまなことが考えられます。 ほとんどの場合、トランザクションが失敗しても、このエラーは発生しません。  
   
 サーバーに十分なメモリがないので、DBCC ステートメントなどの診断クエリは失敗する可能性があります。  
   
@@ -61,8 +61,6 @@ ms.locfileid: "67951618"
 4.  DBCC MEMORYSTATUS 出力を監視し、エラー メッセージが表示された場合にどのように変化するかを調べます。  
   
 5.  ワークロード (同時セッション数や現在実行中のクエリ数など) をチェックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 次のアクションを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるメモリを増やせる可能性があります。  
   

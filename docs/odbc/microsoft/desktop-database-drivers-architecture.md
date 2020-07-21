@@ -1,5 +1,5 @@
 ---
-title: デスクトップ データベース ドライバーのアーキテクチャ |Microsoft Docs
+title: デスクトップデータベースドライバーのアーキテクチャ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,41 +12,41 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae6fb72bb3ed0a9bca1571eb572bbfbd20fe9995
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071907"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288742"
 ---
 # <a name="desktop-database-drivers-architecture"></a>デスクトップ データベース ドライバーのアーキテクチャ
-使用には、Microsoft Windows 95 以降、または Windows NT 4.0 と Windows 2000 は、これらのドライバーが設計されています。 Windows 95 以降; のみの 32 ビット アプリケーションがサポートされます。16 ビットおよび 32 ビット アプリケーションは、Windows NT 4.0 および Windows 2000 でサポートされます。  
+これらのドライバーは、Microsoft Windows 95 以降、または Windows NT 4.0 と Windows 2000 で使用するように設計されています。 Windows 95 以降では、32ビットアプリケーションのみがサポートされています。16ビットおよび32ビットのアプリケーションは、Windows NT 4.0 と Windows 2000 でサポートされています。  
   
 > [!NOTE]  
->  これらのドライバーで使用される ODBC のバージョンについてを参照してください、 *ODBC プログラマ リファレンス*と過去および現在のリリース ノート。 これらのドライバーは、表示される領域以外に準拠している、 *ODBC プログラマ リファレンス*します。  
+>  これらのドライバーで使用する ODBC のバージョンの詳細については、 *Odbc プログラマーズリファレンス*、および過去と現行のリリースノートを参照してください。 記載されている領域を除き、これらのドライバーは*ODBC プログラマーズリファレンス*に準拠しています。  
   
- ODBC のデスクトップ データベース ドライバーには、Microsoft Access、dBASE、Excel、Paradox、およびテキストの 32 ビット ドライバーが含まれます。 いいえ-16 ビットのドライバーが含まれます。 (Microsoft FoxPro 用のドライバーは使用可能な個別に) です。  
+ ODBC デスクトップデータベースドライバーには、Microsoft Access、dBASE、Microsoft Excel、Paradox、およびテキスト用の32ビットドライバーが含まれています。 16ビットドライバーは含まれません。 (Microsoft FoxPro 用ドライバーは別途提供されています。)  
   
- Windows 95 以降のアプリケーション/ドライバーのアーキテクチャを示します。  
+ Windows 95 以降のアプリケーション/ドライバーアーキテクチャは次のとおりです。  
   
- ![アプリ&#47;ドライバー アーキテクチャ。Windows 95 以降](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![アプリ&#47;ドライバーのアーキテクチャ: Windows 95 以降](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
- Windows 95 で 16 ビット アプリケーションでこれらのドライバーの使用がサポートされていません。  
+ Windows 95 では、16ビットアプリケーションによるこれらのドライバーの使用はサポートされていません。  
   
- Windows NT 4.0 や Windows 2000 のアプリケーション/ドライバーのアーキテクチャを示します。  
+ Windows NT 4.0 および Windows 2000 のアプリケーション/ドライバーアーキテクチャは次のとおりです。  
   
- ![アプリ&#47;ドライバー アーキテクチャ。NT 4.0 および Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![アプリ&#47;ドライバーのアーキテクチャ: NT 4.0 および Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
- デスクトップ データベース ドライバーは、2 階層のドライバーです。 2 層構成では、ドライバーは、解析、検証、最適化、およびクエリの実行のプロセスを実行しません。 代わりに、Microsoft Jet は、これらのタスクを実行します。 ODBC API 呼び出しを処理し、SQL エンジンとして機能します。 Microsoft Jet は、ドライバーの分離不可能整数部分になります。ドライバーが付属し、ドライバーが存在する場合でも、コンピューター上の他のアプリケーションが使用しなくします。  
+ デスクトップデータベースドライバーは2層ドライバーです。 2層構成では、ドライバーはクエリの解析、検証、最適化、および実行のプロセスを実行しません。 代わりに、Microsoft Jet はこれらのタスクを実行します。 ODBC API 呼び出しを処理し、SQL エンジンとして機能します。 Microsoft Jet は、ドライバーの一部ではなく、コンピューター上の他のアプリケーションがそれを使用していない場合でも、ドライバーに付属しており、ドライバーと共に存在します。  
   
- デスクトップ データベース ドライバーは、6 つの異なるドライバー - またはより正確に 1 つで構成されているドライバー ファイル (Odbcjt32.dll) を ODBC[ドライバー マネージャー](../../odbc/reference/the-driver-manager.md) 6 つの異なる方法で使用します。 Odbcjt32.dll でドライバーをドライバー マネージャーを使用してデータ ソースのレジストリ エントリで DRIVERID フラグを決定します。 アプリケーションへの呼び出しに含まれる接続文字列でこのフラグを渡します**SQLDriverConnect**します。 既定では、フラグは、Microsoft Access ドライバーの ID です。  
+ デスクトップデータベースドライバーは、6つの異なるドライバー (または、より正確には、ODBC[ドライバーマネージャー](../../odbc/reference/the-driver-manager.md)が6つの異なる方法で使用するドライバーファイル (Odbcjt32) で構成されます。 データソースのレジストリエントリにある DRIVERID フラグによって、Odbcjt32 内でドライバーマネージャーが使用するドライバーが決まります。 アプリケーションは、 **SQLDriverConnect**の呼び出しに含まれる接続文字列にこのフラグを渡します。 既定では、フラグは Microsoft Access ドライバーの ID です。  
   
- ドライバーのセットアップ ファイルは、セットアップ時に、DRIVERID フラグを変更します。 Microsoft Access ドライバーを除くすべてのドライバーでは、関連付けられたセットアップ DLL があります。 クリックすると**セットアップ**で、 [Microsoft ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md) ODBC インストーラー DLL (Odbcinst.dll) は、データ ソースのセットアップ DLL を読み込みます。 ODBC インストーラーの関数をエクスポートする DLL のセットアップ**SQLConfigDataSource**します。 ウィンドウ ハンドルが渡された場合**SQLConfigDataSource**、この関数は、セットアップ ウィンドウを表示し、ユーザー インターフェイスから選択したドライバーに従って DRIVERID フラグを変更します。  
+ ドライバーセットアップファイルは、セットアップ時に DRIVERID フラグを変更します。 Microsoft Access ドライバー以外のすべてのドライバーには、セットアップ DLL が関連付けられています。 データソースの[MICROSOFT Odbc データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)で [**セットアップ**] をクリックすると、Odbc インストーラー dll (odbcinst .dll) によってセットアップ dll が読み込まれます。 セットアップ DLL により、ODBC インストーラー関数**Sqlconfigdatasource**がエクスポートされます。 ウィンドウハンドルが**Sqlconfigdatasource**に渡されると、この関数はセットアップウィンドウを表示し、ユーザーインターフェイスから選択されたドライバーに従って driverid フラグを変更します。  
   
- NULL ウィンドウのハンドルが渡されるファイルがプログラムによって作成されると、 **SQLConfigDataSource**、関数は、データ ソースを作成、動的にに従って DRIVERID フラグを変更して、 *lpszDriver*関数呼び出しの引数。  
+ プログラムによってファイルが作成されると、 **Sqlconfigdatasource**に NULL ウィンドウハンドルが渡されます。この関数は、関数呼び出しの*lpszdriver*引数に従って driverid フラグを変更して、データソースを動的に作成します。  
   
- Odbcjt32.dll では、Microsoft Jet API の上に ODBC 関数を実装します。 ODBC および Microsoft Jet の関数間の直接マッピングただしします。 カーソル モデルと SQL のマッピングなど、さまざまな要因は、関数の直接的な相関関係を回避します。  
+ Odbcjt32 は、Microsoft Jet API 上に ODBC 関数を実装します。 ただし、ODBC と Microsoft Jet の関数の間に直接のマッピングはありません。 カーソルモデルや SQL マッピングなどの多くの要因により、関数を直接相関させることができません。  
   
- ODBC ドライバーは、Microsoft Jet エンジンと ODBC ドライバー マネージャーの間存在します。 アプリケーションによって呼び出されたいくつかの ODBC 関数は、ドライバー マネージャーによって処理され、ドライバーに渡されません。 Microsoft Jet をこれらの関数には、ドライバー マネージャーへの直接接続があるないために、呼び出す関数を表示されません。
+ ODBC ドライバーは、Microsoft Jet エンジンと ODBC ドライバーマネージャーの間に存在します。 アプリケーションによって呼び出される一部の ODBC 関数は、ドライバーマネージャーによって処理され、ドライバーに渡されません。 これらの関数では、ドライバーマネージャーに直接接続されていないため、Microsoft Jet は関数呼び出しを認識しません。

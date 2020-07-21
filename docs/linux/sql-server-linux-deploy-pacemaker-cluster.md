@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077476"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196760"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux 用の Pacemaker クラスターをデプロイする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このチュートリアルでは、。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI) 用の Linux Pacemaker クラスターをデプロイするために必要なタスクについて説明します。 緊密に結合された Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] スタックとは異なり、Linux 上の Pacemaker クラスター作成と可用性グループ (AG) 構成は、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] のインストールの前でも後でも行うことができます。 AG または FCI デプロイの Pacemaker 部分のリソースの統合と構成は、クラスターの構成後に行われます。
 > [!IMPORTANT]
@@ -175,7 +175,7 @@ SLES で Pacemaker クラスターを作成するプロセスは、RHEL と Ubun
    ```
    
 7. 管理用の IP アドレスを構成した場合は、ブラウザーでテストできます。このとき、*hacluster* のパスワード変更もテストされます。
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. クラスターのノードとなる別の SLES サーバーで、以下を実行します。 
    ```bash
@@ -200,7 +200,7 @@ SLES で Pacemaker クラスターを作成するプロセスは、RHEL と Ubun
 次のコマンドを使用して、SQL Server HA パッケージおよび [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] エージェントをインストールします (まだインストールしていない場合)。 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をインストールした後で HA パッケージをインストールすると、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] を使用するために再起動が必要になります。 この時点で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] がインストールされているはずであるため、これらの手順では、Microsoft パッケージのリポジトリが既にセットアップされていることを前提としています。
 > [!NOTE]
 > - ログ配布またはその他の用途で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] エージェントを使用する予定がない場合は、インストールする必要がありません。したがって、パッケージ *mssql-server-agent* はスキップできます。
-> - [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux 用のその他のパッケージ ([!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] フルテキスト検索 (*mssql-server-fts*) と [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*)) は、FCI と AG のいずれについても、高可用性を確保するうえで必須ではありません。
+> - Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用のその他のパッケージ ([!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] フルテキスト検索 (*mssql-server-fts*) と [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*)) は、FCI と AG のいずれについても、高可用性を確保するうえで必須ではありません。
 
 **RHEL**
 
@@ -223,7 +223,7 @@ sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、SQL Server on Linux 用に Pacemaker クラスターをデプロイする方法について説明しました。 以下の方法を学習しました。
 > [!div class="checklist"]

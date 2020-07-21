@@ -1,5 +1,5 @@
 ---
-title: SSMA for Sybase コンポーネント (SybaseToSQL) の削除 |Microsoft Docs
+title: SSMA for Sybase コンポーネントの削除 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,50 +10,50 @@ ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028645"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA for Sybase コンポーネントの削除 (SybaseToSQL)
-終了したらデータベースを移行してから Sybase Adaptive Server Enterprise (ASE) に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA コンポーネントをアンインストールしたい場合があります。 いつでも、クライアント コンポーネントをアンインストールすることができますから拡張機能パックをアンインストールしないでください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、移行されたデータベース内の関数を使用できなくする場合を除き、 **ssma_syb** のスキーマ**sysdb**データベース。  
+Sybase Adaptive Server Enterprise (ASE) からへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースの移行が完了したら、ssma コンポーネントのアンインストールが必要になる場合があります。 クライアントコンポーネントはいつでもアンインストールできますが、移行したデータベースが**sysdb**データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**ssma_syb**スキーマの関数を使用しなくなったことが確実でない限り、から拡張機能パックをアンインストールしないでください。  
   
-## <a name="uninstalling-the-ssma-for-sybase-client"></a>Sybase クライアント用の SSMA のアンインストール  
-SSMA をアンインストールするにを使用して**プログラム追加と削除**します。  
+## <a name="uninstalling-the-ssma-for-sybase-client"></a>SSMA for Sybase クライアントのアンインストール  
+SSMA をアンインストールするには、[**プログラムの追加と削除**] を使用します。  
   
 **SSMA をアンインストールするには**  
   
-1.  コントロール パネルで、開く**プログラム追加と削除**します。  
+1.  [コントロール] パネルで **[プログラムの追加と削除]** を開きます。  
   
-2.  選択**Microsoft SQL Server Migration Assistant for Sybase**、 をクリックし、**削除**します。  
+2.  **Sybase の Microsoft SQL Server Migration Assistant**を選択し、[**削除**] をクリックします。  
   
-3.  SSMA をアンインストールすることを確認するには、次のようにクリックします。**はい**します。  
+3.  SSMA をアンインストールすることを確認するには、[**はい**] をクリックします。  
   
-## <a name="uninstalling-the-extension-pack"></a>拡張機能パックをアンインストールします。  
-データベースを移行は、内のオブジェクトを使用しない場合は、確認、 **sysdb.ssma_syb**スキーマ、拡張機能パックを削除するを使用**プログラム追加と削除**します。  
+## <a name="uninstalling-the-extension-pack"></a>拡張機能パックのアンインストール  
+移行したデータベースで**ssma_syb**スキーマのオブジェクトが使用されていないことが確実な場合は、[**プログラムの追加と削除**] を使用して拡張機能パックを削除できます。  
   
 拡張機能パックをアンインストールするには  
   
-1.  コントロール パネルで、開く**プログラム追加と削除**します。  
+1.  [コントロール] パネルで **[プログラムの追加と削除]** を開きます。  
   
-2.  選択**Microsoft SQL Server Migration Assistant for Sybase 拡張パック**、 をクリックし、**削除**します。  
+2.  **Sybase 拡張パックの Microsoft SQL Server Migration Assistant**を選択し、[**削除**] をクリックします。  
   
-3.  拡張機能パックをアンインストールすることを確認するには、次のようにクリックします。**はい**します。  
+3.  拡張パックをアンインストールすることを確認するには、[**はい**] をクリックします。  
   
-4.  ユーティリティのデータベースのスクリプト ページで、インスタンスで次のようにクリックします。**次**します。  
+4.  [ユーティリティを使用したインスタンスデータベーススクリプト] ページで、[**次へ**] をクリックします。  
   
-5.  接続パラメーター ページで、認証方式を選択し、クリックして**次**します。  
+5.  [接続パラメーター] ページで、認証方法を選択し、[**次へ**] をクリックします。  
   
-    Windows 認証は SQL Server のインスタンスにログオンしようとするのに Windows 資格情報を使用します。 SQL Server 認証を選択した場合、SQL Server ログイン名とパスワードを入力する必要があります。  
+    Windows 認証では、Windows 資格情報を使用して SQL Server のインスタンスにログオンしようとします。 SQL Server 認証を選択した場合は、SQL Server のログイン名とパスワードを入力する必要があります。  
   
-6.  操作の完了 ページで、 **OK**します。  
+6.  [操作が完了しました] ページで、[ **OK]** をクリックします。  
   
-7.  [完了] ページで、次のようにクリックします。**終了**します。  
+7.  [完了] ページで、[**終了**] をクリックします。  
   
-をアンインストールした後、ことを確認できる、 **sysdb.ssma_syb**スキーマ、および場合によっては、全体**sysdb**データベース、を使用して削除されました[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 ただし、他の SSMA 製品を使用する場合も使用、 **sysdb**データベース。 場合は、データベースが存在し、他のデータベースにこのデータベース内のオブジェクトが参照されていないことを確認したら、データベースをデタッチすることができます。  
+をアンインストールした後、を使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、 **sysdb. ssma_syb**スキーマ、および場合によっては**sysdb**データベース全体が削除されたことを確認できます。 ただし、他の SSMA 製品を使用する場合は、 **sysdb**データベースも使用します。 データベースが存在し、他のデータベースがこのデータベース内のオブジェクトを参照していない場合は、データベースをデタッチできます。  
   
-## <a name="see-also"></a>関連項目  
-[SSMA for Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+## <a name="see-also"></a>参照  
+[SSMA for Sybase Client &#40;SybaseToSQL&#41;のインストール](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[SSMA コンポーネントの SQL Server &#40;SybaseToSQL&#41;のインストール](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

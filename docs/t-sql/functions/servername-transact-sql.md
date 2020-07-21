@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 09a7e9d6199b3227b51cb67a0687c2b812bd21d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 112e9ef765b65d9563bfda7e0ec59bac24d02053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714980"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているローカル サーバーの名前を返します。  
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -41,14 +41,14 @@ ms.locfileid: "68031579"
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、サーバー名がインストール時のコンピューター名に設定されます。 サーバーの名前を変更するには、**sp_addserver** を使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが複数インストールされている状態で、ローカル サーバー名がセットアップ以来変更されていない場合は、@@SERVERNAME によって次のローカル サーバー名情報が返されます。  
   
 |インスタンス|サーバー情報|  
 |--------------|------------------------|  
-|[既定のインスタンス]|'*servername*'|  
+|既定のインスタンス|'*servername*'|  
 |[名前付きインスタンス]|'*servername*\\*instancename*'|  
 |フェールオーバー クラスター インスタンス - 既定のインスタンス|'*network_name_for_fci_in_wsfc*'|  
 |フェールオーバー クラスター インスタンス - 名前付きインスタンス|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
@@ -57,8 +57,8 @@ ms.locfileid: "68031579"
   
  一方、@@SERVERNAME はこのような変更をレポートしません。 @@SERVERNAME は、**sp_addserver** ストアド プロシージャまたは **sp_dropserver** ストアド プロシージャを使用してローカル サーバー名に加えられた変更をレポートします。  
   
-## <a name="examples"></a>使用例  
- 次に、`@@SERVERNAME` の使用例を示します。  
+## <a name="examples"></a>例  
+ 次の例に、`@@SERVERNAME` の使用方法を示します。  
   
 ```  
 SELECT @@SERVERNAME AS 'Server Name'  

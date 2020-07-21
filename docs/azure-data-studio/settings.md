@@ -1,29 +1,28 @@
 ---
 title: ユーザーとワークスペースの設定
-titleSuffix: Azure Data Studio
 description: ユーザーとワークスペースの設定を変更して Azure Data Studio をカスタマイズする方法。
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758388"
 ---
 # <a name="modify-user-and-workspace-settings"></a>ユーザーとワークスペースの設定を変更する
 
-設定を使用すると、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を好みに合わせて簡単に構成できます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] のエディター、ユーザー インターフェイス、機能的な動作のほとんどすべての部分に、変更可能なオプションがあります。
+設定を使用すると、Azure Data Studio を好みに合わせて簡単に構成できます。 Azure Data Studio のエディター、ユーザー インターフェイス、機能的な動作のほとんどすべての部分に、変更可能なオプションがあります。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、次の 2 つの異なる設定のスコープがあります。
+Azure Data Studio には、次の 2 つの異なる設定のスコープがあります。
 
-* **ユーザー**: これらの設定は、開かれた [!INCLUDE[name-sos](../includes/name-sos-short.md)] のすべてのインスタンスにグローバルに適用されます。
+* **ユーザー**: これらの設定は、開かれた Azure Data Studio のすべてのインスタンスにグローバルに適用されます。
 * **ワークスペース**: ワークスペースの設定は、コンピューター上のフォルダー固有の設定であり、Explorer のサイドバーでフォルダーが開かれている場合のみ使用できます。 このスコープで定義された設定は、ユーザー スコープよりも優先されます。
 
 ## <a name="creating-user-and-workspace-settings"></a>ユーザーとワークスペースの設定を作成する
@@ -36,9 +35,10 @@ ms.locfileid: "67959277"
 
 ![設定例](media/settings/sample-settings.png)
 
-変更した `settings.json` ファイルを保存した後、設定の変更が [!INCLUDE[name-sos](../includes/name-sos-short.md)] によって再度読み込まれます。
+変更した `settings.json` ファイルを保存した後、設定の変更が Azure Data Studio によって再度読み込まれます。
 
->**注:** ワークスペースの設定は、チーム全体でプロジェクト固有の設定を共有する場合に便利です。
+> [!NOTE] 
+> ワークスペースの設定は、チーム全体でプロジェクト固有の設定を共有する場合に便利です。
 
 ## <a name="settings-file-locations"></a>設定ファイルの場所
 
@@ -48,7 +48,7 @@ ms.locfileid: "67959277"
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-ワークスペース設定ファイルは、プロジェクトの `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` フォルダーの下に格納されます。
+ワークスペース設定ファイルは、プロジェクトの `.Azure Data Studio` フォルダーの下に格納されます。
 
 ## <a name="hot-exit"></a>Hot Exit
 
@@ -63,4 +63,4 @@ ms.locfileid: "67959277"
 
 ## <a name="additional-resources"></a>その他のリソース
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、ユーザーとワークスペースの設定機能が Visual Studio Code から継承されているため、設定の詳細については、[Visual Studio Code の設定](https://code.visualstudio.com/docs/getstarted/settings)に関する記事を参照してください。
+Azure Data Studio では、ユーザーとワークスペースの設定機能が Visual Studio Code から継承されているため、設定の詳細については、[Visual Studio Code の設定](https://code.visualstudio.com/docs/getstarted/settings)に関する記事を参照してください。

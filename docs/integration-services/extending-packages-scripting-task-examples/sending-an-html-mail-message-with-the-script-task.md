@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4fcafb7ba6651b294893b749d8800b80338a1a0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110542"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71286744"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
 
@@ -33,14 +33,14 @@ ms.locfileid: "68110542"
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次の例では、**System.Net.Mail** 名前空間を使用して、HTML メール メッセージを構成および送信します。 スクリプトは、電子メールの宛先、差出人、件名、および本文をパッケージ変数から取得し、これらを使用して新しい **MailMessage** を作成します。また、その **IsBodyHtml** プロパティに **True** を設定します。 次に、別のパッケージ変数から SMTP サーバー名を取得し、**System.Net.Mail.SmtpClient** のインスタンスを初期化し、そのインスタンスの **Send** メソッドを呼び出して HTML メッセージを送信します。 このサンプルでは、メッセージ送信機能をサブルーチンにカプセル化しているため、他のスクリプトで再利用できます。  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>このスクリプト タスクの例を SMTP 接続マネージャーを使用せずに構成するには  
   
 1.  `HtmlEmailTo`、`HtmlEmailFrom`、および `HtmlEmailSubject` という名前の文字列変数を作成し、これらに適切な値を割り当てて、有効なテスト メッセージを用意します。  
   
-2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 例:  
+2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 次に例を示します。  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  

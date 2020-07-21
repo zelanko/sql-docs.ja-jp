@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 048cd415ec16ef668bbf61a393f9103b522694eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63073847"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050280"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>メモリ最適化オブジェクト用ストレージの作成と管理
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エンジンが統合されているため、メモリ最適化テーブルと (従来型の) ディスクベース テーブルの両方を同じデータベースに格納することができます。 ただし、メモリ最適化テーブルのストレージ構造は、ディスクベース テーブルとは異なります。  
@@ -32,7 +31,7 @@ ms.locfileid: "63073847"
   
  メモリ最適化テーブルのストレージには、次のキー属性があります。  
   
--   すべてのメモリ最適化テーブルは、メモリ最適化ファイル グループにマップされます。 このファイル グループは、filestream ファイル グループを使用して構築されています。  
+-   すべてのメモリ最適化テーブルは、メモリ最適化ファイルグループにマップされます。 このファイルグループは、filestream ファイルグループを使用して作成されます。  
   
 -   ページという単位はなく、データは行として保存されます。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63073847"
   
 -   ディスクベース テーブルとは異なり、メモリ最適化テーブルのストレージは圧縮されません。 圧縮された (行またはページの) ディスクベース テーブルをメモリ最適化テーブルに移行する場合は、サイズの変化を考慮する必要があります。  
   
--   メモリ最適化テーブルは、持続的にすることも、非持続的にすることもできます。 のみ、持続性メモリ最適化テーブルの記憶域を構成する必要があります。  
+-   メモリ最適化テーブルは、持続的にすることも、非持続的にすることもできます。 持続性のあるメモリのストレージを構成する必要があるのは、テーブルを最適化することだけです。  
   
  ここでは、チェックポイント ファイル ペアと、メモリ最適化テーブルのデータが格納されるしくみの他の側面について説明します。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "63073847"
   
 -   [データ ファイルとデルタ ファイルのペアのマージに関する監視とトラブルシューティング](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

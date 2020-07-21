@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce297a1c2bc782a82a322618acedb102bb9e18eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c4652a3228bb3fb1407a67680e347f6b23a097b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727497"
 ---
-# <a name="mssqlserver845"></a>MSSQLSERVER_845
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_845"></a>MSSQLSERVER_845
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|845|  
 |イベント ソース|MSSQLSERVER|  
@@ -33,7 +33,7 @@ ms.locfileid: "68101486"
 |メッセージ テキスト|バッファー ラッチを待機中にタイムアウトが発生しました。ページ %S_PGID の型 %d、データベース ID %d。|  
   
 ## <a name="explanation"></a>説明  
-プロセスがラッチを獲得しようと待機していましたが、待機中に制限時間に達し、獲得に失敗しました。 このエラーは、I/O 操作の完了までに時間がかかりすぎる場合に発生する可能性があります。通常は、他のタスクによってシステムのプロセスが中断された結果のエラーです。 場合によっては、ハードウェア障害によってこのエラーが生じることもあります。  
+ラッチを取得するためにプロセスが待機中でしたが、制限時間に達したため、取得できませんでした。 このエラーは、I/O 操作の完了までに時間がかかりすぎる場合に発生する可能性があります。通常は、他のタスクによってシステムのプロセスが中断された結果のエラーです。 場合によっては、ハードウェア障害によってこのエラーが生じることもあります。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 次のタスクを実行すると、このエラーを回避できる場合があります。  

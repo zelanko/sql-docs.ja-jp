@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) で論理リレーションシップの定義 |Microsoft Docs
+title: データソースビューでの論理リレーションシップの定義 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a356fa721f6e95289ab92579bbc580900f32f507
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546974"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)
   データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データ ソース ビュー (DSV) に追加されたテーブル間のリレーションシップが、基になるデータベース リレーションシップまたは指定した名前一致条件に基づき、自動的に定義されます。  
@@ -43,11 +42,11 @@ ms.locfileid: "66075619"
   
  [テーブル、名前付きクエリ、またはビュー間のリレーションシップを追加するには](#bkmk_addRel)  
   
- [[ダイアグラム] ペインでリレーションシップを表示または変更するには](#bkmk_diagrampane)  
+ [ダイアグラムペインでリレーションシップを表示または変更するには](#bkmk_diagrampane)  
   
  [[テーブル] ペインでリレーションシップを表示または変更するには](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a> テーブル、名前付きクエリ、またはビュー間のリレーションシップを追加するには  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>テーブル、名前付きクエリ、またはビューの間にリレーションシップを追加するには  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でプロジェクトを開くか、論理リレーションシップを追加するデータ ソース ビューが含まれているデータベースに接続します。  
   
@@ -72,11 +71,11 @@ ms.locfileid: "66075619"
   
     4.  必要に応じて、 **[説明]** ボックスにリレーションシップの説明を入力します。  
   
-##  <a name="bkmk_diagrampane"></a> [ダイアグラム] ペインでリレーションシップを表示または変更するには  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a> [ダイアグラム] ペインでリレーションシップを表示または変更するには  
   
 -   **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインで、表示するリレーションシップを右クリックし、 **[リレーションシップの編集]** をクリックするか、リレーションシップの矢印をダブルクリックします。  リレーションシップを変更するには、 **[リレーションシップの編集]** ダイアログ ボックスを使用します。  
   
-##  <a name="bkmk_tablespane"></a> [テーブル] ペインでリレーションシップを表示または変更するには  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a> [テーブル] ペインでリレーションシップを表示または変更するには  
   
 1.  **データ ソース ビュー デザイナー** の **[テーブル]** ペインで、表示または変更するリレーションシップを含むテーブル、ビュー、または名前付きクエリを検索し、展開します。  
   
@@ -85,6 +84,6 @@ ms.locfileid: "66075619"
 3.  変更するリレーションシップを右クリックし、 **[リレーションシップの編集]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [「多次元モデルのデータ ソース ビュー」](data-source-views-in-multidimensional-models.md)  
+ [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
   
   

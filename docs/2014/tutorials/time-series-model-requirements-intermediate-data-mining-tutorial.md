@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892958"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>時系列モデルの要件について (中級者向けデータ マイニング チュートリアル)
@@ -31,17 +31,17 @@ ms.locfileid: "68892958"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>予測モデルの時間キーを特定するには  
   
-1.  [ **Salesbyregion. dsv [Design]** ] ペインで、vTimeSeries テーブルを右クリックし、[データの**探索**] を選択します。  
+1.  [ **Salesbyregion. dsv [Design]**] ペインで、vTimeSeries テーブルを右クリックし、[データの**探索**] を選択します。  
   
      新しいタブが開き、" **VTimeSeries テーブルの探索**" というタイトルが表示されます。  
   
 2.  [**テーブル**] タブで、timeindex 列および Reporting Date 列に使用されているデータを確認します。  
   
-     どちらの列も一意の値を持つシーケンスであり、時系列キーとして使用できますが、列によってデータ型が異なります。 Microsoft タイム シリーズ アルゴリズムでは、`datetime` データ型は必要なく、値が一意であり、順序付けられていることのみが必要とされます。 したがって、どちらの列も予測モデルの時間キーとして使用できます。  
+     どちらの列も一意の値を持つシーケンスであり、時系列キーとして使用できますが、列によってデータ型が異なります。 Microsoft Time Series アルゴリズムでは、`datetime` データ型は必要なく、値が一意であり、順序付けられていることのみが必要とされます。 したがって、どちらの列も予測モデルの時間キーとして使用できます。  
   
 3.  データソースビューデザイン画面で、[レポートの日付] 列を選択し、[**プロパティ**] を選択します。 次に、TimeIndex 列をクリックし、[**プロパティ**] を選択します。  
   
-     フィールド TimeIndex のデータ型は system.string であるのに対し、フィールドのレポート日付のデータ型は system.string です。 多くのデータ ウェアハウスでは、インデックス作成のパフォーマンスを高めるために、日付/時刻の値が整数に変換され、その整数列がキーとして使用されます。 ただし、この列を使用した場合、Microsoft タイム シリーズ アルゴリズムでは、201014、201014 などの将来の値を使用して予測が行われます。 カレンダーの日付を使用して売上データの予測を表す必要があるので、レポートの日付列を一意の系列 id として使用します。  
+     フィールド TimeIndex のデータ型は system.string であるのに対し、フィールドのレポート日付のデータ型は system.string です。 多くのデータ ウェアハウスでは、インデックス作成のパフォーマンスを高めるために、日付/時刻の値が整数に変換され、その整数列がキーとして使用されます。 ただし、この列を使用した場合、Microsoft Time Series アルゴリズムでは、201014、201014 などの将来の値を使用して予測が行われます。 カレンダーの日付を使用して売上データの予測を表す必要があるので、レポートの日付列を一意の系列 id として使用します。  
   
 ### <a name="to-set-the-key-in-the-data-source-view"></a>データ ソース ビューのキーを設定するには  
   
@@ -65,9 +65,9 @@ ms.locfileid: "68892958"
 -   タブを右クリックし、 **VTimeSeries テーブルを探索**して、[**閉じる**] を選択します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [予測構造とモデル&#40;中間データマイニングチュートリアルの作成&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [中間データマイニングチュートリアル &#40;予測構造とモデルの作成&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
+ [Microsoft Time Series アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

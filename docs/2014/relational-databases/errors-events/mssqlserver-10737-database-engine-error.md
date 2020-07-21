@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 208af6ed-b271-4ab8-803e-7666025385c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7d89c05ebd0b181b63f66fa0e0e0db99d54b952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60b577640518b10183cb7f61464871f7cef95d18
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916146"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554057"
 ---
-# <a name="mssqlserver10737"></a>MSSQLSERVER_10737
+# <a name="mssqlserver_10737"></a>MSSQLSERVER_10737
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|MSSQLSERVER|  
 |イベント ID|10737|  
@@ -33,6 +32,6 @@ ms.locfileid: "62916146"
 |メッセージ テキスト|ALTER TABLE REBUILD ステートメントまたは ALTER INDEX REBUILD ステートメントの DATA_COMPRESSION 句でパーティションを指定する場合は、PARTITION=ALL を指定する必要があります。 PARTITION=ALL 句を使用すると、DATA_COMPRESSION 句でサブセットのみを指定した場合でも、テーブルまたはインデックスのすべてのパーティションが必ず再構築されます。|  
   
 ## <a name="user-action"></a>ユーザーの操作  
- ALTER TABLE ステートメントまたは ALTER INDEX ステートメントに PARTITION=ALL 句を追加します。 また、特定のパーティションを再構築するには、REBUILD PARTITION = \<partition-number-expr> WITH (DATA_COMPRESSION={ON | OFF}) を使用します。  
+ ALTER TABLE ステートメントまたは ALTER INDEX ステートメントに PARTITION=ALL 句を追加します。 または、特定のパーティションを再構築するには、REBUILD PARTITION = \<partition-number-expr> WITH (DATA_COMPRESSION={ON | OFF}) を使用します。  
   
   

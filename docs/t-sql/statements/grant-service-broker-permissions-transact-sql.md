@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb76fda1e2c94486203d3fb4ac23f13e13475b84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050761"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880374"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Service Broker の権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Service Broker コントラクト、メッセージ型、リモート バインド、ルート、またはサービスに対する権限を許可します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68050761"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GRANT permission  [ ,...n ] ON  
     {    
@@ -71,7 +71,7 @@ GRANT permission  [ ,...n ] ON
  権限を許可するサービスを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれかです。  
+ 権限を許可するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
   
@@ -93,7 +93,7 @@ GRANT permission  [ ,...n ] ON
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
  *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
   
@@ -111,7 +111,7 @@ GRANT permission  [ ,...n ] ON
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="service-broker-contracts"></a>Service Broker コントラクト  
  Service Broker コントラクトは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、Service Broker コントラクトで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  

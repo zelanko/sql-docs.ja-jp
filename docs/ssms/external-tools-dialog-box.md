@@ -1,6 +1,6 @@
 ---
-title: '[外部ツール] ダイアログ ボックス | Microsoft Docs'
-ms.custom: ''
+title: '[外部ツール] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22b70fa3a33404cee302f12ccb98ea03dbdb9aed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265123"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245029"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
+**[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
 ## <a name="options"></a>オプション  
 **[メニューの内容]**  
@@ -35,16 +35,16 @@ ms.locfileid: "68265123"
 **[下へ移動]**  
 **[ツール]** メニューで表示されるツールの一覧に、選択したツールを表示する位置を下へ移動します。  
   
-**[追加]**  
+**追加**  
 新しいツールを指定できるようにテキスト ボックスをクリアします。  
   
 **削除**  
 **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
-**[タイトル]**  
+**Title**  
 **[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前を入力します。 ツール名の 1 文字の前にアンパサンド (&) を付けて、その文字をキーボード ショートカットとして指定します。 たとえば、"&SQLCMD" と指定した場合は、 **[ツール]** メニューに &SQLCMD が表示されます。  
   
-**Command**  
+**コマンド**  
 起動するファイルへのパスを指定します。  
   
 **引数**  
@@ -68,10 +68,10 @@ ms.locfileid: "68265123"
 ## <a name="example"></a>例  
 **[外部ツール]** ダイアログ ボックスに次の値を入力すると、"DAC" というラベルが付いたメニュー項目が作成されます。このメニュー項目を選択すると、コマンド プロンプトが開き、専用管理者接続を使用して **sqlcmd** ユーティリティが実行されます。  
   
-|ボックス|[値]|  
+|ボックス|値|  
 |-------|---------|  
 |**Title**|DAC (DAC)|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**コマンド**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引数**|-A|  
   
 ## <a name="see-also"></a>参照  

@@ -20,15 +20,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 320f7fc2255e9f665141929836d2e7bb7375429f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828051"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432299"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -94,7 +93,7 @@ ms.locfileid: "62828051"
  データ フロー コンポーネントの種類に関係なく、パフォーマンスを向上させるには、クエリの最適化と不必要な並べ替えの回避の 2 つの一般的なガイドラインに従う必要があります。  
   
 #### <a name="optimize-queries"></a>クエリの最適化  
- データ フロー コンポーネントの多くは、ソースからデータを抽出したり、参照テーブルを作成するための参照操作を行うときにクエリを使用します。 既定のクエリでは、SELECT * FROM \<tableName> 構文が使用されます。 この種類のクエリは、ソース テーブル内のすべての列を返します。 デザイン時にすべての列を使用可能にしておくことで、参照列、パススルー列、またはソース列として、任意の列を選択できます。 ただし、目的の列を選択した後は、選択した列のみを含むようにクエリを修正します。 不必要な列を削除することで、パッケージ内のデータ フローが効率化されます。列数が少なくなると、行が小さくなるためです。 行が小さいほど 1 つのバッファーに収まる行が増え、データセット内のすべての行を処理する作業が減ります。  
+ データ フロー コンポーネントの多くは、ソースからデータを抽出したり、参照テーブルを作成するための参照操作を行うときにクエリを使用します。 既定のクエリでは、SELECT * FROM 構文が使用され \<tableName> ます。 この種類のクエリは、ソース テーブル内のすべての列を返します。 デザイン時にすべての列を使用可能にしておくことで、参照列、パススルー列、またはソース列として、任意の列を選択できます。 ただし、目的の列を選択した後は、選択した列のみを含むようにクエリを修正します。 不必要な列を削除することで、パッケージ内のデータ フローが効率化されます。列数が少なくなると、行が小さくなるためです。 行が小さいほど 1 つのバッファーに収まる行が増え、データセット内のすべての行を処理する作業が減ります。  
   
  クエリを作成するには、手動で入力するか、クエリ ビルダーを使用することができます。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "62828051"
  このセクションの推奨事項に従うと、集計変換、あいまい参照変換、あいまいグループ化変換、参照変換、マージ結合変換、および緩やかに変化するディメンション変換のパフォーマンスが向上します。  
   
 #### <a name="aggregate-transformation"></a>集計変換  
- 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 真数または概数値の結果として予想されるグループ数がわかっている場合、 **Group by**操作、設定、`Keys`と`KeysScale`プロパティ、それぞれします。 結果として予想される個別の値の真数または概数値の数がわかっている場合、**個別のカウント**操作、設定、`CountDistinctKeys`と`CountDistinctScale`プロパティ、それぞれします。  
+ 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 **グループ化**操作の結果として予想されるグループの正確な数または概数がわかっている場合は、 `Keys` `KeysScale` プロパティとプロパティをそれぞれ設定します。 **個別のカウント**操作の結果として予想される個別の値の正確な数または概数がわかっている場合は、 `CountDistinctKeys` `CountDistinctScale` プロパティとプロパティをそれぞれ設定します。  
   
  データ フロー内に複数の集計を作成する必要がある場合は、複数の変換を作成する代わりに、1 つの集計変換を使用した複数の集計を作成することを検討してください。 この方法は、集計が別の集計のサブセットである場合にパフォーマンスを向上させます。変換により内部ストレージを最適化でき、入力データのスキャンを一度だけ行えば済むためです。 たとえば、集計で GROUP BY 句と AVG 集計を使用する場合は、それらを 1 つの変換に結合することでパフォーマンスを向上させることができます。 ただし、1 つの集計変換内で複数の集計を実行すると集計操作がシリアル化されるので、複数の集計を個別に計算する必要がある場合は、パフォーマンスが向上しない可能性があります。  
   
@@ -143,7 +142,7 @@ ms.locfileid: "62828051"
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
   
- 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://go.microsoft.com/fwlink/?LinkId=96602)」の「Unique dimension scenario, (固有のディメンション シナリオ)」をご覧ください。  
+ 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://www.microsoft.com/download/details.aspx?id=14582)」の「特有のディメンション シナリオ」を参照してください。  
   
 ### <a name="destinations"></a>変換先  
  変換先のパフォーマンスを向上させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の使用と、変換先のパフォーマンスのテストを検討してください。  
@@ -166,13 +165,13 @@ ms.locfileid: "62828051"
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
   
--   technet.microsoft.com の技術記事、「[SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」  
+-   technet.microsoft.com の技術記事、「 [SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」。  
   
--   technet.microsoft.com の技術記事、「[Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」  
+-   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」。  
   
 -   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
   
--   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)」  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)  
   
 -   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](https://go.microsoft.com/fwlink/?LinkId=220817)」  
   
@@ -196,8 +195,8 @@ ms.locfileid: "62828051"
   
 -   technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
-## <a name="see-also"></a>参照  
- [パッケージ開発のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+## <a name="see-also"></a>関連項目  
+ [パッケージ開発のトラブルシューティングツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

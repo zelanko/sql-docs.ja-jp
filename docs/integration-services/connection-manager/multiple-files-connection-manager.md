@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 758bf428032d0eb66cca054032c094d30fa85c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104128"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294370"
 ---
 # <a name="multiple-files-connection-manager"></a>複数ファイル接続マネージャー
 
@@ -39,7 +39,7 @@ ms.locfileid: "68104128"
   
  次の表に **FileUsageType**の値を示します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|複数ファイル接続マネージャーは、既存のファイルを使用します。|  
 |**1**|複数ファイル接続マネージャーは、ファイルを作成します。|  
@@ -63,12 +63,12 @@ ms.locfileid: "68104128"
   
  \<*パス*>|\<*パス*>  
   
- 複数のファイルまたはフォルダーを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ内のすべてのテキスト ファイルを参照するには、 **ConnectionString** プロパティの値を「C:\\*.txt」に設定します。  
+ 複数のファイルまたはフォルダーを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ内のすべてのテキスト ファイルを参照するには、 **ConnectionString** プロパティの値を「C:\\\*.txt」に設定します。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)」を参照してください。  
   
- プログラムによる接続マネージャーの構成の詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」および「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)」を参照してください。  
+ プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
   

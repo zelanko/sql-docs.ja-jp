@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL デバッガー情報 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL デバッガー情報
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 487c347679fc26e28f02aa8bd11306ac3086567c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063343"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL デバッガー情報
   デバッガーが特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止するたびに、さまざまなデバッガー ウィンドウを使用して現在の実行状態を表示できます。  
@@ -40,11 +39,11 @@ ms.locfileid: "66063430"
 -   **[デバッグ]** ツール バーの **[ブレークポイント]** をクリックし、目的のウィンドウを選択する。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 式  
- 式は、変数やパラメーターなどの単独のスカラー値に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 句です。 左側のデバッガー ウィンドウでは、式に現在割り当てられているデータ値を、最大で 5 つのタブまたはウィンドウに表示できます: **[ローカル]、[ウォッチ 1]** 、 **[ウォッチ 2]** 、 **[ウォッチ 3]** 、 **[ウォッチ 4]** です。  
+ 式は、変数やパラメーターなどの単独のスカラー値に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 句です。 左側のデバッガー ウィンドウでは、式に現在割り当てられているデータ値を最大で 5 つのタブまたはウィンドウ ( **[ローカル]、[ウォッチ 1]** 、 **[ウォッチ 2]** 、 **[ウォッチ 3]** 、および **[ウォッチ 4]** ) に表示できます。  
   
  **[ローカル]** ウィンドウには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの現在のスコープ内のローカル変数についての情報が表示されます。 **[ローカル]** ウィンドウに表示される式のセットは、一覧の式を追加または削除しない限り変更されません。  
   
- **[クイック ウォッチ]** と 4 つの **[ウォッチ]** ウィンドウに指定できる式は、変数の識別子だけではありません。 単一の値に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 式 (変数に対して数値を加算する式など) や単一の値に評価される SELECT ステートメントを指定することができます。 たとえば、以下のような場合があります。  
+ **[クイック ウォッチ]** と 4 つの **[ウォッチ]** ウィンドウに指定できる式は、変数の識別子だけではありません。 単一の値に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 式 (変数に対して数値を加算する式など) や単一の値に評価される SELECT ステートメントを指定することができます。 たとえば、次のようになります。  
   
 -   変数の名前 (@IntegerCounter など)。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66063430"
   
  **[ローカル]** 、 **[ウォッチ]** 、または **[クイック ウォッチ]** の各ウィンドウで変数にデータ値を設定するには、行を右クリックし、 **[値の編集]** を選択します。 **[ローカル]** 、 **[ウォッチ]** 、および **[クイック ウォッチ]** ダイアログ ボックスの **[値]** 列では、テキスト、XML、および HTML のデータ ビジュアライザーがサポートされます。 ビジュアライザーは、 **[値]** 列の右側の虫眼鏡データ ヒントとして表されます。 ビジュアライザーを使用すると、データ型に一致するテキスト、XML、または HTML のデータ値を表示できます (たとえば、XML ファイルをブラウザー ウィンドウに表示できます)。  
   
- デバッグ モードでは、識別子の上にマウス ポインターを移動すると、式の名前とその現在の値が**クイック ヒント** ポップアップに表示されます。 詳細については、「[クイック ヒント &#40;IntelliSense&#41;](quick-info-intellisense.md)」を参照してください。  
+ デバッグ モードでは、識別子の上にマウス ポインターを移動すると、式の名前とその現在の値が **クイック ヒント** ポップアップに表示されます。 詳細については、「[クイック ヒント &#40;IntelliSense&#41;](quick-info-intellisense.md)」を参照してください。  
   
 ## <a name="breakpoints"></a>ブレークポイント  
  **[ブレークポイント]** ウィンドウでは、現在設定されているブレークポイントを表示および管理できます。 詳細については、「 [Transact-SQL コードのステップ実行](step-through-transact-sql-code.md)」を参照してください。  

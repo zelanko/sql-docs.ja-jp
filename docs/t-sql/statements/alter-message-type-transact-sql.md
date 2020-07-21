@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4f54cc7e37c6def3b0fad29851012ef6e1a2829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0e9e6a6d8e0f4b976775271532fc61b03b199fa
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071282"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381176"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   メッセージ型のプロパティを変更します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68071282"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
@@ -46,14 +46,17 @@ ALTER MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *message_type_name*  
  変更するメッセージ型の名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
  VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。  
   
- なし  
+ NONE  
  検証が実行されません。 メッセージ本文には何らかのデータが含まれることがあれば、NULL の場合もあります。  
   
  EMPTY  
@@ -65,7 +68,7 @@ ALTER MESSAGE TYPE message_type_name
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  メッセージの本文には、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があります。 *schema_collection_name* は、既存の XML スキーマ コレクションの名前であることが必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  メッセージ型の検証を変更しても、既にキューに配布されているメッセージには影響しません。  
   
  メッセージ型の AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
@@ -75,7 +78,7 @@ ALTER MESSAGE TYPE message_type_name
   
  ALTER MESSAGE TYPE ステートメントでスキーマ コレクションが指定されている場合、このステートメントを実行するユーザーは、指定されているスキーマ コレクションに対する REFERENCES 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、メッセージ型 `//Adventure-Works.com/Expenses/SubmitExpense` を変更し、メッセージ本文に整形式の XML ドキュメントが含まれることを要求します。  
   
 ```  

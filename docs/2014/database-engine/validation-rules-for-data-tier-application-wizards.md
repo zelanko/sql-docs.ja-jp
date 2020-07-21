@@ -1,5 +1,5 @@
 ---
-title: データ層アプリケーションのウィザードの検証規則 |Microsoft Docs
+title: データ層アプリケーションウィザードの検証規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23b19a53b512996f72990714ba3a478965179a1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19dc400cac04fbf0956a33b899d18e3dcee449ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773387"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927623"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>データ層アプリケーションのウィザードの検証規則
   このトピックは、データ層アプリケーションのウィザードでの検証規則の修正措置に関する内容が追加される予定です。  

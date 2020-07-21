@@ -14,22 +14,21 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00c66af1d609e2e1730be8b7647bdc881d129caf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770422"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431019"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
   
  文字マップ変換では、列データを適切に変換したり、変換出力に列を追加して、変換後のデータを新しい列に挿入したりできます。 また、さまざまなマップ操作のセットを同じ入力列に適用し、その結果を別の列に格納できます。 たとえば、同じ列を大文字と小文字に変換し、その結果を 2 つの異なる列に格納できます。  
   
- 状況によっては、マップによってデータが切り捨てられる場合があります。 たとえば、1 バイト文字をマルチバイトで表記される文字にマップした場合、切り捨てが発生することがあります。 文字マップ変換には 1 つのエラー出力が含まれます。このエラー出力を使用すると、切り捨てられたデータを別の出力に送ることができます。 詳しくは、「 [データのエラー処理](../error-handling-in-data.md)」をご覧ください。  
+ 状況によっては、マップによってデータが切り捨てられる場合があります。 たとえば、1 バイト文字をマルチバイトで表記される文字にマップした場合、切り捨てが発生することがあります。 文字マップ変換には 1 つのエラー出力が含まれます。このエラー出力を使用すると、切り捨てられたデータを別の出力に送ることができます。 詳細については、「 [データのエラー処理](../error-handling-in-data.md)」を参照してください。  
   
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
@@ -45,8 +44,8 @@ ms.locfileid: "62770422"
 |カタカナ|ひらがなをカタカナにマップします。|  
 |言語の文字種|システム規則ではなく言語の文字種を適用します。 言語の文字種は、Win32 API が提供する、チュルク語や他のロケールの Unicode 単純文字種のマップに関する機能を基準とします。|  
 |小文字|文字を小文字に変換します。|  
-|簡体字中国語|繁体字中国語文字を簡体字中国語文字にマップします。|  
-|繁体字中国語|簡体字中国語文字を繁体字中国語文字にマップします。|  
+|簡体中国語|繁体中国語文字を簡体中国語文字にマップします。|  
+|Traditional Chinese|簡体中国語文字を繁体中国語文字にマップします。|  
 |大文字|文字を大文字に変換します。|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>相互に排他的なマップ操作  
@@ -57,7 +56,7 @@ ms.locfileid: "62770422"
 |小文字|大文字|  
 |ひらがな|カタカナ|  
 |半角|全角|  
-|繁体字中国語|簡体字中国語|  
+|Traditional Chinese|簡体中国語|  
 |小文字|ひらがな、カタカナ、半角、全角|  
 |大文字|ひらがな、カタカナ、半角、全角|  
   

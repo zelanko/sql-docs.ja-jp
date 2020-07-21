@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client ヘッダー ファイルとライブラリ ファイルを使用して |Microsoft Docs
+title: SQL Server Native Client ヘッダーファイルとライブラリファイルの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,21 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 245dd5a511b9366a80d1e57aa0d7bc3d21d8f23d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049620"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>SQL Server Native Client ヘッダー ファイルとライブラリ ファイルの使用
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と共にインストールされます。 アプリケーションを開発するときは、開発に必要なすべてのファイルを開発環境にコピーしてインストールすることが重要です。 インストールと再配布の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client を参照してください[SQL Server Native Client をインストールする](installing-sql-server-native-client.md)します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と共にインストールされます。 アプリケーションを開発するときは、開発に必要なすべてのファイルを開発環境にコピーしてインストールすることが重要です。 Native Client のインストールと再配布の詳細について [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、「 [SQL Server Native Client のインストール](installing-sql-server-native-client.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルとライブラリ ファイルは、次の場所にインストールされます。  
   
- *%PROGRAM FILES%* \Microsoft SQL Server\110\SDK  
+ *% PROGRAM FILES%* \Microsoft SQL server \ 110\ SDK  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイル (sqlncli.h) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client データ アクセス機能をカスタム アプリケーションに追加するために使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルには、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された新しい機能を使用するために必要なすべての定義、属性、プロパティ、およびインターフェイスが含まれています。  
   
@@ -74,7 +73,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  OLE DB および ODBC Api の両方が、アプリケーションによって使用されている場合、上記のコードの最初の行を省略する必要があります。 また、アプリケーションに odbcss.h 用の `#include` ステートメントがある場合は、そのステートメントを削除する必要があります。  
+>  アプリケーションで OLE DB と ODBC の両方の Api が使用されている場合は、上記のコードの最初の行を省略する必要があります。 また、アプリケーションに odbcss.h 用の `#include` ステートメントがある場合は、そのステートメントを削除する必要があります。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によってデータ ソースに接続するときは、ドライバー名文字列として "SQL Server Native Client 11.0" を使用します。  
   
@@ -98,7 +97,7 @@ include "sqlncli.h";
   
  たとえば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (および \Program Files\Microsoft SQL Server\110\SDK の関連するライブラリ ファイル (sqlncli11.lib) とヘッダー ファイル (sqlncli.h)) を使用してアプリケーションをコンパイルする場合は、接続文字列で "DRIVER={SQL Server Native Client 11.0}" (ODBC の場合) を指定する必要があります。  
   
- 詳細については、実行を参照してください。[一括コピー操作を実行する](../features/performing-bulk-copy-operations.md)します。  
+ 詳細については、「[一括コピー操作の実行](../features/performing-bulk-copy-operations.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client を使用したアプリケーションのビルド](building-applications-with-sql-server-native-client.md)  

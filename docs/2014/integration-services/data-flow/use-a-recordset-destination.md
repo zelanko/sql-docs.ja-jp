@@ -9,20 +9,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 80513addcc1683b6238734bd72c0ddee3608c61d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900001"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429969"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、`Object` データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
   
- レコードセット変換先は、さまざまなシナリオで使用できます。 次にいくつかの例を示します。  
+ レコードセット変換先は、さまざまなシナリオで使用できます。 次に例をいくつか示します。  
   
 -   メール送信タスクと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語を使用して、レコードセットの行ごとにカスタマイズされた電子メール メッセージを送信できます。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "62900001"
   
 5.  **[レコードセット変換先エディター]** を開いて、次の設定を使用して変換先を構成します。  
   
-    1.  **コンポーネントのプロパティ** タブの`VariableName`プロパティで、`User::BonusRecordset`します。  
+    1.  [**コンポーネントのプロパティ**] タブの [プロパティ] で、 `VariableName` [] を選択し `User::BonusRecordset` ます。  
   
     2.  **[入力列]** タブで、使用可能な 3 つすべての列を選択します。  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62900001"
   
 2.  **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **コレクション** ページの**列挙子**を選択します**Foreach ADO 列挙子**、および**ADO オブジェクト ソース変数**を選択します。`User::BonusRecordset`.  
+    1.  [**コレクション**] ページの [**列挙子**] で [ **Foreach ado Enumerator**] を選択し、[ **ADO オブジェクトソース変数**] でを選択し `User::BonusRecordset` ます。  
   
-    2.  **変数のマッピング**ページで、マップ`User::EmailAddress`をインデックス 0、`User::FirstName`をインデックス 1、および`User::Bonus`インデックス 2 にします。  
+    2.  [**変数のマッピング**] ページで、インデックス `User::EmailAddress` 0、 `User::FirstName` インデックス1、インデックス2にマップし `User::Bonus` ます。  
   
 3.  **[制御フロー]** タブで、Foreach ループ コンテナー内にメール送信タスクを追加します。  
   

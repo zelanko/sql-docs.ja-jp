@@ -1,5 +1,5 @@
 ---
-title: '方法: PHP データ型を指定する |Microsoft Docs'
+title: 方法:PHP データ型を指定する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936395"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80915808"
 ---
-# <a name="how-to-specify-php-data-types"></a>方法: PHP データ型を指定する
+# <a name="how-to-specify-php-data-types"></a>方法:PHP データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV ドライバーを使用する場合、PDOStatement::bindColumn と PDOStatement::bindParam を使用してサーバーからデータを取得するときに PHP データ型を指定できます。 詳細については、「 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) 」および「 [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) 」を参照してください。  

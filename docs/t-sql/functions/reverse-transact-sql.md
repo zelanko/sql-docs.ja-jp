@@ -17,18 +17,18 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed41eebaf1f90315668fe7336dddf7a2c3c87404
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092619"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003727"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   文字列値を反転して返します。  
   
@@ -47,13 +47,13 @@ REVERSE ( string_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *string_expression* に暗黙的に変換できるデータ型である必要があります **varchar** です。 それ以外の場合、使用して [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) に明示的に変換する *string_expression* です。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  SC の照合順序を使用する場合、REVERSE 関数はサロゲート ペアの 2 つの要素の順序を反転しません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、すべての連絡先の名前の文字を、逆に並べ替えて返します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
   
 ```  
@@ -93,7 +93,7 @@ SELECT REVERSE(1234) AS Reversed ;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、すべてのデータベースの名前と、文字を逆に並べ替えた名前を返します。  
   
 ```  

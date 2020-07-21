@@ -11,22 +11,22 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963349"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750727"
 ---
 # <a name="sql-property"></a>SQL プロパティ
-取得するために使用するクエリ文字列を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を取得するために使用するクエリ文字列を示します。  
   
- 設定することができます、 **SQL**でデザイン時にプロパティ、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのオブジェクトのタグ、または実行時にスクリプト コードです。  
+ RDS では、デザイン時に**SQL**プロパティを設定でき[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのオブジェクトタグ、またはスクリプトコードの実行時。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *QueryString*  
- A**文字列**有効な SQL データの要求を表す値です。  
+ *クエリ*  
+ 有効な SQL データ要求を含む**文字列**値です。  
   
  *DataControl*  
- オブジェクト変数を表す、 **rds.DataControl**オブジェクト。  
+ RDS を表すオブジェクト変数です **。DataControl**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 一般に、これは、SQL ステートメント (データベース サーバーの言語を使用) など`"Select * from NewTitles"`します。 レコードを一致し、正確に更新されることを確認するには、更新可能なクエリはバイナリ長フィールドまたは計算フィールド以外のフィールドを含める必要があります。  
+## <a name="remarks"></a>解説  
+ 一般に、これは (データベースサーバーの言語を使用した) SQL ステートメントです `"Select * from NewTitles"` 。 レコードが正確に一致して更新されるように、更新可能なクエリには、長いバイナリフィールドまたは計算フィールド以外のフィールドを含める必要があります。  
   
- **SQL**プロパティは、サーバー側のカスタム ビジネス オブジェクトは、クライアントのデータを取得する場合は省略可能です。  
+ カスタムのサーバー側ビジネスオブジェクトがクライアントのデータを取得する場合、 **SQL**プロパティは省略可能です。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL プロパティの例 (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [接続プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
+ [Connect プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
+ [Query メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh メソッド (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

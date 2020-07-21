@@ -1,5 +1,5 @@
 ---
-title: 自動生成されたキーの使用 |Microsoft Docs
+title: 自動生成キーの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f93bad7ff490ee2774d10e2df940168a67d30867
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026613"
 ---
 # <a name="using-auto-generated-keys"></a>自動生成キーの使用

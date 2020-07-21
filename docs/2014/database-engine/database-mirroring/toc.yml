@@ -13,7 +13,7 @@
   items:
     - name: 構成
       items:
-        - name: 展開
+        - name: デプロイ
           items:
             - name: データベース ミラーリングの設定
               href: setting-up-database-mirroring-sql-server.md
@@ -93,7 +93,7 @@
       items:
         - name: データベース ミラーリングの監視
           href: monitoring-database-mirroring-sql-server.md
-        - name: 'クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響'
+        - name: 'クォーラム : データベースの可用性にミラーリング監視サーバーが与える影響'
           href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
         - name: データベース ミラーリング セッション中の役割の交代
           href: role-switching-during-a-database-mirroring-session-sql-server.md

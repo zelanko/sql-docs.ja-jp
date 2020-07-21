@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a663dedf34d75a21ee8df6b97979548c04abf7ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955832"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>バイナリ ラージ オブジェクト (Blob) データ (SQLServer)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイルおよびドキュメントをデータベースまたはリモート ストレージ デバイスに格納するためのソリューションが用意されています。  
   
-##  <a name="section"></a> このセクションの内容  
+##  <a name="in-this-section"></a><a name="section"></a> トピックの内容  
  [BLOB の保存オプションの比較 &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
  FILESTREAM、FileTable、およびリモート BLOB ストアの利点を比較します。  
   

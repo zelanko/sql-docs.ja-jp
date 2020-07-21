@@ -1,5 +1,5 @@
 ---
-title: Interval のリテラル構文 |Microsoft Docs
+title: Interval リテラル構文 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,68 +12,68 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - ODBC literals [ODBC], interval
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3387b07a8e769206a6a495addff4287000691fec
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041625"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290572"
 ---
 # <a name="interval-literal-syntax"></a>Interval のリテラルの構文
-次の構文は、ODBC で interval のリテラルに使用されます。  
+ODBC の interval リテラルには、次の構文が使用されます。  
   
- *間隔リテラル:: = 間隔*[+ *&#124;* -]*間隔文字列間隔修飾子*  
+ *interval-リテラル:: = interval* [+*&#124;*-] *interval-文字列間隔-修飾子*  
   
- *間隔文字列*:: =*見積もり*{*年-月-リテラル*&#124; です。*日付時刻リテラル*}*見積もり*  
+ *interval-string* :: = *quote* { *year-month-リテラル*&#124; の*日付と時刻の*間の*引用符*  
   
- *年-月-リテラル*:: =*年値*&#124;です。[*年値*-]*月の値*  
+ *年月-リテラル*:: =*年-値*&#124; [*年-値*-]*月-値*  
   
- *日付時刻リテラル*:: =*日間隔*&#124; です。*時間間隔*  
+ *日時リテラル*:: =*日-時間*間隔 &#124;*時間間隔*  
   
- *1 日間隔*:: =*日数値*[*時間値*[:*分値*[:*秒値*]]  
+ *日-時間-間隔*:: =*日-値*[*時間-値*[:*分-値*[:*秒-値*]]]  
   
- *時間間隔*:: =*時間値*[:*分値*[:*秒値*]  
+ *時間間隔*:: =*時間-値*[:*分-値*[:*秒-値*]]  
   
- &#124; です。*分値*[:*秒値*]  
+ &#124;*分-値*[:*秒-値*]  
   
- &#124; です。*秒の値*  
+ &#124;*秒-値*  
   
- *年の値*:: = *datetime 値*  
+ *years-value* :: = *datetime-値*  
   
- *か月間値*:: = *datetime 値*  
+ *month-value* :: = *datetime-value*  
   
- *日数値*:: = *datetime 値*  
+ *日数-値*:: = *datetime-値*  
   
- *時間値*:: = *datetime 値*  
+ *時間-値*:: = *datetime-値*  
   
- *分値*:: = *datetime 値*  
+ *分-値*:: = *datetime-値*  
   
- *秒の値*:: =*秒整数*[. [*秒の端数*]  
+ *秒-値*:: =*秒-整数-値*[. [*秒-分*]]  
   
- *整数値の秒*:: =*符号なし整数*  
+ *秒-整数-値*:: =*符号なし整数*  
   
- *秒の端数*:: =*符号なし整数*  
+ *秒-分数*:: =*符号なし整数*  
   
- *datetime 値*:: =*符号なし整数*  
+ *datetime-value* :: = *unsigned-integer*  
   
- *間隔修飾子*:: =*開始フィールド*TO*終了フィールド*&#124;*単一 datetime フィールド*  
+ *interval-修飾子*:: =*開始-* フィールドから*終了*フィールド &#124; には、*単一の datetime フィールド*を指定します。  
   
- *開始フィールド*:: =*秒-datetime-フィールド以外*[(*間隔リード フィールド精度*)]  
+ *start-field* :: = *second-datetime-field* [(*interval-先頭フィールドの有効桁数*)]  
   
- *終了フィールド*:: =*非秒 datetime のフィールドの*&#124;です。2 番目 [(*間隔--秒の有効桁数*)]  
+ *end field* :: = *second-datetime-field* &#124; second [(*interval-秒の小数部の有効桁数*)]  
   
- *単一 datetime フィールド*:: =*非秒 datetime のフィールドの*[(*間隔先頭フィールド精度*)] &#124; です。2 番目 [(*間隔先頭フィールド精度*[、(*間隔--秒の有効桁数*)]  
+ *単一の datetime-field* :: = *second-datetime-field* [(*interval-先頭フィールドの有効桁数*)] &#124; second [(間隔-*先頭フィールド-* 有効桁数 [, (*間隔-秒の小数部の有効桁数*)]  
   
- *datetime フィールド*:: =*非秒 datetime のフィールドの*&#124; です。1 秒  
+ *datetime-field* :: = *second-datetime-field* &#124; second  
   
- *2 番目の datetime のフィールド以外*:: = 年 &#124; です。月 &#124; です。1 日 &#124; です。1 時間 &#124; です。1 分  
+ *秒以外の datetime-field* :: = YEAR &#124; MONTH &#124; DAY &#124; HOUR &#124; MINUTE  
   
- *間隔--秒の有効桁数*:: =*符号なし整数*  
+ *interval-秒の小数部の有効桁数*:: =*符号なし整数*  
   
- *間隔をリード フィールド精度*:: =*符号なし整数*  
+ *interval-先頭フィールド-有効桁数*:: =*符号なし整数*  
   
- *見積もり*:: = '  
+ *引用符*:: = '  
   
- *符号なし整数*:: =*桁.*
+ *符号なし整数*:: = *digit...*

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542264"
 ---
 # <a name="defining-and-browsing-perspectives"></a>パースペクティブの定義と表示
   パースペクティブを使用すれば、特定の目的に従ってキューブの表示を単純化できます。 既定では、ユーザーはアクセスする権限のあるキューブ内のすべての要素を表示できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ全体の表示時に表示されるものが、キューブの既定のパースペクティブです。 キューブ全体を表示すると、操作が非常に複雑になる可能性があります。特に、ビジネス インテリジェンスやレポートの要件に応じてキューブのごく一部分しか操作する必要のないユーザーにとっては複雑すぎます。  
@@ -33,15 +32,15 @@ ms.locfileid: "69493770"
   
      次の図のように、すべてのオブジェクトとその種類が **[パースペクティブ]** ペインに表示されます。  
   
-     ![キューブデザイナーのパースペクティブペイン](../../2014/tutorials/media/l9-perspectives-1.gif "キューブデザイナーのパースペクティブペイン")  
+     ![キューブ デザイナーの [パースペクティブ] ペイン](../../2014/tutorials/media/l9-perspectives-1.gif "キューブ デザイナーの [パースペクティブ] ペイン")  
   
 2.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
      次の図のように、新しいパースペクティブの既定の名前 " **パースペクティブ** " が **[パースペクティブ名]** 列に表示されます。 各オブジェクトのチェック ボックスはオンになっています。いずれかのオブジェクトのチェック ボックスをオフにするまでは、このキューブの既定のパースペクティブと同じ表示内容になります。  
   
-     ![パースペクティブ名列の新しいパースペクティブ]です。(../../2014/tutorials/media/l9-perspectives-2.gif "パースペクティブ名列の新しいパースペクティブ")です。  
+     ![[パースペクティブ名] 列の新しいパースペクティブ](../../2014/tutorials/media/l9-perspectives-2.gif "[パースペクティブ名] 列の新しいパースペクティブ")  
   
-3.  パースペクティブ名をに`Internet Sales`変更します。  
+3.  パースペクティブ名をに変更 `Internet Sales` します。  
   
 4.  次の行で、DefaultMeasure を **[Internet Sales-Sales Amount]** に設定します。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493770"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの名前をに`Reseller Sales`変更します。  
+2.  新しいパースペクティブの名前をに変更し `Reseller Sales` ます。  
   
 3.  既定のメジャーとして **[Reseller Sales-Sales Amount]** を設定します。  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493770"
   
 1.  **[パースペクティブ]** タブのツール バーの **[新しいパースペクティブ]** ボタンをクリックします。  
   
-2.  新しいパースペクティブの名前をに`Sales Summary`変更します。  
+2.  新しいパースペクティブの名前をに変更し `Sales Summary` ます。  
   
     > [!NOTE]  
     >  計算されるメジャーを既定のメジャーとして指定することはできません。  
@@ -170,11 +169,11 @@ ms.locfileid: "69493770"
   
 4.  次の図のように、Excel の分析機能では、Excel でモデルを参照するときに使用するパースペクティブを選択することができます。  
   
-     ![Internet Sales パースペクティブのオブジェクト](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales パースペクティブのオブジェクト")  
+     ![[Internet Sales] パースペクティブのオブジェクト](../../2014/tutorials/media/l9-perspectives-3.gif "[Internet Sales] パースペクティブのオブジェクト")  
   
 5.  または、Windows の [スタート] メニューから Excel を起動して、次の図のように、データ接続ウィザードで localhost 上の Analysis Services Tutorial データベースへの接続を定義し、パースペクティブを選択することもできます。  
   
-     ![Excel のデータ接続ウィザード](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel のデータ接続ウィザード")  
+     ![Excel でのデータ接続ウィザード](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel でのデータ接続ウィザード")  
   
 6.  [ `Internet Sales` **パースペクティブ**] ボックスの一覧でを選択し、[メタデータ] ペインでメジャーとディメンションを確認します。  
   
@@ -184,16 +183,16 @@ ms.locfileid: "69493770"
   
      `Internet Sales`メジャーグループのみが表示され、**インターネット GPM**と、計算される**すべての製品の internet Sales 比率**が計算されるメンバーになります。  
   
-8.  モデルで再度 Excel を選択します。 [ `Sales Summary`] を選択します。  
+8.  モデルで再度 Excel を選択します。 [`Sales Summary`] を選択します。  
   
      次の図のように、これらの各メジャー グループには 1 つのメジャーだけが表示されます。  
   
-     ![Internet sales および再販業者の売上メジャー](../../2014/tutorials/media/l9-perspectives-4.gif "Internet sales および再販業者の売上メジャー")  
+     ![[Internet Sales] および [Reseller Sales] メジャー](../../2014/tutorials/media/l9-perspectives-4.gif "[Internet Sales] および [Reseller Sales] メジャー")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [翻訳の定義と表示](lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジョン](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [多次元モデルのパースペクティブ](multidimensional-models/perspectives-in-multidimensional-models.md)  
   

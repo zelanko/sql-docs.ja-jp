@@ -1,5 +1,5 @@
 ---
-title: パーティション表現 (テーブル) |Microsoft Docs
+title: パーティション表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a29f273a584f3e60c6cf6458751965158cf8704
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62795521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940003"
 ---
 # <a name="partition-representation-tabular"></a>パーティション表現 (テーブル)
   運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。それぞれのサブセットがテーブルのパーティションです。  
@@ -92,6 +91,6 @@ private void AddPartition(
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular サンプル  
- ただし、AMO を使用して作成し、パーティションを操作する方法を理解するに表現する際に、AMO to Tabular サンプルのソース コード参照してください。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
+ ただし、AMO を使用してパーティション表現の作成と操作を行う方法については、AMO to Tabular サンプルのソース コードを参照してください。 このサンプルは、Codeplex から入手できます。 このコードに関する重要な注意事項: このコードは、ここで説明する論理的概念を補足するためにのみ提供されています。運用環境では使用しないでください。教育目的以外の目的にも使用しないでください。  
   
   

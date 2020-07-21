@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec264773787fd89f8cb36ba2e2386a186dc78816
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736124"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスが別の **geography** インスタンスと交差する地点を表すオブジェクトを返します。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68042053"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの geography インスタンスが交差する地点が返されます。  
   
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STIntersection() は常に null を返します。  
@@ -54,7 +54,7 @@ ms.locfileid: "68042053"
   
  結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Polygon と LineString が交差する地点を計算する  
  `STIntersection()` を使用して、`Polygon` と `LineString` が交差する地点を計算する例を次に示します。  

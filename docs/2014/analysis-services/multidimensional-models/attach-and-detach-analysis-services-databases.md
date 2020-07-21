@@ -1,5 +1,5 @@
 ---
-title: アタッチし、Analysis Services データベースのデタッチ |Microsoft Docs
+title: Analysis Services データベースをアタッチおよびデタッチする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077484"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469007"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを一時的にオフラインにした後、そのデータベースを同じサーバー インスタンスまたは別のサーバー インスタンス上でオンラインに戻すことは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。 このような状況だけでなくさまざまな場合に、`Attach` コマンドと `Detach` コマンドを使用することによって、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA は、データベースをオフラインにした後、簡単にオンラインに戻すことができます。  
@@ -46,9 +45,9 @@ ms.locfileid: "66077484"
   
 |読み書き可能なデータベースのデタッチ|読み取り専用データベースのデタッチ|  
 |--------------------------------------|-------------------------------------|  
-|1) サーバーはデータベースに対する CommitExclusive ロックの要求を発行します<br />2) サーバーは、実行中のトランザクションすべてがコミットまたはロールバックされるまで待機します<br />3) サーバーはデータベースのデタッチに必要なすべてのメタデータを構築します<br />4) データベースは削除済みに設定されます<br />5) サーバーはトランザクションをコミットします|1) データベースは削除済みに設定されます<br />2) サーバーはトランザクションをコミットします<br /><br /> <br /><br /> 注:読み取り専用データベースのデタッチのパスワードを変更できません。 アタッチされたデータベースに既にパスワードが含まれている場合にパスワード パラメーターを指定すると、エラーが発生します。|  
+|1) サーバーはデータベースに対する CommitExclusive ロックの要求を発行します<br />2) サーバーは、実行中のトランザクションすべてがコミットまたはロールバックされるまで待機します<br />3) サーバーはデータベースのデタッチに必要なすべてのメタデータを構築します<br />4) データベースは削除済みに設定されます<br />5) サーバーはトランザクションをコミットします|1) データベースは削除済みに設定されます<br />2) サーバーはトランザクションをコミットします<br /><br /> <br /><br /> 注: 読み取り専用データベースでは、デタッチ用のパスワードを変更できません。 アタッチされたデータベースに既にパスワードが含まれている場合にパスワード パラメーターを指定すると、エラーが発生します。|  
   
- `Attach` コマンドおよび `Detach` コマンドは 1 つの操作として実行する必要があります。 同じトランザクション内でその他の操作と組み合わせることはできません。 また、`Attach`と`Detach`コマンドはアトミックなトランザクション コマンドです。 つまり、操作は成功するか失敗するかのどちらかになります。 データベースは未完了の状態にしておくことはできません。  
+ `Attach` コマンドおよび `Detach` コマンドは 1 つの操作として実行する必要があります。 同じトランザクション内でその他の操作と組み合わせることはできません。 また、 `Attach` コマンドと `Detach` コマンドはアトミックトランザクションコマンドです。 つまり、操作は成功するか失敗するかのどちらかになります。 データベースは未完了の状態にしておくことはできません。  
   
 > [!IMPORTANT]  
 >  `Detach` コマンドを実行するには、サーバーまたはデータベースの管理者特権が必要です。  
@@ -56,12 +55,12 @@ ms.locfileid: "66077484"
 > [!IMPORTANT]  
 >  `Attach` コマンドを実行するには、サーバーの管理者特権が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.analysisservices.sharepoint.integration.dll * のようになります。](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Analysis Services データベースの移動](move-an-analysis-services-database.md)   
- [データベースの ReadWriteMode](database-readwritemodes.md)   
- [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [データベース ReadWriteModes](database-readwritemodes.md)   
+ [Analysis Services データベースを ReadOnly モードと ReadWrite モードの間で切り替える](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [Detach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Attach 要素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   

@@ -1,0 +1,49 @@
+---
+title: dm_pdw_nodes_exec_text_query_plan (Transact-sql) |Microsoft Docs
+description: TSQL バッチまたはバッチ内の特定のステートメントのプラン表示をテキスト形式で返す動的管理ビュー。
+ms.custom: ''
+ms.date: 10/14/2019
+ms.prod: sql
+ms.technology: data-warehouse
+ms.reviewer: ''
+ms.topic: language-reference
+dev_langs:
+- TSQL
+ms.assetid: ''
+author: XiaoyuMSFT
+ms.author: xiaoyul
+monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 45f26c9569950c2450318abf546a838632e06f20
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "73145667"
+---
+# <a name="sysdm_pdw_nodes_exec_text_query_plan--transact-sql"></a>dm_pdw_nodes_exec_text_query_plan (Transact-sql)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、またはバッチ内の特定のステートメントのプラン表示をテキスト形式で返します。
+
+## <a name="table-returned"></a>返されたテーブル  
+  
+|列名|データ型|説明|  
+|-----------------|---------------|-----------------|  
+|**pdw_node_ID**|**int**|ノードに関連付けられている一意の数値 ID。|
+|**dbid**|**smallint**|このプランに対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントがコンパイルされたときに有効であったコンテキスト データベースの ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。<br /><br /> NULL 値は許可されます。|  
+|**objectid**|**int**|ストアド プロシージャやユーザー定義関数など、クエリ プランのオブジェクトの ID。 アドホック バッチおよび準備されたバッチの場合、この列の値は **NULL** です。<br /><br /> NULL 値は許可されます。|  
+|**number**|**smallint**|ストアド プロシージャに付けられた番号 (整数)。 アドホック バッチおよび準備されたバッチの場合、この列の値は **NULL** です。<br /><br /> NULL 値は許可されます。| 
+|**暗号**|**bit**|対応するプロシージャが暗号化されているかどうか。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> NULL 値は許可されません。|  
+|**query_plan**|**nvarchar(max)**|*Plan_handle*で指定されたクエリ実行プランのコンパイル時のプラン表示表現を格納します。 プラン表示はテキスト形式です。 アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、ストアド プロシージャ コール、ユーザー定義関数コールなどを含むバッチごとに、1 つのプランが生成されます。<br /><br /> NULL 値は許可されます。|  
+
+## <a name="remarks"></a>Remarks  
+[Dm_exec_text_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql?view=sql-server-ver15)適用される同じコメント。  
+
+## <a name="permissions"></a>アクセス許可  
+ サーバーに対する**sysadmin**サーバー `VIEW SERVER STATE`ロールまたは権限が必要です。  
+  
+## <a name="see-also"></a>関連項目  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+
+  ## <a name="next-steps"></a>次のステップ
+ 開発に関するその他のヒントについては、[SQL Data Warehouse の開発の概要](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)に関する記事をご覧ください。

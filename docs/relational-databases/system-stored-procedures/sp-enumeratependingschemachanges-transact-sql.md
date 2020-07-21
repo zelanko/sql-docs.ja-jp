@@ -1,5 +1,5 @@
 ---
-title: sp_enumeratependingschemachanges (TRANSACT-SQL) |Microsoft Docs
+title: sp_enumeratependingschemachanges (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumeratependingschemachanges
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0b150b563cc9ea6bb555e6ea4f9caa1e6fe60193
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124575"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881741"
 ---
-# <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  保留中のすべてのスキーマ変更に関する一覧を返します。 このストアド プロシージャを使用できる[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)、これにより、管理者がレプリケートされないように選択した保留中のスキーマの変更をスキップします。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  保留中のすべてのスキーマ変更に関する一覧を返します。 このストアドプロシージャは、 [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)と共に使用できます。これにより、管理者は、選択した保留中のスキーマ変更をスキップして、レプリケートされないようにすることができます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,34 +38,34 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @starting_schemaversion = ] starting_schemaversion` 結果セットに含めるスキーマ変更の最小数です。  
+`[ @starting_schemaversion = ] starting_schemaversion`結果セットに含めるスキーマ変更の最小数を指定します。  
   
 ## <a name="result-set"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**article_name**|**sysname**|スキーマの変更を適用するアーティクルの名前または**パブリケーション全体**のパブリケーション全体に適用されるスキーマ変更します。|  
+|**article_name**|**sysname**|スキーマ変更が適用されるアーティクルの名前、またはパブリケーション全体に適用されるスキーマ変更の場合は**パブリケーション全体**。|  
 |**schemaversion**|**int**|保留中のスキーマ変更の数。|  
-|**schematype**|**sysname**|スキーマの種類を表すテキスト値を変更します。|  
-|**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] スキーマの変更について説明します。|  
-|**schemastatus**|**nvarchar(10)**|スキーマ変更がアーティクルに対して保留になっているかどうかを示します。次のいずれかの値をとります。<br /><br /> **アクティブな**= スキーマ変更が保留中<br /><br /> **非アクティブな**= スキーマ変更がアクティブでないです。<br /><br /> **スキップ**= スキーマ変更はレプリケートされません|  
-|**される**|**uniqueidentifier**|スキーマの変更を識別します。|  
+|**schematype**|**sysname**|スキーマ変更の種類を表すテキスト値。|  
+|**スキーマのスキーマ**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]スキーマの変更について説明します。|  
+|**schemastatus**|**nvarchar (10)**|スキーマ変更がアーティクルに対して保留になっているかどうかを示します。次のいずれかの値をとります。<br /><br /> **active** = スキーマの変更は保留中です<br /><br /> **inactive** = スキーマ変更が非アクティブ<br /><br /> **skip** = スキーマの変更はレプリケートされません|  
+|**schemaguid**|**uniqueidentifier**|スキーマの変更を識別します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_enumeratependingschemachanges**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_enumeratependingschemachanges**は、マージレプリケーションで使用します。  
   
- **sp_enumeratependingschemachanges**, で使用[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)、マージ レプリケーションのサポートのためのものでは、および使用する場合にのみ、他の修正操作など再初期化、状況を解決できませんでした。  
+ [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)と共に使用される**sp_enumeratependingschemachanges**は、マージレプリケーションのサポートを目的としており、再初期化などの他の是正措置によって状況を修正できなかった場合にのみ使用してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_enumeratependingschemachanges**します。  
+ **Sp_enumeratependingschemachanges**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [sysmergeschemachange &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

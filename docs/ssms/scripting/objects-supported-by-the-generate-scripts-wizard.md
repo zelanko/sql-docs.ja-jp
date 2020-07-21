@@ -1,6 +1,6 @@
 ---
-title: スクリプト生成ウィザードでサポートされるオブジェクト | Microsoft Docs
-ms.custom: ''
+title: スクリプト生成ウィザードでサポートされるオブジェクト
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9b1a48c19ad6e6b0e33d2b7f0d9ad326d866e00
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c14ea09d45c59def95f078eb87e72e2a70925892
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262284"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253764"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>スクリプト生成ウィザードでサポートされるオブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68262284"
 |アセンブリ|DEFAULT 制約|ストアド プロシージャ*|ユーザー定義データ型|XML スキーマ コレクション|  
 |CHECK 制約|フルテキスト カタログ|シノニム|ユーザー定義関数||  
 |CLR (共通言語ランタイム) ストアド プロシージャ*|インデックス|テーブル|ユーザー定義テーブル||  
-|CLR ユーザー定義関数|Rule|ユーザー**|ユーザー定義型||  
+|CLR ユーザー定義関数|ルール|ユーザー**|ユーザー定義型||  
   
  \* 暗号化されずにパブリッシュされます。  
   

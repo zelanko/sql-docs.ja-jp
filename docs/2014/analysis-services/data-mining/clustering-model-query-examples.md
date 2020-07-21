@@ -1,5 +1,5 @@
 ---
-title: クラスタ リング モデルのクエリ例 |Microsoft Docs
+title: クラスタリングモデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085718"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524208"
 ---
 # <a name="clustering-model-query-examples"></a>クラスタリング モデルのクエリ例
   データ マイニング モデルに対するクエリを作成すると、モデルに関するメタデータを取得できます。また、分析で検出されたパターンに関する詳細を取得するためのコンテンツ クエリも作成できます。 モデル内のパターンを使用して新しいデータの予測を行う予測クエリを作成することもできます。 取得できる情報は、クエリの種類によって異なります。 たとえばコンテンツ クエリを使用すると、検出されたクラスターに関する追加情報を取得できるのに対し、予測クエリを使用すると、新しいデータ ポイントが所属する可能性が高いクラスターを調べることができます。  
@@ -50,12 +49,12 @@ ms.locfileid: "66085718"
   
  [すべての可能なクラスターを確率および距離と共に取得する](#bkmk_Query10)  
   
-##  <a name="bkmk_top2"></a> モデルに関する情報の入手  
+##  <a name="finding-information-about-the-model"></a><a name="bkmk_top2"></a> モデルに関する情報の入手  
  すべてのマイニング モデルでは、アルゴリズムによる学習内容が、正規化されたスキーマ (マイニング モデル スキーマ行セット) に従って公開されます。 マイニング モデル スキーマ行セットに対するクエリは、データ マイニング拡張機能 (DMX) ステートメントを使用して作成できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、スキーマ行セットに対して直接、システム テーブルとしてクエリを実行することもできます。  
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1:DMX を使用してモデル メタデータを取得する  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a> サンプル クエリ 1: DMX を使用してモデル メタデータを取得する  
  次のクエリは、「基本的なデータ マイニング チュートリアル」で作成したクラスター モデル `TM_Clustering`に関する基本的なメタデータを返します。 クラスター モデルの親ノードで利用可能なメタデータには、モデルの名前、モデルが格納されているデータベース、モデルの子ノードの数などがあります。 このクエリでは、DMX コンテンツ クエリを使用してモデルの親ノードからメタデータを取得しています。  
   
 ```  
@@ -68,7 +67,7 @@ WHERE NODE_TYPE = 1
 > [!NOTE]  
 >  CHILDREN_CARDINALITY という列名は、多次元式 (MDX) の同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |||  
 |-|-|  
@@ -77,13 +76,13 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|すべて|  
   
  アソシエーション モデル内でのこれらの列の意味については、「[クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2:スキーマ行セットからモデル メタデータを取得する  
+###  <a name="sample-query-2-retrieving-model-metadata-from-the-schema-rowset"></a><a name="bkmk_Query2"></a>サンプルクエリ 2: スキーマ行セットからモデルメタデータを取得する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、DMX コンテンツ クエリで返されたのと同じ情報を取得できます。 ただし、スキーマ行セットから返される情報にはいくつかの追加の列があります (モデルの作成時に使用されたパラメーター、モデルが最後に処理された日時、モデルの所有者など)。  
   
  次の例では、モデルが作成された日、変更された日、最後に処理された日、モデルの作成に使用されたクラスタリング パラメーター、およびトレーニング セットのサイズが返されます。 この情報は、モデルのドキュメントを作成する場合や、既存のモデルの作成に使用されたクラスタリング オプションを特定する場合に使用できます。  
@@ -94,7 +93,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM_Clustering'  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |||  
 |-|-|  
@@ -109,7 +108,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>クラスターに関する情報の入手  
  一般に、クラスター モデルに対する最も便利なコンテンツ クエリでは、 **クラスター ビューアー**を使用して参照できるのと同じ種類の情報が返されます。 こうした情報には、クラスターのプロファイル、クラスターの特性、クラスターの識別などがあります。 ここでは、この情報を取得するクエリの例を紹介します。  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3:クラスターまたはクラスターの一覧を取得します。  
+###  <a name="sample-query-3-returning-a-cluster-or-list-of-clusters"></a><a name="bkmk_Query3"></a> サンプル クエリ 3: クラスターまたはクラスターのリストを取得する  
  すべてのクラスターはノードの種類が 5 であるため、モデル コンテンツに対してその種類のノードのみのクエリを実行することによって、簡単にクラスターのリストを取得できます。 この例のように、返されるノードを確率やサポートでフィルター処理することもできます。  
   
 ```  
@@ -118,7 +117,7 @@ FROM TM_Clustering.CONTENT
 WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |||  
 |-|-|  
@@ -135,7 +134,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4:クラスターの属性を取得する  
+###  <a name="sample-query-4-returning-attributes-for-a-cluster"></a><a name="bkmk_Query4"></a> サンプル クエリ 4: クラスターの属性を取得する  
  **クラスター ビューアー** には、すべてのクラスターについて、属性とその値の一覧を含むプロファイルが表示されます。 そのほか、モデル内のケースの母集団全体の値の分布を示すヒストグラムも表示されます。 ビューアーでモデルを参照する場合は、このヒストグラムをマイニング凡例からコピーして、簡単に Excel や Word のドキュメントに貼り付けることができます。 また、ビューアーの [クラスターの特性] ペインを使用して、異なるクラスターの属性をグラフィカルに比較することもできます。  
   
  ただし、一度に複数のクラスターの値を取得する必要がある場合は、モデルに対してクエリを実行する方が簡単です。 たとえば、モデルを参照していて、上位 2 つのクラスターは `Number Cars Owned`という属性が異なっていることに気付いた場合、 それぞれのクラスターの値を抽出することができます。  
@@ -158,7 +157,7 @@ WHERE NODE_TYPE = 5
 > [!NOTE]  
 >  入れ子になったテーブル列である `PROBABILITY`は、MDX の予約済みキーワードと同じ名前であるため、角かっこで囲む必要があります。  
 >   
->  例の結果を次に示します。  
+>  結果の例:  
   
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
@@ -177,7 +176,7 @@ WHERE NODE_TYPE = 5
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> サンプル クエリ 5:ストアド プロシージャをシステムを使用して、クラスターのプロファイルを取得  
+###  <a name="sample-query-5-return-a-cluster-profile-using-system-stored-procedures"></a><a name="bkmk_Query5"></a> サンプル クエリ 5: システム ストアド プロシージャを使用してクラスターのプロファイルを取得する  
  DMX を使用して独自にクエリを作成する代わりに、より簡単な方法として、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でクラスターの操作に使用されるシステム ストアド プロシージャを呼び出すこともできます。 次の例は、内部ストアド プロシージャを使用して、ID が 002 のクラスターのプロファイルを取得する方法を示しています。  
   
 ```  
@@ -190,12 +189,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterPr
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCharacteristics('TM_Clustering", '009',0.0005  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |属性|値|頻度|サポート|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
-|Region|North America|0.999852875241508|899|  
+|リージョン|北米|0.999852875241508|899|  
 |Total Children|0|0.993860958572323|893|  
   
 > [!NOTE]  
@@ -203,7 +202,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> サンプル クエリ 6:クラスターの識別要因を検索します。  
+###  <a name="sample-query-6-find-discriminating-factors-for-a-cluster"></a><a name="bkmk_Query6"></a> サンプル クエリ 6: クラスターの識別要因を取得する  
  **クラスター ビューアー** の **[クラスターの識別]** タブを使用すると、クラスターを簡単に別のクラスターと比較したり、他のすべてのケース (そのクラスターを除く全クラスター) と比較したりできます。  
   
  一方、この情報を返すクエリを作成するのは簡単ではなく、一時的な結果を格納して複数のクエリの結果を比較する追加の処理がクライアント側で必要になる場合があります。 より簡単な方法として、システム ストアド プロシージャを使用できます。  
@@ -214,13 +213,13 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDiscrimination('TM_Clustering','009','007',0.0005,true)  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|属性|値|[スコア]|  
+|属性|値|Score|  
 |----------------|------------|-----------|  
-|Region|North America|100|  
+|リージョン|北米|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
-|Region|Europe|-72.5041051379789|  
+|リージョン|ヨーロッパ|-72.5041051379789|  
 |English Occupation|手動|-69.6503163202722|  
   
  この情報は、 **[クラスターの識別]** タブの 1 つ目のドロップダウン リストでクラスター 9 を選択し、2 つ目のドロップダウン リストでクラスター 7 を選択した場合にグラフに表示されるのと同じ情報です。 クラスター 9 を他のすべてのクラスターと比較するには、次のように、2 つ目のパラメーターで空の文字列を使用します。  
@@ -234,7 +233,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> サンプル クエリ 7:クラスターに属するケースを取得する  
+###  <a name="sample-query-7-returning-cases-that-belong-to-a-cluster"></a><a name="bkmk_Query7"></a> サンプル クエリ 7: クラスターに属するケースを取得する  
  マイニング モデルでドリルスルーが有効になっている場合は、モデルで使用されたケースに関する詳細情報を返すクエリを作成できます。 さらに、マイニング構造でドリルスルーが有効になっている場合は、[StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 関数を使用して、基になる構造の列を含めることもできます。  
   
  次の例は、モデルで使用された 2 つの列 (Age および Region) と、モデルで使用されなかったもう 1 つの列 (First Name) を返します。 このクエリで返されるのは、クラスター 1 に分類されたケースだけです。  
@@ -252,11 +251,11 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>モデルを使用して予測を行う  
  クラスターは、データの説明や把握のために使用されるのが一般的ですが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の実装では、クラスター メンバーシップに関する予測を行って、その予測に関連する確率を取得することもできます。 ここでは、クラスター モデルに対する予測クエリを作成する方法の例を紹介します。 表形式のデータ ソースを指定して複数のケースの予測を行うことも、単一クエリを作成して一度に 1 つずつ新しい値を渡すこともできます。 このセクションの例は、わかりやすくするためにすべて単一クエリになっています。  
   
- DMX を使用して予測クエリを作成する方法の詳細については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
+ DMX を使用した予測クエリの作成方法の詳細については、「[データマイニングクエリインターフェイス](data-mining-query-tools.md)」を参照してください。  
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> サンプル クエリ 8:クラスター モデルの結果を予測する  
+###  <a name="sample-query-8-predicting-outcomes-from-a-clustering-model"></a><a name="bkmk_Query8"></a> サンプル クエリ 8: クラスター モデルの結果を予測する  
  作成したクラスター モデルに予測可能な属性が含まれている場合は、そのモデルを使用して結果に関する予測を行うことができます。 ただし、予測可能列を `Predict` に設定するか `PredictOnly` に設定するかによって、モデルによる予測可能な属性の処理方法が異なります。 列の使用法を `Predict` に設定すると、その属性の値がクラスター モデルに追加され、完成したモデルに属性として表示されます。 一方、列の使用法を `PredictOnly` に設定すると、その値はクラスターの作成には使用されません。 代わりに、モデルが完成した後に、各ケースが属するクラスターに基づいて `PredictOnly` 属性の新しい値がクラスタリング アルゴリズムによって作成されます。  
   
  次のクエリでは、モデルに新しいケースを 1 つ渡しています。このケースに関する情報は Age と Gender だけです。 SELECT ステートメントでは、関心のある予測可能な属性と値のペアを指定しています。 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 関数は、それらの属性を持つケースの結果が対象の結果になる確率を返します。  
@@ -273,17 +272,17 @@ NATURAL PREDICTION JOIN
   
  使用法を `Predict` に設定した場合の結果の例を次に示します。  
   
-|Bike Buyer|式|  
+|Bike Buyer|正規表現|  
 |----------------|----------------|  
 |1|0.592924735740338|  
   
  使用法を `PredictOnly` に設定し、モデルを再処理した場合の結果の例を次に示します。  
   
-|Bike Buyer|式|  
+|Bike Buyer|正規表現|  
 |----------------|----------------|  
 |1|0.55843544003102|  
   
- この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
+ この例ではモデルに大きな違いはありませんが、 値の実際の分布とモデルの予測との違いを検出することが重要になる場合もあります。 そのような場合は、 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 関数を使用できます。この関数は、特定のモデルについてケースの確率を返します。  
   
  PredictCaseLikelihood 関数によって返される数値は確率であるため、常に 0 と 1 の間になります。値 .5 はランダムな結果を表します。 したがって、スコアが .5 より小さい場合は、予測されたケースがそのモデルではあり得そうにないことを示し、.5 より大きい場合は、おそらくモデルに収まることを示します。  
   
@@ -299,7 +298,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |NormalizedValue|NonNormalizedValue|  
 |---------------------|------------------------|  
@@ -309,7 +308,7 @@ NATURAL PREDICTION JOIN
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> サンプル クエリ 9:クラスター メンバーシップを確認する  
+###  <a name="sample-query-9-determining-cluster-membership"></a><a name="bkmk_Query9"></a> サンプル クエリ 9: クラスター メンバーシップを確認する  
  この例では、 [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) 関数を使用して、新しいケースが属する可能性が最も高いクラスターを取得し、 [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) 関数を使用して、そのクラスターに属する確率を取得しています。  
   
 ```  
@@ -322,17 +321,17 @@ NATURAL PREDICTION JOIN
   'S' AS [Marital Status]) AS t  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|$CLUSTER|式|  
+|$CLUSTER|正規表現|  
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **注**既定で、`ClusterProbability`関数は、最も可能性の高いクラスターの確率を返します。 ただし、 `ClusterProbability('cluster name')`という構文を使用して別のクラスターを指定することもできます。 その場合は、この 2 つの予測関数の結果は互いに無関係であるため、 2 番目の列の確率スコアが、1 番目の列のクラスターとは別のクラスターのものになる場合もあることに注意してください。  
+ **メモ**既定では、 `ClusterProbability` 関数は最も可能性の高いクラスターの確率を返します。 ただし、 `ClusterProbability('cluster name')`という構文を使用して別のクラスターを指定することもできます。 その場合は、この 2 つの予測関数の結果は互いに無関係であるため、 2 番目の列の確率スコアが、1 番目の列のクラスターとは別のクラスターのものになる場合もあることに注意してください。  
   
  [トップに戻る](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> サンプル クエリ 10:すべての可能なクラスターを確率および距離と共に取得する  
+###  <a name="sample-query-10-returning-all-possible-clusters-with-probability-and-distance"></a><a name="bkmk_Query10"></a> サンプル クエリ 10: すべての可能なクラスターを確率および距離と共に取得する  
  前の例の確率スコアはあまり高くありませんでした。 より適したクラスターがあるかどうかを調べるには、 [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) 関数を [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) 関数と共に使用して、すべての可能なクラスターと、各クラスターに新しいケースが属する確率を含む、入れ子になったテーブルを取得することができます。 ここでは、結果を見やすくするために、FLATTENED キーワードを使用して階層的な行セットをフラット テーブルに変更しています。  
   
 ```  
@@ -369,7 +368,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
+|予測関数|使用法|  
 |[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|入力ケースを含んでいる可能性が最も高いクラスターを返します。|  
 |[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|指定されたクラスターと入力したケース間の距離を返します。ただしクラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。<br /><br /> 入力ケースが指定されたクラスターに所属する確率を返します。|  
 |[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|入力ケースが指定されたクラスターに所属する確率を返します。|  
@@ -388,8 +387,8 @@ NATURAL PREDICTION JOIN
  特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)   
- [Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)  
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft クラスタリングアルゴリズムテクニカルリファレンス](microsoft-clustering-algorithm-technical-reference.md)   
+ [Microsoft クラスタリングアルゴリズム](microsoft-clustering-algorithm.md)  
   
   

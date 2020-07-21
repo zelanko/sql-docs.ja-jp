@@ -1,6 +1,6 @@
 ---
-title: アプライアンスの管理タスク - Analytics Platform System |Microsoft Docs
-description: このガイドでは、Analytics Platform System (APS) のアプライアンスの管理タスクを実行する方法について説明します。
+title: アプライアンスの管理タスク
+description: このガイドでは、Analytics Platform System (APS) のアプライアンス管理タスクを実行する方法について説明します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,31 +8,32 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1a24c7fe3d167775845ea6360aefdd1172eeaa72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 51925c5657d0381b9e107dc5ce3cf6fd88366bdf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961490"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401437"
 ---
-# <a name="appliance-management-tasks-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスの管理タスク
-このガイドでは、Analytics Platform System (APS) のアプライアンスの管理タスクを実行する方法について説明します。  
+# <a name="appliance-management-tasks-for-analytics-platform-system"></a>分析プラットフォームシステムのアプライアンス管理タスク
+このガイドでは、Analytics Platform System (APS) のアプライアンス管理タスクを実行する方法について説明します。  
   
-## <a name="guide-sections"></a>ガイドのセクションでは  
+## <a name="guide-sections"></a>ガイドセクション  
   
--   [アプライアンスのインストールと構成の概要&#40;Analytics Platform System&#41;](appliance-installation-and-configuration-overview.md)  
+-   [アプライアンスのインストールと構成の概要 &#40;Analytics Platform System&#41;](appliance-installation-and-configuration-overview.md)  
   
--   [アプライアンス ノードへの接続&#40;Analytics Platform System&#41;](connect-to-appliance-nodes.md)  
+-   [アプライアンスノードへの接続 &#40;Analytics Platform System&#41;](connect-to-appliance-nodes.md)  
   
--   [ウイルス対策ソフトウェア&#40;Analytics Platform System&#41;](antivirus-software.md)  
+-   [ウイルス対策ソフトウェア &#40;Analytics Platform System&#41;](antivirus-software.md)  
   
--   [アプライアンスの構成&#40;Analytics Platform System&#41;](appliance-configuration.md)  
+-   [アプライアンス構成 &#40;Analytics Platform System&#41;](appliance-configuration.md)  
   
--   [ソフトウェアのサービス&#40;Analytics Platform System&#41;](software-servicing.md)  
+-   [ソフトウェアサービス &#40;Analytics Platform System&#41;](software-servicing.md)  
   
--   [サービスのステータスの PDW &#40;Analytics Platform System&#41;](pdw-services-status.md)  
+-   [PDW サービスの状態 &#40;Analytics Platform System&#41;](pdw-services-status.md)  
   
--   [APS アプライアンスの電源オンまたはオフ&#40;Analytics Platform System&#41;](power-the-aps-appliance-on-or-off.md)  
+-   [APS アプライアンスの電源をオンまたはオフ &#40;Analytics Platform System&#41;](power-the-aps-appliance-on-or-off.md)  
   
--   [アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+-   [アプライアンス監視 &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

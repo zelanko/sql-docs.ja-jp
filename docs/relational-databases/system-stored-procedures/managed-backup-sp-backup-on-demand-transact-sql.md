@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup。 sp_backup_on_demand (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,25 +18,24 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5b2ee41dcc94e0bc84b6a5347ba84609b73e3335
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942050"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053523"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup。 sp_backup_on_demand (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  要求[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を指定されたデータベースのバックアップを実行します。  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]指定されたデータベースのバックアップを実行するように要求します。  
   
- このストアド プロシージャを使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で構成されるデータベースに対してアドホック バックアップを実行できます。 こうことで、バックアップ チェーンが中断し、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]プロセスは認識し、バックアップは同じ Windows Azure Blob ストレージ コンテナーに格納します。  
+ このストアド プロシージャを使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で構成されるデータベースに対してアドホック バックアップを実行できます。 これにより、バックアップチェーンとプロセスの中断 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] が認識され、バックアップが同じ Azure Blob ストレージコンテナーに格納されます。  
   
- バックアップが正常に完了すると、完全バックアップのファイル パスが返されます。 これには、バックアップ操作の結果、新しいバックアップ ファイルの場所と名前が含まれます。  
+ バックアップが正常に完了すると、完全バックアップファイルのパスが返されます。 これには、バックアップ操作の結果として生成される新しいバックアップファイルの名前と場所が含まれます。  
   
- 場合、エラーが返されます[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]のバックアップを実行中は、指定されたデータベースの型を指定します。 この場合、返されるエラー メッセージには、現在のバックアップのアップロード先となるバックアップ ファイルの完全なパスが含まれます。  
+ が指定されたデータベースの指定された [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 種類のバックアップを実行中の場合、エラーが返されます。 この場合、返されるエラー メッセージには、現在のバックアップのアップロード先となるバックアップ ファイルの完全なパスが含まれます。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,23 +47,23 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="arguments"></a><a name="Arguments"></a>数値  
  @database_name  
- バックアップの実行対象となるデータベースの名前。 @database_nameは **SYSNAME** します。  
+ バックアップを実行するデータベースの名前を指定します。 @database_nameは**SYSNAME**です。  
   
  @type  
- 実行するバックアップの種類:データベースまたはログ。 @typeパラメーターが**nvarchar (32)** します。  
+ 実行するバックアップの種類: Database または Log。 @typeパラメーターは**NVARCHAR (32)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
+ **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例で、データベース"TestDB"のデータベース バックアップを要求します。 このデータベースでは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にします。  
+## <a name="examples"></a>例  
+ 次の例では、データベース ' TestDB ' のデータベースバックアップ要求を作成します。 このデータベースは [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 有効になっています。  
   
 ```  
 Use MSDB  

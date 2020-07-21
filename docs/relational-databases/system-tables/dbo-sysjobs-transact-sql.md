@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobs (TRANSACT-SQL) |Microsoft Docs
+title: dbo.sysジョブ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,40 +17,40 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ea2b3196e159b19a1baaa032c622a4cf9132402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 00bab120cd8d0e931f0aba77ce7aee694126339c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097602"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890495"
 ---
-# <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="dbosysjobs-transact-sql"></a>dbo.sysジョブ (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。 このテーブルに格納されます、 **msdb**データベース。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによる実行が予定されているジョブに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|ジョブの一意な ID。|  
-|**originating_server_id**|**int**|ジョブを実行した元のサーバーの ID。|  
+|**job_id**|**uniqueidentifier**|ジョブの一意の ID。|  
+|**originating_server_id**|**int**|ジョブの送信元のサーバーの ID。|  
 |**name**|**sysname**|ジョブの名前。|  
-|**enabled**|**tinyint**|ジョブが実行可能かどうか。|  
+|**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
 |**description**|**nvarchar(512)**|ジョブの説明。|  
-|**start_step_id**|**int**|実行を開始するジョブ ステップの ID。|  
-|**category_id**|**int**|ジョブ カテゴリの ID。|  
-|**owner_sid**|**varbinary(85)**|ジョブ所有者のセキュリティ識別番号 (SID)。|  
-|**notify_level_eventlog**|**int**|**ビットマスク**示すどのような場合は、Microsoft Windows アプリケーション ログに、通知イベントが記録する必要があります。<br /><br /> **0** = なし<br /><br /> **1**ジョブ成功時の =<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = (ジョブの結果に関係なく、ジョブが終了したとき|  
-|**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1**ジョブ成功時の =<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = (ジョブの結果に関係なく、ジョブが終了したとき|  
-|**notify_level_netsend**|**int**|ジョブが完了すると、どのような場合、ネットワーク メッセージを示すビットマスクを送信する必要があります。<br /><br /> **0** = なし<br /><br /> **1**ジョブ成功時の =<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = (ジョブの結果に関係なく、ジョブが終了したとき|  
-|**notify_level_page**|**int**|どのような場合に、ジョブの完了時にポケットベルのメッセージを送信するのかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1**ジョブ成功時の =<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = (ジョブの結果に関係なく、ジョブが終了したとき|  
-|**notify_email_operator_id**|**int**|通知先のオペレーターの電子メール名。|  
-|**notify_netsend_operator_id**|**int**|コンピューターまたはネットワーク メッセージを送信するときに使用するユーザーの ID。|  
-|**notify_page_operator_id**|**int**|コンピューターまたはページを送信するときに使用するユーザーの ID。|  
-|**delete_level**|**int**|**ビットマスク**示すジョブの完了時にどのような場合、ジョブを削除する必要があります。<br /><br /> **0** = なし<br /><br /> **1**ジョブ成功時の =<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = (ジョブの結果に関係なく、ジョブが終了したとき|  
-|**date_created**|**datetime**|ジョブを作成した日付。|  
-|**date_modified**|**datetime**|ジョブを最後に変更した日付。|  
+|**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
+|**category_id**|**int**|ジョブカテゴリの ID。|  
+|**owner_sid**|**varbinary (85)**|ジョブ所有者のセキュリティ識別番号 (SID)。|  
+|**notify_level_eventlog**|**int**|どのような場合に通知イベントを Microsoft Windows アプリケーションログに記録するかを示す**ビットマスク**。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_level_netsend**|**int**|どのような場合に、ジョブの完了時にネットワークメッセージを送信するかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_level_page**|**int**|どのような場合に、ジョブの完了時にポケットベルのメッセージを送信するのかを示すビットマスク。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_email_operator_id**|**int**|通知するオペレーターの電子メール名。|  
+|**notify_netsend_operator_id**|**int**|ネットワークメッセージを送信するときに使用されるコンピューターまたはユーザーの ID。|  
+|**notify_page_operator_id**|**int**|ページの送信時に使用されるコンピューターまたはユーザーの ID。|  
+|**delete_level**|**int**|どのような場合に、ジョブの完了時にジョブを削除する必要があるかを示す**ビットマスク**。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功したとき<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**date_created**|**datetime**|ジョブが作成された日付。|  
+|**date_modified**|**datetime**|ジョブが最後に変更された日付。|  
 |**version_number**|**int**|ジョブのバージョン。|  
   
   

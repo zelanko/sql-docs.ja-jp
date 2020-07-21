@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d2eb2d5db5fe7c1803e32413fd214993444e494
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919606"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760358"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks メソッドの例 (VB)
-この例では、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッド。 ブックマークの相対値が必要なは、特定のブックマークで特別な何らかの形でない限り、めったにありません。  
+この例は、 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
   
- ランダムな行を指定する[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)から派生した、***作成者***検索の対象としてテーブル。 各の行を対象とする相対の位置に表示されます。  
+ ***Authors***テーブルから派生した[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のランダムな行を検索の対象として指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -132,7 +132,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CompareBookmarks メソッド (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

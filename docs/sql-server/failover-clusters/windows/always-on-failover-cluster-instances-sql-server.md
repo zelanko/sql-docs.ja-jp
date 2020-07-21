@@ -1,6 +1,7 @@
 ---
-title: Always On フェールオーバー クラスター インスタンス (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Always On フェールオーバー クラスター インスタンス
+description: SQL Server の Always On フェールオーバー クラスター インスタンスの説明。
+ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063802"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75230186"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "68063802"
    
  **このトピックの内容**  
   
--   [利点](#Benefits)  
+-   [メリット](#Benefits)  
   
--   [推奨事項](#Recommendations)  
+-   [Recommendations (推奨事項)](#Recommendations)  
   
 -   [フェールオーバー クラスター インスタンスの概要](#Overview)  
   
@@ -50,9 +51,9 @@ ms.locfileid: "68063802"
   
 -   [SQL Server フェールオーバーの概念とタスク](#ConceptsAndTasks)  
   
--   [関連項目](#RelatedTopics)  
+-   [関連トピック](#RelatedTopics)  
   
-##  <a name="Benefits"></a> フェールオーバー クラスター インスタンスの利点  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a> フェールオーバー クラスター インスタンスの利点  
  サーバーのハードウェアまたはソフトウェアに障害が発生すると、そのサーバーに接続しているアプリケーションまたはクライアントで、ダウンタイムが発生します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが (スタンドアロン インスタンスではなく) FCI として構成されている場合、その [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの高可用性は、FCI の冗長ノードの存在によって保護されます。 一度に FCI 内のノードの 1 つだけが WSFC リソース グループを所有します。 障害 (ハードウェア、オペレーティング システム、アプリケーション、サービスなどの障害) が発生した場合や計画していたアップグレードが行われる場合は、リソース グループの所有権が別の WSFC ノードに移動します。 この処理は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続しているクライアントまたはアプリケーションに認識されることなく実行され、これによって障害発生中のアプリケーションおよびクライアントのダウンタイムを最小限に抑えることができます。 次の一覧は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの主な利点を示しています。  
   
 -   冗長性によるインスタンス レベルの保護  
@@ -76,15 +77,15 @@ ms.locfileid: "68063802"
   
 -   フェールオーバー時のリソース使用状況を調整  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  実稼働環境では、静的 IP アドレスをフェールオーバー クラスター インスタンスの仮想 IP アドレスと組み合わせて使用することをお勧めします。  実稼働環境で DHCP を使用することはお勧めしません。 ダウンタイムが発生した場合に DHCP の IP リース期限が切れると、DNS 名に関連付けられている新しい DHCP IP アドレスの再登録に余分な時間がかかります。  
   
-##  <a name="Overview"></a> フェールオーバー クラスター インスタンスの概要  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a> フェールオーバー クラスター インスタンスの概要  
  FCI は、1 つ以上の WSFC ノードのある WSFC リソース グループで実行します。 FCI が起動すると、ノードの 1 つがリソース グループの所有権を引き受け、その [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスをオンラインにします。 このノードが所有するリソースは次のとおりです。  
   
 -   ネットワーク名  
   
--   IP アドレス (IP address)  
+-   IP アドレス  
   
 -   共有ディスク  
   
@@ -108,7 +109,7 @@ ms.locfileid: "68063802"
   
 5.  クライアント アプリケーション接続要求が、同じ仮想ネットワーク名 (VNN) を使用して新しいアクティブ ノードに自動的に送られます。  
   
- FCI は、基になる WSFC クラスターが正常なクォーラム状態にある限りオンラインになります (クォーラム WSFC ノードの大半は、自動フェールオーバー ターゲットとして使用できます)。 WSFC クラスターがクォーラムを失うと、その原因がハードウェア、ソフトウェア、ネットワーク障害であるか、不適切なクォーラム構成であるかにかかわらず、WSFC クラスター全体が FCI と共にオフラインになります。 この予定外のフェールオーバー シナリオでは、WSFC クラスターと FCI をオンラインに戻すために、手動介入によって残りの使用可能ノードでクォーラムを再確立する必要があります。 詳細については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」をご覧ください。  
+ FCI は、基になる WSFC クラスターが正常なクォーラム状態にある限りオンラインになります (クォーラム WSFC ノードの大半は、自動フェールオーバー ターゲットとして使用できます)。 WSFC クラスターがクォーラムを失うと、その原因がハードウェア、ソフトウェア、ネットワーク障害であるか、不適切なクォーラム構成であるかにかかわらず、WSFC クラスター全体が FCI と共にオフラインになります。 この予定外のフェールオーバー シナリオでは、WSFC クラスターと FCI をオンラインに戻すために、手動介入によって残りの使用可能ノードでクォーラムを再確立する必要があります。 詳細については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
   
 ### <a name="predictable-failover-time"></a>予測可能なフェールオーバー時間  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスがチェックポイント操作を最後に行った時期によっては、バッファー キャッシュ内のダーティ ページが大量になることがあります。 このため、フェールオーバーは、残りのダーティ ページをディスクに書き込むまで継続し、フェールオーバー時間が長く予測不能になる場合があります。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]からは、FCI は間接チェックポイントを使用して、バッファー キャッシュに保持されるダーティ ページの量を調整します。 これにより、通常の作業負荷ではリソースの消費が増えますが、フェールオーバー時間の予測や構成が可能になります。 これは、組織内のサービス レベル契約で、高可用性ソリューションの目標復旧時間 (RTO) を指定する場合に非常に役立ちます。 間接的なチェックポイントの詳細については、「 [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt)」を参照してください。  
@@ -124,7 +125,7 @@ ms.locfileid: "68063802"
   
  詳細については、「 [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)」をご覧ください。  
   
-##  <a name="FCIelements"></a> フェールオーバー クラスター インスタンスの構成要素  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a> フェールオーバー クラスター インスタンスの構成要素  
  FCI は、類似するハードウェア構成と同一のソフトウェア構成 (オペレーティング システムのバージョンとパッチ レベル、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョン、パッチ レベル、コンポーネント、インスタンス名など) を含む物理サーバー (ノード) のセットから構成されます。 同一のソフトウェア構成は、ノード間でフェールオーバーする際に FCI が完全に機能できるようにするために必要です。  
   
  WSFC リソース グループ  
@@ -142,7 +143,7 @@ ms.locfileid: "68063802"
  仮想 IP  
  マルチサブネット FCI の場合、FCI の各サブネットに仮想 IP アドレスが割り当てられます。 フェールオーバー時に、DNS サーバー上の VNN は、それぞれのサブネットの仮想 IP アドレスを指すように更新されます。 アプリケーションとクライアントは、マルチサブネット フェールオーバー後に同じ VNN を使用して FCI に接続できます。  
   
-##  <a name="ConceptsAndTasks"></a> SQL Server フェールオーバーの概念とタスク  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a> SQL Server フェールオーバーの概念とタスク  
   
 |概念とタスク|トピック|  
 |------------------------|-----------|  
@@ -150,7 +151,7 @@ ms.locfileid: "68063802"
 |FCI の管理とメンテナンスの概念について説明します。|[フェールオーバー クラスター インスタンスの管理とメンテナンス](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |マルチサブネットの構成と概念について説明します。|[SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> 関連項目  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a> 関連トピック  
   
 |**トピックの説明**|**トピック**|  
 |----------------------------|---------------|  

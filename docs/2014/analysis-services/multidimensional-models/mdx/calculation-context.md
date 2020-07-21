@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6d14df51c6ec37fb96520af7acf207227ae4ea5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546534"
 ---
 # <a name="calculation-context"></a>計算コンテキスト
   計算コンテキストとは、式が評価され、すべての座標が明示的に知られているか、または式から派生することができる、キューブの既知のサブ空間です。  
@@ -38,7 +37,7 @@ ms.locfileid: "66074688"
   
 5.  各軸上のキューブ セルまたはサブキューブ セル : 軸上の空の組が削除され、HAVING 句が適用されます。  
   
-6.  詳細については、次を参照してください[クエリ & #40; 内のキューブ コンテキストの確立。MDX と #41 です。](establishing-cube-context-in-a-query-mdx.md)  
+6.  詳細については、「 [クエリ内のキューブ コンテキストの確立 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)」を参照してください。  
   
  次のクエリでは、WHERE 句で指定されている Country 属性のメンバーと Calendar Year 属性のメンバーによって、行軸の計算コンテキストを制限しています。  
   
@@ -70,7 +69,7 @@ WHERE (Customer.Country.France,
 >  クエリのパフォーマンスを向上するには、解決プロセスのできるだけ早い段階でメンバーおよび組を削除してください。 こうすることで、最終的なメンバーのセットに対するクエリ時の複雑な計算を、最小限のセルに対して行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [クエリ内のキューブ コンテキストの確立 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX&#41;&#40;クエリでのキューブコンテキストの確立](establishing-cube-context-in-a-query-mdx.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   

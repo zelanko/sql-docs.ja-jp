@@ -1,5 +1,5 @@
 ---
-title: 主要業績評価指標 (Kpi) では、多次元モデル |Microsoft Docs
+title: 多次元モデルの主要業績評価指標 (Kpi) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546642"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
   ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。  
@@ -37,16 +36,16 @@ ms.locfileid: "66074798"
   
  ビジネス用語では、主要業績評価指標 (KPI) とは、ビジネスの成功度を判断するための測定値のことです。 KPI は一定期間中頻繁に評価されます。 たとえば、組織の営業部門では KPI として月間売上総利益を使用できます。一方、同じ組織の人事部門では、四半期単位の従業員離職率を使用できます。 これらはそれぞれ KPI の一例です。 企業幹部は、グループにまとめて事業のスコアカードに記録した KPI を頻繁に使用し、事業の成功度の履歴要約をすばやく正確に取得します。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]における KPI は、キューブ内のメジャー グループに関連付けられた、ビジネスの成功を評価するために使用する計算のコレクションです。 これらの計算は通常、多次元式 (MDX) および計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
+ で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、KPI は、ビジネスの成功を評価するために使用される、キューブ内のメジャーグループに関連付けられた計算のコレクションです。 これらの計算は通常、多次元式 (MDX) および計算されるメンバーの組み合わせです。 KPI には、KPI の計算結果をクライアント アプリケーションでどのように表示するかについての情報を提供する追加のメタデータもあります。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] での KPI の主要な利点の 1 つは、別々のクライアント アプリケーションによって使用できる、サーバー ベースの KPI であることです。 サーバー ベースの KPI では、個別のクライアント アプリケーションで別々のバージョンのデータを管理するのではなく、単一の実稼働バージョンがサポートします。 さらに、複雑な計算を各クライアント コンピューターではなくサーバー上で実行するので、パフォーマンス上の利点も期待できます。  
   
 ## <a name="common-kpi-terms"></a>一般的な KPI 用語  
  次の表は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の一般的な KPI 用語の定義を示しています。  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
-|[目標]|KPI のターゲット値を返す MDX 数値式または計算。|  
+|Goal|KPI のターゲット値を返す MDX 数値式または計算。|  
 |値|KPI の実際の値を返す MDX 数値式。|  
 |状態|特定時点の KPI の状態を示す MDX 式。<br /><br /> 状態 MDX 式は、-1 ～ 1 の正規化された値を返します。 -1 以下の値は "不良" または "低" と解釈されます。 値 0 は "許容値" または "中" と解釈されます。 1 以上の値は、"良" または "高" と解釈されます。<br /><br /> 中間値は数の制限なく返すことができ、クライアント アプリケーションでサポートされていれば、それを使用して任意の数の状態情報を表示できます。|  
 |傾向|一定期間にわたり、KPI の値を評価する MDX 式。 傾向は、特定のビジネス コンテキストで役に立つ任意の時間ベースの条件です。<br /><br /> 傾向 MDX 式を使用すると、ビジネス ユーザーは、一定期間内の KPI の上下を判断できるようになります。|  

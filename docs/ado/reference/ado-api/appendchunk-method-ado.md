@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920561"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762941"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
-大きなテキストまたはバイナリ データにデータを追加します。[フィールド](../../../ado/reference/ado-api/field-object.md)、または、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト。  
+大きなテキストまたはバイナリデータ[フィールド](../../../ado/reference/ado-api/field-object.md)、または[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトにデータを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,28 +35,28 @@ object.AppendChunk Data
   
 #### <a name="parameters"></a>パラメーター  
  *object*  
- A**フィールド**または**パラメーター**オブジェクト。  
+ **フィールド**または**パラメーター**オブジェクト。  
   
  *データ*  
- A**バリアント**オブジェクトに追加するデータを格納しています。  
+ オブジェクトに追加するデータを格納している**バリアント**。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **AppendChunk**メソッドを**フィールド**または**パラメーター**と時間の長いバイナリまたは文字のデータの挿入するオブジェクト。 システム メモリが限られている状況で使用することができます、 **AppendChunk**全体ではなく、特定の部分で長い値を操作するメソッド。  
+## <a name="remarks"></a>解説  
+ **フィールド**または**パラメーター**オブジェクトに対して**appendchunk**メソッドを使用して、長いバイナリまたは文字データを格納します。 システムメモリが制限されている場合は、 **Appendchunk**メソッドを使用して、長い値を全体ではなく部分的に操作することができます。  
   
 ## <a name="field"></a>フィールド  
- 場合、 **adFldLong**ビット、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)のプロパティを**フィールド**にオブジェクトが設定されている**true**、使用することができます、 **AppendChunk**そのフィールドのメソッド。  
+ **Field**オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティの**adfldlong**ビットが**true**に設定されている場合は、そのフィールドに**appendchunk**メソッドを使用できます。  
   
- 最初の**AppendChunk**を呼び出す、**フィールド**既存のデータを上書きするオブジェクトは、フィールドにデータを書き込みます。 その後**AppendChunk**呼び出しは、既存のデータに追加します。 場合 1 つのフィールドにデータを追加して、設定したり、現在のレコードの別のフィールドの値を読み取る、ADO では、最初のフィールドにデータを追加操作が完了している前提としています。 呼び出す場合、 **AppendChunk**最初のフィールド、ADO メソッドは、新しい呼び出しを解釈**AppendChunk**操作し、既存のデータを上書きします。 他のフィールドへのアクセス[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)最初のクローンではないオブジェクトを**Recordset**オブジェクトを妨害しない**AppendChunk**操作。  
+ **Field**オブジェクトの最初の**appendchunk**呼び出しでは、データがフィールドに書き込まれ、既存のデータが上書きされます。 後続の**Appendchunk**呼び出しでは、を既存のデータに追加します。 1つのフィールドにデータを追加した後、現在のレコードの別のフィールドの値を設定または読み取る場合、ADO は最初のフィールドにデータを追加したことを前提としています。 最初のフィールドで**appendchunk**メソッドを再度呼び出すと、ADO は呼び出しを新しい**appendchunk**操作として解釈し、既存のデータを上書きします。 最初の**レコードセット**オブジェクトの複製ではない他の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのフィールドにアクセスしても、 **appendchunk**操作が中断されることはありません。  
   
- 呼び出すと、現在のレコードがない場合**AppendChunk**上、**フィールド**オブジェクト、エラーが発生します。  
+ **フィールド**オブジェクトで**appendchunk**を呼び出したときに現在のレコードが存在しない場合は、エラーが発生します。  
   
 > [!NOTE]
->  **AppendChunk**についてメソッドは動作しません**フィールド**のオブジェクトを[レコード オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。 操作は実行しないと、実行時エラーが生成されます。  
+>  **Appendchunk**メソッドは、[レコードオブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの**フィールド**オブジェクトに対しては動作しません。 操作は一切実行されず、実行時エラーが発生します。  
   
 ## <a name="parameter"></a>パラメーター  
- 場合、 **adParamLong**ビット、**属性**のプロパティを**パラメーター**にオブジェクトが設定されている**true**、使用することができます、 **AppendChunk**メソッド パラメーターにします。  
+ **Parameter**オブジェクトの**Attributes**プロパティの**adparamlong**ビットが**true**に設定されている場合は、そのパラメーターに**appendchunk**メソッドを使用できます。  
   
- 最初の**AppendChunk**を呼び出す、**パラメーター**の既存のデータを上書きするオブジェクトをパラメーターにデータを書き込みます。 後続**AppendChunk**で呼び出し、**パラメーター**オブジェクトは、既存のパラメーターのデータを追加します。 **AppendChunk**パラメーター データのすべて null 値が渡された呼び出しが破棄されます。  
+ **パラメーター**オブジェクトの最初の**appendchunk**呼び出しは、データをパラメーターに書き込み、既存のデータを上書きします。 **パラメーター**オブジェクトに対する後続の**appendchunk**呼び出しは、既存のパラメーターデータにを追加します。 Null 値を渡す**Appendchunk**呼び出しは、すべてのパラメーターデータを破棄します。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -64,8 +64,8 @@ object.AppendChunk Data
 |-|-|  
 |[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AppendChunk および GetChunk メソッドの例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [AppendChunk および GetChunk メソッドの例 (vc++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
+ [AppendChunk および GetChunk メソッドの例 (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [GetChunk メソッド (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

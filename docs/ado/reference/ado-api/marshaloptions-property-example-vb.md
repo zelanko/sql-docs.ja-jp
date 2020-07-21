@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - MarshalOptions property [ADO], Visual Basic example
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cedf7562c1ab0bc5c7582aec7e7409cb18cf256a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918241"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754398"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions プロパティの例 (VB)
-この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がすべての行または変更された行のみのサーバーに送信されます。  
+この例では、 [Marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -131,6 +131,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

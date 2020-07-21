@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9622a762b8ac7e40dfcbd61c9ff4acdbe2aef67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748883"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが指定の型と同じであるかどうかをテストするメソッド。 **geometry** インスタンスの型が指定された型と同じである場合は、1 を返します。 このメソッドは、指定された型がインスタンスの型の先祖である場合も、1 を返します。 それ以外の場合、このメソッドは 0 を返します。
   
@@ -45,10 +45,10 @@ ms.locfileid: "68101246"
   
  CLR の戻り値の型:**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  メソッドへの入力は、次のいずれかの型である必要があります: **Geometry**、**Point**、**Curve**、**LineString**、**CircularString**、**CompoundCurve**、**Surface**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiSurface**、**MultiPolygon**、**MultiCurve**、**MultiLineString**、**MultiPoint**。 このメソッドは、上記以外の文字列が入力に使用された場合、**ArgumentException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `MultiPoint` インスタンスを作成し、`InstanceOf()` を使用して、このインスタンスが `GeometryCollection` であるかどうかを判定する例を次に示します。  
   
 ```  

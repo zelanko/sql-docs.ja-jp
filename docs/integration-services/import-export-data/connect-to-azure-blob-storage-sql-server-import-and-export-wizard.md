@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b578b024392edf8c2a8bc2363b8a824bce502555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17330bafe2655f0569f0828706d5e29ed2af3812
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114538"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285351"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Azure Blob Storage に接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68114538"
  **Azure アカウントの使用**  
  オンライン アカウントを使用するかどうかを指定します。
   
- **ストレージ アカウント名**  
+ **Storage account name \(ストレージ アカウント名\)**  
  Azure ストレージ アカウントの名前を入力します。  
   
 **アカウント キー**  

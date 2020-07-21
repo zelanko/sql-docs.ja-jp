@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/01/2019
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -13,25 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ec10ba94f4dba5e8e2e73ceac864d7c3b8221d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714592"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 2 番目の引数で指定された一部の文字が 3 番目の引数で指定された対象の文字セットに変換された後に、最初の引数として指定された文字列を返します。
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 TRANSLATE ( inputString, characters, translations)
 ```
 
@@ -47,15 +47,17 @@ TRANSLATE ( inputString, characters, translations)
 
 2 番目の引数の文字が 3 番目の引数の一致する文字に置き換えられる、`inputString` と同じデータ型の文字式を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
+`TRANSLATE`characters*式と*translations *式の長さが異なる場合、* はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
-`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では文字が複数回置き換えられることはありません。 これは、使用するたびに関連するすべての文字が置き換えられる複数の `REPLACE` 関数とは異なります。 
+`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では `inputString` 内の個々の文字が複数回置き換えられることはありません。 `characters` パラメーター内の 1 つの値で、`inputString` 内の複数の文字を置き換えることができます。 
+
+これは、複数の `REPLACE` 関数の動作とは異なります。関数を呼び出すごとに、前回の入れ子になった `REPLACE` 関数呼び出しによって置き換えられている場合であっても、関連するすべての文字が置き換えられるためです。 
 
 `TRANSLATE` は常に SC 照合順序を認識しています。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. 角かっこと中かっこを通常のかっこで置き換える
 
@@ -67,7 +69,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-```plain_text
+```text
 2*(3+4)/(7-2)
 ```
 
@@ -131,13 +133,13 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 
 ## <a name="see-also"></a>参照
 
- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [文字列関数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
+- [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+- [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+- [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+- [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+- [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+- [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+- [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+- [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+- [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+- [文字列関数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

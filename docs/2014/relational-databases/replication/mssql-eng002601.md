@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8faca0230b77cb7ff37e9e936bcc68c1e715d90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049330"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -29,8 +28,8 @@ ms.locfileid: "62667066"
 |イベント ID|2601|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|シンボル名|なし|  
-|メッセージ テキスト|一意インデックス '%.\*ls' を含むオブジェクト '%.*ls' には重複するキー行を挿入できません。|  
+|シンボル名|該当なし|  
+|メッセージ テキスト|一意インデックス '%.*ls' を含むオブジェクト '%.\*ls' には重複するキー行を挿入できません。|  
   
 ## <a name="explanation"></a>説明  
  このエラーは、データベースがレプリケートされたかどうかにかかわらず発生する一般エラーです。 レプリケートされたデータベースでは、このエラーは、一般に主キーがトポロジ間で適切に管理されなかった場合に発生します。 分散環境では、主キー列などの一意の列に複数のノードで同じ値が挿入されないようにすることが不可欠です。 以下のような原因が考えられます。  
@@ -41,14 +40,14 @@ ms.locfileid: "62667066"
   
 -   ID 列を持つテーブルが使用されているが、列が正しく管理されていない。  
   
--   マージ レプリケーションでは、このエラーも発生挿入時にシステム テーブルに**MSmerge_contents**; は、エラーが発生したのと似ています。一意インデックス 'ucl1SycContents ' オブジェクト 'MSmerge_contents' に重複するキー行を挿入することはできません。  
+-   マージ レプリケーションで、システム テーブル **MSmerge_contents**への挿入を行った。この場合、"一意なインデックス 'ucl1SycContents' を含むオブジェクト 'MSmerge_contents' には重複するキー列を挿入できません。" のようにエラーが表示されます。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  必要なアクションは、エラーが発生した原因によって異なります。  
   
 -   行の挿入と更新が複数のノードで行われた。  
   
-     使用するレプリケーションの種類にかかわらず、できる限り挿入と更新をパーティション分割することをお勧めします。これにより、競合の検出と対処に必要な処理を減らすことができます。 ピア ツー ピアのトランザクション レプリケーションの場合は、挿入と更新のパーティション分割は必須です。 詳細については、「 [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
+     使用するレプリケーションの種類にかかわらず、できる限り挿入と更新をパーティション分割することをお勧めします。これにより、競合の検出と対処に必要な処理を減らすことができます。 ピア ツー ピアのトランザクション レプリケーションの場合は、挿入と更新のパーティション分割は必須です。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
 -   読み取り専用のサブスクライバーで行が挿入された。  
   

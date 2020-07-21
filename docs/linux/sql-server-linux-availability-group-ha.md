@@ -1,5 +1,7 @@
 ---
-title: SQL Server Always On 可用性グループのデプロイ パターン
+title: 可用性グループの展開パターン - SQL Server on Linux
+description: Linux サーバー上の SQL Server Always On 可用性グループに対してサポートされているデプロイ構成について説明します。
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,16 +10,16 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996432"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892253"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性グループ構成の高可用性とデータ保護
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux サーバー上の SQL Server Always On 可用性グループに対してサポートされているデプロイ構成について説明します。 可用性グループでは、高可用性とデータ保護がサポートされています。 フェールオーバー後の自動障害検出、自動フェールオーバー、および透過的再接続により、高可用性が提供されます。 同期されるレプリカにより、データ保護が提供されます。 
 

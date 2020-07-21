@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578774"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域
@@ -33,10 +33,10 @@ ms.locfileid: "65578774"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> 特性の概要  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> 特性の概要  
  次の表は、各方法のさまざまな特性についてまとめたものです。 詳細については、このトピックの後半で説明します。 ドリルダウンによる表示と非表示はどのレポート アイテムにも適用できるので、この表の比較にはドリルダウンは含まれていません。  
   
-|特性 (trait)|サブレポート|詳細|入れ子|  
+|特性 (trait)|サブレポート|ドリルスルー|入れ子|  
 |-----------|---------------|------------------|------------|  
 |使用するデータセットがメイン レポートと同じかどうか|同じまたは別|同じまたは別|同じ|  
 |データの取得方法|メイン レポートと同時にデータを取得|詳細レポートごとにデータを取得|メイン レポートと同時にすべてのデータを取得|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578774"
 |表示される場所|メイン レポート内|別のレポート内|メイン レポート内|  
   
   
-##  <a name="Details"></a> 特性の詳細  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> 特性の詳細  
   
-###  <a name="Datasets"></a> 使用するデータセット  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> 使用するデータセット  
  サブレポートと詳細レポートでは、メイン レポートと同じデータセットを使用することも、メイン レポートとは別のデータセットを使用することもできます。 入れ子になったデータ領域では同じデータセットを使用します。  
   
-###  <a name="RetrieveData"></a> データの取得  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> データの取得  
  サブレポートと入れ子になったデータ領域では、メイン レポートと同時にデータを取得します。 詳細レポートでは個別に取得します。 各詳細レポートでは、ユーザーがそれぞれのリンクをクリックしたときにデータが取得されます。 メイン レポートとその下位レポートのデータを同時に取得する必要がある場合は、この違いが重要になります。  
   
-###  <a name="ProcessRender"></a> 処理と表示  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> 処理と表示  
  サブレポートは、メイン レポートの一部として処理されます。 たとえば、注文明細情報を表示するサブレポートが詳細行のテーブル セルに追加された場合、サブレポートはテーブルの行ごとに一度処理され、メイン レポートの一部として表示されます。 詳細レポートは、ユーザーがメインの要約レポート内のドリルスルー リンクをクリックしたときにだけ処理および表示されます。  
   
-###  <a name="Performance"></a> パフォーマンス  
+###  <a name="performance"></a><a name="Performance"></a> パフォーマンス  
  どの方法を使用するかを決定する際は、サブレポートの代わりにデータ領域の使用を検討してください。ただし、サブレポートを複数のレポートで使用する場合はこの限りではありません。 サブレポートは、それぞれのインスタンスが個別のレポートとして処理されるので、レポート サーバーのパフォーマンスに影響することがあります。 データ領域はサブレポートと同じ機能の多くが提供され、柔軟性も同等ですが、パフォーマンスの点で優れています。 詳細レポートについても、メイン レポートとは別にデータを取得するので、サブレポートよりもパフォーマンスが優れています。  
   
-###  <a name="Parameters"></a> パラメーターの使用  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> パラメーターの使用  
  詳細レポートとサブレポートには、通常、表示するレポート データを指定するレポート パラメーターがあります。 たとえば、メイン レポートの販売注文番号をクリックすると、詳細レポートが開き、販売注文番号がパラメーターとして受け取られ、その販売注文のすべてのデータが表示されます。 メイン レポートにリンクを作成する場合は、詳細レポートにパラメーターとして渡す値を指定します。  
   
  詳細レポートまたはサブレポートを作成するには、まず対象の詳細レポートまたはサブレポートをデザインする必要があり、その後にメイン レポートに対してドリルスルー アクションを作成したり、参照を追加したりします。  
   
-###  <a name="Reusability"></a> 再利用性  
+###  <a name="reusability"></a><a name="Reusability"></a> 再利用性  
  サブレポートと詳細レポートは別個のレポートです。 したがって、これらのレポートは多数のレポートで使用することも、スタンドアロンのレポートとして表示することもできます。 入れ子になったデータ領域は再利用できません。 このデータ領域は別のデータ領域内に入れ子になっているので、レポート パーツとして保存することはできません。 入れ子になったデータ領域を格納しているデータ領域はレポート パーツとして保存できますが、入れ子になったデータ領域は保存できません。  
   
-###  <a name="Location"></a> 場所  
+###  <a name="location"></a><a name="Location"></a> 場所  
  サブレポートと詳細レポートはどちらも別個のレポートであるため、メイン レポートの外部に保存されます。 サブレポートは同じレポート サーバーと別のレポート サーバーのどちらにあってもかまいませんが、詳細レポートは同じレポート サーバー上にある必要があります。 入れ子になったデータ領域はメイン レポートの一部です。  
   
-###  <a name="Display"></a> 表示  
+###  <a name="display"></a><a name="Display"></a> 表示  
  サブレポートと入れ子になったデータ領域は、メイン レポート内に表示されます。 詳細レポートは個別に表示されます。  
   
   
-##  <a name="InThisSection"></a> トピックの内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  [詳細レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  ユーザーがメイン レポート内のリンクをクリックすると開くレポートについて説明します。  
   
@@ -94,6 +94,6 @@ ms.locfileid: "65578774"
  レポート定義ファイルの外部にあるアイテムを参照する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

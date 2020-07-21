@@ -1,5 +1,5 @@
 ---
-title: createStatement (int, int) メソッドMicrosoft Docs
+title: createStatement メソッド (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84afda93fa79d226eec21cb92c16ff5ebbc55fa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67955312"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement (int, int) メソッド
@@ -42,16 +42,16 @@ public java.sql.Statement createStatement(int resultSetType,
   
  *resultSetConcurrency*  
   
- 結果セットの同時実行の種類を表す**int**値。  
+ 結果セットのコンカレンシーの種類を表す **int** 値です。  
   
 ## <a name="return-value"></a>戻り値  
- ステートメントオブジェクト。  
+ Statement オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この createStatement メソッドは、createStatement メソッドによって、java. .sql. 接続インターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この createStatement メソッドは、java.sql.Connection インターフェイスの createStatement メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [createStatement メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

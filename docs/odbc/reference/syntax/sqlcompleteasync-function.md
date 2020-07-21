@@ -12,29 +12,27 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCompleteAsync function [ODBC]
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118629"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279590"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.8  
+**互換性**  
+ 導入されたバージョン: ODBC 3.8 標準準拠: なし  
   
- 標準への準拠:なし  
+ **まとめ**  
+ **Sqlcompleteasync**を使用すると、通知またはポーリングベースの処理のいずれかを使用して非同期関数が完了したかどうかを判断できます。 非同期操作の詳細については、「[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)」を参照してください。  
   
- **概要**  
- **SQLCompleteAsync**非同期関数のいずれかの通知またはポーリング ベースの処理を使用して完了時に決定するために使用できます。 非同期操作の詳細については、次を参照してください。[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)します。  
+ **Sqlcompleteasync**は、ODBC ドライバーマネージャーでのみ実装されます。  
   
- **SQLCompleteAsync**は、ODBC ドライバー マネージャーでのみ実装します。  
+ 通知に基づく非同期処理モードでは、ドライバーマネージャーによって通知に使用されるイベントオブジェクトが生成された後に、 **Sqlcompleteasync**を呼び出す必要があります。 **Sqlcompleteasync**が非同期処理を完了すると、非同期関数によってリターンコードが生成されます。  
   
- 通知ベースの非同期処理モードで**SQLCompleteAsync**ドライバー マネージャーが通知に使用されるイベント オブジェクトを生成した後に呼び出す必要があります。 **SQLCompleteAsync**完了、非同期処理と非同期関数は、リターン コードが生成されます。  
-  
- ポーリング ベースの非同期処理モードで**SQLCompleteAsync**代替は、元の非同期関数呼び出しで引数を指定することがなく、元の非同期関数を呼び出すことです。 **SQLCompleteAsync** ODBC カーソル ライブラリが有効になっているかどうかに関係なく使用できます。  
+ ポーリングベースの非同期処理モードでは、元の非同期関数呼び出しで引数を指定しなくても、 **Sqlcompleteasync**を使用して元の非同期関数を呼び出すことができます。 **Sqlcompleteasync**は、ODBC カーソルライブラリが有効になっているかどうかに関係なく使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,32 +46,32 @@ SQLRETURN SQLCompleteAsync(
   
 ## <a name="arguments"></a>引数  
  *HandleType*  
- [入力]非同期を完了するためのハンドルの型を処理します。 有効な値は sql_handle_dbc としてまたは sql_handle_stmt として。  
+ 代入非同期処理を完了するハンドルの型。 有効な値は、SQL_HANDLE_DBC または SQL_HANDLE_STMT です。  
   
- *Handle*  
- [入力]非同期を完了するためのハンドルを処理します。 場合*処理*で指定された型の有効なハンドルではありません*HandleType*、 **SQLCompleteAsync** SQL_INVALID_HANDLE が返されます。  
+ *扱え*  
+ 代入非同期処理を完了するハンドル。 *Handle*が*handletype*によって指定された型の有効なハンドルでない場合、 **sqlcompleteasync**は SQL_INVALID_HANDLE を返します。  
   
- 場合*処理*で指定された型の有効なハンドルではありません*HandleType*、 **SQLCompleteAsync** SQL_INVALID_HANDLE が返されます。  
+ *Handle*が*handletype*によって指定された型の有効なハンドルでない場合、 **sqlcompleteasync**は SQL_INVALID_HANDLE を返します。  
   
  *AsyncRetCodePtr*  
- [出力]非同期 API のリターン コードを格納するバッファーへのポインター。 場合*AsyncRetCodePtr*が null の場合、 **SQLCompleteAsync** SQL_ERROR を返します。  
+ Output非同期 API のリターンコードを格納するバッファーへのポインター。 *AsyncRetCodePtr*が NULL の場合、 **sqlcompleteasync**は SQL_ERROR を返します。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_ERROR、SQL_NO_DATA、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_ERROR、SQL_NO_DATA、または SQL_INVALID_HANDLE。  
   
-## <a name="diagnostics"></a>診断  
- 場合**SQLCompleteAsync**返します SQL_SUCCESS、アプリケーションは、によって指し示されるバッファーから非同期関数のリターン コードを取得する必要があります*AsyncRetCodePtr*します。 関連付けられている SQLSTATE、存在する場合、取得できますを呼び出して**SQLGetDiagRec**で、 *HandleType* sql_handle_stmt としてのステートメント ハンドルまたは*HandleType* sql _ のHANDLE_DBC との接続を処理します。 これらの診断レコードがこれではない非同期の関数に関連付けられた**SQLCompleteAsync**関数。  
+## <a name="diagnostics"></a>Diagnostics  
+ **Sqlcompleteasync**が SQL_SUCCESS を返す場合、アプリケーションは、 *AsyncRetCodePtr*が指すバッファーから非同期関数のリターンコードを取得する必要があります。 関連する SQLSTATE (存在する場合) は、SQLGetDiagRec SQL_HANDLE_STMT の*Handletype*を使用して**SQLGetDiagRec**を呼び出し、ステートメントハンドル、または SQL_HANDLE_DBC の*handletype*と接続ハンドルを呼び出すことによって取得できます。 これらの診断レコードは、 **Sqlcompleteasync**関数ではなく、非同期関数に関連付けられています。  
   
- **SQLCompleteAsync**ことを示す SQL_SUCCESS 以外のコードを返します**SQLCompleteAsync**は正しく呼び出されません。 **SQLCompleteAsync**任意の診断レコードをここで投稿されます。 リターン コードは次のとおりです。  
+ **Sqlcompleteasync**は、 **sqlcompleteasync**が正しく呼び出されないことを示す SQL_SUCCESS 以外のコードを返します。 この場合、 **Sqlcompleteasync**は診断レコードを通知しません。 考えられるリターンコードは次のとおりです。  
   
--   SQL_INVALID_HANDLE:によって示されるハンドル*HandleType*と*処理*有効なハンドルではありません。  
+-   SQL_INVALID_HANDLE: *Handletype*と*handle*によって示されたハンドルが有効なハンドルではありません。  
   
--   SQL_ERROR:*AsyncRetCodePtr*が NULL またはハンドルの非同期処理が有効になっていません。  
+-   SQL_ERROR: *AsyncRetCodePtr*が NULL であるか、ハンドルで非同期処理が有効になっていません。  
   
--   SQL_NO_DATA:通知モードでは、非同期の操作が進行中またはドライバー マネージャーが、アプリケーションが通知されません。 ポーリング モードで、非同期操作は進行中です。  
+-   SQL_NO_DATA: 通知モードで、非同期操作が進行中でないか、またはドライバーマネージャーによってアプリケーションに通知されませんでした。 ポーリングモードでは、非同期操作は実行されていません。  
   
 ## <a name="comments"></a>コメント  
- ポーリング ベースの非同期処理モードで*AsyncRetCodePtr* SQL_STILL_EXECUTING がありますと**SQLCompleteAsync** SQL_SUCCESS を返します。 アプリケーションはまでポーリングを保持する必要があります*AsyncRetCodePtr* SQL_STILL_EXECUTING ではありません。 通知ベースの非同期処理モードで*AsyncRetCodePtr* SQL_STILL_EXECUTING ものではありません。  
+ ポーリングベースの非同期処理モードでは、 **Sqlcompleteasync**が SQL_SUCCESS を返すときに*AsyncRetCodePtr*が SQL_STILL_EXECUTING される可能性があります。 *AsyncRetCodePtr*が SQL_STILL_EXECUTING されないようにするには、アプリケーションでポーリングを続ける必要があります。 通知ベースの非同期処理モードでは、 *AsyncRetCodePtr*が SQL_STILL_EXECUTING されることはありません。  
   
-## <a name="see-also"></a>参照  
- [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## <a name="see-also"></a>関連項目  
+ [非同期実行 (ポーリングメソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

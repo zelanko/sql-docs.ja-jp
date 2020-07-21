@@ -1,5 +1,5 @@
 ---
-title: イベント パラメーター |Microsoft Docs
+title: イベントパラメーター |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763193"
 ---
 # <a name="event-parameters"></a>イベント パラメーター
-すべてのイベント ハンドラーでは、イベント ハンドラーを制御する状態パラメーターがあります。 完全なイベントは、このパラメーターもイベントを生成する操作の成否を示すために使用されます。 最も包括的なイベントは、エラーが発生した場合をし、操作を実行するために使用する ADO オブジェクトを参照する 1 つまたは複数のオブジェクトのパラメーターに関する情報を提供するエラー パラメーターを指定します。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントにはオブジェクトのパラメーターが含まれています、**コマンド**、**レコード セット**、および**接続**オブジェクトイベントに関連付けられています。 Microsoft® Visual Basic® の次の例では、pCommand、pRecordset、および表す pConnection オブジェクトを参照できます、**コマンド**、 **Recordset**、および**の接続**オブジェクトによって使用される、 **Execute**メソッド。  
+すべてのイベントハンドラーには、イベントハンドラーを制御する状態パラメーターがあります。 完全なイベントの場合、このパラメーターは、イベントを生成した操作の成功または失敗を示すためにも使用されます。 ほとんどの完全なイベントには、発生したエラーに関する情報や、操作の実行に使用される ADO オブジェクトを参照する1つ以上のオブジェクトパラメーターも含まれています。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントには、イベントに関連付けられている**コマンド**、**レコードセット**、および**接続**オブジェクトのオブジェクトパラメーターが含まれます。 次の Microsoft® Visual Basic®例では、 **Execute**メソッドによって使用される**コマンド**、**レコードセット**、および**接続**オブジェクトを表す Pcommand、pcommand、および pcommand オブジェクトを確認できます。  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -36,36 +36,36 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
      ByVal pConnection As ADODB.Connection)  
 ```  
   
- を除き、**エラー**オブジェクトはイベントに同じパラメーターが渡されます。 それぞれの保留中の操作で使用され、操作が完了できるかどうかを決定するオブジェクトを確認するこのことができます。  
+ **Error**オブジェクトを除き、同じパラメーターがイベントに渡されます。 これにより、保留中の操作で使用される各オブジェクトを確認し、操作の完了を許可する必要があるかどうかを判断できます。  
   
- いくつかのイベント ハンドラーが、*理由*イベントが発生した理由に関する追加情報を提供するパラメーター。 たとえば、 **WillMove**と**MoveComplete**ナビゲーション方法のいずれかによりイベントを発生させる (**MoveNext**、 **MovePrevious**など) が呼び出されるか、クエリの結果として。  
+ 一部のイベントハンドラーには*Reason*パラメーターがあり、これによってイベントが発生した理由に関する追加情報が提供されます。 たとえば、 **MoveComplete**イベントが発生するのは、いずれかのナビゲーションメソッド (**MoveNext**、 **MovePrevious**など) が呼び出されているか、または再クエリの結果として発生**したため**です。  
   
 ## <a name="status-parameter"></a>状態パラメーター  
- イベント ハンドラー ルーチンが呼び出されたときに、*状態*パラメーターは、次の値のいずれかに設定します。  
+ イベントハンドラールーチンが呼び出されると、 *Status*パラメーターは次のいずれかの値に設定されます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**adStatusOK**|完了イベントの両方に渡されます。 この値は、正常に完了イベントを原因となった操作を意味します。|  
-|**adStatusErrorsOccurred**|完全なイベントのみに渡されます。 この値は、イベントの原因となった操作が成功すると、かはイベントには、操作がキャンセルされたことを意味します。 チェック、*エラー*パラメーターの詳細。|  
-|**adStatusCantDeny**|イベントのみに渡されます。 この値はイベントによって、操作をキャンセルすることはできないことを意味します。 実行する必要があります。|  
+|**adStatusOK**|両方に渡され、イベントが完了します。 この値は、イベントの原因となった操作が正常に完了したことを示します。|  
+|**Adstatuserrorの Curred**|完全なイベントにのみ渡されます。 この値は、イベントの原因となった操作が失敗したことを意味します。または、イベントによって操作が取り消されます。 詳細については、*エラー*パラメーターを確認してください。|  
+|**adStatusCantDeny**|に渡されるのはイベントのみです。 この値は、operation イベントによって操作を取り消すことができないことを意味します。 実行する必要があります。|  
   
- 操作を続行する必要がありますがイベントで判断した場合、以下のままにして、*状態*パラメーター。 受信状態のパラメーターに設定されませんでした限り**adStatusCantDeny**、変更することで保留中の操作をキャンセルできます*状態*に**adStatusCancel**します。 操作に関連付けられている完全なイベントには、これを行うときにその*状態*パラメーターに設定**adStatusErrorsOccurred**します。 **エラー**完了イベントに渡されるオブジェクトの値を含む**adErrOperationCancelled**します。  
+ 操作を続行するかどうかをイベントで判断した場合は、 *Status*パラメーターを変更しないままにします。 ただし、着信状態パラメーターが**Adstatuscantdeny**に設定されていない限り、*状態*を**adstatuscancel**に変更することによって保留中の操作を取り消すことができます。 これを行うと、操作に関連付けられている Complete イベントの*Status*パラメーターが**Adstatuserrorの curred**に設定されます。 Complete イベントに渡される**Error**オブジェクトには、値**adErrOperationCancelled**が含まれます。  
   
- 不要になったイベントを処理する場合は、設定*状態*に**adStatusUnwantedEvent**アプリケーションでは、そのイベントの通知を受け取る不要になったとします。 ただし、1 つ以上の理由で一部のイベントが発生することに注意してください。 その場合は、指定する必要があります**adStatusUnwantedEvent**の考えられる各理由。 たとえば、保留中の通知の受信を停止する**RecordChange** 、イベントを設定する必要がある、*状態*パラメーターを**adStatusUnwantedEvent**の**adRsnAddNew**、 **adRsnDelete**、 **adRsnUpdate**、 **adRsnUndoUpdate**、 **adRsnUndoAddNew**、**adRsnUndoDelete**、および**adRsnFirstChange**発生するとします。  
+ イベントを処理する必要がなくなった場合は、 *Status*を**adStatusUnwantedEvent**に設定すると、アプリケーションはそのイベントの通知を受信しなくなります。 ただし、一部のイベントは複数の理由で発生する可能性があることに注意してください。 その場合は、考えられる理由ごとに**adStatusUnwantedEvent**を指定する必要があります。 たとえば、保留中の**Recordchange**イベントの通知の受信を停止するには、 **Adrsnaddnew**、 **adrsnaddnew**、 **adrsnaddnew**、 **AdRsnUndoUpdate**、 **adRsnUndoAddNew**、 **adRsnUndoDelete**、および**Adrsnfirstchange**が発生したときに、 *Status*パラメーターを**adStatusUnwantedEvent**に設定する必要があります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**adStatusUnwantedEvent**|このイベント ハンドラーがさらに通知を受信しないことを要求します。|  
-|**adStatusCancel**|実行される操作のキャンセルを要求します。|  
+|**adStatusUnwantedEvent**|このイベントハンドラーがこれ以上通知を受信しないことを要求します。|  
+|**adStatusCancel**|発生しようとしている操作のキャンセルを要求します。|  
   
-## <a name="error-parameter"></a>エラー パラメーター  
- *エラー*パラメーターは、ADO への参照を[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 ときに、*状態*にパラメーターが設定されている**adStatusErrorsOccurred**、**エラー**オブジェクトには、操作が失敗した理由の詳細が含まれています。 完了イベントに関連付けられているはイベントが設定して、操作をキャンセルされた場合、*状態*パラメーターを**adStatusCancel**、エラー オブジェクトは常に設定**adErrOperationCancelled**します。  
+## <a name="error-parameter"></a>エラーパラメーター  
+ *Error*パラメーターは ADO [error](../../../ado/reference/ado-api/error-object.md)オブジェクトへの参照です。 *Status*パラメーターを**Adstatuserrorの curred**に設定すると、**エラー**オブジェクトには、操作が失敗した理由の詳細が含まれます。 Complete イベントに関連付けられているイベントが、 *Status*パラメーターを**adstatuscancel**に設定して操作を取り消した場合、error オブジェクトは常に**adErrOperationCancelled**に設定されます。  
   
-## <a name="object-parameter"></a>オブジェクトのパラメーター  
- 各イベントは、操作に関連するオブジェクトを表す 1 つまたは複数のオブジェクトを受け取ります。 など、 **ExecuteComplete**イベントを受信、**コマンド**オブジェクト、**レコード セット**オブジェクト、および**接続**オブジェクト。  
+## <a name="object-parameter"></a>オブジェクトパラメーター  
+ 各イベントは、操作に関係するオブジェクトを表す1つ以上のオブジェクトを受け取ります。 たとえば、 **ExecuteComplete**イベントは、**コマンド**オブジェクト、**レコードセット**オブジェクト、および**接続**オブジェクトを受け取ります。  
   
-## <a name="reason-parameter"></a>Reason パラメータ  
- *理由*パラメーター、 *adReason*イベントが発生した理由に関する追加情報を提供します。 イベントを*adReason*パラメーターは、毎回のさまざまな理由のため、同じ操作の場合でもを複数回呼び出すことができます。 たとえば、 **WillChangeRecord**またはしないで、挿入、削除、またはレコードの変更を元に戻すには操作のイベント ハンドラーが呼び出されます。 使用することが何らかの理由で発生したときにのみイベントを処理する場合、 *adReason*パラメーターが必要ない出現回数を除外します。 たとえば、レコードが追加された理由で発生した場合にのみ、レコードの変更イベントを処理したい場合は、次のようを使用できます。  
+## <a name="reason-parameter"></a>理由パラメーター  
+ *Reason*パラメーター *adReason*は、イベントが発生した理由に関する追加情報を提供します。 *AdReason*パラメーターを持つイベントは、同じ操作でも、毎回異なる理由で複数回呼び出すことができます。 たとえば、レコードの挿入、削除、または変更を実行しようとしている操作に対して **、イベントハンドラー**が呼び出されます。 特定の理由で発生したイベントのみを処理する場合は、 *adReason*パラメーターを使用して、関心のないオカレンスを除外することができます。 たとえば、レコードが追加されたことが原因でレコード変更イベントが発生した場合にのみ処理するには、次のようにします。  
   
 ```  
 ' BeginEventExampleVB01  
@@ -82,12 +82,12 @@ End Sub
 ' EndEventExampleVB01  
 ```  
   
- この場合、通知可能性のあるその他の理由の各発生します。 ただし、これは 1 回だけ動機ごと。 通知が各理由の 1 回発生した後、新しいレコードを追加するためだけの通知が届きます。  
+ この場合、その他の理由ごとに通知が発生する可能性があります。 ただし、これは、それぞれの理由で1回だけ発生します。 各理由で通知が1回発生すると、新しいレコードの追加についてのみ通知が送信されます。  
   
- 設定する必要がこれに対し、 *adStatus*に**adStatusUnwantedEvent**を要求に 1 回だけことがなく、イベント ハンドラー、 **adReason**パラメーター停止の受信イベント通知します。  
+ これに対して、 *Adstatus*を**adStatusUnwantedEvent**に1回だけ設定して、 **adReason**パラメーターを持たないイベントハンドラーがイベント通知の受信を停止するように要求する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [イベント ハンドラーの連携](../../../ado/guide/data/how-event-handlers-work-together.md)   
+## <a name="see-also"></a>参照  
+ [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [言語による ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [イベントハンドラーの連携方法](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [イベントの種類](../../../ado/guide/data/types-of-events.md)

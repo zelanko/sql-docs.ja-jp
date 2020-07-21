@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071253"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381276"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 境界値の分割または結合によって、パーティション関数を変更します。 ALTER PARTITION FUNCTION ステートメントを実行すると、1 つのテーブル パーティションやパーティション関数を使用するインデックスを、2 つのパーティションに分割できます。 また、そのステートメントは 2 つのパーティションを 1 つのパーティションにマージすることもできます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68071253"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER PARTITION FUNCTION partition_function_name()  
 {   
@@ -53,7 +53,10 @@ ALTER PARTITION FUNCTION partition_function_name()
 } [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 *partition_function_name*  
 変更するパーティション関数の名前です。  
   
@@ -109,7 +112,7 @@ ALTER PARTITION FUNCTION は、そのパーティション関数を使用する�
   
 -   パーティション関数が作成されたデータベースのサーバーでの CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. パーティション テーブルまたはパーティション インデックスの 1 つのパーティションを 2 つのパーティションに分割する  
 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 `ALTER PARTITION FUNCTION` でこれらのパーティションのうちの 1 つを 2 つに分割して、合計 5 つのパーティションを作成します。  

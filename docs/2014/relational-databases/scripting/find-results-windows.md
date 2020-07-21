@@ -1,6 +1,6 @@
 ---
-title: 検索結果ウィンドウ | Microsoft Docs
-ms.custom: ''
+title: 検索結果ウィンドウ
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 06f26cb7b606052b2183c90713f0ab0470351ffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049038"
 ---
 # <a name="find-results-windows"></a>検索結果ウィンドウ
   2 つの検索結果ウィンドウには、 **[検索と置換]** ダイアログの **[フォルダーを指定して検索]** タブまたは **[フォルダーを指定して置換]** タブを使用して検出された項目が表示されます。 **[フォルダーを指定して検索]** または **[フォルダーを指定して置換]** の **[検索結果]** コマンドを使用すると、検出された項目が表示される検索結果ウィンドウを選択できます。  
@@ -58,7 +57,7 @@ ms.locfileid: "66090501"
  PageDown  
  次の一致項目のグループまで下にスクロールします。  
   
- 上矢印  
+ ↑  
  前の一致項目を選択します。  
   
  下方向キー  

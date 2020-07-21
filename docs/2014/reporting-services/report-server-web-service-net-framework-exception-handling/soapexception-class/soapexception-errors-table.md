@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63045994"
 ---
 # <a name="soapexception-errors-table"></a>SoapException エラー テーブル
@@ -99,9 +99,9 @@ ms.locfileid: "63045994"
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services における例外処理の概要](../introducing-exception-handling-in-reporting-services.md)   
- [エラーとイベントのリファレンス (Reporting Services)](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
+ [エラーとイベントのリファレンス &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Reporting Services SoapException クラス](reporting-services-soapexception-class.md)   
  [Detail プロパティを使用したエラー処理](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   

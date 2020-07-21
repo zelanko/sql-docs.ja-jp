@@ -1,5 +1,5 @@
 ---
-title: SharePoint ライブラリ (Reporting Services の SharePoint モード) のドキュメントのアップロード |Microsoft Docs
+title: SharePoint ライブラリへのドキュメントのアップロード (SharePoint モードの Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098839"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)
@@ -49,7 +49,7 @@ ms.locfileid: "66098839"
   
 ## <a name="see-also"></a>参照  
  [SharePoint ライブラリへのレポートのパブリッシュ](reports/publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint ライブラリへの共有データ ソースのパブリッシュ](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [SharePoint ライブラリへの共有データソースのパブリッシュ](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

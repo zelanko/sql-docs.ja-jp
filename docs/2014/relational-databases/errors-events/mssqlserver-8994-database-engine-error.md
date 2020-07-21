@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d213738b7ea2bbe846bad98620d3b4d5577133a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cadbd0ad802c464c50816c82c3418e683c3e967
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913218"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550842"
 ---
-# <a name="mssqlserver8994"></a>MSSQLSERVER_8994
+# <a name="mssqlserver_8994"></a>MSSQLSERVER_8994
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8994|  

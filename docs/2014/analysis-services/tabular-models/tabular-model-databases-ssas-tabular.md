@@ -1,5 +1,5 @@
 ---
-title: 表形式モデル データベース (SSAS テーブル) |Microsoft Docs
+title: テーブルモデルデータベース (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 669d39c3f76cc8e925932b238bd7b0fd1c1a89c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938573"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>表形式モデルのデータベース (SSAS 表形式)
   テーブル モデル データベースは、Analysis Services のテーブル モデル プロジェクト テンプレートを使用して [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成する Analysis Services データベースであり、テーブルおよびリレーションシップがデータを表すための主な構造です。  
@@ -24,7 +23,7 @@ ms.locfileid: "66066423"
  テーブル モデル データベースは多次元データベースよりも構築が容易であり、リレーショナル データベースのバックグラウンドがある場合は特に容易です。 バックグラウンドがない場合でも、管理タスクは多次元データベースのデータベース管理と同じではないものの類似しています。 同じツールとアプローチが適用されます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [テーブル モデル ソリューション (SSAS テーブル)](../tabular-model-solutions-ssas-tabular.md)  
+ [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [テーブル モデル データ アクセス](tabular-model-data-access.md)  
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f0bf7d9a38f25af008be3bf77ce8dc31070f5bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9cdb19c6df46e3c24625bfb740c82771f0adcc1d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055931"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283176"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>レッスン 3-3:レッスン 3 で作成したチュートリアル パッケージのテスト
 

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 564f34822a6c674b20cb0fd54879ee44de16dd6b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732667"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、定義されている列の長さをバイト単位で返します。
   
@@ -55,10 +55,10 @@ COL_LENGTH ( 'table' , 'column' )
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する適切な権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_LENGTH など) が NULL を返す可能性があります。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **max** 指定子 (**varchar (max)** ) で宣言された **varchar** 列の場合、COL_LENGTH では値 -1 が返されます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`varchar(40)` 型と `nvarchar(40)` 型の列の値を返します。
   
 ```sql
@@ -82,7 +82,7 @@ VarChar     NVarChar
 ## <a name="see-also"></a>参照
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME &#40;TRANSACT-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

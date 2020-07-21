@@ -1,9 +1,8 @@
 ---
 title: JSON データへのインデックスの追加 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ helpviewer_keywords:
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 77cdc132f3ef52baf6124d3f52279ad1c16b9bde
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755764"
 ---
 # <a name="index-json-data"></a>JSON データへのインデックスの追加
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SQL Server と SQL Database では、JSON のデータ型は組み込まれておらず、SQL Server には、カスタム JSON インデックスはありません。 ただし、標準的なインデックスを使用して、JSON ドキュメント用にクエリを最適化できます。 
 
@@ -69,7 +69,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>この例の実行プラン
 この例のクエリの実行プランを次に示します。  
   
-![実行計画](../../relational-databases/json/media/jsonindexblog1.png "実行計画")  
+![実行プラン](../../relational-databases/json/media/jsonindexblog1.png "実行プラン")  
   
 SQL Server では、テーブルを完全にスキャンするのではなく、非クラスター化インデックスに index seek を使用し、指定した条件に一致する行を探します。 次に、`SalesOrderHeader` テーブルでキー参照を使って、クエリで参照される他の列 (この例では `SalesOrderNumber` と `OrderDate`) をフェッチします。  
  
@@ -137,13 +137,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  実際の実行計画を見ると、非クラスター化インデックスからの並べ替えられた値を使用していることがわかります。  
   
- ![実行計画](../../relational-databases/json/media/jsonindexblog2.png "実行計画")  
+ ![実行プラン](../../relational-databases/json/media/jsonindexblog2.png "実行プラン")  
   
- クエリには `ORDER BY` 句がありますが、実行計画では、Sort 演算子は使用しません。 JSON インデックスは既にセルビア語 (キリル) の規則に従って並んでいます。 したがって、結果が既に並べ替えられている場合、SQL Server は非クラスター化インデックスを使用できます。  
+ クエリには `ORDER BY` 句がありますが、実行プランでは、Sort 演算子は使用しません。 JSON インデックスは既にセルビア語 (キリル) の規則に従って並んでいます。 したがって、結果が既に並べ替えられている場合、SQL Server は非クラスター化インデックスを使用できます。  
   
  ただし、`JSON_VALUE` 関数の後に `COLLATE French_100_CI_AS_SC` を追加するなど、`ORDER BY` 式の照合順序を変更した場合、得られるクエリ実行プランは異なります。  
   
- ![実行計画](../../relational-databases/json/media/jsonindexblog3.png "実行計画")  
+ ![実行プラン](../../relational-databases/json/media/jsonindexblog3.png "実行プラン")  
   
  インデックス内の値の順序はフランス語の照合順序の規則を準拠していないために、SQL Server では、結果の順序付けにそのインデックスを使用できません。 したがって、フランス語の照合順序の規則を使用して結果を並べ替える Sort 演算子が追加されます。  
  

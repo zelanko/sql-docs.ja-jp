@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet Members |Microsoft Docs
+title: SQLServerResultSet のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67970562"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet のメンバー
@@ -27,7 +27,7 @@ ms.locfileid: "67970562"
   
 ## <a name="fields"></a>フィールド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|行ロックを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|行ロックを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。|  
@@ -40,13 +40,13 @@ ms.locfileid: "67970562"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|継承元のクラス|[説明]|  
+|継承元のクラス|説明|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT、CONCUR_READ_ONLY、CONCUR_UPDATABLE、FETCH_FORWARD、FETCH_REVERSE、FETCH_UNKNOWN、HOLD_CURSORS_OVER_COMMIT、TYPE_FORWARD_ONLY、TYPE_SCROLL_INSENSITIVE、TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトで指定した行にカーソルを移動します。|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの最終行の後ろにカーソルを移動します。|  
@@ -71,7 +71,7 @@ ms.locfileid: "67970562"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの同時実行モードを取得します。|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって使用される SQL カーソルの名前を取得します。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の java.sql.Date オブジェクトとして取得されます。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクトとして取得します。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|指定された列の値が [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md) オブジェクトとして取得されます。|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **double** として取得されます。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのフェッチ方向を取得します。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのフェッチ サイズを取得します。|  
@@ -125,7 +125,7 @@ ms.locfileid: "67970562"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|指定された列を文字ストリームの値で更新します。|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|指定された列を java.sql.Clob 値で更新します。|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|指定された列を日付の値で更新します。|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)列を更新します。|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)列が更新されます。|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|指定された列を **double** 値で更新します。|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|指定された列を **float** 値で更新します。|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|指定された列を **int** 値で更新します。|  

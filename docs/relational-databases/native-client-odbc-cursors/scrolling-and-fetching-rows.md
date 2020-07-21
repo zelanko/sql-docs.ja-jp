@@ -1,5 +1,5 @@
 ---
-title: スクロールとフェッチ行 |マイクロソフトのドキュメント
+title: 行のスクロールとフェッチ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,42 +18,40 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b45e71e5501a1c294760c4e7cadba5f96b169e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: d5c7e2612094b9067c4902481937a2f93505bcc1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078810"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998964"
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スクロール可能なカーソルを使用するには、ODBC アプリケーションでは次の操作を行う必要があります。  
   
--   設定を使用してカーソル機能[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)します。  
+-   [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を使用してカーソル機能を設定します。  
   
--   使用して、カーソルを開く**SQLExecute**または**SQLExecDirect**します。  
+-   **Sqlexecute**または**SQLExecDirect**を使用してカーソルを開きます。  
   
--   使用して行のスクロールとフェッチ**SQLFetch**または[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)します。  
+-   **Sqlfetch**または[sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)を使用して行をスクロールおよびフェッチします。  
   
- 両方**SQLFetch**と**SQLFetchSroll**行のブロックを一度にフェッチできます。 指定された行の数が返される**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE パラメーターを設定します。  
+ **Sqlfetch**と**Sqlfetchsroll**は、同時に行のブロックをフェッチできます。 返される行の数は、SQL_ATTR_ROW_ARRAY_SIZE パラメーターを設定するために**SQLSetStmtAttr**を使用して指定します。  
   
- ODBC アプリケーションで使用できる**SQLFetch**順方向専用カーソルを介してフェッチを実行します。  
+ ODBC アプリケーションでは、 **Sqlfetch**を使用して、順方向専用カーソルを介してフェッチできます。  
   
- **SQLFetchScroll**カーソルの周囲をスクロールするために使用します。 **SQLFetchScroll** 、次のフェッチをサポートしているだけでなく相対フェッチ前に、最初と最後の行セット (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (行セットのフェッチ行から始まる*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 たとえば、行 -1 の絶対フェッチは、結果セット内にある最後の行を起点とした行セットをフェッチします。  
+ カーソルをスクロールするには、 **Sqlfetchscroll**を使用します。 **Sqlfetchscroll**は、相対フェッチ (現在の行セットの先頭から行セット*n*の行をフェッチ) と絶対フェッチ (行*n*で始まる行セットのフェッチ) に加えて、次の行セット、以前の行セット、最初の行セット、および最後の行セットのフェッチをサポートしています。 絶対フェッチで*n*が負の値の場合、行は結果セットの末尾からカウントされます。 たとえば、行 -1 の絶対フェッチは、結果セット内にある最後の行を起点とした行セットをフェッチします。  
   
- 使用するアプリケーション**SQLFetchScroll**ブロックに対してのみ、レポートなどのカーソル機能は、一度に 1 つを結果セットを通過する可能性がありますオプションのみを使用して、次の行セットをフェッチします。 スクリーン ベースのアプリケーションでは、その一方で、活用することのすべての機能**SQLFetchScroll**します。 スクロール バーの操作への呼び出しを直接変換できる場合は、アプリケーションでは、行セットのサイズを画面に表示される行の数に設定し、結果セットに、画面バッファーをバインドする、 **SQLFetchScroll**します。  
+ レポートなどのブロックカーソル機能に対してのみ**Sqlfetchscroll**を使用するアプリケーションは、次の行セットをフェッチするオプションのみを使用して、結果セットを1回だけ通過する可能性があります。 一方、画面ベースのアプリケーションでは、 **Sqlfetchscroll**のすべての機能を利用できます。 アプリケーションで、行セットのサイズを画面に表示される行数に設定し、画面バッファーを結果セットにバインドすると、スクロールバーの操作を**Sqlfetchscroll**の呼び出しに直接変換できます。  
   
 |スクロール バーの操作|SQLFetchScroll のスクロール操作|  
 |--------------------------|-------------------------------------|  
 |1 画面分上へ移動 (PageUp)|SQL_FETCH_PRIOR|  
 |1 画面分下へ移動 (PageDown)|SQL_FETCH_NEXT|  
-|1 行上へ移動|指定したを-1 に FetchOffset SQL_FETCH_RELATIVE|  
-|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE|  
+|1 行上へ移動|FetchOffset が-1 に等しい SQL_FETCH_RELATIVE|  
+|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE |  
 |スクロール ボックスを先頭に移動|SQL_FETCH_FIRST|  
 |スクロール ボックスを末尾に移動|SQL_FETCH_LAST|  
 |スクロール ボックスを任意の位置に移動|SQL_FETCH_ABSOLUTE|  
@@ -62,7 +60,7 @@ ms.locfileid: "68078810"
   
 -   [ODBC での行のブックマーク](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
-## <a name="see-also"></a>関連項目  
- [カーソルを使用して&#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;カーソルの使用](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

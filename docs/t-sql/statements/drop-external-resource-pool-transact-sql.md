@@ -5,7 +5,7 @@ ms.date: 08/07/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - DROP EXTERNAL RESOURCE POOL
@@ -18,15 +18,15 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: f4326901f40c580e869cae11ed184ca70cd7b442
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9891b5beb1742b7f53bae16c7e48d10ef6e6955b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892741"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052767"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 外部プロセス用のリソースの定義に使われる Resource Governor 外部リソース プールを削除します。 
 
@@ -53,7 +53,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
 *pool_name*  
 削除する外部リソース プールの名前。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ワークロード グループが含まれている場合は、外部リソース プールを削除できません。  
 
@@ -65,7 +65,7 @@ DDL ステートメントを実行する場合、Resource Governor の状態に�
 
 `CONTROL SERVER` 権限が必要です。  
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、`ex_pool` という外部リソース プールを削除します。  
 
@@ -79,8 +79,6 @@ GO
 ## <a name="see-also"></a>参照
 
 + [external scripts enabled サーバー構成オプション](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-+ [SQL Server R サービス](../../advanced-analytics/r-services/sql-server-r-services.md)
-+ [SQL Server R Services の既知の問題](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
 + [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)

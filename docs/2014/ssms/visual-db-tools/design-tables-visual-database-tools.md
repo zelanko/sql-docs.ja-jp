@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08b322b5eb6658dfa44dfd1734a5e5d721674630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044421"
 ---
 # <a name="design-tables-visual-database-tools"></a>テーブルのデザイン (Visual Database Tools)
   テーブル デザイナーでは、ウィンドウ全体を使用して 1 つのテーブルをデザインします。 このセクションの各トピックでは、テーブル デザイナーを使用してデータベース テーブルを作成および変更する方法について説明します。  

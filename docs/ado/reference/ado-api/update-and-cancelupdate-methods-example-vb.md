@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 92c65ce30010c4e1bc6943ba60dd1eee84478aa9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937834"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759538"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update および CancelUpdate メソッドの例 (VB)
-この例では、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドと組み合わせて、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッド。  
+この例では、[更新](../../../ado/reference/ado-api/update-method.md)メソッドと[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドの組み合わせを示します。  
   
 ```  
 'BeginUpdateVB  
@@ -114,13 +114,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- この例では、 **Update**メソッドと組み合わせて、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッド。  
+ この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドと共に**Update**メソッドを使用します。  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)

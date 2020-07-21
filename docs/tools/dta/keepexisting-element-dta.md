@@ -1,10 +1,8 @@
 ---
-title: KeepExisting 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: KeepExisting 要素 (DTA)
+description: dta ユーティリティでは、KeepExisting 要素により、データベース エンジン チューニング アドバイザーで推奨設定を生成するときに保持される物理設計構造を指定します。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7caf2afc79a61f33bd31665714cf6d2ba270a656
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d76ae0a45b08ff826deaac7750688d521746c077
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034817"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831504"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  データベース エンジン チューニング アドバイザーが、推奨設定を生成するときに保持しなければならない物理設計構造 (インデックス、インデックス付きビュー、パーティション分割) を指定します。  
+
+データベース エンジン チューニング アドバイザーが、推奨設定を生成するときに保持しなければならない物理設計構造 (インデックス、インデックス付きビュー、パーティション分割) を指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,12 +41,12 @@ ms.locfileid: "68034817"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**string**。長さの制限は、サーバーによって決まります。|  
 |**指定できる値**|**NONE**<br /> 既存の構造を保持しません。<br /><br /> **ALL**<br /> 既存の構造をすべて保持します。<br /><br /> **ALIGNED**<br /> パーティションで固定された構造をすべて保持します。<br /><br /> **CL_IDX**<br /> テーブルのクラスター化インデックスをすべて保持します。<br /><br /> **IDX**<br /> テーブルのクラスター化インデックスと非クラスター化インデックスをすべて保持します。<br /><br /> この要素では、上記の値のいずれか 1 つを使用してください。|  
 |**既定値**|[なし] :|  
-|**個数**|省略可。 **TuningOptions** 要素につき 1 回だけ使用できます。|  
+|**個数**|省略可能。 **TuningOptions** 要素につき 1 回だけ使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

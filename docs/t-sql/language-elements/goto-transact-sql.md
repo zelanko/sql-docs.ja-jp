@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e507d650d34ea08e8bd53fb8d3cd0860242a4feb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706451"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   実行の流れを指定のラベルに分岐します。 GOTO の後の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはスキップされ、処理はそのラベルから続行されます。 GOTO ステートメントとラベルは、プロシージャ、バッチ、またはステートメント ブロック内のどこででも使用できます。 GOTO ステートメントは入れ子にすることができます。  
   
@@ -49,13 +49,13 @@ GOTO label
  *label*  
  GOTO によりラベルを指定した場合、そのラベルが以降の処理を開始する位置になります。 ラベルは、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従う必要があります。 GOTO の使用の有無にかかわらず、ラベルをコメント行として使用することができます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GOTO は、条件付きフロー制御ステートメント、ステートメント ブロック、またはプロシージャ内に存在できますが、バッチの外にあるラベルに移動できません。 GOTO による分岐は、GOTO の前後に定義されたラベルに移動できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  GOTO 権限は、特に指定のない限りすべての有効なユーザーに与えられます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`GOTO` を分岐手段として使用する方法を示します。  
   
 ```  
@@ -78,7 +78,7 @@ Branch_Three:
 ```  
   
 ## <a name="see-also"></a>参照  
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
  [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   

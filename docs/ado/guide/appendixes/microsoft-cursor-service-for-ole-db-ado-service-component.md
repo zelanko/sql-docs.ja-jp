@@ -1,5 +1,5 @@
 ---
-title: OLE DB (ADO サービス コンポーネント) の Microsoft カーソル サービス |Microsoft Docs
+title: Microsoft Cursor Service for OLE DB (ADO サービスコンポーネント) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758508"
 ---
-# <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB の概要の Microsoft カーソル サービス
-OLE DB 用の Microsoft カーソル サービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、ユーザーは、すべてのデータ プロバイダーから比較的均一な機能を認識します。
+# <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 用 Microsoft Cursor Service の概要
+Microsoft Cursor Service for OLE DB は、データプロバイダーのカーソルサポート機能を補足します。 その結果、ユーザーは、すべてのデータプロバイダーの比較的一様な機能を認識します。
 
- カーソル サービスでは、動的プロパティを使用できるようにし、特定のメソッドの動作が向上します。 たとえば、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動的プロパティなどの特定の操作を容易に一時インデックスの作成ができるように、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド。
+ カーソルサービスは動的プロパティを使用可能にし、特定のメソッドの動作を拡張します。 たとえば、"動的に[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)" プロパティを使用すると、 [Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドなどの特定の操作を容易にするために一時インデックスを作成できます。
 
- カーソル サービスを使用すると、常にバッチを更新するためのサポート。 データ プロバイダーが劣るカーソル、静的カーソルなどを指定できますのみときも、dynamic カーソルより高機能な種類のカーソルをシミュレートします。
+ カーソルサービスにより、すべての場合にバッチ更新がサポートされます。 また、静的カーソルなど、データプロバイダーが使用できるカーソルの数が少ない場合に、動的カーソルなど、より多くの機能を持つカーソルの種類をシミュレートします。
 
 ## <a name="keyword"></a>Keyword
- このサービスのコンポーネントを呼び出す、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)または[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**します。
+ このサービスコンポーネントを呼び出すには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)または[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定します。
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -36,9 +36,9 @@ recordset.CursorLocation=adUseClient
 ```
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- 次の動的プロパティを追加の OLE DB カーソル サービスが呼び出されたときに、 **Recordset**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。 完全な一覧**接続**と**Recordset**オブジェクトの動的プロパティの一覧は、 [ADO Dynamic プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)します。 関連付けられている OLE DB プロパティ名に、適切な場所はかっこ内に含ま ADO のプロパティ名の後にします。
+ OLE DB のカーソルサービスが呼び出されると、次の動的プロパティが**レコードセット**オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。 **接続**および**レコードセット**オブジェクトの動的プロパティの完全な一覧は、「 [ADO 動的プロパティインデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)」に記載されています。 関連する OLE DB プロパティ名 (適切な場合) は、ADO プロパティ名の後にかっこで囲まれています。
 
- カーソル サービスが呼び出された後は、いくつかの動的プロパティへの変更を基になるデータ ソースに表示されません。 たとえば、設定、*コマンド タイムアウト*プロパティを**レコード セット**は基になるデータ プロバイダーには表示されません。
+ 一部の動的プロパティに対する変更は、カーソルサービスが呼び出された後に、基になるデータソースからは認識されません。 たとえば、**レコードセット**の*コマンドタイムアウト*プロパティを設定しても、基になるデータプロバイダーには表示されません。
 
 ```vb
 
@@ -51,42 +51,42 @@ Recordset1.Properties.Item("Command Time out") = 50
 
 ```
 
- 基になるプロバイダーの動的プロパティを設定する必要がありますが、アプリケーションには、カーソル サービスが必要ですが場合、は、カーソルのサービスを呼び出す前にプロパティを設定します。 コマンド オブジェクトのプロパティの設定は常に、カーソルの場所に関係なく、基になるデータ プロバイダーに渡されます。 そのため、いつでもプロパティを設定するのにコマンド オブジェクトを使用することもできます。
+ アプリケーションでカーソルサービスが必要であるのに、基になるプロバイダーで動的プロパティを設定する必要がある場合は、カーソルサービスを呼び出す前にプロパティを設定します。 Command オブジェクトのプロパティ設定は、カーソル位置に関係なく、常に基になるデータプロバイダーに渡されます。 したがって、コマンドオブジェクトを使用して、いつでもプロパティを設定できます。
 
 > [!NOTE]
->  基になるデータ プロバイダーがサポートされている場合でも、DBPROP_SERVERDATAONINSERT 動的プロパティは、カーソル サービスによってサポートされていません。
+>  動的プロパティ DBPROP_SERVERDATAONINSERT は、基になるデータプロバイダーでサポートされている場合でも、cursor service ではサポートされていません。
 
 |プロパティ名|説明|
 |-------------------|-----------------|
-|自動再計算 (DBPROP_ADC_AUTORECALC)|この値はどのくらいの頻度を示します Data Shaping Service で作成されたレコード セットの集計と計算列が計算されます。 既定値 (値 = 1) Data Shaping Service は、値が変更されたことを決定するたびに再計算されます。 値が 0 の場合、階層の最初にビルド時に計算または集計列が計算のみです。|
-|バッチ サイズ (DBPROP_ADC_BATCHSIZE)|データ ストアに送信される前にバッチ処理できる update ステートメントの数を示します。 バッチ内の複数のステートメント、データに少ないラウンド トリップを格納します。|
-|子の行をキャッシュする (DBPROP_ADC_CACHECHILDROWS)|Data Shaping Service で作成されたレコード セットは、この値は、後で使用できるキャッシュに、子のレコード セットが格納されているかどうかを示します。|
-|カーソル エンジンのバージョン (DBPROP_ADC_CEVER)|使用されているカーソル サービスのバージョンを示します。|
-|状態の変更 (DBPROP_ADC_MAINTAINCHANGESTATUS) の管理します。|複数のテーブルの結合で 1 つまたは複数の行の再同期に使用されるコマンドのテキストを示します。|
-|[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|インデックスを作成するかどうかを示します。 設定すると**True**、一時的な特定の操作の実行を向上させるためにインデックスの作成を承認します。|
-|[名前を変更します。](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|名前を示します、 **Recordset**します。 現在内で参照されているまたはその後、データ シェイプのコマンドです。|
-|[再同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|によって使用されるカスタム コマンド文字列を示します、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドと、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)プロパティが有効になります。|
-|[一意のカタログ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|参照されているテーブルを含むデータベースの名前を示します、**一意テーブル**プロパティ。|
-|[一意のスキーマ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|参照されるテーブルの所有者の名前を示します、**一意テーブル**プロパティ。|
-|[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|1 つのテーブルの名前を示します、**レコード セット**挿入、更新、または削除によって変更可能な複数のテーブルから作成します。|
-|更新基準 (DBPROP_ADC_UPDATECRITERIA)|どのフィールドを示す、**場所**句は、更新中に発生する競合を処理するために使用します。|
-|[再同期の更新](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)(DBPROP_ADC_UPDATERESYNC)|示すかどうか、**再同期**メソッドが後に暗黙的に呼び出され、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド (とその動作)、**一意テーブル**プロパティが有効になります。|
+|自動再計算 (DBPROP_ADC_AUTORECALC)|データシェイプサービスで作成されたレコードセットの場合、この値は計算列および集計列を計算する頻度を示します。 既定値 (値 = 1) は、データ整形サービスによって値が変更されたと判断されるたびに再計算されます。 値が0の場合、計算列または集計列は、階層が最初に構築されたときにのみ計算されます。|
+|バッチサイズ (DBPROP_ADC_BATCHSIZE)|データストアに送信される前にバッチ処理できる update ステートメントの数を示します。 バッチ内のステートメントが多くなるほど、データストアへのラウンドトリップが減少します。|
+|子行のキャッシュ (DBPROP_ADC_CACHECHILDROWS)|データシェイプサービスで作成されたレコードセットの場合、この値は、子レコードセットが後で使用できるようにキャッシュに格納されているかどうかを示します。|
+|カーソルエンジンのバージョン (DBPROP_ADC_CEVER)|使用されているカーソルサービスのバージョンを示します。|
+|変更の状態を維持する (DBPROP_ADC_MAINTAINCHANGESTATUS)|複数のテーブルの結合で1つ以上の行を再同期するために使用されるコマンドのテキストを示します。|
+|[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|インデックスを作成する必要があるかどうかを示します。 **True**に設定されている場合、は、特定の操作の実行を向上させるために、インデックスの一時的な作成を承認します。|
+|[名前のリシェイプ](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|**レコードセット**の名前を示します。 現在の、またはそれ以降のデータシェイプコマンド内で参照できます。|
+|[再同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|[一意のテーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)プロパティが有効な場合に、再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドによって使用されるカスタムコマンド文字列を示します。|
+|[一意のカタログ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意のテーブル**プロパティで参照されるテーブルを含むデータベースの名前を示します。|
+|[一意のスキーマ](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意のテーブル**プロパティで参照されるテーブルの所有者の名前を示します。|
+|[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|挿入、更新、または削除によって変更できる複数のテーブルから作成された**レコードセット**内の1つのテーブルの名前を示します。|
+|更新条件 (DBPROP_ADC_UPDATECRITERIA)|更新中に発生した競合の処理に使用される**where**句内のフィールドを示します。|
+|再[同期の更新](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)(DBPROP_ADC_UPDATERESYNC)|**一意のテーブル**プロパティが有効な場合に、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド (およびその動作) の後に再**同期**メソッドが暗黙的に呼び出されるかどうかを示します。|
 
- 設定またはのインデックスとしてその名前を指定することで動的プロパティを取得することも、**プロパティ**コレクション。 たとえば、取得しての現在の値を出力、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動的プロパティは、新しい値を次のように設定し。
+ **プロパティ**コレクションのインデックスとして名前を指定して、動的プロパティを設定または取得することもできます。 たとえば、 [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動的プロパティの現在の値を取得して印刷し、次のように新しい値を設定します。
 
 ```vb
 Debug.Print rs.Properties("Optimize")
 rs.Properties("Optimize") = True
 ```
 
-## <a name="built-in-property-behavior"></a>組み込みのプロパティの動作
- OLE DB のカーソル サービスは、特定の組み込みプロパティの動作にも影響します。
+## <a name="built-in-property-behavior"></a>組み込みプロパティの動作
+ OLE DB 用の Cursor Service は、特定の組み込みプロパティの動作にも影響します。
 
 |プロパティ名|説明|
 |-------------------|-----------------|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|使用可能なカーソルの種類を補足するもの、 **Recordset**します。|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|使用できるロックの種類を補足するもの、**レコード セット**します。 一括更新を可能にします。|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|1 つまたは複数のフィールド名を指定します、**レコード セット**並べ替えられた各フィールドが昇順または降順で並べ替えられるかどうか、およびします。|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|**レコードセット**で使用できるカーソルの種類を補足します。|
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|**レコードセット**で使用可能なロックの種類を補足します。 バッチ更新を有効にします。|
+|[並べ替え](../../../ado/reference/ado-api/sort-property.md)|**レコードセット**が並べ替えられる1つ以上のフィールド名と、各フィールドを昇順と降順のどちらで並べ替えるかを指定します。|
 
 ## <a name="method-behavior"></a>メソッドの動作
- OLE DB のカーソル サービスを有効またはの動作に影響、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの[Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドと**レコード セット**オブジェクトの[を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[保存](../../../ado/reference/ado-api/save-method.md)メソッド。
+ OLE DB 用の Cursor Service は、 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの[Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドの動作に有効または影響を及ぼします。**レコードセット**オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、および[Save](../../../ado/reference/ado-api/save-method.md)メソッドがあります。

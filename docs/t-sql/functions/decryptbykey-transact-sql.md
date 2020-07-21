@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76bb0b64f0a3405a20b9b05c8cb1e18d6ab242a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e67c362ba45a7b70b252eb011ec0ee1e24e54888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682429"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は対称キーを使用してデータを復号します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68118939"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  
@@ -46,7 +46,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 *ciphertext*  
 キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
-**@ciphertext**  
+**\@ciphertext**  
 キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
  *add_authenticator*  
@@ -55,13 +55,13 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  *authenticator*  
 認証子の生成の基礎として使用されるデータ。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *authenticator* には、**sysname** データ型が与えられます。  
 
-**@authenticator**  
-認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *@authenticator* には、**sysname** データ型が与えられます。  
+**\@authenticator**  
+認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *\@authenticator* には、**sysname** データ型が与えられます。  
 
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。 `DECRYPTBYKEY` は、データの暗号化に使用する対称キーが開いていない場合か、*ciphertext* が NULL の場合、NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DECRYPTBYKEY` は対称キーを使用します。 データベースでは、この対称キーを既に開いている必要があります。 `DECRYPTBYKEY` では、複数のキーを同時に開いておくことができます。 暗号化テキストの復号する直前にキーを開く必要はありません。  
   
 対称暗号化/復号は通常、比較的すぐに動作します。大量のデータが含まれる操作で効率的に動作します。  
@@ -71,7 +71,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ## <a name="permissions"></a>アクセス許可  
 対称キーは現在のセッションで開かれている必要があります。 詳細については、「[OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. 対称キーを使用して暗号化解除する  
 この例では、対称キーで暗号化テキストを復号します。  

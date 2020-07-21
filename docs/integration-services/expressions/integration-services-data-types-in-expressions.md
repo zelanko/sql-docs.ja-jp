@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eef95663a1f5b26209b1081d6481e7ca3fdd2a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080747"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297547"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
 
@@ -27,7 +27,7 @@ ms.locfileid: "68080747"
 
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
   
-## <a name="variables"></a>変数:  
+## <a name="variables"></a>変数  
  また、式は変数を使用することもできます。 変数は variant データ型で、式エバリュエーターは、変数のデータ型を variant サブタイプから [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換してから式を評価します。 変数では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型のサブセットのみが使用できます。 たとえば、変数はバイナリ ラージ オブジェクト (BLOB) データ型を使用することはできません。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型と [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に対する ｖariant データ型のマッピングについては、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
@@ -67,7 +67,7 @@ ms.locfileid: "68080747"
 ## <a name="implicit-data-conversion"></a>暗黙的なデータ変換  
  データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば、 **smallint** 型を **int**型と比較する場合、比較を実行する前に、 **smallint** 型から **int** 型に暗黙的に変換されます。  
   
- 引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
+ 引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
  次の図は、BINARY 演算での暗黙的な変換の結果のデータ型を示しています。 この表の列と行の交差部分は、左 (変換元) と右 (変換先) の型のオペランドによるバイナリ演算の結果のデータ型です。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68080747"
 >   
 >  エラーや予期しない結果が発生しないように、 **True** および **False**については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。  
   
- 詳細については、次の各トピックを参照してください。  
+ 詳細については、次のトピックを参照してください。  
   
 -   [== &#40;等しい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   

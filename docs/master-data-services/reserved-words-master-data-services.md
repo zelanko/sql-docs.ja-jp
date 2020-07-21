@@ -1,5 +1,5 @@
 ---
-title: 予約語 (マスター データ サービス) | Microsoft Docs
+title: 予約語
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c33bf34a99addae8a94fb92222eb3265cc6a52a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811465"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル オブジェクトまたはメンバーを作成するときに使用できない単語がいくつかあります。 これらの単語を使用すると、エラーが発生する可能性があります。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68085692"
   
 -   [モデル](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [[エンティティ]](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [エンティティ](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [明示的階層](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
@@ -39,20 +39,20 @@ ms.locfileid: "68085692"
   
 -   [メンバー](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> モデル  
+##  <a name="models"></a><a name="models"></a>モジュール  
  名前を **Name** または **Code**に設定したモデルを作成する場合は、 **[モデルと同じ名前のエンティティを作成する]** を選択しないでください。エンティティの名前に **Name** または **Code** は使用できません。  
   
-##  <a name="entities"></a> [エンティティ]  
+##  <a name="entities"></a><a name="entities"></a>事業  
  エンティティ名には **Name** または **Code**を使用できません。  
   
-##  <a name="exhierarchies"></a> 明示的階層  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>明示的階層  
  明示的階層名には **Name** または **Code**を使用できません。  
   
-##  <a name="attributes"></a> 属性  
+##  <a name="attributes"></a><a name="attributes"></a>アトリビュート  
   
 -   **ID**  
   
--   **Code**  
+-   **コード**  
   
 -   **EnterUserName**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68085692"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> メンバー  
+##  <a name="members"></a><a name="members"></a>属する  
  メンバーの場合、 **MDMMemberStatus**、 **MDMUnused**、または **ROOT** を **Code** 属性値として使用することはできません。  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,5 +1,6 @@
 ---
-title: sql:column() 関数 (XQuery) |Microsoft Docs
+title: 'sql: column () 関数 (XQuery) |Microsoft Docs'
+description: 'XQuery 関数 sql: column () を使用して xml 内部の XML 以外のリレーショナルデータをバインドし、リレーショナルデータと XML データをまとめる方法について説明します。'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775408"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery Extension Functions - sql:column()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 拡張関数 - sql:column()
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  」の説明に従って[XML 内リレーショナル データのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)、使用することができます、 **sql:column()** 関数を使用するときに[XML データ型メソッド](../t-sql/xml/xml-data-type-methods.md)リレーショナル値を公開するにはXQuery 内部。  
+  「 [Xml 内部のリレーショナルデータのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)」で説明されているように、 [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)を使用して XQuery 内にリレーショナル値を公開する場合は、 **sql: column ()** 関数を使用できます。  
   
- たとえば、 [query() メソッド (XML データ型)](../t-sql/xml/query-method-xml-data-type.md)変数またはの列に格納されている XML インスタンスに対してクエリを指定するために使用**xml**型。 場合によっては、することも、別の値を使用するクエリ リレーショナル、XML 以外の列と XML データを結合します。 これを行うには、使用する、 **sql:column()** 関数。  
+ たとえば、 [query () メソッド (xml データ型)](../t-sql/xml/query-method-xml-data-type.md)を使用して、 **xml 型の**変数または列に格納されている xml インスタンスに対してクエリを指定します。 場合によっては、クエリで XML 以外の別の列の値を使用して、リレーショナルデータと XML データを結合することが必要になることもあります。 これを行うには、 **sql: column ()** 関数を使用します。  
   
- SQL 値は、対応する XQuery 値にマップされ、その型は、対応する SQL 型に相当する XQuery 基本データ型になります。  
+ SQL 値は、対応する XQuery 値にマップされ、型は、対応する SQL 型に相当する XQuery 基本データ型になります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,32 +39,32 @@ ms.locfileid: "67946018"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>コメント  
- 指定された列への参照をことに注意してください、 **sql:column()** XQuery 内の関数が処理されている行の列を参照します。  
+## <a name="remarks"></a>Remarks  
+ XQuery 内の**sql: column ()** 関数で指定された列への参照は、処理される行の列を参照することに注意してください。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、のみを参照することができます、 **xml**インスタンス コンテキスト、ソースの式の XML DML 挿入ステートメントで、それ以外の場合、型の列を参照することはできません**xml**または CLRユーザー定義型です。  
+ では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、xml インスタンスを参照する**xml**ことができるのは、xml DML insert ステートメントのソース式のコンテキストだけです。それ以外の場合は **、XML**型または CLR ユーザー定義型の列を参照することはできません。  
   
- **Sql:column()** 結合操作では、関数はサポートされていません。 適用操作は、代わりに使用できます。  
+ **Sql: column ()** 関数は、結合操作ではサポートされていません。 代わりに、適用操作を使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. sql:column() を使用して XML 内部のリレーショナル値を取得する  
- XML の構築には、次の例は、XML とリレーショナル データをバインドする、XML 以外のリレーショナル列の値を取得する方法を示します。  
+ Xml の構築では、xml 以外のリレーショナル列から値を取得して XML およびリレーショナルデータをバインドする方法を次の例に示します。  
   
- クエリは、次の形式の XML を構築します。  
+ このクエリでは、次の形式の XML が構築されます。  
   
 ```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
   
- 構築済みの XML では、次に注意してください。  
+ 構築された XML では、次の点に注意してください。  
   
--   **ProductID**、 **ProductName**、および**ProductPrice**属性値がから取得した、**製品**テーブル。  
+-   **ProductID**、 **ProductName**、および**Productprice**属性値は、 **Product**テーブルから取得されます。  
   
--   **ProductModelID**から属性値を取得、 **ProductModel**テーブル。  
+-   **Productmodelid**属性の値は、 **productmodel**テーブルから取得されます。  
   
--   さらに興味深いクエリを作成する、 **ProductModelName**属性値がから取得した、 **CatalogDescription**の列**xml 型**します。 すべての製品モデルの XML 製品モデル カタログ情報が格納されていないため、`if`ステートメントを使用して、存在する場合にのみ値を取得します。  
+-   クエリをさらに興味深いものにするために、 **ProductModelName**属性の値は、 **Xml 型**の**catalogdescription**列から取得されます。 XML 製品モデルのカタログ情報はすべての製品モデルに対して格納されていないので、 `if` ステートメントは、存在する場合にのみ値を取得するために使用されます。  
   
     ```sql
     SELECT P.ProductID, CatalogDescription.query('  
@@ -90,9 +91,9 @@ sql:column("columnName")
   
 -   値を 2 つの異なるテーブルから取得するため、FROM 句で 2 つのテーブルを指定しています。 WHERE 句に定義された条件により結果をフィルター選択し、カタログの説明のある製品モデルの製品のみを取得しています。  
   
--   **名前空間**キーワード、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)XML 名前空間プレフィックス"pd"、クエリ本文で使用されるを定義します。 "P"および"PM"、テーブルの別名が、クエリ自体の FROM 句で定義されているに注意してください。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)内の**namespace**キーワードは、クエリ本文で使用される XML 名前空間プレフィックス "pd" を定義します。 テーブルの別名 "P" と "PM" は、クエリ自体の FROM 句で定義されていることに注意してください。  
   
--   **Sql:column()** 関数を使用して、XML 内部の XML 以外の値を表示します。  
+-   Xml 内の XML 以外の値を取り込むには、 **sql: column ()** 関数を使用します。  
   
  結果の一部を次に示します。  
   
@@ -105,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- 次のクエリでは、製品に固有の情報を含む XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 XML が割り当てられているし、@xの変数 **xml** 型。  
+ 次のクエリでは、製品固有の情報を含む XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 Xml は @x **xml**型の変数に割り当てられます。  
   
 ```sql
 declare @x xml  
@@ -130,7 +131,7 @@ select @x
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [SQL Server XQuery 拡張関数します。](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [XQuery 拡張関数の SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   

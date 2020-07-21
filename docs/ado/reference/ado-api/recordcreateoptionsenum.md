@@ -13,29 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917343"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761910"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-指定します、既存かどうか**レコード**開かれているか、新しい**レコード**用に作成された、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 値は、AND 演算子と組み合わせることができます。  
+既存の**レコード**を開くか、 [Record](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド用に新しい**レコード**を作成するかを指定します。 値は AND 演算子と組み合わせることができます。  
   
-|定数|Value|説明|  
+|定数|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|新たに作成**レコード**によって指定されたノードで*ソース*既存を開く代わりに、パラメーター**レコード**します。 ソースを指している場合、既存のノードでは、実行時エラーが発生し、しない限り、 **adCreateCollection**を組み合わせて**adOpenIfExists**または**adCreateOverwrite**します。|  
-|**adCreateNonCollection**|0|新たに作成**レコード**型の[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)します。|  
-|**adCreateOverwrite**|0x4000000|作成フラグを変更します。 **adCreateCollection**、 **adCreateNonCollection**、および**adCreateStructDoc**します。 ときにソース URL は、既存のノードを指している場合にこの値は、作成フラグの値のいずれかで使用またはまたは**レコード**、既存の**レコード**が上書きされ、新しい場所を作成します。 この値はと共に使用することはできません**adOpenIfExists**します。|  
-|**adCreateStructDoc**|0x80000000|新たに作成**レコード**型の[adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md)、既存を開く代わりに**レコード**します。|  
-|**adFailIfNotExists**|-1|既定値です。 場合、実行時エラーが発生*ソース*存在しないノードを指します。|  
-|**adOpenIfExists**|0x2000000|作成フラグを変更します。 **adCreateCollection**、 **adCreateNonCollection**、および**adCreateStructDoc**します。 ときにソース URL は、既存のノードを指している場合にこの値は、作成フラグの値のいずれかで使用またはまたは**レコード**オブジェクト プロバイダーは、既存を開く必要があります**レコード**新しいを作成するのではなく1 つです。 この値はと共に使用することはできません**adCreateOverwrite**します。|  
+|**adCreateCollection**|0x2000|既存の**レコード**を開く代わりに、 *Source*パラメーターで指定されたノードに新しい**レコード**を作成します。 ソースが既存のノードを指している場合、 **Adcreatecollection**が**Adopenifexists**または**adcreatecollection**と結合されていない限り、実行時エラーが発生します。|  
+|**adCreateNonCollection**|0|[Adsimplerecord](../../../ado/reference/ado-api/recordtypeenum.md)型の新しい**レコード**を作成します。|  
+|**adCreateOverwrite**|0x4000000|作成フラグ**Adcreatecollection**、 **adcreatenoncollection**、および**adCreateStructDoc**を変更します。 またはをこの値と共に使用し、作成フラグの値の1つを使用すると、ソース URL が既存のノードまたは**レコード**を指している場合は、既存のレコードが上書きされ、その代わりに新しい**レコード**が作成されます。 この値は、 **Adopenifexists**と一緒に使用することはできません。|  
+|**adCreateStructDoc**|0x80000000|既存の**レコード**を開く代わりに、 [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md)型の新しい**レコード**を作成します。|  
+|**adFailIfNotExists**|-1|既定値。 *ソース*が存在しないノードを指している場合、実行時エラーが発生します。|  
+|**adOpenIfExists**|0x2000000|作成フラグ**Adcreatecollection**、 **adcreatenoncollection**、および**adCreateStructDoc**を変更します。 またはをこの値と共に使用し、作成フラグの値の1つを使用する場合、ソース URL が既存のノードまたは**レコード**オブジェクトを指している場合、プロバイダーは新しいレコードを作成するのではなく、既存の**レコード**を開く必要があります。 この値は**Adcreateoverwrite**と共に使用することはできません。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- これらの定数には、ADO と WFC 対応はありません。  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)

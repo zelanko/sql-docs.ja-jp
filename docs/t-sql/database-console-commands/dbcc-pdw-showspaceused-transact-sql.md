@@ -12,15 +12,15 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a8a016fe9852c076b563796caf4cc196ea3ecce
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116489"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197218"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベースの特定のテーブルまたはすべてのテーブルの行数、予約済みのディスク領域、使用済みのディスク領域を表示します。
   
@@ -28,7 +28,7 @@ ms.locfileid: "68116489"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  
@@ -48,28 +48,28 @@ VIEW SERVER STATE 権限が必要です。
 ## <a name="result-sets"></a>結果セット  
 これは、すべてのテーブルの結果セットです。
   
-|[列]|データ型|[説明]|  
+|列|データ型|説明|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|データベースに使用されている合計領域 (KB 単位)。|  
-|data_space|BIGINT|データに使用されている領域 (KB 単位)。|  
-|index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。|  
-|unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
+|reserved_space|bigint|データベースに使用されている合計領域 (KB 単位)。|  
+|data_space|bigint|データに使用されている領域 (KB 単位)。|  
+|index_space|bigint|インデックスに使用されている領域 (KB 単位)。|  
+|unused_space|bigint|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
 |pdw_node_id|INT|データに使用されているコンピューティング ノード。|  
   
 これは、1 つのテーブルの結果セットです。
   
-|[列]|データ型|[説明]|範囲|  
+|列|データ型|説明|Range|  
 |------------|---------------|-----------------|-----------|  
-|rows|BIGINT|行の数。||  
-|reserved_space|BIGINT|オブジェクトに予約されている合計領域 (KB 単位)。||  
-|data_space|BIGINT|データに使用されている領域 (KB 単位)。||  
-|index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。||  
-|unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。||  
+|rows|bigint|行の数。||  
+|reserved_space|bigint|オブジェクトに予約されている合計領域 (KB 単位)。||  
+|data_space|bigint|データに使用されている領域 (KB 単位)。||  
+|index_space|bigint|インデックスに使用されている領域 (KB 単位)。||  
+|unused_space|bigint|予約済み領域の一部で使用されていない領域 (KB 単位)。||  
 |pdw_node_id|INT|領域の使用状況の報告に使用されるコンピューティング ノード。||  
 |distribution_id|INT|領域の使用状況の報告に使用されるディストリビューション。|レプリケートされたテーブルの場合、値は -1 です。|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  
 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースの FactInternetSales テーブルの行数、予約済みのディスク領域、使用済みのディスク領域を表示する複数の方法を示します。
   
 ```sql

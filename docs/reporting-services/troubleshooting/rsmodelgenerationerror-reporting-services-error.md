@@ -1,5 +1,6 @@
 ---
 title: rsModelGenerationError - Reporting Services エラー | Microsoft Docs
+description: 'このエラー リファレンス ページでは、イベント ID "rsModelGenerationError" について説明します: モデルの生成中にエラーが発生しました。'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 870f1fbc49e99e2cd43c6adb857137776c275550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: bfeb477ac1830d9604e3d794e96e807548639671
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574087"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487232"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services エラー
     

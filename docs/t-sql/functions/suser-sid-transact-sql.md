@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6eed882fffc8d6752d4884f006450efc5b9257be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b3c63e625fa31e1ea21e243c28cec8b7551f66b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714782"
 ---
-# <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定されたログイン名のセキュリティ ID 番号 (SID) を返します。  
   
@@ -40,26 +40,26 @@ ms.locfileid: "68117599"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
 ## <a name="arguments"></a>引数  
  **'** *login* **'**  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  ユーザーのログイン名を指定します。 *login* は **sysname** です。 *login* は省略可能で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインか、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーまたはグループを指定できます。 *login* の指定を省略すると、現在のセキュリティ コンテキストについての情報が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
  *Param2*  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
  ログイン名を検証するかどうかを指定します。 *Param2* のデータ型は **int** で、省略可能です。 *Param2* が 0 の場合、ログイン名は検証されません。 *Param2* で 0 が指定されていない場合、Windows ログイン名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されたログイン名がまったく同じであるかどうかが確認されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SUSER_SID は、ALTER TABLE または CREATE TABLE の中で、DEFAULT 制約として使用できます。 SUSER_SID は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 SUSER_SID の後には、パラメーターを指定しない場合も含め、常にかっこが必要です。  
   
  SUSER_SID を引数なしで呼び出すと、現在のセキュリティ コンテキストの SID が返されます。 EXECUTE AS を使用してコンテキストを切り替えたバッチ内で SUSER_SID を引数なしで呼び出すと、権限を借用したコンテキストの SID が返されます。 権限を借用したコンテキストから SUSER_SID(ORIGINAL_LOGIN()) を呼び出すと、元のコンテキストの SID が返されます。  
@@ -68,36 +68,41 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
-## <a name="examples"></a>使用例  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 解説  
+ SUSER_SID では、常に現在のセキュリティ コンテキストのログイン SID が返されます。 別のログインの SID を取得するには、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) を使用します。
   
-### <a name="a-using-susersid"></a>A. SUSER_SID を使用する  
+ SUSER_SID ステートメントでは、EXECUTE AS で借用したセキュリティ コンテキストを使用した実行はサポートされません。  
+
+## <a name="examples"></a>例  
+  
+### <a name="a-using-suser_sid"></a>A. SUSER_SID を使用する  
  次の例では、現在のセキュリティ コンテキストのセキュリティ ID 番号 (SID) を返します。  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>B. SUSER_SID を特定のログインと共に使用する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における `sa` というログインのセキュリティ ID 番号を返します。  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>B. SUSER_SID を特定のログインと共に使用する  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` ログインのセキュリティ ID 番号を返します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SID('sa');  
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>C. SUSER_SID を Windows ユーザー名と共に使用する  
+### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. SUSER_SID を Windows ユーザー名と共に使用する  
  次の例では、Windows ユーザーである `London\Workstation1` のセキュリティ ID 番号を返します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>D. SUSER_SID を DEFAULT 制約として使用する  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. SUSER_SID を DEFAULT 制約として使用する  
  次の例では、`SUSER_SID` ステートメントで `DEFAULT` を `CREATE TABLE` 制約として使用しています。  
   
 ```  
@@ -118,7 +123,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Windows ログイン名と SQL Server に格納されたログイン名を比較する  
  次の例は、*Param2* を使用して Windows から SID を取得する方法を示しています。この例では、その SID を `SUSER_SNAME` 関数への入力として使用しています。 Windows に格納された形式 (`TestComputer\User`) でログインを指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納された形式 (`TESTCOMPUTER\User`) のログインを取得しています。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
@@ -128,6 +133,6 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary と varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

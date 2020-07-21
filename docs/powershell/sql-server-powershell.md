@@ -10,10 +10,10 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 7a2725586a094aed0cb7d933553bc3fc389adfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67912211"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
@@ -60,6 +60,6 @@ SQL PowerShell コマンドレットは Azure SQL Database、Azure SQL Data Ware
 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙する条件のセットを指定するために XPath と同様の構文を使用する文字列です。 URN (Unique Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。 詳細については、「 [クエリ式と Uniform Resource Name](query-expressions-and-uniform-resource-names.md)」を参照してください。       
 
 
-## <a name="cmdlet-reference"></a>コマンドレット参照
+## <a name="cmdlet-reference"></a>コマンドレット リファレンス
 * [SqlServer のコマンドレット](https://docs.microsoft.com/powershell/module/sqlserver)
 * [SQLPS のコマンドレット](https://docs.microsoft.com/powershell/module/sqlps)

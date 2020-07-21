@@ -1,5 +1,5 @@
 ---
-title: Windows 同期マネージャー (Windows Synchronization Manager) を使用してサブスクリプションの同期 |Microsoft Docs
+title: Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f1b0832fb82425874b656715091f793b79dfd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62745761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004490"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
   
-1.  **[サブスクリプションのプロパティ - \<サブスクライバー>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)」を参照してください。  
+1.  [**サブスクリプションのプロパティ- \<Subscriber> \<SubscriptionDatabase> :** ] ダイアログボックスで、Windows 同期マネージャーを使用したプルサブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 2.  Windows の **[スタート]** メニューから、同期マネージャーにアクセスします。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62745761"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  [**サブスクリプションのプロパティ- \<Subscriber> \<SubscriptionDatabase> :** ] ダイアログボックスの **[全般**] ページで、[ **Windows 同期マネージャーを使用**する] オプションの値として [**有効**] を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62745761"
   
     -   **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
   
-    -   **[スタート]** メニューの **[ファイル名を指定して実行]** **実行**ダイアログ ボックスに「`mobsync.exe`で、**オープン**フィールドをクリックしてして **[ok]** 。  
+    -   [**スタート**] をクリックし、[実行] をクリックし**ます。** [ファイル名を選択して**実行**] ダイアログボックスで、[開く] フィールドに「」と入力し、 `mobsync.exe` [ **OK**] をクリックします。 **Open**  
   
 2.  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
   
@@ -73,9 +72,9 @@ ms.locfileid: "62745761"
   
 2.  以下のタブのプロパティを参照および変更します。  
   
-    -   **[識別]**  
+    -   **識別**  
   
-    -   **[サブスクライバー ログイン]** 、 **[ディストリビューター ログイン]** 、および **[パブリッシャー ログイン]** (マージ レプリケーションの場合のみ)  
+    -   **[サブスクライバー ログイン]**、 **[ディストリビューター ログイン]**、および **[パブリッシャー ログイン]** (マージ レプリケーションの場合のみ)  
   
     -   **[Web サーバー情報]** (SQL Server 2005 以降を実行しているサブスクライバー上のマージ サブスクリプションの場合)  
   

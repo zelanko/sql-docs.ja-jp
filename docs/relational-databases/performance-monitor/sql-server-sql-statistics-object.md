@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758946"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Statistics** オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
   
  コンパイルは、クエリのターンアラウンド時間の大半を占めます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、コンパイルのコストを節約するために、コンパイル済みのクエリ プランがクエリ キャッシュに保存されます。 キャッシュを使用して、コンパイル済みのクエリを再使用のために保存すると、後から実行するときに再コンパイルの必要がなくなるので、コンパイルを減らすことができます。 ただし、一意のクエリはすべて、少なくとも 1 回コンパイルする必要があります。 クエリの再コンパイルは、次の要因によって生じることがあります。  
@@ -34,7 +34,7 @@ ms.locfileid: "67995654"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
   
-|SQL Server SQL Statistics カウンター|[説明]|  
+|SQL Server SQL Statistics カウンター|説明|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|1 秒あたりの自動パラメーター化が実行された数。 総数は、失敗した試行、安全な試行、および安全ではない試行の合計でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにより、いくつかのリテラルをパラメーターに置き換えることによって [!INCLUDE[tsql](../../includes/tsql-md.md)] 要求のパラメーター化が試行されると、自動パラメーター化が発生します。複数の類似した要求で、結果としてキャッシュされた実行プランの再使用を可能にするためです。 自動パラメーター化は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいバージョンでは簡易パラメーター化とも呼ばれています。 このカウンターには、強制パラメーター化は含まれません。|  
 |**Batch Requests/sec**|1 秒あたりに受信した [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドのバッチの数。 この統計値はすべての制約の影響を受けます。制約とは、I/O、ユーザー数、キャッシュ サイズ、要求の複雑さなどです。 バッチ要求の数が多いことは、スループットが優れていることを意味します。|  

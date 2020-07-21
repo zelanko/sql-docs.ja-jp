@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff7d2c619a1dad619676092b8f2c937890d681f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787367"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server エージェントの Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server エージェントの **Statistics** パフォーマンス オブジェクトには、SQL Server エージェントに関する情報を報告するパフォーマンス カウンターが含まれています。  
   
  次の表では、 **SQLAgent:Statistics** カウンターを示します。  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**SQL Server restarted**|前回の SQL Server エージェントの起動以降に Microsoft SQL Server が SQL Server エージェントによって正常に再起動された回数。|  
   

@@ -1,5 +1,6 @@
 ---
 title: '例: XML 型の列のクエリ | Microsoft Docs'
+description: xml データ型の列のクエリを実行する方法の例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5e28c3b6a68e765287cfcc2934c06fb25270f5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006814"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633114"
 ---
 # <a name="example-querying-xmltype-columns"></a>例: XML 型の列のクエリ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   次のクエリには、 **xml** 型の列が含まれています。 クエリでは、 `Instructions` xml **型の** 列から、製品モデル ID、名前、および最初の場所での製造手順を取得しています。  
   
 ## <a name="example"></a>例  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - dates [SQL Server], MONTH
 - MONTH function [SQL Server]
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9fc2c8718fd643e5838172831858c51aea6fd47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05ab7281448d8e20d23bf31c3da2a9ff08a7cd41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130228"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005106"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   指定された*日付*の月を表す整数を返します。  
   
@@ -55,11 +55,11 @@ MONTH ( date )
  **int**  
   
 ## <a name="return-value"></a>戻り値  
- \* * 月には、同じの値が返されます [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**月**、*日*)。 * *。  
+ MONTH は [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**month**、*date*) と同じ値を返します。  
   
  *日付*に時刻部分のみが含まれている場合、戻り値は 1、基本の月です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のステートメントでは、`4` が返されます。 これは月の数値です。  
   
 ```  
@@ -72,7 +72,7 @@ SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`4` が返されます。 これは月の数値です。  
   
 ```  

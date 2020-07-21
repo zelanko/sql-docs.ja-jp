@@ -13,16 +13,16 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731583"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
 
-[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb.md)]
 
 計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。
 
@@ -40,22 +40,22 @@ ms.locfileid: "68082562"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> はじめに
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに
 
-### <a name="Limitations"></a> 制限事項と制約事項
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 制限事項と制約事項
 
 - 計算列は、DEFAULT 制約定義または FOREIGN KEY 制約定義として使用したり、NOT NULL 制約定義と共に使用したりすることはできません。 ただし、計算列の値が決定的な式によって定義され、その結果のデータ型がインデックス列で可能な場合、計算列は、インデックスのキー列として、または任意の PRIMARY KEY 制約または UNIQUE 制約の一部として使用できます。 たとえば、テーブルに整数型の列 a と b がある場合、計算列 a + b にはインデックスを作成できますが、計算列 a+DATEPART(dd, GETDATE()) にインデックスを作成することはできません。これは、この計算列の値が次以降の呼び出しで変更される可能性があるためです。
 - 計算列を INSERT ステートメントまたは UPDATE ステートメントの対象にすることはできません。
 
-### <a name="Security"></a> セキュリティ
+### <a name="security"></a><a name="Security"></a> セキュリティ
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 テーブルに対する ALTER 権限が必要です。
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio の使用
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用
 
-### <a name="NewColumn"></a> 新しい計算列を追加するには
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> 新しい計算列を追加するには
 
 1. **オブジェクト エクスプローラー**で、新しい計算列を追加するテーブルを展開します。 **[列]** を右クリックして **[新しい列]** をクリックします。
 2. 列名を入力し、既定のデータ型 (**nchar**(10)) をそのまま使用します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、計算列のデータ型は、数式で指定された式のデータ型のうち優先順位が高い方になります。 たとえば、式で **money** 型の列と **int**型の列を参照する場合、 **money** 型の方が優先順位が高いため、計算列はそのデータ型になります。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。
@@ -63,11 +63,11 @@ ms.locfileid: "68082562"
 4. **[(数式)]** 子プロパティで、列の式を右側のグリッド セルに入力します。 たとえば、 `SalesTotal` 列に `SubTotal+TaxAmt+Freight`という数式を入力した場合、テーブル内の各行のこれらの列の値が加算されます。
 
    > [!IMPORTANT]
-   > 数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、 **nvarchar** 型の列を **int**型の列と結合する場合は、この数式 **のように、整数型を** nvarchar `('Prod'+CONVERT(nvarchar(23),ProductID))`に変換する必要があります。 詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
+   > 数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、 **nvarchar** 型の列を **int**型の列と結合する場合は、この数式 **のように、整数型を** nvarchar `('Prod'+CONVERT(nvarchar(23),ProductID))`に変換する必要があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
 
 5. **[Is Persisted]** 子プロパティのドロップダウンの **[はい]** または **[いいえ]** をクリックし、データを永続化するかどうかを指定します。
 
-6. **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。
+6. **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>既存の列に計算列の定義を追加するには
 
@@ -75,7 +75,7 @@ ms.locfileid: "68082562"
 2. 計算列の数式を指定する列を右クリックし、 **[削除]** をクリックします。 **[OK]** をクリックします。
 3. 前の手順に従って、新しい列を追加し、計算列の数式を指定して、新しい計算列を追加します。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>テーブルの作成時に計算列を追加するには
 

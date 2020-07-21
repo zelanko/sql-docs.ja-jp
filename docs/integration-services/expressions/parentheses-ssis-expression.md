@@ -12,14 +12,14 @@ helpviewer_keywords:
 - evaluation order [Integration Services]
 - parentheses operator ()
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ffdc00f4f8f0c009512eace3b3724a7fc419e8a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 968ab3afbdb5d184364758797180102d65293eb7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967942"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71288528"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (かっこ) (SSIS 式)
 
@@ -40,7 +40,7 @@ ms.locfileid: "67967942"
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  *expression*のデータ型。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: ディメンションの属性のプロパティの参照 |Microsoft Docs
+title: ディメンションの属性のプロパティのリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3437c8edaa0ffeb2d647ec2dc111106b8ef81030
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075192"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546814"
 ---
 # <a name="dimension-attribute-properties-reference"></a>ディメンションの属性のプロパティの参照
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、ディメンションやディメンション属性の機能を決定する多くのプロパティがあります。 次の表に、このような属性のプロパティの一覧とその説明を示します。  
+  に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、ディメンションとディメンション属性の機能を決定する多くのプロパティがあります。 次の表に、このような属性のプロパティの一覧とその説明を示します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -48,16 +47,16 @@ ms.locfileid: "66075192"
 |`Name`|属性のわかりやすい名前を格納します。|  
 |`NameColumn`|属性のキー列の値ではなく、ユーザーに対して表示される属性の名前を示す列を指定します。 この列は、属性メンバーのキー列値がわかりにくいかユーザーにとって有用ではない場合や、キー列が複合キーに基づいている場合に使用されます。 この `NameColumn` プロパティが親子階層内で使用されるのではなく、子メンバーの `NameColumn` プロパティが親子階層内でメンバー名として使用されます。|  
 |`NamingTemplate`|親属性で構成された親子階層内のレベルに名前を付ける方法を定義します。 このプロパティ値は、`Usage` プロパティの値が Parent に設定されている場合にのみ使用されます。 これは、親子階層が定義されていることを意味します。|  
-|`OrderBy`|属性階層内のメンバーに順序を付ける方法を説明します。 既定値は Name であり、`NameColumn` プロパティの値が存在する場合はその値に基づいて属性のメンバーに順序を付け、 それ以外の場合はキー列の値で順序を付けることを指定します。 次のオプションを使用できます。<br /><br /> `NameColumn` 値の並べ替え順、`NameColumn`プロパティ。<br /><br /> **Key** : 属性メンバーのキー列の値に基づいて順序が付けられます。<br /><br /> **AttributeKey** : 指定された属性のメンバー キーの値に基づいて順序が付けられます。この場合、この属性に対する属性リレーションシップが必要です。<br /><br /> **AttributeName** : 指定された属性のメンバー名の値に基づいて順序が付けられます。この場合、この属性に対する属性リレーションシップが必要です。|  
+|`OrderBy`|属性階層内のメンバーに順序を付ける方法を説明します。 既定値は Name であり、`NameColumn` プロパティの値が存在する場合はその値に基づいて属性のメンバーに順序を付け、 それ以外の場合はキー列の値で順序を付けることを指定します。 次のオプションを使用できます。<br /><br /> `NameColumn`プロパティの値によって並べ替え `NameColumn` ます。<br /><br /> **Key** : 属性メンバーのキー列の値に基づいて順序が付けられます。<br /><br /> **AttributeKey** : 指定された属性のメンバー キーの値に基づいて順序が付けられます。この場合、この属性に対する属性リレーションシップが必要です。<br /><br /> **AttributeName** : 指定された属性のメンバー名の値に基づいて順序が付けられます。この場合、この属性に対する属性リレーションシップが必要です。|  
 |`OrderByAttribute`|属性階層のメンバーに順序を付ける際に使用する属性を指定します。|  
-|`RootMemberIf`|親子階層のルート メンバー (最上位メンバー) を識別する方法を指定します。 このプロパティ値は、`Usage` プロパティの値が Parent に設定されている場合にのみ使用されます。 これは、親子階層が定義されていることを意味します。 既定値は `ParentIsBlankSelfOrMissing` です。これは、`ParentIsBlank`、`ParentIsSelf`、または `ParentIsMissing` に記述されている条件を 1 つ以上満たすメンバーだけがルート メンバーとして扱われることを意味します。 また、次の値も指定できます。<br /><br /> `ParentIsBlank` Null、0、または空の文字列のキー列または列があるメンバーのみがルート メンバーとして扱われます。<br /><br /> `ParentIsSelf` 親として自体が唯一のメンバーは、ルート メンバーとして扱われます。<br /><br /> `ParentIsMissing` 親が見つからないメンバーだけがルート メンバーとして扱われます。|  
+|`RootMemberIf`|親子階層のルート メンバー (最上位メンバー) を識別する方法を指定します。 このプロパティ値は、`Usage` プロパティの値が Parent に設定されている場合にのみ使用されます。 これは、親子階層が定義されていることを意味します。 既定値は `ParentIsBlankSelfOrMissing` です。これは、`ParentIsBlank`、`ParentIsSelf`、または `ParentIsMissing` に記述されている条件を 1 つ以上満たすメンバーだけがルート メンバーとして扱われることを意味します。 また、次の値も指定できます。<br /><br /> `ParentIsBlank`キー列または列内の null、0、または空の文字列を持つメンバーのみがルートメンバーとして扱われます。<br /><br /> `ParentIsSelf`自身を親として持つメンバーだけがルートメンバーとして扱われます。<br /><br /> `ParentIsMissing`親が見つからないメンバーだけがルートメンバーとして扱われます。|  
 |`Type`|属性の型を示します。 詳細については、「 [属性の種類の構成](attribute-properties-configure-attribute-types.md)」を参照してください。|  
 |`UnaryOperatorColumn`|単項演算子を含む列を指定します。 単項演算子を含む列の詳細を定義する DataItem 型のバインドです。|  
-|`Usage`|属性の使用方法を説明します。<br /><br /> 次のオプションを使用できます。<br /><br /> `Regular` 属性は、標準の属性です。 これが既定値です。<br /><br /> **Key** : この属性はキー属性です。<br /><br /> **Parent** : この属性は親属性です。|  
+|`Usage`|属性の使用方法を説明します。<br /><br /> 次のオプションを使用できます。<br /><br /> `Regular`属性は通常の属性です。 これが既定値です。<br /><br /> **Key** : この属性はキー属性です。<br /><br /> **Parent** : この属性は親属性です。|  
 |`ValueColumn`|属性の値を示す列を指定します。 属性の `NameColumn` 要素が指定されている場合は、`DataItem` 要素の既定値と同じ `ValueColumn` 値が使用されます。 属性の `NameColumn` 要素が指定されていないときに、属性の `KeyColumns` コレクションに、文字列データ型のキー列を表す 1 つの `KeyColumn` 要素が含まれている場合は、`DataItem` 要素の既定値と同じ `ValueColumn` 値が使用されます。|  
   
 > [!NOTE]  
->  値を設定する方法については、 `KeyColumn` null 値とその他のデータ整合性の問題を操作するときに、プロパティを参照してください[Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)します。  
+>  Null 値やその他のデータの整合性の問題を扱うときにプロパティの値を設定する方法の詳細については `KeyColumn` 、「 [Analysis Services 2005 でのデータ整合性の問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)」を参照してください。  
   
 > [!NOTE]  
 >  クエリで階層のメンバーが明示的に指定されていない場合は、属性の既定のメンバーが式の評価に使用されます。 属性の既定のメンバーは、属性の `DefaultMember` プロパティによって指定されます。 ディメンションからの階層がクエリに含まれている場合は、階層内のレベルに対応する属性からのすべての既定のメンバーは無視されます。 ディメンションの階層がクエリに含まれていない場合は、既定のメンバーがディメンションのすべての属性に対して使用されます。 既定のメンバーの詳細については、「 [既定メンバーの定義](attribute-properties-define-a-default-member.md)」を参照してください。  

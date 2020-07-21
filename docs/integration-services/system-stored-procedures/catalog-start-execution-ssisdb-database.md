@@ -8,28 +8,28 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af383d7c8770a254ba4112194ab9452bbb9a1bab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e492091be9fc2f363b5f105893e888301b1e0e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674256"
 ---
-# <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB データベース)
+# <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの実行のインスタンスを起動します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
+catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] retry_count]  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -37,9 +37,9 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  実行のインスタンスの一意の識別子。 *execution_id* は **bigint** です。
  
  [@retry_count =] *retry_count*  
- 実行に失敗した場合の再試行回数。 実行が Scale Out である場合にのみ有効になります。このパラメーターはオプションです。 指定しない場合、その値は 0 に設定されます。 *retry_count* は **int** です。
+ 実行に失敗した場合の再試行回数。 実行が Scale Out である場合にのみ有効になります。このパラメーターは省略可能です。 指定しない場合、その値は 0 に設定されます。 *retry_count* は **int** です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。 実行のインスタンスが作成された後、インスタンスが起動する前に、対応するプロジェクトが再配置される場合があります。 この場合、実行のインスタンスは古いプロジェクトを参照します。 この無効な参照により、ストアド プロシージャが失敗します。  
   
 > [!NOTE]  

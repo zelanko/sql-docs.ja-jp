@@ -1,5 +1,5 @@
 ---
-title: Resync プロパティ-動的 (ADO) の更新 |Microsoft Docs
+title: 更新の再同期プロパティ-動的 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,27 +11,27 @@ apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e9d000150cc86a8c838ac5dea827b5c376f3a79f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938804"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759488"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync プロパティ - 動的 (ADO)
-指定するかどうか、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドの後に、暗黙的な[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドの操作であれば、その操作のスコープ。  
+[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドの後に暗黙の再[同期](../../../ado/reference/ado-api/resync-method.md)メソッド操作を実行するかどうかを指定します。それを行う場合は、その操作のスコープを指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 1 つ以上を取得または設定、 [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md)値。  
+ 1つ以上の[ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md)値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
- 既に、残りの値の組み合わせを表す adResyncAll を除き、ADCPROP_UPDATERESYNC_ENUM の値を組み合わせることができます。  
+## <a name="remarks"></a>解説  
+ ADCPROP_UPDATERESYNC_ENUM の値は、他の値の組み合わせを既に表している adResyncAll を除き、組み合わせて使用できます。  
   
- 定数**adResyncConflicts** 、基になる値として再同期の値が格納されますが、保留中の変更を上書きしません。  
+ 定数**adResyncConflicts**は、再同期値を基になる値として格納しますが、保留中の変更はオーバーライドしません。  
   
- **再同期の更新**に動的なプロパティが追加、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション時に、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) にプロパティを設定**adUseClient**します。  
+ **更新**の再同期は、[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティが**adUseClient**に設定されている場合に、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加される動的プロパティです。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

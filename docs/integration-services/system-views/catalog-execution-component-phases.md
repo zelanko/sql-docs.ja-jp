@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce4f3284e5b0e483c09ea9cc95e64ed20fc1a1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaad1d3e470472891f082ec7b28173f9f5149d07
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672796"
 ---
-# <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases 
+# <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   各実行フェーズでデータ フロー コンポーネントが費やした時間を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|フェーズの一意識別子 (ID)。|  
 |execution_id|**bigint**|実行のインスタンスの一意の ID。|  
@@ -38,7 +38,7 @@ ms.locfileid: "68065247"
 |end_time|**datetimeoffset(7)**|フェーズの終了時刻。|  
 |execution_path|**nvarchar(max)**|データ フロー タスクの実行パス。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、Validate、Pre-Execute、Post-Execute、PrimeOutput、ProcessInput など、データ フロー コンポーネントの実行フェーズごとに 1 行表示されます。 各行には、特定の実行フェーズの開始時刻と終了時刻が表示されます。  
   
 ## <a name="example"></a>例  

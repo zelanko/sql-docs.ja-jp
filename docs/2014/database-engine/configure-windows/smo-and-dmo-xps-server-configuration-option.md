@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64eb0087a9261502900c1b1f29d6ce5d2a0cd976
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934833"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs サーバー構成オプション
   このサーバーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の拡張ストアド プロシージャを使用するには、SMO and DMO XPs オプションを使用します。  
@@ -24,14 +23,14 @@ ms.locfileid: "62755279"
   
  次の表に、このオプションで使用可能な値を示します。  
   
-|値|説明|  
+|値|意味|  
 |-----------|-------------|  
 |0|SMO 拡張ストアド プロシージャ (XP) を使用できません。|  
-|1|SMO 拡張ストアド プロシージャ (XP) を使用できます。 既定値です。|  
+|1|SMO 拡張ストアド プロシージャ (XP) を使用できます。 これは既定値です。|  
   
- この設定はすぐに有効になります。  
+ 設定はすぐに有効になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、SMO の拡張ストアド プロシージャを有効にします。  
   
 ```  

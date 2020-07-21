@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09fe23c827b1d3d4561a4333180ad3eb508a3adc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88684e76718c3a16f3949dc3b7cbef04c9e655be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766348"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定したテーブルまたはインデックス付きビューからフルテキスト インデックスを削除します。  
   
@@ -46,13 +46,13 @@ DROP FULLTEXT INDEX ON table_name
  *table_name*  
  削除するフルテキスト インデックスが含まれているテーブルまたはインデックス付きビューの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DROP FULLTEXT INDEX コマンドを使用する前に、フルテキスト インデックスからすべての列を削除する必要はありません。  
   
 ## <a name="permissions"></a>アクセス許可  
  実行するには、テーブルまたはインデックス付きビューの ALTER 権限を持っているか、**sysadmin** 固定サーバー ロール、**db_owner** 固定データベース ロール、または **db_ddladmin** 固定データベース ロールのメンバーであることが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`JobCandidate` テーブルに存在するフルテキスト インデックスを削除します。  
   
 ```  

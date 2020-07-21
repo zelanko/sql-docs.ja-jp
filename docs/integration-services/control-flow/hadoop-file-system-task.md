@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0b75f26a4eae2643ebec512492788bcc60102648
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988163"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294067"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop ファイル システム タスク
 
@@ -28,12 +28,12 @@ ms.locfileid: "67988163"
   
  Hadoop ファイル システム タスクを追加するには、デザイナーにドラッグ アンド ドロップします。 その後、タスクをダブルクリックするか、右クリックして **[編集]** をクリックし、 **[Hadoop ファイル システム タスク エディター]** ダイアログ ボックスを開きます。  
   
- ![[Hadoop ファイル システム タスク エディター]](../../integration-services/control-flow/media/hadoop-filesystem-task.png "[Hadoop ファイル システム タスク エディター]")  
+ ![Hadoop ファイル システム タスク エディター](../../integration-services/control-flow/media/hadoop-filesystem-task.png "[Hadoop ファイル システム タスク エディター]")  
   
 ## <a name="options"></a>オプション  
  **[Hadoop ファイル システム タスク エディター]** ダイアログ ボックスで、次のオプションを構成します。  
   
-|フィールド|[説明]|  
+|フィールド|説明|  
 |-----------|-----------------|  
 |**Hadoop 接続**|既存の Hadoop 接続マネージャーを指定するか、新しい Hadoop 接続マネージャーを作成します。 この接続マネージャーは、対象ファイルがホストされる場所を示します。|  
 |**[Hadoop File Path] (Hadoop ファイル パス)**|HDFS 上のファイルまたはディレクトリのパスを指定します。|  

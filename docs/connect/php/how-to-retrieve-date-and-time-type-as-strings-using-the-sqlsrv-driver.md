@@ -10,27 +10,27 @@ ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b8cd038579c471891e6e9ae0d81075b22016f6d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993530"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916135"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する
+# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-の[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]SQLSRV ドライバーを使用する場合は、次のように指定することで、日付と時刻の型 (**smalldatetime**、 **datetime**、 **date**、 **time**、 **datetime2**、 **datetimeoffset**) を文字列として取得できます。接続文字列またはステートメントレベルのオプション:
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] に SQLSRV ドライバーを使用する場合、日付と時刻の型 (**smalldatetime**、**datetime**、**date**、**time**、**datetime2**、および **datetimeoffset**) を文字列として取得するには、接続文字列またはステートメント レベルで次のオプションを指定します。
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-既定値は **false** です。つまり、**smalldatetime**、**datetime**、**date**、**time**、**datetime2**、**datetimeoffset** 型は [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトとして返されます。 このオプションがステートメントレベルで設定されている場合は、接続レベルの設定が上書きされます。
+既定値は **false** です。つまり、**smalldatetime**、**datetime**、**date**、**time**、**datetime2**、**datetimeoffset** 型は [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトとして返されます。 このオプションをステートメント レベルで設定すると、接続レベルの設定はオーバーライドされます。
 
-PDO_SQLSRV ドライバーは、既定では日付と時刻の型を文字列として返します。 PHP DateTime オブジェクトとして取得する方法については、「[方法: PDO_SQLSRV を使用して日付と時刻の型を Php Datetime オブジェクトとして取得](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)する」を参照してください。
+PDO_SQLSRV ドライバーからは、既定で日付と時刻の型が文字列として返されます。 PHP DateTime オブジェクトとして取得する方法については、「[方法: PDO_SQLSRV を使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください
 
 ## <a name="example"></a>例
 次は、日付/時刻型を文字列として取得する構文の例です。
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>例
-ステートメントレベルの Return? Asstrings オプションは、対応する接続オプションよりも優先されます。
+ステートメント レベルの ReturnDatesAsStrings オプションを指定すると、対応する接続オプションはオーバーライドされます。
 
 ```php
 <?php
@@ -194,4 +194,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>参照
 [データの取得](../../connect/php/retrieving-data.md)
 
-[方法: PDO_SQLSRV を使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+[方法: PDO_SQLSRV を使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください

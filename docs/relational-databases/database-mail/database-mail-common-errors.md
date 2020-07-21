@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4693990f7dc2a32f1d1a4c1462d35af9830de530
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737416"
 ---
 # <a name="common-errors-with-database-mail"></a>データベース メールの一般的なエラー 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 この記事では、データベース メールでよく見られるエラーとその解決策について説明します。
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>ストアド プロシージャ 'sp_send_dbmail' が見つかりませんでした
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>ストアド プロシージャ 'sp_send_dbmail' が見つかりませんでした
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) ストアド プロシージャは msdb データベースにインストールされています。 msdb データベースから **sp_send_dbmail** を実行するか、3 部構成の名前をこのストアド プロシージャに指定する必要があります。
 
 例:
@@ -48,7 +48,7 @@ EXEC dbo.sp_send_dbmail ...
 
 プロファイルのアクセス許可を確認するには、ストアド プロシージャ [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) をプロファイルの名前で実行します。 ストアド プロシージャ [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) または[データベース メール構成ウィザード](configure-database-mail.md)を使用し、msdb ユーザーまたはグループがプロファイルにアクセスするための権限を与えます。
 
-## <a name="permission-denied-on-spsenddbmail"></a>sp_send_dbmail でアクセスが拒否される
+## <a name="permission-denied-on-sp_send_dbmail"></a>sp_send_dbmail でアクセスが拒否される
 
 このトピックでは、データベース メールの送信を試みたユーザーには sp_send_dbmail を実行する権限がないというエラー メッセージに対してトラブルシューティングを行う方法について説明します。
 
@@ -68,7 +68,7 @@ GO
 ```
 詳細については、「[sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md)」と「[sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md)」を参照してください。
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>キューに登録されたデータベース メールのエントリが sysmail_event_log または Windows アプリケーション イベント ログにない 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>キューに登録されたデータベース メールのエントリが sysmail_event_log または Windows アプリケーション イベント ログにない 
 
 データベース メールは、電子メール メッセージをキューに登録するために Service Broker に依存します。 データベース メールが停止している場合、または Service Broker のメッセージ配信が **msdb** データベースでアクティブになっていない場合は、データベース メールによってメッセージがデータベースのキューに登録されますが、そのメッセージは配信できません。 この場合、Service Broker メッセージは Service Broker のメール キューに残ります。 Service Broker では外部プログラムがアクティブ化されないので、**sysmail_event_log** にはログ エントリが存在せず、**sysmail_allitems** および関連するビューのアイテムの状態は更新されません。
 
@@ -113,7 +113,7 @@ Service Broker がアクティブになっている場合、メッセージの�
 
 
 
-##  <a name="RelatedContent"></a> 参照
+##  <a name="see-also"></a><a name="RelatedContent"></a> 参照
   
 -  [データベース メールの概要](database-mail.md)
 -  [データベース メール プロファイルの作成](create-a-database-mail-profile.md)

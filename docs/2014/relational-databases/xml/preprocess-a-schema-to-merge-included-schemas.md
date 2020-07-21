@@ -16,20 +16,19 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065518"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
   W3C XSD の **include** 要素では、スキーマのモジュール性がサポートされます。そのため、1 つの XML スキーマを複数の物理ファイルにパーティション分割できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この要素は現在サポートされていません。 この要素を含む XML スキーマはサーバーによって拒否されます。  
   
- 解決方法として、\<xsd:include> ディレクティブを含む XML スキーマを前処理して、含まれているすべてのスキーマの内容をコピーし、1 つのスキーマにマージすることで、サーバーにアップロードできます。 次の C# コードを使用すると、前処理を行うことができます。 コードの最初の部分にあるコメントにはこのコードの使用方法が記述されています。  
+ ソリューションとして、ディレクティブを含む XML スキーマを前処理して、 \<xsd:include> 含まれているすべてのスキーマの内容をコピーし、1つのスキーマにマージしてサーバーにアップロードすることができます。 次の C# コードを使用すると、前処理を行うことができます。 コードの最初の部分にあるコメントにはこのコードの使用方法が記述されています。  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -190,7 +189,7 @@ public class XmlSchemaIncludeNormalizer
 ## <a name="testing-the-preprocessor-tool"></a>プリプロセッサ ツールのテスト  
  次の XSD スキーマを使用すると、プリプロセッサ ツールをテストできます。  
   
-### <a name="bookscommonxsd"></a>books_common.xsd  
+### <a name="books_commonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

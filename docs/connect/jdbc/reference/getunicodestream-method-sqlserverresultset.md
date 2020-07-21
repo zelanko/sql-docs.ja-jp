@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 079663faa466b171df35481ee69374194c015acb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e4eb5989f2674825963f2db2157d67d85416d030
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978384"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910923"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67978384"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getUnicodeStream メソッド &#40;int&#41;](../../../connect/jdbc/reference/getunicodestream-method-int.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、Unicode 文字のストリームとして取得します。|  
 |[getUnicodeStream メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getunicodestream-method-java-lang-string.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Unicode 文字のストリームとして取得します。|  

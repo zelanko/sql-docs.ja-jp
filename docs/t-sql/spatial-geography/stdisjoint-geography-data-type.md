@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 966fba424556a0eb55bc100be376fca735b5620c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736126"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   任意の **geography** インスタンスと別の **geography** インスタンスが空間的に連結されていない場合、1 を返します。 それ以外の場合は 0 を返します。  
   
@@ -43,14 +43,14 @@ ms.locfileid: "68042322"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  比較する 2 つのインスタンスに含まれる地点のセットの交点が空である場合、これらの **geography** インスタンスは連結されていません。  
   
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STDisjoint()` を使用して、2 つの `geography` インスタンスが空間的に連結されていないかどうかをテストする例を次に示します。  
   
 ```  

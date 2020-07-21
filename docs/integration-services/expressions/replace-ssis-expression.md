@@ -11,14 +11,14 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 63d3031ccbee2d6ae242ee3531cf4c5b946c3949
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 891e0fa855ec422efbdfd93abe9905f4ee7bffc0
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967883"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297417"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 式)
 
@@ -50,7 +50,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *searchstring* の長さを 0 にすることはできません。  
   
  *replacementstring* の長さは 0 にすることができます。  

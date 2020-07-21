@@ -1,5 +1,5 @@
 ---
-title: マイニング構造から列を削除 |Microsoft Docs
+title: マイニング構造からの列の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b2377aa37747a1e6e58f4494129afd2b2adcd78
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082958"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520460"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>マイニング構造からの列の削除
   データ マイニング デザイナーを使用して、マイニング構造の作成後に構造から列を削除できます。 マイニング構造列を削除する理由には、次のようなものがあります。  

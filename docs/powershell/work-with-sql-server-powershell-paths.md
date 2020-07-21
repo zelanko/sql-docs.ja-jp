@@ -10,10 +10,10 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 17c898e02f63a9d491c514967137e1f357b2db74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68121351"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
@@ -35,12 +35,12 @@ ms.locfileid: "68121351"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのオブジェクトを管理するために使用されます。 データベース内のデータの処理には使用されません。 テーブルまたはビューに移動した場合に、プロバイダーを使用してデータの選択、挿入、更新、または削除を行うことはできません。 テーブルおよびビューのデータを Windows PowerShell 環境からクエリまたは変更するには、 **Invoke-Sqlcmd** コマンドレットを使用します。 詳細については、「 [Invoke-Sqlcmd コマンドレット](invoke-sqlcmd-cmdlet.md)」を参照してください。  
   
-##  <a name="ListPropMeth"></a> メソッドとプロパティの一覧表示  
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> メソッドとプロパティの一覧表示  
  **メソッドとプロパティの一覧表示**  
   
  特定のオブジェクトまたはオブジェクト クラスで使用できるメソッドとプロパティを表示するには、 **Get-Member** コマンドレットを使用します。  
   
-### <a name="examples-listing-methods-and-properties"></a>例 :メソッドとプロパティの一覧表示  
+### <a name="examples-listing-methods-and-properties"></a>例: メソッドとプロパティの一覧表示  
  次の例では、Windows PowerShell 変数に SMO <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを設定し、メソッドとプロパティを一覧表示します。  
   
 ```  
@@ -65,12 +65,12 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> メソッドとプロパティの使用  
+##  <a name="using-methods-and-properties"></a><a name="UsePropMeth"></a> メソッドとプロパティの使用  
  **SMO メソッドとプロパティの使用**  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダー パスからオブジェクトの操作を実行するには、SMO メソッドとプロパティを使用します。  
   
-### <a name="examples-using-methods-and-properties"></a>例 :メソッドとプロパティの使用  
+### <a name="examples-using-methods-and-properties"></a>例: メソッドとプロパティの使用  
  次の例では、SMO の **Schema** プロパティを使用して、AdventureWorks2012 の Sales スキーマからテーブルの一覧を取得します。  
   
 ```  

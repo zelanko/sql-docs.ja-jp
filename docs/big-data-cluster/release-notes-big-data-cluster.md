@@ -1,807 +1,255 @@
 ---
-title: リリース ノート
+title: SQL Server ビッグ データ クラスターのリリース ノート
 titleSuffix: SQL Server big data clusters
-description: この記事では、(プレビュー) の最新[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の更新プログラムと既知の問題について説明します。
+description: この記事では、SQL Server ビッグ データ クラスターの最新の更新プログラムと既知の問題について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653439"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517163"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server 上のビッグ データ クラスターのリリース ノート
+# <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]最新リリースに関する更新プログラムと既知の問題の一覧を示します。
+次のリリース ノートは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に適用されます。 この記事は、リリースごとのセクションに分けられています。 各リリースには、Linux パッケージのダウンロードへのリンクに加えて、CU の変更について説明するサポート記事へのリンクが含まれています。 この記事には、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC) の最新リリースに関する[既知の問題](#known-issues)の一覧もあります。
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+このセクションでは、BDC でサポートされているプラットフォームについて説明します。
 
-## <a id="ctp32"></a> CTP 3.2 (7 月)
+### <a name="kubernetes-platforms"></a>Kubernetes プラットフォーム
 
-以下のセクションでは、SQL Server 2019 CTP 3.2 のビッグ データ クラスターの新機能と既知の問題について説明します。
+|プラットフォーム|サポートされているバージョン|
+|---------|---------|
+|Kubernetes|BDC に必要な Kubernetes の最小バージョンは 1.13 です。 Kubernetes バージョンのサポート ポリシーについては、[Kubernetes バージョンとバージョン スキュー サポート](https://kubernetes.io/docs/setup/release/version-skew-policy/)に関するページを参照してください。|
+|Azure Kubernetes Service (AKS)|BDC に必要な AKS の最小バージョンは 1.13 です。<br/>バージョンのサポート ポリシーについては、[AKS でサポートされている Kubernetes のバージョン](/azure/aks/supported-kubernetes-versions)に関するページを参照してください。|
 
-### <a name="whats-new"></a>新機能
+### <a name="host-os-for-kubernetes"></a>Kubernetes のホスト OS
 
-|新機能または更新 | 詳細 |
-|:---|:---|
-|パブリック プレビュー |CTP 3.2 より前の SQL Server ビッグ データ クラスターは、登録した早期導入者に提供されていました。 このリリースでは、あらゆるユーザーが SQL Server ビッグ データ クラスターの機能を操作できるようにします。 <br/><br/> 「[使用を開始[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)する」を参照してください。|
-|`azdata` |CTP 3.2 での `azdata` の導入 - Python で作成されたコマンドライン ユーティリティを使用して、クラスター管理者が REST API 経由でビッグ データ クラスターをブートストラップし、管理できるようにします。 `mssqlctl` が `azdata` に置き換えられます。 [`azdata` のインストール](deploy-install-azdata.md)に関するページを参照してください。 |
-|PolyBase |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースに対してクエリを実行するために使用されるようになりました。 以前の CTP リリースでは、外部データ ソース内の列は序数位置に基づいてのみバインドされ、EXTERNAL TABLE の定義で指定された名前は使用されませんでした。 |
-|HDFS の階層の更新 |リモート データの最新のスナップショットに対して既存のマウントを更新できるように、HDFS の階層に対して更新機能を導入しました。 [HDFS の階層](hdfs-tiering.md)に関するページを参照してください。 |
-|Notebook ベースのトラブルシューティング |CTP 3.2 では、Jupyter Notebook が導入されており、SQL Server ビッグ データ クラスター内のコンポーネントの[配置](deploy-notebooks.md)と[検出、診断、トラブルシューティング](manage-notebooks.md)の支援が行われます。 |
-| &nbsp; | &nbsp; |
+|プラットフォーム|サポートされているバージョン|
+|---------|---------|
+|Red Hat Enterprise Linux|7.3、7.4、7.5、7.6|
+|Ubuntu|16.04|
 
-### <a name="known-issues"></a>既知の問題
+### <a name="sql-server-editions"></a>SQL Server のエディション
 
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
+|Edition|Notes|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Developer| ビッグ データ クラスターのエディションは、SQL Server マスター インスタンスのエディションによって決まります。 展開時に、Developer エディションが既定で展開されます。 エディションは、展開後に変更できます。 [SQL Server マスター インスタンスの構成](../big-data-cluster/configure-sql-server-master-instance.md)に関するページを参照してください。 |
 
-#### <a name="polybase"></a>PolyBase
+## <a name="tools"></a>ツール
 
-- カウントが 1000 を超える場合の TOP 句のプッシュダウンは、このリリースではサポートされません。 このような場合は、リモート データ ソースからすべての行が読み取られます。
+|プラットフォーム|サポートされているバージョン|
+|---------|---------|
+|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>最新バージョンについては、「[リリース履歴](#release-history)」を参照してください。|
+|Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新のビルドを取得します。|
 
-- 外部データ ソースへの併置結合のプッシュダウンは、このリリースではサポートされません。 たとえば、分布の種類が ROUND_ROBIN である 2 つのデータ プール テーブルをプッシュダウンすると、そのデータは、結合操作を実行する SQL マスター インスタンスまたはコンピューティング プール インスタンスに渡されます。
+## <a name="release-history"></a>リリース履歴
 
-#### <a name="compute-pool"></a>コンピューティング プール
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のリリース履歴の一覧を次の表に示します。
 
-- ビッグ データ クラスターのデプロイでは、1 つのインスタンスを持つコンピューティング プールのみがサポートされます。
+| Release               | Version         | リリース日 |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 2020-03-31   |
+| [CU3](#cu3)           | 15.0.4023.6     | 2020-03-12   |
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
+| [CU1](#cu1)           | 15.0.4003.23    | 2020-01-07   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
 
-#### <a name="storage-pool"></a>記憶域プール
+## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
-- 記憶域プール内の parquet ファイルへのクエリ実行では、特定のデータ型がサポートされません。
+更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
 
-- MAP および LIST 親列や型がない親列に対してはクエリを実行できません。 それにより、エラーが返されます。
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (2020 年 4 月)
 
-- REPEATED ノードにはクエリを実行できず、間違った結果が返されることがあります。
+SQL Server 2019 の Cumulative Update 4 (CU4) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4033.1 です。
 
-## <a id="ctp31"></a> CTP 3.1 (6 月)
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
 
-以下のセクションでは、SQL Server 2019 CTP 3.1 のビッグ データ クラスターの新機能と既知の問題について説明します。
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (2020 年 3 月)
 
-### <a name="whats-new"></a>新機能
+SQL Server 2019 の Cumulative Update 3 (CU3) リリースです。 このリリースの SQL Server Database エンジンのバージョンは、15.0.4023.6 です。
 
-| 新機能または更新 | 詳細 |
-|:---|:---|
-| `mssqlctl` コマンドの変更 | `mssqlctl cluster` コマンドの名前が、`mssqlctl bdc` に変更されました。 詳しくは、[`mssqlctl` のリファレンス](reference-azdata.md)に関する記事をご覧ください。 |
-| 新しい `mssqlctl` ステータス コマンドとクラスター管理ポータルの削除。 | クラスター管理ポータルはこのリリースで削除されました。 既存の監視コマンドを補完する新しいステータス コマンドが `mssqlctl` に追加されました。 |
-| Spark コンピューティング プール | ストレージをスケールアップする必要なしに、追加ノードを作成して Spark のコンピューティング能力を増強します。 さらに、Spark に使われない記憶域プールのノードを開始することができます。 Spark と記憶域は切り離されています。 詳しくは、「[Configure storage without spark (Spark なしで記憶域を構成する)](deployment-custom-configuration.md#sparkstorage)」をご覧ください。 |
-| MSSQL Spark コネクタ | データ プール外部テーブルの読み取り/書き込みのサポート。 以前のリリースでは、MASTER インスタンス テーブルの読み取り/書き込みだけがサポートされていました。 詳しくは、「[How to read and write to SQL Server from Spark using the MSSQL Spark Connector (MSSQL Spark コネクタを使用して Spark から SQL Server の読み取りと書き込みを行う方法)](spark-mssql-connector.md)」をご覧ください。 |
-| MLeap を使用する機械学習 | [Spark で MLeap 機械学習モデルをトレーニングし、Java 言語拡張機能を使用して SQL Server でスコアリングします](spark-create-machine-learning-model.md)。 |
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
 
-### <a name="known-issues"></a>既知の問題
+### <a name="resolved-issues"></a>解決した問題
 
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
+SQL Server 2019 CU3 では、以前のリリースで発生した次の問題が解決されています。
 
-#### <a name="hdfs"></a>HDFS
+- [プライベート リポジトリを使用した展開](#deployment-with-private-repository)
+- [タイムアウトによりアップグレードが失敗することがある](#upgrade-may-fail-due-to-timeout)
 
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2 (2020 年 2 月)
 
-   `Error previewing file: File exceeds max size of 30MB`
+これは SQL Server 2019 の Cumulative Update 2 (CU2) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4013.40 です。
 
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 (2020 年 1 月)
 
-#### <a name="deployment"></a>展開
+これは SQL Server 2019 の Cumulative Update 1 (CU1) リリースです。 このリリースに対する SQL Server データベース エンジンのバージョンは 15.0.4003.23 です。
 
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-   > [!IMPORTANT]
-   > 最新リリースをデプロイする前に、データをバックアップし、(以前のバージョンの **azdata** を使用して) 既存のビッグ データ クラスターを削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
+## <a name="gdr1-november-2019"></a><a id="rtm"></a> GDR1 (2019 年 11 月)
 
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
+SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]の一般提供が開始されました。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.2070.34 です。
 
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
 
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
+## <a name="known-issues"></a>既知の問題
 
-#### <a name="external-tables"></a>外部テーブル
+### <a name="deployment-with-private-repository"></a>プライベート リポジトリを使用した展開
 
-- ビッグ データ クラスターのデプロイでは、**SqlDataPool** および **SqlStoragePool** の外部データ ソースが作成されなくなりました。 データ プールや記憶域プールへのデータ仮想化をサポートするには、これらのデータ ソースを手動で作成できます。
+- **影響を受けるリリース**: GDR1、CU1、CU2。 CU3 に対して解決されました。
 
-   > [!NOTE]
-   > これらの外部データ ソースを作成するための URI は CTP によって異なります。 その作成方法を確認するには、次の Transact-SQL コマンドを参照してください。 
+- **問題およびユーザーへの影響**:プライベート リポジトリからアップグレードする場合に特定の要件があります。
 
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+- **回避策**:プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要な場合に正常にロールバックすることが可能になります。 また、最初の展開以降にプライベート リポジトリの資格情報を変更した場合は、アップグレードする前に Kubernetes で対応するシークレットを更新します。 `azdata` では、`AZDATA_PASSWORD` と `AZDATA_USERNAME` の環境変数を使用した資格情報の更新はサポートされていません。 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) を使用してシークレットを更新します。 
+
+別のリポジトリを使用した現在のビルドとターゲット ビルドのアップグレードはサポートされていません。
+
+### <a name="upgrade-may-fail-due-to-timeout"></a>タイムアウトによりアップグレードが失敗することがある
+
+- **影響を受けるリリース**: GDR1、CU1、CU2。 CU 3 に対して解決されました。
+
+- **問題およびユーザーへの影響**:タイムアウトによりアップグレードが失敗することがあります。
+
+   次のコードにエラー例を示します。
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
+   このエラーは、Azure Kubernetes Service (AKS) で BDC を更新した場合によく発生します。
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+- **回避策**:アップグレードのタイムアウトを増やします。 
 
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
+   アップグレードのタイムアウトを増やすには、アップグレード構成マップを編集します。 アップグレード構成マップを編集するには:
 
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+   1. 次のコマンドを実行します。
 
-- 文字データ型を使用する外部テーブルを Oracle に対して作成している場合、Azure Data Studio 仮想化ウィザードでは、これらの列が外部テーブル定義内の VARCHAR として解釈されます。 これにより、外部テーブル DDL でエラーが発生します。 NVARCHAR2 型を使用するように Oracle スキーマを変更するか、またはウィザードを使用する代わりに手動で EXTERNAL TABLE ステートメントを作成し、NVARCHAR を指定してください。
+      ```bash
+      kubectl edit configmap controller-upgrade-configmap
+      ```
 
-#### <a name="application-deployment"></a>アプリケーションの展開
+   2. 次のフィールドを編集します。
 
-- RESTful API から R、Python、または MLeap アプリケーションを呼び出すと、その呼び出しが 5 分でタイムアウトします。
+       **`controllerUpgradeTimeoutInMinutes`** : コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。 既定値は 5 です。 20 以上に更新します。
 
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
+       **`totalUpgradeTimeoutInMinutes`** :コントローラーとコントローラー db の両方のアップグレード (コントローラー+ コラボレーション db のアップグレード) が完了するまでの合計時間を指定します。既定値は 10 です。 40 以上に更新します。
 
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
+       **`componentUpgradeTimeoutInMinutes`** :これ以降のアップグレードの各フェーズの完了時間を指定します。  既定値は 30 です。 45 に更新します。
 
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
+   3. 保存して終了します
 
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
+   別の方法として、次の Python スクリプトでタイムアウトを設定することも可能です。
 
-#### <a name="security"></a>セキュリティ
+   ```python
+   from kubernetes import client, config
+   import json
 
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
 
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
+       The timeout settings are as follows
 
-#### <a name="kibana-logs-dashboards"></a>Kibana ログのダッシュボード
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
 
-- Aris CTP 3.0 および 3.1 の間で、Kibana バージョンが 6.3.1 から 7.0.1 にアップグレードされました。  これにより、Edge ブラウザーと Kibana との互換性がなくなりました。 ユーザーが Edge で Kibana ダッシュボードの現在のバージョンを読み込むと、空白のページが表示されます。 Kibana.rs でサポートされるブラウザーについては、[こちら]( https://www.elastic.co/support/matrix#matrix_browse)を参照してください。 
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
 
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
 
-## <a id="ctp30"></a> CTP 3.0 (5 月)
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
 
-以下のセクションでは、SQL Server 2019 CTP 3.0 のビッグ データ クラスターの新機能と既知の問題について説明します。
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
 
-### <a name="whats-new"></a>新機能
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
 
-| 新機能または更新 | 詳細 |
-|:---|:---|
-| **mssqlctl** の更新 | 複数の **mssqlctl** [コマンドとパラメーターが更新されました](reference-azdata.md)。 これには、コントローラーのユーザー名とエンドポイントをターゲットにするようになった **mssqlctl login** コマンドの更新も含まれています。 |
-| ストレージの機能強化 | ログとデータのさまざまなストレージ構成のサポート。 また、ビッグ データ クラスターへの永続ボリューム要求の数が削減されました。 |
-| 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスのサポート。 |
-| 新しいプールの動作と機能 | コンピューティング プールは、既定で **ROUND_ROBIN** 配布内​​のストレージ プールおよびデータ プールの操作にのみ使用されるようになりました。 データ プールで新しい **REPLICATED** 分布の種類が使用できるようになりました。これは、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
-| 外部テーブルの機能強化 | HADOOP データ ソースの種類の外部テーブルで、最大サイズ 1 MB の行の読み取りがサポートされるようになりました。 外部テーブル (ODBC、記憶域プール、データ プール) で、SQL Server テーブルと同じ幅の行がサポートされるようになりました。 |
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
 
-### <a name="known-issues"></a>既知の問題
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
 
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
 
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内に新しいフォルダーを作成しようとすると、Azure Data Studio からエラーが返されます。 この機能を有効にするには、Azure Data Studio の Insider ビルドをインストールします。
-  
-   - [Windows ユーザー インストーラー - **Insider ビルド**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
-   - [Windows システム インストーラー - **Insider ビルド**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
-   - [Windows ZIP - **Insider ビルド**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
-   - [macOS ZIP - **Insider ビルド**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
-   - [Linux TAR.GZ - **Insider ビルド**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="deployment"></a>展開
-
-- GPU 対応のビッグ データ クラスターのための以前のデプロイ手順は CTP 3.0 ではサポートされません。 代わりのデプロイ手順は、現在調査中です。 現在のところ、"GPU がサポートされたビッグ データ クラスターのデプロイと TensorFlow の実行" に関する記事は、混乱を避けるために一時的に未公開になっています。
-
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。
-
-   > [!IMPORTANT]
-   > 最新リリースをデプロイする前に、データをバックアップし、(以前のバージョンの **azdata** を使用して) 既存のビッグ データ クラスターを削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="external-tables"></a>外部テーブル
-
-- ビッグ データ クラスターのデプロイでは、**SqlDataPool** および **SqlStoragePool** の外部データ ソースが作成されなくなりました。 データ プールや記憶域プールへのデータ仮想化をサポートするには、これらのデータ ソースを手動で作成できます。
-
-   > [!NOTE]
-   > これらの外部データ ソースを作成するための URI は CTP によって異なります。 その作成方法を確認するには、次の Transact-SQL コマンドを参照してください。 
-
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
    ```
 
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
+### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>Azure Data Studio (ADS) または curl からの Livy ジョブの送信が 500 エラーで失敗する
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+- **問題およびユーザーへの影響**:HA 構成で、Spark 共有リソース `sparkhead` が複数のレプリカで構成されています。 この場合、Azure Data Studio (ADS) または `curl` からの Livy ジョブの送信でエラーが発生する可能性があります。 確認するには、`sparkhead` ポッドに `curl` を実行すると、接続が拒否されます。 たとえば、`curl https://sparkhead-0:8998/` または `curl https://sparkhead-1:8998` によって 500 エラーが返されます。
 
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
+   これは、次のシナリオで発生します。
 
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+   - 各 Zookeeper インスタンスの Zookeeper ポッドまたはプロセスが数回再起動します。
+   - `sparkhead` ポッドと Zookeeper ポッド間のネットワーク接続が信頼できない場合。
 
-- 文字データ型を使用する外部テーブルを Oracle に対して作成している場合、Azure Data Studio 仮想化ウィザードでは、これらの列が外部テーブル定義内の VARCHAR として解釈されます。 これにより、外部テーブル DDL でエラーが発生します。 NVARCHAR2 型を使用するように Oracle スキーマを変更するか、またはウィザードを使用する代わりに手動で EXTERNAL TABLE ステートメントを作成し、NVARCHAR を指定してください。
-
-#### <a name="application-deployment"></a>アプリケーションの展開
-
-- RESTful API から R、Python、または MLeap アプリケーションを呼び出すと、その呼び出しが 5 分でタイムアウトします。
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a id="ctp25"></a> CTP 2.5 (4 月)
-
-以下のセクションでは、SQL Server 2019 CTP 2.5 のビッグ データ クラスターの新機能と既知の問題について説明します。
-
-### <a name="whats-new"></a>新機能
-
-| 新機能または更新 | 詳細 |
-|:---|:---|
-| 展開プロファイル | ビッグ データ クラスターの展開には、環境変数の代わりに、既定およびカスタマイズした[展開構成 JSON ファイル](deployment-guidance.md#configfile)を使用します。 |
-| 入力が求められる展開 | `azdata cluster create` では、既定の展開に必要な設定の入力が求められるようになりました。 |
-| サービス エンドポイントとのポッド名の変更 | 次の外部エンドポイントは名前が変更されました。<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **azdata** の機能強化 | **azdata** を使用して[外部エンドポイントを一覧表示](deployment-guidance.md#endpoints)し、`--version` パラメーターで **azdata** のバージョンを確認します。 |
-| オフライン インストール | ビッグ データ クラスターのオフライン デプロイのためのガイダンス。 |
-| HDFS 階層の機能強化 | ADLS Gen2 での S3 階層、マウント キャッシュ、および OAuth のサポート。 |
-| 新しい `mssql` Spark-SQL Server コネクタ | |
-
-### <a name="known-issues"></a>既知の問題
-
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
-
-#### <a name="deployment"></a>展開
-
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。
-
-   > [!IMPORTANT]
-   > 最新リリースをデプロイする前に、データをバックアップし、(以前のバージョンの **azdata** を使用して) 既存のビッグ データ クラスターを削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="external-tables"></a>外部テーブル
-
-- ビッグ データ クラスターのデプロイでは、**SqlDataPool** および **SqlStoragePool** の外部データ ソースが作成されなくなりました。 データ プールや記憶域プールへのデータ仮想化をサポートするには、これらのデータ ソースを手動で作成できます。
-
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   ```
-
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- 文字データ型を使用する外部テーブルを Oracle に対して作成している場合、Azure Data Studio 仮想化ウィザードでは、これらの列が外部テーブル定義内の VARCHAR として解釈されます。 これにより、外部テーブル DDL でエラーが発生します。 NVARCHAR2 型を使用するように Oracle スキーマを変更するか、またはウィザードを使用する代わりに手動で EXTERNAL TABLE ステートメントを作成し、NVARCHAR を指定してください。
-
-#### <a name="application-deployment"></a>アプリケーションの展開
-
-- RESTful API から R、Python、または MLeap アプリケーションを呼び出すと、その呼び出しが 5 分でタイムアウトします。
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a id="ctp24"></a> CTP 2.4 (3 月)
-
-以下のセクションでは、SQL Server 2019 CTP 2.4 のビッグ データ クラスターの新機能と既知の問題について説明します。
-
-### <a name="whats-new"></a>新機能
-
-| 新機能または更新 | 詳細 |
-|:---|:---|
-| Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポートに関するガイダンス。 | [GPU をサポートしているビッグ データ クラスターを展開し、TensorFlow を実行します](spark-gpu-tensorflow.md)。 |
-| データ ソース **SqlDataPool** と **SqlStoragePool** は、既定では作成されなくなりました。 | 必要に応じてこれらを手動で作成します。 [既知の問題](#externaltablesctp24)を参照してください。 |
-| データ プール用の `INSERT INTO SELECT` のサポート。 | 例については、「[Tutorial:Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md)」 (チュートリアル: Transact SQL を使用して SQL Server のデータ プールにデータを取り込む) を参照してください。 |
-| オプション `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` | 外部テーブルに対するクエリでのコンピューティング プールの使用を強制するか、または無効にします。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようにします。 |
-| 更新された AKS の展開に関する推奨事項 | AKS でビッグ データ クラスターを評価するときには、サイズ **Standard_L8s** の単一ノードを使用することをお勧めします。 |
-| Spark 2.4 への Spark のランタイムのアップグレード。 | |
-
-### <a name="known-issues"></a>既知の問題
-
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
-
-#### <a name="deployment"></a>展開
-
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。
-
-   > [!IMPORTANT]
-   > 最新リリースをデプロイする前に、データをバックアップし、(以前のバージョンの **azdata** を使用して) 既存のビッグ データ クラスターを削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="kubeadm-deployments"></a>kubeadm のデプロイ
-
-kubeadm を使用して複数のコンピューターに Kubernetes をデプロイした場合、ビッグ データ クラスターに接続するために必要なエンドポイントがクラスター管理ポータルに正しく表示されません。 この問題が発生している場合は、サービス エンドポイントの IP アドレスを検出するために次の回避策を使用します。
-
-- クラスター内から接続している場合は、接続先のエンドポイントのサービス IP を取得するために Kubernetes にクエリを実行します。 たとえば、次の **kubectl** コマンドは SQL Server マスター インスタンスの IP アドレスを表示します。
+- **回避策**:両方の Livy サーバーを再起動します。
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
    ```
-
-- クラスターの外部から接続している場合は、次の手順を使用して接続します。
-
-   1. `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>` で、SQL Server マスター インスタンスを実行しているノードの IP アドレスを取得します。
-
-   1. この IP アドレスを使用して、SQL Server マスター インスタンスに接続します。
-
-   1. 他の外部エンドポイントを取得するために、マスター データベース内の **cluster_endpoint_table** にクエリを実行します。
-
-      これが接続タイムアウトで失敗した場合は、対応するノードがファイアウォールで保護されている可能性があります。 この場合は、Kubernetes クラスター管理者に連絡して、外部に公開されているノード IP を教えてもらう必要があります。 これはどのノードでも発生する可能性があります。 その後、その IP とそれに対応するポートを使用して、クラスターで実行されているさまざまなサービスに接続できます。 たとえば、管理者は次を実行してこの IP を見つけることができます。
-
-      ```
-      [root@m12hn01 config]# kubectl cluster-info
-      Kubernetes master is running at https://172.50.253.99:6443
-      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-      ```
-
-#### <a name="delete-cluster-fails"></a>クラスターの削除が失敗する
-
-**azdata** を使用してクラスターを削除しようとすると、次のエラーで失敗します。
-
-```
-2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
-Error processing command: "TypeError"
-delete_namespaced_service() takes 3 positional arguments but 4 were given
-Makefile:61: recipe for target 'delete-cluster' failed
-make[2]: *** [delete-cluster] Error 1
-Makefile:223: recipe for target 'deploy-clean' failed
-make[1]: *** [deploy-clean] Error 2
-Makefile:203: recipe for target 'deploy-clean' failed
-make: *** [deploy-clean] Error 2
-```
-
-新しい Python Kubernetes クライアント (バージョン 9.0.0) では名前空間の削除 API が変更され、現在はそれによって **azdata** が停止します。 これは、新しい Kubernetes python クライアントがインストールされている場合にのみ発生します。 この問題は、**kubectl** (`kubectl delete ns <ClusterName>`) を使用してクラスターを直接削除することによって回避できます。あるいは、`sudo pip install kubernetes==8.0.1` を使用して以前のバージョンをインストールできます。
-
-#### <a id="externaltablesctp24"></a> 外部テーブル
-
-- ビッグ データ クラスターのデプロイでは、**SqlDataPool** および **SqlStoragePool** の外部データ ソースが作成されなくなりました。 データ プールや記憶域プールへのデータ仮想化をサポートするには、これらのデータ ソースを手動で作成できます。
-
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   ```
-
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- 文字データ型を使用する外部テーブルを Oracle に対して作成している場合、Azure Data Studio 仮想化ウィザードでは、これらの列が外部テーブル定義内の VARCHAR として解釈されます。 これにより、外部テーブル DDL でエラーが発生します。 NVARCHAR2 型を使用するように Oracle スキーマを変更するか、またはウィザードを使用する代わりに手動で EXTERNAL TABLE ステートメントを作成し、NVARCHAR を指定してください。
-
-#### <a name="application-deployment"></a>アプリケーションの展開
-
-- RESTful API から R、Python、または MLeap アプリケーションを呼び出すと、その呼び出しが 5 分でタイムアウトします。
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a id="ctp23"></a> CTP 2.3 (2 月)
-
-以下のセクションでは、SQL Server 2019 CTP 2.3 のビッグ データ クラスターの新機能と既知の問題について説明します。
-
-### <a name="whats-new"></a>新機能
-
-| 新機能または更新 | 詳細 |
-| :---------- | :------ |
-| IntelliJ のビッグ データ クラスターでの Spark ジョブの送信。 | [IntelliJ で Spark ジョブ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を送信する](spark-submit-job-intellij-tool-plugin.md) |
-| アプリケーションの展開およびクラスター管理の一般的な CLI。 | [アプリを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| ビッグ データ クラスターにアプリケーションを展開するための VS Code の拡張機能。 | [VS Code を使用してアプリケーションを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
-| **azdata** ツール コマンドの使用法の変更。 | 詳細については、[azdata の既知の問題](#azdatactp23)を参照してください。 |
-| ビッグ データ クラスターで Sparklyr を使用する | [SQL Server 2019 のビッグ データ クラスターで Sparklyr を使用する](sparklyr-from-RStudio.md) |
-| **HDFS 階層**を使用した、外部の HDFS 互換ストレージのビッグ データ クラスターへのマウント。 | [HDFS 階層](hdfs-tiering.md)に関するページを参照してください。 |
-| SQL Server のマスター インスタンスと HDFS/Spark ゲートウェイの新しい統一された接続エクスペリエンス。 | [SQL Server のマスター インスタンスと HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md)に関するページを参照してください。 |
-| **azdata cluster delete** を使用してクラスターを削除すると、ビッグ データ クラスターの一部であった名前空間内のオブジェクトのみが削除されるようになりました。 | 名前空間は削除されません。 ただし、以前のリリースでは、このコマンドを使用すると、名前空間全体が削除されました。 |
-| _セキュリティ_ エンドポイントの名前が変更され、統合されました。 | **service-security-lb** と **service-security-nodeport** は、**endpoint-security** エンドポイントに統合されました。 |
-| _プロキシ_ エンドポイントの名前が変更され、統合されました。 | **service-proxy-lb** と **service-proxy-nodeport** は、**endpoint-service-proxy** エンドポイントに統合されました。 |
-| _コントローラー_ エンドポイントの名前が変更され、統合されました。 | **service-mssql-controller-lb** と **service-mssql-controller-nodeport** は、**endpoint-controller** エンドポイントに統合されました。 |
-| &nbsp; | &nbsp; |
-
-### <a name="known-issues"></a>既知の問題
-
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
-
-#### <a name="deployment"></a>展開
-
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。
-
-   > [!IMPORTANT]
-   > 最新リリースをデプロイする前に、データをバックアップし、(以前のバージョンの **azdata** を使用して) 既存のビッグ データ クラスターを削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
-
-- EULA に同意するには、**ACCEPT_EULA** 環境変数が "yes" または "Yes" である必要があります。 以前のリリースでは "y" や "Y" が許可されましたが、これらは受け付けられなくなり、デプロイは失敗します。
-
-- **CLUSTER_PLATFORM** 環境変数には、以前のリリースに存在した既定値がありません。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="kubeadm-deployments"></a>kubeadm のデプロイ
-
-kubeadm を使用して複数のコンピューターに Kubernetes をデプロイした場合、ビッグ データ クラスターに接続するために必要なエンドポイントがクラスター管理ポータルに正しく表示されません。 この問題が発生している場合は、サービス エンドポイントの IP アドレスを検出するために次の回避策を使用します。
-
-- クラスター内から接続している場合は、接続先のエンドポイントのサービス IP を取得するために Kubernetes にクエリを実行します。 たとえば、次の **kubectl** コマンドは SQL Server マスター インスタンスの IP アドレスを表示します。
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
    ```
 
-- クラスターの外部から接続している場合は、次の手順を使用して接続します。
+### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>可用性グループのマスター インスタンスの場合にメモリ最適化テーブルを作成する
 
-   1. `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>` で、SQL Server マスター インスタンスを実行しているノードの IP アドレスを取得します。
+- **問題およびユーザーへの影響**:可用性グループ データベース (リスナー) に接続するために公開されているプライマリ エンドポイントを使用して、メモリ最適化テーブルを作成することはできません。
 
-   1. この IP アドレスを使用して、SQL Server マスター インスタンスに接続します。
+- **回避策**:SQL Server マスター インスタンスが可用性グループの構成である場合にメモリ最適化テーブルを作成するには、新しい接続で作成されたセッションで、[SQL Server インスタンスに接続](deployment-high-availability.md#instance-connect)し、エンドポイントを公開し、SQL Server データベースに接続して、メモリ最適化テーブルを作成します。
 
-   1. 他の外部エンドポイントを取得するために、マスター データベース内の **cluster_endpoint_table** にクエリを実行します。
+### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>外部テーブルの Active Directory 認証モードに挿入する
 
-      これが接続タイムアウトで失敗した場合は、対応するノードがファイアウォールで保護されている可能性があります。 この場合は、Kubernetes クラスター管理者に連絡して、外部に公開されているノード IP を教えてもらう必要があります。 これはどのノードでも発生する可能性があります。 その後、その IP とそれに対応するポートを使用して、クラスターで実行されているさまざまなサービスに接続できます。 たとえば、管理者は次を実行してこの IP を見つけることができます。
+- **問題およびユーザーへの影響**:SQL Server マスター インスタンスが Active Directory 認証モードになっている場合、外部テーブルのうち少なくとも 1 つがストレージプール内にある場合に外部テーブルからのみ選択され、別の外部テーブルに挿入されるクエリでは、次のように返されます。
 
-      ```
-      [root@m12hn01 config]# kubectl cluster-info
-      Kubernetes master is running at https://172.50.253.99:6443
-      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-      ```
-
-#### <a id="azdatactp23"></a> azdata
-
-- **azdata** ツールが、動詞-名詞のコマンドの順序から名詞-動詞の順序に変更されました。 たとえば、`azdata create cluster` が `azdata cluster create` になりました。
-
-- `azdata cluster create` を使用してクラスターを作成する場合は、`--name` パラメーターが必要になりました。
-
-   ```bash
-   azdata cluster create --name <cluster_name>
+   ```
+   Msg 7320, Level 16, State 102, Line 1
+   Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- ビッグ データ クラスターと **azdata** の最新バージョンへのアップグレードに関する重要な情報については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
+- **回避策**:次のいずれかの方法でクエリを変更します。 ストレージ プール テーブルをローカル テーブルに結合するか、最初にローカル テーブルに挿入し、ローカル テーブルからデータを読み取ってデータ プールに挿入します。
 
-#### <a name="external-tables"></a>外部テーブル
+### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>Transparent Data Encryption 機能が、SQL Server のマスター インスタンスの可用性グループの一部であるデータベースで使用できない
 
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
+- **問題およびユーザーへの影響**:HA 構成では、暗号化に使用されるマスター キーがレプリカごとに違うため、暗号化が有効になっているデータベースをフェールオーバー後に使用することはできません。 
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+- **回避策**:この問題の回避策はありません。 修正が適用されるまでは、この構成では暗号化を有効にしないことをお勧めします。
 
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
+## <a name="next-steps"></a>次のステップ
 
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- 文字データ型を使用する外部テーブルを Oracle に対して作成している場合、Azure Data Studio 仮想化ウィザードでは、これらの列が外部テーブル定義内の VARCHAR として解釈されます。 これにより、外部テーブル DDL でエラーが発生します。 NVARCHAR2 型を使用するように Oracle スキーマを変更するか、またはウィザードを使用する代わりに手動で EXTERNAL TABLE ステートメントを作成し、NVARCHAR を指定してください。
-
-#### <a name="application-deployment"></a>アプリケーションの展開
-
-- RESTful API から R、Python、または MLeap アプリケーションを呼び出すと、その呼び出しが 5 分でタイムアウトします。
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a id="ctp22"></a> CTP 2.2 (2018 年 12 月)
-
-以下のセクションでは、SQL Server 2019 CTP 2.2 のビッグ データ クラスターの新機能と既知の問題について説明します。
-
-### <a name="new-features"></a>新しい機能
-
-- `/portal` (**https://\<ip-address\>:30777/portal**) でアクセスされるクラスター管理ポータル。
-- マスター プールのサービス名が `service-master-pool-lb` と `service-master-pool-nodeport` から `endpoint-master-pool` に変更されました。
-- 新しいバージョンの **azdata** と更新されたイメージ。
-- その他のバグ修正および機能強化。
-
-### <a name="known-issues"></a>既知の問題
-
-以下のセクションでは、このリリースの既知の問題と制限事項について説明します。
-
-#### <a name="deployment"></a>展開
-
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。 最新リリースをデプロイする前に、既存のビッグ データ クラスターをすべてバックアップして削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="cluster-administration-portal"></a>クラスターの管理ポータル
-
-クラスター管理ポータルに SQL Server マスター インスタンスのエンドポイントが表示されません。 マスター インスタンスの IP アドレスとポートを見つけるには、次の **kubectl** コマンドを使用します。
-
-```
-kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
-```
-
-#### <a name="external-tables"></a>外部テーブル
-
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a id="ctp21"></a> CTP 2.1 (2018 年 11 月)
-
-以下のセクションでは、SQL Server 2019 CTP 2.1 のビッグ データ クラスターの新機能と既知の問題について説明します。
-
-### <a name="new-features"></a>新しい機能
-
-- ビッグ データ クラスターでの [Python および R アプリのデプロイ](big-data-cluster-create-apps.md)。
-- 新しいバージョンの **azdata** と更新されたイメージ。 
-- その他のバグ修正および機能強化。
-
-### <a name="known-issues"></a>既知の問題
-
-以下のセクションでは、CTP [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 2.1 でのに関する既知の問題について説明します。
-
-#### <a name="deployment"></a>展開
-
-- 以前のリリースからのビッグ データ クラスターのアップグレードはサポートされていません。 最新リリースをデプロイする前に、既存のビッグ データ クラスターをすべてバックアップして削除する必要があります。 詳細については、[新しいリリースへのアップグレード](deployment-upgrade.md)に関するページを参照してください。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="admin-portal"></a>管理ポータル
-
-- [msqlctl-ctp コマンドを使用してアプリを作成](big-data-cluster-create-apps.md)し、それを SQL Server ビッグ データ クラスターにデプロイすると、クラスター管理ポータルでは、そのアプリケーションがデプロイされたポッドが管理者ポータルの [コントローラー] セクションに [不明] として表示されます。
-
-#### <a name="external-tables"></a>外部テーブル
-
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a id="ctp20"></a> CTP 2.0 (2018 年 10 月)
-
-以下のセクションでは、SQL Server 2019 CTP 2.0 のビッグ データ クラスターの新機能と既知の問題について説明します。
-
-### <a name="new-features"></a>新しい機能
-
-- azdata 管理ツールを使用した簡単なデプロイ エクスペリエンス
-- Azure Data Studio でのネイティブなノートブック エクスペリエンス
-- SQL Server のストレージ インスタンスを経由した HDFS ファイルへのクエリ実行
-- SQL Server、Oracle、MongoDB、および HDFS へのマスターを経由したデータ仮想化
-- Azure Data Studio での SQL Server と Oracle のためのデータ仮想化ウィザード
-- マスター上の ML サービス
-- 監視とトラブルシューティングのために使用できるクラスター管理ポータル
-- Azure Data Studio での Spark ジョブの送信 
-- クラスター管理ポータルでの Spark UI
-- ストレージ クラスへのボリューム マウント
-- マスターからのデータ プールに対するクエリ
-- SSMS での分散クエリの計画の表示
-- azdata 管理ツール用の Pip パッケージ
-- コントローラー サービスを使用した組み込みのデプロイ エンジン
-
-### <a name="known-issues"></a>既知の問題
-
-以下のセクションでは、CTP [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 2.0 でのに関する既知の問題について説明します。
-
-#### <a name="deployment"></a>展開
-
-- Azure Kubernetes Service (AKS) を使用している場合、Kubernetes の推奨されるバージョンは、ディスクのサイズ変更がサポートされない 1.10.* です。 デプロイ時にストレージのサイズを適切に設定していることを確認してください。 ストレージ サイズを調整する方法の詳細については、[データ永続化](concept-data-persistence.md)に関する記事を参照してください。 VM にデプロイされた Kubernetes の場合、推奨されるバージョンは 1.11 です。
-
-- AKS にデプロイした後、そのデプロイから次の 2 つの警告イベントが表示されることがあります。 これらのイベントはどちらも既知の問題ですが、AKS にビッグ データ クラスターを正常にデプロイすることを妨げるものではありません。
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間が削除されません。 これにより、クラスター上に孤立した名前空間が残される可能性があります。 回避策として、同じ名前を持つクラスターをデプロイする前に、名前空間を手動で削除します。
-
-#### <a name="external-tables"></a>外部テーブル
-
-- サポートされていない列の型を含むテーブルのデータ プール外部テーブルを作成できます。 その外部テーブルにクエリを実行すると、次のようなメッセージが表示されます。
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- 記憶域プール外部テーブルにクエリを実行したときに、基になるファイルが同時に HDFS にコピーされていると、エラーが発生することがあります。
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### <a name="spark-and-notebooks"></a>Spark とノートブック
-
-- POD が再起動すると、Kubernetes 環境で POD IP アドレスが変更される可能性があります。 マスター ポッドの再起動のシナリオでは、Spark セッションが `NoRoteToHostException` で失敗する可能性があります。 これは、新しい IP アドレスで更新されない JVM キャッシュによって発生します。
-
-- Jupyter が既にインストールされ、Windows 上に別の Python が存在する場合は、Spark ノートブックが失敗することがあります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
-
-- ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
-
-#### <a name="hdfs"></a>HDFS
-
-- HDFS 内のファイルを右クリックしてプレビューすると、次のエラーが表示されることがあります。
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Azure Data Studio では現在、30 MB を超えるファイルをプレビューする方法はありません。
-
-- hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
-
-#### <a name="security"></a>セキュリティ
-
-- SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
-
-- AKS ログに、ビッグ データ クラスターのデプロイのための SA パスワードが含まれている可能性があります。
-
-## <a name="next-steps"></a>次の手順
-
-の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)に関するページを参照してください。

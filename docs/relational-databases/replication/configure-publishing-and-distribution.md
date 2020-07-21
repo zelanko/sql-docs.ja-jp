@@ -1,5 +1,6 @@
 ---
 title: パブリッシングおよびディストリビューションの構成 | Microsoft Docs
+description: SQL Server Management Studio、Transact-SQL、またはレプリケーション管理オブジェクトを使用して SQL Server でパブリッシングとディストリビューションを構成する方法について説明します。
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -14,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: defa71e8650afc1ef96e750cbbeb7f7f52325272
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774002"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを構成する方法について説明します。
 
-##  <a name="BeforeYouBegin"></a> はじめに 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに 
 
-###  <a name="Security"></a> セキュリティ 
+###  <a name="security"></a><a name="Security"></a> セキュリティ 
 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。
 
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用 
-パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、 **[ディストリビューターのプロパティ - \<ディストリビューター>]** ダイアログ ボックスでプロパティを表示および変更します。 `db_owner` 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用 
+パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、 **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスでプロパティを表示および変更します。 `db_owner` 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。
 
 #### <a name="to-configure-distribution"></a>ディストリビューションを構成するには 
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、ディストリビューターとなるサーバーに接続し (多くの場合、パブリッシャーとディストリビューターは同じサーバーです)、サーバー ノードを展開します。
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、ディストリビューターとなるサーバーに接続し (多くの場合、パブリッシャーとディストリビューターは同じサーバーです)、サーバー ノードを展開します。
 
 2. **[レプリケーション]** フォルダーを右クリックし、 **[ディストリビューションの構成]** をクリックします。
 
 3. ディストリビューションの構成ウィザードに従って、次の操作を実行します。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - ディストリビューターを選択します。 ローカル ディストリビューターを使用するには、 **[ServerName を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]** を選択します。 リモート ディストリビューターを使用するには、 **[以下のサーバーをディストリビューターとして使用する]** を選択し、サーバーを選択します。 このサーバーは既にディストリビューターとして構成されている必要があり、パブリッシャーではこのディストリビューターを使用できるようになっている必要があります。 詳細については、「[ディストリビューターでのリモート パブリッシャーの有効化 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)」を参照してください。
 
@@ -54,9 +53,9 @@ ms.locfileid: "68768685"
 
   - 必要に応じて、その他のパブリッシャーでディストリビューターを使用できるようにします。 その他のパブリッシャーがディストリビューターを使用できるようになっている場合は、これらのパブリッシャーからディストリビューターへの接続に対して、 **[ディストリビューター パスワード]** ページでパスワードを入力する必要があります。
 
-  - 必要に応じて、構成の設定のスクリプトを作成します。 詳しくは、「 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)」をご覧ください。
+  - 必要に応じて、構成の設定のスクリプトを作成します。 詳細については、「[レプリケーションのスクリプト作成](../../relational-databases/replication/scripting-replication.md)」を参照してください。
 
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用 
 レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>ローカル ディストリビューターを使用してパブリッシングを構成するには
 1. [sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) を実行して、サーバーが既にディストリビューターとして構成されているかどうかを調べます。
@@ -87,12 +86,12 @@ ms.locfileid: "68768685"
 
 4. パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 このとき、`@dbname` にはパブリッシュするデータベースを、`@optname` にはレプリケーションの種類を、`@value` には true 値を指定します。
 
-###  <a name="TsqlExample"></a> 例 (Transact-SQL) 
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL) 
 次の例に、パブリッシングおよびディストリビューションをプログラムから構成する方法を示します。 この例では、パブリッシャーおよびローカル ディストリビューターとして構成するサーバーの名前をスクリプト変数を使って指定しています。 レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。
 
 [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
 
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用 
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用 
 
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>パブリッシングおよびディストリビューションを単一サーバーで構成するには 
 
@@ -104,7 +103,7 @@ ms.locfileid: "68768685"
 
 4. <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> プロパティにデータベース名を設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。
 
-5. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 手順 3. の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを渡します。
+5. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 手順 3 の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを渡します。
 
 6. <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。
 
@@ -161,7 +160,7 @@ ms.locfileid: "68768685"
 > [!IMPORTANT]
 > 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、Windows .NET Framework に用意されている [暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733) を使用します。
 
-###  <a name="PShellExample"></a> 例 (RMO) 
+###  <a name="example-rmo"></a><a name="PShellExample"></a> 例 (RMO) 
 レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってレプリケーション パブリッシングおよびディストリビューションを構成できます。
 
 [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)] 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8bb3cdc14668c6e923358d790281ba3b5c35fc6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960852"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>ショートカット クエリ ファイル (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、よく使用するデータにすばやく接続して読み込むために、ショートカット クエリ ファイルを使用します。 MDS データを他のユーザーと共有する場合にも使用できます。 ワークシートを保存して電子メールで送信する代わりに、ショートカット クエリ ファイルを保存して電子メールで送信する必要があります。 これにより、両者が MDS リポジトリに接続して最新のデータを取得するようになります。  
@@ -37,7 +36,7 @@ ms.locfileid: "65482665"
   
  このアプリケーションでショートカット クエリ ファイルを開くときに、接続を "安全な" 接続にするように求めるメッセージが表示されます。これは、この場所からの内容を信頼することを意味します。 接続を安全としてマークするたびに、接続がリストに追加されます。 このリストをクリアする場合は、 **[設定]** ダイアログ ボックスを開き、 **[セーフ リストに追加されたサーバー]** セクションで **[すべてクリア]** をクリックします。  
   
- アプリケーションの既定の場所は*ドライブ*: SQL server \120\master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe \Program Files\Microsoft します。  
+ アプリケーションの既定の場所は、*ドライブ*:、Services\Excel、および Master Data Add-In\Microsoft.MasterDataServices.QueryOpener.exe です。  
   
  ショートカット クエリ ファイルを開く方法には、ファイルをインポートする方法と、ダブルクリックして自動的に開くようにする方法の 2 種類があります。  
   

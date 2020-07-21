@@ -1,9 +1,7 @@
 ---
-title: JSON パス式 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/23/2017
+title: JSON パス式
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +10,18 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06468560c612801efbf75a7717399659ec71eab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715367"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  JSON オブジェクトのプロパティを参照するには、JSON パス式を使用します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68005463"
   
 -   **JSON_VALUE** を呼び出して、JSON テキストから値を抽出します。 詳細については、「 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」をご覧ください。  
   
--   **JSON_QUERY** を呼び出して、JSON オブジェクトまたは配列を抽出します。 詳細については、「 [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」をご覧ください。  
+-   **JSON_QUERY** を呼び出して、JSON オブジェクトまたは配列を抽出します。 詳細については、「[JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」を参照してください。  
   
 -   **JSON_MODIFY** を呼び出して、JSON 文字列内のプロパティの値を更新します。 詳細については、「 [JSON_MODIFY &#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)」を参照してください。  
 
@@ -42,9 +42,7 @@ ms.locfileid: "68005463"
   
 2.  [パス](#PATH) 自体。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  必要に応じて、パス式の先頭に **lax** または **strict**キーワードを指定してパス モードを宣言します。 既定値は **lax**です。  
   
 -   **lax** モードでは、パス式にエラーが含まれている場合、関数は空の値を返します。 たとえば、値 **$.name** を要求するときに JSON テキストに **name** キーが含まれていない場合、関数は null を返しますが、エラーは発生しません。  
@@ -54,26 +52,26 @@ ms.locfileid: "68005463"
 次のクエリでは、パス式で `lax` モードが明示的に指定されています。
 
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{ ... }'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{ ... }';
 
-SELECT * FROM OPENJSON(@json, N'lax $.info')
+SELECT * FROM OPENJSON(@json, N'lax $.info');
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  省略可能なパス モード宣言の後に、パス自体を指定します。  
   
 -   ドル記号 (`$`) はコンテキスト アイテムを表します。  
   
 -   プロパティのパスは、パス ステップのセットです。 パス ステップには、次の要素と演算子を含めることができます。  
   
-    -   キー名。 たとえば、 `$.name` や `$."first name"`。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
+    -   キー名。 たとえば、`$.name` や `$."first name"`す。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
   
-    -   配列の要素。 たとえば、`$.product[3]` のようになります。 配列は 0 から始まります。  
+    -   配列の要素。 たとえば、「 `$.product[3]` 」のように入力します。 配列は 0 から始まります。  
   
     -   ドット演算子 (`.`) は、オブジェクトのメンバーを示します。 たとえば、`$.people[1].surname` では、`surname` は `people` の子です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  このセクションの例では、次の JSON テキストを参照します。  
   
 ```json  
@@ -91,22 +89,22 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  次の表に、パス式の例をいくつか示します。  
   
-|パス式|[値]|  
+|パス式|値|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name":"Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
 |$.people[1].surname|null|  
-|$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
+|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>組み込み関数が重複するパスを処理する方法  
  たとえば、同じ名前の 2 つのキーが同じレベルにある場合など、JSON テキストに重複するプロパティが含まれる場合、**JSON_VALUE** および **JSON_QUERY** 関数はパスに一致する最初の値のみを返します。 重複するキーが含まれる JSON オブジェクトを解析してすべての値を取得するには、次の例に示すように **OPENJSON** を使用します。  
   
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}';
 
 SELECT value
-FROM OPENJSON(@json,'$.person.info') 
+  FROM OPENJSON(@json,'$.person.info');
 ```  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  

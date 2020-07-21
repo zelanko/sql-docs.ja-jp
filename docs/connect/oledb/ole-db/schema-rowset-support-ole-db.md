@@ -1,5 +1,5 @@
 ---
-title: スキーマ行セットのサポート (OLE DB) |Microsoft Docs
+title: スキーマ行セットのサポート (OLE DB) | Microsoft Docs
 description: スキーマ行セットのサポート (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993930"
 ---
 # <a name="schema-rowset-support-ole-db"></a>スキーマ行セットのサポート (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "67993930"
   OLE DB Driver for SQL Server では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 分散クエリを処理する際に、リンク サーバーからスキーマ情報を返すこともできます。  
   
 > [!NOTE]  
->  ではシノニムがサポートされていますが、SQLServerのOLEDBドライバーでは、シノニムのメタデータは返されません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はシノニムをサポートしていますが、シノニムのメタデータは OLE DB Driver for SQL Server から返されません。  
   
  次の表に、OLE DB Driver for SQL Server でサポートされるスキーマ行セットと制限列を示します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67993930"
 ## <a name="in-this-section"></a>このセクションの内容  
  [スキーマ行セットでの分散クエリのサポート](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS 行&#40;セット OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 行セット &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

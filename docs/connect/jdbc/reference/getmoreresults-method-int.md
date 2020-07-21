@@ -1,5 +1,5 @@
 ---
-title: getMoreResults (int) メソッドMicrosoft Docs
+title: getMoreResults メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db242def83e840e3518aa4036a66f823585f80b2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981770"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906178"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,8 +51,8 @@ public final boolean getMoreResults(int mode)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMoreResults メソッドは、java. .sql. ステートメントインターフェイスの getMoreResults メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getMoreResults メソッドは、java.sql.Statement インターフェイスの getMoreResults メソッドで指定されています。  
   
  結果を取得する前に getMoreResults メソッドを呼び出した場合、このメソッドは引数 *mode* で指定されたとおりに動作し、次の結果に移動します。  
   

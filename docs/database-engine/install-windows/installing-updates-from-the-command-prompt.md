@@ -1,5 +1,6 @@
 ---
 title: コマンド プロンプトからの更新プログラムのインストール | Microsoft Docs
+description: この記事では、SQL Server 更新プログラムのインストールのコマンド構文について説明します。 インストール スクリプトをテストし、組織の必要に応じて変更できます。
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22821930b8d0e10826fcaad0f33258262f59f2ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990914"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900381"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>コマンド プロンプトからの更新プログラムのインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 インストール スクリプトをテストし、必要に応じて変更してください。 
  
@@ -31,7 +32,7 @@ ms.locfileid: "67990914"
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    内の複数の 
+    or 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -74,7 +75,7 @@ ms.locfileid: "67990914"
 > [!IMPORTANT] 
 > セキュリティ資格情報は、できるだけ実行時に入力してください。 資格情報をスクリプト ファイルに含める必要がある場合は、不正なアクセスが行われないようにファイルをセキュリティで保護してください。 
  
-|スイッチ|[説明]| 
+|Switch|説明| 
 |------------|-----------------| 
 |**/?**|自動インストールのコマンド プロンプト ヘルプを表示します。| 
 |**/action=Patch または /action=RemovePatch**|インストール動作を指定します: Patch または RemovePatch。| 
@@ -88,7 +89,7 @@ ms.locfileid: "67990914"
  
  *準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに更新プログラムを適用するために、このパラメーターを指定することはできません。 代わりに /instanceID パラメーターを指定してください。 
  
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
  [SQL Server サービスのインストールの概要](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

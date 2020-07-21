@@ -1,5 +1,5 @@
 ---
-title: execute メソッド (SQLServerStatement) |Microsoft Docs
+title: execute メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1367f39-23d7-4e26-b160-6d988d7e6988
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4be0fdbc622b50ffe6e403a0d1bc05e1be7104b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4073149f426fc9aade012696780f57cf092c359a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954932"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922075"
 ---
 # <a name="execute-method-sqlserverstatement"></a>execute メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67954932"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[execute (java.lang.String)](../../../connect/jdbc/reference/execute-method-java-lang-string-sqlserverstatement.md)|渡された SQL ステートメントを実行します。このステートメントは、複数の結果を返す場合があります。|  
 |[execute (java.lang.String, int)](../../../connect/jdbc/reference/execute-method-java-lang-string-int.md)|複数の結果を返す可能性がある渡された SQL ステートメントを実行し、すべての自動生成キーを検索可能にする必要があることを [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。|  

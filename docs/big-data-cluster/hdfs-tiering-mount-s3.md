@@ -1,7 +1,7 @@
 ---
 title: HDFS の階層制御の S3 のマウント
 titleSuffix: SQL Server big data clusters
-description: この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上の Hdfs に外部 S3 ファイルシステムをマウントするように hdfs 階層を構成する方法について説明します。
+description: この記事では、HDFS 階層制御を構成して、外部の S3 ファイル システムを SQL Server 2019 ビッグ データ クラスター上の HDFS にマウントする方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: fce89b5c2ee40fc7229c0c330fefe9e253a4fdc6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652302"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606591"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための S3 をマウントする方法
 
@@ -43,7 +43,7 @@ ms.locfileid: "69652302"
    > [!TIP]
    > S3 アクセスキーを作成する方法の詳細については、[S3 アクセス キー](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)に関する記事を参照してください。
 
-## <a id="mount"></a> リモート HDFS ストレージをマウントする
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> リモート HDFS ストレージをマウントする
 
 アクセス キーを使用して資格情報ファイルを準備したので、マウントを開始することができます。 次の手順では、S3 のリモート HDFS ストレージを、ビッグ データ クラスターのローカル HDFS ストレージにマウントします。
 
@@ -61,7 +61,7 @@ ms.locfileid: "69652302"
    
 1. 上の手順に続けて環境変数 MOUNT_CREDENTIALS を設定する
 
-1. **Azdata bdc HDFS mount create**を使用して、Azure にリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
+1. **azdata bdc hdfs mount create** を使用して、Azure でリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
 
    ```bash
    azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -72,7 +72,7 @@ ms.locfileid: "69652302"
 
 正常にマウントされていれば、HDFS データに対してクエリを実行し、そのデータに対して Spark ジョブを実行できます。 これは、`--mount-path` によって指定された場所にあるビッグ データ クラスターの HDFS に表示されます。
 
-## <a id="status"></a> マウントの状態を取得する
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> マウントの状態を取得する
 
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
@@ -94,14 +94,14 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> マウントを削除する
+## <a name="delete-the-mount"></a><a id="delete"></a> マウントを削除する
 
-マウントを削除するには、 **azdata bdc hdfs mount delete**コマンドを使用し、hdfs でマウントパスを指定します。
+マウントを削除するには、**azdata bdc hdfs mount delete** コマンドを使用して、HDFS で次のマウント パスを指定します。
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。

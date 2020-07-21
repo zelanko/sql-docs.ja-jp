@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3e848fe9a07d838631eef1737c2a7679b67e649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040021"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
   トレースにキャプチャされたイベント データを表示するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義されたトレース プロパティに基づいてデータが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを分析するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーなどの別のプログラムにデータをコピーする方法があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、 **Text** データ列がトレースに含まれている場合、SQL バッチおよびリモート プロシージャ コール (RPC) のイベントを含んだトレース ファイルを使用できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用する適切なイベントと列がキャプチャされるようにするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に付属の定義済みチューニング テンプレートを使用します。  
@@ -32,7 +31,7 @@ ms.locfileid: "68211025"
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースを開くとき、そのトレース ファイルが [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または SQL トレース システムのストアド プロシージャによって作成されている場合は、トレース ファイルに .trc というファイル拡張子が付いている必要はありません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース ファイル (.log) と汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース .log ファイルと汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の日付および時刻の表示形式は、トレース分析を行いやすいように設定できます。  
   
@@ -49,7 +48,7 @@ AND     CPU < (Duration * 1000)
 ```  
   
 > [!NOTE]  
->  サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup> 秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。  
+>  サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。  
   
 ## <a name="displaying-object-names-when-viewing-traces"></a>トレースを確認するときのオブジェクト名の表示  
  オブジェクトの識別子 (**Object ID**) でなく名前を表示するには、 **Object Name** データ列に加えて **Server Name** と **Database ID** の各データ列もキャプチャする必要があります。  
@@ -63,7 +62,7 @@ AND     CPU < (Duration * 1000)
   
     -   トレースを定義する場合、キャプチャするその他のデータ列に加え、 **Event Class**、 **ClientProcessID**、 **Start Time** の各データ列もキャプチャします。 詳細については、「[トレースの作成 &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)」を参照してください。  
   
-    -   **Event Class** データ列でキャプチャされたデータをグループ化し、トレースをファイルまたはテーブルにキャプチャします。 キャプチャされたデータをグループ化するには、[トレースのプロパティ] ダイアログ ボックスの **[イベントの選択]** タブで **[列の構成]** をクリックします。 詳細については、「[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)」を参照してください。  
+    -   **Event Class**データ列でキャプチャされたデータをグループ化し、トレースをファイルまたはテーブルにキャプチャします。 キャプチャされたデータをグループ化するには、[トレースのプロパティ] ダイアログ ボックスの **[イベントの選択]** タブで **[列の構成]** をクリックします。 詳細については、「[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)」を参照してください。  
   
     -   トレースを開始して、適切な時間が経過するか、適切な数のイベントがキャプチャされたら、トレースを停止します。  
   
@@ -81,7 +80,7 @@ AND     CPU < (Duration * 1000)
   
  これと同じ方法で、グループ化されたイベントを見つけることができます。 目的のイベントが見つかったら、 **ClientProcessID**、 **ApplicationName**、その他のイベント クラスでイベントをグループ化すると、関連する動作を発生順に表示できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [保存されているトレースの表示 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
  [フィルター情報の表示 &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)   

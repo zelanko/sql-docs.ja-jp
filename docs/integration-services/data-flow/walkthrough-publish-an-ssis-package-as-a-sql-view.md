@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:SSIS パッケージを SQL ビューとして公開する | Microsoft Docs
+title: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,30 +10,30 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 401422fcd3c2e32dcd83bebc3ef51351ca83555f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079825"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216899"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル:SQL ビューとして SSIS パッケージを公開する
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>チュートリアル: SSIS パッケージを SQL ビューとして公開する
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
   このチュートリアルでは、SSIS パッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに SQL ビューとして公開する詳細な手順について説明します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを実行するには、コンピューターに次のソフトウェアがインストールされている必要があります。  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以降と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を起動します。  
+1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以降と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を起動します。  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1:SSIS プロジェクトを構築して SSIS カタログに配置する  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>手順 1: SSIS プロジェクトを構築して SSIS カタログに配置する  
  この手順では、SSIS 対応データ ソース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します) からデータを抽出し、そのデータを Data Streaming Destination コンポーネントを使用して出力する SSIS パッケージを作成します。 その後、SSIS プロジェクトを構築して SSIS カタログに配置します。  
   
 1.  **SQL Server Data Tools**を起動します。 **[スタート]** メニューで、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
@@ -58,13 +58,13 @@ ms.locfileid: "68079825"
   
 5.  **ソース コンポーネント** を、ツールボックスから **データ フロー デザイナー** にドラッグし、データ ソースからデータを抽出するように構成します。  
   
-    1.  このチュートリアルを実行するために、次のものを作成します。テスト データベース: **TestDB**、テーブル: **Employee**。 **ID**、 **FirstName** 、 **LastName**という 3 つの列があるテーブルを作成します。  
+    1.  このチュートリアルを実行するために、 **Employee** テーブルがあるテスト データベース **TestDB**を作成します。 **ID**、 **FirstName** 、 **LastName**という 3 つの列があるテーブルを作成します。  
   
     2.  **ID** を主キーとして設定します。  
   
     3.  次のデータを持つ 2 つのレコードを挿入します。  
   
-        |ID|FirstName|LastName|  
+        |id|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -85,7 +85,7 @@ ms.locfileid: "68079825"
   
     2.  ウィザードの指示に従って、プロジェクトをローカル データベース サーバーの SSIS カタログに配置します。 次の例では、 **Power BI** をフォルダー名として、 **SSISPackagePublishing** をSSIS カタログ内のプロジェクト名として使用します。  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>手順 2:SSIS データ フィード公開ウィザードを使用して SSIS パッケージを SQL ビューとして公開する  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>手順 2: SSIS データ フィード公開ウィザードを使用して SSIS パッケージを SQL ビューとして公開する  
  この手順では、SQL Server Integration Services (SSIS) データ フィード公開ウィザードを使用して、SSIS パッケージを SQL Server データベースにビューとして公開します。 パッケージの出力データは、このビューをクエリすることで使用できます。  
   
  SSIS データ フィード公開ウィザードにより、OLE DB Provider for SSIS (SSISOLEDB) を利用するリンク サーバーが作成され、リンク サーバーのクエリを構成する SQL ビューが作成されます。 このクエリには、SSIS カタログのフォルダー名、プロジェクト名、およびパッケージ名が含まれます。  
@@ -96,17 +96,17 @@ ms.locfileid: "68079825"
   
 2.  **[概要]** ページで **[次へ]** をクリックします。  
   
-     ![データフィード発行ウィザード - [概要] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "データフィード発行ウィザード - [概要] ページ")  
+     ![データ フィード公開ウィザード - [説明] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "データ フィード公開ウィザード - [説明] ページ")  
   
 3.  **[パッケージの設定]** ページで、次のタスクを実行します。  
   
     1.  SSIS カタログを含む SQL Server インスタンスの **名前** を入力するか、 **[参照]** をクリックしてサーバーを選択します。  
   
-         ![データフィード発行ウィザード - [パッケージの設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "データフィード発行ウィザード - [パッケージの設定] ページ")  
+         ![データ フィード公開ウィザード - [パッケージの設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "データ フィード公開ウィザード - [パッケージの設定] ページ")  
   
     2.  [パス] フィールドの横にある **[参照]** をクリックして SSIS カタログを参照し、公開する SSIS パッケージを選択し (例: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)、 **[OK]** をクリックします。  
   
-         ![データフィード発行ウィザード - パッケージの参照](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "データフィード発行ウィザード - パッケージの参照")  
+         ![データ フィード公開ウィザード - パッケージの参照](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "データ フィード公開ウィザード - パッケージの参照")  
   
     3.  ページ下部の [パッケージ パラメーター]、[プロジェクト パラメーター]、[接続マネージャー] タブを使用して、パッケージのパッケージ パラメーター、プロジェクト パラメーター、または接続マネージャーの設定値を入力します。 パッケージを実行するために使用される環境参照を指定して、プロジェクト/パッケージ パラメーターを環境変数にバインドすることもできます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68079825"
   
     1.  ビューを作成する **データベース** を選択します。  
   
-         ![データフィード発行ウィザード - [公開の設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "データフィード発行ウィザード - [公開の設定] ページ")  
+         ![データ フィード公開ウィザード - [公開の設定] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "データ フィード公開ウィザード - [公開の設定] ページ")  
   
     2.  **ビュー** の **名前**を入力します。 ボックスの一覧から既存のビューを選択することもできます。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "68079825"
   
 5.  **[検証]** ページで、すべての設定値の検証結果を確認します。 次の例では、選択した SQL Server インスタンスにリンク サーバーが存在しないために、リンクサーバーの存在に関する **警告** が表示されています。 **[結果]** に **[エラー]** が表示された場合は、 **[エラー]** の上にマウス カーソルを合わせると、エラーの詳細を確認できます。 たとえば、SSISOLEDB プロバイダーの [InProcess 許可] オプションを有効にしていなかった場合は、リンク サーバーの構成操作でエラーが発生します。  
   
-     ![データフィード発行ウィザード - [検証] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "データフィード発行ウィザード - [検証] ページ")  
+     ![データ フィード公開ウィザード - [検証] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "データ フィード公開ウィザード - [検証] ページ")  
   
 6.  このレポートを XML ファイルとして保存するために [レポートの保存] をクリックします。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68079825"
   
 8.  **[概要]** ページで選択内容を確認し、 **[公開]** をクリックして公開プロセスを開始します。リンク サーバーがサーバー上に存在していない場合は、リンク サーバーの作成後にそのリンク サーバーを使用するビューが作成されます。  
   
-     ![データフィード発行ウィザード - [概要] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "データフィード発行ウィザード - [概要] ページ")  
+     ![データ フィード公開ウィザード - [概要] ページ](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "データ フィード公開ウィザード - [概要] ページ")  
   
      これで、次の SQL ステートメントを TestDB データベースに対して実行することで、パッケージの出力データをクエリできます: SELECT * FROM [SSISPackageView]。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68079825"
     > [!NOTE]  
     >  次のデータ型はサポートされていません: text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)。  
   
-## <a name="step-3-test-the-sql-view"></a>手順 3:SQL ビューをテストする  
+## <a name="step-3-test-the-sql-view"></a>手順 3: SQL ビューをテストする  
  ここでは、SSIS データ フィード公開ウィザードによって作成された SQL ビューを実行します。  
   
 1.  SQL Server Management Studio を起動します。  
@@ -170,7 +170,7 @@ ms.locfileid: "68079825"
   
 4.  SSIS パッケージの結果が表示されることを確認します。  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>手順 4:SSIS パッケージの実行を確認する  
+## <a name="step-4-verify-the-ssis-package-execution"></a>手順 4: SSIS パッケージの実行を確認する  
  この手順では、SSIS パッケージが実行されたことを確認します。  
   
 1.  SQL Server Management Studio で、 **[Integration Services カタログ]** 、 **[SSISDB]** 、SSIS プロジェクトが存在する **フォルダー** 、 **[プロジェクト]** 、プロジェクト ノード、 **[パッケージ]** の順に展開します。  
@@ -182,7 +182,7 @@ ms.locfileid: "68079825"
     > [!NOTE]  
     >  Windows Vista Service Pack 2 コンピューターでは、2 種類の SSIS パッケージの実行 (成功した実行と失敗した実行) が表示される場合があります。 失敗した実行は今回のリリースの既知の問題によって発生しているため、無視してください。  
   
-## <a name="more-info"></a>詳細  
+## <a name="more-info"></a>詳細情報  
  データ フィード公開ウィザードでは、次の重要な手順を実行します。  
   
 1.  リンク サーバーを作成し、OLE DB Provider for SSIS を使用するように構成します。  
@@ -261,13 +261,11 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 -   単一引用符 (') - これは標準的な OPENQUERY によってサポートされています。 クエリ句で単一引用符を使用する場合は、2 つの単一引用符 (") を使用します。  
   
--   二重引用符 (") - クエリのパラメーター部分は二重引用符で囲みます。 パラメーターの値そのものに二重引用符が含まれる場合は、エスケープ文字を使用します。 例: \"」を参照してください。  
+-   二重引用符 (") - クエリのパラメーター部分は二重引用符で囲みます。 パラメーターの値そのものに二重引用符が含まれる場合は、エスケープ文字を使用します。 (例: \")。  
   
 -   左右の角かっこ ([ と ]) - これらの文字は、前後のスペースを示すために使用されます。 たとえば、"[ some spaces ]" は、前に 1 つ、後ろに 1 つのスペースがある文字列 " some spaces " を示します。 これらの文字そのものをクエリ句で使用する場合は、エスケープする必要があります。 たとえば、 \\[ や \\] のように指定します。  
   
 -   スラッシュ (\\) - クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
-  
- スラッシュ (\\) - クエリで使用するすべての \ では、エスケープ文字を使用する必要があります。 たとえば、クエリ句の \\\ は \ として評価されます。  
   
 ## <a name="see-also"></a>参照  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

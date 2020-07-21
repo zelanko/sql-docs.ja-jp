@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d522f06b226d744a71e1d1eb842182c3b52c935c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee10024b38af62d88c2c3ca0776d84ba5cfc0280
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898975"
 ---
-# <a name="hostid-transact-sql"></a>HOST_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ワークステーション ID 番号を返します。 ワークステーションの ID 番号とは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているクライアント コンピューター上のアプリケーションのプロセス ID (PID) です。  
   
@@ -44,12 +44,12 @@ HOST_ID ()
 ## <a name="return-types"></a>戻り値の型  
  **char(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  システム関数へのパラメーターが省略可能の場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーが推測されます。 組み込み関数の後には常にかっこが必要です。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、受注を記録するテーブルに行を挿入するコンピューターの端末 ID を記録するために、`HOST_ID()` 定義内で `DEFAULT` を使用するテーブルを作成します。  
   
 ```  
@@ -65,6 +65,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

@@ -38,25 +38,25 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c3557af934ab7029822b5f9d3657828ee5d2a75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965587"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763763"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog プロパティ (ADOX)
-プロバイダー固有のプロパティへのアクセスを提供するテーブル、ユーザー、または列のオブジェクトの親のカタログを指定します。  
+プロバイダー固有のプロパティへのアクセスを提供する、テーブル、ユーザー、または列オブジェクトの親カタログを指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定し、返します、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)オブジェクト。 設定**ParentCatalog**開いた**カタログ**テーブルまたは列を追加する前に、プロバイダー固有のプロパティにアクセスできるように、**カタログ**コレクション。  
+ [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)オブジェクトを設定して返します。 **ParentCatalog**を開いている**カタログ**に設定すると、テーブルまたは列を**カタログ**コレクションに追加する前に、プロバイダー固有のプロパティにアクセスできます。  
   
-## <a name="remarks"></a>コメント  
- 一部のデータ プロバイダーは、作成時にのみ書き込まれるプロバイダー固有のプロパティの値を許可する: は、ときにテーブルまたは列が追加されますをその**カタログ**コレクション。 これらのオブジェクトを追加する前にこれらのプロパティにアクセスする、**カタログ**、指定、**カタログ**で、 **ParentCatalog**プロパティ最初。  
+## <a name="remarks"></a>解説  
+ 一部のデータプロバイダーでは、プロバイダー固有のプロパティ値を作成時にのみ書き込むことができます。つまり、テーブルまたは列がその**カタログ**コレクションに追加されたときです。 これらのオブジェクトを**カタログ**に追加する前にこれらのプロパティにアクセスするには、まず、 **ParentCatalog**プロパティで**カタログ**を指定します。  
   
- テーブルまたは列は別に追加するときにエラーが発生した**カタログ**よりも、 **ParentCatalog**します。  
+ テーブルまたは列が**ParentCatalog**とは別の**カタログ**に追加されると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -65,5 +65,5 @@ ms.locfileid: "67965587"
 |[Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
 |[User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

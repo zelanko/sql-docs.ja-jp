@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b0dff24ff83cd577bfdb572a16582bbdc6b6863
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748685"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 円弧を含む **geometry** インスタンスの多角形近似を返します。
   
@@ -36,9 +36,9 @@ ms.locfileid: "67930308"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  空の **geometry** インスタンス変数に空の **GeometryCollection** インスタンスを返し、初期化されていない **geometry** 変数に **NULL** を返します。  
   
  メソッドによって返される多角形近似は、メソッドの呼び出しに使用した **geometry** インスタンスによって変わります。  
@@ -51,7 +51,7 @@ ms.locfileid: "67930308"
   
  SQL/MM 仕様とは異なり、`STCurveToLine` メソッドでは、多角形近似の計算に z 座標の値が使用されません。 このメソッドでは、呼び出し元 **geography** インスタンスに存在する z 座標値は無視されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. 初期化されていないジオメトリ変数と空のインスタンスを使用する  
  次の例では、最初の **SELECT** ステートメントで初期化されていない **geometry** インスタンスを使用して `STCurveToLine` メソッドを呼び出し、2 つ目の **SELECT** ステートメントで空の **geometry** インスタンスを使用します。 したがって、最初のステートメントには **NULL** が返され、2 つ目のステートメントには **GeometryCollection** コレクションが返されます。  

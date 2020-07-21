@@ -94,20 +94,19 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 627aae71f32230ccbd78e7ee1c042ca78ba71985
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068870"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940619"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元サーバー モードのみ  
+ **適用対象:** 多次元サーバーモードのみ  
   
-## <a name="memory"></a>Memory  
+## <a name="memory"></a>メモリ  
  `DefaultPageSizeForData`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "66068870"
  `DefaultPageSizeForProp`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="lazyprocessing"></a>LazyProcessing  
+## <a name="lazyprocessing"></a>レイジー処理  
  `Enabled`  
  レイジー集計処理が有効かどうかを示すブール型プロパティです。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "66068870"
  `MaxRetries`  
  レイジー処理が失敗した場合にエラーが発生する前にイベントでの再試行の回数を定義する、符号付き 32 ビット整数のプロパティです。  
   
-## <a name="processplan"></a>ProcessPlan  
+## <a name="processplan"></a>プロセス プラン  
  `CacheRowsetRows`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -186,7 +185,7 @@ ms.locfileid: "66068870"
  `OptimizeSchema`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="proactivecaching"></a>ProactiveCaching  
+## <a name="proactivecaching"></a>プロアクティブ キャッシュ  
  `DefaultRefreshInterval`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -196,7 +195,7 @@ ms.locfileid: "66068870"
  `PartitionLatencyAccuracy`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="process"></a>[処理]  
+## <a name="process"></a>Process  
  `AggregationMemoryLimitMax`  
  集計処理に充てることができるメモリの最大量を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティです。物理メモリの比率として表されます。  
   
@@ -287,7 +286,7 @@ ms.locfileid: "66068870"
  `ROLAPDimensionProcessingEffort`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="query"></a>Query  
+## <a name="query"></a>クエリ  
  `AggregationsUseEnabled`  
  保存されている集計が実行時に使用されるかどうかを定義するブール型プロパティです。 このプロパティでは、情報提供およびベンチマークの目的で、集計のデザインを変更したり再処理したりせずに集計を無効にすることができます。  
   
@@ -431,7 +430,7 @@ ms.locfileid: "66068870"
  `DataCache\ MemoryModel\ Tax`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="jobs"></a>Jobs  
+## <a name="jobs"></a>ジョブ  
  `ProcessAggregation\ MemoryModel\ Income`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -478,7 +477,7 @@ ms.locfileid: "66068870"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
+ [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

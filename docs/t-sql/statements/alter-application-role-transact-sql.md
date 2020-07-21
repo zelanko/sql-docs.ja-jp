@@ -20,34 +20,38 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 77bd1b9ccfb2eb93300c16a7fa7a99f87a4c0413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b0d65b5d4d68ac23f980e98405d4c19e0e970e1
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066089"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302026"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   アプリケーション ロールの名前、パスワード、または既定のスキーマを変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文
   
-```  
+```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
-  
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+
  *application_role_name*  
  変更するアプリケーション ロールの名前です。  
   
@@ -60,8 +64,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  オブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
-## <a name="remarks"></a>Remarks  
- 新しいアプリケーション ロールの名前が既にデータベースに存在する場合、このステートメントは失敗します。 アプリケーション ロールの名前、パスワード、または既定のスキーマが変更されても、そのロールに関連付けられている ID は変更されません。  
+## <a name="remarks"></a>解説
+
+新しいアプリケーション ロールの名前が既にデータベースに存在する場合、このステートメントは失敗します。 アプリケーション ロールの名前、パスワード、または既定のスキーマが変更されても、そのロールに関連付けられている ID は変更されません。  
   
 > [!IMPORTANT]  
 >  パスワードの有効期限ポリシーは、アプリケーション ロールのパスワードには適用されません。 このため、複雑なパスワードを選択する際には十分注意してください。 アプリケーション ロールを呼び出すアプリケーションは、これらのパスワードを格納する必要があります。  
@@ -74,12 +79,12 @@ ALTER APPLICATION ROLE application_role_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。 既定のスキーマを変更するには、アプリケーション ロールに対する ALTER 権限も必要です。 アプリケーション ロールは、それ自体の既定のスキーマを変更できますが、名前とパスワードは変更できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-name-of-application-role"></a>A. アプリケーション ロールの名前を変更する  
  次の例では、アプリケーション ロール `weekly_receipts` の名前を `receipts_ledger` に変更します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
@@ -93,7 +98,7 @@ GO
 ### <a name="b-changing-the-password-of-application-role"></a>B. アプリケーション ロールのパスワードを変更する  
  次の例では、アプリケーション ロール `receipts_ledger` のパスワードを変更します。  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH PASSWORD = '897yUUbv867y$200nk2i';  
 GO  
@@ -102,7 +107,7 @@ GO
 ### <a name="c-changing-the-name-password-and-default-schema"></a>C. 名前、パスワード、および既定のスキーマを変更する  
  次の例では、アプリケーション ロール `receipts_ledger` の名前、パスワード、および既定のスキーマをすべて同時に変更します。  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH NAME = weekly_ledger,   
     PASSWORD = '897yUUbv77bsrEE00nk2i',   

@@ -1,5 +1,6 @@
 ---
 title: スマートフォンやタブレット向けに Reporting Services モバイル レポートをレイアウトする | Microsoft Docs
+description: SQL Server Mobile Report Publisher で Reporting Services モバイル レポートを作成したので、電話やタブレット バージョンをレイアウトすることができます。
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 40333dd0fc5dd53c03c412aa3fb5f19b4e92dabe
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63129622"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448460"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>スマートフォンやタブレット向けに Reporting Services モバイル レポートをレイアウトする
 [で](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Reporting Services モバイル レポートを作成 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]できたので、スマートフォンやタブレット バージョンをレイアウトすることができます。  
@@ -37,7 +38,7 @@ ms.locfileid: "63129622"
   
    ![SSMRP_PhonePreview](../../reporting-services/mobile-reports/media/ssmrp-phonepreview.png)  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

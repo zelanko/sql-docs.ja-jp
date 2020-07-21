@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054699"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>コマンド プロンプトからの PowerPivot のインストール
   コマンド ラインからセットアップを実行して、SQL Server PowerPivot for SharePoint をインストールすることができます。 コマンドには `/ROLE` パラメーターを含め、`/FEATURES` パラメーターを除外する必要があります。  
@@ -27,8 +26,8 @@ ms.locfileid: "68890179"
   
  コンピューターが SharePoint ファームと同じドメインに参加する必要があります。  
   
-##  <a name="Commands"></a>/ROLE ベースのインストールオプション  
- PowerPivot for SharePoint の配置では `/ROLE` パラメーターの代わりに `/FEATURES` パラメーターが使用されます。 有効な値は次のとおりです。  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>/ROLE ベースのインストールオプション  
+ PowerPivot for SharePoint の配置では `/ROLE` パラメーターの代わりに `/FEATURES` パラメーターが使用されます。 有効な値は、次のとおりです。  
   
 -   `SPI_AS_ExistingFarm`  
   
@@ -41,24 +40,24 @@ ms.locfileid: "68890179"
  以前のリリースとは異なり、すべてのサーバー構成タスクはインストール後のタスクとして実行されます。 インストールと構成の手順を自動化している場合は、PowerShell を使用してサーバーを構成できます。 詳細については、「 [Windows PowerShell を使用した PowerPivot の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)」を参照してください。  
   
 ## <a name="example-commands"></a>コマンドの例  
- 次の例では、各オプションの使用方法を示します。 例1は`SPI_AS_ExistingFarm`を示しています。  
+ 次の例では、各オプションの使用方法を示します。 例1は `SPI_AS_ExistingFarm` を示しています。  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  例 2 は `SPI_AS_NewFarm` を示します。 データベース エンジンを準備するパラメーターが含まれています。  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>コマンドの構文の変更  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>コマンドの構文の変更  
  次の手順に従って、コマンド構文の例を変更します。  
   
 1.  次のコマンドをコピーして、メモ帳に貼り付けます。  
   
-    ```  
+    ```cmd
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
@@ -77,35 +76,31 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
 2.  ここでは、`PID` パラメーターが省略されているため、Evaluation Edition がインストールされます。 Enterprise Edition をインストールする場合は、セットアップ コマンドに PID を追加して、有効なプロダクト キーを指定します。  
   
     ```  
-  
     /PID=<product key for an Enterprise installation>  
-  
     ```  
   
-3.  Domain\username > と\<StrongPassword \<> のプレースホルダーを、有効なユーザーアカウントとパスワードに置き換えます。  
+3.  とのプレースホルダーを \<domain\username> 、 \<StrongPassword> 有効なユーザーアカウントとパスワードに置き換えます。  
   
-     および/ **assvcpassword**パラメーターは、アプリケーションサーバーで[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスを構成するために使用されます。 `/assvaccount` これらのプレースホルダーを有効なアカウント情報に置き換えます。  
+     `/assvaccount`および **/assvcpassword**パラメーターは、アプリケーションサーバーでインスタンスを構成するために使用され [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] ます。 これらのプレースホルダーを有効なアカウント情報に置き換えます。  
   
      **/Assysadminaccounts**パラメーターは、SQL Server セットアップを実行しているユーザーの id に設定する必要があります。 システム管理者を少なくとも 1 人指定する必要があります。 SQL Server セットアップでは、あらかじめ登録された Administrators グループのメンバーに対して sysadmin 権限が自動的に付与されなくなったことに注意してください。  
   
 4.  改行を削除します。  
   
-5.  コマンド全体を選択し、編集 メニューの **コピー** をクリックします。  
+5.  コマンド全体を選択し、[編集] メニューの [**コピー** ] をクリックします。  
   
-6.  管理者のコマンド プロンプトを開きます。 これを行うには、 **[スタート]** ボタンをクリックし、コマンドプロンプトを右クリックして、 **[管理者として実行]** を選択します。  
+6.  管理者のコマンド プロンプトを開きます。 これを行うには、[**スタート**] ボタンをクリックし、コマンドプロンプトを右クリックして、[**管理者として実行**] を選択します。  
   
 7.  SQL Server のインストール メディアを含むドライブまたは共有フォルダーに移動します。  
   
-8.  編集済みのコマンドをコマンド ラインに貼り付けます。 これを行うには、コマンドプロンプトウィンドウの左上隅にあるアイコンをクリックし、 **[編集]** をポイントして、 **[貼り付け]** をクリックします。  
+8.  編集済みのコマンドをコマンド ラインに貼り付けます。 これを行うには、コマンドプロンプトウィンドウの左上隅にあるアイコンをクリックし、[**編集**] をポイントして、[**貼り付け**] をクリックします。  
   
 9. **Enter**キーを押してコマンドを実行します。 セットアップが完了するまで待ちます。 コマンド プロンプト ウィンドウでセットアップの進行状況を監視できます。  
   
 10. インストールを確認するには、\Program Files\SQL Server\120\Setup Bootstrap\Log にある summary.txt ファイルを調べます。 サーバーがエラーなしでインストールされていれば、最終結果が "Passed" になっています。  
   
-11. サーバーを構成します。 少なくとも、ソリューションを配置し、サービス アプリケーションを作成して、各サイト コレクションで PowerPivot 機能を有効化する必要があります。 詳細については、「サーバーの全体管理での[PowerPivot for SharePoint &#40;2010 powerpivot 構成ツール&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)または[powerpivot サーバーの管理と構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)の構成または修復」を参照してください。  
+11. サーバーを構成します。 少なくとも、ソリューションを配置し、サービス アプリケーションを作成して、各サイト コレクションで PowerPivot 機能を有効化する必要があります。 詳細については、「サーバーの全体管理で PowerPivot 構成ツール&#41;または[Powerpivot サーバーの管理と構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)を[&#40;2010 PowerPivot for SharePoint の構成または修復](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot サービスアカウントの構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

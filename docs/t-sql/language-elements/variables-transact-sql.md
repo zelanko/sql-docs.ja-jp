@@ -13,15 +13,15 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086130"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000724"
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Transact-SQL ローカル変数は、特定の型の単一データ値を保持できるオブジェクトです。 バッチ内の変数とスクリプトは、通常、次の場合に使用されます。 
 
@@ -31,6 +31,9 @@ Transact-SQL ローカル変数は、特定の型の単一データ値を保持�
 
 > [!NOTE]
 > 一部の Transact-SQL システム関数の名前には、2 つの "*アット*" マーク (\@\@) で始まるものがあります。 初期のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、\@\@ 関数がグローバル変数と呼ばれていましたが、これらは変数ではなく、変数とは違った動作をします。 \@\@ 関数はシステム関数であり、構文の用法は関数の規則に従います。
+
+> [!NOTE]
+> 変数はビューで使用できません。
 
 次のスクリプトは小さなテスト テーブルを作成し、そのテーブルに 26 行を設定する例です。 このスクリプトでは変数を使用して次の 3 つのことを行います。 
 
@@ -146,7 +149,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例:  
+選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 次に例を示します。  
 
 ```sql
 USE AdventureWorks2014;

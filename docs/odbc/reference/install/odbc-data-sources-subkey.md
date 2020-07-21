@@ -1,7 +1,7 @@
 ---
-title: ODBC データ ソースのサブキー |Microsoft Docs
+title: ODBC データソースサブキー |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,28 +12,30 @@ helpviewer_keywords:
 - data sources [ODBC], subkeys
 - registry entries for data sources [ODBC], subkeys
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a1d0c506c4a4b33d7138378032947821d4e9f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5e97e643a78187b15e91833c832cd16ca435c7f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093992"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304061"
 ---
-# <a name="odbc-data-sources-subkey"></a>ODBC データ ソースのサブキー
-ODBC データ ソースのサブキーの下の値は、データ ソースを一覧表示します。 これらの値の形式は、次の表に示すようにします。  
-  
-|名前|データ型|data|  
-|----------|---------------|----------|  
-|*data-source-name*|REG_SZ|*ドライバーの説明*|  
-  
- *データのソース名*(通常は、ユーザーを要求) を管理プログラムによって値が定義されていると*ドライバー説明*ドライバー開発者によって定義されます (の名前では、通常は、DBMS ドライバーに関連付けられている)。  
-  
- たとえば、3 つのデータ ソースが定義されているとします。インベントリは、SQL Server を使用します。給与支払い名簿 dBASE; を使用します。スタッフ、書式設定されたテキスト ファイルを使用します。 ODBC データ ソースのサブキーの下の値が次のようにあります。  
-  
-```  
-Inventory : REG_SZ : SQL Server  
-Payroll : REG_SZ : dBASE  
-Personnel : REG_SZ : Text  
+# <a name="odbc-data-sources-subkey"></a>ODBC データソースサブキー
+
+サブキーの`ODBC Data Sources`下の値には、データソースが一覧表示されます。 これらの値の形式を次の表に示します。
+
+| 名前 | データの種類 | データ |
+| :--- | :-------- | :--- |
+| *データソース名* | REG_SZ | *ドライバー-説明* |
+| &nbsp; | &nbsp; | &nbsp; |
+
+*データソース名*の値は、管理プログラムによって定義されます (通常はユーザーにプロンプトを表示します)。*ドライバーの説明*は、ドライバーの開発者によって定義されます (通常は、ドライバーに関連付けられている DBMS の名前です)。
+
+たとえば、SQL Server を使用する Inventory という3つのデータソースが定義されているとします。DBASE を使用する Payroll書式設定されたテキストファイルを使用するスタッフ。 サブキーの`ODBC Data Sources`下の値は次のようになります。
+
+```console
+Inventory : REG_SZ : SQL Server
+Payroll : REG_SZ : dBASE
+Personnel : REG_SZ : Text
 ```

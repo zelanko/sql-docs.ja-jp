@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 561f6a893803aba1e545356b05de9a5e86088476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706147"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   スカラー値を単一列で構成される値のセットと比較します。 SOME と ANY は等価です。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68072262"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   
@@ -60,12 +60,12 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- 指定された比較が (_scalar_expression_ **,** _x_) の任意の組で **TRUE** の場合、SOME または ANY から TRUE が返されます。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** が返されます。  
+ 指定された比較が (**scalar_expression** _,_ **x**) の任意の組で _TRUE_ の場合、SOME または ANY から TRUE が返されます。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** が返されます。  
   
-## <a name="remarks"></a>Remarks  
- SOME の場合、*scalar_expression* ではサブクエリによって返される 1 つ以上の値に対し肯定的な比較を行う必要があります。 サブクエリによって返されるすべての値に対し肯定的な比較を行うために *scalar_expression* を必要とするステートメントについては、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).」を参照してください。 たとえば、*scalar_express* を 2 とすると、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* = SOME (subquery) は TRUE と評価されます。 サブクエリによって値 2 と 3 が返される場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  
+## <a name="remarks"></a>解説  
+ SOME の場合、*scalar_expression* ではサブクエリによって返される 1 つ以上の値に対し肯定的な比較を行う必要があります。 サブクエリによって返されるすべての値に対し肯定的な比較を行うために *scalar_expression* を必要とするステートメントについては、「[ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).」を参照してください。 たとえば、*scalar_express* を 2 とすると、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* = SOME (subquery) は TRUE と評価されます。 サブクエリによって値 2 と値 3 が返される場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-running-a-simple-example"></a>A. 簡単な例を実行する  
  次のステートメントでは、簡単なテーブルを作成し、`1` 列に値 `2`、`3`、`4`、`ID` を追加します。  
@@ -80,7 +80,7 @@ INSERT T1 VALUES (3) ;
 INSERT T1 VALUES (4) ;  
 ```  
   
- テーブルには`3` より大きい値があるため、次のクエリは `TRUE` を返します。  
+ テーブルには`TRUE` より大きい値があるため、次のクエリは `3` を返します。  
   
 ```  
 IF 3 < SOME (SELECT ID FROM T1)  

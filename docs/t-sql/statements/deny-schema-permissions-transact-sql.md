@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f5a86fc5eccf214828e969865cdedbc4379dc9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766662"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY (スキーマ権限の拒否) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 スキーマの権限を拒否します。  
   
 
-![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -75,7 +75,7 @@ CASCADE
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 スキーマは、データベース レベルでセキュリティ保護可能です。 権限の階層で親となっているデータベースに含まれています。 次の表に、スキーマで拒否できる最も限定的で制限された権限を示します。 それらを暗黙的に含む、より全般的な権限を次の表に示します。  
   
 |スキーマ権限|権限が含まれるスキーマ権限|権限が含まれるデータベース権限|  

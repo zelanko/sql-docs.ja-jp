@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 740e132845a738101a38248da41fc0b53d1acecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067870"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>例:EXPLICIT モードを使用した兄弟の構築
+# <a name="example-constructing-siblings-with-explicit-mode"></a>例: EXPLICIT モードを使用した兄弟の構築
   販売注文情報を提供する XML を生成するとします。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟です。 各注文には、<`OrderHeader`> 要素が 1 つ、<`SalesPerson`> 要素が 1 つ、<`OrderDetail`> 要素が 1 つ以上あります。  
   
 ```  
@@ -32,7 +31,7 @@ ms.locfileid: "62704737"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 次に示す EXPLICIT モードのクエリは、上記の形式の XML を生成します。 このクエリでは、<`OrderHeader`> 要素の `Tag` 列に 1 を、<`SalesPerson`> 要素には 2 を、<`OrderDetail`> 要素には 3 を指定しています。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟なので、これらの要素の `Parent` 列に値 1 を指定し、<`OrderHeader`> 要素を親要素として特定しています。  
+ 次に示す EXPLICIT モードのクエリは、上記の形式の XML を生成します。 このクエリでは、<`Tag`> 要素の `OrderHeader` 列に 1 を、<`SalesPerson`> 要素には 2 を、<`OrderDetail`> 要素には 3 を指定しています。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟なので、これらの要素の `Parent` 列に値 1 を指定し、<`OrderHeader`> 要素を親要素として特定しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +108,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

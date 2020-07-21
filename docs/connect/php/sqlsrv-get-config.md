@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_get_config |Microsoft Docs
+title: sqlsrv_get_config | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_get_config
 - sqlsrv_get_config
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f94c20c8aa6cf603c6588586e072813682b2ce68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ef4f53e4ee4ae1c9022ea8bfab0ba7a66c147c08
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992703"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922754"
 ---
-# <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
+# <a name="sqlsrv_get_config"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 指定された構成設定の現在の値を返します。  
@@ -41,7 +41,7 @@ sqlsrv_get_config( string $setting )
 ## <a name="return-value"></a>戻り値  
 *$setting* パラメーターで指定された設定の値。 無効な設定を指定した場合は、 **false** が返されて、エラーがエラー コレクションに追加されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **false** が **sqlsrv_get_config** によって返された場合は、[sqlsrv_errors](../../connect/php/sqlsrv-errors.md) を呼び出して、エラーが発生したかどうか、または **false** が *$setting* パラメーターで指定した設定の値かどうかを、判定する必要があります。  
   
 ## <a name="see-also"></a>参照  

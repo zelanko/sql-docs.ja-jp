@@ -18,14 +18,14 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 706a2259cbf333f500f1a8e5812de494dd6b863c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b8c49f0f462bf62bde8e92a1e51f981d18d7ef7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943951"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297746"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
 
@@ -41,7 +41,7 @@ ms.locfileid: "67943951"
   
  また、並べ替え変換では、並べ替えの実行時に重複する行を削除できます。 重複する行とは、並べ替えキーの値が同じ行のことです。 並べ替えキーの値は、使用する文字列比較オプションに基づいて生成されます。したがって、リテラル文字列が異なっていても、並べ替えキーの値は同じとなる場合があります。 並べ替え変換は、値は異なるが並べ替えキーが同じ入力列の行を、重複していると識別します。  
   
- 並べ替え変換には、パッケージの読み込み時にプロパティ式で更新できる、**MaximumThreads** カスタム プロパティがあります。 詳細については、「[Integration Services (SSIS) の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
+ 並べ替え変換には、パッケージの読み込み時にプロパティ式で更新できる、 **MaximumThreads** カスタム プロパティがあります。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67943951"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67943951"
  **使用できる入力列**  
  このチェック ボックスを使用して、並べ替える列を指定します。  
   
- **[名前]**  
+ **Name**  
  使用できる各入力列の名前を表示します。  
   
  **パススルー**  
@@ -82,7 +82,7 @@ ms.locfileid: "67943951"
  **[並べ替えの種類]**  
  昇順で並べ替えるか、降順で並べ替えるかを示します。  
   
- **並べ替え順序**  
+ **[並べ替え順序]**  
  列を並べ替える順序を示します。 各列に対して手動で設定する必要があります。  
   
  **[比較フラグ]**  

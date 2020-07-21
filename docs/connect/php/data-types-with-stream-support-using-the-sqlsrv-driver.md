@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - streaming data
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92c28fe249d766fff33d2c52e20497cebd1f486b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae18b0e3e5c3add352f2efe71c78c3591740dd6c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993680"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928050"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用したストリームでのデータ型のサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "67993680"
   
 -   image  
   
--   NCHAR  
+-   nchar  
   
 -   ntext  
   
--   NVARCHAR  
+-   nvarchar  
   
 -   text  
   
--   UDT (UDT)  
+-   UDT  
   
 -   varbinary  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f63fabadc4cf4dea98536c3ef2f8f863fa0dc642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941545"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292607"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB ソースを使用してデータを抽出する
 
@@ -72,6 +72,6 @@ ms.locfileid: "67941545"
  [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
   
   

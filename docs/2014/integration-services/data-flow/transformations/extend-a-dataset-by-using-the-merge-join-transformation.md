@@ -12,15 +12,14 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb5e111e052c84e89f3ebb5a52bfbdf429295f64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900305"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430609"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>マージ結合変換を使用してデータセットを拡張する
   マージ結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、マージ結合変換への入力を提供する 2 つのデータ フロー コンポーネントがあらかじめ含まれている必要があります。  
@@ -61,9 +60,9 @@ ms.locfileid: "62900305"
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Merge Join Transformation](merge-join-transformation.md)   
+ [マージ結合変換](merge-join-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)  
   
   

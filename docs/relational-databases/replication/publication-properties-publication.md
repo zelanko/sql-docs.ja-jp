@@ -1,6 +1,7 @@
 ---
-title: SQL Server レプリケーションの 'パブリケーションのプロパティ' ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: パブリケーションのプロパティ - ダイアログボックス
+description: SQL Server Management Studio (SSMS) の [パブリケーションのプロパティ] ダイアログボックス内にあるページについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,33 +21,33 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4edfe83d19a0db5c15c767e5d94cf7de993d1fe8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720871"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server レプリケーションの 'パブリケーションのプロパティ' ダイアログ ボックス
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 このページでは、[パブリケーションのプロパティ] ダイアログ ボックス内にあるページについて説明します。 
 
 ## <a name="general"></a>全般
  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[全般]** ページには、名前、説明、およびサブスクリプションの有効期限ポリシーなどの、パブリケーションに関する基本情報が表示されます。  
   
-### <a name="options"></a>オプション  
- **[名前]**  
+### <a name="options"></a>Options  
+ **名前**  
  パブリケーションの名前です (読み取り専用)。  
   
  **[データベース]**  
  パブリケーション データベースの名前です (読み取り専用)。  
   
- **[説明]**  
+ **説明**  
  パブリケーションの説明です。  
   
- **型**  
+ **Type**  
  パブリケーションの種類です (読み取り専用)。  
   
  **[サブスクリプションの有効期限]**  
@@ -79,11 +80,11 @@ ms.locfileid: "68769978"
 -   サブスクライバーがデータを更新する場合に、異なるデータ パーティションを異なるサブスクライバーに送信できるので (2 つのサブスクライバーが同一のデータ値を更新することはない)、競合をなくす、または減らすことができます。    
 -   機密データの送信を回避できます。 行フィルターと列フィルターを使用して、サブスクライバーによるデータへのアクセスを制限できます。 マージ レプリケーションにおいて HOST_NAME() を含むパラメーター化されたフィルターを使用する場合は、セキュリティ上の留意事項があります。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」の「HOST_NAME() によるフィルター選択」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[フィルター選択されたテーブル]**  
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
- **[追加]**  
+ **追加**  
  **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションのために **[追加]** をクリックすると、次の 3 つの選択肢が表示されます。 **[フィルターの追加]** 、 **[選択したフィルターを拡張するために結合を追加する]** 、 **[フィルターを自動的に生成]** 。  
   
 -   **[フィルターの追加]** をクリックすると、 **[フィルターの追加]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、行フィルターをテーブル アーティクルに適用できます。 たとえば、 **[フィルターの追加]** ダイアログ ボックスを使用して、顧客データ テーブルをサブスクライバーにレプリケートするときにフランスの顧客に関するデータだけを格納するように指定できます。  
@@ -107,7 +108,7 @@ ms.locfileid: "68769978"
  **[テーブルの検索]**  
  マージ パブリケーションのみです。 **[テーブルの検索]** をクリックすると、複雑なフィルター ツリー内でテーブルを検索できます。 複雑なリレーションシップを持つデータベースでは、1 つのテーブルを複数のテーブルに結合できます。その場合、テーブルはフィルター ツリー内で複数の場所に表示されます。  
   
- 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、 **[\<tablename> のテーブルを表示するには、[テーブルの検索]** をクリックします。] というテキストが表示されます。  
+ 実際のテーブルはツリー内の 1 つの場所に表示されます。他の場所では、テーブルがショートカットによって表されます。 テーブルのショートカットはテーブルの単なる参照であり、テーブルの子ノードを示すものではありません。 ショートカット ノードはショートカット矢印付きで示されます。このノードを展開すると、 **[\<tablename> のテーブルを表示するには、[テーブルの検索] をクリックします]** というテキストが表示されます。  
   
  ペイン内でショートカット ノードを選択し、 **[テーブルの検索]** をクリックすると、ペインが展開され、テーブルが強調表示されます。 ショートカット ノードを選択せずに **[テーブルの検索]** をクリックすると、 **[テーブルの検索]** ダイアログ ボックスが表示されます。  
   
@@ -119,11 +120,11 @@ ms.locfileid: "68769978"
   
  サブスクライバーがパブリッシャーまたはディストリビューターに接続してパブリケーションへのアクセスを要求すると、サブスクライバーのログインが PAL 内の認証情報と比較されます。 これにより、クライアント ツールでパブリッシャーおよびディストリビューターのログインが使用されてパブリッシャーでの変更が直接実行されるのを防ぐことができ、パブリッシャーのセキュリティがさらに高まります。 詳細については、「[パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
- **[追加]**  
+### <a name="options"></a>Options  
+ **追加**  
  一覧に新しいエントリを追加します。 追加できるのは、パブリッシャーとディストリビューターの両方で既に定義されているログイン、アカウント、またはグループの名前だけです。 ドメイン アカウントが使用されるか、ローカル アカウントが両方のサーバーで作成されている場合は、両方のサーバーで定義されています。  
   
- **[削除]**  
+ **Remove**  
  選択されたエントリを一覧から削除します。  
   
  **[すべて削除]**  
@@ -138,14 +139,14 @@ ms.locfileid: "68769978"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでのマージ レプリケーションに対して、Web 同期のプロパティを設定して、サブスクリプションを HTTPS (安全なハイパーテキスト転送プロトコル) 経由で同期できるようにする。 Web 同期を使用するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) サーバーを構成する必要があります。 詳細については、「 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[FTP 経由でスナップショットにアクセス]**  
  **[ファイル転送プロトコル (FTP) を使用したスナップショット ファイルのダウンロードをサブスクライバーに許可する]** を選択し、 **[FTP サーバー名]** 、 **[ポート番号]** 、 **[FTP ルート フォルダーからのパス]** 、 **[ログイン]** 、および **[パスワード]** を指定し、サブスクライバーがスナップショットの配信に FTP を使用できるようにします。  
   
  このオプションを選択すると、サブスクライバーは FTP を使用してスナップショット ファイルを取得できますが、この設定は必須ではありません。 このオプションを選択した場合、サブスクリプションの新規作成ウィザードでは、サブスクライバーがスナップショット ファイルを FTP 経由で取得する設定が既定で有効になります。 設定を変更するには、 **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用します。 サブスクライバーが FTP 経由でスナップショットにアクセスするように設定する場合は、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページで、スナップショット ファイルの場所として FTP フォルダーを指定します。 これにより、スナップショット エージェントは、新しいスナップショットが生成されたときに FTP フォルダー内のファイルを自動的に更新します。 場所を FTP フォルダーに設定していない場合は、新しいスナップショットが生成されたときにファイルを手動で更新する必要があります。 詳細については、「[FTP でのスナップショットの配信](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
  **[Web 同期]**  
- マージ レプリケーションのみです。 **[Web サーバーへの接続による同期をサブスクライバーに許可する]** を選択し、マージ サブスクライバーが Web 同期を使用できるように Web サーバー アドレスを指定します。 Web サーバーは、SSL (Secure Sockets Layer) を使用する必要があります。また、Web アドレスは `https://server.domain.com/synchronize` のように完全修飾である必要があります。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
+ マージ レプリケーションのみです。 **[Web サーバーへの接続による同期をサブスクライバーに許可する]** を選択し、マージ サブスクライバーが Web 同期を使用できるように Web サーバー アドレスを指定します。 Web サーバーでは、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用する必要があります。また、Web アドレスは `https://server.domain.com/synchronize` のように完全修飾である必要があります。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
 
 
 ## <a name="agent-security"></a>エージェント セキュリティ
@@ -159,17 +160,17 @@ ms.locfileid: "68769978"
   
  各エージェントに必要なセキュリティ設定および権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[セキュリティ設定]** または **[エージェントの作成]**  
  エージェント ジョブが作成されている場合、 **[セキュリティ設定]** をクリックして、エージェントのセキュリティ設定を変更できるダイアログ ボックスにアクセスします。 エージェント ジョブが作成されていない場合、 **[エージェントの作成]** をクリックしてエージェントの作成とセキュリティ設定を指定します。  
 
 ## <a name="data-partitions"></a>データ パーティション
 データ パーティション  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   **[パブリケーションのプロパティ]** ダイアログ ボックスの **[データ パーティション]** ページを使用すると、パラメーター化されたフィルタリングを使用するマージ パブリケーションのデータ パーティションを定義できます。 これらのパーティションを定義した後で、パーティションのスナップショットを生成して、サブスクライバーの接続プロパティ (ログイン名やコンピューター名) に基づいて複数のサブスクライバーの初期データセットを提供することができます。 また、サブスクライバーが最初に同期するときにパーティション用のスナップショットがない場合に、スナップショットの配布および生成をサブスクライバーが要求できるように設定することもできます。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
-### <a name="options"></a>オプション  
- **[追加]**  
+### <a name="options"></a>Options  
+ **追加**  
  パーティションを定義するには **[追加]** をクリックします。 **[データ パーティションの追加]** ダイアログ ボックスで、 **HOST_NAME()** や **SUSER_SNAME()** の値を指定し、スナップショットを更新するスケジュールを定義します。  
   
  **[編集]**  
@@ -189,17 +190,17 @@ ms.locfileid: "68769978"
 
 ## <a name="snapshot"></a>スナップショット
 スナップショット  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
-  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページを使用すると、スナップショット形式、スナップショット フォルダーの場所、およびスナップショットのアプリケーションの前後に実行するスクリプトを設定できます。 スナップショット フォルダーは、共有として指定する必要があり、エージェントがフォルダーでファイルを読み書きするための十分な権限を持っている必要があります。 フォルダーの適切なセキュリティ保護の詳細については、「[スナップショット フォルダーのセキュリティ保護](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」を参照してください。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
+  **[パブリケーションのプロパティ]** ダイアログ ボックスの **[スナップショット]** ページを使用すると、スナップショット形式、スナップショット フォルダーの場所、およびスナップショットのアプリケーションの前後に実行するスクリプトを設定できます。 スナップショット フォルダーは、共有として指定する必要があり、エージェントがフォルダーでファイルを読み書きするための十分な権限を持っている必要があります。 フォルダーの適切なセキュリティ保護の詳細については、「[Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
   
 > [!NOTE]  
 >  変更する場合は、パブリケーションの新しいスナップショットが必要です。 詳細については、「[Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>Options  
  **[スナップショットの形式]**  
  スナップショットの形式にネイティブ モードまたはキャラクター モードを選択します。  
   
--   すべてのサブスクライバーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] のインスタンスである場合は、 **[ネイティブ SQL Server - サブスクライバーはすべて SQL Server を実行しているサーバーである必要があります]** を選択します。 ネイティブ スナップショットの形式によってパフォーマンスが最適化されます。    
+-   すべてのサブスクライバーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 以外の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスである場合は、 **[ネイティブ SQL Server - サブスクライバーはすべて SQL Server を実行しているサーバーである必要があります]** を選択します。 ネイティブ スナップショットの形式によってパフォーマンスが最適化されます。    
 -   いずれかのサブスクライバーが **を実行している場合、または** 以外のバージョンのサブスクライバーである場合は、 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [文字 - パブリッシャーまたはサブスクライバーで SQL Server が実行されていない場合は必須][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択します。    
  **[スナップショット ファイルの場所]**  
  スナップショット ファイルを格納する場所を選択します。 既定の場所に格納するか、既定の場所ではなく代替位置に格納したり、既定の場所と代替位置の両方に格納したりできます。 代替位置に格納されたファイルは圧縮できます。  

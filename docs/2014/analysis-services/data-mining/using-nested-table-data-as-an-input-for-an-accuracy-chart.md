@@ -1,5 +1,5 @@
 ---
-title: 精度チャートの入力として入れ子になったテーブルのデータを使用して |Microsoft Docs
+title: 入れ子になったテーブルデータを精度チャートの入力として使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31a3952e98c1d4a7f5dd1e42f6e34a86c0432d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082729"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520139"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>入れ子になったテーブルのデータを精度チャートの入力として使用する方法
   外部データを使用してマイニング モデルの精度をテストする際、マイニング モデルに入れ子になったテーブルが含まれている場合は、外部データにもケース テーブルと関連する入れ子になったテーブルが格納されている必要があります。  
@@ -43,7 +42,7 @@ ms.locfileid: "66082729"
   
 3.  **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
-4.  [参照] ボタンをクリックします **([...])。** を現在のサーバー上のデータ ソース ビューの一覧から外部データ セットを選択します。  
+4.  参照ボタン ([. **..])** をクリックして、現在のサーバー上のデータソースビューの一覧から外部データセットを選択します。  
   
 5.  **[ケース テーブルの選択]** をクリックします。 **[テーブルの選択]** ダイアログ ボックスで、ケース データが含まれているテーブルをデータ ソース ビューから選択し、 **[OK]** をクリックします。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66082729"
      入れ子になったテーブルとケース テーブル間のリレーションシップを変更する必要がある場合は、 **[結合の変更]** をクリックして **[リレーションシップの作成]** ダイアログ ボックスを開きます。  
   
 ## <a name="see-also"></a>参照  
- [モデルのテスト データの選択およびマップ](choose-and-map-model-testing-data.md)   
+ [モデルテストデータを選択してマップする](choose-and-map-model-testing-data.md)   
  [モデルのテスト データへのフィルターの適用](apply-filters-to-model-testing-data.md)  
   
   

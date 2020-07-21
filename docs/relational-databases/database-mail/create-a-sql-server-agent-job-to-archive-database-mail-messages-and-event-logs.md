@@ -1,6 +1,5 @@
 ---
-title: データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成 | Microsoft Docs
-ms.custom: ''
+title: データベース メールのメッセージとイベントをアーカイブする SQL Server エージェント ジョブの作成
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,35 +14,36 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a035483534ec11e2c26c8a35b654d4ee55a025cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 1cc39f3a2a849bd60cda71c5988eeb0cadcd9a88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737596"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   データベース メール メッセージと添付ファイルのコピーは、データベース メール イベント ログに記録されると同時に、 **msdb** のテーブルに保持されます。 このテーブルのサイズを縮小するためには、不要になったメッセージやイベントを定期的にアーカイブする必要があります。 次の手順では、この処理を自動化する SQL Server エージェント ジョブを作成します。  
   
 -   **作業を開始する準備:**  、 [前提条件](#Prerequisites)、 [推奨事項](#Recommendations)、 [権限](#Permissions)  
   
 -   **データベース メール メッセージおよびログをアーカイブする方法:** [SQL Server エージェント](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  アーカイブ データを格納する新しいテーブルが、特別なアーカイブ データベース内にある場合があります。 代わりに、行をテキスト ファイルにエクスポートすることができます。  
    
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  運用環境では、詳細なエラー チェックを追加したり、ジョブが失敗した場合には電子メール メッセージをオペレーターに送信したりする必要があるでしょう。  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  このトピックで説明したストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
   
-###  <a name="Process_Overview"></a> プロセスの概要  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> プロセスの概要  
   
 -   まず、次のステップから構成される "データベース メールのアーカイブ" という名前のジョブを作成します。  
   
@@ -71,8 +71,6 @@ ms.locfileid: "68134459"
 4.  **[カテゴリ]** ボックスで **[データベースのメンテナンス]** をクリックします。  
   
 5.  **[説明]** ボックスに「 **データベース メール メッセージのアーカイブ**」と入力し、 **[ステップ]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  [概要](#Process_Overview)  
   
@@ -210,7 +208,7 @@ ms.locfileid: "68134459"
   
 5.  **[頻度]** 領域で、たとえば毎月 1 回など、定期的にジョブを実行するオプションを選択します。  
   
-6.  **[一日のうちの頻度]** 領域で、 **[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
+6.  **[一日のうちの頻度]** 領域で、 **[1 回: \<time>]** を選択します。  
   
 7.  その他のオプションが目的どおりに構成されていることを確認し、 **[OK]** をクリックしてスケジュールを保存します。  
   

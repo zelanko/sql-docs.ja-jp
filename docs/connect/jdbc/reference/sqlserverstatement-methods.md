@@ -1,5 +1,5 @@
 ---
-title: SQLServerStatement メソッド |Microsoft Docs
+title: SQLServerStatement のメソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de170a1a-fd06-4b70-8749-d86e2e0fb286
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdb999935069a2ae3bd941442c443ced4f289dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d32cc33878000a16170baff738badd4fa46e0a9d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970342"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926973"
 ---
 # <a name="sqlserverstatement-methods"></a>SQLServerStatement メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerStatement のメンバーの詳細については、「 [SQLServerStatement members](../../../connect/jdbc/reference/sqlserverstatement-members.md)」を参照してください。  
+  SQLServerStatement のメンバーの詳細については、「[SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

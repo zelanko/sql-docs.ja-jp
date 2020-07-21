@@ -1,5 +1,5 @@
 ---
-title: 永続化されたデータソースオブジェクト |Microsoft Docs
+title: 保存されるデータ ソース オブジェクト | Microsoft Docs
 description: 保存されるデータ ソース オブジェクト
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015941"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
@@ -27,9 +27,9 @@ ms.locfileid: "68015941"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server は、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートしています。  
+  OLE DB Driver for SQL Server は、**IPersistFile** インターフェイスを通じて、保存されたデータ ソース オブジェクトをサポートしています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A.データ ソースの初期化の保存:**  
   
  次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  
@@ -232,6 +232,6 @@ HRESULT InitFromPersistedDS
  **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
 ## <a name="see-also"></a>参照  
- [データソースオブジェクト&#40;の OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データ ソース オブジェクト &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

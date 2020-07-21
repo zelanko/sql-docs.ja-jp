@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd91cccfdeef2cab9e4fdfae73bc69a996d652fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62912187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013639"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
   サービスの現在の状態を取得または設定します。  
@@ -36,17 +35,17 @@ object
 .State [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サービスの状態を指定する uint32 値。  
   
- 値は、次のいずれかを指定できます。  
+ 値には、次のいずれかを指定できます。  
   
  1  
- 停止中。 サービスが停止します。  
+ 停止中。 サービスが停止しています。  
   
  2  
  開始保留中。 サービスは開始を待機しています。  
@@ -55,7 +54,7 @@ object
  停止保留中。 サービスは停止を待機しています。  
   
  4  
- 実行中です。 サービスは実行中です。  
+ 実行中。 サービスは実行中です。  
   
  5  
  継続保留中。 サービスは継続を待機しています。  
@@ -66,9 +65,9 @@ object
  7  
  一時停止。 サービスは一時停止しています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

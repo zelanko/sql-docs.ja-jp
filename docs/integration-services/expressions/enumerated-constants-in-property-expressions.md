@@ -15,14 +15,14 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 826f96ab6dec92053bc60b58044a21e1377f551c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081054"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297637"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
 
@@ -37,24 +37,24 @@ ms.locfileid: "68081054"
   
  次の各セクションでは、列挙定数について説明します。  
   
- [[パッケージ]](#Package)  
+ [Package](#Package)  
   
  [Foreach ループ列挙子](#Foreach)  
   
- [処理手順](#Tasks)  
+ [タスク](#Tasks)  
   
  [メンテナンス プランのタスク](#MaintenancePlanTasks)  
   
- [共通プロパティ](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> [パッケージ]  
+##  <a name="package"></a><a name="Package"></a> [パッケージ]  
  次の表は、列挙子からの値を使用して設定する、パッケージのプロパティの表示名とそれに対応する数値を示します。  
   
  **PackageType** プロパティ - **DTSPackageType** 列挙子の値を使用して設定されます。  
   
 |DTSPackageType の表示名|数値|  
 |-------------------------------------|-------------------|  
-|既定|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -65,19 +65,19 @@ ms.locfileid: "68081054"
   
 |DTSCheckpointUsage の表示名|数値|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|なし|0|  
 |IfExists|1|  
-|毎回|2|  
+|Always (常に)|2|  
   
  **PackagePriorityClass** プロパティ - **DTSPriorityClass** 列挙子の値を使用して設定されます。  
   
 |DTSPriorityClass の表示名|数値|  
 |---------------------------------------|-------------------|  
-|既定|0|  
+|Default|0|  
 |AboveNormal|1|  
-|標準|2|  
+|Normal|2|  
 |BelowNormal|3|  
-|Idle|4|  
+|アイドル|4|  
   
  **ProtectionLevel** プロパティ - **DTSProtectionLevel** 列挙子の値を使用して設定されます。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68081054"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> 優先順位制約  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> 優先順位制約  
  **EvalOp** プロパティ - **DTSPrecedenceEvalOp** 列挙子の値を使用して設定されます。  
   
 |DTSPrecedenceEvalOp の表示名|数値|  
@@ -102,14 +102,14 @@ ms.locfileid: "68081054"
   
  **Value** プロパティ - **DTSExecResult** 列挙子の値を使用して設定されます。  
   
-|表示名|数値|  
+|フレンドリ名|数値|  
 |-------------------|-------------------|  
-|成功|0|  
-|失敗|1|  
+|Success|0|  
+|障害|1|  
 |Completion|2|  
 |Canceled|3|  
   
-##  <a name="Foreach"></a> Foreach ループ列挙子  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Foreach ループ列挙子  
  Foreach ループには、プロパティ式で設定できるプロパティを含む一連の列挙子があります。  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach ADO 列挙子  
@@ -134,7 +134,7 @@ ms.locfileid: "68081054"
   
 |EnumerationType の表示名|数値|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|ナビゲーター|0|  
 |ノード|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,11 +143,11 @@ ms.locfileid: "68081054"
   
 |InnerElementType の表示名|数値|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|ナビゲーター|0|  
 |ノード|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> 処理手順  
+##  <a name="tasks"></a><a name="Tasks"></a> 処理手順  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、プロパティ式で設定できるプロパティを含む多くのタスクが含まれています。  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク  
@@ -207,8 +207,8 @@ ms.locfileid: "68081054"
   
 |DTSFileSystemAttributes の表示名|数値|  
 |----------------------------------------------|-------------------|  
-|標準|0|  
-|Archive|1|  
+|Normal|0|  
+|アーカイブ|1|  
 |[非表示]|2|  
 |ReadOnly|4|  
 |システム|8|  
@@ -219,7 +219,7 @@ ms.locfileid: "68081054"
 |DTSFTPOp の表示名|数値|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|受信|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -267,15 +267,15 @@ ms.locfileid: "68081054"
 |MailPriority の表示名|数値|  
 |-----------------------------------|-------------------|  
 |高|1|  
-|標準|3|  
-|Low|5|  
+|Normal|3|  
+|低|5|  
   
 ### <a name="transfer-database-task"></a>データベース転送タスク  
  **Action** プロパティ - **TransferAction** 列挙子の値を使用して設定されます。  
   
 |TransferAction の表示名|数値|  
 |-------------------------------------|-------------------|  
-|[コピー]|0|  
+|コピー|0|  
 |[詳細ビュー]|1|  
   
  **Method** プロパティ - **TransferMethod** 列挙子の値を使用して設定されます。  
@@ -334,8 +334,8 @@ ms.locfileid: "68081054"
   
 |ExistingData の表示名|数値|  
 |-----------------------------------|-------------------|  
-|[置換]|0|  
-|追加|1|  
+|Replace|0|  
+|Append|1|  
   
 ### <a name="web-service-task"></a>Web サービス タスク  
  **OutputType** プロパティ - **DTSOutputType** 列挙子の値を使用して設定されます。  
@@ -420,12 +420,12 @@ ms.locfileid: "68081054"
   
 |DTSXMLOperation の表示名|数値|  
 |--------------------------------------|-------------------|  
-|[検証]|0|  
+|検証|0|  
 |XSLT (XSLT)|1|  
 |[XPath]|2|  
 |Merge|3|  
 |[Diff]|4|  
-|[Patch]|5|  
+|修正プログラム|5|  
   
  **SourceType**、**SecondOperandType**、および **XPathSourceType** プロパティ - **DTSXMLSourceType** 列挙子の値を使用して設定されます。  
   
@@ -453,7 +453,7 @@ ms.locfileid: "68081054"
   
 |DTSXMLXPathOperation の表示名|数値|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|評価|0|  
 |値|1|  
 |NodeList|2|  
   
@@ -476,10 +476,10 @@ ms.locfileid: "68081054"
 |DTSXMLDiffAlgorithm の表示名|数値|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|[高速]|1|  
+|速い|1|  
 |[詳細]|2|  
   
-##  <a name="MaintenancePlanTasks"></a> メンテナンス プランのタスク  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> メンテナンス プランのタスク  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、メンテナンス プランおよび [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ用の SQL Server タスクを実行する一連のタスクが含まれています。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、プログラムによるこれらのタスクの操作がサポートされていません。また、プログラミング リファレンス ドキュメントには、これらのタスクとその列挙子に関する API ドキュメントが含まれていません。  
@@ -494,8 +494,8 @@ ms.locfileid: "68081054"
 |なし|0|  
 |All|1|  
 |システム|2|  
-|ユーザー|3|  
-|Specific|4|  
+|User|3|  
+|固有|4|  
   
  **TableSelectionType** プロパティ - **TableSelection** 列挙子の値を使用して設定されます。  
   
@@ -503,7 +503,7 @@ ms.locfileid: "68081054"
 |-------------------------------------|-------------------|  
 |なし|0|  
 |All|1|  
-|Specific|2|  
+|固有|2|  
   
  **ObjectTypeSelection** プロパティ - **ObjectType** 列挙子の値を使用して設定されます。  
   
@@ -519,13 +519,13 @@ ms.locfileid: "68081054"
 |DestinationType の表示名|数値|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|手動|1|  
+|マニュアル|1|  
   
  **ExistingBackupsAction** プロパティ - **ActionForExistingBackups** 列挙子の値を使用して設定されます。  
   
 |ActionForExistingBackups の表示名|数値|  
 |-----------------------------------------------|-------------------|  
-|追加|0|  
+|Append|0|  
 |Overwrite|1|  
   
  **BackupAction** プロパティ - **BackupTaskType** 列挙子の値を使用して設定されます。 このプロパティは、タスクで実行されるバックアップの種類を定義する際に、 **BackupIsIncremental** プロパティと合わせて使用します。  
@@ -533,8 +533,8 @@ ms.locfileid: "68081054"
 |BackupTaskType の表示名|数値|  
 |-------------------------------------|-------------------|  
 |データベース|0|  
-|[ファイル]|1|  
-|Log|2|  
+|ファイル|1|  
+|ログ|2|  
   
  **BackupDevice** プロパティ - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の **DeviceType** 列挙子の値を使用して設定されます。  
   
@@ -568,11 +568,11 @@ ms.locfileid: "68081054"
   
 |StatisticsTarget の表示名|数値|  
 |---------------------------------------|-------------------|  
-|[列]|1|  
+|列|1|  
 |インデックス|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> 共通プロパティ  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> 共通プロパティ  
  パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、およびシーケンス コンテナーでは、次の列挙子を使用して、指定されたプロパティを設定できます。  
   
  **ForceExecutionResult** プロパティ - **DTSForcedExecResult** 列挙子の値を使用して設定されます。  
@@ -580,8 +580,8 @@ ms.locfileid: "68081054"
 |DTSForcedExecResult の表示名|数値|  
 |------------------------------------------|-------------------|  
 |なし|-1|  
-|成功|0|  
-|失敗|1|  
+|Success|0|  
+|障害|1|  
 |Completion|2|  
   
  **IsolationLevel** プロパティ - .NET Framework **IsolationLevel** 列挙子の値を使用して設定されます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink?LinkId=17313)の .NET Framework クラス ライブラリを参照してください。  
@@ -592,15 +592,15 @@ ms.locfileid: "68081054"
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
 |有効|1|  
-|Disabled|2|  
+|無効|2|  
   
  **TransactionOption** プロパティ - **DTSTransactionOption** 列挙子の値を使用して設定されます。  
   
 |DTSTransactionOption の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Supported|1|  
-|Required|2|  
+|サポートされています|1|  
+|必須|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [プロパティ式を追加または変更する](../../integration-services/expressions/add-or-change-a-property-expression.md)  

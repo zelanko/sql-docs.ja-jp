@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 92abee758d5eda99aebddc874550eb9cd2e87ca5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d66be3ee4f5d4a5eb7237dbec55160b4d263d626
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767613"
 ---
 # <a name="snapshot-folder"></a>[スナップショット フォルダー]
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ディストリビューションの構成ウィザードとパブリケーションの新規作成ウィザードには、 **[スナップショット フォルダー]** ページが表示されます。 このウィザードで有効にしたすべてのパブリッシャーでは、このページで指定したスナップショット フォルダーの場所が既定で使用されます (後から **[ディストリビューターのプロパティ]** ダイアログ ボックスを使用して有効にしたパブリッシャーには、この既定のスナップショット フォルダーが適用されません)。 ディストリビューションの構成ウィザードまたは **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで、この既定をオーバーライドできます。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68769510"
 Azure SQL Database マネージド インスタンスの場合、スナップショット フォルダーは Azure ファイル共有である必要があります。 
   
 ## <a name="options"></a>オプション  
- **Snapshot folder**  
+ **[スナップショット フォルダー]**  
  スナップショット ファイルを保存するフォルダーのパスを入力します。  
   
 > [!NOTE]  

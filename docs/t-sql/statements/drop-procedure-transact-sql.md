@@ -25,15 +25,15 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9b03115c8dd424d5ce21fadcb74157958b16088
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044030"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009246"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1 つ以上のストアド プロシージャまたはプロシージャ グループを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の現在のデータベースから削除します。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "68044030"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```sql  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  
@@ -76,7 +76,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ### <a name="permissions"></a>アクセス許可  
  プロシージャの **CONTROL** 権限か、プロシージャが属しているスキーマに対する **ALTER** 権限、または **db_ddladmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のデータベースから `dbo.uspMyProc` ストアド プロシージャを削除します。  
   
 ```  

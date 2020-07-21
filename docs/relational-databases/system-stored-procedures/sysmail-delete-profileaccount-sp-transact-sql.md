@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_delete_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf2e5f7e05286da23f4bccc94d1017f00cb7db70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27568d450bed5a937931164ed1c04cd09d0b7c2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909196"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890936"
 ---
-# <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース メール プロファイルからアカウントを削除します。  
   
@@ -40,13 +40,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id` 削除するプロファイルのプロファイル ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定することがあります。  
+`[ @profile_id = ] profile_id`削除するプロファイルのプロファイル ID。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定できます。  
   
-`[ @profile_name = ] 'profile_name'` 削除するプロファイルのプロファイル名。 *profile_name*は**sysname**、既定値は NULL です。 いずれか、 *profile_id*または*profile_name*指定することがあります。  
+`[ @profile_name = ] 'profile_name'`削除するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定できます。  
   
-`[ @account_id = ] account_id` 削除するアカウント ID。 *account_id*は**int**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定することがあります。  
+`[ @account_id = ] account_id`削除するアカウント ID。 *account_id*は**int**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定できます。  
   
-`[ @account_name = ] 'account_name'` 削除するアカウントの名前。 *account_name*は**sysname**、既定値は NULL です。 いずれか、 *account_id*または*account_name*指定することがあります。  
+`[ @account_name = ] 'account_name'`削除するアカウントの名前を指定します。 *account_name*は**sysname**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -54,17 +54,17 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- 指定されたプロファイルで指定されたアカウントが関連付けられていない場合は、エラーを返します。  
+## <a name="remarks"></a>解説  
+ 指定されたアカウントが、指定されたプロファイルに関連付けられていない場合、エラーを返します。  
   
  アカウントを指定し、プロファイルを指定しなかった場合、このストアド プロシージャでは指定したアカウントがすべてのプロファイルから削除されます。 たとえば、既存の SMTP サーバーをシャットダウンする前に、その SMTP サーバーを使用しているアカウントを各プロファイルから個別に削除するのではなく、すべてのプロファイルからまとめて削除できます。  
   
- プロファイルを指定し、アカウントを指定しなかった場合、このストアド プロシージャでは指定したプロファイルからすべてのアカウントが削除されます。 例: SMTP サーバーを変更する場合は、プロファイルが使用して、プロファイルからすべてのアカウントを削除し、必要に応じて新しいアカウントを追加する便利な場合があります。  
+ プロファイルを指定し、アカウントを指定しなかった場合、このストアド プロシージャでは指定したプロファイルからすべてのアカウントが削除されます。 たとえば、プロファイルで使用する SMTP サーバーを変更する場合は、プロファイルからすべてのアカウントを削除し、必要に応じて新しいアカウントを追加すると便利な場合があります。  
   
- ストアド プロシージャ**sysmail_delete_profileaccount_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_delete_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
  次の例では、プロファイルの `Audit Account` からアカウントの `AdventureWorks Administrator` を削除します。  
@@ -77,8 +77,8 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

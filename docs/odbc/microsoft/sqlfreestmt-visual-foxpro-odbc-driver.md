@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 824942890ef8f6c7a301cc3befddb483ba3cc8be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31276137735c6934ae6940c038e3cdaada3241b0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053699"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298642"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:コア レベル  
+ ODBC API の準拠: コアレベル  
   
- 関連付けられた特定の処理を停止する*hstmt*に関連付けられている開いているカーソルを閉じ、 *hstmt*、保留中の結果を破棄し、必要に応じて、ステートメントに関連付けられたすべてのリソースを解放処理します。  
+ 特定の*hstmt*に関連付けられている処理を停止し、その*hstmt*に関連付けられている開いているカーソルを閉じ、保留中の結果を破棄し、オプションでステートメントハンドルに関連付けられているすべてのリソースを解放します。  
   
- 詳細については、次を参照してください。 [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) 」を参照してください。

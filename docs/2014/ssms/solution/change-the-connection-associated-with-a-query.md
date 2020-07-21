@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73353f0d8d00d27e2a03d87f603d2859fc8d38d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62955820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066324"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>クエリに関連付けられた接続の変更
   クエリで使用する接続を変更することにより、クエリを複数の異なるサーバーまたはデータベースに対して実行することができます。  
@@ -31,9 +30,9 @@ ms.locfileid: "62955820"
   
 2.  **[データベース エンジンへの接続]** ダイアログ ボックスで、新しい接続情報を入力し、 **[接続]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [プロジェクト内の接続とクエリを関連付け](associate-a-query-with-a-connection-in-a-project.md)   
+## <a name="see-also"></a>参照  
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [クエリをプロジェクト内の接続に関連付ける](associate-a-query-with-a-connection-in-a-project.md)   
  [プロジェクト内の接続のプロパティを表示または変更する方法](view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
   

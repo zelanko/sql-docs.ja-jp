@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergeconflictrows (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergeconflictrows (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893577"
 ---
-# <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定された競合テーブルの行を返します。 このストアド プロシージャは、競合テーブルが格納されているコンピューターで実行されます。  
+  指定された競合テーブルの行を返します。 このストアドプロシージャは、競合テーブルが格納されているコンピューター上で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,39 +41,39 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 パブリケーションが指定されている場合、パブリケーションにすべての競合が返されます。 たとえば場合、 **MSmerge_conflict_Customers**テーブルが競合する行を**WA**と**CA**パブリケーション、パブリケーション名を渡して**CA**に関連する競合の取得、 **CA**パブリケーション。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*の**sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。 たとえば、 **MSmerge_conflict_Customers**テーブルに**WA**および**ca**パブリケーションの競合行がある場合、パブリケーション名**ca**を渡すと、 **ca**パブリケーションに関連する競合が取得されます。  
   
-`[ @conflict_table = ] 'conflict_table'` 競合テーブルの名前です。 *conflict_table*は**sysname**、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンで競合テーブルの名前付け形式名の使用**MSmerge_conflict\__パブリケーション\_記事_** でパブリッシュされたアーティクルごとに 1 つのテーブル。  
+`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**であり、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **MSmerge_conflict \_ _パブリケーション \_ アーティクル_** での形式名を使用して付けられます。  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。*publisher_db*は**sysname**、既定値は NULL です。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。*publisher_db*は**sysname**,、既定値は NULL です。  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts` 結果セットが論理レコードの競合に関する情報を含むかどうかを示します。 *logical_record_conflicts*は**int**既定値は 0 です。 **1**論理レコードの競合情報が返されることを意味します。  
+`[ @logical_record_conflicts = ] logical_record_conflicts`結果セットに論理レコードの競合に関する情報が含まれているかどうかを示します。 *logical_record_conflicts*は**int**,、既定値は0です。 **1**は、論理レコードの競合情報が返されることを意味します。  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_helpmergeconflictrows**結果ベース テーブルの構造とこれらの列で構成されるセットを返します。  
+ **sp_helpmergeconflictrows**は、ベーステーブル構造とこれらの追加列で構成される結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar(255)**|競合の元。|  
-|**conflict_type**|**int**|競合のタイプを示すコード。<br /><br /> **1** = 更新の競合。行レベルで競合が検出されています。<br /><br /> **2** = 列更新の競合。列レベルで検出された競合します。<br /><br /> **3** = update 削除が優先される競合。削除が優先されます。<br /><br /> **4** = update Wins 削除の競合。競合を避けるに削除された rowguid が、このテーブルに記録されます。<br /><br /> **5** = 挿入のアップロードに失敗しました。パブリッシャーでサブスクライバーからの挿入を適用できませんでした。<br /><br /> **6** = 挿入のダウンロードに失敗しました。サブスクライバーでパブリッシャーからの挿入を適用できませんでした。<br /><br /> **7** = 削除のアップロードに失敗しました。サブスクライバーでの削除をパブリッシャーにアップロードされませんでした。<br /><br /> **8** = 削除のダウンロードに失敗しました。パブリッシャーでの削除がサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = アップロードを更新できませんでした。サブスクライバーで更新プログラムをパブリッシャー側で適用されませんでした。<br /><br /> **10** = 更新のダウンロードに失敗しました。パブリッシャーでの更新をサブスクライバーに適用されませんでした。<br /><br /> **12** = 論理レコードの更新の Wins の削除。競合を避ける削除された論理レコードは、このテーブルに記録されます。<br /><br /> **13** = 論理レコード競合挿入の更新。更新プログラムを論理レコードの競合を挿入します。<br /><br /> **14** = 論理レコードの削除が優先される更新競合。競合を避ける更新された論理レコードは、このテーブルに記録されます。|  
-|**reason_code**|**int**|状況依存エラー コード。|  
-|**reason_text**|**varchar(720)**|状況依存エラーの説明。|  
-|**pubid**|**uniqueidentifier**|パブリケーションの識別子です。|  
+|**origin_datasource**|**varchar(255)**|競合の発生元。|  
+|**conflict_type**|**int**|競合のタイプを示すコード。<br /><br /> **1** = 更新の競合: 行レベルで競合が検出されます。<br /><br /> **2** = 列更新の競合: 列レベルで競合が検出されました。<br /><br /> **3** = 更新の削除 Wins の競合: 削除によって競合が優先されます。<br /><br /> **4** = 更新 Wins 削除の競合: 競合が失われた削除済みの rowguid がこのテーブルに記録されます。<br /><br /> **5** = 挿入のアップロードに失敗しました: サブスクライバーからの挿入をパブリッシャーで適用できませんでした。<br /><br /> **6** = ダウンロードの挿入に失敗しました: パブリッシャーからの挿入をサブスクライバーで適用できませんでした。<br /><br /> **7** = 削除のアップロードに失敗しました: サブスクライバーでの削除をパブリッシャーにアップロードできませんでした。<br /><br /> **8** = 削除のダウンロードに失敗: パブリッシャーでの削除をサブスクライバーにダウンロードできませんでした。<br /><br /> **9** = 更新のアップロードに失敗しました: サブスクライバーでの更新をパブリッシャーで適用できませんでした。<br /><br /> **10** = 更新のダウンロードに失敗しました: パブリッシャーでの更新をサブスクライバーに適用できませんでした。<br /><br /> **12** = 論理レコードの更新による Wins の削除: 競合が失われた削除された論理レコードがこのテーブルに記録されます。<br /><br /> **13** = 論理レコードの競合の挿入更新: 論理レコードへの挿入が更新と競合しています。<br /><br /> **14** = 論理レコードの削除 Wins 更新の競合: 競合が失われる更新された論理レコードがこのテーブルに記録されます。|  
+|**reason_code**|**int**|状況に依存する可能性があるエラーコード。|  
+|**reason_text**|**varchar (720)**|状況依存のエラーの説明。|  
+|**pubid**|**uniqueidentifier**|パブリケーション識別子。|  
 |**MSrepl_create_time**|**datetime**|競合情報が追加された時刻。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_helpmergeconflictrows**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpmergeconflictrows**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーだけ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、および**replmonitor** を実行できるは、ディストリビューションデータベースでロール**sp_helpmergeconflictrows**します。  
+ **Sp_helpmergeconflictrows**を実行できるのは、固定サーバーロール**sysadmin** 、 **db_owner**固定データベースロールのメンバー、およびディストリビューションデータベースの**replmonitor**ロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [マージ パブリケーションの競合情報の表示&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [マージパブリケーションの競合情報を表示 &#40;レプリケーション Transact-sql プログラミング&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

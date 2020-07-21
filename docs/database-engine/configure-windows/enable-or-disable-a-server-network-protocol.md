@@ -1,5 +1,6 @@
 ---
 title: サーバー ネットワーク プロトコルの有効化または無効化 | Microsoft Docs
+description: サーバー ネットワーク プロトコルを有効または無効にする方法について説明します。 SQL Server 構成マネージャーまたは PowerShell を使用してこのタスクを行う方法を説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b63c205a6953a751507abdd67abb229b5f15387
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772501"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   すべてのネットワーク プロトコルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってインストールされますが、必ずしも有効になっているとは限りません。 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは PowerShell を使用してサーバー ネットワーク プロトコルを有効または無効にする方法について説明します。 変更を有効にするために [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止し、再起動する必要があります。  
   
 > [!IMPORTANT]  
@@ -45,21 +46,21 @@ ms.locfileid: "68011817"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   
 #### <a name="to-enable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルを有効にするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
   
-2.  コンソール ペインで、 **[** _\<インスタンス名> のプロトコル]_ をクリックします。  
+2.  コンソール ペインで、 **[** _\<instance name> のプロトコル]_ をクリックします。  
   
 3.  詳細ペインで、変更するプロトコルを右クリックし、 **[有効化]** または **[無効化]** をクリックします。  
   
-4.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
+4.  コンソール ペインで、 **[再起動]** をクリックします。  
   
-5.  詳細ペインで **[SQL Server (** _\<インスタンス名>_ **)]** を右クリックします。次に、 **[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止し、再起動します。  
+5.  詳細ペインで、 **[SQL Server (** _\<instance name>_ **)]** を右クリックします。 **[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止し、再起動します。  
   
-##  <a name="PowerShellProcedure"></a> SQL Server PowerShell の使用  
+##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> SQL Server PowerShell の使用  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>PowerShell を使用してサーバー ネットワーク プロトコルを有効にするには  
   

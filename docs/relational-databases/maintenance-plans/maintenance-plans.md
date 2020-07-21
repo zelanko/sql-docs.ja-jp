@@ -1,5 +1,6 @@
 ---
 title: メンテナンス プラン | Microsoft Docs
+description: SQL Server データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なワークフローを作成するメンテナンス プランについて説明します。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789458"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   メンテナンス プランでは、データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なタスクのワークフローを作成します。 メンテナンス プラン ウィザードでも主要なメンテナンス プランを作成できますが、プランを手動で作成するとより柔軟性が高くなります。  
   
 ## <a name="benefits-of-maintenance-plans"></a>メンテナンス プランの利点  
@@ -45,7 +46,7 @@ ms.locfileid: "68115877"
 ## <a name="maintenance-plan-functionality"></a>メンテナンス プランの機能  
  メンテナンス プランは、次のタスクを実行するように作成できます。  
   
--   新しい FILL FACTOR を使用してインデックスを再構築し、データ ページとインデックス ページのデータを再編成します。 この再構築によって、データ量と空き領域がすべてのデータベース ページに均等に分配されます。 また、その後の拡張を高速化できます。 詳細については、「[インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
+-   新しい FILL FACTOR を使用してインデックスを再構築し、データ ページとインデックス ページのデータを再編成します。 この再構築によって、データ量と空き領域がすべてのデータベース ページに均等に分配されます。 また、その後の拡張を高速化できます。 詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
 -   空のデータベース ページを削除してデータ ファイルを圧縮します。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68115877"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |**Agent XP** サーバー構成オプションを構成し、SQL Server エージェントの拡張ストアド プロシージャを有効にします。|[Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |メンテナンス プラン デザイン画面を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

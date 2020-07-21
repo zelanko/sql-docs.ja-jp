@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4788e7696b9bb986ab5a16fb2fea618d0b996cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fda701ce7c4ffa092725772e41265eadc522352e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62938607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010134"
 ---
-# <a name="mssqleng020574"></a>MSSQL_ENG020574
+# <a name="mssql_eng020574"></a>MSSQL_ENG020574
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62938607"
  サブスクライバーのデータがパブリッシャーのデータに対して検証され、データが一致しなかったため検証に失敗しました。 検証の詳細については、「 [Validate Replicated Data](validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 次のように対処することをお勧めします。  
+ 次を実行することをお勧めします。  
   
 -   検証に失敗した原因を確認します。  
   

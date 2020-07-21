@@ -1,83 +1,86 @@
 ---
-title: 'チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140938"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257029"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する
+
 このチュートリアルでは、SQL Server のコード分析ルールを作成する手順について説明します。 このチュートリアルで作成するルールは、ストアド プロシージャ、トリガー、および関数で WAITFOR DELAY ステートメントを回避する場合に使用します。  
   
 このチュートリアルでは、次の手順を使用して、Transact\-SQL の静的コード分析のカスタム ルールを作成します。  
   
-1.  クラス ライブラリを作成し、そのプロジェクトの署名を有効にして、必要な参照を追加します。  
+1. クラス ライブラリを作成し、そのプロジェクトの署名を有効にして、必要な参照を追加します。  
   
-2.  Visual C\# のカスタム ルール クラスを作成します。  
+2. Visual C\# のカスタム ルール クラスを作成します。  
   
-3.  2 つのヘルパー Visual C\# クラスを作成します。  
+3. 2 つのヘルパー Visual C\# クラスを作成します。  
   
-4.  作成した結果の DLL をインストールするには、Extensions ディレクトリにコピーします。  
+4. 作成した結果の DLL をインストールするには、Extensions ディレクトリにコピーします。  
   
-5.  新しいコード分析ルールが設定されていることを確認します。  
+5. 新しいコード分析ルールが設定されていることを確認します。  
   
-**前提条件**  
+**前提条件**
   
 このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Visual C\# または Visual Basic の開発をサポートする、SQL Server Data Tools を含む Visual Studio のバージョンがインストールされていること。  
+- Visual C\# または Visual Basic の開発をサポートする、SQL Server Data Tools を含む Visual Studio のバージョンがインストールされていること。  
   
--   SQL Server オブジェクトを含む SQL Server プロジェクト。  
+- SQL Server オブジェクトを含む SQL Server プロジェクト。  
   
--   データベース プロジェクトを配置できる SQL Server のインスタンス。  
+- データベース プロジェクトを配置できる SQL Server のインスタンス。  
   
 > [!NOTE]  
 > このチュートリアルは、既に SQL Server Data Tools の SQL Server 機能を使い慣れているユーザーを対象としています。 また、クラス ライブラリの作成方法、コード エディターを使用してクラスにコードを追加する方法など、Visual Studio の概念を理解している必要があります。  
   
 ## <a name="creating-a-custom-code-analysis-rule-for-sql-server"></a>SQL Server のカスタム コード分析ルールを作成する  
+
 まずクラス ライブラリを作成します。 クラス ライブラリ プロジェクトを作成するには、次の操作を行います。  
   
-1.  SampleRules という名前の Visual C\# または Visual Basic のクラス ライブラリ プロジェクトを作成します。  
+1. SampleRules という名前の Visual C\# または Visual Basic のクラス ライブラリ プロジェクトを作成します。  
   
-2.  ファイル Class1.cs の名前を AvoidWaitForDelayRule.cs に変更します。  
+2. ファイル Class1.cs の名前を AvoidWaitForDelayRule.cs に変更します。  
   
-3.  ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。  
+3. ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。  
   
-4.  [フレームワーク] タブで [System.ComponentModel.Composition] を選択します。  
+4. [フレームワーク] タブで [System.ComponentModel.Composition] を選択します。  
   
-5.  **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies ディレクトリに移動して、Microsoft.SqlServer.TransactSql.ScriptDom.dll を選択します。次に、[OK] をクリックします。  
+5. **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies ディレクトリに移動して、Microsoft.SqlServer.TransactSql.ScriptDom.dll を選択します。次に、[OK] をクリックします。  
   
-6.  次に、必要な DACFx 参照をインストールします。 **[参照]** をクリックし、<Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 ディレクトリに移動します。 Microsoft.SqlServer.Dac.dll、Microsoft.SqlServer.Dac.Extensions.dll、および Microsoft.Data.Tools.Schema.Sql.dll の各エントリを選択し、 **[追加]** 、 **[OK]** の順にクリックします。  
+6. 次に、必要な DACFx 参照をインストールします。 **[参照]** をクリックし、<Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 ディレクトリに移動します。 Microsoft.SqlServer.Dac.dll、Microsoft.SqlServer.Dac.Extensions.dll、および Microsoft.Data.Tools.Schema.Sql.dll の各エントリを選択し、 **[追加]** 、 **[OK]** の順にクリックします。  
   
     これで、DACFx バイナリが Visual Studio インストール ディレクトリ内にインストールされます。 Visual Studio 2012 の場合、通常、<Visual Studio Install Dir> は C:\Program Files (x86)\\MicrosoftVisual Studio 11.0 になります。 Visual Studio 2013 の場合、通常は C:\Program Files (x86)\\MicrosoftVisual Studio 12.0 です。  
   
 次に、ルールに使用するサポート クラスを追加します。  
   
-## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>カスタム コード分析ルールのサポート クラスを作成する  
+## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>カスタム コード分析ルールのサポート クラスを作成する
+
 ルール用のクラスを作成する前に、ビジター クラスと属性クラスをプロジェクトに追加します。 これらのクラスは、追加のカスタム ルールを作成するときに便利なことがあります。  
   
-最初に定義する必要があるクラスは、WaitForDelayVisitor クラスです。このクラスは、[TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) から派生します。 このクラスを使用すると、モデル内の WAITFOR DELAY ステートメントにアクセスできます。 ビジター クラスは、SQL Server で提供される [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を利用します。 この API の Transact\-SQL コードは、抽象構文ツリー (AST) として表されます。ビジター クラスは、WAITFORDELAY ステートメントなど、特定の構文オブジェクトを探すときに便利です。 構文オブジェクトは、特定のオブジェクト プロパティや関係に関連付けられていないので、オブジェクト モデルを使用して見つけるのは難しいことがありますが、ビジター パターンと [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を使用すると、簡単に見つかります。  
+最初に定義する必要があるクラスは、WaitForDelayVisitor クラスです。このクラスは、[TSqlConcreteFragmentVisitor](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor) から派生します。 このクラスを使用すると、モデル内の WAITFOR DELAY ステートメントにアクセスできます。 ビジター クラスは、SQL Server で提供される [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を利用します。 この API の Transact\-SQL コードは、抽象構文ツリー (AST) として表されます。ビジター クラスは、WAITFORDELAY ステートメントなど、特定の構文オブジェクトを探すときに便利です。 構文オブジェクトは、特定のオブジェクト プロパティや関係に関連付けられていないので、オブジェクト モデルを使用して見つけるのは難しいことがありますが、ビジター パターンと [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) API を使用すると、簡単に見つかります。  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>WaitForDelayVisitor クラスを定義する  
   
-1.  **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
+1. **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2. **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  **[名前]** テキスト ボックスに「WaitForDelayVisitor.cs」と入力し、 **[追加]** ボタンをクリックします。 WaitForDelayVisitor.cs ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
+3. **[名前]** テキスト ボックスに「WaitForDelayVisitor.cs」と入力し、 **[追加]** ボタンをクリックします。 WaitForDelayVisitor.cs ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
   
-4.  WaitForDelayVisitor.cs ファイルを開き、次のコードに合わせて内容を更新します。  
+4. WaitForDelayVisitor.cs ファイルを開き、次のコードに合わせて内容を更新します。  
   
     ```  
     using System.Collections.Generic;  
@@ -87,19 +90,19 @@ ms.locfileid: "68140938"
     }  
     ```  
   
-5.  クラス宣言で、アクセス修飾子を internal に変更し、TSqlConcreteFragmentVisitor からクラスを派生させます。  
+5. クラス宣言で、アクセス修飾子を internal に変更し、TSqlConcreteFragmentVisitor からクラスを派生させます。  
   
     ```  
     internal class WaitForDelayVisitor : TSqlConcreteFragmentVisitor {}  
     ```  
   
-6.  次のコードを追加して、List メンバー変数を定義します。  
+6. 次のコードを追加して、List メンバー変数を定義します。  
   
     ```  
     public IList<WaitForStatement> WaitForDelayStatements { get; private set; }  
     ```  
   
-7.  次のコードを追加して、クラス コンストラクターを定義します。  
+7. 次のコードを追加して、クラス コンストラクターを定義します。  
   
     ```  
     public WaitForDelayVisitor() {  
@@ -107,7 +110,7 @@ ms.locfileid: "68140938"
     }  
     ```  
   
-8.  次のコードを追加して、ExplicitVisit メソッドをオーバーライドします。  
+8. 次のコードを追加して、ExplicitVisit メソッドをオーバーライドします。  
   
     ```  
     public override void ExplicitVisit(WaitForStatement node) {  
@@ -125,13 +128,13 @@ ms.locfileid: "68140938"
   
 ### <a name="defining-the-localizedexportcodeanalysisruleattribute-class"></a>LocalizedExportCodeAnalysisRuleAttribute クラスを定義する  
   
-1.  **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
+1. **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2. **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  **[名前]** テキスト ボックスに「LocalizedExportCodeAnalysisRuleAttribute.cs」と入力し、 **[追加]** ボタンをクリックします。 ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
+3. **[名前]** テキスト ボックスに「LocalizedExportCodeAnalysisRuleAttribute.cs」と入力し、 **[追加]** ボタンをクリックします。 ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
   
-4.  ファイルを開き、次のコードに合わせて内容を更新します。  
+4. ファイルを開き、次のコードに合わせて内容を更新します。  
   
     ```  
     using Microsoft.SqlServer.Dac.CodeAnalysis;  
@@ -237,38 +240,38 @@ ms.locfileid: "68140938"
   
 ### <a name="to-add-a-resource-file-and-three-resource-strings"></a>リソース ファイルと 3 つのリソース文字列を追加するには  
   
-1.  **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
+1. **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューで、 **[新しい項目の追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2. **[プロジェクト]** メニューで、 **[新しい項目の追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  **[インストールされたテンプレート]** の一覧で、 **[全般]** をクリックします。  
+3. **[インストールされたテンプレート]** の一覧で、 **[全般]** をクリックします。  
   
-4.  詳細ウィンドウの **[リソース ファイル]** をクリックします。  
+4. 詳細ウィンドウの **[リソース ファイル]** をクリックします。  
   
-5.  **[名前]** に「RuleResources.resx」と入力します。 リソースが定義されていないリソース エディターが表示されます。  
+5. **[名前]** に「RuleResources.resx」と入力します。 リソースが定義されていないリソース エディターが表示されます。  
   
-6.  次のように、4 つのリソース文字列を定義します。  
+6. 次のように、4 つのリソース文字列を定義します。  
   
-    |[オブジェクト名]|[値]|  
+    |名前|値|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|WAITFOR DELAY ステートメントは {0} にありました。|  
     |AvoidWaitForDelay_RuleName|ストアド プロシージャ、関数、およびトリガーで WaitFor Delay ステートメントの使用を回避します。|  
     |CategorySamples|SamplesCategory|  
     |CannotCreateResourceManager|{1} から {0} の ResourceManager は作成できません。|  
   
-7.  **[ファイル]** メニューで、 **[RuleResources.resx の保存]** をクリックします。  
+7. **[ファイル]** メニューで、 **[RuleResources.resx の保存]** をクリックします。  
   
 次に、ユーザー インターフェイスにルールに関する情報を表示するときに Visual Studio で使用されるリソース ファイル内のリソースを参照するクラスを定義します。  
   
 ### <a name="defining-the-sampleconstants-class"></a>SampleConstants クラスを定義する  
   
-1.  **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
+1. **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2. **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  **[名前]** テキスト ボックスに「SampleRuleConstants.cs」と入力し、 **[追加]** ボタンをクリックします。 SampleRuleConstants.cs ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
+3. **[名前]** テキスト ボックスに「SampleRuleConstants.cs」と入力し、 **[追加]** ボタンをクリックします。 SampleRuleConstants.cs ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
   
-4.  SampleRuleConstants.cs ファイルを開き、次の using ステートメントをファイルに追加します。  
+4. SampleRuleConstants.cs ファイルを開き、次の using ステートメントをファイルに追加します。  
   
     ```  
     namespace SampleRules  
@@ -302,20 +305,21 @@ ms.locfileid: "68140938"
     }  
     ```  
   
-5.  **[ファイル]**  >  **[保存]** をクリックします。  
+5. **[ファイル]**  >  **[保存]** をクリックします。  
   
-## <a name="creating-the-custom-code-analysis-rule-class"></a>カスタム コード分析ルール クラスを作成する  
+## <a name="creating-the-custom-code-analysis-rule-class"></a>カスタム コード分析ルール クラスを作成する
+
 以上の手順で、カスタム コード分析ルールで使用するヘルパー クラスを追加したら、カスタム ルール クラスを作成し、AvoidWaitForDelayRule という名前を付けます。 データベースの開発時に、AvoidWaitForDelayRule カスタム ルールを使用すると、ストアド プロシージャ、トリガー、および関数で WAITFOR DELAY ステートメントを回避できます。  
   
 ### <a name="creating-the-avoidwaitfordelayrule-class"></a>AvoidWaitForDelayRule クラスを作成する  
   
-1.  **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
+1. **ソリューション エクスプローラー**で、SampleRules プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
+2. **[プロジェクト]** メニューで、 **[クラスの追加]** を選択します。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
-3.  **[名前]** テキスト ボックスに「AvoidWaitForDelayRule.cs」と入力し、 **[追加]** をクリックします。 AvoidWaitForDelayRule.cs ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
+3. **[名前]** テキスト ボックスに「AvoidWaitForDelayRule.cs」と入力し、 **[追加]** をクリックします。 AvoidWaitForDelayRule.cs ファイルは、**ソリューション エクスプローラー**のプロジェクトに追加されます。  
   
-4.  AvoidWaitForDelayRule.cs ファイルを開き、次の using ステートメントをファイルに追加します。  
+4. AvoidWaitForDelayRule.cs ファイルを開き、次の using ステートメントをファイルに追加します。  
   
     ```  
     using Microsoft.SqlServer.Dac.CodeAnalysis;  
@@ -329,7 +333,7 @@ ms.locfileid: "68140938"
     }  
     ```  
   
-5.  AvoidWaitForDelayRule クラス宣言で、アクセス修飾子を public に変更します。  
+5. AvoidWaitForDelayRule クラス宣言で、アクセス修飾子を public に変更します。  
   
     ```  
     /// <summary>  
@@ -340,13 +344,13 @@ ms.locfileid: "68140938"
     public sealed class AvoidWaitForDelayRule  
     ```  
   
-6.  Microsoft.SqlServer.Dac.CodeAnalysis.SqlCodeAnalysisRule 基本クラスから AvoidWaitForDelayRule クラスを派生させます。  
+6. Microsoft.SqlServer.Dac.CodeAnalysis.SqlCodeAnalysisRule 基本クラスから AvoidWaitForDelayRule クラスを派生させます。  
   
     ```  
     public sealed class AvoidWaitForDelayRule : SqlCodeAnalysisRule  
     ```  
   
-7.  LocalizedExportCodeAnalysisRuleAttribute をクラスに追加します。  
+7. LocalizedExportCodeAnalysisRuleAttribute をクラスに追加します。  
   
     LocalizedExportCodeAnalysisRuleAttribute を使用すると、コード分析サービスでカスタム コード分析ルールを検出できます。 コード分析では、ExportCodeAnalysisRuleAttribute (またはこの属性から継承している属性) でマークしたクラスのみを使用できます。  
   
@@ -373,7 +377,7 @@ ms.locfileid: "68140938"
   
     このルールでは特定の要素を分析するため、RuleScope プロパティを Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleScope.Element にする必要があります。 このルールは、モデル内の一致する要素ごとに 1 回呼び出されます。 モデル全体を分析する場合は、Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleScope.Model を代わりに使用できます。  
   
-8.  Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.SupportedElementTypes を設定するコンストラクターを追加します。 要素がスコープのルールの場合は必須です。 このルールを適用する要素の種類を定義します。 この場合、ルールはストアド プロシージャ、トリガー、および関数に適用されます。 Microsoft.SqlServer.Dac.Model.ModelSchema クラスでは、分析に使用できるすべての要素の種類が一覧表示されることに注意してください。  
+8. Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.SupportedElementTypes を設定するコンストラクターを追加します。 要素がスコープのルールの場合は必須です。 このルールを適用する要素の種類を定義します。 この場合、ルールはストアド プロシージャ、トリガー、および関数に適用されます。 Microsoft.SqlServer.Dac.Model.ModelSchema クラスでは、分析に使用できるすべての要素の種類が一覧表示されることに注意してください。  
   
     ```  
     public AvoidWaitForDelayRule()  
@@ -488,30 +492,32 @@ ms.locfileid: "68140938"
   
 ### <a name="building-the-class-library"></a>クラス ライブラリをビルドする  
   
-1.  **[プロジェクト]** メニューの **[SampleRules のプロパティ]** をクリックします。  
+1. **[プロジェクト]** メニューの **[SampleRules のプロパティ]** をクリックします。  
   
-2.  **[署名]** タブをクリックします。  
+2. **[署名]** タブをクリックします。  
   
-3.  **[アセンブリの署名]** をクリックします。  
+3. **[アセンブリの署名]** をクリックします。  
   
-4.  **[厳密な名前のキー ファイルを選択してください]** で **[<New>]** をクリックします。  
+4. **[厳密な名前のキー ファイルを選択してください]** で **[<New>]** をクリックします。  
   
-5.  **[厳密な名前キーの作成]** ダイアログ ボックスで、 **[キー ファイル]** に「MyRefKey」と入力します。  
+5. **[厳密な名前キーの作成]** ダイアログ ボックスで、 **[キー ファイル]** に「MyRefKey」と入力します。  
   
-6.  (省略可能) 厳密な名前のキー ファイルにパスワードを指定できます。  
+6. (省略可能) 厳密な名前のキー ファイルにパスワードを指定できます。  
   
-7.  **[OK]** をクリックします。  
+7. **[OK]** をクリックします。  
   
-8.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
+8. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
 9. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
 次に、アセンブリをインストールし、SQL Server プロジェクトをビルドして配置するときに読み込まれるようにします。  
   
-## <a name="install-a-static-code-analysis-rule"></a>静的コード分析ルールのインストール  
+## <a name="install-a-static-code-analysis-rule"></a>静的コード分析ルールのインストール
+
 ルールをインストールするには、アセンブリおよび関連付けられた .pdb ファイルを Extensions フォルダーにコピーする必要があります。  
   
-### <a name="to-install-the-samplerules-assembly"></a>SampleRules アセンブリをインストールするには  
+### <a name="to-install-the-samplerules-assembly"></a>SampleRules アセンブリをインストールするには
+
 次に、アセンブリ情報を Extensions ディレクトリにコピーします。 Visual Studio が起動すると、<Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120\Extensions ディレクトリとサブディレクトリの機能拡張が特定され、使用できるようになります。  
   
 Visual Studio 2012 の場合、通常、<Visual Studio Install Dir> は C:\Program Files (x86)\\MicrosoftVisual Studio 11.0 になります。 Visual Studio 2013 の場合、通常は C:\Program Files (x86)\\MicrosoftVisual Studio 12.0 です。  
@@ -522,24 +528,24 @@ Visual Studio 2012 の場合、通常、<Visual Studio Install Dir> は C:\Progr
   
 ### <a name="starting-a-new-visual-studio-session-and-creating-a-database-project"></a>新しい Visual Studio セッションの開始とデータベース プロジェクトの作成  
   
-1.  Visual Studio の 2 つ目のセッションを開始します。  
+1. Visual Studio の 2 つ目のセッションを開始します。  
   
-2.  **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** の順にクリックします。  
+2. **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順にクリックします。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされたテンプレート]** の一覧で、 **[SQL Server]** ノードを展開し、 **[SQL Server データベース プロジェクト]** をクリックします。  
+3. **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされたテンプレート]** の一覧で、 **[SQL Server]** ノードを展開し、 **[SQL Server データベース プロジェクト]** をクリックします。  
   
-4.  **[名前]** テキスト ボックスに「SampleRulesDB」と入力し、 **[OK]** をクリックします。  
+4. **[名前]** テキスト ボックスに「SampleRulesDB」と入力し、 **[OK]** をクリックします。  
   
 最後に、SQL Server プロジェクトに新しいルールが表示されます。 新しい AvoidWaitForRule コード分析ルールを表示するには:  
   
-1.  **ソリューション エクスプローラー**で、SampleRulesDB プロジェクトを選択します。  
+1. **ソリューション エクスプローラー**で、SampleRulesDB プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 [SampleRulesDB のプロパティ] ページが表示されます。  
+2. **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 [SampleRulesDB のプロパティ] ページが表示されます。  
   
-3.  **[コード分析]** をクリックします。 RuleSamples.CategorySamples という新しいカテゴリが表示されます。  
+3. **[コード分析]** をクリックします。 RuleSamples.CategorySamples という新しいカテゴリが表示されます。  
   
-4.  RuleSamples .CategorySamples を展開します。 "SR1004:Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions" (SR1004: ストアド プロシージャ、関数、トリガーで WaitFor Delay ステートメントを使用しないでください) と表示されます。  
+4. RuleSamples .CategorySamples を展開します。 "SR1004:Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions" (SR1004: ストアド プロシージャ、関数、トリガーで WaitFor Delay ステートメントを使用しないでください) と表示されます。  
   
-## <a name="see-also"></a>参照  
-[データベース コード分析ルールの機能拡張の概要](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
-  
+## <a name="see-also"></a>参照
+
+[データベース コード分析ルールの機能拡張の概要](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)

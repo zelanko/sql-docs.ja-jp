@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050785"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (拡張ストアド プロシージャ API)
     
@@ -90,7 +89,7 @@ destlen
 ## <a name="returns"></a>戻り値  
  データ型の変換が成功した場合は、変換後のデータの長さをバイト数で返します。 **srv_convert** がサポートしていないデータ型への変換要求を受けた場合は、開発者の定義したエラー ハンドラーがあればそれを呼び出し、グローバル エラー番号を設定して -1 を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  **srv_willconvert** 関数は、特定の変換が可能かどうかを判断する関数です。  
   
  概数データ型 SRVFLT4 または SRVFLT8 への変換では、有効桁数の一部が失われることがあります。 概数データ型 SRVFLT4 または SRVFLT8 から SRVCHAR または SRVTEXT への変換でも有効桁数の一部が失われることがあります。  
@@ -114,8 +113,8 @@ destlen
 > [!IMPORTANT]  
 >  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [srv_setutype &#40;拡張ストアド プロシージャ API&#41;](srv-setutype-extended-stored-procedure-api.md)   
+## <a name="see-also"></a>参照  
+ [srv_setutype &#40;拡張ストアドプロシージャ API&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert &#40;拡張ストアド プロシージャ API&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

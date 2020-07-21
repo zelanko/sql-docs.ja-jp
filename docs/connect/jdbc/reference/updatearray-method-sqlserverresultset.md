@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66b4473d-a8c1-4d19-8487-b39d6d0597c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85a8b46d88ab783c7742ba2af911211baefcffe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 481528507cab371dd44c108167b5c9efbbb518f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985980"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922932"
 ---
 # <a name="updatearray-method-sqlserverresultset"></a>updateArray メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67985980"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateArray (int, java.sql.Array)](../../../connect/jdbc/reference/updatearray-method-int-java-sql-array.md)|渡された列インデックスを使用して、指定された列を Array オブジェクトで更新します。|  
 |[updateArray (java.lang.String, java.sql.Array)](../../../connect/jdbc/reference/updatearray-method-java-lang-string-java-sql-array.md)|渡された列名を使用して、指定された列を Array オブジェクトで更新します。|  

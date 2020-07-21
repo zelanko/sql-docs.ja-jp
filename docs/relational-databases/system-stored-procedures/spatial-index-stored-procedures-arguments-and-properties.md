@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028904"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626583"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間インデックスストアドプロシージャ-引数とプロパティ
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、空間インデックス ストアド プロシージャの引数とプロパティについて説明します。  
   
@@ -31,13 +31,13 @@ ms.locfileid: "69028904"
 ## <a name="syntax"></a>構文  
  特定の空間インデックスストアドプロシージャの構文については、次のトピックを参照してください。  
   
--   [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>引数  
 `[ @tabname = ] 'tabname'`空間インデックスが指定されているテーブルの修飾名または修飾され名を指定します。  
@@ -54,12 +54,12 @@ ms.locfileid: "69028904"
   
  *verboseoutput*は**tinyint**で、既定値はありません。  
   
-`[ @query_sample = ] 'query_sample'`は、インデックスの有用性をテストするために使用できる代表的なクエリサンプルです。 代表的なオブジェクトまたはクエリウィンドウを指定できます。 *query_sample*は**geometry**既定値はありません。  
+`[ @query_sample = ] 'query_sample'`は、インデックスの有用性をテストするために使用できる代表的なクエリサンプルです。 代表的なオブジェクトまたはクエリウィンドウを指定できます。 *query_sample*は**geometry**で、既定値はありません。  
   
 `[ @xml_output = ] 'xml_output'`XML フラグメントに結果セットを返す出力パラメーターを指定します。 *xml_output*は**xml**で、既定値はありません。  
   
 ## <a name="properties"></a>Properties  
- 次の表に示すように、  **\@verboseoutput** = 0 を設定してコアプロパティを返します。verboseoutput > 0 にすると、空間インデックスのすべてのプロパティが返されます。  **\@**  
+ 次の表に示すように、 ** \@ verboseoutput** = 0 を設定してコアプロパティを返します。** \@ verboseoutput** > 0 にすると、空間インデックスのすべてのプロパティが返されます。  
   
  **Base_Table_Rows**  
  ベーステーブル内の行の数。 値は**bigint**です。  
@@ -124,7 +124,7 @@ ms.locfileid: "69028904"
  オブジェクトごとのセル数 (インデックスプロパティ)。 値は**int**です。  
   
  **Total_Primary_Index_Rows**  
- インデックス内の行の数。 値は**bigint**です。  
+ インデックス内の行数。 値は**bigint**です。  
   
  **Total_Primary_Index_Pages**  
  インデックス内のページ数。 値は**bigint**です。  
@@ -138,7 +138,7 @@ ms.locfileid: "69028904"
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
  レベル 0 (ルートセル、 **geometry**の境界ボックス外) でテセレーションされるインデックス付きオブジェクトのセルインスタンスの数。 これは、コアプロパティです。 値は**bigint**です。  
   
- **Geometry**インデックスの場合は、インデックスの境界ボックスがデータドメインより小さい場合に発生します。 クエリウィンドウが境界ボックスの外側にあり、インデックスのパフォーマンスを低下させる場合 (たとえば、 **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**が1の場合)、レベル0のオブジェクトの数が多いと、セカンダリフィルターが必要になることがあります。 クエリウィンドウが境界ボックス内にある場合は、レベル0のオブジェクトの数が多いと、インデックスのパフォーマンスが実際に向上する可能性があります。  
+ **Geometry**インデックスの場合は、インデックスの境界ボックスがデータドメインより小さい場合に発生します。 クエリウィンドウが境界ボックスの外側にある場合、インデックスのパフォーマンスが低下する (たとえば**Total_Number_Of_ObjectCells_In_Level0_For_QuerySample**が 1) 場合は、レベル0のオブジェクトの数が多いと、セカンダリフィルターが必要になることがあります。 クエリウィンドウが境界ボックス内にある場合は、レベル0のオブジェクトの数が多いと、インデックスのパフォーマンスが実際に向上する可能性があります。  
   
  NULL および空のインスタンスは、レベル 0 でカウントされますが、パフォーマンスには影響しません。 レベル0には、ベーステーブルの NULL および空のインスタンスと同じ数のセルが含まれます。 **Geography**インデックスでは、クエリサンプルが1としてカウントされるため、レベル0には、NULL および空のインスタンスと同じ数のセルが含まれます。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "69028904"
 >  この情報は、境界ボックスが非常に失われている可能性のあるオブジェクトがあるかどうかを判断する場合にのみ役立ちます。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- 境界ボックスに接しているレベル0のオブジェクトの数。 (Cell_attribute 値は0です)。値は**bigint**です。  
+ 境界ボックスに接しているレベル0のオブジェクトの数。 (Cell_attribute 値は0です)。 値は**bigint**です。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
  テセレーションレベル1のグリッドセルの境界に接するオブジェクトセルの数。 (Cell_attribute 値は0です)。これは、コアプロパティです。 値は**bigint**です。  
@@ -197,17 +197,17 @@ ms.locfileid: "69028904"
  テセレーションレベル3のグリッドセルの境界に接するオブジェクトセルの数。 (Cell_attribute 値は0です)。これは、コアプロパティです。 値は**bigint**です。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- テセレーション レベル 4 のグリッド セルの境界に接するオブジェクト セルの数 (Cell_attribute 値は0です)。これは、コアプロパティです。 値は**bigint**です。  
+ テセレーション レベル 4 のグリッド セルの境界に接するオブジェクト セルの数  (Cell_attribute 値は0です)。これは、コアプロパティです。 値は**bigint**です。  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  オブジェクトによってカバーされるリーフセルを含むグリッドの合計領域 (リーフセルの合計) の割合。  
   
- たとえば、オブジェクトは、合計で100のリーフセルに相当する領域をカバーする4つの異なるグリッドレベルで、10個のセルにテセレーションされます。 オブジェクトによって完全に覆われた3つの内部セルがあるとします。 3つの内部セルによってカバーされる領域は、42のリーフセルに相当します。 このため、対象領域の割合は 42% です。 これは、インデックス内のオブジェクトがどの程度細分化されているかについての適切な尺度です。  
+ たとえば、オブジェクトは、合計で100のリーフセルに相当する領域をカバーする4つの異なるグリッドレベルで、10個のセルにテセレーションされます。 オブジェクトによって完全に覆われた3つの内部セルがあるとします。 3つの内部セルによってカバーされる領域は、42のリーフセルに相当します。 このため、対象領域の割合は42% です。 これは、インデックス内のオブジェクトがどの程度細分化されているかについての適切な尺度です。  
   
  値は**float**です。  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**と同じですが、これらが部分的に覆われたセルである点が異なります。 値は**float**です。  
+ **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**と同じですが、これらが部分的にカバーされたセルである点が異なります。 値は**float**です。  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**と同じですが、これらが境界セルである点が異なります。 値は**float**です。  
@@ -300,25 +300,25 @@ ms.locfileid: "69028904"
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。 これは、すべての空間インデックスストアドプロシージャに適用されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="examples"></a>使用例  
  例については、次のトピックを参照してください。  
   
--   [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>必要条件  
   
 ## <a name="see-also"></a>関連項目  
- [空間インデックスストアドプロシージャ&#40;transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [空間インデックスストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery の基礎](../../xquery/xquery-basics.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

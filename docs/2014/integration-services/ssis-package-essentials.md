@@ -1,5 +1,5 @@
 ---
-title: SSIS パッケージの Essentials |Microsoft Docs
+title: SSIS パッケージの要点 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4e3f6637c4e9fd65b0218b8489372355b3608f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055417"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421050"
 ---
 # <a name="ssis-package-essentials"></a>SSIS パッケージの基本事項
-  パッケージは、データの抽出、変換、および読み込みを行うための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能が実装されているオブジェクトです。 パッケージは [!INCLUDE[ssIS](../includes/ssis-md.md)] で [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] デザイナーを使用して作成します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード、または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 接続プロジェクト ウィザードを使用してもパッケージを作成できます。 詳細については、 [SQL Server Data Tools でパッケージの作成](create-packages-in-sql-server-data-tools.md)SSIS デザイナーで、[プロジェクトのインポート ウィザード](../../2014/integration-services/import-project-wizard.md)します。  
+  パッケージは、データの抽出、変換、および読み込みを行うための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能が実装されているオブジェクトです。 パッケージは [!INCLUDE[ssIS](../includes/ssis-md.md)] で [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]デザイナーを使用して作成します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード、または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 接続プロジェクト ウィザードを使用してもパッケージを作成できます。 詳細については、「SSIS デザイナーおよびプロジェクトの[インポートウィザード](../../2014/integration-services/import-project-wizard.md)で[SQL Server Data Tools でパッケージを作成する](create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
  基本的なパッケージには次の要素が含まれます。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66055417"
   
  詳細については、「 [Data Flow](data-flow/data-flow.md)」を参照してください。  
   
- 基本的なパッケージを作成する方法の例は、次を参照してください。[レッスン 1。プロジェクトと基本パッケージ作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)です。  
+ 基本的なパッケージを作成する方法の例については、「[レッスン 1: プロジェクトと基本パッケージの作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -48,10 +47,10 @@ ms.locfileid: "66055417"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
-1.  MSDN.Microsoft.com のビデオ「[基本パッケージの作成 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=131023)」  
+1.  MSDN.Microsoft.com のビデオ「 [基本パッケージの作成 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=131023)」  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; パッケージ &#40;Integration Services](../../2014/integration-services/integration-services-ssis-packages.md)   
  [優先順位制約](control-flow/precedence-constraints.md)  
   
   

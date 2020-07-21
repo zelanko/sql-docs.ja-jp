@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: b79212040df67c22ae7e34cd380a1a1f1bd10773
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060330"
 ---
 # <a name="back-up-the-service-master-key"></a>サービス マスター キーのバックアップ
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用してサービス マスター キーをバックアップする方法について説明します。 サービス マスター キーは、暗号化階層のルートになります。 サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
@@ -32,20 +31,20 @@ ms.locfileid: "63011539"
   
 -   [サービス マスター キーをバックアップするには](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 サービス マスター キーで暗号化されている場合は、マスター キーを明示的に開く必要はありません。ただし、マスター キーがパスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
 -   マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する CONTROL 権限が必要です。  
   
-##  <a name="Procedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="Procedure"></a> Transact-SQL の使用  
   
 #### <a name="to-back-up-the-service-master-key"></a>サービス マスター キーをバックアップするには  
   

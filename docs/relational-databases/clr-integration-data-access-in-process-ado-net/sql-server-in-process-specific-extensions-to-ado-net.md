@@ -1,6 +1,7 @@
 ---
-title: SQL Server のインプロセス固有の拡張 ADO.NET |Microsoft Docs
-ms.custom: ''
+title: ADO.NET へのインプロセス拡張機能の SQL Server
+description: ADO.NET の4つの主な機能拡張に関する記事へのリンク。具体的には、インプロセスでの使用のみを目的としています。
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1ed0cf58c34506ce12dd04bf529a80d44a03d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8265a79c58f94eea59b0776910eda6e4902d5989
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765453"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>ADO.NET に対する SQL Server インプロセス固有の拡張機能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ADO.NET には、特にインプロセスで使用する、4 つの主要な拡張機能があります。 次のトピックでは、これらの拡張機能の詳細について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

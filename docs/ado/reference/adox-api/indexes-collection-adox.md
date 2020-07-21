@@ -14,37 +14,37 @@ f1_keywords:
 helpviewer_keywords:
 - Indexes collection [ADOX]
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966048"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763853"
 ---
 # <a name="indexes-collection-adox"></a>Indexes コレクション (ADOX)
-すべてを含む[インデックス](../../../ado/reference/adox-api/index-object-adox.md)テーブルのオブジェクト。  
+テーブルのすべての[Index](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)のメソッド、**インデックス**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
+## <a name="remarks"></a>Remarks  
+ **Indexes**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-indexes.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   新しいインデックスを使用して、コレクションに追加、 **Append**メソッド。  
+-   **追加**メソッドを使用して、新しいインデックスをコレクションに追加します。  
   
- 残りのプロパティとメソッドは、ADO のコレクションに標準的です。 可能な代替手段としては以下の方法があります。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
--   使用して、コレクションのインデックスにアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のインデックスにアクセスします。  
   
--   使用して、コレクションに含まれるインデックスの数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクションに格納されているインデックスの数を返します。  
   
--   コレクションのインデックスを削除する、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッド。  
+-   [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、コレクションからインデックスを削除します。  
   
--   現在のデータベース スキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Indexes Append メソッドの例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

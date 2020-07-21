@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 068220e731c905f32dff471d477ae27742698e23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63255788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066216"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>クエリ結果の消去 (Visual Database Tools)
   **クエリおよびビュー デザイナー**でクエリを実行した後、結果ペインの内容を消去できます。 この手順は、オブジェクト エクスプローラーで **[ビューを開く]** オプション、または **[テーブルを開く]** オプションを使用して作成されたクエリに当てはまります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターでクエリを実行した場合は、クエリ エディター ウィンドウを閉じるか別のクエリを実行しないと結果ペインの内容が消去されません。  
@@ -35,9 +34,9 @@ ms.locfileid: "63255788"
   
      クエリの実行中に結果ペインの内容を消去すると、クエリは中止されます。  
   
-## <a name="see-also"></a>関連項目  
- [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [クエリの停止&#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools &#40;クエリの実行&#41;](run-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの停止&#41;](stop-a-query-visual-database-tools.md)   
  [結果ペインのデータの操作 (Visual Database Tools)](visual-database-tools.md)  
   
   

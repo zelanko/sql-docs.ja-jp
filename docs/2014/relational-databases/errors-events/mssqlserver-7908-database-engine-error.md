@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b2d8a9218c5cb654f3343a7475d17630d7b49e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: deb4f24860a8cbe7f15ec824f48943724fdd68e6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762243"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553357"
 ---
-# <a name="mssqlserver7908"></a>MSSQLSERVER_7908
+# <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|7908|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のファイル 'FILE' は、有効な Filestream ファイルではありません。|  
+|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のファイル 'FILE' は有効な FileStream ファイルではありません。|  
   
 ## <a name="explanation"></a>説明  
  列ディレクトリにある FILESTREAM ファイルの名前は ROWGUID です。 列ディレクトリにあるファイル名を ROWGUID に変換できない場合、そのファイルは有効なファイルではありません。  
@@ -48,6 +47,6 @@ ms.locfileid: "62762243"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

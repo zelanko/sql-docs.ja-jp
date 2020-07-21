@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2559f86514ccd57e4c70f15e199724b3ebf44388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 446eca11209e49f2b865a2ccb9fd34a258c31100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780897"
 ---
-# <a name="mssqlserver17083"></a>MSSQLSERVER_17083
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_17083"></a>MSSQLSERVER_17083
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|17083|  
 |イベント ソース|MSSQLSERVER|  
@@ -36,7 +36,7 @@ ms.locfileid: "68100272"
 ネイティブ コンパイル ストアド プロシージャの本体に ATOMIC ブロックがありませんでした。  
   
 ## <a name="user-action"></a>ユーザーの操作  
-ネイティブ コンパイル ストアド プロシージャには ATOMIC ブロックが必要です。 例:  
+ネイティブ コンパイル ストアド プロシージャには ATOMIC ブロックが必要です。 次に例を示します。  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

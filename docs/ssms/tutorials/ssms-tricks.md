@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
+title: SSMS 使用のヒントとテクニック
 description: コードのコメントとコメント解除、テキストのインデント、オブジェクト エクスプローラーでのオブジェクトのフィルター処理、SQL Server エラー ログへのアクセス、SQL Server Management Studio を使用した SQL Server インスタンス名の検索を行う方法を学習します。
 ms.topic: tutorial
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267580"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245509"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
 
@@ -37,11 +37,11 @@ ms.locfileid: "68267580"
 > * SQL Server のエラー ログにアクセスする
 > * 使っている SQL Server インスタンスの名前を調べる
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この記事に記載されている手順をテストするには、SQL Server Management Studio、SQL サーバーへのアクセス、AdventureWorks データベースが必要です。 
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 * [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。 SSMS でデータベースを復元する方法については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
 
@@ -231,7 +231,7 @@ SQL Server のエラー ログのパスは、構成設定によって異なる�
 
 6. メモ帳で errorlog.log ファイルを開きます。 
 
-## <a name="determine-sql-server-name"></a>SQL Server インスタンス名を見つける
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>SQL Server インスタンス名を見つける
 
 SQL Server に接続する前に、あるいは接続した後に、いくつかの方法で SQL server の名前を検索できます。  
 
@@ -282,7 +282,7 @@ SQL Server に接続しているとき、3 か所でサーバー名が見つか�
 
     ![SQL Server 名を問い合わせる](media/ssms-tricks/queryservername.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 

@@ -1,6 +1,8 @@
 ---
-title: '[ ] (ワイルドカード - 一致する文字列) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: '[ ] 文字列と一致するワイルドカード'
+description: ワイルドカードを使用して、1 つ以上の文字と一致させます。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,19 +23,20 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838777ff87f9d6d7f2584642fcaa82b08a3266b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000325"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "76831587"
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (ワイルドカード - 一致する文字列) (TRANSACT-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (ワイルドカード - 一致する文字列) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 角かっこ `[ ]` で指定された範囲または集合の任意の 1 文字に一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。  
-  
-## <a name="examples"></a>使用例  
+
+ 
+## <a name="examples"></a>例  
 ### <a name="a-simple-example"></a>A:簡単な例   
 次の例では、文字 `m` で始まる名前が返されます。 `[n-z]` は、2 番目の文字が `n` から `z` の範囲に含まれる必要があることを指定します。 パーセントのワイルドカード `%` は、2 文字に 0 個以上の任意の文字列が続くことを指定します。 `model` データベースと `msdb` データベースがこの条件を満たしています。 `master` データベースは条件を満たさず、結果セットから除外されます。
  
@@ -66,7 +69,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- 結果セットは次のようになります。  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  
@@ -74,8 +77,26 @@ EmployeeID      FirstName      LastName      PostalCode
 290             Lynn           Tsoflias      3000  
 ```  
 
+### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C: 範囲と 1 文字を組み合わせたセットを使用する
 
+ワイルドカード セットには、1 文字と範囲の両方を含めることができます。 次の例では、[] 演算子を使用して、1 つの数字と一連の特殊文字で始まる文字列を検索します。
 
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[0-9!@#$.,;_]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name                         name  column_id
+---------     -----------                         ----  ---------
+615673241     vSalesPersonSalesByFiscalYears      2002  5
+615673241     vSalesPersonSalesByFiscalYears      2003  6
+615673241     vSalesPersonSalesByFiscalYears      2004  7
+1591676718    JunkTable                           _xyz  1
+```
   
 ## <a name="see-also"></a>参照  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

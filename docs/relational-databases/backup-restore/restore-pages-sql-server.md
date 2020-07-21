@@ -1,5 +1,6 @@
 ---
 title: ページ復元 (SQL Server) | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でページを復元する方法について説明します。 データベース全体を復元することなく、損傷したページを復元します。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c763e5846ad4452ac96991c6c440abb3f4626eac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759126"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してページを復元する方法について説明します。 ページ復元の目的は、データベース全体を復元することなく 1 つ以上の損傷したページを復元することです。 通常、復元候補のページは、そのページにアクセスする際に発生したエラーによって、"問題あり" に設定されています。 問題ありに設定されているページは、 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) データベースの **suspect_pages** テーブルで特定できます。  
   
@@ -39,9 +40,9 @@ ms.locfileid: "68041497"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ページを復元する方法:**  
   
@@ -49,14 +50,14 @@ ms.locfileid: "68041497"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="WhenUseful"></a> どのような場合にページ復元が役立つか  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> どのような場合にページ復元が役立つか  
  ページ復元の目的は、損傷した個々のページを修復することです。 少数のページに関する復元と復旧は、ファイルの復元を行うより高速に実行でき、復元処理中にオフラインになるデータ量が少なくなる場合があります。 ただし、1 つのファイル内の多数のページを復元しなければならない場合は、ファイル全体を復元する方が効率的です。 たとえば、デバイス上の多くのページが損傷している場合は、デバイスの故障が差し迫っていることを示している可能性があるので、できれば別の場所にファイルを復元し、デバイスを修復することを検討します。  
   
  また、すべてのページ エラーが復元を必要とするわけではありません。 セカンダリ インデックスなど、キャッシュされたデータで発生する問題は、データを再計算することで解決される可能性があります。 たとえば、データベース管理者がセカンダリ インデックスを削除して再構築した場合、破損したデータは修正されていますが、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルにはそのことが記録されません。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ページの復元は、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに適用されます。 ページ復元は、読み取り/書き込みファイル グループでのみサポートされます。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "68041497"
   
          ページ復元の実行で推奨されるのは、データベースを完全復旧モデルに設定し、ログ バックアップを試行する方法です。 ログ バックアップが成功した場合は、ページ復元を開始できます。 ログ バックアップが失敗した場合は、前回のログ バックアップ以降の作業をあきらめるか、REPAIR_ALLOW_DATA_LOSS オプションを指定して DBCC を実行してみる必要があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   ページ復元のシナリオ:  
   
@@ -99,14 +100,14 @@ ms.locfileid: "68041497"
   
      それ以降、ログ バックアップを復元した場合、復元対象のページが少なくとも 1 つ存在するデータベース ファイルにのみ適用されます。 また、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ページを含むファイル グループに現在のログ ファイルの状態を反映する必要があります。 ファイル復元と同様に、ロールフォワード セットは 1 つのログ再実行パスで進められます。 正常にページ復元を完了するには、データベースとの一貫性が保たれた状態になるようにページを復旧する必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。  
   
  RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、新たに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でのページ復元がサポートされます。  
   
 #### <a name="to-restore-pages"></a>ページを復元するには  
@@ -132,14 +133,14 @@ ms.locfileid: "68041497"
      **バックアップ セット**  
      このセクションには、復元に関連するバックアップ セットが表示されます。  
   
-    |[ヘッダー]|値|  
+    |ヘッダー|値|  
     |------------|------------|  
-    |**[名前]**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または **[\<空白>]** (トランザクション ログ用)。|  
-    |**型**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
-    |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
+    |**名前**|バックアップ セットの名前です。|  
+    |**コンポーネント**|バックアップされるコンポーネント: **[データベース]** 、 **[ファイル]** 、または **\<blank>** (トランザクション ログ用)。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
+    |**サーバー**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
-    |**[位置]**|ボリューム内でのバックアップ セットの位置。|  
+    |**Position**|ボリューム内でのバックアップ セットの位置。|  
     |**最初の LSN**|バックアップ セット内の最初のトランザクションのログ シーケンス番号 (LSN)。 ファイル バックアップの場合は空白。|  
     |**最後の LSN**|バックアップ セット内の最後のトランザクションのログ シーケンス番号 (LSN)。 ファイル バックアップの場合は空白。|  
     |**チェックポイントの LSN**|バックアップが作成された時点で最新のチェックポイントのログ シーケンス番号 (LSN)。|  
@@ -147,7 +148,7 @@ ms.locfileid: "68041497"
     |**[開始日]**|バックアップ操作が開始した日時で、クライアントの地域設定で表示されます。|  
     |**完了日**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
     |**[サイズ]**|バックアップ セットのサイズ (バイト単位) です。|  
-    |**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
+    |**ユーザー名**|バックアップ操作を実行したユーザーの名前。|  
     |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  
   
      **[確認]** をクリックして、ページ復元操作の実行に必要なバックアップ ファイルの整合性を確認します。  
@@ -157,17 +158,15 @@ ms.locfileid: "68041497"
     > [!WARNING]  
     >  破損していない特定のページを復元するには、 **[追加]** をクリックし、復元するページの **[ファイル ID]** と **[ページ ID]** を入力します。  
   
-5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
+5.  ページ グリッドを使用して、復元対象のページを特定します。 最初、このグリッドには、 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) システム テーブルから取得されたデータが表示されます。 このグリッドにページを追加したりグリッドからページを削除したりするには、 **[追加]** または **[削除]** をクリックします。 詳細については、「[suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)」を参照してください。  
   
 6.  **[バックアップ セット]** グリッドに、既定の復元プランのバックアップ セットが一覧表示されます。 必要に応じて **[確認]** をクリックし、バックアップが読み取り可能かどうか、また、バックアップ セットに不備がないかどうかを、実際には復元せずに確認します。 詳細については、「[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)」をご覧ください。  
   
-     **[ページ]**  
+     **ページ**  
   
 7.  ページ グリッドに一覧表示されたページを復元するには、 **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  RESTORE DATABASE ステートメントでページを指定するには、ページを含むファイルのファイル ID とページのページ ID が必要です。 必須の構文は次のとおりです。  
   
  `RESTORE DATABASE <database_name>`  
@@ -205,7 +204,7 @@ ms.locfileid: "68041497"
     > [!NOTE]  
     >  この復元シーケンスは、ファイル復元シーケンスと似ています。 実際、ページ復元とファイル復元は、どちらも同じ復元シーケンスで実行することができます。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、 `B` を指定して、ファイル `NORECOVERY`の 4 つの損傷したページを復元します。 次に、 `NORECOVERY`を使用して 2 つのログ バックアップを適用してから、 `RECOVERY`を使用してログ末尾のバックアップを復元します。 次の例では、オンライン復元を実行します。 この例では、ファイル `B` のファイル ID が `1`で、損傷したページのページ ID は `57`、 `202`、 `916`、および `1016`です。  
   
 ```sql  

@@ -1,54 +1,59 @@
 ---
-title: マスター データ マネージャー Web アプリケーションのセキュリティ保護 | Microsoft Docs
+title: マスター データ マネージャー Web アプリケーションのセキュリティ保護
+description: SQL Server では、HTTPS を使用してマスターデータマネージャー web アプリケーションをセキュリティで保護することができます。 管理者である必要があります。 web サーバーに MDS をインストールする必要があります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028803"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279378"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   HTTPS を使用して [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをセキュリティ保護できます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、HTTP または HTTPS のいずれかを使用できますが、両方を使用することはできません。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がインストールされている Web サーバーの管理者である必要があります。  
   
 -   MDS が Web サーバーにインストールされていて、Web アプリケーションが存在する必要があります。 詳細については、「 [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md) 」および「 [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)」を参照してください。  
-  
+
+- [Windows 認証の IIS 拡張保護を](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)有効にしないでください。 
+
+- 使用可能なすべての IP アドレスでリッスンするように web サーバーを構成します。 特定の IP アドレスでリッスンするように Web サーバーを構成しないでください。 
+
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>HTTPS を使用してマスター データ マネージャー Web アプリケーションをセキュリティ保護するには  
   
 1.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションが HTTP を使用して正しく構成されていることを確認した後、IIS で証明書を作成します。 詳細については、「 [IIS 7 でサーバー証明書を構成する](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx)」を参照してください。  
   
 2.  **[接続]** ペインの **[サイト]** で、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストするサイトをクリックします。  
   
-3.  **[アクション]** ペインで、 **[バインド]** をクリックします。  
+3.  **[操作]** ウィンドウで、**[バインド]** をクリックします。  
   
 4.  **[追加]** をクリックします。  
   
 5.  一覧から、 **[https]** を選択します。  
   
-6.  SSL 証明書を選択します。  
+6.  TLS/SSL 証明書を選択します。  
   
 7.  **[OK]** をクリックします。  
   
-8.  任意。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
+8.  省略可能。 HTTP を削除してユーザーが HTTPS のみを使用してサイトにアクセスできるようにするには、一覧の **[http]** の行をクリックします。 **[削除]** をクリックし、確認のダイアログ ボックスで **[はい]** をクリックします。  
   
     > [!IMPORTANT]  
     >  HTTP を削除した後に basicHttp 構成および wsHttpBinding 構成を変更する必要があります。  

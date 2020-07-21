@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d132a2d1618e7a37f9f07a0cc735c73a49c246c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058351"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>アイテムやプロジェクトのクリアまたは削除
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトに含まれるプロジェクト アイテムには、クエリ、接続、およびその他のファイルがあります。 プロジェクトのクエリとその他のファイルは、記憶域に残したままソリューションからクリアできます。 現在のソリューションでは使用せずに、別のソリューションで使用する場合は、プロジェクトやアイテムをクリアします。  
@@ -52,9 +51,9 @@ ms.locfileid: "63035695"
   
 3.  **[ファイル]** メニューの **[削除]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [新しい項目をプロジェクトに追加します。](add-new-items-to-a-project.md)   
+## <a name="see-also"></a>参照  
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [プロジェクトに新しい項目を追加する](add-new-items-to-a-project.md)   
  [既存の項目をプロジェクトに追加する](add-existing-items-to-a-project.md)  
   
   

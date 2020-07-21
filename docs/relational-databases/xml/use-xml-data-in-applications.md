@@ -1,5 +1,6 @@
 ---
 title: アプリケーションでの XML データの使用 | Microsoft Docs
+description: アプリケーションで xml データ型を操作するときに使用できるオプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b137b58daa6936328e5f8f37dc31277e0d5b6ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762549"
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、アプリケーションで **xml** データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  
   
 -   ADO および **Native Client を使用した、** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型の列に含まれている XML の操作  
@@ -146,14 +147,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET を使用した、xml 型の列に含まれている XML の操作  
- ADO.NET および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、**xml** データ型の列に含まれている XML を操作するには、**SqlCommand** クラスの標準の動作を使用します。 たとえば、 **xml** データ型の列とその値は、 **SqlDataReader**を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として **xml** データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを **XmlReader** 型に割り当てる必要があります。  
+ ADO.NET および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、**xml** データ型の列に含まれている XML を処理するには、**SqlCommand** クラスの標準の動作を使用します。 たとえば、 **xml** データ型の列とその値は、 **SqlDataReader**を使用して SQL 列を取得するときと同じ方法で取得できます。ただし、XML として **xml** データ型の列のコンテンツを使用して作業を行う場合は、最初にそのコンテンツを **XmlReader** 型に割り当てる必要があります。  
   
- 詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Column Values in a Data Reader」を参照してください。  
+ 詳細とコード例については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK ドキュメントの「データ リーダーの XML 列の値」を参照してください。  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>ADO.NET を使用した、パラメーター内の xml 型の列の操作  
  ADO.NET および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]でパラメーターとして渡された xml データ型を操作するには、 **SqlXml** データ型のインスタンスとして値を指定することができます。 特殊な処理は必要ありません。 **の** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の列は、 **string** や **integer**などの他の列やデータ型と同じように、パラメーター値を受け取ることができます。  
   
- 詳細とコード例については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK のマニュアルの「XML Values as Command Parameters」を参照してください。  
+ 詳細とコード例については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK ドキュメントの「コマンド パラメーターとしての XML 値」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

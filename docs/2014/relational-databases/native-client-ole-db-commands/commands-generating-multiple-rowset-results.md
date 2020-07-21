@@ -1,5 +1,5 @@
 ---
-title: 複数の行セットの結果を生成するコマンド |Microsoft Docs
+title: 複数行セットの結果を生成するコマンド | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,24 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d78b0144e112ca868f990ab87d5c58a798b0c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62657682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056415"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから複数の行セットを返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、ステートメントから複数の行セットを返すことができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
   
 -   バッチにまとめられた SQL ステートメントが 1 つのコマンドとして実行される場合。  
   
 -   ストアド プロシージャが SQL ステートメントのバッチを実装している場合。  
   
 ## <a name="batches"></a>バッチ  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、SQL ステートメントのバッチ区切り記号としてセミコロン文字を認識します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、SQL ステートメントのバッチ区切り記号としてセミコロン文字を認識します。  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -48,7 +47,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [IMultipleResults を使用した複数の結果セットの処理](using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>関連項目  
- [[コマンド]](commands.md)  
+## <a name="see-also"></a>参照  
+ [コマンド](commands.md)  
   
   

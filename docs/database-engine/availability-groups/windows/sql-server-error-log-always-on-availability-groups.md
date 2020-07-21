@@ -1,6 +1,7 @@
 ---
-title: SQL Server エラー ログ (Always On 可用性グループ) (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: SQL Server エラー ログ (可用性グループ)
+description: Always On 可用性グループに影響を与える SQL Server エラー ログ イベントと、エラー ログの確認が必要となる現象について説明します。
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3152d98e44f723ed15f508e76d9828eb6dde82c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013962"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898077"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server エラー ログ (Always On 可用性グループ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   SQL Server エラー ログでは、次のような Always On 可用性グループに影響するイベントを報告します。  
   
 -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターとの通信    

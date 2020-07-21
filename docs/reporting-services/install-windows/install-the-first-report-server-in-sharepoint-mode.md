@@ -8,11 +8,11 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892281"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286176"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -31,7 +31,7 @@ ms.locfileid: "68892281"
   
  シングル サーバー インストールは、開発およびテストのシナリオには便利ですが、運用環境にはお勧めしません。  
   
-##  <a name="bkmk_singleserver"></a> シングル サーバー展開の例
+##  <a name="example-single-server-deployment"></a><a name="bkmk_singleserver"></a> シングル サーバー展開の例
 
  シングル サーバー インストールは、開発およびテストのシナリオには便利ですが、シングル サーバーは運用環境にはお勧めしません。 シングル サーバー環境とは、1 台の同じコンピューターに SharePoint と Reporting Services コンポーネントがインストールされている場合です。 このトピックでは、複数の Reporting Services サーバーへのスケールアウトについては説明しません。  
   
@@ -47,12 +47,12 @@ ms.locfileid: "68892281"
 |**(3)**|Power View と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]で使用される Excel サービス アプリケーション。 これは、SharePoint 2016 のシングル サーバー配置では使用できません。 [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) が必要です。|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。|  
   
- ![SSAS SharePoint モードのシングル サーバー展開](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSAS SharePoint モードのシングル サーバー展開")  
+ ![SSRS SharePoint モードのシングル サーバー配置](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "SSRS SharePoint モードのシングル サーバー配置")  
   
 > [!TIP]  
 >  より複雑な配置例については、「 [Deployment Topologies for SQL Server BI Features in SharePoint (SharePoint での SQL Server BI 機能の配置トポロジ)](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)」を参照してください。  
   
-##  <a name="bkmk_setupaccounts"></a> セットアップ アカウント
+##  <a name="setup-accounts"></a><a name="bkmk_setupaccounts"></a> セットアップ アカウント
 
  このセクションでは、SharePoint モードの Reporting Services の主な展開手順に使うアカウントとアクセス許可について説明します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68892281"
   
      セキュリティ上、SharePoint ファーム管理者アカウントがローカル オペレーティング システムの管理者アカウントを兼ねないことをお勧めします。 インストール プロセスの一環としてファーム管理者アカウントをローカルの Administrators グループに追加する場合は、インストールの完了後にローカルの Administrators グループからそのアカウントを削除することをお勧めします。  
   
-##  <a name="bkmk_install_SSRS"></a> 手順 1. SharePoint モードの Reporting Services レポート サーバーのインストール
+##  <a name="step-1-install-reporting-services-report-server-in-sharepoint-mode"></a><a name="bkmk_install_SSRS"></a> 手順 1. SharePoint モードの Reporting Services レポート サーバーのインストール
 
  この手順では、SharePoint モードの Reporting Services レポート サーバーと、SharePoint 製品用の Reporting Services アドインをインストールします。 コンピューターに既にインストールされている内容によっては、次の手順で説明するインストール ページの一部は表示されない場合があります。  
  
@@ -142,7 +142,7 @@ ms.locfileid: "68892281"
   
 9. データベース エンジン サービスを選択した場合は、 **[インスタンスの構成]** ページで **MSSQLSERVER** の既定のインスタンスを受け入れて、 **[次へ]** をクリックします。  
   
-     ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ")Reporting Services SharePoint サービス アーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server "インスタンス" に基づいていません。  
+     ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")Reporting Services SharePoint サービス アーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server "インスタンス" に基づいていません。  
   
 10. **[サーバーの構成]** ページが表示されたら、適切な資格情報を入力します。 Reporting Services のデータ警告機能またはサブスクリプション機能を使う場合は、SQL Server エージェントの **[スタートアップの種類]** を **[自動]** に変更する必要があります。 コンピューターに既にインストールされている内容によっては、 **[サーバーの構成]** ページは表示されない場合があります。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "68892281"
   
 15. インストールには数分かかります。 機能の一覧と各機能の状態が表示された **[完了]** ページが表示されます。 コンピューターの再起動が必要であることを示す情報ダイアログが表示される場合もあります。  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> 手順 2: Reporting Services SharePoint サービスの登録と開始  
+##  <a name="step-2-register-and-start-the-reporting-services-sharepoint-service"></a><a name="bkmk_install_SSRS_sharedservice"></a> 手順 2: Reporting Services SharePoint サービスの登録と開始  
  ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
 > [!NOTE]
@@ -224,7 +224,7 @@ ms.locfileid: "68892281"
     > [!NOTE]  
     >  Reporting Services サービスが **[開始中]** ステータスのままで、 **[開始]** に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
   
-##  <a name="bkmk_create_serrviceapplication"></a> 手順 3: Reporting Services サービス アプリケーションの作成  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> 手順 3: Reporting Services サービス アプリケーションの作成  
  ここでは、既存のサービス アプリケーションを確認している場合に、サービス アプリケーションおよびプロパティの説明を作成する手順について説明します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
@@ -260,7 +260,7 @@ ms.locfileid: "68892281"
   
 -   トピック「 [PowerShell を使用して Reporting Services サービス アプリケーションを作成するには](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)」。  
 
-##  <a name="bkmk_powerview"></a> 手順 4: Power View のサイト コレクション機能のアクティブ化
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> 手順 4: Power View のサイト コレクション機能のアクティブ化
 
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 製品用の SQL Server 2016 Reporting Services アドインの機能である [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、サイト コレクション機能です。 この機能は、ルート サイト コレクションと、Reporting Services アドインのインストール後に作成されたサイト コレクションで自動的にアクティブ化されます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]を使用する場合は、この機能がアクティブ化されていることを確認してください。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "68892281"
   
      ブラウザーで目的の SharePoint サイトを開きます。 例: https://\<サーバー名>/sites/bi  
   
-2.  **[設定]** ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") を選びます。  
+2.  **[設定]** ![[SharePoint の設定]](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") の順に選択します。  
   
 3.  **[サイトの設定]** を選びます。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "68892281"
   
  この手順は、サイト コレクションごとに実行します。 詳しくは、「 [SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)」をご覧ください。  
   
-##  <a name="bkmk_full_script"></a> 手順 1 ～ 4 に対応する Windows PowerShell スクリプト  
+##  <a name="windows-powershell-script-for-steps-1-4"></a><a name="bkmk_full_script"></a> 手順 1 ～ 4 に対応する Windows PowerShell スクリプト  
  このセクション内の PowerShells スクリプトは、前のセクションで手順 1 ～ 4 を実行するときに使用したものと同じです。 このスクリプトは、次の作業を実行します。  
   
 -   Reporting Services サービスおよびサービス プロキシをインストールし、そのサービスを開始します。  
@@ -383,10 +383,10 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
 ```  
   
-##  <a name="bkmk_additional_config"></a> その他の構成  
+##  <a name="additional-configuration"></a><a name="bkmk_additional_config"></a> その他の構成  
  このセクションでは、SharePoint のほとんどの配置で重要になる追加の構成手順について説明します。  
   
-###  <a name="bkmk_configure_ECS"></a> Excel Services と PowerPivot の構成  
+###  <a name="configure-excel-services-and-power-pivot"></a><a name="bkmk_configure_ECS"></a> Excel Services と PowerPivot の構成  
  SharePoint で Excel 2016 または Excel 2013 ブックの [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを表示する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを Power Pivot モードで使用するように Excel Services を構成する必要があります。 
  
  SharePoint 2016 の場合は、Excel Services を使うために [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) を構成する必要があります。 詳細については、次のホワイト ペーパーを参照してください。
@@ -395,7 +395,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  - [多層 SharePoint 2016 ファームでの SQL Server 2016 PowerPivot と Power View の配置](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
- SharePoint 2016 の場合は、Excel Services アプリケーションを作成して構成する必要があります。 詳細については、以下を参照してください。  
+ SharePoint 2016 の場合は、Excel Services アプリケーションを作成して構成する必要があります。 詳細については、「  
   
 -   「[Power Pivot モードでの Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」の「Analysis Services 統合のための Excel Services の構成」セクション。  
   
@@ -403,7 +403,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 
 また、Reporting Services サービス アプリケーションによって使われるアプリケーション プールのセキュリティ アカウントは、Analysis Services サーバーの管理者である必要があります。
   
-###  <a name="bkmk_provision_agent"></a> サブスクリプションと警告の準備  
+###  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provision_agent"></a> サブスクリプションと警告の準備  
  Reporting Services のサブスクリプションとデータ警告の機能を利用するには、SQL Server エージェントのアクセス許可の構成が必要になる場合があります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新します。 サービス アプリケーション作成成功ページの **[サブスクリプションと警告の準備]** リンクをクリックして、SQL Server エージェントを準備するための別のページに移動します。 配置がコンピューターの境界をまたいでいる場合は (たとえば、SQL Server データベース インスタンスが異なるコンピューターにある場合)、準備手順を行う必要があります。 詳細については、「 [SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」をご覧ください  
   
 ### <a name="configure-e-mail-for-ssrs-service-applications"></a>SSRS サービス アプリケーション用電子メールを構成する  
@@ -415,7 +415,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
 ### <a name="activate-the-report-server-file-sync-feature"></a>レポート サーバーのファイル同期機能をアクティブにする  
  ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、サイト レベルの **レポート サーバー ファイル同期** 機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)」をご覧ください。  
   
-##  <a name="bkmk_verify_installation"></a> インストールの確認  
+##  <a name="verify-the-installation"></a><a name="bkmk_verify_installation"></a> インストールの確認  
  次に、Reporting Services の SharePoint モードの展開を確認するための推奨手順と手続きについて説明します。  
   
 -   検証トピック「 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」の「SharePoint」を参照してください。  
@@ -424,7 +424,7 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
   
      レポートをドキュメント ライブラリに保存し、ライブラリからレポートを実行します。 レポート ビルダーでレポートを作成する方法の詳細については、「 [レポート ビルダーの起動 (レポート ビルダー)](https://technet.microsoft.com/library/ms159221.aspx)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

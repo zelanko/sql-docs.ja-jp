@@ -1,5 +1,5 @@
 ---
-title: レコード セット (Visual C 構文用の ADO) |Microsoft Docs
+title: レコードセット (ADO for Visual C++ 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a8c377ee920122a18f6a848923605c7007c6f25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a094c5cbbc6af8e61bd221f06ff197a00d2524
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931374"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761890"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -52,7 +52,7 @@ Update(VARIANT Fields, VARIANT Values)
 UpdateBatch(AffectEnum AffectRecords)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_AbsolutePage(PositionEnum *pl)  
@@ -118,5 +118,5 @@ WillChangeRecordset(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORec
 WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

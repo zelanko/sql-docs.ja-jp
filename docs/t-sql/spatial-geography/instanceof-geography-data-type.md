@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 09dc970627cb282ed2597c191727b57c173c7bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a6939de145d3e63341bddda70d6fa04d9af9b69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930634"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731147"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geography** インスタンスが、指定した型と同じであるかどうかをテストします。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67930634"
   
 CLR の戻り値の型:**SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **geography** インスタンスの型が指定した型と同じである場合、または指定した型がインスタンスの型の先祖である場合は 1 を返します。それ以外の場合は 0 を返します。  
   
 この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  
@@ -56,7 +56,7 @@ CLR の戻り値の型:**SqlBoolean**
   
 このメソッドは正確ではありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 `MultiPoint` インスタンスを作成し、`InstanceOf()` を使用して、このインスタンスが `GeometryCollection` であるかどうかを判定する例を次に示します。  
   
 ```sql  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9afddbb4041600ffb22504ad66b4e9aa1ef1e33c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6123a670053f5e6fa4b9c7196c9bc503b97c855b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045577"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293505"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>データ フローでコンポーネントを追加または削除する
 

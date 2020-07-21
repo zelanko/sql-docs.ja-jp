@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_alert_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_log_shipping_alert_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9793b26bbd45e08aa3bc488071bd3b26a3f1cfc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879931"
 ---
-# <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このストアド プロシージャは、このサーバーで警告ジョブが作成されているかどうかを確認します。 このストアド プロシージャが警告ジョブを作成し、そのジョブ ID を追加します。 警告ジョブが存在しない場合、 **log_shipping_monitor_alert**テーブル。 警告ジョブは既定で有効にし、2 分ごとに 1 回のスケジュールで実行します。  
+  このストアドプロシージャは、このサーバーで警告ジョブが作成されたかどうかを確認します。 警告ジョブが存在しない場合、このストアドプロシージャは警告ジョブを作成し、そのジョブ ID を**log_shipping_monitor_alert**テーブルに追加します。 警告ジョブは、既定で有効になっており、2分ごとに1回のスケジュールで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_job_id = ] alert_job_id OUTPUT` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブのログ配布警告ジョブ ID。  
+`[ @alert_job_id = ] alert_job_id OUTPUT`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布警告ジョブのエージェントジョブ ID。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -48,14 +48,14 @@ sp_add_log_shipping_alert_job
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **sp_add_log_shipping_alert_job**から実行する必要があります、**マスター**監視サーバー上のデータベース。  
+## <a name="remarks"></a>解説  
+ **sp_add_log_shipping_alert_job**は、監視サーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- この例の実行**sp_add_log_shipping_alert_job**警告ジョブ ID を作成するには  
+ この例では、 **sp_add_log_shipping_alert_job**を実行して警告ジョブ ID を作成します。  
   
 ```  
 USE master  
@@ -63,7 +63,7 @@ GO
 EXEC sp_add_log_shipping_alert_job;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

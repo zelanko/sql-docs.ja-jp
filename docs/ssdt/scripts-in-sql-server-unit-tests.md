@@ -1,23 +1,24 @@
 ---
-title: SQL Server の単体テストのスクリプト | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストのスクリプト
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110741"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256969"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server の単体テストのスクリプト
+
 各 SQL Server 単体テストには、1 つの事前テスト アクション、テスト アクション、および事後テスト アクションが含まれています。 これらの各アクションには、次のものが含まれています。  
   
 -   データベースで実行される Transact\-SQL スクリプト  
@@ -32,7 +33,7 @@ ms.locfileid: "68110741"
   
 次の表に、SQL Server の単体テストに関連付けられているスクリプトの一覧を示します。  
   
-|**操作**|**スクリプトの種類**|**[説明]**|  
+|**操作**|**スクリプトの種類**|**説明**|  
 |--------------|-------------------|-------------------|  
 |TestInitialize|共通スクリプト (初期化)|(省略可能) このスクリプトは、単体テストのすべての事前テスト アクションおよびテスト アクションの前に実行されます。 TestInitialize スクリプトは、指定されたテスト クラス内の各単体テストの前に実行されます。 このスクリプトは、特権コンテキストを使用して実行されます。|  
 |事前テスト|テスト スクリプト|(省略可能) このスクリプトは単体テストの一部です。 事前テスト スクリプトは、単体テスト内のテスト アクションの前に実行されます。 このスクリプトは、特権コンテキストを使用して実行されます。|  
@@ -48,7 +49,7 @@ ms.locfileid: "68110741"
 ![2 つのデータベース単体テスト](../ssdt/media/twodatabaseunittests.png "2 つのデータベース単体テスト")  
   
 > [!NOTE]  
-> SQL Server データベース プロジェクトの配置が構成されている場合、テスト実行の開始時に、特権コンテキストの接続文字列で配置が行われます。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
+> SQL Server データベース プロジェクトの配置が構成されている場合、テスト実行の開始時に、特権コンテキストの接続文字列で配置が行われます。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
   
 ## <a name="initialization-and-cleanup-scripts"></a>初期化スクリプトとクリーンアップ スクリプト  
 SQL Server 単体テスト デザイナーでは、TestInitialize スクリプトと TestCleanup スクリプトが共通スクリプトと呼ばれます。 上記の例では、2 つの単体テストが同じテスト クラスに含まれていることを前提としています。 その結果、これらの単体テストでは、同一の TestInitialize スクリプトと TestCleanup スクリプトが共有されます。 すべての単体テストが 1 つのテスト クラス内にある場合は、常にこの例のようになります。 ただし、テスト実行に別のテスト クラスの単体テストが含まれる場合、単体テストの実行前と実行後に、関連するテスト クラスの共通スクリプトが実行されます。  

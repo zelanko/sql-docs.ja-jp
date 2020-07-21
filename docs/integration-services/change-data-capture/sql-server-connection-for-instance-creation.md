@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e38ec34f452ac286cf069bf2c88a9b8eb5578db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3eee4812124b44a679762d42931b7fa7048b92a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086616"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294561"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>インスタンスの作成のための SQL サーバー接続
 
@@ -32,8 +32,8 @@ ms.locfileid: "68086616"
  **[サーバー名]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するサーバーの名前を入力します。  
   
- **[認証]**  
- 次のいずれかを選択します。  
+ **認証**  
+ 次のいずれかを選択してください。  
   
 -   **[Windows 認証]**  
   
@@ -56,6 +56,6 @@ ms.locfileid: "68086616"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 変更データベースの作成](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [CDC デザイナーで使用する SQL Server 接続に必要な権限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [CDC デザイナーで使用する SQL Server 接続に必要なアクセス許可](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

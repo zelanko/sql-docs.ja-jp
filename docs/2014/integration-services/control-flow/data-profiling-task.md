@@ -13,15 +13,14 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f17debb2b93711981f80c84b0166940f34e44057
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831888"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433379"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -82,7 +81,7 @@ ms.locfileid: "62831888"
 |FunctionalDependencyProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
 |InclusionProfile|`integer` 型、`char` 型、および `datetime` 型の列|  
   
- \* 有効なデータ型の場合は、前の表に、 `integer`、 `char`、`datetime`と`numeric`型が次の特定のデータ型が含まれます。  
+ \*有効なデータ型の前の表では、、、 `integer` `char` `datetime` 、およびの `numeric` 各型に、次の特定のデータ型が含まれています。  
   
  整数型には `bit`、`tinyint`、`smallint`、`int`、および `bigint` が含まれます。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831888"
   
  数値型には `integer` 型 (`bit` を除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric` が含まれます。  
   
- \*\* `image`、 `text`、 `XML`、 `udt`、および`variant`列の Null 比プロファイル以外のプロファイルの種類はサポートされていません。  
+ \*\*`image`、 `text` 、 `XML` 、 `udt` 、およびの各 `variant` 型は、列の Null 比プロファイル以外のプロファイルではサポートされていません。  
   
 ### <a name="valid-tables-and-columns"></a>有効なテーブルと列  
  テーブルまたは列が空の場合、データ プロファイル タスクで行われる処理は次のようになります。  
@@ -109,11 +108,11 @@ ms.locfileid: "62831888"
 -   **クイック プロファイル** [クイック プロファイル] を選択すると、タスクをすばやく構成できます。 [クイック プロファイル] では、すべての既定のプロファイルおよび既定の設定を使用してテーブルまたはビューがプロファイルされます。  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>データ プロファイル タスクで使用できるカスタム ログ メッセージ  
- 次の表は、データ プロファイル タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
+ 次の表は、データ プロファイル タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
-|**DataProfilingTaskTrace**|タスクの状態に関する説明情報を提供します。 メッセージには次の情報が含まれます。<br /><br /> 処理要求の開始<br /><br /> クエリの開始<br /><br /> クエリの終了<br /><br /> 計算要求の完了|  
+|**DataProfilingTaskTrace**|タスクの状態に関する説明情報を提供します。 メッセージには次の情報が含まれます。<br /><br /> 処理要求の開始<br /><br /> クエリの開始<br /><br /> Query End<br /><br /> 計算要求の完了|  
   
 ## <a name="output-and-its-schema"></a>出力とそのスキーマ  
  データ プロファイル タスクでは、選択したプロファイルは DataProfile.xsd スキーマに従って構造化された XML に出力されます。 この XML 出力をファイルに保存するかパッケージ変数に保存するかを指定できます。 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/) でこのスキーマをオンラインで表示できます。 この Web ページから、スキーマのローカル コピーを保存できます。 その後、スキーマのローカル コピーを Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他のスキーマ エディター、XML エディター、またはメモ帳などのテキスト エディターで表示できます。  

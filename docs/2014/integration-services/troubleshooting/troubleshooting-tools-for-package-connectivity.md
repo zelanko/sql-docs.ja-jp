@@ -1,5 +1,5 @@
 ---
-title: ツールのパッケージ接続のトラブルシューティング |Microsoft Docs
+title: トラブルシューティングツールのパッケージ接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fce781a80b03e937f875214a74c60aeacf016246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766165"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420459"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>トラブルシューティング ツールのパッケージ接続
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージと、パッケージがデータを抽出して読み込むデータ ソースとの接続のトラブルシューティングを行うための、機能とツールが用意されています。  
@@ -68,7 +67,7 @@ ms.locfileid: "62766165"
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ開発のトラブルシューティング ツール](troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](troubleshooting-tools-for-package-execution.md)  
   

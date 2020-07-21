@@ -16,16 +16,16 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140394"
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
   レポート実行プロパティでは、レポートの処理方法を制御します。 実行プロパティは、各レポートごとに設定する必要があります。  
   
- レポート実行プロパティを設定する web ポータルでレポートに移動、レポートを右クリックして選択**管理**ドロップ ダウン メニューから。
+ レポートの実行プロパティを設定するには、Web ポータルでレポートに移動し、レポートを右クリックし、ドロップダウン メニューから **[管理]** を選択します。
   
 ## <a name="report-execution-modes"></a>レポート実行モード  
  レポートは、要求時に実行するか、スナップショットとして実行することができます。 以下のセクションでは、各方法について説明します。  

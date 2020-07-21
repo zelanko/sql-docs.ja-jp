@@ -15,14 +15,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9efb20e7c182d1d8a2426347fcfe2eafa09d35ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc14bf340407903674014a84a6b48f2ff14522fc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034345"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298125"
 ---
 # <a name="recordset-destination"></a>レコードセット変換先
 
@@ -42,7 +42,7 @@ ms.locfileid: "68034345"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [レコードセット変換先のカスタム プロパティ](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   

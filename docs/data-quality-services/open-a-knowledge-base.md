@@ -1,6 +1,5 @@
 ---
-title: ナレッジ ベースを開く | Microsoft Docs
-ms.custom: ''
+title: ナレッジ ベースを開く
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,34 +9,34 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 73bcb228383cb5d80554c0f0059215cb4acbb9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935056"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882736"
 ---
 # <a name="open-a-knowledge-base"></a>ナレッジ ベースを開く
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で既存のナレッジ ベースを開き、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを開くには、ナレッジ ベースが既に作成されていて、発行済みであるか (他のユーザーが作成した場合) または閉じられている (自分で作成した場合) 必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ナレッジ ベースを開くには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールを所有している必要があります。  
   
-##  <a name="Open"></a> Open a knowledge base  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a>ナレッジベースを開く  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[ナレッジ ベースを開く]** をクリックします。  
   
@@ -71,29 +70,29 @@ ms.locfileid: "67935056"
   
 -   [最近使用したナレッジ ベース] の他のユーザーにロックされたナレッジ ベースを開くには、そのユーザーにナレッジ ベースのロック解除を依頼します。  
   
-##  <a name="FollowUp"></a>補足情報: ナレッジ ベースを開いた後  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>補足情報: ナレッジベースを開いた後  
  ナレッジ ベースを開くと、ナレッジ ベースはナレッジ ベース テーブルの [状態] 列に示される状態になります。 ナレッジ検出およびポリシー照合のアクティビティでは、ナレッジ ベースは特定のウィザード ページで開かれます。 ドメイン管理アクティビティでは、ナレッジ ベースはドメイン管理ページで開かれます。 状態について詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
-##  <a name="Locked"></a> ナレッジ ベースがロックされている場合  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>ナレッジベースがロックされている場合  
  最初の列のロック アイコンは、ナレッジ ベースがロックされているかどうかを示します。 ロックされたナレッジ ベースの名前は、赤いフォントで表示されます。 特定ユーザーによるナレッジ ベースのアクティビティによって変更中のナレッジ ベースは、[ロック済み] としてマークされます。 ロックされているナレッジ ベースを他のユーザーが操作することはできません。 ナレッジ ベースを操作しているユーザーは、[ナレッジ ベースを開く] ページのテーブル内でナレッジ ベースを右クリックし、 **[ロック解除]** をクリックするか、発行することにより、ロックを解除できます。 DQS では、ロックされたナレッジ ベースにカーソルが置かれているときに、そのナレッジ ベースをロックしたユーザーとロックした時間を示すヒントが表示されます。  
   
-##  <a name="State"></a> ナレッジ ベースの状態  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>ナレッジベースの状態  
  [状態] フィールドは、ナレッジ ベースがアクティビティのどのステージにあるのかを示します。 ナレッジ ベースを開くと、そのステージで開かれます。  
   
--   **\<空>** : ナレッジ ベースが発行済みの場合にはナレッジ ベースの [状態] フィールドは空白になります (ドメイン管理アクティビティの **[発行]** をクリックした後、 **[はい - ナレッジ ベースを発行して終了]** をクリック)。  
+-   **\<Empty>**: ナレッジベースが発行されている場合は、ナレッジベースの [状態] フィールドが空になります。これには、ドメイン管理アクティビティの [**発行**] をクリックし、[**はい-ナレッジベースを発行して終了]** をクリックします。  
   
--   **[作業中]** : ナレッジ ベースに対する作業内容が保存されています (ドメイン管理アクティビティの **[発行]** をクリックした後、 **[いいえ - 作業内容をナレッジ ベースに保存して終了]** をクリック)。  
+-   **作業中**: ナレッジベースの作業は、ドメイン管理アクティビティの [**発行**] をクリックし、[**いいえ-作業内容をナレッジベースに保存**して終了] をクリックして保存されています。  
   
--   **[ドメイン管理]** : ナレッジ ベースのドメインに対してデータが入力されましたが、ナレッジ ベースはまだ発行されていないため、作業内容はドメイン管理アクティビティに含まれたままです。 ナレッジ検出アクティビティは使用できません。 **[ドメイン管理]** 画面で **[閉じる]** をクリックした場合にこの状態になります。  
+-   **[ドメイン管理]**: ナレッジ ベースのドメインに対してデータが入力されましたが、ナレッジ ベースはまだ発行されていないため、作業内容はドメイン管理アクティビティに含まれたままです。 ナレッジ検出アクティビティは使用できません。 **[ドメイン管理]** 画面で **[閉じる]** をクリックした場合にこの状態になります。  
   
--   **[検出 - マッピング]** : ナレッジ ベースは **[ナレッジ ベース管理: マッピング]** ページで閉じられました。 ナレッジ ベースがロックされていて、ドメイン管理アクティビティおよび照合アクティビティを使用できません。  
+-   **[検出 - マッピング]**: ナレッジ ベースは **[ナレッジ ベース管理: マッピング]** ページで閉じられました。 ナレッジ ベースがロックされていて、ドメイン管理アクティビティおよび照合アクティビティを使用できません。  
   
--   **[検出 - 検出]** : ナレッジ ベースは **[ナレッジ ベース管理: 分析]** ページで閉じられました。 ナレッジ ベースがロックされていて、ドメイン管理アクティビティを使用できません。  
+-   **[検出 - 検出]**: ナレッジ ベースは **[ナレッジ ベース管理: 分析]** ページで閉じられました。 ナレッジ ベースがロックされていて、ドメイン管理アクティビティを使用できません。  
   
--   **[検出 - 値管理]** : ナレッジ ベースは **[ナレッジ ベース管理: Manage Domain Terms]\(ドメイン用語の管理\)** ページで閉じられました。 ナレッジ ベースがロックされていて、ドメイン管理アクティビティを使用できません。  
+-   [**検出-値の管理**]: ナレッジベースは [**ナレッジベース管理: ドメイン用語の管理**] ページで閉じられました。 ナレッジ ベースがロックされていて、ドメイン管理アクティビティを使用できません。  
   
--   **[ポリシーの照合 - ポリシーの照合]** : ナレッジ ベースは **[ポリシーの照合 - ポリシーの照合]** ページで閉じられました。 ナレッジ ベースがロックされていて、ナレッジ検出アクティビティおよびドメイン管理アクティビティを使用できません。  
+-   **ポリシー**照合ポリシーの照合: ナレッジベースは [ポリシーの照合 **-** ポリシーの照合] ページで閉じられました。 ナレッジ ベースがロックされていて、ナレッジ検出アクティビティおよびドメイン管理アクティビティを使用できません。  
   
--   **[ポリシーの照合 - 照合結果]** : ナレッジ ベースは **[ポリシーの照合 - 照合結果]** ページで閉じられました。 ナレッジ ベースがロックされていて、ナレッジ検出アクティビティおよびドメイン管理アクティビティを使用できません。  
+-   **ポリシー照合結果の照合**: ナレッジベースは [ポリシーの照合**結果**] ページで閉じられました。 ナレッジ ベースがロックされていて、ナレッジ検出アクティビティおよびドメイン管理アクティビティを使用できません。  
   
   

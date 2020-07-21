@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergefilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137688"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893586"
 ---
-# <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マージ フィルターに関する情報を返します。 このストアド プロシージャは、任意のデータベースのパブリッシャーで実行されます。  
+  マージ フィルターに関する情報を返します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値は **%** 、すべてのアーティクルの名前が返されます。  
+`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はです **%** 。これにより、すべてのアーティクルの名前が返されます。  
   
-`[ @filtername = ] 'filtername'` に関する情報を返すフィルターの名前です。 *filtername*は**sysname**、既定値は **%** 、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報が返されます。  
+`[ @filtername = ] 'filtername'`情報を返すフィルターの名前を指定します。 *filtername*のデータ型は**sysname**で、既定値はです **%** 。これは、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報を返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -51,29 +51,29 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|結合フィルターの ID。|  
 |**filtername**|**sysname**|フィルターの名前。|  
-|**結合アーティクル名**|**sysname**|結合アーティクルの名前です。|  
-|**join_filterclause**|**nvarchar(2000)**|結合を修飾するフィルター句。|  
+|**join article name**|**sysname**|結合アーティクルの名前。|  
+|**join_filterclause**|**nvarchar (2000)**|結合を修飾するフィルター句。|  
 |**join_unique_key**|**int**|一意なキーを基に結合を行うかどうかを示します。|  
-|**ベース テーブルの所有者**|**sysname**|ベース テーブルの所有者の名前。|  
-|**ベース テーブルの名前**|**sysname**|ベース テーブルの名前です。|  
-|**結合テーブルの所有者**|**sysname**|ベース テーブルに結合するテーブルの所有者の名前。|  
-|**結合テーブルの名前**|**sysname**|ベース テーブルに結合するテーブルの名前。|  
-|**アーティクルの名前**|**sysname**|ベース テーブルに結合するテーブル アーティクルの名前です。|  
-|**filter_type**|**tinyint**|マージ フィルターは、次のいずれかの種類です。<br /><br /> **1** = 結合フィルターのみ<br /><br /> **2** = 論理レコードのリレーションシップ<br /><br /> **3** = 両方|  
+|**base table owner**|**sysname**|ベーステーブルの所有者の名前。|  
+|**base table name**|**sysname**|ベーステーブルの名前。|  
+|**join table owner**|**sysname**|ベース テーブルに結合するテーブルの所有者の名前。|  
+|**結合テーブル名**|**sysname**|ベーステーブルに結合されているテーブルの名前。|  
+|**アーティクル名**|**sysname**|ベーステーブルに結合されているテーブルアーティクルの名前。|  
+|**filter_type**|**tinyint**|マージフィルターの種類。次のいずれかを指定できます。<br /><br /> **1** = 結合フィルターのみ<br /><br /> **2** = 論理レコードリレーションシップ<br /><br /> **3** = 両方|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_helpmergefilter**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>注釈  
+ **sp_helpmergefilter**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergefilter**します。  
+ **Sp_helpmergefilter**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

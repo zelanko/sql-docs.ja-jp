@@ -1,5 +1,5 @@
 ---
-title: sys.syscacheobjects (TRANSACT-SQL) |Microsoft Docs
+title: sys.syscacheobjects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,36 +20,36 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899944"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  キャッシュの使用方法についてを説明します。  
+  キャッシュの使用方法に関する情報が含まれています。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**bucketid**|**int**|バケット ID です。 値は 0 ～ディレクトリ サイズ -1 の範囲を示します。 ディレクトリのサイズは、ハッシュ テーブルのサイズです。|  
+|**bucketid**|**int**|バケット ID です。 値は 0 ～ディレクトリ サイズ -1 の範囲を示します。 ディレクトリサイズは、ハッシュテーブルのサイズです。|  
 |**cacheobjtype**|**nvarchar(17)**|キャッシュ内のオブジェクトの種類です。<br /><br /> コンパイル済みプラン<br /><br /> 実行プラン<br /><br /> 解析ツリー<br /><br /> カーソル<br /><br /> 拡張ストアド プロシージャ|  
-|**objtype**|**nvarchar(8)**|オブジェクトの種類。<br /><br /> ストアド プロシージャ<br /><br /> 準備済みステートメント<br /><br /> アドホック クエリ ([!INCLUDE[tsql](../../includes/tsql-md.md)]から言語イベントとして送信された、 **sqlcmd**または**osql**ユーティリティは、リモート プロシージャ呼び出しではなく)<br /><br /> ReplProc (レプリケーション プロシージャ)<br /><br /> トリガー<br /><br /> 表示<br /><br /> 既定<br /><br /> ユーザー テーブル<br /><br /> システム テーブル<br /><br /> [確認]<br /><br /> Rule|  
-|**objid**|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの 1 つです。 これは、オブジェクトに格納されている ID **sysobjects**のデータベース オブジェクト (プロシージャ、ビュー、トリガー、およびなど)。 アドホックまたは準備された SQL などのキャッシュ オブジェクトの**objid**は内部的に生成された値です。|  
-|**dbid**|**smallint**|データベース ID がキャッシュ オブジェクトがコンパイルされました。|  
-|**dbidexec**|**smallint**|クエリ実行元となるデータベース ID です。<br /><br /> ほとんどのオブジェクトに対して**dbidexec**と同じ値を持つ**dbid**します。<br /><br /> システム ビュー、 **dbidexec**は、クエリを実行するためのデータベースの ID です。<br /><br /> アドホック クエリでは、 **dbidexec**は 0 です。 つまり、 **dbidexec**と同じ値を持つ**dbid**します。|  
-|**uid**|**smallint**|アドホックなクエリ プランおよび使用可能になったプランのプラン作成者です。<br /><br /> -2 は、送られたバッチが暗黙的な名前解決に依存せず、複数ユーザー間での共有が可能なことを示します。 これは推奨される方法です。 他の値は、データベースのクエリを送っているユーザーのユーザー ID を示します。<br /><br /> オーバーフローまたはユーザーおよびロールの数が 32,767 を超える場合は NULL を返します。|  
-|**refcounts**|**int**|このキャッシュ オブジェクトを参照するその他のキャッシュ オブジェクトの数。 1 は基になるオブジェクトであることを示します。|  
+|**objtype**|**nvarchar(8)**|オブジェクトの種類:<br /><br /> ストアド プロシージャ<br /><br /> 準備済みステートメント<br /><br /> アドホッククエリ ( [!INCLUDE[tsql](../../includes/tsql-md.md)] リモートプロシージャコールではなく、 **sqlcmd**ユーティリティまたは**osql**ユーティリティから言語イベントとして送信されます)<br /><br /> ReplProc (レプリケーションプロシージャ)<br /><br /> トリガー<br /><br /> View<br /><br /> Default<br /><br /> ユーザー テーブル<br /><br /> システム テーブル<br /><br /> チェック<br /><br /> ルール|  
+|**objid**|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの1つ。 これは、データベースオブジェクト (プロシージャ、ビュー、トリガーなど) の**sysobjects**に格納されているオブジェクト ID です。 アドホックまたは準備された SQL などのキャッシュオブジェクトの場合、 **objid**は内部で生成された値です。|  
+|**dbid**|**smallint**|キャッシュオブジェクトがコンパイルされたデータベース ID。|  
+|**dbidexec**|**smallint**|クエリ実行元となるデータベース ID です。<br /><br /> ほとんどのオブジェクトでは、 **dbidexec**の値は**dbid**と同じです。<br /><br /> システムビューの場合、 **dbidexec**は、クエリの実行元のデータベース ID です。<br /><br /> アドホッククエリの場合、 **dbidexec**は0です。 つまり、 **dbidexec**の値は**dbid**と同じになります。|  
+|**uid**|**smallint**|アドホックなクエリ プランおよび使用可能になったプランのプラン作成者です。<br /><br /> -2 は、送られたバッチが暗黙的な名前解決に依存せず、複数ユーザー間での共有が可能なことを示します。 可能であればこの方法の使用をお勧めします。 他の値は、データベースのクエリを送っているユーザーのユーザー ID を示します。<br /><br /> ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
+|**refcounts**|**int**|このキャッシュオブジェクトを参照している他のキャッシュオブジェクトの数。 1 は基になるオブジェクトであることを示します。|  
 |**usecounts**|**int**|このキャッシュ オブジェクトが最初の時点から使用された回数です。|  
-|**pagesused**|**int**|キャッシュ オブジェクトによって使用されたページ数です。|  
-|**setopts**|**int**|コンパイル済みプランに影響する SET オプションの設定です。 この設定は、キャッシュ キーの一部です。 この列の値を変更するには、ユーザーがオプションの設定を変更ことを示します。 これらのオプションを以下に示します。<br /><br /> **ANSI_PADDING**<br /><br /> **FORCEPLAN**<br /><br /> **CONCAT_NULL_YIELDS_NULL**<br /><br /> **ANSI_WARNINGS**<br /><br /> **ANSI_NULLS**<br /><br /> **QUOTED_IDENTIFIER**<br /><br /> **ANSI_NULL_DFLT_ON**<br /><br /> **ANSI_NULL_DFLT_OFF**|  
-|**langid**|**smallint**|言語 id です。 キャッシュ オブジェクトを作成した接続の言語の ID です。|  
-|**dateformat**|**smallint**|キャッシュ オブジェクトを作成した接続の日付形式です。|  
+|**使用されたもの**|**int**|キャッシュ オブジェクトによって使用されたページ数です。|  
+|**setopts**|**int**|コンパイル済みプランに影響する SET オプションの設定です。 この設定は、キャッシュ キーの一部です。 この列の値を変更すると、ユーザーが SET オプションを変更したことを示します。 ポリシーで設定できるオプションは、次のとおりです。<br /><br /> **ANSI_PADDING**<br /><br /> **FORCEPLAN**<br /><br /> **CONCAT_NULL_YIELDS_NULL**<br /><br /> **ANSI_WARNINGS**<br /><br /> **ANSI_NULLS**<br /><br /> **QUOTED_IDENTIFIER**<br /><br /> **ANSI_NULL_DFLT_ON**<br /><br /> **ANSI_NULL_DFLT_OFF**|  
+|**langid**|**smallint**|言語 ID。 キャッシュオブジェクトを作成した接続の言語の ID。|  
+|**dateformat**|**smallint**|キャッシュオブジェクトを作成した接続の日付形式。|  
 |**status**|**int**|キャッシュ オブジェクトがカーソル プランであるかどうかを示します。 現時点では、最下位ビットのみが使用されます。|  
 |**lasttime**|**bigint**|これは旧バージョンとの互換性のためにだけ用意されています。 常に 0 を返します。|  
 |**maxexectime**|**bigint**|これは旧バージョンとの互換性のためにだけ用意されています。 常に 0 を返します。|  
@@ -57,7 +57,7 @@ ms.locfileid: "68010781"
 |**lastreads**|**bigint**|これは旧バージョンとの互換性のためにだけ用意されています。 常に 0 を返します。|  
 |**lastwrites**|**bigint**|これは旧バージョンとの互換性のためにだけ用意されています。 常に 0 を返します。|  
 |**sqlbytes**|**int**|プロシージャの定義または送信済みバッチのバイト長です。|  
-|**sql**|**nvarchar(3900)**|モジュールの定義または最初の 3,900 文字のバッチを送信します。|  
+|**server**|**nvarchar(3900)**|モジュール定義、または送信されたバッチの最初の3900文字。|  
   
 ## <a name="see-also"></a>関連項目  
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

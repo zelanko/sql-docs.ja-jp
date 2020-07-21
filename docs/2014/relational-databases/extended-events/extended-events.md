@@ -10,23 +10,22 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa7f81fb0260def654f0ad1c93ccee367f44f664
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62990703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027453"
 ---
 # <a name="extended-events"></a>拡張イベント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャは高い拡張性と柔軟な構成を備えており、これによってユーザーは、トラブルシューティングまたはパフォーマンスの問題の特定に必要な量の情報を過不足なく収集できます。  
   
- Web サイトで拡張イベントに関する詳細を検索する[SQL Server 拡張イベント](https://blogs.msdn.com/b/extended_events/)します。  
+ 拡張イベントの詳細については、「 [SQL Server 拡張イベント](https://blogs.msdn.com/b/extended_events/)」を参照してください。  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
- 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]** )。  
+## <a name="benefits-of-ssnoversion-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
+ 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]**)。  
   
 ## <a name="extended-events-concepts"></a>拡張イベントの概念  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなど、既存の概念を基にして、Event Tracing for Windows の概念や、新しい概念を導入したものです。  
@@ -73,7 +72,7 @@ ms.locfileid: "62990703"
   
 -   アクティブ プロセスを最小限の負荷で動的に監視する機能。  
   
--   パフォーマンスへの体感的な影響を伴わずに動作する既定のシステム正常性セッション。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照してください。  
+-   パフォーマンスへの体感的な影響を伴わずに動作する既定のシステム正常性セッション。 このセッションは、パフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 詳細については、「 [System_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照してください。  
   
 ## <a name="extended-events-tasks"></a>拡張イベントのタスク  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データ定義言語 (DDL) ステートメント、動的管理ビューおよび関数、カタログ ビューを実行することで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の簡単、または複雑な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント トラブルシューティング ソリューションを作成することができます。  
@@ -98,11 +97,11 @@ ms.locfileid: "62990703"
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](monitor-system-activity-using-extended-events.md)|  
   
 ## <a name="see-also"></a>参照  
- [[データ層アプリケーション]](../data-tier-applications/data-tier-applications.md)   
+ [データ層アプリケーション](../data-tier-applications/data-tier-applications.md)   
  [SQL Server オブジェクトとバージョンの DAC サポート](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [データ層アプリケーションの配置](../data-tier-applications/deploy-a-data-tier-application.md)   
  [データ層アプリケーションの監視](../data-tier-applications/monitor-data-tier-applications.md)   
  [拡張イベントの動的管理ビュー](../views/views.md)   
- [拡張イベント カタログ ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [拡張イベントのカタログビュー &#40;Transact-sql&#41;](~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

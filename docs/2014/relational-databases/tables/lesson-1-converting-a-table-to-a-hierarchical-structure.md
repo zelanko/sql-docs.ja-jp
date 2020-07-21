@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:テーブルの階層構造への変換 |Microsoft Docs
+title: レッスン 1:テーブルの階層構造への変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd6f1d123bca9f9f0c10288e0b58dd075c7b0949
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205647"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068060"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>レッスン 1:テーブルの階層構造への変換
   階層リレーションシップを表すために自己結合を使っているテーブルがある場合、このレッスンの説明に従って、それらのテーブルを階層構造に変換できます。 現在の表示から、`hierarchyid` を使用した表示に移行するのは比較的簡単です。 移行後は、コンパクトで理解しやすい階層表示が可能になるため、ユーザーはさまざまな方法でインデックスを作成して効率的なクエリを実現できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "63205647"
   
 -   [NewOrg テーブルの最適化](lesson-1-3-optimizing-the-neworg-table.md)  
   
--   [概要:テーブルの階層構造への変換](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+-   [概要: テーブルの階層構造への変換](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
 ## <a name="prerequisites"></a>前提条件  
  このレッスンを学習するには、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースが必要です。  
@@ -39,6 +38,6 @@ ms.locfileid: "63205647"
  [Employee テーブルの現在の構造の確認](lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:作成して、階層テーブルでデータを管理します。](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [レッスン 2: 階層テーブルでのデータの作成と管理](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   

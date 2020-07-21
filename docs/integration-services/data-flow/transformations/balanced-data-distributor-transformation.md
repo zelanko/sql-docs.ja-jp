@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69d9972a8f1a24242915bdf2a0d4ddd31b0a12c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50cf62449d789684324a25c4c0bd09bbe28ce28a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112781"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291705"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Balanced Data Distributor (BDD) 変換
 

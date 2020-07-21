@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 032eaa357b601bfd72f018443725542ef2253592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8f3aef5f587e590dcad0ab0490679a480529387a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088932"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71290500"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
 
@@ -47,7 +47,7 @@ ms.locfileid: "68088932"
   
     -   **[式]** 列で直接プロパティ式を入力するか変更し、 **[OK]** をクリックします。  
   
-         \- または -  
+         または  
   
     -   プロパティの式の行の省略記号 [...] をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
   

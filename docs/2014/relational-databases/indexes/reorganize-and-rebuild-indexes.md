@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7c00f2128bb4c54064511ffff9e8929c9faf4d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811034"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049838"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>インデックスの再構成と再構築
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、断片化したインデックスを再構成または再構築する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、基になるデータに対して挿入、更新、または削除の各操作が行われるたびに、インデックスが自動的にメンテナンスされます。 このような変更が長期にわたると、インデックス内の情報がデータベース内に散在 (断片化) することになります。 インデックスに、キー値に基づく論理順序とデータ ファイル内の物理順序が一致しないページが存在すると、断片化が発生します。 インデックスが大量に断片化されると、クエリのパフォーマンスが低下し、アプリケーションの応答が遅くなる場合があります。  
@@ -64,14 +63,14 @@ ms.locfileid: "68811034"
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Fragmentation"></a> 断片化の検出  
+###  <a name="detecting-fragmentation"></a><a name="Fragmentation"></a> 断片化の検出  
  断片化を解消する方法を決める最初の手順は、断片化の程度を判断するためにインデックスを分析することです。 システム関数 [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)を使用して、特定のインデックス、テーブルやインデックス付きビュー上のすべてのインデックス、データベース内のすべてのインデックス、またはすべてのデータベース内のすべてのインデックスの断片化を検出できます。 パーティション インデックスの場合は、 **sys.dm_db_index_physical_stats** でもパーティションごとの断片化情報が提供されます。  
   
  **sys.dm_db_index_physical_stats** 関数から返される結果セットに含まれる列を次に示します。  
   
-|[列]|説明|  
+|列|説明|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|論理的な断片化 (インデックス内で順序が乱れたページ) の割合。|  
 |**fragment_count**|インデックス内の断片化 (物理的に連続したリーフ ページ) の数。|  
@@ -81,13 +80,13 @@ ms.locfileid: "68811034"
   
 |**avg_fragmentation_in_percent** 値|断片化解消ステートメント|  
 |-----------------------------------------------|--------------------------|  
-|> 5% および\< = 30%|ALTER INDEX REORGANIZE|  
+|> 5% および \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
 <sup>1</sup> インデックスの再構築はオンラインでもオフラインでも実行できます。 インデックスの再構成は、常にオンラインで実行されます。 再構成オプションと同様の可用性を実現するには、インデックスをオンラインで再構築してください。  
   
 > [!TIP]
-> これらの値は、`ALTER INDEX REORGANIZE` と `ALTER INDEX REBUILD` の使い分けの大まかな目安となります。 ただし、実際の値は状況によって変わります。 それぞれの環境で実際に試して最適なしきい値を特定することが重要です。 たとえば、特定のインデックスが主にスキャン操作のために使用されている場合、断片化を解消すると、これらの操作のパフォーマンスが向上します。 主にシーク操作に使用されるインデックスについては、パフォーマンス上の利点は低くなります。 同様に、ヒープ (クラスター化インデックスのないテーブル) の断片化を解消することは、非クラスター化インデックススキャン操作では特に便利ですが、参照操作にはほとんど影響しません。
+> これらの値は、`ALTER INDEX REORGANIZE` と `ALTER INDEX REBUILD` の使い分けの大まかな目安となります。 ただし、実際の値は状況によって変わります。 それぞれの環境で実際に試して最適なしきい値を特定することが重要です。 たとえば、特定のインデックスが主にスキャン操作に使用されている場合、断片化を解消すると、これらの操作のパフォーマンスが向上します。 主にシーク操作に使用されるインデックスについては、パフォーマンス上の利点は小さくなります。 同様に、ヒープ (クラスター化インデックスのないテーブル) 内の断片化の解消は、非クラスター化インデックスのスキャン操作では特に便利ですが、参照操作にはほとんど影響しません。
 
 断片化のレベルが非常に低い場合 (5% 未満) は、通常、これらのコマンドのいずれも使用しないでください。インデックスの再構成や再構築には、ほとんどの場合、そのようなわずかな断片化を解消するには見合わないコストがかかります。 
 
@@ -95,21 +94,21 @@ ms.locfileid: "68811034"
 > 小さなインデックスを再構築または再構成しても、多くの場合、断片化が解消することはありません。 小さなインデックスのページは、混合エクステントに格納される場合もあります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。
 
 ### <a name="index-defragmentation-considerations"></a>インデックスの最適化に関する考慮事項
-特定の条件下では、クラスター化インデックスを再構築すると、クラスター化キーを参照する非クラスター化インデックスが自動的に再構築されます (非クラスター化インデックスレコードに含まれる物理識別子または論理識別子を変更する必要がある場合)。
+特定の条件下では、非クラスター化インデックス レコードに含まれる物理識別子または論理識別子を変更する必要がある場合に、クラスター化インデックスを再構築すると、クラスター化キーを参照する非クラスター化インデックスが自動的に再構築されます。
 
-すべての非クラスター化インデックスを強制的にテーブルに再構築するシナリオを次に示します。
+すべての非クラスター化インデックスを強制的にテーブル上に自動再構築するシナリオ:
 
--  テーブルにクラスター化インデックスを作成する
--  クラスター化インデックスを削除すると、テーブルがヒープとして格納されます。
--  列を含めたり除外したりするようにクラスター化キーを変更する
+-  テーブルに対するクラスター化インデックスの作成
+-  テーブルがヒープとして格納される原因となる、クラスター化インデックスの削除
+-  クラスター化キーの変更による列の挿入または除外
 
-すべての非クラスター化インデックスをテーブルで自動的に再構築する必要がないシナリオは、次のとおりです。
+すべての非クラスター化インデックスをテーブル上で自動的に再構築する必要がないシナリオ:
 
 -  一意のクラスター化インデックスの再構築
 -  一意でないクラスター化インデックスの再構築
--  クラスター化インデックスへのパーティション構成の適用、またはクラスター化インデックスの別のファイルグループへの移動など、インデックススキーマの変更
+-  クラスター化インデックスへのパーティション構成の適用、クラスター化インデックスの別のファイルグループへの移動など、インデックス スキーマの変更
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 128 エクステントを超えるインデックスは、論理フェーズと物理フェーズの 2 つの独立したフェーズで再構築されます。 論理フェーズでは、インデックスによって使用されている既存のアロケーション ユニットが、割り当て解除に設定されます。その後、データ行がコピーされ、並べ替えられてから、再構築されたインデックスを格納するために作成された新しいアロケーション ユニットに移動されます。 物理フェーズでは、バックグラウンドで行われる短いトランザクションで、以前に割り当て解除に設定されたアロケーション ユニットが物理的に削除され、ロックの必要はあまり多くありません。 エクステントの詳細については、「[ページとエクステントのアーキテクチャ ガイド](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide)」を参照してください。
 
@@ -119,12 +118,12 @@ ms.locfileid: "68811034"
 
 インデックスのあるファイル グループがオフラインであるか、または読み取り専用に設定されている場合、インデックスを再構成または再構築することはできません。 キーワード `ALL` を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する `ALTER` 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedureFrag"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureFrag"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>インデックスの断片化を確認するには  
   
@@ -151,7 +150,7 @@ ms.locfileid: "68811034"
      **[行の平均サイズ]**  
      リーフ レベルの行の平均サイズです。  
   
-     **[奥行]**  
+     **Depth**  
      インデックス内のレベルの数 (リーフ レベルを含む) です。  
   
      **[転送されたレコード]**  
@@ -172,16 +171,16 @@ ms.locfileid: "68811034"
      **[行の最小サイズ]**  
      リーフ レベルの最小行サイズです。  
   
-     **[ページ]**  
+     **ページ**  
      データ ページ数の合計です。  
   
-     **Partition ID**  
+     **パーティション ID**  
      インデックスを含む B ツリーのパーティション ID です。  
   
      **[バージョンの非実体行]**  
      未処理のスナップショット分離トランザクションが原因で保持されているゴースト レコードの数。  
   
-##  <a name="TsqlProcedureFrag"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureFrag"></a> Transact-SQL の使用  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>インデックスの断片化を確認するには  
   
@@ -217,9 +216,9 @@ ms.locfileid: "68811034"
     (6 row(s) affected)  
     ```  
   
- 詳細については、「[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)」を参照してください。  
+ 詳細については、「 [sys. dm_db_index_physical_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)」を参照してください。  
   
-##  <a name="SSMSProcedureReorg"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureReorg"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>インデックスを再構成または再構築するには  
   
@@ -271,9 +270,9 @@ ms.locfileid: "68811034"
   
 7.  **[ラージ オブジェクトの列データを圧縮する]** チェック ボックスをオンにして、ラージ オブジェクト (LOB) データを含むページもすべて圧縮することを指定します。  
   
-8.  クリックして **OK.**  
+8.  **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedureReorg"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> Transact-SQL の使用  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>デフラグされたインデックスを再構成するには  
   
@@ -332,7 +331,7 @@ ms.locfileid: "68811034"
   
  詳細については、「[ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 2000 インデックスの最適化に関するベスト プラクティス](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

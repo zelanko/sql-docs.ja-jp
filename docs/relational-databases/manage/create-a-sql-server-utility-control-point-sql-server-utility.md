@@ -1,5 +1,6 @@
 ---
-title: SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ) | Microsoft Docs
+title: SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
+description: SQL Server ユーティリティ コントロール ポイント (UCP) を作成することによって、リソース使用のボトルネックおよび統合の可能性を特定するのに役立つ情報を得ることができます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115691"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196890"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   企業では、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティを所有することができ、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでは、多くの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスおよびデータ層アプリケーションを管理できます。 各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティには、ユーティリティ コントロール ポイント (UCP) を 1 つだけ含めることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに新しい UCP を作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各マネージド インスタンス、および各データ層アプリケーション コンポーネントは、1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのみのメンバーであり、1 つの UCP で管理されます。  
   
  UCP では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
@@ -77,7 +78,7 @@ ms.locfileid: "68115691"
   
 -   このプロシージャは、sysadmin 権限を持つユーザーが実行する必要があります。この権限は、UCP の作成に必要な権限と同じです。  
   
--   SQL Server のマネージド インスタンスをすべて UCP から削除する必要があります。 UCP は、SQL Server のマネージド インスタンスの 1 つです。 詳細については、「[ソフト NUMA を使用するようにSQL Server ユーティリティから SQL Server のインスタンスを削除する方法](https://go.microsoft.com/fwlink/?LinkId=169392)」を参照してください。  
+-   SQL Server のマネージド インスタンスをすべて UCP から削除する必要があります。 UCP は、SQL Server のマネージド インスタンスの 1 つです。 詳細については、「[SQL Server ユーティリティから SQL Server のインスタンスを削除する方法](https://go.microsoft.com/fwlink/?LinkId=169392)」を参照してください。  
   
  このプロシージャを使用して、SQL Server UCP を SQL Server ユーティリティから削除します。 操作の完了後は、この SQL Server インスタンスに再度 UCP を作成することができます。  
   
@@ -100,9 +101,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ以外のコレクション セットとサイド バイ サイドで実行できます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのメンバーであれば、他のコレクション セットによって監視できます。 ただし、マネージド インスタンス上のすべてのコレクション セットは、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ管理データ ウェアハウスにアップロードすることに注意してください。 詳細については、「[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)」、および「[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)」を参照してください。  
   
 ## <a name="wizard-steps"></a>ウィザードの手順  
- ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
+ ![UCP の作成](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 以降のセクションでは、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP を作成するワーク フローで使用するウィザードの各ページについて説明します。 新しい UCP を作成するウィザードを起動するには、SSMS の [表示] メニューからユーティリティ エクスプローラーを開き、ユーティリティ エクスプローラーのウィンドウ上部にある **[UCP の作成]** ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") ボタンをクリックします。  
+ 以降のセクションでは、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP を作成するワーク フローで使用するウィザードの各ページについて説明します。 新しい UCP を作成するウィザードを起動するには、SSMS の [表示] メニューからユーティリティ エクスプローラーを開き、ユーティリティ エクスプローラーのウィンドウ上部にある ![[UCP の作成]](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **[UCP の作成]** ボタンをクリックします。  
   
  次の一覧にあるリンクをクリックすると、ウィザードのページの詳細に移動できます。  
   
@@ -118,18 +119,18 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 -   [検証規則](#Validation_rules)  
   
--   [概要](#Summary)  
+-   [まとめ](#Summary)  
   
 -   [ユーティリティ コントロール ポイントの作成](#Creating_UCP)  
   
-##  <a name="Welcome"></a> UCP の作成ウィザードの概要  
+##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> UCP の作成ウィザードの概要  
  ユーティリティ エクスプローラーを開いたときに、接続されたユーティリティ コントロール ポイントがない場合は、ユーティリティ コントロール ポイントに接続するか、新しいユーティリティ コントロール ポイントを作成する必要があります。  
   
- **既存の UCP に接続する** - ユーティリティ コントロール ポイントが既に配置されている場合は、ユーティリティ エクスプローラーのウィンドウ上部にある **[ユーティリティへの接続]** ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") ボタンをクリックして接続できます。 既存の UCP に接続するには、管理者資格情報を持っているか、Utility Reader ロールのメンバーである必要があります。 UCP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに 1 つだけ存在できます。また、1 つの SSMS インスタンスから接続できる UCP は 1 つだけです。  
+ **既存の UCP に接続する** - ユーティリティ コントロール ポイントが既に配置されている場合は、ユーティリティ エクスプローラーのウィンドウ上部にある ![[ユーティリティへの接続]](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") **[ユーティリティへの接続]** ボタンをクリックして接続できます。 既存の UCP に接続するには、管理者資格情報を持っているか、Utility Reader ロールのメンバーである必要があります。 UCP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに 1 つだけ存在できます。また、1 つの SSMS インスタンスから接続できる UCP は 1 つだけです。  
   
- **新しい UCP を作成する** - 新しいユーティリティ コントロール ポイントを作成するには、ユーティリティ エクスプローラーのウィンドウ上部にある **[UCP の作成]** ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") ボタンをクリックします。 新しい UCP を作成するには、接続ダイアログで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名と管理者資格情報を指定する必要があります。 UCP は 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにつき 1 つだけ存在します。  
+ **新しい UCP を作成する** - 新しいユーティリティ コントロール ポイントを作成するには、ユーティリティ エクスプローラーのウィンドウ上部にある ![[UCP の作成]](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **[UCP の作成]** ボタンをクリックします。 新しい UCP を作成するには、接続ダイアログで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名と管理者資格情報を指定する必要があります。 UCP は 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにつき 1 つだけ存在します。  
   
-##  <a name="Instance_name"></a> インスタンスの指定  
+##  <a name="specify-instance"></a><a name="Instance_name"></a> インスタンスの指定  
  作成する UCP について、次の情報を指定します。  
   
 -   **インスタンス名** - 接続ダイアログで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。  
@@ -138,7 +139,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Connection_dialog"></a> 接続ダイアログ  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 接続ダイアログ  
  [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
   
 > [!NOTE]  
@@ -146,7 +147,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  続行するには、 **[接続]** をクリックします。  
   
-##  <a name="Agent_configuration"></a> ユーティリティ コレクション セットのアカウント  
+##  <a name="utility-collection-set-account"></a><a name="Agent_configuration"></a> ユーティリティ コレクション セットのアカウント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットを実行する Windows ドメイン アカウントを指定します。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントとして使用されます。 また、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントを使用することもできます。 検証の要件を満たすには、次のガイドラインに従ってアカウントを指定します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのオプションを指定する場合は、次のガイドラインに従います。  
@@ -155,10 +156,10 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Validation_rules"></a> 検証規則  
+##  <a name="validation-rules"></a><a name="Validation_rules"></a> 検証規則  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースでは、UCP が作成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで、次の条件が満たされている必要があります。  
   
-|検証規則|修正措置|  
+|検証規則|是正措置|  
 |---------------------|-----------------------|  
 |ユーティリティ コントロール ポイントが作成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対する管理者特権が必要です。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対する管理者特権を持つアカウントでログオンします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンは 10.50 以上である必要があります。|UCP をホストする別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  
@@ -181,7 +182,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Summary"></a> 概要  
+##  <a name="summary"></a><a name="Summary"></a> まとめ  
  概要ページには、UCP について指定した情報が表示されます。  
   
 -   UCP をホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。  
@@ -192,7 +193,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  UCP 構成設定を変更するには、 **[前へ]** をクリックします。 続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Creating_UCP"></a> ユーティリティ コントロール ポイントの作成  
+##  <a name="creating-the-utility-control-point"></a><a name="Creating_UCP"></a> ユーティリティ コントロール ポイントの作成  
  UCP の作成操作中は、ウィザードに手順と進行状況が表示されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで UCP を作成する準備をしています。  
@@ -217,7 +218,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の追加のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する方法については、「[SQL Server のインスタンスの登録 (SQL Server ユーティリティ)](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージド インスタンスである UCP を削除するには、 **ユーティリティ エクスプローラー** のウィンドウで **[マネージド インスタンス]** を選択してマネージド インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラー **のコンテンツ ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージド インスタンスを削除]** を選択します。  
   
-##  <a name="PowerShell_create_UCP"></a> PowerShell を使用したユーティリティ コントロール ポイントの新規作成  
+##  <a name="create-a-new-utility-control-point-using-powershell"></a><a name="PowerShell_create_UCP"></a> PowerShell を使用したユーティリティ コントロール ポイントの新規作成  
  次の例を使用すると、新しいユーティリティ コントロール ポイントを作成できます。  
   
 ```  

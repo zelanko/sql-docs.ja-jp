@@ -15,24 +15,23 @@ helpviewer_keywords:
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c67f84723e79b66d0454fb509f2fa9ced03dac7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62985763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997267"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
-  Row-Level Security を使用すると、クエリを実行するユーザーの特性に基づき、データベース テーブルの行へのアクセスを制御できます (たとえば、グループのメンバーシップや実行コンテキストなど)。 行レベルのセキュリティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 で使用可能になりました。 この機能の現在の説明については、現在のドキュメントの「 [行レベルのセキュリティ](https://msdn.microsoft.com/library/dn765131.aspx) 」を参照してください。  
+  行レベルのセキュリティを使用すると、クエリを実行しているユーザーの特性 (たとえば、グループ メンバーシップや実行コンテキストなど) に基づいて、データベース テーブル内の行へのアクセスを制御できます。 行レベルのセキュリティが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 で使用可能になりました。 この機能の現在の説明については、現在のドキュメントの「 [行レベルのセキュリティ](https://msdn.microsoft.com/library/dn765131.aspx) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ ポリシーを作成する&#40;Azure SQL Database&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   
- [セキュリティ ポリシーの ALTER &#40;Azure SQL Database&#41;](/sql/t-sql/statements/alter-security-policy-transact-sql)   
- [セキュリティ ポリシーのドロップ&#40;Azure SQL Database&#41;](/sql/t-sql/statements/drop-security-policy-transact-sql)   
+ [セキュリティポリシー &#40;Azure SQL Database の作成&#41;](/sql/t-sql/statements/create-security-policy-transact-sql)   
+ [セキュリティポリシーの変更 &#40;Azure SQL Database&#41;](/sql/t-sql/statements/alter-security-policy-transact-sql)   
+ [セキュリティポリシー &#40;Azure SQL Database&#41;を削除します](/sql/t-sql/statements/drop-security-policy-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
- [sys.security_policies &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-policies-transact-sql)   
- [sys.security_predicates &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-predicates-transact-sql)   
+ [security_policies &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-policies-transact-sql)   
+ [security_predicates &#40;Azure SQL Database&#41;](/sql/relational-databases/system-catalog-views/sys-security-predicates-transact-sql)   
  [ユーザー定義関数の作成 &#40;データベース エンジン&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   

@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109822"
 ---
 # <a name="choose-the-deployment-location"></a>配置場所の選択
   レポート ウィザードのこのページを使用すると、レポート サーバー プロジェクトに使用するサーバーとフォルダーの配置を設定できます。  
   
-## <a name="options"></a>および  
- **レポート サーバー**  
- たとえば、レポート サーバーの仮想ディレクトリの URL を入力 http://localhost/reportserver します。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。 既定では、レポート サーバーは、reportserver という名前の仮想ディレクトリにインストールされます。  
+## <a name="options"></a>オプション  
+ **レポートサーバー**  
+ レポートサーバーの仮想ディレクトリの URL を入力します。たとえば、 http://localhost/reportserverのようになります。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。 既定では、レポート サーバーは、reportserver という名前の仮想ディレクトリにインストールされます。  
   
- **配置フォルダー**  
+ **デプロイ フォルダー**  
  レポート サーバー プロジェクトに含まれているレポートをパブリッシュするために、パブリッシュ先フォルダーの名前を入力します。 フォルダーの既定値は、プロジェクトの名前です。 フォルダーがレポート サーバー上に存在しない場合は、レポートのパブリッシュ時に、レポート デザイナーによってフォルダーが作成されます。  
   
 ## <a name="see-also"></a>参照  

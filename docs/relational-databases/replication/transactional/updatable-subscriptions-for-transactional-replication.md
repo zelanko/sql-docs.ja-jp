@@ -1,6 +1,7 @@
 ---
-title: トランザクション レプリケーションの更新可能なサブスクリプション | Microsoft Docs
-ms.custom: ''
+title: 更新可能なサブスクリプション (トランザクション)
+description: SQL Server のトランザクション レプリケーションで使用できる、更新可能なサブスクリプション機能について説明します。
+ms.custom: seo-lt-2019
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aac257eefed1d3c04054c0369fc4d503e2daf05d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883199"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>トランザクション レプリケーションの更新可能なサブスクリプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!NOTE]  
@@ -41,9 +42,9 @@ ms.locfileid: "68121217"
   
  パブリケーションの新規作成ウィザードで更新可能なサブスクリプションによるトランザクション パブリケーションを作成する場合は、即時更新およびキュー更新の両方が有効になります。 ストアド プロシージャによるパブリケーションを作成する場合は、どちらか一方または両方のオプションを有効にすることができます。 パブリケーションに対してサブスクリプションを作成する場合は、使用する更新モードを指定します。 必要に応じて、更新モードを切り替えることができます。 詳細については、以下の「更新モードの切り替え」を参照してください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
+ トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「[トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」 (トランザクション レプリケーションに更新可能なサブスクリプションを作成する (Management Studio)) を参照してください。 
+ トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「[トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」 を参照してください。 
   
 ## <a name="switching-between-update-modes"></a>更新モードの切り替え  
  更新可能なサブスクリプションを使用する場合に、サブスクリプションに 1 つの更新モードを指定し、アプリケーションで別の更新モードが必要な場合はそちらに切り替えるように指定できます。 たとえば、サブスクリプションで即時更新を使用するが、システム障害でネットワークに接続できなくなった場合には、キュー更新に切り替えるように指定することができます。  

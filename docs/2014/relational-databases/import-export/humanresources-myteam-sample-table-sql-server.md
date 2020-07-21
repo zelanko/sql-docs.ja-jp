@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47b8990bfb211b12e97d02d2df77fd94d684ac8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050468"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
   「 [一括データのインポートおよびエクスポート](bulk-import-and-export-of-data-sql-server.md) 」のコード例の大部分では、 **myTeam**という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、 **データベースの** HumanResources **スキーマに** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを作成する必要があります。  
@@ -29,12 +28,12 @@ ms.locfileid: "66011954"
   
  **myTeam** には、次の列が含まれています。  
   
-|[列]|データ型|NULL 値の許容|説明|  
+|列|データ型|NULL 値の許容|説明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|不可|行の主キー。 チーム メンバーの従業員 ID。|  
 |**名前**|`nvarchar(50)`|不可|チーム メンバーの名前。|  
-|**Title**|`nvarchar(50)`|[可]|チームにおける従業員の肩書き。|  
-|**背景情報**|`nvarchar(50)`|不可|行が最後に更新された日時 EnterprisePublishing|  
+|**Title**|`nvarchar(50)`|Nullable|チームにおける従業員の肩書き。|  
+|**バックグラウンド**|`nvarchar(50)`|不可|行が最後に更新された日時 (既定値)。|  
   
  **HumanResources.myTeam テーブルを作成するには**  
   

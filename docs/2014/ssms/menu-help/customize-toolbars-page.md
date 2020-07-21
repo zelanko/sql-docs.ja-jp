@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64684c7b87119aa2763ddc4f48f200de20dde0cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067373"
 ---
 # <a name="customize-toolbars-page"></a>[ユーザー設定] ([ツール バー] ページ)
   **[ツール バー]** タブを使用すると、ツール バーの作成、名前の変更、削除、リセットができます。 このタブを開くには、 **[ツール]** メニューの **[ユーザー設定]** をクリックした後、 **[ツール バー]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **[ツール バー]**  
  組み込みのツール バーと、ユーザーが作成したツール バーがすべて表示されます。 ツール バーが表示されているときには、このダイアログ ボックス内のツール バー名の左側にチェック マークが表示されます。  
   

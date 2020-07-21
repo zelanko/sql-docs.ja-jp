@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61cadcd3f8f8a7fa72a3eac69f3bdbd8546d3055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016436"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62655492"
   
  パブリケーションの新規作成ウィザードで更新可能なサブスクリプションによるトランザクション パブリケーションを作成する場合は、即時更新およびキュー更新の両方が有効になります。 ストアド プロシージャによるパブリケーションを作成する場合は、どちらか一方または両方のオプションを有効にすることができます。 パブリケーションに対してサブスクリプションを作成する場合は、使用する更新モードを指定します。 必要に応じて、更新モードを切り替えることができます。 詳細については、以下の「更新モードの切り替え」を参照してください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
+ トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
  トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「 [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62655492"
  **更新モードを切り替えるには**  
   
  更新モードを切り替えるには、両方の更新モードに対してパブリケーションとサブスクリプションを有効にしてから、必要に応じてこれらを切り替える必要があります。 詳細については、「  
-[更新可能トランザクション サブスクリプションの更新モードの切り替え](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
+[更新可能なトランザクションサブスクリプションの更新モードを切り替え](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)ます。  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>更新可能なサブスクリプションの使用に関する注意点  
   
@@ -123,9 +122,9 @@ ms.locfileid: "62655492"
     -   競合が予想され、"サブスクライバー優先" の競合解決方法を使用する場合は、パブリッシャーまたはサブスクライバーで外部キーの制約は使用しないでください。"パブリッシャー優先" の競合解決方法を使用する場合は、サブスクライバーで外部キーの制約は使用しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [トランザクション レプリケーション](transactional-replication.md)   
- [データとデータベース オブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
- [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
+ [ピアツーピアトランザクションレプリケーション](peer-to-peer-transactional-replication.md)   
+ [トランザクションレプリケーション](transactional-replication.md)   
+ [データとデータベースオブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

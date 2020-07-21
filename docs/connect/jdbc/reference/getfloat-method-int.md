@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bb0f1d7376c92eb5710e9d308d40f10fce1e3fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dec6b21b0f1f72e9d7113c04afba6a99ad54a01a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983113"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924794"
 ---
 # <a name="getfloat-method-int"></a>getFloat (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,17 +35,17 @@ public float getFloat(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **浮動小数点**値です。  
+ **float** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getFloat メソッドは、java.sql.CallableStatement インターフェイスの getFloat メソッドで規定されています。  
   
  このメソッドは、数値ベースのすべての型を、Java の**float** の忠実性を使用して返します。  

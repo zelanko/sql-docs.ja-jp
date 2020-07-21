@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714941"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   セッションの SET オプション設定を返します。  
   
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *オプション*  
  このセッションの現在のオプション設定値です。 *オプション* 値は次のいずれかを指定することができます。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |ANSI_NULLS|= (等号) と <> (不等号) を NULL 値に対して使用した場合の ISO 動作を指定します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |ANSI_PADDING|列に定義されているサイズよりも短い値を列に格納する方法と、値の後に文字とバイナリ データ型で空白が続いている値を列に格納する方法を指定します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -53,15 +53,15 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|連結の結果が NULL として取り扱われるのか、空文字列として取り扱われるのかを制御します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|式の丸め処理で精度が低下するときに、エラー メッセージや警告を生成するかどうかを指定します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|引用符を使用して、識別子とリテラル文字列を区切る方法に関して、ISO 規格に従うかどうかを指定します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<その他の文字列>|NULL = 入力は無効です。|  
+|\<Any other string>|NULL = 入力は無効です。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET オプションは、サーバー レベル、データベース レベル、およびユーザー指定のオプションを組み合わせることによって表します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`CONCAT_NULL_YIELDS_NULL` オプションの設定を返します。  
   
 ```  

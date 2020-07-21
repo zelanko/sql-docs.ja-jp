@@ -20,23 +20,23 @@ helpviewer_keywords:
 - RollbackTransComplete event [ADO]
 - BeginTransComplete event [ADO]
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b5e005485fd2ebef3d9454286584bba03267201
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920444"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762863"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
-これらのイベントが関連付けられている操作の後に呼び出される、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの実行が終了します。  
+これらのイベントは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの関連付けられた操作の実行が終了した後に呼び出されます。  
   
--   **BeginTransComplete**が呼び出された後、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
+-   **Begintranscomplete**は、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作の後に呼び出されます。  
   
--   **CommitTransComplete**が呼び出された後、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
+-   **Committranscomplete**は、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作の後に呼び出されます。  
   
--   **RollbackTransComplete**が呼び出された後、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作。  
+-   **RollbackTransComplete**は、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)操作の後に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,26 +49,26 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>パラメーター  
  *TransactionLevel*  
- A**長い**新しいトランザクションのレベルを含む値、 **BeginTrans**このイベントの原因となった。  
+ このイベントの原因となった**BeginTrans**の新しいトランザクションレベルを含む**Long**値。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 EventStatusEnum の値がある場合に発生したエラーについて説明します**adStatusErrorsOccurred**。 それ以外の場合に設定されていません。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 EventStatusEnum の値が**Adstatuserrorerrorcode Curred**; の場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。 このパラメーターに設定されているこれらのイベントのいずれかが呼び出されると**adStatusOK**イベントの原因となった操作が成功した場合または**adStatusErrorsOccurred**操作に失敗した場合。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。 これらのイベントのいずれかが呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合は**Adstatusok**に、操作が失敗した場合は**Adstatuserrorの curred**に設定されます。  
   
- これらのイベントは、後続の通知を防ぐためこのパラメーターを設定して**adStatusUnwantedEvent**前に、イベントを返します。  
+ これらのイベントは、イベントが返される前に、このパラメーターを**adStatusUnwantedEvent**に設定することにより、後続の通知を防ぐことができます。  
   
  *pConnection*  
- **接続**オブジェクトをこのイベントが発生しました。  
+ このイベントが発生した**接続**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- Visual C で複数**接続**同じイベント処理メソッドを共有することができます。 メソッドを使用して、返された**接続**オブジェクト イベントの原因を判断するオブジェクト。  
+## <a name="remarks"></a>解説  
+ Visual C++ では、複数の**接続**で同じイベント処理方法を共有できます。 メソッドは、返された**接続**オブジェクトを使用して、イベントの原因となったオブジェクトを特定します。  
   
- 場合、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティに設定されて**adXactCommitRetaining**または**adXactAbortRetaining**、コミットやトランザクションをロールバックした後、新しいトランザクションを開始します。 使用して、 **BeginTransComplete**すべて無視するイベントが最初のトランザクションの開始イベント。  
+ [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティが**AdXactCommitRetaining**または**Adxactabortretaining 保持**するように設定されている場合、トランザクションをコミットまたはロールバックした後に新しいトランザクションが開始されます。 **Begintranscomplete**イベントを使用すると、最初のトランザクション開始イベント以外はすべて無視されます。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)

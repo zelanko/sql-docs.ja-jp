@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザー エラー |Microsoft Docs
+title: Upgrade Advisor のエラー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f6c9f133af7b8054414f6867f41cee3022d68925
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efd380c4db55086adaf7e7ae522b18a953471dab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011759"
 ---
 # <a name="upgrade-advisor-errors"></a>アップグレード アドバイザー エラー
   レポート ビューアーにアップグレード アドバイザー エラーが表示されることがあります。 そのようなエラーはこのヘルプ トピックにリンクされています。  

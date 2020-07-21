@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 676e0deaea8fa740a9b9fb007a6217b91f1e3863
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe85583f07db12a370db82a08636578ef174c5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63044090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028721"
 ---
 # <a name="scans-event-category"></a>Scans イベント カテゴリ
   **Scans** イベント カテゴリには、各種のスキャン イベントがあります。  

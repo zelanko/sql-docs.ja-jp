@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106448"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>データセット フィールド コレクションの参照 (レポート ビルダーおよび SSRS)
@@ -40,10 +40,10 @@ ms.locfileid: "66106448"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>実行時の動的クエリにおける存在しないフィールドの検出  
- 既定では、Fields コレクションのアイテムには 2 つのプロパティがあります。Value と IsMissing です。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
+ 既定では、フィールド コレクションのアイテムには、Value および IsMissing という 2 つのプロパティがあります。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
   
 > [!NOTE]  
->  IsMissing は、任意の種類のデータ ソースに関して、デザイン時と実行時の間にデータセット スキーマに加えられた変更を検出します。 IsMissing は、多次元キューブで空のメンバーを検出するために使用することはできませんし、MDX クエリ言語の概念に関連しない`EMPTY`と`NON EMPTY`します。  
+>  IsMissing は、任意の種類のデータ ソースに関して、デザイン時と実行時の間にデータセット スキーマに加えられた変更を検出します。 IsMissing は、多次元キューブ内の空のメンバーを検出するためには使用できません。また、 `EMPTY`および`NON EMPTY`の MDX クエリ言語の概念とは関係がありません。  
   
  IsMissing プロパティをカスタム コードでテストすると、結果セットにフィールドが含まれているかどうかを判断できます。 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数では、関数の呼び出しに含まれているすべてのパラメーターが評価されるので、存在しないパラメーターへの参照が評価されたときにエラーが返されます。そのため、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数の呼び出しで `IIF` や `SWITCH` などの式を使用してフィールドの有無をテストすることはできません。  
   
@@ -92,6 +92,6 @@ End Function
   
 ## <a name="see-also"></a>参照  
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)  
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)  
   
   

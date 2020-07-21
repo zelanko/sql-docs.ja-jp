@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e94646c6cab4a143fb87db9443d219d79262f39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720555"
 ---
 # <a name="change-workload-group-settings"></a>ワークロード グループの設定の変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。  
   
 -   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
@@ -29,7 +29,7 @@ ms.locfileid: "68136929"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  既定のワークロード グループとユーザー定義のワークロード グループの設定を変更することができます。  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +38,10 @@ ms.locfileid: "68136929"
   
  インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるメモリ ワークスペースの使用が許可されます。 この特別な処理はリソース ガバナーでサポートされていますが、最初のメモリ許可も追加のメモリ許可も、ワークロード グループ設定およびリソース プール設定によって制限されます。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ワークロード グループの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
  **ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含む **ワークロード グループ** フォルダーまで **[管理]** ノードを再帰的に展開します。  
@@ -54,7 +54,7 @@ ms.locfileid: "68136929"
   
 5.  変更を保存するには、 **[OK]** をクリックします。  
   
-##  <a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
  **Transact-SQL を使用してワークロード グループの設定を変更するには**  
   
 1.  変更するプロパティ値を指定する ALTER WORKLOAD GROUP ステートメントを実行します。  

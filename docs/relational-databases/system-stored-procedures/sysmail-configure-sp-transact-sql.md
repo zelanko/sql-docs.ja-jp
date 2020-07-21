@@ -1,5 +1,5 @@
 ---
-title: sysmail_configure_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_configure_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017723"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890997"
 ---
-# <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベース メールの構成設定を変更します。 指定された構成設定**sysmail_configure_sp**全体に適用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+  データベース メールの構成設定を変更します。 **Sysmail_configure_sp**で指定された構成設定は、インスタンス全体に適用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@parameter_name** =] **'** _parameter_name_ **'**  
+ [ **@parameter_name** =] **'**_parameter_name_**'**  
  変更するパラメーターの名前。  
   
- [ **@parameter_value** =] **'** _parameter_value_ **'**  
+ [ **@parameter_value** =] **'**_parameter_value_**'**  
  パラメーターの新しい値を指定します。  
   
- [ **@description** =] **'** _説明_ **'**  
+ [ **@description** =] **'**_description_**'**  
  パラメーターの説明。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -56,36 +56,36 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  データベース メールでは次のパラメーターが使用されます。  
   
 ||||  
 |-|-|-|  
-|パラメーター名|説明|既定値|  
+|パラメーター名|説明|Default value|  
 |*AccountRetryAttempts*|指定したプロファイル内の各アカウントを使用して、外部メール処理が電子メール メッセージの送信を試行する回数。|**1**|  
 |*AccountRetryDelay*|外部メール処理が次回のメッセージ送信の試行を待機する時間 (秒単位)。|**5000**|  
-|*DatabaseMailExeMinimumLifeTime*|外部メール処理がアクティブな状態にとどまる最小時間 (秒単位)。 データベース メールは、多くのメッセージを送信する場合は、データベース メールをアクティブにしておくし、頻繁な開始と停止のオーバーヘッドを回避するには、この値を大ききます。|**600**|  
-|*DefaultAttachmentEncoding*|既定の電子メールの添付ファイルのエンコーディングします。|MIME|  
-|*MaxFileSize*|添付ファイルの最大サイズ (バイト単位)。|**1000000**|  
+|*DatabaseMailExeMinimumLifeTime*|外部メール処理がアクティブな状態にとどまる最小時間 (秒単位)。 データベースメールが多数のメッセージを送信している場合は、この値を大きくしてデータベースメールアクティブにして、頻繁な起動と停止のオーバーヘッドを回避します。|**600**|  
+|*DefaultAttachmentEncoding*|電子メールの添付ファイルの既定のエンコーディング。|MIME|  
+|*MaxFileSize*|添付ファイルの最大サイズ (バイト単位)。|**100万**|  
 |*ProhibitedExtensions*|電子メールへの添付ファイルとして送信できない拡張子のコンマ区切りのリスト。|**exe、dll、vbs、js**|  
-|*LoggingLevel*|データベース メール ログに記録されるメッセージ。 数値の値は次のいずれか:<br /><br /> 1-これは、通常モードです。 エラーのみを記録します。<br /><br /> 2-拡張モード。 エラー、警告、および情報メッセージを記録します。<br /><br /> 3-これは、詳細モードです。 エラー、警告、情報メッセージ、成功メッセージ、およびその他の内部メッセージを記録します。 トラブルシューティングを行うには、このモードを使用してください。|**2**|  
+|*Logginglevel.information*|データベース メール ログに記録されるメッセージ。 次の数値のいずれかです。<br /><br /> 1-これは通常モードです。 エラーのみをログに記録します。<br /><br /> 2-これは拡張モードです。 エラー、警告、および情報メッセージをログに記録します。<br /><br /> 3-詳細モードです。 エラー、警告、情報メッセージ、成功メッセージ、および追加の内部メッセージをログに記録します。 トラブルシューティングを行うには、このモードを使用してください。|**2**|  
   
- ストアド プロシージャ**sysmail_configure_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_configure_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
- **A.各アカウントを 10 回再試行するデータベース メールを設定します。**  
+## <a name="examples"></a>例  
+ **A. 各アカウントに対して 10 回再試行するようデータベース メールを設定する**  
   
- 次の例では、到達できないアカウントを検討する前に各アカウントを 10 回再試行するデータベース メールの設定を示します。  
+ 次の例では、アカウントに到達できないことを考慮する前に、各アカウントを10回再試行するようにデータベースメールを設定しています。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_configure_sp  
     'AccountRetryAttempts', '10' ;  
 ```  
   
- **B.添付ファイルの最大サイズをメガバイト単位の 2 つに設定します。**  
+ **B. 添付ファイルの最大サイズを 2 MB に設定する**  
   
  次の例では、添付ファイルの最大サイズを 2 MB に設定します。  
   
@@ -96,7 +96,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [sysmail_help_configure_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [sysmail_help_configure_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

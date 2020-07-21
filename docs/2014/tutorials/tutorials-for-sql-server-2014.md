@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 21c94cbc7b5adc1e65cb21aa14d4ab2cec9122ce
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ccc9871a879196bc26251ea952ddd5dd573768e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035296"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 チュートリアル
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、多数の新しいテクノロジと機能が導入されています。  
@@ -24,18 +23,18 @@ ms.locfileid: "68892935"
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サーバーを使用している場合は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データ プロバイダーがインストールされています。 チュートリアルの作業を正常に実行するには、それらのプロバイダーと連携する [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] サンプル データベースか、または [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] バージョンのサンプル データベースと連携する [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] データ プロバイダーが必要です。  
   
--   チュートリアルで[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]使用するサンプルをダウンロードするには、CodePlex の「 [samples for SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) 」を参照してください。  
+-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]チュートリアルで使用するサンプルをダウンロードするには、CodePlex の「 [samples for SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images) 」を参照してください。  
   
--   [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] チュートリアルで 使用する [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ブックと [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをダウンロードするには、「[ImageFilesforHelloWorldPicnicSampleModelinPowerPivotandPowerView](https://www.microsoft.com/download/details.aspx?id=26719)」を参照してください。  
+-   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]チュートリアルで使用するブックとレポートをダウンロードするには [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 、「 [Image Files for HelloWorldPicnic Sample Model in PowerPivot and Power View」](https://www.microsoft.com/download/details.aspx?id=26719)を参照してください。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]は、Enterprise Edition [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]用[!INCLUDE[msCoName](../includes/msconame-md.md)] の[!INCLUDE[SPS2010](../includes/sps2010-md.md)]アドインの[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]機能です。  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]は、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Enterprise Edition 用のアドインの機能です [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] 。  
   
--   バージョンの[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]データベースをダウンロードするには、CodePlex の[Adventure works 2014 サンプルデータベース](http://msftdbprodsamples.codeplex.com/releases/view/125550)にアクセスします。  
+-   バージョンのデータベースをダウンロードするに [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] は、CodePlex の[Adventure Works 2014 サンプルデータベース](https://msftdbprodsamples.codeplex.com/releases/view/125550)にアクセスします。  
   
--   バージョンの[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]データベースをダウンロードするには、CodePlex の[Adventure works for SQL Server 2012 に関する](http://msftdbprodsamples.codeplex.com/releases/view/55330)ページを参照してください。  
+-   バージョンのデータベースをダウンロードするには [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 、CodePlex の[Adventure works for SQL Server 2012 に関する](https://msftdbprodsamples.codeplex.com/releases/view/55330)ページを参照してください。  
   
--   チュートリアルの[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]一覧については、MSDN ライブラリの[チュートリアル](https://msdn.microsoft.com/library/ms167593.aspx)に関するページを参照してください。  
+-   チュートリアルの一覧については [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 、MSDN ライブラリの[チュートリアル](https://msdn.microsoft.com/library/ms167593.aspx)に関するページを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  チュートリアルは、以下の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] テクノロジに対して使用できます。  
@@ -48,5 +47,4 @@ ms.locfileid: "68892935"
 |[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  
 |[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
 |[Enterprise Information Management のチュートリアル](../../2014/tutorials/enterprise-information-management-tutorials.md)|Microsoft EIM テクノロジを使用して企業の情報を管理する方法について説明します。|  
-  
   

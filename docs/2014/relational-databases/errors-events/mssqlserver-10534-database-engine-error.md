@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: e65bb118-99d5-4fdb-b1d5-0ec70f0a677b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9a20d1003e8b87179e2690fa35ad44b50894568
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 021ef5c5c7980115f5eb25792f4090774d968cef
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870581"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554127"
 ---
-# <a name="mssqlserver10534"></a>MSSQLSERVER_10534
+# <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|10534|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_INVALID_PARAMS|  
-|メッセージ テキスト|プラン ガイドを作成することはできません ' % です。\*ls' の指定した値`@params`が無効です。 *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。`@params` に指定した値が無効です。 *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。|  
   
 ## <a name="explanation"></a>説明  
  `@params` に指定した値が無効です。  
@@ -39,7 +38,7 @@ ms.locfileid: "62870581"
  *parameter_name parameter_type* 形式の値を指定するか、NULL を指定してください。  
   
 ## <a name="see-also"></a>参照  
- [プラン ガイド](../performance/plan-guides.md)   
+ [プランガイド](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

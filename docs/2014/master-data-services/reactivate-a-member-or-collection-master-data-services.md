@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e78e31157f62346baf12d58c146ed99aab205408
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fcbbca7703af5e254f295240888c2fa54938763
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960712"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、次のいずれかの状態にあったメンバーを再アクティブ化できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "65482650"
   
 -   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の **[バージョン管理]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>メンバーまたはコレクションを再アクティブ化するには  
   
@@ -63,9 +62,9 @@ ms.locfileid: "65482650"
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。 **[新しい値]** 列に **[アクティブ]** と表示され、新しいトランザクションが追加されます。  
   
 ## <a name="see-also"></a>参照  
- [非アクティブ化またはステージング処理を使用してメンバーを削除&#40;マスター データ サービス&#41;](add-update-and-delete-data-master-data-services.md)   
- [メンバーまたはコレクションを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)   
+ [ステージング処理を使用したメンバーの非アクティブ化または削除 &#40;マスターデータサービス&#41;](add-update-and-delete-data-master-data-services.md)   
+ [マスターデータサービス &#40;のメンバーまたはコレクションを削除&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [メンバー &#40;マスターデータサービス&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

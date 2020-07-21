@@ -1,5 +1,6 @@
 ---
 title: リンク レポートのメソッド | Microsoft Docs
+description: これらのメソッドでは、リンクされたアイテムをデータベースに追加したり、リンク アイテムに対してアイテムの名前を取得したり、アイテムにリンクされたアイテムを取得したり、リンク アイテムに対してカタログ アイテムを設定したりします。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284419"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198249"
 ---
 # <a name="linked-reports-methods"></a>リンク レポートのメソッド
   以下のメソッドを使用してリンク アイテムを作成し、管理できます。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A>|新しいリンク アイテムをレポート サーバー データベースに追加します。|  
 |<xref:ReportService2010.ReportingService2010.GetItemLink%2A>|指定したリンク アイテムでアイテム定義が使用されているアイテムの名前を返します。|  

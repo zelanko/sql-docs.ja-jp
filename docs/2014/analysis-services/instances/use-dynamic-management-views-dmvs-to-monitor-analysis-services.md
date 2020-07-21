@@ -1,5 +1,5 @@
 ---
-title: 動的管理ビュー (Dmv) を使用して、Analysis Services の監視 |Microsoft Docs
+title: 動的管理ビュー (Dmv) を使用して Analysis Services を監視する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543717"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
@@ -40,12 +39,12 @@ SELECT * FROM $System.<schemaRowset>
   
  [DMV リファレンス](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a> DMV クエリを使用する利点  
+##  <a name="benefits-of-using-dmv-queries"></a><a name="bkmk_ben"></a>DMV クエリを使用する利点  
  DMV クエリは、他の手段では取得できない操作とリソース消費に関する情報を返します。  
   
  DMV クエリは、XML/A Discover コマンドの実行の代わりとなる手段です。 クエリの構文は SQL に基づいているため、多くの管理者にとって DMV クエリを記述するのはより簡単です。 また、結果セットは、読み取りやコピーが容易な表形式で返されます。  
   
-##  <a name="bkmk_ex"></a> 例とシナリオ  
+##  <a name="examples-and-scenarios"></a><a name="bkmk_ex"></a>例とシナリオ  
  DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 このセクションでは、DMV クエリが最もよく使用されるシナリオの例を示します。 DMV クエリを使用してサーバー インスタンスを監視する方法の詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) 」を参照してください。  
   
  `Select * from $System.discover_object_activity` /** このクエリは、サービスの前回の開始以降のオブジェクト アクティビティについてレポートします。 この DMV に基づくクエリの例については、「 [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)」を参照してください。  
@@ -56,7 +55,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** このクエリは、特定の時点で使用されるロックのスナップショットを返します。  
   
-##  <a name="bkmk_syn"></a> クエリ構文  
+##  <a name="query-syntax"></a><a name="bkmk_syn"></a>クエリ構文  
  DMV のクエリ エンジンは、データ マイニング パーサーです。 DMV クエリ構文は、[SELECT (DMX)](/sql/dmx/select-dmx) ステートメントに基づきます。  
   
  DMV クエリ構文は SQL SELECT ステートメントに基づいていますが、SELECT ステートメントの完全な構文をサポートしていません。 特に、JOIN、GROUP BY、LIKE、CAST、CONVERT はサポートされていません。  
@@ -81,14 +80,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> ツールと権限  
+##  <a name="tools-and-permissions"></a><a name="bkmk_tools"></a>ツールとアクセス許可  
  DMV のクエリを行うには、Analysis Services インスタンスに対するシステム管理者権限が必要です。  
   
  SQL Server Management Studio、Reporting Services レポート、または PerformancePoint ダッシュボードなど、MDX または DMX クエリをサポートするクライアント アプリケーションを使用できます。  
   
  Management Studio から DMV クエリを実行するには、クエリを行うインスタンスに接続し、 **[新しいクエリ]** をクリックします。 MDX または DMX クエリ ウィンドウからクエリを実行することができます。  
   
-##  <a name="bkmk_ref"></a> DMV リファレンス  
+##  <a name="dmv-reference"></a><a name="bkmk_ref"></a>DMV リファレンス  
  すべてのスキーマ行セットに DMV インターフェイスがあるわけではありません。 DMV を使用してクエリを行うことができる、すべてのスキーマ行セットの一覧を返すには、次のクエリを実行します。  
   
 ```  
@@ -98,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  DMV が指定された行セットは利用できない場合、サーバーには、次のエラーが返されます。"、 \<Schemarowset > サーバーで要求の種類が認識されませんでした"。 他のすべてのエラーは、構文の問題を示します。  
+>  特定の行セットに対して DMV が使用できない場合、サーバーは " \<schemarowset> 要求の種類がサーバーによって認識されませんでした" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
   
 |[行セット]|説明|  
 |------------|-----------------|  
@@ -108,7 +107,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|現在のデータベース内のすべてのテーブルの一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
 |[DISCOVER_CALC_DEPENDENCY 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|他の列およびテーブルとの依存関係があるモデルで使用されている列およびテーブルの一覧を返します。|  
 |[DISCOVER_COMMAND_OBJECTS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|参照先のコマンドによって使用されているオブジェクトに関するリソース使用量と利用状況の情報を提供します。|  
-|[DISCOVER_COMMANDS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|現在実行されているコマンドのリソース使用状況とアクティビティ情報を提供します。|  
+|[DISCOVER_COMMANDS 行セット](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|現在実行されているコマンドのリソース使用状況とアクティビティ情報を提供します。|  
 |[DISCOVER_CONNECTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Analysis Services に対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
 |[DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|テーブル モデルに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
 |[DISCOVER_DB_CONNECTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|たとえば処理中またはインポート中に、Analysis Services から外部データ ソースに対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
@@ -155,16 +154,16 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|現在のデータベースで定義されるデータ ソース オブジェクトに関する情報を返します。|  
 |[MDSCHEMA_KPIS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|現在のデータベースで定義される KPI に関する情報を返します。|  
 |[MDSCHEMA_LEVELS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|現在のデータベースで定義される階層内のレベルに関する情報を返します。|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|メジャー グループのディメンションを一覧表示します。|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|メジャー グループのディメンションを一覧表示します。|  
 |[MDSCHEMA_MEASUREGROUPS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|現在の接続にあるメジャー グループの一覧を返します。|  
-|[MDSCHEMA_MEASURES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|現在の接続にあるメジャーの一覧を返します。|  
+|[MDSCHEMA_MEASURES 行セット](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|現在の接続にあるメジャーの一覧を返します。|  
 |[MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|現在の接続にあるすべてのメンバーの一覧を返し、データベース、キューブ、およびディメンションごとに一覧表示します。|  
 |[MDSCHEMA_PROPERTIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|プロパティの型、データ型、その他のメタデータと共に、各プロパティの完全修飾名を返します。|  
 |[MDSCHEMA_SETS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|現在の接続で定義されるセットの一覧を表示します。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [New System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [新しいシステム. Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
  [制限された行セットと DMV の新しい SYSTEMRESTRICTEDSCHEMA 関数](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

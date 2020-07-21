@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 644ba0cfdbe2f0043364c633676bbc536c641efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025791"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのツールが備わっています。 詳細については、「 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)」を参照してください。  
@@ -84,7 +83,7 @@ ms.locfileid: "62468196"
   
     -   **[オブジェクト エクスプローラー]** で、データベースを右クリックし、 **[プロパティ]** 、 **[全般]** ページの順にクリックします。 **[メモリ最適化オブジェクトに割り当てられたメモリ]** プロパティの値は、データベースのメモリ最適化オブジェクトに割り当てられたメモリを示します。 **[メモリ最適化オブジェクトに使用されるメモリ]** プロパティの値は、データベースのメモリ最適化オブジェクトに使用されるメモリを示します。  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされる機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>でサポートされる機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、メモリ最適化データ ファイル グループ、メモリ最適化テーブル、インデックス、およびネイティブ コンパイル ストアド プロシージャを含むデータベースのデータベース エンジンによってサポートされる操作と機能をサポートしています。  
   
  データベース、テーブル、ストアド プロシージャ、ユーザー定義テーブル型、またはインデックス オブジェクトについては、インメモリ OLTP をサポートするために [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の次の機能が更新または拡張されています。  
@@ -99,9 +98,9 @@ ms.locfileid: "62468196"
   
     -   処理手順  
   
-    -   [レポート]  
+    -   Reports  
   
-    -   プロパティ  
+    -   Properties  
   
     -   データベース タスク:  
   
@@ -150,10 +149,10 @@ ms.locfileid: "62468196"
   
 -   テンプレート エクスプローラー  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  インメモリ OLTP オブジェクトに対して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、データベース エンジンでもサポートされない機能と操作はサポートしていません。  
   
- サポートされていないの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]については、「 [SQL Server でサポートされる機能](unsupported-sql-server-features-for-in-memory-oltp.md)します。  
+ サポートされていない機能の詳細につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「[サポートされる SQL Server 機能](unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)  

@@ -1,6 +1,7 @@
 ---
-title: Microsoft レプリケーション インタラクティブ競合回避モジュール | Microsoft Docs
-ms.custom: ''
+title: インタラクティブ競合回避モジュール (マージ)
+describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,15 +14,15 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e92f4720807ee45f254674730c76ad65696e1570
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 557627ae2524131c277361967e6564704f691397
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722006"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft レプリケーション インタラクティブ競合回避モジュール
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   インタラクティブ競合回避モジュールは、Windows 同期マネージャーを使用して同期が行われるマージ サブスクリプションに使用することができます。 これにより、データ競合に対する結果の表示、比較、編集、および選択ができます。 レプリケーションには、コミットされた後で競合結果の表示および修正を行うことができる競合表示モジュールも含まれます。 インタラクティブ競合回避モジュールを使用すると、同期中に結果を選択することができます。  
   
 > [!NOTE]  
@@ -34,10 +35,10 @@ ms.locfileid: "68767679"
  **[提案された解決策]**  
  アーティクルの競合回避モジュールによって提案された解決策です。  
   
- **パブリッシャー**  
+ **発行元**  
  パブリッシャーでのデータ値です。  
   
- **サブスクライバー (Subscriber)**  
+ **サブスクライバー**  
  サブスクライバーでのデータ値です。  
   
  **[推奨設定を優先]** 、 **[パブリッシャーを優先]** 、 **[サブスクライバーを優先]**  

@@ -1,5 +1,5 @@
 ---
-title: 要素 (DTA) データベースの名前を付けます |Microsoft Docs
+title: Database の Name 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 554469d77ef7561711b8245e7bb736b6bcb0a58b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011520"
 ---
 # <a name="name-element-for-database-dta"></a>Database の Name 要素 (DTA)
   チューニングするデータベースの名前を指定します。  
@@ -35,7 +34,7 @@ ms.locfileid: "63297506"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|`string`、長さは無制限です。|  
 |**既定値**|[なし] :|  

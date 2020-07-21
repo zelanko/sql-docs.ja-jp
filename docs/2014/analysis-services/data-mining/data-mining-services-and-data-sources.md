@@ -1,5 +1,5 @@
 ---
-title: データ マイニング サービスおよびデータ ソース |Microsoft Docs
+title: データマイニングサービスとデータソース |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afba038563ec5934a874811c804dd7a4aa9fff1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523088"
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
   データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
@@ -23,7 +22,7 @@ ms.locfileid: "66084914"
  このトピックには、データ マイニング モデルの作成、処理、配置、またはクエリのために SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに接続する際に知っておく必要がある情報が含まれています。  
   
 ## <a name="data-mining-services"></a>データ マイニング サービス  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のサーバー コンポーネントは、msmdsrv.exe アプリケーションです。このアプリケーションは、通常、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
+ のサーバーコンポーネント [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は msmdsrv.exe アプリケーションであり、通常は Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
   
 -   クライアントから受信したステートメントの解析  
   
@@ -44,13 +43,13 @@ ms.locfileid: "66084914"
 -   サーバー リソースの管理  
   
 ### <a name="xmla-listener"></a>XMLA リスナー  
- XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port`いるポートを指定する、msmdsrv.ini ファイルで構成設定を使用できます、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスがリッスンします。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。  
+ XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini ファイルの構成設定を使用して、インスタンスがリッスンするポートを指定でき [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ます。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。  
   
 |Port|説明|  
 |----------|-----------------|  
-|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
-|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
-|サーバーの起動時に動的に割り当てられます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
+|2383|の既定のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|2382|の他のインスタンスのリダイレクター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|サーバーの起動時に動的に割り当てられます。|の名前付きインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
   
  このサービスが使用するポートを制御する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66084914"
 -   モデルを移動するときには、同じ要件が適用されます。元のデータ ソースの場所への適切なアクセスをセットアップするか、データ ソースをコピーするか、新しいデータ ソースを構成する必要があります。 また、ログインおよびロールを転送するか、データ マイニング オブジェクトを新しい場所で処理および更新できるように権限をセットアップする必要があります。  
   
 ## <a name="configuring-permissions-and-server-properties"></a>権限とサーバー プロパティの構成  
- データ マイニングには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する追加の権限が必要です。 ほとんどのデータ マイニング プロパティは、[[分析サーバーのプロパティ] ダイアログ ボックス &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md) を使用して設定できます。  
+ データ マイニングには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する追加の権限が必要です。 ほとんどのデータ マイニング プロパティは、[[分析サーバーのプロパティ] ダイアログ ボックス &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md) を使用して設定できます。  
   
- 構成できるプロパティの詳細については、次を参照してください。 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)します。  
+ 構成できるプロパティの詳細については、「 [Analysis Services でのサーバープロパティの構成](../server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  データ マイニングに関連するサーバー プロパティを以下に示します。  
   
--   `AllowAdHocOpenRowsetQueries` サーバーのメモリ領域に直接読み込まれる OLE DB プロバイダーへのアドホック アクセスを制御します。  
+-   `AllowAdHocOpenRowsetQueries`サーバーのメモリ領域に直接読み込まれる OLE DB プロバイダーへのアドホックアクセスを制御します。  
   
     > [!IMPORTANT]  
     >  セキュリティを強化するため、このプロパティは `false` に設定することをお勧めします。 既定値は `false` です。 このプロパティが `false` に設定されていても、ユーザーは単一クエリを作成したり、許可されているデータ ソースに対して OPENQUERY を使用したりできます。  
@@ -88,7 +87,7 @@ ms.locfileid: "66084914"
  そのほか、サーバーをチューニングしたりクライアントの利用に関するセキュリティを制御したりするためのプロパティを設定することもできます。 詳細については、「 [機能プロパティ](../server-properties/feature-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  各エディションによるプラグイン アルゴリズムのサポートの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) します。  
+>  の各エディションによるプラグインアルゴリズムのサポートの詳細につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [SQL Server 2012 () の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」を参照してください https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>データ マイニング オブジェクトへのプログラムによるアクセス  
  以下のオブジェクト モデルを使用して、Analysis Services データベースへの接続を作成し、データ マイニング オブジェクトを操作できます。  
@@ -117,14 +116,14 @@ ms.locfileid: "66084914"
   
  プロシージャがデータセットを返した場合、クライアントは、行を含む入れ子になったテーブルを持つデータセットまたはデータ テーブルを受け取ります。 たとえば、モデル コンテンツに対するクエリを作成すると、そのクエリではモデル全体が返されます。 あまり多くの行が返されないようにするには、ADOMD+ オブジェクト モデルを使用してストアド プロシージャを作成します。  
   
- サーバー ストアド プロシージャを記述するには、Microsoft.AnalysisServices.AdomdServer 名前空間を参照する必要があります。 ストアド プロシージャを作成および使用する方法の詳細については、「 [ユーザー定義関数およびストアド プロシージャ](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)」を参照してください。  
+ サーバー ストアド プロシージャを記述するには、Microsoft.AnalysisServices.AdomdServer 名前空間を参照する必要があります。 ストアド プロシージャを作成および使用する方法の詳細については、「 [ユーザー定義関数およびストアド プロシージャ](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)」を参照してください。  
   
 > [!NOTE]  
 >  ストアド プロシージャを使用してデータ サーバー オブジェクトのセキュリティを変更することはできません。 ストアド プロシージャの実行時には、ユーザーの現在のコンテキストを使用してすべてのサーバー オブジェクトへのアクセスが決定されます。 したがって、ユーザーは、アクセスするすべてのデータベース オブジェクトに対する適切な権限を持っている必要があります。  
   
 ## <a name="see-also"></a>参照  
- [物理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理アーキテクチャ &#40;Analysis Services - データ マイニング&#41;](physical-architecture-analysis-services-data-mining.md)   
+ [物理アーキテクチャ &#40;Analysis Services-多次元データ&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [物理アーキテクチャ &#40;Analysis Services-データマイニング&#41;](physical-architecture-analysis-services-data-mining.md)   
  [データ マイニング ソリューションおよびオブジェクトの管理](management-of-data-mining-solutions-and-objects.md)  
   
   

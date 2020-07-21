@@ -21,13 +21,13 @@ ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0fa5615d70542373030e0344d6988d9d2d0a028c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68026261"
 ---
-# <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
+# <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 この関数では、現在のデータベースでのプリンシパルの ID 番号が返されます。 プリンシパルの詳細については、「[プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)」を参照してください。
@@ -48,10 +48,10 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 **int**  
 データベース プリンシパルが存在しない場合は NULL。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DATABASE_PRINCIPAL_ID` は、選択リスト、WHERE 句、式が使えるあらゆる場所で使用します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-retrieving-the-id-of-the-current-user"></a>A. 現在のユーザーの ID を取得する  
 この例では、現在のユーザーのデータベース プリンシパル ID が返されます。

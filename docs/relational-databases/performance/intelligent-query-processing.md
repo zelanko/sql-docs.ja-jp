@@ -1,8 +1,8 @@
 ---
-title: Microsoft SQL データベースでのインテリジェントなクエリ処理 | Microsoft Docs
+title: インテリジェントなクエリの処理
 description: SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるためのインテリジェントなクエリ処理の機能です。
-ms.custom: ''
-ms.date: 07/22/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,27 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 104fbedea8199f0a6fb092c3ee1524bbfb4b903f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787308"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インテリジェントなクエリ処理 (QP) 機能ファミリには、最小限の労力で実装できる、既存のワークロードのパフォーマンスを広範に改善する機能が含まれています。 
 
 ![インテリジェントなクエリ処理](./media/iqp-feature-family.png)
 
-データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] を使って設定できます。 例:  
+インテリジェントなクエリ処理の概要については、この 6 分間のビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
+データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] を使って設定できます。 次に例を示します。  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -35,21 +40,21 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 以下の表で、すべてのインテリジェントなクエリ処理について詳しく説明します。これには、データベース互換性レベルに関する要件も含まれます。
 
-| **IQP の機能** | **Azure SQL Database でのサポート** | **SQL Server でのサポート** |**[説明]** |
+| **IQP の機能** | **Azure SQL Database でのサポート** | **SQL Server でのサポート** |**説明** |
 | --- | --- | --- |--- |
 | [適応型結合 (バッチ モード)](#batch-mode-adaptive-joins) | あり (互換性レベル 140 未満)| あり ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、互換性レベル 140 未満)|適応型結合では、実際の入力行に基づき、実行時に結合の種類が動的に選択されます。|
-| [個別の概算数](#approximate-query-processing) | あり (パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降)|高パフォーマンスと小さいメモリ占有領域の利点がある、ビッグ データシナリオに対して、おおよその COUNT DISTINCT を指定します。 |
-| [行ストアでのバッチ モード](#batch-mode-on-rowstore) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|列ストア インデックスを必要としない、CPU にバインドされたリレーショナル DW ワークロードに対してバッチ モードを指定します。  | 
+| [個別の概算数](#approximate-query-processing) | はい| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)|高パフォーマンスと小さいメモリ占有領域の利点がある、ビッグ データシナリオに対して、おおよその COUNT DISTINCT を指定します。 |
+| [行ストアでのバッチ モード](#batch-mode-on-rowstore) | あり (互換性レベル 150 未満)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、互換性レベル 150 未満)|列ストア インデックスを必要としない、CPU にバインドされたリレーショナル DW ワークロードに対してバッチ モードを指定します。  | 
 | [インターリーブ実行](#interleaved-execution-for-mstvfs) | あり (互換性レベル 140 未満)| あり ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、互換性レベル 140 未満)|固定推定値ではなく、最初のコンパイルで発生した複数ステートメントのテーブル値関数の実際のカーディナリティを使用します。|
 | [メモリ許可フィードバック (バッチ モード)](#batch-mode-memory-grant-feedback) | あり (互換性レベル 140 未満)| あり ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、互換性レベル 140 未満)|バッチ モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
-| [メモリ許可フィードバック (行モード)](#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|行モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
-| [スカラー UDF のインライン化](#scalar-udf-inlining) | いいえ | あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 以降、互換性レベル 150 未満、パブリック プレビュー)|スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。|
-| [テーブル変数の遅延コンパイル](#table-variable-deferred-compilation) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティを使用します。|
+| [メモリ許可フィードバック (行モード)](#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、互換性レベル 150 未満)|行モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
+| [スカラー UDF のインライン化](#scalar-udf-inlining) | いいえ | あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、互換性レベル 150 未満)|スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。|
+| [テーブル変数の遅延コンパイル](#table-variable-deferred-compilation) | あり (互換性レベル 150 未満)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、互換性レベル 150 未満)|固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティを使用します。|
 
 ## <a name="batch-mode-adaptive-joins"></a>バッチ モード適応型結合
 バッチ モード適応型結合機能を使うと、最初の入力のスキャンが **終わる** まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、単一のキャッシュされたプランを使用して遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。
 
-詳細については、「[アダプティブ結合について](../../relational-databases/performance/joins.md#adaptive)」を参照してください。
+互換性レベルを変更せずにアダプティブ結合を無効にする方法など、詳細については、「[アダプティブ結合について](../../relational-databases/performance/joins.md#adaptive)」を参照してください。
 
 ## <a name="batch-mode-memory-grant-feedback"></a>バッチ モード メモリ許可フィードバック
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのクエリの実行プランには、実行に最低限必要なメモリと、すべての行をメモリに収めるのに最適なメモリ許可サイズが含まれます。 メモリ許可サイズが正しくない場合、パフォーマンスが低下します。 メモリ許可が多すぎると、メモリが無駄になり、コンカレンシーが制限されます。 メモリ許可が少なすぎると、負荷の高いディスクへの書き込みが発生する原因になります。 繰り返されるワークロードを処理することにより、バッチ モード メモリ許可フィードバックはクエリに実際に必要なメモリ量を再計算し、キャッシュされたプランの許可値を更新します。 同じクエリ ステートメントを実行するとき、クエリは、修正されたメモリ許可サイズを使うことで、コンカレンシーに影響を与える過剰なメモリ許可を減らし、負荷の高いディスクへの書き込みが発生する過少なメモリ許可を修正します。
@@ -95,7 +100,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
@@ -111,7 +116,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-`DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリのバッチ モード メモリ許可フィードバックを無効にすることもできます。 例:
+`DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリのバッチ モード メモリ許可フィードバックを無効にすることもできます。 次に例を示します。
 
 ```sql
 SELECT * FROM Person.Address  
@@ -123,14 +128,11 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 
 ## <a name="row-mode-memory-grant-feedback"></a>行モード メモリ許可フィードバック
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (パブリック プレビューの機能)
-
-> [!NOTE]
-> 行モード メモリ許可フィードバックはパブリック プレビューの機能です。  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 行モード メモリ許可フィードバックは、バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能を拡張します。  
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で行モード メモリ許可フィードバックのパブリック プレビューを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で行モード メモリ許可フィードバックを有効にするには、クエリを実行する際に接続されるデータベースのデータベース互換レベル 150 を有効にします。
 
 行モード メモリ許可フィードバックのアクティビティは、**memory_grant_updated_by_feedback** XEvent を通じて確認できます。 
 
@@ -138,16 +140,13 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 
 *LastRequestedMemory* では、前のクエリの実行から許可されたメモリがキロバイト (KB) で表示されます。 *IsMemoryGrantFeedbackAdjusted* 属性を使用すると、実際のクエリ実行プラン内のステートメントに対するメモリ許可フィードバックの状態を確認できます。 この属性に表示される値は次のとおりです。
 
-| IsMemoryGrantFeedbackAdjusted の値 | [説明] |
+| IsMemoryGrantFeedbackAdjusted の値 | 説明 |
 |---|---|
 | No:First Execution | メモリ許可フィードバックは、最初のコンパイルとそれに関連付けられた実行ではメモリを調整しません。  |
 | No:Accurate Grant | ディスクへの書き込みが存在せず、許可されたメモリの少なくとも 50% がステートメントによって使用されている場合、メモリ許可フィードバックはトリガーされません。 |
 | No:Feedback disabled | メモリ許可フィードバックが継続的にトリガーされ、メモリを増加させる操作と減少させる操作の間で変動している場合、ステートメントのメモリ許可フィードバックは無効にされます。 |
 | Yes:Adjusting | メモリ許可フィードバックが適用されています。また、次の実行に向けてさらに調整される可能性があります。 |
 | Yes:Stable | メモリ許可フィードバックが適用されています。また、許可されたメモリが安定しています (つまり、前回の実行で許可されたメモリと今回の実行で許可されたメモリが同じです)。 |
-
-> [!NOTE]
-> パブリック プレビューの行モード メモリ許可フィードバック プランの属性は、バージョン 17.9 以降の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のグラフィカルなクエリ実行プランで表示されます。 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、行モード メモリ許可フィードバックを無効にする
 行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。 データベースを発生源とするすべてのクエリ実行に対して行モード メモリ許可フィードバックを無効にするには、該当するデータベースとの関連で次を実行します。
@@ -162,7 +161,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-`DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリの行モード メモリ許可フィードバックを無効にすることもできます。 例:
+`DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリの行モード メモリ許可フィードバックを無効にすることもできます。 次に例を示します。
 
 ```sql
 SELECT * FROM Person.Address  
@@ -173,7 +172,6 @@ OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'));
 USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
 
 ## <a name="interleaved-execution-for-mstvfs"></a>MSTVF のインターリーブ実行
-
 インターリーブ実行では、関数に基づく実際の行数を使用して、より正確なダウンストリーム クエリ プランを決定します。 複数ステートメントのテーブル値関数 (MSTVF) の詳細については、「[テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」を参照してください。
 
 インターリーブ実行は、単一クエリ実行の最適化フェーズと実行フェーズの間の一方向境界を変更し、修正されたカーディナリティ推定に基づいてプランが適応できるようにします。 最適化中に、インターリーブ実行の候補を検出した場合 (現在は**複数ステートメント テーブル値関数 (MSTVF)** )、最適化を一時停止し、該当するサブツリーを実行し、正確なカーディナリティの推定をキャプチャし、ダウンストリームの演算に対する最適化を再開します。   
@@ -215,14 +213,14 @@ MSTVF のシンプルな `SELECT *` では、インターリーブ実行によ�
 ### <a name="tracking-interleaved-execution-activity"></a>インターリーブ実行アクティビティの追跡
 実際のクエリ実行プランで使用法属性を確認できます。
 
-| 実行プラン属性 | [説明] |
+| 実行プラン属性 | 説明 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | *QueryPlan* ノードに適用します。 *true* の場合、プランにインターリーブ実行候補が含まれることを意味します。 |
 | IsInterleavedExecuted | TVF ノードの RelOp 以下にある *RuntimeInformation* 要素の属性。 *true* の場合、操作がインターリーブ実行操作の一部としてマテリアル化されたことを意味します。 |
 
 次の xEvent を使って、インターリーブ実行の発生を追跡することもできます。
 
-| xEvent | [説明] |
+| xEvent | 説明 |
 | ---- | --- |
 | interleaved_exec_status | このイベントは、インターリーブ実行が発生すると発生します。 |
 | interleaved_exec_stats_update | このイベントは、インターリーブ実行によって更新されたカーディナリティの推定を記述します。 |
@@ -238,14 +236,13 @@ MSTVF のシンプルな `SELECT *` では、インターリーブ実行によ�
 インターリーブ実行を使うプランは強制的に実行できます。 プランは、最初の実行に基づいてカーディナリティの推定を修正されたバージョンです。    
 
 ### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、インターリーブ実行を無効にする
-
 インターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。  データベースを発生源とするすべてのクエリ実行に対してインターリーブ実行を無効にするには、該当するデータベースとの関連で次を実行します。
 
 ```sql
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
@@ -256,11 +253,11 @@ ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 -- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 
--- Azure SQL Database, SQL Server 2019 and higher
+-- Starting with SQL Server 2019, and in Azure SQL Database
 ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
-[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_INTERLEAVED_EXECUTION_TVF` を指定することで、特定のクエリでインターリーブ実行を無効にすることもできます。 例:
+[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_INTERLEAVED_EXECUTION_TVF` を指定することで、特定のクエリでインターリーブ実行を無効にすることもできます。 次に例を示します。
 
 ```sql
 SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
@@ -280,24 +277,63 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 
 USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
 
-
 ## <a name="table-variable-deferred-compilation"></a>テーブル変数の遅延コンパイル
 
-> [!NOTE]
-> テーブル変数の遅延コンパイルは、パブリック プレビュー機能です。  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報によって、ダウンストリーム プラン操作が最適化されます。
+**テーブル変数の遅延コンパイル**を使用すると、テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のプランのコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報は、ダウンストリーム プラン操作を最適化するために使用されます。
 
 テーブル変数の遅延コンパイルを使用すると、テーブル変数を参照するステートメントのコンパイルは、そのステートメントが最初に実際に実行されるまで遅延されます。 この遅延コンパイルの動作は、一時テーブルの動作と同じです。 この変更によって、元の 1 行の推定値ではなく、実際のカーディナリティを使用できるようになります。 
 
-テーブル変数の遅延コンパイルのパブリック プレビューは、Azure SQL Database で有効にすることができます。 そのためには、クエリの実行時に接続しているデータベースに対して互換性レベル 150 を有効にします。
+テーブル変数の遅延コンパイルを有効にするには、クエリを実行する際に接続されるデータベースに対してデータベース互換レベル 150 を有効にします。
 
-詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)」をご覧ください。
+テーブル変数の遅延コンパイルを使用することで、テーブル変数のその他の特性が変更されることは**ありません**。 たとえば、この機能はテーブル変数に列統計を追加しません。
+
+テーブル変数の遅延コンパイルによって**再コンパイルの頻度が増加することはありません**。 最初のコンパイルを行った場所でシフトします。 結果として得られるキャッシュされたプランは、最初の遅延コンパイルのテーブル変数の行数に基づいて生成されます。 キャッシュされたプランは、連続するクエリによって再利用されます。 プランが削除されるか、再コンパイルされるまで再利用されます。 
+
+最初のプランのコンパイルに使用される table 変数の行数で示される標準値は、固定行数の推定値とは異なる場合があります。 異なる場合、ダウンストリーム操作が役立ちます。 テーブル変数の行数が実行全体で大幅に変化する場合は、この機能を使用してもパフォーマンスが改善しない可能性があります。
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>互換性レベルを変更することなく、テーブル変数の遅延コンパイルを無効にする
+table 変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベースまたはステートメント範囲で無効にします。 データベースを発生源とするすべてのクエリ実行に対してテーブル変数の遅延コンパイルを無効にするには、該当するデータベースとの関連で次のサンプルを実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+データベースを発生源とするすべてのクエリ実行に対してテーブル変数の遅延コンパイルを再度有効にするには、該当するデータベースとの関連で次のサンプルを実行します。
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+DISABLE_DEFERRED_COMPILATION_TV を USE HINT クエリ ヒントとして割り当てることで、特定のクエリに対してテーブル変数の遅延コンパイル無効にすることもできます。  次に例を示します。
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
-> [!NOTE]
-> スカラー ユーザー定義関数 (UDF) のインライン化は、パブリック プレビュー機能です。  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
 スカラー UDF のインライン化によって、[スカラー UDF](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) は関係式に自動的に変換されます。 これらは呼び出し元の SQL クエリに埋め込まれます。 この変換により、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 スカラー UDF のインライン化によって、UDF 内の操作をコストベースで簡単に最適化できるようになります。 その結果、非効率的で反復的な直列の実行プランではなく、効率的でセット指向の並列処理になります。 この機能は、データベース互換性レベル 150 では既定で有効です。
 
@@ -305,8 +341,7 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 
 ## <a name="approximate-query-processing"></a>概数クエリ処理
 
-> [!NOTE]
-> **APPROX_COUNT_DISTINCT** はパブリック プレビュー機能です。  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 概数クエリ処理は新しい機能ファミリです。 絶対的な精度よりも応答性が重要となる場合に、大規模なデータ セット全体が集計されます。 たとえば、ダッシュボードに表示するために、100 億の行に対する **COUNT(DISTINCT())** を計算する場合などです。 この場合、重要なのは絶対的な精度ではなく、応答性です。 新しい集計関数 **APPROX_COUNT_DISTINCT** は、グループ内の一意の非 null 値の概数を返します。
 
@@ -314,65 +349,67 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 
 ## <a name="batch-mode-on-rowstore"></a>行ストアでのバッチ モード 
 
-> [!NOTE]
-> 行ストアでのバッチ モードは、パブリック プレビュー機能です。  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 行ストアのバッチ モードでは、列ストア インデックスを要求せず、分析ワークロードをバッチ モードで実行できます。  この機能は、ディスク上のヒープと B ツリー インデックスに対するバッチ モード実行とビットマップ フィルターをサポートしています。 行ストアのバッチ モードでは、既存のすべてのバッチ モード対応演算子のサポートが有効になります。
 
-### <a name="background"></a>背景情報
-
+### <a name="background"></a>バックグラウンド
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、分析ワークロードを促進する新機能である列ストア インデックスが導入されました。 後続の各リリースでユース ケースを拡張し、列ストア インデックスのパフォーマンスを向上させました。 これまでは、これらすべての機能を 1 つの機能として浮上させ、文書化しました。 テーブルに列ストア インデックスを作成します。 すると、分析ワークロードが高速になります。 ただし、関連しているが異なる 2 つのテクノロジ セットがあります。
 - **列ストア** インデックスでは、分析クエリは必要な列のデータにのみアクセスできます。 列ストア形式のページ圧縮は、従来の**行ストア** インデックスの圧縮よりもはるかに効果的でもあります。 
 - **バッチ モード**処理では、クエリ演算子によってデータがより効率的に処理されます。 一度に 1 行ずつではなく、複数行がバッチ処理されます。 他のいくつかのスケーラビリティの向上がバッチ モード処理に関連付けられています。 バッチ モードの詳細については、「[実行モード](../../relational-databases/query-processing-architecture-guide.md#execution-modes)」を参照してください。
 
 2 セットの機能が連携して、入力/出力 (I/O) と CPU の使用率が向上します。
-- 列ストア インデックスを使用すると、より多くのデータがメモリに格納されます。 その結果、I/O のニーズが減ります。
+- 列ストア インデックスを使用すると、より多くのデータがメモリに格納されます。 これにより、I/O ワークロードが減少します。
 - バッチ モード処理では、CPU がより効率的に使用されます。
 
-2 つのテクノロジは可能な限り相互活用されます。 たとえば、バッチ モード集計は、列ストア インデックス スキャンの一部として評価できます。 また、バッチ モード結合とバッチ モード集計により、Run-length エンコードを使用して圧縮された列ストア データをはるかに効率的に処理できます。 
+2 つのテクノロジは可能な限り相互活用されます。 たとえば、バッチ モード集計は、列ストア インデックス スキャンの一部として評価できます。 また、圧縮された列ストア データも、バッチ モード結合とバッチ モード集計により、ラン レングス エンコードを使用してはるかに効率的に処理されます。 
  
-2 つの機能は独立し使用できます。
-* 列ストア インデックスを使用する行モード プランがあります。
-* 行ストア インデックスのみを使用するバッチ モード プランがあります。 
+しかし、この 2 つの機能は独立していることを理解しておくことが重要です。
+* 列ストア インデックスを使用する行モード プランを利用できます。
+* 行ストア インデックスのみを使用するバッチ モード プランを利用できます。 
 
 通常、2 つの機能を一緒に使用すると、最適な結果が得られます。 そのため、これまで SQL Server のクエリ オプティマイザーは、列ストア インデックスのあるテーブルが少なくとも 1 つ関係するクエリに対してのみバッチ モード処理を検討しました。
 
-列ストア インデックスは、一部のアプリケーションには適していません。 列ストア インデックスではサポートされていない他の機能を使用するアプリケーションもあります。 たとえば、インプレースの変更は列ストアの圧縮と互換性がありません。 そのため、クラスター化列ストアがあるテーブルでは、トリガーはサポートされません。 さらに重要なことに、列ストア インデックスによって **DELETE** および **UPDATE** ステートメントにオーバーヘッドが増えます。 
+一部のアプリケーションには、列ストア インデックスが適していない可能性があります。 列ストア インデックスではサポートされていない他の機能を使用するアプリケーションもあります。 たとえば、インプレースの変更は列ストアの圧縮と互換性がありません。 そのため、クラスター化列ストア インデックスがあるテーブルでは、トリガーはサポートされません。 さらに重要なことに、列ストア インデックスによって **DELETE** および **UPDATE** ステートメントにオーバーヘッドが増えます。 
 
-一部のトランザクションと分析のハイブリッド ワークロードでは、ワークロードのトランザクション面のオーバーヘッドが列ストア インデックスのメリットを上回ります。 このようなシナリオでは、バッチ モード処理単独での CPU 使用率を改善することができます。 そのため、行ストア機能のバッチ モードでは、すべてのクエリに対してバッチ モードが考慮されます。 どのインデックスが関係しているかは問題ではありません。
+一部のトランザクションと分析のハイブリッド ワークロードでは、トランザクションのワークロードでのオーバーヘッドが列ストア インデックスを使用することから得られるメリットを上回ります。 このようなシナリオでは、バッチ モードの処理だけを採用することにより、CPU 使用率を向上させることができます。 このため、行ストアでのバッチ モード機能では、関連するインデックスの種類に関係なく、すべてのクエリにバッチ モードが検討されます。
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>行ストアでバッチ モードの恩恵を受ける可能性があるワークロード
-
 次のワークロードは、行ストアでのバッチ モードの恩恵を受ける可能性があります。
-* ワークロードの大部分が分析クエリで構成されています。 通常、このようなクエリには、数十万行以上を処理する結合や集計などの演算子があります。
-* ワークロードが CPU バウンドです。 ボトルネックが IO の場合は、可能であれば列ストア インデックスを検討することを引き続きお勧めします。
-* 列ストア インデックスを作成すると、ワークロードのトランザクション部分に過剰なオーバーヘッドがかかります。 または、列ストア インデックスの作成が現実的ではありません。アプリケーションは列ストア インデックスでまだサポートされていない機能に依存しているためです。
+* ワークロードの大部分が分析クエリで構成されています。 通常、このようなクエリでは、数十万行以上を処理する結合や集計などの演算子を使用します。
+* ワークロードが CPU バウンドです。 ボトルネックが I/O の場合は、可能であれば列ストア インデックスを検討することを引き続きお勧めします。
+* 列ストア インデックスを作成すると、ワークロードのトランザクション部分に過剰なオーバーヘッドがかかります。 または、列ストア インデックスの作成が実行不可能です。アプリケーションは列ストア インデックスでまだサポートされていない機能に依存しているためです。
+
 
 > [!NOTE]
-> 行ストアでのバッチ モードは、CPU 使用量を減らすことでのみ支援できます。 ボトルネックが IO に関連し、データがまだキャッシュされていない場合 ("コールド" キャッシュ)、行ストアでのバッチ モードでは経過時間が向上しません。 同様に、すべてのデータをキャッシュするための十分なメモリがマシンにない場合、パフォーマンスは向上しない可能性があります。
+> 行ストアでのバッチ モードは、CPU 使用量を減らすことでのみ支援できます。 ボトルネックが I/O に関連し、データがまだキャッシュされていない場合 ("コールド" キャッシュ)、行ストアでのバッチ モードではクエリ経過時間が向上しません。 同様に、すべてのデータをキャッシュするための十分なメモリがマシンにない場合、パフォーマンスは向上しない可能性があります。
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>行ストアでのバッチ モードによる変化
 
-互換性レベルを 150 に移行する以外に、候補のワークロードに対して行ストアでのバッチ モードを有効にするためにユーザー側で変更を加える必要はありません。
+データベースの互換性レベルを 150 に設定します。 他の変更は必要ありません。
 
-クエリが列ストア インデックスのあるテーブルに関係しない場合でも、クエリ プロセッサではヒューリスティックを使用して、バッチ モードを検討するかどうかが決定されます。 ヒューリスティックは以下のチェックから構成されます。
+クエリで列ストア インデックスのあるテーブルにアクセスしない場合でも、ヒューリスティックを使用するクエリ プロセッサでは、バッチ モードを検討するかどうかが決定されます。 ヒューリスティックは以下のチェックから構成されます。
 1. テーブル サイズ、使用される演算子、入力クエリの推定カーディナリティの初期チェック。
 2. オプティマイザーによってクエリに対する新しい低コストのプランが検出されたときの追加のチェックポイント。 これらの代替プランがバッチ モードを大いに利用しない場合、オプティマイザーではバッチ モードの代替手段の探索が停止されます。
 
+
 行ストアでバッチ モードが使用されている場合、実際の実行モードはクエリ プランで **[バッチ モード]** と表示されます。 scan 演算子では、ディスク上のヒープと B ツリー インデックスにバッチ モードを使用します。 このバッチ モード スキャンでは、バッチ モードのビットマップ フィルターを評価できます。 また、プラン内の他のバッチ モード演算子も表示されることがあります。 たとえば、ハッシュ結合、ハッシュ ベースの集計、並べ替え、ウィンドウ集計、フィルター、連結、Compute Scalar 演算子などです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-* クエリ プランは常にバッチ モードを使用するわけではありません。 クエリ オプティマイザーでは、クエリがバッチ モードの恩恵を受けないと判断される場合があります。 
-* クエリ オプティマイザーの検索スペースは変化しています。 そのため、行モード プランを取得する場合、それがより低い互換性レベルで取得するプランと同じではない可能性があります。 また、バッチ モード プランを取得する場合、それが列ストア インデックスを使用して取得したプランと同じではない可能性があります。 
-* 新しいバッチ モード行ストア スキャンが原因で、プランは、列ストア インデックスと行ストア インデックスが混在するクエリに対して変化する可能性もあります。
-* 現在、行ストア スキャンには、新しいバッチ モードに対して制限事項があります。 
-    * インメモリ OLTP テーブル、またはディスク上のヒープと B ツリー以外のインデックスに対しては開始されません。 
-    * 大規模なオブジェクト (LOB) 列がフェッチまたはフィルター処理された場合にも開始されません。 この制限には、スパース列セットと XML 列が含まれます。
-* 列ストア インデックスでもバッチ モードが使用されないクエリがあります。 たとえば、カーソルを含むクエリです。 これと同様の例外は、行ストアのバッチ モードにも適用されます。
+クエリ プランは常にバッチ モードを使用するわけではありません。 クエリ オプティマイザーでは、クエリがバッチ モードの恩恵を受けないと判断される場合があります。 
+
+クエリ オプティマイザーの検索スペースは変化しています。 そのため、行モード プランを取得する場合、それがより低い互換性レベルで取得するプランと同じではない可能性があります。 また、バッチ モード プランを取得する場合、それが列ストア インデックスを使用して取得したプランと同じではない可能性があります。 
+
+新しいバッチ モード行ストア スキャンが原因で、プランは、列ストア インデックスと行ストア インデックスが混在するクエリに対して変化する可能性もあります。
+
+現在、行ストア スキャンには、新しいバッチ モードに対して制限事項があります。 
+- インメモリ OLTP テーブル、またはディスク上のヒープと B ツリー以外のインデックスに対しては開始されません。 
+- 大規模なオブジェクト (LOB) 列がフェッチまたはフィルター処理された場合にも開始されません。 この制限には、スパース列セットと XML 列が含まれます。
+
+列ストア インデックスでもバッチ モードが使用されないクエリがあります。 たとえば、カーソルを含むクエリです。 これと同様の例外は、行ストアのバッチ モードにも適用されます。
 
 ### <a name="configure-batch-mode-on-rowstore"></a>行ストアにバッチ モードを構成する
-
 **BATCH_MODE_ON_ROWSTORE** データベース スコープ構成は、既定で有効です。 データベースの互換性レベルを変更せずに、行ストアのバッチ モードを無効にすることができます。
 
 ```sql
@@ -405,11 +442,10 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
-## <a name="see-also"></a>参照
-
+## <a name="see-also"></a>関連項目
 [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)    
 [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [結合](../../relational-databases/performance/joins.md)    
-[アダプティブ クエリ処理のデモンストレーション](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[インテリジェントな QP のデモ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[アダプティブ クエリ処理のデモンストレーション](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[インテリジェントなクエリ処理のデモ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

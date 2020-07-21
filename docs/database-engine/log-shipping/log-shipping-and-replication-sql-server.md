@@ -1,5 +1,6 @@
 ---
 title: ログ配布とレプリケーション (SQL Server) | Microsoft Docs
+description: プライマリ データベースに対して行われるすべての挿入、更新、または削除のトランザクション ログが、ログ配布によってセカンダリ データベースに適用されるしくみについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c72f43b6605821ad984a9ad9dc98378aea258bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030817"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696044"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ログ配布では単一のデータベースの 2 つのコピーを使用します。通常、これらのコピーは異なるコンピューターに配置されます。 クライアントが任意の時点において使用できるデータベースのコピーは 1 つだけです。 このコピーはプライマリ データベースと呼ばれます。 クライアントがプライマリ データベースに対して加えた更新は、ログ配布によってセカンダリ データベースと呼ばれるもう一方のコピー データベースに適用されます。 プライマリ データベースに対して行われた挿入、更新、および削除はすべてトランザクション ログに記録され、ログ配布によってこのトランザクション ログがセカンダリ データベースに適用されます。  
   
  ログ配布はレプリケーションと組み合わせて使用できます。ログ配布とレプリケーションを併用した場合の動作を以下に示します。  
@@ -54,7 +55,7 @@ ms.locfileid: "68030817"
   
 1.  パブリケーション データベースで sync with backup オプションが設定されていない場合は、 `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`を実行します。 詳細については、「[sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)」を参照してください。  
   
-2.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)」を参照してください。  
+2.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。  
   
 3.  パブリッシャーに障害が発生した場合は、RESTORE LOG の KEEP_REPLICATION オプションを使用して、データベースの最新のログをセカンダリ サーバーに復元します。 これにより、データベースのレプリケーション設定がすべて保持されます。 詳細については、「[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)」および「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68030817"
   
  **sync with backup オプションを使用しないでトランザクション レプリケーションとログ配布を構成するには**  
   
-1.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「[ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)」を参照してください。  
+1.  パブリケーション データベースに対してログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)で導入されました。  
   
 2.  パブリッシャーに障害が発生した場合は、RESTORE LOG の KEEP_REPLICATION オプションを使用して、データベースの最新のログをセカンダリ サーバーに復元します。 これにより、データベースのレプリケーション設定がすべて保持されます。 詳細については、「[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)」および「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。  
   

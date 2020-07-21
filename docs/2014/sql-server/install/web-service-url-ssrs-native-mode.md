@@ -1,5 +1,5 @@
 ---
-title: Web サービスの URL (SSRS ネイティブ モード) |Microsoft Docs
+title: Web サービス URL (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-author: markingmyname
-ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f72b7f40c6733c48bb2d7fa2867799d7ad99d4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065080"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web サービス URL (SSRS ネイティブ モード)
-  [Web サービス URL] ページを使用すると、レポート サーバーへのアクセスに使用する URL を構成または変更できます。 *URL 予約* は、指定した URL に基づいて作成されます。 URL 予約は、その後のレポート サーバー Web サービスへのアクセスに使用できるすべての URL の構文と規則を定義し、 レポート サーバー Web サービスのプレフィックス、ホスト、ポート、および仮想ディレクトリを指定します。 ホストの指定方法によっては、1 つの予約で複数の URL を定義できます。 ホストの既定値では、強いワイルドカードが指定されます。 強いワイルドカードを使用すると、レポート サーバーをホストするコンピューターに解決できるあらゆるホスト名を URL に指定できます。 構成と URL 予約の詳細については、次を参照してください[URL の構成&#40;SSRS 構成マネージャー&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)と[レポート サーバー Url の構成&#40;SSRS 構成マネージャー&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
+  [Web サービス URL] ページを使用すると、レポート サーバーへのアクセスに使用する URL を構成または変更できます。 *URL 予約* は、指定した URL に基づいて作成されます。 URL 予約は、その後のレポート サーバー Web サービスへのアクセスに使用できるすべての URL の構文と規則を定義し、 レポート サーバー Web サービスのプレフィックス、ホスト、ポート、および仮想ディレクトリを指定します。 ホストの指定方法によっては、1 つの予約で複数の URL を定義できます。 ホストの既定値では、強いワイルドカードが指定されます。 強いワイルドカードを使用すると、レポート サーバーをホストするコンピューターに解決できるあらゆるホスト名を URL に指定できます。 URL の構成と予約の詳細については、「 [ssrs Configuration Manager&#41;の url &#40;構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)する」および「 [ssrs Configuration Manager&#41;&#40;レポートサーバーの url を構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)する」を参照してください。  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード。  
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウで **[Web サービス URL]** をクリックします。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
@@ -34,12 +33,12 @@ ms.locfileid: "66090984"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を再インストールした場合に、[すべて割り当て] の既定の IP アドレス値とポート 80 を使用しようとするとエラーが表示されるときは、通常、サービスの再起動後に URL を再作成することによってエラーを解決できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **仮想ディレクトリ**  
  レポート サーバー Web サービスの仮想ディレクトリ名を指定します。 仮想名は、同じコンピューター上のレポート サーバー Web サービス インスタンスごとに 1 つだけ指定できます。  
   
- **[IP アドレス]**  
- TCP/IP ネットワーク上でレポート サーバー コンピューターを識別します。 有効な値は次のとおりです。  
+ **IP アドレス**  
+ TCP/IP ネットワーク上でレポート サーバー コンピューターを識別します。 有効な値は、次のとおりです。  
   
 -   **[すべて割り当て]** は、レポート サーバー アプリケーションを指す URL に、コンピューターに割り当てられている IP アドレスをどれでも使用できることを示します。 コンピューターに割り当てられている IP アドレスに対してドメイン ネーム サーバーによって解決されるわかりやすいホスト名 (コンピューター名など) も、この値の対象に含まれます。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL の既定値です。  
   
@@ -47,22 +46,22 @@ ms.locfileid: "66090984"
   
 -   **[127.0.0.1]** は、localhost にアクセスする場合に使用します。 この値は、レポート サーバー コンピューターでのローカル管理をサポートします。 この値のみを選択すると、レポート サーバー コンピューターにローカルにログオンしているユーザーだけがアプリケーションにアクセスできるようになります。  
   
--   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 IP アドレスは、次の形式のような 4 バイト フィールドが 8 の 128 ビット値になります、ネットワークが IPv6 のアドレス指定を使用する場合:\<ヘッダー >:*nnnn:nnnn:nnnn:nnnn*  
+-   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 ネットワークで IPv6 アドレス指定を使用している場合、IP アドレスは、次の形式の 8 4 バイトフィールドの128ビット値になります: \<header> :*nnnn: nnnn: nnnn: nnnn*  
   
      複数のカードがある場合は、それぞれに IP アドレスが割り当てられます。 この値のみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。  
   
- **[TCP ポート]**  
+ **TCP ポート**  
  レポート サーバーの仮想ディレクトリ名を含む URL に対する HTTP 要求をレポート サーバーが監視するポートを指定します。  
   
  **[SSL 証明書]**  
- 指定した IP アドレスに証明書をバインドします。 証明書をコンピューターにインストールして構成する必要があります。 Reporting Services には証明書の管理機能は用意されていません。 証明書は、IP アドレスに解決されるホスト名またはコンピューター名に対して発行されている必要があります。 たとえば、発行された証明書を使用する http://salesreports 、指定した IP アドレスが"salesreports"という名前のサーバーに解決する必要があります。  
+ 指定した IP アドレスに証明書をバインドします。 証明書をコンピューターにインストールして構成する必要があります。 Reporting Services には証明書の管理機能は用意されていません。 証明書は、IP アドレスに解決されるホスト名またはコンピューター名に対して発行されている必要があります。 たとえば、に対して発行された証明書を使用するには、指定した http://salesreports IP アドレスが "salesreports" という名前のサーバーに解決される必要があります。  
   
  証明書を使用する場合は、RSReportServer.config ファイルの `UrlRoot` 構成設定を、証明書で登録されたコンピューターの完全修飾名を指すように変更する必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) ネイティブ モードのレポート サーバーでの SSL 接続の構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   
  **[SSL ポート]**  
  SSL 接続のポートを指定します。  
   
- **Url**  
+ **URL**  
  現在のレポート サーバー インスタンスに対して定義されている URL が表示されます。  
   
  **詳細設定**  
@@ -82,7 +81,7 @@ ms.locfileid: "66090984"
 >  この問題を修正するには、すべてのバインドを削除し、一意の設定で新しいバインドを作成するか、ワイルドカードを使用して Reporting Services の URL 登録を構成してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services Configuration Manager F1 ヘルプトピック &#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

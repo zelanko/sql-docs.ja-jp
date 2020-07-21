@@ -1,5 +1,6 @@
 ---
 title: ネイティブ コンパイル T-SQL モジュールでサポートされる DDL | Microsoft Docs
+description: ストアド プロシージャ、スカラー UDF、インライン TVF、トリガーなど、ネイティブ コンパイル T-SQL モジュールでサポートされている DDL 構文について説明します。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fde492554b52170602e5676fa8dcce018885053
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c2a91b1568b139038cad32e81e273d564fbec98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715385"
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる DDL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、ストアド プロシージャ、スカラー UDF、インライン TVF、トリガーなど、ネイティブ コンパイル T-SQL モジュールでサポートされている DDL 構文を示します。  
   
  ネイティブ コンパイル T-SQL モジュールの一部として使用できる機能と T-SQL 対象領域の詳細については、「 [ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: データベース メール ビュー (TRANSACT-SQL) |Microsoft Docs
+title: データベースメールビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], Database Mail
 - status information [SQL Server], Database Mail
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 44250423b994e4d35769d93aebd4434988de9a2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752965"
 ---
 # <a name="database-mail-views-transact-sql"></a>データベース メール ビュー (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベース メールには、次に示すビューがあります。これらのビューでは、データベース メールの電子メールの内容や、電子メールの状態を表示できます。また、データベース メールでログに記録されたエラーなど、その他の受信メッセージも表示できます。 これらのビューは、 **msdb**データベース。  
+  データベース メールには、次に示すビューがあります。これらのビューでは、データベース メールの電子メールの内容や、電子メールの状態を表示できます。また、データベース メールでログに記録されたエラーなど、その他の受信メッセージも表示できます。 これらのビューは**msdb**データベースにあります。  
   
 |||  
 |-|-|  
@@ -39,7 +39,7 @@ ms.locfileid: "68033120"
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

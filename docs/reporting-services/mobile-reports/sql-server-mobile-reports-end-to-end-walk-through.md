@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028895"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server モバイル レポート: エンド ツー エンドのチュートリアル
@@ -22,7 +22,7 @@ ms.locfileid: "69028895"
 
 調整可能なグリッド行とグリッド列、柔軟なモバイル レポート要素を備えたデザイン領域でモバイル レポートを作成します。 さまざまなオンプレミス データ ソースに接続するか、Excel ブックをアップロードしてモバイル レポートを作成します。 レポートを [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルに保存し、ブラウザーまたは Power BI モバイル アプリで表示します。  
   
-この記事では、次について説明します。   
+この記事で説明する内容は次のとおりです。   
   
 - サンプル データ ソースとして AdventureWorks データベースを使用して、 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータル上で共有データ ソースとデータセットを作成する。  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "69028895"
   
 ## <a name="create-a-shared-data-source"></a>共有データ ソースの作成  
   
-Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 「 [サポートされるデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
+Reporting Services でサポートされるデータ ソースのいずれもからモバイル レポートの共有データ ソースを作成できます。 「[サポートされるデータ ソースの一覧](../report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルから、 **[新規作成]**  >  **[データソース]** をクリックします。  
   
@@ -63,7 +63,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
   
 [Reporting Services の共有データ ソース](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)の詳細を参照してください。  
    
-## <a name="shared-dataset">共有データセットを作成する</a>  
+## <a name=""></a><a name="shared-dataset">共有データセットを作成する</a>  
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] のレポート デザイナーなど、既存の [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]クライアント ツールを使用して、共有データセットを作成します。  このチュートリアルでは [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]を使用します。 [レポート ビルダーをインストールする](../install-windows/install-report-builder.md)か、Web ポータルから起動します。 3 つのデータセットを Reporting Services モバイル レポートの KPI の値、KPI のトレンド、および詳細フィールド用に 1 つずつ作成します。     
   
@@ -93,7 +93,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
    
 これで、KPI とモバイル レポートの基準としてデータセットを使用できます。  同じデータ ソースに対して複数のデータセットを作成できます。 さらに、これらの共有データセットに対して複数の KPI とモバイル レポートを作成できます。   
   
-## <a name="create-KPI">KPI の作成</a>  
+## <a name=""></a><a name="create-KPI">KPI の作成</a>  
 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web ポータルで KPI の権限を作成します。    
   
 1. Web ポータルの右上隅で **[新規作成]**  >  **[新しい KPI]** をクリックします。   
@@ -133,7 +133,7 @@ Reporting Services でサポートされるデータ ソースのいずれもか
    
     ![PBI_SSMRP_NewKPI](../../reporting-services/mobile-reports/media/pbi-ssmrp-newkpi.png)  
     
-## <a name="create-mobile-report">Reporting Services モバイル レポートの作成</a>  
+## <a name=""></a><a name="create-mobile-report">Reporting Services モバイル レポートの作成</a>  
    
 Reporting Services モバイル レポートを作成するには、 [SQL Server Mobile Report Publisher をインストールする](https://go.microsoft.com/fwlink/?LinkId=717766)か、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルから起動します。 
 

@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e6c1f37c72ad1ad5d375f86463fe630400ecf4a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102024"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72798374"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
@@ -42,12 +42,14 @@ ms.locfileid: "68102024"
 
   指定された [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のテーブルの現在の ID 値をチェックし、必要に応じて ID 値を変更します。 ID 列の新しい現在の ID 値を手動で設定する場合に DBCC CHECKIDENT を使用することもできます。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```console
-  
+
+-- Syntax for SQL Server and Azure SQL Database  
+
 DBCC CHECKIDENT
  (
     table_name  
@@ -55,7 +57,17 @@ DBCC CHECKIDENT
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```console
+-- Syntax for Azure SQL Data Warehouse
+DBCC CHECKIDENT   
+ (   
+    table_name  
+        [RESEED, new_reseed_value ]   
+)  
+[ WITH NO_INFOMSGS ]  
+
+```
 ## <a name="arguments"></a>引数
 
  *table_name*  
@@ -73,14 +85,14 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  現在の ID 値に加えられる特定の修正は、指定されているパラメーターによって異なります。  
   
 |DBCC CHECKIDENT コマンド|ID の修正または加えられた修正|  
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|現在の ID 値はリセットされません。 DBCC CHECKIDENT は、ID 列の現在の ID 値と現在の最大値を返します。 2 つの値が異なる場合は、エラーが発生しないよう、または連続値の一部が欠落しないように、ID 値をリセットする必要があります。|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> 内の複数の<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、テーブルの現在の ID 値は ID 列の最大値にリセットされます。 後の「例外」のセクションを参照してください。|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> or<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|テーブルの現在の ID 値が、ID 列に格納されている最大の ID 値より小さい場合、テーブルの現在の ID 値は ID 列の最大値にリセットされます。 後の「例外」のセクションを参照してください。|  
 |DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|現在の ID 値は *new_reseed_value* に設定されます。 テーブルが作成された後、そのテーブルに行が挿入されていない、または TRUNCATE TABLE ステートメントを使用してすべての行が削除された場合、DBCC CHECKIDENT を実行した後に挿入された最初の行が ID として *new_reseed_value* を使用します。 テーブルに行が存在する場合、または DELETE ステートメントを使用してすべての行が削除された場合は、挿入される次の行に *new_reseed_value* + [現在の増分](../../t-sql/functions/ident-incr-transact-sql.md)の値が使用されます。 トランザクションによって行が挿入され、後でそのトランザクションがロールバックされた場合、挿入される次の行では、*new_reseed_value*  + [現在の増分](../../t-sql/functions/ident-incr-transact-sql.md)の値が、行が削除されたかのように使用されます。 テーブルが空でない場合、ID 値に ID 列の最大値より小さな値を設定すると、次の状況のいずれかが発生する可能性があります。<br /><br /> ID 列に PRIMARY KEY 制約または UNIQUE 制約が設定されている場合、生成される ID 値と既存の値との競合が原因で、テーブルに対する後続の挿入操作でエラー メッセージ 2627 が生成されます。<br /><br /> PRIMARY KEY 制約または UNIQUE 制約が設定されていない場合、後続の挿入操作では重複した ID 値が挿入されます。|  
   
 ## <a name="exceptions"></a>例外
@@ -89,7 +101,7 @@ DBCC CHECKIDENT
   
 |条件|リセット方法|  
 |---------------|-------------------|  
-|現在の ID 値がテーブルの最大値より大きい。|DBCC CHECKIDENT (*table_name*, NORESEED) を実行して、列の現在の最大値を判断します。 次に、DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) コマンドで値を *new_reseed_value* に指定します。<br /><br /> -または-<br /><br /> *new_reseed_value* を非常に低い値に設定して DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) を実行してから DBCC CHECKIDENT (*table_name*, RESEED) を実行して値を修正します。|  
+|現在の ID 値がテーブルの最大値より大きい。|DBCC CHECKIDENT (*table_name*, NORESEED) を実行して、列の現在の最大値を判断します。 次に、DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) コマンドで値を *new_reseed_value* に指定します。<br /><br /> \- または -<br /><br /> *new_reseed_value* を非常に低い値に設定して DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) を実行してから DBCC CHECKIDENT (*table_name*, RESEED) を実行して値を修正します。|  
 |すべての行がテーブルから削除されている。|*new_reseed_value* を新しい開始値に設定して DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) を実行します。|  
   
 ## <a name="changing-the-seed-value"></a>シード値の変更
@@ -120,7 +132,7 @@ DBCC CHECKIDENT
 
 Azure SQL Data Warehouse には **db_owner** アクセス許可が必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. 必要に応じて現在の ID 値をリセットする  
  次の例では、必要に応じて、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の指定されたテーブルの現在の ID 値をリセットします。  

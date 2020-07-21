@@ -1,5 +1,5 @@
 ---
-title: 実行の SQL Server インポートおよびエクスポート ウィザード |Microsoft Docs
+title: SQL Server インポートおよびエクスポートウィザードを実行する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -12,36 +12,35 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1803dd3357d2a725f2196e2c692f7470e27a03f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768034"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436859"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを実行する
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用すると、最も簡単な方法でデータ ソース間でデータをコピーしたり、基本パッケージを構築したりすることができます。 ウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用すると、最も簡単な方法でデータ ソース間でデータをコピーしたり、基本パッケージを構築したりすることができます。 ウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
- SQL Server インポートおよびエクスポート ウィザードを使用して、SQL Server データベースから Microsoft Excel スプレッドシートにデータをエクスポートするパッケージを作成する方法を示すビデオは、次を参照してください。 [Excel (SQL Server ビデオ) への SQL Server データのエクスポート](https://go.microsoft.com/fwlink/?LinkId=131024)します。  
+ SQL Server のインポートおよびエクスポートウィザードを使用して、SQL Server データベースから Microsoft Excel スプレッドシートにデータをエクスポートするパッケージを作成する方法を示すビデオについては、「 [SQL Server データを excel にエクスポートする (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=131024)」を参照してください。  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動するには  
   
--   **開始**メニューで、**すべてのプログラム**、 をポイント**Microsoft SQL Server** 、順にクリックします**データ インポートおよびエクスポート**します。  
+-   [**スタート**] ボタンをクリックし、[**すべてのプログラム**]、[**Microsoft SQL Server** ] の順にポイントして、[**データのインポートおよびエクスポート**] をクリックします。  
   
      \- または -  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を右クリックし、 **SSIS パッケージ**フォルダー、およびクリック**SSISImport およびエクスポート ウィザード**します。  
+     で、[ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **SSIS パッケージ**] フォルダーを右クリックし、[ **SSISImport and Export Wizard**] をクリックします。  
   
      \- または -  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の**プロジェクト** メニューのをクリックして**SSISImport およびエクスポート ウィザード**します。  
+     で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [**プロジェクト**] メニューの [ **SSISImport and Export Wizard**] をクリックします。  
   
      \- または -  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、 をクリックし、**データのインポート**または**データをエクスポート**.  
+     で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーの種類に接続し、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [データベース] を展開します。データベースを右クリックして [**タスク**] をポイントし、[**データのインポート**] または [**データのエクスポート**] をクリックします。  
   
      \- または -  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62768034"
   
     -   新しいデータベースを作成してデータベース プロパティを設定するかどうかを指定します。 次のプロパティは構成できません。ウィザードは指定の既定値を使用します。  
   
-        |プロパティ|値|  
+        |プロパティ|[値]|  
         |--------------|-----------|  
         |照合順序|Latin1_General_CS_AS_KS_WS|  
         |復旧モデル|[完全]|  
@@ -103,7 +102,7 @@ ms.locfileid: "62768034"
   
     -   数値データ型の列の有効桁数と小数点以下桁数を設定します。  
   
-    -   列が null 値を含めるかどうかを指定します。  
+    -   列に null 値を含めることができるかどうかを指定します。  
   
 5.  (省略可) 複数のテーブルを選択して、これらのテーブルに適用されるメタデータおよびオプションを更新します。  
   
@@ -115,19 +114,19 @@ ms.locfileid: "62768034"
   
     -   既存の変換先テーブルを切り捨てるかどうかを指定します。  
   
-6.  保存し、パッケージを実行します。  
+6.  パッケージを保存して実行します。  
   
-     ウィザードを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはコマンド プロンプトから起動した場合、パッケージはすぐに実行されます。 パッケージを保存することができます必要に応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**データベースまたはファイル システム。 詳細については、 **msdb**データベースを参照してください[Package Management &#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)します。  
+     ウィザードを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはコマンド プロンプトから起動した場合、パッケージはすぐに実行されます。 必要に応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**データベースまたはファイルシステムにパッケージを保存できます。 **Msdb**データベースの詳細については、「 [Package Management &#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)」を参照してください。  
   
-     パッケージを保存する際に、パッケージの保護レベルを設定し、パスワードを使用する保護レベルの場合はパスワードを指定できます。 パッケージの保護レベルの詳細については、次を参照してください。[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)します。  
+     パッケージを保存する際に、パッケージの保護レベルを設定し、パスワードを使用する保護レベルの場合はパスワードを指定できます。 パッケージ保護レベルの詳細については、「[パッケージ内の機微なデータの Access Control](../security/access-control-for-sensitive-data-in-packages.md)」を参照してください。  
   
      ウィザードを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクトから起動した場合、ウィザードからパッケージを実行することはできません。 代わりに、ウィザードを起動した [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトにパッケージが追加されます。 パッケージは、その後、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で実行できます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
+    >  では、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
   
-## <a name="see-also"></a>参照  
- [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+## <a name="see-also"></a>関連項目  
+ [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [SQL Server データ ツールでのパッケージの作成](../create-packages-in-sql-server-data-tools.md)  
   
   

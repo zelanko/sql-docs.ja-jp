@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2060c886-1226-4066-bc0c-de90a1cfb82b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8772f3218f0e03e07bcdb7b2290b5521c73be580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8efc64cc421506aab080b0bf4aaefd0ad1c29de4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62912857"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550937"
 ---
-# <a name="mssqlserver844"></a>MSSQLSERVER_844
+# <a name="mssqlserver_844"></a>MSSQLSERVER_844
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|844|  

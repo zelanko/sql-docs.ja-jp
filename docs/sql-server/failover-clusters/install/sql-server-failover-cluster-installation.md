@@ -1,7 +1,7 @@
 ---
-title: SQL Server フェールオーバー クラスターのインストール | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: フェールオーバー クラスター インスタンスを作成する
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063870"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75230622"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68063870"
   
     -   システムが最小要件を満たしていることを確認する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに関する特定の要件の詳細については、「 [フェールオーバー クラスタリングをインストールする前に](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」を参照してください。  
   
-2.  他のクラスター ノードに影響を与えずに、フェールオーバー クラスター構成からノードを追加または削除します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
+2.  他のクラスター ノードに影響を与えずに、フェールオーバー クラスター構成からノードを追加または削除します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
     -   フェールオーバー クラスター内のすべてのノードは、32 ビットまたは 64 ビットのいずれかの同一プラットフォームで構成され、エディションおよびバージョンが同じオペレーティング システムを実行している必要があります。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の 64 ビット エディションは、64 ビット版の Windows オペレーティング システムを実行する 64 ビット ハードウェアにインストールする必要があります。 このリリースのフェールオーバー クラスタリングでは、WOW64 がサポートされません。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "68063870"
     - マルチドメイン クラスター上の SQL FCI。   
     - ドメイン + ワークグループ クラスター上の SQL FCI。 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール オプション  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール オプション  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>オプション 1:ノードの追加を伴う統合インストール  
+##### <a name="option-1-integrated-installation-with-add-node"></a>オプション 1: ノードの追加を伴う統合インストール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 統合フェールオーバー クラスター インストールは、次の 2 つの手順で構成されています。  
   
 1.  単一ノードの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを作成および構成します。 ノードの構成が正常に完了すると、完全に機能するフェールオーバー クラスター インスタンスが完成します。 フェールオーバー クラスターには 1 つのノードしかないので、この時点では高可用性は備わっていません。  
@@ -79,9 +79,9 @@ ms.locfileid: "68063870"
   
 -   ノードの削除 - [SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
- **注** IPv6 IP アドレスがサポートされています。  IPv4 と IPv6 の両方を構成すると、それぞれ異なるサブネットとして扱われ、IPV6 がまずオンラインになることが想定されます。  
+ **注** IPv6 IP アドレスがサポートされています。  IPv4 と IPv6 の両方を構成すると、それぞれ異なるサブネットとして扱われ、IPV6 がまずオンラインになることが想定されます。  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスター  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスター  
  クラスター上のノードが別々のサブネットにある場合、OR 依存関係を設定できます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターの各ノードが、指定されている 1 つ以上の IP アドレスの実行可能な所有者である必要があります。  
   
 ## <a name="see-also"></a>参照  

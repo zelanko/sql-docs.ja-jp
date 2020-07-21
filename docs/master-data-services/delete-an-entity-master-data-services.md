@@ -1,5 +1,5 @@
 ---
-title: エンティティを削除する (マスター データ サービス) | Microsoft Docs
+title: エンティティを削除する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2598634f239c738e0287caa9706aad497cb706a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c605aeb0afd9350243604fe2bbbcabc95e92ba84
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811821"
 ---
 # <a name="delete-an-entity-master-data-services"></a>エンティティを削除する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを削除して、そのエンティティのすべてのメンバーおよび属性を削除します。  
   
 > [!NOTE]  
 >  すべてのバージョンからのエンティティのメンバーが恒久的に削除されます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-an-entity"></a>エンティティを削除するには  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67906312"
 6.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)   
+ [エンティティ &#40;マスターデータサービス&#41;](../master-data-services/entities-master-data-services.md)   
  [エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)  
   
   

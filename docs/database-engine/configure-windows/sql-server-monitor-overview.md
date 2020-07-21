@@ -1,5 +1,6 @@
 ---
 title: SQL Server モニターの概要 | Microsoft Docs
+description: SQL Server モニターについて説明します。 そのレプリケーション モニター モジュールとデータベース ミラーリング モニター モジュールの使用方法について説明します。 また、使用に必要なアクセス許可について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb99ef49e22c578ec1ebd8cc715a6e70e5bb6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771801"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server モニターの概要
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SQL Server モニターでは、監視機能を実行するのではなく、監視を行うモジュールをホストします。 SQL Server モニターのモジュールには、レプリケーション モニターやデータベース ミラーリング モニターが含まれます。  
   
  これらのモジュールのいずれかを使用するには、 **[実行]** メニューから該当するモジュールを選択します。 現在選択されているモジュールには、ナビゲーション ペインと詳細ペインの内容、詳細ペインでのユーザーとのやり取り、および内容と状態に関するクエリがあります。  
@@ -51,7 +52,7 @@ ms.locfileid: "68032492"
  **操作**  
  ナビゲーション ツリーで選択されたノードのコンテキスト メニューが含まれます。  
   
- **[実行]**  
+ **Go**  
  監視するコンポーネントの一覧が含まれます。  
   
 -   データベース ミラーリング  

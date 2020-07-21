@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd2441424a6728bbaac8c000e54f5737b3d7c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972062"
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
@@ -27,7 +26,7 @@ ms.locfileid: "65483644"
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-the-version-name"></a>バージョン名を変更するには  
   
@@ -39,10 +38,10 @@ ms.locfileid: "65483644"
   
 4.  Enter キーを押します。  
   
-## <a name="see-also"></a>関連項目  
- [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)   
- [バージョンをコミットする (マスター データ サービス)](../../2014/master-data-services/commit-a-version-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [マスターデータサービス &#40;のバージョンをロックする&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)   
+ [マスターデータサービス &#40;のバージョンをコミット&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)   
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

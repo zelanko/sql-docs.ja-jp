@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117298"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393000"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースにスキーマを作成します。 CREATE SCHEMA トランザクションでは、新しいスキーマにテーブルとビューを作成し、それらのオブジェクトに GRANT、DENY、または REVOKE 権限を設定することもできます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68117298"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
@@ -59,13 +59,15 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *schema_name*  
  データベース内でスキーマを識別する名前を指定します。  
   
@@ -87,7 +89,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  セキュリティ保護可能なリソース (ただし新しいスキーマを除く) に対する権限を拒否する DENY ステートメントを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  ステートメントに CREATE SCHEMA AUTHORIZATION を使用し、スキーマ名を指定しなくても、このステートメントは許可されます。ただしこれは、旧バージョンとの互換性の維持を目的としたものです。 ステートメントでエラーは発生しませんが、スキーマは作成されません。  
@@ -112,7 +114,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **スキーマおよびユーザーの暗黙的な作成**  
   
- データベース ユーザー アカウント (データベース内のデータベース プリンシパル) がなくても、ユーザーがデータベースを使用できる場合があります。 このことは、次の状況で発生します。  
+ データベース ユーザー アカウント (データベース内のデータベース プリンシパル) がなくても、ユーザーがデータベースを使用できる場合があります。 これは、次の状況で発生します。  
   
 -   ログインが **CONTROL SERVER** 特権を持っている。  
   
@@ -139,7 +141,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 > [!NOTE]  
 >  旧バージョンとの互換性のための構文では、スキーマが作成されないので、CREATE SCHEMA に対する権限はチェックされません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. スキーマを作成して、権限を付与する  
  次の例では、`Annik` が所有するスキーマ `Sprockets` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 `Sprockets` と `NineProngs` は単一のステートメントで作成されることに注意してください。  
@@ -154,14 +156,14 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. スキーマとスキーマ内のテーブルを作成する  
  次の例では、スキーマ `Sales` を作成した後、そのスキーマ内にテーブル `Sales.Region` を作成します。  
   
 ```  
 CREATE SCHEMA Sales;  
-GO;  
+GO
   
 CREATE TABLE Sales.Region   
 (Region_id int NOT NULL,  

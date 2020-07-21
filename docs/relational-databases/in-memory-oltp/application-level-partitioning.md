@@ -1,5 +1,6 @@
 ---
 title: アプリケーション レベルのパーティション分割 | Microsoft Docs
+description: 注文を処理するこの例を確認します。 このアプリケーションでは、最近の注文がメモリ最適化テーブルに格納され、ディスクベース テーブルに古い注文が格納されます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629704"
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このアプリケーションは注文を処理します。 最近の注文には多くの処理が行われます。 以前の注文には多くの処理は行われません。 最近の注文は、メモリ最適化テーブルにあります。 以前の注文は、ディスク ベース テーブルにあります。 *hotDate* より後の注文は、メモリ最適化テーブルにあります。 *hotDate* より前の注文は、ディスク ベース テーブルにあります。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
   
  このサンプルでは、ディスク ベース テーブルに対応するパーティション テーブルを使用せず、3 番目のテーブルを使用して 2 つのテーブルの間の明示的な分岐点を追跡します。 この分岐点を使用して、新しく挿入されるデータが日付に基づいて必ず適切なテーブルに挿入されることを保証できます。 また、どこでデータを検索するかを決定することもできます。 遅れて到着するデータも、引き続き適切なテーブルに配置されます。  

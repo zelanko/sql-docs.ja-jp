@@ -1,5 +1,5 @@
 ---
-title: NextRecordset メソッドの例 (vc++) |Microsoft Docs
+title: NextRecordset メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 09ef2448d0e3f350ccb6f1be1e34d5ba876f8384
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932026"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762373"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset メソッドの例 (VC++)
-この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドの 3 つの異なるから成る複合コマンド ステートメントを使用してレコード セット内のデータを表示する**選択**ステートメント。  
+この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドを使用して、3つの個別の**SELECT**ステートメントで構成された複合コマンドステートメントを使用するレコードセットのデータを表示します。  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -138,5 +138,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [NextRecordset メソッド (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)

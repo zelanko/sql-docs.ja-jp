@@ -29,14 +29,14 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a4ab95832616c95ab1634814d191117bdf53926
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051165"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79287396"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
 
@@ -105,12 +105,12 @@ ms.locfileid: "68051165"
   
 -   **/ConfigFile** オプションを使用して、デザイン時に指定した構成を置き換える構成を読み込むことはできません。  
   
- これらのオプションの詳細と、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] と以前のバージョン間におけるこれらのオプションの動作の違いについては、「[SQL Server 2016 における Integration Services 機能の動作の変更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
+ これらのオプションの詳細と、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] と以前のバージョン間におけるこれらのオプションの動作の違いについては、「 [SQL Server 2016 における Integration Services 機能の動作の変更](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)」を参照してください。  
   
 ### <a name="package-configuration-types"></a>パッケージの構成の種類  
  パッケージの構成の種類を次の表に示します。  
   
-|型|[説明]|  
+|Type|説明|  
 |----------|-----------------|  
 |XML 構成ファイル|XML ファイルに構成を格納します。 XML ファイルは、複数の構成を格納できます。|  
 |環境変数|環境変数に構成を格納します。|  
@@ -215,11 +215,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  ウィザードの終了後、新しい構成が **[パッケージ構成オーガナイザー]** ダイアログ ボックスの構成の一覧に追加されます。  
   
-> **注:** パッケージ構成ウィザードの最後に表示される [ウィザードの完了] ページには、構成内の対象プロパティが一覧表示されます。 **dtexec** コマンド プロンプト ユーティリティを使用してパッケージの実行時にプロパティを更新するには、パッケージ構成ウィザードを実行してプロパティのパスを表す文字列を生成し、それらの文字列をコピーしてコマンド プロンプト ウィンドウに貼り付け、**dtexec** の set オプションと一緒に使用します。  
+> **注:** パッケージ構成ウィザードの最後に表示される [ウィザードの完了] ページには、構成内の対象プロパティが一覧表示されます。 **dtexec** コマンド プロンプト ユーティリティを使用してパッケージの実行時にプロパティを更新するには、パッケージ構成ウィザードを実行してプロパティのパスを表す文字列を生成し、それらの文字列をコピーしてコマンド プロンプト ウィンドウに貼り付け、 **dtexec**の set オプションと一緒に使用します。  
   
  次の表に、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスの構成の一覧の列を示します。  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
 |**[構成名]**|構成の名前です。|  
 |**[構成の種類]**|構成の種類です。|  
@@ -264,7 +264,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[パッケージの構成を有効にする]**  
  パッケージで使用する構成を選択します。  
   
@@ -283,20 +283,20 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[対象になるプロパティ]**  
  構成によって変更されるプロパティの名前を表示します。 構成の種類が複数の構成をサポートしている場合、この列は空白になります。  
   
- **[追加]**  
+ **追加**  
  パッケージ構成ウィザードを使用して構成を追加します。  
   
  **[編集]**  
  パッケージ構成ウィザードを再実行することにより、既存の構成を編集します。  
   
- **[削除]**  
+ **Remove**  
  構成を選択してから、 **[削除]** をクリックします。  
   
  **矢印**  
  構成を選択し、上矢印および下矢印を使用して、構成を一覧の上または下に移動します。 構成は、一覧に表示された順序で読み込まれます。  
 
 ## <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
-  **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をクリックします。 詳細については、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」を参照してください。  
+  **パッケージ構成ウィザード** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、 **で** [SSIS] **メニューの** [パッケージ構成] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をクリックします。 詳細については、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」を参照してください。  
   
 > **注:** パッケージ配置モデルの構成を使用できます。 パラメーターは、プロジェクト配置モデルの構成の代わりに使用します。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを配置できます。 配置モデルの詳細については、「 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
   
@@ -305,7 +305,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>[パッケージ構成ウィザードへようこそ] ページ  
  **SSIS 構成ウィザード** を使用すると、パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、ようこそページをスキップします。  
   
@@ -321,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **構成の種類**  
  次のオプションを使用して、構成を格納するソースの種類を選択します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**XML 構成ファイル**|構成を XML ファイルとして格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
 |**環境変数**|構成を環境変数の 1 つに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
@@ -338,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[構成ファイル名]**|ウィザードで生成する構成ファイルのパスを入力します。|  
 |**[参照]**|**[構成ファイルの場所の選択]** ダイアログ ボックスを使用して、ウィザードで生成する構成ファイルのパスを指定します。 指定したファイルが存在しない場合、ウィザードによってファイルが新しく作成されます。|  
@@ -346,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -358,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**レジストリ エントリ**|構成情報を格納するレジストリ キーを入力します。 形式は \<registry key> です。<br /><br /> Value という名前の値を持つレジストリ キーが、あらかじめ HKEY_CURRENT_USER に存在していることが必要です。 この値には、DWORD または文字列を指定できます。<br /><br /> HKEY_CURRENT_USER のルートにないレジストリ キーを使用する場合は、\<Registry key\registry key\\...> の形式を使用してキーを識別します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -373,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[親変数]**|構成情報を格納する親パッケージ内の変数を指定します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -388,23 +388,23 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**[接続]**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
+|**接続**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
 |**[構成テーブル]**|既存のテーブルを選択するか、 **[新規作成]** をクリックし、新しいテーブルを作成する SQL ステートメントを記述します。|  
 |**[構成フィルター]**|既存の構成名を選択するか、新しい名前を入力します。<br /><br /> 多くの SQL Server の構成は同じテーブルに格納でき、各構成には複数の構成アイテムを含むことができます。<br /><br /> このユーザー定義の値はテーブルに格納され、特定の構成に属する構成アイテムの識別に使用されます。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
 ### <a name="select-objects-to-export-page"></a>[エクスポートするオブジェクトの選択] ページ  
  **[対象になるプロパティの選択]** ページまたは [エクスポートするプロパティの選択] ページを使用すると、構成に含まれるオブジェクト プロパティを指定できます。 XML 構成の種類を選択した場合のみ、複数のプロパティを選択する機能を使用できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **オブジェクト**  
  パッケージ階層を展開して、エクスポートするプロパティを選択します。  
   
@@ -417,7 +417,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>[ウィザードの完了] ページ  
  **[ウィザードの完了]** ページを使用すると、構成の名前を指定し、構成を作成するためにウィザードが使用する設定を表示できます。 ウィザードが完了すると、パッケージのすべての構成が一覧表示される **[パッケージ構成オーガナイザー]** が表示されます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[構成名]**  
  構成の名前を入力します。  
   
@@ -427,7 +427,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[完了]**  
  構成を作成して **[パッケージ構成ウィザード]** を終了します。  
 
-## <a name="child"></a> 子パッケージでの変数およびパラメーターの値の使用
+## <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a><a name="child"></a> 子パッケージでの変数およびパラメーターの値の使用
   この手順では、構成の種類として親変数を使用するパッケージ構成を作成する方法について説明します。 この構成の種類を使用すると、親パッケージから実行される子パッケージが親内の変数にアクセスできるようになります。  
   
 > [!NOTE]  
@@ -482,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  次の表に、配置ユーティリティのプロパティの一覧を示します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |AllowConfigurationChange|配置の際に構成を更新するかどうかを指定する値。|  
 |CreateDeploymentUtility|プロジェクトのビルド時にパッケージ配置ユーティリティを作成するかどうかを指定する値。 配置ユーティリティを作成するには、このプロパティが **True** である必要があります。|  
@@ -586,16 +586,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>[パッケージの構成] ページ  
  **[パッケージの構成]** ページを使用すると、パッケージ構成を編集できます。  
   
-#### <a name="options"></a>オプション  
- **[構成ファイル]**  
+#### <a name="options"></a>Options  
+ **構成ファイル**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
- **関連項目:** [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
+ **関連トピック:** [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
   
- **[パス]**  
+ **パス**  
  構成するプロパティのパスを表示します。  
   
- **型**  
+ **Type**  
  プロパティのデータ型が表示されます。  
   
  **Value**  
@@ -613,7 +613,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Next**  
  パッケージとその依存関係をインストールし、インストールが完了したらウィザードの次のページへ移動します。  
   
- **ステータス**  
+ **状態**  
  パッケージ インストールの進行状況を表示します。  
   
  **[完了]**  
@@ -622,7 +622,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>[SSIS パッケージの配置] ページ  
  **[SSIS パッケージの配置]** ページを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとその従属ファイルをインストールする場所を指定します。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[ファイル システムに配置]**  
  パッケージとその従属ファイルをファイル システム上の指定したフォルダーに配置します。  
   
@@ -647,7 +647,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>[インストール フォルダーの選択] ページ  
  **[インストール フォルダーの選択]** ページを使用して、パッケージとその従属ファイルをインストールするファイル システム フォルダーを指定します。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **フォルダー**  
  パッケージとその従属ファイルをコピーするパスとフォルダーを指定します。  
   
@@ -663,7 +663,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>[インストール先の SQL Server の指定] ページ  
  **[インストール先の SQL Server の指定]** ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへのパッケージ配置に関するオプションを指定します。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **サーバー名**  
  パッケージの配置先となるサーバーの名前を指定します。  
   
@@ -673,7 +673,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[SQL Server 認証を使用する]**  
  パッケージがサーバーのログオンに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するかどうかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名とパスワードを入力する必要があります。  
   
- **User name**  
+ **ユーザー名**  
  ユーザー名を指定します。  
   
  **パスワード**  
@@ -699,6 +699,6 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="finish-the-package-installation-page"></a>[パッケージ インストール ウィザードの完了] ページ  
  **[パッケージ インストール ウィザードの完了]** ページを使用して、パッケージのインストール結果の要約を表示します。 このページでは、配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの名前、インストールされたパッケージ、構成ファイル、インストール場所などの詳細が表示されます。  
   
- **完了**  
+ **[完了]**  
  **[完了]** をクリックすると、ウィザードが終了します。  
 

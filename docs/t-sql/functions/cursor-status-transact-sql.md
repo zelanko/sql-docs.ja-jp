@@ -17,17 +17,17 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2519c31b56f9f4509485db5d5dcd59b81d2eee7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732433"
 ---
-# <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 与えられたパラメーターに対して、`CURSOR_STATUS` はカーソル宣言でカーソルと結果のセットが返されているかどうかを示します。
   
@@ -68,12 +68,12 @@ CURSOR_STATUS
 |1|カーソルの結果セットは 1 つ以上の行で構成されます。<br /><br /> 状態非依存のキーセット カーソルの場合、結果セットは 1 つ以上の行で構成されます。<br /><br /> 動的カーソルの場合、結果セットは 0、1、または複数の行で構成されます。|この変数に割り当てられているカーソルはオープンしています。<br /><br /> 状態非依存のキーセット カーソルの場合、結果セットは 1 つ以上の行で構成されます。<br /><br /> 動的カーソルの場合、結果セットは 0、1、または複数の行で構成されます。|  
 |0|カーソル結果セットは空です。*|この変数に割り当てられているカーソルはオープンしていますが、結果セットは完全に空です。*|  
 |-1|カーソルはクローズしています。|この変数に割り当てられているカーソルはクローズしています。|  
-|-2|該当なし。|次のいずれかの可能性があります。<br /><br /> 以前に呼び出されたプロシージャでは、この OUTPUT 変数にカーソルが割り当てられませんでした。<br /><br /> 以前に割り当てられたプロシージャによって、この OUTPUT 変数にカーソルが割り当てられましたが、プロシージャの終了時点ではカーソルはクローズした状態でした。 このため、カーソルの割り当てが解除され、呼び出し元のプロシージャに返されません。<br /><br /> 宣言されたカーソル変数にはカーソルが割り当てられていません。|  
+|-2|適用不可。|次のいずれかの可能性があります。<br /><br /> 以前に呼び出されたプロシージャでは、この OUTPUT 変数にカーソルが割り当てられませんでした。<br /><br /> 以前に割り当てられたプロシージャによって、この OUTPUT 変数にカーソルが割り当てられましたが、プロシージャの終了時点ではカーソルはクローズした状態でした。 このため、カーソルの割り当てが解除され、呼び出し元のプロシージャに返されません。<br /><br /> 宣言されたカーソル変数にはカーソルが割り当てられていません。|  
 |-3|指定された名前のカーソルは存在しません。|指定された名前のカーソル変数は存在しません。あるいは、存在しているとしても、それにはカーソルがまだ割り当てられていません。|  
   
 \* 動的カーソルがこのような結果を返すことはありません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`CURSOR_STATUS` 関数を使用し、カーソルの宣言後、そのオープン後、そのクローズ後の状態を示しています。
   
 ```sql

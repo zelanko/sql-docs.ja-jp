@@ -2,20 +2,20 @@
 title: OLE DB Driver for SQL Server の UTF-8 のサポート | Microsoft Docs
 description: OLE DB Driver for SQL Server の UTF-8 のサポート
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.reviewer: v-kaywon
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775171"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928274"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-8 のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775171"
 Microsoft OLE DB Driver for SQL Server (version 18.2.1) によって、UTF-8 サーバーのエンコードのサポートが追加されます。 SQL Server の UTF-8 のサポートについては、以下を参照してください。
 - [照合順序と Unicode のサポート](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 のサポート](#ctp23)
+
+> [!IMPORTANT]
+> Microsoft OLE DB Driver for SQL Server では [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 関数を使用して、DBTYPE_STR 入力バッファーのエンコードを決定します。 GetACP が UTF-8 エンコードを返すシナリオはサポートされていません。 バッファーで Unicode データを格納する必要がある場合は、バッファー データ型を DBTYPE_WSTR (UTF-16 エンコード) に設定する必要があります。
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8 でエンコードされた CHAR または VARCHAR 列へのデータの挿入
 挿入用の入力パラメーター バッファーが作成されるとき、そのバッファーは、[DBBINDING 構造体](https://go.microsoft.com/fwlink/?linkid=2071182)の配列を使用して記述されます。 各 DBBINDING 構造体では単一のパラメーターがコンシューマーのバッファーに関連付けられ、データ値の長さや型などの情報が含まれます。 CHAR 型の入力パラメーター バッファーでは、DBBINDING 構造体の *wType* を DBTYPE_STR に設定する必要があります。 WCHAR 型の入力パラメーター バッファーでは、DBBINDING 構造体の *wType* を DBTYPE_WSTR に設定する必要があります。

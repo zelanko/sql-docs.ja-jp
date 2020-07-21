@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 393eba0d3ac6df43427e4b5f5774479c43f9bedc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6db679832e0c4ebd35465c8f2770aa151ef28c3c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952893"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923379"
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>getColumnName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.lang.String getColumnName(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getColumnName メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

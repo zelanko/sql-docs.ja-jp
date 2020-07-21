@@ -1,6 +1,6 @@
 ---
-title: 新しい別名 ([別名] タブ) |Microsoft Docs
-ms.custom: ''
+title: '[別名 - 新規] ダイアログ ボックス ([別名] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 24b08707a13bd67fcac41df0104ca916bfb2179c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: d691369d3df437cb8312d66f521eb48c20212ca8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010020"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306431"
 ---
 # <a name="new-alias-alias-tab"></a>[別名 - 新規] ダイアログ ボックス ([別名] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68010020"
  **[パイプ名]**  /  **[ポート番号]**  
  接続文字列の追加要素です。 このボックスの名前は、選択したプロトコルによって異なります。  
   
- **[プロトコル]**  
+ **プロトコル**  
  接続に使用するプロトコルです。  
   
  **[サーバー]**  
@@ -39,7 +39,7 @@ ms.locfileid: "68010020"
 ## <a name="when-to-use-an-alias"></a>別名を使用する状況  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は既定で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスに接続するときには **共有メモリ** プロトコルを使用し、別のコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときには **TCP/IP** または **名前付きパイプ**を使用します。 TCP/IP または名前付きパイプを使用するときにカスタム接続文字列を指定する場合や、接続のためにサーバー名以外の名前を使用する場合には、別名を作成してください。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定の TCP/IP ポート 1433 で受信を待機しない場合に、別のポート番号を設定した接続文字列を指定します。  
   

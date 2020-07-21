@@ -1,5 +1,5 @@
 ---
-title: 実行時データ パラメーター (ODBC) を使用して、|Microsoft Docs
+title: 実行時データパラメーターの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a2018b038c76c745c1a81e11e713547a7b10dcce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043949"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>実行時データ パラメーターの使用 (ODBC)
     
@@ -25,7 +24,7 @@ ms.locfileid: "68206804"
   
 1.  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) を呼び出してプログラム バッファーをステートメント パラメーターにバインドするときに、次のように指定します。  
   
-    -   最後のパラメーターでは、SQL_LEN_DATA_AT_EXEC を使用して、(*長さ*)、*長さ*の長さの合計、 `text`、 `ntext`、または`image`パラメーターのデータ (バイト単位)。  
+    -   最後のパラメーターには、SQL_LEN_DATA_AT_EXEC (*length*) を*length*使用し `text` ます。 length は、、 `ntext` 、またはパラメーターデータの合計長 `image` (バイト単位) です。  
   
     -   プログラム定義のパラメーター識別子として `rgbValue` (8 番目のパラメーター) を使用します。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "68206804"
 ## <a name="example"></a>例  
  このサンプルでは、SQLParamData と SQLPutData を使用して、SQL_LONG 変数の文字データを読み込む方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -221,7 +220,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [テキストとイメージの列の操作方法に関するトピックを管理する&#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+## <a name="see-also"></a>参照  
+ [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

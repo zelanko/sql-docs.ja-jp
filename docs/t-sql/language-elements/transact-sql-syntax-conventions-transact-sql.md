@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121600"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73981899"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "68121600"
   
 |表記|使用目的|  
 |----------------|--------------|  
-|大文字|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
+|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
 |_斜体_|ユーザーが指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文のパラメーターを示します。|  
 |**太字**|データベース名、テーブル名、列名、インデックス名、ストアド プロシージャ、ユーティリティ、データ型名、およびテキストを、記載されているとおりに入力します。|  
 |下線|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
-|(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
+|&#124; (垂直線)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
-|[ **,** ..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目はコンマで区切ります。|  
+|[ **,** ..._n_]|先行する項目を _n_ 回繰り返せることを示します。 出現箇所は、コンマで区切られます。|  
 |[..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目は空白で区切ります。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの終端記号を示します。 セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須になる予定です。|  
 |\<label> ::=|構文のブロックの名前を示します。 この表記規則を使用して、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付けます。 構文のブロックを使用できる箇所は、不等号で囲まれたラベル (\<label>) で示します。<br /><br /> セットとは、式のコレクションです (たとえば \<grouping set>)。リストとは、セットのコレクションです (たとえば \<composite element list>)。|  
@@ -84,7 +84,7 @@ _object\_name_
   
 中間のノードを省略するには、ピリオドを使用してそれらの位置を示します。 次の表に、オブジェクト名の有効な形式を示します。  
   
-|オブジェクト参照形式|[説明]|  
+|オブジェクト参照形式|説明|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|4 部構成の名前です。|  
 |_server_._database_.._object_|スキーマ名を省略しています。|  
@@ -110,9 +110,9 @@ _object\_name_
 多くのコード例では、Unicode 文字列定数に **N** という文字をプレフィックスとして加えています。プレフィックス **N** がない場合、文字列はデータベースの既定のコード ページに変換されます。 この既定のコード ページでは、一部の文字が認識されない場合があります。  
   
 ## <a name="applies-to-references"></a>"適用対象" リファレンス  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] リファレンスには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] に関連する記事が含まれています。   
+[!INCLUDE[tsql](../../includes/tsql-md.md)] リファレンスには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] に関連する記事が含まれています。   
 
-各記事の先頭近くに、記事の主題をサポートする製品を示すセクションがあります。 製品が省略されている場合、記事で説明されている機能は、その製品では使用できません。 たとえば、可用性グループは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE AVAILABILITY GROUP** の記事は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に適用されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで) が適用対象と記載されています。  
+各記事の先頭近くに、記事の主題をサポートする製品を示すセクションがあります。 製品が省略されている場合、記事で説明されている機能は、その製品では使用できません。 たとえば、可用性グループは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE AVAILABILITY GROUP** の記事は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に適用されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) が適用対象と記載されています。  
   
 場合によっては、記事の一般的な主題を製品で使用できますが、すべての引数がサポートされるわけではありません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER** ステートメントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品で使用できますが、**WITH PASSWORD** 構文は以前のバージョンでは使用できません。 記事の本文の適切な引数の説明に、「**適用対象**」セクションが追加で挿入されます。  
   

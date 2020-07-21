@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d6e2115c42fb5fa7e0abb71e12db0c8c28569a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082167"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283013"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>レッスン 6-4:レッスン 6 のパッケージを配置する
 
@@ -60,7 +60,7 @@ ms.locfileid: "68082167"
   
 3.  **SSIS Tutorial** フォルダーを展開し、 **[プロジェクト]** を右クリックし、 **[パッケージのインポート]** を選択します。  
   
-4.  **[Integration Services プロジェクトの変換ウィザードの概要]** **ページで**、 **[次へ]** を選択します。  
+4.  **[Integration Services プロジェクトの変換ウィザードの概要]** **概要**ページで、 **[次へ]** を選択します。  
   
 5.  **[パッケージの検索]** ページの **[ソース]** の一覧で、**ファイル システム**が選択されていることを確認し、 **[参照]** を選択します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68082167"
   
 Integration Services プロジェクトの変換ウィザードを閉じると、Integration Services 配置ウィザードが表示されます。 次に、このウィザードを使用してレッスン 6 パッケージを配置します。  
   
-1.  **[Integration Services 配置ウィザードの概要]** **ページで** 、プロジェクトを配置する手順を確認し、 **[次へ]** を選択します。  
+1.  **[Integration Services 配置ウィザードの概要]** **概要**ページで、プロジェクトを配置する手順を確認し、 **[次へ]** を選択します。  
   
 2.  **[配置先の選択]** ページで、サーバー名が SSISDB カタログを含む SQL Server のインスタンスであることと、パスが **SSIS Tutorial Deployment** を示していることを確認し、 **[次へ]** を選択します。  
   

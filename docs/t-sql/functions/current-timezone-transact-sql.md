@@ -1,7 +1,7 @@
 ---
 title: CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6c29cfba3f47506cb88860763d6650cfb3ecab7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 760da1491a7fbf4633cb02fe1fea8568e7ab9fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85684497"
 ---
-# <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
+# <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-この関数では、サーバーまたはインスタンスによって観測されるタイム ゾーンの名前が返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`CURRENT_TIMEZONE` では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから戻り値が取得されます。 SQL Database Managed Instance の戻り値は、基盤となるオペレーティング システムのタイム ゾーンではなく、インスタンスの作成時に割り当てられたインスタンス自体のタイム ゾーンに基づきます。
+この関数では、サーバーまたはインスタンスによって観測されるタイム ゾーンの名前が返されます。 SQL Database Managed Instance の戻り値は、基盤となるオペレーティング システムのタイム ゾーンではなく、インスタンスの作成時に割り当てられたインスタンス自体のタイム ゾーンに基づきます。
   
 > [!NOTE]  
 > 単一 SQL データベースおよびプール SQL データベースにおいて、タイム ゾーンは常に UTC に設定され、`CURRENT_TIMEZONE` では UTC タイム ゾーンの名前が返されます。
@@ -54,7 +54,7 @@ CURRENT_TIMEZONE ( )
 
 **varchar**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 `CURRENT_TIMEZONE` は非決定的関数です。 この列を参照するビューと式には、インデックスを付けることができません。
   
@@ -69,6 +69,8 @@ SELECT CURRENT_TIMEZONE();
 */
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Database Managed Instance のタイム ゾーン](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+
+[CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

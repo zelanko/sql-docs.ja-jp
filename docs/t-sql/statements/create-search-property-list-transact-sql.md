@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1443f941f4399e0df24cd69ccc62040b06564ca
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117282"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391685"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   新しい検索プロパティ リストを作成します。 検索プロパティ リストは、フルテキスト インデックスに含める 1 つまたは複数の検索プロパティを指定するために使用します。  
   
@@ -46,7 +46,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ;  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *new_list_name*  
  新しい検索プロパティ リストの名前を指定します。 *new_list_name* は最大 128 文字の識別子です。 *new_list_name* は、現在のデータベース内のすべてのプロパティ リストの中で一意であり、識別子の規則に準拠している必要があります。 *new_list_name* は、フルテキスト インデックスが作成されるときに使用されます。  
   
@@ -62,9 +64,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
  プロパティ リストを所有するユーザーまたはロールの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているロールの名前を指定するか、現在のユーザーが *owner_name* に対する IMPERSONATE 権限を持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
 > [!NOTE]  
->  所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
+>  所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  プロパティ リストについての一般的な情報については、「[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」をご覧ください。  
@@ -87,13 +89,13 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  現在のデータベースには CREATE FULLTEXT CATALOG 権限が必要であり、ソース プロパティ リストのコピー元のデータベースには REFERENCES 権限が必要です。  
   
 > [!NOTE]  
 >  リストとフルテキスト インデックスを関連付けるには、REFERENCES 権限が必要です。 プロパティを追加または削除するか、リストを削除するには、CONTROL 権限が必要です。 プロパティ リストの REFERENCES 権限または CONTROL 権限は、そのプロパティ リストの所有者が許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCES 権限を与えることができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 空のプロパティ リストを作成し、インデックスに関連付ける  
  次の例では、`DocumentPropertyList` という名前の新しい検索プロパティ リストを作成します。 次に、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使って、新しいプロパティ リストを `AdventureWorks` データベースにある `Production.Document` テーブルのフルテキスト インデックスに関連付けます。このとき、カタログの作成は開始されません。  

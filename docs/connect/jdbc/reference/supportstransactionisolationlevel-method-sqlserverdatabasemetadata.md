@@ -1,5 +1,5 @@
 ---
-title: supportsTransactionIsolationLevel メソッド |Microsoft Docs
+title: supportsTransactionIsolationLevel メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ecfbc637db90531378d589043b637596c4ec2ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5cb72238f96f6686e200134ef3b50bc085b65ac8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968665"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80908718"
 ---
 # <a name="supportstransactionisolationlevel-method-sqlserverdatabasemetadata"></a>supportsTransactionIsolationLevel メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public boolean supportsTransactionIsolationLevel(int level)
  トランザクション分離レベルを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsTransactionIsolationLevel メソッドは、supportsTransactionIsolationLevel メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsTransactionIsolationLevel メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsTransactionIsolationLevel メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

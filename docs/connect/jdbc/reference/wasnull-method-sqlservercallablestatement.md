@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1a27b2fe-ae12-46a9-9bca-2c5ca66b9eb3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 03e2ba3f7721c0322e54686cef0a53d93a9bf79c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 283d9f2eee1c56ed1fbb2ed9a519e52c8b7feea1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001549"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919460"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>wasNull メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public boolean wasNull()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  wasNull メソッドは、java.sql.CallableStatement インターフェイスの wasNull メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

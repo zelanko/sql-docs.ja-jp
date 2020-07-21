@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_types (TRANSACT-SQL) |Microsoft Docs
+title: assembly_types (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_types catalog view
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44a5c374b585661421bfa22273eece46512eb2e4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118107"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823407"
 ---
-# <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (TRANSACT-SQL)
+# <a name="sysassembly_types-transact-sql"></a>assembly_types (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  CLR アセンブリによって定義されるユーザー定義型ごとに 1 行のデータを保持します。 次**sys.assembly_types**継承された列の一覧に表示されます (を参照してください[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 後**rule_object_id**します。  
+  CLR アセンブリによって定義されるユーザー定義型ごとに 1 行のデータを保持します。 次の**assembly_types**は、 **rule_object_id**後に、継承された列の一覧に表示されます (例については、「 [transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)」を参照してください)。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -38,14 +38,14 @@ ms.locfileid: "68118107"
 |**assembly_class**|**sysname**|この型を定義しているアセンブリ内のクラスの名前です。|  
 |**is_binary_ordered**|**bit**|この型のバイトの並べ替えは、型の比較演算子を使用した並べ替えと同じです。|  
 |**is_fixed_length**|**bit**|型の長さは、常に max_length と同じです。|  
-|**prog_id**|**nvarchar(40)**|COM に公開される型の progID|  
-|**assembly_qualified_name**|**nvarchar (4000)**|アセンブリ修飾型名。 名前は、Type.GetType() に渡すに適した形式では。|  
+|**prog_id**|**nvarchar(40)**|COM に公開される型の ProgID。|  
+|**assembly_qualified_name**|**nvarchar (4000)**|アセンブリ修飾型名。 この名前は、タイプ GetType () に渡すのに適した形式になっています。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [スカラー型カタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;スカラー型のカタログビュー](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)  
   
   

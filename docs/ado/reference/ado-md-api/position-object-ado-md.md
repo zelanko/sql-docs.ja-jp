@@ -1,5 +1,5 @@
 ---
-title: オブジェクト (ADO MD) の位置 |Microsoft Docs
+title: Position オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,32 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46d619f268816b356e115a60d07a48fbe7e1d758
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949251"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765033"
 ---
 # <a name="position-object-ado-md"></a>Position オブジェクト (ADO MD)
-軸に沿ったポイントを定義するさまざまなディメンションの 1 つまたは複数のメンバーのセットを表します。  
+軸に沿って点を定義する、異なる次元の1つ以上のメンバーのセットを表します。  
   
-## <a name="remarks"></a>コメント  
- プロパティのコレクションと、**位置**オブジェクトの次を行うことができます。  
+## <a name="remarks"></a>Remarks  
+ **Position**オブジェクトのプロパティとコレクションを使用すると、次の操作を実行できます。  
   
--   使用して、**序数**の序数位置を返すプロパティを**位置**に沿って、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)します。  
+-   **序数**プロパティを使用して、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)に沿った**位置**の位置を表す序数を返します。  
   
--   使用して、[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)に沿った位置を構成するメンバーを返すコレクション、**軸**します。  
+-   [Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションを使用して、**軸**に沿って位置を構成するメンバーを返します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [軸の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [軸オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+## <a name="see-also"></a>参照  
+ [Axis の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Positions コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

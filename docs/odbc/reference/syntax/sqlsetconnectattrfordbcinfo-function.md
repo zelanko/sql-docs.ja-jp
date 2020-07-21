@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f43a0fc6cd02fe566579a543667f9a4c4c1a108
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910368"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301889"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
+**互換性**  
+ 導入されたバージョン: ODBC 3.81 標準準拠: ODBC  
   
- **概要**  
- **SQLSetConnectAttrForDbcInfo**と同じ**SQLSetConnectAttr**が接続ハンドルの代わりに、接続情報トークンの属性を設定します。  
+ **まとめ**  
+ **SQLSetConnectAttrForDbcInfo**は**SQLSetConnectAttr**と同じですが、接続ハンドルではなく、接続情報トークンの属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,43 +39,43 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 ## <a name="arguments"></a>引数  
  *hDbcInfoToken*  
- [入力]トークンのハンドル。  
+ 代入トークンハンドル。  
   
  *属性*  
- [入力]設定する属性。 有効な属性の一覧は、特定のドライバーと同じである[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)します。  
+ 代入設定する属性。 有効な属性の一覧は、ドライバー固有であり、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)の場合と同じです。  
   
  *ValuePtr*  
- [入力]関連付けられる値を指すポインター*属性*します。 値に応じて*属性*、 *ValuePtr*は 32 ビット符号なし整数値にまたは null で終わる文字列を指します。 されている場合、*属性*引数は、ドライバー固有の値、値*ValuePtr*符号付き整数である可能性があります。  
+ 代入*属性*に関連付けられる値へのポインター。 *属性*の値に応じて、 *valueptr*は32ビットの符号なし整数値になるか、null で終わる文字列を指します。 *属性*引数がドライバー固有の値の場合、 *valueptr*の値は符号付き整数であることに注意してください。  
   
  *StringLength*  
- [入力]場合*属性*ODBC で定義された属性と*ValuePtr*文字の文字列またはバイナリのバッファーを指す、この引数の長さである必要があります **ValuePtr*します。 文字の文字列データでは、この引数は、文字列のバイト数を含める必要があります。  
+ 代入*属性*が ODBC 定義の属性であり、 *valueptr*が文字列またはバイナリバッファーを指している場合、この引数は **valueptr*の長さである必要があります。 文字列データの場合、この引数には文字列のバイト数を含める必要があります。  
   
- 場合*属性*ODBC で定義された属性と*ValuePtr*整数*StringLength*は無視されます。  
+ *属性*が ODBC 定義の属性であり、 *valueptr*が整数の場合、 *stringlength*は無視されます。  
   
- 場合*属性*ドライバーの定義済みの属性では、アプリケーションを設定して属性をドライバー マネージャーの性質を示します、 *StringLength*引数。 *StringLength*次の値を持つことができます。  
+ *属性*がドライバーで定義された属性の場合、アプリケーションは*stringlength*引数を設定することによって、ドライバーマネージャーに対する属性の性質を示します。 *Stringlength*には次の値を指定できます。  
   
--   場合*ValuePtr*文字の文字列へのポインターは*StringLength* SQL_NTS または文字列の長さです。  
+-   *Valueptr*が文字列へのポインターである場合、 *stringlength*は文字列または SQL_NTS の長さを示します。  
   
--   場合*ValuePtr* 、SQL_LEN_BINARY_ATTR の結果を配置するアプリケーションが、バイナリ バッファーへのポインター (*長さ*) マクロで*StringLength*します。 これにより、負の値で*StringLength*します。  
+-   *Valueptr*がバイナリバッファーへのポインターである場合、アプリケーションは、SQL_LEN_BINARY_ATTR (*長さ*) マクロの結果を*stringlength*に配置します。 これにより、*文字列長*に負の値が挿入されます。  
   
--   場合*ValuePtr*文字の文字列またはバイナリ文字列以外の値へのポインターは*StringLength* SQL_IS_POINTER 値でなければなりません。  
+-   *Valueptr*が文字列またはバイナリ文字列以外の値へのポインターである場合、 *stringlength*には SQL_IS_POINTER 値を指定する必要があります。  
   
--   場合*ValuePtr* 、固定長の値を含む*StringLength* SQL_IS_INTEGER または SQL_IS_UINTEGER のいずれかを適切なは。  
+-   *Valueptr*に固定長の値が含まれている場合は、必要に応じて*stringlength*が SQL_IS_INTEGER か SQL_IS_UINTEGER になります。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- 同じ[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)ドライバー マネージャーを使用する点を除いて、 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN の**処理**の*hDbcInfoToken*.  
+ [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)と同じですが、Driver Manager では SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**と*Hdbcinfotoken*の**ハンドル**が使用される点が異なります。  
   
-## <a name="remarks"></a>コメント  
- **SQLSetConnectAttrForDbcInfo**と同じ**SQLSetConnectAttr**が接続ハンドルの代わりに、接続情報トークンの属性を設定します。 たとえば場合、 **SQLSetConnectAttr** 、属性を認識しない**SQLSetConnectAttrForDbcInfo**もその属性の SQL_ERROR を返します。  
+## <a name="remarks"></a>Remarks  
+ **SQLSetConnectAttrForDbcInfo**は**SQLSetConnectAttr**と同じですが、接続ハンドルではなく、接続情報トークンの属性を設定します。 たとえば、 **SQLSetConnectAttr**が属性を認識しない場合、 **SQLSetConnectAttrForDbcInfo**はその属性の SQL_ERROR も返す必要があります。  
   
- ドライバーには、SQL_ERROR または SQL_INVALID_HANDLE が返されます、たびに、ドライバーはプール ID を計算するには、この属性を無視します。 ドライバー マネージャーがから診断情報を取得することも、 *hDbcInfoToken*でアプリケーションに SQL_SUCCESS_WITH_INFO を返すと[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). そのため、アプリケーションでは、一部の属性を設定できない理由に関する詳細を取得できます。  
+ ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーはこの属性を無視してプール ID を計算する必要があります。 また、ドライバーマネージャーは*Hdbcinfotoken*から診断情報を取得し、 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに SQL_SUCCESS_WITH_INFO を返します。 そのため、アプリケーションでは、一部の属性を設定できない理由に関する詳細を取得できます。  
   
- アプリケーションでは、この関数を直接呼び出さないでください。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
+ アプリケーションでは、この関数を直接呼び出すことはできません。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
   
- ODBC ドライバーの開発の sqlspi.h が含まれます。  
+ ODBC ドライバーの開発には sqlspi. h を含めます。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

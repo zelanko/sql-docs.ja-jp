@@ -1,7 +1,6 @@
 ---
 title: リンク サーバー (データベース エンジン) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 06/16/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,21 +18,22 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a7dc1d67e45bb8d67cebff9deb3a694b09038154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734952"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  リンク サーバーを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) では、リモート データ ソースからデータを読み取ったり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの外部にあるリモート データベース サーバー (たとえば、OLE DB データ ソース) に対してコマンドを実行することができます。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel、Azure CosmosDB など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。
+  リンク サーバーを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] では、リモート データ ソースからデータを読み取ったり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの外部にあるリモート データベース サーバー (たとえば、OLE DB データ ソース) に対してコマンドを実行することができます。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel、Azure CosmosDB など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。
 
 > [!NOTE]
-> リンク サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および Azure SQL Database Managed Instance で使用できます。 Azure SQL Database シングルトンおよびエラスティック プールでは使用できません。 [Managed Instance には、ここに示されるいくつかの制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)があります。 
+> リンク サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] で使用できます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] シングルトンおよびエラスティック プールでは使用できません。 [Managed Instance には、ここに示されるいくつかの制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)があります。 
 
 ## <a name="when-to-use-linked-servers"></a>リンク サーバーを使用する場合
 
@@ -56,24 +56,27 @@ ms.locfileid: "68073663"
   
 *OLE DB プロバイダー* は、特定のデータ ソースを管理し、相互運用する DLL です。 *OLE DB データ ソース* は、OLE DB を使用してアクセスできる特定のデータベースを識別します。 リンク サーバーの定義を使用してクエリが行われるデータ ソースは通常はデータベースですが、さまざまなファイルやファイル形式用の OLE DB プロバイダーが存在します。 これには、テキスト ファイル、ワークシートのデータ、およびフルテキスト検索の結果が含まれます。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー (PROGID: SQLNCLI11) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用の公式の OLE DB プロバイダーです。  
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、[Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID:MSOLEDBSQL) が既定の OLE DB プロバイダーです。 以前のバージョンでは、[SQL Server Native Client OLE DB provider (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID:SQLNCLI11) が既定の OLE DB プロバイダーでした。
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散クエリは、必要な OLE DB インターフェイスを実装しているすべての OLE DB プロバイダーで処理できるように設計されています。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーなど、特定のプロバイダーに対してのみテストが行われています。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散クエリは、必要な OLE DB インターフェイスを実装しているすべての OLE DB プロバイダーで処理できるように設計されています。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は既定の OLE DB プロバイダーに対してテストされています。  
   
 ## <a name="linked-server-details"></a>リンク サーバーの詳細  
  次の図に、基本的なリンク サーバー構成を示します。  
   
- ![クライアント層、サーバー層、およびデータベース サーバー層](../../relational-databases/linked-servers/media/lsvr.gif "クライアント層、サーバー層、およびデータベース サーバー層")  
+ ![クライアント層、サーバー層、データベース サーバー層](../../relational-databases/linked-servers/media/lsvr.gif "クライアント層、サーバー層、データベース サーバー層")  
   
 リンク サーバーは、通常は分散クエリの処理に使用します。 クライアント アプリケーションからリンク サーバー経由で分散クエリが実行されるときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でコマンドが解析され、OLE DB に要求が送信されます。 行セット要求は、プロバイダーに対するクエリの実行や、プロバイダーのベース テーブルを開くなどの形式をとります。  
-  
+
 > [!NOTE]
 > データ ソースがリンク サーバー経由でデータを返すには、そのデータ ソースの OLE DB プロバイダー (DLL) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスと同じサーバー上に存在する必要があります。  
-  
-> [!IMPORTANT] 
-> OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft によってリリースされたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。 
-  
+ 
+> [!IMPORTANT]
+> OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft によってリリースされたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。
+
+> [!NOTE]
+> リンク サーバーでは、完全委任を使用する場合に、Active Directory パススルー認証をサポートします。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17 以降では、制約付き委任を使用したパススルー認証もサポートされています。ただし、[リソース ベースの制約付き委任](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview)はサポートされません。
+
 ## <a name="managing-providers"></a>プロバイダーの管理  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OLE DB プロバイダーを読み込んで使用する方法を制御する一連のオプションは、レジストリで指定されます。  
   
@@ -96,17 +99,12 @@ ms.locfileid: "68073663"
 > リンク サーバーは、どのサーバーで定義されたかを示す (ループ バックする) ように定義することができます。 ループバック サーバーは、単一のサーバー ネットワークで分散クエリを使用するアプリケーションをテストする際に最も有効です。 ループバック リンク サーバーはテスト用であり、分散トランザクションなどの多くの操作ではサポートされていません。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [リンク サーバーの作成 &#40;SQL Server データベース エンジン&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
-  
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
-  
- [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [リンク サーバーの作成 &#40;SQL Server データベース エンジン&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    
   
 ## <a name="related-content"></a>関連コンテンツ  
- [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
-  
+ [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-  
-  
+

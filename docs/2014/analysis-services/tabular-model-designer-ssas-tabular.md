@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル デザイナー (SSAS テーブル) |Microsoft Docs
+title: テーブルモデルデザイナー (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,33 +11,32 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940183"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>テーブル モデル デザイナー (SSAS テーブル)
-  テーブル モデル デザイナーの一部は、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、Microsoft と統合された[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010 またはそれ以降、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートとします。  
+  テーブルモデルデザイナーは、Microsoft 2010 以降と統合されたの一部であり、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] プロフェッショナルなテーブルモデルソリューションの開発専用のプロジェクトの種類のテンプレートが追加されています。  
   
  このトピックのセクション:  
   
--   [利点](#bkmk_benefits)  
+-   [メリット](#bkmk_benefits)  
   
 -   [プロジェクト テンプレート](#bkmk_proj_temp)  
   
--   [Windows とメニュー](#bkmk_wind_men)  
+-   [ウィンドウおよびメニュー](#bkmk_wind_men)  
   
 -   [Visual Studio の統合](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a> 利点  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 利点  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、テーブル モデルを作成するための新しいプロジェクト テンプレートが、使用可能なプロジェクトの種類に追加されます。 いずれかのテンプレートを使用して新しいテーブル モデル プロジェクトを作成した後は、テーブル モデル デザイナー ツール、およびウィザードを使用して、モデル作成を開始できます。  
   
  プロフェッショナルな多次元のテーブル モデル ソリューション作成のための新しいテンプレートとツールのほかに、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境には、組織のために最も強力な BI ソリューションを作成するための、デバッグ、およびプロジェクトのライフ サイクルに関する機能が用意されています。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]の詳細については、「 [Visual Studio の概要](https://go.microsoft.com/fwlink/?LinkId=206389)」を参照してください。  
   
-##  <a name="bkmk_proj_temp"></a> プロジェクト テンプレート  
+##  <a name="project-templates"></a><a name="bkmk_proj_temp"></a> プロジェクト テンプレート  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]をインストールすると、以下のテーブル モデル プロジェクト テンプレートがビジネス インテリジェンス プロジェクトの種類に追加されます。  
   
  **Analysis Services のテーブル プロジェクト**  
@@ -52,16 +51,16 @@ ms.locfileid: "66067826"
 > [!NOTE]  
 >  テーブル モデル プロジェクトでは、テーブル モードの Analysis Services サーバー インスタンスがローカルまたはネットワーク上で実行されている必要があります。  
   
-##  <a name="bkmk_wind_men"></a> ウィンドウおよびメニュー  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a>ウィンドウとメニュー  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のテーブル モデルの作成環境には、次が含まれています。  
   
 ### <a name="designer-window"></a>デザイナー ウィンドウ  
  デザイナー ウィンドウは、モデルを視覚的に表現し、テーブル モデルの作成に使用されます。 Model.bim ファイルを開くと、デザイナー ウィンドウにそのモデルが表示されます。 デザイナー ウィンドウでは、2 つの異なる表示モードを使用してモデルを作成することができます。  
   
- **データ ビュー**  
+ **[Data View] (データ ビュー)**  
  データ ビューではテーブルが表形式のグリッド形式で表示されます。 また、メジャー グリッドを使用してメジャーを定義することもできます。メジャー グリッドはテーブルごとにデータ ビューのみで表示することができます。  
   
- **ダイアグラム ビュー**  
+ **Diagram view**  
  ダイアグラム ビューでは、テーブル間のリレーションシップと共にグラフィカルな形式でテーブルが表示されます。 列、メジャー、階層、および KPI はフィルター選択することも、定義済みのパースペクティブを使用してモデルを表示することを選択することもできます。  
   
  どちらのビューでもほとんどのモデル作成タスクを実行できます。  
@@ -80,9 +79,9 @@ ms.locfileid: "66067826"
   
 -   テーブル  
   
--   [列]  
+-   列  
   
--   [メジャー]  
+-   Measure  
   
  プロジェクト ウィンドウには、プロジェクト プロパティによりプロジェクト名とプロジェクト フォルダーのみが表示されます。 プロジェクトには、モーダル プロパティ ダイアログ ボックスを使用して設定できる配置オプションと配置サーバーの追加の設定もあります。 これらのプロパティを表示するには、 **ソリューション エクスプローラー**で、プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66067826"
   
  既定では、 **エラー一覧** は、エラーが返されない限り表示されません。 ただし、 **エラー一覧** ウィンドウはいつでも表示できます。 **エラー一覧** ウィンドウを表示するには、 **[表示]** メニューをクリックしてから **[エラー一覧]** をクリックします。  
   
-### <a name="output"></a>[出力]  
+### <a name="output"></a>出力  
  ビルドと配置の情報が、(進捗状況のモーダル ダイアログに加えて) **出力** ウィンドウに表示されます。 **出力** ウィンドウを表示するには、 **[表示]** をクリックしてから [出力] をクリックします。  
   
 ### <a name="menu-items"></a>メニュー項目  
@@ -111,21 +110,21 @@ ms.locfileid: "66067826"
   
  これらのメニュー項目に加えて、Analysis Services のオプションに別途設定が追加されます。追加された設定には、[ツール] のメニュー項目からアクセスすることができます。  
   
-### <a name="toolbar"></a>[ツール バー]  
+### <a name="toolbar"></a>ツール バー  
  Analysis Services ツール バーを使用すると、最もよく使用されるモデル作成コマンドにすばやく簡単にアクセスできます。  
   
-##  <a name="bkmk_vsint"></a> Visual Studio との統合  
+##  <a name="visual-studio-integration"></a><a name="bkmk_vsint"></a> Visual Studio との統合  
  **ソース管理**  
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](https://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
  **フォント**  
- テーブル モデルでは [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境フォントを使用して表示フォントを制御します。 既定の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] フォントに、対象の言語で必要なすべての Unicode 文字がない場合は、このフォントの変更が必要になることがあります。 フォントを変更するには、 **[ツール]** メニューをクリックし、 **[オプション]** 、 **[フォントおよび色]** の順にクリックします。  
+ テーブル モデルでは [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境フォントを使用して表示フォントを制御します。 既定の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] フォントに、対象の言語で必要なすべての Unicode 文字がない場合は、このフォントの変更が必要になることがあります。 フォントを変更するには、 **[ツール]** メニューをクリックし、 **[オプション]**、 **[フォントおよび色]** の順にクリックします。  
   
  **キーボード ショートカット**  
  Analysis Services のキーボード ショートカットは、[ツール]  > [オプション] > [キーボード] ダイアログで構成/再マップできます。 テーブル モデル デザイナーのコンテキストでは、ビルド、保存、デバッグ、新しいプロジェクトなど、一部のグローバル [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ショートカットがサポートされています。 その他のテーブル モデル デザイナーに固有のショートカットは Analysis Services コンテキストです。  
   
 ## <a name="see-also"></a>参照  
- [テーブル モデル プロジェクト (SSAS テーブル)](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;テーブルモデルプロジェクト](tabular-models/tabular-model-projects-ssas-tabular.md)   
  [プロパティ (SSAS テーブル)](tabular-models/properties-ssas-tabular.md)  
   
   

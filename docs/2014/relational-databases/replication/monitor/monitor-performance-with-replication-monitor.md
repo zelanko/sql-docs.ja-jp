@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e43b11618827367e4ab8cea0d1b1b3e2598a2e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005781"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>レプリケーション モニターを使用したパフォーマンスの監視
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] &#xA0;レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
   
 -   警告およびしきい値の設定  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62667218"
  詳細については、「 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
 ## <a name="view-performance-measurements"></a>パフォーマンス測定値の表示  
- レプリケーション モニターでは、パブリケーションの **[現在の平均パフォーマンス]** 列と **[現在の最低パフォーマンス]** 列、およびサブスクリプションの **[パフォーマンス]** 列に、トランザクション レプリケーションおよびマージ レプリケーションのパフォーマンスの品質を示す値が表示されます。 値は以下のとおりです。  
+ レプリケーション モニターでは、パブリケーションの **[現在の平均パフォーマンス]** 列と **[現在の最低パフォーマンス]** 列、およびサブスクリプションの **[パフォーマンス]** 列に、トランザクション レプリケーションおよびマージ レプリケーションのパフォーマンスの品質を示す値が表示されます。 値は次のとおりです。  
   
 -   [非常に良い]  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62667218"
   
 -   トランザクション レプリケーションの場合、パフォーマンス品質は待機時間のしきい値によって決定されます。 しきい値が設定されていない場合、値は表示されません。 次の表は、しきい値とパフォーマンス品質値の相関関係を示しています。 たとえば、しきい値が 60 秒に設定されている場合に、実際の待機時間が 30 秒であるとすると、待機時間はしきい値の 50% となり、値は [良い] になります。  
   
-    |[非常に良い]|[良い]|[普通]|悪い|重大|  
+    |[非常に良い]|[良い]|[普通]|悪い|Critical|  
     |---------------|----------|----------|----------|--------------|  
     |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   

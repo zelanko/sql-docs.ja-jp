@@ -1,5 +1,5 @@
 ---
-title: ODBC SQL 文法 (Visual FoxPro ODBC ドライバー) のサポート |Microsoft Docs
+title: サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 - FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080063"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304085"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー)
-Microsoft Visual FoxPro ODBC ドライバーには、次のサポートされています。  
+Microsoft Visual FoxPro ODBC ドライバーでは、次の機能がサポートされています。  
   
--   すべての SQL ステートメントと、ODBC SQL 文法で句  
+-   ODBC の最小 SQL 文法のすべての SQL ステートメントと句  
   
--   ODBC core SQL 文法の他の SQL ステートメント  
+-   ODBC core SQL 文法からの追加の SQL ステートメント  
   
- 次の表には、ODBC SQL 文法のレベルによって、ドライバーでサポートされている項目が表示されます。  
+ 次の表に、ドライバーによってサポートされる、ODBC SQL の文法レベル別の一覧を示します。  
   
-|Level|要素|アイテム|  
+|Level|要素|Item|  
 |-----------|--------------|----------|  
-|最小|データ定義言語 (DDL)|CREATE TABLE および DROP TABLE|  
-||データ操作言語 (DML)|選択、挿入、更新、および削除|  
-||式|単純な (A など > + C)|  
-||データ型|CHAR、VARCHAR、LONG VARCHAR|  
+|最小値|データ定義言語 (DDL)|CREATE TABLE および DROP TABLE|  
+||データ操作言語 (DML)|SELECT、INSERT、UPDATE、および DELETE|  
+||式|Simple (>B + C など)|  
+||データ型|CHAR、VARCHAR、または LONG VARCHAR|  
   
- だけでなく、サポートされている ODBC SQL の文法は、Visual FoxPro ODBC ドライバーは、次の Visual FoxPro コマンドを完全なネイティブ Visual FoxPro 言語構文をサポートします。  
+ サポートされている ODBC SQL 文法に加えて、Visual FoxPro ODBC ドライバーでは、次の Visual FoxPro コマンドの完全なネイティブ Visual FoxPro 言語構文がサポートされています。  
   
  [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
@@ -49,7 +49,7 @@ Microsoft Visual FoxPro ODBC ドライバーには、次のサポートされて
   
  [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [タグを削除します。](../../odbc/microsoft/delete-tag-command.md)  
+ [タグの削除](../../odbc/microsoft/delete-tag-command.md)  
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   

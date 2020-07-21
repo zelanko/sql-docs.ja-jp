@@ -11,38 +11,37 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 733066f73b7adab950defcb2552364eda2bde7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245494"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062109"
 ---
-# <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)
-  このタブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] を **登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。  
+# <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン)
+  このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] を**登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。  
   
-## <a name="options"></a>および  
- **[データベースへの接続]**  
- 接続するデータベースを一覧から選択します。 選択した場合 **\<既定 >** サーバーの既定のデータベースに接続されます。 選択した場合 **\<サーバーの参照 >** 、接続先となるデータベースのサーバーを参照することができます。  
+## <a name="options"></a>オプション  
+ **データベースへの接続**  
+ 接続するデータベースを一覧から選択します。 を選択した場合は、 **\<default>** サーバーの既定のデータベースに接続されます。 を選択した場合は、接続先の **\<Browse server>** データベースのサーバーを参照できます。  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、 **[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。 **[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
- 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、「 [Windows Azure SQL Database Overview](/azure/sql-database/sql-database-technical-overview)」(Microsoft Azure SQL Database の概要) をご覧ください。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master**に接続すると、すべてのデータベースを表示できるようになります。 詳細については、「 [Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)」を参照してください。  
   
- **[ネットワーク プロトコル]**  
+ **ネットワーク プロトコル**  
  一覧からプロトコルを選択します。 使用できるクライアント プロトコルは、[コンピューターの管理] の [SQL Native Client の構成] を使用して設定されたプロトコルです。  
   
- **[ネットワーク パケット サイズ]**  
+ **ネットワークパケットサイズ**  
  送信されるネットワーク パケットのサイズを入力します。 既定値は 4096 バイトです。  
   
- **[接続タイムアウト]**  
- 接続の確立を待機するタイムアウトまでの秒数を入力します。既定値は 15 秒です。  
+ **接続のタイムアウト**  
+ 接続が確立されるまで待機する秒数を入力します。この時間が経過するとタイムアウトになります。既定値は15秒です。  
   
- **[実行タイムアウト]**  
+ **実行タイムアウト**  
  タスクの実行がサーバーで完了するまで待機する秒数を入力します。 既定値は 0 秒です。つまり、タイムアウトはありません。  
   
- **[暗号化接続]**  
+ **暗号化接続**  
  接続の暗号化を強制します。  
   
  **[作成した色を使用する]**  
@@ -57,16 +56,16 @@ ms.locfileid: "63245494"
  **[すべてリセット]**  
  手動で入力された接続プロパティ値をすべて既定値に置き換えます。  
   
- **のインスタンスに接続するときには、**  
+ **接続する**  
  一覧表示された値を使用して接続を試行します。  
   
- **および**  
+ **Options**  
  クリックすると、ダイアログ ボックスが切り替わり、パスワードの保存などの追加のサーバー接続オプションが非表示になります。  
   
- **を登録するときには、**  
+ **テスト**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] を **登録済みサーバー**に登録するときに、クリックして接続をテストします。  
   
- **および**  
+ **保存**  
  **登録済みサーバー**に設定を保存します。  
   
 ## <a name="see-also"></a>参照  

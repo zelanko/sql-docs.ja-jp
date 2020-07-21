@@ -1,7 +1,8 @@
 ---
-title: データベースのデタッチとアタッチ (SQL Server) | Microsoft Docs
+title: データベースのデタッチとアタッチ (SQL Server)
+description: SQL Server データベースのデータとトランザクション ログ ファイルをデタッチしてから再アタッチすることで、データベースを別のインスタンスに変更したり、データベースを移動したりすることができます。
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -27,26 +28,26 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756283"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
   
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> セキュリティ  
 ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。  
   
 > [!IMPORTANT]  
 > 不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。   
-> 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+> 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
-##  <a name="DetachDb"></a> データベースのデタッチ  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> データベースのデタッチ  
 データベースはデタッチすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスからは削除されますが、データ ファイルおよびトランザクション ログ ファイル内ではそのまま残ります。 これらのデータ ファイルとトランザクション ログ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の任意のインスタンスにデータベースをアタッチできます。その際、そのデータベースをデタッチした元のサーバーにアタッチすることもできます。  
   
 次の条件に 1 つでも該当する場合、データベースをデタッチできません。  
@@ -58,11 +59,17 @@ ms.locfileid: "68037586"
   
 -   データベースに、データベース スナップショットが存在する。  
   
-    データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)の同一または別のインスタンスに再度アタッチすることができます。  
+    データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     > データベース スナップショットのデタッチおよびアタッチは行うことができません。  
+
+-   データベースは、Always On 可用性グループの一部です。  
   
+    可用性グループから削除されるまで、データベースをデタッチすることはできません。 詳細については、「[Always On 可用性グループからプライマリ データベースを削除する](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)」をご覧ください。
+  
+
+
 -   データベースがデータベース ミラーリング セッションでミラー化される。  
   
     セッションが終了するまでは、データベースはデタッチできません。 詳細については、「 [データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」を参照してください。  
@@ -83,7 +90,7 @@ ms.locfileid: "68037586"
   
 3.  データベースをデタッチし直します。  
   
-##  <a name="AttachDb"></a> データベースのインポート  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> データベースのインポート  
 コピーまたはデタッチした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースはアタッチできます。 フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
   
 データベースをアタッチするときは、すべてのデータ ファイル (MDF ファイルおよび NDF ファイル) を利用できる状態にする必要があります。 データベースを最初に作成したときか最後にアタッチしたときとデータ ファイルのパスが異なる場合、ファイルの現在のパスを指定する必要があります。  
@@ -101,7 +108,7 @@ ms.locfileid: "68037586"
   
 -   アタッチ中のプライマリ データ ファイルが読み取り専用の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではデータベースが読み取り専用であると想定されます。 読み取り専用データベースは、プライマリ ファイルに指定されている場所でログ ファイルを使用できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではプライマリ ファイルに格納されているログの場所を更新できないので、新しいログ ファイルは作成できません。  
  
-###  <a name="Metadata"></a> データベースのインポート時におけるメタデータの変更  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> データベースのインポート時におけるメタデータの変更  
 読み取り専用データベースをデタッチして再アタッチすると、現在の差分ベースに関するバックアップ情報が失われます。 *差分ベース* とは、データベース内のすべてのデータ、またはデータベースのファイルやファイル グループのサブセット内のすべてのデータを対象とした最新の完全バックアップのことです。 ベース バックアップ情報がない場合、 **master** データベースは読み取り専用データベースと同期されなくなります。そのため、それ以降に取得した差分バックアップで予期しない結果が発生することがあります。 したがって、読み取り専用データベースに対して差分バックアップを使用する場合は、データベースを再アタッチした後に、完全バックアップを行って新しい差分ベースを作成する必要があります。 差分バックアップについては、「[差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)」を参照してください。  
   
 アタッチ時に、データベースが起動します。 通常はデータベースをアタッチすると、そのデータベースはデタッチまたはコピーされたときと同じ状態になります。 ただし、アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「 [cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。 
@@ -112,14 +119,14 @@ ms.locfileid: "68037586"
 ### <a name="backup-and-restore-and-attach"></a>バックアップと復元およびアタッチ  
 完全または部分的にオフラインのデータベースと同様に、復元中のファイルが含まれているデータベースはアタッチできません。 復元シーケンスを停止すると、データベースをアタッチできます。 データベースのインポート後、復元シーケンスを再開できます。  
   
-###  <a name="OtherServerInstance"></a> 別のサーバー インスタンスへのデータベースのインポート  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> 別のサーバー インスタンスへのデータベースのインポート  
   
 > [!IMPORTANT]  
 > 新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成したデータベースは、それ以前のバージョンでアタッチすることはできません。 これにより、データベースが古いバージョンの [!INCLUDE[ssde_md](../../includes/ssde_md.md)] で物理的に使用できないようにします。 ただし、これはメタデータの状態に関係し、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)には影響しません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。   
   
-データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
+データベースを別のサーバー インスタンスにアタッチするときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、アタッチ先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要が生じる場合があります。 詳細については、「[データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
 **データベースをデタッチするには**  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
@@ -130,7 +137,7 @@ ms.locfileid: "68037586"
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
--   [データベースのインポート](../../relational-databases/databases/attach-a-database.md)  
+-   [データベースのアタッチ](../../relational-databases/databases/attach-a-database.md)  
   
 -   [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
   

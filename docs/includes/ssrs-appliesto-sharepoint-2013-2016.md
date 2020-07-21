@@ -1,6 +1,6 @@
 ---
-title: ファイルを含める
-description: ファイルを含める
+title: インクルード ファイル
+description: インクルード ファイル
 services: ''
 author: maggiesMSFT
 ms.service: ''
@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 433ec06c740c900c04ac99478304d05846e30038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 983a04aa7a2206dec7561a26178e92cdfe32762c
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68221314"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502325"
 ---
- ![はい](media/yes.png)SharePoint
+ ![はい](media/yes-icon.png)SharePoint

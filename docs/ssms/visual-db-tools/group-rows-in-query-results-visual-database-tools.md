@@ -1,10 +1,7 @@
 ---
-title: クエリ結果内の行のグループ化 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: クエリの結果内の行のグループ化
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,20 +11,24 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254471"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247195"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>クエリ結果内の行のグループ化 (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 小計を作成したり、テーブルのサブセットの他の集計情報を表示したりする場合は、集計クエリを使用してグループを作成します。 各グループは、テーブルで同じ値を持つすべての行のデータを集計します。  
   
 たとえば、 `titles` テーブルの本の平均価格を出版社ごとに分類して表示するとします。 そのためには、クエリを出版社 (たとえば、 `pub_id`) でグループ化します。 クエリの出力結果は次のようになります。  
   
-![クエリ結果: 出版社別にグループ化された平均価格](../../ssms/visual-db-tools/media/dv3w9e1.gif "クエリ結果: 出版社別にグループ化された平均価格")  
+![クエリ結果: パブリッシャーごとにグループ化された平均価格](../../ssms/visual-db-tools/media/dv3w9e1.gif "クエリ結果: パブリッシャーごとにグループ化された平均価格")  
   
 データをグループ化すると、次のように集計データまたはグループ化データだけを表示できます。  
   
@@ -49,7 +50,7 @@ GROUP BY pub_id, type
   
 出力結果は、次のようになります。  
   
-![クエリ結果: 出版社と種類別にグループ化された価格](../../ssms/visual-db-tools/media/dv3w9e2.gif "クエリ結果: 出版社と種類別にグループ化された価格")  
+![クエリ結果: パブリッシャーおよび種類ごとにグループ化された価格](../../ssms/visual-db-tools/media/dv3w9e2.gif "クエリ結果: パブリッシャーおよび種類ごとにグループ化された価格")  
   
 ### <a name="to-group-rows"></a>列をグループ化するには  
   
@@ -71,9 +72,9 @@ GROUP BY pub_id, type
   
 5.  集計する列の **[グループ化]** グリッド セルで、該当する集計関数を選択します。  
   
-    集計する列に別名が自動的に割り当てられます。 この自動的に割り当てられた別名は、わかりやすい名前に変更することができます。 詳細については、「 [列の別名の作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)」を参照してください。  
+    集計する列に別名が自動的に割り当てられます。 この自動的に割り当てられた別名は、わかりやすい名前に変更することができます。 詳細については、[列の別名の作成](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)に関するページをご覧ください。  
   
-    ![クエリ結果セットに列の別名を追加](../../ssms/visual-db-tools/media/dv3w9e3.gif "クエリ結果セットに列の別名を追加")  
+    ![クエリ結果セットへの列の別名の追加](../../ssms/visual-db-tools/media/dv3w9e3.gif "クエリ結果セットへの列の別名の追加")  
   
     **SQL** ペインのステートメントは、次のようになります。  
   
@@ -84,5 +85,5 @@ GROUP BY pub_id, type
     ```  
   
 ## <a name="see-also"></a>参照  
-[クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[クエリ結果の並べ替えとグループ化](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

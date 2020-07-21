@@ -1,5 +1,5 @@
 ---
-title: サーバーからクライアントへの変換 |Microsoft Docs
+title: サーバーからクライアントへの変換 | Microsoft Docs
 description: サーバーからクライアントへの変換
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015809"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
@@ -27,17 +27,17 @@ ms.locfileid: "68015809"
   この記事では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) と OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="conversions"></a>コンバージョン  
- 次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合、ICommandWithParameters:: SetParameterInfo が呼び出され、 *pwszDataSourceType*で指定された型がサーバー上の実際の型と一致しない場合、サーバーによって暗黙的な変換が実行され、返された型が返されます。クライアントは、ICommandWithParameters:: SetParameterInfo によって指定された型と一致します。 これにより、サーバーの変換規則がこの記事の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
+ 次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでは、ICommandWithParameters::SetParameterInfo が呼び出され、*pwszDataSourceType* で指定された型が実際のサーバーの型と一致しない場合、サーバーによって暗黙的な変換が実行され、クライアントに返された型は ICommandWithParameters::SetParameterInfo を介して指定された型と一致します。 これにより、サーバーの変換規則がこの記事の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
-|To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|To -><br /><br /> ソース|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1、7|[OK]|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
+|Date|1、7|[OK]|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Time|5、6、7|-|9|[OK]|6|3、6|5、6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Smalldatetime|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|DATETIME|5、7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
-|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK]\ (VT_BSTR)|[OK]|[OK]|4|4|  
-|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|[OK]\ (VT_BSTR)|[OK]|[OK]|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|なし|なし|なし|なし|なし|なし|  
+|Datetime|5、7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
+|Datetime2|5、7|8|9、10|10|7|3|5、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
+|Datetimeoffset|5、7、11|8、11|9、10、11|10、11|7、11|[OK]|5、7、11|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7、13|12|12、9|12|12|12|7、13|該当なし|該当なし|該当なし|該当なし|該当なし|該当なし|  
 |Sql_variant<br /><br /> (datetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9、10|10|[OK]|3|7|-|7 (VT_DATE)|[OK]|[OK]|4|4|  
 |Sql_variant<br /><br /> (date)|1、7|[OK]|2|2|1|1、3|1、7|-|OK (VT_BSTR)|[OK]|[OK]|4|4|  
@@ -50,7 +50,7 @@ ms.locfileid: "68015809"
 |Symbol|意味|  
 |------------|-------------|  
 |[OK]|変換は必要ありません。|  
-|-|変換はサポートされていません。 IAccessor:: CreateAccessor が呼び出されたときにバインディングが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION が*rgStatus*に返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
+|-|変換はサポートされていません。 IAccessor::CreateAccessor の呼び出し時にバインドが検証される場合、DBBINDSTATUS_UPSUPPORTEDCONVERSION が *rgStatus* で返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |1|時刻フィールドに 0 が設定されます。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE が設定されます。|  
 |3|タイムゾーンは 0 に設定されます。|  

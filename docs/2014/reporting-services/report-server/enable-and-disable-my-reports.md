@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103848"
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
@@ -50,7 +50,7 @@ ms.locfileid: "66103848"
   
  個人用レポートをアクティブ化すると、ユーザーが [個人用レポート] フォルダーを必要とするかどうかに関係なく、ドメイン アカウントを持つ各ユーザーが [個人用レポート] リンクをクリックしたときに、[個人用レポート] フォルダーが作成されます。 フォルダーが使用されているかどうかを判断する体系的な方法はありません。 フォルダーに含まれているデータがあるかどうかを調べるには、フォルダーを手動で確認する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [個人用レポートをセキュリティで保護する](../security/secure-my-reports.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)  
   

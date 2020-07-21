@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェントでの自動管理タスクをスケジュール設定 |Microsoft Docs
+title: SQL Server エージェントでの自動管理タスクのスケジュール設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e6100e2d8eefc27c88f70e84407ef94ef4635c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063075"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
   SMO では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは次のオブジェクトで表現されます。  
@@ -34,8 +33,8 @@ ms.locfileid: "62519227"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
   
-## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+## <a name="examples"></a>例  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
 1.  プログラムで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用する場合、エージェント名前空間を修飾する `Imports` ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62519227"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-visual-c"></a>Visual C# でのステップを持つジョブとスケジュールの作成  
  このコード例では、ステップを持つジョブとスケジュールを作成し、オペレーターへの通知を行います。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -112,7 +111,7 @@ ms.locfileid: "62519227"
 ## <a name="creating-a-job-with-steps-and-a-schedule-in-powershell"></a>PowerShell でのステップを持つジョブとスケジュールの作成  
  このコード例では、ステップを持つジョブとスケジュールを作成し、オペレーターへの通知を行います。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -145,7 +144,7 @@ $jbstp.OnFailAction =[Microsoft.SqlServer.Management.SMO.Agent.StepCompletionAct
 $jbstp.Create();   
   
 #Define a JobSchedule object variable by supplying the parent job and name arguments in the constructor.   
-$jbsch =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
+$jbsch = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Agent.JobSchedule -argumentlist $jb, "Test_Job_Schedule"   
   
 #Set properties to define the schedule frequency, and duration.   
 $jbsch.FrequencyTypes =  [Microsoft.SqlServer.Management.SMO.Agent.FrequencyTypes]::Daily  
@@ -166,7 +165,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Visual Basic での警告の作成  
  このコード例では、パフォーマンス条件によってトリガーされる警告を作成しています。 条件は、次の形式で指定する必要があります。  
   
- **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
  警告の通知にはオペレーターが必要です。 `operator` は Visual Basic キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
@@ -175,11 +174,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C# での警告の作成  
  このコード例では、パフォーマンス条件によってトリガーされる警告を作成しています。 条件は、次の形式で指定する必要があります。  
   
- **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
  警告の通知にはオペレーターが必要です。 `operator` は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
-```  
+```csharp
 {  
              //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -208,11 +207,11 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell での警告の作成  
  このコード例では、パフォーマンス条件によってトリガーされる警告を作成しています。 条件は、次の形式で指定する必要があります。  
   
- **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
  警告の通知にはオペレーターが必要です。 `operator` は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
@@ -251,7 +250,7 @@ $op.Drop()
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-c"></a>Visual C# でプロキシ アカウントを使用することでユーザーがサブシステムにアクセスできるようにする  
  このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> メソッドを使用して、ユーザーが指定されたサブシステムにアクセスできるようにする方法を示します。  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
 {   
 Server srv = default(Server);   
@@ -283,5 +282,3 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ## <a name="see-also"></a>参照  
  [SQL Server エージェント](../../../ssms/agent/sql-server-agent.md)   
  [ジョブの実装](../../../ssms/agent/implement-jobs.md)  
-  
-  

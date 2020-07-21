@@ -1,5 +1,5 @@
 ---
-title: Stretch Database 向きのデータベースとテーブルを識別する | Microsoft Docs
+title: データベースとテーブルの識別
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 304aba1c33dcfd46a2dbfb27e8eeefff8c0f6436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091847"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73843751"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant で Stretch Database 向きのデータベースとテーブルを識別する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68091847"
 
 3.  **[ソース サーバーの種類]** と **[ターゲット サーバーの種類]** の両方で、 **[SQL Server]** を選びます。
 
-4.  **[作成]** を選択します。 
+4.  **作成** を選択します。 
 
 5. **[オプション]** ページ (ステップ 1) で、 **[New features recommendation]\(新しい機能の推奨事項\)** を選びます。 必要に応じて、 **[Compatibility issues]\(互換性の問題\)** をオフにします。
 
@@ -55,7 +56,7 @@ Stretch Database Advisor は、以前は SQL Server 2016 アップグレード �
 
 アップグレード アドバイザーの代わりとなる拡張版の Data Migration Assistant のリリースを機に、Stretch Database Advisor の機能はこの新しいツールに組み込まれます。 Stretch Database に関する推奨事項を取得するために、オプションを選ぶ必要はありません。 Data Migration Assistant で Assessment を実行すると、Stretch Database に関する結果が、 **[機能に関する推奨事項]** の **[ストレージ]** タブに表示されます。
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-step"></a>次のステップ  
  Stretch Database を有効にします。  
   
 -   **データベース**の Stretch Database を有効にするには、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。  

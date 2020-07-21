@@ -1,5 +1,5 @@
 ---
-title: インターフェイスの適合性レベル |Microsoft Docs
+title: インターフェイスの準拠レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138909"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304602"
 ---
 # <a name="interface-conformance-levels"></a>インターフェイスの適合性レベル
-平準化の目的は、どのような機能を利用して、ドライバーからアプリケーションに通知するためにです。 関数に基づく平準化パターンがこの目標を十分に達成することはできません。 ODBC 3。*x*ドライバーを所有している特徴に基づいて分類されます。 はこの関数をサポートしている含めることができます、機能をサポートによって返される情報の種類の記述子フィールド、ステートメント属性を"Y"値のサポートを含めることができますも**SQLGetInfo**など。  
+平準化の目的は、ドライバーから使用可能な機能をアプリケーションに通知することです。 関数に基づく平準化方式では、この目標を達成することはできません。 ODBC 3 の場合。*x*は、ドライバーが所有する機能に基づいて分類されます。 機能をサポートするには、関数のサポートを含めることができます。また、記述子フィールド、ステートメント属性、 **SQLGetInfo**によって返される情報型の "Y" 値などをサポートすることもできます。  
   
- インターフェイスの適合性の仕様を簡略化するのには、ODBC は、次の 3 つの適合性レベルを定義します。 特定の準拠レベルを満たすためには、ドライバーはすべての適合性レベルの要件を満たす必要があります。 特定のレベルへの準拠は、すべての下位レベルの完全な準拠を意味します。  
+ インターフェイス準拠の仕様を簡略化するために、ODBC では3つの準拠レベルが定義されています。 特定の準拠レベルを満たすには、ドライバーがその準拠レベルのすべての要件を満たしている必要があります。 指定されたレベルに準拠すると、すべての下位レベルに完全な準拠が示されます。  
   
- 適合性レベルは、常に除算を行わないでください一直線に並べる、ODBC 関数の特定のリストのサポートが、次のセクションに記載されている、サポートされている機能を指定します。 機能のサポートを提供するドライバーが特定の ODBC 関数の呼び出しの一部またはすべてのフォームをサポートする必要があります (詳細については、次を参照してください[関数の適合性](../../../odbc/reference/develop-app/function-conformance.md))、特定の属性を設定 (を参照してください[属性の適合性。](../../../odbc/reference/develop-app/attribute-conformance.md))、および特定の記述子フィールド (を参照してください[記述子フィールドの適合性](../../../odbc/reference/develop-app/descriptor-field-conformance.md))。  
+ 準拠レベルは、特定の ODBC 関数の一覧については、常に正しくサポートされるとは限りませんが、次のセクションに記載されているサポートされる機能を指定します。 機能のサポートを提供するために、ドライバーは特定の ODBC 関数 (詳細については、「[関数の一致](../../../odbc/reference/develop-app/function-conformance.md)」を参照)、特定の属性の設定 ([属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)を参照)、および特定の記述子フィールドの一部またはすべての形式の呼び出しをサポートする必要があります (「[記述子フィールドの準拠](../../../odbc/reference/develop-app/descriptor-field-conformance.md)」を参照)。  
   
- アプリケーションでは、ドライバーのインターフェイスへの準拠レベルを検出データ ソースに接続し、呼び出すことによって**SQLGetInfo** SQL_ODBC_INTERFACE_CONFORMANCE オプションを使用します。  
+ アプリケーションは、データソースに接続し、SQL_ODBC_INTERFACE_CONFORMANCE オプションを使用して**SQLGetInfo**を呼び出すことによって、ドライバーのインターフェイスの準拠レベルを検出します。  
   
- ドライバーでは、完全な準拠本人レベル以上の機能を実装するために無料です。 アプリケーションが呼び出すことによって、このような追加機能を検出**SQLGetFunctions** (どの ODBC 関数が存在するかを決定) して**SQLGetInfo** (さまざまな他の ODBC の機能のクエリを実行) します。  
+ ドライバーは、完全な準拠を要求するレベルを超える機能を自由に実装できます。 アプリケーションでは、 **Sqlgetfunctions** (存在する odbc 関数を判別するため) と**SQLGetInfo** (他のさまざまな odbc 機能に対してクエリを実行するため) を呼び出すことによって、そのような追加機能を検出します。  
   
- ODBC インターフェイスへの準拠レベルは 3 つです。Core、レベル 1 および Level 2。  
+ ODBC インターフェイスの準拠レベルには、コア、レベル1、レベル2の3つがあります。  
   
 > [!NOTE]
->  これらの適合性レベル ODBC 2 で同じ名前の ODBC API への準拠レベルよりも異なる要件があります *.x*します。 具体的には、ODBC 2 によって暗黙的にすべての機能 *.x* API への準拠レベル 1 は、コア インターフェイスへの準拠レベルの一部であるようになりました。 その結果、多くの ODBC ドライバーは、コア レベル インターフェイスの適合性を報告する可能性があります。  
+>  これらの準拠レベルには、odbc 2.x の同じ名前の ODBC API 準拠レベルとは異なる要件が*あります。* 特に、ODBC*2.X API の*準拠レベル1によって暗黙的に示されるすべての機能が、コアインターフェイスの準拠レベルの一部になっています。 その結果、多くの ODBC ドライバーによって、コアレベルのインターフェイスの準拠が報告される場合があります。  
   
  このセクションでは、次のトピックを扱います。  
   

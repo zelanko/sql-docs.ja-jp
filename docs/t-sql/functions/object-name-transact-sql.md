@@ -24,15 +24,15 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8dafb369a94eda03a959c26b4dfe12df03c7e860
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914730"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005090"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマ スコープ オブジェクトのデータベース オブジェクト名を返します。 スキーマ スコープ オブジェクトの一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」をご覧ください。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67914730"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 OBJECT_NAME ( object_id [, database_id ] )  
 ```  
   
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>アクセス許可  
  オブジェクトに対する ANY 権限が必要です。 データベース ID を指定するには、そのデータベースの CONNECT 権限を持っているか、ゲスト アカウントが有効である必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳しくは、「[式](../../t-sql/language-elements/expressions-transact-sql.md)」および「[WHERE](../../t-sql/queries/where-transact-sql.md)」をご覧ください。  
   
  このシステム関数が返す値には、現在のデータベースの照合順序が使用されます。  
@@ -87,15 +87,15 @@ FROM master.sys.objects;
 GO  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. WHERE 句で OBJECT_NAME を使用する  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. WHERE 句で OBJECT_NAME を使用する  
  この例では、`sys.objects` ステートメントの `OBJECT_NAME` 句の `WHERE` で指定されたオブジェクトの `SELECT` カタログ ビューから列を返します。  
   
 ```  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyID int;  
+DECLARE @MyID INT;  
 SET @MyID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product',  
     'U'));  
 SELECT name, object_id, type_desc  
@@ -128,13 +128,13 @@ SELECT QUOTENAME(DB_NAME(database_id))
     + N'.'   
     + QUOTENAME(OBJECT_NAME(object_id, database_id))  
     , *   
-FROM sys.dm_db_index_operational_stats(null, null, null, null);  
+FROM sys.dm_db_index_operational_stats(NULL, NULL, NULL, NULL);  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. WHERE 句で OBJECT_NAME を使用する  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. WHERE 句で OBJECT_NAME を使用する  
  この例では、`sys.objects` ステートメントの `OBJECT_NAME` 句の `WHERE` で指定されたオブジェクトの `SELECT` カタログ ビューから列を返します。 (実際のオブジェクト番号 (次の例では 274100017) は異なります。  この例をテストするには、お使いのデータベースで `SELECT name, object_id FROM sys.objects;` を実行して、有効なオブジェクト番号を調べてください。)  
   
 ```  

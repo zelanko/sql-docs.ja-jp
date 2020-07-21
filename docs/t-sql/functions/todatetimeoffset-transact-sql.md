@@ -21,18 +21,18 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f6978a8344b7a1c9100a701d582193295f34c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df790c42b67e0542f57c43650bb40e76c584086e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098974"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993047"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   返します、 **datetimeoffset** 値から変換されたです、 **datetime2** 式です。  
   
@@ -46,7 +46,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 値に解決される[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 値に解決される[式](../../t-sql/data-types/datetime2-transact-sql.md)です。  
   
 > [!NOTE]  
 >  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar**です。  
@@ -60,7 +60,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 ## <a name="return-type"></a>戻り値の型  
  **datetimeoffset**. 小数部の有効桁数が同じ、 *datetime* 引数。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>A. 現在の日付と時刻のタイム ゾーン オフセットを変更する  
  次の例では、現在の日付と時刻のゾーン オフセットを、タイム ゾーン `-07:00` に変更します。  

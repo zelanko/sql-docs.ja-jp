@@ -11,28 +11,28 @@ helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a921aaeebc57ab72f75c980b0877a9fa0723fdca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6c675adc3577654067e5db162666d63aaf239756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671647"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **SSISDB** カタログに表示されるすべてのパッケージの詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|パッケージの一意識別子 (ID) です。|  
-|NAME|**nvarchar (256)**|パッケージの一意の名前。|  
+|name|**nvarchar (256)**|パッケージの一意の名前。|  
 |package_guid|**uniqueidentifier**|パッケージを識別するグローバル一意識別子 (GUID)。|  
 |description|**nvarchar(1024)**|パッケージの説明 (省略可)。|  
 |package_format_version|**int**|パッケージの開発に使用された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン。|  
@@ -46,7 +46,7 @@ ms.locfileid: "67997852"
 |validation_status|**char(1)**|検証の状態。|  
 |last_validation_time|**datetimeoffset(7)**|前回の検証操作の時刻。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの各パッケージの行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  

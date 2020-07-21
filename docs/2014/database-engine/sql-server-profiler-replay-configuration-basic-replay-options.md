@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler の再生の構成 (基本再生オプション) |Microsoft Docs
+title: SQL Server プロファイラー-構成の再生 (基本的な再生オプション) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d95ca6c63903adff866ce0e6c25146b8e77d6b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928583"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - [構成の再生] ([再生オプションの基本設定])
   **[構成の再生]** ダイアログ ボックスの **[再生オプションの基本設定]** ページを使用すると、トレース ファイルまたはテーブルの再生方法を指定できます。  
   
  このウィンドウを表示するには、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を使用して、再生するイベントを含むトレース ファイルまたはテーブルを開きます。 詳細については、「 [再生を実行するための必要条件](../tools/sql-server-profiler/replay-requirements.md)」を参照してください。 トレース ファイルまたはテーブルが開いている状態で、 **[再生]** メニューの **[開始]** をクリックした後、トレースを再生する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[再生サーバー]**  
  再生のために接続する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを表示します。  
   
- **[変更]**  
+ **変更...**  
  **[サーバーへの接続]** ダイアログ ボックスを表示して、別のサーバーへ接続します。  
   
  **[ファイルに保存]**  
@@ -51,9 +50,9 @@ ms.locfileid: "66089718"
  **[再生結果を表示する]**  
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]に再生結果を表示します。  
   
-## <a name="see-also"></a>関連項目  
- [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
- [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
+## <a name="see-also"></a>参照  
+ [トレーステーブル &#40;SQL Server プロファイラーの再生&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [トレースファイル &#40;SQL Server プロファイラーを再生する&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [トレースの再生](../tools/sql-server-profiler/replay-traces.md)  
   
   

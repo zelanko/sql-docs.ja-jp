@@ -1,5 +1,5 @@
 ---
-title: ネイティブ モードから SharePoint モードへの移行 (SSRS) | Microsoft Docs
+title: ネイティブから SharePoint への移行 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570702"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082623"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "65570702"
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサーバー モードを別のモードにアップグレードまたは変換することはできません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードにアップグレードまたは変換することはできません。 モードが異なると使用されるデータベース スキーマも異なるため、モード間でレポート サーバー データベースをコピーすることはできません。 コンテンツはレポート サーバー間で移行できます。 使用するツールは、移行元サーバーと移行先サーバーに対して構成されたレポート サーバー モードの種類によって異なります。  
   
-##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移行ツール  
+##  <a name="reporting-services-migration-tool"></a><a name="bkmk_native_to_sharepoint"></a> Reporting Services 移行ツール  
  このツールでは、ネイティブ モードの配置から SharePoint モードの配置へのコンテンツの移行がサポートされます。 SharePoint モードから SharePoint モードまたは SharePoint モードからネイティブ モードへの移行はサポートされません。  
   
  詳細については、「[Reporting Services 移行ツール](https://www.microsoft.com/download/details.aspx?id=29560)」(https://www.microsoft.com/download/details.aspx?id=29560) を参照してください。  
@@ -41,12 +41,12 @@ ms.locfileid: "65570702"
   
  次の表は、スクリプトを使用して移行できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オブジェクトをまとめたものです。  
   
-|Object|スクリプト化の可否|コメント|  
+|Object|スクリプト化の可否|説明|  
 |------------|---------------------|--------------|  
-|[レポート]|はい|移行後にデータソースのパスワードを再入力します。|  
+|Reports|はい|移行後にデータソースのパスワードを再入力します。|  
 |データソース|はい|移行後にレポートとデータソースとの間のリンクを再設定します。|  
 |モデル|はい||  
-|[データセット]|はい||  
+|データセット|はい||  
 |レポート パーツ||移行後にレポート パーツへのパスを確認または更新します。|  
 |スケジュール|はい|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
 |サブスクリプション|はい|ListSubscriptions メソッドに関する説明 (「 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 」) および <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> に関する説明を参照してください。|  

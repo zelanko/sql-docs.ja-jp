@@ -16,21 +16,21 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d610b40e38832e2dc82b02edf276475d2b27d74c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947187"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294303"
 ---
 # <a name="back-up-database-task"></a>データベースのバックアップ タスク
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  データベースのバックアップ タスクは、さまざまな種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップを実行します。 詳細については、「 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
+  データベースのバックアップ タスクは、さまざまな種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのバックアップを実行します。 詳しくは、「[SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」をご覧ください。  
   
  データベースのバックアップ タスクを使用すると、パッケージは単一データベースまたは複数データベースをバックアップできます。 タスクにより単一データベースのみをバックアップする場合、バックアップ対象となるデータベース、ファイル、またはファイル グループなどのコンポーネントを選択できます。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "67947187"
   
 |復旧モデル|データベース|データベースの差分|[トランザクション ログ]|ファイルまたはファイルの差分|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|Required|省略可|サポートされていません|サポートされていません|  
-|[完全]|Required|省略可|Required|省略可|  
-|一括ログ|Required|省略可|Required|省略可|  
+|シンプル|必須|省略可能|サポートされていません|サポートされていません|  
+|[完全]|必須|省略可能|必須|省略可能|  
+|一括ログ|必須|省略可能|必須|省略可能|  
   
- データベースのバックアップ タスクは、Transact-SQL BACKUP ステートメントをカプセル化します。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
+ データベースのバックアップ タスクは、Transact-SQL BACKUP ステートメントをカプセル化します。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
 ## <a name="configuration-of-the-back-up-database-task"></a>データベースのバックアップ タスクの構成  
  プロパティは、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定できます。 このタスクは、 **デザイナーの** [ツールボックス] **の** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../../includes/ssis-md.md)] に表示されます。  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099928"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
@@ -40,12 +40,12 @@ ms.locfileid: "66099928"
   
 -   [ロールを作成、削除、または変更する (Management Studio)](../security/role-definitions-create-delete-or-modify.md)  
   
--   [アイテムの削除&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
+-   [アイテムの削除 &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
 -   [[レポート サーバー ジョブのキャンセル] (Management Studio)](cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>関連項目  
- [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>参照  
+ [Management Studio F1 ヘルプのレポートサーバー](report-server-in-management-studio-f1-help.md)   
  [SQL Server Management Studio の概要](../../ssms/sql-server-management-studio-ssms.md)  
   
   

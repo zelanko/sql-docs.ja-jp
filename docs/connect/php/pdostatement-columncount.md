@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: columnCount |Microsoft Docs'
+title: PDOStatement::columnCount | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13b7df0010236103da8d5311ee37ea237e14bf2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c0b109b3cc40b9e76f878a1d0f455b2637372cf
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936098"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920998"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ int PDOStatement::columnCount ();
 ## <a name="return-value"></a>戻り値  
 結果セット内の列数を返します。 結果セットが空の場合はゼロ (0) を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
 ## <a name="example"></a>例  

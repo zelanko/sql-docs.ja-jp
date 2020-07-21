@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097218"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance クラス
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance クラス
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
   
  この種類の全メンバーの一覧については、「 [MSReportServer_Instance のメンバー](msreportserver-instance-members.md)」を参照してください。  

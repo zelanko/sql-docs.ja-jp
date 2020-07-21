@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 35bb112313bb7a94425fc11eb192d9343ea73031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941378"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292312"
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
 
@@ -41,9 +41,9 @@ ms.locfileid: "67941378"
   
     1.  **[インフォキューブ]** を選択します。 **[作成]** をクリックします。 **[トランザクション データのインフォキューブの作成]** ダイアログ ボックスで、一覧のいずれかの行から **[IObject]** 列の **[検索]** をクリックします。 各行は、パッケージのデータ フローの列を表します。  
   
-    2.  **[インフォソース]** を選択します。 **[作成]** をクリックします。 **[インフォソースの作成]** ダイアログ ボックスで、 **[トランザクション データ]** を選択します。 **[トランザクション データのインフォソースの作成]** ダイアログ ボックスで、一覧のいずれかの行から **[IObject]** 列の **[検索]** をクリックします。 各行は、パッケージのデータ フローの列を表します。  
+    2.  **[インフォソース]** を選択します。 **[Create]** をクリックします。 **[インフォソースの作成]** ダイアログ ボックスで、 **[トランザクション データ]** を選択します。 **[トランザクション データのインフォソースの作成]** ダイアログ ボックスで、一覧のいずれかの行から **[IObject]** 列の **[検索]** をクリックします。 各行は、パッケージのデータ フローの列を表します。  
   
-    3.  **[インフォソース]** を選択します。 **[作成]** をクリックします。 **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]** を選択します。 **[マスター データのインフォソースの作成]** ダイアログ ボックスで、 **[参照]** をクリックします。  
+    3.  **[インフォソース]** を選択します。 **[Create]** をクリックします。 **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]** を選択します。 **[マスター データのインフォソースの作成]** ダイアログ ボックスで、 **[参照]** をクリックします。  
   
  **[インフォオブジェクトの参照]** ダイアログ ボックスは、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスの **[属性]** セクションで **[追加]** をクリックして開くこともできます。  
   
@@ -62,10 +62,10 @@ ms.locfileid: "67941378"
  **時間の特性**  
  時間の特性を表すインフォオブジェクトを参照します。  
   
- **[名前]**  
+ **Name**  
  参照するインフォオブジェクトの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 すべてのインフォオブジェクトを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
- **[説明]**  
+ **説明**  
  アスタリスクのワイルドカード文字 (*) と一緒に説明、または部分的な説明を入力します。 説明にかからわずすべてのインフォオブジェクトを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
  **[参照]**  
@@ -85,9 +85,9 @@ ms.locfileid: "67941378"
 ## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
- [[トランザクション データのインフォソースの作成]](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [[追加]](../../integration-services/data-flow/create-new-infoobject.md)   
+ [新しいインフォオブジェクトの作成](../../integration-services/data-flow/create-new-infoobject.md)   
  [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

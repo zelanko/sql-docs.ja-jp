@@ -1,5 +1,5 @@
 ---
-title: SQL Server プログラミングの OLE DB ドライバー |Microsoft Docs
+title: OLE DB Driver for SQL Server のプログラミング | Microsoft Docs
 description: OLE DB Driver for SQL Server のプログラミング
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993932"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server のプログラミング
@@ -30,19 +30,19 @@ ms.locfileid: "67993932"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 用の OLE DB ドライバーは、データへのアクセスに使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、OLE DB Driver for SQL Server プロバイダーの使用をお勧めします。 OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
+  OLE DB Driver for SQL Server は、データへのアクセスに使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、OLE DB Driver for SQL Server プロバイダーの使用をお勧めします。 OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
- OLE DB Driver for SQL Server は、に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続しているアプリケーションに対して OLE DB サポートを提供します。  
+ OLE DB Driver for SQL Server を使うと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続するアプリケーションが OLE DB をサポートできるようになります。  
   
- SQL Server の OLE DB ドライバーは OLE DB バージョン2.0 に準拠しているプロバイダーです。  
+ OLE DB Driver for SQL Server は OLE DB バージョン 2.0 準拠のプロバイダーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [OLE DB Driver for SQL Server のアプリケーションの作成](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [データソースオブジェクト&#40;の OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [データ ソース オブジェクト &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [[コマンド]](../../oledb/ole-db-commands/commands.md)  
+-   [コマンド](../../oledb/ole-db-commands/commands.md)  
   
 -   [行セット](../../oledb/ole-db-rowsets/rowsets.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67993932"
   
 -   [テーブルとインデックス](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [データ型&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [データ型 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [スキーマ行セットのサポート &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67993932"
   
 -   [スパース列のサポート &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB Driver for SQL Server &#40;OLE DB&#41;リファレンス](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB Driver for SQL Server &#40;OLE DB&#41; リファレンス](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB の使用法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

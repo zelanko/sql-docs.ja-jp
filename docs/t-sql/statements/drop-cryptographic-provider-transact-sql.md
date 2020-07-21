@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54ac21a2303da83323fb1f28ff78d8c3bbe275fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897834"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の暗号プロバイダーを削除します。  
   
@@ -42,7 +42,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  拡張キー管理プロバイダーの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  拡張キー管理 (EKM) プロバイダーを削除するには、そのプロバイダーを使用しているすべてのセッションを停止する必要があります。  
   
  EKM プロバイダーは、資格情報がマップされていない場合のみ削除できます。  
@@ -52,7 +52,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`SecurityProvider` という暗号プロバイダーを削除します。  
   
 ```  

@@ -11,17 +11,16 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSSRC.F1
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 author: yualan
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.author: chugu
+ms.openlocfilehash: e5bce25e303b055d734da6a00c73851f4eb0d7ec
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061348"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439389"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
-  **Azure Data Lake Store Source** コンポーネントは、SSIS パッケージが Azure Data Lake Store からデータを読み取れるようにします。 サポートされるファイル形式は、Text と Avro です。
+  **Azure Data Lake Store Source** コンポーネントは、SSIS パッケージが Azure Data Lake Store からデータを読み取れるようにします。 サポートされるファイル形式は、テキストと Avro です。
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Azure Data Lake Store Source を構成する 
   

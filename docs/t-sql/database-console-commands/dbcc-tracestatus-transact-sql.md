@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31bcacc0d001c4759e81380177c84af3ff278e30
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896233"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 トレース フラグの状態を表示します。
   
@@ -40,7 +40,7 @@ ms.locfileid: "68040560"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )   
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -61,22 +61,22 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果セット  
 次の表では、結果セットに表示される情報について説明します。
   
-|列名|[説明]|  
+|列名|説明|  
 |---|---|
 |**TraceFlag**|トレース フラグの名前です。|  
-|**ステータス**|トレース フラグがグローバルまたはセッションごとに ON または OFF に設定されているかどうかを示します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|**Global**|トレース フラグがグローバルに設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Session**|トレース フラグがセッションに対して設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**状態**|トレース フラグがグローバルまたはセッションごとに ON または OFF に設定されているかどうかを示します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|**グローバル**|トレース フラグがグローバルに設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**セッション**|トレース フラグがセッションに対して設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS はトレース フラグ番号の列と状態の列を返します。 これは、トレース フラグがオン (1)、オフ (0) のどちらになっているかを示します。 グローバル トレース フラグまたはセッション トレース フラグのどちらの状態を確認するかに応じて、トレース フラグ番号の列ヘッダーが **Global Trace Flag** または **Session Trace Flag** に設定されます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、セッションとグローバルという 2 種類のトレース フラグがあります。 セッション トレース フラグは、1 つの接続についてアクティブで、その接続に対してのみ表示可能です。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。
   
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例は、現在グローバルに有効化されているすべてのトレース フラグの状態を表示します。
   
 ```sql  

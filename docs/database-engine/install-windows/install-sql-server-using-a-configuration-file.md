@@ -1,5 +1,6 @@
 ---
 title: 構成ファイルを使用した SQL Server のインストール | Microsoft Docs
+description: SQL Server セットアップを使用して構成ファイルを生成し、統一された構成を使用して組織全体に SQL Server を配置できます。
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,16 +10,16 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 800be0666d97ea1503fa5b1a8dd261543d0b4a10
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899672"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>構成ファイルを使用した SQL Server のインストール
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。 
  
@@ -67,18 +68,18 @@ FEATURES=SQL,Tools
     > [!NOTE]  
     >  セットアップ インフラストラクチャは、パスワードなどの機密情報を除き、実行したアクションに対してすべての適切なパラメーターを書き出します。 /IAcceptSQLServerLicenseTerms パラメーターは構成ファイルに書き出されないので、構成ファイルに変更を加えるか、コマンド プロンプトで値を指定する必要があります。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。 また、値が通常はコマンド プロンプトで指定されないブール型パラメーターの場合は、値が含まれます。 
   
-## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>構成ファイルを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+## <a name="using-the-configuration-file-to-install-ssnoversion"></a>構成ファイルを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
 
 コマンド ライン インストールでのみ構成ファイルを使用できます。 
   
 > [!NOTE]  
 > 構成ファイルに変更を加える必要がある場合は、コピーを作成して、コピーを変更することをお勧めします。 
   
-### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>構成ファイルを使用してスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールする方法  
+### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>構成ファイルを使用してスタンドアロンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールする方法  
   
 -   コマンド プロンプトからインストールを実行し、 *ConfigurationFile* パラメーターを使用して ConfigurationFile.ini を指定します。 
   
-### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>構成ファイルを使用してスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのイメージの準備と完了を行う方法 (SysPrep)  
+### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>構成ファイルを使用してスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのイメージの準備と完了を行う方法 (SysPrep)  
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスを準備し、同じコンピューター上で構成するには、次の操作を行います。 
   
@@ -96,7 +97,7 @@ FEATURES=SQL,Tools
   
     -   イメージ完了用構成ファイルは、準備済みのインスタンスの構成を自動化するために、Windows イメージと共に保存できます。 
   
-### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする方法  
+### <a name="how-to-install-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする方法  
   
 1. 統合インストール方法は次のとおりです (ノードに単一ノードのフェールオーバー クラスターを作成し、追加ノードでは AddNode を実行します)。  
   
@@ -118,17 +119,17 @@ FEATURES=SQL,Tools
   
     -   この ConfigurationFile.ini ファイルを指定すると、フェールオーバー クラスターを完了できます。 
   
-### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加または削除する方法  
+### <a name="how-to-add-or-remove-a-node-to-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加または削除する方法  
   
 -   フェールオーバー クラスターにノードを追加したり、フェールオーバー クラスターからノードを削除したりするために以前使用した構成ファイルがある場合は、同じファイルを再利用してノードの追加や削除を実行できます。 
   
-### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードする方法  
+### <a name="how-to-upgrade-a-ssnoversion-failover-cluster-using-the-configuration-file"></a>構成ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをアップグレードする方法  
   
 1. パッシブ ノードでアップグレードを実行して、ConfigurationFile.ini ファイルをキャプチャします。 それには、実際のアップグレードを実行するか、または実際のアップグレードを実行しないで最後に終了します。 
   
 2. アップグレードするすべての追加ノードで、ConfigurationFile.ini ファイルを指定して処理を完了します。 
   
-## <a name="sample-syntax"></a>サンプル構文  
+## <a name="sample-syntax"></a>構文例  
  次に、構成ファイルの使用方法の例をいくつか示します。  
   
 -   コマンド プロンプトで構成ファイルを指定するには  
@@ -143,7 +144,7 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  

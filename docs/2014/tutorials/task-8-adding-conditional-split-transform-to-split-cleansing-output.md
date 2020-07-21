@@ -1,5 +1,5 @@
 ---
-title: タスク 8:クレンジングの出力を分割する変換を分割する条件を追加する |Microsoft Docs
+title: 'タスク 8: 条件分割変換を追加してクレンジング出力を分割する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,42 +9,41 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006342"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>タスク 8:条件分割変換を追加してクレンジング出力を分割する
-  この変換では、データ フローに条件分割変換を追加します。 条件分割変換では、データの内容に応じて別の出力に行をルートできます。 このチュートリアルでは、使用して、**レコードの状態**DQS クレンジング変換からの出力列です。 このチュートリアルでは、適切なレコードまたは修正されたレコードのみを MDS サーバーにアップロードします。 場合を確認するため、**レコードの状態**は**修正**または**Corrected**とレコードを MDS にアップロードする前に、レコードを結合します。  
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>タスク 8: 条件分割変換を追加してクレンジング出力を分割する
+  この変換では、データ フローに条件分割変換を追加します。 条件分割変換では、データの内容に応じて別の出力に行をルートできます。 このチュートリアルでは、DQS クレンジング変換の [**レコードの状態**] 出力列を使用します。 このチュートリアルでは、適切なレコードまたは修正されたレコードのみを MDS サーバーにアップロードします。 そのため、レコードの**状態**が**適切**であるか、**修正**されたかを確認し、レコードを MDS にアップロードする前にレコードを結合します。  
   
-1.  ドラッグ アンド ドロップ**条件分割変換**から**共通**セクション、 **SSIS ツールボックス**を**データ フロー** ] タブの [ **仕入先データ クレンジング**します。  
+1.  **SSIS ツールボックス**の [**共通**] セクションから [**仕入先データのクレンジング**] の [**データフロー** ] タブに**条件分割変換**をドラッグアンドドロップします。  
   
-2.  右クリックして**条件分割**、 をクリック**の名前を変更**します。 型**Pick Correct and Corrected Records**キーを押します**ENTER**します。  
+2.  [**条件分割**] を右クリックし、[**名前の変更**] をクリックします。 「**正しいレコードと修正**されたレコードを選択する **」と入力**し、enter キーを押します。  
   
-3.  接続**Cleanse Supplier Data**と**Pick Correct and Corrected Records**青色コネクタを使用します。  
+3.  Blue コネクタを使用して、 **Supplier データをクレンジング**し、**正しいレコードと修正**されたレコードを選択します。  
   
-     ![Cleanse Supplier Data に正しいと修正済みの選択](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Cleanse Supplier データが正しいと修正済みの選択")  
+     ![仕入先データのクレンジング-適切な & 修正 > 選択](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "仕入先データのクレンジング -> 適切なデータと修正済みのデータの選択")  
   
-4.  ダブルクリック**Pick Correct and Corrected Records**で、**データ フロー**タブ。  
+4.  [**データフロー** ] タブで、[**適切なレコードを選択して修正し**ました] をダブルクリックします。  
   
-5.  変更、**既定の出力名**画面の下部にある**修正**します。  
+5.  画面の下部にある**既定の出力名**を [**修正**] に変更します。  
   
-6.  展開**列**で、**左上ペイン**します。  
+6.  左上のペインで [**列** **]** を展開します。  
   
      ![条件分割変換エディター](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-02.jpg "条件分割変換エディター")  
   
-7.  ドラッグ アンド ドロップ**レコードの状態**を**条件**列。  
+7.  [レコードの**状態**] を [**条件**] 列にドラッグアンドドロップします。  
   
-8.  型 **「修正済み」= =** 横に **[レコードの状態]** の**条件**列。  
+8.  [**条件**] 列の **[レコードの状態]** の横に「 **= = "修正済み"」** と入力します。  
   
-9. クリックして**ケース 1**で、**出力名 列**、名を変更して、**修正済み**します。  
+9. [**出力名] 列**の**ケース 1**をクリックし、名前を "**修正**済み" に変更します。  
   
-10. クリックして**OK**を閉じる、**条件分割変換エディター**  ダイアログ ボックス。  
+10. [ **OK** ] をクリックして [**条件分割変換エディター** ] ダイアログボックスを閉じます。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 9:結合を追加してレコードと修正のレコードを結合するすべての変換](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [タスク 9: 全体結合変換を追加して適切なレコードと修正済みレコードを結合する](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

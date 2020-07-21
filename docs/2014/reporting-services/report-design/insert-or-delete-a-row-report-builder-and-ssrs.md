@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd9f92b0128bd6280654885f79f8231570f721de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105627"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>行の挿入または削除 (レポート ビルダーおよび SSRS)
@@ -29,13 +29,13 @@ ms.locfileid: "66105627"
   
 -   [デザイン] ビューで、Tablix データ領域の左上隅をクリックすると、その上部および横に列ハンドルと行ハンドルが表示されます。  
   
-     データ領域部分についての詳細については、次を参照してください。[一覧&#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)します。  
+     データ領域の領域の詳細については、「 [&#40;レポートビルダーと SSRS&#41;の一覧](tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="to-insert-a-row-in-a-selected-data-region"></a>選択したデータ領域に行を挿入するには  
   
 -   行の挿入位置にある行ハンドルを右クリックし、 **[行を挿入]** をクリックして、 **[上]** または **[下]** をクリックします。  
   
-     \- または -  
+     \- - または -  
   
 -   行の挿入位置にあるデータ領域のセルを右クリックし、 **[行を挿入]** をクリックし、 **[上]** または **[下]** をクリックします。  
   

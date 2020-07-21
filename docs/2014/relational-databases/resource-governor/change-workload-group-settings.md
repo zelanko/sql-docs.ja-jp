@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 579aad71d32a629d75f1eecd76e7dacfe32d94f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066518"
 ---
 # <a name="change-workload-group-settings"></a>ワークロード グループの設定の変更
   ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。  
@@ -29,7 +28,7 @@ ms.locfileid: "63199915"
   
 ## <a name="before-you-begin"></a>はじめに  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  既定のワークロード グループとユーザー定義のワークロード グループの設定を変更することができます。  
   
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,10 +37,10 @@ ms.locfileid: "63199915"
   
  インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるメモリ ワークスペースの使用が許可されます。 この特別な処理はリソース ガバナーでサポートされていますが、最初のメモリ許可も追加のメモリ許可も、ワークロード グループ設定およびリソース プール設定によって制限されます。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ワークロード グループの設定を変更するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
+##  <a name="change-workload-group-settings-using-sql-server-management-studio"></a><a name="ChgWGProp"></a> SQL Server Management Studio を使用してワークロード グループの設定を変更する  
  **ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  オブジェクト エクスプローラーで、変更するワークロード グループを含む **ワークロード グループ** フォルダーまで **[管理]** ノードを再帰的に展開します。  
@@ -54,7 +53,7 @@ ms.locfileid: "63199915"
   
 5.  変更を保存するには、 **[OK]** をクリックします。  
   
-##  <a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
+##  <a name="change-workload-group-settings-using-transact-sql"></a><a name="ChgWGTSQL"></a> Transact-SQL を使用してワークロード グループの設定を変更する  
  **Transact-SQL を使用してワークロード グループの設定を変更するには**  
   
 1.  変更するプロパティ値を指定する ALTER WORKLOAD GROUP ステートメントを実行します。  

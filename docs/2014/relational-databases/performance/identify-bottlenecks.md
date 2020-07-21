@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cf0299f4ba1eeb3f60ad2f24737b136a482a6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066840"
 ---
 # <a name="identify-bottlenecks"></a>ボトルネックの特定
   共有リソースへの同時アクセスは、ボトルネックの原因になります。 一般に、ボトルネックはあらゆるソフトウェア システムに存在し、避けられないものです。 ただし、共有リソースに対する過剰な要求により応答時間が遅くなる場合は、これを特定してチューニングする必要があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "63150897"
 ## <a name="analyzing-bottlenecks"></a>ボトルネックの分析  
  さまざまなイベントに対して過剰な要求が行われている期間は、ボトルネックをチューニングできる指標になります。  
   
- 例 :  
+ 次に例を示します。  
   
 -   他のいくつかのコンポーネントにより、このコンポーネントの負荷が低下しているため、負荷を完了するまでの時間がかかっている可能性があります。  
   
@@ -65,6 +64,6 @@ ms.locfileid: "63150897"
  [ディスクの使用量の監視](../performance-monitor/monitor-disk-usage.md)   
  [メモリ使用率の監視](../performance-monitor/monitor-memory-usage.md)   
  [SQL Server: General Statistics オブジェクト](../performance-monitor/sql-server-general-statistics-object.md)   
- [SQL Server:Locks オブジェクト](../performance-monitor/sql-server-locks-object.md)  
+ [SQL Server の Locks オブジェクト](../performance-monitor/sql-server-locks-object.md)  
   
   

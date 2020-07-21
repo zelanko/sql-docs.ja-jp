@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c07fc8eb400ddabe9a1eb7733722c247b7b58f0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771448"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438789"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
   新しい Oracle CDC Windows Service の作成と編集は CDC Service 構成コンソールで行います。  
@@ -36,7 +35,7 @@ ms.locfileid: "62771448"
 > [!NOTE]  
 > このオプションは、サービスを編集するときは使用できません。 既に存在する Windows サービスの名前を変更することはできません。  
   
- **[説明]**  
+ **説明**  
  サービスを識別するのに役立つ説明を入力します。  
   
  **[サービス アカウント]**  
@@ -50,7 +49,7 @@ ms.locfileid: "62771448"
   
      Windows Vista または Windows Server 2008 では、既定のサービス アカウントは NETWORK SERVICE アカウントです。  
   
-     Windows 7 および Windows Server 2008 R2 以降では、既定のサービス アカウントは NT Service\\<サービス名> です。  
+     Windows 7 および Windows Server 2008 R2 以降では、既定のサービス アカウントは NT Service\\<service-name> です。  
   
      これらのアカウントにはパスワードが不要なため、これらのアカウントを使用すると、パスワードを使用せずに作業を行うことができます。 さらにこれらのアカウントは、Oracle CDC Service の実行に必要な権限のみを提供します。  
   
@@ -58,8 +57,8 @@ ms.locfileid: "62771448"
   
  **[サーバー名]** : 接続先となる対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します (例: **\\\\<コンピューター名>\\<インスタンス名>** )。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
- **[認証]**  
- 次のいずれかを選択します。  
+ **認証**  
+ 次のいずれかを選択してください。  
   
 -   **[Windows 認証]** :このオプションを選択した場合、Oracle CDC Service はサービス アカウント ID を使用して対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが異なるコンピューターで実行されている場合、Windows 認証をドメイン アカウントと共に使用する必要があります。  
   

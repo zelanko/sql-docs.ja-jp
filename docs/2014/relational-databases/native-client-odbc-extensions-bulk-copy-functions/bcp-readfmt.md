@@ -1,5 +1,5 @@
 ---
-title: bcp_readfmt | Microsoft Docs
+title: bcp_readfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,16 @@ topic_type:
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55800012b84cf33908d9feddfdac63d85536e97d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019400"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
   指定されたフォーマット ファイルからデータ ファイル形式の定義を読み取ります。  
   
 ## <a name="syntax"></a>構文  
@@ -52,17 +51,17 @@ szFormatFile
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- 後`bcp_readfmt`形式の値を読み取り、適切な呼び出し[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)します。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
+## <a name="remarks"></a>Remarks  
+ は、 `bcp_readfmt` 書式設定値を読み取った後、 [bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)に対する適切な呼び出しを行います。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
   
- フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)します。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)します。  
+ フォーマットファイルを永続化するには、 [bcp_writefmt](bcp-writefmt.md)を呼び出します。 の呼び出しで `bcp_readfmt` は、保存された形式を参照できます。 詳細については、「 [bcp_init](bcp-init.md)」を参照してください。  
   
- または、一括コピー ユーティリティ (**bcp**) で参照できるファイルにユーザー定義のデータ形式を保存できます`bcp_readfmt`します。 詳細については、 **bcp**ユーティリティと構造の**bcp**データ形式のファイルを参照してください[一括インポートとエクスポートのデータ&#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)します。  
+ また、一括コピーユーティリティ (**bcp**) では、で参照できるファイルにユーザー定義データ形式を保存することもでき `bcp_readfmt` ます。 **Bcp**ユーティリティと**bcp**データフォーマットファイルの構造の詳細については、「[データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](../import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
   
- `BCPDELAYREADFMT`の値、 *eOption*パラメーターの[bcp_control](bcp-control.md) bcp_readfmt の動作を変更します。  
+ `BCPDELAYREADFMT` [Bcp_control](bcp-control.md)の*eOption*パラメーターの値によって、bcp_readfmt の動作が変更されます。  
   
 > [!NOTE]  
->  4\.2 以降のバージョンによって、フォーマット ファイルが生成される必要がありますが、 **bcp**ユーティリティ。  
+>  フォーマットファイルは、 **bcp**ユーティリティのバージョン4.2 以降で作成されている必要があります。  
   
 ## <a name="example"></a>例  
   

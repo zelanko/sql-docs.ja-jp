@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースへのオンライン モードでの接続 |Microsoft Docs
+title: オンラインモードでの Analysis Services データベースへの接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520bf86abe448b444c653f61849640f0b1a7789f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076569"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536974"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Analysis Services データベースへのオンライン モードでの接続
-  既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに直接接続すると、そのデータベース内のオブジェクトを直接変更できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに直接接続すると、オブジェクトに対する変更処理が直ちに行われ、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内に作成されません。  
+  既存のデータベースに直接接続 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] し、そのデータベース内のオブジェクトを直接変更できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに直接接続すると、オブジェクトに対する変更処理が直ちに行われ、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内に作成されません。  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>SQL Server データ ツールを使用して Analysis Services データベースに直接接続するには  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66076569"
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のオブジェクトを直接編集できるようになりました。  
   
 ## <a name="see-also"></a>参照  
- [開発段階における Analysis Services プロジェクトおよびデータベースの操作](work-with-analysis-services-projects-and-databases-in-development.md)   
- [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [開発段階での Analysis Services プロジェクトとデータベースの操作](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

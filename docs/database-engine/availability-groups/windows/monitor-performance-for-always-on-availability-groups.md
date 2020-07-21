@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897347"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 可用性グループのパフォーマンス面は、ミッション クリティカルなデータベースに対するサービス レベル アグリーメント (SLA) を維持する上で重要です。 可用性グループがセカンダリ レプリカにログを配布する方法を理解することで、可用性実装の回復時刻の目標 (RTO) および回復ポイントの目標 (RPO) の推定、ならびにパフォーマンスに問題がある可用性グループまたはレプリカにおけるボトルネックの特定が容易になります。 この記事では、同期プロセスについて説明し、主要なメトリックの計算方法を示すと共に、一般的なパフォーマンス トラブルシューティング シナリオへのリンクをいくつか紹介します。  
    
 ##  <a name="data-synchronization-process"></a>データ同期プロセス  
@@ -44,7 +44,7 @@ ms.locfileid: "68014680"
 |||||  
 |-|-|-|-|  
 |**Level**|**ゲート数**|**メッセージ数**|**有用なメトリック**|  
-|[Transport]|可用性レプリカごとに 1 つ|8192|拡張イベント **database_transport_flow_control_action**|  
+|トランスポート|可用性レプリカごとに 1 つ|8192|拡張イベント **database_transport_flow_control_action**|  
 |データベース|可用性データベースごとに 1 つ|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 拡張イベント **hadron_database_flow_control_action**|  
   
  いずれかのゲートのメッセージしきい値に達すると、ログ メッセージは特定のレプリカ、または特定のデータベースに送信されなくなります。 送信するメッセージに対して確認応答メッセージが受信され、結果として送信メッセージの数がしきい値を下回ると、メッセージを送信できるようになります。  
@@ -312,7 +312,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO と RPO の監視  
- このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
+ このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
   
  [フェールオーバー時間 (RTO) の推定](#estimating-failover-time-rto) および[データ損失の可能性 (RPO) の推定](#estimating-potential-data-loss-rpo) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット "**データベース レプリカ状態**" の中でパフォーマンス メトリックとして便利に提供されています (「[SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
   
@@ -436,19 +436,19 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
  評価結果を検査するために、ジョブの履歴を表示することができます。 評価エラーは、イベント ID 34052 で Windows アプリケーション ログ (イベント ビューアー内) にも記録されます。 また、ポリシー エラー発生時にアラートを送信するように SQL Server エージェントを構成することもできます。 詳細については、「[ポリシー管理者にポリシー エラーを通知する警告の構成](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)」を参照してください。  
   
-##  <a name="BKMK_SCENARIOS"></a> パフォーマンスのトラブルシューティング シナリオ  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> パフォーマンスのトラブルシューティング シナリオ  
  次の表に、一般的なパフォーマンスに関連するトラブルシューティング シナリオを示します。  
   
-|シナリオ|[説明]|  
+|シナリオ|説明|  
 |--------------|-----------------|  
-|[トラブルシューティング: 可用性グループ接続の超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
-|[トラブルシューティング: 可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
-|[トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
+|[トラブルシューティング:可用性グループ接続の超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
+|[トラブルシューティング:可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
+|[トラブルシューティング:プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
   
-##  <a name="BKMK_XEVENTS"></a> 有用な拡張イベント  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> 有用な拡張イベント  
  **同期中の**状態にあるレプリカのトラブルシューティングを行う場合は、次の拡張イベントは便利です。  
   
-|イベント名|カテゴリ|Channel|可用性レプリカ|  
+|イベント名|カテゴリ|チャネル|可用性レプリカ|  
 |----------------|--------------|-------------|--------------------------|  
 |redo_caught_up|トランザクション|デバッグ|セカンダリ|  
 |redo_worker_entry|トランザクション|デバッグ|セカンダリ|  

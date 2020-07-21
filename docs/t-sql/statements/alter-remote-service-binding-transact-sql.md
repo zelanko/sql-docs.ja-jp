@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50d11dd143e4cb90a48100e6275aa0c3d8eb02ab
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927223"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381166"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   リモート サービス バインドに関連付けられているユーザーの変更や、バインドに関する匿名認証の設定の変更を行います。  
   
@@ -35,14 +35,17 @@ ms.locfileid: "67927223"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *binding_name*  
  変更するリモート サービス バインドの名前です。 サーバー名、データベース名、スキーマ名は指定できません。  
   
@@ -52,7 +55,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  リモート サービスと通信するときに匿名認証を使用するかどうかを指定します。 ANONYMOUS = ON の場合は、匿名認証が使用され、ローカル ユーザーの資格情報はリモート サービスに転送されません。 ANONYMOUS = OFF の場合は、ユーザーの資格情報が転送されます。 この句を指定しない場合、既定値は OFF になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *user_name* に関連付けられている証明の公開キーは、リモート サービスに送信されるメッセージの認証とセッション キーの暗号化に使用されます。その後、暗号化されたセッション キーを使用して、メッセージ交換が暗号化されます。 *user_name* の証明は、リモート サービスをホストするデータベースに格納されているログインの証明と対応している必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -62,7 +65,7 @@ ALTER REMOTE SERVICE BINDING binding_name
   
  リモート サービス バインドの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、リモート サービス バインド `APBinding` を変更し、アカウント `SecurityAccount` からの証明を使用してメッセージを暗号化します。  
   
 ```  

@@ -1,6 +1,6 @@
 ---
-title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 'sql: overflow フィールド (SQLXML)'
+description: 'Sql: overflow-field 注釈を使用して、XML ドキュメントからすべての未使用データを受け取るオーバーフロー列として列を識別する方法について説明します。'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,23 +15,24 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c80f2374b9d7cbbbe00b1b3cfe8202e382bb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724699"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>注釈の解釈 - sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列を使用して、スキーマで指定、 **sql:overflow-フィールド**注釈。 オーバーフロー列は複数指定することもできます。  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列は、 **sql: overflow-field**注釈を使用してスキーマで指定されます。 オーバーフロー列は複数指定することもできます。  
   
- 存在する XML ノード (要素または属性) されるたびに、 **sql:overflow-フィールド**定義されている注釈がスコープに入った、オーバーフロー列がアクティブになり、未使用データを受信します。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
+ **Sql: overflow-field**注釈が定義されている XML ノード (要素または属性) がスコープ内に入るたびに、オーバーフロー列がアクティブになり、未使用データが受信されます。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
   
- オーバーフロー列にデータを保存すると XML 一括読み込みも格納、タグと親要素の終了タグを**sql:overflow-フィールド**が定義されています。  
+ データはオーバーフロー列に格納されるため、XML 一括読み込みでは、 **sql: overflow フィールド**が定義されている親要素の開始タグと終了タグも格納されます。  
   
- たとえば、次のスキーマについて説明します、 **\<顧客 >** と **\<CustOrder >** 要素。 これらの要素それぞれに、オーバーフロー列が指定されています。  
+ たとえば、次のスキーマでは、要素と要素が記述されて **\<Customers>** **\<CustOrder>** います。 これらの要素それぞれに、オーバーフロー列が指定されています。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,15 +76,15 @@ ms.locfileid: "67902228"
 </xsd:schema>  
 ```  
   
- スキーマで、 **\<顧客 >** 要素は Cust テーブルにマップし、 **\<順序 >** 要素は CustOrder テーブルにマップされます。  
+ スキーマでは、 **\<Customer>** 要素は Cust テーブルにマップされ、 **\<Order>** 要素は custorder テーブルにマップされます。  
   
- 両方の **\<顧客 >** と **\<順序 >** 要素は、オーバーフロー列を識別します。 したがって、XML 一括読み込みを保存します未使用のすべての子の要素と属性、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素と、未使用の子要素と、の属性をすべて **\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
+ 要素と要素は、どちらも **\<Customer>** **\<Order>** オーバーフロー列を識別します。 したがって、XML 一括読み込みでは、すべての未使用の子要素と要素の属性が、 **\<Customer>** Cust テーブルのオーバーフロー列と、 **\<Order>** custorder テーブルのオーバーフロー列にある要素のすべての未使用の子要素と属性に保存されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
 1.  この例のスキーマを SampleSchema.xml として保存します。  
   
-2.  これらのテーブルを作成します。  
+2.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Cust (  

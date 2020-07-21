@@ -17,18 +17,18 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20e082110f771f0c1525369b0f778fb0df6e6b3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86ec4ba1a3dce9ec818c9756261d19a775d3a1da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003709"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   文字列の右端から指定された数の文字を返します。  
   
@@ -36,13 +36,16 @@ ms.locfileid: "68095395"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 RIGHT ( character_expression , integer_expression )  
 ```  
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には、定数、変数、または列を使用できます。 *character_expression* には、**text** または **ntext** を除く任意のデータ型 (暗黙的に **varchar** または **nvarchar** に変換できるデータ型) を使用できます。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用して *character_expression* を明示的に変換します。  
+ 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* には、**text** または **ntext** を除く任意のデータ型 (暗黙的に **varchar** または **nvarchar** に変換できるデータ型) を使用できます。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用して *character_expression* を明示的に変換します。  
+   
+> [!NOTE]  
+> *string_expression* の型が **binary** か **varbinary** の場合、RIGHT では、**varchar** への暗黙的変換が実行され、そのため、バイナリ入力は保持されません。  
   
  *integer_expression*  
  返される *character_expression* の文字数を指定する正の整数です。 *integer_expression* が負の場合、エラーが返されます。 *integer_expression* が **bigint** 型で、値が大きい場合、*character_expression* には **varchar(max)** などのラージ データ型を使用する必要があります。  
@@ -55,7 +58,7 @@ RIGHT ( character_expression , integer_expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  SC の照合順序を使用する場合、RIGHT 関数では、UTF-16 のサロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-right-with-a-column"></a>A:列を指定して RIGHT を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の各担当者の名前の右端から 5 文字が返されます。  
@@ -82,7 +85,7 @@ Rob
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-right-with-a-column"></a>B. 列を指定して RIGHT を使用する  
  次の例では、`DimEmployee` テーブル内の各姓の右端から 5 文字が返されます。  
@@ -110,9 +113,7 @@ lters
  次の例では、`RIGHT` を使用して `abcdefg` という文字列の右端の 2 文字を返します。  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;  
+SELECT RIGHT('abcdefg', 2); 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

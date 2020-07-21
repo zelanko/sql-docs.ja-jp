@@ -1,5 +1,5 @@
 ---
-title: ディメンション オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Dimension オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Dimension object [ADO MD], members
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 29f5b7e001fe764c026841da11895a5bc1881b0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938523"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764293"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [Description プロパティ](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
- [Hierarchies コレクション](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+ [階層のコレクション](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
   
  [Name プロパティ](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
@@ -37,5 +37,5 @@ ms.locfileid: "67938523"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

@@ -1,28 +1,28 @@
 ---
-title: Azure Kubernetes Services (AKS) を使用して Kubernetes に SQL Server コンテナーを配置する
+title: Azure Kubernetes Services (AKS) を使用して SQL Server コンテナーを配置する
 description: このチュートリアルでは、Azure Kubernetes Service で Kubernetes を使用して SQL Server 高可用性ソリューションを配置する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 2ae299553c700de7f22976917fa8556f93dbe61b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032051"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902316"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes Services (AKS) を使用して Kubernetes に SQL Server コンテナーを配置する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 高可用性 (HA) のための永続ストレージを使用して、Azure Kubernetes Service (AKS) の Kubernetes で SQL Server インスタンスを構成する方法について説明します。 このソリューションでは回復性が提供されます。 SQL Server インスタンスで障害が発生した場合、Kubernetes によって新しいポッドに自動的に再作成されます。 Kubernetes では、ノード障害に対する回復性も提供されます。
 
-このチュートリアルでは、AKS 上のコンテナーに高可用性 SQL Server インスタンスを構成する方法について説明します。 [SQL Server コンテナー用の Always On 可用性グループ](sql-server-ag-kubernetes.md)を作成することもできます。 2 つの異なる Kubernetes ソリューションを比較するには、「[SQL Server コンテナーの高可用性](sql-server-linux-container-ha-overview.md)」を参照してください。
+このチュートリアルでは、AKS 上のコンテナーに高可用性 SQL Server インスタンスを構成する方法について説明します。
 
 > [!div class="checklist"]
 > * SA パスワードを作成する
@@ -47,12 +47,12 @@ Kubernetes 1.6 以降では、[ストレージ クラス](https://kubernetes.io/
 
 ![Kubernetes SQL Server クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * **Kubernetes クラスター**
    - このチュートリアルでは、Kubernetes クラスターが必要です。 この手順では、[kubectl](https://kubernetes.io/docs/user-guide/kubectl/) を使用してクラスターを管理します。 
 
-   - `kubectl` を使って AKS に Kubernetes クラスターを作成して接続する方法については、[Azure Container Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)に関する記事をご覧ください。 
+   - `kubectl` を使って AKS に単一ノード Kubernetes クラスターを作成して接続する方法については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)に関する記事をご覧ください。 
 
    >[!NOTE]
    >ノード障害から保護するため、Kubernetes クラスターには複数のノードが必要です。
@@ -160,12 +160,15 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 1. 配置を記述するマニフェスト (YAML ファイル) を作成します。 次の例では、SQL Server コンテナー イメージに基づくコンテナーを含む配置が記述されています。
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:
@@ -182,7 +185,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: MSSQL_SA_PASSWORD
+           - name: SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -250,7 +253,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
    ![get pod コマンドのスクリーンショット](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
-   上の図では、ポッドの状態は `Running` です。 この状態は、コンテナーの準備ができていることを示します。 これには数分かかることがあります。
+   上の図では、ポッドの状態は `Running` です。 この状態は、コンテナーの準備ができていることを示します。 この処理には数分かかることがあります。
 
    >[!NOTE]
    >配置が作成された後、ポッドが表示されるまでに数分かかることがあります。 遅延は、クラスターによって Docker Hub から [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) イメージがプルされるためです。 イメージが初めてプルされた後の配置は、既にイメージがキャッシュされているノードに対するものの場合は、高速になる可能性があります。 
@@ -315,7 +318,7 @@ Kubernetes クラスターで、[永続ボリューム](https://kubernetes.io/do
 
 Kubernetes では、ポッドが自動的に再作成されて SQL Server インスタンスが復旧され、永続ストレージに接続されます。 新しいポッドが配置されたことを確認するには、`kubectl get pods` を使います。 新しいコンテナーの IP アドレスが同じであることを確認するには、`kubectl get services` を使います。 
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
 
 このチュートリアルでは、高可用性を実現するために SQL Server コンテナーを Kubernetes クラスターに配置する方法を学習しました。 
 
@@ -326,7 +329,7 @@ Kubernetes では、ポッドが自動的に再作成されて SQL Server イン
 > * SQL Server Management Studio (SSMS) と接続する
 > * 障害と復旧を検証する
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 >[Kubernetes の概要](https://docs.microsoft.com/azure/aks/intro-kubernetes)

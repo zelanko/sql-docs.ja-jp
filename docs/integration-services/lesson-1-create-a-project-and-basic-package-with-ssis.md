@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 27af17bfd3b59d119bbe4d64dd52840c90e88a0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 662fcb31c7a633be5186f93943af318316e7ff8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112320"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900965"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1:SSIS によるプロジェクトと基本パッケージの作成
 
@@ -27,7 +27,7 @@ ms.locfileid: "68112320"
   
 パッケージを作成する前に、ソース データの形式と変換先データの形式を理解する必要があります。 理解することで、ソース データを変換先にマップするための変換を定義できます。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルでは、Microsoft SQL Server Data Tools、一連のサンプル パッケージ、サンプル データベースを使用します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "68112320"
   
 * このチュートリアルのレッスン パッケージをすべてダウンロードするには:
 
-    1.  [Integration Services チュートリアル ファイル](https://www.microsoft.com/en-us/download/details.aspx?id=56827)のページに移動します。
+    1.  [Integration Services チュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)のページに移動します。
 
     2.  **[ダウンロード]** ボタンを選択します。
 
@@ -50,7 +50,8 @@ ms.locfileid: "68112320"
   
 SampleCurrencyData.txt ファイルのソース データの例:  
   
-<pre>1.00070049USD9/3/05 0:001.001201442  
+```
+1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
 1.00020004USD9/5/05 0:001.001201442  
 1.00020004USD9/6/05 0:001  
@@ -59,7 +60,8 @@ SampleCurrencyData.txt ファイルのソース データの例:
 1.00070049USD9/9/05 0:001.001502253  
 1.00070049USD9/10/05 0:000.99990001  
 1.00020004USD9/11/05 0:001.001101211  
-1.00020004USD9/12/05 0:000.99970009</pre>  
+1.00020004USD9/12/05 0:000.99970009
+```
   
 フラット ファイル ソース データを操作する前に、フラット ファイル接続マネージャーがフラット ファイル データをどのように解釈するのかを理解しておく必要があります。 フラット ファイル ソースが Unicode の場合、すべての列が [DT_WSTR] として定義され、既定の列幅 50 が設定されます。 フラット ファイル ソースが ANSI エンコードの場合は、列が [DT_STR] として定義され、列幅が既定の 50 になります。 これらの既定値を変更し、自分のデータにより適した文字列型にしなければならない場合があります。 変換先のデータ型を見て、フラット ファイル接続マネージャー内でその型を選択する必要があります。  
   
@@ -68,41 +70,41 @@ SampleCurrencyData.txt ファイルのソース データの例:
   
 |列名|データ型|参照テーブル|参照列|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|なし|なし|  
+|AverageRate|float|なし|なし|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|なし|なし|  
+|EndOfDayRate|float|なし|なし|  
   
 ## <a name="map-the-source-data-to-the-destination"></a>変換先にソース データをマップする  
 変換元と変換先のデータ形式を調べてみると、**CurrencyKey** と **DateKey** の値については参照が必要であることがわかります。 これらの参照を実行する変換では、**DimCurrency** ディメンション テーブルと **DimDate** ディメンション テーブルの代替キーを使用することにより、それらの値を取得します。  
   
 |フラット ファイルの列|テーブル名|列名|データ型|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|FLOAT|  
+|0|FactCurrencyRate|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrencyRate|EndOfDayRate|FLOAT|  
+|3|FactCurrencyRate|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
 -   [ステップ 1:新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [ステップ 2:フラット ファイル接続マネージャーの追加と構成](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [手順 2:フラット ファイル接続マネージャーの追加と構成](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [ステップ 3:OLE DB 接続マネージャーを追加し、構成する](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [ステップ 4:データ フロー タスクをパッケージに追加する](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [手順 4:データ フロー タスクをパッケージに追加する](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [ステップ 5:フラット ファイルの変換元を追加し、構成する](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [手順 5:フラット ファイルの変換元を追加し、構成する](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [ステップ 6:参照変換を追加し、構成する](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [手順 6:参照変換を追加し、構成する](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [ステップ 7:OLE DB 変換先を追加し、構成する](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [手順 7:OLE DB 変換先を追加し、構成する](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [ステップ 8:レッスン 1 パッケージに注釈を付け、書式を設定する](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [手順 8: レッスン 1 パッケージに注釈を付け、書式を設定する](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [ステップ 9:レッスン 1 パッケージをテストする](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [手順 9:レッスン 1 パッケージをテストする](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
 [ステップ 1:新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  

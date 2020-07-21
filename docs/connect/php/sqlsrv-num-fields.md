@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields |Microsoft Docs
+title: sqlsrv_num_fields | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a1155a01de68a9c4d45fc2c7e4e6660c581c3bb7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992666"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926429"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-アクティブな結果セット内のフィールド数を取得します。 この関数は、実行前または実行後に、任意の準備されたステートメントで呼び出すことができます。  
+アクティブな結果セット内のフィールド数を取得します。 任意の準備されたステートメントに対して、実行前または実行後に、この関数を呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   

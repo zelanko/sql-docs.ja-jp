@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 907dd855186236e05eb103fd771a28ff0bc916ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086567"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283555"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>レッスン 2 から 4:レッスン 2 で作成したチュートリアル パッケージのテスト
 
@@ -50,7 +50,7 @@ Foreach ループ コンテナーとフラット ファイル接続マネージ�
 ## <a name="go-to-next-lesson"></a>次のレッスンに進む  
 [レッスン 3:SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [プロジェクトとパッケージの実行](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 52cb1cb10fb3e55f91442e54f128db160622b770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82e21333bdd0f4be27f19ee19f43fd5f0abab309
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114593"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71285574"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -38,7 +38,7 @@ Excel ファイルに接続するために追加のファイルのダウンロ�
 > このデータ プロバイダーの接続オプションは、Excel が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
 **[Excel ファイル パス]**  
- Excel ファイルのパスとファイル名を指定します。 例:
+ Excel ファイルのパスとファイル名を指定します。 次に例を示します。
 -   ローカル コンピューター上の上のファイルの場合、**C:\\MyData.xlsx** です。
 -   ネットワーク共有上のファイルの場合、 **\\\\Sales\\Database\\Northwind.xlsx** です。
 

@@ -1,5 +1,5 @@
 ---
-title: ディメンションの順序の定義 |Microsoft Docs
+title: ディメンションの順序を定義する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cd5ea148e374c18c530ba0a15c80dbb23983020
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544584"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>ディメンションの順序の定義
   キューブまたはディメンションに属性の順序指定の拡張機能を追加して、属性のメンバーの順序付け方法を指定します。 メンバーは、属性の名前またはキー、あるいは、属性リレーションシップに基づいた別の属性の名前またはキーによって順序を指定できます。 既定では、名前によってメンバーの順序を指定します。 この拡張機能により、ディメンション内にある属性の `OrderBy` および `OrderByAttributeID` プロパティ設定が変更されます。  
@@ -35,7 +34,7 @@ ms.locfileid: "66076860"
 ## <a name="specifying-ordering"></a>順序の指定  
  **[属性の順序の指定]** の 2 ページ目で、ディメンションのすべての属性を順序付ける方法を指定します。  
   
- **[属性の並べ替え]** 列で、順序付けに使用する属性を変更できます。 一覧でメンバーの順序付けに使用する属性がない場合、一覧を下までスクロールを選び **\<新しい属性 ...> >** を開く、**列を選択して** ダイアログ ボックスで行うことができますディメンション テーブルに列を選択します。 **[列の選択]** ダイアログ ボックスを使用して列を選択すると、属性のメンバーを順序付ける追加の属性が作成されます。  
+ **[属性の並べ替え]** 列で、順序付けに使用する属性を変更できます。 メンバーの順序付けに使用する属性が一覧にない場合は、一覧を下にスクロールして [ **\<New attribute...>** **列の選択**] ダイアログボックスを開くと、ディメンションテーブルの列を選択できます。 **[列の選択]** ダイアログ ボックスを使用して列を選択すると、属性のメンバーを順序付ける追加の属性が作成されます。  
   
  **[条件]** 列で、 **[キー]** または **[名前]** のどちらによって属性のメンバーを順序付けるかを選択できます。  
   

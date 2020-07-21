@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f97fdcba1cfed8ca28c39afdec92275aa6ba5d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2dcc2f69223c4d4c3a700ade7d7b6da5417f3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732871"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 カーソルへの参照を含む、変数またはストアド プロシージャの OUTPUT パラメーターのデータ型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **cursor** 型の変数とパラメーターを参照できる操作は次のとおりです。
--   DECLARE *@local_variable* および SET *@local_variable* ステートメント。  
+-   DECLARE *\@local_variable* ステートメントと SET *\@local_variable* ステートメント。  
 -   OPEN、FETCH、CLOSE、DEALLOCATE cursor ステートメント。  
 -   ストアド プロシージャの出力パラメーター。  
 -   CURSOR_STATUS 関数。  

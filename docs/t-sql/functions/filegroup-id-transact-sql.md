@@ -19,17 +19,17 @@ helpviewer_keywords:
 - IDs [SQL Server], filegroups
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9902a85fbede75926bfbcb3dd48e19f622c19ea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: beb3e7ed1733bc3cb2f7a3c136de1168e3722df9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858440"
 ---
-# <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この館数は、指定されたファイル グループ名のファイル グループ識別 (ID) 番号を返します。  
   
@@ -42,16 +42,16 @@ FILEGROUP_ID ( 'filegroup_name' )
 ```  
   
 ## <a name="arguments"></a>引数  
-*filegroup_name* **sysname** 型の式。ファイル グループ ID `FILEGROUP_ID` を取得するファイル グループの名前を表します。  
+*filegroup_name***sysname** 型の式。ファイル グループ ID `FILEGROUP_ID` を取得するファイル グループの名前を表します。  
   
 ## <a name="return-types"></a>戻り値の型  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *filegroup_name* に対応する、 **名前** 内の列、 **sys.filegroups** カタログ ビューです。  
   
-## <a name="examples"></a>使用例  
-この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PRIMARY` という名前のファイル グループのファイル グループ ID を取得します。  
+## <a name="examples"></a>例  
+この例では、`PRIMARY` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という名前のファイル グループのファイル グループ ID を取得します。  
   
 ```  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  

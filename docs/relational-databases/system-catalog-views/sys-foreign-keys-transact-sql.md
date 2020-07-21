@@ -1,5 +1,5 @@
 ---
-title: sys.foreign_keys (TRANSACT-SQL) |Microsoft Docs
+title: foreign_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,38 +20,37 @@ ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 451addd3be6c6da4094eab54c962e23f95134de6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133891"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002310"
 ---
-# <a name="sysforeignkeys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="sysforeign_keys-transact-sql"></a>foreign_keys (Transact-sql)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  FOREIGN KEY 制約があるオブジェクトごとに 1 行が含まれています**sys.object.type** F. を =  
+  FOREIGN KEY 制約であるオブジェクトごとに1行の値を格納します。 **type** = F.  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**\<Columns inherited from sys.objects>**||このビューが継承する列の一覧については、「 [sys. objects &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**referenced_object_id**|**int**|参照されるオブジェクトの ID。|  
-|**key_index_id**|**int**|参照されるオブジェクト内のキー インデックスの ID。|  
-|**is_disabled**|**bit**|FOREIGN KEY 制約が無効です。|  
+|**key_index_id**|**int**|参照されたオブジェクト内のキーインデックスの ID。|  
+|**is_disabled**|**bit**|FOREIGN KEY 制約が無効になっています。|  
 |**is_not_for_replication**|**bit**|FOREIGN KEY 制約は、NOT FOR REPLICATION オプションを使用して作成されました。|  
-|**is_not_trusted**|**bit**|FOREIGN KEY 制約がシステムで検証されていません。|  
-|**delete_referential_action**|**tinyint**|削除が発生したときに FOREIGN KEY に対して宣言された参照操作。<br /><br /> 0 = 操作なし<br /><br /> 1 = 連鎖<br /><br /> 2 = NULL に設定<br /><br /> 3 = 既定値に設定|  
+|**is_not_trusted**|**bit**|外部キー制約がシステムによって検証されていません。|  
+|**delete_referential_action**|**tinyint**|削除が発生したときに、この外部キーに対して宣言された参照アクション。<br /><br /> 0 = 操作なし<br /><br /> 1 = Cascade<br /><br /> 2 = null に設定<br /><br /> 3 = 既定値に設定|  
 |**delete_referential_action_desc**|**nvarchar(60)**|削除が発生したときに FOREIGN KEY に対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
-|**update_referential_action**|**tinyint**|更新が発生したときに FOREIGN KEY に対して宣言された参照操作。<br /><br /> 0 = 操作なし<br /><br /> 1 = 連鎖<br /><br /> 2 = NULL に設定<br /><br /> 3 = 既定値に設定|  
-|**update_referential_action_desc**|**nvarchar(60)**|更新が発生したときに FOREIGN KEY に対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
-|**is_system_named**|**bit**|1 = システムによって生成された名前。<br /><br /> 0 = ユーザー指定の名前。|  
+|**update_referential_action**|**tinyint**|更新が発生したときに FOREIGN KEY に対して宣言された参照操作。<br /><br /> 0 = 操作なし<br /><br /> 1 = Cascade<br /><br /> 2 = null に設定<br /><br /> 3 = 既定値に設定|  
+|**update_referential_action_desc**|**nvarchar(60)**|更新が発生したときに、この外部キーに対して宣言された参照操作の説明。<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**is_system_named**|**bit**|1 = システムによって名前が生成されました。<br /><br /> 0 = ユーザーによって指定された名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [SQL Server システム カタログに対するクエリに関してよくあるご質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

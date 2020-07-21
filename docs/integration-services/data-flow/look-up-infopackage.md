@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6edecaf72b8644dbc70e438a1e9bb895d8bdc14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c5736704fd170c629dacdadb89cb3466a0180db
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941315"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298232"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
 
@@ -60,16 +60,16 @@ ms.locfileid: "67941315"
  **インフォパッケージ**  
  SAP Netweaver BW システムで定義された InfoPackage の名前を表示します。  
   
- **型**  
+ **Type**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |Trans.|トランザクション データ。|  
 |Attr.|属性データ。|  
 |テキスト|テキスト。|  
   
- **[説明]**  
+ **説明**  
  インフォパッケージの説明を表示します。  
   
  **インフォソース**  
@@ -81,7 +81,7 @@ ms.locfileid: "67941315"
  インフォパッケージの一覧が表示されたら、目的のインフォパッケージを選択します。変換先の関連するオプションに必要な値が設定されます。  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換先エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

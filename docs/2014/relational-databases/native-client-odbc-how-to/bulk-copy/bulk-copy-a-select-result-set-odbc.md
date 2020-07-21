@@ -1,5 +1,5 @@
 ---
-title: SELECT 結果セット (ODBC) の一括コピー |マイクロソフトのドキュメント
+title: SELECT 結果セットの一括コピー (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6fd6984768c38b998ee077e5ff9f5ac83d257d8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019081"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 結果セットの一括コピー (ODBC)
   このサンプルでは、一括コピー関数を使用して SELECT ステートメントの結果セットを一括コピーする方法を示します。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
@@ -35,24 +34,24 @@ ms.locfileid: "63225521"
   
 3.  SQL Server に接続します。  
   
-4.  呼び出す[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
+4.  [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して、次の情報を設定します。  
   
-    -   NULL を指定する、 *szTable*パラメーター。  
+    -   *Sztable*パラメーターには NULL を指定します。  
   
     -   結果セット データを受信するデータ ファイルの名前。  
   
     -   一括コピー エラー メッセージを受信するデータ ファイルの名前 (メッセージ ファイルが不要な場合は NULL を指定)。  
   
-    -   コピーの方向:DB_OUT します。  
+    -   コピーの方向 (DB_OUT)。  
   
-5.  呼び出す[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)eOption を BCPHINTS に設定し、SELECT ステートメントを含む SQLTCHAR 配列へのポインターを iValue に配置します。  
+5.  [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を呼び出し、EOPTION を BCPHINTS に設定し、SELECT ステートメントを含む sqltchar 配列へのポインターを ivalue に配置します。  
   
-6.  呼び出す[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
+6.  [Bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を呼び出して、一括コピー操作を実行します。  
   
- これらの手順を使用すると、ファイルはネイティブ形式で作成されます。 使用してデータ値を他のデータ型に変換できる[bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)します。 詳細については、次を参照してください。[一括コピー フォーマット ファイルを作成&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)します。  
+ これらの手順を使用すると、ファイルはネイティブ形式で作成されます。 [Bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を使用して、データ値を他のデータ型に変換できます。 詳細については、「 [&#40;ODBC&#41;の一括コピーフォーマットファイルの作成](create-a-bulk-copy-format-file-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -163,6 +162,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [一括コピーの SQL Server ODBC ドライバーの操作について&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [SQL Server ODBC ドライバーを使用した一括コピーの操作方法に関するトピック &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

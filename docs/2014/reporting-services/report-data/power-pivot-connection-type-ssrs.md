@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 接続の種類 (SSRS) |Microsoft Docs
+title: PowerPivot の接続の種類 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107187"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "79112148"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の PowerPivot ギャラリーにパブリッシュされた PowerPivot ブックからデータを取得することができます。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)を参照してください。  
+ このトピックの情報を使用して、データ ソースを構築してください。 詳細な手順については、「[データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;の追加と検証](add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  PowerPivot データ ソースは、SharePoint サイトの PowerPivot ギャラリーにパブリッシュされている必要があります。  
   
- レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 Excel 用 PowerPivot でこのクライアント ライブラリがインストールされているが、このアプリケーションがないコンピューターを使用している場合は、ダウンロードして、ページから ADOMD.NET をインストールする必要があります、 [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565)します。  
+ レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアントライブラリは PowerPivot for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用している場合は、 [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)から ADOMD.NET をダウンロードしてインストールする必要があります。  
   
 ## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
-## <a name="connection-string"></a>[接続文字列]  
- 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx します。  
+## <a name="connection-string"></a>接続文字列  
+ 接続文字列は、PowerPivot ギャラリーまたはその他のライブラリ (など) の SharePoint でパブリッシュされた PowerPivot http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxブックの URL です。  
   
 ## <a name="credentials"></a>[資格情報]  
- PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳しくは、「[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)に関する記事を参照してください。  
+ PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または「[レポートビルダーで資格情報を指定する](../specify-credentials-in-report-builder.md)」を参照してください。  
   
 ## <a name="queries"></a>クエリ  
  PowerPivot データ ソースに接続した後、MDX グラフィカル クエリを使用して、基となるデータ構造を参照および選択してクエリを作成します。 クエリを作成したら、それを実行して結果ペインにサンプル データを表示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "66107187"
 ## <a name="parameters"></a>パラメーター  
  フィルター ペインで、フィルターの **[パラメーター]** オプションを選択して、フィルターの選択に対応する使用可能な値を持つレポート パラメーターが自動的に作成されるようにします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  PowerPivot ギャラリーの PowerPivot ブックからレポート ビルダーを開いた場合、PowerPivot ブックのピボットテーブル、ピボットグラフ、スライサー、およびその他のレイアウト機能や分析機能は、レポートで再作成されません。 代わりに、PowerPivot ブック内のデータを参照する、あらかじめ構成されたデータ ソースが空のレポートに含まれます。 PowerPivot ブックに基づくレポートをデザインする場合、レポートで再作成するスライサー、フィルター、およびテーブルやグラフの数によっては、手間と時間がかかることがあります。 そのため、レポートでのデータの表示方法については、PowerPivot のデザインとは切り離して考えることをお勧めします。  
   
  PowerPivot ブック内のデータは大幅に圧縮されていますが、PowerPivot ブックから取得されたレポートのデータは圧縮されません。 クエリ デザイナーを使用してフィルターとパラメーターを指定し、レポートに必要なデータだけに制限します。  

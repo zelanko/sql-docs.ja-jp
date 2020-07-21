@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 374ca1c0b12c968a1beebd86e742263982dfa470
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040767"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>データベース ダイアグラムの名前変更 (Visual Database Tools)
   オブジェクト エクスプローラーでデータベース ダイアグラムの名前を変更できます。 データベースに対する ALTER 権限が必要です。  
@@ -39,7 +38,7 @@ ms.locfileid: "63228360"
   
      新しい名前のデータベース ダイアグラムが、オブジェクト エクスプローラーに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ダイアグラムの使用 (Visual Database Tools)](visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Indexes Append メソッドの例 (vc++) |Microsoft Docs
+title: Indexes Append メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Indexes Append method [ADOX], VC++ example
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23c6970dd503c15e0eb04d6d97bed15c5a90dc71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 77624629aeb68381729f891f74f57a980f71a589
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966076"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763873"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append メソッドの例 (VC++)
-次のコードでは、新しいインデックスを作成する方法を示します。 テーブル内の 2 つの列にインデックスがあります。  
+次のコードは、新しいインデックスを作成する方法を示しています。 インデックスは、テーブル内の2つの列にあります。  
   
 ```  
 // BeginCreateIndexCpp.cpp  
@@ -85,7 +85,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateIndexX...." << endl;  
+      cout << "Error occurred in CreateIndexX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

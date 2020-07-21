@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e755532e06d64e273408c7e81936a1c2d370697
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714729"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066407"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
   決定的関数は、一連の特定の入力値で呼び出され、かつデータベースの状態が同じ場合は、必ず同じ結果を返します。 非決定的関数は、アクセスするデータベースの状態が同じ場合でも、一連の特定の入力値で呼び出すたびに、異なる結果を返すことがあります。 たとえば、AVG 関数は、上記の制限を前提として常に同じ結果を返しますが、現在の datetime 値を返す GETDATE 関数によって返される結果は常に異なります。  
@@ -40,20 +39,20 @@ ms.locfileid: "62714729"
 ||||  
 |-|-|-|  
 |ABS|DATEDIFF|POWER|  
-|ACOS|[DAY]|RADIANS|  
-|ASIN|DEGREES|[ROUND]|  
+|ACOS|DAY|RADIANS|  
+|ASIN|DEGREES|ROUND|  
 |ATAN|EXP|SIGN|  
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
 |COS|LOG|TAN|  
-|COT|LOG10|[YEAR]|  
-|DATALENGTH|[MONTH]||  
+|COT|LOG10|YEAR|  
+|DATALENGTH|MONTH||  
 |[DATEADD]|NULLIF||  
   
  次の関数は必ず決定的関数になるとは限りませんが、決定的な方法で指定されている場合は、インデックス付きビューまたは計算列のインデックスで使用できます。  
   
-|関数|コメント|  
+|機能|説明|  
 |--------------|--------------|  
 |すべての集計関数|OVER 句および ORDER BY 句で指定されていない限り、集計関数はすべて決定的です。 集計関数の一覧については、「[集計関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)」を参照してください。|  
 |CAST|`datetime` 型、`smalldatetime` 型、または `sql_variant` 型と併用しない場合は決定的関数になります。|  

@@ -1,5 +1,5 @@
 ---
-title: インポート (SSAS) の概要 |Microsoft Docs
+title: インポートの概要 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3b2125fc-afc5-4d7a-82b8-9e1fdbc6b115
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dbf47c696b33e368b5b957d2d6fcf961abf417b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a59e64b51a1e700803a32d708e344832566085b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080516"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544184"
 ---
 # <a name="import-summary-ssas"></a>[インポートの概要] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データ インポート用に指定されているフィルターを表示できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

@@ -1,5 +1,5 @@
 ---
-title: 共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 共有データセットまたは埋め込みデータセットの作成 (レポート ビルダー) | Microsoft Docs
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1aeae63d9fdec1b7afb876364b2fc36714e72479
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500476"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081413"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
 埋め込みデータセットは、単一の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートで使用されます。 レポート サーバーの共有データセットはモバイルとページ分割があるタイプの、複数のレポートで使用できます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。  
@@ -116,7 +116,7 @@ ms.locfileid: "66500476"
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

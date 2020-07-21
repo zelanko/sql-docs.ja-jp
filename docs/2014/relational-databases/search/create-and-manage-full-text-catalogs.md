@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18efd79bc34beee94d4edc61e9165a986edba90b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997470"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
   フルテキスト カタログが、ファイル グループに属さない仮想オブジェクトとなりました。これは、フルテキスト インデックスのグループを指す論理的概念です。  
   
-##  <a name="creating"></a> フルテキスト カタログを作成します。  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>フルテキストカタログの作成  
   
 #### <a name="to-create-a-full-text-catalog"></a>フルテキスト カタログを作成するには  
   
@@ -42,12 +41,12 @@ ms.locfileid: "66011470"
   
   
   
-##  <a name="props"></a> フルテキスト カタログのプロパティを表示します。  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>フルテキストカタログのプロパティの表示  
  FULLTEXTCATALOGPROPERTY などの [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、フルテキスト インデックスに関連するさまざまなプロパティの値を取得するために使用できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  次の表は、フルテキスト カタログに関連しているプロパティを示しています。  
   
-|プロパティ|説明|関数|  
+|プロパティ|説明|機能|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|アクセントの区別の設定。|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|フルテキスト カタログがインポートされているかどうかを示します。|FULLTEXTCATALOGPROPERTY|  
@@ -60,7 +59,7 @@ ms.locfileid: "66011470"
   
   
   
-##  <a name="rebuildone"></a> フルテキスト カタログの再構築  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>フルテキストカタログの再構築  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>フルテキスト カタログを再構築するには  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66011470"
   
   
   
-##  <a name="rebuildall"></a> データベースのすべてのフルテキスト カタログを再構築  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>データベースのすべてのフルテキストカタログの再構築  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>データベースのフルテキスト カタログを再構築するには  
   
@@ -92,7 +91,7 @@ ms.locfileid: "66011470"
   
   
   
-##  <a name="removing"></a> データベースからフルテキスト カタログの削除  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>データベースからのフルテキストカタログの削除  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>データベースからフルテキスト カタログを削除するには  
   

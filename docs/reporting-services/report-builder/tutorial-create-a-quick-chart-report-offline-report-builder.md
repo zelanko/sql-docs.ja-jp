@@ -1,5 +1,6 @@
 ---
-title: 'チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:オフラインでのクイック グラフ レポートの作成 (レポート ビルダー) | Microsoft Docs
+description: このチュートリアルでは、レポート ビルダーで Reporting Services の改ページ調整されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを変更します。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67037963"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290740"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル: オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル:オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
 
-  このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]の改ページ調整されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
+  このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のページ分割されたレポートに円グラフを作成します。 次に、パーセンテージを追加し、円グラフを少し変更します。 
   
 このチュートリアルは 2 つの異なる方法で実行できます。 どちらの方法でも、次の図に示すような円グラフが作成されます。  
   
- ![レポート ビルダー クイック円グラフ](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "レポート ビルダー クイック円グラフ")  
+ ![レポート ビルダーのクイック円グラフ](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "レポート ビルダーのクイック円グラフ")  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  XML データを使用するか [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用するかにかかわらず、レポート ビルダーにアクセスできることが必要です。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、ネイティブ モードまたは SharePoint 統合モードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から起動するか、Microsoft ダウンロード センターから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をダウンロードできます。 詳細については、「 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。  
   
-##  <a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> このチュートリアルを実行する 2 つの方法  
   
 -   [XML データを使用して円グラフを作成する](#CreatePieChartXML)  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67037963"
   
  [XML データを使用して円グラフを作成する](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>このチュートリアル用のデータを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>このチュートリアル用のデータを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する  
  データを含むクエリをこのトピックからコピーし、ウィザードに貼り付けることができます。 SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 チュートリアルのデータセット クエリでは、リテラル データを使用します。ただし、クエリは、レポート データセットに必要なメタデータを返すように、SQL Server のインスタンスで処理される必要があります。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用する利点は、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の他のすべてのチュートリアルで同じ方法が使用されているため、他のチュートリアルを実行するときに既に手順がわかっていることです。  
@@ -50,13 +51,13 @@ ms.locfileid: "67037963"
   
  [データを含む SQL クエリを使用して円グラフを作成する](#CreatePieQueryData)  
   
-##  <a name="CreatePieChartXML"></a> XML データを使用して円グラフを作成する  
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a> XML データを使用して円グラフを作成する  
   
 1.  [Web ポータル、SharePoint 統合モードのレポート サーバー、またはコンピューターから、](../../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
-     ![レポート ビルダーの作業の開始](../../reporting-services/media/rb-getstarted.png "レポート ビルダーの作業の開始")  
+     ![レポート ビルダーの概要](../../reporting-services/media/rb-getstarted.png "レポート ビルダーの概要")  
   
      **[作業の開始]** ダイアログ ボックスが表示されない場合は、 **[ファイル]**  > **[新規]** の順にクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "67037963"
   
 11. (省略可) **[実行]** ボタン ( **!** ) をクリックして、グラフの基になるデータを確認します。  
   
-     ![レポート ビルダーのデザイン クエリ](../../reporting-services/report-builder/media/rb-designquery.png "レポート ビルダーのデザイン クエリ")  
+     ![レポート ビルダー デザイン クエリ](../../reporting-services/report-builder/media/rb-designquery.png "レポート ビルダー デザイン クエリ")  
   
 12. **[次へ]** をクリックします。  
   
@@ -129,15 +130,15 @@ ms.locfileid: "67037963"
   
      主要なデータのまま、デザイン ビューに新しい円グラフ レポートが表示されます。  
   
-     ![レポート ビルダーのデザイン ビューでの新しい円グラフ](../../reporting-services/report-builder/media/rb-newpiedesign.png "レポート ビルダーのデザイン ビューでの新しい円グラフ")  
+     ![レポート ビルダーのデザイン ビューの新しい円](../../reporting-services/report-builder/media/rb-newpiedesign.png "レポート ビルダーのデザイン ビューの新しい円")  
   
 17. 実際の円グラフを表示するには、リボンの **[ホーム]** タブで **[実行]** をクリックします。  
   
-     ![レポート ビルダーの新しいグラフの実行](../../reporting-services/report-builder/media/rb-newchartrun.png "レポート ビルダーの新しいグラフの実行")  
+     ![レポート ビルダーの新しいグラフ実行](../../reporting-services/report-builder/media/rb-newchartrun.png "レポート ビルダーの新しいグラフ実行")  
   
 18. 円グラフの変更を続けるには、この記事の「 [ウィザードの実行後](#AfterWizard) 」に進んでください。  
   
-##  <a name="CreatePieQueryData"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して円グラフを作成する  
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して円グラフを作成する  
   
 1.  [Web ポータル、SharePoint 統合モードのレポート サーバー、またはコンピューターから、](../../reporting-services/report-builder/start-report-builder.md) レポート ビルダーを起動します [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
@@ -187,7 +188,7 @@ ms.locfileid: "67037963"
   
 15. 実際の円グラフを表示するには、リボンの **[ホーム]** タブで **[実行]** をクリックします。  
  
-##  <a name="AfterWizard"></a> ウィザードの実行後  
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> ウィザードの実行後  
  円グラフ レポートが完成したので、操作してみます。 変更を続行するには、リボンの **[実行]** タブで **[デザイン]** をクリックします。  
   
 ## <a name="make-the-chart-bigger"></a>グラフの拡大  
@@ -219,8 +220,8 @@ ms.locfileid: "67037963"
   
  グラフのラベルと凡例をカスタマイズする方法の詳細については、「[円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)」および「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
-##  <a name="WhatsNext"></a> 次の課題  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための *接続文字列*が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
+##  <a name="whats-next"></a><a name="WhatsNext"></a> 次の課題  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートを初めて自分で作成したので、他のチュートリアルに取り組んで独自のデータからレポートを作成する準備ができました。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を実行するには、データベースなどのデータ ソースにアクセスする権限と、実際にデータ ソースに接続するための*接続文字列* が必要です。 システム管理者がこの情報を保持し、ユーザーを設定できます。  
   
  他のチュートリアルを実行するには、SQL Server のインスタンスの名前と、任意のデータベースに読み取り専用でアクセスするのに十分な資格情報が必要です。 これもシステム管理者が設定できます。  
   
@@ -228,7 +229,7 @@ ms.locfileid: "67037963"
   
  開始する前に、いくつかの概念や用語について確認しておくと役立つ場合があります。 「[Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)」をご覧ください。 また、レポートを初めて自分で作成する前に、計画の時間を取ってください。 時間を費やす価値があります。 「[レポートの計画 &#40;レポート ビルダー&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)」を参照してください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  

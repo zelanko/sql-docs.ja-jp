@@ -17,20 +17,22 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e5a258436c521eec380114a42e68c3f20b75fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd74e1cf495ef3cfc1784011fb1d7c18b5ab15d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760874"
 ---
 # <a name="configure-parallel-index-operations"></a>並列インデックス操作の構成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  このトピックでは、並列処理の最大限度に関する定義と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してこの設定を変更する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 以上を実行するマルチプロセッサ コンピューターでは、他のクエリと同様に、インデックスのステートメントがこのステートメントに関連付けられているスキャン操作、並べ替え操作、インデックス操作などの実行に、複数のプロセッサを使用する場合があります。 1 つのインデックス ステートメントの実行に使用されるプロセッサの数は、 [max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 構成オプション、現在のワークロード、およびインデックス統計によって決まります。 max degree of parallelism オプションによって、並列プランの実行で使用するプロセッサの最大数が決まります。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によりシステムがビジー状態であることが検出されると、ステートメントの実行が開始される前に、インデックス操作の並列処理の次数が自動的に削減されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、パーティション分割されていないインデックスの先頭のキー列で個々の値の数が制限されている場合や、個々の値の頻度が大きく異なる場合に、並列処理の次数を減らすこともできます。  
+このトピックでは、並列処理の最大限度に関する定義と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してこの設定を変更する方法について説明します。 
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 以上を実行するマルチプロセッサ システムでは、他のクエリと同様、このステートメントに関連付けられているスキャン操作、並べ替え操作、インデックス操作などの実行に、インデックスのステートメントで複数のプロセッサ (CPU) が使用される場合があります。 1 つのインデックス ステートメントの実行に使用される CPU の数は、[max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) サーバー構成オプション、現在のワークロード、およびインデックス統計によって決まります。 max degree of parallelism オプションによって、並列プランの実行で使用するプロセッサの最大数が決まります。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によりシステムがビジー状態であることが検出されると、ステートメントの実行が開始される前に、インデックス操作の並列処理の次数が自動的に削減されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、パーティション分割されていないインデックスの先頭のキー列で個々の値の数が制限されている場合や、個々の値の頻度が大きく異なる場合に、並列処理の次数を減らすこともできます。 詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)」を参照してください。 
   
 > [!NOTE]  
->  並列インデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、「Features Supported by the Editions of SQL Server 2016 (SQL Server 2016 の各エディションがサポートする機能)」を参照してください  
+> 並列インデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -38,7 +40,7 @@ ms.locfileid: "68025002"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **並列処理の最大限度を設定するために使用するもの:**  
   
@@ -46,42 +48,40 @@ ms.locfileid: "68025002"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   通常は、クエリ オプティマイザーによって使用されるプロセッサ数で、最適なパフォーマンスが得られます。 ただし、非常に大きなインデックスの作成、再構築、または削除などの操作ではリソースが集中的に消費されるので、インデックス操作中に、他のアプリケーションやデータベース操作でリソースが不足する可能性があります。 この問題が発生した場合は、インデックス操作に使用するプロセッサ数を制限することで、インデックス ステートメントの実行に使用される最大プロセッサ数を手動で構成できます。  
   
 -   MAXDOP インデックス オプションは、このオプションを指定しているクエリに関してのみ、max degree of parallelism 構成オプションをオーバーライドします。 次の表に、max degree of parallelism 構成オプションと MAXDOP インデックス オプションで指定できる有効な整数値を示します。  
   
-    |[値]|Description|  
+    |値|説明|  
     |-----------|-----------------|  
     |0|現在のシステム ワークロードに応じて、使用する CPU 数をサーバーが決定するように指定します。 この値は既定値であり、推奨の設定です。|  
     |1|並列プラン生成を抑制します。 操作は順番に実行されます。|  
-    |2～64|プロセッサ数が指定値まで制限されます。 現在のワークロードによっては、使用されるプロセッサ数が少なくなる場合があります。 使用できる CPU 数よりも大きな値を指定した場合は、実際に使用できる CPU 数が使用されます。|  
+    |2 ～ 64|プロセッサ数が指定値まで制限されます。 現在のワークロードによっては、使用されるプロセッサ数が少なくなる場合があります。 使用できる CPU 数よりも大きな値を指定した場合は、実際に使用できる CPU 数が使用されます。|  
   
 -   インデックスの並列実行と MAXDOP インデックス オプションは、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに適用されます。  
   
-    -   CREATE INDEX  
+    -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
   
-    -   ALTER INDEX REBUILD  
+    -   [ALTER INDEX (...)REBUILD](../../t-sql/statements/alter-index-transact-sql.md)  
   
-    -   DROP INDEX (このステートメントは、クラスター化インデックスのみに適用されます。)  
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (クラスター化インデックスのみに適用されます。)  
   
-    -   ALTER TABLE ADD (インデックス) CONSTRAINT  
+    -   [ALTER TABLE ADD (インデックス) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md) 
   
-    -   ALTER TABLE DROP (クラスター化インデックス) CONSTRAINT  
+    -   [ALTER TABLE DROP (クラスター化インデックス) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
   
--   ALTER INDEX REORGANIZE ステートメントには、MAXDOP インデックス オプションを指定できません。  
+-   `ALTER INDEX (...) REORGANIZE` ステートメントには、MAXDOP インデックス オプションを指定できません。  
   
--   クエリ オプティマイザーが構築操作に 2 次以上の並列処理を適用すると、並べ替えを必要とするパーティション インデックス操作に必要なメモリ容量がさらに大きくなる場合があります。 並列処理の次数が高いと、必要なメモリ容量も大きくなります。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
+-   クエリ オプティマイザーで構築操作に 2 次以上の並列処理が適用されると、並べ替えを必要とするパーティション インデックス操作に必要なメモリ容量がさらに大きくなる場合があります。 並列処理の次数が高いと、必要なメモリ容量も大きくなります。 詳細については、「 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> アクセス許可  
+ テーブルまたはビューに対する `ALTER` 権限が必要です。  
   
-####  <a name="Permissions"></a> Permissions  
- テーブルまたはビューに対する ALTER 権限が必要です。  
-  
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>インデックスに並列処理の最大限度を設定するには  
   
@@ -101,9 +101,7 @@ ms.locfileid: "68025002"
   
 8.  **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>既存のインデックスに並列処理の最大限度を設定するには  
   
@@ -113,7 +111,7 @@ ms.locfileid: "68025002"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
@@ -133,7 +131,7 @@ ms.locfileid: "68025002"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
@@ -141,7 +139,12 @@ ms.locfileid: "68025002"
     WITH (MAXDOP=8);  
     GO  
     ```  
-  
- 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
-  
-  
+ 
+## <a name="see-also"></a>関連項目
+[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)    
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)      
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)      
+[ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)       
+[ALTER TABLE index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)    

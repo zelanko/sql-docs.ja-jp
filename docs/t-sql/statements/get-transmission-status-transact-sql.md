@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6928832c352740774aeb1711c9d064c92731585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1730fac109d23211fedcccec8603a7129adf7ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132060"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899165"
 ---
-# <a name="gettransmissionstatus-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   メッセージ交換の一方の側に関して、最後の転送の状態を返します。  
   
@@ -53,7 +53,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>戻り値の型  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定したメッセージ交換に関する、最後の転送試行の状態を説明する文字列を返します。 最後の転送が成功した場合、転送がまだ試行されていない場合、または *conversation_handle* が存在しない場合は、空の文字列が返されます。  
   
  この関数で返される情報は、管理ビュー sys.transmission_queue の last_transmission_error 列で表示される情報と同じです。 ただし、この関数を使用すると、転送キューに現在メッセージがないメッセージ交換の転送状態を検出できます。  
@@ -61,7 +61,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 > [!NOTE]  
 >  GET_TRANSMISSION_STATUS では、現在のインスタンスにメッセージ交換エンドポイントを持たないメッセージの情報は提供されません。 つまり、転送されるメッセージの情報は使用できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、メッセージ交換ハンドル `58ef1d2d-c405-42eb-a762-23ff320bddf0` とのメッセージ交換に関する転送状態がレポートされます。  
   
 ```  

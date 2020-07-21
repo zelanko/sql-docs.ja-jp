@@ -1,5 +1,5 @@
 ---
-title: レコード セットを返す JScript コードの例 |Microsoft Docs
+title: Recordset | を返す JScript コードの例Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924933"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757798"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>レコードセットを返す JScript コードの例
-## <a name="jscript-code-rsjs"></a>JScript コード (rs.js)  
+## <a name="jscript-code-rsjs"></a>JScript コード (rs .js)  
   
 ```  
 main();  
@@ -81,8 +81,8 @@ function alert(str)
   
 #### <a name="try-it"></a>手順を次に示します。  
   
-1.  上記のコードをテキスト ファイルに保存します。 Rs.js として保存します。  
+1.  上記のコードをテキストファイルに保存します。 ファイルを rs .js として保存します。  
   
-2.  コマンド プロンプトを開き、JScript ファイル (rs.js) を保存したディレクトリに移動します。  
+2.  JScript ファイル (rs-232c) を保存したディレクトリで、コマンドプロンプトと cd を開きます。  
   
-3.  型`CScript rs.js`コマンド プロンプトからです。
+3.  `CScript rs.js`コマンドプロンプトで「」と入力します。

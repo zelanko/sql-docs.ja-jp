@@ -13,10 +13,10 @@ ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570885"
 ---
 # <a name="search-a-report-using-url-access"></a>URL アクセスを使用してレポートを検索する
@@ -30,7 +30,7 @@ https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:
 ```  
   
 ## <a name="see-also"></a>参照  
- [URL アクセス &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL アクセス (SSRS)](../reporting-services/url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
   
   

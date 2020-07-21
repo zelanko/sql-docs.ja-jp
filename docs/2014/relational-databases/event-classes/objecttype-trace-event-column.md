@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f90661e5ebedc91505989c3d80dcec78436ce86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63028379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029144"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType トレース イベント列
   Object Type トレース イベント列は、さまざまなトレース イベントで使用されます。 このトピックでは、この列の値と、その値に関連付けられている定義について説明します。  
@@ -35,15 +34,15 @@ ms.locfileid: "63028379"
 |8260|既定値 (制約またはスタンドアロン)|  
 |8262|外部キー制約|  
 |8272|ストアド プロシージャ|  
-|8274|Rule|  
+|8274|ルール|  
 |8275|システム テーブル|  
 |8276|サーバーのトリガー|  
 |8277|(ユーザー定義) テーブル|  
 |8278|表示|  
 |8280|拡張ストアド プロシージャ|  
 |16724|CLR トリガー|  
-|16964|[データベース]|  
-|16975|オブジェクト|  
+|16964|データベース|  
+|16975|Object|  
 |17222|フルテキスト カタログ|  
 |17232|CLR ストアド プロシージャ|  
 |17235|スキーマ|  
@@ -65,7 +64,7 @@ ms.locfileid: "63028379"
 |19283|ObfusKey|  
 |19521|非対称キー ログイン|  
 |19523|証明書ログイン|  
-|19538|ロール|  
+|19538|Role|  
 |19539|SQL ログイン|  
 |19543|Windows ログイン|  
 |20034|リモート サービス バインド|  
@@ -82,13 +81,13 @@ ms.locfileid: "63028379"
 |20821|UNIQUE 制約|  
 |21057|アプリケーション ロール|  
 |21059|Certificate|  
-|21075|[サーバー]|  
+|21075|サーバー|  
 |21076|Transact-SQL トリガー|  
 |21313|アセンブリ|  
 |21318|CLR スカラー関数|  
 |21321|インライン スカラー SQL 関数|  
 |21328|パーティション構成|  
-|21333|ユーザー|  
+|21333|User|  
 |21571|Service Broker サービス コントラクト|  
 |21572|データベースのトリガー|  
 |21574|CLR テーブル値関数|  
@@ -96,14 +95,14 @@ ms.locfileid: "63028379"
 |21581|Service Broker メッセージ型|  
 |21586|Service Broker ルート|  
 |21587|統計|  
-|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|ユーザー|  
+|21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|User|  
 |22099|Service Broker サービス|  
 |22601|インデックス|  
 |22604|証明書ログイン|  
 |22611|XMLSchema|  
-|22868|型|  
+|22868|種類|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

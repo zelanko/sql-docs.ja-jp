@@ -1,5 +1,5 @@
 ---
-title: sp_altermessage (TRANSACT-SQL) |Microsoft Docs
+title: sp_altermessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 925a08a938e56ad2834cf656e89d7a229842641d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85875184"
 ---
-# <a name="spaltermessage-transact-sql"></a>sp_altermessage (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  インスタンスのシステム メッセージまたはユーザー定義の状態の変更、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 使用してユーザー定義メッセージを表示することができます、 **sys.messages**カタログ ビューです。  
+  のインスタンス内のユーザー定義メッセージまたはシステムメッセージの状態を変更 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 ユーザー定義のメッセージは、**システム**カタログビューを使用して表示できます。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -41,15 +41,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@message_id =** ] *message_number*  
- 変更するメッセージのエラー番号は、 **sys.messages**します。 *message_number*は**int**で既定値はありません。  
+ [** @message_id =** ] *message_number*  
+ **Sys. messages**から変更するメッセージのエラー番号を指定します。 *message_number*は**int**で、既定値はありません。  
   
-`[ @parameter = ] 'write\_to\_log_'` 併用 **@parameter_value** に書き込まれるメッセージがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *write_to_log*は**sysname**で既定値はありません。 *write_to_log* WITH_LOG または NULL に設定する必要があります。 場合*write_to_log* WITH_LOG または null の場合、しの値に設定されている **@parameter_value** は**true**メッセージは、Windows アプリケーション ログに書き込まれます。 場合*write_to_log* WITH_LOG または NULL との値に設定されている **@parameter_value** は**false**メッセージは、Windows アプリケーション ログには常に書き込まれませんが、可能性がありますエラーの発生状況によっては書き込まれます。 場合*write_to_log*が指定されている値 **@parameter_value** も指定する必要があります。  
+`[ @parameter = ] 'write\_to\_log_'`は、メッセージが Windows アプリケーションログに書き込まれることを示すために** \@ parameter_value**と共に使用され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 *write_to_log*は**sysname**で、既定値はありません。 *write_to_log*は WITH_LOG または NULL に設定する必要があります。 *Write_to_log*が WITH_LOG または NULL に設定されていて、 ** \@ parameter_value**の値が**True**の場合、メッセージは Windows アプリケーションログに書き込まれます。 *Write_to_log*が WITH_LOG または NULL に設定されており、 ** \@ parameter_value**の値が**false**の場合、メッセージは常に Windows アプリケーションログには書き込まれませんが、エラーが発生した方法によっては書き込まれることがあります。 *Write_to_log*が指定されている場合は、 ** \@ parameter_value**の値も指定する必要があります。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
-`[ @parameter_value = ]'value_'` 併用 **@parameter** にへの書き込みエラーがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *値*は**varchar (5)** 既定値はありません。 場合**true**エラーが常に Windows アプリケーション ログに書き込まれます。 場合**false**エラーは、Windows アプリケーション ログには常に書き込まれませんが、エラーの発生状況によっては書き込まれる可能性があります。 場合*値*が指定されている*write_to_log*の **@parameter** も指定する必要があります。  
+`[ @parameter_value = ]'value_'`は、エラーが Windows アプリケーションログに書き込まれることを示すために、 ** \@ パラメーター**と共に使用され [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 *値*は**varchar (5)**,、既定値はありません。 **True**の場合、エラーは常に Windows アプリケーションログに書き込まれます。 **False**の場合、エラーは常に Windows アプリケーションログに書き込まれませんが、エラーが発生した方法によっては書き込まれることがあります。 *Value*を指定する場合は、 ** \@ パラメーター**の*write_to_log*も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,16 +57,16 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- 効果**sp_altermessage**に WITH_LOG オプションは、点を除いて、RAISERROR WITH LOG パラメーターと同じ**sp_altermessage**既存のメッセージのログ記録の動作を変更します。 メッセージを WITH_LOG に変更すると場合、常にユーザーが、エラーを起動する方法に関係なく、Windows アプリケーション ログに書き込まれます。 WITH_LOG オプションなしで RAISERROR を実行、場合でも、エラーは、Windows アプリケーション ログに書き込まれます。  
+## <a name="remarks"></a>解説  
+ WITH_LOG オプションを使用した**sp_altermessage**の効果は、既存のメッセージのログ記録の動作を**sp_altermessage**変更する点を除いて、RAISERROR with LOG パラメーターの効果と似ています。 メッセージが WITH_LOG されるように変更されている場合は、ユーザーがどのようにエラーを呼び出したかに関係なく、常に Windows アプリケーションログに書き込まれます。 WITH_LOG オプションを指定せずに RAISERROR を実行した場合でも、エラーは Windows アプリケーションログに書き込まれます。  
   
- システム メッセージを使用して変更できる**sp_altermessage**します。  
+ システムメッセージは**sp_altermessage**を使用して変更できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **serveradmin**固定サーバー ロール。  
+ **Serveradmin**固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、既存のメッセージをさせます`55001`を Windows アプリケーション ログに記録します。  
+ 次の例では、既存のメッセージが `55001` Windows アプリケーションログに記録されます。  
   
 ```  
 EXECUTE sp_altermessage 55001, 'WITH_LOG', 'true';  

@@ -1,27 +1,28 @@
 ---
-title: トレーステーブル (SQL Server プロファイラー) を開きます。Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: トレース テーブルを開く
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03e7d69d4011caf60d733ab6f0bb17b680fcb4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: b3779c75b0cc90bc10a208cf592a080ff067b5b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911678"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307144"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>トレース テーブルを開く (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して既存のトレース テーブルを開く方法について説明します。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して既存のトレース テーブルを開く方法について説明します。  
   
 ### <a name="to-open-a-trace-table"></a>トレース テーブルを開くには  
   

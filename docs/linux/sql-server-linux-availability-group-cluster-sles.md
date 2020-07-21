@@ -1,7 +1,7 @@
 ---
-title: SQL Server 可用性グループ用の SLES クラスターを構成する
+title: SUSE:SQL Server on Linux の可用性グループを構成する
 titleSuffix: SQL Server
-description: SUSE Linux Enterprise Server (SLES) 用の可用性グループ クラスターを作成する方法について説明します
+description: SUSE Linux Enterprise Server (SLES) 用の可用性グループ クラスターを作成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,24 +10,25 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003562"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892337"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の SLES クラスターを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 このガイドでは、SUSE Linux Enterprise Server (SLES) 12 SP2 の SQL Server 用に 3 ノード クラスターを作成する手順について説明します。 高可用性を実現するため、Linux 上の可用性グループには 3 つのノードが必要です。[可用性グループ構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)に関するページを参照してください。 クラスタリング レイヤーは、[Pacemaker](https://clusterlabs.org/) の上に構築された SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) に基づいています。 
 
 クラスター構成、リソース エージェントのオプション、管理、ベスト プラクティス、推奨事項の詳細については、「[SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)」を参照してください。
 
 >[!NOTE]
->この時点では、Linux の Pacemaker との SQL Server の統合は、Windows 上の WSFC とは結合されていません。 Linux の SQL Server サービスはクラスターに対応していません。 Pacemaker は、可用性グループ リソースを含む、クラスター リソースのすべてのオーケストレーションを制御します。 Linux では、sys.dm_hadr_cluster などのクラスター情報を提供する Always On 可用性グループの動的管理ビュー (DMV) に依存しないようにする必要があります。 また、仮想ネットワーク名は WSFC に固有であり、Pacemaker には同等のものがありません。 フェールオーバー後に透過的な再接続に使用するリスナーを引き続き作成できますが、仮想 IP リソースの作成に使用する IP で、DNS サーバーにリスナー名を手動で登録する必要があります (以下のセクションで説明します)。
+>現時点では、Linux 上の SQL Server と Pacemaker の統合では、Windows 上の WSFC のような連携は行われていません。 Linux の SQL Server サービスはクラスターに対応していません。 Pacemaker は、可用性グループ リソースを含む、クラスター リソースのすべてのオーケストレーションを制御します。 Linux では、sys.dm_hadr_cluster などのクラスター情報を提供する Always On 可用性グループの動的管理ビュー (DMV) に依存しないようにする必要があります。 さらに、仮想ネットワーク名は WSFC に固有のものであり、Pacemaker にはそれに該当するものはありません。 フェールオーバー後に透過的な再接続に使用するリスナーを引き続き作成できますが、仮想 IP リソースの作成に使用する IP で、DNS サーバーにリスナー名を手動で登録する必要があります (以下のセクションで説明します)。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>ロードマップ
 
@@ -48,13 +49,13 @@ ms.locfileid: "68003562"
 
 5. [可用性グループをクラスターのリソースとして追加します](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server)。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 次のエンドツーエンドのシナリオを完了するには、3 つのノード クラスターをデプロイするために 3 台のマシンが必要です。 次の手順では、これらのサーバーを構成する方法を示します。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>各クラスター ノードにオペレーティング システムをセットアップして構成する 
 
-最初の手順では、クラスター ノードのオペレーティング システムを構成します。 このチュートリアルでは、HA アドオンの有効なサブスクリプションで SLES 12 SP2 を使用します。
+最初の手順は、クラスター ノード上のオペレーティング システムを構成することです。 このチュートリアルでは、HA アドオンの有効なサブスクリプションで SLES 12 SP2 を使用します。
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>各クラスター ノードに SQL Server サービスをインストールして構成する
 
@@ -118,9 +119,9 @@ Linux サーバーで、可用性グループを構成してから、クラス�
 
 3. クラスター通信レイヤー (Corosync) を構成するには、次のようにします。 
 
-   A. バインド先のネットワーク アドレスを入力します。 既定では、このスクリプトは eth0 のネットワーク アドレスを提示します。 別の方法としては、bond0 のアドレスなどの別のネットワーク アドレスを入力します。 
+   a. バインド先のネットワーク アドレスを入力します。 既定では、このスクリプトは eth0 のネットワーク アドレスを提示します。 別の方法としては、bond0 のアドレスなどの別のネットワーク アドレスを入力します。 
 
-   B. マルチキャスト アドレスを入力します。 このスクリプトは、既定として使用できるランダムなアドレスを提示します。 
+   b. マルチキャスト アドレスを入力します。 このスクリプトは、既定として使用できるランダムなアドレスを提示します。 
 
    c. マルチキャスト ポートを入力します。 このスクリプトは、既定として 5405 を提示します。 
 
@@ -187,7 +188,7 @@ Linux サーバーで、可用性グループを構成してから、クラス�
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>クラスター プロパティ cluster-recheck-interval を設定する
 
-`cluster-recheck-interval` は、クラスターがリソース パラメーター、制約、またはその他のクラスター オプションの変更を確認するポーリング間隔を示します。 レプリカがダウンした場合、クラスターは、`failure-timeout` 値と `cluster-recheck-interval` 値によってバインドされた間隔でレプリカの再起動を試みます。 たとえば、`failure-timeout` が 60 秒に設定されていて、`cluster-recheck-interval` が 120 秒に設定されている場合、再起動は 60 秒より大きく 120 秒未満の間隔で試行されます。 failure-timeout は 60 秒、cluster-recheck-interval は 60 秒より大きい値に設定することをお勧めします。 cluster-recheck-interval を小さい値に設定することは推奨されません。
+`cluster-recheck-interval` は、クラスターによってリソース パラメーター、制約、またはその他のクラスター オプションの変更が確認されるポーリング間隔を示します。 レプリカがダウンした場合、クラスターでは、`failure-timeout` 値と `cluster-recheck-interval` 値によってバインドされた間隔でレプリカの再起動が試みられます。 たとえば、`failure-timeout` が 60 秒に設定されていて、`cluster-recheck-interval` が 120 秒に設定されている場合、再起動は 60 秒より大きく 120 秒未満の間隔で試行されます。 failure-timeout は 60 秒、cluster-recheck-interval は 60 秒より大きい値に設定することをお勧めします。 cluster-recheck-interval を小さい値に設定することは推奨されません。
 
 プロパティ値を `2 minutes` に更新するには、次を実行します。
 
@@ -214,13 +215,17 @@ crm configure property cluster-recheck-interval=2min
 Pacemaker クラスター プロパティの詳細については、[クラスター リソースの構成](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)に関するページを参照してください。
 
 ## <a name="configure-fencing-stonith"></a>フェンスを構成する (STONITH)
-Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスター セットアップ用にフェンス デバイスを構成する必要があります。 クラスター リソース マネージャーがノードまたはノード上のリソースの状態を判断できない場合は、フェンスを使用してクラスターを既知の状態に戻します。
+Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスター セットアップ用にフェンス デバイスを構成する必要があります。 クラスター リソース マネージャーでノードまたはノード上のリソースの状態を判断できない場合は、フェンスを使用してクラスターが既知の状態に戻されます。
 
 リソース レベルのフェンスは、主に、リソースを構成することによって障害が発生したときにデータが破損しないことを保証します。 たとえば DRBD (分散レプリケートされたブロックデバイス) でリソース レベルのフェンスを使用して、通信リンクがダウンしたときにノード上のディスクを期限切れとしてマークすることができます。
 
-ノード レベルのフェンスは、ノードがリソースを実行しないようにします。 これはノードをリセットすることによって行われ、Pacemaker の実装は "STONITH" ("Shoot the Other Node in the Head") と呼ばれます。 Pacemaker は、サーバーの無停電電源装置や管理インターフェイス カードなど、さまざまな種類のフェンス デバイスをサポートしています。
+ノード レベルのフェンスでは、ノードによってリソースが実行されないことが保証されます。 これはノードをリセットすることによって行われ、Pacemaker の実装は "STONITH" ("Shoot the Other Node in the Head") と呼ばれます。 Pacemaker は、サーバーの無停電電源装置や管理インターフェイス カードなど、さまざまな種類のフェンス デバイスをサポートしています。
 
-詳細については、「[Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)」(ゼロから始める Pacemaker クラスター)、「[Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html)」(フェンスと STONITH)、および「[SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)」(SUSE HA ドキュメント: フェンスと STONITH) を参照してください。
+詳細については、次を参照してください。
+
+- [ゼロから始める Pacemaker クラスター](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [SUSE HA ドキュメント:フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 クラスターの初期化時に構成が検出されない場合、STONITH は無効になります。 後で次のコマンドを実行して有効にすることができます。
 
@@ -229,10 +234,9 @@ sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。 SUSE では、どのクラウド環境 (Azure を含む) のフェンス エージェントも提供していません。 結果的に、クラスター ベンダーは、これらの環境で運用クラスターを実行するためのサポートを提供していません。 Microsoft では、このギャップのための、今後のリリースで利用できるようになるソリューションに取り組んでいます。
+>STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。 SUSE では、どのクラウド環境 (Azure を含む) のフェンス エージェントも提供していません。 そのため、クラスター ベンダーでは、これらの環境で運用クラスターを実行するためのサポートは提供されていません。 Microsoft では、このギャップのための、今後のリリースで利用できるようになるソリューションに取り組んでいます。
 
-
-## <a name="configure-the-cluster-resources-for-sql-server"></a>SQL Server のクラスター リソースを構成する
+## <a name="configure-the-cluster-resources-for-sql-server"></a>SQL Server 用にクラスター リソースを構成する
 
 [SLES 管理ガイド](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)を参照してください
 
@@ -293,7 +297,7 @@ primitive admin_addr \
 ```
 
 ### <a name="add-colocation-constraint"></a>コロケーション制約を追加する
-リソースを実行する場所の選択など、Pacemaker クラスターでのほぼすべての決定は、スコアを比較することによって行われます。 スコアはリソースごとに計算され、クラスター リソース マネージャーは、特定のリソースのスコアが最も高いノードを選択します。 (ノードにリソースの負のスコアがある場合、そのノードではリソースを実行できません。)制約を使用してクラスターの決定を操作できます。 制約にはスコアがあります。 制約のスコアが INFINITY より低い場合、これは単なる推奨設定です。 INFINITY のスコアは、それが必要であることを意味します。 可用性グループと仮想 IP リソースのプライマリが同じホスト上で実行されるようにするため、INFINITY のスコアを持つコロケーション制約を定義します。 
+リソースを実行する場所の選択など、Pacemaker クラスターでのほぼすべての決定は、スコアを比較することによって行われます。 スコアはリソースごとに計算され、クラスター リソース マネージャーでは、特定のリソースのスコアが最も高いノードが選択されます。 (ノードにリソースの負のスコアがある場合、そのノードではリソースを実行できません。)制約を使用してクラスターの決定を操作できます。 制約にはスコアがあります。 制約のスコアが INFINITY より低い場合、これは単なる推奨設定です。 INFINITY のスコアは、それが必要であることを意味します。 可用性グループと仮想 IP リソースのプライマリが同じホスト上で実行されるようにするため、INFINITY のスコアを持つコロケーション制約を定義します。 
 
 マスターと同じノードで実行されるように仮想 IP のコロケーション制約を設定するには、1 つのノードで次のコマンドを実行します。
 
@@ -310,8 +314,8 @@ commit
 1. ユーザーが、ノード 1 からノード 2 の可用性グループ マスターに resource migrate を発行します。
 2. 仮想 IP リソースがノード 1 で停止します。
 3. 仮想 IP リソースがノード 2 で開始します。 この時点で、IP アドレスは一時的にノード 2 を指しますが、ノード 2 はフェールオーバー前のセカンダリのままです。 
-4. ノード 1 の可用性グループ マスターは、スレーブに降格されます。
-5. ノード 2 の可用性グループ スレーブは、マスターに昇格されます。 
+4. ノード 1 の可用性グループ マスターは降格されます。
+5. ノード 2 の可用性グループは、マスターに昇格されます。 
 
 IP アドレスが事前フェールオーバー セカンダリのノードを一時的に指さないようにするには、順序制約を追加します。 順序制約を追加するには、1 つのノードで次のコマンドを実行します。 
 
@@ -322,18 +326,18 @@ crm crm configure \
 
 
 >[!IMPORTANT]
->クラスターを構成し、可用性グループをクラスター リソースとして追加した後は、Transact-SQL を使用して可用性グループ リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバークラスター (WSFC) の場合と同様に、オペレーティング システムと緊密に結合されていません。 SQL Server サービスはクラスターの存在を認識しません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 SLES では `crm` を使用します。 
+>クラスターを構成し、可用性グループをクラスター リソースとして追加した後は、Transact-SQL を使用して可用性グループ リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) ほど、オペレーティング システムと緊密に結合されていません。 SQL Server サービスでは、クラスターの存在は認識されません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 SLES では `crm` を使います。 
 
 `crm` を使用して可用性グループの手動フェールオーバーを行います。 Transact-SQL を使用してフェールオーバーを開始しないでください。 詳細については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)に関するページを参照してください。
 
 
-詳細については、以下をご覧ください。
+詳細については、次を参照してください。
 - [クラスター リソースの管理](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm)。   
 - [HA の概念](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
 - [Pacemaker クイック リファレンス](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [HA 可用性グループの操作](sql-server-linux-availability-group-failover-ha.md)

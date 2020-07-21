@@ -1,6 +1,6 @@
 ---
 title: データを SQL Server on Linux に一括コピーする
-description: ''
+description: この記事では、bcp ユーティリティについて説明します。 bcp を使用すると、大量の行を SQL Server テーブルにインポートしたり、SQL Server テーブルからデータ ファイルにデータをエクスポートしたりできます。
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 447304bf0927b08e76a668e93ca750f3f8bfc779
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68127321"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896287"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>bcp を使用してデータを SQL Server on Linux に一括コピーする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、[bcp](../tools/bcp-utility.md) コマンドライン ユーティリティを使用して、ユーザーが指定した形式で SQL Server on Linux のインスタンスとデータ ファイルとの間でデータを一括コピーする方法について説明します。
 
@@ -134,7 +134,7 @@ cat ~/test_export.txt
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [bcp ユーティリティ](../tools/bcp-utility.md)
 - [bcp を使用した互換性のためのデータ形式の指定](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [BULK INSERT を使用した一括データのインポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)

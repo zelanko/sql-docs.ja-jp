@@ -1,5 +1,5 @@
 ---
-title: getHostNameInCertificate メソッド (SQLServerDataSource) |Microsoft Docs
+title: getHostNameInCertificate メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ apilocation:
 - getHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 67978d2597a5167d3930c85ee453dc6d985f021e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f35af25109bc68a36560c6496cf5f5268bd9319
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982903"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219261"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQL Server の SSL (Secure Sockets Layer) 証明書の検証に使用されるホスト名を返します。  
+  SQL Server の TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets Layer)) 証明書を検証するために使用するホスト名が返されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,8 +37,8 @@ public java.lang.String getHostNameInCertificate()
 ## <a name="return-value"></a>戻り値  
  ホスト名を含む **String** です。値が設定されていない場合は null です。  
   
-## <a name="remarks"></a>Remarks  
- ホスト名を使用して、通信レイヤーが SSL で暗号化されているときに、SQL Server の SSL 証明書の値を検証します。  
+## <a name="remarks"></a>解説  
+ ホスト名は、通信レイヤーが TLS/SSL で暗号化されているときに、SQL Server の TLS/SSL 証明書の値を検証するために使用されます。  
   
  ホスト名が設定されていない場合、[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) メソッドは null を返します。  
   

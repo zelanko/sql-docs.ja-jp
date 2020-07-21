@@ -1,5 +1,5 @@
 ---
-title: 非推奨のマスター データ サービス機能 | Microsoft Docs
+title: 非推奨のマスター データ サービス機能
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fc17ed2046ead7d142f0f5c138341b7a56eee26c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811527"
 ---
 # <a name="deprecated-master-data-services-features"></a>非推奨のマスター データ サービス機能
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   このトピックでは、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68267029"
 * [メンバー リビジョン履歴](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「[Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](https://go.microsoft.com/fwlink/p/?LinkId=615373)」  
+ msdn.com のブログ投稿「 [Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](https://go.microsoft.com/fwlink/p/?LinkId=615373)」  
   
 ## <a name="see-also"></a>関連項目  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  

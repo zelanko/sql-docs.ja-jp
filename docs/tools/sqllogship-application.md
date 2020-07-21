@@ -1,6 +1,7 @@
 ---
-title: sqllogship アプリケーション |Microsoft Docs
-ms.custom: ''
+title: sqllogship アプリケーション
+description: sqllogship アプリケーションでは、SQL Server データベースに関するログ配布構成のバックアップ、コピー、復元操作、およびクリーンアップ作業が行われます。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065450"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151594"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピックリンクアイコン](../database-engine/configure-windows/media/topic-link.gif "トピックリンクアイコン")構文表記規則については、「[コマンド&#40;プロンプト&#41;ユーティリティリファレンスデータベースエンジン](../tools/command-prompt-utility-reference-database-engine.md)」を参照してください。  
+ ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") 構文規則の詳細については、「[コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +55,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  ログ配布の履歴に追加するメッセージのレベルを指定します。 *level* は、次のいずれかの整数です。  
   
-|level|[説明]|  
+|Level|説明|  
 |-----------|-----------------|  
 |0|トレースおよびデバッグのメッセージを出力しません。|  
 |1|エラー処理メッセージを出力します。|  
@@ -68,7 +69,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** _timeout_value_  
  指定した操作を開始してからタイムアウトするまでの時間を指定します。既定では、タイムアウトはありません。 *timeout_value* のデータ型は **int**_です。_  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  可能な限り、バックアップ、コピー、および復元ジョブでバックアップ、コピー、および復元を行うことをお勧めします。 バッチ操作や他のアプリケーションからこれらのジョブを開始するには、 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) ストアド プロシージャを呼び出します。  
   
  **sqllogship** で作成されるログ配布の履歴には、ログ配布のバックアップ、コピー、および復元ジョブで作成される履歴も含まれます。 **sqllogship** を繰り返し使用してログ配布構成のバックアップ、コピー、および復元操作を行う場合、対応するログ配布ジョブを無効にすることを検討してください。 詳細については、「 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)」をご覧ください。  
@@ -82,10 +83,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |------------|----------------------|-----------------|  
 |**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)」を参照してください。|  
 |**-copy**|バックアップ ディレクトリの読み取りアクセス許可と、コピー ディレクトリの書き込みアクセス許可が必要です。|[sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) ストアド プロシージャと同一の権限が必要です。|  
-|**-restore**|コピー ディレクトリの読み取り/書き込みアクセス許可が必要です。|RESTORE ステートメントと同一の権限が必要です。 詳細については、「[RESTORE &#40;Transact-SQL&#41;](../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。|  
+|**-restore**|コピー ディレクトリの読み取り/書き込みアクセス許可が必要です。|RESTORE ステートメントと同一の権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../t-sql/statements/restore-statements-transact-sql.md)で復元することはできません。|  
   
 > [!NOTE]  
->  バックアップ ディレクトリおよびコピー ディレクトリのパスを検索するには、**sp_help_log_shipping_secondary_database** ストアド プロシージャを実行するか、**msdb** の **log_shipping_secondary** テーブルを参照します。 バックアップ ディレクトリおよびコピー先ディレクトリのパスはそれぞれ、 **backup_source_directory** 列および **backup_destination_directory** 列にあります。  
+>  バックアップ ディレクトリおよびコピー ディレクトリのパスを検索するには、 **sp_help_log_shipping_secondary_database** ストアド プロシージャを実行するか、 **msdb** の **log_shipping_secondary**テーブルを参照します。 バックアップ ディレクトリおよびコピー先ディレクトリのパスはそれぞれ、 **backup_source_directory** 列および **backup_destination_directory** 列にあります。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   

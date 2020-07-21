@@ -1,5 +1,5 @@
 ---
-title: value() メソッド (xml データ型) | Microsoft Docs
+title: value() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051217"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393010"
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML に対して XQuery を実行し、SQL 型の値を返します。 このメソッドは、スカラー値を返します。  
   
@@ -35,7 +35,9 @@ ms.locfileid: "68051217"
 value (XQuery, SQLType)  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *XQuery*  
  XML インスタンス内のデータを取得する *XQuery* 式 (文字列リテラル) です。 XQuery により、返される値は最大 1 つである必要があります。 それ以外の場合は、エラーが返されます。  
   
@@ -47,7 +49,7 @@ value (XQuery, SQLType)
 > [!NOTE]  
 >  パフォーマンス上の理由から、リレーショナル値との比較を行う述語内では **value()** メソッドではなく、**exist()** と **sql:column()** を使用してください。 これは、下の例 D で示しています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. xml 型の変数に対する value() メソッドの使用  
  次の例では、XML インスタンスが `xml` 型の変数に格納されています。 `value()` メソッドは、XML から `ProductID` 属性の値を取得します。 その後、この値は `int` 変数に代入されます。  
@@ -135,7 +137,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() メソッドの代替としての exist() メソッドの使用  
- パフォーマンス上の理由から、リレーショナル値との比較を行う述語内では `value()` メソッドではなく、`exist()` と `sql:column()` を使用してください。 例:  
+ パフォーマンス上の理由から、リレーショナル値との比較を行う述語内では `value()` メソッドではなく、`exist()` と `sql:column()` を使用してください。 次に例を示します。  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

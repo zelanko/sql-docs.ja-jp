@@ -1,26 +1,29 @@
 ---
-title: 監視とトラブルシューティング
+title: Kubernetes のトラブルシューティング
 titleSuffix: SQL Server big data clusters
-description: この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]監視とトラブルシューティングに役立つコマンドについて説明します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスターの監視とトラブルシューティングに役立つコマンドについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653023"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606404"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視とトラブルシューティング[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes のトラブルシューティング
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、の監視とトラブルシューティングに使用できる、いくつか[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の監視とトラブルシューティングに使用できる、いくつかの便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
+
+> [!TIP]
+> ビッグ データ クラスターのコンポーネントの状態を監視するには、[**azdata bdc status**](deployment-guidance.md#status) のコマンドを使用するか、Azure Data Studio に組み込まれている[トラブルシューティングのノートブック](notebooks-manage-bdc.md)を使用します。
 
 > [!TIP]
 > Windows (cmd または PS) または Linux (bash) のクライアント コンピューターで、次の **kubectl** コマンドを実行します。 それらには、クラスターでの以前の認証と、実行対象のクラスター コンテキストが必要です。 たとえば、以前に作成された AKS クラスターでは、`az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` を実行して Kubernetes クラスター構成ファイルをダウンロードし、クラスター コンテキストを設定できます。
@@ -95,7 +98,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> サービスの状態を取得する
+## <a name="get-status-of-services"></a><a id="services"></a> サービスの状態を取得する
 
 ビッグ データ クラスター サービスの詳細を取得するには、次のコマンドを実行します。 これらの詳細には、それらの種類と、それぞれのサービスおよびポートに関連付けられている IP アドレスが含まれます。 SQL Server ビッグ データ クラスターのサービスは、展開構成ファイルで指定されているクラスター名に基づいて、クラスターのブートストラップ時に作成される新しい名前空間に作成されることに注意してください。
 
@@ -135,7 +138,7 @@ kubectl describe service <service_name> -n <namespace_name>
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> ファイルをコピーする
+## <a name="copy-files"></a><a id="copy"></a> ファイルをコピーする
 
 コンテナーからローカル コンピューターにファイルをコピーする必要がある場合は、次の構文で `kubectl cp` コマンドを使います。
 
@@ -149,7 +152,7 @@ kubectl cp <pod_name>:<source_file_path> -c <container_name> -n <namespace_name>
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> コンテナーからファイルをコピーする
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> コンテナーからファイルをコピーする
 
 次の例では、SQL Server のログ ファイルが、コンテナーからローカル コンピューター上の `~/temp/sqlserverlogs` パスにコピーされます (この例では、ローカル コンピューターは Linux クライアントです)。
 
@@ -157,7 +160,7 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> コンテナーにファイルをコピーする
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> コンテナーにファイルをコピーする
 
 次の例では、**AdventureWorks2016CTP3.bak** ファイルが、ローカル コンピューターから `master-0` ポッド内の SQL Server マスター インスタンス コンテナー (`mssql-server`) にコピーされます。 ファイルは、コンテナー内の `/tmp` ディレクトリにコピーされます。 
 
@@ -165,7 +168,7 @@ kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sq
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> ポッドを強制的に削除する
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> ポッドを強制的に削除する
  
 ポッドを強制的に削除することはお勧めしません。 ただし、可用性、回復性、またはデータの永続性をテストする場合は、`kubectl delete pods` コマンドでポッドを削除してポッドの障害をシミュレートできます。
 
@@ -179,7 +182,7 @@ kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> ポッドの IP アドレスを取得する
+## <a name="get-pod-ip"></a><a id="getip"></a> ポッドの IP アドレスを取得する
  
 トラブルシューティングのために、ポッドが現在実行されているノードの IP アドレスを取得することが必要になる場合があります。 IP アドレスを取得するには、次の構文で `kubectl get pods` コマンドを使います。
 
@@ -222,6 +225,6 @@ Kubernetes クラスターでダッシュボードを展開して構成する方
 kubectl proxy
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)、「」を参照してください。
+ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

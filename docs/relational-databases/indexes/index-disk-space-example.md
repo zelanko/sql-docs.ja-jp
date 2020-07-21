@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668291"
 ---
 # <a name="index-disk-space-example"></a>インデックスのディスク領域の例
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   インデックスを作成、再構築、または削除する場合は、古い (基になる) 構造と新しい (対象となる) 構造の両方を格納するディスク領域が、それぞれ適切なファイルとファイル グループで必要になります。 古い構造の割り当ては、インデックス作成トランザクションがコミットされるまで解除されません。 並べ替え操作用に一時ディスク領域が追加で必要になる場合もあります。 詳細については、「 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)」をご参照ください。  
   
  この例では、クラスター化インデックスを作成するために必要なディスク領域を判断します。  
@@ -50,31 +50,29 @@ ms.locfileid: "67909726"
   
 1.  基になる構造のサイズを判断します。  
   
-     ヒープ:100 万行 * 200 バイト ~ 200 MB  
+     ヒープ : 100 万行 * 200 バイト ~ 200 MB  
   
-     非クラスター化インデックス A:100 万行 * 50 バイト / 80% ~ 63 MB  
+     非クラスター化インデックス A : 100 万行 * 50 バイト / 80% ~ 63 MB  
   
-     非クラスター化インデックス B:100 万行 * 80 バイト / 80% ~ 100 MB  
+     非クラスター化インデックス B : 100 万行 * 80 バイト / 80% ~ 100 MB  
   
-     既存の構造の合計サイズ:363 MB  
+     既存の構造の合計サイズ : 363 MB  
   
 2.  対象となるインデックス構造のサイズを判断します。 新しいクラスター化キーは、uniqueifier も含めて 24 バイトとします。 どちらの非クラスター化インデックスの行インジケーター (8 バイト長) も、このクラスター化キーに置き換えられます。  
   
-     クラスター化インデックス:100 万行 * 200 バイト / 80% ~ 250 MB  
+     クラスター化インデックス : 100 万行 * 200 バイト / 80% ~ 250 MB  
   
-     非クラスター化インデックス A:100 万行 * (50 - 8 + 24) バイト / 80% ~ 83 MB  
+     非クラスター化インデックス A : 100 万行 * (50 - 8 + 24) バイト / 80% ~ 83 MB  
   
-     非クラスター化インデックス B:100 万行 * (80 - 8 + 24) バイト / 80% ~ 120 MB  
+     非クラスター化インデックス B : 100 万行 * (80 - 8 + 24) バイト / 80% ~ 120 MB  
   
-     新しい構造の合計サイズ:453 MB  
+     新しい構造の合計サイズ : 453 MB  
   
      基になる構造と対象の構造の両方をサポートするために、インデックス操作中に必要な合計のディスク領域は、816 MB (363 + 453) です。 現在基になる構造に割り当てられている領域は、インデックス操作がコミットされると、割り当てが解除されます  
   
 3.  並べ替え用の追加の一時ディスク領域を判断します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     **tempdb** での並べ替え (SORT_IN_TEMPDB を ON に設定) と、対象の場所での並べ替え (SORT_IN_TEMPDB を OFF に設定) に必要な領域を示します。  
   
     1.  SORT_IN_TEMPDB が ON の場合、 **tempdb** には最大のインデックス (100 万行 * 200 バイト ～ 200 MB) を格納できるだけのディスク領域が必要です。 並べ替え操作では、FILL FACTOR については考慮されません。  
   
@@ -112,10 +110,10 @@ ms.locfileid: "67909726"
   
 |インデックス操作|構造の場所と必要なディスク領域|  
 |---------------------|---------------------------------------------------------------------------|  
-|SORT_IN_TEMPDB = ON に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ:1018 MB<br /><br /> \- 既存のテーブルとインデックス:363 MB\*<br /><br /> -<br />                    **tempdb**:202 MB*<br /><br /> \- 新しいインデックス:453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ:453 MB|  
-|SORT_IN_TEMPDB = OFF に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ:816 MB<br /><br /> \- 既存のテーブルとインデックス:363 MB*<br /><br /> \- 新しいインデックス:453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ:453 MB|  
-|SORT_IN_TEMPDB = ON に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ:1058 MB<br /><br /> \- 既存のテーブルとインデックス:363 MB\*<br /><br /> -<br />                    **tempdb** (マッピング インデックスを含む):242 MB*<br /><br /> \- 新しいインデックス:453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ:453 MB|  
-|SORT_IN_TEMPDB = OFF に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ:856 MB<br /><br /> \- 既存のテーブルとインデックス:363 MB*<br /><br /> \- 一時マッピング インデックス:40 MB\*<br /><br /> \- 新しいインデックス:453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ:453 MB|  
+|SORT_IN_TEMPDB = ON に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ: 1018 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = OFF に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ: 816 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = ON に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ: 1058 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB\*<br /><br /> -<br />                    **tempdb** (マッピング インデックスを含む): 242 MB*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = OFF に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ: 856 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB*<br /><br /> \- 一時マッピング インデックス: 40 MB\*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
   
  *この領域は、インデックス操作がコミットされると、割り当てが解除されます。  
   

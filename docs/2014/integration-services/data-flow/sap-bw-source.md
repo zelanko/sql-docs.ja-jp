@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed26b4141abc2340289f18831ece8e2e0d828fff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62901072"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437669"
 ---
 # <a name="sap-bw-source"></a>SAP BW 転送元
-  SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元コンポーネントです。 SAP BW 変換元は、SAP Netweaver BW Version 7 システムからデータを抽出し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにこのデータを使用可能にします。  
+  SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元コンポーネントです。 そのため、SAP BW 変換元により SAP Netweaver BW Version 7 システムからデータが抽出され、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにこのデータが使用できるようになります。  
   
  この変換は、1 つの出力と 1 つのエラー出力をとります。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62901072"
   
 -   [SAP BW 変換元を構成する](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> 変換元に必要な SAP Netweaver BW オブジェクトの準備  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> 変換元に必要な SAP Netweaver BW オブジェクトの準備  
  SAP BW 変換元を使用する前に、特定のオブジェクトを SAP Netweaver BW システムに含める必要があります。 これらのオブジェクトがまだ存在しない場合は、これらの手順に従って SAP Netweaver BW システムで作成および構成する必要があります。  
   
 > [!NOTE]  
@@ -80,12 +79,12 @@ ms.locfileid: "62901072"
   
      SAP BW 変換元は、データ転送プロセスをアクティブにするプロセス チェーンを呼び出すことができます。  
   
-##  <a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> SAP Netweaver BW システムへの接続  
  SAP Netweaver BW Version 7 システムに接続するため、SAP BW 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部である SAP BW 接続マネージャーを使用します。 SAP BW 接続マネージャーは、SAP BW 変換元が使用できる唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接続マネージャーです。  
   
  SAP BW 接続マネージャーの詳細については、「 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
-##  <a name="bkmk_Configure_Source"></a> SAP BW 変換元の構成  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> SAP BW 変換元の構成  
  SAP BW 変換元は、次の方法で構成できます。  
   
 -   データを抽出するためのオープン ハブ サービス (OHS) 転送先を探して選択します。  
@@ -110,7 +109,7 @@ ms.locfileid: "62901072"
   
 -   選択したオプションを使用して、抽出するデータをプレビューします。  
   
- 変換元が呼び出す RFC 関数のログを有効にすることもできます (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換元が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
+ 変換元が呼び出す RFC 関数のログを有効にすることもできます (このログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換元が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62901072"
   
  SAP BW 変換元を構成するときに、SAP Netweaver BW オブジェクトを参照したり、ソース データをプレビューしたりするためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[RFC 転送先の参照]](look-up-rfc-destination.md)  
+-   [RFC 転送先の参照](look-up-rfc-destination.md)  
   
 -   [プロセス チェーンの参照](look-up-process-chain.md)  
   

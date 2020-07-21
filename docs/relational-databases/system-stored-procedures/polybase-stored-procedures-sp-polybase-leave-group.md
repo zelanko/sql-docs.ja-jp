@@ -1,5 +1,6 @@
 ---
-title: sp_polybase_leave_group (TRANSACT-SQL) |Microsoft Docs
+title: sp_polybase_leave_group (Transact-sql) |Microsoft Docs
+description: Sp_polybase_leave_group Transact-sql コマンドは、スケールアウト計算用に PolyBase グループから SQL Server インスタンスを削除します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941923"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052722"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  SQL Server インスタンスをスケール アウト計算 PolyBase グループから削除します。 
+  スケールアウト計算用に PolyBase グループから SQL Server インスタンスを削除します。 
  
- SQL Server インスタンスが必要、 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)機能をインストールします。  PolyBase では、SQL Server 以外のデータ ソース、Hadoop と Azure blob ストレージなどの統合を使用できます。 参照してください[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)します。  
+ SQL Server インスタンスには、 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)機能がインストールされている必要があります。  PolyBase を使用すると、Hadoop や Azure blob ストレージなどの非 SQL Server データソースを統合できます。 「 [Sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)」も参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,20 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
- コンピューティング ノードは、グループからのみ削除できます。  
+## <a name="remarks"></a>注釈  
+ コンピューティングノードはグループからのみ削除できます。  
   
- ストアド プロシージャを実行した後に、コンピューターに、PolyBase エンジンと PolyBase データ移動サービスを再起動します。 確認するヘッド ノードで次の DMV を実行する: **sys.dm_exec_compute_nodes**します。  
+ ストアドプロシージャを実行した後、コンピューターで PolyBase エンジンと PolyBase Data Movement サービスを再起動します。 検証するには、ヘッドノードで次の DMV を実行します: **dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>例  
- 例では、PolyBase グループから現在のコンピューターを削除します。  
+ この例では、PolyBase グループから現在のコンピューターを削除します。  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
+## <a name="see-also"></a>参照  
+ [PolyBase を使ってみる](../../relational-databases/polybase/get-started-with-polybase.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

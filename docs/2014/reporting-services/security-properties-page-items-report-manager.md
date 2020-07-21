@@ -1,5 +1,5 @@
 ---
-title: セキュリティのプロパティ ページ、アイテム (レポート マネージャー) |Microsoft Docs
+title: '[セキュリティ] プロパティページ、アイテム (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102169"
 ---
 # <a name="security-properties-page-items-report-manager"></a>[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)
@@ -24,7 +24,7 @@ ms.locfileid: "66102169"
   
  セキュリティ設定は、ルート フォルダーからサブフォルダーおよびサブフォルダー内のアイテムにまで継承されます。 継承されたセキュリティを明示的に破棄しない限り、親アイテムのセキュリティ コンテキストがサブフォルダーおよびアイテムに継承されます。 中間層のフォルダーのセキュリティ ポリシーを再定義した場合、サブフォルダーを含む子アイテムに新しいセキュリティ設定が有効になります。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-security-page-for-an-item"></a>アイテムの [セキュリティ] ページを開くには  
@@ -50,19 +50,19 @@ ms.locfileid: "66102169"
  削除するグループ名またはユーザー名の横のチェック ボックスをオンにして、 **[削除]** をクリックします。 ロールの割り当てが 1 つしか残っていない場合、またはロールの割り当てがレポート サーバーのセキュリティの基準を定義する組み込みのロールの割り当て ("Built-in\Administrators" など) である場合、ロールの割り当てを削除することはできません。 ロールの割り当てを削除しても、グループ アカウントやユーザー アカウント、またはロールの定義は削除されません。  
   
  **新しいロールの割り当て**  
- クリックすると、[新しいロールの割り当て] ページが開きます。このページは、現在のアイテムに新たなロールの割り当てを作成するために使用します。 詳細については、次を参照してください。[新しいロールの割り当て。ロールの割り当て ページを編集&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)します。  
+ クリックすると、[新しいロールの割り当て] ページが開きます。このページは、現在のアイテムに新たなロールの割り当てを作成するために使用します。 詳細については、「[新しいロールの割り当て: [ロールの割り当ての編集] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)」を参照してください。  
   
- **親のセキュリティに戻す**  
+ **[親のセキュリティに戻す]**  
  セキュリティ設定を直接の親フォルダーの設定に再設定する場合にクリックします。 レポート サーバーのフォルダー階層全体で継承が維持される場合、最上位のフォルダーである [ホーム] フォルダーのセキュリティ設定が使用されます。  
   
- **グループまたはユーザー**  
+ **[グループまたはユーザー]**  
  現在のアイテムにおける、既存のロールの割り当ての一部であるグループおよびユーザーが一覧表示されます。 この列には、現在のフォルダーに対する既存のロールの割り当てが定義されているグループおよびユーザーが表示されます。 グループ名またはユーザー名をクリックして、ロールの割り当ての詳細を表示または編集できます。  
   
- **Roles**  
+ **ロール**  
  既存のロールの割り当ての一部であるロールの定義が 1 つ以上表示されます。 1 つのグループ アカウントまたは 1 つのユーザー アカウントに複数のロールが割り当てられている場合、そのグループまたはユーザーは、そのロールに属するすべてのタスクを実行できます。 ロールに関連付けられているタスクを表示するには、SQL Server Management Studio を使用して各ロール定義のタスクを表示します。  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
+ [レポートマネージャーの F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
  [定義済みロール](security/role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](security/granting-permissions-on-a-native-mode-report-server.md)   
  [ロールの割り当て](security/role-assignments.md)   

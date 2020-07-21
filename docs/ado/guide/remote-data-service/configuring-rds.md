@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f916a78d9a61bcfa7b0896301a46eb3a52874043
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750032"
 ---
 # <a name="configuring-rds"></a>RDS の構成
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- RDS を効率的に実装するには、使用できるさまざまな構成に精通することを確認します。 このセクションには、RDS の実装でのセキュリティとスケーラビリティに関する重要な情報が含まれています RDS を使用するコンピューターの構成については、次のトピックを参照してください。  
+ RDS を効率的に実装するには、使用できるさまざまな構成について理解している必要があります。 ここでは、RDS の実装におけるセキュリティとスケーラビリティに関する重要な情報について説明します。 RDS を使用するようにコンピューターを構成する方法については、次のトピックを参照してください。  
   
 -   [Web サーバー コンピューターへのゲスト特権の付与](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67922848"
   
 -   [安全または無制限モード用の DataFactory の構成](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS での関連テクノロジの使用](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS のトラブルシューティング](../../../ado/guide/remote-data-service/troubleshooting-rds.md)

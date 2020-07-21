@@ -1,5 +1,5 @@
 ---
-title: SQL Server の例を参照 |Microsoft Docs
+title: SQL Server の参照の例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,71 +12,71 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f3a7568c0849844526ef5f172bcecc0a5857268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114327"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301983"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
-次の例はどのように**SQLBrowseConnect** for SQL Server ドライバーで使用可能な接続を参照する場合に使用します。 最初に、アプリケーションは、接続ハンドルを要求します。  
+次の例では、 **SQLBrowseConnect**を使用して、ドライバーで使用可能な接続を SQL Server で参照する方法を示します。 まず、アプリケーションが接続ハンドルを要求します。  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);  
 ```  
   
- 次に、アプリケーション呼び出し**SQLBrowseConnect**によって返されるドライバーの名前を使用して、SQL Server ドライバーを指定します、 **SQLDrivers**:  
+ 次に、アプリケーションは**SQLBrowseConnect**を呼び出し、 **sqldrivers**によって返されるドライバーの説明を使用して SQL Server ドライバーを指定します。  
   
 ```  
 SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,  
                   sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- これは、最初の呼び出しなので**SQLBrowseConnect**、ドライバー マネージャーが、SQL Server ドライバーを読み込むし、ドライバーの呼び出し**SQLBrowseConnect**から受け取った同じ引数で関数をアプリケーション。  
+ **SQLBrowseConnect**の最初の呼び出しであるため、ドライバー SQL Server マネージャーは、アプリケーションから受け取ったものと同じ引数を使用して、ドライバーの**SQLBrowseConnect**関数を呼び出します。  
   
 > [!NOTE]  
->  指定する必要があります Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうか、`Trusted_Connection=yes`接続文字列でユーザー ID とパスワードの情報の代わりにします。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列に`Trusted_Connection=yes`ユーザー ID とパスワードの情報ではなくを指定する必要があります。  
   
- ドライバーでは、最初の呼び出しであるかを決定します。 **SQLBrowseConnect**し、接続属性の 2 番目のレベルを返します: サーバー、ユーザー名、パスワード、アプリケーション名、およびワークステーションの id。 サーバーの属性の有効なサーバー名の一覧を返します。 リターン コード**SQLBrowseConnect** SQL_NEED_DATA です。 参照結果の文字列を次に示します。  
+ ドライバーは、これが**SQLBrowseConnect**の最初の呼び出しであると判断し、接続属性の2番目のレベル (サーバー、ユーザー名、パスワード、アプリケーション名、ワークステーション ID) を返します。 Server 属性では、有効なサーバー名の一覧が返されます。 **SQLBrowseConnect**からのリターンコードは SQL_NEED_DATA です。 参照結果の文字列を次に示します。  
   
 ```  
 "SERVER:Server={red,blue,green,yellow};UID:Login ID=?;PWD:Password=?;  
    *APP:AppName=?;*WSID:WorkStation ID=?;"  
 ```  
   
- 参照結果の文字列内の各キーワードは、コロンと等号 (=) の前に 1 つまたは複数の単語続きます。 これらの単語は、アプリケーションがビルド ダイアログ ボックスを使用できるわかりやすい名前です。 **アプリ**と**WSID**キーワードの意味は必須では、アスタリスクが付きます。 **SERVER**、 **UID**、および**PWD**キーワードのプレフィックスは、アスタリスクは、[次へ] の参照要求の文字列でそれらの値を指定する必要があります。 値、 **SERVER**によって返されるサーバーのいずれかのキーワードがあります**SQLBrowseConnect**またはユーザーが指定した名前。  
+ 参照結果文字列の各キーワードの後には、コロンと等号の前に1つ以上の単語が続きます。 これらの単語は、アプリケーションがダイアログボックスを構築するために使用できるわかりやすい名前です。 **アプリ**と**wsid**キーワードの先頭にはアスタリスクが付いています。これは省略可能であることを意味します。 **SERVER**、 **UID**、および**PWD**キーワードの前にアスタリスクが付いていません。これらの値は、次の参照要求文字列で指定する必要があります。 **SERVER**キーワードの値には、 **SQLBrowseConnect**によって返されるサーバーの1つ、またはユーザーが指定した名前を使用できます。  
   
- アプリケーション呼び出し**SQLBrowseConnect**もう一度、緑色のサーバーを指定して、省略すると、**アプリ**と**WSID**キーワードと各キーワードの後に、わかりやすい名前。  
+ アプリケーションは、次のように、緑のサーバーを指定し、**アプリ**と**wsid**キーワード、および各キーワードの後にユーザーフレンドリ名を省略して、 **SQLBrowseConnect**を再度呼び出します。  
   
 ```  
 SQLBrowseConnect(hdbc, "SERVER=green;UID=Smith;PWD=Sesame;", SQL_NTS,  
                   BrowseResult, sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- ドライバーは、緑色のサーバーに接続しようとします。 不足しているキーワードと値のペアなどの致命的でないエラーがある場合**SQLBrowseConnect** SQL_NEED_DATA が返され、エラーが起こる前と同じ状態のままです。 アプリケーションを呼び出して**SQLGetDiagField**または**SQLGetDiagRec**エラーを確認します。 接続が成功した場合、ドライバーが SQL_NEED_DATA を返し、参照の結果文字列を返します。  
+ ドライバーは、緑色のサーバーへの接続を試みます。 キーワードと値のペアがないなど、致命的でないエラーが発生した場合、 **SQLBrowseConnect**は SQL_NEED_DATA を返し、エラーが発生する前と同じ状態のままになります。 アプリケーションは、 **SQLGetDiagField**または**SQLGetDiagRec**を呼び出して、エラーを特定できます。 接続に成功すると、ドライバーは SQL_NEED_DATA を返し、参照結果の文字列を返します。  
   
 ```  
 "*DATABASE:Database={master,model,pubs,tempdb};  
    *LANGUAGE:Language={us_english,Franais};"  
 ```  
   
- この文字列内の属性は省略可能であるために、アプリケーションは、これらを省略できます。 ただし、アプリケーションを呼び出す必要があります**SQLBrowseConnect**もう一度です。 アプリケーションの言語とデータベースの名前を省略する場合、空の参照要求文字列を指定します。 Pubs データベースおよび呼び出し、この例では、アプリケーションを選択**SQLBrowseConnect**最後に、省略すると、**言語**キーワードとアスタリスクの前に、**データベース**キーワード。  
+ この文字列の属性は省略可能であるため、アプリケーションは省略できます。 ただし、アプリケーションは**SQLBrowseConnect**を再度呼び出す必要があります。 アプリケーションがデータベース名と言語を省略した場合は、空の参照要求文字列を指定します。 この例では、アプリケーションは pubs データベースを選択し、 **SQLBrowseConnect**を呼び出します。このとき、 **LANGUAGE**キーワードと、 **database**キーワードの前にあるアスタリスクを省略します。  
   
 ```  
 SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,  
                   sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- **データベース**属性は、ドライバーで必要な最後の接続属性、参照の処理が完了したら、アプリケーションがデータ ソースに接続されていると**SQLBrowseConnect**SQL_SUCCESS を返します。 **SQLBrowseConnect**も参照結果の文字列として完全な接続文字列を返します。  
+ **DATABASE**属性はドライバーに必要な最後の接続属性であるため、参照プロセスが完了し、アプリケーションがデータソースに接続され、 **SQLBrowseConnect**が SQL_SUCCESS を返します。 また、 **SQLBrowseConnect**は、参照結果の文字列として完全な接続文字列を返します。  
   
 ```  
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- ドライバーによって返される最終的な接続文字列は、それぞれのキーワードの後にわかりやすい名前を含まないも、アプリケーションで指定されていない省略可能なキーワードを含んでいるか。 アプリケーションでは、この文字列を使用します。 **SQLDriverConnect** (切断) 後の現在の接続ハンドル上のデータ ソースに再接続するか、異なる接続ハンドルのデータ ソースに接続します。 例:  
+ ドライバーによって返される最終的な接続文字列には、各キーワードの後にユーザーフレンドリ名が含まれていません。また、アプリケーションで指定されていない省略可能なキーワードも含まれていません。 アプリケーションでは、この文字列を**SQLDriverConnect**と共に使用して、現在の接続ハンドル (切断後) 上のデータソースに再接続したり、別の接続ハンドルのデータソースに接続したりできます。 次に例を示します。  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

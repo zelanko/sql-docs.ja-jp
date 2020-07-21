@@ -1,6 +1,6 @@
 ---
-title: SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする | Microsoft Docs
-ms.custom: ''
+title: SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
+description: Transact-SQL、コマンドライン ツール、ウィザードを使用して、SQL Server および Azure SQL Database のデータをさまざまなデータ形式でインポートおよびエクスポートすることができます。
 ms.date: 10/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,15 +10,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f28d7905d8c5c7e37b95602aa3ee45cba4b9885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c2f1b8e4a711081bb998c6417c90e28b7638e508
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063192"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001188"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 さまざまな方法を使って、SQL Server と Azure SQL Database のデータをインポートしておよびエクスポートできます。 Transact-SQL ステートメント、コマンドライン ツール、ウィザードなどの方法があります。
 
 また、インポートおよびエクスポートするデータの形式にもさまざまな種類があります。 フラット ファイル、Excel、主要なリレーショナル データベース、さまざまなクラウド サービスなどの形式があります。
@@ -29,10 +30,10 @@ ms.locfileid: "68063192"
 `BULK INSERT` または `OPENROWSET(BULK...)` コマンドでデータをインポートできます。 通常は、SQL Server Management Studio (SSMS) でこれらのコマンドを実行します。 詳しくは、「[BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。
 
 ### <a name="use-bcp-from-the-command-prompt"></a>コマンド プロンプトから BCP を使用する
-BCP コマンドライン ユーティリティを使って、データをインポートおよびエクスポートできます。 詳しくは、「[bcp ユーティリティを使用した一括データのインポートとエクスポート](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。
+BCP コマンドライン ユーティリティを使って、データをインポートおよびエクスポートできます。 詳しくは、「[bcp ユーティリティを使用した一括データのインポートとエクスポート](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)」をご覧ください。
 
 ### <a name="use-the-import-flat-file-wizard"></a>フラット ファイルのインポート ウィザードを使用する
-インポート ウィザードやエクスポート ウィザードおよびその他のツールで使用可能な構成オプションが必ずしもすべて必要ではない場合、SQL Server Management Studio (SSMS) の**フラット ファイルのインポート ウィザード**を使用して、テキスト ファイルを SQL Server にインポートできます。 詳細については、次の記事をご覧ください。
+インポート ウィザードやエクスポート ウィザードおよびその他のツールで使用可能な構成オプションが必ずしもすべて必要ではない場合、SQL Server Management Studio (SSMS) の**フラット ファイルのインポート ウィザード**を使用して、テキスト ファイルを SQL Server にインポートできます。 詳細については、次の記事を参照してください。
 - [SQL のフラット ファイルのインポート ウィザード](import-flat-file-wizard.md)
 - [SQL Server Management Studio 17.3 の新機能](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [SSMS 17.3 の新しいフラット ファイルのインポート ウィザードの概要](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
@@ -47,7 +48,7 @@ SQL Server インポートおよびエクスポート ウィザードを使っ�
 
 ## <a name="data-formats-for-import-and-export"></a>インポートおよびエクスポートのデータ形式
 
-### <a name="supported-formats"></a>サポートされている形式
+### <a name="supported-formats"></a>サポートされるフォーマット
 
 フラット ファイルまたはその他のさまざまなファイル形式、リレーショナル データベース、およびクラウド サービスで、データをインポートおよびエクスポートできます。 特定のツールでのこれらのオプションについて詳しくは、次のトピックをご覧ください。
 -   SQL Server インポートおよびエクスポート ウィザードについては、「[Connect to Data Sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)」(SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する) をご覧ください。
@@ -62,5 +63,5 @@ SQL Server インポートおよびエクスポート ウィザードを使っ�
 -   XML については、「[XML ドキュメントのインポートおよびエクスポート](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)」をご覧ください。
 -   Azure Blob Storage については、「[Azure BLOB ストレージからのインポートおよびエクスポート](examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 インポートまたはエクスポート タスクをどこから始めればよいかわからない場合は、SQL Server インポートおよびエクスポート ウィザードを検討してください。 概要については、「[簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)」をご覧ください。

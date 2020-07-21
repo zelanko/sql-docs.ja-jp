@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580350"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
@@ -26,10 +26,10 @@ ms.locfileid: "65580350"
   
  以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用されていた ActiveX コントロールは、レポート サーバーからクライアント コンピューターにダウンロードする必要がありました。 レポート サーバーを SQL Server 2016 以降にアップグレードしても、この印刷コントロールはレポート サーバーまたはクライアント コンピューターから削除されません。  
 
-##  <a name="bkmk_clientside_printexpereince"></a> 印刷時の動作  
+##  <a name="the-print-experience"></a><a name="bkmk_clientside_printexpereince"></a> 印刷時の動作  
  レポート ビューアーのツールバーで印刷 ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") ボタンをクリックしたときの動作は、クライアント コンピューターにインストールされている PDF 閲覧アプリケーションの種類と、使用しているブラウザーの種類によって異なります。   クライアント コンピューターの環境に応じて、PDF ファイルのダウンロード、ダイアログ ボックスでの印刷オプションの設定、またはその両方を行うことができます。  
   
- ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
+ ![レポート ツール バー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツール バー")  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ ms.locfileid: "65580350"
 |PDF リーダー アプリケーションがインストール済みの場合、印刷ボタンをクリックすると PDF ファイルのプレビュー ウィンドウが表示され、PDF ファイルを保存または印刷することができます。||  
 |PDF リーダー アプリケーションがインストールされていない場合は、次の 2 種類の動作になります。<br /><br /> レポートが自動的に表示され、使用しているブラウザーのダウンロード プロセスを使用して PDF ファイルがダウンロードされます。   **注:** 複雑なレポートになるほど、 **[印刷]** をクリックしてからブラウザーのダウンロード通知が表示されるまでの時間が長くなります。 **[レポートの PDF を表示するには、ここをクリックしてください。]** をクリックして、PDF ファイルを再度ダウンロードすることもできます。<br /><br /> **[レポートの PDF を表示するには、ここをクリックしてください。]** をクリックして、PDF ファイルをダウンロードします。|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
-##  <a name="bkmk_troubleshoot_clientsideprinting"></a> クライアント側印刷機能のトラブルシューティング  
+##  <a name="troubleshoot-client-side-printing"></a><a name="bkmk_troubleshoot_clientsideprinting"></a> クライアント側印刷機能のトラブルシューティング  
  レポート ビューアーのツールバーで印刷ボタンが無効になっている場合は、次のことを確認します。  
   
 -   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のレポート サーバーでクライアント側印刷機能が無効になっています。 このセクションの「  [クライアント側印刷機能を有効または無効にする](#bkmk_enable) 」セクションを参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "65580350"
   
      ![ssrs_html5_switch2html5](../../reporting-services/report-server/media/ssrs-html5-switch2html5.png "ssrs_html5_switch2html5")  
   
-##  <a name="bkmk_enable"></a> クライアント側印刷機能を有効または無効にする  
+##  <a name="enable-and-disable-client-side-printing"></a><a name="bkmk_enable"></a> クライアント側印刷機能を有効または無効にする  
  レポート サーバー管理者は、レポート サーバーのシステム プロパティ **EnableClientPrinting** を **false**に設定して、リモート印刷機能を無効にすることができます。 これにより、サーバーが管理しているすべてのレポートでクライアント側印刷機能が無効になります。 既定では、 **EnableClientPrinting** は **true**に設定されています。 クライアント側印刷機能は、次の方法で無効にすることができます。  
   
 -   **ネイティブ モードのレポート サーバー**の場合:  
@@ -84,7 +84,7 @@ ms.locfileid: "65580350"
   
 -   レポート サーバー システム プロパティの **EnableClientPrinting** を **false.** に設定するスクリプトまたはコードを記述します。  
   
- 次のサンプル スクリプトは、クライアント側印刷機能を無効にする方法の一例を示しています。 この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コードをコンパイルして実行すると、 **EnableClientPrinting** プロパティが **False**に設定されます。 コードの実行後、IIS を再起動してください。  
+ 次のサンプル スクリプトは、クライアント側印刷機能を無効にする方法の一例を示しています。 この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] コードをコンパイルして実行すると、**EnableClientPrinting** プロパティが **False** に設定されます。 コードの実行後、IIS を再起動してください。  
   
 ### <a name="sample-script"></a>サンプル スクリプト  
   

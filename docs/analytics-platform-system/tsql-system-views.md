@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System Parallel Data Warehouse のシステム ビュー |Microsoft Docs
-description: システム ビューの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+title: システム ビュー
+description: 分析プラットフォームシステム (APS) SQL Server 並列データウェアハウス (PDW) のシステムビュー。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c459b3656f4b7a2d61cbe0109a78848894600fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959963"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74399805"
 ---
-# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System Parallel Data Warehouse のシステム ビュー
-システム ビューの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
+# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System Parallel Data Warehouse のシステムビュー
+分析プラットフォームシステム (APS) SQL Server 並列データウェアハウス (PDW) のシステムビュー。
 
-## <a name="parallel-data-warehouse-catalog-views"></a>並列データ ウェアハウスのカタログ ビュー
+## <a name="parallel-data-warehouse-catalog-views"></a>並列データウェアハウスのカタログビュー
 * [sys.pdw_column_distribution_properties](https://msdn.microsoft.com/library/mt204022.aspx)
 * [sys.pdw_database_mappings](https://msdn.microsoft.com/library/mt203891.aspx)
 * [sys.pdw_distributions](https://msdn.microsoft.com/library/mt203892.aspx)
@@ -36,7 +37,7 @@ ms.locfileid: "67959963"
 * [sys.pdw_table_distribution_properties](https://msdn.microsoft.com/library/mt203896.aspx)
 * [sys.pdw_table_mappings](https://msdn.microsoft.com/library/mt203876.aspx)
 
-## <a name="parallel-data-warehouse-dynamic-management-views-dmvs"></a>Parallel Data Warehouse 動的管理ビュー (Dmv)
+## <a name="parallel-data-warehouse-dynamic-management-views-dmvs"></a>並列データウェアハウスの動的管理ビュー (Dmv)
 * [sys.dm_pdw_dms_cores](https://msdn.microsoft.com/library/mt203911.aspx)
 * [sys.dm_pdw_dms_external_work](../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md)
 * [sys.dm_pdw_dms_workers](https://msdn.microsoft.com/library/mt203878.aspx)
@@ -56,14 +57,14 @@ ms.locfileid: "67959963"
 * [sys.dm_pdw_wait_stats](https://msdn.microsoft.com/library/mt203909.aspx)
 * [sys.dm_pdw_waits](https://msdn.microsoft.com/library/mt203909.aspx)
 
-## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>Parallel Data Warehouse に適用可能な SQL Server の Dmv
-次に示す Dmv は、並列データ ウェアハウスに適用されますに接続して実行する必要があります、**マスター**データベース。
+## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>並列データウェアハウスに適用可能な SQL Server Dmv
+次の Dmv は並列データウェアハウスに適用できますが、 **master**データベースに接続することによって実行する必要があります。
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
 * [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
 * [sys.fn_helpcollations()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
-## <a name="sql-server-catalog-views"></a>SQL Server のカタログ ビュー
+## <a name="sql-server-catalog-views"></a>SQL Server カタログ ビュー
 * [sys.all_columns](https://msdn.microsoft.com/library/ms177522.aspx)
 * [sys.all_objects](https://msdn.microsoft.com/library/ms178618.aspx)
 * [sys.all_parameters](https://msdn.microsoft.com/library/ms190340.aspx)
@@ -129,17 +130,17 @@ ms.locfileid: "67959963"
 * [sys.types](https://msdn.microsoft.com/library/ms188021.aspx)
 * [sys.views](https://msdn.microsoft.com/library/ms190334.aspx)
 
-## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 使用可能な Dmv Parallel Data warehouse
-Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多くを公開します。 Parallel Data warehouse では、照会されたときに、これらのビューのディストリビューションで実行されている SQL Server データベースの状態が報告します。
+## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>並列データウェアハウスで使用できる Dmv の SQL Server
+並列データウェアハウスは、SQL Server の動的管理ビュー (Dmv) の多くを公開します。 これらのビューは、並列データウェアハウスでクエリを実行すると、ディストリビューションで実行されている SQL Server データベースの状態を報告します。
 
-これらの各 DMV は、pdw_node_id という特定の列があります。 これは、コンピューティング ノードの識別子です。 
+これらの DMV には、pdw_node_id と呼ばれる特定の列があります。 これは、コンピューティングノードの識別子です。 
 
 > [!NOTE]
-> これらのビューを使用するには、次の表に示すように、名前に pdw_nodes _"を挿入します。
+> これらのビューを使用するには、次の表に示すように、名前に ' pdw_nodes_ ' を挿入します。
 > 
 > 
 
-| Parallel Data Warehouse での DMV 名 | SQL Server の T-SQL のトピックへのリンクします。 |
+| Parallel Data Warehouse の DMV 名 | SQL Server T-sql トピックへのリンク |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](https://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](https://msdn.microsoft.com/library/ms188755.aspx) |
@@ -162,7 +163,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 | sys.dm_pdw_nodes_os_child_instances |[sys.dm_os_child_instances](https://msdn.microsoft.com/library/ms165698.aspx) |
 | sys.dm_pdw_nodes_os_cluster_nodes |[sys.dm_os_cluster_nodes](https://msdn.microsoft.com/library/ms187341.aspx) |
 | sys.dm_pdw_nodes_os_dispatcher_pools |[sys.dm_os_dispatcher_pools](https://msdn.microsoft.com/library/bb630336.aspx) |
-| sys.dm_pdw_nodes_os_dispatchers |TRANSACT-SQL のドキュメントは、ご利用いただけません。 |
+| sys.dm_pdw_nodes_os_dispatchers |Transact-SQL のドキュメントはありません。 |
 | sys.dm_pdw_nodes_os_hosts |[sys.dm_os_hosts](https://msdn.microsoft.com/library/ms187800.aspx) |
 | sys.dm_pdw_nodes_os_latch_stats |[sys.dm_os_latch_stats](https://msdn.microsoft.com/library/ms175066.aspx) |
 | sys.dm_pdw_nodes_os_memory_brokers |[sys.dm_os_memory_brokers](https://msdn.microsoft.com/library/bb522548.aspx) |
@@ -171,7 +172,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 | sys.dm_pdw_nodes_os_memory_cache_entries |[sys.dm_os_memory_cache_entries](https://msdn.microsoft.com/library/ms189488.aspx) |
 | sys.dm_pdw_nodes_os_memory_cache_hash_tables |[sys.dm_os_memory_cache_hash_tables](https://msdn.microsoft.com/library/ms182388.aspx) |
 | sys.dm_pdw_nodes_os_memory_clerks |[sys.dm_os_memory_clerks](https://msdn.microsoft.com/library/ms175019.aspx) |
-| sys.dm_pdw_nodes_os_memory_node_access_stats |TRANSACT-SQL のドキュメントは、ご利用いただけません。 |
+| sys.dm_pdw_nodes_os_memory_node_access_stats |Transact-SQL のドキュメントはありません。 |
 | sys.dm_pdw_nodes_os_memory_nodes |[sys.dm_os_memory_nodes](https://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_memory_objects |[sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) |
 | sys.dm_pdw_nodes_os_memory_pools |[sys.dm_os_memory_pools](https://msdn.microsoft.com/library/ms175022.aspx) |
@@ -179,7 +180,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 | sys.dm_pdw_nodes_os_performance_counters |[sys.dm_os_performance_counters](https://msdn.microsoft.com/library/ms187743.aspx) |
 | sys.dm_pdw_nodes_os_process_memory |[sys.dm_os_process_memory](https://msdn.microsoft.com/library/bb510747.aspx) |
 | sys.dm_pdw_nodes_os_schedulers |[sys.dm_os_schedulers](https://msdn.microsoft.com/library/ms177526.aspx) |
-| sys.dm_pdw_nodes_os_spinlock_stats |TRANSACT-SQL のドキュメントは、ご利用いただけません。 |
+| sys.dm_pdw_nodes_os_spinlock_stats |Transact-SQL のドキュメントはありません。 |
 | sys.dm_pdw_nodes_os_sys_info |[sys.dm_os_sys_info](https://msdn.microsoft.com/library/ms175048.aspx) |
 | sys.dm_pdw_nodes_os_sys_memory |[sys.dm_os_memory_nodes](https://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_tasks |[sys.dm_os_tasks](https://msdn.microsoft.com/library/ms174963.aspx) |
@@ -200,7 +201,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](https://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](https://msdn.microsoft.com/library/ms188778.aspx) |
 
-## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>SQL Parallel Data Warehouse で使用可能なサーバー 2016 の PolyBase Dmv
+## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>並列データウェアハウスで使用可能な SQL Server 2016 PolyBase Dmv
 * [sys.dm_exec_compute_node_errors](https://msdn.microsoft.com/library/mt146380.aspx)
 * [sys.dm_exec_compute_node_status](https://msdn.microsoft.com/library/mt146382.aspx)
 * [sys.dm_exec_compute_nodes](../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
@@ -212,7 +213,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 * [sys.dm_exec_external_operations](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
-## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA ビュー
+## <a name="sql-server-information_schema-views"></a>SQL Server INFORMATION_SCHEMA ビュー
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
 * [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
 * [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
@@ -223,8 +224,8 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
 * [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
-## <a name="next-steps"></a>次の手順
-参照の詳細については、次を参照してください。 [T-SQL 言語要素](tsql-language-elements.md)と[T-SQL ステートメント](tsql-statements.md)します。
+## <a name="next-steps"></a>次のステップ
+詳細については、「 [t-sql 言語要素](tsql-language-elements.md)」および「 [t-sql ステートメント](tsql-statements.md)」を参照してください。
 
 <!--Image references-->
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e68559c2f795a16bd9257d53a92f1cb5899d711
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729618"
 ---
 # <a name="write-database-engine"></a>Write (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 書き込み のバイナリ表現を書き込みます **SqlHierarchyId** を渡されたに **BinaryWriter**です。 書き込み [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して呼び出すことができない です。 代わりに、CAST または CONVERT を使用してください。
   
@@ -42,10 +42,10 @@ void Write( BinaryWriter w )
 ## <a name="return-types"></a>戻り値の型  
 **CLR の戻り値の型: void**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 書き込み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合など**からデータを読み込むときに、 hierarchyid** 列です。 Write は、**hierarchyid** と **varbinary**間で変換が行われる場合も呼び出されます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql
 MemoryStream stream = new MemoryStream();  

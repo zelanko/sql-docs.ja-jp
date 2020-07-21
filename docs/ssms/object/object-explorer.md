@@ -1,10 +1,7 @@
 ---
-title: オブジェクト エクスプローラー | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: オブジェクト エクスプローラー
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -26,14 +23,18 @@ helpviewer_keywords:
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96bdde501293faf5e34391b2b6d7e7da4e7c2e7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264124"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257139"
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68264124"
   
 ## <a name="object-explorer-tasks"></a>オブジェクト エクスプローラーのタスク  
   
-|[説明]|トピック|  
+|説明|トピック|  
 |---------------|---------|  
 |オブジェクト エクスプローラーを開いて、その動作を定義するオプションを構成する方法について説明します。|[オブジェクト エクスプローラーを開き、構成する](../../ssms/object/open-and-configure-object-explorer.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスにオブジェクト エクスプローラーを接続する方法について説明します。|[オブジェクト エクスプローラーからインスタンスへの接続](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  

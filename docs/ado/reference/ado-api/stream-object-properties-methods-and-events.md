@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c79f2b1e35b263c61f9af5b3e309b9b72a930d53
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930677"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759628"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Charset プロパティ](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS プロパティ](../../../ado/reference/ado-api/eos-property.md)  
@@ -69,5 +69,5 @@ ms.locfileid: "67930677"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

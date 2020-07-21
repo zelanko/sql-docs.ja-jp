@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26d1e0fc71a43dabeb1c02737180766cbe840f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702609"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンス内の各図形に含まれる地点の合計数を返します。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "68120900"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型:**SqlInt32**  
+ CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドは、**geography** インスタンスの記述に含まれている地点をカウントします。 重複する地点はカウントされます。ただし、セグメント間の接続点は 1 つとしてカウントされます。 対象となるインスタンスがコレクションの場合、このメソッドは、コレクション内の地点の合計数を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>A. LineString 内の地点の合計数を取得する  
  `LineString` インスタンスを作成し、`STNumPoints()` を使用して、インスタンスの記述で使用されている地点の数を確認する例を次に示します。  

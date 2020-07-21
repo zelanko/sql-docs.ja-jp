@@ -1,5 +1,5 @@
 ---
-title: レコード セット オブジェクトを使用して |Microsoft Docs
+title: レコードセットオブジェクトを使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 183c8b3379d2ac90fa089f2f2834b46473961abf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923637"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763083"
 ---
 # <a name="using-a-recordset-object"></a>レコードセット オブジェクトを使用する
-また、使用することができます**Recordset.Open**を暗黙的に接続を確立し、1 回の操作では、その接続経由でコマンドを発行します。 たとえばでは Visual Basic の場合。  
+または、**レコードセット**を使用して、暗黙的に接続を確立し、1回の操作でその接続に対してコマンドを発行することもできます。 たとえば、Visual Basic の場合は次のようになります。  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -47,4 +47,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- 注意**oRs.Open**は接続文字列を受け取り (*sConn*) の代わりに、**接続**オブジェクト (*oConn*)、そのの値として**ActiveConnection**パラメーター。 設定によって、クライアント側カーソルの種類を適用することも、 **CursorLocation**プロパティを**Recordset**オブジェクト。 ここでも、これと対照的に、 **HelloData**例。
+ **ActiveConnection**パラメーターの値として**接続**オブジェクト (*oconn*) の代わりに接続文字列 (*sconn*) が実行されることに注意してください **。** また、クライアント側のカーソルの種類は、**レコードセット**オブジェクトの**cursor location**プロパティを設定することによって適用されます。 ここでも、 **HelloData**の例と比較してください。

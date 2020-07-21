@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c4f082b427aaafb8b93aff7f3247859a92a3b62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077986"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738230"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 *this* の *n* 番目の先祖を表す **hierarchyid** が返されます。
   
@@ -50,14 +50,14 @@ n、 **int**, を階層を上がるレベル数を表します。
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 出力の各ノードにとって、現在のノードが指定したレベルの先祖であるかどうかをテストするときに使用します。
   
 [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md) より大きい数値が渡されると、NULL が返されます。
   
 負の数が渡されると、例外が発生します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. 親の子ノードを検索する  
 `GetAncestor(1)` は、`david0` をその直接の先祖 (親) とする従業員を返します。 `GetAncestor(1)` の使用例を次に示します。

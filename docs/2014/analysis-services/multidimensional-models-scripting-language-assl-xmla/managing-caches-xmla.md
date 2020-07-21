@@ -14,24 +14,23 @@ helpviewer_keywords:
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdc5bcd2e0500749edfa298a871b6fec7243ddfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544984"
 ---
 # <a name="managing-caches-xmla"></a>キャッシュの管理 (XMLA)
-  使用することができます、 [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) XML for Analysis (XMLA)、指定したディメンションまたはパーティションのキャッシュをクリアするコマンド。 キャッシュの力をクリアする[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]そのオブジェクトのキャッシュを再構築します。  
+  XML for Analysis (XMLA) の[clearcache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla)コマンドを使用して、指定したディメンションまたはパーティションのキャッシュを消去できます。 キャッシュをクリアすると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] そのオブジェクトのキャッシュが強制的に再構築されます。  
   
 ## <a name="specifying-objects"></a>オブジェクトの指定  
- [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`ClearCache`コマンドは、次のオブジェクトの 1 つのみのオブジェクト参照を含めることができます。 以下に該当しないオブジェクトに対するオブジェクト参照が含まれる場合、エラーが発生します。  
+ コマンドの[object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティには、 `ClearCache` 次のいずれかのオブジェクトに対してのみオブジェクト参照を含めることができます。 以下に該当しないオブジェクトに対するオブジェクト参照が含まれる場合、エラーが発生します。  
   
- [データベース]  
+ データベース  
  データベースに含まれるすべてのディメンションおよびパーティションのキャッシュを消去します。  
   
- [ディメンション]  
+ Dimension  
  指定されたディメンションのキャッシュを消去します。  
   
  Cube  
@@ -40,10 +39,10 @@ ms.locfileid: "62727588"
  [メジャー グループ]  
  メジャー グループに含まれるすべてのパーティションのキャッシュを消去します。  
   
- パーティション  
+ Partition  
  指定されたパーティションのキャッシュを消去します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   
   

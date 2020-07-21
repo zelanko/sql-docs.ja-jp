@@ -1,6 +1,7 @@
 ---
-title: '[ミラー サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード) | Microsoft Docs'
-ms.custom: ''
+title: 'セキュリティの構成ウィザード: ミラー サーバー インスタンス'
+description: SQL Server Management Studio の [データベース ミラーリング セキュリティ構成ウィザード] の [ミラー サーバー インスタンス] ページについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99a8157c9285a7e6950e493f15c1b22f8c9d2eba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045627"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784108"
 ---
-# <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>[ミラー サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="configure-database-mirrroing-security-wizard-mirror-server-instance"></a>データベース ミラーリング セキュリティ構成ウィザード: ミラー サーバー インスタンス
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、ミラー データベースを持つサーバー インスタンスに関する情報を指定できます。  
   
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.locfileid: "68045627"
   
 -   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ミラー サーバー インスタンス]**  
  **[データベースのプロパティ]** ダイアログ ボックスの **[ミラー化]** ページで、ミラー サーバー インスタンスが既に指定されている場合、そのインスタンスが表示されます。詳細については、「[[データベースのプロパティ] &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)」を参照してください。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68045627"
 > [!NOTE]  
 >  データベース ミラーリング セキュリティ構成ウィザードは、 **[サーバーへの接続]** ダイアログ ボックスで指定された資格情報を使ってサーバー インスタンスに接続します。 これらは、ミラーリング セッションの資格情報とは異なります。ミラーリング セッションでは、サーバー インスタンスをサービスとして実行している開始アカウントの資格情報が使用されます。  
   
- **[リスナー ポート]**  
+ **リスナー ポート**  
  このオプションでは、このサーバー インスタンスに対するミラーリング エンドポイントが存在するかどうかに応じて、次のような内容が表示されます。  
   
 -   サーバー インスタンスに対するリスナー ポートが存在しない場合、 **[リスナー ポート]** テキスト ボックスにポート番号 5022 が表示されます。 使用可能な任意のポート番号を入力できます (7022 など)。  

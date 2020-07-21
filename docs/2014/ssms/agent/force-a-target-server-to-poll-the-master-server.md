@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 307eee715b468c3d99fa0b8e1779ba2c6c73cbaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63044057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008751"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>ターゲット サーバーからのマスター サーバーのポーリングの強制
   このトピックでは、ターゲット サーバーからマスター サーバーにポーリングさせる方法について説明します。 ターゲット サーバーは、マスター サーバーの登録済みサーバーである必要があります。  
@@ -30,25 +29,25 @@ ms.locfileid: "63044057"
 > [!NOTE]  
 >  ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
   
--   **ターゲット サーバーからマスター サーバーにポーリングさせるには、次を使用します。** [SQL Server Management Studio](#SSMS)  
+-   **ターゲット サーバーからマスター サーバーにポーリングさせるために使用するもの:**  [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  ターゲット サーバーは、マスター サーバーの登録済みサーバーである必要があります。 このトピックに説明されている手順は、マスター サーバーから実行する必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
- **対象サーバーからマスター サーバーにポーリングさせるには**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
+ **ターゲット サーバーからマスター サーバーにポーリングさせるには**  
   
 1.  **オブジェクト エクスプローラー**で、マスター サーバーを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** をクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、**[マルチ サーバーの管理]** をポイントして、**[ターゲット サーバーの管理]** をクリックします。  
   
-3.  ターゲット サーバーをクリックし、 **[強制的にポーリング]** をクリックします。  
+3.  ターゲット サーバーをクリックし、**[強制的にポーリング]** をクリックします。  
   
   

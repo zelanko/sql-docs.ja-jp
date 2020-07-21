@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103921"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>フォルダーの作成、削除、または変更 (レポート マネージャー)
@@ -35,7 +35,7 @@ ms.locfileid: "66103921"
   
      **[新しいフォルダー]** ページが開きます。  
   
-3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? :など) は使用できません : \@ & = + , $ / * \< > |. フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
+3.  フォルダー名を入力します。 フォルダー名にはスペースを使用できますが、URL エンコードに使用される予約文字 (; ? :など) は使用できません : \@ & = +、$/* \< > |。 フォルダー名を続けて入力して、同時に複数のフォルダーを作成することはできません。  
   
 4.  必要に応じて、説明を入力します。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66103921"
   
 6.  フォルダーとフォルダーの内容を削除するには、 **[削除]** をクリックします。  
   
-7.  **[適用]** をクリックして変更を保存します。  
+7.  **[Apply (適用)]** をクリックして変更内容を保存します。  
   
-## <a name="see-also"></a>関連項目  
- [[新しいフォルダー] ページ &#40;レポート マネージャー&#41;](../new-folder-page-report-manager.md)   
- [[コンテンツ] ページ &#40;レポート マネージャー&#41;](../contents-page-report-manager.md)   
- [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [[新しいフォルダー] ページ &#40;レポートマネージャー&#41;](../new-folder-page-report-manager.md)   
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../contents-page-report-manager.md)   
+ [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -30,12 +30,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f897bff869f68e25bfd021a2f95dd05cfc60af8f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910087"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632290"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67910087"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 --Applies to SQL Server and Azure SQL Database
  
 BEGIN { TRAN | TRANSACTION }   
@@ -56,7 +56,7 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 --Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
@@ -142,7 +142,7 @@ COMMIT TRAN T1;
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 明示的なトランザクションを使用します。
 **適用対象:** SQL Server (2008 以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse

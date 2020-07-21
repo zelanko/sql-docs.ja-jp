@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_semantic_languages (TRANSACT-SQL) |Microsoft Docs
+title: fulltext_semantic_languages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,39 +19,39 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764672"
 ---
-# <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfulltext_semantic_languages-transact-sql"></a>fulltext_semantic_languages (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  統計モデルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されている各言語の行を返します。 言語モデルの登録時に、セマンティック インデックス作成用の言語が有効であります。  
+  統計モデルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されている各言語の行を返します。 言語モデルが登録されている場合、その言語はセマンティックインデックス作成に対して有効になります。  
   
- このカタログ ビューに似ています[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)します。  
+ このカタログビューは、 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)に似ています。  
     
 ||||  
 |-|-|-|  
-|**列名**|**型**|**[説明]**|  
-|lcid|ssNoversion|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
-|NAME|sysname|内の別名のいずれかの値は、 [sys.syslanguages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の値に対応する**lcid**、または LCID の数値の文字列表現。|  
+|**列名**|**Type**|**説明**|  
+|lcid|INT|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
+|name|sysname|はsys.sys言語のエイリアスの値 &#40;**lcid**の値に対応する[transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)か、数値の lcid の文字列形式です。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「 [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)」を参照してください。  
   
-## <a name="metadata"></a>メタデータ  
- セマンティック インデックス作成をサポートするためにインストールされているセマンティック言語統計データベースに関する詳細については、カタログ ビューに対してクエリ[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+## <a name="metadata"></a>Metadata  
+ セマンティックインデックス作成をサポートするためにインストールされているセマンティック言語統計データベースの詳細については、カタログビューの[fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)に対するクエリを実行してください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を照会する方法**sys.fulltext_semantic_languages**の現在のインスタンスでセマンティック インデックス作成の言語モデルが登録されているすべての情報を取得する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+ 次の例では、 **fulltext_semantic_languages**クエリを実行し、の現在のインスタンスでセマンティックインデックス作成に登録されているすべての言語モデルに関する情報を取得する方法を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_languages;  

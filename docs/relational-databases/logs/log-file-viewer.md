@@ -1,5 +1,6 @@
 ---
 title: ログ ファイルの表示 | Microsoft Docs
+description: SQL Server Management Studio の [ログ ファイルの表示] を使用して、ログ ファイルに記録されたエラーおよびイベントに関する情報にアクセスできます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7425bb2175b9a2e7b813f63e7d78aec7e73ef5ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668122"
 ---
 # <a name="log-file-viewer"></a>ログ ファイルの表示
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [ログ ファイルの表示] を使用して、ログ ファイルに記録されたエラーおよびイベントに関する情報にアクセスできます。  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>[ログ ファイルの表示] を使用する利点  
@@ -28,7 +29,7 @@ ms.locfileid: "68084074"
   
 -   監査コレクション  
   
--   データ コレクション  
+-   データ収集  
   
 -   データベース メール  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68084074"
 |[ログ ファイルの表示] の F1 ヘルプを提供します。|[[ログ ファイルの表示] の F1 ヘルプ](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server エージェント エラー ログ](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

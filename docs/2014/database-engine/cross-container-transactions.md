@@ -1,5 +1,5 @@
 ---
-title: コンテナーにまたがるトランザクション |Microsoft Docs
+title: 複数コンテナーにまたがるトランザクション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934483"
 ---
 # <a name="cross-container-transactions"></a>複数コンテナーにまたがるトランザクション
   複数コンテナーにまたがるトランザクションは、ネイティブ コンパイル ストアド プロシージャの呼び出しまたはメモリ最適化テーブルでの操作を含む、暗黙的または明示的なユーザー トランザクションです。  
@@ -24,8 +23,8 @@ ms.locfileid: "62807426"
   
  メモリ最適化テーブルを参照する解釈されたクエリは、明示的または暗黙的なトランザクションから実行された場合も、自動コミット モードで実行された場合も、複数コンテナーにまたがるトランザクションの一部と見なされます。  
   
-##  <a name="isolation"></a> 個々 の操作の分離  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各トランザクションには分離レベルがあります。 既定の分離レベルは READ COMMITTED です。 別の分離レベルを使用する分離レベルを使用して、設定できます[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)します。  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>個々の操作の分離  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各トランザクションには分離レベルがあります。 既定の分離レベルは READ COMMITTED です。 別の分離レベルを使用するには、 [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)を使用して分離レベルを設定できます。  
   
  多くの場合、ディスク ベース テーブルでの操作とは異なる分離レベルで、メモリ最適化テーブルでの操作を実行することが必要になります。 トランザクションでは、ステートメントのコレクションまたは個別の読み取り操作に対して別の分離レベルを設定することができます。  
   
@@ -65,13 +64,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>個別の操作の分離セマンティクス  
  シリアル化可能なトランザクション T は完全に分離して実行されます。 他のすべてのトランザクションは、T の開始前にコミット済みであるか、T のコミット後に開始されるかのように見えます。 トランザクション内の別の操作に別の分離レベルがある場合は、さらに複雑になります。  
   
- トランザクション分離レベルでの一般的なセマンティクス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、ロックの影響、と共にについては[SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)します。  
+ でのトランザクション分離レベルの一般的なセマンティクスについては、「 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SET TRANSACTION 分離レベル &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」で説明されています。  
   
  異なる操作に異なる分離レベルがある複数コンテナーにまたがるトランザクションの場合は、個別の読み取り操作の分離のセマンティクスを理解しておく必要があります。 書き込み操作は常に分離されます。 それぞれ異なるトランザクションでの書き込みが互いに影響し合うことはできません。  
   
  データの読み取り操作では、フィルター条件を満たす行の数が返されます。  
   
- 読み取り操作のトランザクション t です。 分離レベルの一部は、以下の観点認識できるように読み取りは実行されます。  
+ 読み取りは、トランザクション T の一部として実行されます。読み取り操作の分離レベルは、という点で理解できます。  
   
  コミットの状態  
  コミットの状態では、読み取られたデータのコミットが保証されるかどうかを参照します。  
@@ -80,9 +79,9 @@ commit
  一連の読み取りに関するトランザクションの一貫性では、読み取られた行バージョンがすべて正確な同じ一連のトランザクションからの更新を含んでいることが保証されるかどうかを参照します。  
   
  安定性では、読み取られたデータについてシステムからトランザクション T への提供が保証されます。  
- 安定性は、トランザクションの読み取りが反復可能かどうかを参照します。 したがって、読み取りが反復された場合、同じ行や行バージョンが返されるかということになります。  
+ 安定性とは、トランザクションの読み取りが反復可能であるかどうかを意味します。 したがって、読み取りが反復された場合、同じ行や行バージョンが返されるかということになります。  
   
- 特定の保証では、トランザクションの論理的な終了時刻を参照します。 一般に、論理的な終了時刻は、トランザクションがデータベースにコミットされる時間です。 メモリ最適化テーブルにトランザクションからアクセスする場合、論理的な終了時刻は、理論的には検証フェーズの開始時です (詳細については、トランザクション有効期間の説明を参照してください。[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ 特定の保証では、トランザクションの論理的な終了時刻を参照します。 一般に、論理的な終了時刻は、トランザクションがデータベースにコミットされる時間です。 メモリ最適化テーブルにトランザクションからアクセスする場合、論理的な終了時刻は、理論的には検証フェーズの開始時です  (詳細については、「[メモリ最適化テーブルの](../relational-databases/in-memory-oltp/memory-optimized-tables.md)トランザクション」に記載されているトランザクションの有効期間の説明を参照してください。  
   
  分離レベルに関係なく、トランザクション (T) は常に自己の更新を確認します。  
   
@@ -99,7 +98,7 @@ commit
  読み取られるデータは、コミットされること、およびトランザクションの論理的終了時刻まで安定状態であることが保証されます。  
   
  SERIALIZABLE  
- REPEATABLE READ とファントムの回避と T. ファントムの回避の意味、スキャン操作が、T によって書き込まれた追加の行を返すことができますのみで実行されるすべてのシリアル化可能な読み取り操作に関して、トランザクションの一貫性の保証がすべてがありません他のトランザクションによって書き込まれた行。  
+ すべてのシリアル化可能な読み取りとファントムの回避、およびで実行されるすべてのシリアル化可能な読み取り操作に関して、トランザクションの一貫性が保証されます。ファントムの回避とは、他のトランザクションによって書き込まれた行を返さない、T によって書き込まれた追加の行のみを返すことを意味します。  
   
  次のようなトランザクションがあるとします。  
   
@@ -131,11 +130,11 @@ commit
  トランザクションの終了時の t1 からの読み取りは構文的に READ COMMITTED で行われますが、同じ読み取りが SERIALIZABLE のトランザクションで前に実行されているので、この読み取りは効果的にシリアル化可能です。シリアル化可能性により、トランザクションの後続のどの時点で読み取りを実行しても、同じ行を返すことが保証されます。  
   
 ## <a name="cross-container-transactions-and-isolation-levels"></a>複数コンテナーにまたがるトランザクションと分離レベル  
- コンテナーにまたがるトランザクションは 2 つの辺を持つものとして見なすことができます。 (ディスク ベース テーブルに対する操作) のディスク ベース側と、メモリ最適化側 (メモリ最適化テーブルでの操作) にします。 これら 2 つの側で分離レベルが異なる場合があります。 実際に、それぞれの側での個々の読み取り操作で分離レベルが異なることがあります。  
+ 複数コンテナーにまたがるトランザクションは、ディスクベースの側 (ディスクベーステーブルに対する操作の場合) とメモリ最適化側 (メモリ最適化テーブルでの操作の場合) という2つの側面を持つことができます。 これら 2 つの側で分離レベルが異なる場合があります。 実際に、それぞれの側での個々の読み取り操作で分離レベルが異なることがあります。  
   
  特定のトランザクション T のディスク ベース側は、次の条件のいずれかに一致する場合、特定の分離レベル X に達します。  
   
--   X で開始します。つまり、セッションの既定値が X、いずれかを実行するため`SET TRANSACTION ISOLATION LEVEL`、または、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]既定。  
+-   X で開始します。つまり、セッションの既定値は X で、実行したか、 `SET TRANSACTION ISOLATION LEVEL` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 既定値です。  
   
 -   トランザクションの実行中に、`SET TRANSACTION ISOLATION LEVEL` を使用して、既定の分離レベルが X に変更されます。  
   
@@ -147,7 +146,7 @@ commit
   
  トランザクションのディスク ベース側は READ COMMITTED 分離レベルに達します。これは、開始時のレベルが READ COMMITTED であるためです。 また、ディスク ベース側は REPEATABLE READ にも達します。これは、最初の読み取り操作が REPEATABLE READ で実行されるためです。 トランザクションの終了時の削除は READ COMMITTED 分離レベルで実行され、新しい分離レベルの導入はありません。  
   
- トランザクションのメモリ最適化側で、2 つのレベルのいずれかに達することができます: condition1 が true の場合は serializable に達し、false の場合、メモリ最適化側到達だけでスナップショット分離中にします。  
+ トランザクションのメモリ最適化側は、次の2つのレベルのいずれかに到達できます。 condition1 が true の場合は、シリアル化可能な状態になりますが、false の場合、メモリ最適化側はスナップショット分離にのみ到達します。  
   
 ```sql  
 set transaction isolation level read committed  
@@ -181,13 +180,13 @@ commit
 ## <a name="read-only-cross-container-transactions"></a>読み取り専用の複数コンテナーにまたがるトランザクション  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のほとんどの読み取り専用トランザクションは、コミット時にロールバックされます。 データベースにコミットされる変更がないため、システムはトランザクションによって使用されるリソースを単純に解放します。 読み取り専用のディスク ベース トランザクションの場合、トランザクションによって使用されるロックはこの時点ですべて解放されます。 ネイティブ コンパイル プロシージャの 1 回の実行全体での読み取り専用のメモリ最適化トランザクションの場合、検証は実行されません。  
   
- 自動コミット モードの複数コンテナーにまたがる読み取り専用トランザクションは、トランザクションの終了時に単純にロールバックされます。 検証は実行されません。  
+ 自動コミット モードの複数コンテナーにまたがる読み取り専用トランザクションは、トランザクションの終了時に単純にロールバックされます。 検証が実行されません。  
   
- 明示的または暗黙的な複数コンテナーにまたがる読み取り専用トランザクションでは、REPEATABLE READ 分離または SERIALIZABLE 分離でメモリ最適化テーブルにアクセスする場合、コミット時に検証を実行します。 検証に関する詳細については、競合の検出、検証、に関するセクションを参照し、コミットの依存関係の確認[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ 明示的または暗黙的な複数コンテナーにまたがる読み取り専用トランザクションでは、REPEATABLE READ 分離または SERIALIZABLE 分離でメモリ最適化テーブルにアクセスする場合、コミット時に検証を実行します。 検証の詳細については、「[メモリ最適化テーブルのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)での競合の検出、検証、コミットの依存関係のチェック」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルに対するトランザクションの概要](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [メモリ最適化テーブルのトランザクションについて](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [メモリ最適化テーブルを使用したトランザクション分離レベルのガイドライン](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

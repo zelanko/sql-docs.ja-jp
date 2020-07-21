@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: Bike Buyer マイニング構造の処理 |Microsoft Docs'
+title: 'レッスン 3: 自転車購入者マイニング構造の処理 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62655799"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>レッスン 3: Bike Buyer マイニング構造の処理
-  このレッスンでは、ステートメントとから vTargetMail ビューに INSERT を使用します、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]マイニング構造とマイニング モデルで作成したを処理するサンプル データベース[レッスン 1。Bike Buyer マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)と[レッスン 2。Bike Buyer マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)します。  
+  このレッスンでは、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプルデータベースの INSERT INTO ステートメントと vTargetMail ビューを使用して、「[レッスン 1: 自転車の購入者マイニング構造の作成](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)」と「[レッスン 2: 自転車購入者マイニング構造へのマイニングモデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)」で作成したマイニング構造とマイニングモデルを処理します。  
   
- マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルの処理では、マイニング構造で定義されたデータが、選択したデータ マイニング アルゴリズムを介して受け渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニング モデルの処理の詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
+ マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルの処理では、マイニング構造で定義されたデータが、選択したデータ マイニング アルゴリズムを介して受け渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニングモデルの処理の詳細については、「[データマイニング&#41;&#40;処理の要件と考慮事項](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
  マイニング構造の再処理は、構造列またはソース データを変更した場合に必要です。 処理済みのマイニング構造にマイニング モデルを追加する場合は、INSERT INTO MINING MODEL ステートメントを使用して新しいマイニング モデルをトレーニングできます。  
   
 ## <a name="train-structure-template"></a>構造テンプレートのトレーニング  
- マイニング構造とその関連マイニング モデルをトレーニングするために使用して、 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
+ マイニング構造とそれに関連付けられているマイニングモデルをトレーニングするには、 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)ステートメントを使用します。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -63,10 +63,10 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース クエリを定義するその他の方法については、次を参照してください。 [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)します。  
+ このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソースクエリを定義するその他の方法については、「 [&#60;source data query&#62;](/sql/dmx/source-data-query)」を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクを実行します。  
+ このレッスンでは、次の作業を実行します。  
   
 -   Bike Buyer マイニング構造の処理  
   
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO を使用してマイニング構造を処理するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -86,7 +86,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Bike Buyer  
@@ -98,7 +98,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Customer Key],  
@@ -123,7 +123,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     OPENQUERY([Adventure Works DW],  
@@ -136,7 +136,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-     OPENQUERY ステートメントは、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] データ ソースを参照して、vTargetMail ビューにアクセスしています。 ビューには、マイニング モデルのトレーニングに使用されるソース データが含まれています。  
+     OPENQUERY ステートメントは、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] データ ソースを参照して、vTargetMail ビューにアクセスしています。 ビューには、マイニングモデルのトレーニングに使用されるソースデータが含まれています。  
   
      最終的なステートメントは次のようになります。  
   
@@ -168,15 +168,15 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+6.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Process Bike Buyer Structure.dmx`します。  
+7.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`Process Bike Buyer Structure.dmx`、ファイル名を指定します。  
   
-8.  ツールバーの**Execute**ボタンをクリックします。  
+8.  ツールバーの [**実行**] ボタンをクリックします。  
   
  次のレッスンでは、このレッスンでマイニング構造に追加したマイニング モデルの内容を調査します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4:Bike Buyer マイニング モデルの参照](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [レッスン 4: Bike Buyer マイニング モデルの参照](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

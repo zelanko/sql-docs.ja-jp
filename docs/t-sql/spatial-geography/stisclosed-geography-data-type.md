@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41a0f923e997951e52b23ed0b1c2860a8c1532b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736111"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   指定された **geography** インスタンスの始点と終点が同じ場合は 1 を返します。 含まれている各 **geometry** インスタンスが閉じている場合は、**geometrycollection** 型に対して 1 を返します。 インスタンスが閉じていない場合は 0 を返します。  
   
@@ -41,16 +41,16 @@ ms.locfileid: "68042034"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスの任意の図形が地点の場合、またはインスタンスが空の場合、このメソッドは 0 を返します。  
   
  **FullGlobe** インスタンスが **Polygon** などの別の型のインスタンスの場合、このメソッドは true を返します。  
   
  すべての **Polygon** インスタンスは閉じていると見なされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Polygon` インスタンスを作成し、`STIsClosed()` を使用して `Polygon` が閉じているかどうかをテストする例を次に示します。  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 title: COALESCE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: COALESCE の Transact-SQL リファレンス。NULL と評価されない最初の式の現在の値を返します。
 ms.date: 08/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,15 +21,15 @@ ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b72554fcfb879a84eb881647a7f75186168380dd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950291"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005046"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 引数を順番に評価し、`NULL` と評価されない最初の式の現在の値を返します。 たとえば、`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` では、3 番目の値が null ではない最初の値であるために、3 番目の値が返されます。 
   
@@ -37,7 +37,7 @@ ms.locfileid: "67950291"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 COALESCE ( expression [ ,...n ] )   
 ```  
   
@@ -48,7 +48,7 @@ _式 (expression)_
 ## <a name="return-types"></a>戻り値の型  
 _式_のデータ型のうち、最も優先順位が高いものを返します。 すべての式で NULL 値が許可されない場合、結果は NULL 値が許可されない型になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 すべての引数が `NULL` である場合、`COALESCE` は `NULL` を返します。 NULL 値の少なくとも 1 つは、型指定された `NULL` である必要があります。  
   
 ## <a name="comparing-coalesce-and-case"></a>COALESCE と CASE の比較  
@@ -69,7 +69,7 @@ END
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
-from  
+FROM  
 (  
 SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x  
 ) AS T;  
@@ -93,9 +93,9 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     -- evaluates to NULL.  
     CREATE TABLE #Demo   
     (   
-    col1 integer NULL,   
-    col2 AS COALESCE(col1, 0) PRIMARY KEY,   
-    col3 AS ISNULL(col1, 0)   
+      col1 INTEGER NULL,   
+      col2 AS COALESCE(col1, 0) PRIMARY KEY,   
+      col3 AS ISNULL(col1, 0)   
     );   
   
     -- This statement succeeds because the nullability of the   
@@ -103,9 +103,9 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
   
     CREATE TABLE #Demo   
     (   
-    col1 integer NULL,   
-    col2 AS COALESCE(col1, 0),   
-    col3 AS ISNULL(col1, 0) PRIMARY KEY   
+      col1 INTEGER NULL,   
+      col2 AS COALESCE(col1, 0),   
+      col3 AS ISNULL(col1, 0) PRIMARY KEY   
     );  
     ```  
   
@@ -113,7 +113,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
   
 5.  `ISNULL` は、2 つのパラメーターのみを受け取ります。 これに対し `COALESCE` はさまざまな数のパラメーターを受け取ります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-running-a-simple-example"></a>A. 簡単な例を実行する  
 次の例では、`COALESCE` を使用して、NULL 以外の値を持つ最初の列からデータを選択する方法を示します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
@@ -136,11 +136,11 @@ IF OBJECT_ID('dbo.wages') IS NOT NULL
 GO  
 CREATE TABLE dbo.wages  
 (  
-    emp_id        tinyint   identity,  
-    hourly_wage   decimal   NULL,  
-    salary        decimal   NULL,  
-    commission    decimal   NULL,  
-    num_sales     tinyint   NULL  
+    emp_id        TINYINT   IDENTITY,  
+    hourly_wage   DECIMAL   NULL,  
+    salary        DECIMAL   NULL,  
+    commission    DECIMAL   NULL,  
+    num_sales     TINYINT   NULL  
 );  
 GO  
 INSERT dbo.wages (hourly_wage, salary, commission, num_sales)  
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C:簡単な例  
+### <a name="c-simple-example"></a>C: 簡単な例  
 次の例では、`COALESCE` が NULL 以外の値を含む最初の列からデータを選択する方法を示します。 `Products` テーブルに、このデータが含まれているとします。  
   
 ```  
@@ -225,11 +225,11 @@ NULL         White      PN9876         White
 ```sql  
 CREATE TABLE dbo.wages  
 (  
-    emp_id        tinyint   NULL,  
-    hourly_wage   decimal   NULL,  
-    salary        decimal   NULL,  
-    commission    decimal   NULL,  
-    num_sales     tinyint   NULL  
+    emp_id        TINYINT   NULL,  
+    hourly_wage   DECIMAL   NULL,  
+    salary        DECIMAL   NULL,  
+    commission    DECIMAL   NULL,  
+    num_sales     TINYINT   NULL  
 );  
 INSERT INTO dbo.wages (emp_id, hourly_wage, salary, commission, num_sales)  
 VALUES (1, 10.00, NULL, NULL, NULL);  
@@ -269,7 +269,7 @@ VALUES (12, NULL, NULL, 14000, 4);
   
 SELECT CAST(COALESCE(hourly_wage * 40 * 52,   
    salary,   
-   commission * num_sales) AS decimal(10,2)) AS TotalSalary   
+   commission * num_sales) AS DECIMAL(10,2)) AS TotalSalary   
 FROM dbo.wages  
 ORDER BY TotalSalary;  
 ```  

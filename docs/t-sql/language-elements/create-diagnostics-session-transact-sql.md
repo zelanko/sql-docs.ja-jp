@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68088972"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -77,18 +77,18 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  イベントに関連するプロパティです。  プロパティ名は、キャプチャ タグの一部でもかまわず、またはフィルター条件の一部として使用されます。  
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
 |UserName|ユーザー (ログイン) の名前。|  
 |SessionId|セッション ID。|  
 |QueryId|クエリの ID。|  
 |CommandType|コマンドの種類。|  
 |CommandText|処理されたコマンド内のテキスト。|  
-|[OperationType]|イベントの操作の種類。|  
+|OperationType|イベントの操作の種類。|  
 |Duration|イベントの期間。|  
 |SPID|サービス プロセス ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  各ユーザーには、最大 10 個の同時診断セッションが許可されます。 現在のセッションの一覧については、[sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) を参照してください。不要なセッションがある場合は、`DROP DIAGNOSTICS SESSION` を使用して削除します。  
   
  診断セッションでは、削除されるまでメタデータの収集が続行されます。  
@@ -99,7 +99,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ## <a name="locking"></a>ロック  
  診断セッション テーブルで共有ロックを取得します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-diagnostics-session"></a>A. 診断セッションを作成する  
  この例では、データベース エンジンのパフォーマンスのメトリックを記録する診断セッションを作成します。 この例では、エンジン クエリ実行/終了イベントと DMS ブロック   イベントをリッスンする診断セッションを作成します。 返される結果は、コマンド テキスト、コンピューター名、要求 ID (クエリ ID)、イベントが作成されたセッションです。  

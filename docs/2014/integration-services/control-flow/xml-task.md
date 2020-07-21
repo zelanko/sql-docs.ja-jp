@@ -12,15 +12,14 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e28c5f77bea9a22511ca93d1a2b350887cae77b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438019"
 ---
 # <a name="xml-task"></a>XML タスク
   XML タスクは、XML データの処理に使用します。 このタスクを使用すると、パッケージは、XML ドキュメントの取得、Extensible Stylesheet Language Transformations (XSLT) スタイル シートや XPath 式の使用によるドキュメントへの操作の適用、複数ドキュメントのマージ、または更新したドキュメントの検証、比較、およびファイルや変数への保存を行うことができます。  
@@ -53,12 +52,12 @@ ms.locfileid: "62829357"
 ## <a name="predefined-xml-operations"></a>定義済み XML 操作  
  XML タスクには、XML ドキュメントを処理するための定義済み操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|説明|  
+|Operation|説明|  
 |---------------|-----------------|  
 |[Diff]|2 つの XML ドキュメントを比較します。 XML ソース ドキュメントを基本ドキュメントとして使用し、Diff 操作は、そのドキュメントを 2 番目の XML ドキュメントと比較し、それらの違いを検出して XML DiffGram ドキュメントに書き込みます。 この操作には、比較をカスタマイズするためのプロパティが含まれています。|  
 |Merge|2 つの XML ドキュメントをマージします。 マージ操作は、XML ソース ドキュメントを基本ドキュメントとして使用し、2 番目のドキュメントの内容を基本ドキュメントに追加します。 この操作では、基本ドキュメント内のマージ場所を指定できます。|  
-|[Patch]|DiffGram ドキュメントと呼ばれる Diff 操作の出力を XML ドキュメントに適用し、DiffGram ドキュメントの内容を含む新しい親ドキュメントを作成します。|  
-|[検証]|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。|  
+|修正プログラム|DiffGram ドキュメントと呼ばれる Diff 操作の出力を XML ドキュメントに適用し、DiffGram ドキュメントの内容を含む新しい親ドキュメントを作成します。|  
+|検証|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。|  
 |XPath|XPath クエリと評価を実行します。|  
 |XSLT (XSLT)|XML ドキュメントに対して XSL 変換を実行します。|  
   
@@ -119,9 +118,9 @@ ms.locfileid: "62829357"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[XML タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [XML タスクを使った XML の検証](xml-task.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -141,6 +140,5 @@ ms.locfileid: "62829357"
   
 -   agilebi.com のブログ「 [XML 変換先スクリプト コンポーネント](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)」  
   
--   www.codeplex.com に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
-  
+-   [www.codeplex.com](www.codeplex.com) に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
   

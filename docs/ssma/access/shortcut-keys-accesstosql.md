@@ -1,5 +1,5 @@
 ---
-title: ショートカット キー (AccessToSQL) |Microsoft Docs
+title: ショートカットキー (キーによる Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +10,17 @@ ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 59d1d5f4da95b7f152a92a8d780af5ca9f3d3394
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051516"
 ---
-# <a name="shortcut-keys-accesstosql"></a>ショートカット キー (AccessToSQL)
-SSMA アプリケーション内を移動するキーボード ショートカットを使用することができます。 詳細については、次の各トピックを参照してください。  
+# <a name="shortcut-keys-accesstosql"></a>ショートカットキー (キーによる Sql)
+SSMA アプリケーション内を移動するには、キーボードショートカットを使用します。 詳しくは、次のトピックをご覧ください。  
   
--   [メニュー コマンドやその他のショートカット キー &#40;AccessToSQL&#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
+-   [メニューコマンドやその他のショートカットキー &#40;、Sql&#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server Migration Assistant for Access の概要&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+## <a name="see-also"></a>参照  
+[アクセスのための SQL Server Migration Assistant を使用したはじめに &#40;アクセス許可 SQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
   

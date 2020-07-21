@@ -1,6 +1,7 @@
 ---
-title: 役割交代のためのサービスの中断時間の算出 (データベース ミラーリング) | Microsoft Docs
-ms.custom: ''
+title: ミラーリング フェールオーバー中のサービス中断時間の算出
+description: プライマリ ロールからセカンダリ ロールへのデータベース ミラーリングがフェールオーバーするときの、サービスの中断時間を算出します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754678"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   役割の交代中、データベース ミラーリングを使用できない時間の長さは、役割の交代の形式、および原因によって異なります。  
   
 -   自動フェールオーバーの場合、サービスが中断される時間には 2 つの要因が影響します。ミラー サーバーがプリンシパル サーバー インスタンスに障害が発生したことを認識するのに必要な時間 (エラー検出)、およびデータベースのフェールオーバーに必要な時間 (フェールオーバー時間) です。  
@@ -38,7 +39,7 @@ ms.locfileid: "67997859"
 -   手動フェールオーバーでは、フェールオーバー コマンドの発行以降にデータベースをフェールオーバーするために必要な時間だけになります。  
   
 ## <a name="error-detection"></a>エラー検出  
- システムにエラーが通知されるまでの時間は、エラーの種類によって異なります。たとえば、ネットワーク エラーは発生した直後に通知されます。サーバーが応答しなくなった場合は、既定で 10 秒かかります。これは既定のタイムアウト期間です。  
+ システムにエラーが通知されるまでの時間は、エラーの種類によって異なります。たとえば、ネットワーク エラーはほぼ即座に通知されますが、サーバーが応答しない場合では (既定のタイムアウトで) 10 秒かかります。  
   
  データベース ミラーリング セッション中に障害が発生する原因と考えられるエラー、および自動フェールオーバーを伴う高い安全性モードでのタイムアウト検出の詳細については、「 [データベース ミラーリング中に発生する可能性のあるエラー](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)」を参照してください。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "67997859"
  フェールオーバー時間の内訳は、以前のミラー サーバーが再実行キューに残っているすべてのログをロールフォワードするために必要な時間を主とし、これにわずかな時間を加えたものです (ミラー サーバーでログ レコードが処理される方法の詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください)。 フェールオーバー時間の測定方法の詳細については、このトピックの「フェールオーバーの再実行速度の測定」を参照してください。  
   
 > [!IMPORTANT]  
->  インデックスまたはテーブルを作成し、変更するトランザクション中にフェールオーバーが発生した場合、フェールオーバーには通常より長い時間がかかる可能性があります。  たとえば、次の一連の操作の間のフェールオーバーでは、フェールオーバーの時間が増加する場合があります: BEGIN TRANSACTION、テーブルに対する CREATE INDEX、テーブルに対する SELECT INTO。 このようなトランザクションでは、COMMIT TRANSACTION ステートメントまたは ROLLBACK TRANSACTION ステートメントを使用してトランザクションを完了するまで、フェールオーバーの時間が増加する可能性は残ります。  
+>  インデックスまたはテーブルを作成し、変更するトランザクション中にフェールオーバーが発生した場合、フェールオーバーには通常より長い時間がかかる可能性があります。  たとえば、BEGIN TRANSACTION、テーブルに対する CREATE INDEX、SELECT INTO という一連の操作では、フェールオーバーの時間が増加する場合があります。 このようなトランザクションでは、COMMIT TRANSACTION ステートメントまたは ROLLBACK TRANSACTION ステートメントを使用してトランザクションを完了するまで、フェールオーバーの時間が増加する可能性は残ります。  
   
 ### <a name="the-redo-queue"></a>再実行キュー  
  データベースのロールフォワードでは、現在ミラー サーバー上の再実行キューにあるすべてのログ レコードが適用されます。 *再実行キュー* は、ミラー サーバー上のディスクに再実行用として書き込まれていて、ミラー データベースへはロールフォワードされていないログ レコードで構成されています。  

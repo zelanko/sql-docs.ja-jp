@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ceec604d9fe07b339af11ed69226d41a7f616678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63182889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058546"
 ---
-# <a name="select-objects-object-explorer"></a>[オブジェクトの選択]\(オブジェクト エクスプローラー)
+# <a name="select-objects-object-explorer"></a>[オブジェクトの選択] (オブジェクト エクスプローラー)
   **[オブジェクトの選択]** ダイアログ ボックスを使用すると、オブジェクトを別のダイアログ ボックスの一覧に追加できます。 ダイアログ ボックスを開いた方法に応じて、ダイアログ ボックスのタイトルおよび使用できるオプションが異なります。 利用可能なオプションだけが表示されます。たとえば、新しいオブジェクトの所有者を選択する場合は、利用可能なログインだけが表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[以下のオブジェクトの種類を選択]**  
- 選択するオブジェクトの種類の一覧を表示します。 種類には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルやデータベース レベルのプリンシパルおよびセキュリティ保護可能なリソースが含まれます。 このボックスには、 **[オブジェクトの種類]** ボタンをクリックして表示される **[オブジェクトの種類を選択]** ダイアログ ボックスで選択した内容が入力されます。  
+ 選択するオブジェクトの種類の一覧を表示します。 種類には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルやデータベース レベルのプリンシパルおよびセキュリティ保護可能なリソースが含まれます。 このボックスには、 **[オブジェクトの種類]** ボタンをクリックして表示される **[オブジェクトの種類を選択]** ダイアログ ボックスで選択した内容が入力されます。  
   
  **[追加するオブジェクト名の入力]**  
  選択するオブジェクトの名前のリストをセミコロン区切りで入力します。 選択するオブジェクトの種類は、 **[以下のオブジェクトの種類を選択]** ボックスに含まれている必要があります。 オブジェクトは、 **[参照]** ボタンをクリックしてアクセスできる一覧から選択できます。  
   
- **オブジェクト型**  
+ **[オブジェクトの種類]**  
  オブジェクトの種類の一覧を表示します。 種類に対応するチェック ボックスをオンにすることにより、種類を 1 つ以上選択できます。  
   
  **[名前の確認]**  

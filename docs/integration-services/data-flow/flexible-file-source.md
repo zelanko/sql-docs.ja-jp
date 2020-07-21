@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpextfilesrc.f1
 - sql14.dts.designer.afpextfilesrc.f1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 694a6c2307983c7003be80be5dc318fc756af392
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bdebcba1d6313c1e8c6363faa147a3e6a275e9dc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892335"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71292396"
 ---
 # <a name="flexible-file-source"></a>柔軟なファイル ソース
 
@@ -52,7 +52,7 @@ ms.locfileid: "68892335"
 - **nullValue:** null 値を表すための 1 つまたは複数の文字。 **既定**値は \N です。
 - **encodingName:** エンコーディング名を指定します。 [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) プロパティを参照してください。
 - **skipLineCount:** 入力ファイルからデータを読むとき、スキップする空ではない行の数を示します。 skipLineCount と firstRowAsHeader の両方が指定されている場合、行が最初にスキップされ、次に、入力ファイルからヘッダー情報が読まれます。
-- **treatEmptyAsNull:** 入力ファイルからデータを読むとき、null 値として null または空の文字列を扱うことを指定します。 **既定**値は True です。
+- **treatEmptyAsNull:** 入力ファイルからデータを読むとき、null 値として null または空の文字列を扱うことを指定します。 既定値は **True** です。
 
 接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。
 

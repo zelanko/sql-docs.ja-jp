@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 53f07adfd7479edba22370f3d4fd8c9ad7ad4450
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3bd2ac7f6c9670c9c1b193c7b9687b0d4e4ba4ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716835"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; プロパティ
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[&lt;AgentProfileName&gt; のプロパティ]** ダイアログ ボックスを使用すると、プロファイル内の各エージェント パラメーターに対して指定された値を表示したり、ユーザー定義のプロファイルの値を変更したりできます。  
   
 ## <a name="options"></a>オプション  
- **名前**  
+ **Name**  
  プロファイルの名前。  
   
- **[説明]**  
+ **説明**  
  プロファイルの説明です。  
   
  **パラメーター**  
@@ -42,7 +42,7 @@ ms.locfileid: "68768212"
   
 -   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
--   [レプリケーション マージ エージェント](../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
 -   [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   

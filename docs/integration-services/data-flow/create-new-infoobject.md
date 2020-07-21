@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f473e21219704f0474fec519d8b4870fc0930b46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049539"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293173"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
 
@@ -124,26 +124,26 @@ ms.locfileid: "68049539"
 ### <a name="attributes-list"></a>[属性] の一覧  
  **[属性]** ボックスの一覧には、作成するインフォオブジェクトの属性が表示されます。 **[属性]** の一覧には次の列見出しがあります:  
   
- **[インフォオブジェクト]**  
+ **インフォオブジェクト**  
  インフォオブジェクトの名前を表示します。  
   
- **[説明]**  
+ **説明**  
  インフォオブジェクトの説明を表示します。  
   
  **インフォオブジェクトの種類**  
  インフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|主要データ|  
-|UNI|単位|  
+|UNI|Units|  
 |TIM|時間の特性|  
   
 ### <a name="attributes-options"></a>[属性] のオプション  
  作成するインフォオブジェクトの属性を追加または削除するには、次のオプションを使用します。  
   
- **[追加]**  
+ **追加**  
  属性として既存のインフォオブジェクトを追加します。  
   
  既存のインフォオブジェクトを追加するには、[追加] をクリックし、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用してインフォオブジェクトを検索します。 このダイアログ ボックスの詳細については、「 [インフォオブジェクトの参照](../../integration-services/data-flow/look-up-infoobject.md)」を参照してください。  
@@ -153,13 +153,13 @@ ms.locfileid: "68049539"
   
  新しいインフォオブジェクトを作成して追加するには、[新規作成] をクリックし、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスの新しいインスタンスを使用して、新しいインフォオブジェクトを作成します。  
   
- **[削除]**  
+ **Remove**  
  選択したインフォオブジェクトを **[属性]** の一覧から削除します。  
   
 ## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
- [[トランザクション データのインフォソースの作成]](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

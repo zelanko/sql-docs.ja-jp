@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: a1d393dd-453b-4d45-9aa5-7d371213e32b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f336c64ffc0d044fa0f7282f3c87451483353879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc0a085886dbec7eb8e5656bd7f84b9a066a3e4f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914953"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552170"
 ---
-# <a name="mssqlserver21862"></a>MSSQLSERVER_21862
+# <a name="mssqlserver_21862"></a>MSSQLSERVER_21862
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|MSSQLSERVER|  
 |イベント ID|21862|  

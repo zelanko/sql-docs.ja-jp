@@ -1,10 +1,9 @@
 ---
-title: スケジュールの作成とジョブへのアタッチ | Microsoft Docs
-ms.custom: ''
+title: スケジュールの作成とジョブへのアタッチ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2213390f252fdd07f1c8aacc6570940f759e7579
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267258"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252141"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>スケジュールの作成とジョブへのアタッチ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68267258"
   
 -   指定した日時に 1 回だけジョブを実行する。  
   
--   スケジュールに従って定期的にジョブを実行する。  
+-   定期的なスケジュール。  
   
 また、ジョブ スケジュールの代わりとして、ジョブの実行によってイベントに応答する警告を作成することもできます。  
   
@@ -91,7 +92,7 @@ CPU アイドル条件は、特定の時間にわたり、CPU 使用率が一定
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを作成する方法について説明します。|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを設定する方法について説明します。|[ジョブのスケジュール設定](../../ssms/agent/schedule-a-job.md)|  
 |使用しているサーバーの CPU アイドル状態を定義する方法について説明します。|[CPU のアイドル時間と期間の設定 (SQL Server Management Studio)](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

@@ -1,28 +1,29 @@
 ---
-title: Oracle 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
+title: 外部データへのアクセス:Oracle - PolyBase
 description: この記事では、PolyBase を使用して Oracle のデータにアクセスする外部データ ソースを作成する方法を示します。
-ms.date: 04/23/2019
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 09899bf161289e87e7bb15b9084335bbb4bc6180
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740959"
 ---
-# <a name="configure-polybase-to-access-external-data-in-oracle"></a>Oracle 上の外部データにアクセスするための PolyBase の構成
+# <a name="configure-polybase-to-access-external-data-in-oracled"></a>Oracle 内の外部データにアクセスするように PolyBase を構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、Oracle 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。
 

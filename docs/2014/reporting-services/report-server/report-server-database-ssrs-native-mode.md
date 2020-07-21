@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e5f5225ef696a5477ef9d0aa4a67749bc5e4a88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103451"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>レポート サーバー データベース (SSRS ネイティブ モード)
-  レポート サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] を使用してメタデータやオブジェクトの定義を格納するステートレス サーバーです。 ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールでは、一時データと永続データが 2 つのデータベースに別々に格納されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定では、データベース名がそれぞれ **reportserver** と **reportservertempdb**になります。  
+  レポート サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] を使用してメタデータやオブジェクトの定義を格納するステートレス サーバーです。 ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールでは、一時データと永続データが 2 つのデータベースに別々に格納されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定では、データベース名がそれぞれ **reportserver** と **reportservertempdb**になります。  
   
  SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールでは、データ警告機能用のデータベースも作成されます。 SharePoint モードの 3 つのデータベースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに関連付けられます。 詳細については、「 [Reporting Services SharePoint サービス アプリケーションの管理](../manage-a-reporting-services-sharepoint-service-application.md)｣を参照してください  
   
@@ -36,14 +36,14 @@ ms.locfileid: "66103451"
 > [!IMPORTANT]  
 >  データベースのテーブル構造はサーバー操作用に最適化されているので、変更またはチューニングしないでください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、リリースごとにテーブル構造を変更することがあります。 ユーザーがデータベースを変更または拡張すると、将来のアップグレードの実行や Service Pack の適用の際に、機能が制限されたり機能を利用できない場合があります。 また、レポート サーバーの処理を損なう変更を行う可能性もあります。 たとえば、ReportServer データベースで READ_COMMITTED_SNAPSHOT をオンにすると、対話的な並べ替え機能が無効になります。  
   
- レポート サーバー データベースへのすべてのアクセスは、レポート サーバー経由で行われる必要があります。 レポート サーバー データベースのコンテンツにアクセスするには、レポート マネージャーや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]などのレポート サーバー管理ツールを使用するか、または URL アクセス、レポート サーバー Web サービス、Windows Management Instrumentation (WMI) プロバイダーなどの、プログラマティック インターフェイスを使用します。  
+ レポート サーバー データベースへのすべてのアクセスは、レポート サーバー経由で行われる必要があります。 レポートサーバーデータベースのコンテンツにアクセスするには、レポートサーバー管理ツール (レポートマネージャーや[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]など)、または URL アクセス、レポートサーバー Web サービス、Windows Management Instrumentation (WMI) プロバイダーなどのプログラムインターフェイスを使用できます。  
   
  レポート サーバー データベースへの接続は、通常、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して定義します。 ただし、既定の構成でインストールする場合は、セットアップ時に定義することもできます。 データベースへのレポート サーバーの接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="report-server-database"></a>レポート サーバー データベース  
  レポート サーバー データベースは、以下のコンテンツを格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。  
   
--   レポート サーバーによって管理されるアイテム (../レポートおよびリンク レポート、共有データ ソース、レポート モデル、フォルダー、リソース) およびすべてのプロパティとそれらの項目に関連付けられているセキュリティ設定。  
+-   レポートサーバーによって管理されるアイテム (..レポートとリンクレポート、共有データソース、レポートモデル、フォルダー、リソース)、およびこれらのアイテムに関連付けられているすべてのプロパティとセキュリティ設定を表示します。  
   
 -   サブスクリプションおよびスケジュールの定義  
   

@@ -10,21 +10,21 @@ ms.topic: language-reference
 helpviewer_keywords:
 - views [Integration Services]
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8c7d6a6f0de0ec6c9e14b5d6c9df8ff9ab2bf9cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f60d65e9100436382c62ae66c6acc5dc9ace201c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671317"
 ---
 # <a name="views-integration-services-catalog"></a>ビュー (Integration Services カタログ)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このセクションでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビューについて説明します。  
   

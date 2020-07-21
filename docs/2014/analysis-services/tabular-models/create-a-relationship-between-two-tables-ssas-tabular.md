@@ -1,5 +1,5 @@
 ---
-title: 2 つのテーブル (SSAS テーブル) 間のリレーションシップの作成 |Microsoft Docs
+title: 2つのテーブル間のリレーションシップの作成 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd264701c8e74d4fdb99d186e3bb5be8d2b5e15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939841"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)
   データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ (SSAS テーブル)](relationships-ssas-tabular.md)」を参照してください。  
@@ -49,7 +48,7 @@ ms.locfileid: "66067534"
   
 6.  **[関連する参照列]** で、 **[列]** で選択した列の値と一致する一意の値を含む列を選択します。  
   
-7.  **[作成]** をクリックします。  
+7.  **Create** をクリックしてください。  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>データ ビューで 2 つのテーブル間のリレーションシップを作成するには  
   
@@ -67,10 +66,10 @@ ms.locfileid: "66067534"
   
 5.  **[関連する参照列]** で、 **[列]** で選択した列の値と一致する一意の値を含む列を選択します。  
   
-6.  **[作成]** をクリックします。  
+6.  **Create** をクリックしてください。  
   
 ## <a name="see-also"></a>参照  
- [リレーションシップの削除 (SSAS テーブル)](delete-relationships-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;のリレーションシップの削除](delete-relationships-ssas-tabular.md)   
  [リレーションシップ (SSAS テーブル)](relationships-ssas-tabular.md)  
   
   

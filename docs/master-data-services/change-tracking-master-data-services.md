@@ -1,5 +1,5 @@
 ---
-title: 変更の追跡 (マスター データ サービス) | Microsoft Docs
+title: 変更追跡
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7883f3dda53897eb9d53e9ff4e9e41e6731775d0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811637"
 ---
 # <a name="change-tracking-master-data-services"></a>変更の追跡 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、変更の追跡グループを使用して、属性の値が変化したときにアクションを実行できます。 新しい値がどうなるかわからないけれども、変更が発生した場合にそれを知りたいときに、変更の追跡を使用します。  
   

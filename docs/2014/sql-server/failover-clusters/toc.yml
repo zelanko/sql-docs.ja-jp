@@ -5,7 +5,7 @@
       href: windows/always-on-failover-cluster-instances-sql-server.md
 - name: 操作方法
   items:
-    - name: 展開
+    - name: デプロイ
       items:
         - name: インストールの準備
           href: install/before-installing-failover-clustering.md

@@ -13,21 +13,21 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926265"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761398"
 ---
-# <a name="adding-records-to-a-recordset"></a>レコードをレコード セットに追加します。
-使用して、 **AddNew**メソッドを作成し、既存の新しいレコードの初期化を**Recordset**します。 使用することができます、**サポート**メソッドを**CursorOptionEnum**の値**adAddNew**を現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。
+# <a name="adding-records-to-a-recordset"></a>レコードをレコードセットに追加する
+**AddNew**メソッドを使用して、既存のレコード**セット**内の新しいレコードを作成して初期化します。 **サポート**メソッドと**カーソルオプションの列挙**値**adaddnew**を使用すると、現在の**レコードセット**オブジェクトにレコードを追加できるかどうかを確認できます。
 
- 呼び出した後、 **AddNew**メソッドでは、新しいレコードが現在のレコードになり、を呼び出した後は、最新の状態、 **Update**メソッド。 場合、 **Recordset**オブジェクトは、ブックマークをサポートしていない、別のレコードに移動すると、新しいレコードにアクセスすることができません。 そのため、カーソルの種類に応じてする必要がありますを呼び出す、 **Requery**メソッドを新しいレコードにアクセスできるようにします。
+ **AddNew**メソッドを呼び出すと、新しいレコードが現在のレコードになり、 **Update**メソッドを呼び出した後も最新の状態が維持されます。 **Recordset**オブジェクトがブックマークをサポートしていない場合、別のレコードに移動すると、新しいレコードにアクセスできなくなる可能性があります。 したがって、カーソルの種類によっては、新しいレコードにアクセスできるようにするために、 **Requery**メソッドを呼び出す必要がある場合があります。
 
- 呼び出す場合**AddNew** ADO を呼び出し、現在のレコードを編集している間、または新しいレコードを追加するときに、 **Update**を保存する方法の変更し、新しいレコードを作成します。
+ 現在のレコードを編集しているとき、または新しいレコードを追加しているときに**AddNew**を呼び出した場合、ADO は**Update**メソッドを呼び出して変更を保存し、新しいレコードを作成します。
 
  このセクションでは、次のトピックを扱います。
 

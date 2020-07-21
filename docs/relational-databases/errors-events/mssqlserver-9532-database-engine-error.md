@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6cb06f095b51d4fb5e10f571d8918ffbb20c67ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4965274fcb5db44cb17852677cc7eb39f1370fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85636203"
 ---
-# <a name="mssqlserver9532"></a>MSSQLSERVER_9532
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_9532"></a>MSSQLSERVER_9532
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|9532|  
 |イベント ソース|MSSQLSERVER|  

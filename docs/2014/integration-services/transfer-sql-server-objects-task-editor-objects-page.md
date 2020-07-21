@@ -1,5 +1,5 @@
 ---
-title: SQL Server オブジェクト タスク エディター ([オブジェクト] ページ) の転送 |Microsoft Docs
+title: '[オブジェクトの転送タスクエディター] ([オブジェクト] ページ) SQL ServerMicrosoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc54343ef930d4fbca1bbe25f2e03ba4e539d44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054864"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439909"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
   **[SQL Server オブジェクトの転送タスク エディター]** ダイアログ ボックスの **[オブジェクト]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンス間で 1 つまたは複数の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトをコピーするためのプロパティを指定できます。 コピーできる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトには、テーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数などがあります。 このタスクの詳細については、「 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)」を参照してください。  
@@ -28,14 +27,14 @@ ms.locfileid: "66054864"
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクを作成するユーザーは、転送元サーバー オブジェクトをコピー用に選択するために必要な権限と、オブジェクトの転送先の転送先サーバー データベースにアクセスするために必要な権限を持っている必要があります。  
   
 ## <a name="static-options"></a>静的オプション  
- **SourceConnection**  
- SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
+ **[Sourceconnection]**  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行元サーバーへの新しい接続を作成します。  
   
  **[SourceDatabase]**  
  オブジェクトのコピー元の転送元サーバー上のデータベースを選択します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、をクリックし **\<New connection...>** て、移行先サーバーへの新しい接続を作成します。  
   
  **[DestinationDatabase]**  
  オブジェクトのコピー先の転送先サーバー上のデータベースを選択します。  
@@ -52,10 +51,10 @@ ms.locfileid: "66054864"
  **[ExistingData]**  
  転送先サーバーにデータをどのようにコピーするかを指定します。 このプロパティには、次の表に示すオプションがあります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**[置換]**|転送先サーバー上のデータは上書きされます。|  
-|**追加**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
+|**Replace**|転送先サーバー上のデータは上書きされます。|  
+|**Append**|転送元サーバーからコピーされたデータは、転送先サーバー上の既存のデータに追加されます。|  
   
 > [!NOTE]  
 >  **[ExistingData]** オプションは、 **[CopyData]** が **[True]** に設定されている場合にのみ使用できます。  
@@ -199,7 +198,7 @@ ms.locfileid: "66054864"
  **[CopyAllUserDefinedTypes]**  
  指定した転送元データベース内のすべてのユーザー定義型 (UDT) をコピーするか、選択した UDT だけをコピーするかを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみサポートされます。  
   
- **[UserDefinedTypes]**  
+ **UserDefinedTypes**  
  **[ユーザー定義型の選択]** ダイアログ ボックスが開きます。  
   
  **[CopyAllXmlSchemaCollections]**  
@@ -208,10 +207,10 @@ ms.locfileid: "66054864"
  **[XmlSchemaCollectionsList]**  
  **[XML スキーマ コレクションの選択]** ダイアログ ボックスが開きます。  
   
-## <a name="see-also"></a>参照  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
- [[SQL Server オブジェクトの転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [SQL Server オブジェクトの転送タスクエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

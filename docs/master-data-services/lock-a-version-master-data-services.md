@@ -1,5 +1,5 @@
 ---
-title: バージョンをロックする (マスター データ サービス) | Microsoft Docs
+title: バージョンをロックする
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b98dff0acf3b2d7a8c3eed5d79e284bfca8f92fd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813278"
 ---
 # <a name="lock-a-version-master-data-services"></a>バージョンをロックする (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロックして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。  
   
 > [!NOTE]  
 >  バージョンをロックしても、スーパー ユーザーおよびモデル管理者は、引き続きメンバーの追加、編集、および削除を行うことができます。 モデルに対する権限を持つその他のユーザーは、メンバーの表示のみを行うことができます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   バージョンのステータスは、 **[未処理]** である必要があります。  
   
--   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 ### <a name="to-lock-a-version"></a>バージョンをロックするには  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68131848"
 -   [バージョンをコミットする (マスター データ サービス)](../master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>関連項目  
- [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)   
+ [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)   
  [バージョンをロック解除する (マスター データ サービス)](../master-data-services/unlock-a-version-master-data-services.md)  
   
   

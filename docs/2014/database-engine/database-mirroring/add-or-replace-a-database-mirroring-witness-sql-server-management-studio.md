@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a97732878a8cf0f5113f22eec0289af20184e19d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807460"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934433"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
   データベース ミラーリング エンドポイントで Windows 認証を使用している場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング監視サーバーを追加または置き換えることができます。 また、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でミラーリング監視サーバーを追加すると、動作モードが自動フェールオーバーを伴う高い安全性モードに変更されます。  
@@ -46,7 +45,7 @@ ms.locfileid: "62807460"
   
 9. **[ミラーリング監視サーバー インスタンス]** ページで、 **[接続]** をクリックします。  
   
-10. **[サーバーへの接続]** ページの **[サーバー名]** フィールドでミラーリング監視サーバー インスタンスを指定し、既定の Windows 認証を使用します。 **[接続]** をクリックします。  
+10. **[サーバーへの接続]** ページの **[サーバー名]** フィールドでミラーリング監視サーバー インスタンスを指定し、既定の Windows 認証を使用します。 **[Connect]** をクリックします。  
   
 11. 接続が確立されると、ミラーリング監視サーバー インスタンスのリスナー ポートとデータベース ミラーリング エンドポイントが **[ミラーリング監視サーバー インスタンス]** ページに表示されます。 **[次へ]** をクリックします。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "62807460"
   
     -   すべてのサーバー インスタンスで同じサービス アカウントを使用する場合は、これらのフィールドを空白のままにします。  
   
-    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]** 、 **[ミラー]** 、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
+    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]**、 **[ミラー]**、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
   
-         *DOMAINNAME* **\\** *username*  
+         *DOMAINNAME* **\\***ユーザー名*  
   
          ドメイン名は大文字にする必要があります。  
   
@@ -68,11 +67,11 @@ ms.locfileid: "62807460"
   
      ミラーリング監視サーバーを有効にし、自動フェールオーバーを伴う高い安全性モードにセッションを変更するには、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [データベース ミラーリング監視サーバー](database-mirroring-witness.md)   
- [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)   
+## <a name="see-also"></a>参照  
+ [データベースミラーリング監視サーバー](database-mirroring-witness.md)   
+ [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [[データベースのプロパティ] &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)   
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)  
   
   

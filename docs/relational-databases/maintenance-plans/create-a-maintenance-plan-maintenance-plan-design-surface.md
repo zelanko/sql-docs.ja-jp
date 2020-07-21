@@ -1,6 +1,6 @@
 ---
-title: メンテナンス プランの作成 (メンテナンス プラン デザイン画面) | Microsoft Docs
-ms.custom: ''
+title: デザイン サーフェイスでメンテナンス プランを作成する
+description: SQL Server でメンテナンス プラン デザイン画面を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667709"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でメンテナンス プラン デザイン画面を使用して、単一サーバーまたはマルチサーバーのメンテナンス プランを作成する方法について説明します。 基本的なメンテナンス プランを作成する場合は、 **メンテナンス プラン ウィザード** が最適です。それに対して、デザイン画面を使用してプランを作成すると、高度なワークフローを利用できます。  
   
  **このトピックの内容**  
@@ -29,24 +30,24 @@ ms.locfileid: "68083903"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   [メンテナンス プラン デザイン画面を使用したメンテナンス プランの作成](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上のターゲット サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランはターゲット サーバー上でも表示できますが、ターゲット サーバーでは管理できません。  
   
 -   **db_ssisadmin** ロールおよび **dc_admin** ロールのメンバーは、特権を **sysadmin**に昇格できる可能性があります。 このような特権の昇格が発生するのは、それらのロールが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを変更でき、これらのパッケージを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **sysadmin** セキュリティ コンテキストを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行できるためです。 メンテナンス プラン、データ コレクション セット、およびその他の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行時にこの特権の昇格を防ぐには、特権が制限されたプロキシ アカウントを使用するようにパッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを構成するか、 **db_ssisadmin** ロールおよび **dc_admin** ロールには **sysadmin** メンバーのみを追加するようにします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。 ユーザーが **sysadmin** 固定サーバー ロールのメンバーである場合のみ、オブジェクト エクスプローラーに **[メンテナンス プラン]** ノードが表示されます。  
   
-##  <a name="SSMSProcedure"></a> メンテナンス プラン デザイン画面の使用  
+##  <a name="using-maintenance-plan-design-surface"></a><a name="SSMSProcedure"></a> メンテナンス プラン デザイン画面の使用  
   
 #### <a name="to-create-a-maintenance-plan"></a>メンテナンス プランを作成するには  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68083903"
   
 3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
   
-4.  **[新しいメンテナンス プラン]** ダイアログ ボックスで、 **[名前]** ボックスにプランの名前を入力し、 **[OK]** をクリックします。 ツールボックスと *[maintenance_plan_name* **[デザイン]]** 画面が開き、 **Subplan_1** サブプランがメイン グリッドに作成されます。  
+4.  **[新しいメンテナンス プラン]** ダイアログ ボックスで、 **[名前]** ボックスにプランの名前を入力し、 **[OK]** をクリックします。 ツールボックスと *[maintenance_plan_name* **[デザイン]]** 画面が開き、**Subplan_1** サブプランがメイン グリッドに作成されます。  
   
      デザイン領域のヘッダーには、次のオプションがあります。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "68083903"
      **[スケジュールの削除]**  
      選択されているサブプランからスケジュールを削除します。  
   
-     **[接続の管理]**  
+     **接続の管理**  
      **[接続の管理]** ダイアログ ボックスが表示されます。 メンテナンス プランに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス接続を追加する際に使用します。 このダイアログ ボックスの詳細については、以下を参照してください。  
   
      **[レポートとログ記録]**  
@@ -84,10 +85,10 @@ ms.locfileid: "68083903"
      **サーバー**  
      **[サーバー]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、サブプラン タスクを実行するサーバーを選択します。 このオプションは、マルチサーバー環境のマスター サーバーのみで有効になります。 詳細については、「[マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)」と「[メンテナンス プラン &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)」を参照してください。  
   
-     **[名前]**  
+     **名前**  
      メンテナンス プランの名前が表示されます。 新しいメンテナンス プランの名前は、メンテナンス プラン デザイナーを開く前にダイアログ ボックスで指定します。 メンテナンス プランの名前を変更するには、オブジェクト エクスプローラーでプランを右クリックし、 **[名前の変更]** をクリックします。  
   
-     **[説明]**  
+     **説明**  
      メンテナンス プランの説明を表示または指定します。 説明の長さは最大 512 文字です。  
   
      **デザイナー画面**  
@@ -99,13 +100,13 @@ ms.locfileid: "68083903"
   
      **[サブプランのプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **[名前]**  
+     **名前**  
      サブプランの名前です。  
   
-     **[説明]**  
+     **説明**  
      サブプランの簡潔な説明です。  
   
-     **スケジュール**  
+     **[スケジュール]**  
      どのようなスケジュールでサブプランが実行されるかを示します。 **[サブプランのスケジュール]** をクリックして、 **[新しいジョブ スケジュール]** ダイアログ ボックスを開きます。 サブプランからスケジュールを削除するには、 **[スケジュールの削除]** をクリックします。  
   
      **[実行するアカウント名]** 一覧  
@@ -231,50 +232,48 @@ ms.locfileid: "68083903"
   
 12. ログ ファイル ビューアーで結果を参照するには、 **オブジェクト エクスプローラー**で **[メンテナンス プラン]** フォルダーを右クリックするか、特定のメンテナンス プランを右クリックして **[履歴の表示]** を選択します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
+     **[ログ ファイルの表示 -** _server\_name_] ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **Load Log**  
-     Open a dialog box where you can specify a log file to load.  
+     **[ログの読み込み]**  
+     読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  
   
-     **Export**  
-     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
+     **エクスポート**  
+     **[ログ ファイルの概要]** グリッドに表示されている情報をテキスト ファイルとしてエクスポートするためのダイアログ ボックスが開きます。  
   
-     **Refresh**  
-     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
+     **[更新]**  
+     選択されたログの表示を更新します。 **[更新]** ボタンをクリックすると、選択したログがターゲット サーバーから再度読み込まれ、それと同時にすべてのフィルター設定が適用されます。  
   
-     **Filter**  
-     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
+     **Assert**  
+     **[接続]** や **[日付]** などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  
   
      **Search**  
-     Search the log file for specific text. Searching with wildcard characters is not supported.  
+     ログ ファイル内で特定のテキストを検索します。 ワイルドカード文字を使用した検索はサポートされません。  
   
      **Stop**  
-     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
+     ログ ファイル エントリの読み込みを停止します。 たとえば、最新のエントリのみを表示したい場合に、リモートまたはオフラインのログ ファイルの読み込みに長い時間がかかるときは、このオプションを使用することをお勧めします。  
   
-     **Log file summary**  
-     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
+     **[ログ ファイルの概要]**  
+     この情報パネルには、ログ ファイルのフィルター選択の概要が表示されます。 ファイルがフィルター選択されない場合、 **"フィルターが適用されていません"** と表示されます。 ログにフィルターが適用されている場合、"**ログ エントリのフィルター条件:** \<filter criteria>" と表示されます。  
   
      **Date**  
-     Displays the date of the event.  
+     イベントの日付が表示されます。  
   
-     **Source**  
-     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
+     **ソース**  
+     サービスの名前 (たとえば MSSQLSERVER) など、イベントの作成元のソース機能が表示されます。 ログの種類によっては表示されません。  
   
-     **Message**  
-     Displays any messages associated with the event.  
+     **メッセージ**  
+     イベントに関連付けられているメッセージがすべて表示されます。  
   
-     **Log Type**  
-     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
+     **[ログの種類]**  
+     イベントが属するログの種類が表示されます。 [ログ ファイルの概要] ウィンドウには、選択したログがすべて表示されます。  
   
-     **Log Source**  
-     Displays a description of the source log in which the event is captured.  
+     **[ログ ソース]**  
+     イベントがキャプチャされているソース ログの説明が表示されます。  
   
-     **Selected row details**  
-     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
+     **[選択した行の詳細]**  
+     行を選択すると、選択されたイベント行の詳細情報がページの下部に表示されます。 列をグリッド内の別の場所にドラッグすることで、列を並べ替えることができます。 グリッドのヘッダーで列のセパレーター バーを左右にドラッグすると、列の幅を変更できます。 グリッドのヘッダーで列のセパレーター バーをダブルクリックすると、内容の長さに合わせて自動的に列の幅が調整されます。  
   
-     **Instance**  
-     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
+     **インスタンス**  
+     イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name*と表示されます。  
   
   

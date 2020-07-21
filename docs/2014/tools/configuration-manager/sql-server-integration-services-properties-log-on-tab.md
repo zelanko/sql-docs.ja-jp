@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f81c3b90dc8ef20f7e66bb22c960cd9fd8a7c01a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064169"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-  **のプロパティ** ダイアログ ボックスの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[ログオン]** タブでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
+  [ **の**プロパティ[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]] ダイアログ ボックスの **[ログオン]** タブでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスで使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "63217946"
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -39,7 +38,7 @@ ms.locfileid: "63217946"
  **[開始]**  
  サービスを開始します。  
   
- **[停止]**  
+ **Stop**  
  サービスを停止します。  
   
  **[一時停止]**  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765669"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   各ステートメントの解析、コンパイル、および実行に必要な時間をミリ秒単位で表示します。  
   
@@ -40,12 +40,12 @@ ms.locfileid: "67897997"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET STATISTICS TIME が ON の場合、ステートメントの処理時間の統計が表示されます。 OFF の場合、時間の統計は表示されません。  
   
  SET STATISTICS TIME は、解析時ではなく実行時に設定されます。  
@@ -59,10 +59,10 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="permissions"></a>アクセス許可  
  SET STATISTICS TIME を使用するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限が必要です。 SHOWPLAN 権限は必要ありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、サーバーの実行、解析、コンパイルの時間を表示します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

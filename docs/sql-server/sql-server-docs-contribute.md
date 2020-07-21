@@ -9,11 +9,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68693187"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286326"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -30,13 +30,13 @@ ms.locfileid: "68693187"
 
 公開されるすべての投稿は、SQL コンテンツ チームによって技術的正確さと一貫性が検証されます。 
 
-## <a id="githubui"></a> ブラウザーで編集する
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> ブラウザーで編集する
 
 お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 詳細については、[Microsoft Docs 共同作成者ガイドの概要](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)のページを参照してください。 
 
 次の手順は、このプロセスをまとめたものです。 
 
-1. フィードバックがあるページで、右上の **[編集]** リンクを選択します。
+1. フィードバックがあるページで、右上の **[Edit]\(編集\)** リンクを選択します。
 1. 次のページで、右上の**鉛筆**アイコンを選択します。
 1. 次のページの **[Edit file]\(ファイルの編集\)** テキスト ウィンドウで、変更するテキストを直接編集します。
     新規または変更されたテキストの書式設定に関するヘルプが必要な場合は、「[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)」(マークダウンのカンニング ペーパー) を参照してください。
@@ -51,9 +51,9 @@ ms.locfileid: "68693187"
 
 ![SQL ドキュメントの編集](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> ツールを使ってローカルに編集する
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> ツールを使ってローカルに編集する
 
-もう 1 つの編集オプションは、**sql-docs** または **azure-docs** リポジトリをフォークして、お使いのコンピューターにローカルに複製します。 その後、Markdown エディターと git クライアントを使って、変更を送信することができます。 このワークフローは、複雑で複数のファイルが関係する編集に適しています。 また、docs.microsoft.com に頻繁に投稿する場合にも適しています。
+もう 1 つの編集オプションは、**sql-docs** または **azure-docs** リポジトリをフォークして、お使いのコンピューターにローカルにクローンします。 その後、Markdown エディターと git クライアントを使って、変更を送信することができます。 このワークフローは、複雑で複数のファイルが関係する編集に適しています。 また、docs.microsoft.com に頻繁に投稿する場合にも適しています。
 
 この方法で投稿する場合は、次の記事を参照してください。
 
@@ -79,7 +79,7 @@ ms.locfileid: "68693187"
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) リポジトリでは、複数の標準フォルダーを使ってコンテンツが整理されています。
 
-| フォルダー | [説明] |
+| Folder | 説明 |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 公開されたすべての SQL Server コンテンツが格納されています。 サブフォルダーには、異なる分野のコンテンツが論理的にまとめられています。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | インクルード ファイルが格納されています。 これらのファイルは、他のトピックに含めることのできるコンテンツのブロックです。 |
@@ -117,10 +117,10 @@ SQL Server の各記事には、タイトルの後に **applies-to** インク�
 > [!TIP]
 > ドキュメントに関するフィードバックではなく製品のフィードバックの場合は、[こちらで SQL Server 製品に関するフィードバックを提供](https://feedback.azure.com/forums/908035-sql-server)してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 GitHub で [sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs)を調べます。
 
 記事を探し、変更内容を送信して、SQL Server コミュニティに投稿します。 
 
-ありがとうございます。
+よろしくお願いいたします。

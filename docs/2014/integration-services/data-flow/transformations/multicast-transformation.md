@@ -14,15 +14,14 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b5c0a38c966c89f426a213f302b45c390b77cfe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900192"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437609"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
   マルチキャスト変換は、入力を 1 つ以上の出力に配信します。 この変換は条件分割変換と似ています。 いずれの変換も、1 つの入力を複数の出力に送信します。 この 2 つの変換の違いは、マルチキャスト変換は各行を各出力に送信するのに対し、条件分割変換は 1 行を単一の出力に送信する点です。 詳細については、「 [Conditional Split Transformation](conditional-split-transformation.md)」を参照してください。  
@@ -43,8 +42,8 @@ ms.locfileid: "62900192"
 ## <a name="related-tasks"></a>Related Tasks  
  このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [データ フロー](../data-flow.md)   
+## <a name="see-also"></a>関連項目  
+ [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   
   

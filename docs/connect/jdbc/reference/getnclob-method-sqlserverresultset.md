@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 432901eb-57b6-44ad-98b4-43164bcbc2b6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5957c26c25f03d5c2c8369bf5279861384733df7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68ee925b520a51d9bc955cb1af371d548473a4c2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981434"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905488"
 ---
 # <a name="getnclob-method-sqlserverresultset"></a>getNClob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "67981434"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
-|[getNClob Method &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
-|[getNClob Method &#40;java. String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
+|[getNClob メソッド &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
+|[getNClob メソッド &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値を、Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

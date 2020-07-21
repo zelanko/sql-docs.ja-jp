@@ -1,5 +1,5 @@
 ---
-title: SQL Data Warehouse のストアド プロシージャ |Microsoft Docs
+title: ストアドプロシージャの SQL Data Warehouse |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
@@ -12,19 +12,19 @@ ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6dbde63f1f9468fc974b36fdd7e8b7af0ddf9da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aa82ee5c5a617c3564ac9246f2e42bebcab220e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950381"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "73844363"
 ---
-# <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse のストアド プロシージャ
+# <a name="sql-data-warehouse-stored-procedures"></a>ストアドプロシージャの SQL Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベース ロールに関連する操作を実行するのに使用できる組み込みの手順を示します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 次のシステム プロシージャが含まれます。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]には、データベースロールに関連する操作を実行するために使用できる組み込みの手順が用意されています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]には、次のシステムプロシージャが含まれています。  
   
-##  <a name="AggregateFunctions"></a> [sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+##  <a name="sp_datatype_info_90-40sql-data-warehouse41"></a><a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   
@@ -39,10 +39,10 @@ ms.locfileid: "67950381"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  いくつかその他のシステム ストアド プロシージャのインスタンス内でのみ使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Api 想定されてません一般的なクライアントを使用します。 これらの手順が紹介[システム ストアド プロシージャ (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms187961.aspx)します。 これらの手順が変更される可能性があり、互換性は保証されません。 一覧のすべての手順では使用できない[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
+>  いくつかの追加のシステムストアドプロシージャは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内またはクライアント api を使用してのみ使用され、一般的な顧客使用を目的としていません。 これらの手順については、 [「システムストアドプロシージャ (transact-sql)](https://msdn.microsoft.com/library/ms187961.aspx)」をご覧ください。 これらの手順は変更される可能性があり、互換性は保証されません。 この一覧に記載されているすべて[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]のプロシージャは、では使用できません。  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システムストアド関数 &#40;Transact-sql&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

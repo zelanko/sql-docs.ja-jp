@@ -1,5 +1,5 @@
 ---
-title: CommandText プロパティを使用してテンプレート ファイルの実行 |マイクロソフトのドキュメント
+title: CommandText プロパティ | を使用したテンプレートファイルの実行Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bbd9f3693fa8f84015efb061dda5e1a9267af960
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996386"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
-  この例では、SQL または XPath クエリで構成されるテンプレート ファイルを指定して、CommandTextproperty を使用して、方法を示します。 SQL または XPath クエリを指定する、CommandText の値として、代わりに、値としてファイル名を指定できます。 次の例では、CommandType プロパティは SqlXmlCommandType.TemplateFile として指定されます。  
+  この例では、SQL または XPath クエリで構成されるテンプレートファイルを CommandTextproperty を使用して指定する方法を示します。 CommandText の値として SQL または XPath クエリを指定する代わりに、ファイル名を値として指定できます。 次の例では、CommandType プロパティが SqlXmlCommandType として指定されています。  
   
  サンプル アプリケーションでは、次のテンプレートが実行されます。  
   
@@ -79,7 +78,7 @@ class Test
   
 2.  この例で提供される XML テンプレート (TemplateFile.xml) をフォルダーに保存します。  
   
-3.  スキーマが格納されている同じフォルダーには、この例では、c# コード (DocSample.cs されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+3.  この例で提供されている C# コード (DocSample.cs) を、スキーマが格納されているのと同じフォルダーに保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 4.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   
@@ -91,7 +90,7 @@ class Test
   
 5.  コマンド プロンプトで、DocSample.exe を実行します。  
   
- テンプレートにパラメーターを渡すと場合、でも、パラメーター名はアット マークで開始する必要があります (@)。たとえば、p.Name="@ContactID"SqlXmlParameter オブジェクトである場合、します。  
+ テンプレートにパラメーターを渡す場合、パラメーター名はアットマーク (@) で始める必要があります。たとえば、p.Name = "" のように指定し @ContactID ます。ここで、p は SqlXmlParameter オブジェクトです。  
   
  次は、1 つのパラメーターをとるように変更したテンプレートです。  
   

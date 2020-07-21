@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fc588fad85c94f1d04295156a0c6d4de34269ab4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040219"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>トレース結果のテーブルへの保存 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース結果をデータベース テーブルに保存する方法について説明します。  
@@ -42,9 +41,9 @@ ms.locfileid: "67792688"
   
 6.  **[テーブル]** ボックスの一覧で、トレース結果用のテーブルの名前を入力または選択します。 **[OK]** をクリックします。  
   
-7.  **トレースのプロパティ**ダイアログ ボックスで、**設定行の最大数 (1000)** を保存する行の最大数を指定する チェック ボックス。  
+7.  [**トレースのプロパティ**] ダイアログボックスで、[**最大行数の設定 (1000 行単位)** ] チェックボックスをオンにして、保存する最大行数を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

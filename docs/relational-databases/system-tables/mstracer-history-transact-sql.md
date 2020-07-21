@@ -1,5 +1,5 @@
 ---
-title: MStracer_history (Transact-SQL) |Microsoft Docs
+title: MStracer_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ dev_langs:
 helpviewer_keywords:
 - MStracer_history system table
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e1683427057ac458e09bddde51dc70d8d402d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881481"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MStracer_history**テーブルには、サブスクライバーで受信したすべてのトレーサー トークンの記録が保持されます。 このテーブルは、ディストリビューション データベースに格納し、レプリケーションによりパフォーマンスを監視するために使用されます。  
+  **MStracer_history**テーブルには、サブスクライバーで受信したすべてのトレーサートークンの記録が保持されます。 このテーブルは、ディストリビューションデータベースに格納され、パフォーマンス監視のためにレプリケーションによって使用されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**parent_tracer_id**|**int**|トレーサー トークンを一意に識別します。|  
-|**agent_id**|**int**|トレーサー トークン レコードを処理したエージェントを識別します。|  
+|**agent_id**|**int**|トレーサートークンレコードを処理したエージェントを識別します。|  
 |**subscriber_commit**|**datetime**|トレーサー トークン レコードがサブスクライバーでコミットされた日付と時刻です。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

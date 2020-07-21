@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェント テーブル (TRANSACT-SQL) |Microsoft Docs
+title: SQL Server エージェントテーブル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - SQL Server Agent, system tables
 - system tables [SQL Server], SQL Server Agent
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a677a563666acff5c18f84a3f133b03b616072ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753870"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server エージェントのテーブル (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用される情報を格納するシステム テーブルについて説明します。 すべてのテーブルは、msdb データベースの dbo スキーマにです。  
+  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用される情報を格納するシステム テーブルについて説明します。 すべてのテーブルは、msdb データベースの dbo スキーマにです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  

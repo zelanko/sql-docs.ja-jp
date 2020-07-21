@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25073bd212ec8b468c0388d11d7701744998d036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940400"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883638"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 以下の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
   
@@ -63,15 +63,15 @@ Oracle および IBM DB2, にサブスクリプションを作成する方法の
 ## <a name="considerations-for-non-sql-server-subscribers"></a>SQL Server 以外のサブスクライバーに関する注意点  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにレプリケートする場合は、以下の点に留意してください。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   レプリケーションでは、テーブルとインデックス付きビューをテーブルとして[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーにパブリッシュする処理をサポートしています (インデックス付きビューは、インデックス付きビューとしてレプリケートすることはできません)。  
   
--   パブリケーションの新規作成ウィザードでパブリケーションを作成し、[パブリケーションのプロパティ] ダイアログ ボックスを使用して、このパブリケーションを SQL Server 以外のサブスクライバーに対して有効化する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに、サブスクリプション データベース内の全オブジェクトの所有者は指定されません。一方、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、パブリケーション データベース内の対応するオブジェクトの所有者が指定されます。  
+-   パブリケーションの新規作成ウィザードでパブリケーションを作成し、[パブリケーションのプロパティ] ダイアログ ボックスを使用して、これを SQL Server 以外のサブスクライバーに対して有効化する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに、サブスクリプション データベース内の全オブジェクトの所有者は指定されません。一方、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーには、パブリケーション データベース内の対応するオブジェクトの所有者が設定されます。  
   
 -   パブリケーションに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーが含まれる場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーのサブスクリプションを作成する前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対してパブリケーションを有効化する必要があります。  
   
--   既定では、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して生成したスクリプトには、`CREATE TABLE` 構文に引用符なしの識別子が使用されます。 したがって、「test」という名前でパブリッシュされたテーブルは「TEST」としてレプリケートされます。 大文字/小文字の指定をパブリケーション データベース内のテーブルと同一にするには、ディストリビューション エージェントの **-QuotedIdentifier** パラメーターを使用します。 パブリッシュされたオブジェクトの名前 (テーブル、列、制約など) に、スペースや、 **以外のサブスクライバーのデータベースのバージョンでの予約語が含まれている場合は、** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターも使用する必要があります。 このパラメーターの詳細については、「 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
+-   既定では、スナップショット エージェントが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対して生成したスクリプトには、`CREATE TABLE` 構文に引用符なしの識別子が使用されます。 したがって、「test」という名前でパブリッシュされたテーブルは「TEST」としてレプリケートされます。 大文字/小文字の指定をパブリケーション データベース内のテーブルと同一にするには、ディストリビューション エージェントの **-QuotedIdentifier** パラメーターを使用します。 パブリッシュされたオブジェクトの名前 (テーブル、列、制約など) に、スペースや、 **以外のサブスクライバーのデータベースのバージョンでの予約語が含まれている場合は、** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パラメーターも使用する必要があります。 このパラメーターの詳細については、 [レプリケーション ディストリビューション エージェント](../../../relational-databases/replication/agents/replication-distribution-agent.md) を参照してください。  
   
 -   ディストリビューション エージェントを実行するアカウントには、OLE DB プロバイダーのインストール ディレクトリに対する読み取りアクセス権が必要です。  
   
@@ -87,11 +87,11 @@ Oracle および IBM DB2, にサブスクリプションを作成する方法の
   
 -   アーティクルをパブリケーションに追加または削除する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーのサブスクリプションは再初期化する必要があります。  
   
--   すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでサポートされる制約は、NULL および NOT NULL のみです。 主キーの制約は一意なインデックスとしてレプリケートされます。  
+-   すべての[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでサポートされる制約は、NULL および NOT NULL のみです。 主キーの制約は一意なインデックスとしてレプリケートされます。  
   
 -   NULL 値の扱いはデータベースによって異なり、空白値、空の文字列、および NULL の表示方法に影響します。 また、UNIQUE 制約が定義されている列に値を挿入する際の動作にも影響します。 たとえば、Oracle では一意な列に複数の NULL 値を挿入できますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意な列に 1 つの NULL 値しか挿入できません。  
   
-     他にも注意が必要なのは、列に対して NOT NULL が定義されている場合、NULL 値、空の文字列、および空白値がどのように扱われるかという点です。 Oracle サブスクライバーでのこの問題の対処方法の詳細については、「 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md)」を参照してください。  
+     他にも注意が必要なのは、列に対して NOT NULL が定義されている場合、NULL 値、空の文字列、および空白値がどのように扱われるかという点です。 Oracle サブスクライバーでのこの問題の対処方法の詳細については、「 [Oracle サブスクライバー](../../../relational-databases/replication/non-sql/oracle-subscribers.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーからサブスクリプションが削除されても、レプリケーション関連のメタデータ (トランザクション シーケンス テーブル) は削除されません。  
   

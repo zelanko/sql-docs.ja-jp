@@ -12,16 +12,16 @@ ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503080"
 ---
 # <a name="image-device-information-settings"></a>画像デバイス情報設定
   次の表は、IMAGE 形式で表示するためのデバイス情報設定を示しています。  
   
-|設定|[値]|  
+|設定|値|  
 |-------------|-----------|  
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定はオーバーライドされます。|  

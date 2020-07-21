@@ -1,5 +1,5 @@
 ---
-title: 承認が必要 (マスター データ サービス) | Microsoft Docs
+title: 承認が必要
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448a8174acef464fa1badb5a25d019891dd53bc6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812064"
 ---
 # <a name="approval-required-master-data-services"></a>承認が必要 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、管理者はエンティティを「承認が必要」に設定できます。 このエンティティに対するすべての変更には、エンティティ管理者の確認と承認が必要になります。  
   
@@ -30,14 +30,14 @@ ms.locfileid: "68047761"
 >   
 >  ビジネス ルールによって行われた変更は、承認がバイパスされます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  
   
 -   モデル管理者である必要があります。 詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
--   エンティティが存在する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)」を参照してください。  
+-   エンティティが存在する必要があります。 詳細については、「 [Create a Entity &#40;マスターデータサービス](../master-data-services/create-an-entity-master-data-services.md)」を参照してください&#41;  
   
 ## <a name="to-enable-approval-required-for-an-entity"></a>エンティティに対して「承認が必要」を有効にするには  
   

@@ -1,5 +1,5 @@
 ---
-title: Stretch 対応データベースの復元 (Stretch Database) | Microsoft Docs
+title: Stretch 対応データベースの復元
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 169d1d2dfe2ab36d5ae7541ee33912ea162f372f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136103"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73843769"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースの復元 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "68136103"
   バックアップの詳細については、「 [Stretch 対応データベースのバックアップ](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)」をご覧ください。
 
 > [!TIP]
-> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性の詳細については、「 [高可用性ソリューション](../../database-engine/sql-server-business-continuity-dr.md)」をご覧ください。
+> バックアップは、完全な高可用性とビジネス継続性ソリューションの一部にすぎません。 高可用性についての詳細は、「 [高可用性ソリューション](../../database-engine/sql-server-business-continuity-dr.md)」を参照してください。
 
 ## <a name="restore-your-sql-server-data"></a>SQL Server データの復元
 ハードウェアの障害または破損から復元するには、Stretch 対応 SQL Server データベースをバックアップから復元します。 現在使用中の SQL Server の復元方法を引き続き使用できます。 詳細については、「 [復元と復旧の概要](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)」をご覧ください。
@@ -37,7 +38,7 @@ Azure の SQL Server Stretch Database サービスでは、Azure Storage スナ�
 
 Azure ポータルを使用して、Azure ライブ データベースを過去の状態に復元するには、次の手順を実行します。
 
-1. [Azure ポータル][]にログインします。
+1. [Azure Portal][] にログインします。
 2. 画面左側の **[参照]** を選択し、 **[SQL デーベース]** を選択します。
 3. 使用中のデータベースに移動して選択します。
 4. データベース ブレードの上部にある **[復元]** をクリックします。
@@ -49,7 +50,7 @@ Azure の SQL Server Stretch Database サービスでは、データベースが
 
 Azure ポータルを使用して、削除された Azure データベースをその時点の状態に復元するには、次の手順を実行します。
 
-1. [Azure ポータル][]にログインします。
+1. [Azure Portal][] にログインします。
 2. 画面左側の **[参照]** を選択し、 **[SQL Servers]** を選択します。
 3. 使用中のサーバーに移動して選択します。
 4. サーバーのブレードで [操作] まで下へスクロールし、 **[削除されたデータベース]** タイルをクリックします。
@@ -57,13 +58,13 @@ Azure ポータルを使用して、削除された Azure データベースを�
 5. 新しい **データベース名** を指定し、 **[作成]** をクリックします。
 6. データベースの復元処理が開始され、 **[通知]** を使用して監視できます。
 
-## <a name="reconnect"></a>SQL Server データベースと Azure リモート データベース間の接続を復元する
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>SQL Server データベースと Azure リモート データベース間の接続を復元する
 
 1.  異なる名前または異なるリージョンの復元された Azure データベースに接続するには、ストアド プロシージャ [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) を実行して、以前の Azure データベースから切断します。  
   
 2.  ストアド プロシージャ [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) を実行してローカルの Stretch 対応データベースを Azure データベースに再接続します。  
   
-    -   既存のデータベース スコープ資格情報を sysname または varchar(128) 値として指定します。 (varchar(max) は使用しないでください)。資格情報の名前はビュー **sys.database_scoped_credentials** で参照できます。  
+    -   既存のデータベース スコープ資格情報を sysname または varchar(128) 値として指定します。 (varchar(max) は使用しないでください)。資格情報の名前はビュー **sys.database_scoped_credentials**で参照できます。  
   
     -   リモート データのコピーを作成するかどうかを指定し、コピーに接続します (推奨)。  
   
@@ -83,5 +84,5 @@ Azure ポータルを使用して、削除された Azure データベースを�
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [Azure ポータル]: https://portal.azure.com/
+ [Azure Portal]: https://portal.azure.com/
  

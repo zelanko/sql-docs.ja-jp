@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling support
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80900988"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>接続のプール (Microsoft SQL Server 用 Drivers for PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68015120"
   
 -   [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では ODBC 接続プールが使用されます。  
   
--   Windows の既定では、接続プールは有効になっています。 Linux と macOS では、接続プールが ODBC に対して有効になっている場合にのみ、接続がプールされます ([接続プールの有効化/無効化](#enablingdisabling-connection-pooling)に関する参照を参照してください)。 接続プールが有効になっていて、サーバーに接続している場合、ドライバーは新しい接続を作成する前に、プールされた接続を使用しようとします。 プールに同等の接続がない場合、新しい接続が構築され、プールに追加されます。 ドライバーは、接続文字列の比較に基づき、接続が同等かどうかを判断します。  
+-   Windows の既定では、接続プールは有効になっています。 Linux と macOS では、接続プールが ODBC に対して有効になっている場合にのみ、接続がプールされます (「[接続プールの有効化と無効化](#enablingdisabling-connection-pooling)」を参照してください)。 接続プールが有効になっているときに、サーバーに接続すると、ドライバーでは、新しい接続を作成する前にプールされたものの使用が試みられます。 プールに同等の接続がない場合、新しい接続が構築され、プールに追加されます。 ドライバーは、接続文字列の比較に基づき、接続が同等かどうかを判断します。  
   
 -   プールの接続が使用されると、接続状態がリセットされます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68015120"
   
 接続のプールについて詳しくは、「[ドライバー マネージャーの接続プール](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)」をご覧ください。  
   
-## <a name="enablingdisabling-connection-pooling"></a>接続プールの有効化/無効化
+## <a name="enablingdisabling-connection-pooling"></a>接続プールの有効化と無効化
 ### <a name="windows"></a>Windows
 (接続プールで同等の接続を探す代わりに) 新しい接続を構築するようにドライバーに強制できます。その場合、接続文字列の *ConnectionPooling* 属性を **false** (または 0) に設定します。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "68015120"
   
 その他の接続属性の詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
 ### <a name="linux-and-macos"></a>Linux と macOS
-*Connectionpooling*属性を使用して、接続プールを有効/無効にすることはできません。 
+接続プールを有効または無効にする場合に、*ConnectionPooling* 属性を使用することはできません。 
 
-接続プールは、odbcinst .ini 構成ファイルを編集することで有効または無効にすることができます。 変更を有効にするには、ドライバーを再読み込みする必要があります。
+接続プールを有効または無効にするには、odbcinst.ini 構成ファイルを編集します。 変更を有効にするには、ドライバーを再度読み込む必要があります。
 
-を`Pooling`に`Yes`設定し、 `CPTimeout` odbcinst .ini ファイルで正の値を指定すると、接続プールが有効になります。 
+dbcinst.ini ファイル内で `Pooling` を `Yes` に、`CPTimeout` を正の値に設定すると、接続プールが有効になります。 
 ```
 [ODBC]
 Pooling=Yes
@@ -55,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-少なくと、odbcinst .ini ファイルは次の例のようになります。
+最低限、odbcinst.ini ファイルは次の例のようにする必要があります。
 
 ```
 [ODBC]
@@ -68,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-Odbcinst `No` .ini ファイルのをに設定`Pooling`すると、ドライバーによって新しい接続が強制的に作成されます。
+odbcinst.ini ファイル内で `Pooling` を `No` に設定すると、ドライバーは新しい接続の作成を強制されます。
 ```
 [ODBC]
 Pooling=No
 ```
 
-## <a name="remarks"></a>Remarks
-- Linux または macOS では、odbcinst .ini ファイルでプーリングが有効になっている場合、すべての接続がプールされます。 これは、ConnectionPooling 接続オプションが無効であることを意味します。 プーリングを無効にするには、odbcinst .ini ファイルに Pooling = No を設定し、ドライバーを再読み込みします。
-  - unixODBC < = 2.3.4 (Linux および macOS) が、エラーメッセージ、警告、および情報メッセージなどの適切な診断情報を返さない場合がある
-  - このため、SQLSRV および PDO_SQLSRV ドライバーは、長いデータ (xml、バイナリなど) を文字列として適切にフェッチできない可能性があります。 回避策として、長いデータをストリームとしてフェッチできます。 SQLSRV については、次の例を参照してください。
+## <a name="remarks"></a>解説
+- Linux または macOS では、odbcinst.ini ファイル内でプーリングが有効になっている場合、すべての接続がプールされます。 これは、ConnectionPooling 接続オプションの影響を受けないことを意味します。 プーリングを無効にするには、odbcinst.ini ファイル内で Pooling=No を設定し、ドライバーを再度読み込みます。
+  - unixODBC < = 2.3.4 (Linux および macOS) の場合、エラー メッセージ、警告、情報メッセージなどの適切な診断情報が返されない場合があります
+  - このため、SQLSRV および PDO_SQLSRV ドライバーでは、長いデータ (xml やバイナリなど) を文字列として適切にフェッチできない可能性があります。 回避策として、長いデータをストリームとしてフェッチすることができます。 SQLSRV については、次の例を参照してください。
 
 ```
 <?php

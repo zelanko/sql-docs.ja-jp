@@ -1,5 +1,5 @@
 ---
-title: sys.sp_drop_trusted_assembly (TRANSACT-SQL) |Microsoft Docs
+title: sp_drop_trusted_assembly (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625947"
 ---
-# <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly (TRANSACT-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 サーバー上の信頼されたアセンブリの一覧からアセンブリを削除します。
 
@@ -44,19 +44,19 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>引数
 
 [ @hash =] '*値*'  
-サーバーの信頼されたアセンブリの一覧から削除するアセンブリの SHA2_512 のハッシュ値。 アセンブリが署名されていないか、データベースが信頼可能としてマークされていない場合でも、clr の厳密なセキュリティが有効にすると、信頼されたアセンブリを読み込むことがあります。
+サーバーの信頼されたアセンブリの一覧から削除するアセンブリの SHA2_512 ハッシュ値。 アセンブリが署名されていないか、データベースが信頼できるものとしてマークされていない場合でも、clr strict security を有効にすると、信頼されたアセンブリが読み込まれることがあります
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
 
-この手順からアセンブリを削除します。 [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)します。
+この手順では、アセンブリを[trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)から削除します。
 
 ## <a name="permissions"></a>アクセス許可
 
-メンバーシップが必要です、`sysadmin`固定サーバー ロールまたは`CONTROL SERVER`権限。
+`sysadmin`固定サーバーロールまたは権限のメンバーシップが必要 `CONTROL SERVER` です。
 
 ## <a name="examples"></a>使用例  
 
-次の例では、サーバーの信頼されたアセンブリの一覧から、アセンブリのハッシュを削除します。  
+次の例では、サーバーの信頼されたアセンブリの一覧からアセンブリハッシュを削除します。  
 
 ```  
 EXEC sp_drop_trusted_assembly 
@@ -64,7 +64,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>関連項目  
-  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

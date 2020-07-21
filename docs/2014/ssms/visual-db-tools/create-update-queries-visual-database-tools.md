@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84a0fb2152a7e05b853abd28b94e82bffa32273b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058047"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>更新クエリの作成 (Visual Database Tools)
   更新クエリを使用すると、複数行の内容を一度に変更できます。 たとえば、 `titles` テーブルで更新クエリを使用すると、特定の出版社から出版されているすべての本の価格に、10% 加算するような処理を行うことができます。  
@@ -72,8 +71,8 @@ WHERE (pub_id = '0766')
  更新クエリを実行しても、 [結果ペイン](results-pane-visual-database-tools.md)には結果が表示されません。 代わりに、変更された行数を示すメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [クエリの種類がサポートされている&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;サポートされているクエリの種類&#41;](supported-query-types-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

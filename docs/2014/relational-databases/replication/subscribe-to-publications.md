@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b97dda18082c38f25362142b8a570863c51940bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047639"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
   サブスクリプションとは、パブリケーションのデータとデータベース オブジェクトのコピーを要求することです。 サブスクリプションでは、受信するパブリケーションおよびパブリケーションの受信場所と受信時間が定義されます。 サブスクリプションを設計する場合は、エージェント処理を実行する場所を考慮してください。 選択するサブスクリプションの種類によって、エージェントが実行される場所が決まります。 プッシュ サブスクリプションではマージ エージェントまたはディストリビューション エージェントがディストリビューターで実行されるのに対し、プル サブスクリプションではサブスクライバーでエージェントが実行されます。 サブスクリプションの作成後にその種類を変更することはできません。  
@@ -64,7 +63,7 @@ ms.locfileid: "62629693"
   
  **プッシュ サブスクリプションを作成するには**  
   
- [Create a Push Subscription](create-a-push-subscription.md)  
+ [プッシュ サブスクリプションを作成する](create-a-push-subscription.md)  
   
  **プッシュ サブスクリプションのプロパティを表示または変更するには**  
   
@@ -72,14 +71,14 @@ ms.locfileid: "62629693"
   
  **プッシュ サブスクリプションを削除するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[プッシュ サブスクリプションの削除](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プッシュ サブスクリプションの削除](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  サブスクリプションを削除しても、パブリッシュされたオブジェクトはサブスクライバーから削除されません。  
   
  **プル サブスクリプションを作成するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Create a Pull Subscription](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プル サブスクリプションの作成](create-a-pull-subscription.md)  
   
  **プル サブスクリプションのプロパティを表示または変更するには**  
   

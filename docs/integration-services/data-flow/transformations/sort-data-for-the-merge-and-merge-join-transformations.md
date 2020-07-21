@@ -11,14 +11,14 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d048894d525ab26a8abb2b4a13b55fcf151227aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928124"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297784"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
 
@@ -42,7 +42,7 @@ ms.locfileid: "67928124"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     \- または -  
+     または  
   
 -   Transact-SQL の CAST 演算子を使用して最初に **varchar** 値を **nvarchar** 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   
@@ -115,6 +115,6 @@ ms.locfileid: "67928124"
  [マージ結合変換](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   

@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 85c6d5577a68619920ec149df95316f19a3a8542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a94fef8c3b8202503f0af4c58f1b9b732102225e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672348"
 ---
-# <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values 
+# <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パッケージの実行中に設定されたプロパティ オーバーライド値を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|プロパティ オーバーライド値の一意の ID。|  
 |execution_id|**bigint**|実行のインスタンスの一意の ID。|  
@@ -34,7 +34,7 @@ ms.locfileid: "68065201"
 |property_value|**nvarchar(max)**|プロパティのオーバーライド値。|  
 |sensitive|**bit**|値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、 **[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションを使用してプロパティ値がオーバーライドされた実行ごとに行が表示されます。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
   
 ## <a name="permissions"></a>アクセス許可  

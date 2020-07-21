@@ -27,15 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984399"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012564"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   プリンシパルに対する権限を拒否します。 プリンシパルが、そのグループまたはロールのメンバーシップから権限を継承しないようにします。 DENY は、オブジェクトの所有者または sysadmin 固定サーバー ロールのメンバーに適用されない点を除いて、すべての権限より優先されます。
   **セキュリティに関する注意** sysadmin 固定サーバー ロールのメンバーとオブジェクトの所有者の権限を拒否することはできません。
@@ -44,7 +44,7 @@ ms.locfileid: "67984399"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for DENY  
@@ -62,7 +62,7 @@ DENY   { ALL [ PRIVILEGES ] }
 { see the tables below }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DENY   
@@ -132,7 +132,7 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
   
 このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DENY ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対する権限を拒否するための完全な構文については、後のトピックを参照してください。  
   
  GRANT OPTION で権限が付与されたプリンシパルに対して、その権限を拒否するときに CASCADE を指定しないと、DENY は失敗します。  
@@ -153,7 +153,7 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
   
  固定サーバー ロール sysadmin のメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を拒否できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を拒否できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を拒否できます。 AS 句を使用する場合、指定されるプリンシパルは、権限の拒否対象となるセキュリティ保護可能なリソースを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の表は、セキュリティ保護可能なリソースと、セキュリティ保護可能なリソース固有の構文について説明しているトピックの一覧です。  
   
 |||  
@@ -169,25 +169,25 @@ AS <principal> 句は、権限の拒否者として記録されるプリンシ�
 |エンドポイント|[DENY (エンドポイントの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |フルテキスト カタログ|[DENY (フルテキストの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |フルテキスト ストップリスト|[DENY (フルテキストの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
-|機能|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Login|[DENY (サーバー プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
+|Function|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|ログイン|[DENY (サーバー プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
 |メッセージ型|[DENY (Service Broker の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |Object|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |キュー|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |リモート サービス バインド|[DENY (Service Broker の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|ロール|[DENY (データベース プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Route|[DENY (Service Broker の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Role|[DENY (データベース プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|ルート|[DENY (Service Broker の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |スキーマ|[DENY (スキーマ権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |検索プロパティ リスト|[DENY (検索プロパティ リスト権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
-|[サーバー]|[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
+|サーバー|[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
 |サービス|[DENY (Service Broker の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |ストアド プロシージャ|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |対称キー|[DENY (対称キーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
 |シノニム|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |システム オブジェクト|[DENY (システム オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
 |テーブル|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|型|[DENY (型の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
-|ユーザー|[DENY (データベース プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|種類|[DENY (型の権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
+|User|[DENY (データベース プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |表示|[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |XML スキーマ コレクション|[DENY (XML スキーマ コレクションの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   

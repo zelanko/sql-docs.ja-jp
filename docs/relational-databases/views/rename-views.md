@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
 author: stevestein
 ms.author: sstein
-ms.manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc4d31360e86fa0ec60c482034ce1678801cf5f3
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 856c40bbe7031a8adf2a789f8ac2a674d572838c
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582326"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85082683"
 ---
 # <a name="rename-views"></a>ビューの名前の変更
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューの名前を変更できます。  
   
 > [!WARNING]  
@@ -35,7 +34,7 @@ ms.locfileid: "67582326"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してビューの名前を変更するには:**  
   
@@ -45,17 +44,17 @@ ms.locfileid: "67582326"
   
 -   **補足情報:** [ビューの名を変更した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  ビューのすべての依存関係の一覧を取得します。 ビューを参照するすべてのオブジェクト、スクリプト、またはアプリケーションは、ビューの新しい名前を反映するように変更する必要があります。 詳しくは、「 [Get Information About a View](../../relational-databases/views/get-information-about-a-view.md)」をご覧ください。 ビューの名前を変更するのではなく、ビューを削除してから新しい名前で作成し直すことをお勧めします。 ビューを再作成することにより、ビューで参照されているオブジェクトの依存情報が更新されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  SCHEMA に対する ALTER 権限または OBJECT に対する CONTROL 権限と、データベースの CREATE VIEW 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-rename-a-view"></a>ビューの名前を変更するには  
   
@@ -65,16 +64,14 @@ ms.locfileid: "67582326"
   
 3.  ビューの新しい名前を入力します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **ビューの名前を変更するには**  
   
  ビューの名前は **sp_rename** を使用して変更できますが、既存のビューを削除した後、新しい名前でビューを再作成することをお勧めします。  
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」および「[DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: ビューの名を変更した後  
+##  <a name="follow-up-after-renaming-a-view"></a><a name="FollowUp"></a>補足情報: ビューの名を変更した後  
  ビューの古い名前を参照するすべてのオブジェクト、スクリプト、およびアプリケーションで新しい名前が使用されていることを確認します。  
   
   

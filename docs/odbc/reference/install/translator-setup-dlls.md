@@ -1,5 +1,5 @@
 ---
-title: トランスレーター セットアップ Dll |Microsoft Docs
+title: トランスレーターセットアップ Dll |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - translator setup DLL [ODBC]
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b6c99dffc94f2675efdbbc3d5c1d142a5ae9b7e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28c354fddb36b9e035361fa4ba03fbde34b7d399
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093837"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296052"
 ---
 # <a name="translator-setup-dlls"></a>トランスレーター セットアップ DLL
 > [!NOTE]  
->  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
+>  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
   
- トランスレーター セットアップ DLL が含まれています、 **ConfigTranslator**トランスレーターの既定のオプションを返す関数。 必要に応じて、ユーザーにこの情報メッセージが表示されます。 この関数の詳細については、次を参照してください。[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)します。  
+ Translator セットアップ DLL には、変換プログラムの既定のオプションを返す**configtranslator**関数が含まれています。 必要に応じて、ユーザーにこの情報の入力を求めます。 この関数の詳細については、「 [SETUP DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  
   
- トランスレーター セットアップ DLL は、変換プログラムの開発者によって書き込まれます。 トランスレーターの一部にすることができます、または別の DLL。
+ Translator セットアップ DLL は、translator 開発者によって作成されています。 トランスレーター DLL または別の DLL の一部にすることができます。

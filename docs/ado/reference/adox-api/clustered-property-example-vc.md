@@ -1,5 +1,5 @@
 ---
-title: プロパティの例 (vc++) をクラスター化された |Microsoft Docs
+title: Clustered プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33ef2ac09d81d85c6b9170c84bffbc8491dbd995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8039f07bfdb750a5ed3632d2f7c28b51a02b8ec9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966944"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759388"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered プロパティの例 (VC++)
-この例では、 [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 エントリのため、この例を返す、Microsoft Jet データベースは、クラスター化インデックスがサポートされていない注**False**の**Clustered**のすべてのインデックスのプロパティ、 *Northwind*データベース。  
+この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)されたプロパティを示します。 Microsoft Jet データベースではクラスター化インデックスがサポートされていないため、この例では*Northwind*データベースのすべてのインデックスの**クラスター化**されたプロパティに対して**False**が返されます。  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -82,11 +82,11 @@ void ClusteredX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ClusteredX...."<< endl;  
+      cout << "Error occurred in ClusteredX...."<< endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Clustered プロパティ (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

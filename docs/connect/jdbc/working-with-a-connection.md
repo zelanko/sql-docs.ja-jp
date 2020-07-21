@@ -1,5 +1,6 @@
 ---
-title: 接続の操作 |Microsoft Docs
+title: JDBC 接続の操作
+description: Microsoft JDBC Driver for SQL Server の SQLServerConnection クラスを使用して SQL Server データベースに接続するさまざまな方法の例。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,23 +9,23 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1253c2ec5822fef83d6da71279752202f2d93ebd
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025471"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631952"
 ---
 # <a name="working-with-a-connection"></a>接続の操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-以下のセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するさまざまな方法の例を示します。
+以下のセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerConnection](reference/sqlserverconnection-class.md) クラスを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続するさまざまな方法の例を示します。
 
 > [!NOTE]  
-> JDBC ドライバーを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続で問題が発生した場合は、「[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)」で提案されている修正方法を参照してください。
+> JDBC ドライバーを使用した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続で問題が発生した場合は、「[接続のトラブルシューティング](troubleshooting-connectivity.md)」で提案されている修正方法を参照してください。
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>DriverManager クラスを使用した接続の作成
 
@@ -43,7 +44,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver クラスを使用した接続の作成
 
-ドライバーの一覧で DriverManager 用に特定のドライバーを指定する必要がある場合は、次のように [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) クラスの [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) メソッドを使用して、データベース接続を作成できます。
+ドライバーの一覧で DriverManager 用に特定のドライバーを指定する必要がある場合は、次のように [SQLServerDriver](reference/sqlserverdriver-class.md) クラスの [connect](reference/connect-method-sqlserverdriver.md) メソッドを使用して、データベース接続を作成できます。
 
 ```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
@@ -53,7 +54,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>SQLServerDataSource クラスを使用した接続の作成
 
-[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスを使用して接続を作成する必要がある場合は、次のように、クラスのさまざまな setter メソッドを使用してから [getConnection](../../connect/jdbc/reference/getconnection-method.md) メソッドを呼び出すことができます。
+[SQLServerDataSource](reference/sqlserverdatasource-class.md) クラスを使用して接続を作成する必要がある場合は、次のように、クラスのさまざまな setter メソッドを使用してから [getConnection](reference/getconnection-method.md) メソッドを呼び出すことができます。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();  
@@ -65,39 +66,39 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>限定されたデータ ソースを対象とした接続の作成
+## <a name="creating-a-connection-that-targets-a-specific-data-source"></a>特定のデータ ソースを対象とする接続の作成
 
-限定されたデータ ソースを対象にデータベース接続を作成するには複数の方法があります。 それぞれの方法は、接続 URL を使用して設定するプロパティによって設定されます。
+特定のデータ ソースを対象とするデータベース接続を作成する必要がある場合、多数の方法があります。 それぞれの方法は、接続 URL を使用して設定するプロパティによって設定されます。
 
-リモート サーバーの既定のインスタンスに接続するには、次の方法を使用します。
+リモート サーバー上の既定のインスタンスに接続するには、次の例を使用します。
 
 ```java
 String url = "jdbc:sqlserver://MyServer;integratedSecurity=true;"
 ```
 
-サーバーの特定のポートに接続するには、次の方法を使用します。
+サーバーの特定のポートに接続するには、次の例を使用します。
 
 ```java
 String url = "jdbc:sqlserver://MyServer:1533;integratedSecurity=true;"
 ```
 
-サーバーの名前付きインスタンスに接続するには、次の方法を使用します。
+サーバー上の名前付きインスタンスに接続するには、次の例を使用します。
 
 ```java
 String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSecurity=true;"
 ```
 
-サーバーの特定のデータベースに接続するには、次の方法を使用します。
+サーバー上の特定のデータベースに接続するには、次の例を使用します。
 
 ```java
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-接続 URL の例については、「[接続 url を作成する](../../connect/jdbc/building-the-connection-url.md)」を参照してください。
+接続 URL の例については、「[接続 URL の構築](building-the-connection-url.md)」を参照してください。
 
-## <a name="creating-a-connection-with-a-custom-login-time-out"></a>カスタムのログイン タイムアウトを持つ接続の作成
+## <a name="creating-a-connection-with-a-custom-login-timeout"></a>カスタムのログイン タイムアウトを持つ接続の作成
 
-サーバーの負荷またはネットワーク トラフィックを調整する必要がある場合は、次のように、特定のログイン タイムアウト値を秒数で指定した接続を作成できます。
+サーバーの負荷またはネットワーク トラフィックを調整する必要がある場合は、次の例のように、特定のログイン タイムアウト値を秒数で指定した接続を作成できます。
 
 ```java
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
@@ -105,7 +106,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 
 ## <a name="create-a-connection-with-application-level-identity"></a>アプリケーション レベルの ID を持つ接続の作成
 
-ログとプロファイリングを使用する必要がある場合は、次のように、接続が特定のアプリケーションからのものであることを識別する必要があります。
+ログとプロファイルを使用する必要がある場合は、次の例のように、接続が特定のアプリケーションからのものであることを識別する必要があります。
 
 ```java
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
@@ -113,7 +114,7 @@ String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecu
 
 ## <a name="closing-a-connection"></a>接続を閉じる
 
-次のように、SQLServerConnection クラスの [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) メソッドを呼び出すことで、データベース接続を明示的に閉じることができます。
+次のように、SQLServerConnection クラスの [close](reference/close-method-sqlserverconnection.md) メソッドを呼び出すことで、データベース接続を明示的に閉じることができます。
 
 ```java
 con.close();
@@ -124,6 +125,6 @@ con.close();
 > [!NOTE]  
 > また、close メソッドを呼び出すと、保留中のトランザクションもすべてロールバックされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[JDBC ドライバーによる SQL Server への接続](connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: SQLExtendedFetch (カーソル ライブラリ) |Microsoft Docs
+title: SQLExtendedFetch (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC], Cursor Library
 ms.assetid: 06fbf06f-127b-475c-b636-7b784918475d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3fd7d02d74b0e19d91871c5df7c9c5915d028f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe39b2d2cbbaf72ce3844c35187040589d1dac58
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064450"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302063"
 ---
 # <a name="sqlextendedfetch-cursor-library"></a>SQLExtendedFetch (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLExtendedFetch**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLExtendedFetch**を参照してください[SQLExtendedFetch 関数](../../../odbc/reference/syntax/sqlextendedfetch-function.md)します。  
+ このトピックでは、カーソルライブラリでの**SQLExtendedFetch**関数の使用について説明します。 **SQLExtendedFetch**の一般的な情報については、「 [SQLExtendedFetch 関数](../../../odbc/reference/syntax/sqlextendedfetch-function.md)」を参照してください。  
   
- カーソル ライブラリを実装して**SQLExtendedFetch**を繰り返し呼び出す**SQLFetch**ドライバー。  
+ カーソルライブラリは、ドライバーで**Sqlfetch**を繰り返し呼び出すことによって、 **SQLExtendedFetch**を実装します。  
   
- カーソル ライブラリ呼び出しをサポートする**SQLExtendedFetch**で、 *FetchOrientation* SQL_FETCH_BOOKMARK の。  
+ カーソルライブラリでは、SQL_FETCH_BOOKMARK の*Fetchorientation*を使用した**SQLExtendedFetch**の呼び出しをサポートしています。  
   
- カーソル ライブラリを使用すると、呼び出し**SQLExtendedFetch**いずれかへの呼び出しを混在させることはできません**SQLFetchScroll**または**SQLFetch**します。
+ カーソルライブラリを使用する場合、 **SQLExtendedFetch**の呼び出しと**sqlfetchscroll**または**sqlfetch**の呼び出しを混在させることはできません。

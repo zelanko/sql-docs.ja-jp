@@ -1,6 +1,6 @@
 ---
-title: カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用 | Microsoft Docs
-ms.custom: ''
+title: カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3bc3c116f8082b17f392d04ae14e0895762fc37
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262066"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257598"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "68262066"
   
 ## <a name="object-explorer-node-report-parameters"></a>オブジェクト エクスプローラー ノードのレポート パラメーター  
   
-|[パラメーター名]|データ型|  
+|パラメーター名|データ型|  
 |------------------|-------------|  
-|**ObjectName**|**文字列**|  
+|**ObjectName**|**String**|  
 |**ObjectTypeName**|**String**|  
-|**フィルター選択されたインデックス**|**ブール値**|  
+|**フィルター選択されたインデックス**|**Boolean**|  
 |**ServerName**|**String**|  
-|**フォント名**|**String**|  
+|**FontName**|**String**|  
 |**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>オブジェクト エクスプローラー ノードのレポート パラメーターの例  

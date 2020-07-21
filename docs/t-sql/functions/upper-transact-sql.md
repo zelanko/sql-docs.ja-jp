@@ -20,18 +20,18 @@ helpviewer_keywords:
 - characters [SQL Server], uppercase
 - lowercase characters
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91870e53e5976ba5d52b83f086a57fa552ad1ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc6822f890ba66df1f2d7945e411a4cd334de1bc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927623"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004076"
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   小文字データを大文字に変換して文字式を返します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67927623"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 UPPER ( character_expression )  
 ```  
   
@@ -52,7 +52,7 @@ UPPER ( character_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`UPPER` 関数と `RTRIM` 関数を使用して `dbo.DimEmployee` テーブル内の人の姓を返しています。関数により、姓を大文字にして空白を切り捨て、名と連結しています。  
   
 ```  

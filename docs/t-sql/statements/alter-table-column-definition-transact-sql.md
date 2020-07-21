@@ -21,15 +21,15 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fdcb278eabde4d7b6b4324c4f8aaafe7905fd90
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232151"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380975"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルに追加される列のプロパティを指定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68232151"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 column_name <data_type>  
 [ FILESTREAM ]  
 [ COLLATE collation_name ]   
@@ -80,7 +80,9 @@ column_name <data_type>
 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *column_name*  
  変更、追加、または削除する列の名前を指定します。 *column_name* は 1 ～ 128 文字で指定できます。 timestamp データ型で作成される新しい列の場合は、*column_name* を省略できます。 **timestamp** データ型の列に対して *column_name* を指定しない場合には、名前 **timestamp** が使われます。  
   
@@ -89,13 +91,13 @@ column_name <data_type>
   
  *type_name* は次のいずれかです。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に基づく別名データ型。 このデータ型をテーブル定義で使用するには、先に CREATE TYPE を使って作成しておく必要があります。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型とそれが属するスキーマ。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型をテーブル定義で使用するには、先に CREATE TYPE を使って作成しておく必要があります。  
   
- *type_schema_name* を指定しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]は次の順序で *type_name* を参照します。  
+ *type_schema_name* を指定しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] では次の順序で *type_name* が参照されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データ型  
   
@@ -119,7 +121,7 @@ DOCUMENT
  *column_name* 内の **xml** データ型の各インスタンスは 1 つのトップレベル要素のみで構成できることを指定します。 DOCUMENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。  
   
  *xml_schema_collection*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  **xml** データ型にのみ適用されます。XML スキーマ コレクションとこのデータ型を関連付けるためのものです。 スキーマで **xml** 列を使用するには、まず、[CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) を使用してデータベース内にスキーマを作成する必要があります。  
   
@@ -178,12 +180,12 @@ IDENTITY
  読み込まれている前の行の ID 値に加算される増分値を指定します。  
   
 NOT FOR REPLICATION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  IDENTITY プロパティに対して指定できます。 IDENTITY プロパティに対してこの句を指定した場合、レプリケーション エージェントが挿入操作を実行するとき ID 列の値は増加しません。  
   
 ROWGUIDCOL  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  列が、行グローバル一意識別子列であることを指定します。 ROWGUIDCOL は、**uniqueidentifier** 列にのみ割り当てることができ、1 つのテーブルに 1 つの **uniqueidentifier** 列だけを ROWGUIDCOL 列として指定できます。 ROWGUIDCOL は、ユーザー定義データ型の列には割り当てできません。  
   
@@ -213,14 +215,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  列は、該当するデータ型である必要があります。  
   
 ALGORITHM  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
 **'AEAD_AES_256_CBC_HMAC_SHA_256'** を指定する必要があります。  
   
  機能の制約などについて詳しくは、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」をご覧ください。  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  動的なデータ マスクを指定します。 *mask_function* マスキング関数は、適切なパラメーターの名前を指定します。 以下の関数を使用できます。  
   
@@ -234,14 +236,14 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  関数のパラメーターについては、「[動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  追加される列が **uniqueidentifier** データ型の場合は、NEWID() 関数を使用する既定値を定義することで、テーブル内にある既存の各行の新しい列に一意の識別子値を設定できます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、列定義において DEFAULT、IDENTITY、ROWGUIDCOL または列制約を指定する場合に順序は適用されません。  
   
  列の追加によりデータ行のサイズが 8,060 バイトを超える場合、ALTER TABLE ステートメントは失敗します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

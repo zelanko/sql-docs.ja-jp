@@ -1,5 +1,6 @@
 ---
-title: 空の関数 (XQuery) |Microsoft Docs
+title: empty 関数 (XQuery) |Microsoft Docs
+description: 指定された項目のシーケンスが空かどうかを示す値を返す XQuery 関数 empty () について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753567"
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの関数 - empty
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  True の場合の値 *$arg*は空のシーケンスです。 それ以外の場合、関数は、False を返します。  
+  *$Arg*の値が空のシーケンスの場合に True を返します。 それ以外の場合、関数は False を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +37,16 @@ fn:empty($arg as item()*) as xs:boolean
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 項目のシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合、関数は、False を返します。  
+ 項目のシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合、関数は False を返します。  
   
-## <a name="remarks"></a>コメント  
- **Fn:exists()** 関数がサポートされていません。 別の方法として、 **not()** 関数を使用できます。  
+## <a name="remarks"></a>Remarks  
+ **Fn: exists ()** 関数はサポートされていません。 代わりに、 **not ()** 関数を使用することもできます。  
   
 ## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Empty() XQuery 関数を使用して、属性が存在するかどうかを決定するには  
- 製品モデル 7 の製造プロセスをこのクエリがないすべてのワーク センター拠点が返されます、 **MachineHours**属性。  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A: Empty () XQuery 関数を使用して、属性が存在するかどうかを判断する  
+ 製品モデル7の製造プロセスでは、このクエリは**Machinehours**属性を持たないすべてのワークセンターの場所を返します。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -74,7 +75,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- 以下、少し変更のクエリが場合、"NotFound"を返します、 **MachineHour**属性が存在しません。  
+ 次のように若干変更されたクエリでは、 **Machinehour**属性が存在しない場合に "NotFound" が返されます。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

@@ -9,10 +9,10 @@ ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574765"
 ---
 # <a name="cache-a-shared-dataset"></a>共有データセットのキャッシュ
@@ -39,7 +39,7 @@ ms.locfileid: "65574765"
   
 6.  30 分後にキャッシュが期限切れになるようにオプションを選択します。 キャッシュが指定のスケジュールに従って期限切れになるように選択することもできます。  
   
-7.  **[適用]** をクリックします。  
+7.  **[Apply]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  

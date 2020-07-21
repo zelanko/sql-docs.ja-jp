@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_secondary (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_monitor_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfdf2e7f08f9fc5c5ef602188c6c291b53de6063
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001012"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891784"
 ---
-# <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  監視テーブルからセカンダリ データベースに関する情報を返します。  
+  監視テーブルからセカンダリデータベースに関する情報を返します。  
   
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,40 +42,40 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @secondary_server = ] 'secondary_server'` セカンダリ サーバーの名前です。 *secondary_server*は**sysname**、既定値はありません。  
+`[ @secondary_server = ] 'secondary_server'`セカンダリサーバーの名前を指定します。 *secondary_server*は**sysname**であり、既定値はありません。  
   
-`[ @secondary_database = ] 'secondary_database'` セカンダリ データベースの名前です。 *secondary_database*は**sysname**、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|[列]|説明|  
+|Column|説明|  
 |------------|-----------------|  
-|**secondary_server**|セカンダリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。|  
-|**secondary_database**|ログ配布構成におけるセカンダリ データベースの名前。|  
+|**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのセカンダリインスタンスの名前です。|  
+|**secondary_database**|ログ配布構成のセカンダリデータベースの名前。|  
 |**secondary_id**|ログ配布構成におけるセカンダリ サーバーの ID。|  
 |**primary_server**|ログ配布構成における [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のプライマリ インスタンスの名前。|  
-|**primary_database**|ログ配布構成におけるプライマリ データベースの名前。|  
-|**restore_threshold**|許容経過時間を分単位の数は、アラートを生成する前に、操作を復元します。|  
+|**primary_database**|ログ配布構成のプライマリデータベースの名前。|  
+|**restore_threshold**|復元操作の間に、アラートが生成されるまでの経過時間 (分単位)。|  
 |**threshold_alert**|復元のしきい値を超えたときに発生する警告。|  
-|**threshold_alert_enabled**|復元のしきい値の警告を有効にするかどうか。<br /><br /> 1 = 有効にします。<br /><br /> 0 = 無効になっています。|  
+|**threshold_alert_enabled**|復元のしきい値の警告を有効にするかどうか。<br /><br /> 1 = 有効。<br /><br /> 0 = 無効です。|  
 |**last_copied_file**|セカンダリ サーバーにコピーされた最後のバックアップ ファイルの名前。|  
-|**last_copied_date**|セカンダリ サーバーに最後にコピー操作の日付と時刻。|  
-|**last_copied_date_utc**|世界協定時刻で表される、セカンダリ サーバーに最後にコピー操作の日付と時刻。|  
-|**last_restored_file**|セカンダリ データベースに復元される最後のバックアップ ファイルの名前。|  
-|**last_restored_date**|最後の日付と時刻は、セカンダリ データベースに対する操作を復元します。|  
-|**last_restored_date_utc**|最後の日付と時刻、世界協定時刻で表される、セカンダリ データベースに対する操作を復元します。|  
-|**history_retention_period**|時間、分単位でログ配布履歴されるレコードは削除する前に特定のセカンダリ データベースに保持されます。|  
+|**last_copied_date**|セカンダリサーバーに最後にコピー操作を行った日時です。|  
+|**last_copied_date_utc**|セカンダリサーバーへの最後のコピー操作の日時。協定世界時で表されます。|  
+|**last_restored_file**|セカンダリデータベースに復元された最後のバックアップファイルのファイル名。|  
+|**last_restored_date**|セカンダリデータベースに対する最後の復元操作の日時。|  
+|**last_restored_date_utc**|セカンダリデータベースでの最後の復元操作の日時。協定世界時で表されます。|  
+|**history_retention_period**|指定されたセカンダリデータベースのログ配布履歴レコードが保持されてから削除されるまでの時間 (分単位)。|  
   
-## <a name="remarks"></a>コメント  
- **sp_help_log_shipping_monitor_secondary**から実行する必要があります、**マスター**監視サーバー上のデータベース。  
+## <a name="remarks"></a>注釈  
+ **sp_help_log_shipping_monitor_secondary**は、監視サーバーの**master**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>こちらもご覧ください  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

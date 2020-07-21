@@ -1,5 +1,6 @@
 ---
 title: インライン XSD スキーマの生成 | Microsoft Docs
+description: SQL クエリの FOR XML 句で XMLSCHEMA オプションを使用することにより、インライン XSD スキーマを生成する方法について学習します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3792243af5a25f2ef1b9c7acd023f78acbb3eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943157"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727035"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   FOR XML 句では、クエリからクエリ結果と共にインライン スキーマを返すように要求できます。 XDR スキーマが必要な場合は、FOR XML 句に XMLDATA キーワードを指定します。 XSD スキーマが必要な場合は、XMLSCHEMA キーワードを指定します。  
   
  このトピックでは、XMLSCHEMA キーワードとこのキーワードで生成されるインライン XSD スキーマについて説明します。 次に、インライン スキーマを要求するときの制限事項を示します。  
@@ -37,7 +38,7 @@ ms.locfileid: "67943157"
   
  FOR XML クエリに XMLSCHEMA を指定すると、クエリ結果としてスキーマと XML データの両方が返されます。 データの最上位レベルの各要素が既定の名前空間宣言を使用して前のスキーマを参照し、次に、既定の名前空間宣言がインライン スキーマの対象の名前空間を参照します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -274,7 +275,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  このインライン XSD スキーマでは、次の点に注意してください。  
   
--   ListPrice と DealerPrice は `money` という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`row`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`Price`> 子要素のみが含まれます。  
+-   ListPrice と DealerPrice は `money`という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`row`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`Price`> 子要素のみが含まれます。  
   
 -   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`Price`> 要素の `xsi:nil` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`row`> の複合型の定義として 2 つの <`Price`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
   
@@ -465,7 +466,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Col2 と Col3 の両方で NULL 値が許容されるので、<`Col`> 要素の宣言により、minOccurs が 0、maxOccurs が 2 にそれぞれ指定されます。  
   
--   これらの <`Col`> 要素は兄弟なので、スキーマに含まれる要素の宣言は 1 つです。 また、型は異なりますが、どちらの要素も単純型なので、スキーマ内の要素の型は `xsd:anySimpleType` になります。 結果では、`xsi:type` 属性により、それぞれのインスタンスの型が識別されます。  
+-   これらの <`Col`> 要素は兄弟なので、スキーマに含まれる要素の宣言は 1 つです。 また、型は異なりますが、どちらの要素も単純型なので、スキーマ内の要素の型は `xsd:anySimpleType`になります。 結果では、 `xsi:type` 属性により、それぞれのインスタンスの型が識別されます。  
   
 -   クエリ結果の <`Col`> 要素のインスタンスはすべて、`xsi:type` 属性を使用して、インスタンスの型を参照します。  
   

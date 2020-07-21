@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2f2cdc39fbc79c01f87dbca6051aae551521c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057257"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296116"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>レッスン 1-2:フラット ファイル接続マネージャーの追加と構成
 
@@ -83,10 +83,10 @@ ms.locfileid: "68057257"
   
     |フラット ファイルの列|推測されたデータ型|変換先列|変換先の型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
     **CurrencyID** 列で推測されたデータ型は、変換先テーブルのフィールドのデータ型と互換性がありません。 `DimCurrency.CurrencyAlternateKey` のデータ型は nchar(3) なので、**CurrencyID** のデータ型を文字列 [DT_STR] から Unicode 文字列 [DT_WSTR] に変更する必要があります。 また、フィールド `DimDate.FullDateAlternateKey` は date データ型として定義されるため、**CurrencyDate** の型は、date [DT_Date] から database date [DT_DBDATE] に変更する必要があります。  
   
@@ -96,10 +96,10 @@ ms.locfileid: "68057257"
   
 4.  **[OK]** を選択します。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
-[手順 3:OLE DB 接続マネージャーを追加し、構成する](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+## <a name="go-to-next-task"></a>次のタスクに進む
+[ステップ 3:OLE DB 接続マネージャーを追加し、構成する](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [フラット ファイル接続マネージャー](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Integration Services のデータ型](../integration-services/data-flow/integration-services-data-types.md)  
   

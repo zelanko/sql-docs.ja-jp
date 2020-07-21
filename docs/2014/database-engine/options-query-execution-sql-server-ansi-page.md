@@ -1,5 +1,5 @@
 ---
-title: オプション (クエリ実行-SQL Server ANSI ページ) |Microsoft Docs
+title: '[オプション] ([クエリ実行]-SQL Server-[ANSI] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 198505c5d14b9fda510d4635dbaa3d3d49483ddf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930154"
 ---
-# <a name="options-query-execution-sql-server-ansi-page"></a>オプション (クエリ実行-SQL Server ANSI ページ)
-  ユーザーのクエリや、トリガーやストアド プロシージャが実行されている間、これらの ANSI (ISO) 規格の SET オプションの組み合わせによってクエリ処理環境が定義されます。 ただし、これらの SET オプションに、ISO 規格に準拠するために必要なオプションがすべて含まれているとは限りません。 このページを使用すると、ISO 規格で指定されているすべての設定、または設定の一部が使用されたクエリを [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で実行するように指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、 **[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスで、 **[実行]** の下にある **[ANSI]** をクリックします。  
+# <a name="options-query-execution-sql-server-ansi-page"></a>[オプション] ([クエリ実行]-SQL Server-[ANSI] ページ)
+  ユーザーのクエリや、トリガーやストアド プロシージャが実行されている間、これらの ANSI (ISO) 規格の SET オプションの組み合わせによってクエリ処理環境が定義されます。 ただし、これらの SET オプションに、ISO 規格に準拠するために必要なオプションがすべて含まれているとは限りません。 このページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO 規格で指定されているすべての設定または設定の一部を使用してクエリを実行するように指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、[**クエリ**] メニューの [**クエリオプション**] をクリックするか、クエリウィンドウを右クリック [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] して [**クエリオプション**] を選択します。 **[クエリ オプション]** ダイアログ ボックスで、**[実行]** の下にある **[ANSI]** をクリックします。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  **SET ANSI_DEFAULTS**  
  このチェック ボックスをオンにすると、既定の ISO 設定がすべて選択されます。 既定では、すべての ISO オプションが選択されるとは限りません。  
   
@@ -33,10 +32,10 @@ ms.locfileid: "66089378"
  このチェック ボックスをオンにすると、CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで明示的に NOT NULL に定義されなかったユーザー定義データ型または列が、すべて既定で NULL 値を許容するという設定になります。 既定では、このチェック ボックスはオンになっています。  
   
  **[SET IMPLICIT_TRANSACTIONS]**  
- このチェック ボックスをオンにすると、接続が暗黙のトランザクション モードに設定されます。 このチェック ボックスをオフにすると、接続は自動コミット トランザクション モードに戻ります。 暗黙のトランザクション モードが選択されているときに、暗黙のトランザクションを開始するステートメントについては、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql)」を参照してください。 既定では、このチェック ボックスはオフになっています。  
+ このチェック ボックスをオンにすると、接続が暗黙のトランザクション モードに設定されます。 このチェック ボックスをオフにすると、接続は自動コミット トランザクション モードに戻ります。 暗黙のトランザクション モードが選択されているときに、暗黙のトランザクションを開始するステートメントについては、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql)」を参照してください。 既定では、このチェック ボックスはオフです。  
   
  **SET CURSOR_CLOSE_ON_COMMIT**  
- このチェック ボックスをオンにすると、トランザクションがコミットされたときに、オープンしているカーソルが ISO に準拠して自動的にクローズします。 このチェック ボックスをオフにすると、トランザクションが変わってもカーソルはオープンしたままです。接続が終了するか、カーソルが明示的にクローズされたときだけカーソルがクローズします。 既定では、このチェック ボックスはオフになっています。  
+ このチェック ボックスをオンにすると、トランザクションがコミットされたときに、オープンしているカーソルが ISO に準拠して自動的にクローズします。 このチェック ボックスをオフにすると、トランザクションが変わってもカーソルはオープンしたままです。接続が終了するか、カーソルが明示的にクローズされたときだけカーソルがクローズします。 既定では、このチェック ボックスはオフです。  
   
  **SET ANSI_PADDING**  
  列に定義されているサイズよりも短い値の名前を列に格納する方法と、値の後に **char**、**varchar**、**binary**、**varbinary** データ型で空白が続いている値を列に格納する方法を指定します。 この設定は新しい列の定義にだけ影響します。 列が作成された後は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では列の作成時の設定に基づいて値が格納されます。 この設定を後で変更しても、既存の列には影響がありません。 既定では、このチェック ボックスはオンになっています。  

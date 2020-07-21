@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ソリューションの関連プロジェクト |Microsoft Docs
+title: データマイニングソリューションの関連プロジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082986"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520608"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
   データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
@@ -30,7 +29,7 @@ ms.locfileid: "66082986"
   
  このトピックでは、データ準備とデータ マイニングのプロセスをサポートするため、または、分析と処理のためのツールを提供してユーザーをサポートするために、予測分析ソリューションに組み込まれることの多い [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のその他の機能について説明します。  
   
- [Integration Services](#bkmk_SSIS)  
+ [統合サービス](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66082986"
   
  [セマンティック インデックスの作成](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a>SQL Server Integration Services  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニング プロジェクトのデータ準備とトレーニングのフェーズに必要なコンポーネントと機能が用意されています。 さまざまなデータ クレンジング タスクやデータ準備タスクには、スクリプトをはじめとする他のツールを使用することもできますが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ マイニングに関して多数の利点があります。  
   
 -   繰り返し、自動化、分岐、および拡張が可能なワークフローの一部としてタスクを表現できます。  
@@ -63,9 +62,9 @@ ms.locfileid: "66082986"
   
 -   [CDC 制御タスク](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [データ クレンジング](../../data-quality-services/data-cleansing.md)  
+-   [データクレンジング](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [データ プロファイル タスク](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66082986"
   
 -   [用語参照変換](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services (SQL Server Reporting Services)  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、データ マイニング ソリューションに欠かせないコンポーネントとは考えられていませんが、データ マイニング ソリューションのプレゼンテーションの面で役立つ次のような機能を備えています。  
   
 -   複雑なレポートにおける、複数のソースからのデータの統合。 アナリスト用のモデル コンテンツに対するクエリや、エンド ユーザー用の予測と傾向を示すレポートを作成できます。  
@@ -112,7 +111,7 @@ ms.locfileid: "66082986"
   
  Reporting Services をデータ ソースのプレゼンテーション層として使用する方法の詳細については、「 [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)」を参照してください。  
   
-##  <a name="bkmk_DQSetc"></a> Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新機能です。 データに問題があるとデータ マイニングが不可能になる可能性があるため、繰り返し分析を行ったり、大規模な組織で複雑なデータ ソースを扱ったりするデータ マイニング担当者は、DQS を使用する計画的なデータ プロジェクトの方が、 [!INCLUDE[tsql](../../includes/tsql-md.md)] やその他のスクリプトを使用した場当たり的なデータ クレンジングよりも、データ マイニングをサポートするうえで信頼性の高いソリューションであることを認識する必要があります。  
   
  データ マイニング ソリューションでのデータ準備とデータ整合性のために、DQS の次の機能を考慮する必要があります。  
@@ -148,7 +147,7 @@ ms.locfileid: "66082986"
   
  詳細については、「 [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
-##  <a name="bkmk_FTSetc"></a> フルテキスト検索  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>フルテキスト検索  
  SQL Server のフルテキスト検索により、アプリケーションとユーザーは、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行できます。 フルテキスト検索が有効であれば、語句のさまざまな形式に関する言語固有のルールに基づいて強化された検索を、テキスト データに対して実行できます。 また、複数の用語間の距離などの検索条件を構成することも、尤度の順に返される結果を制限する関数を使用することもできます。  
   
  フルテキスト クエリは SQL Server エンジンによって提供される機能なので、パラメーター化クエリを作成したり、テキスト データ ソースでフルテキスト検索機能を使用してカスタム データ セットや用語のベクトルを生成したりできるほか、これらのソースをデータ マイニングで使用することもできます。  
@@ -161,7 +160,7 @@ ms.locfileid: "66082986"
   
  詳細については、「 [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
- フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえばが格納されているトークンが"run"、クエリ エンジンも検索用語を"running"、"ran"、および"runner"これらは、定期的に派生原形の単語"run"のため、します。  
+ フルテキスト インデックスの作成後に保存される単語のバージョンは、圧縮形式のトークンです。 フルテキスト インデックスに対する後続のクエリにより、その言語のルールに基づいて特定の単語の変化形が複数生成されるため、あいまい一致も漏らさず照合されます。 たとえば、格納されているトークンが "run" であっても、クエリエンジンは "実行中"、"実行済み"、"ランナー" という用語を検索します。これは、"run" という単語の原形バリエーションが定期的に派生しているためです。  
   
  ユーザー類義語辞典を作成および構築して、シノニムの格納、検索結果の精度の向上、用語の分類を行うこともできます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 詳細については、「 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)」を参照してください。  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66082986"
   
 -   フルテキスト インデックスを作成できるのは、データ型が char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary、varbinary(max) の列のみです。 列が varbinary、varbinary(max)、image、または xml の場合は、インデックスを作成できるドキュメントのファイル拡張子 (.doc、.pdf、.xls など) を別の型列で指定する必要があります。  
   
-##  <a name="bkmk_SemSearch"></a> セマンティック インデックスの作成  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>セマンティックインデックス作成  
  セマンティック検索は SQL Server の既存のフルテキスト検索機能を基にして構築されていますが、追加の機能と統計を使用して、自動キーワード抽出や関連ドキュメントの検出などにも対応できます。 たとえば、セマンティック検索を使用すると、編成用の基本分類を構築することも、ドキュメントのコーパスを分類することもできます。 また、クラスタリングまたはデシジョン ツリー モデルで、抽出した用語を組み合わせたものや、ドキュメントの類似スコアを使用することも可能です。  
   
  セマンティック検索を正しく実装し、データ列にインデックスを設定したら、セマンティック インデックスの作成にネイティブに備わる関数を使用して、以下の処理が可能です。  
@@ -201,7 +200,7 @@ ms.locfileid: "66082986"
 -   すべてのフルテキスト言語でセマンティック インデックスの作成がサポートされているわけではありません。 サポートされている言語の一覧については、「[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル ソリューション &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [SSAS&#41;&#40;の多次元モデルソリューション](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [テーブル モデル ソリューション &#40;SSAS テーブル&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

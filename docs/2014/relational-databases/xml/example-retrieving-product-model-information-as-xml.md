@@ -1,5 +1,5 @@
 ---
-title: 例:XML での製品モデル情報の取得 | Microsoft Docs
+title: '例 : XML での製品モデル情報の取得 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f72bcde1cf180b321c25cff7d3185b540083c0f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067859"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>例:XML での製品モデル情報の取得
+# <a name="example-retrieving-product-model-information-as-xml"></a>例 : XML での製品モデル情報の取得
   次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、 `FOR XML` 句で指定します。  
   
 ## <a name="example"></a>例  

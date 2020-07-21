@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912773"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392900"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース内のテーブルまたはインデックス付きビューで、フルテキスト インデックスを作成します。 テーブルまたはインデックス付きビューごとに 1 つのフルテキスト インデックスのみ使用でき、各フルテキスト インデックスは 1 つのテーブルまたはインデックス付きビューに適用されます。 フルテキスト インデックスには、1,024 列まで格納できます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67912773"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE FULLTEXT INDEX ON table_name  
    [ ( { column_name   
              [ TYPE COLUMN type_column_name ]  
@@ -66,6 +66,8 @@ CREATE FULLTEXT INDEX ON table_name
  }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 *table_name*       
 フルテキスト インデックスに含まれている列を格納するテーブルまたはインデックス付きビューの名前を指定します。  
@@ -103,7 +105,7 @@ LANGUAGE *language_term*
 データ型が XML または BLOB の列に格納されているドキュメントに対しては、そのドキュメントの言語のエンコードがインデックス作成時に使用されます。 たとえば、データ型が XML の列では、XML ドキュメントの属性 **xml:lang** によって言語が決定されます。 クエリ時には、フルテキスト クエリ内で *language_term* を指定しない限り、前回 *language_term* に指定された値がフルテキスト クエリの既定の言語になります。  
   
 STATISTICAL_SEMANTICS       
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで) 
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降) 
   
 キー フレーズを追加で作成し、統計的セマンティック インデックス作成の一部である類似性のインデックスを記録します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
@@ -143,7 +145,7 @@ OFF
 フルテキスト インデックスに関連付けるストップリストの名前を指定します。  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)  
   
 検索プロパティ リストとインデックスを関連付けます。  
  
@@ -153,7 +155,7 @@ OFF
 *property_list_name*       
 フルテキスト インデックスに関連付ける検索プロパティ リストの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 フルテキスト インデックスについて詳しくは、「[フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)」をご覧ください。  
   
 **xml** 列にフルテキスト インデックスを作成して XML 要素のコンテンツにインデックスを設定できますが、XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。 詳細については、「 [XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
@@ -166,9 +168,9 @@ OFF
 |変更の追跡|WITH NO POPULATION|結果|  
 |---------------------|------------------------|------------|  
 |有効ではない|指定なし|インデックスで完全作成が実行されます。|  
-|有効ではない|[Specified]|ALTER FULLTEXT INDEX...START POPULATION ステートメントが実行されるまで、インデックスの作成は行われません。|  
-|有効|指定あり|エラーが発生し、インデックスは変更されません。|  
-|有効|指定なし|インデックスで完全作成が実行されます。|  
+|有効ではない|指定済み|ALTER FULLTEXT INDEX...START POPULATION ステートメントが実行されるまで、インデックスの作成は行われません。|  
+|Enabled|指定済み|エラーが発生し、インデックスは変更されません。|  
+|Enabled|指定なし|インデックスで完全作成が実行されます。|  
   
  フルテキスト インデックスの作成について詳しくは、「[フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」をご覧ください。  
   
@@ -180,7 +182,7 @@ OFF
 > [!NOTE]  
 > public には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる既定のストップリストに対する REFERENCE 権限が許可されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. 一意のインデックス、フルテキスト カタログ、およびフルテキスト インデックスを作成する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの `HumanResources.JobCandidate` テーブルの `JobCandidateID` 列に一意のインデックスを作成します。 その後、既定のフルテキスト カタログ、`ft` を作成します。 そして最後に、`Resume` カタログおよびシステム ストップリストを使用して `ft` 列にフルテキスト インデックスを作成します。  

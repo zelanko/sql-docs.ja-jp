@@ -1,5 +1,6 @@
 ---
-title: メンバー (マスター データ サービス) | Microsoft Docs
+title: メンバー
+description: マスターデータサービスでは、メンバーは、Product エンティティ内の道路150自転車や、Customer エンティティの特定の顧客などの物理的なマスターデータです。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d19aaf52051b4f68b3272d1eef78806cdcc96942
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811928"
 ---
 # <a name="members-master-data-services"></a>メンバー (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーは物理マスター データです。 たとえば、Product エンティティの Road-150 バイクや、Customer エンティティの特定の顧客をメンバーにすることができます。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68092591"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しいリーフ メンバーを作成する。|[リーフ メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|新しいリーフ メンバーを作成する。|[リーフ メンバーを作成する &#40;マスター データ サービス&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
 |新しい統合メンバーを作成する。|[統合メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |既存のメンバーまたはコレクションを削除する。|[メンバーまたはコレクションを削除する (マスター データ サービス)](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
 |削除したメンバーまたはコレクションを再アクティブ化する。|[メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  

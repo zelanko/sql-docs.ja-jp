@@ -17,25 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallDriverEx function [ODBC]
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 054e8b6b9eae26bd5f973f3d46d7ef37363a8e79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030605"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302124"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0  
+**互換性**  
+ 導入されたバージョン: ODBC 3.0  
   
  **まとめ**  
- **SQLInstallDriverEx**システム情報の Odbcinst.ini のエントリに、ドライバーに関する情報を追加し、インクリメント、ドライバーの*UsageCount*を 1 つ。 ただし、バージョンのドライバー、既に存在する場合が、 *UsageCount*値のドライバーが存在しない新しい*UsageCount*値が 2 に設定します。  
+ **Sqlinstalldriverex**は、ドライバーに関する情報をシステム情報の odbcinst .ini エントリに追加し、ドライバーの*usagecount*を1だけインクリメントします。 ただし、ドライバーのバージョンが既に存在していても、ドライバーの*Usagecount*の値が存在しない場合、新しい*usagecount*の値は2に設定されます。  
   
- この関数は、すべてのファイルを実際にはコピーしません。 ドライバーのファイルを正しくターゲット ディレクトリにコピーする呼び出し元のプログラムの役目です。  
+ この関数は、実際にはファイルをコピーしません。 ドライバーのファイルをターゲットディレクトリに適切にコピーするのは、呼び出し元のプログラムの役割です。  
   
- 機能**SQLInstallDriverEx**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
+ **Sqlinstalldriverex**の機能には、ODBCCONF を使用してアクセスすることもでき[ます。EXE](../../../odbc/odbcconf-exe.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,93 +53,93 @@ BOOL SQLInstallDriverEx(
   
 ## <a name="arguments"></a>引数  
  *lpszDriver*  
- [入力]物理ドライバー名の代わりにユーザーに表示されるドライバーの名前 (通常は、関連付けられている DBMS の名前)。 *LpszDriver*引数は、二重の null で終わる、ドライバーを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの詳細については、次を参照してください。[ドライバーの仕様のサブキー](../../../odbc/reference/install/driver-specification-subkeys.md)します。 二重の null で終わる文字列の詳細については、次を参照してください。 [ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)します。  
+ 代入物理ドライバー名の代わりにユーザーに提示されるドライバーの説明 (通常は、関連付けられている DBMS の名前)。 *Lpszdriver*引数には、ドライバーを記述する2つのキーワードと値のペアの二重の null で終わるリストが含まれている必要があります。 キーワードと値のペアの詳細については、「[ドライバー仕様のサブキー](../../../odbc/reference/install/driver-specification-subkeys.md)」を参照してください。 双方向の null で終わる文字列の詳細については、「 [Configdsn 関数](../../../odbc/reference/syntax/configdsn-function.md)」を参照してください。  
   
  *lpszPathIn*  
- [入力]インストール、または null ポインターのターゲット ディレクトリの完全パス。 場合*lpszPathIn* null ポインターの場合は、ドライバーはシステム ディレクトリにインストールされます。  
+ 代入インストール先ディレクトリの完全パス、または null ポインター。 *Lpszpathin*が null ポインターの場合、ドライバーはシステムディレクトリにインストールされます。  
   
  *lpszPathOut*  
- [出力]ドライバーのインストール先のターゲット ディレクトリのパス。 ドライバーが既にインストールされていない場合、 *lpszPathOut*と同じである必要があります*lpszPathIn*します。 ドライバーがインストールされていた場合*lpszPathOut*は、以前のインストール パスです。  
+ Outputドライバーをインストールするターゲットディレクトリのパス。 ドライバーがまだインストールされていない場合、 *Lpszpathout*は*lpszpathout*と同じである必要があります。 ドライバーが既にインストールされている場合、 *Lpszpathout*は以前のインストールのパスです。  
   
  *cbPathOutMax*  
- [入力]長さ*lpszPathOut*します。  
+ 代入*Lpszpathout*の長さ。  
   
  *pcbPathOut*  
- [出力]\(Null 終了文字を除く) バイトの合計数で返される使用可能な*lpszPathOut*です。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*cbPathOutMax*マイナス、null 終了文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
+ Output*Lpszpathout*で返すことができる合計バイト数 (null 終端文字を除く)。 返される使用可能なバイト数が*Cbpathoutmax*以上の場合、 *lpszpathout*の出力パスは*cbpathoutmax*から null 終端文字に切り捨てられます。 *Pcbpathout*引数は null ポインターにすることができます。  
   
- *起こり*  
- [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
+ *fRequest*  
+ 代入要求の種類。 *Frequest*引数には、次のいずれかの値が含まれている必要があります。  
   
- ODBC_INSTALL_INQUIRY:ドライバーをインストールできる場所について照会します。  
+ ODBC_INSTALL_INQUIRY: ドライバーをインストールできる場所について問い合わせます。  
   
- ODBC_INSTALL_COMPLETE:インストール要求を完了します。  
+ ODBC_INSTALL_COMPLETE: インストール要求を完了します。  
   
  *lpdwUsageCount*  
- [出力]この関数が呼び出された後、ドライバーの使用率カウントします。  
+ Outputこの関数が呼び出された後のドライバーの使用カウント。  
   
- アプリケーションでは、使用率カウントは設定しないでください。 ODBC では、この数を維持します。  
+ アプリケーションで使用状況カウントを設定しないでください。 ODBC ではこのカウントが維持されます。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLInstallDriverEx** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlinstalldriverex**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|無効なバッファーの長さ|*LpszPathOut*引数が出力パスを格納するのに十分な大きさでした。 バッファーには、切り捨てられたパスが含まれています。<br /><br /> *CbPathOutMax*引数が 0 の場合と*起こり*ODBC_INSTALL_COMPLETE でした。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の型が無効です。|*起こり*引数が、次のいずれか。<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*LpszDriver*引数には、構文エラーが含まれています。|  
-|ODBC_ERROR_INVALID_PATH|無効なインストール パス|*LpszPathIn*引数に無効なパスが含まれています。|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーター セットアップ ライブラリを読み込むことができません。|ドライバーのセットアップのライブラリを読み込むことができませんでした。|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|無効なパラメーターのシーケンス|*LpszDriver*引数には、キーワードと値のペアの一覧が含まれていませんでした。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|インクリメントまたはコンポーネントの使用率カウントは減少できませんでした。|ドライバーの使用状況のカウントをインクリメントするインストーラーが失敗しました。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszpathout*引数は、出力パスを格納するのに十分な大きさではありませんでした。 バッファーには、切り捨てられたパスが含まれています。<br /><br /> *Cbpathoutmax*引数が0で、 *frequest*が ODBC_INSTALL_COMPLETE でした。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Frequest*引数は、次のいずれかではありませんでした:<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*Lpszdriver*引数に構文エラーが含まれていました。|  
+|ODBC_ERROR_INVALID_PATH|無効なインストールパス|*Lpszpathin*引数に無効なパスが含まれています。|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーターセットアップライブラリを読み込めませんでした|ドライバーセットアップライブラリを読み込めませんでした。|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|無効なパラメーターシーケンス|*Lpszdriver*引数にキーワードと値のペアのリストが含まれていませんでした。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|コンポーネントの使用状況カウントをインクリメントまたはデクリメントできませんでした|インストーラーでドライバーの使用量を増やすことができませんでした。|  
   
-## <a name="comments"></a>コメント  
- *LpszDriver*引数は、キーワードと値のペアの形式で属性の一覧を示します。 各ペアは、null バイトで終了し、全体の一覧は null バイトで終了します。 (つまり、2 つの null バイトの末尾を示す一覧。)この一覧の形式は次のとおりです。  
+## <a name="comments"></a>説明  
+ *Lpszdriver*引数は、キーワードと値のペアの形式の属性の一覧です。 各ペアは null バイトで終了し、リスト全体は null バイトで終了します。 (つまり、2つの null バイトはリストの末尾をマークします)。この一覧の形式は次のとおりです。  
   
- _ドライバー desc_ **\\** 0Driver **=** _ドライバー-filename DLL_ **\\** 0 [セットアップ **=** _セットアップ-filename DLL_<b>\\</b>0]  
+ _ドライバー-desc_ **\\**0driver**=**_driver-dll-ファイル名_**\\**0 [**=** セットアップ_セットアップ-dll-ファイル名_<b>\\</b>0]  
   
- [_ドライバー-attr-keyword1_ **=** _value1_<b>\\</b>0] [_ドライバー-attr-keyword2_ **=** _value2_<b>\\</b>0].<b> \\ </b>0  
+ [_keyword1_**=**_value1_<b>\\</b>0][_keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
- \0 の null バイトがあると*ドライバー-attr-keywordn*ドライバー属性のいずれかのキーワードは、します。 キーワードは、指定した順序で表示する必要があります。 たとえば、書式設定されたテキスト ファイル用のドライバーが個別のドライバーと Dll のセットアップとし、.txt および .csv の拡張子を持つファイルを使用できます。 *LpszDriver*引数のこのドライバーで次のようにある可能性があります。  
+ ここで、\ 0 は null バイトで、 *driver-attr*は any driver attribute キーワードです。 キーワードは、指定された順序で表示される必要があります。 たとえば、フォーマットされたテキストファイルのドライバーに個別のドライバーおよびセットアップ Dll があり、.txt 拡張子と .csv 拡張子を持つファイルを使用できるとします。 このドライバーの*lpszdriver*引数は、次のようになります。  
   
 ```  
 Text\0Driver=TEXT.DLL\0Setup=TXTSETUP.DLL\0FileUsage=1\0  
 FileExtns=*.txt,*.csv\0\0  
 ```  
   
- SQL Server 用のドライバーが別のセットアップ DLL ではありませんし、ドライバー属性キーワードはありませんとします。 *LpszDriver*引数のこのドライバーで次のようにある可能性があります。  
+ SQL Server 用のドライバーが個別のセットアップ DLL を持たず、driver 属性キーワードを持っていないとします。 このドライバーの*lpszdriver*引数は、次のようになります。  
   
 ```  
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- 後**SQLInstallDriverEx**からドライバーに関する情報を取得、 *lpszDriver*引数、システムの Odbcinst.ini のエントリの [ODBC Drivers] セクションに、ドライバーの説明を追加します情報。 ドライバーの説明を持つというセクションを作成し、ドライバ DLL の完全パスとセットアップ DLL を追加します。 最後に、インストールのターゲット ディレクトリのパスを返しますが、ドライバー ファイルをコピーはありません。 呼び出し元のプログラムは、ターゲット ディレクトリにドライバー ファイルをコピーする必要があります実際にします。  
+ **Sqlinstalldriverex**は、 *lpszdriver*引数からドライバーに関する情報を取得した後、システム情報の odbcinst .INI エントリの [ODBC Drivers] セクションにドライバーの説明を追加します。 次に、ドライバーの説明というセクションを作成し、ドライバー DLL とセットアップ DLL の完全なパスを追加します。 最後に、インストール先ディレクトリのパスを返しますが、ドライバーファイルはコピーされません。 呼び出し元のプログラムは、実際にはドライバーファイルをターゲットディレクトリにコピーする必要があります。  
   
- **SQLInstallDriverEx**を 1 つインストールされているドライバーのコンポーネントの使用率カウントをインクリメントします。 ドライバーのバージョンが既に存在するドライバーのコンポーネントの使用率カウントは存在しない場合は、新しいコンポーネントの使用状況カウント値が 2 に設定します。  
+ **Sqlinstalldriverex**は、インストールされているドライバーのコンポーネントの使用量を1つ増やします。 ドライバーのバージョンが既に存在していても、そのドライバーのコンポーネントの使用量が存在しない場合、新しいコンポーネントの使用状況のカウント値は2に設定されます。  
   
- アプリケーションのセットアップ プログラムは、物理的にドライバー ファイルをコピーし、ファイルの使用率カウントを維持します。 ドライバー ファイルが以前インストールされていない場合、アプリケーションのセットアップ プログラムがでファイルをコピーする必要があります、 *lpszPathIn*パスとファイルの使用率カウントを作成します。 セットアップ プログラムは、ファイルが既にインストールされている場合、単ファイルの使用率カウントをインクリメントし、以前のインストールでのパスを返します、 *lpszPathOut*引数。  
-  
-> [!NOTE]  
->  使用状況カウントがコンポーネントと使用状況カウントがファイルの詳細については、次を参照してください。[使用状況のカウント](../../../odbc/reference/install/usage-counting.md)します。  
-  
- 場合は、アプリケーションでは、以前のバージョンのドライバー ファイルがインストールされていた、ドライバーをアンインストールし、再インストール、ドライバー コンポーネントの使用率カウントは有効なようにする必要があります。 **SQLConfigDriver** (で、*起こり*ODBC_REMOVE_DRIVER の) 必要がありますまず呼び出され、し**SQLRemoveDriver**コンポーネントの使用率カウントをデクリメントを呼び出す必要があります。 **SQLInstallDriverEx**し、コンポーネントの使用率カウントをインクリメント、ドライバを再インストールを呼び出す必要があります。 アプリケーションのセットアップ プログラムは、古いファイルを新しいファイルに置き換える必要があります。 ファイルの使用率カウントは同じですが、引き続き、以前のバージョンのファイルを使用して、他のアプリケーションは、新しいバージョンを使用してようになりました。  
+ アプリケーションセットアッププログラムは、ドライバーファイルを物理的にコピーし、ファイルの使用量を維持する役割を担います。 ドライバーファイルが以前にインストールされていない場合、アプリケーションセットアッププログラムは、 *Lpszpathin*パスのファイルをコピーして、ファイルの使用状況カウントを作成する必要があります。 ファイルが既にインストールされている場合、セットアッププログラムは単にファイルの使用状況カウントをインクリメントし、 *Lpszpathout*引数内の以前のインストールのパスを返します。  
   
 > [!NOTE]  
->  ドライバーがインストールされていた場合と**SQLInstallDriverEx**関数は TRUE、別のディレクトリにドライバーをインストールすると呼びますが、 *lpszPathOut*にディレクトリを含めるドライバーが既にインストールされています。 これで入力したディレクトリに含まれませんが、 *lpszDriver*引数。  
+>  コンポーネントの使用量とファイルの使用量のカウントの詳細については、「[使用量のカウント](../../../odbc/reference/install/usage-counting.md)」を参照してください。  
   
- パスの長さ*lpszPathOut*で**SQLInstallDriverEx**により、2 フェーズのインストール プロセスでは、アプリケーションには、どのような判断できるように*cbPathOutMax*である必要があります呼び出す**SQLInstallDriverEx**で、*起こり*ODBC_INSTALL_INQUIRY モード。 使用できるバイトの合計数が返されます、 *pcbPathOut*バッファー。 **SQLInstallDriverEx**で呼び出すことができますし、*起こり*ODBC_INSTALL_COMPLETE の*cbPathOutMax*引数の値に設定、 *pcbPathOut*バッファーと、null 終了文字。  
+ 以前のバージョンのドライバーファイルがアプリケーションによって既にインストールされている場合は、ドライバーコンポーネントの使用回数が有効になるように、ドライバーをアンインストールしてから再インストールする必要があります。 **Sqlconfigdriver** (ODBC_REMOVE_DRIVER の*frequest*を含む) を最初に呼び出してから、 **sqlconfigdriver**を呼び出して、コンポーネントの使用量を減らす必要があります。 次に、ドライバーを再インストールするために**Sqlinstalldriverex**を呼び出して、コンポーネントの使用量を増やします。 アプリケーションセットアッププログラムは、古いファイルを新しいファイルに置き換える必要があります。 ファイルの使用量は同じままで、古いバージョンのファイルを使用した他のアプリケーションでは、新しいバージョンが使用されるようになります。  
   
- 2 フェーズのモデルを使用しないように選択するかどうか**SQLInstallDriverEx**を設定する必要があります*cbPathOutMax*、として値 _MAX_PATH に、ターゲット ディレクトリのパスの記憶域のサイズを定義します。切り捨てを防ぐために、Stdlib.h で定義されます。  
+> [!NOTE]  
+>  ドライバーが既にインストールされていて、別のディレクトリにドライバーをインストールするために**Sqlinstalldriverex**が呼び出されている場合、関数は TRUE を返しますが、 *lpszpathout*には、ドライバーが既にインストールされているディレクトリが含まれます。 *Lpszdriver*引数に入力されたディレクトリは含まれません。  
   
- ときに*起こり*ODBC_INSTALL_COMPLETE は、 **SQLInstallDriverEx**により*lpszPathOut* NULL である (または*cbPathOutMax*にする0 の場合)。 場合*起こり*ODBC_INSTALL_COMPLETE、返される使用可能なバイト数がより大きいまたは等しいときに、返される FALSE *cbPathOutMax*結果をその切り捨てが発生します。  
+ **Sqlinstalldriverex**でのパスの長さは、2フェーズのインストールプロセスを*可能にし*ます。そのため、アプリケーションでは、 **sqlinstalldriverex**を ODBC_INSTALL_INQUIRY モードの*frequest*で呼び出すことによって、どの*cbpathoutmax*が必要かを判断できます。 これにより、 *Pcbpathout*バッファーで使用可能な合計バイト数が返されます。 その後、 **Sqlinstalldriverex**は、ODBC_INSTALL_COMPLETE の*Frequest*と*Cbpathoutmax*引数を*pcbpathout*バッファーの値に設定し、null 終了文字を指定して呼び出すことができます。  
   
- 後**SQLInstallDriverEx**が呼び出されたとアプリケーションのセットアップ プログラムは、必要に応じて、ドライバー ファイルがコピー、ドライバーのセットアップ DLL を呼び出す必要があります**SQLConfigDriver**構成を設定しますドライバー。  
+ **Sqlinstalldriverex**に2フェーズモデルを使用しない場合は、stdlib.h> で定義されているように、ターゲット _MAX_PATH ディレクトリのパスのストレージのサイズを定義する*Cbpathoutmax*を設定して、切り捨てが行われないようにする必要があります。  
+  
+ *Frequest*が ODBC_INSTALL_COMPLETE 場合、 **Sqlinstalldriverex**では、 *lpszpathout*を NULL (または*cbpathoutmax*を0にすることは許可されません) にすることはできません。 *Frequest*が ODBC_INSTALL_COMPLETE の場合、返されるバイト数が*Cbpathoutmax*以上であるときに FALSE が返され、その結果、切り捨てが発生します。  
+  
+ **Sqlinstalldriverex**が呼び出され、アプリケーションセットアッププログラムによってドライバーファイル (必要に応じて) がコピーされた後、ドライバーのセットアップ DLL は**sqlconfigdriver**を呼び出してドライバーの構成を設定する必要があります。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |ドライバー マネージャーのインストール|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|

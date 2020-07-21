@@ -1,5 +1,5 @@
 ---
-title: WMI プロバイダー イベントとエラー |Microsoft Docs
+title: WMI プロバイダーのイベントとエラー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5a6c9c1b30adee7b42f9424d648d33dacc52e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0be233b164d68bc93caa0484e59fb2196497a3b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933173"
 ---
 # <a name="wmi-provider-events-and-errors"></a>WMI プロバイダーのイベントとエラー
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連するさまざまな WMI エラーの原因と解決方法について説明します。  
@@ -29,6 +28,6 @@ ms.locfileid: "62780268"
  ログオン失敗: ユーザー アカウントの制限。 考えられる原因として、空のパスワードが許可されていない、ログオン時間制限、またはポリシーによる制限が適用されたことなどが挙げられます。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのイベントとエラー](../../relational-databases/native-client-ole-db-errors/errors.md)  
+ [データベースエンジンイベントとエラー](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

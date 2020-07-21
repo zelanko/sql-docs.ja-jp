@@ -1,5 +1,5 @@
 ---
-title: sys.sysprotects (TRANSACT-SQL) |Microsoft Docs
+title: sys.sysによる保護 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfda1be56b5fc373d0ae1b9e8d5141ac046b717e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079237"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884471"
 ---
-# <a name="syssysprotects-transact-sql"></a>sys.sysprotects (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssysprotects-transact-sql"></a>sys.sysによる保護 (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  GRANT および DENY ステートメントを使用して、データベース内のセキュリティ アカウントに適用されているアクセス許可について説明します。  
+  GRANT ステートメントと DENY ステートメントを使用して、データベース内のセキュリティアカウントに適用されている権限に関する情報を格納します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -38,14 +38,14 @@ ms.locfileid: "68079237"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|これらのアクセス許可を適用するオブジェクトの ID。|  
-|**uid**|**smallint**|これらのアクセス許可を適用するユーザーまたはグループの ID。 オーバーフローまたはユーザーおよびロールの数が 32,767 を超える場合は NULL を返します。|  
-|**action**|**tinyint**|次のアクセス許可のいずれかを設定できます。<br /><br /> 26 = REFERENCES<br /><br /> 178 = 関数の作成<br /><br /> 193 = SELECT<br /><br /> 195 = 挿入<br /><br /> 196 = DELETE<br /><br /> 197 = UPDATE<br /><br /> 198 = CREATE TABLE<br /><br /> 203 = CREATE DATABASE<br /><br /> 207 = CREATE VIEW<br /><br /> 222 = CREATE PROCEDURE<br /><br /> 224 = EXECUTE<br /><br /> 228 = BACKUP DATABASE<br /><br /> 233 = 既定値の作成<br /><br /> 235 = BACKUP LOG<br /><br /> 236 = ルールの作成|  
-|**protecttype**|**tinyint**|次の値を持つことができます。<br /><br /> 204 GRANT_W_GRANT を =<br /><br /> 205 = GRANT<br /><br /> 206 = 拒否|  
-|**columns**|**varbinary(8000)**|これらの SELECT または UPDATE 権限を適用する列のビットマップです。<br /><br /> ビット 0 = すべての列。<br /><br /> ビット 1 = 権限を適用する列<br /><br /> NULL = 情報はありません。|  
-|**権限の許可者**|**smallint**|GRANT または DENY 権限を発行したユーザーのユーザー ID です。 オーバーフローまたはユーザーおよびロールの数が 32,767 を超える場合は NULL を返します。|  
+|**uid**|**smallint**|これらのアクセス許可が適用されるユーザーまたはグループの ID。 ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
+|**action**|**tinyint**|次のいずれかのアクセス許可を持つことができます。<br /><br /> 26 = REFERENCES<br /><br /> 178 = 関数の作成<br /><br /> 193 = SELECT<br /><br /> 195 = 挿入<br /><br /> 196 = 削除<br /><br /> 197 = 更新<br /><br /> 198 = CREATE TABLE<br /><br /> 203 = CREATE DATABASE<br /><br /> 207 = CREATE VIEW<br /><br /> 222 = CREATE PROCEDURE<br /><br /> 224 = EXECUTE<br /><br /> 228 = BACKUP DATABASE<br /><br /> 233 = 既定値の作成<br /><br /> 235 = BACKUP LOG<br /><br /> 236 = ルールの作成|  
+|**protecttype**|**tinyint**|には次の値を指定できます。<br /><br /> 204 = GRANT_W_GRANT<br /><br /> 205 = GRANT<br /><br /> 206 = 拒否|  
+|**欄**|**varbinary(8000)**|これらの SELECT または UPDATE 権限を適用する列のビットマップです。<br /><br /> ビット 0 = すべての列。<br /><br /> ビット 1 = 権限を適用する列<br /><br /> NULL = 情報がありません。|  
+|**権限**|**smallint**|GRANT または DENY 権限を発行したユーザーのユーザー ID です。 ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
   
 ## <a name="see-also"></a>関連項目  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

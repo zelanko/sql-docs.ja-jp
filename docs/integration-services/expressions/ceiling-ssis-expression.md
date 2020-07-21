@@ -11,14 +11,14 @@ helpviewer_keywords:
 - smallest integer great than or equal to expression
 - CEILING function [SSIS]
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7663b63b3871a06b0f44f5f91cd9a6aee32aee56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a50fd15830d3509cd086ad4b62938658e1866494
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033975"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297675"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
 
@@ -41,7 +41,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  関数に送信された数値式のデータ型です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、CEILING は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -57,7 +57,7 @@ CEILING(123.74)
 CEILING(-124.27)  
 ```  
   
- -124.00 を返します。  
+ -124.00 を返します  
   
 ```  
 CEILING(0.00)  

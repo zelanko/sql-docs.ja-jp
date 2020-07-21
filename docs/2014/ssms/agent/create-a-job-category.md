@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f6daeeca6253861e8a9dcbb72faa2bd55eb2761
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056639"
 ---
 # <a name="create-a-job-category"></a>ジョブ カテゴリの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクトを使用して、ジョブ カテゴリを作成する方法について説明します。  
@@ -28,17 +27,15 @@ ms.locfileid: "62856122"
   
  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
- マルチサーバー カテゴリは、マスター サーバー上だけに存在します。 マスター サーバー上で使用できるのは、 **[未カテゴリ化 (マルチサーバー)]** という既定のジョブ カテゴリだけです。 マルチサーバー ジョブがダウンロードされると、ターゲット サーバー上ではそのカテゴリが **[MSX からのジョブ]** に変更されます。  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
+ マルチサーバー カテゴリは、マスター サーバー上だけに存在します。 マスター サーバー上で使用できるのは、**[未カテゴリ化 (マルチサーバー)]** という既定のジョブ カテゴリだけです。 マルチサーバー ジョブがダウンロードされると、ターゲット サーバー上ではそのカテゴリが **[MSX からのジョブ]** に変更されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
-
-  
-##  <a name="SSMS"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-job-category"></a>ジョブ カテゴリを作成するには  
   
@@ -48,7 +45,7 @@ ms.locfileid: "62856122"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  **_server_name_** ダイアログ ボックスで、 **追加**をクリックします。  
+4.  [**ジョブカテゴリ**_server_name_の管理] ダイアログボックスで、[**追加**] をクリックします。  
   
 5.  新しいダイアログ ボックスで、 **[名前]** ボックスに新しいジョブ カテゴリの名前を入力します。  
   
@@ -56,13 +53,11 @@ ms.locfileid: "62856122"
   
 7.  **[OK]** をクリックします。  
   
-8.  **_server_name_** ダイアログ ボックスで、 **最新の情報に更新** をクリックして、新しいジョブ カテゴリをアクティブにします。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
+8.  [**ジョブカテゴリ**_server_name_の管理] ダイアログボックスで、[最新の状態に**更新**] をクリックして、新しいジョブカテゴリが [アクティブ] になっていることを確認します。 すべての設定が適切であることを確認したら、このダイアログ ボックスを閉じます。  
   
- これらのダイアログ ボックスの詳細については、次を参照してください。[ジョブ カテゴリ。ジョブ カテゴリの管理](job-categories-manage-job-categories.md)と[ジョブ カテゴリのプロパティと新しいジョブ カテゴリ](job-categories-properties-new-job-category.md)します。  
-  
- 
-  
-##  <a name="TSQL"></a> Transact-SQL の使用  
+ これらのダイアログボックスの詳細については、「[ジョブカテゴリ:](job-categories-manage-job-categories.md)ジョブカテゴリの管理」および「ジョブカテゴリのプロパティ」、[および「新しいジョブカテゴリ](job-categories-properties-new-job-category.md)」を参照してください。  
+
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-job-category"></a>ジョブ カテゴリを作成するには  
   
@@ -72,7 +67,7 @@ ms.locfileid: "62856122"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- creates a local job category named AdminJobs   
     USE msdb ;  
     GO  
@@ -83,15 +78,9 @@ ms.locfileid: "62856122"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)します。  
-  
+ 詳細については、「 [sp_add_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)」を参照してください。  
 
-  
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ カテゴリを作成するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `JobCategory` クラスを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  
-  
- 
-  
-  

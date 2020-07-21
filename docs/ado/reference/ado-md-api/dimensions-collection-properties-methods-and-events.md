@@ -1,5 +1,5 @@
 ---
-title: ディメンションのコレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Dimensions コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Dimensions collection [ADO MD], members
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd8efea8b3e1aad41430b6dc7170331ab65bf127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 40d3a6e5bb88e8b38441a8ff4869ac17b74e8bb1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938475"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764253"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Dimensions コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
@@ -31,5 +31,5 @@ ms.locfileid: "67938475"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)

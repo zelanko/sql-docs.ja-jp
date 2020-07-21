@@ -30,15 +30,14 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046362"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
   `xml` データ型の列には XML インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
@@ -93,17 +92,17 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   ベース テーブルの主キー。 ベース テーブルとの逆結合のため、ベース テーブルの主キーがプライマリ XML インデックスにコピーされます。ベース テーブルの主キーの最大列数は 15 です。  
   
- このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例 :  
+ このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 次に例を示します。  
   
 -   `//ContactRecord/PhoneNumber` 最後の 2 つのロケーション ステップだけが既知です。  
   
- スイッチまたは  
+ OR  
   
 -   `/Book/*/Title` 式の中間でワイルドカード文字 (`*`) が指定されています。  
   
  [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods) に関係するクエリの場合、クエリ プロセッサでプライマリ XML インデックスが使用され、スカラー値またはプライマリ インデックス自体の XML サブツリーのどちらかが返されます。 (このプライマリ XML インデックスには XML インスタンスの再構築に必要なすべての情報が格納されています)。  
   
- たとえば、次のクエリに格納されている概要情報を返します、`CatalogDescription``xml`型の列、`ProductModel`テーブル。 このクエリでは、カタログの説明に <`Features`> の説明も含まれている製品モデルに限り <`Summary`> 情報が返されます。  
+ たとえば、次のクエリでは、テーブルの type 列に格納されている概要情報が返され `CatalogDescription``xml` `ProductModel` ます。 このクエリでは、カタログの説明に <`Summary`> の説明も含まれている製品モデルに限り <`Features`> 情報が返されます。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   パス式を使用して個々の XML インスタンスから複数の値を取得する場合、PROPERTY インデックスで各 XML インスタンス内のパスをクラスター化すると効果が得られる可能性があります。 このシナリオは、主キーの値がわかっていてオブジェクトのプロパティをフェッチするプロパティ バッグ シナリオで主に発生します。  
   
--   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 //author[last-name="Howard"]\(\<author> 要素が階層のどのレベルにあってもよい) のように、descendant 軸を参照する場合がその典型です。 また、ワイルドカードを使用するクエリ (いずれかの属性に値 "novel" が指定された \<book> 要素をクエリで検索する /book [@* = "novel"] など) もこれに該当します。  
+-   XML インスタンスの値を、要素名または属性名がわからないままクエリで取得する場合、VALUE インデックスを作成できます。 これは通常、子孫の軸参照 (たとえば、author [last-name = "Howard"]) で発生します。この場合、 \<author> 要素は階層の任意のレベルで発生する可能性があります。 また、/book [@ * = "html"] などのワイルドカードクエリでも発生します。この場合、クエリでは、 \<book> 属性の値が "html" である要素が検索されます。  
   
 ### <a name="path-secondary-xml-index"></a>PATH セカンダリ XML インデックス  
  クエリで `xml` 型列のパス式をよく指定している場合、PATH セカンダリ インデックスにより検索速度を向上できる場合があります。 このトピックで既に説明したように、WHERE 句に **exist()** メソッドを指定するクエリを使用する場合には、プライマリ インデックスが役に立ちます。 PATH セカンダリ インデックスを追加することでも、そのようなクエリの検索パフォーマンスが向上する場合があります。  
@@ -141,7 +140,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` パスだけを指定しています。  
   
- スイッチまたは  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` パスとノード値の両方を指定しています。  
   
@@ -166,9 +165,9 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]`: <`LastName`> 要素の値はわかっていますが、親である <`author`> はどこにでも存在し得ます。  
   
--   `/book[@* = "someValue"]`: `"someValue"` という値の属性を持つ <`book`> 要素を検索します。  
+-   `/book[@* = "someValue"]`: `book` という値の属性を持つ <`"someValue"`> 要素を検索します。  
   
- 次のクエリは、 `ContactID` テーブルから `Contact` を返します。 `WHERE`句内の値を検索するフィルターを指定する、`AdditionalContactInfo``xml`型の列。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
+ 次のクエリは、 `ContactID` テーブルから `Contact` を返します。 句は、 `WHERE` 型の列の値を検索するフィルターを指定し `AdditionalContactInfo``xml` ます。 連絡先 ID は、対応する追加の連絡先情報の XML バイナリ ラージ オブジェクトに特定の電話番号が含まれている場合にのみ返されます。 <`telephoneNumber`> 要素は XML 内のどこにでも存在し得るので、パス式で descendent-or-self 軸を指定しています。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +182,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  この場合、検索する <`number`> の値はわかっていますが、この値は <`telephoneNumber`> 要素の子として XML インスタンス内のどこにでも存在できます。 このようなクエリでは特定の値に基づいてインデックス参照を行うと、効率的になる場合があります。  
   
 ### <a name="property-secondary-index"></a>PROPERTY セカンダリ XML インデックス  
- 個々の XML インスタンスから 1 つ以上の値を取得するクエリでは、PROPERTY インデックスを使用するとメリットが得られる場合があります。 このシナリオは、オブジェクトのプロパティを使用して取得したときに発生します。、 **value()** のメソッド、`xml`型とオブジェクトの主キーの値をいいます。  
+ 個々の XML インスタンスから 1 つ以上の値を取得するクエリでは、PROPERTY インデックスを使用するとメリットが得られる場合があります。 このシナリオは、型の**value ()** メソッドを使用してオブジェクトのプロパティを取得し、 `xml` オブジェクトの主キーの値がわかっている場合に発生します。  
   
  PROPERTY インデックスは、プライマリ XML インデックスの列 (PK、パス、およびノード値) について構築されます。PK はベース テーブルの主キーです。  
   
@@ -198,7 +197,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- このトピックの後半で説明する違いを除けばのインデックス、XML の作成、`xml`型の列はインデックスを作成する以外に似ています`xml`型の列。 XML インデックスの作成と管理には、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用できます。  
+ このトピックで後述する相違点を除いて、型の列に XML インデックスを作成 `xml` することは、非型列にインデックスを作成することと似てい `xml` ます。 XML インデックスの作成と管理には、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用できます。  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
@@ -213,8 +212,8 @@ WHERE ProductModelID = 19
   
  XML インデックスによる領域の使用状況は、テーブル値関数 [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)でわかります。 この関数は、すべてのインデックスの種類について、占有しているディスク ページの数、バイト単位の平均行サイズ、レコードの数などの情報を示します。 また、この情報には XML インデックスも含まれています。 この情報はデータベース パーティションごとに取得できます。 どの XML インデックスにも同一の、ベース テーブルのパーティション構成とパーティション関数が使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)   
- [XML Data &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
+ [XML データ &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

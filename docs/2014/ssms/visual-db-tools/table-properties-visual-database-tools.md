@@ -12,15 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df4a0332ebc622b069c468e51c461b7cba20aa36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044195"
 ---
-# <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] (Visual Database Tools)
+# <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] \(Visual Database Tools)
   以下のプロパティは、テーブル デザイナーで右クリックして [プロパティ] をクリックすると開く [プロパティ] ウィンドウに表示されます。 特に断りのない限り、テーブルが選択されているときにこれらのプロパティを [プロパティ] ウィンドウで編集できます。  
   
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "63204689"
  **[IDENTITY] カテゴリ**  
  展開して **[名前]** 、 **[説明]** 、および **[スキーマ]** の各プロパティを表示します。  
   
- **名前**  
+ **Name**  
  テーブルの名前を表示します。 名前を編集するには、テキスト ボックスに入力します。  
   
 > [!CAUTION]  
@@ -43,7 +42,7 @@ ms.locfileid: "63204689"
  **データベース名**  
  選択したテーブルのデータ ソースの名前を表示します。  
   
- **[説明]**  
+ **説明**  
  選択したテーブルの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。  
   
  **[スキーマ]**  

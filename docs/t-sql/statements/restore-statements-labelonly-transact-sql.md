@@ -21,12 +21,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: d91954b0533a2af86a8afefdf54ea16ada28286d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742950"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625825"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE ステートメント - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +39,7 @@ ms.locfileid: "68742950"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 RESTORE LABELONLY   
 FROM <backup_device>   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>結果セット  
  RESTORE LABELONLY の結果セットは 1 行のデータで構成され、次の情報が含まれています。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|メディアの名前|  
 |**MediaSetId**|**uniqueidentifier**|メディア セットの一意な識別番号。|  
@@ -91,7 +91,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|ラベルを作成したバックアップ ソフトウェアの名前。|  
 |**SoftwareVendorId**|**int**|バックアップを作成したソフトウェア ベンダーの一意なベンダー識別番号。|  
 |**MediaDate**|**datetime**|ラベルが作成された日時。|  
-|**Mirror_Count**|**int**|セットにあるミラーの数 (1 ～ 4)<br /><br /> 注: セット内の各種ミラーに対して作成されたラベルは同一のものです。|  
+|**Mirror_Count**|**int**|セットにあるミラーの数 (1 ～ 4)<br /><br /> 注: セット内の各ミラーに対して作成されたラベルは同一のものです。|  
 |**IsCompressed**|**bit**|バックアップが圧縮されているかどうか。<br /><br /> 0 = 非圧縮<br /><br /> 1 = 圧縮|  
   
 > [!NOTE]  

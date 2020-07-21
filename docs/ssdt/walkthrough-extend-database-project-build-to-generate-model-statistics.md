@@ -1,23 +1,24 @@
 ---
-title: 'チュートリアル: モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: モデルの統計を生成するためのデータベース プロジェクトのビルドを拡張する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069010"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242689"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
+
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
   
 このチュートリアルでは、次の主なタスクを行います。  
@@ -28,7 +29,7 @@ ms.locfileid: "68069010"
   
 -   [ビルド コントリビューターをテストする](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   C# または VB の開発をサポートする、SQL Server Data Tools (SSDT) を含む Visual Studio のバージョンがインストールされていること。  
@@ -53,7 +54,7 @@ ms.locfileid: "68069010"
   
 このチュートリアルのコントリビューターの例で使用されているコマンドは次のとおりです。  
   
-|**クラス**|**メソッド/プロパティ**|**[説明]**|  
+|**クラス**|**メソッド/プロパティ**|**説明**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|モデルに対してクエリを実行してオブジェクトを取得します。これは、モデル API に対するメイン エントリ ポイントです。 Table や View などの最上位レベルの型のみに対してクエリを実行できます。Columns などの型は、モデルの走査によってのみ検出できます。 ModelTypeClass フィルターが指定されていない場合は、最上位レベルのすべての型が返されます。|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|現在の TSqlObject によって参照される要素に対するリレーションシップを検出します。 たとえば、テーブルの場合、テーブルの列などのオブジェクトが返されます。 この場合、ModelRelationshipClass フィルターを使用すると、クエリの実行対象となる正確なリレーションシップを指定できます (たとえば、"Table.Columns" フィルターを使用した場合は列のみが返されます)。<br /><br />GetReferencingRelationshipInstances、GetChildren、GetParent など、類似するメソッドが多数あります。 詳細については、API のドキュメントを参照してください。|  
@@ -69,12 +70,12 @@ ms.locfileid: "68069010"
   
 この場合、属性の最初のパラメーターは一意の識別子である必要があります。この識別子は、プロジェクト ファイル内でコントリビューターを識別するために使用されます。 ライブラリの名前空間 (このチュートリアルでは "ExampleContributors") とクラス名 (このチュートリアルでは "ModelStatistics") を組み合わせて識別子を生成することをお勧めします。 このチュートリアルの後半では、この名前空間を使用してコントリビューターの実行を指定する方法について説明します。  
   
-## <a name="CreateBuildContributor"></a>ビルド コントリビューターを作成する  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>ビルド コントリビューターを作成する  
 ビルド コントリビューターを作成するには、次のタスクを実行する必要があります。  
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
   
--   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)から継承する ModelStatistics という名前のクラスを定義する。  
+-   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) から継承する ModelStatistics という名前のクラスを定義する。  
   
 -   OnExecute メソッドをオーバーライドする。  
   
@@ -451,7 +452,7 @@ ms.locfileid: "68069010"
   
     次に、アセンブリをインストールし、SQL プロジェクトのビルド時に読み込まれるようにします。  
   
-## <a name="InstallBuildContributor"></a>ビルド コントリビューターのインストール  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>ビルド コントリビューターのインストール  
 ビルド コントリビューターをインストールするには、アセンブリおよび関連付けられた .pdb ファイルを Extensions フォルダーにコピーする必要があります。  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>MyBuildContributor アセンブリをインストールするには  
@@ -463,7 +464,7 @@ ms.locfileid: "68069010"
     > [!NOTE]  
     > 既定では、コンパイル済みの .dll ファイルのパスは YourSolutionPath\YourProjectPath\bin\Debug または YourSolutionPath\YourProjectPath\bin\Release です。  
   
-## <a name="TestBuildContributor"></a>ビルド コントリビューターの実行またはテスト  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>ビルド コントリビューターの実行またはテスト  
 ビルド コントリビューターを実行またはテストするには、次のタスクを実行する必要があります。  
   
 -   ビルドする予定の .sqlproj ファイルにプロパティを追加する。  
@@ -587,10 +588,10 @@ Relationships
   
     報告された結果は、XML ファイルにも保存されます。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 出力 XML ファイルの処理を実行するには、追加のツールを作成できます。 これは、ビルド コントリビューターの一例にすぎません。 たとえば、ビルドの一部としてデータ辞書ファイルを出力するビルド コントリビューターを作成できます。  
   
 ## <a name="see-also"></a>参照  
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

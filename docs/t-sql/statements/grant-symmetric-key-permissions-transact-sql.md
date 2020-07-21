@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a364e553f3d50ca0202b9ab591e43f88f3bf1e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735529"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT (対称キーの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   対称キーの権限を許可します。 
   
@@ -35,7 +35,7 @@ ms.locfileid: "68050769"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
@@ -66,7 +66,7 @@ GRANT permission [ ,...n ]
  WITH GRANT OPTION  
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
- AS \<database_principal> このクエリを実行するプリンシパルが権限を許可する権利の派生元のプリンシパルを指定します。  
+ AS \<database_principal> このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。  
   
  *Database_user*  
  データベース ユーザーを指定します。  
@@ -92,7 +92,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  対称キーに関する情報は、[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) カタログ ビューで確認できます。  
   
  対称キーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、対称キーで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -125,7 +125,7 @@ GRANT permission [ ,...n ]
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、対称キー `SamInventory42` の `ALTER` 権限を、データベース ユーザー `HamidS` に対して許可します。  
   
 ```  

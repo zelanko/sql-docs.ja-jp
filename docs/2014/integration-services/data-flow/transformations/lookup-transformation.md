@@ -16,15 +16,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 567c5d95c2ee7c15ea5c541f7fe2010d46ba36f5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900256"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430459"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -59,7 +58,7 @@ ms.locfileid: "62900256"
   
 -   参照テーブル内の複数のエントリが一致する場合、参照クエリから最初に返されたエントリのみが返されます。 複数のエントリが一致する場合、すべての参照データセットをキャッシュに読み込むように参照変換が構成されているときだけ、エラーまたは警告が生成されます。 この場合、参照変換によってデータセットがキャッシュに読み込まれたときに複数の一致エントリが検出されると、警告が生成されます。  
   
- 複合結合の場合、変換入力の複数の列を参照データセットの列に結合できます。 この変換では、DT_R4、DT_R8、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型以外のすべてのデータ型の列を結合できます。 詳細については、「 [Integration Services Data Types](../integration-services-data-types.md)」を参照してください。  
+ 複合結合の場合、変換入力の複数の列を参照データセットの列に結合できます。 この変換では、DT_R4、DT_R8、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型以外のすべてのデータ型の列を結合できます。 詳細については、「 [Integration Services データ型](../integration-services-data-types.md)」を参照してください。  
   
  通常、参照データセットの値が、変換出力に追加されます。 たとえば、参照変換により、入力列の値を使用してテーブルから製品名を抽出し、製品名を変換出力に追加できます。 参照テーブルの値によって列の値を置換したり、値を新しい列に追加できます。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62900256"
 -   不一致出力。 不一致出力は、参照データセット内の 1 つ以上のエントリと一致しない入力内の行を処理します。 一致エントリがない行をエラーとして扱うように参照変換を構成している場合、これらの行はエラー出力にリダイレクトされます。 それ以外の場合、これらの行は不一致出力にリダイレクトされます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 作成された参照変換を実行する方法の詳細についての[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を参照してください[参照変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)します。  
+    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 で作成された参照変換を実行する方法の詳細について [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] は、「参照[変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)」を参照してください。  
   
 -   エラー出力。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "62900256"
   
 -   キャッシュ ファイルをパッケージと一緒に配置できます。 ***これにより、このデータを複数のコンピューター上で使用できます。*** 詳細については、「 [参照変換用のキャッシュを作成および配置する](create-and-deploy-a-cache-for-the-lookup-transformation.md)」をご覧ください。  
   
--   RAW ファイル ソースを使用してキャッシュ ファイルからデータを読み取ることができます。 次に他のデータ フロー コンポーネントを使用してデータを変換または移動できます。 詳細については、「 [RAW ファイル ソース](../raw-file-source.md)」をご覧ください。  
+-   RAW ファイル ソースを使用してキャッシュ ファイルからデータを読み取ることができます。 次に他のデータ フロー コンポーネントを使用してデータを変換または移動できます。 詳細については、「 [RAW ファイル ソース](../raw-file-source.md)」を参照してください。  
   
     > [!NOTE]  
     >  キャッシュ接続マネージャーは、RAW ファイル変換先を使用して作成または変更されたキャッシュ ファイルをサポートしていません。  
@@ -129,20 +128,20 @@ ms.locfileid: "62900256"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   MSDN ライブラリのビデオ「[フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」 (msdn.microsoft.com)  
+-   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」  
   
 -   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   blogs.msdn.com のブログ記事「[参照パターン: 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
+-   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
   
 -   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   
      [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [あいまい参照変換](fuzzy-lookup-transformation.md)   
  [用語参照変換](term-lookup-transformation.md)   
- [データ フロー](../data-flow.md)   
+ [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   
   

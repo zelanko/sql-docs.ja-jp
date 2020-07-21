@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f0aa79ac22011a480ae60fe3002e0ac5bf896525
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7b8f3b70c3d161fe5bbd288ec3fd5566646c0637
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768236"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159990"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、レプリケーション エージェント イベントなどのイベントを、警告を使用して監視する方法が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、警告に関連するイベントに対し、Windows アプリケーション ログを監視します。 このようなイベントが発生すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、定義されたタスクを実行したり、電子メールまたはポケットベルのメッセージを指定したオペレーターに送信することにより、自動的に応答します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、タスクを実行したりオペレーターに通知するように設定できる、レプリケーション エージェントに対する一連の定義済みの警告が含まれます。 実行するタスクの定義の詳細については、このトピックの「警告への応答の自動化」を参照してください。  
   
  次の警告は、コンピューターをディストリビューターとして構成したときにインストールされます。  
@@ -41,9 +41,9 @@ ms.locfileid: "68768236"
 |14151|**レプリケーション: エージェントが失敗しました**|エージェントがエラーでシャットダウンされました。|はい|  
 |14152|**レプリケーション: エージェントを再試行します**|操作の再試行が成功せず、エージェントはシャットダウンされました (エージェントが、サーバーの利用不能、デッドロック、接続の失敗、タイムアウト障害などのエラーを検出しました)。|はい|  
 |14157|**レプリケーション: 有効期限の切れたサブスクリプションを削除しました**|有効期限の切れたサブスクリプションが削除されました。|いいえ|  
-|20572|**レプリケーション:データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
-|20574|**レプリケーション:サブスクライバーでデータ検証の問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
-|20575|**レプリケーション:サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
+|20572|**レプリケーション: データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
+|20574|**レプリケーション: サブスクライバーでデータ検証で問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
+|20575|**レプリケーション: サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
 |20578|**レプリケーション: エージェントのカスタム シャットダウン**|||  
 |22815|**ピア ツー ピア競合検出の警告**|ピア ツー ピア ノードで変更を適用しようとしたときにディストリビューション エージェントで競合が検出されました。|はい|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68768236"
 ### <a name="framework-for-automating-responses"></a>応答の自動化のためのフレームワーク  
  通常では、警告が表示された場合、警告の原因と実行する適切な操作を知るのに役立つ唯一の情報は、警告自体に含まれています。 この情報の解析は間違いやすく、時間がかかります。 レプリケーションでは、 **sysreplicationalerts** システム テーブルで警告についての追加情報が提供され、応答の自動化を容易にしています。提供される情報は、既に解析済みで、カスタマイズしたプログラムで簡単に使用できます。  
   
- たとえば、サブスクライバー A の **Sales.SalesOrderHeader** テーブルのデータが検証に失敗した場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、その失敗を通知するメッセージ 20574 を表示します。 受信するメッセージは、"パブリケーション 'MyPublication' のアーティクル 'SalesOrderHeader' に対するサブスクライバー 'A' のサブスクリプションで、データ検証に失敗しました" という内容になります。  
+ たとえば、サブスクライバー A の **Sales.SalesOrderHeader** テーブルのデータが検証に失敗した場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、その失敗を通知するメッセージ 20574 を表示します。 "パブリケーション 'MyPublication' のアーティクル 'SalesOrderHeader' に対するサブスクライバー 'A' のサブスクリプションで、データ検証に失敗しました" というメッセージが表示されます。  
   
  このメッセージに基づいた応答を作成する場合は、サブスクライバー名、アーティクル名、パブリケーション名、およびエラーをメッセージから手動で解析する必要があります。 しかし、ディストリビューション エージェントおよびマージ エージェントは **sysreplicationalerts** にそれらの情報 (およびエージェントの種類、警告の時刻、パブリケーション データベース、サブスクライバー データベース、パブリケーションの種類などの詳細) を書き込みます。このため、応答ジョブではテーブルから関連情報を直接クエリできます。 正確な行を警告の特定のインスタンスへ関連付けることはできませんが、このテーブルにある **status** 列を使用して、対象となるエントリを追跡できます。 このテーブルのエントリは、履歴の保有期間の間、維持されます。  
   
@@ -91,6 +91,6 @@ deallocate hc
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [監視 &#40;レプリケーション&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [監視 (レプリケーション)](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

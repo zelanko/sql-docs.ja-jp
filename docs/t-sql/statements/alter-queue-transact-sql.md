@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 836678305a32d1acf9192387bae6f79d398cf847
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7856a54070b58f6a834dd5a65b18b58e9667682
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927237"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381186"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   キューのプロパティを変更します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67927237"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 ALTER QUEUE <object>   
    queue_settings  
    | queue_action  
@@ -78,7 +78,10 @@ WITH
   
 ```  
   
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *database_name* (オブジェクト)  
  変更するキューを含むデータベースの名前を指定します。 *database_name* が指定されていない場合、これは既定で現在のデータベースに設定されます。  
   
@@ -104,12 +107,12 @@ WITH
  キューがストアド プロシージャをアクティブにするかどうかを指定します。 STATUS = ON の場合は、現在実行中のプロシージャの数が MAX_QUEUE_READERS より少なく、ストアド プロシージャによるメッセージの受信よりも早くメッセージがキューに到着する場合に、PROCEDURE_NAME で指定されるストアド プロシージャがキューによって開始されます。 STATUS = OFF の場合は、キューによってストアド プロシージャはアクティブになりません。  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   
  キューの内部テーブルのすべてのインデックスを再構築します。 負荷が高いために断片化の問題が発生した場合は、この機能を使用します。 MAXDOP は、唯一サポートされているキューの rebuild オプションです。 REBUILD は常にオフライン操作です。  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   
  キューの内部テーブルのすべてのインデックスを再構成します。   
 ユーザー テーブルの REORGANIZE とは異なり、キューの REORGANIZE は常にオフライン操作として実行されます。これは、キューではページ レベルのロックが明示的に無効になっているためです。  
@@ -118,7 +121,7 @@ WITH
 >  インデックスの断片化に関する一般的なガイダンスでは、断片化が 5% から 30% の場合、インデックスを再構成します。 断片化が 30% を超える場合は、インデックスを再構築します。 ただし、これらの数値は環境の開始点として一般的なガイダンスでのみ使用できます。 インデックスの断片化の量を確認するには、「[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)」を使用します。例については、この記事の例 G を参照してください。  
   
  MOVE TO { *file_group* | "default" }  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   
  キューの内部テーブルを (そのインデックスと共に) ユーザー指定のファイル グループに移動します。  新しいファイル グループを読み取り専用にすることはできません。  
   
@@ -157,7 +160,7 @@ WITH
   
  有害なメッセージの処理が OFF に設定されているキューは、トランザクションのロールバックが連続して 5 回実行されても無効になりません。 これにより、カスタムの有害なメッセージの処理システムをアプリケーションで定義できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定されたアクティブ化ストアド プロシージャが存在するキューにメッセージが含まれている場合は、アクティブ化状態を OFF から ON に変更すると、すぐにアクティブ化ストアド プロシージャがアクティブになります。 アクティブ化状態を ON から OFF に変更すると、ストアド プロシージャのインスタンスのアクティブ化処理は停止しますが、現在実行中のストアド プロシージャのインスタンスは停止しません。  
   
  キューにアクティブ化ストアド プロシージャを追加しても、キューのアクティブ化の状態は変わりません。 キューのアクティブ化ストアド プロシージャを変更しても、現在実行中のアクティブ化ストアド プロシージャのインスタンスには影響しません。  
@@ -171,7 +174,7 @@ WITH
 ## <a name="permissions"></a>アクセス許可  
  既定では、キューを変更する権限は、キューの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-making-a-queue-unavailable"></a>A. キューを利用できないようにする  
  次の例では、`ExpenseQueue` キューをメッセージの受信に利用できないようにします。  
@@ -223,7 +226,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. キュー インデックスを再構築する  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   
  次の例では、キュー インデックスを再構築します。  
   
@@ -233,7 +236,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. キュー インデックスを再構成する  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   
  次の例では、キュー インデックスを再構成します。  
   
@@ -243,7 +246,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I:キューの内部テーブルを別のファイル グループに移動する  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   
 ```  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

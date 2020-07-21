@@ -18,14 +18,14 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 390039cae99e160ca95f2b2460db268f34bef8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 417fce6637f17b428f0e4d45404760088a8c0e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034373"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488601"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
 
@@ -59,9 +59,9 @@ ms.locfileid: "68034373"
   
  次の表では、WriteOption プロパティで使用できるオプションについて説明します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
-|追加|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
+|Append|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
 |常に作成する|常に新しいファイルを作成します。|  
 |1 回だけ作成する|新しいファイルを 1 つ作成します。 ファイルが存在する場合、コンポーネントは失敗します。|  
 |切り捨てと追加|既存のファイルを切り捨て、データをそのファイルに書き込みます。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
@@ -136,7 +136,7 @@ ms.locfileid: "68034373"
  コンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+ sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
 ## <a name="raw-file-destination-editor-connection-manager-page"></a>[RAW ファイル変換先エディター] ([接続マネージャー] ページ)
   ファイルに RAW データを書き込むための RAW ファイル変換先を構成するには、RAW ファイル変換先エディターを使用します。  
@@ -149,14 +149,14 @@ ms.locfileid: "68034373"
   
 -   [[列] タブのオプションの設定](#mapping)  
   
-###  <a name="open"></a> RAW ファイル変換先エディターを開く  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> RAW ファイル変換先エディターを開く  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
 2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
- **[アクセス モード]**  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+ **アクセス モード**  
  ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
   
  **[ファイル名]** または **[変数名]**  
@@ -170,7 +170,7 @@ ms.locfileid: "68034373"
   
  **[初期 RAW ファイルの生成]** をクリックすると、メッセージ ボックスが表示されます。 ファイルの作成を続行するには、 **[OK]** をクリックします。 **[列]** ページで別の列の一覧を選択するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="mapping"></a> [列] タブのオプションの設定  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> [列] タブのオプションの設定  
  **使用できる入力列**  
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   
@@ -191,14 +191,14 @@ ms.locfileid: "68034373"
   
 -   [[列] タブのオプションの設定](#mapping)  
   
-###  <a name="open"></a> RAW ファイル変換先エディターを開く  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> RAW ファイル変換先エディターを開く  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]パッケージに RAW ファイル変換先を追加します。  
   
 2.  コンポーネントを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
- **[アクセス モード]**  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+ **アクセス モード**  
  ファイル名の指定方法を選択します。 ファイル名とパスを直接入力するには **[ファイル名]** を選択します。ファイル名を含んでいる変数を指定するには、 **[変数からのファイル名]** を選択します。  
   
  **[ファイル名]** または **[変数名]**  
@@ -212,7 +212,7 @@ ms.locfileid: "68034373"
   
  このボタンをクリックすると、列の一覧が表示されます。 [キャンセル] をクリックして列を変更するか、[OK] をクリックしてファイルの作成を続行することができます。  
   
-###  <a name="mapping"></a> [列] タブのオプションの設定  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> [列] タブのオプションの設定  
  **使用できる入力列**  
  RAW ファイルに書き込む 1 つ以上の入力列を選択します。  
   

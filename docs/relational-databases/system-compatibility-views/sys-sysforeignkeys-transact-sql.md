@@ -1,5 +1,5 @@
 ---
-title: sys.sysforeignkeys (TRANSACT-SQL) |Microsoft Docs
+title: sys.sysforeignkeys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fff6be675a0433b3e51df74086fba59b8772b8d7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053452"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901063"
 ---
-# <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース中のテーブルの定義内にある、FOREIGN KEY 制約に関する情報を保持します。  
   
@@ -37,15 +37,15 @@ ms.locfileid: "68053452"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**constid**|**int**|FOREIGN KEY 制約の ID。|  
+|**constid**|**int**|外部キー制約の ID。|  
 |**fkeyid**|**int**|FOREIGN KEY 制約を持つテーブルのオブジェクト ID。|  
-|**rkeyid**|**int**|FOREIGN KEY 制約で参照されるテーブルのオブジェクト ID。|  
-|**fkey**|**smallint**|参照元の列の ID。|  
-|**rkey**|**smallint**|参照先の列の ID。|  
+|**rkeyid**|**int**|FOREIGN KEY 制約で参照されているテーブルのオブジェクト ID。|  
+|**fkey**|**smallint**|参照している列の ID。|  
+|**rkey**|**smallint**|参照されている列の ID。|  
 |**keyno**|**smallint**|参照列リスト内の列の位置。|  
   
 ## <a name="see-also"></a>関連項目  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: GO (Transact-SQL) | Microsoft Docs
+title: SQL Server のユーティリティのステートメント - GO | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd28aae90386501e49513551def97e3fea8f5574
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072305"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892108"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントではありませんが、**sqlcmd** ユーティリティ、**osql** ユーティリティ、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコード エディターで認識されるコマンドがあります。 これらのコマンドを使用すると、バッチおよびスクリプトの読み取りと実行が容易になります。  
   
@@ -45,7 +45,7 @@ GO [count]
  *count*  
  正の整数を指定します。 GO の前のバッチが、指定された回数実行されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GO は [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントではなく、**sqlcmd** および **osql** ユーティリティと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] コード エディターで認識されるコマンドです。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーティリティでは、GO は、現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのバッチを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに送信するためのシグナルとして解釈されます。 現在のステートメントのバッチは、前回の GO の後に入力されたすべてのステートメントで構成されます。最初の GO の場合、現在のバッチは、アドホック セッションまたはスクリプトの開始後に入力されたすべてのステートメントで構成されます。  
@@ -87,7 +87,7 @@ GO;
 ## <a name="permissions"></a>アクセス許可  
  GO は、権限を必要としないユーティリティ コマンドです。 すべてのユーザーが実行できます。    
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、2 つのバッチを作成します。 最初のバッチは、データベース コンテキストを設定する `USE AdventureWorks2012` ステートメントのみで構成されます。 その他のステートメントではローカル変数が使用されます。 このため、すべてのローカル変数宣言を 1 つのバッチにまとめる必要があります。 これには、変数を参照する最後のステートメントが実行されてから `GO` コマンドを実行するようにします。  
   
 ```  

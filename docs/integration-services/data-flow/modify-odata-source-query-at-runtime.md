@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aed5435091125200df30dadf5ff771e5965f2d94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091719"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298208"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの提供
 
@@ -33,7 +33,7 @@ ms.locfileid: "68091719"
   
 1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
   
-2.  **[パラメーター化]** ダイアログで、 **[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
+2.  **[パラメーター化]** ダイアログで、**[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
   
 3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68091719"
   
     4.  パラメーターが **[必須]** であるかどうかを指定します。  
   
-5.  **[OK]** をクリックして、ダイアログ ボックスを閉じます。  
+5.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 ## <a name="provide-the-query-with-an-expression"></a>クエリに式を指定する
  この方法は、クエリ文字列を実行時に動的に構築する場合に役立ちます。

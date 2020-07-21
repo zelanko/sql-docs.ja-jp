@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a66af1aafad411a70b707165b96c546cbababa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b97fc2b789387babcb05d7b0dfe2e39049a317a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929247"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899725"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   既存のサービスを削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67929247"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP SERVICE service_name  
 [ ; ]  
@@ -47,7 +47,7 @@ DROP SERVICE service_name
  *service_name*  
  削除するサービスの名前です。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービスがメッセージ交換の優先度で参照されている場合、そのサービスは削除できません。  
   
  サービスを削除すると、そのサービスへのすべてのメッセージが、サービスで使用されるキューから削除されます。 メッセージ交換でサービスが使用されている場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってリモート側にエラーが送信されます。  
@@ -55,7 +55,7 @@ DROP SERVICE service_name
 ## <a name="permissions"></a>アクセス許可  
  サービスを削除する権限は、既定では、サービスの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、サービス `//Adventure-Works.com/Expenses` を削除します。  
   
 ```  

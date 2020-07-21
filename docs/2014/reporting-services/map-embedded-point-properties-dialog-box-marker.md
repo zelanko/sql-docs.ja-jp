@@ -1,5 +1,5 @@
 ---
-title: マップの埋め込みポイントのプロパティ ダイアログ ボックスで、マーカー |Microsoft Docs
+title: '[マーカー] ([マップの埋め込みポイントのプロパティ] ダイアログボックス)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108332"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>[マーカー] ([マップの埋め込みポイントのプロパティ] ダイアログ ボックス)
@@ -29,14 +29,14 @@ ms.locfileid: "66108332"
   
  詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **マーカーの種類**  
- マーカーの種類を指定します。 既定値は `Circle` です。  
+## <a name="options"></a>オプション  
+ **[マーカーの種類]**  
+ マーカーの種類を指定します。 既定値は、`Circle` です。  
   
- **マーカーのサイズ**  
+ **[マーカー サイズ]**  
  マーカーのサイズを指定します。 既定値は [10pt] です。  
   
 ## <a name="see-also"></a>参照  
- [マップ (レポート ビルダーおよび SSRS)](report-design/maps-report-builder-and-ssrs.md)  
+ [マップ &#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

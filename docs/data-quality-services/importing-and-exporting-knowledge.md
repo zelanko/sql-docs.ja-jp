@@ -1,6 +1,5 @@
 ---
-title: ナレッジのインポートとエクスポート | Microsoft Docs
-ms.custom: ''
+title: ナレッジのインポートとエクスポート
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935255"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882779"
 ---
 # <a name="importing-and-exporting-knowledge"></a>ナレッジのインポートとエクスポート
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションで直接ナレッジ ベースとドメインを作成するか、ナレッジ ベースにナレッジをインポートしたり、ナレッジ ベースからナレッジをエクスポートすることができます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションでは、インポートおよびエクスポート操作にデータ ファイルを使用したり、インポート操作に Excel ファイルを使用できます。 使用されるデータ ファイルは、.dqs 拡張子を持つ [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で作成された暗号化ファイルです。 Microsoft Excel で作成されるファイルの拡張子は、.xlsx、.xls、または .csv です。 これらの操作を行うことで、データのクレンジングと照合の実行に使用するナレッジを構築および共有する際の柔軟性が高まります。  
   
@@ -31,13 +30,13 @@ ms.locfileid: "67935255"
   
 |||  
 |-|-|  
-|ナレッジ ベースのドメインを .dqs データ ファイルにエクスポートする|[ドメインを .dqs ファイルにエクスポートする](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|ドメインを .dqs データ ファイルから既存のナレッジ ベースへインポートする|[ドメインを .dqs ファイルからインポートする](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|ナレッジ ベース全体を .dqs データ ファイルにエクスポートする|[ナレッジ ベースを .dqs ファイルにエクスポートする](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|ナレッジ ベース全体を .dqs データ ファイルにインポートする|[ナレッジ ベースを .dqs ファイルからインポートする](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|ナレッジ ベースのドメインを .dqs データ ファイルにエクスポートする|[.dqs ファイルへのドメインのエクスポート](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|ドメインを .dqs データ ファイルから既存のナレッジ ベースへインポートする|[.dqs ファイルからのドメインのインポート](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|ナレッジ ベース全体を .dqs データ ファイルにエクスポートする|[.dqs ファイルへのナレッジ ベースのエクスポート](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|ナレッジ ベース全体を .dqs データ ファイルにインポートする|[.dqs ファイルからのナレッジ ベースのインポート](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |値を Excel ファイルからドメインへインポートする|[値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |ドメインを Excel ファイルからナレッジ ベースへインポートする|[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|ナレッジ ベースへのクレンジング中に収集されたナレッジをインポートする|[クレンジング プロジェクトの値をドメインにインポートする](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|ナレッジ ベースへのクレンジング中に収集されたナレッジをインポートする|[ドメインへのクレンジング プロジェクトの値のインポート](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

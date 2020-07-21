@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualservernodes (TRANSACT-SQL) |Microsoft Docs
+title: fn_virtualservernodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,20 +23,19 @@ ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 0ec290179cdbf3e61f0e5033acbf3156dbc6441a
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059189"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091666"
 ---
-# <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+# <a name="sysfn_virtualservernodes-transact-sql"></a>fn_virtualservernodes (Transact-sql)
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
-  これでフェールオーバー クラスター インスタンス ノードの一覧を返しますのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行できます。 この情報は、フェールオーバー クラスタリング環境で役立ちます。  
+  のインスタンスを実行できるフェールオーバークラスターインスタンスノードの一覧を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この情報は、フェールオーバー クラスタリング環境で役立ちます。  
   
 > [!IMPORTANT]
->  これは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]システム関数は、旧バージョンとの互換性のために含まれています。 使用することをお勧めします。 [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)代わりにします。  
+>  この [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] システム関数は、旧バージョンとの互換性のために用意されています。 代わりに、 [dm_os_cluster_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)を使用することをお勧めします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +47,15 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>返されるテーブル  
- 現在のサーバーがクラスター化されたサーバーの場合**fn_virtualservernodes**このフェールオーバー クラスター インスタンス ノードの一覧を返しますのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は定義されています。  
+ 現在のサーバーがクラスター化されたサーバーの場合、 **fn_virtualservernodes**は、このインスタンスが定義されているフェールオーバークラスターインスタンスノードの一覧を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- 現在のサーバー インスタンスがクラスター化されたサーバーではない場合**fn_virtualservernodes**空の行セットを返します。  
+ 現在のサーバーインスタンスがクラスター化されたサーバーでない場合、 **fn_virtualservernodes**は空の行セットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーがのインスタンスに対する VIEW SERVER STATE 権限がある必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+ ユーザーは、のインスタンスに対する VIEW SERVER STATE 権限を持っている必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-## <a name="examples"></a>使用例  
- 次の例では`fn_virtualservernodes`クラスター化されたサーバー インスタンスに対してクエリを実行します。  
+## <a name="examples"></a>例  
+ 次の例では、を使用し `fn_virtualservernodes` て、クラスター化されたサーバーインスタンスに対してクエリを実行します。  
   
 ```  
 SELECT * FROM fn_virtualservernodes();  
@@ -68,12 +67,12 @@ SELECT * FROM fn_virtualservernodes();
   
  -------\-  
   
- SS3 CLUSN1  
+ SS3-CLUSN1  
   
- SS3 CLUSN2  
+ SS3-CLUSN2  
   
-## <a name="see-also"></a>関連項目  
- [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [fn_servershareddrives &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   
   

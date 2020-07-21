@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993202"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "76941204"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ $*statement*: SQL ステートメントを含む文字列。
 ## <a name="return-value"></a>戻り値
 成功した場合は、PDOStatement オブジェクトを返します。 失敗した場合は、PDOException オブジェクトを、または `PDO::ATTR_ERRMODE` の値によっては false を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では、実行されるまで準備されたステートメントを検証しません。
 
 次の表は、使用可能な *key_pair* の値を一覧しています。
 
-|Key|[説明]|
+|Key|説明|
 |-------|---------------|
-|PDO::ATTR_CURSOR|カーソル動作を定義します。 スクロール不可の順方向カーソル `PDO::CURSOR_FWDONLY` が既定値です。 `PDO::CURSOR_SCROLL` はスクロール可能なカーソルです。<br /><br />たとえば、`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )` のようになります。<br /><br />`PDO::CURSOR_SCROLL` に設定すると、以下で説明するように、`PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` を使用してスクロール可能なカーソルの種類を設定することができます。<br /><br />PDO_SQLSRV ドライバーの結果セットとカーソルに関する詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。|
+|PDO::ATTR_CURSOR|カーソル動作を定義します。 スクロール不可の順方向カーソル `PDO::CURSOR_FWDONLY` が既定値です。 `PDO::CURSOR_SCROLL` はスクロール可能なカーソルです。<br /><br />たとえば、「 `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )` 」のように入力します。<br /><br />`PDO::CURSOR_SCROLL` に設定すると、以下で説明するように、`PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` を使用してスクロール可能なカーソルの種類を設定することができます。<br /><br />PDO_SQLSRV ドライバーの結果セットとカーソルに関する詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。|
 |PDO::ATTR_EMULATE_PREPARES|既定ではこの属性は false です。この `PDO::ATTR_EMULATE_PREPARES => true` により変更することができます。 詳細と例については、[エミュレートの準備](#emulate-prepare)に関するセクションを参照してください。|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|スクロール可能なカーソルの種類を指定します。 `PDO::ATTR_CURSOR` が `PDO::CURSOR_SCROLL` に設定されている場合にのみ有効です。 この属性に指定可能な値については、以下を参照してください。|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。 このオプションは `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` が true の場合のみ機能します。 詳細については、「[10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)」を参照してください。|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` に指定可能な値を次の表に示します。 スクロール可能なカーソルの詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。
 
-|[値]|[説明]|
+|値|説明|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|クライアント側の (バッファー処理された) 静的カーソルを作成します。これは、クライアント マシンのメモリ内に結果セットをバッファー処理します。|
 |PDO::SQLSRV_CURSOR_DYNAMIC|サーバー側 (バッファーなし) の動的カーソルを作成します。これは、任意の順序で行にアクセスすることができ、変更内容がデータベースに反映されます。|
@@ -139,6 +139,33 @@ print_r($row);
 ?>
 ```
 
+## <a name="example"></a>例
+次の 2 つのスニペットでは、CHAR/VARCHAR 列のターゲットとなるデータに PDO::prepare を使用する方法を示しています。 PDO::prepare の既定のエンコードは UTF-8 なので、ユーザーはオプション `PDO::SQLSRV_ENCODING_SYSTEM` を使用して、暗黙的な変換を回避できます。
+
+**方法 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**方法 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## <a name="example"></a>例
@@ -209,13 +236,59 @@ Information on :con_name parameter
 > [!NOTE]
 > emulate prepare が true に設定されている場合、パラメーター化クエリのセキュリティは有効ではありません。 そのため、アプリケーションでは、パラメーターにバインドされたデータに、悪意のある Transact-SQL コードが含まれていないことを確認する必要があります。
 
-### <a name="encoding"></a>[エンコード]
+### <a name="encoding"></a>エンコード
 
 別のエンコーディング (UTF-8 やバイナリなど) でパラメーターをバインドしたい場合、PHP スクリプトにエンコーディングを明確に指定する必要があります。
 
 PDO_SQLSRV ドライバーでは最初に `PDO::bindParam()` に指定されたエンコーディングがチェックされます (たとえば、`$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`)。
 
 見つからない場合、`PDO::prepare()` または `PDOStatement::setAttribute()` にエンコーディングが設定されているかどうかドライバーによりチェックされます。 それ以外の場合、ドライバーでは `PDO::__construct()` または `PDO::setAttribute()` に指定されたエンコーディングが使用されます。
+
+さらに、バージョン5.8.0 以降では、`PDO::ATTR_EMULATE_PREPARES` を true に設定して PDO::p repare を使用する場合には、`N` プレフィックスが確実に使用されるように、ユーザーは [PHP 7.2 で導入された拡張文字列型](https://wiki.php.net/rfc/extended-string-types-for-pdo)を使用できます。 以下のスニペットでは、さまざまな代替方法を示しています。
+
+> [!NOTE]
+> 既定では、emulate prepare が false に設定されます。この場合、拡張された PDO 文字列定数は無視されます。
+
+**バインド時にドライバー オプション PDO::SQLSRV_ENCODING_UTF8 を使用する**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**PDO::SQLSRV_ATTR_ENCODING 属性を使用する**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**PDO 定数 PDO::PARAM_STR_NATL を使用する**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**既定の文字列パラメーターの型 PDO::P ARAM_STR_NATL を設定する**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>制限事項
 

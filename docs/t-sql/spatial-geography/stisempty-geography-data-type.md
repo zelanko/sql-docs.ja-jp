@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4cbc66e3-9035-4ecf-8f5a-6301f168c26c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5cd0e37ddf47e80ff524d02688d5764d93717a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c4ae2f630813a97184c70eae9ddd73537f0dd1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736097"
 ---
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスが空の場合 1 を返します。 **geography** インスタンスが空ではない場合 0 を返します。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "68042070"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  空の `geography` インスタンスを作成し、`STIsEmpty()` を使用して、このインスタンスが空であることを確認する例を次に示します。  
   
 ```  

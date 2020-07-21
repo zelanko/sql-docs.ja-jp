@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 283c033a7c34342c6460ff9acca96e976d1f35a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d25c3d7cf2c58af5b7daceeadb1daf3a9122a6d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112691"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903905"
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>データ変換の変換を使用してデータ型を変換する
+# <a name="convert-data-type-with-data-conversion-transformation"></a>データ変換の変換を使用してデータ型を変換する
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -62,6 +62,6 @@ ms.locfileid: "68112691"
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
  [Integration Services のデータ型](../../../integration-services/data-flow/integration-services-data-types.md)   
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
   
   

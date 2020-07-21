@@ -21,14 +21,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0b530cf3a73baa961fa2db5e39563e6a585b1f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944216"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71291258"
 ---
 # <a name="lookup-transformation"></a>参照変換
 
@@ -90,11 +90,11 @@ ms.locfileid: "67944216"
   
  キャッシュをファイルに永続化する他の利点を次に示します。  
   
--   ***複数のパッケージ間でキャッシュ ファイルを共有できます。詳細については、「***  [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***」をご覧ください。***  
+-   ***複数のパッケージ間でキャッシュ ファイルを共有できます。詳細については、***[キャッシュ接続マネージャーを使用したフル キャッシュ モードの参照変換の実装](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***に関するページをご覧ください。***  
   
 -   キャッシュ ファイルをパッケージと一緒に配置できます。 ***これにより、このデータを複数のコンピューター上で使用できます。*** 詳細については、「 [参照変換用のキャッシュを作成および配置する](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)」をご覧ください。  
   
--   RAW ファイル ソースを使用してキャッシュ ファイルからデータを読み取ることができます。 次に他のデータ フロー コンポーネントを使用してデータを変換または移動できます。 詳細については、「 [RAW ファイル ソース](../../../integration-services/data-flow/raw-file-source.md)」をご覧ください。  
+-   RAW ファイル ソースを使用してキャッシュ ファイルからデータを読み取ることができます。 次に他のデータ フロー コンポーネントを使用してデータを変換または移動できます。 詳細については、「 [RAW ファイル ソース](../../../integration-services/data-flow/raw-file-source.md)」を参照してください。  
   
     > [!NOTE]  
     >  キャッシュ接続マネージャーは、RAW ファイル変換先を使用して作成または変更されたキャッシュ ファイルをサポートしていません。  
@@ -147,7 +147,7 @@ ms.locfileid: "67944216"
 ## <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
   [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[フル キャッシュ]**  
  参照変換を実行する前に、参照データセットを生成してキャッシュに読み込みます。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "67944216"
  **[キャッシュなし]**  
  参照変換の実行中に、参照データセットを生成します。 キャッシュにデータは読み込まれません。  
   
- **キャッシュ接続マネージャー**  
+ **[フル キャッシュ]**  
  キャッシュ接続マネージャーを使用するように参照変換を構成します。 このオプションを選択できるのは、[フル キャッシュ] オプションを選択した場合だけです。  
   
  **[キャッシュなし]**  
@@ -176,7 +176,7 @@ ms.locfileid: "67944216"
 ## <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]** および **[キャッシュ接続マネージャー]** を選択すると、次のオプションを使用できます。  
   
  **[フル キャッシュ]**  
@@ -223,7 +223,7 @@ ms.locfileid: "67944216"
 ## <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 入力列とは、データ フロー内の接続されているソースからの列です。 入力列と参照列のデータ型は一致している必要があります。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "67944216"
 ## <a name="lookup-transformation-editor-advanced-page"></a>[参照変換エディター] ([詳細設定] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用して、部分キャッシュを構成し、参照変換用 SQL ステートメントを変更します。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[キャッシュ サイズ (32 ビット)]**  
  32 ビット コンピューター用のキャッシュ サイズを MB 単位で調整します。 既定値は 5 MB です。  
   

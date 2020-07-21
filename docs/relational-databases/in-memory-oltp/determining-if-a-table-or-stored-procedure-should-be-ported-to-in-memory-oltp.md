@@ -1,6 +1,7 @@
 ---
-title: テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認 | Microsoft Docs
-ms.custom: ''
+title: テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうか
+description: インメモリ OLTP によってデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するには、SQL Server Management Studio のトランザクション パフォーマンス分析レポートを使用します。
+ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d25137348904fdf3eceb1cc0fceb2a147580f744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723271"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
   
@@ -122,8 +123,6 @@ ms.locfileid: "68092290"
 3.  **[次へ]** をクリックし、タスクの一覧が、 **[チェックリスト生成オプションの構成]** ページの設定と一致することを確認します。  
   
 4.  **[完了]** をクリックし、移行チェックリスト レポートが、選択したオブジェクトに対してのみ生成されたことを確認します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  このレポートを、メモリ最適化アドバイザー ツールおよびネイティブ コンパイル アドバイザー ツールによって生成されたレポートと比較して、レポートの精度を確認できます。 詳細については、「 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 」および「 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)」を参照してください。  
   

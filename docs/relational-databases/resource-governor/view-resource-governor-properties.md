@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 461c222e6558ca2c003abc7920e1479c050df89e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c19adf7c918fa4a2bd2f48227a8109cef26c64f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729265"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
- ##  <a name="BeforeYouBegin"></a> 関連トピック 
- **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、次のトピックをご覧ください。  
+ ##  <a name="related-topics"></a><a name="BeforeYouBegin"></a> 関連トピック 
+ **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、以下のトピックを参照してください。  
   
 -   [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)  
   
--   [リソース ガバナーを無効にしたとき](../../relational-databases/resource-governor/disable-resource-governor.md)  
+-   [リソース ガバナーの無効化](../../relational-databases/resource-governor/disable-resource-governor.md)  
   
 -   [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
@@ -48,10 +48,10 @@ ms.locfileid: "68106721"
   
  [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動的管理ビューにクエリを実行して is_configuration_pending の現在の状態を取得することにより、構成が保留中かどうかを確認できます。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース ガバナーのプロパティを表示するには、VIEW SERVER STATER 権限が必要です。 リソース ガバナーの構成タスクを行うには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ViewRGProp"></a> [リソース ガバナーのプロパティ] ページ  
+##  <a name="resource-governor-properties-page"></a><a name="ViewRGProp"></a> [リソース ガバナーのプロパティ] ページ  
  **で、次の [リソース ガバナーのプロパティ] ページでリソース ガバナーのプロパティを表示するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
@@ -62,9 +62,7 @@ ms.locfileid: "68106721"
   
 4.  変更を保存するには、 **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="RGProp"></a> Resource Governor properties  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a> Resource Governor properties  
  **[分類子関数の名前]**  
  分類子関数を一覧から選択して指定します。  
   
@@ -74,7 +72,7 @@ ms.locfileid: "68106721"
  **[リソース プール]**  
  提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **[名前]**  
+ **Name**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -94,7 +92,7 @@ ms.locfileid: "68106721"
  **[リソース プールのワークロード グループ]**  
  提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **[名前]**  
+ **Name**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  
@@ -125,7 +123,7 @@ ms.locfileid: "68106721"
 2.  リソース ガバナー エンティティの現在の構成を表示するには、「[リソース ガバナー関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)」を使用します。  
   
 ## <a name="more-information"></a>詳細情報
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

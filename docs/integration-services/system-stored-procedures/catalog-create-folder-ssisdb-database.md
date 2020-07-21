@@ -8,28 +8,28 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 41e68c4ab43a4c2838721321341ce42ce12883d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95f74f595481d9cf373c51be18cccf404b824e49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749656"
 ---
-# <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (SSISDB データベース)
+# <a name="catalogcreate_folder-ssisdb-database"></a>catalog.create_folder (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
+catalog.create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>引数  

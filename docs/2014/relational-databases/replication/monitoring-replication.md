@@ -15,26 +15,25 @@ helpviewer_keywords:
 - replication [SQL Server], monitoring
 - administering replication, monitoring
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f827c05952eadfdae4b666f256750760959bf962
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049411"
 ---
 # <a name="monitoring-replication"></a>監視 (レプリケーション)
   レプリケーション トポロジの監視は、レプリケーションの配置における重要な側面です。 レプリケーション処理は分散環境で行われるため、レプリケーションに関連するすべてのコンピューターについてその利用状況と状態を追跡することが不可欠です。 レプリケーションの監視には以下のツールを使用できます。  
   
--   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]レプリケーションモニター  
   
-     レプリケーションの監視を行うにあたり、最も重要なツールがレプリケーション モニターです。すべてのレプリケーションの利用状況がパブリッシャー関連のビューで表示されます。 詳細については、次を参照してください。[レプリケーション モニターでパフォーマンスを監視](monitor/monitor-performance-with-replication-monitor.md)します。  
+     レプリケーションの監視を行うにあたり、最も重要なツールがレプリケーション モニターです。すべてのレプリケーションの利用状況がパブリッシャー関連のビューで表示されます。 詳細については、「[レプリケーションモニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)」を参照してください。  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] を使用して、レプリケーション モニターにアクセスできます。 また、次に示すエージェントによってログに記録された現在の状態や最後のメッセージを表示したり、各エージェントを開始および停止したりすることができます。ログ リーダー エージェント、スナップショット エージェント、マージ エージェント、ディストリビューション エージェント。 詳細については、「 [Monitor Replication Agents](monitor/monitor-replication-agents.md)」を参照してください。  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] を使用して、レプリケーション モニターにアクセスできます。 また、ログ リーダー エージェント、スナップショット エージェント、マージ エージェント、およびディストリビューション エージェントの各エージェントを開始および停止したり、現在の状態や各エージェントによってログに記録された最後のメッセージを表示することができます。 詳細については、「 [Monitor Replication Agents](monitor/monitor-replication-agents.md)」を参照してください。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] およびレプリケーション管理オブジェクト (RMO)  
   
@@ -49,8 +48,8 @@ ms.locfileid: "62666870"
      システム モニターには、レプリケーションに関するさまざまなカウンターが表示されるので、パフォーマンスを監視する場合に便利です。 詳細については、「 [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション管理に関する FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+ [レプリケーションの管理に関する FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [レプリケーション管理のベストプラクティス](administration/best-practices-for-replication-administration.md)   
 
   
   

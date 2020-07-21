@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca8f5b4d767ef0fe836cd260f8d12dd5b40c75d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62467282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050371"
 ---
 # <a name="atomic-blocks"></a>ATOMIC ブロック
   `BEGIN ATOMIC` は、ANSI SQL 標準の一部です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ネイティブ コンパイル ストアド プロシージャの最上位でのみ ATOMIC ブロックがサポートされます。  
@@ -123,7 +122,7 @@ ORDER BY c1
 GO  
 ```  
   
- メモリ最適化テーブルに固有の次のエラー メッセージは、トランザクションの失敗が決定的であることを示しています。 Atomic ブロックのスコープ内に出現する場合、トランザクションを中止が発生します。10772、41301、41302、41305、41325、41332、および 41333 します。  
+ メモリ最適化テーブルに固有の次のエラー メッセージは、トランザクションの失敗が決定的であることを示しています。 ATOMIC ブロックのスコープ内で、10772、41301、41302、41305、41325、41332、または 41333 のエラーが発生した場合、トランザクションは中止されます。  
   
 ## <a name="session-settings"></a>セッションの設定  
  ATOMIC ブロックのセッション設定は、ストアド プロシージャのコンパイル時に固定されます。 一部の設定は `BEGIN ATOMIC` で指定できますが、その他の設定は常に同じ値に固定されます。  
@@ -141,7 +140,7 @@ GO
 |----------------------|-----------------|  
 |`DATEFORMAT`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、`DATEFORMAT` は `LANGUAGE` に関連付けられた既定の日付形式をオーバーライドします。|  
 |`DATEFIRST`|指定した場合、`DATEFIRST` は `LANGUAGE` に関連付けられた既定値をオーバーライドします。|  
-|`DELAYED_DURABILITY`|サポートされる値は`OFF`と`ON`します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。詳細については、「[Control Transaction Durability](../logs/control-transaction-durability.md)」 (トランザクションの持続性の制御) を参照してください。|  
+|`DELAYED_DURABILITY`|サポートされる値は、`OFF` と `ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。詳細については、「[Control Transaction Durability](../logs/control-transaction-durability.md)」 (トランザクションの持続性の制御) を参照してください。|  
   
  次の SET オプションには、すべてのネイティブ コンパイル ストアド プロシージャのすべての ATOMIC ブロックについて同じシステム既定値が設定されます。  
   
@@ -162,6 +161,6 @@ GO
 |XACT_ABORT|OFF<br /><br /> 処理できない例外により ATOMIC ブロックはロールバックされますが、そのエラーが致命的でない限りトランザクションは中止されません。|  
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: OPENXML 内でのメタプロパティの指定 | Microsoft Docs
+description: OPENXML ステートメントでメタプロパティ属性を指定して、XML ノードから情報を抽出する方法について学習します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd34411b00bfa89c5c69b0d71073ee1c0d4d2280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728119"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML ドキュメントに含まれるメタプロパティ属性は、XML アイテム (要素、属性、その他の DOM ノードなど) のプロパティを示す属性です。 これらの属性は、物理的に XML ドキュメントのテキスト内に存在するものではありません。 ただし、OPENXML では、すべての XML アイテムに、これらのメタプロパティが提供されます。 これらのメタプロパティを使用すると、XML ノードの情報 (ローカルの位置や名前空間の情報など) を抽出できます。 これらの情報からは、テキストで表現されている情報よりも詳細な情報を得られます。  
   
  これらのメタプロパティは、 *ColPattern* パラメーターを使用して OPENXML ステートメント内の行セットの列にマップできます。 これらの列には、その列がマップされたメタプロパティの値が含まれます。 OPENXML の構文の詳細については、 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)を参照してください。  
@@ -38,7 +39,7 @@ ms.locfileid: "68000696"
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  
   
-|メタプロパティ属性|[説明]|  
+|メタプロパティ属性|説明|  
 |----------------------------|-----------------|  
 |**\@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
 |**\@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
@@ -49,14 +50,14 @@ ms.locfileid: "68000696"
   
  次の表には、用意されている追加の親プロパティを示します。これらのプロパティを使用すると、階層情報を取得できます。  
   
-|親メタプロパティ属性|[説明]|  
+|親メタプロパティ属性|説明|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|**../\@mp:id** と対応します。|  
 |**\@mp:parentlocalname**|**../\@mp:localname** と対応します。|  
 |**\@mp:parentnamespacerui**|**../\@mp:namespaceuri** と対応します。|  
 |**\@mp:parentprefix**|**../\@mp:prefix** と対応します。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に、OPENXML を使用してさまざまな行セット ビューを作成する方法の例を示します。  
   
 ### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. OPENXML 行セット列のメタプロパティへのマップ  

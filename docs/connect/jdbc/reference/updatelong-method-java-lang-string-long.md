@@ -1,5 +1,5 @@
 ---
-title: updateLong メソッド (java. System.string, long) |Microsoft Docs
+title: updateLong (java.lang.String, long) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 932035288f74c582620108db697cb898c59159bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c0b799ab2a32435ed87135cdb231e0565a44ee26
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999167"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901018"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>updateLong (java.lang.String, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +47,11 @@ public void updateLong(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateLong メソッドは、java.sql.ResultSet インターフェイスの updateLong メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [updateLong メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [updateLong メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

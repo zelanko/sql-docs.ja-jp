@@ -1,6 +1,7 @@
 ---
-title: メモリ最適化テーブルへの SQL_VARIANT の実装 | Microsoft Docs
-ms.custom: ''
+title: メモリ最適化テーブルの SQL_VARIANT
+description: この例を使用して、SQL Server と Azure SQL Database でメモリ最適化テーブルに SQL_VARIANT を実装する方法について説明します。
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fee7c55c95d60329ca7b3721416569d83902a6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76acc2e061ff550d2da90b167637ad7efa76b1d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723156"
 ---
-# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの SQL_VARIANT の実装
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの SQL_VARIANT の実装
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   例として **SQL_VARIANT** 列を含むテーブルを考えてみます。  
   

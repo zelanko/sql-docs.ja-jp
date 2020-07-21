@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDSNFromIni function [ODBC]
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024532"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301801"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0  
   
- **概要**  
- **SQLRemoveDSNFromIni**システム情報から、データ ソースを削除します。  
+ **まとめ**  
+ **Sqlremovedsnfromini**は、システム情報からデータソースを削除します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,31 +43,31 @@ BOOL SQLRemoveDSNFromIni(
   
 ## <a name="arguments"></a>引数  
  *lpszDSN*  
- [入力]削除するデータ ソースの名前です。  
+ 代入削除するデータソースの名前。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、データ ソースを削除または Odbc.ini ファイルで、データ ソースはなかった場合に TRUE を返します。 データ ソースの削除に失敗した場合は FALSE を返します。  
+ 関数は、データソースが削除された場合、またはデータソースが Odbc .ini ファイルにない場合に TRUE を返します。 データソースの削除に失敗した場合は、FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLRemoveDSNFromIni** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlremovedsnfromini**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_INVALID_DSN|無効な DSN|*LpszDSN*引数が無効です。|  
-|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーは、レジストリから DSN 情報を削除できませんでした。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn*引数が無効でした。|  
+|ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーで、レジストリから DSN 情報を削除できませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- **SQLRemoveDSNFromIni**のシステム情報 [ODBC データ ソース] セクションから、データ ソース名を削除します。 データ ソースの仕様のセクションでは、システム情報からも削除されます。  
+## <a name="comments"></a>説明  
+ **Sqlremovedsnfromini**は、システム情報の [ODBC データソース] セクションからデータソース名を削除します。 また、システム情報からデータソースの仕様セクションも削除されます。  
   
- この関数は、ドライバーのセットアップのライブラリからのみ呼び出す必要があります。  
+ この関数は、ドライバーセットアップライブラリからのみ呼び出す必要があります。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|追加、変更、またはデータ ソースを削除します。|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
-|追加、変更、またはデータ ソースを削除します。|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|既定のデータ ソースを削除します。|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
-|システム情報へのデータ ソース名の追加|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|データソースの追加、変更、または削除|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
+|データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|既定のデータソースの削除|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
+|システム情報へのデータソース名の追加|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

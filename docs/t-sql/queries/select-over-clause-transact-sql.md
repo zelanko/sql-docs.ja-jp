@@ -1,6 +1,6 @@
 ---
 title: OVER 句 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: OVER 句の Transact-SQL リファレンス。クエリ結果セット内でユーザー指定の行セットが定義されます。
 ms.date: 08/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948323"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999766"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   関連するウィンドウ関数が適用される前に、行セットのパーティション処理と並べ替えを決定します。 つまり、OVER 句はクエリ結果セット内のウィンドウまたはユーザー指定の行セットを定義します。 その後、ウィンドウ関数はウィンドウ内の各行の値を計算します。 関数で OVER 句を使用すると、移動平均、累積集計、集計途中経過、グループ結果ごとの上位 N などの集計値を計算できます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67948323"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse  
   
 OVER (   
@@ -101,7 +101,7 @@ ORDER BY order_by_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
   
  ROWS | RANGE  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  パーティション内の開始点と終了点を指定することで、パーティション内の行をさらに制限します。 これは、論理アソシエーションまたは物理アソシエーションによって現在の行を基準に行の範囲を指定することで行います。 物理アソシエーションは ROWS 句を使用することで実現されます。  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS または RANGE を使用する場合は、ORDER BY 句を指定する必要があります。 ORDER BY に複数の順序式が含まれる場合、ROW FOR RANGE では、現在行を決定するときに ORDER BY リスト内のすべての列が考慮されます。  
   
  UNBOUNDED PRECEDING  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  ウィンドウがパーティションの最初の行から開始することを指定します。 UNBOUNDED PRECEDING はウィンドウの開始位置としてのみ指定できます。  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> は、現在行より前にある行または値の数を示します。 RANGE に対してはこの指定を使用できません。  
   
  CURRENT ROW  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  ウィンドウが現在の行 (ROWS の場合) または現在の値 (RANGE の場合) で開始または終了することを指定します。 CURRENT ROW は開始位置としても終了位置としても指定できます。  
   
  BETWEEN \<window frame bound > AND \<window frame bound >  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  ROWS または RANGE で使用し、ウィンドウの下限 (開始) と上限 (終了) の境界位置を指定します。 前の \<window frame bound> は境界の開始位置を定義し、後の \<window frame bound> は境界の終了位置を定義します。 上限を下限より小さくすることはできません。  
   
  UNBOUNDED FOLLOWING  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  ウィンドウがパーティションの最後の行で終了することを指定します。 UNBOUNDED FOLLOWING はウィンドウの終了位置としてのみ指定できます。 たとえば、RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING では、現在行から開始してパーティションの最後の行で終了するウィンドウが定義されます。  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> は、現在行より後にある行または値の数を示します。 \<unsigned value specification> FOLLOWING をウィンドウの開始位置として指定するときは、終了位置を \<unsigned value specification> FOLLOWING にする必要があります。 たとえば、ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING では、現在行より後の 2 行目から開始して現在行より後の 10 行目で終了するウィンドウが定義されます。 RANGE に対してはこの指定を使用できません。  
   
  unsigned integer literal  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  現在の行または値より前または後にある行または値の数を指定する正の整数リテラル (0 を含む) です。 この指定は ROWS に対してのみ有効です。  
   
@@ -186,9 +186,9 @@ ROWS/RANGE を指定し、\<window frame preceding> を \<window frame extent> �
   
  OVER 句と共に使用される順位付け関数、集計関数、または分析関数によっては、\<ORDER BY clause> と \<ROWS and RANGE clause> のどちらか一方または両方がサポートされない場合があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. OVER 句を ROW_NUMBER 関数と共に使用する  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. OVER 句を ROW_NUMBER 関数と共に使用する  
  次の例では、OVER 句と ROW_NUMBER 関数を使用して、パーティション内の各行の行番号を表示する方法を示します。 OVER 句に指定した ORDER BY 句によって、列 `SalesYTD` を基準に各パーティション内の行の順序付けが行われます。 SELECT ステートメントの ORDER BY 句によって、クエリ結果セット全体が返される順序が決まります。  
   
 ```sql  
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -390,15 +390,15 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. ROWS 句を指定する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  次の例では、ROWS 句を使用して、行の計算対象のウィンドウを、現在行からその後の *N* 行まで (この例では 1 行) と定義しています。  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -453,9 +453,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. OVER 句を ROW_NUMBER 関数と共に使用する  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. OVER 句を ROW_NUMBER 関数と共に使用する  
  次の例は、割り当てられている販売ノルマに基づいて営業担当者の ROW_NUMBER を返します。  
   
 ```sql  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

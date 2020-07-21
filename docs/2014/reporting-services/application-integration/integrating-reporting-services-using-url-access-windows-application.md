@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126242"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Windows アプリケーションでの URL アクセスの使用
@@ -31,7 +31,7 @@ ms.locfileid: "63126242"
 -   Windows フォームで <xref:System.Windows.Forms.WebBrowser> コントロールを使用し、レポートを表示します。  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Windows フォームからの Internet Explorer の起動  
- <xref:System.Diagnostics.Process> クラスを使用して、コンピューターで実行されているプロセスにアクセスできます。 <xref:System.Diagnostics.Process> クラスは、アプリケーションの起動、停止、制御、および監視に役立つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の構成要素です。 レポート サーバー データベースの特定のレポートを表示するには、レポートへの URL を渡して **IExplore** プロセスを起動できます。 次のコード例を使用すると、ユーザーが Windows フォームのボタンをクリックしたときに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer が起動し、特定のレポート URL を渡すことができます。  
+ <xref:System.Diagnostics.Process> クラスを使用して、コンピューターで実行されているプロセスにアクセスできます。 <xref:System.Diagnostics.Process>クラスは、アプリケーションを[!INCLUDE[msCoName](../../includes/msconame-md.md)]起動、停止、制御、および監視するための便利[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]な構成要素です。 レポート サーバー データベースの特定のレポートを表示するには、レポートへの URL を渡して **IExplore** プロセスを起動できます。 次のコード例を使用すると、ユーザーが Windows フォームのボタンをクリックしたときに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer が起動し、特定のレポート URL を渡すことができます。  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,11 +87,11 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Windows フォームに WebBrowser コントロールを追加するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で新しい Windows アプリケーションを作成します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)]また[!INCLUDE[msCoName](../../includes/msconame-md.md)]は[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のいずれかで、新しい Windows アプリケーションを作成します。  
   
 2.  **[ツールボックス]** ダイアログ ボックスで <xref:System.Windows.Forms.WebBrowser> コントロールを探します。  
   
-     **ツールボックス**が表示されていない場合は、 **[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
+     **ツールボックス**が表示されていない場合は、**[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
   
 3.  <xref:System.Windows.Forms.WebBrowser> コントロールを Windows フォームのデザイン画面にドラッグします。  
   
@@ -118,6 +118,6 @@ webBrowser1.Navigate(url);
  [URL アクセスを使用した Reporting Services の統合](integrating-reporting-services-using-url-access.md)   
  [SOAP を使用した Reporting Services の統合](integrating-reporting-services-using-soap.md)   
  [ReportViewer コントロールを使用した Reporting Services の統合](integrating-reporting-services-using-reportviewer-controls.md)   
- [URL アクセス &#40;SSRS&#41;](../url-access-ssrs.md)  
+ [URL アクセス (SSRS)](../url-access-ssrs.md)  
   
   

@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d85f5704a3a091f2f4b652812a66977eb11c93f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483406"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971842"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]、リーフ メンバーを作成する、システムにマスター データを追加して、ステージング テーブルを使用していない場合、または[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]データをインポートします。  
+  で [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 、マスターデータをシステムに追加し、ステージングテーブルまたはを使用してデータをインポートしない場合は、リーフメンバーを作成し [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] ます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
--   最低限必要**Update**にメンバーを追加するエンティティのリーフ モデル オブジェクトに対する権限。  
+-   メンバーを追加するエンティティのリーフモデルオブジェクトに対する**更新**権限が最低限必要です。  
   
 ### <a name="to-create-a-leaf-member"></a>リーフ メンバーを作成するには  
   
@@ -49,9 +48,9 @@ ms.locfileid: "65483406"
   
 8.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](add-update-and-delete-data-master-data-services.md)   
- [統合メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [ステージング処理を使用したマスターデータサービスのメンバーの読み込みまたは更新](add-update-and-delete-data-master-data-services.md)   
+ [統合メンバー &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  
   
   

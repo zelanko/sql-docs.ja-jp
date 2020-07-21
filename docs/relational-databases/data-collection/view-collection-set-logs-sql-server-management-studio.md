@@ -1,7 +1,6 @@
 ---
-title: コレクション セット ログの表示 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: コレクション セットのログの表示 (SSMS)
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24c587168f9778601e672141775f822b1b0362fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b347a88187e7f7b961c8ad86b50b334e0837333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733833"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>コレクション セット ログの表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   すべてのコレクション セットのログまたは個々のコレクション セットのログは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から表示できます。  
   
 ### <a name="to-view-collection-set-logs"></a>コレクション セットのログを表示するには  
@@ -32,8 +32,6 @@ ms.locfileid: "68055479"
      **[ログ ファイルの表示]** が開きます。ビューアーの **[データ コレクション]** ノードの下に、各コレクション セットのすべてのログ ファイルが選択された状態で表示されます。  
   
 3.  特定のコレクション セットのログを表示するには、表示しないログを含む各コレクション セットの横にあるチェック ボックスをオフにします。 コレクション セットのログ情報が、 **[ログ ファイルの表示]** の詳細ペインから削除されます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-view-a-specific-collection-set-log-file"></a>特定のコレクション セットのログ ファイルを表示するには  
   

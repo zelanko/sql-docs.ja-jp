@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5e39c227ede9890c1b7290a2e2dec8cdf7104a1a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829473"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438059"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>[値包含プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[値包含プロファイル要求]** のオプションを設定できます。 値包含プロファイルは、2 つの列間または列のセット間の値の重複を計算します。 したがって、このプロファイルでは、列または列のセットが、選択したテーブル間の外部キーとして適しているかどうかを判断できます。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、値包含プロファイルで Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "62829473"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="understanding-the-selection-of-columns-for-the-inclusioncolumns-property"></a>InclusionColumns プロパティの列の選択について  
  **[値包含プロファイル要求]** は、サブセット内のすべての値がスーパーセット内に存在するかどうかを計算します。 多くの場合、スーパーセットは参照テーブルです。 たとえば、住所テーブルの州列はサブセット テーブルです。 この列の 2 文字の州コードはすべて、スーパーセット テーブルである米国郵便サービス州コード テーブルにも存在します。  
@@ -57,7 +56,7 @@ ms.locfileid: "62829473"
   
 -   **全般**  
   
--   **Options**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **[ConnectionManager]**  
@@ -100,7 +99,7 @@ ms.locfileid: "62829473"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -121,13 +120,13 @@ ms.locfileid: "62829473"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[None]**  
  プロファイルの出力を絞り込むためのしきい値設定を選択します。 このプロパティの既定値は **[Specified]** です。 詳細については、このトピックの「しきい値設定について」を参照してください。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**[InclusionThresholdSetting]**|しきい値を指定しません。 キーの強さは、その値に関係なく報告されます。|  
+|**なし**|しきい値を指定しません。 キーの強さは、その値に関係なく報告されます。|  
 |**[Specified]**|**[InclusionStrengthThreshold]** で指定したしきい値を使用します。 包含の強さは、このしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値を指定しません。 包含の強さは、サブセットの値がスーパーセットの値に完全に含まれている場合にのみ報告されます。|  
   
@@ -141,7 +140,7 @@ ms.locfileid: "62829473"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[InclusionThresholdSetting]**|しきい値を指定しません。 包含の強さは、スーパーセット列のキーの強さに関係なく報告されます。|  
+|**なし**|しきい値を指定しません。 包含の強さは、スーパーセット列のキーの強さに関係なく報告されます。|  
 |**[Specified]**|**[SupersetColumnsKeyThreshold]** で指定したしきい値を使用します。 包含の強さは、スーパーセット列のキーの強さがこのしきい値より大きい場合にのみ報告されます。|  
 |**[Exact]**|しきい値を指定しません。 包含の強さは、スーパーセット列がスーパーセット テーブルのキーに完全に一致している場合にのみ報告されます。|  
   
@@ -155,6 +154,6 @@ ms.locfileid: "62829473"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

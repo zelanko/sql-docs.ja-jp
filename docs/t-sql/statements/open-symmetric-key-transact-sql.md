@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c4adbad4a3775ddd0f6af97dbea2c1afdba76c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129392"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897087"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   対称キーの暗号化を解除し、対称キーを使用可能にします。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68129392"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   
@@ -67,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  対称キーの保護に使用されているパスワードを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 対称キーを開いてからコンテキストを切り替えた場合、キーは開かれたままになり、権限を借用したコンテキストでも使用できます。 開いている対称キーに関する情報は、[sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) カタログ ビューで確認できます。  
   
  対称キーが別のキーで暗号化された場合は、そのキーを最初に開く必要があります。  
@@ -87,7 +87,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 -   DECRYPTION BY PASSWORD の場合は、対称キーの暗号化に使用されたパスワードの 1 つについての情報が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. 証明書を使用して対称キーを開く  
  次の例では、対称キー `SymKeyMarketing3` を開き、証明書 `MarketingCert9` の秘密キーを使って暗号化を解除します。  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft Docs
+title: sp_cdc_get_captured_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b2726479cf082b33fddbec609321e82aeafa9633
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891082"
 ---
-# <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sp_cdc_get_captured_columns (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したキャプチャ インスタンスによって追跡されるキャプチャ対象のソース列について、変更データ キャプチャのメタデータ情報を返します。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
@@ -45,9 +45,9 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="arguments"></a>引数  
  [ @capture_instance =] '*capture_instance*'  
- ソース テーブルに関連付けられたキャプチャ インスタンスの名前です。 *capture_instance*は**sysname** NULL にすることはできません。  
+ ソーステーブルに関連付けられたキャプチャインスタンスの名前を指定します。 *capture_instance*は**sysname**であり、NULL にすることはできません。  
   
- レポート テーブルのキャプチャ インスタンスを実行、 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアド プロシージャ。  
+ テーブルのキャプチャインスタンスに関するレポートを作成するには、 [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)ストアドプロシージャを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,27 +57,27 @@ sys.sp_cdc_get_captured_columns
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
-|ソース テーブル|**sysname**|ソース テーブルの名前。|  
+|source_table|**sysname**|ソーステーブルの名前。|  
 |capture_instance|**sysname**|キャプチャ インスタンスの名前です。|  
 |column_name|**sysname**|キャプチャされたソース列の名前。|  
-|column_id|**int**|ソース テーブル内の列の ID です。|  
+|column_id|**int**|ソーステーブル内の列の ID。|  
 |column_ordinal|**int**|ソース テーブル内での列の位置です。|  
-|data_type|**sysname**|列のデータを入力します。|  
-|character_maximum_length|**int**|文字ベースの列の最大文字数それ以外の場合は NULL です。|  
+|data_type|**sysname**|列のデータ型。|  
+|character_maximum_length|**int**|文字ベースの列の最大文字長。それ以外の場合は NULL。|  
 |numeric_precision|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、NULL です。|  
 |numeric_precision_radix|**smallint**|数値ベースの場合は、列の有効桁数の基数です。それ以外の場合は、NULL です。|  
 |numeric_scale|**int**|数値ベースの場合は、列の小数点以下桁数です。それ以外の場合は、NULL です。|  
-|datetime_precision|**smallint**|Datetime ベース以外の場合は、列の有効桁数それ以外の場合は NULL です。|  
+|datetime_precision|**smallint**|Datetime ベースの場合は、列の有効桁数です。それ以外の場合は NULL。|  
   
-## <a name="remarks"></a>コメント  
- Sys.sp_cdc_get_captured_columns を使用して、キャプチャ インスタンスのクエリ関数によって返されたキャプチャ対象列の列情報を取得する[cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)または[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)します。 列名、Id、および位置のキャプチャ インスタンスのライフ サイクルに対して不変で残ります。 追跡対象テーブルの基になるソース列のデータ型が変更された場合にのみ、列のデータ型が変化します。 追加またはソース テーブルから削除される列は、既存のキャプチャ インスタンスのキャプチャ対象列に対する影響を与えるありません。  
+## <a name="remarks"></a>注釈  
+ Sp_cdc_get_captured_columns を使用して、キャプチャされた列に関する列情報を取得します。キャプチャインスタンスのクエリ関数[cdc. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)または fn_cdc_get_net_changes_<capture_instance>[します。 ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) 列名、Id、および位置は、キャプチャインスタンスの有効期間中は一定のままです。 追跡対象テーブルの基になるソース列のデータ型が変更された場合にのみ、列のデータ型が変化します。 ソーステーブルに対して追加または削除された列は、既存のキャプチャインスタンスのキャプチャ対象列には影響しません。  
   
- 使用[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)情報を取得するデータ定義言語 (DDL) ステートメントのソース テーブルに適用します。 DDL の変更によって追跡対象ソース列の構造が変更された場合、そのような DDL の変更がすべて結果セットとして返されます。  
+ ソーステーブルに適用されるデータ定義言語 (DDL) ステートメントに関する情報を取得するには、 [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)を使用します。 DDL の変更によって追跡対象ソース列の構造が変更された場合、そのような DDL の変更がすべて結果セットとして返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- db_owner 固定データベース ロールのメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。 エラー 22981 を返します、呼び出し元にソース データを表示するアクセス許可がないとき (オブジェクトが存在しないかアクセスが拒否されました。)。  
+ db_owner 固定データベース ロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。 呼び出し元にソースデータを表示するアクセス許可がない場合、関数はエラー 22981 (オブジェクトが存在しないか、アクセスが拒否されました。) を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、`HumanResources_Employee` キャプチャ インスタンスに存在するキャプチャ対象列の情報を返します。  
   
 ```  
@@ -89,6 +89,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

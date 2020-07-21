@@ -8,27 +8,27 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e3c0e70164ad23d03d9621971fe2ee776e4c77a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 080bd33f6864355dbd0f6eb58903b1796670ed26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673012"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このビューは、指定した実行の各実行可能ファイルの行を表示します。  
   
  実行可能ファイルは、パッケージの制御フローに追加するタスクまたはコンテナーです。  
   
-|列名|**データ型**|[説明]|  
+|列名|**データの種類**|説明|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|実行可能ファイルの一意の識別子。|  
 |execution_id|**bigint**|実行のインスタンスの一意の識別子。|  
@@ -49,5 +49,5 @@ ms.locfileid: "68017438"
 > [!NOTE]  
 >  サーバー上で操作を実行する権限がある場合は、操作に関する情報を表示する権限もあります。 行レベルのセキュリティが適用されるため、表示する権限がある行のみが表示されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5682fc63f92000705f13afdaa35c20d4898190e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945593"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295129"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、コンテナーおよびタスク上のブレークポイントがサポートされています。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67945593"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではブレークの条件が 10 件用意されており、すべてのタスクとコンテナーで有効にできます。 **[ブレークポイントの設定]** ダイアログ ボックスでは、次の条件に基づいてブレークポイントを有効にできます。  
   
-|ブレークの条件|[説明]|  
+|ブレークの条件|説明|  
 |---------------------|-----------------|  
 |タスクまたはコンテナーが **OnPreExecute** イベントを受け取ったとき。|タスクが実行される直前に呼び出されます。 このイベントは、タスクまたはコンテナーが実行される直前に、タスクまたはコンテナーから発生します。|  
 |タスクまたはコンテナーが **OnPostExecute** イベントを受け取ったとき。|タスクの実行ロジックが完了した直後に呼び出されます。 このイベントは、タスクまたはコンテナーが実行された直後に、タスクまたはコンテナーから発生します。|  
@@ -71,9 +71,9 @@ ms.locfileid: "67945593"
   
  次の表では、ヒット カウントの種類について説明します。  
   
-|ヒット カウントの種類|[説明]|  
+|ヒット カウントの種類|説明|  
 |--------------------|-----------------|  
-|毎回|ブレークポイントにヒットすると、常に実行が中断されます。|  
+|Always (常に)|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |ヒット カウント (等しい)|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  
 |ヒット カウント (より大きいまたは等しい)|ブレークポイントの発生回数がヒット カウント以上になると実行が中断されます。|  
 |ヒット カウント (倍数)|ヒット カウントの倍数だけブレークポイントが発生すると実行が中断されます。 たとえば、このオプションを 5 に設定すると、実行は 5 回ごとに中断されます。|  
@@ -89,9 +89,9 @@ ms.locfileid: "67945593"
   
  次の表では、実行状態を示す色について説明します。  
   
-|色|実行状態|  
+|Color|実行状態|  
 |-----------|----------------------|  
-|灰色|実行の待機中です。|  
+|グレー|実行の待機中です。|  
 |黄|実行中|  
 |[緑]|正常に実行されました。|  
 |強調表示|実行されましたがエラーが発生しました。|  
@@ -112,13 +112,13 @@ ms.locfileid: "67945593"
   
  次の表は、各ウィンドウについて説明しています。  
   
-|ウィンドウ|[説明]|  
+|ウィンドウ|説明|  
 |------------|-----------------|  
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|  
-|[出力]|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  
-|[イミディエイト]|式をデバッグして評価し、変数の値を出力するのに使用されます。|  
+|出力|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  
+|即時|式をデバッグして評価し、変数の値を出力するのに使用されます。|  
 
-## <a name="debug"></a> タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
   この手順では、パッケージ、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーにブレークポイントを設定する方法について説明します。  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>パッケージ、タスク、またはコンテナーにブレークポイントを設定するには  
@@ -144,17 +144,17 @@ ms.locfileid: "67945593"
 ## <a name="set-breakpoints"></a>[ブレークポイントの設定]
   **[ブレークポイントの設定]** ダイアログ ボックスを使用すると、ブレークポイントを有効にしてブレークポイントの動作を制御するためのイベントを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **有効**  
  選択すると、イベントのブレークポイントが有効になります。  
   
- **[ブレークの条件]**  
+ **Break Condition**  
  ブレークポイントの設定に使用できるイベントの一覧を表示します。  
   
- **[ヒット カウントの種類]**  
+ **Hit Count Type**  
  ブレークポイントがいつ有効になるかを指定します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**毎回**|ブレークポイントにヒットすると、常に実行が中断されます。|  
 |**ヒット カウント (等しい)**|ブレークポイントの発生回数がヒット カウントと等しくなると実行が中断されます。|  

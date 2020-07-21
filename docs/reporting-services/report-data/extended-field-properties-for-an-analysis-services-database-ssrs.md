@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースに対する拡張フィールド プロパティ (SSRS) | Microsoft Docs
+title: Analysis Services データベースに対する拡張フィールド プロパティ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573320"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077680"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ **Value** および **IsMissing** に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールド プロパティ値をレポートに含めるには、組み込み **Fields** コレクションを使用して名前で拡張フィールド プロパティ値を指定する式を記述します。  
@@ -40,21 +40,21 @@ ms.locfileid: "65573320"
   
  次の表に、使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**型**|**説明/有効値**|  
+|**プロパティ**|**Type**|**説明/有効値**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**オブジェクト**|フィールドのデータ値を指定します。|  
-|**IsMissing**|**ブール値**|フィールドが結果データセットに存在するかどうかを示します。|  
+|**Value**|**Object**|フィールドのデータ値を指定します。|  
+|**IsMissing**|**Boolean**|フィールドが結果データセットに存在するかどうかを示します。|  
 |**UniqueName**|**String**|レベルの完全修飾名を返します。 たとえば、従業員の **UniqueName** 値は *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* のようになります。|  
 |**BackgroundColor**|**String**|データベースで定義されたフィールドの背景色を返します。|  
-|**色**|**String**|データベースで定義されたアイテムの前景色を返します。|  
+|**Color**|**String**|データベースで定義されたアイテムの前景色を返します。|  
 |**FontFamily**|**String**|データベースで定義されたアイテムのフォント名を返します。|  
-|**フォントサイズ**|**String**|データベースで定義されたアイテムのフォントのポイント サイズを返します。|  
+|**FontSize**|**String**|データベースで定義されたアイテムのフォントのポイント サイズを返します。|  
 |**フォント太さ**|**String**|データベースで定義されたアイテムのフォントの太さを返します。|  
 |**FontStyle**|**String**|データベースで定義されたアイテムのフォントのスタイルを返します。|  
 |**TextDecoration**|**String**|データベースで定義されたアイテムの特殊なテキストの書式設定を返します。|  
 |**FormattedValue**|**String**|メジャーまたは主要データに対して書式設定した値を返します。 たとえば、 **Sales Amount Quota** の **FormattedValue** プロパティは、$1,124,400.00 などの通貨形式を返します。|  
-|**[キー]**|**オブジェクト**|レベルのキーを返します。|  
-|**LevelNumber**|**Integer**|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
+|**[キー]**|**Object**|レベルのキーを返します。|  
+|**LevelNumber**|**整数**|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |**ParentUniqueName**|**String**|親子階層の場合は、親レベルの完全修飾名を返します。|  
   
 > [!NOTE]  
@@ -95,9 +95,9 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|日曜日|7/1/2001|[Date].[Date].[All Periods]|1|  
+|1-Jul-01|[Date].[Date].&[1]|土曜日|7/1/2001|[Date].[Date].[All Periods]|1|  
 |2-Jul-01|[Date].[Date].&[2]|月曜日|7/2/2001|[Date].[Date].[All Periods]|2|  
-|3-Jul-01|[Date].[Date].&[3]|火曜日|7/3/2001|[Date].[Date].[All Periods]|3|  
+|3-Jul-01|[Date].[Date].&[3]|Tuesday|7/3/2001|[Date].[Date].[All Periods]|3|  
   
  MDX クエリ デザイナーのグラフィカル モードを使用して作成される既定の MDX クエリに、ディメンション プロパティとして含まれるのは MEMBER_CAPTION と UNIQUENAME のみです。 既定では、これらの値は常に **String**データ型です。  
   
@@ -126,10 +126,10 @@ CELL PROPERTIES
   
  プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|値|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

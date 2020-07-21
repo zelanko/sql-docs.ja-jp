@@ -12,10 +12,10 @@ ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee4e9f30dc190aae78e1e3e763451e42b3a52ecb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571013"
 ---
 # <a name="xml-device-information-settings"></a>XML デバイス情報設定
@@ -31,7 +31,7 @@ ms.locfileid: "65571013"
 |**OmitSchema**|**true**<br /><br /> **false**|XML からスキーマの場所を省略するかどうかを示します。 場所は SchemaLocation 属性です。<br /><br /> OmitSchema の既定値は OmitNamespace の値によって決まります。<br /><br /> OmitNamespace = False の場合、既定では、OmitSchema = **False** です。 ユーザーは OmitSchema = True を設定して既定値をオーバーライドできます。<br /><br /> OmitNamespace = True の場合、OmitShema に明示的に構成した値に関係なく、OmitSchema は **True** として機能します。|  
 |**[エンコード]**|.NET Framework でサポートされている文字エンコードの Internet Assigned Numbers Authority (IANA) 名。|既定値は **UTF-8**です。 他の値には、ASCII、UTF-7、UTF-16 などがあります。|  
 |**FileExtension**|生成されたファイルに使用するファイル拡張子。||  
-|**[スキーマ]**|**true** の値は、XML スキーマを表示することを示します。 既定値は **false**です。|XML スキーマ定義 (XSD) を表示するか、実際の XML データを表示するかを示します。|  
+|**[スキーマ]**|**true** の値は、XML スキーマを表示することを示します。 既定値は **false** です。|XML スキーマ定義 (XSD) を表示するか、実際の XML データを表示するかを示します。|  
   
 ## <a name="see-also"></a>参照  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

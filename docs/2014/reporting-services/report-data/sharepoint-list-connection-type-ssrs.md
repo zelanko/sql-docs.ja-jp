@@ -11,32 +11,32 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107077"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
   Microsoft SharePoint リストのデータをレポートに含めるには、種類が Microsoft SharePoint リストのレポート データ ソースに基づいたデータセットを追加または作成する必要があります。 これは、Microsoft SQL Server Reporting Services SharePoint リストのデータ拡張機能に基づいたビルトイン データ ソースの種類です。 このデータ ソースの種類を使用して、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0、および [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 のサイトからのリスト データに接続し、そのデータを取得します。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)を参照してください。  
+ このトピックの情報を使用して、データ ソースを構築してください。 詳細な手順については、「[データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;の追加と検証](add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Connection"></a> 接続文字列  
+##  <a name="connection-string"></a><a name="Connection"></a>接続文字列  
  SharePoint リストへの接続文字列は、SharePoint サイトまたはサブサイトの URL です ( `http://MySharePointWeb/MySharePointSite` や `http://MySharePointWeb/MySharePointSite/Subsite`など)。  
   
  クエリ デザイナーには、付与されている権限でアクセスできる SharePoint リストが表示されます。  
   
- 他の接続文字列の例については、 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)に関する記事を参照してください。  
+ 接続文字列の例について詳しくは、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」をご覧ください。  
   
-##  <a name="Credentials"></a> 資格情報  
- クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。 レポートをパブリッシュした後、そのデータ ソースに対する資格情報を変更する必要が生じる場合があります。そのレポートをレポート サーバーで実行するときに、データを取得するためのアクセス許可が有効な状態になるようにするためです。 このデータ拡張機能で使用できる資格情報の種類は、データ ソースとして使用している SharePoint リストの SharePoint テクノロジの構成によって異なります。  
+##  <a name="credentials"></a><a name="Credentials"></a>認証  
+ クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。 レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。 このデータ拡張機能で使用できる資格情報の種類は、データ ソースとして使用している SharePoint リストの SharePoint テクノロジの構成によって異なります。  
   
  次の表は、ローカル ファームの SharePoint リストおよびリモートの SharePoint リストに接続するときに SharePoint リスト拡張機能が実行する資格情報取得動作の概要を示しています。  
   
  **表 1** は、レガシ Windows SharePoint サイトに配置されたレポートの場合です。 レガシ Windows サイトがサポートしているのは、Kerberos、NTLM、およびフォーム ベースの認証 (FBA) のみです。 **表 2** は、要求ベースの SharePoint サイトに配置されたレポートの場合です。  
   
- **表 1**  
+ **テーブル 1**  
   
 ||サポートされる資格情報|クラシック モードの Windows 認証|<sup>3</sup>要求認証|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "66107077"
 |リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<sup>2</sup>|  
 ||保存、要求、なし (Windows 資格情報を使用<sup>1</sup>)|はい|いいえ<sup>2</sup>|  
   
- **表 2**  
+ **表2**  
   
 ||サポートされる資格情報|クラシック モードの Windows 認証|<sup>3</sup>要求認証|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
@@ -54,27 +54,27 @@ ms.locfileid: "66107077"
 |リモートの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|いいえ<sup>2</sup>|  
 ||保存、要求、なし (Windows 資格情報を使用<sup>1</sup>)|いいえ|いいえ<sup>2</sup>|  
   
- <sup>1</sup>保存された情報や Windows 以外の資格情報のプロンプトの資格情報はサポートされていません。  
+ <sup>1</sup> Windows 以外の資格情報で格納された資格情報とプロンプトの資格情報はサポートされていません。  
   
- <sup>2</sup>リモートの SharePoint リストのフォーム ベースの認証および要求認証はサポートされません。  
+ <sup>2</sup>フォームベース認証と要求認証は、リモートの SharePoint リストではサポートされていません。  
   
- <sup>3</sup> Windows 認証、フォーム ベース認証 (FBA)、セキュア アプリケーション マークアップ言語 (SAML) トークン、その他の id プロバイダーまたは上記の 1 つ以上の組み合わせは、認証プロバイダーを説明します。  
+ <sup>3</sup> Windows 認証、フォームベース認証 (FBA)、セキュアアプリケーションマークアップ言語 (SAML) トークン、その他の id プロバイダー、または上記の認証プロバイダーの組み合わせ。  
   
- **[Windows 認証]**  
+ **Windows 認証**  
  信頼済みアカウント モードのレポート サーバーと連携するように構成されている SharePoint テクノロジの場合、このオプションはサポートされません。 これは、SQL Server 2012 Reporting Services より前のリリースにのみ適用されます。  
   
  Windows 統合モードのレポート サーバーと連携するように構成されている SharePoint テクノロジの場合、このオプションは現在の Windows ユーザーと現在の SharePoint ユーザーの両方に適用されます。  
   
- レポート サーバー (ローカル モード) なしで動作するように構成されている SharePoint テクノロジの場合、このオプションはサポートされません。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート (Reporting Services の SharePoint モード)](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)」を参照してください。  
+ レポート サーバー (ローカル モード) なしで動作するように構成されている SharePoint テクノロジの場合、このオプションはサポートされません。 ローカルモードの詳細については、「[レポートビューアーでのローカルモードと接続モードのレポート](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)」の「&#40;Reporting Services」&#41;を参照してください。  
   
  **[資格情報は必要ありません]\([資格情報を使用しない])**  
  このオプションを使用するには、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
  Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
   
- 詳細については、次を参照してください[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)、[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)、および[でサポートされるデータ ソース。Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)します。  
+ 詳細については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。[レポートビルダーで資格情報を指定](../specify-credentials-in-report-builder.md)し、 [Reporting Services &#40;SSRS&#41;でサポートされているデータソース](../create-deploy-and-manage-mobile-and-paginated-reports.md)を指定してください。  
   
-##  <a name="Query"></a> クエリ  
+##  <a name="queries"></a><a name="Query"></a>問い合わせ  
  クエリを設計するには、データ ソースから新規データセットを作成し、関連するクエリ デザイナーを開きます。 詳細については、「 [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
  SharePoint リストのグラフィカル クエリ デザイナーには、次の 4 つのペインがあります。  
@@ -141,7 +141,7 @@ ms.locfileid: "66107077"
   
  整形式の XML テキストという状態を崩さない限り、このビューのクエリを編集できます。  
   
-#### <a name="example-2-all-fields-for-a-list"></a>例 2。 リストのすべてのフィールド  
+#### <a name="example-2-all-fields-for-a-list"></a>例 2. リストのすべてのフィールド  
  リストの名前のみを指定することもできます。非表示のフィールドを含むすべてのフィールドが返されます。 次の例では、Tasks という名前のリストからすべてのフィールドを取得します。  
   
 ```  
@@ -152,42 +152,42 @@ ms.locfileid: "66107077"
   
  リスト Tasks のすべてのフィールドがクエリ結果で返されます。  
   
-##  <a name="Parameters"></a> パラメーター  
+##  <a name="parameters"></a><a name="Parameters"></a>パラメータ  
  このデータ拡張機能では、パラメーターはサポートされていません。  
   
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>操作方法に関するトピック  
  データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
   
- [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [データ接続またはデータソース &#40;レポートビルダーと SSRS&#41;に追加して検証する](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
-##  <a name="Related"></a> 関連項目  
+##  <a name="related-sections"></a><a name="Related"></a> 関連セクション  
  次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)  
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
  [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  データ接続とデータ ソースについて説明します。  
   
- [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [レポート埋め込みデータセットと共有データセット &#40;レポートビルダーと SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  埋め込みデータセットと共有データセットについて説明します。  
   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント)。  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
   
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポートパラメーター &#40;レポートビルダーとレポートデザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [データのフィルター処理、グループ化、並べ替え &#40;レポートビルダーと SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

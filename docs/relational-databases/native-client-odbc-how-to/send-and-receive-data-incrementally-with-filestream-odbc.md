@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM (ODBC) のインクリメンタル式でのデータの送受信 |Microsoft Docs
+title: データインクリメンタル、FILESTREAM (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,34 +8,32 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cd8c0de5e2ba4df7f5a07800ce77fd691a1c784
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: f475eb3ba5887932ff760077fb001e520ca48130
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937478"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002920"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
- FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)します。  
+ FILESTREAM 機能の詳細については、「 [Filestream Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にしてください (「[FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)」を参照)。  
   
- 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ 1つ目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
- 2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
+ 2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
   
- 3 番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用されるデータベースを削除します。  
+ 3番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用されるデータベースを削除します。  
   
-```  
+```sql
 USE master  
 GO  
   
@@ -76,7 +74,7 @@ CREATE TABLE [myfilestreamdb]..[mydocs]
 GO  
 ```  
   
-```  
+```cpp
 // compile with: /D "_UNICODE" /D "UNICODE" odbc32.lib /EHsc  
 #pragma once  
 #define WIN32_LEAN_AND_MEAN  
@@ -177,7 +175,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 }  
 ```  
   
-```  
+```sql
 USE master  
 GO  
 -- Drop the filestream demo database  

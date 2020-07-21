@@ -1,5 +1,5 @@
 ---
-title: setNClob メソッド (int, java. io. Reader, long) |Microsoft Docs
+title: setNClob メソッド (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dae9fbeb16a5b9c9c881e4250206b7f83344ef78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 915f10af904bb6688ce5c59d8322662ebefaf9a1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973800"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901128"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setNClob メソッドは、java.sql.PreparedStatement インターフェイスの setNClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリング エンドポイント (SQL Server) | Microsoft Docs
+description: 各サーバーが Always On 可用性グループまたはデータベース ミラーリングに参加するために必要な専用データベース ミラーリング エンドポイントについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896993"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>データベース ミラーリング エンドポイント (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   サーバー インスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] またはデータベース ミラーリングに参加するには、専用の *データベース ミラーリング エンドポイント*が必要です。 このエンドポイントの用途は特殊で、他のサーバー インスタンスからの接続を受信するためにのみ使用されます。 特定のサーバー インスタンスでは、他のサーバー インスタンスに対するすべての [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] またはデータベース ミラーリング接続では、単一のデータベース ミラーリング エンドポイントが使用されます。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68047991"
 >  データベース ミラーリング機能は、将来のバージョンの Microsoft SQL Server では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在データベース ミラーリングを使用しているアプリケーションでは、代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用するようにアプリケーションを修正することを計画してください。  
   
   
-##  <a name="ServerNetworkAddress"></a> サーバー ネットワーク アドレス  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> サーバー ネットワーク アドレス  
  サーバー インスタンスのネットワーク アドレス (サーバー インスタンスの *サーバー ネットワーク アドレス* または *エンドポイント URL*) には、そのサーバー インスタンスのホスト コンピューターのシステム名とドメイン名以外に、そのサーバー インスタンスのエンドポイントのポート番号も含まれています。 このポート番号は、特定のサーバー インスタンスを一意に識別します。  
   
  次の図に、同じサーバー上の 2 つのサーバー インスタンスを一意に識別するしくみを示します。 どちらのサーバー インスタンスのサーバー ネットワーク アドレスにも、同じシステム名 `MYSYSTEM`とドメイン名 `Adventure-Works.MyDomain.com`が含まれています。 システム側でサーバー インスタンスまでルーティングできるように、サーバー ネットワーク アドレスには、特定のサーバー インスタンスのミラーリング エンドポイントに関連付けられたポート番号が含まれています。  
@@ -57,7 +58,7 @@ ms.locfileid: "68047991"
 >  使用中のデータベース ミラーリング エンドポイントは再構成しないでください。 サーバー インスタンスは、互いのエンドポイントを使用して、他のシステムの状態を調べます。 エンドポイントを再構成すると、そのエンドポイントは再起動されます。これにより、他のサーバー インスタンスではエラーが発生したように見えることがあります。 これは、自動フェールオーバー モードでは特に重要です。この場合、パートナーでエンドポイントを再構成すると、フェールオーバーが発生する可能性があります。  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> データベース ミラーリング エンドポイント用の Windows 認証の種類の決定  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> データベース ミラーリング エンドポイント用の Windows 認証の種類の決定  
  データベース ミラーリング エンドポイントに使用できる認証の種類は、サーバー インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントによって次のように決定されることを理解しておく必要があります。  
   
 -   サーバー インスタンスがドメイン サービス アカウントで実行中の場合は、データベース ミラーリング エンドポイントで Windows 認証を使用できます。 同じドメイン ユーザー アカウントですべてのサーバー インスタンスを実行した場合は、自動的に両方の **マスター** データベースに正しいユーザー ログインが存在します。 可用性データベースのセキュリティ構成が単純化されるので、こちらの方法をお勧めします。  
@@ -74,7 +75,7 @@ ms.locfileid: "68047991"
      証明書を使用してデータベース ミラーリング セキュリティを自動的に構成する方法は用意されていません。 CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは **New-SqlHadrEndpoint** PowerShell コマンドレットのいずれかを使用する必要があります。 詳細については、「 [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。 サーバー インスタンスで証明書の認証を有効にする方法については、「 [データベース ミラーリング エンドポイントでの証明書の使用 (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」をご覧ください。  
   
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリング エンドポイントを構成するには**  
   
 -   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

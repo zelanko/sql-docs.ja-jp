@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7cfc1a4c6856debd52097b89587167060d212c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0c50372c199d80dc0e6d3d7e3326918011f8a28
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082201"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283063"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>レッスン 6-3:レッスン 6 のパッケージをテストする
 
@@ -35,7 +35,7 @@ ms.locfileid: "68082201"
   
 **データ フロー**  
   
-![データ フロー](../integration-services/media/task5lesson5data.gif "データ フロー")  
+![データ フロー](../integration-services/media/task5lesson5data.gif "Data Flow")  
   
 ## <a name="test-the-lesson-6-package"></a>レッスン 6 のパッケージをテストする  
   

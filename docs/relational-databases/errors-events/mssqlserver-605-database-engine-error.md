@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7657c18708e9b54c33f15142c57782da671037f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903931"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279609"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|605|  
 |イベント ソース|MSSQLSERVER|  
@@ -54,6 +54,7 @@ ms.locfileid: "67903931"
   
 1.  次のクエリを実行して、メッセージ内に指定されているアロケーション ユニットと関連付けられているテーブルを特定し、 `allocation_unit_id` をエラー メッセージ内に指定されているアロケーション ユニットと入れ替えます。  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -73,6 +74,7 @@ ms.locfileid: "67903931"
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  エラー メッセージ内に指定されている 2 番目のアロケーション ユニット ID と関連付けられているテーブルに対し、REPAIR 句なしで DBCC CHECKTABLE を実行します。  
   

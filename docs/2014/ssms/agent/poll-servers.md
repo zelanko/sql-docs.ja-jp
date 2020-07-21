@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6370e53083d2cf818e8c8b09752d49e092755a46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63062210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067683"
 ---
 # <a name="poll-servers"></a>サーバーのポーリング
   マルチサーバー管理を実装している場合、ターゲット サーバーからマスター サーバーに定期的にアクセスし、既に実行したジョブの情報をアップロードして新しいジョブをダウンロードします。 マスター サーバーにアクセスする処理は *サーバー ポーリング* と呼ばれ、定期的な *ポーリング間隔*で行われます。  
@@ -51,7 +50,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   ジョブ スケジュールまたはジョブ ステップを変更しないジョブ ストアド プロシージャの場合。  
   
- **対象サーバーからマスター サーバーにポーリングさせるには**  
+ **ターゲット サーバーからマスター サーバーにポーリングさせるには**  
   
 -   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   

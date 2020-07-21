@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10f97749970337435b14ff0d1dc14df42ad48daf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c3c6361737f8aefd3e6e9eac0af7caf29684b97
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732752"
 ---
-# <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="cert_id-transact-sql"></a>CERT_ID (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、証明書の ID 値を返します。
   
@@ -48,13 +48,13 @@ Cert_ID ( 'cert_name' )
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) カタログ ビューでは、証明書名を表示します。
   
 ## <a name="permissions"></a>アクセス許可  
 証明書に関する適切なアクセス許可が必要です。また、証明書に対する呼び出し元の VIEW DEFINITION アクセス許可が拒否されていない必要があります。 証明書のアクセス許可の詳細については、「[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md#permissions)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、`ABerglundCert3` という名前の証明書の ID を返します。
   
 ```sql

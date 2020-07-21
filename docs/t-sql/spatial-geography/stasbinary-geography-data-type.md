@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4cad5886b2bbf367ef9e3f0ebe97a370e4a5bd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705250"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスについて Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。  
   
@@ -41,12 +41,12 @@ ms.locfileid: "68042544"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR の戻り値の型:**SqlBytes**  
+ CLR 戻り値の型: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STAsBinary()` を使用して、`LineString``geography` インスタンスを、テキストから (-122.360, 47.656) ～ (-122.343, 47.656) の範囲で作成する例を次に示します。 その後、結果を WKB で返します。  
   
 ```  

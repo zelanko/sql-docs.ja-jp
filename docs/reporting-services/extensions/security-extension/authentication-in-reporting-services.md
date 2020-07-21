@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193853"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488588"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
   認証とは、ユーザーの本人性を立証するプロセスです。 ユーザー認証にはさまざまな方法がありますが、 最も一般的なのはユーザー パスワードを使用する方法です。 たとえば、フォーム認証を実装する場合は、ユーザーに対して資格情報の提示を要求し (通常は、ログイン名とパスワードを要求するインターフェイスを使用)、データベース テーブルや構成ファイルなどのデータ ストアと照合して、そのユーザーが本人かどうかを検証します。 資格情報の有効性を確認できない場合は、認証プロセスが失敗し、そのユーザーは匿名ユーザーであると見なされます。  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  Web サービスがセキュリティ拡張機能によってユーザーの認証を正常に完了すると、以降の要求に使用されるクッキーが生成されます。 クッキーをカスタム セキュリティ機関に保持することはできません。レポート サーバーがセキュリティ機関を所有していないためです。 クッキーは <xref:ReportService2010.ReportingService2010.LogonUser%2A> Web サービス メソッドから返され、以降の Web サービス メソッド呼び出しおよび URL アクセスに使用されます。  
   
 > [!NOTE]  
->  転送時にクッキーが損傷しないよう、<xref:ReportService2010.ReportingService2010.LogonUser%2A> から返される認証クッキーの転送を Secure Sockets Layer (SSL) 暗号化を使用して保護する必要があります。  
+>  転送時にクッキーが損傷しないよう、<xref:ReportService2010.ReportingService2010.LogonUser%2A> から返される認証クッキーの転送をトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) 暗号化を使用して保護する必要があります。  
   
  カスタム セキュリティ拡張機能をインストールした場合に URL アクセスによってレポート サーバーにアクセスすると、インターネット インフォメーション サービス (IIS) および [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] が認証チケットの転送を自動的に管理します。 OAP API によってレポート サーバーにアクセスする場合は、プロキシ クラスの実装に認証チケット管理用の追加サポートを含める必要があります。 SOAP API の使用および認証チケットの管理の詳細については、「カスタム セキュリティでの Web サービスの使用」を参照してください。  
   
 ## <a name="forms-authentication"></a>フォーム認証  
  フォーム認証は [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 認証の種類の 1 つであり、未認証ユーザーは HTML フォームにリダイレクトされます。 ユーザーが資格情報を入力すると、認証チケットを含むクッキーが発行されます。 以降の要求では、クッキーをチェックしてユーザーがレポート サーバーによって認証されているかどうかを確認します。  
   
- Reporting Services API から利用できるセキュリティ拡張機能インターフェイスを使用すると、フォーム認証をサポートするように [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を拡張できます。 フォーム認証を使用するように [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を拡張する場合は、レポート サーバーとのすべての通信に Secure Sockets Layer (SSL) を使用して、悪意のあるユーザーが別のユーザーのクッキーにアクセスすることを防止します。 SSL を使用した場合、クライアントとレポート サーバーが相互に認証でき、2 台のコンピューター間の通信内容を他のコンピューターから読み取ることができなくなります。 SSL 接続で送信されたすべてのデータが暗号化されるため、悪意のあるユーザーはレポート サーバーに送信されたパスワードやデータを傍受できません。  
+ Reporting Services API から利用できるセキュリティ拡張機能インターフェイスを使用すると、フォーム認証をサポートするように [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を拡張できます。 フォーム認証を使用するように [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を拡張する場合は、レポート サーバーとのすべての通信にトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して、悪意のあるユーザーが別のユーザーのクッキーにアクセスすることを防止します。 TLS を使用した場合、クライアントとレポート サーバーが相互に認証でき、2 台のコンピューター間の通信内容を他のコンピューターから読み取ることができなくなります。 TLS 接続でクライアントから送信されるすべてのデータが暗号化されるため、悪意のあるユーザーはレポート サーバーに送信されたパスワードやデータを傍受できません。  
   
  一般に、フォーム認証は、Windows 以外のプラットフォームでのアカウントおよび認証をサポートするために実装されます。 レポート サーバーへのアクセスを要求するユーザーにグラフィカル インターフェイスが表示され、入力した資格情報が認証のためにセキュリティ機関に送信されます。  
   

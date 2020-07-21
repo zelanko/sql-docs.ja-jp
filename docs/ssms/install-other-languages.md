@@ -1,5 +1,5 @@
 ---
-title: 英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする | Microsoft Docs
+title: 英語以外の言語バージョンをインストールする
 description: 英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする
 ms.prod: sql
 ms.reviewer: ''
@@ -7,14 +7,14 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: fb1d51121f38aa2adfe0bdfbfcb6c5bcc10d8c4f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265009"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246883"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする
 
@@ -45,12 +45,12 @@ SSMS は複数の言語で利用可能ですが、コンピューターのシス
    - 目的の Visual Studio 2015 Shell (Isolated) Language Pack をダウンロードしてインストールします。
 
    > [!IMPORTANT]
-   > Visual Studio 2015 Shell (Isolated) Language Pack のインストールは、必ず上記手順で実行してください。 **[ツール]**  |  **[オプション]**  |  **[国際対応の設定]** の **[追加の言語を取得する]** リンクは使用しないでください。
+   > Visual Studio 2015 Shell (Isolated) Language Pack のインストールは、必ず上記手順で実行してください。**[ツール]** | **[オプション]** | **[国際対応の設定]** の **[追加の言語を取得する]** リンクは使用しないでください。
 
 5. SSMS を実行して、次の設定から使用する言語を選択します。
    - **[ツール]**  |  **[オプション]**  |  **[国際対応の設定]**
 6. SSMS を閉じて再起動します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- [チュートリアル: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [チュートリアル:SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)

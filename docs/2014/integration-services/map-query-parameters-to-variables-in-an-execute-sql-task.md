@@ -1,5 +1,5 @@
 ---
-title: クエリ パラメーターを変数にマップを SQL 実行タスク |Microsoft Docs
+title: クエリパラメーターを SQL 実行タスクの変数にマップする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2e105e2ccccce912965cbfc0662a380ea1a6264
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057794"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440269"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
 
@@ -38,7 +37,7 @@ ms.locfileid: "66057794"
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、次を参照してください[タスクまたはコンテナーの制御フローに追加または削除。](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  SQL 実行タスクがまだパッケージに含まれていない場合、SQL 実行タスクをパッケージの制御フローに追加します。 詳細については、「[制御フローでのタスクまたはコンテナーの追加または削除](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)」を参照してください。  
   .  
   
 5.  SQL 実行タスクをダブルクリックします。  
@@ -58,7 +57,7 @@ ms.locfileid: "66057794"
     |接続の種類|パラメーター マーカー|  
     |---------------------|----------------------|  
     |ADO (ADO)|?|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL および OLE DB|?|  
   
@@ -80,10 +79,10 @@ ms.locfileid: "66057794"
   
      使用するパラメーター名は、SQL 実行タスクが使用する接続の種類によって異なります。  
   
-    |接続の種類|[パラメーター名]|  
+    |接続の種類|パラメーター名|  
     |---------------------|--------------------|  
     |ADO (ADO)|Param1、Param2、...|  
-    |ADO.NET および SQLMOBILE|@\<パラメーター名>|  
+    |ADO.NET および SQLMOBILE|@\<parameter name>|  
     |ODBC|1、2、3、...|  
     |EXCEL および OLE DB|0、1、2、3、…|  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66057794"
   
 ## <a name="see-also"></a>参照  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
- [パラメーターとリターン コード、SQL 実行タスク](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [SQL 実行タスクのパラメーターとリターンコード](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
   

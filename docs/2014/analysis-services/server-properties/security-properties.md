@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a6b5880a67afde3efaf34eb9050dc9c95b472bf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940611"
 ---
 # <a name="security-properties"></a>セキュリティのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 次の表に示すセキュリティ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元および表形式サーバー モード  
+ **適用対象:** 多次元サーバー モードおよびテーブル サーバー モード  
   
 ## <a name="properties"></a>プロパティ  
  `RequireClientAuthentication`  
@@ -69,7 +68,7 @@ ms.locfileid: "66068909"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
+ [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

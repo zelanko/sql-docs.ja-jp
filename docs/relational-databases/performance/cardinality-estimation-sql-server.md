@@ -15,16 +15,16 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730290"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コストベースのオプティマイザーです。 つまり、実行のための推定処理コストが最も低いクエリ プランが選択されます。 クエリ オプティマイザーでは、主に次の 2 つの要素に基づいてクエリ プランを実行する際のコストが決定されます。
 
@@ -48,12 +48,7 @@ ms.locfileid: "67946994"
 
 この記事では、ご利用のシステムに最適な CE 構成を評価して選択する方法を示しています。 最も正確なので、ほとんどのシステムで最新の CE のメリットを享受できます。 CE はクエリが返す可能性のある行の数を予測します。 クエリ オプティマイザーではカーディナリティ予測を使用して、最適なクエリ プランを生成します。 推定が正確であるほど、通常はクエリ オプティマイザーでより最適なクエリ プランを生成できます。  
   
-アプリケーション システムには、新しい CE が原因で低速のプランに変更された重要なクエリが含まれている可能性があります。 そのようなクエリは、次のいずれかのようになります。  
-  
-- OLTP (オンライン トランザクション処理) クエリ。頻繁に実行され、その複数のインスタンスがしばしば同時に実行されます。  
-- SELECT。OLTP 営業時間中に実行される大量の集計と一緒に実行されます。  
-  
-新規の CE で低速で実行するクエリを識別するための手法があります。 そして、パフォーマンスの問題に対処する方法のオプションもあります。
+アプリケーション システムには、バージョン全体の CE の変更が原因で低速のプランに変更された重要なクエリが含まれている可能性があります。 CE の問題によって低速で実行するクエリを識別するための手法とツールがあります。 また、その後のパフォーマンスの問題に対処する方法のオプションもあります。
   
 ## <a name="versions-of-the-ce"></a>CE のバージョン
 
@@ -102,7 +97,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
 GO
 ```  
  
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降の場合は、[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` を使用します。
+また、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降の場合は、[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` になります。
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -129,7 +124,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> 最新リリースの [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) をインストールし、頻繁に更新することをお勧めします。  
+> 最新リリースの [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールし、頻繁に更新することをお勧めします。  
+
+> [!IMPORTANT] 
+> クエリ ストアがデータベースとワークロードに対して正しく構成されていることを確認します。 詳細については、「[クエリ ストアを使用するときの推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)」を参照してください。 
   
 カーディナリティ推定処理を追跡するための別のオプションは、**query_optimizer_estimate_cardinality** という名前の拡張イベントを使用することです。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行します。 これは `C:\Temp\` に .xel ファイルを書き込みます (ただし、パスを変更することができます)。 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で .xel ファイルを開くと、ユーザーにわかりやすい方法で詳細情報が表示されます。  
   
@@ -176,7 +174,7 @@ GO
   
     3.  データベースの `LEGACY_CARDINALITY_ESTIMATION` 構成が OFF になっていることを確認します。  
   
-    4.  クエリ ストアをクリアします。 もちろん、クエリ ストアが ON であることを確認します。  
+    4.  クエリ ストアをクリアします。 クエリストアが ON になっていることを確認します。  
   
     5.  `SET NOCOUNT OFF;` ステートメントを実行します。  
   
@@ -282,8 +280,8 @@ WHERE Model = 'Xbox' AND
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  

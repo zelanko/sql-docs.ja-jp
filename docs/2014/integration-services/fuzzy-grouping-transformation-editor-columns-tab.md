@@ -1,5 +1,5 @@
 ---
-title: あいまいグループ化変換エディター ([列] タブ) |Microsoft Docs
+title: '[あいまいグループ化変換エディター] ([列] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,22 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6194849367e89e2e7ba93e0f1138f4fdef59b3c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425289"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター] ([列] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
   
  あいまいグループ化変換の詳細については、「 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **使用できる入力列**  
+## <a name="options"></a>オプション  
+ **[使用できる入力列]**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
  **名前**  
@@ -39,7 +38,7 @@ ms.locfileid: "66058357"
  **入力列**  
  **[使用できる入力列]** の一覧で選択されている入力列の 1 つを選択します。  
   
- **[出力の別名]**  
+ **出力のエイリアス**  
  対応する出力列に付けるわかりやすい名前を入力します。 既定では、出力列名は入力列名と同じになります。  
   
  **[グループ出力の別名]**  
@@ -57,10 +56,10 @@ ms.locfileid: "66058357"
  **[数字]**  
  列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**[Neither]**|先頭および末尾の数字は考慮されません。|  
-|**[Leading]**|先頭の数字のみが考慮されます。|  
+|**どちらもオフ**|先頭および末尾の数字は考慮されません。|  
+|**最高**|先頭の数字のみが考慮されます。|  
 |**[Trailing]**|末尾の数字のみが考慮されます。|  
 |**[Leading and Trailing]**|先頭および末尾の両方の数字が考慮されます。|  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66058357"
  文字列比較オプションについては、「 [文字列データの比較](data-flow/comparing-string-data.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまいグループ化変換を使用して類似のデータ行を識別する](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

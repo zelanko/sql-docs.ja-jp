@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 447ab09f049a5177a68a1c4a1d3d00239161149a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787373"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server、Batch Resp Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **SQLServer:Batch Resp Statistics** パフォーマンス オブジェクトには、SQL Server バッチ応答時間を追跡するカウンターが用意されています。
 
 次の表では、SQL Server の **Batch Resp Statistics** パフォーマンス オブジェクトについて説明します。
 
 
-|**SQL Server Batch Resp Statistics カウンター**|[説明]|  
+|**SQL Server Batch Resp Statistics カウンター**|説明|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|応答時間が 0 ミリ秒以上 1 ミリ秒未満の SQL バッチ数|
 |**Batches >=000001ms & \<000002ms**|応答時間が 1 ミリ秒以上 2 ミリ秒未満の SQL バッチ数|
@@ -48,7 +48,7 @@ ms.locfileid: "67987194"
 
 オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |**CPU Time:Requests**|要求に対して CPU が使用した時間。|  
 |**CPU Time:Total(ms)**|バッチに対して CPU が使用した合計時間。|  

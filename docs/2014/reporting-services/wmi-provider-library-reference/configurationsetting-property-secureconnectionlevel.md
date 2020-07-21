@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d1b3bccc8a7fee3899fa21208d83a718a33f5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097559"
 ---
-# <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>SecureConnectionLevel プロパティ (WMI MSReportServer_ConfigurationSetting)
-  RSReportServer.config ファイルに指定された、セキュリティで保護された接続レベルを返します。 読み取り専用。  
+# <a name="secureconnectionlevel-property-wmi-msreportserver_configurationsetting"></a>SecureConnectionLevel プロパティ (WMI MSReportServer_ConfigurationSetting)
+  RSReportServer.config ファイルに指定された、セキュリティで保護された接続レベルを返します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- `Integer`セキュリティで保護された接続レベルを表す値です。 この戻り値は、SSL が構成されているかどうかを示します。 1 以上の値は、SSL がオンであることを示します。 値 0 は、SSL がオフであることを示します。  
+ セキュリティ`Integer`で保護された接続レベルを表す値。 この戻り値は、SSL が構成されているかどうかを示します。 1 以上の値は、SSL がオンであることを示します。 値 0 は、SSL がオフであることを示します。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
@@ -47,7 +47,7 @@ public Integer SecureConnectionLevel;
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

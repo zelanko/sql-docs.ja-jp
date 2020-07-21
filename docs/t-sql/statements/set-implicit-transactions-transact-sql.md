@@ -24,15 +24,15 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928957"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004978"
 ---
-# <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   接続に対して、BEGIN TRANSACTION モードを "*暗黙*" に設定します。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "67928957"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ON の場合、システムは "*暗黙*" トランザクション モードです。 つまり、@@TRANCOUNT = 0 の場合に、次の Transact-SQL ステートメントのいずれかが新しいトランザクションを開始します。 これは、最初に実行される目に見えない BEGIN TRANSACTION と同じです。  
   
 ||||  
@@ -54,6 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |CREATE|INSERT|TRUNCATE TABLE|  
 |DELETE|OPEN|UPDATE|  
 |DROP|。|。|  
+||||
   
  OFF の場合、前の T-SQL ステートメントはそれぞれ目に見えない BEGIN TRANSACTION と目に見えない COMMIT TRANSACTION ステートメントによってバインドされます。 OFF の場合、トランザクション モードは "*オートコミット*" です。 T-SQL コードが明確に BEGIN TRANSACTION を発行する場合、トランザクション モードは "*明示的*" です。  
   
@@ -73,13 +74,13 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  IMPLICIT_TRANSACTIONS の現在の設定を表示するには、次のクエリを実行します。  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の Transact-SQL スクリプトは、いくつかの異なるテスト ケースを実行します。 動作の詳細と各テスト ケースの結果を示すテキスト出力も提供されます。  
   
 ```sql  
@@ -149,9 +150,9 @@ INSERT INTO dbo.t1 VALUES (42);
 PRINT N'[D.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 go  
 COMMIT TRANSACTION;  
-PRINT N'[D.04] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
-PRINT N'[D.05] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 go  
   
 -- Clean up.  

@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063522"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
-1.  **作業を開始する準備:** [アクセス許可](#Permissions)  
+1.  **作業を開始する準備:**  [アクセス許可](#Permissions)  
   
-2.  **使用して、リソース ガバナーのプロパティを表示するには。** [リソース ガバナーのプロパティ ページ](#ViewRGProp)  
+2.  **リソース ガバナーのプロパティを表示するには (次を使用):**  [[リソース ガバナーのプロパティ] ページ](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
- **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、次のトピックをご覧ください。  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
+ **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、以下のトピックを参照してください。  
   
 -   [リソース ガバナーの有効化](enable-resource-governor.md)  
   
--   [リソース ガバナーを無効にしたとき](disable-resource-governor.md)  
+-   [リソース ガバナーの無効化](disable-resource-governor.md)  
   
 -   [リソース プールの作成](create-a-resource-pool.md)  
   
@@ -51,11 +50,11 @@ ms.locfileid: "63209682"
   
  [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 動的管理ビューにクエリを実行して is_configuration_pending の現在の状態を取得することにより、構成が保留中かどうかを確認できます。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リソース ガバナーのプロパティを表示するには、VIEW SERVER STATER 権限が必要です。 リソース ガバナーの構成タスクを行うには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="ViewRGProp"></a> リソース ガバナーのプロパティ ページを表示します。  
- **で、次の [リソース ガバナーのプロパティ] ページでリソース ガバナーのプロパティを表示するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="view-the-resource-governor-properties-page"></a><a name="ViewRGProp"></a>[Resource Governor のプロパティ] ページを表示する  
+ **の [Resource Governor のプロパティ] ページを使用してリソースガバナーのプロパティを表示するには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
@@ -65,15 +64,15 @@ ms.locfileid: "63209682"
   
 4.  変更を保存するには、 **[OK]** をクリックします。  
   
-##  <a name="RGProp"></a> リソース ガバナーのプロパティ  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a>Resource Governor のプロパティ  
  **[分類子関数の名前]**  
  分類子関数を一覧から選択して指定します。  
   
  **リソース ガバナーの有効化**  
  チェック ボックスをオンまたはオフにしてリソース ガバナーを有効または無効にします。  
   
- **[リソース プール]**  
- 提供されるグリッドを使用して、リソース プール構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
+ **リソース プール**  
+ 提供されるグリッドを使用して、リソース プール構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク (**&#42;**) が付いている行をクリックします。  
   
  **名前**  
  リソース プールの名前を指定します。  
@@ -81,19 +80,19 @@ ms.locfileid: "63209682"
  **[最小 CPU %]**  
  CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 範囲は 0 から 100 です。  
   
- **[最大 CPU %]**  
+ **Maximum CPU % (最大 CPU %)**  
  CPU の競合がある場合に、このリソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 範囲は 0 から 100 です。 既定の設定は 100 です。  
   
  **[最小メモリ %]**  
  このリソース プール用に確保され、他のリソース プールとは共有できないメモリ量の最小値を指定します。 範囲は 0 から 100 です。  
   
- **[最大メモリ %]**  
+ **Maximum Memory % (最大メモリ %)**  
  このリソース プールの要求で使用できる合計サーバー メモリを指定します。 範囲は 0 から 100 です。 既定の設定は 100 です。  
   
- 詳細については、次を参照してください。 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)します。  
+ 詳細については、「 [CREATE RESOURCE POOL &#40;transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)」を参照してください。  
   
  **[リソース プールのワークロード グループ]**  
- 提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
+ 提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク (**&#42;**) が付いている行をクリックします。  
   
  **名前**  
  ワークロード グループの名前を指定します。  
@@ -118,7 +117,7 @@ ms.locfileid: "63209682"
   
  詳細については、「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)」を参照してください。  
   
-## <a name="view-resource-governor-properties-by-using-transact-sql"></a>TRANSACT-SQL を使用してビューのリソース ガバナーのプロパティ  
+## <a name="view-resource-governor-properties-by-using-transact-sql"></a>Transact-sql を使用して Resource Governor のプロパティを表示する  
  **Transact-SQL を使用してリソース ガバナーのプロパティを表示する**  
   
 1.  リソース ガバナー エンティティの定義を表示するには、「[リソース ガバナーのカタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql)」を使用します。  

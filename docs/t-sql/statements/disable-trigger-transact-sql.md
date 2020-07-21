@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8179c57a2d472d4cdddda10dacdd07ffe473504
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766601"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トリガーを無効にします。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67984304"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -64,14 +64,14 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  DDL トリガーの場合、*trigger_name* が、データベース スコープで実行するために作成または変更されたことを示します。  
   
  ALL SERVER  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  DDL トリガーの場合、*trigger_name* が、サーバー スコープで実行するために作成または変更されたことを示します。 ALL SERVER はログオン トリガーにも適用されます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定では、トリガーは作成されたときに有効になります。 トリガーを無効にしてもトリガーは削除されず、 オブジェクトとして現在のデータベースに残りますが、 トリガーがプログラムされた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行しても、トリガーは起動しません。 トリガーは、[ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) を使用することにより再度有効にできます。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用して無効または有効にできます。  
   
  **ALTER TRIGGER** ステートメントを使用してトリガーを変更すると、トリガーが有効になります。  
@@ -81,13 +81,13 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを無効にするには、サーバーでの CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) の DDL トリガーを無効にするために、ユーザーには少なくとも、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例は、AdventureWorks2012 データベースで記述されています。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. テーブルの DML トリガーを無効にする  
- 次の例では、テーブル `Address` に作成されたトリガー `uAddress` を無効にします。  
+ 次の例では、テーブル `uAddress` に作成されたトリガー `Person` を無効にします。  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -95,7 +95,7 @@ GO
 ### <a name="b-disabling-a-ddl-trigger"></a>B. DDL トリガーを無効にする  
  次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

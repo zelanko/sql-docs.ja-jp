@@ -8,30 +8,30 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7871b8225e6574067befb3ab8a90af1875410def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e6ca772f59aea6646df88af9355e00d98224a7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749703"
 ---
-# <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB データベース)
+# <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログで環境を作成します。  
   
 ## <a name="syntax"></a>構文  
   
 ```sql  
-catalog.create_environment [@folder_name =] folder_name  
-     , [@environment_name =] environment_name  
-  [  , [@environment_description =] environment_description ]  
+catalog.create_environment [ @folder_name = ] folder_name  
+     , [ @environment_name = ] environment_name  
+  [  , [ @environment_description = ] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   指定したフォルダーには、同じ名前を持つ環境が既に存在する  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  環境名は、フォルダー内で一意になる必要があります。  
   
   

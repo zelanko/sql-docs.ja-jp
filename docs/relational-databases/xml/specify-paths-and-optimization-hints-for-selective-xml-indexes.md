@@ -1,6 +1,6 @@
 ---
-title: 選択的 XML インデックスのパスと最適化ヒントの指定 | Microsoft Docs
-ms.custom: ''
+title: 選択的 XML インデックスのパスと最適化ヒント | Microsoft Docs
+description: 選択的 XML インデックスを作成または変更するときに、ノード パスと最適化ヒントを指定する方法について学習します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cab94f3f628f1b3423af25467c12ba7b595ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 460ad75c1596ce6eaf45e35d9c03b2db2d5267bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729850"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  
   
  ノード パスと最適化ヒントは、次のいずれかのステートメントで同時に指定します。  
@@ -29,7 +30,7 @@ ms.locfileid: "68021074"
   
  選択的 XML インデックスの詳細については、「 [選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
-##  <a name="untyped"></a> 型指定されていない XML での XQuery 型と SQL Server 型について  
+##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> 型指定されていない XML での XQuery 型と SQL Server 型について  
  選択的 XML インデックスは、XQuery 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型という 2 つの型システムをサポートします。 インデックスを設定するパスを使用して、XQuery 式、または XML データ型の value() メソッドの戻り値の型のいずれかと一致させることができます。  
   
 -   インデックスを設定するパスに注釈が設定されていない場合、または XQUERY キーワードを使用して注釈が設定されている場合、パスは XQuery 式と一致します。 XQUERY 注釈付きノード パスには 2 種類のバリエーションがあります。  
@@ -135,7 +136,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ```  
   
   
-##  <a name="typed"></a> 型指定された XML に対する選択的 XML インデックスのサポートについて  
+##  <a name="understanding-selective-xml-index-support-for-typed-xml"></a><a name="typed"></a> 型指定された XML に対する選択的 XML インデックスのサポートについて  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型指定された XML は、特定の XML ドキュメントに関連付けられたスキーマです。 このスキーマは、ノードの全体的なドキュメントの構造と型を定義します。 スキーマが存在する場合、選択的 XML インデックスは、ユーザーがパスを昇格したときのスキーマ構造を適用することで、パスの XQUERY 型を指定する必要がないようにします。  
   
  選択的 XML インデックスは、次の XSD 型をサポートします。  
@@ -209,7 +210,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  最適化ヒントの詳細については、「 [最適化ヒントの指定](#hints)」を参照してください。  
   
-##  <a name="paths"></a> パスの指定  
+##  <a name="specifying-paths"></a><a name="paths"></a> パスの指定  
  選択的 XML インデックスを使用して、実行する予定のクエリに関連する格納された XML データから、ノードのサブセットにのみインデックスを設定できます。 関連するノードのサブセットが XML ドキュメント内のノードの総数よりも大幅に少ない場合、選択的 XML インデックスには、関連するノードだけが格納されます。 選択的 XML インデックスを有効利用するには、インデックスを設定する適切なノードのサブセットを識別します。  
   
 ### <a name="choosing-the-nodes-to-index"></a>インデックスを設定するノードの選択  
@@ -235,8 +236,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   ノード `b`。述語が、XQuery 式の中でノード`b` に適用されるため。  
   
 2.  **原則 2**: 最大限のパフォーマンスを得るには、特定の XQuery 式を評価するために必要なすべてのノードにインデックスを設定します。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  上に示した SELECT ステートメントのパフォーマンスを向上させるには、次に示す選択的 XML インデックスを作成します。  
   
@@ -273,7 +272,7 @@ FOR
 )  
 ```  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  異なる XQuery 型用のインデックスを設定するために適切なノードを選択するいくつかの例を次に示します。  
   
  **例 1**  
@@ -347,7 +346,7 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/g**|ノード `g` の存在が exist() メソッドによって評価される。|  
   
   
-##  <a name="hints"></a> 最適化ヒントの指定  
+##  <a name="specifying-optimization-hints"></a><a name="hints"></a> 最適化ヒントの指定  
  省略可能な最適化ヒントを使用して、選択的 XML インデックスによってインデックス設定されるノードのマッピングの詳細を指定できます。 たとえば、ノードのデータ型とカーディナリティ、およびデータの構造に関する特定の情報を指定できます。 この追加情報により、マッピングに対するサポートが向上します。 さらに、パフォーマンスの向上またはストレージの節約、あるいはその両方が実現します。  
   
  最適化ヒントの使用は任意です。 常に既定のマッピングをそのまま使用できます。これらは信頼できますが、最適化されたパフォーマンスとストレージを提供しない場合があります。  
@@ -379,7 +378,7 @@ WHERE T.xmldata.exist('
   
  node() 最適化ヒントを使用して、一般的なクエリではその値を評価する必要がないノードを指定できます。 このヒントは、通常のクエリがノードの存在のみを評価する必要があるときに必要なメモリ量が減少します (既定では、選択的 XML インデックスは、complex ノード型以外の昇格されたすべてのノードの値を格納します)。  
   
- 次の例を参照してください。  
+ 次の例を確認してください。  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -418,7 +417,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  既存の文字列が指定された MAXLENGTH よりも長い場合は、その値をインデックスに挿入する操作は失敗します。  
   
   
-##  <a name="sample"></a> 例で参照されるサンプル XML ドキュメント  
+##  <a name="sample-xml-document-for-examples"></a><a name="sample"></a> 例で参照されるサンプル XML ドキュメント  
  このトピックの例では、次に示すサンプル XML ドキュメントが参照されています。  
   
 ```xml  

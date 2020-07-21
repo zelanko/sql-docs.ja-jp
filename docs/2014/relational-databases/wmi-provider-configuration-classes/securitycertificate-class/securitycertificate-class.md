@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060025"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
-  [SecurityCertificate クラス] securitycertificate-class.md) は、セキュリティ証明書を表します。 証明書の公開キーの値のインスタンスにバインドするデジタル署名されたステートメントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、対応する秘密キーが格納されます。 証明書は証明機関から発行されます。  
+  [SecurityCertificate Class] securitycertificate-class.md) は、セキュリティ証明書を表します。 証明書は、公開キーの値を、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 対応する秘密キーを保持するのインスタンスにバインドする、デジタル署名されたステートメントです [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 証明書は証明機関から発行されます。  
   
- [SecurityCertificate クラス] securitycertificate-class.md)、次のタスクを実行できます。  
+ [SecurityCertificate Class] securitycertificate-class.md) を使用すると、次のタスクを実行できます。  
   
 -   セキュリティ証明書のプロパティの表示  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63270770"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [暗号化階層](../../security/encryption/encryption-hierarchy.md)  
   
   

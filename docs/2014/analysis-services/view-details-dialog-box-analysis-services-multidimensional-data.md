@@ -1,5 +1,5 @@
 ---
-title: 表示の詳細 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
+title: '[詳細の表示] ダイアログボックス (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33c44106a091f1d970b156a4b29a45738ee81169
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065452"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938153"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>[詳細表示] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [詳細表示] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のメッセージまたは操作についての詳細情報を表示できます。 **[詳細表示]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -26,13 +25,13 @@ ms.locfileid: "66065452"
   
 -   **の** [配置状況] **ウィンドウの** [状態] ツリー ビュー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]内の項目をダブルクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
  **詳細**  
  選択したメッセージまたは操作についての追加情報を表示します。  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [プロセスの進行状況 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
- [多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [[処理の進行状況] ダイアログボックス &#40;Analysis Services-多次元データ&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
+ [多次元モデルのオブジェクト処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -1,35 +1,35 @@
 ---
-title: データ マイニング拡張機能 (DMX) データ操作ステートメント |Microsoft Docs
-ms.date: 06/07/2018
+title: データ操作ステートメント (DMX) |Microsoft Docs
+ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0235661fae03c93f71c33ce0dd6f01570ade7852
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071061"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669718"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX ステートメント - データ操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  次の表では、データ マイニング データ操作言語 (DML) のデータ マイニング拡張機能 (DMX) の一部であるステートメントが一覧表示します。  
+  次の表に、データマイニング拡張機能 (DMX) のデータマイニングデータ操作言語 (DML) に含まれるステートメントの一覧を示します。  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[DELETE&#40;DMX&#41;](../dmx/delete-dmx.md)|マイニング モデルからトレーニング済みのコンテンツを消去します。|  
-|[INSERT&#40;DMX&#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
-|[SELECT&#40;DMX&#41;](../dmx/select-dmx.md)|マイニング モデルを参照します。|  
-|[&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)|両方のデータ ソースにクエリ**INSERT INTO**と**SELECT**ステートメント。|  
-|[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
+|[DMX&#41;の削除 &#40;](../dmx/delete-dmx.md)|マイニングモデルからトレーニング済みコンテンツを削除します。|  
+|[&#40;DMX&#41;に挿入する](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
+|[DMX&#41;を選択 &#40;](../dmx/select-dmx.md)|マイニングモデルを参照します。|  
+|[&#60;ソースデータクエリ&#62;](../dmx/source-data-query.md)|**INSERT INTO**および**SELECT**ステートメントの両方のデータソースを照会します。|  
+|[DMX&#41;を更新 &#40;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+## <a name="see-also"></a>参照  
+ [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

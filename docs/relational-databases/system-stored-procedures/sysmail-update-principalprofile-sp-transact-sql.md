@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_update_principalprofile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bdfeab82f6964abb5e48758cb4b8adba096e5b4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037380"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890823"
 ---
-# <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  アソシエーションのプリンシパルとプロファイルの間の情報を更新します。  
+  プリンシパルとプロファイルの関連付けに関する情報を更新します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,15 +41,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @principal_id = ] principal_id` データベース ユーザーまたはロールの ID、 **msdb**の関連付けを変更するデータベース。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+`[ @principal_id = ] principal_id`関連付けを変更する**msdb**データベースのデータベースユーザーまたはロールの ID。 *principal_id*は**int**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。  
   
-`[ @principal_name = ] 'principal_name'` データベース ユーザーまたはロールの名前、 **msdb**を更新するアソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
+`[ @principal_name = ] 'principal_name'`関連付けを更新する**msdb**データベースのデータベースユーザーまたはロールの名前。 *principal_name*は**sysname**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定できます。  
   
-`[ @profile_id = ] profile_id` 関連付けを変更するプロファイルの id。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id`関連付けを変更するプロファイルの id。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'` 関連付けを変更するプロファイルの名前。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'`関連付けを変更するプロファイルの名前。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @is_default = ] 'is_default'` このプロファイルは、データベース ユーザーの既定のプロファイルかどうかです。 データベース ユーザーは、既定のプロファイルを 1 つのみあります。 *is_default*は**ビット**、既定値はありません。  
+`[ @is_default = ] 'is_default'`このプロファイルが、データベースユーザーの既定のプロファイルかどうかを指定します。 データベースユーザーは、既定のプロファイルを1つだけ持つことができます。 *is_default*は**ビット**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -57,22 +57,22 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このストアド プロシージャでは、指定したプロファイルを、データベース ユーザーの既定のプロファイルにするかどうかを変更します。 データベース ユーザーが持つことのできる既定のプライベート プロファイルは 1 つだけです。  
   
- アソシエーションのプリンシパル名の場合は**パブリック**、アソシエーションのプリンシパル id がまたは**0**、このストアド プロシージャは、パブリック プロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
+ アソシエーションのプリンシパル名が**public**の場合、またはアソシエーションのプリンシパル id が**0**の場合、このストアドプロシージャはパブリックプロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ときに **\@is_default**は '**1**' と、プリンシパルが 1 つ以上のプロファイルに関連付けられた、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 プロファイルされていた既定のプロファイルも、プリンシパルに関連付けられてが、既定のプロファイルではなくなりました。  
+ ** \@ Is_default**が '**1**' で、プリンシパルが複数のプロファイルに関連付けられている場合、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
   
- ストアド プロシージャ**sysmail_update_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_update_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
- **A.データベースの既定のパブリック プロファイルに、プロファイルの設定**  
+ **A. プロファイルをデータベースの既定のパブリック プロファイルに設定する**  
   
- 次の例では、設定、プロファイル`General Use Profile`内のユーザーの既定のパブリック プロファイルを**msdb**データベース。  
+ 次の例では、プロファイル `General Use Profile` を、 **msdb**データベースのユーザーの既定のパブリックプロファイルに設定します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -81,9 +81,9 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1';  
 ```  
   
- **B.ユーザーの既定のプライベート プロファイルに、プロファイルの設定**  
+ **B. プロファイルをユーザーの既定のプライベート プロファイルに設定する**  
   
- 次の例では、設定、プロファイル`AdventureWorks Administrator`プリンシパルの既定のプロファイルに`ApplicationUser`で、 **msdb**データベース。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 プロファイルされていた既定のプロファイルも、プリンシパルに関連付けられてが、既定のプロファイルではなくなりました。  
+ 次の例では、プロファイル `AdventureWorks Administrator` を、 `ApplicationUser` **msdb**データベース内のプリンシパルの既定のプロファイルに設定します。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -94,7 +94,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
 ## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

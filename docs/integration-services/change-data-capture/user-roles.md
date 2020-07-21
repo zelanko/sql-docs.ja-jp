@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fb0412abb3f7c352b1904dd8cc3925531cf9b457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898960"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298591"
 ---
 # <a name="user-roles"></a>ユーザー ロール
 
@@ -27,7 +27,7 @@ ms.locfileid: "67898960"
 ## <a name="windows-user-roles"></a>Windows ユーザー ロール  
  ここでは、Oracle CDC Service によって使用される Windows ユーザー ロールについて説明します。  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>コンピューター管理者:Oracle CDC Service  
+### <a name="computer-administrator-oracle-cdc-service"></a>コンピューターの管理者: Oracle CDC Service  
  コンピューターの管理者は、コンピューターでの CDC Service の作成とメンテナンスを担当する Windows ユーザーです。 このユーザーは、ローカル コンピューターの Administrators グループに属している必要があります。  
   
  Oracle CDC Service のコンピューターの管理者が実行するタスクには次のものがあります。  
@@ -56,7 +56,7 @@ ms.locfileid: "67898960"
   
 -   CDC Service for Oracle がインストールされているコンピューターで管理者として承認されたコンピューターの管理者の業務遂行。 この人物は、CDC Service for Oracle をインストールし、CDC Service 構成コンソールを使用して CDC Service for Oracle をローカル コンピューターで構成します。  
   
-### <a name="service-account-oracle-cdc-service"></a>サービス アカウント:Oracle CDC Service  
+### <a name="service-account-oracle-cdc-service"></a>サービス アカウント: Oracle CDC Service  
  これは Oracle CDC Service Windows サービス アカウントで、Oracle CDC Service を実行するために使用する Windows アカウント (サービス アカウント) です。  
   
  サービス アカウントに必要な特権は、Oracle クライアントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC プロバイダーを使用するための特権だけです。 このアカウントは、特定のプロバイダーで必要な場合を除いて、ファイルにアクセスする必要はありません (たとえば、 **tnsnames.ora** ファイルで Oracle クライアントの接続文字列が Oracle データベース インスタンスを参照している場合、サービス アカウントにはそのファイルへの読み取りアクセス権が必要です)。  

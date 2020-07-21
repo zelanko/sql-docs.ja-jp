@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 412ec93cbfedc87e92da9e86c7e4c7455919722a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058059"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>値の一致しない行を選択する方法 (Visual Database Tools)
   値の一致しない行を検索するには、NOT 演算子を使用します。  
@@ -38,7 +37,7 @@ NOT LIKE 'A%'
 ```  
   
 ## <a name="see-also"></a>参照  
- [ルールを入力するための値を検索する&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索値を入力するための規則&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

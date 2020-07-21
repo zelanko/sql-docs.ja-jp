@@ -1,5 +1,5 @@
 ---
-title: データの移動 |Microsoft Docs
+title: データを移動する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - searching data [ADO]
 - navigating data [ADO]
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924781"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748440"
 ---
 # <a name="navigating-through-data"></a>データ内の移動
-**レコード セット**さまざまなメソッドや結果のデータセットをナビゲートするプロパティをサポートしています。 サンプルをいくつかのシナリオを経由してこの機能を調べる**Recordset**オブジェクト。  
+**レコードセット**は、結果のデータセット内を移動するためのさまざまなメソッドとプロパティをサポートしています。 この機能を確認するには、サンプルの**レコードセット**オブジェクトを使用していくつかのシナリオを実行します。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67924781"
   
 -   [レコードセット内を移動する他の方法](../../../ado/guide/data/more-ways-to-move-in-a-recordset.md)  
   
--   [ブックマークを使用する](../../../ado/guide/data/using-bookmarks.md)  
+-   [ブックマークの使用](../../../ado/guide/data/using-bookmarks.md)  
   
 -   [ページを使用する](../../../ado/guide/data/using-pages.md)  
   

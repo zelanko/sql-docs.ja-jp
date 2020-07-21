@@ -1,10 +1,8 @@
 ---
-title: TuningTimeInMin 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningTimeInMin 要素 (DTA)
+description: dta ユーティリティでは、TuningTimeInMin 要素によって、チューニング セッションの最大の長さが分単位で指定されます。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c19cec140b0059cad98c777613dcbe1d3ec5a7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 5f57cc81435aeb6542dfdd4a360e8e4c0a26d343
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105847"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151477"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  チューニング セッションの最大の長さを分単位で指定します。  
+
+チューニング セッションの最大の長さを分単位で指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +41,7 @@ ms.locfileid: "68105847"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |**データ型と長さ**|**unsignedInt**、長さは無制限です。|  
 |**既定値**|480 分 (8 時間)。|  
@@ -52,7 +56,7 @@ ms.locfileid: "68105847"
   
 ## <a name="example"></a>例  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のコード例は、最大チューニング時間を 12 時間に設定する方法を示します。  
   
 ## <a name="code"></a>コード  

@@ -14,17 +14,17 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d8dd1cd471328859dd8bfa595fc341bda5f51f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36a8f05f6f135b5f8790f95e409f5db59dcf145a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095300"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628969"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>フルテキスト インデックスの作成のトラブルシューティング
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
      
-##  <a name="failure"></a> フルテキスト インデックスの作成エラーのトラブルシューティング  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> フルテキスト インデックスの作成エラーのトラブルシューティング  
  フルテキスト インデックスの作成時または保守時には、後述の理由により、フルテキスト インデクサーが 1 つ以上の行のインデックス作成に失敗することがあります。 このような行レベルのエラーでは、インデックスの作成は中止されることなく完了します。 インデクサーは、エラーが発生した行をスキップします。そのため、エラーが発生した行に含まれる内容のクエリはできません。  
   
  インデックス作成は、次の場合に失敗する可能性があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "68095300"
 >  署名の検証を無視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのセキュリティが低くなります。 実装するすべてのコンポーネントに署名するか、入手するすべてのコンポーネントの署名を確認することをお勧めします。 コンポーネントの署名についての詳細は、「[sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)」を参照して下さい。  
   
   
-##  <a name="state"></a> トランザクション ログの復元後のフルテキスト インデックスの一貫性の喪失  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> トランザクション ログの復元後のフルテキスト インデックスの一貫性の喪失  
  データベースのトランザクション ログを復元する場合、フルテキスト インデックスの状態に一貫性がないという警告が表示されることがあります。 この警告の原因は、データベースのバックアップ後にテーブルのフルテキスト インデックスが変更されたことにあります。 フルテキスト インデックスを一貫性のある状態に戻すには、テーブルに対してすべてのカタログの作成 (クロール) を実行します。 詳細については、「 [フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」をご覧ください。  
   
   

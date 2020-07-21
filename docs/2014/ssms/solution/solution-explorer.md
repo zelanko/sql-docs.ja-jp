@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 023e7296e1e83cb7fae5becc3e846930c73ab257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058336"
 ---
 # <a name="solution-explorer"></a>ソリューション エクスプローラー
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のソリューション エクスプローラー ペインには、データベースのスクリプト、クエリ、データ接続、ファイルなどの項目を管理するための "プロジェクト" と呼ばれるコンテナーが用意されています。 互いに関連する 1 つまたは複数のプロジェクトは、"ソリューション" と呼ばれるコンテナーにまとめることができます。  
@@ -52,7 +51,7 @@ ms.locfileid: "63025720"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |ソリューション内の 1 つまたは複数のプロジェクトを収集する方法について説明します。|[ソリューション (SQL Server Management Studio)](solutions-sql-server-management-studio.md)|  
 |プロジェクトを作成し、スクリプトや接続などの項目を追加する方法について説明します。|[プロジェクト (SQL Server Management Studio)](projects-sql-server-management-studio.md)|  
 |ソリューションまたは個々のプロジェクトをソース コード管理システムに統合する方法について説明します。|[ソリューション エクスプローラーのソース管理](../../database-engine/solution-explorer-source-control.md)|  

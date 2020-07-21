@@ -1,11 +1,7 @@
 ---
-title: .dacpac ファイルの抽出、発行、および登録 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: .dacpac ファイルの抽出、発行、および登録
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DacTableChooser
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 67cb0321ebc1bdfa345b7bb6670ca31a4418d6e8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912801"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241649"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>.dacpac ファイルの抽出、発行、および登録
+
 このトピックでは、SQL Server オブジェクト エクスプローラーで接続されているデータベースを右クリックして実行できる 4 つの手順について説明します。  
   
 -   データ層アプリケーションの公開  
@@ -50,7 +51,7 @@ ms.locfileid: "67912801"
 **[公開の詳細設定]** ダイアログ ボックスでは、その他の公開の構成を利用できます。このダイアログ ボックスには、 **[詳細設定]** ボタンをクリックしてアクセスできます。  
   
 ## <a name="extract-data-tier-application"></a>データ層アプリケーションの抽出  
-データベースから .dacpac を抽出できます。 抽出では、データベース スキーマに加え、ユーザー テーブルのデータを含む SQL Server または Microsoft Azure SQL のライブ データベースから、データベース スナップショット ファイル (.dacpac) を作成します。  
+データベースから .dacpac を抽出できます。 抽出では、データベース スキーマに加えて、ユーザー テーブルのデータが含まれる可能性があるライブ SQL Server または Azure SQL Database から、データベース スナップショット ファイル (.dacpac) が作成されます。  
   
 作成する .dacpac ファイルを指定します。 **[DAC のプロパティ]** ボタンをクリックすると、 **[DAC のプロパティ]** ダイアログ ボックスが表示され、.dacpac ファイルのプロパティを指定できます。  
   

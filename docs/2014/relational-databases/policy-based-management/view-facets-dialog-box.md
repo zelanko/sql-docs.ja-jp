@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5fd79d47d0a3bd9ac80c2f66ff54cc096fcca88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047699"
 ---
 # <a name="view-facets-dialog-box"></a>[ファセットの表示] ダイアログ ボックス
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このダイアログ ボックスでは変更できません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **ファセット**  
  現在選択されているファセットの名前。  
   
- **[説明]**  
+ **説明**  
  ファセットの概要を説明します。  
   
  **[ファセットのプロパティ]**  

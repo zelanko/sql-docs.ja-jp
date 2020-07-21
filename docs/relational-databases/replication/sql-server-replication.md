@@ -1,5 +1,6 @@
 ---
 title: SQL Server のレプリケーション | Microsoft Docs
+description: SQL Server のレプリケーションについて説明します。これは、データベース間でのデータとデータベース オブジェクトのコピーと配布、およびデータベース間の同期を行うためのテクノロジです。
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -13,22 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e158860b786a7612a31acd629a7b5d5deff203f3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723102"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   レプリケーションとは、あるデータベースから別のデータベースにデータやデータベース オブジェクトをコピーおよび配布し、それらのデータベースを同期させて一貫性を保つための一連のテクノロジです。 レプリケーションを使用すると、ローカル エリア ネットワーク、ワイド エリア ネットワーク、ダイヤルアップ接続、ワイヤレス接続、インターネットなどを経由して、別の場所や、リモート ユーザーまたはモバイル ユーザーにデータを配布することができます。  
   
  トランザクション レプリケーションは、高いスループットが必要とされるサーバー間のシナリオで使用されるのが一般的です。たとえば、スケーラビリティと可用性の向上、データ ウェアハウジングとレポート、複数サイトからのデータの統合、異種データの統合、バッチ処理のオフロードなどのシナリオで使用されます。 マージ レプリケーションは、データの競合の可能性があるモバイル アプリケーションや分散サーバー アプリケーションを主な対象としています。 モバイル ユーザーとのデータ交換、店舗販売時点管理 (POS) アプリケーション、複数サイトからのデータの統合などのシナリオが一般的です。 スナップショット レプリケーションは、トランザクション レプリケーションとマージ レプリケーションに初期データセットを提供するために使用されます。データの完全な更新が必要な場合にも使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この 3 種類のレプリケーションにより、企業全体のデータの同期のための強力かつ柔軟なシステムが提供されます。 SQLCE 3.5 および SQLCE 4.0 に対するレプリケーションは [!INCLUDE[win8srv](../../includes/win8srv-md.md)] と [!INCLUDE[win8](../../includes/win8-md.md)]の両方でサポートされます。  
 
- レプリケーションの代替手段として、Microsoft Sync Framework を使用してデータベースを同期できます。 Sync Framework には、SQL Server、SQL Server Express、SQL Server Compact、および SQL Azure の各データベース間での同期を容易にするコンポーネントと、直感的かつ柔軟性の高い API が含まれています。 また、Sync Framework には、SQL Server データベースと、ADO.NET と互換性があるその他のデータベースとの間で同期を行うために使用できるクラスもあります。 Sync Framework のデータベース同期コンポーネントの詳細については、「 [データベースの同期](https://go.microsoft.com/fwlink/?LinkId=209079)」を参照してください。 Sync Framework の概要の詳細については、「 [Microsoft Sync Framework デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=209078)」を参照してください。 Sync Framework とマージ レプリケーションとの比較の詳細については、データベースの同期の「 [概要とシナリオ](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)」を参照してください。  
-  
 
 ## <a name="whats-new"></a>新機能 
 - SQL Server 2017 では、SQL Server のレプリケーションに重要な新機能は加えられていません。 
@@ -50,7 +49,7 @@ ms.locfileid: "68769484"
   
 ## <a name="publications-and-articles"></a>パブリケーションおよびアーティクル 
   
--   [パブリケーションの作成](publish/create-a-publication.md)    
+-   [パブリケーションを作成する](publish/create-a-publication.md)    
 -   [アーティクルの定義](publish/define-an-article.md)   
 -   [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
 -   [アーティクルのプロパティの表示と変更](publish/view-and-modify-article-properties.md)    
@@ -72,7 +71,7 @@ ms.locfileid: "68769484"
   
 -   [列フィルターの定義および変更](publish/define-and-modify-a-column-filter.md)    
 -   [静的行フィルターの定義および変更](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [マージ アーティクルのパラメーター化された行フィルターの定義および変更](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [パラメーター化された行フィルターの最適化](publish/optimize-parameterized-row-filters.md)    
 -   [マージ アーティクル間の結合フィルターの定義および変更](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
@@ -93,7 +92,7 @@ ms.locfileid: "68769484"
 -   [Create a Pull Subscription](create-a-pull-subscription.md)    
 -   [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)    
 -   [プル サブスクリプションの削除](delete-a-pull-subscription.md)    
--   [プッシュ サブスクリプションの作成](create-a-push-subscription.md)   
+-   [プッシュ サブスクリプションを作成する](create-a-push-subscription.md)   
 -   [プッシュ サブスクリプションのプロパティの表示または変更](view-and-modify-push-subscription-properties.md)   
 -   [プッシュ サブスクリプションの削除](delete-a-push-subscription.md)   
 -   [同期スケジュールの指定](specify-synchronization-schedules.md)    
@@ -104,12 +103,12 @@ ms.locfileid: "68769484"
   
 -   [初期スナップショットの作成および適用](create-and-apply-the-initial-snapshot.md)   
 -   [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
--   [トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [トランザクション サブスクリプションのバックアップからの初期化 &#40;レプリケーション Transact-SQL プログラミング&#41;](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [手動によるサブスクリプションの初期化](initialize-a-subscription-manually.md)    
 -   [プル サブスクリプションの同期](synchronize-a-pull-subscription.md)    
 -   [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)   
 -   [サブスクリプションの再初期化](reinitialize-a-subscription.md)    
--   [同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [同期中のスクリプトの実行 &#40;レプリケーション Transact-SQL プログラミング&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)  
 -   [ビジネス ロジック ハンドラーのデバッグ&#40;レプリケーション プログラミング&#41;](debug-a-business-logic-handler-replication-programming.md)    
 -   [同期中にトリガーと制約の動作を制御する &#40;レプリケーション Transact-SQL プログラミング&#41;](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
@@ -136,6 +135,6 @@ ms.locfileid: "68769484"
 -   [プログラムによるレプリケーションの監視](monitor/programmatically-monitor-replication.md)    
 -   [レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する (レプリケーション Transact-SQL プログラミング)](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](view-conflict-information-for-merge-publications.md) 
--   [トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [待機時間を計測して Connections for Transactional Replication を検証します。](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

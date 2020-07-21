@@ -1,5 +1,6 @@
 ---
 title: Reporting Services における SOAP の役割 | Microsoft Docs
+description: レポート サーバー Web サービスは SOAP over HTTP を使用します。 レポート マネージャーは、レポートと関連のコンテンツが格納されているレポート サーバー データベースへのインターフェイスを提供します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4f03388971728750866480a5b0a6ec9626f92a1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d8bd652a821b6c5dad42238a1eae6ad97c90a1c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069890"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509663"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
   レポート サーバー Web サービスでは、Simple Object Access Protocol (SOAP) メッセージングを使用し、ネットワーク経由でテキストベースのコマンドを送信します。 これらのコマンドは XML テキスト形式であり、HTTP を使用して World Wide Web 経由で送信されます。 レポート サーバー Web サービスでは、通信プロトコルとして SOAP を使用することで、アプリケーションとコンポーネントが開放型で広く普及しているインフラストラクチャを使用してレポート サーバーとデータを交換できるようにしています。 SOAP 標準は www.w3.org/TR/SOAP で定義されています。  
@@ -39,7 +40,7 @@ ms.locfileid: "63069890"
 </soap:Envelope>  
 ```  
   
- SOAP 自体は、メッセージを **Envelope** 要素に入れるよう要求します。メッセージは一括して **Body** 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作をメソッドにカプセル化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クライアント プロキシ クラスを作成できます。 次の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] メソッドは上記の SOAP の例を表しています。  
+ SOAP 自体は、メッセージを **Envelope** 要素に入れるよう要求します。メッセージは一括して **Body** 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作をメソッドにカプセル化する [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クライアント プロキシ クラスを作成できます。 次の [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] メソッドは上記の SOAP の例を表しています。  
   
 ```  
 public void DeleteItem(string item);  

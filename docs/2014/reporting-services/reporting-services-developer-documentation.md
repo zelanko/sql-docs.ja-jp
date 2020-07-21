@@ -1,5 +1,5 @@
 ---
-title: 開発者&#39;ガイド (Reporting Services) |Microsoft Docs
+title: Developer&#39;s ガイド (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8c555d853fd791bed29a06f561021b138526ea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255101"
 ---
-# <a name="developer39s-guide-reporting-services"></a>開発者&#39;ガイド (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、独自のアプリケーションで活用できるいくつかのプログラミング インターフェイスが用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の既存機能を使用して、カスタム レポート ツールと管理ツールを Web サイトや Windows アプリケーションに組み込むことができます。また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプラットフォームを拡張することもできます。  
+# <a name="developer39s-guide-reporting-services"></a>Developer&#39;s ガイド (Reporting Services)
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、独自のアプリケーションで活用できるいくつかのプログラミング インターフェイスが用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の既存機能を使用して、カスタム レポート ツールと管理ツールを Web サイトや Windows アプリケーションに組み込むことができます。また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプラットフォームを拡張することもできます。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プラットフォームの拡張には、データへのアクセス、レポート配信などに使用できる新しいコンポーネントとリソースの作成もあります。 これらのコンポーネントとリソースは、組織内で [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用している企業に販売できます。  
   
@@ -33,11 +33,11 @@ ms.locfileid: "63255101"
  [レポート サーバー web サービス](report-server-web-service/report-server-web-service.md)  
  レポート サーバー Web サービスでは、レポート サーバーのすべての機能にアクセスできます。 Web サービスは、HTTP に対して SOAP を使用し、クライアント プログラムとレポート サーバー間の通信インターフェイスとして動作するように設計されています。 Web サービスとそのメソッドは、レポート サーバーの機能を提供するため、管理から実行までのレポートのライフ サイクルのあらゆる部分にカスタム ツールを作成できます。  
   
- [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)  
+ [URL アクセス (SSRS)](url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、レポートのナビゲーションおよび表示を行うためにすばやくかつ簡単なアクセス ポイントとして使用できる URL ベースの完全な要求セットをサポートします。 このテクノロジをレポート サーバー Web サービスと組み合わせることにより、完全なレポート ソリューションをカスタム ビジネス アプリケーションに統合できます。 Web ポータルの一部としてレポートを統合するとき、または Web ブラウザーからレポートを表示するときに、URL アクセスが特に役立ちます。  
   
  [Reporting Services の拡張機能](extensions/reporting-services-extensions.md)  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージド コード API を使用して、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 発展するビジネス ニーズに対応するために、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] を使用してアセンブリを作成し、新しい [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の表示、セキュリティ、配信、およびデータ処理機能を追加できます。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージド コード API を使用して、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 を使用して[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]アセンブリを作成し、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]進化するビジネスニーズに合わせて、新しいレンダリング、セキュリティ、配信、およびデータ処理機能を追加することができます。  
   
  [カスタム レポート アイテム](custom-report-items/custom-report-items.md)  
  カスタム レポート アイテムを作成して RDL に機能を追加する方法、または既存のコントロールの機能を拡張する方法について説明します。  
@@ -50,8 +50,8 @@ ms.locfileid: "63255101"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)   
- [テクニカル リファレンス &#40;SSRS&#41;](technical-reference-ssrs.md)   
+ [レポート定義言語 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)   
+ [SSRS&#41;&#40;テクニカルリファレンス](technical-reference-ssrs.md)   
  [セキュリティで保護された開発 &#40;Reporting Services&#41;](extensions/secure-development/secure-development-reporting-services.md)  
   
   

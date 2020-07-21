@@ -1,10 +1,9 @@
 ---
-title: '[ファイルを開く] ダイアログ ボックス | Microsoft Docs'
-ms.custom: ''
+title: '[ファイルを開く] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263325"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251453"
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263325"
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でプロジェクトやコンポーネントを開く前に、コードが信頼できるものかどうかを確認してください。 プロジェクトまたはコンポーネントを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で開くと、それらのコードがローカル コンピューター上で信頼されたプロセスとして実行される場合があります。  
   
 ## <a name="option"></a>オプション  
-**[探す場所]**  
+**Look in**  
 このドロップダウン メニューから、既存のプロジェクト フォルダーを探します。 この一覧でフォルダーを選択すると、そのフォルダーの内容が主要ペインに表示されます。  
   
 ## <a name="my-places-bar"></a>マイ プレース バー  
@@ -52,7 +53,7 @@ ms.locfileid: "68263325"
 **エンコードを指定して開く**  
 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスを使用して対象ファイルのエディターを指定するには、 **[開く]** ボタンの右側にある小さな四角形をクリックし、 **[ファイルを開くアプリケーションの選択]** を選択します。 必要であれば、言語エンコード方式を指定して、選択したファイルを開くときに適用することもできます。 この操作を行うには、一覧で "**エンコード付き**" が示されているプログラムをクリックし、 **[開く]** をクリックして、 **[エンコード]** ダイアログ ボックスを表示します。 このボタンは、使用できない場合があります。  
   
-## <a name="toolbar"></a>[ツール バー]  
+## <a name="toolbar"></a>ツール バー  
 **最近参照した場所**  
 最近参照したフォルダー、ドライブ、またはインターネットの場所を返します。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "68263325"
 **[縮小表示]**  
 アイテムのサムネイルを表示ペインに表示します。  
   
-**[大きいアイコン]**  
+**タイル**  
 ファイルおよびフォルダーを大きなアイコンで表示します。  
   
 **[小さいアイコン]**  
@@ -86,7 +87,7 @@ ms.locfileid: "68263325"
 **詳細**  
 ファイルおよびフォルダーの名前、サイズ、種類、および最終更新日時をリスト形式で表示します。 特定の項目で並べ替えるには、列のヘッダーをクリックします。  
   
-**[Web ビュー]**  
+**WebView**  
 このコマンドは使用できません。  
   
 ## <a name="tools"></a>ツール  

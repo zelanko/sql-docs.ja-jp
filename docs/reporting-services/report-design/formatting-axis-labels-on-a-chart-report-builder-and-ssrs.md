@@ -1,5 +1,5 @@
 ---
-title: グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフの軸ラベルの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575622"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079914"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
@@ -56,10 +56,10 @@ ms.locfileid: "65575622"
   
  軸のスケールは、軸上に表示するデータ範囲を定義するための最小値と最大値によって決定されます。 グラフでは、結果セットの値に基づいて各軸の最小値と最大値が計算されます。 値軸では、スケールは常に値フィールドの最大値と最小値によって決まります。 カテゴリ軸では、最小値と最大値の型がカテゴリ フィールドの型に応じて決まります。 データセット内のすべてのフィールドは、カテゴリ フィールドの 3 つの型のいずれかに分類できます。 次の表では、カテゴリ フィールドの 3 つの型を説明しています。  
   
-|カテゴリ フィールドの型|[説明]|例|  
+|カテゴリ フィールドの型|説明|例|  
 |-------------------------|-----------------|-------------|  
 |数値|カテゴリは、X 軸に数値順にプロットされます。|従業員の ID 番号別の売上レポートでは、従業員の ID 番号が X 軸に表示されます。|  
-|日付/時刻|カテゴリは、X 軸に日時順にプロットされます。|月別の売上レポートでは、書式設定された日付が X 軸に表示されます。|  
+|Date/time|カテゴリは、X 軸に日時順にプロットされます。|月別の売上レポートでは、書式設定された日付が X 軸に表示されます。|  
 |文字列|カテゴリは、データ ソースで最初に出現した順序で X 軸にプロットされます。|地域別の売上レポートでは、地域名が X 軸に表示されます。|  
   
  2 本の軸を使用するすべての種類のグラフは、カテゴリの数が多すぎて収まらない場合に、一部の軸ラベルを非表示にするようにデザインされています。これにより、グラフ内の画像が見やすくなり、ラベルの重なりが回避されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "65575622"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>グラフの軸ラベルの計算方法の例  
  次の表には、縦棒グラフにプロットされる売上データのサンプルが含まれています。 Name フィールドは [カテゴリ グループ] 領域に追加され、Quantity フィールドは [値] 領域に追加されます。  
   
-|[オブジェクト名]|Quantity|  
+|Name|Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

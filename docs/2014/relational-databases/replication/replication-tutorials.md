@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4d70abd6c58b3eb0fa4a53e2806ab1b3fbe9245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064620"
 ---
 # <a name="replication-tutorials"></a>レプリケーションのチュートリアル
   レプリケーションには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でレプリケーション トポロジをセットアップし、それを実行する方法を学習できるチュートリアルが用意されています。  
@@ -27,7 +26,7 @@ ms.locfileid: "62960771"
  レプリケーションのチュートリアルでは、"パブリッシャー" はレプリケート元のデータが配置されているサーバーを指し、"サブスクライバー" はレプリケート先のサーバーを指しています。 パブリッシャーとサブスクライバーが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを共有することもできますが、これは必須条件ではありません。 詳細については、 [「レプリケーションのパブリッシング モデルの概要」](publish/replication-publishing-model-overview.md)を参照してください。  
   
 > [!NOTE]  
->  このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、次を参照してください。 [Developer's Guide&#40;レプリケーション&#41;](concepts/replication-developer-documentation.md)します。  
+>  このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、「[開発者ガイド &#40;レプリケーションの&#41;](concepts/replication-developer-documentation.md)」を参照してください。  
   
 ## <a name="replication-tutorials"></a>レプリケーションのチュートリアル  
  [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)  

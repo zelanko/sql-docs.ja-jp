@@ -1,5 +1,6 @@
 ---
-title: Reporting Services レポートの処理のトラブルシューティング | Microsoft Docs
+title: Reporting Services レポートの処理のトラブルシューティング
+description: この記事では、レポート プロセッサによってデータとレイアウトの情報が結合され、レポート アイテムのプロパティ式が評価されるときに発生する問題のトラブルシューティングを行います。
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573871"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664439"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Reporting Services レポートの処理のトラブルシューティング
 レポート データが取得されると、レポート プロセッサによってデータとレイアウトの情報が結合され、 結合されたデータとレイアウトのコンテキストで、式を持つ各レポート アイテム プロパティが評価されます。 このトピックでは、このような問題のトラブルシューティングについて説明します。   
@@ -23,12 +24,12 @@ ms.locfileid: "65573871"
   
 レポート プロセッサは、レポート定義 (.rdl ファイル) が .rdl ファイルの先頭の名前空間宣言で指定されているスキーマに準拠していることを確認します。 RDL スキーマの詳細については、「 [レポート定義スキーマのバージョンを確認する (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
-また、実行時に評価されるレポートの式は、レポートのデータとレイアウトを正しく結合できるようにする一連のルールに従っている必要があります。 レポート プロセッサで問題が検出されると、"レポート `<report name>` の定義が無効です" というメッセージが表示されることがあります。  
+また、実行時に評価されるレポートの式は、レポートのデータとレイアウトを正しく結合できるようにする一連のルールに従っている必要があります。 レポート プロセッサで問題が検出されると、次のメッセージが表示されることがあります: レポート `<report name>` の定義が無効です。  
   
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>レポート アイテムの式は、現在のデータセット スコープ、または集計内の場合は指定されたデータセット スコープ内のフィールドしか参照できない  
   
 以下を参考にすると、エラーの原因の特定が容易になります。  
-* レポートに複数のデータセットがある場合、レポート本文のテキスト ボックスの集計式でスコープ パラメーターを指定する必要があります。 たとえば、 `=First(Fields!FieldName.Value, "DataSet1")`のようにします。  
+* レポートに複数のデータセットがある場合、レポート本文のテキスト ボックスの集計式でスコープ パラメーターを指定する必要があります。 たとえば、「 `=First(Fields!FieldName.Value, "DataSet1")` 」のように入力します。  
   
 スコープ パラメーターを指定するには、レポート アイテムのスコープ内にあるデータセット、データ領域、またはグループの名前を指定します。 「 [合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 」および「 [式のリファレンス (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md)」を参照してください。  
   

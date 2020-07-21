@@ -1,5 +1,5 @@
 ---
-title: xml (Transact-SQL) | Microsoft Docs
+title: xml (Transact-SQL)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d8d863a6ca6a44a323c05f26298c68de774dfc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b06e817cd649937b48c95fb6dc31e2ae38978c7a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948027"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393240"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   XML データを格納するデータ型です。 格納できる **xml** インスタンスは、列や変数の **xml** 型です。  
   
@@ -37,7 +37,9 @@ ms.locfileid: "67948027"
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  CONTENT  
  **xml** インスタンスを整形式の XML フラグメントに制限します。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 最上位レベルにはテキスト ノードも許可されます。  
   
@@ -49,12 +51,12 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  *xml_schema_collection*  
  XML スキーマ コレクションの名前を指定します。 型指定された **xml** 列または変数を作成するには、必要に応じて、XML スキーマ コレクションの名前を指定することができます。 型指定された XML および型指定されていない XML に関する詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ストアド表現 **xml** データ型のインスタンスは、サイズの 2 ギガバイト (GB) を超えることはできません。  
   
  CONTENT および DOCUMENT ファセットは型指定された XML にのみ適用されます。 詳細については、「[型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 USE AdventureWorks;  

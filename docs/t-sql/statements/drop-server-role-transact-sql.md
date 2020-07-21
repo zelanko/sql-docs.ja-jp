@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67929245"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  サーバーから削除するユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールは、サーバーから削除できません。 セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールを削除するには、まず、セキュリティ保護可能なリソースの所有権を転送するか、リソースを削除する必要があります。  
   
  メンバーを含むユーザー定義サーバー ロールは削除できません。 メンバーを含むユーザー定義サーバー ロールを削除するには、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) を使用して先にロールのメンバーを削除しておく必要があります。  
@@ -57,7 +57,7 @@ DROP SERVER ROLE role_name
 ## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する CONTROL 権限か、ALTER ANY SERVER ROLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-to-drop-a-server-role"></a>A. サーバー ロールを削除するには  
  次の例では、サーバー ロール `purchasing` を削除します。  

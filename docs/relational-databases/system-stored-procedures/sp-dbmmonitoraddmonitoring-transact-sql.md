@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitoraddmonitoring (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbmmonitoraddmonitoring (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 268226d28b134ffe13a5acfca3baf47bde655baf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108153"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866738"
 ---
-# <a name="spdbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベース ミラーリング サーバー インスタンス上のすべてのミラー化されたデータベース ミラーリングの状態を定期的に更新するモニターのジョブを作成します。  
+  サーバーインスタンス上のミラー化されたデータベースごとにミラーリングの状態を定期的に更新する、データベースミラーリングモニターのジョブを作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,40 +41,40 @@ sp_dbmmonitoraddmonitoring [ update_period ]
   
 ## <a name="arguments"></a>引数  
  *update_period*  
- 更新間隔を分単位で指定します。 この値は、1 から 120 分に指定できます。 既定値は 1 分です。  
+ 更新間隔を分単位で指定します。 この値は、1 ~ 120 分の間で指定できます。 既定値は 1 分です。  
   
 > [!NOTE]  
->  更新間隔が小さすぎる場合、クライアント、応答時間が増加する可能性があります。  
+>  更新期間が短すぎると、クライアントの応答時間が長くなる可能性があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このプロシージャを実行するには、サーバー インスタンス上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行できることが必要です。また、データベース ミラーリング監視ジョブを実行するにはエージェントが実行中であることが必要です。  
   
- データベース ミラーリングが開始された場合[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **sp_dbmmonitoraddmonitoring**プロシージャが自動的に実行します。 ALTER DATABASE ステートメントを使用して手動でのミラーリングを開始する場合、サーバー インスタンスでミラー化されたデータベースを監視する必要がありますを実行する**sp_dbmmonitoraddmonitoring**手動でします。  
+ データベースミラーリングがから開始された場合 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、 **sp_dbmmonitoraddmonitoring**プロシージャは自動的に実行されます。 ALTER DATABASE ステートメントを使用して手動でミラーリングを開始する場合、サーバーインスタンス上のミラー化されたデータベースを監視するには、 **sp_dbmmonitoraddmonitoring**を手動で実行する必要があります。  
   
 > [!NOTE]  
->  実行する場合**sp_dbmmonitoraddmonitoring** 、データベース ミラーリングをセットアップする前に、監視ジョブは実行されますが、ミラーリング監視の履歴を格納するデータベースの状態テーブルは更新されません。  
+>  データベースミラーリングをセットアップする前に**sp_dbmmonitoraddmonitoring**を実行すると、監視ジョブは実行されますが、データベースミラーリングモニターの履歴が保存されている状態テーブルは更新されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、更新間隔として使用した監視を開始`3`分。  
+ 次の例では、更新間隔 (分) で監視を開始し `3` ます。  
   
 ```  
 EXEC sp_dbmmonitoraddmonitoring 3;  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

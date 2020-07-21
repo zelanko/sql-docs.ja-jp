@@ -1,5 +1,6 @@
 ---
-title: Reporting Services レポートのデータ取得に関する問題のトラブルシューティング | Microsoft Docs
+title: Reporting Services レポートのデータ取得に関する問題のトラブルシューティング
+description: この記事では、レポートをローカルでプレビューするかレポート サーバーでレポートを実行して、レポート データを取得するときに発生する問題を診断して修正します。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574423"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664452"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services レポートのデータ取得に関する問題のトラブルシューティング
 レポート処理の最初の手順は、データセット クエリを実行して各データセットのレポート データを取得することです。 レポートをローカルでプレビューする場合は、データ ソースの接続と資格情報で十分な権限を使用して、コンピューターにデータを取得する必要があります。 レポートをレポート サーバーで実行する場合は、データ ソースの接続と資格情報で十分な権限を使用して、レポート サーバーでデータを取得する必要があります。 このトピックでは、レポート データの取得に関する問題のトラブルシューティングを行います。   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>データ ソースへの接続を作成できない  
-データ ソースの作成、データセット クエリの実行、またはレポートのプレビューの際に、"データ ソース `<data source name>`への接続を作成できません" というメッセージが表示されることがあります。   
+データ ソースの作成、データセット クエリの実行、またはレポートのプレビューの際に、次のメッセージが表示されることがあります。[データ ソース `<data source name>` への接続を作成できません。]   
     
 ### <a name="data-source-is-not-available"></a>データ ソースが使用できない  
 データ ソースがオフラインであるか、他の何らかの理由で使用できません。   
@@ -57,7 +58,7 @@ ms.locfileid: "65574423"
 データセット フィールド コレクションを設定するには、次の操作を行います。  
 * データベースからフィールド情報を取得する権限を持っていることを確認します。 データ ソースによっては、データ ソースへのアクセス権を持っていても、テーブルまたは列へのアクセス権を持っていないことがあります。 また、ビューへのアクセス権は持っていても、ビューを作成するストアド プロシージャを実行するための権限を持っていない場合もあります。 データベース内の特定のテーブルまたは列へのアクセスを検証するには、レポート用と同じ権限を使用して、SQL Server Management Studio など、別のアプリケーションでクエリ結果を確認します。 期待したクエリ結果が得られない場合は、システム管理者に問い合わせて、必要なデータにアクセスするための権限を付与してもらいます。   
 * **[データセットのプロパティ]** ダイアログ ボックスのクエリ ペインでクエリを実行します。 詳細については、「 [データセットの作成と追加 (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
-* フィールドを手動で追加します。 詳細については、「 [レポート データ ペインでフィールドを追加、編集、更新する方法 (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。   
+* フィールドを手動で追加します。 詳細については、「[レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)」を参照してください。   
   
 ## <a name="see-also"></a>参照  
 [エラーとイベント (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

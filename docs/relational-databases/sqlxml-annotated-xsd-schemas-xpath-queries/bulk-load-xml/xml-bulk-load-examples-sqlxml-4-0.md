@@ -1,6 +1,6 @@
 ---
-title: XML 一括読み込みの例 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: XML 一括読み込みの例 (SQLXML)
+description: 各例の XSD および XDR スキーマを使用して、SQKXML 4.0 の XML 一括読み込み機能の詳細な例を確認します。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,20 +31,21 @@ helpviewer_keywords:
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e2b536b6f1bc22e15948dfb1a0d4df539c099f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9ec14bb6a13b3dc8675c2bf2710bdcf101b80ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650823"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   以下の例では、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の XML 一括読み込み機能について示します。 それぞれの例では、XSD スキーマと、同等の XDR スキーマを提供します。  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>一括読み込みスクリプト (ValidateAndBulkload.vbs)  
- 次のスクリプトで記述された、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript)、XML DOM に XML ドキュメントを読み込みます; スキーマに対して検証するためと、ドキュメントが有効で実行、XML 一括ロードする負荷に XML を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 このスクリプトは、後に示す個々の例で使用できます。  
+ Visual Basic Scripting Edition (VBScript) で記述された次のスクリプトは、xml [!INCLUDE[msCoName](../../../includes/msconame-md.md)] DOM に xml ドキュメントを読み込み、スキーマに対して xml ドキュメントを検証します。ドキュメントが有効な場合、は xml 一括読み込みを実行して xml をテーブルに読み込みます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] このスクリプトは、後に示す個々の例で使用できます。  
   
 > [!NOTE]  
 >  XML 一括読み込みでは、データ ファイルから内容がアップロードされなくても警告またはエラーは返されません。 このため、一括読み込み操作を実行する前に XML データ ファイルを検証することをお勧めします。  
@@ -112,8 +113,8 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>A. 単一テーブルでの XML の一括読み込み  
- この例は、のインスタンスへの接続を確立します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ConnectionString プロパティ (MyServer) で指定されています。 この例では、ErrorLogFile プロパティも指定します。 エラー出力は指定したファイル ("C:\error.log") に保存されます。ファイルの保存場所は変更することもできます。 マッピング スキーマ ファイル (SampleSchema.xml) と XML データ ファイル (SampleXMLData.xml) の両方に、Execute メソッドがパラメーターとして持つことにも注意してください。 一括読み込みが実行される場合で作成した Cust テーブル**tempdb**データベースは、XML データ ファイルの内容に基づいて新しいレコードが格納されます。  
+## <a name="a-bulk-loading-xml-in-a-table"></a>A: 単一テーブルでの XML の一括読み込み  
+ この例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ConnectionString プロパティ (MyServer) で指定されているのインスタンスへの接続を確立します。 この例では、ErrorLogFile プロパティも指定しています。 エラー出力は指定したファイル ("C:\error.log") に保存されます。ファイルの保存場所は変更することもできます。 また、Execute メソッドのパラメーターは、マッピングスキーマファイル (SampleSchema.xml) と XML データファイル (SampleXMLData.xml) の両方であることに注意してください。 一括読み込みを実行すると、 **tempdb**データベースで作成した Cust テーブルには、XML データファイルの内容に基づく新しいレコードが格納されます。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>一括読み込みのサンプルをテストするには  
   
@@ -149,7 +150,7 @@ End Function
     </xsd:schema>  
     ```  
   
-3.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleXMLData.xml として保存します。 このファイルには、次の XML ドキュメントを追加します。  
+3.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleXMLData.xml として保存します。 このファイルに、次の XML ドキュメントを追加します。  
   
     ```xml  
     <ROOT>  
@@ -171,11 +172,11 @@ End Function
     </ROOT>  
     ```  
   
-4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに、このトピックの冒頭で示した VBScript コードを追加します。 接続文字列は、適切なサーバー名に変更します。 Execute メソッドにパラメーターとして指定されているファイルの適切なパスを指定します。  
+4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに、このトピックの冒頭で示した VBScript コードを追加します。 接続文字列は、適切なサーバー名に変更します。 Execute メソッドのパラメーターとして指定されたファイルの適切なパスを指定します。  
   
 5.  VBScript コードを実行します。 XML 一括読み込みによって、XML が Cust テーブルに読み込まれます。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```xml  
   
@@ -200,8 +201,8 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 複数テーブルでの XML データの一括読み込み  
- XML ドキュメントから成る、この例では、 **\<顧客 >** と **\<順序 >** 要素。  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B: 複数テーブルでの XML データの一括読み込み  
+ この例では、XML ドキュメントは要素と要素で構成されて **\<Customer>** **\<Order>** います。  
   
 ```xml  
 <ROOT>  
@@ -226,13 +227,13 @@ End Function
 </ROOT>  
 ```  
   
- この例の一括では、2 つのテーブルに XML データを読み込みます**Cust**と**CustOrder**:  
+ この例では、XML データを**Cust**および**custorder**という2つのテーブルに一括読み込みします。  
   
 -   Cust (CustomerID、CompanyName、City)  
   
--   CustOrder (OrderID、CustomerID)  
+-   CustOrder (OrderID, CustomerID)  
   
- 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と **\<順序 >** 要素。  
+ 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマでは、要素と要素の間の親子リレーションシップを指定し **\<Customer>** **\<Order>** ます。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -271,11 +272,11 @@ End Function
 </xsd:schema>  
 ```  
   
- 主キー/外部キー リレーションシップ間上記で指定した XML 一括読み込みで、  **\<Cust >** と **\<CustOrder >** を一括要素は、両方のテーブルにデータを読み込む.  
+ XML 一括読み込みでは、上で指定された要素と要素の間の主キー/外部キーのリレーションシップを使用して、 **\<Cust>** **\<CustOrder>** データを両方のテーブルに一括読み込みします。  
   
 #### <a name="to-test-a-sample-bulk-load"></a>一括読み込みのサンプルをテストするには  
   
-1.  2 つのテーブルを作成する**tempdb**データベース。  
+1.  **Tempdb**データベースに2つのテーブルを作成します。  
   
     ```sql  
     USE tempdb;  
@@ -291,11 +292,11 @@ End Function
   
 3.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleData.xml として保存します。 このファイルに、この例で前に示した XML ドキュメントを追加します。  
   
-4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに、このトピックの冒頭で示した VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドにパラメーターとして指定されているファイルの適切なパスを指定します。  
+4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに、このトピックの冒頭で示した VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドのパラメーターとして指定されたファイルの適切なパスを指定します。  
   
 5.  上の VBScript コードを実行します。 XML 一括読み込みによって、XML ドキュメントが Cust テーブルと CustOrder テーブルに読み込まれます。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```xml  
   
@@ -331,7 +332,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>C. スキーマでチェーン リレーションシップを使用して XML の一括読み込みを行う  
+## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>C: スキーマでチェーン リレーションシップを使用して XML の一括読み込みを行う  
  この例では、XML 一括読み込みにおいて、マッピング スキーマで指定されている M:N リレーションシップを使用し、M:N リレーションシップを表すテーブルにデータを読み込む方法を示します。  
   
  たとえば、次の XSD スキーマを考えてみます。  
@@ -384,7 +385,7 @@ End Function
 </xsd:schema>  
 ```  
   
- スキーマを指定します、 **\<順序 >** を持つ要素を **\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
+ スキーマでは、 **\<Order>** 子要素を持つ要素を指定し **\<Product>** ます。 **\<Order>** 要素は Ord テーブルにマップされ、 **\<Product>** 要素はデータベースの Product テーブルにマップされます。 要素に指定されたチェーンリレーションシップは、 **\<Product>** OrderDetail テーブルによって表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
   
  このスキーマで XML ドキュメントの一括読み込みを行うと、Ord テーブル、Product テーブル、および OrderDetail テーブルにレコードが追加されます。  
   
@@ -434,7 +435,7 @@ End Function
   
 5.  VBScript コードを実行します。 XML 一括読み込みによって、XML ドキュメントが Ord テーブルと Product テーブルに読み込まれます。  
   
-## <a name="d-bulk-loading-in-identity-type-columns"></a>D. ID 型の列に一括読み込みを行う  
+## <a name="d-bulk-loading-in-identity-type-columns"></a>D: ID 型の列に一括読み込みを行う  
  この例では、一括読み込みでの ID 型列の扱いについて説明します。 この例では、3 つのテーブル (Ord、Product、OrderDetail) にデータの一括読み込みが行われます。  
   
  これらのテーブルには、次の条件が設定されています。  
@@ -453,7 +454,7 @@ Product (ProductID, ProductName)
 OrderDetail (OrderID, ProductID)  
 ```  
   
- この XML 一括読み込みの例で、一括読み込みオブジェクト モデルの KeepIdentity プロパティが false に設定します。 このため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Product テーブルおよび Ord テーブルの ProductID 列および OrderID 列に ID 値がそれぞれ生成されます。一括読み込みの対象ドキュメントで指定されている値は無視されます。  
+ この XML 一括読み込みの例では、BulkLoad オブジェクトモデルの KeepIdentity プロパティが false に設定されています。 このため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Product テーブルおよび Ord テーブルの ProductID 列および OrderID 列に ID 値がそれぞれ生成されます。一括読み込みの対象ドキュメントで指定されている値は無視されます。  
   
  この場合、XML 一括読み込みでは、テーブル間の主キー/外部キーのリレーションシップが識別されます。 一括読み込みでは、主キーのあるテーブルにレコードが挿入された後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で生成された ID 値が、外部キー列のあるテーブルに格納されます。 次の XML 一括読み込みの例では、次の順序でテーブルにデータが挿入されます。  
   
@@ -468,7 +469,7 @@ OrderDetail (OrderID, ProductID)
   
 #### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  これらのテーブルを作成します。  
+1.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Ord (  
@@ -486,7 +487,7 @@ OrderDetail (OrderID, ProductID)
     GO  
     ```  
   
-2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 このファイルには、この XSD スキーマを追加します。  
+2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 この XSD スキーマをこのファイルに追加します。  
   
     ```  
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -542,7 +543,7 @@ OrderDetail (OrderID, ProductID)
     </ROOT>  
     ```  
   
-4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに次の VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 パラメーターとして使用されるファイルの適切なパスを指定、 **Execute**メソッド。  
+4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに次の VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 **Execute**メソッドのパラメーターとして機能するファイルの適切なパスを指定します。  
   
     ```  
     Set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -559,13 +560,13 @@ OrderDetail (OrderID, ProductID)
 5.  VBScript コードを実行します。 XML 一括読み込みによって、適切なテーブルにデータが読み込まれます。  
   
 ## <a name="e-generating-table-schemas-before-bulk-loading"></a>E. 一括読み込み前にテーブル スキーマを生成する  
- 一括読み込み前にテーブルが存在しない場合、XML 一括読み込みでテーブルを作成するように指定できます。 この TRUE に SQLXMLBulkLoad オブジェクトの SchemaGen プロパティを設定します。 また、必要に応じて、既存のテーブルを削除して再 SGDropTables プロパティを TRUE に設定して作成するための XML 一括読み込みを要求できます。 次の VBScript の例では、これらのプロパティの使用法を示します。  
+ 一括読み込み前にテーブルが存在しない場合、XML 一括読み込みでテーブルを作成するように指定できます。 SQLXMLBulkLoad オブジェクトの SchemaGen プロパティを TRUE に設定すると、これが行われます。 また、必要に応じて、SGDropTables プロパティを TRUE に設定して、既存のテーブルを削除して再作成するために、XML 一括読み込みを要求することもできます。 次の VBScript の例では、これらのプロパティの使用法を示します。  
   
  また、この例では、これらの他に次の 2 つのプロパティを TRUE に設定します。  
   
--   CheckConstraints です。 : このプロパティを TRUE に設定すると、テーブルに指定されている制約違反が、テーブルに挿入されるデータによって発生するのを回避できます。この場合の制約は、Cust テーブルと CustOrder テーブル間に指定されている PRIMARY KEY/FOREIGN KEY 制約です。 制約違反が発生すると、一括読み込みは失敗します。  
+-   CheckConstraints. : このプロパティを TRUE に設定すると、テーブルに指定されている制約違反が、テーブルに挿入されるデータによって発生するのを回避できます。この場合の制約は、Cust テーブルと CustOrder テーブル間に指定されている PRIMARY KEY/FOREIGN KEY 制約です。 制約違反が発生すると、一括読み込みは失敗します。  
   
--   XMLFragment します。 : サンプル XML ドキュメント (データ ソース) はフラグメントであり、単一の最上位要素が含まれていません。したがって、このプロパティを TRUE に設定する必要があります。  
+-   XMLFragment. : サンプル XML ドキュメント (データ ソース) はフラグメントであり、単一の最上位要素が含まれていません。したがって、このプロパティを TRUE に設定する必要があります。  
   
  この VBScript コードは次のとおりです。  
   
@@ -588,14 +589,14 @@ Set objBL = Nothing
   
 1.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleSchema.xml として保存します。 このファイルに、前の例「スキーマでチェーン リレーションシップを使用して XML の一括読み込みを行う」で示した XSD スキーマを追加します。  
   
-2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleXMLData.xml として保存します。 このファイルに、前の例「スキーマでチェーン リレーションシップを使用して XML の一括読み込みを行う」で示した XML ドキュメントを追加します。 削除、\<ルート > (フラグメントになります) をドキュメントからの要素。  
+2.  任意のテキスト エディターまたは XML エディターでファイルを作成し、SampleXMLData.xml として保存します。 このファイルに、前の例「スキーマでチェーン リレーションシップを使用して XML の一括読み込みを行う」で示した XML ドキュメントを追加します。 \<ROOT>ドキュメントから要素を削除します (フラグメントにするため)。  
   
-3.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに、この例で示した VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドにパラメーターとして指定されているファイルの適切なパスを指定します。  
+3.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに、この例で示した VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドのパラメーターとして指定されたファイルの適切なパスを指定します。  
   
 4.  VBScript コードを実行します。 XML 一括読み込みによって、指定されたマッピング スキーマを基に必要なテーブルが作成され、このテーブルにデータの一括読み込みが行われます。  
   
 ## <a name="f-bulk-loading-from-a-stream"></a>F. ストリームから一括読み込みを行う  
- XML 一括読み込みオブジェクト モデルの Execute メソッドは、2 つのパラメーターを受け取ります。 最初のパラメーターはマッピング スキーマ ファイルであり、 もう 1 つのパラメーターは、データベースに読み込まれる XML データを指定するものです。 XML 一括読み込みの Execute メソッドに XML データを渡す 2 つの方法はあります。  
+ XML 一括読み込みオブジェクトモデルの Execute メソッドには、2つのパラメーターがあります。 最初のパラメーターはマッピング スキーマ ファイルであり、 もう 1 つのパラメーターは、データベースに読み込まれる XML データを指定するものです。 Xml データを XML 一括読み込みの Execute メソッドに渡すには、次の2つの方法があります。  
   
 -   ファイル名をパラメーターとして指定する。  
   
@@ -614,9 +615,9 @@ Set objBL = Nothing
 ...  
 ```  
   
- スクリプト、XML ストリームとしてに渡します Execute メソッドの 2 番目のパラメーターとして。 Execute メソッドの大部分は、Cust テーブルにデータを読み込みます。  
+ 次に、スクリプトは、2番目のパラメーターとして XML をストリームとして Execute メソッドに渡します。 Execute メソッドは、Cust テーブルにデータを一括読み込みします。  
   
- このスクリプトは、TRUE を SchemaGen プロパティと SGDropTables プロパティを TRUE に設定ため、XML 一括読み込みは、指定されたデータベースに Cust テーブルを作成します。 テーブルが存在する場合は、最初にテーブルが削除された後に再作成されます。  
+ このスクリプトは、SchemaGen プロパティを TRUE に設定し、SGDropTables プロパティを TRUE に設定するため、XML 一括読み込みでは、指定されたデータベースに Cust テーブルが作成されます。 テーブルが存在する場合は、最初にテーブルが削除された後に再作成されます。  
   
  この VBScript の例を次に示します。  
   
@@ -707,7 +708,7 @@ Set objBL = Nothing
 ```  
   
 ### <a name="opening-a-stream-on-an-existing-file"></a>既存のファイルのストリームを開く  
- 既存の XML データ ファイルのストリームを開き、(ファイル名をパラメーターとして渡す) ではなく、Execute メソッドにパラメーターとして、ストリームを渡すことができますも。  
+ また、既存の XML データファイルでストリームを開き、パラメーターとしてストリームをパラメーターとして渡すこともできます (ファイル名をパラメーターとして渡すのではなく)。  
   
  ストリームをパラメーターとして渡す Visual Basic の例を次に示します。  
   
@@ -770,7 +771,7 @@ End Sub
 </ROOT>  
 ```  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -809,9 +810,9 @@ End Sub
 ```  
   
 ## <a name="g-bulk-loading-in-overflow-columns"></a>G. オーバーフロー列に一括読み込みを行う  
- マッピング スキーマが使用して、オーバーフロー列を指定するかどうか、 **sql:overflow-フィールド**注釈、XML 一括読み込みは、この列に、ソース ドキュメントからすべての未使用データをコピーします。  
+ マッピングスキーマで**sql: overflow フィールド**の注釈を使用してオーバーフロー列が指定されている場合、XML 一括読み込みでは、ソースドキュメントからこの列にすべての未使用データがコピーされます。  
   
- この XSD スキーマを検討してください。  
+ 次の XSD スキーマを考えてみます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -846,14 +847,14 @@ End Sub
 </xsd:schema>  
 ```  
   
- このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各 **\<顧客 >** 要素は、この列に追加されます。  
+ このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、各要素のすべての未使用 XML データ **\<Customer>** がこの列に追加されます。  
   
 > [!NOTE]  
->  すべての abstract 要素 (要素の**抽象 ="true"** が指定されて)、すべての属性が禁止されています (対象の属性**禁止されています ="true"** が指定されて) XML の一括でオーバーフローと解釈ロード テストとは、指定されている場合は、オーバーフロー列に追加されます。 それ以外の場合は無視されます。  
+>  すべての抽象要素 ( **abstract = "true"** が指定されている要素) と、禁止されているすべての属性 ( **"true"** が指定されている属性) は、XML 一括読み込みによってオーバーフローと見なされ、指定されている場合はオーバーフロー列に追加されます。 それ以外の場合は無視されます。  
   
 #### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  2 つのテーブルを作成する**tempdb**データベース。  
+1.  **Tempdb**データベースに2つのテーブルを作成します。  
   
     ```  
     USE tempdb;  
@@ -900,7 +901,7 @@ End Sub
     </ROOT>  
     ```  
   
-4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに次の Microsoft Visual Basic Scripting Edition (VBScript) コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドにパラメーターとして指定されているファイルの適切なパスを指定します。  
+4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに次の Microsoft Visual Basic Scripting Edition (VBScript) コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドのパラメーターとして指定されたファイルの適切なパスを指定します。  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -913,7 +914,7 @@ End Sub
   
 5.  VBScript コードを実行します。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -953,13 +954,13 @@ End Sub
 ```  
   
 ## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>H. トランザクション モードで一時ファイル用のファイル パスを指定する  
- トランザクション モードで一括読み込みを行うときに (つまり、トランザクションのプロパティ設定されている場合に TRUE)、設定することも必要があります TempFilePath プロパティが true で、次の条件のいずれかの場合。  
+ トランザクションモードで一括読み込みを行う場合 (つまり、Transaction プロパティが TRUE に設定されている場合)、次のいずれかの条件に該当する場合は、TempFilePath プロパティも設定する必要があります。  
   
 -   リモート サーバーに一括読み込みを行う。  
   
 -   トランザクション モードで作成される一時ファイルの格納に、TEMP 環境変数で指定されているパスとは別のローカル ドライブまたはフォルダーを使用する。  
   
- たとえば、次の VBScript コードでは、SampleXMLData.xml ファイルからデータベース テーブルに、トランザクション モードでデータの一括読み込みが行われます。 TempFilePath プロパティを指定するには、トランザクション モードで生成される一時ファイルのパスを設定しています。  
+ たとえば、次の VBScript コードでは、SampleXMLData.xml ファイルからデータベース テーブルに、トランザクション モードでデータの一括読み込みが行われます。 TempFilePath プロパティは、トランザクションモードで生成される一時ファイルのパスを設定するために指定されます。  
   
 ```  
 set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -973,11 +974,11 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  一時ファイルのパスは、対象の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントと、一括読み込みアプリケーションを実行するアカウントからの共有アクセスが可能な場所にする必要があります。 ローカル サーバーに一括読み込みでない限り、一時ファイルのパスが UNC パスを指定する必要があります (など\\\servername\sharename)。  
+>  一時ファイルのパスは、対象の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントと、一括読み込みアプリケーションを実行するアカウントからの共有アクセスが可能な場所にする必要があります。 ローカルサーバーで一括読み込みを行う場合を除き、一時ファイルのパスは UNC パス (\servername\sharename など) である必要があり \\ ます。  
   
 #### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  このテーブルを作成**tempdb**データベース。  
+1.  **Tempdb**データベースに次のテーブルを作成します。  
   
     ```  
     USE tempdb;  
@@ -1017,7 +1018,7 @@ set objBL=Nothing
     </ROOT>  
     ```  
   
-4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに次の VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドにパラメーターとして指定されているファイルの適切なパスを指定します。 また、TempFilePath プロパティの適切なパスを指定します。  
+4.  任意のテキスト エディターまたは XML エディターでファイルを作成し、ValidateAndBulkload.vbs として保存します。 このファイルに次の VBScript コードを追加します。 接続文字列は、適切なサーバー名とデータベース名に変更します。 Execute メソッドのパラメーターとして指定されたファイルの適切なパスを指定します。 また、TempFilePath プロパティに適切なパスを指定します。  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -1032,7 +1033,7 @@ set objBL=Nothing
   
 5.  VBScript コードを実行します。  
   
-     スキーマは、対応するを指定する必要があります**sql:datatype**の**CustomerID**ときに属性の値は、 **CustomerID**中かっこ ({が含まれる GUID として指定されますおよび}) など。  
+     **Customerid**の値が、次のように中かっこ ({および}) を含む GUID として指定されている場合、スキーマでは**customerid**属性に対応する**sql: datatype**を指定する必要があります。  
   
     ```  
     <ROOT>  
@@ -1041,7 +1042,7 @@ set objBL=Nothing
     </ROOT>  
     ```  
   
-     これは、更新されたスキーマです。  
+     更新されたスキーマは次のようになります。  
   
     ```  
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -1064,9 +1065,9 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     ときに**sql:datatype**として列の型を識別する指定**uniqueidentifier**、一括読み込み操作は、中かっこを削除します ({および}) から、 **CustomerID**値列に挿入します。  
+     列の型が**uniqueidentifier**として指定されて**いる場合、** 一括読み込み操作では、列に挿入する前に、 **CustomerID**値から中かっこ ({および}) を削除します。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -1089,7 +1090,7 @@ set objBL=Nothing
 ## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>I. 既存のデータベース接続で ConnectionCommand プロパティを使用する  
  既存の ADO 接続を使用して、XML の一括読み込みを行うことができます。 これは、データ ソースに実行する多くの操作のうちの 1 つとして XML 一括読み込みを行う場合に便利です。  
   
- ConnectionCommand プロパティでは、ADO コマンド オブジェクトを使用して既存の ADO 接続を使用することができます。 この Visual Basic の例を次に示します。  
+ ConnectionCommand プロパティを使用すると、ADO コマンドオブジェクトを使用して、既存の ADO 接続を使用できます。 この Visual Basic の例を次に示します。  
   
 ```  
 Private Sub Form_Load()  
@@ -1115,7 +1116,7 @@ End Sub
   
 #### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  2 つのテーブルを作成する**tempdb**データベース。  
+1.  **Tempdb**データベースに2つのテーブルを作成します。  
   
     ```  
     USE tempdb;  
@@ -1206,7 +1207,7 @@ End Sub
   
 5.  アプリケーションを実行します。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -1244,9 +1245,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. xml データ型の列に一括読み込みを行う  
- マッピング スキーマが指定されている場合、 [xml データ型](../../../t-sql/xml/xml-transact-sql.md)列を使用して、 **sql:datatype ="xml"** 注釈、XML 一括読み込みはこれにソース ドキュメントからマップされたフィールドの XML 子要素をコピーすることができます列です。  
+ マッピングスキーマで**sql: datatype = "xml"** 注釈を使用して[xml データ型](../../../t-sql/xml/xml-transact-sql.md)の列が指定されている場合、xml 一括読み込みでは、マップされたフィールドの xml 子要素をソースドキュメントからこの列にコピーできます。  
   
- 次の XSD スキーマを考えてみます。この XSD スキーマでは、サンプル データベース AdventureWorks の Production.ProductModel テーブルのビューがマップされます。 このテーブルでの CatalogDescription フィールド**xml**データ型にマッピングされますが、  **\<Desc >** 要素を使用して、 **sql:field**と**sql:データ型"xml"を =** 注釈。  
+ 次の XSD スキーマを考えてみます。この XSD スキーマでは、サンプル データベース AdventureWorks の Production.ProductModel テーブルのビューがマップされます。 この表では、 **xml**データ型の catalogdescription フィールドが、 **\<Desc>** **sql: field**および**sql: datatype = "xml"** 注釈を使用して要素にマップされています。  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

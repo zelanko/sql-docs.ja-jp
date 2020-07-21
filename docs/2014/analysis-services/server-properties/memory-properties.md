@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f1ffd3bd5a41b141e81fcb37b064e5cc4f35f84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940643"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー メモリ プロパティがサポートされています。 これらのプロパティの設定方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  1 ～ 100 の値は、 **[物理メモリの合計]** または **[仮想アドレス領域]** のどちらか少ない方に対する割合を示します。 100 を超える値はメモリ制限を示します (単位: バイト)。  
   
- **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合。  
+ **適用対象:** 多次元および表形式サーバーモード (特に明記されていない場合)。  
   
 ## <a name="properties"></a>プロパティ  
  `LowMemoryLimit`  
@@ -55,7 +54,7 @@ ms.locfileid: "66068892"
  `VertiPaqPagingPolicy`  
  サーバーのメモリが不足したときのページングの動作を指定します。 有効な値は次のとおりです。  
   
- 0 (**0**) ページングを無効にします。 メモリが足りなくなると、メモリ不足エラーが発生し、処理は失敗します。 ページングを無効にする場合は、サービス アカウントに Windows 特権を付与する必要があります。 手順については、「[サービス アカウントの構成 (Analysis Services)](../instances/configure-service-accounts-analysis-services.md)」を参照してください。  
+ ゼロ (**0**) ページングを無効にします。 メモリが足りなくなると、メモリ不足エラーが発生し、処理は失敗します。 ページングを無効にする場合は、サービス アカウントに Windows 特権を付与する必要があります。 手順については、「[サービス アカウントの構成 (Analysis Services)](../instances/configure-service-accounts-analysis-services.md)」を参照してください。  
   
  **1** が既定値です。 このプロパティを指定した場合、オペレーティング システムのページング ファイル (pagefile.sys) を使用してディスクへのページングが行われます。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66068892"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
+ [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

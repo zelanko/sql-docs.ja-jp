@@ -12,18 +12,18 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d7a932d99ba30e84de0ccd4cfbcce1516cd2fad9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043774"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81291002"
 ---
 # <a name="other-excel-driver-programming-details"></a>その他の Excel ドライバーのプログラミングの詳細
 > [!NOTE]  
->  このセクションでは、ODBC 関数とその他のプログラミングの詳細に関する Excel ドライバー固有の情報を提供します。 関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このセクションでは、ODBC 関数とその他のプログラミングの詳細について、Excel ドライバー固有の情報を提供します。 関数に関する一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015207"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
@@ -27,7 +27,7 @@ ms.locfileid: "68015207"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ストアドプロシージャ ([ストアドプロシージャ&#40;データベースエンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
+  ストアド プロシージャ ([ストアド プロシージャ &#40;データベース エンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能なオブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
 -   ストアド プロシージャ  
   

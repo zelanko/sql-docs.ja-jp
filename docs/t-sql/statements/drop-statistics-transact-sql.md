@@ -24,15 +24,15 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca0183f72823073d36181c63273972928ab7aee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef2a22baa6be2298e398485c0fbbc97cd05bbef5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929164"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003401"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースの指定されたテーブル内で、複数のコレクションの統計を削除します。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "67929164"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP STATISTICS table.statistics_name | view.statistics_name [ ,...n ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP STATISTICS [ schema_name . ] table_name.statistics_name   
@@ -60,7 +60,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  削除する統計グループの名前です。 統計の名前は、識別子の規則に従っている必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  統計を削除するときは注意が必要です。 統計を削除すると、クエリ オプティマイザーによって選択された実行プランに影響することがあります。  
   
  インデックスの統計を DROP STATISTICS で削除することはできません。 インデックスが存在する限り、統計は維持されます。  
@@ -70,10 +70,10 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ## <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-statistics-from-a-table"></a>A. テーブルから統計を削除する  
- 次の例では、2 つのテーブルの統計グループ (コレクション) を削除します。 `Vendor` テーブルの `VendorCredit` 統計グループ (コレクション) と `SalesOrderHeader` テーブルの `CustomerTotal` 統計グループ (コレクション) が削除されます。  
+ 次の例では、2 つのテーブルの統計グループ (コレクション) を削除します。 `VendorCredit` テーブルの `Vendor` 統計グループ (コレクション) と `CustomerTotal` テーブルの `SalesOrderHeader` 統計グループ (コレクション) が削除されます。  
   
 ```  
 -- Create the statistics groups.  
@@ -90,7 +90,7 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. テーブルから統計を削除する  
  次の例では、`CustomerStats1` 統計をテーブル `Customer` から削除します。  

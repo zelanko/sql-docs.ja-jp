@@ -1,7 +1,6 @@
 ---
-title: BACPAC ファイルのインポートによる新しいユーザー データベースの作成 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/31/2017
+title: BACPAC ファイルのインポートによる新しいユーザー データベースの作成
+ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -24,17 +23,18 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e7a72be3cbf18cd2adf821f3310a1ea6801ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781675"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] に配置されているデータベースの社内用コピーを作成することもできます。  
   
 ## <a name="before-you-begin"></a>はじめに  
  インポート プロセスでは、2 つの段階を経て新しい DAC が構築されます。  
@@ -43,10 +43,8 @@ ms.locfileid: "68134767"
   
 2.  エクスポート ファイルからデータを一括コピーします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
- データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は  **の**ユーティリティ エクスプローラー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ## <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、インポート時に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定がすべて適用されます。ただし、データベースの照合順序および互換性レベルは、DAC のエクスポート ファイルで定義された値に設定されます。 DAC のエクスポート ファイルには、元のデータベースに基づく値が使用されます。  
@@ -56,7 +54,7 @@ ms.locfileid: "68134767"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DAC は、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]にインポートできるほか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスにインポートすることができます。 新しいバージョンから DAC をエクスポートした場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  ソースが不明または信頼されていない DAC エクスポート ファイルはインポートしないことをお勧めします。 こうしたファイルには、意図しない Transact-SQL コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 エクスポート ファイルのソースが不明または信頼されていない場合は、使用する前に、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードも確認してください。 これらのチェックの実行方法の詳細については、「 [Validate a DAC Package](validate-a-dac-package.md)」をご覧ください。  
   
 ## <a name="security"></a>Security  
@@ -68,7 +66,7 @@ ms.locfileid: "68134767"
 ## <a name="using-the-import-data-tier-application-wizard"></a>データ層アプリケーションのインポート ウィザードの使用  
  **ウィザードを起動するには、次の手順を実行します。**  
   
-1.  内部設置型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内で、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]のインスタンスに接続します。  
+1.  内部設置型または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
 2.  **オブジェクト エクスプローラー**で、 **[データベース]** を右クリックしてから、 **[データ層アプリケーションのインポート]** メニュー項目を選択してウィザードを起動します。  
   
@@ -86,10 +84,10 @@ ms.locfileid: "68134767"
   
     -   [[結果] ページ](#Results)  
   
-###  <a name="Introduction"></a> [説明] ページ  
+###  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのインポート ウィザードの手順が表示されます。  
   
- **オプション**  
+ **[オプション]**  
   
 -   **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
@@ -97,7 +95,7 @@ ms.locfileid: "68134767"
   
 -   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
-###  <a name="Import_settings"></a> [インポートの設定] ページ  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
 -   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
@@ -108,7 +106,7 @@ ms.locfileid: "68134767"
   
      続行するには、インポートする .bacpac ファイルを指定し、 **[開く]** をクリックします。  
   
-###  <a name="Database_settings"></a> [データベースの設定] ページ  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> [データベースの設定] ページ  
  このページを使用すると、作成されるデータベースの詳細を指定できます。  
   
  **SQLServer のローカル インスタンスの場合**  
@@ -124,29 +122,29 @@ ms.locfileid: "68134767"
  **Azure SQL データベースの場合**  
   
  - 「 **[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
- - 「 **[SQL Database のオプションとパフォーマンス:各サービス階層で使用できる内容について理解する](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
+ - 「 **[SQL Database のオプションとパフォーマンス: 各サービス階層で使用できる内容について理解する](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
 
 ### <a name="validation-page"></a>[検証] ページ  
  このページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-###  <a name="Summary"></a> [概要] ページ  
+###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でインポート操作を実行するには、 **[完了]** をクリックします。 インポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="Progress"></a> [進行状況] ページ  
+###  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-###  <a name="Results"></a> [結果] ページ  
+###  <a name="results-page"></a><a name="Results"></a> [結果] ページ  
  このページでは、データベースのインポートや作成操作の成功と失敗が報告され、各アクションの成功または失敗が示されます。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
  **[閉じる]** をクリックしてウィザードを閉じます。  
   
 ## <a name="see-also"></a>参照  
-[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+[BACPAC ファイルをインポートして新しい Azure SQL データベースを作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [データ層アプリケーションのエクスポート](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   

@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283910"
 ---
 # <a name="subscription-and-delivery-methods"></a>サブスクリプション メソッドおよび配信メソッド
   これらのメソッドを使用して、カタログ アイテムのサブスクリプションと配信を作成および管理できます。  
   
-|方法|操作|  
+|Method|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|指定したアイテムのデータ ドリブン サブスクリプションを作成します。|  
 |<xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|データ ドリブン サブスクリプションのプロパティを返します。|  
@@ -38,7 +38,7 @@ ms.locfileid: "63283910"
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|データ ドリブン サブスクリプションのプロパティ値を設定します。|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|サブスクリプションのプロパティ値を設定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [レポート サーバー Web サービス](../report-server-web-service.md)   
  [レポート サーバー Web サービス メソッド](report-server-web-service-methods.md)   

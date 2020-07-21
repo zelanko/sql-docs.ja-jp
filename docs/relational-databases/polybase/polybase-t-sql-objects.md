@@ -1,5 +1,6 @@
 ---
 title: PolyBase Transact-SQL リファレンス | Microsoft Docs
+description: PolyBase を使用するには、Hadoop、Azure blob storage、Azure Data Lake Store、SQL Server、Oracle、Teradata、MongoDB で外部データ用の外部テーブルを作成します。
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - PolyBase, SQL objects
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ed8ea01f7eb653c9c28fb58d083d2a5a01ef46f
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 0e2ea6896d8ffc3450a57a44ea10c30ac6890d92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773058"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL リファレンス
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/applies-to-version/sqlserver.md)]
 
 PolyBase を使用するには、外部テーブルを作成して、外部データを参照する必要があります。  
   
@@ -38,7 +39,7 @@ PolyBase を使用するには、外部テーブルを作成して、外部デ�
 >[!NOTE]
 >PolyBase を使用するには、データベースでの sysadmin または CONTROL SERVER レベルのアクセス許可が必要です。
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 
 PolyBase を構成します。 「 [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。  
   
@@ -549,7 +550,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ```
 
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 クエリの例については、「 [PolyBase Queries (PolyBase のクエリ)](../../relational-databases/polybase/polybase-queries.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: sp_denylogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_denylogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_denylogin
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9f1091617da94dc13894de0b219fb362c59083af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861524"
 ---
-# <a name="spdenylogin-transact-sql"></a>sp_denylogin (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows ユーザーまたは Windows グループが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できないようにします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,30 +42,30 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login_ '` Windows ユーザーまたはグループの名前です。 *ログイン*は**sysname**、既定値はありません。  
+`[ @loginame = ] 'login_ '`Windows ユーザーまたはグループの名前を指定します。 *login*は**sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_denylogin**指定した Windows ユーザーまたは Windows グループにマップされているサーバー レベル プリンシパルに CONNECT SQL 権限を拒否します。 サーバー プリンシパルが存在しない場合は、それが作成されます。 新しいプリンシパルが表示されます、 [sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビューです。  
+## <a name="remarks"></a>解説  
+ 指定した Windows ユーザーまたは Windows グループにマップされているサーバーレベルのプリンシパルに対する CONNECT SQL 権限を拒否**sp_denylogin**ます。 サーバープリンシパルが存在しない場合は、作成されます。 新しいプリンシパルは、 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログビューに表示されます。  
   
- **sp_denylogin**ユーザー定義のトランザクション内で実行することはできません。  
+ **sp_denylogin**は、ユーザー定義のトランザクション内では実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、使用する方法を示します**sp_denylogin**を Windows ユーザーを防ぐために`CORPORATE\GeorgeV`からサーバーに接続します。  
+ 次の例では、 **sp_denylogin**を使用して、Windows ユーザーがサーバーに接続できないようにする方法を示し `CORPORATE\GeorgeV` ます。  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

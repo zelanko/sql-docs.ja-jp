@@ -1,5 +1,5 @@
 ---
-title: 使用中のファイルを確認してください |。Microsoft Docs
+title: 使用中のファイルを確認する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037180"
 ---
 # <a name="check-files-in-use"></a>使用中のファイルの確認
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール後に Windows が再起動されないようにするには、[使用中のファイルの確認] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのセットアップ プログラムで必要とされるファイルをロックしているプロセスを特定します。  
@@ -26,7 +25,7 @@ ms.locfileid: "66096531"
   
  インストール後にコンピューターを再起動しなくてもいいように、セットアップ時に、ファイルをロックしているプロセスの一覧が表示されます。 一覧表示されたプロセスおよびアプリケーションを停止または終了します。 次に、 **[確認の更新]** をクリックしてチェックを再実行します。 実行中のチェックを終了するには **[確認の停止]** をクリックします。 ロックされているファイルが見つからなかった場合、表には何も表示されません。 ロックされていたプロセスが終了または停止したら、 **[次へ]** をクリックして続行します。  
   
- セットアップにより、情報がログ ファイルに書き込まれます。 ログ ファイルを表示する方法の詳細については、次を参照してください。[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)と[方法。SQL Server のセットアップ ログ ファイルを読み取る](https://go.microsoft.com/fwlink/?LinkID=134490)します。  
+ セットアップにより、情報がログ ファイルに書き込まれます。 ログ ファイルを表示する方法の詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) 」および「 [SQL Server のセットアップ ログ ファイルを読み取る方法](https://go.microsoft.com/fwlink/?LinkID=134490)」を参照してください。  
   
  次の情報がログ ファイルに含まれます。  
   
@@ -42,13 +41,13 @@ ms.locfileid: "66096531"
   
 -   ロックされているファイルの名前  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
   
 |名前|説明|  
 |----------|-----------------|  
-|[処理]|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
-|型|プロセスの種類を表示します。|  
-|アカウント|プロセスが実行されているアカウントを表示します。|  
+|プロセス|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
+|種類|プロセスの種類を表示します。|  
+|Account|プロセスが実行されているアカウントを表示します。|  
 |プロセス ID|プロセス ID を表示します。|  
   
   

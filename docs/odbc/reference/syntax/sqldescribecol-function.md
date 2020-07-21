@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63982d87f0dbbe0c8ab1a540185e298d9943f630
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c727f6b36930b0d2ad0d5a61592b83bcd4995426
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104789"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301172"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLDescribeCol**結果セットの 1 つの列に列名、型、列のサイズ、10 進数字、および null 値の許容 - 結果記述子を返します。 この情報もは、ird フィールドにします。  
+ 結果セットの1つの列に対して、 **SQLDescribeCol**は結果記述子-列名、型、列サイズ、10進数、および null 値の許容属性を返します。 この情報は、IRD のフィールドにも記載されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,93 +51,93 @@ SQLRETURN SQLDescribeCol(
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドルです。  
+ 代入ステートメントハンドル。  
   
  *ColumnNumber*  
- [入力]結果のデータの列数は、1 から始まる、増加の列の順序で順番に順序付けします。 *ColumnNumber*ブックマーク列を記述する引数が 0 に設定することもできます。  
+ 代入列の順序の昇順で並べ替えられた結果データの列数。1から始まります。 *Columnnumber*引数を0に設定して、ブックマーク列を記述することもできます。  
   
  *[ColumnName]*  
- [出力]列名を取得するための null で終わるバッファーへのポインター。 この値は、IRD の SQL_DESC_NAME フィールドから読み取られます。 列が名前付きか、列名が確認できない場合、ドライバーは、空の文字列を返します。  
+ Output列名を返す null で終わるバッファーへのポインター。 この値は、IRD の SQL_DESC_NAME フィールドから読み取られます。 列に名前が付いていない場合、または列名を特定できない場合、ドライバーは空の文字列を返します。  
   
- 場合*ColumnName*が null の場合、 *NameLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*ColumnName*します。  
+ *Columnname*が NULL の場合でも、 *NameLengthPtr*は、 *columnname*が指すバッファーで返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
   
  *BufferLength*  
- [入力]長さ、**ColumnName*文字のバッファー。  
+ 代入**ColumnName*バッファーの長さ (文字数)。  
   
  *NameLengthPtr*  
- [出力]文字 (終端の null を除く) の合計数を返すバッファーへのポインターで返される使用可能な\* *ColumnName*します。 返すに使用できる文字数がより大きいかに等しい場合*BufferLength*、内の列名\* *ColumnName*に切り捨てられます*BufferLength*null 終了文字の長さマイナスです。  
+ Output\* *ColumnName*で返すことができる合計文字数 (null 終了を除く) を返すバッファーへのポインター。 返すことのできる文字数が*bufferlength*以上の場合、 \* *ColumnName*の列名は*bufferlength*に切り捨てられ、null 終了文字の長さを引いたものになります。  
   
  *DataTypePtr*  
- [出力]列の SQL データ型を返すバッファーへのポインター。 この値は、IRD の SQL_DESC_CONCISE_TYPE フィールドから読み取られます。 内の値の 1 つ[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)、またはドライバーに固有の SQL データ型。 データ型を決定できない場合、ドライバーは SQL_UNKNOWN_TYPE を返します。  
+ Output列の SQL データ型を返すバッファーへのポインター。 この値は、IRD の SQL_DESC_CONCISE_TYPE フィールドから読み取られます。 これは、 [Sql データ型](../../../odbc/reference/appendixes/sql-data-types.md)の値、またはドライバー固有の sql データ型のいずれかになります。 データ型を特定できない場合、ドライバーは SQL_UNKNOWN_TYPE を返します。  
   
- ODBC 3。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP がで返される *\*DataTypePtr*の日付、時刻、またはタイムスタンプ データ、ODBC 2 にそれぞれ;.*x*SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ドライバー マネージャーは、ODBC 2 時に、必要なマッピングを実行します。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーまたはとき、ODBC 3 *。x* ODBC 2 を利用するアプリケーション *。x*ドライバー。  
+ ODBC 3 の場合。DATE、TIME、または TIMESTAMP データの* \*DataTypePtr*では、 *x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP がそれぞれ返されます。ODBC 2 の場合。*x*、SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ODBC 2 では、ドライバーマネージャーが必要なマッピングを実行します。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバーまたは ODBC 3 の場合。*x*アプリケーションは ODBC 2 で動作しています。*x*ドライバー。  
   
- ときに*ColumnNumber*と等しいで返される SQL_BINARY (ブックマーク列) を 0 に *\*DataTypePtr*の可変長のブックマーク。 (SQL_INTEGER は ODBC の 3 つのブックマークを使用する場合に返されます。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーまたは ODBC 2 *。x*アプリケーションは、ODBC 3 の操作します *。x*ドライバー)。  
+ *Columnnumber*が 0 (ブックマーク列) の場合、 * \*DataTypePtr*では可変長のブックマークに対して SQL_BINARY が返されます。 (SQL_INTEGER は、ブックマークが ODBC 3 で使用されている場合に返されます。*x*アプリケーションが ODBC 2 で動作する。*x*ドライバーまたは ODBC 2。*x*アプリケーションが ODBC 3 を使用して動作している。*x*ドライバー。)  
   
- これらのデータ型の詳細については、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
+ これらのデータ型の詳細については、「付録 D: データ型」の「 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)」を参照してください。 ドライバー固有の SQL データ型の詳細については、ドライバーのドキュメントを参照してください。  
   
  *ColumnSizePtr*  
- [出力]データ ソースの列の文字) 単位でサイズを返すバッファーへのポインター。 列のサイズを決定できない場合、ドライバーは、0 を返します。 列のサイズの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。  
+ Outputデータソース上の列のサイズ (文字数) を返すバッファーへのポインター。 列のサイズを特定できない場合、ドライバーは0を返します。 列のサイズの詳細については、「付録 D: データ型」の「[列のサイズ、10進数、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
   
  *DecimalDigitsPtr*  
- [出力]データ ソースの列の 10 進数字の数を返すバッファーへのポインター。 10 進数字の数が特定できないまたは適用可能でない、ドライバーは 0 を返します。 10 進数字の詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。  
+ Outputデータソース上の列の小数点以下桁数を返すバッファーへのポインター。 小数点以下桁数を特定できない場合、または適用できない場合、ドライバーは0を返します。 10進数の詳細については、「付録 D: データ型」の「[列のサイズ、10進数字、転送オクテットの長さ、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)」を参照してください。  
   
  *NullablePtr*  
- [出力]列が NULL 値を許容するかどうかを示す値を返すバッファーへのポインター。 この値は、IRD の SQL_DESC_NULLABLE フィールドから読み取られます。 値は次のいずれかになります。  
+ Output列で NULL 値が許容されるかどうかを示す値を返すバッファーへのポインター。 この値は、IRD の SQL_DESC_NULLABLE フィールドから読み取られます。 値は、次のいずれかになります。  
   
- SQL_NO_NULLS:その列には NULL 値が許容されていません。  
+ SQL_NO_NULLS: この列では NULL 値が許可されていません。  
   
- SQL_NULLABLE:列が NULL 値を許容します。  
+ SQL_NULLABLE: この列では NULL 値が許可されます。  
   
- SQL_NULLABLE_UNKNOWN:列が NULL 値を許容するかどうか、ドライバーを特定できません。  
+ SQL_NULLABLE_UNKNOWN: ドライバーは、列で NULL 値が許可されているかどうかを判断できません。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLDescribeCol** SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返します呼び出すことによって、関連付けられた SQLSTATE 値を取得できる**SQLGetDiagRec**で、 *HandleType*sql_handle_stmt としての*処理*の*StatementHandle*します。 次の表に、一般的にによって返される SQLSTATE 値**SQLDescribeCol** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **SQLDescribeCol**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLDescribeCol**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データで、右側が切り捨てられました|バッファー \* *ColumnName*を列名は切り詰められましたように列全体の名前を返すのに十分な大きさがありません。 切り詰められていない列名の長さが返される **NameLengthPtr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07005|準備されたステートメントがない、*カーソルの指定*|関連付けられているステートメント、 *StatementHandle*結果セットを返しませんでした。 記述する列がありませんでした。|  
-|07009|無効な記述子のインデックス|引数に指定された (DM) 値*ColumnNumber*を 0 に等しい、SQL_ATTR_USE_BOOKMARKS ステートメントのオプションが SQL_UB_OFF をでした。<br /><br /> 引数が指定された値*ColumnNumber*が結果セット内の列の数を超えていました。|  
-|08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリ割り当てに失敗しました|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている**SQLDescribeCol**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) 関数が呼び出す前に呼び出された**SQLPrepare**、 **SQLExecute**、またはステートメント ハンドルでのカタログ関数。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength*が 0 未満でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データ、右側が切り捨てられました|バッファー \* *ColumnName*が列名全体を返すのに十分な大きさではないため、列名が切り捨てられました。 切り捨てられた列名の長さは **NameLengthPtr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|07005|準備されたステートメントが*カーソル指定*ではありません|*StatementHandle*に関連付けられたステートメントは、結果セットを返しませんでした。 説明する列がありませんでした。|  
+|07009|無効な記述子のインデックス|(DM) 引数*Columnnumber*に指定された値が0で、SQL_ATTR_USE_BOOKMARKS statement オプションが SQL_UB_OFF でした。<br /><br /> 引数*Columnnumber*に指定された値が、結果セット内の列数を超えています。|  
+|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLDescribeCol**が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) 関数は、ステートメントハンドルで**SQLPrepare**、 **sqlexecute**、または catalog 関数を呼び出す前に呼び出されました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) 引数*Bufferlength*に指定された値が0未満でした。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
   
- **SQLDescribeCol**によって返される任意の SQLSTATE を返すことができます**SQLPrepare**または**SQLExecute**後に呼び出されたときに**SQLPrepare** 前**SQLExecute**にデータ ソースが、ステートメント ハンドルに関連付けられている SQL ステートメントを評価するときに依存します。  
+ **SQLDescribeCol**は、ステートメントハンドルに関連付けられている SQL ステートメントがデータソースによって評価されたかどうかに応じて、 **SQLPrepare**または**sqlexecute** **によっ**て返されるすべての**SQLSTATE を返す**ことができます。  
   
- パフォーマンス上の理由から、アプリケーションを呼び出す必要がありますいない**SQLDescribeCol**ステートメントを実行する前にします。  
+ パフォーマンス上の理由から、アプリケーションでは、ステートメントを実行する前に**SQLDescribeCol**を呼び出さないでください。  
   
-## <a name="comments"></a>コメント  
- アプリケーションを呼び出す通常**SQLDescribeCol**呼び出しの後に**SQLPrepare**の前に、または後に関連付けられている呼び出し**SQLExecute**します。 アプリケーションを呼び出すことも**SQLDescribeCol**呼び出しの後に**SQLExecDirect**します。 詳細については、次を参照してください。[結果セットのメタデータ](../../../odbc/reference/develop-app/result-set-metadata.md)します。  
+## <a name="comments"></a>説明  
+ 通常、アプリケーションは**SQLPrepare**の呼び出しの後、関連付けられた**sqlexecute**の呼び出しの前または後に**SQLDescribeCol**を呼び出します。 アプリケーションでは、 **SQLExecDirect**の呼び出し後に**SQLDescribeCol**を呼び出すこともできます。 詳細については、「[結果セットのメタデータ](../../../odbc/reference/develop-app/result-set-metadata.md)」を参照してください。  
   
- **SQLDescribeCol**列名、型、およびによって生成される長さを取得、**選択**ステートメント。 列が式の場合 **ColumnName*が空の文字列またはドライバーの定義の名前。  
+ **SQLDescribeCol**は、 **SELECT**ステートメントによって生成される列の名前、型、および長さを取得します。 列が式の場合、**ColumnName*は空の文字列またはドライバーで定義された名前のいずれかになります。  
   
 > [!NOTE]  
->  ODBC では、Open Group と SQL アクセス グループ呼び出しレベル インターフェイス仕様のオプションを指定しない場合でも、拡張機能として SQL_NULLABLE_UNKNOWN をサポート**SQLDescribeCol**します。  
+>  Open Group および SQL Access Group 呼び出しレベルのインターフェイスの仕様で**SQLDescribeCol**のオプションが指定されていない場合でも、ODBC では拡張として SQL_NULLABLE_UNKNOWN がサポートされます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|バッファーを結果セット内の列にバインドします。|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|ステートメントの処理をキャンセル|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|結果セット内の列に関する情報を返す|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|  
-|複数行のデータをフェッチしています|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|結果の数を返すセットの列|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
-|実行するステートメントを準備します。|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|結果セット内の列へのバッファーのバインド|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|結果セットの列に関する情報を返す|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|  
+|複数行のデータのフェッチ|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|結果セットの列数を返す|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|実行するステートメントの準備|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

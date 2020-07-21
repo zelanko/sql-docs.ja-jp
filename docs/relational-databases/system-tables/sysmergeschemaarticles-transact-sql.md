@@ -1,5 +1,5 @@
 ---
-title: sysmergeschemaarticles (TRANSACT-SQL) |Microsoft Docs
+title: sysmergeschemaarticles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,37 +15,37 @@ dev_langs:
 helpviewer_keywords:
 - sysmergeschemaarticles system table
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9239181b95485b42e839d7dd6d98de6d4186e750
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881356"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マージ レプリケーションのスキーマだけのアーティクルを追跡します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  マージレプリケーションのスキーマのみのアーティクルを追跡します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|マージ パブリケーションでスキーマだけのアーティクルの名前。|  
-|**type**|**tinyint**|次のいずれかのスキーマだけのアーティクルの種類を示します。<br /><br /> **0x20**ストアド プロシージャのスキーマだけのアーティクルを = です。<br /><br /> **0x40** = ビュー スキーマのみのアーティクルまたはインデックス付きビュー スキーマのみのアーティクルです。|  
-|**objid**|**int**|アーティクルのベース オブジェクトのオブジェクト識別子です。 プロシージャ、ビュー、インデックス、ビュー、またはユーザー定義関数のオブジェクト識別子を指定できます。|  
-|**artid**|**uniqueidentifier**|アーティクルの id。|  
-|**description**|**nvarchar (255)**|この記事の説明です。|  
-|**pre_creation_command**|**tinyint**|サブスクリプション データベースの中でアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =** なし - サブスクライバーで、テーブルが既に存在する場合操作はありません。<br /><br /> **1** = drop - テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセット フィルターの WHERE 句に基づいて削除します。<br /><br /> **3** = Truncate のと同じ**2**が行ではなくページを削除します。 ただし、WHERE 句は使用しません。|  
-|**pubid**|**uniqueidentifier**|パブリケーションの一意の識別子。|  
-|**status**|**tinyint**|スキーマだけのアーティクルの状態。次のいずれかになります。<br /><br /> **1** = Unsynced - テーブルに、次回、スナップショット エージェントの実行をパブリッシュする初期処理スクリプト。<br /><br /> **2** = active - テーブルをパブリッシュする初期処理スクリプトが実行されています。<br /><br /> **5** = New_inactive - 追加します。<br /><br /> **6** = New_active - 追加します。|  
-|**creation_script**|**nvarchar (255)**|ターゲット テーブルの作成に使用されるアーティクル スキーマの事前作成スクリプトのパスと名前 (省略可能)。|  
-|**schema_option**|**binary(8)**|スキーマだけのアーティクルに関連するスキーマ生成オプションのビットマップ。次の値のうち 1 つ以上の結果を、ビットごとに論理和演算したものになります。<br /><br /> **0x00** = スナップショット エージェントによるスクリプト作成を無効にしては、指定されたいる creationscript を使用します。<br /><br /> **0x01** = オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。<br /><br /> **0x10** = 対応するクラスター化インデックスを生成します。<br /><br /> **0x20** = ユーザー定義データ型を基本データ型に変換します。<br /><br /> **0x40** = 対応する非クラスター化インデックスを生成またはインデックスです。<br /><br /> **0x80** Include の主キーに関する宣言参照整合性を = です。<br /><br /> **0x100**定義されている場合、テーブル アーティクル上のレプリケートのユーザー トリガーを = です。<br /><br /> **0x200** = 外部キー制約をレプリケートします。 参照先のテーブルがパブリケーションの一部は、パブリッシュされたテーブルですべての外部キー制約はレプリケートされません。<br /><br /> **0x400** = check 制約をレプリケートします。<br /><br /> **0x800** = 既定値をレプリケートします。<br /><br /> **0x1000** = 列レベルの照合順序をレプリケートします。<br /><br /> **0x2000** = 拡張パブリッシュされるアーティクルのソース オブジェクトに関連付けられたプロパティをレプリケートします。<br /><br /> **0x4000** = テーブル アーティクルで定義されている場合、一意なキーをレプリケートします。<br /><br /> **0x8000** = ALTER TABLE ステートメントを使用して、制約として主キーと、テーブルの一意のキーの記事をレプリケートします。<br /><br /> 指定できる値の詳細については**schema_option**を参照してください[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。|  
-|**destination_object**|**sysname**|サブスクリプション データベース内の変換先オブジェクトの名前。 この値は、ストアド プロシージャ、ビュー、Udf などのスキーマだけのアーティクルにのみ適用されます。|  
-|**destination_owner**|**sysname**|ない場合、サブスクリプション データベース内のオブジェクトの所有者**dbo**します。|  
+|**name**|**sysname**|マージパブリケーション内のスキーマのみのアーティクルの名前です。|  
+|**type**|**tinyint**|スキーマのみのアーティクルの種類を示します。次のいずれかを指定できます。<br /><br /> **0x20** = ストアドプロシージャのスキーマのみのアーティクル。<br /><br /> **0x40** = ビュースキーマのみのアーティクルまたはインデックス付きビューのスキーマのみのアーティクル。|  
+|**objid**|**int**|アーティクルベースオブジェクトのオブジェクト識別子。 には、プロシージャ、ビュー、インデックス付き、ビュー、またはユーザー定義関数のオブジェクト識別子を指定できます。|  
+|**artid**|**uniqueidentifier**|アーティクル ID です。|  
+|**description**|**nvarchar(255)**|アーティクルの説明です。|  
+|**pre_creation_command**|**tinyint**|サブスクリプション データベースの中でアーティクルが作成されるときに実行される既定の操作。<br /><br /> **0 =** なし-サブスクライバーにテーブルが既に存在する場合、アクションは実行されません。<br /><br /> **1** = Drop-テーブルを再作成する前に削除します。<br /><br /> **2** = 削除-サブセットフィルターの WHERE 句に基づいて削除を発行します。<br /><br /> **3** = 切り捨て- **2**と同じですが、行ではなくページを削除します。 ただし、は WHERE 句を受け取りません。|  
+|**pubid**|**uniqueidentifier**|パブリケーションの一意識別子です。|  
+|**status**|**tinyint**|スキーマだけのアーティクルの状態。次のいずれかになります。<br /><br /> **1** = 同期されていない-テーブルをパブリッシュする初期処理スクリプトは、次回スナップショットエージェントが実行されるときに実行されます。<br /><br /> **2** = アクティブ-テーブルをパブリッシュする初期処理スクリプトが実行されました。<br /><br /> **5** = New_inactive 追加されます。<br /><br /> **6** = New_active 追加されます。|  
+|**creation_script**|**nvarchar(255)**|ターゲット テーブルの作成に使用されるアーティクル スキーマの事前作成スクリプトのパスと名前 (省略可能)。|  
+|**schema_option**|**binary (8)**|スキーマだけのアーティクルに関連するスキーマ生成オプションのビットマップ。次の値のうち 1 つ以上の結果を、ビットごとに論理和演算したものになります。<br /><br /> **0x00** = スナップショットエージェントによるスクリプト作成を無効にし、提供されたスクリプトを使用します。<br /><br /> **0x01** = オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。<br /><br /> **0x10** = 対応するクラスター化インデックスを生成します。<br /><br /> **0x20** = ユーザー定義データ型を基本データ型に変換します。<br /><br /> **0x40** = 対応する非クラスター化インデックスを生成します。<br /><br /> **0x80** = 宣言された参照整合性を主キーに含めます。<br /><br /> **0x100** = 定義されている場合は、テーブルアーティクルのユーザートリガーをレプリケートします。<br /><br /> **0x200** = 外部キー制約をレプリケートします。 参照先のテーブルがパブリケーションの一部でない場合、パブリッシュされたテーブルのすべての foreign key 制約はレプリケートされません。<br /><br /> **0x400** = check 制約をレプリケートします。<br /><br /> **0x800** = 既定値をレプリケートします。<br /><br /> **0x1000** = 列レベルの照合順序をレプリケートします。<br /><br /> **0x2000** = パブリッシュされたアーティクルのソースオブジェクトに関連付けられた拡張プロパティをレプリケートします。<br /><br /> **0x4000** = テーブルアーティクルで定義されている場合は、一意キーをレプリケートします。<br /><br /> **0x8000** = ALTER table ステートメントを使用して、テーブルアーティクル上の主キーと一意キーを制約としてレプリケートします。<br /><br /> **Schema_option**に使用できる値の詳細については、「 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」を参照してください。|  
+|**destination_object**|**sysname**|サブスクリプションデータベース内の対象オブジェクトの名前。 この値は、ストアドプロシージャ、ビュー、Udf など、スキーマのみのアーティクルに適用されます。|  
+|**destination_owner**|**sysname**|サブスクリプションデータベース内のオブジェクトの所有者 ( **dbo**ではない場合)。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

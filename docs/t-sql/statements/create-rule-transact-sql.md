@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006495"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392880"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ルールと呼ばれるオブジェクトを作成します。 ルールを列または別名データ型にバインドすると、その列に挿入できる適切な値を制限できます。  
   
@@ -50,14 +50,16 @@ ms.locfileid: "68006495"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *schema_name*  
  ルールが属しているスキーマの名前を指定します。  
   
@@ -72,7 +74,7 @@ AS condition_expression
 > [!NOTE]  
 >  別名データ型を使用する式にルールを作成することは避けてください。 別名データ型を使用する式にルールを作成することはできますが、ルールを列または別名データ型にバインドすると、参照時にこの式のコンパイルに失敗します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  CREATE RULE は、単一のバッチ内で他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと組み合わせて使用することはできません。 ルールを作成した時点では、データベース内の既存のデータにルールは適用されません。また、ルールをシステム データ型にバインドすることはできません。  
   
  ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "\@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
@@ -87,17 +89,17 @@ AS condition_expression
   
  以前のルールのバインドを解除せずに、新しいルールを列またはデータ型にバインドすることができます。新しいルールは以前のルールをオーバーライドします。 列にバインドされているルールは、別名データ型にバインドされているルールよりも常に優先されます。 ルールを列にバインドすると、その列の別名データ型に既にバインドされていたルールは新しいルールに置き換えられます。 ルールをデータ型にバインドしても、その別名データ型の列にバインドされていたルールは新しいルールに置き換えられません。 次の表は、ルールが既に存在する列および別名データ型にルールをバインドするときの優先順位です。  
   
-|新しいルールのバインド先|前のルールのバインド先が<br /><br /> 別名データ型の場合|前のルールのバインド先が<br /><br /> [列]|  
+|新しいルールのバインド先|前のルールのバインド先が<br /><br /> 別名データ型の場合|前のルールのバインド先が<br /><br /> 列|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |別名データ型|前のルールが置き換えられる|変更なし|  
-|[列]|前のルールが置き換えられる|前のルールが置き換えられる|  
+|列|前のルールが置き換えられる|前のルールが置き換えられる|  
   
  列に既定値とルールの両方が関連付けられている場合、既定値はルールによって定義されるドメイン内のものであることが必要です。 ルールに矛盾する既定値は挿入されません。 SQL Server データベース エンジンでは、既定値の挿入が試行されるたびにエラー メッセージが生成されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  CREATE RULE を実行するために、ユーザーには少なくとも、現在のデータベースの CREATE RULE 権限と、ルールを作成するスキーマの ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-rule-with-a-range"></a>A. 範囲を指定してルールを作成する  
  次の例で作成するルールは、ルールのバインド先となる列に挿入できる整数の範囲を制限します。  

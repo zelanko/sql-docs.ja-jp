@@ -4,31 +4,31 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893111"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670373"
 ---
 # <a name="usage-dmx"></a>使用法 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニング拡張機能 (DMX) を使用しての[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新しいデータマイニングモデルを定義する場合は、モデルを構築するデータマイニングアルゴリズムで各列を使用する方法を指定する必要があります。 列は次の型のうちのいずれかとして指定することができます。  
+  データマイニング拡張機能 (DMX) を使用しての新しいデータマイニングモデルを定義する場合は [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、モデルを構築するデータマイニングアルゴリズムで各列を使用する方法を指定する必要があります。 列は次の型のうちのいずれかとして指定することができます。  
   
--   **[キー]**  
+-   **キー**  
   
--   **キーシーケンス**  
+-   **Key Sequence**  
   
--   **キー時刻**  
+-   **[キー時刻]**  
   
--   **Predict**  
+-   **将来**  
   
--   **PredictOnly**  
+-   **[予測のみ]**  
   
  DMX では指定されていない列は入力列として扱われます。  
   
@@ -36,17 +36,17 @@ ms.locfileid: "68893111"
   
  **Predict**型として指定された列は、入力列と出力列の両方として使用されます。 **Predictonly**として指定された列は、出力列としてのみ使用されます。 特定のアルゴリズムでは、列の予測を異なる方法で扱うことができます。  
   
- でサポートされる[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]列の使用法の種類の詳細については、「[マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
+ でサポートされる列の使用法の種類の詳細につい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ては、「[マイニングモデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
- [データマイニング拡張&#40;機能&#41; DMX 構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [データマイニング拡張&#40;機能&#41; DMX 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データマイニング拡張&#40;機能&#41; DMX オペレーターリファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データマイニング拡張&#40;機能&#41; DMX ステートメントリファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データマイニング拡張&#40;機能&#41; DMX 構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>参照  
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
+ [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

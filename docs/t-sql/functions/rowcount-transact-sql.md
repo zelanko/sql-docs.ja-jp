@@ -19,17 +19,17 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bd62f7cd06f1d8d233b47d525ab05054d397b59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: a84cae4e79d4b2bd1438bdae9778a4af37d4a231
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736411"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   最後のステートメントの影響を受けた行数を返します。 行の数が 20億を超える場合は、次のようを使用して [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md)です。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68083357"
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、次の方法で @@ROWCOUNT に値を設定できます。  
   
 -   @@ROWCOUNT に、影響を受ける行または読み取られる行の数を設定します。 行はクライアントに送信される場合と、送信されない場合があります。  
@@ -63,11 +63,11 @@ ms.locfileid: "68083357"
   
  EXECUTE ステートメントは、前の @@ROWCOUNT を保存します。  
   
- USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION、COMMIT TRANSACTION などのステートメントは、ROWCOUNT 値を 0 にリセットします。  
+ USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION、COMMIT TRANSACTION などのステートメントによって、ROWCOUNT 値は 0 にリセットされます。  
   
  ネイティブ コンパイル ストアド プロシージャでは、直前の @@ROWCOUNT が維持されます。 ネイティブ コンパイル ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、@@ROWCOUNT は設定しないでください。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`UPDATE` ステートメントを実行し、`@@ROWCOUNT` を使用して、変更された行があるかどうかを調べます。  
   
 ```  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

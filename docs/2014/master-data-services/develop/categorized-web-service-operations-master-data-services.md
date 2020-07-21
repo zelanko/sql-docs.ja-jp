@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 84339eab432194327759fbdad505cdb1af60517b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 890a7da8d94c23ff65303eb2ce629774f20f70a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971532"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がユーザー インターフェイスを通じて行うすべての機能をコード記述で制御できるようにするための操作が、完全なセットとして含まれています。 Web サービス操作は、<xref:Microsoft.MasterDataServices.IService> インターフェイスによって定義され、<xref:Microsoft.MasterDataServices.ServiceClient> クラスのメソッドとして実装されます。 このトピックでは、Web サービス API の使用方法を理解しやすくするために、Web サービス操作を概念ごとのカテゴリに分類します。  
@@ -137,7 +136,7 @@ ms.locfileid: "65479432"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>データ エクスポートの操作  
- これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、次を参照してください。[データのエクスポート&#40;Master Data Services&#41;](../overview-exporting-data-master-data-services.md)します。  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「[データ &#40;マスターデータサービス&#41;のエクスポート](../overview-exporting-data-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -146,7 +145,7 @@ ms.locfileid: "65479432"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>セキュリティの操作  
+## <a name="security-operations"></a>セキュリティ運用担当者  
  これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのアクセスを制御するセキュリティ設定を変更するために使用されます。 詳細については、「[セキュリティ (マスター データ サービス)](../security-master-data-services.md)」を参照してください。  
   
 ||  

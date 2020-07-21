@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a402937af18a450dd778d585dd5a1fa59605f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ea77000e660405d9be5086d7d85625bcdd7ed99
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070502"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293990"
 ---
 # <a name="select-objects-to-transfer"></a>[<転送するオブジェクト> の選択]
 
@@ -32,10 +32,10 @@ ms.locfileid: "68070502"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)   
- [[ジョブ転送タスク エディター] ([全般] ページ)](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
+ [[ジョブ転送タスク エディター] &#40;[全般] ページ&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
  [[ログイン転送タスク エディター] &#40;[ログイン] ページ&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   
  [[SQL Server オブジェクトの転送タスク エディター] &#40;[オブジェクト] ページ&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md)   
- [[Master ストアド プロシージャ転送タスク エディター] ([ストアド プロシージャ] ページ)](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [[エラー メッセージ転送タスク エディター] &#40;[メッセージ] ページ&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
   
   

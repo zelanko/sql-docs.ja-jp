@@ -1,5 +1,5 @@
 ---
-title: トレース (SQL Server Profiler) 内のイベントをフィルター処理 |Microsoft Docs
+title: トレース内のイベントをフィルター処理する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 851fd1c1f3249a36af6de66aaa374088fab1c1ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18dea10c22e3800f1a9f099dbc94a188356e2733
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000245"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>トレース内のイベントへのフィルターの適用 (SQL Server Profiler)
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 トレースのフィルター設定は必須ではありません。 ただし、フィルターを設定すると、トレース中に発生するオーバーヘッドを低減できます。  
@@ -40,13 +39,13 @@ ms.locfileid: "63298170"
   
 4.  **[OK]** をクリックします。  
   
- **注意点 :**  
+ **考慮事項:**  
   
 -   [イベントの選択] タブの **[StartTime]** データ列および **[EndTime]** データ列に対してフィルター条件を設定するには、次の操作を実行します。  
   
     -   日付は `YYYY/MM/DD HH:mm:sec`の形式で入力します。  
   
-         -または-  
+         \- または -  
   
     -   **[全般オプション]** ダイアログ ボックスで、 **[日時の値の表示に地域別設定を使用する]** チェック ボックスをオンにします。 **[全般オプション]** ダイアログ ボックスを表示するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で **[ツール]** メニューの **[オプション]** をクリックします。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "63298170"
   
 -   **osql** ユーティリティまたは **sqlcmd** ユーティリティからイベントをトレースしている場合は必ず、 **%** を **TextData** データ列のフィルターに付加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

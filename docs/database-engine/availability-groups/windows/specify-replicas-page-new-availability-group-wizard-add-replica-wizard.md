@@ -1,6 +1,7 @@
 ---
-title: '[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード) | Microsoft Docs'
-ms.custom: ''
+title: '可用性グループ ウィザード: [レプリカの指定] ページ'
+description: SQL Server Management Studio (SSMS) の新しい可用性グループ ウィザードに含まれる [レプリカの指定] ページのオプションについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,15 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a793ddb2f1b16c8b2f7596c348966e24d2785345
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898089"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 **[レプリカの指定]** ページのオプションについて説明します。 このページの対象は、 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** の **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** です。 **[レプリカの指定]** ページを使用して、1 つまたは複数の可用性レプリカを指定および構成して可用性グループを追加します。 このページには、次の表に示す 4 つのタブが含まれます。 この表でタブの名前をクリックすると、このトピックの対応するセクションに移動します。  
   
 |タブ|簡単な説明|  
@@ -31,11 +32,11 @@ ms.locfileid: "68013990"
 |[バックアップの設定](#BackupPreferencesTab)|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
 |[リスナー](#Listener)|このタブ (使用可能な場合) を使用して、可用性グループ リスナーを作成します。 既定では、リスナーは作成されません。<br /><br /> このタブは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を実行している場合のみ使用できます。<br/><br/>クラスター タイプが EXTERNAL または NONE のいずれかの場合、DHCP は無効です。 |  
   
-##  <a name="ReplicasTab"></a> [レプリカ] タブ  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> [レプリカ] タブ  
  **サーバー インスタンス**  
  可用性レプリカをホストするサーバー インスタンスの名前を表示します。  
   
- セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、 **[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「 [Windows Azure の仮想マシン内の SQL Server の高可用性と災害復旧](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照)、 **[Azure のレプリカ追加]** をクリックして、セカンダリ レプリカを備えた仮想マシンを Windows Azure に作成できます。  
+ セカンダリ レプリカをホストするために使用するサーバー インスタンスが **[可用性レプリカ]** グリッドに表示されていない場合は、 **[レプリカの追加]** をクリックします。 ハイブリッド IT 環境で可用性グループを構成する場合は (「[Azure Virtual Machines での SQL Server の高可用性とディザスター リカバリー](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照)、 **[Azure のレプリカ追加]** ボタンをクリックして、セカンダリ レプリカを備えた仮想マシンを Azure に作成できます。  
   
  **[初期ロール]**  
  新しいレプリカが初期状態で実行するロール(**プライマリ** または **セカンダリ**) を示します。  
@@ -66,12 +67,12 @@ ms.locfileid: "68013990"
  クリックすると、セカンダリ レプリカが可用性グループに追加されます。  
   
  **[Azure のレプリカ追加]**  
- 可用性グループのセカンダリ レプリカを実行する Windows Azure 仮想マシンを作成する場合にクリックします。 このオプションは、内部設置型レプリカが含まれるハイブリッド IT 環境の可用性グループに対してのみ適用できます。 詳細については、「 [Windows Azure 仮想マシン内の SQL Server の高可用性と災害復旧](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照してください。  
+ 可用性グループのセカンダリ レプリカを実行する Azure 仮想マシンを作成する場合にクリックします。 このオプションは、オンプレミスのレプリカが含まれるハイブリッド IT 環境の可用性グループに対してのみ適用できます。 詳細については、「[Azure Virtual Machines での SQL Server の高可用性とディザスター リカバリー](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)」を参照してください。  
   
  **[レプリカの削除]**  
  クリックすると、選択したセカンダリ レプリカが可用性グループから削除されます。  
   
-##  <a name="EndpointsTab"></a> [エンドポイント] タブ  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> [エンドポイント] タブ  
  **[エンドポイント]** タブには、可用性レプリカをホストする各サーバー インスタンスについて、既存のデータベース ミラーリング エンドポイント (存在する場合) の実際の値か、Windows 認証を使用する新しいエンドポイント候補の推奨値が表示されます。 既存のエンドポイントと候補となるエンドポイントの両方について、[エンドポイント値] グリッドには次の情報が表示されます。  
   
  **[サーバー名]**  
@@ -106,7 +107,7 @@ ms.locfileid: "68013990"
   
      エンドポイントを構成するときに **[可用性レプリカの指定]** ページを開いたままにしていた場合は、 **[エンドポイント]** タブに戻り、 **[更新]** をクリックして、 **[エンドポイント値]** グリッドを最新の情報に更新します。  
   
-##  <a name="BackupPreferencesTab"></a> [バックアップの設定] タブ  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> [バックアップの設定] タブ  
  どこでバックアップを実行するかを指定するには、次のオプションのいずれかを選択します。  
   
  **[セカンダリを優先]**  
@@ -122,7 +123,7 @@ ms.locfileid: "68013990"
  バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
 > [!IMPORTANT]  
->  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+>  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
 ### <a name="replica-backup-priorities-grid"></a>[レプリカのバックアップの優先順位] グリッド  
  **[レプリカのバックアップの優先順位]** グリッドを使用して、可用性グループのレプリカごとに、バックアップの優先順位を指定します。 このグリッドに含まれる列は、次のとおりです。  
@@ -136,11 +137,11 @@ ms.locfileid: "68013990"
  **[レプリカの除外]**  
  バックアップの実行に対してこの可用性レプリカが選択されないようにするには これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
-##  <a name="Listener"></a> [リスナー] タブ  
+##  <a name="listener-tab"></a><a name="Listener"></a> [リスナー] タブ  
  クライアント接続ポイントを提供する[可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)の設定を指定します。次のいずれかです。  
   
  **[今は可用性グループ リスナーを作成しない]**  
- この手順をスキップします。 リスナーは、後で作成できます。 詳細については、「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)です。  
+ この手順をスキップします。 リスナーは、後で作成できます。 詳細については、「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)が存在する必要があります。  
   
  **[可用性グループ リスナーの作成]**  
  次のように、この可用性グループに対するリスナー優先順位を指定します。  
@@ -151,7 +152,7 @@ ms.locfileid: "68013990"
 > [!IMPORTANT]  
 >  **[リスナー]** タブで無効な DNS リスナー名 (またはポート番号) を入力した場合は、 **[レプリカの指定]** ページの **[次へ]** ボタンが無効になります。  
   
- **ポート**  
+ **[ポート]**  
  このリスナーで使用される TCP ポートを指定します。  
   
 > [!NOTE]  
@@ -163,7 +164,7 @@ ms.locfileid: "68013990"
  **[静的 IP]**  
  複数のサブネット上でリッスンするリスナーを選択する場合は指定します。 静的 IP ネットワーク モードを使用するには、可用性グループ リスナーが、可用性グループの可用性レプリカをホストするすべてのサブネットでリッスンする必要があります。 各サブネットに対して、 **[追加]** をクリックし、サブネット アドレスを選択して、IP アドレスを指定します。  
   
- **[静的 IP]** がネットワーク モードとして選択されている場合は (これは既定の選択)、グリッドに **[サブネット]** 列および **[IP アドレス]** 列が表示され、関連する **[追加]** ボタンおよび **[削除]** ボタンが表示されます。 最初のサブネットを追加するまで、グリッドが空であることに注意してください。  
+ **[静的 IP]** がネットワーク モードとして選択されている場合は (これは既定の選択)、グリッドに **[サブネット]** 列および **[IP アドレス]** 列が表示され、関連する **[追加]** ボタンおよび **[削除]** ボタンが表示されます。 最初のサブネットを追加するまで、グリッドは空になります。  
   
  **[サブネット]** 列  
  リスナーに対して追加された各サブネットに対して選択したサブネット アドレスが表示されます。  
@@ -171,10 +172,10 @@ ms.locfileid: "68013990"
  **[IP アドレス]** 列  
  特定のサブネットに指定した IPv4 または IPv6 のアドレスが表示されます。  
   
- **[追加]**  
+ **追加**  
  このリスナーにサブネットを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md)」ヘルプ トピックを参照してください。  
   
- **[削除]**  
+ **Remove**  
  グリッド内で現在選択されているサブネットを削除する場合にクリックします。  
   
  **[DHCP]**  
@@ -185,7 +186,7 @@ ms.locfileid: "68013990"
   
  **[DHCP]** が選択されている場合は、 **[サブネット]** フィールドが表示されます。  
   
- **[サブネット]**  
+ **サブネット**  
  ネットワーク モードとして **[DHCP]** を選択している場合は、 **[サブネット]** ボックスの一覧を使用して、可用性グループの可用性レプリカがホストされているサブネットのアドレスを選択します。  
   
 > [!IMPORTANT]
@@ -194,7 +195,7 @@ ms.locfileid: "68013990"
 >  -   リスナーの IP アドレスが排他的に使用されるように確保することを、ネットワーク管理者に依頼します。 この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
 > -   この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

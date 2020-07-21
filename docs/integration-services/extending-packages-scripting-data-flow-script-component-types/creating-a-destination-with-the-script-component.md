@@ -14,14 +14,14 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0a357eea4f29dc65365db7d5ca7274cf8c385aaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 946fc77d3bde2814176ebefce4102742a0288a91
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112415"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296488"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
 
@@ -101,7 +101,7 @@ ms.locfileid: "68112415"
   
 4.  必要に応じて外部データ ソースとの接続を切断し、その他の必要なクリーンアップ作業を実行するには、**PostExecute** メソッドをオーバーライドします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、変換先コンポーネントを作成するために **ScriptMain** クラスで必要なコードを示します。  
   
 > [!NOTE]

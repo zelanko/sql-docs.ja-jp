@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046008"
 ---
 # <a name="detail-property"></a>Detail プロパティ
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティには、次の XML 構造があります。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティの XML 構造は次のとおりです。  
   
 ## <a name="elements"></a>要素  
  **Detail**  
@@ -42,16 +42,16 @@ ms.locfileid: "63046008"
  **LinkID**  
  リンクに割り当てられた ID です。  
   
- **ProductName**  
+ **同様**  
  製品の名前です。 既定値は **Microsoft SQL Server Reporting Services** です。  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、次のようにする必要があります。8.00.0xxx.00 します。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx.00 のようになります。  
   
  **ProductLocaleId**  
  アプリケーションの INTL DLL のロケール ID または言語 ID (0x41A など)。  
   
- **OperatingSystem**  
+ **オペレーティングシステム**  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストール先のオペレーティング システム。 有効値は、依存しないオペレーティング システムの場合は **0**、[!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] の場合は **1**、Windows XP の場合は **16** です。  
   
  **CountryLocaleId**  
@@ -60,16 +60,16 @@ ms.locfileid: "63046008"
  **MoreInformation**  
  メソッド実行中に発生した入れ子にされた例外を含む XML 文字列です。  
   
- **Source**  
+ **ソース**  
  **MoreInformation** の子要素。 エラーのソースです。  
   
  **メッセージ**  
  **MoreInformation** の子要素。 入れ子にされた例外のエラー メッセージです。 この要素には、**ErrorCode** と **HelpLink** の XML 属性が含まれます。  
   
- **Warnings**  
+ **警告**  
  レポート処理から返された警告を含む XML 文字列です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services における例外処理の概要](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException クラス](reporting-services-soapexception-class.md)   
  [Detail プロパティを使用したエラー処理](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa968eaf8b34a1959f17474ae79f65f1a2fd0ebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 53f1732fd96949d53cf931a547e7b45e4113f546
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972437"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926526"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp (int, java.sql.Timestamp, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,16 +43,16 @@ public final void setTimestamp(int n,
   
  *x*  
   
- タイムスタンプオブジェクト。  
+ Timestamp オブジェクト。  
   
- *カレンダー*  
+ *cal*  
   
  Calendar オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setTimestamp メソッドは、java.sql.PreparedStatement インターフェイスの setTimestamp メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

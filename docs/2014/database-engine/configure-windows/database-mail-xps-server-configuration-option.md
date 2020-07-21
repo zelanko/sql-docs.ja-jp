@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83e91bf5070362b1db56907a1c5b016cf816b968
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62810544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935363"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs サーバー構成オプション
-  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 可能な値は次のとおりです。  
+  **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 指定できる値は、  
   
 -   **0** : データベース メールが使用できないことを示します (既定値)。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62810544"
   
  **Database Mail XPs** オプションを 0 に設定すると、データベース メールは開始されません。 データベース メールが実行されている場合にこのオプションを 0 に設定すると、 **DatabaseMailExeMinimumLifeTime** オプションで設定したアイドル状態の時間が続くまで、データベース メールは継続して実行され、メールが送信されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース メール拡張ストアド プロシージャが有効になります。  
   
 ```  

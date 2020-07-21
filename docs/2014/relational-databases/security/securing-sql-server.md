@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b8cb69c88d1f8eee98093c8fc8227db8e67ed7fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997389"
 ---
 # <a name="securing-sql-server"></a>SQL Server の保護
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の保護は、プラットフォーム、認証、オブジェクト (データを含む)、およびシステムにアクセスするアプリケーションの 4 つの領域が関係する一連の手順としてとらえることができます。 以下の各トピックでは、効果的なセキュリティ計画を作成および実装する方法について、順を追って説明します。  
@@ -38,7 +37,7 @@ ms.locfileid: "68891614"
   
  物理的なネットワーク セキュリティを実装する第一歩は、承認されていないユーザーがネットワークにアクセスできないようにすることです。 次の表に、ネットワーク セキュリティ情報の詳細を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] および他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションへのネットワーク アクセス|[!INCLUDE[ssEW](../../includes/ssew-md.md)] オンライン ブックの「サーバー環境の構成とセキュリティ設定」|  
   
@@ -47,7 +46,7 @@ ms.locfileid: "68891614"
   
  ファイアウォールも、セキュリティを実装する効果的な方法を提供します。 論理的には、組織のデータ セキュリティ ポリシーに従って、ネットワーク トラフィックを分離または制限する役割を果たすのがファイアウォールです。 ファイアウォールを使用する場合は、セキュリティ対策を特に強化するポイントを設けることで、オペレーティング システム レベルのセキュリティが向上します。 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でのファイアウォールの使用方法に関する詳細情報を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |ファイアウォールの構成: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |ファイアウォールの構成: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[SSIS サービスにアクセスするように Windows ファイアウォールを構成する](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
@@ -57,13 +56,13 @@ ms.locfileid: "68891614"
   
  外部からのアクセスの縮小はセキュリティのための措置で、未使用のコンポーネントの停止または無効化などが含まれます。 外部からのアクセスを縮小すると、システムを攻撃する手段が限られるので、セキュリティの向上を図ることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への外部からのアクセスを制限するために重要なことは、サービスとユーザーに適切な権限のみを付与して、必要なサービスを "最小の権限" で実行することです。 次の表に、サービスおよびシステム アクセスの詳細を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |次のために必要なサービス: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムがインターネット インフォメーション サービス (IIS) を使用する場合は、プラットフォームを外部のアクセスから保護するための追加の手順が必要です。 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および IIS に関する情報を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |IIS セキュリティ: [!INCLUDE[ssEW](../../includes/ssew-md.md)]|[!INCLUDE[ssEW](../../includes/ssew-md.md)] オンライン ブックの「IIS セキュリティ (IIS Security)」|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [認証]|[Reporting Services での認証](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
@@ -72,7 +71,7 @@ ms.locfileid: "68891614"
 ### <a name="sql-server-operating-system-files-security"></a>SQL Server オペレーティング システム ファイルのセキュリティ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、操作やデータ保存にオペレーティング システム ファイルが使用されます。 ファイル セキュリティのベスト プラクティスでは、これらのファイルへのアクセスを制限する必要があります。 次の表に、これらのファイルに関する情報を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラム ファイル|[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
@@ -88,7 +87,7 @@ GO
 ## <a name="principals-and-database-object-security"></a>プリンシパルとデータベース オブジェクト セキュリティ  
  プリンシパルは、個人、グループ、およびプロセスに与えられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスです。 "セキュリティ保護可能なリソース" とは、サーバー、データベース、およびデータベースに含まれているオブジェクトを指します。 それぞれのリソースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部からのアクセスを縮小するために構成できる一連の権限が設定されています。 次の表に、プリンシパルおよびセキュリティ保護可能なリソースに関する情報を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |サーバーとデータベースのユーザー、ロール、プロセス|[プリンシパル &#40;データベース エンジン&#41;](authentication-access/principals-database-engine.md)|  
 |サーバーとデータベース オブジェクトのセキュリティ|[セキュリティ保護可能](securables.md)|  
@@ -97,7 +96,7 @@ GO
 ### <a name="encryption-and-certificates"></a>暗号化と証明書  
  暗号化では、アクセス コントロールの問題は解決されません。 ただし、暗号化を使用すると、アクセス コントロールがバイパスされるようなまれな状況においてもデータ損失のリスクが限定されるので、セキュリティが強化されます。 たとえば、データベース ホスト コンピューターの構成が適切でない場合に、クレジット カード番号などの機密データを悪意のあるユーザーが入手したとしても、盗まれた情報が暗号化されていれば悪用される可能性が小さくなります。 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での暗号化の詳細を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |暗号化階層: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[暗号化階層](encryption/encryption-hierarchy.md)|  
 |安全な接続の実装|[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
@@ -105,7 +104,7 @@ GO
   
  証明書は、2 つのサーバー間で共有されているソフトウェアの "キー" であり、強力な認証による安全な通信を実現します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で証明書を作成して使用することで、オブジェクトおよび接続のセキュリティを向上させることができます。 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での証明書の使用方法に関する情報を示します。  
   
-|詳細|参照先|  
+|対象|参照先|  
 |---------------------------|---------|  
 |次のための証明書の作成: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |データベース ミラーリングでの証明書の使用|[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
@@ -121,10 +120,10 @@ GO
 ### <a name="sql-server-security-tools-and-utilities"></a>SQL Server のセキュリティ ツールとユーティリティ  
  次の表に、セキュリティの構成と管理に使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のツールとユーティリティに関する情報を示します。  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |接続、構成、制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server Management Studio の使用 [SQL Server]](../../database-engine/use-sql-server-management-studio.md)|  
-|コマンド プロンプトでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続とクエリの実行|[sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)|  
+|コマンド プロンプトでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続とクエリの実行|[sqlcmd Utility](../../tools/sqlcmd-utility.md)|  
 |ネットワーク構成および制御: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 構成マネージャー](../sql-server-configuration-manager.md)|  
 |ポリシー ベースの管理を使用した機能の有効化と無効化|[ポリシー ベースの管理を使用したサーバーの管理](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |レポート サーバーのための対称キーの操作|[rskeymgmt ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
@@ -132,7 +131,7 @@ GO
 ### <a name="sql-server-security-catalog-views-and-functions"></a>SQL Server セキュリティ カタログ ビューと関数  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、パフォーマンスおよび実用性のために最適化されているいくつかのビューおよび関数でセキュリティ情報が公開されます。 次の表に、セキュリティ ビューおよびセキュリティ関数に関する情報を示します。  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ カタログ ビューには、データベース レベルおよびサーバー レベルの権限、プリンシパル、ロールなどに関する情報が表示されます。 暗号化キーと証明書に関する情報や資格情報を表示するカタログ ビューもあります。|[セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ関数。現在のユーザー、権限、およびスキーマに関する情報を返します。|[セキュリティ関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  

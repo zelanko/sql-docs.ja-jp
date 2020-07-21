@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9436c39f-f1a1-484a-a75b-776a72ca70f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 978805a1bd275771bdcfbae1616bd49535e2499a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0db1f78923cd7c91c6b94061a2d2ac9451f22974
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975522"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920201"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-int"></a>setAsciiStream (int, java.io.InputStream, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,8 +52,8 @@ public final void setAsciiStream(int n,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setAsciiStream メソッドは、PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setAsciiStream メソッドは、java.sql.PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

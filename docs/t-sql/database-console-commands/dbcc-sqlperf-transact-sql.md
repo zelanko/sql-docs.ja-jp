@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f3142f2474dbf00e165878d20fbdda53528fa930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4132d5ec459f5fb180ebea94665449cefa7e961a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040625"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882013"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 すべてのデータベースを対象として、トランザクション ログ領域の使用状況に関する統計情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、待機統計情報とラッチ統計情報のリセットにも使用できます。
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,12 +71,12 @@ WITH NO_INFOMSGS
   
 |列名|定義|  
 |---|---|
-|**Database Name**|ログ統計情報を表示するデータベースの名前。|  
+|**データベース名**|ログ統計情報を表示するデータベースの名前。|  
 |**ログ サイズ (MB)**|ログに割り当てられている現在のサイズ。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部ヘッダー情報の格納用に少量のディスク容量が確保されるので、この値は最初にログ領域に割り当てられた容量よりも常に小さくなります。|  
 |**ログの使用済み領域 (%)**|現在トランザクション ログ情報の保存に使用されているログ ファイルのパーセンテージ。|  
-|**ステータス**|ログ ファイルの状態。 常に 0 です。|  
+|**状態**|ログ ファイルの状態。 常に 0 です。|  
   
-## <a name="Remarks"></a> 解説  
+## <a name="remarks"></a><a name="Remarks"></a> 解説  
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、データベース別のトランザクション ログの容量利用情報を返すには、`DBCC SQLPERF(LOGSPACE)` の代わりに [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV を使用します。    
  
 トランザクション ログには、データベースで実行された各トランザクションが記録されます。 詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」と「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)」を参照してください。
@@ -86,7 +86,7 @@ WITH NO_INFOMSGS
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Premium 階層および Business Critical 階層では、データベースで `VIEW DATABASE STATE` アクセス許可が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard、Basic、および General Purpose 階層の場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理者アカウントが必要です。 待機およびラッチ統計をリセットすることはできません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. すべてのデータベースのログ領域情報を表示する  
 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれているすべてのデータベースの `LOGSPACE` 情報を表示します。

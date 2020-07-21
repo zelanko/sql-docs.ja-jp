@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) の開発と管理ツール |Microsoft Docs
+title: 開発ツールと管理ツール | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19c42f5978e974d0c8daf8b4a3257ee4b82b86a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8df702e1b77a551e1073e4d5834535e27b4ea43f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057513"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903850"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) の開発と管理ツール
 

@@ -1,10 +1,9 @@
 ---
-title: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
-ms.custom: ''
+title: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7609b8f6dd7e5ab4b63b04fe2c559aae10745a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd210b4c51707da7350ff83fd9b9c51566109c1e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256255"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257872"
 ---
 # <a name="target-servers-download-instructions-tab"></a>[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68256255"
 **[ターゲット サーバー]**  
 命令の表示または変更を行うサーバーを選択します。  
   
-**[ジョブ]**  
+**ジョブ**  
 命令の表示または変更を行うジョブを選択します。  
   
 **[ターゲット サーバー]**  
@@ -41,7 +42,7 @@ ms.locfileid: "68256255"
 **操作**  
 ダウンロード命令によって実行される操作が表示されます。  
   
-**Object Name**  
+**[オブジェクト名]**  
 ダウンロード命令によって影響を受けるオブジェクトの名前を表示します。  
   
 **[通知日付]**  

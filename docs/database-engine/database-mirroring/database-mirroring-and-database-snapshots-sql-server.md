@@ -1,5 +1,6 @@
 ---
-title: データベース ミラーリングとデータベース スナップショット (SQL Server) | Microsoft Docs
+title: データベース ミラーリングとデータベース スナップショット
+description: SQL Server のレポート作成をオフロードする目的で、データベース スナップショットとデータベース ミラーリングを使用する場合の相互運用性について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 637cc13f10869fffbd50638169aad983c8b51951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0a3e349633184bf838f2d9dc599d8355db6b100
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789715"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>データベース ミラーリングとデータベース スナップショット (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   可用性を維持するために運用しているミラー データベースを利用して、レポート作成の負荷を軽減できます。 ミラー データベースをレポート作成に利用するには、ミラー データベースでデータベース スナップショットを作成し、クライアント接続要求を最新のスナップショットに出力します。 データベース スナップショットは、その作成時に存在していたソース データベースの静的な読み取り専用スナップショットであり、トランザクションに一貫性があります。 ミラー データベースにデータベース スナップショットを作成するには、データベースは同期済みのミラーリング状態になっている必要があります。  
   
  ミラー データベース自体とは異なり、データベース スナップショットはクライアントにアクセスできます。 ミラー サーバーがプリンシパル サーバーと通信している間は、レポート作成用クライアントに対してスナップショットに接続するように指示できます。 データベース スナップショットは静的なので、新しいデータは使用できないことに注意してください。 ユーザーが比較的新しいデータを使用できるようにするには、定期的に新しいデータベース スナップショットを作成し、アプリケーションが着信クライアント接続を最新のスナップショットに出力することが必要です。  
@@ -70,7 +71,7 @@ ms.locfileid: "67951924"
   
      この時点で、新しいクライアント接続をプログラムによって最新のスナップショットに出力できます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベース スナップショットの作成 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

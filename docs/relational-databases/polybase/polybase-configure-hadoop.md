@@ -1,27 +1,29 @@
 ---
-title: Hadoop 内の外部データにアクセスするように PolyBase を構成する | Microsoft Docs
-ms.date: 04/23/2019
+title: 外部データへのアクセス:Hadoop - PolyBase
+description: この記事では、SQL Server インスタンス上の PolyBase と Hardoop を使用します。 PolyBase は、外部テーブルとデータのインポート/エクスポートのアドホック クエリに適しています。
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef6fd0b1015cd9dfc072600e9c4a4d8b0bf9e520
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b51b896610ae74b5d3e30cc2a9e078611202fe17
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062331"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882615"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、Hadoop 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
 
@@ -60,14 +62,12 @@ ms.locfileid: "68062331"
 
 2. **services.msc** を使用して SQL Server を再起動する必要があります。 SQL Server を再起動すると、次のサービスが再起動します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase エンジン  
   
-   ![services.msc での PolyBase サービスの停止と開始](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc での PolyBase サービスの停止と開始")  
+   ![services.msc で PolyBase サービスを停止および開始する](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc で PolyBase サービスを停止および開始する")  
   
-## <a id="pushdown"></a> プッシュダウン計算を有効にする  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> プッシュダウン計算を有効にする  
 
 クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。  
   
@@ -175,7 +175,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>インポート、データ  
+### <a name="importing-data"></a>データのインポート  
 
 次のクエリでは、外部データを SQL Server にインポートします。 この例では、高速走行しているドライバーのデータを、さらに詳細な分析を実行するために SQL Server にインポートします。 パフォーマンスを向上させるために、列ストア テクノロジが活用されています。  
 
@@ -230,7 +230,7 @@ SSMS では、外部テーブルが別のフォルダー **[外部テーブル]*
   
 ![SSMS での PolyBase オブジェクト](media/polybase-management.png)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の記事を参照して、PolyBase を使用して監視するための方法をさらに調べます。
 

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898989"
 ---
-# <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   セッションの現在のトランザクション コンテキストを表すトークンを返します。 アプリケーションでは、このトークンを使用して、FILESTREAM のファイル システム ストリーミング操作をトランザクションにバインドします。 FILESTREAM のトピック一覧については、「[バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
@@ -44,12 +44,12 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>戻り値  
  トランザクションが開始されていないか、キャンセルまたはコミットされている場合、NULL が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  トランザクションは明示的にする必要があります。 BEGIN TRANSACTION に続けて、COMMIT TRANSACTION または ROLLBACK TRANSACTION を使用します。  
   
  GET_FILESTREAM_TRANSACTION_CONTEXT を呼び出すと、トランザクションへのファイル システム アクセス権が呼び出し元に与えられます。このアクセス権は、トランザクションが完了するまで有効です。 トランザクションに対するファイル システム経由のアクセスを別のユーザーに許可するには、EXECUTE AS を使用して、別のユーザーとして GET_FILESTREAM_TRANSACTION_CONTEXT を実行します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`GET_FILESTREAM_TRANSACTION_CONTEXT` を [!INCLUDE[tsql](../../includes/tsql-md.md)] トランザクションで使用して、トランザクション コンテキストを取得します。  
   
 ```csharp  

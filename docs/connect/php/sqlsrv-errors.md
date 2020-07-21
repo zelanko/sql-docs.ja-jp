@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors |Microsoft Docs
+title: sqlsrv_errors | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sqlsrv_errors
 - errors and warnings
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015062"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928215"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 最後に実行された **sqlsrv** 操作に関する拡張エラーや警告の情報を返します。  
@@ -55,9 +55,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$errorsAndOrWarnings* (省略可能): 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
+*$errorsAndOrWarnings*[省略可能]: 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|[値]|[説明]|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -68,11 +68,11 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ## <a name="return-value"></a>戻り値  
 配列の **array** 、または **null**。 返される **array** 内の各 **array** には、3 つのキーと値のペアが含まれます。 次の表では、各キーとその説明を示します。  
   
-|Key|[説明]|  
+|Key|説明|  
 |-------|---------------|  
-|SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、「 [ODBC Error Codes (ODBC エラー コード)](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
-|コード|SQL Server 由来のエラーの場合、SQL Server のネイティブ エラー コード。<br /><br />ODBC ドライバー由来のエラーの場合、ODBC が返すエラー コード。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のエラー コード。 詳細については、「 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)」を参照してください。|  
-|message|エラーの説明です。|  
+|SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、「[ODBC Error Codes (ODBC エラー コード)](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
+|code|SQL Server 由来のエラーの場合、SQL Server のネイティブ エラー コード。<br /><br />ODBC ドライバー由来のエラーの場合、ODBC が返すエラー コード。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のエラー コード。 詳細については、「 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)」を参照してください。|  
+|message|エラーの説明。|  
   
 配列の値は、数値キー 0、1、および 2 でアクセスすることもできます。 エラーまたは警告が発生しなかった場合、 **null** が返されます。  
   

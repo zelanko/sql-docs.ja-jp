@@ -1,5 +1,5 @@
 ---
-title: 計算されるセルのセッション スコープの作成 |Microsoft Docs
+title: セッションスコープの計算されるセルを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 199de07778a153cd1bc40b5033d364e5e0055bd3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546434"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>セッション スコープの計算されるセルの作成
     
 > [!IMPORTANT]  
 >  この構文は非推奨とされます。 代わりに、MDX 割り当てを使用してください。 割り当ての詳細については、「[基本的な MDX スクリプト &#40;MDX&#41;](the-basic-mdx-script-mdx.md)」を参照してください。  
   
- 同じセッション内のすべてのクエリで使用可能な計算されるセルを作成するには、[CREATE CELL CALCULATION](/sql/mdx/mdx-data-definition-create-cell-calculation) ステートメントまたは [ALTER CUBE](/sql/mdx/mdx-data-definition-alter-cube) ステートメントを使用できます。 どちらのステートメントを使用しても結果は同じになります。  
+ 同じセッション内のすべてのクエリで使用可能な計算されるセルを作成するには、 [CREATE CELL CALCULATION](/sql/mdx/mdx-data-definition-create-cell-calculation) ステートメントまたは [ALTER CUBE](/sql/mdx/mdx-data-definition-alter-cube) ステートメントを使用できます。 どちらのステートメントを使用しても結果は同じになります。  
   
 ## <a name="create-cell-calculation-syntax"></a>CREATE CELL CALCULATION の構文  
   
@@ -79,8 +78,8 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |空セット|空セットに解決される MDX セット式。 この場合、計算されるセルのスコープはキューブ全体です。|  
 |単一メンバー セット|1 つのメンバーに解決される MDX セット式。|  
-|レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 この例は、 *Level_Expression*します。`Members` MDX 関数です。 計算されるメンバーを含めるには使用、 *Level_Expression*します。`AllMembers` MDX 関数です。<br /><br /> 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
-|子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 この例は、 `Descendants`(*メンバー式*、 *Level_Expression*、 *Desc_Flag*) MDX 関数です。<br /><br /> 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
+|レベル メンバーのセット|単一レベルのメンバーに解決される MDX セット式。 この例としては、 *Level_Expression*があります。`Members` MDX 関数です。 計算されるメンバーを含めるには、 *Level_Expression*を使用します。`AllMembers` MDX 関数です。<br /><br /> 詳細については、「[AllMembers (MDX)](/sql/mdx/allmembers-mdx)」を参照してください。|  
+|子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 この例として、 `Descendants` (*Member_Expression*、 *Level_Expression*、 *Desc_Flag*) MDX 関数があります。<br /><br /> 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
  [MDX でのセル計算の作成 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

@@ -1,5 +1,5 @@
 ---
-title: ODBC 接続ハンドルの割り当て |Microsoft Docs
+title: 接続ハンドルの割り当て ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bd3a44fe4f0466dfcf11a72fa0377564c1cf02f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077206"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288522"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>接続ハンドルの割り当て (ODBC)
-アプリケーションは、データ ソースまたはドライバーに接続できる、ように、接続ハンドルを割り当てますする必要があります。  
+アプリケーションでデータソースまたはドライバーに接続するには、次のように接続ハンドルを割り当てる必要があります。  
   
-1.  アプリケーションは、SQLHDBC 型の変数を宣言します。 呼び出して**SQLAllocHandle**環境を接続、および sql_handle_dbc としてオプションを割り当てるのハンドルは、この変数のアドレスを渡します。 以下に例を示します。  
+1.  アプリケーションは、SQLHDBC 型の変数を宣言します。 次に、 **SQLAllocHandle**を呼び出し、この変数のアドレス、接続を割り当てる環境のハンドル、および SQL_HANDLE_DBC オプションを渡します。 次に例を示します。  
   
     ```  
     SQLHDBC hdbc1;  
@@ -36,10 +36,10 @@ ms.locfileid: "68077206"
     SQLAllocHandle(SQL_HANDLE_DBC, henv1, &hdbc1);  
     ```  
   
-2.  ドライバー マネージャーは、ステートメントの情報を格納する構造体を割り当てるし、変数内の接続ハンドルを返します。  
+2.  ドライバーマネージャーは、ステートメントに関する情報を格納する構造体を割り当て、変数内の接続ハンドルを返します。  
   
- ドライバー マネージャーは呼び出しません**SQLAllocHandle**このドライバーで時間を呼び出すには、どのドライバーがわからないためです。 呼び出し元を遅らせる**SQLAllocHandle**ドライバー、アプリケーションがデータ ソースに接続する関数を呼び出すまでにします。 詳細については、次を参照してください。[接続処理でドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)、このセクションで後述します。  
+ ドライバーマネージャーは、この時点では**SQLAllocHandle**を呼び出しません。これは、ドライバーが呼び出すドライバーを認識しないためです。 アプリケーションが関数を呼び出してデータソースに接続するまで、ドライバーでの**SQLAllocHandle**の呼び出しが遅延します。 詳細については、このセクションで後述する「[接続プロセスでのドライバーマネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)」を参照してください。  
   
- 接続ハンドルの割り当てではありません、ドライバーの読み込みと同じに重要です。 接続の関数が呼び出されるまでは、ドライバーは読み込まれません。 そのため、接続ハンドルの割り当て後に、ドライバーまたはデータ ソースに接続する前に、接続ハンドルを使用して、アプリケーションが呼び出すことができますのみの機能は**SQLSetConnectAttr**、 **SQLGetConnectAttr**、または**SQLGetInfo** SQL_ODBC_VER オプションを使用します。 接続ハンドルで他の関数の呼び出し**SQLEndTran**、SQLSTATE 08003 (接続は開いていません) を返します。 詳細については、次を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
+ 接続ハンドルの割り当ては、ドライバーの読み込みと同じではないことに注意してください。 ドライバーは、接続関数が呼び出されるまで読み込まれません。 このため、接続ハンドルを割り当て、ドライバーまたはデータソースに接続する前に、アプリケーションが接続ハンドルを使用して呼び出すことができる関数は、 **SQLSetConnectAttr**、 **sqlgetconnectattr**、または**SQLGetInfo** (SQL_ODBC_VER オプションを指定した場合) のみです。 **SQLEndTran**などの接続ハンドルを使用して他の関数を呼び出すと、SQLSTATE 08003 (接続が開かれていません) が返されます。 詳細については、「[付録 B: ODBC 状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)」を参照してください。  
   
- 接続ハンドルの詳細については、次を参照してください。[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)します。
+ 接続ハンドルの詳細については、「[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)」を参照してください。

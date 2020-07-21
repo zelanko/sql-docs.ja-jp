@@ -1,5 +1,5 @@
 ---
-title: 'SQL から C へ: 文字 |Microsoft Docs'
+title: 'SQL から C へ: Character |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - character data type [ODBC]
 - data conversions from SQL to C types [ODBC], character
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a649e1ec27261551b7a64e09310ce99b6140a15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3486c0fcf5cefc39c4b85af814d7d3c1d609b4e3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056919"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296672"
 ---
 # <a name="sql-to-c-character"></a>SQL から C へ: 文字
 
-識別子の文字の ODBC SQL データ型に次のとおりです。
+文字の ODBC SQL データ型の識別子は次のとおりです。
 
 - SQL_CHAR
 - SQL_VARCHAR
@@ -32,42 +32,42 @@ ms.locfileid: "68056919"
 - SQL_WVARCHAR
 - SQL_WLONGVARCHAR
 
-次の表は、ODBC C データ型の SQL データの文字が変換される可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
+次の表は、SQL データの変換先となる ODBC C データ型を示しています。 テーブル内の列と用語の詳細については、「 [SQL から C データ型へのデータの変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)」を参照してください。  
 
 |C 型識別子|テスト|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|
 |:----------------|:---|:-------------|:---------------|:-------|
-|SQL_C_CHAR|データのバイト長 < *BufferLength*<br /><br /> データのバイト長の > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|データの長さを文字 < *BufferLength*<br /><br /> データの文字長 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ|データの文字の長さ<br /><br /> データの文字の長さ|n/a<br /><br /> 01004|  
-|SQL_C_STINYINT SQL_C_UTINYINT SQL_C_TINYINT SQL_C_SBIGINT SQL_C_UBIGINT SQL_C_SSHORT SQL_C_USHORT SQL_C_SHORT SQL_C_SLONG SQL_C_ULONG SQL_C_LONG SQL_C_NUMERIC|[B] を切り捨てることがなく変換されたデータ<br /><br /> データを変換する小数部の桁数が [a] の切り捨て<br /><br /> データの変換が [a] (ではなく小数部) の整数桁の損失になります<br /><br /> データは、*数値リテラル*[b]。|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。<br /><br /> 未定義。|C データ型のバイト数<br /><br /> C データ型のバイト数<br /><br /> 未定義。<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_FLOAT SQL_C_DOUBLE|データは、数の変換先のデータ型の範囲内で、[a]<br /><br /> データが数の変換先のデータ型の範囲外 [a]<br /><br /> データは、*数値リテラル*[b]。|データ<br /><br /> 未定義。<br /><br /> 未定義。|C データ型のサイズ<br /><br /> 未定義。<br /><br /> 未定義。|n/a<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_BIT|データが 0 または 1 です。<br /><br /> データが 2 よりも小さいと 1 に等しく、0 より大きい<br /><br /> データが 0 未満またはより大きい、または 2 と等しい<br /><br /> データは、*数値リテラル*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。<br /><br /> 未定義。|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義。<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
-|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 切り捨てられたデータ|バイト単位でデータの長さ<br /><br /> データの長さ|n/a<br /><br /> 01004|  
-|SQL_C_TYPE_DATE|データの値が有効な*日付値*[a]<br /><br /> データの値が有効な*タイムスタンプ値*時刻部分が 0 [a]。<br /><br /> データの値が有効な*タイムスタンプ値*時刻部分が 0 以外の場合 [a] [c]。<br /><br /> データの値が有効な*日付値*または*タイムスタンプ値*[a]|データ<br /><br /> データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> 未定義。|n/a<br /><br /> n/a<br /><br /> 01S07<br /><br /> 22018|  
-|SQL_C_TYPE_TIME|データの値が有効な*時刻値と値は 0 秒の小数部*[a]<br /><br /> データの値が有効な*タイムスタンプ値または有効な時刻値*; 小数秒の部分が 0 [a]、[d]<br /><br /> データの値が有効な*タイムスタンプ値*; 小数秒の部分が 0 以外の場合 [a]、[d] [e]<br /><br /> データの値が有効な*時刻値*または*タイムスタンプ値*[a]|データ<br /><br /> データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> 未定義。|n/a<br /><br /> n/a<br /><br /> 01S07<br /><br /> 22018|  
-|SQL_C_TYPE_TIMESTAMP|データの値が有効な*タイムスタンプ値または有効な時刻値*; 小数秒の部分を切り捨てることができません [a]<br /><br /> データの値が有効な*タイムスタンプ値または有効な時刻値*; 小数秒の部分を切り捨てる [a]<br /><br /> データの値が有効な*日付値*[a]<br /><br /> データの値が有効な*時刻値*[a]<br /><br /> データの値が有効な*日付値*、*時刻値*、または*タイムスタンプ値*[a]|データ<br /><br /> 切り捨てられたデータ<br /><br /> データ [f]<br /><br /> データ [g]<br /><br /> 未定義。|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> n/a<br /><br /> n/a<br /><br /> 22018|  
-|すべての C interval 型|データの値が有効な*間隔値*; 損失はありません。<br /><br /> データの値が有効な*間隔値*; 後続のフィールドを 1 つまたは複数の切り捨て<br /><br /> データが有効な間隔です。先頭のフィールドの大きな有効桁数が失われる<br /><br /> データの値が有効な間隔の値|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
+|SQL_C_CHAR|データ < *bufferlength*のバイト長<br /><br /> データ >のバイト長 = *Bufferlength*|データ<br /><br /> 切り捨てられたデータ|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)|該当なし<br /><br /> 01004|  
+|SQL_C_WCHAR|データ < *bufferlength*の文字長<br /><br /> データ >の文字長 = *Bufferlength*|データ<br /><br /> 切り捨てられたデータ|データの長さ (文字数)<br /><br /> データの長さ (文字数)|該当なし<br /><br /> 01004|  
+|SQL_C_STINYINT SQL_C_UTINYINT SQL_C_TINYINT SQL_C_SBIGINT SQL_C_UBIGINT SQL_C_SSHORT SQL_C_USHORT SQL_C_SHORT SQL_C_SLONG SQL_C_ULONG SQL_C_LONG SQL_C_NUMERIC|切り捨てなしで変換されたデータ [b]<br /><br /> 小数部の桁の切り捨てで変換されたデータ [a]<br /><br /> データを変換すると、(小数点ではなく) 全体が失われることになります。<br /><br /> データが*数値リテラル*ではない [b]|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。<br /><br /> 未定義。|C データ型のバイト数<br /><br /> C データ型のバイト数<br /><br /> 未定義。<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_FLOAT SQL_C_DOUBLE|データは、数値が変換されるデータ型の範囲内にある [a]<br /><br /> データが、数値を変換するデータ型の範囲外です [a]<br /><br /> データが*数値リテラル*ではない [b]|データ<br /><br /> 未定義。<br /><br /> 未定義。|C データ型のサイズ<br /><br /> 未定義。<br /><br /> 未定義。|該当なし<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_BIT|データは0または1です<br /><br /> データが0より大きく、2未満、1以外の値です。<br /><br /> データが0未満か、または2以上です。<br /><br /> データが*数値リテラル*ではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。<br /><br /> 未定義。|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義。<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22003<br /><br /> 22018|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 切り捨てられたデータ|データの長さ (バイト単位)<br /><br /> データの長さ|該当なし<br /><br /> 01004|  
+|SQL_C_TYPE_DATE|データ値は有効な*日付値*です [a]<br /><br /> データ値は有効な*タイムスタンプ値*です。時間部分がゼロ [a]<br /><br /> データ値は有効な*タイムスタンプ値*です。時刻部分が0以外の場合 [a]、[c]<br /><br /> データ値が有効な*日付値*または*タイムスタンプ値*ではありません [a]|データ<br /><br /> データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> 未定義。|該当なし<br /><br /> 該当なし<br /><br /> 01S07<br /><br /> 22018|  
+|SQL_C_TYPE_TIME|データ値は有効な*時刻値で、秒の小数部の値は 0*[a] です<br /><br /> データ値は有効な*タイムスタンプ値または有効な時刻値*です。秒の小数部がゼロ [a]、[d]<br /><br /> データ値は有効な*タイムスタンプ値*です。秒の小数部はゼロ以外 [a]、[d]、[e]<br /><br /> データ値が有効な*時刻値*または*タイムスタンプ値*ではありません [a]|データ<br /><br /> データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> 未定義。|該当なし<br /><br /> 該当なし<br /><br /> 01S07<br /><br /> 22018|  
+|SQL_C_TYPE_TIMESTAMP|データ値は有効な*タイムスタンプ値または有効な時刻値*です。秒の小数部が切り捨てられない [a]<br /><br /> データ値は有効な*タイムスタンプ値または有効な時刻値*です。秒の小数部が切り捨てられました [a]<br /><br /> データ値は有効な*日付値*です [a]<br /><br /> データ値は有効な*時刻値*[a] です<br /><br /> データ値が有効な*日付値*、*時刻値*、または*タイムスタンプ値*[a] ではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> データ [f]<br /><br /> データ [g]<br /><br /> 未定義。|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 該当なし<br /><br /> 該当なし<br /><br /> 22018|  
+|すべての C 間隔の種類|データ値は有効な*間隔の値*です。切り捨てなし<br /><br /> データ値は有効な*間隔の値*です。1つまたは複数の末尾のフィールドの切り捨て<br /><br /> データは有効な間隔です。先頭のフィールドの有意精度が失われる<br /><br /> データ値が有効な間隔の値ではありません|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
- [a] の値*BufferLength*この変換は無視されます。 ドライバーでのサイズ **TargetValuePtr* C データ型のサイズです。  
+ [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
   
  [b] これは、対応する C データ型のサイズです。  
   
- [c] の時刻部分、*タイムスタンプ値*は切り捨てられます。  
+ [c]*タイムスタンプ値*の時刻部分が切り捨てられています。  
   
- [d] の日付部分、*タイムスタンプ値*は無視されます。  
+ [d]*タイムスタンプ値*の日付部分は無視されます。  
   
- [電子メール]、タイムスタンプの秒の小数部の部分は切り捨てられます。  
+ [e] タイムスタンプの秒部分の小数部は切り捨てられます。  
   
- [f] の時刻のタイムスタンプの構造体のフィールドは、0 に設定されます。  
+ [f] タイムスタンプ構造の時刻フィールドが0に設定されています。  
   
- [g] タイムスタンプの構造体の日付フィールドは、現在の日付に設定されます。  
+ [g] タイムスタンプ構造の日付フィールドが現在の日付に設定されています。  
 
 **余分なスペース**
 
-SQL 文字データは、次の種類のいずれかに変換する場合、先頭と末尾のスペースは無視されます。
+SQL 文字データが次のいずれかの型に変換される場合、先頭と末尾のスペースは無視されます。
 
-- 日付
-- NUMERIC
+- date
+- numeric
 - time
-- TIMESTAMP
-- データ間隔 C
+- timestamp
+- 間隔 C データ

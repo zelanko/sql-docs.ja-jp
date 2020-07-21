@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b6b37879dc3f2e274a5cd322f14cd9050c66a2d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070329"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381086"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   既存のシーケンス オブジェクトの引数を変更します。 **CACHE** オプションを使用してシーケンスが作成されている場合、シーケンスを変更するとキャッシュが再作成されます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68070329"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
@@ -50,7 +50,9 @@ ALTER SEQUENCE [schema_name. ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *sequence_name*  
  データベースに認識されるシーケンスの一意な名前を指定します。 データ型は **sysname** です。  
   
@@ -60,7 +62,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  INCREMENT BY \<constant>  
  NEXT VALUE FOR 関数を呼び出すたびに必要なシーケンス オブジェクトの基準値を増分 (負の場合は減少) させるのに使用される値です。 増分値が負の値の場合はシーケンス オブジェクトは降順で、それ以外の場合は昇順です。 0 は増分として使用できません。  
   
- [ MINVALUE \<constant> | NO MINVALUE ]  
+ [MINVALUE \<constant> |NO MINVALUE]  
  シーケンスのオブジェクトの境界を指定します。 NO MINVALUE を指定すると、シーケンスのデータ型の最小値が使用されます。  
   
  [ MAXVALUE \<constant> | NO MAXVALUE  
@@ -77,15 +79,15 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  キャッシュの動作について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
- シーケンスの作成方法と、シーケンスのキャッシュの管理方法について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
+## <a name="remarks"></a>解説  
+ シーケンスの作成方法と、シーケンスのキャッシュの管理方法について詳しくは、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
  昇順のシーケンスの MINVALUE と降順のシーケンスの MAXVALUE は、シーケンスの START WITH 値を許可しない値に変更することはできません。 昇順のシーケンスの MINVALUE を START WITH 値より大きい数に変更する、または降順のシーケンスの MAXVALUE を START WITH 値より小さい数に変更するには、RESTART WITH 引数を含めて、最小値と最大値の範囲内にある目的の位置からシーケンスを再開します。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  シーケンスの詳細については、「 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  シーケンスに対する **ALTER** 権限、またはスキーマに対する **ALTER** 権限が必要です。 シーケンスに対する **ALTER** 権限を許可するには、次の形式で **ALTER ON OBJECT** を使います。  
@@ -96,10 +98,10 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
   
  シーケンス オブジェクトの所有権は、**ALTER AUTHORIZATION** ステートメントを使って譲渡できます。  
   
-### <a name="audit"></a>監査  
+### <a name="audit"></a>Audit  
  **ALTER SEQUENCE** を監査するには、**SCHEMA_OBJECT_CHANGE_GROUP** を監視します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  シーケンスの作成と、**NEXT VALUE FOR** 関数を使用したシーケンス番号の生成の両方の使用例については、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
 ### <a name="a-altering-a-sequence"></a>A. シーケンスを変更する  

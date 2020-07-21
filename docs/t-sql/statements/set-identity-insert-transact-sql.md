@@ -1,6 +1,6 @@
 ---
 title: SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: SET IDENTITY_INSERT ステートメントの Transact-SQL リファレンス。 ON に設定すると、テーブルの ID 列に明示的な値を挿入することが許可されます。
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,14 +23,14 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ababfa50656969d8151f5ebca264c8ae52ebe8fe
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928967"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634349"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 テーブルの ID 列に明示的な値を追加することを許可します。  
@@ -39,7 +39,7 @@ ms.locfileid: "67928967"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  ID 列があるテーブルの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いかなる場合も、IDENTITY_INSERT プロパティを ON に設定できるのはセッション内の 1 つのテーブルのみです。 1 つのテーブルで既にこのプロパティが ON に設定されている状態で、別のテーブルに対して SET IDENTITY_INSERT ON ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では SET IDENTITY_INSERT が既に ON であるというエラー メッセージが返され、このプロパティが ON に設定されているテーブルがレポートされます。  
   
  挿入する値がテーブルの現在の ID 値よりも大きい場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では新しく挿入された値が現在の ID 値として自動的に使用されます。  
@@ -64,10 +64,10 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 ## <a name="permissions"></a>アクセス許可  
  ユーザーはテーブルを所有しているか、テーブルに対する ALTER 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ID 列を含むテーブルを作成した後、`SET IDENTITY_INSERT` ステートメントによって ID 値に発生したギャップを、`DELETE` の設定を使用して調整しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Create tool table.  

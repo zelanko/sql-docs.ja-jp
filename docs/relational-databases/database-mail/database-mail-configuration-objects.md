@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 681fd78830589d680924b2d1b7d6d71c3692a7ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726536"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース メールには、2 つの構成オブジェクトがあります。データベース アプリケーションまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent から電子メールを送信する際、データベース メールによって使用される設定は、データベース構成オブジェクトを通じて構成することができます。  
   
 -   データベース メール アカウント  
@@ -48,20 +48,20 @@ ms.locfileid: "68134431"
 -   データベース メール プロファイル  
   
   
-##  <a name="VisualElement"></a> データベース メール構成オブジェクトの関係  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> データベース メール構成オブジェクトの関係  
  この図には、2 つのプロファイル、3 つのアカウント、および 3 人のユーザーが示されています。 ユーザー 1 には、アカウント 1 とアカウント 2 を使用しているプロファイル 1 へのアクセス権があります。 ユーザー 3 には、アカウント 2 とアカウント 3 を使用しているプロファイル 2 へのアクセス権があります。 ユーザー 2 には、プロファイル 1 とプロファイル 2 の両方へのアクセス権があります。  
   
  ![ユーザー、プロファイル、アカウントの関係](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "ユーザー、プロファイル、アカウントの関係")  
   
   
-##  <a name="DBAccount"></a> データベース メール アカウント  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> データベース メール アカウント  
  データベース メール アカウントには、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から SMTP サーバーへの電子メール メッセージの送信に使用される情報が含まれています。 各アカウントに、1 つの電子メール サーバーの情報が含まれます。  
   
  データベース メールでは、SMTP サーバーとの通信に関して、次に示す 3 つの認証方法をサポートしています。  
   
 -   Windows 認証:SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
   
--   基本認証:SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
+-   基本認証: SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
   
 -   匿名認証:SMTP サーバーでは認証が必要ありません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "68134431"
   
 -   電子メール サーバーの名前。  
   
--   電子メール サーバーの種類。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、常に SMTP (簡易メール転送プロトコル) です。  
+-   電子メール サーバーの種類。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合は、常に SMTP (簡易メール転送プロトコル) です。  
   
 -   電子メール サーバーのポート番号。  
   
--   SSL (Secure Sockets Layer) を使用して SMTP メール サーバーに接続しているかどうかを示すビット列。  
+-   トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して SMTP メール サーバーに接続しているかどうかを示すビット列。  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]用に構成された資格情報を使用して SMTP サーバーに接続しているかどうかを示すビット列。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68134431"
  データベース メール構成ウィザードでは、アカウントを作成および管理するための便利な方法が提供されます。 また、 **msdb** の構成ストアド プロシージャを使用して、アカウントを作成および管理することもできます。  
   
   
-##  <a name="DBProfile"></a> [データベース メール プロファイル]  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> [データベース メール プロファイル]  
  データベース メール プロファイルとは、関連のあるデータベース メール アカウントに順序を付けたコレクションです。 データベース メールを使用して電子メールを送信するアプリケーションでは、アカウントを直接使用するのではなく、プロファイルを指定します。 アプリケーションが使用するオブジェクトから個別の電子メール サーバーに関する情報を分離することで、柔軟性や信頼性が向上します。つまり、プロファイルにより自動フェールオーバーが提供されるので、ある電子メール サーバーが応答していない場合に、データベース メールによって別の電子メール サーバーに自動的にメールが送信されます。 データベース管理者は、アプリケーション コードまたはジョブ ステップを変更する必要なく、アカウントの追加、削除、または再構成を行うことができます。  
   
  プロファイルはデータベース管理者が電子メールへのアクセスを制御するうえでも役立ちます。 データベース メールを送信するには **DatabaseMailUserRole** のメンバーシップが必要です。 プロファイルを使用すると、メールを送信するユーザーおよび使用するアカウントを管理者が柔軟にコントロールできます。  
@@ -110,7 +110,7 @@ ms.locfileid: "68134431"
  同じシーケンス番号を持つアカウントが複数存在する場合、データベース メールでは、指定された電子メール メッセージに対して、これらのアカウントのいずれか 1 つのみが使用されます。 この場合、そのシーケンス番号に対してどのアカウントが使用されるか、またメッセージごとに同じアカウントが使用されるかついては、データベース メールでは保証されません。  
   
   
-##  <a name="RelatedTasks"></a> データベース メール構成タスク  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> データベース メール構成タスク  
  データベース メールの構成タスクを次の表に示します。  
   
 |構成タスク|トピック|  
@@ -121,21 +121,21 @@ ms.locfileid: "68134431"
 |テンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。||  
   
   
-##  <a name="Add_Tasks"></a> その他のデータベース構成タスク (システム ストアド プロシージャ)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> その他のデータベース構成タスク (システム ストアド プロシージャ)  
  データベース メール構成のストアド プロシージャは、 **msdb** データベースにあります。  
   
  次の表は、データベース メールの構成および管理に使用するストアド プロシージャを示しています。  
   
 ### <a name="database-mail-settings"></a>データベース メール設定  
   
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|データベース メールの構成設定を変更します。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|データベース メールの構成設定を表示します。|  
   
 ### <a name="accounts-and-profiles"></a>アカウントおよびプロファイル  
   
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|データベース メール プロファイルにメール アカウントを追加します。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|データベース メール アカウントを削除します。|  
@@ -150,22 +150,22 @@ ms.locfileid: "68134431"
   
 ### <a name="security"></a>Security  
   
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|データベース プリンシパルがデータベース メール プロファイルを使用するための権限を許可します。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|データベース ユーザーがパブリックまたはプライベートのデータベース メール プロファイルを使用するための権限を削除します。|  
 |[sysmail_help_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)|特定のデータベース ユーザーのデータベース メール プロファイル情報を一覧表示します。|  
 |[sysmail_update_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-principalprofile-sp-transact-sql.md)|特定のデータベース ユーザーの権限情報を更新します。|  
   
-### <a name="system-state"></a>システムの状態  
+### <a name="system-state"></a>システム状態  
   
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|データベース メール外部プログラムおよび関連付けられている SQL Service Broker のキューを開始します。|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|データベース メール外部プログラムおよび関連付けられている SQL Service Broker のキューを停止します。|  
 |[sysmail_help_status_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|データベース メールが開始されているかどうかを示します。|  
   
-##  <a name="RelatedContent"></a> その他のリファレンス  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> その他のリファレンス  
   
 -   [データベース メールのログ記録と監査](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

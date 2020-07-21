@@ -1,5 +1,5 @@
 ---
-title: テスト_ケース (SybaseToSQL) の初期化 |Microsoft Docs
+title: テストケースの初期化 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,31 +12,31 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56d5426b0b05793106724b576f9f012938393d58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029006"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>テスト ケースの初期化 (SybaseToSQL)
-この手順では、新しいテスト_ケースの初期の情報を指定します。  
+このステップでは、新しいテストケースの初期情報を指定します。  
   
 ## <a name="parameters"></a>パラメーター  
-**テスト_ケース名**  
-テスト_ケースを識別する名前を入力します。  
+**テストケース名**  
+テストケースを識別する名前を入力します。  
   
-**作成日**  
-今日の現在の日付、自動的に定義します。  
+**[作成日付]**  
+今日の現在の日付は自動的に定義されます。  
   
 **最終更新日**  
-自動的に; 入力変更しないでください。  
+自動的に入力されます。変更しないでください。  
   
-**テスト_ケースの説明**  
-テスト_ケースの目的を識別するために追加情報を入力します。  
+**テストケースの説明**  
+テストケースの目的を特定するための追加情報を入力します。  
   
 ## <a name="next-step"></a>次の手順  
-[選択し、テストするオブジェクトを構成する&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[&#40;SybaseToSQL&#41;をテストするオブジェクトの選択と構成](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
   
-## <a name="see-also"></a>関連項目  
-[移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>参照  
+[&#40;SybaseToSQL&#41;の移行されたデータベースオブジェクトのテスト](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

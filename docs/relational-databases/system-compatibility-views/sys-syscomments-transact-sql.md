@@ -1,5 +1,5 @@
 ---
-title: sys.syscomments (TRANSACT-SQL) |Microsoft Docs
+title: sys.sysコメント (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,36 +20,36 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49473b85d6c0a52f9c7ec7ed4bab519b19b04693
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010748"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883479"
 ---
-# <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssyscomments-transact-sql"></a>sys.sysコメント (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベース内のビュー、ルール、既定値、トリガー、CHECK 制約、DEFAULT 制約、およびストアド プロシージャごとに 1 つのエントリを保持します。 **テキスト**列には、元の SQL 定義ステートメントが含まれています。  
+  データベース内のビュー、ルール、既定値、トリガー、CHECK 制約、DEFAULT 制約、およびストアド プロシージャごとに 1 つのエントリを保持します。 **Text**列には、元の SQL 定義ステートメントが含まれています。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに sys.sql モジュールを使用することをお勧めします。 詳細については、次を参照してください。 [sys.sql_modules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)します。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに sys.sql モジュールを使用することをお勧めします。 詳細については、「 [sys. sql_modules &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|このテキストが適用されるオブジェクトの ID です。|  
-|**number**|**smallint**|プロシージャがグループ化されている場合は、グループ内の番号です。<br /><br /> 0 = エントリはプロシージャではない|  
-|**colid**|**smallint**|オブジェクトの定義が 4,000 文字を超える場合の行のシーケンス番号です。|  
+|**id**|**int**|このテキストを適用するオブジェクト ID。|  
+|**number**|**smallint**|グループ化されている場合は、プロシージャグループ内の数値。<br /><br /> 0 = エントリはプロシージャではありません。|  
+|**colid**|**smallint**|4000文字を超えるオブジェクト定義の行シーケンス番号。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**ctext**|**varbinary(8000)**|SQL 定義ステートメントの生のバイトです。|  
-|**texttype**|**smallint**|0 = ユーザーが指定するパラメーター<br /><br /> 1 = システムが指定するパラメーター<br /><br /> 4 = 暗号化コメント|  
+|**ctext**|**varbinary(8000)**|SQL 定義ステートメントの生バイト。|  
+|**texttype**|**smallint**|0 = ユーザーが指定したコメント<br /><br /> 1 = システムが指定するパラメーター<br /><br /> 4 = 暗号化されたコメント|  
 |**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**encrypted**|**bit**|プロシージャ定義が暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 暗号化されている<br /><br /> **\*\* 重要な\* \*** ストアド プロシージャの定義を難読化、暗号化のキーワードを使用して CREATE PROCEDURE を使用します。|  
-|**圧縮**|**bit**|常に 0 を返します。 これは、プロシージャが圧縮されていることを示します。|  
-|**text**|**nvarchar (4000)**|SQL 定義ステートメントの実際のテキストです。<br /><br /> デコードされた式のセマンティクスは元のテキストと同じですが、構文も同じであるとは限りません。 たとえば、デコードされた式からは空白文字が削除されます。<br /><br /> これは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-互換のビューは、現在から情報を取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構造体しより多くの文字を返すことができます、 **nvarchar (4000)** 定義します。 **sp_help**返します**nvarchar (4000)** テキスト列のデータ型として。 使用する場合**syscomments**使用を検討して**nvarchar (max)** します。 新しい開発作業では使用しない**syscomments**します。|  
+|**暗号**|**bit**|プロシージャ定義を難読化するかどうかを示します。<br /><br /> 0 = 暗号化されていない<br /><br /> 1 = 難読化<br /><br /> 重要ストアドプロシージャの定義を難読化するには、CREATE procedure を ENCRYPTION キーワードと共に使用します。 ** \* \* \* \* **|  
+|**た**|**bit**|常に 0 を返します。 これは、プロシージャが圧縮されていることを示します。|  
+|**text**|**nvarchar (4000)**|SQL 定義ステートメントの実際のテキストです。<br /><br /> デコードされた式のセマンティクスは元のテキストと同じです。ただし、構文上の保証はありません。 たとえば、空白文字は、デコードされた式から削除されます。<br /><br /> この [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 互換のビューは、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構造から情報を取得し、 **nvarchar (4000)** 定義よりも多くの文字を返すことができます。 **sp_help**は、 **nvarchar (4000)** をテキスト列のデータ型として返します。 **Syscomments**を使用する場合は、 **nvarchar (max)** の使用を検討してください。 新しい開発作業では、 **syscomments**を使用しないでください。|  
   
-## <a name="see-also"></a>参照  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

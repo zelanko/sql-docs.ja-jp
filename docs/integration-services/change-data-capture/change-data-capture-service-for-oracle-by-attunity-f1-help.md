@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e0344b658cabeb82fd2e179293cb8bef1134e84a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f765d232ed9b913cc502525bed4632088be1dc1
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099839"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298878"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Change Data Capture Service for Oracle by Attunity の F1 ヘルプ
 

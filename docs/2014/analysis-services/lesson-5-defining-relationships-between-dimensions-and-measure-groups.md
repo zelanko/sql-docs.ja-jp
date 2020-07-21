@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: ディメンションとメジャー グループ間のリレーションシップを定義する |Microsoft Docs'
+title: 'レッスン 5: ディメンションとメジャーグループ間のリレーションシップの定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 250c1ec9e384eaac7613cb15ae51d0bf9c982245
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542704"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義
   このチュートリアルの前のレッスンでは、キューブに追加したデータベース ディメンションを、1 つ以上のキューブ ディメンションの基準として使用できることを学習しました。 このレッスンでは、キューブ ディメンションとメジャー グループの間に各種のリレーションシップを定義し、これらのリレーションシップのプロパティを指定します。  
@@ -28,7 +27,7 @@ ms.locfileid: "66078418"
  このレッスンの内容は次のとおりです。  
   
  [参照リレーションシップの定義](lesson-5-1-defining-a-referenced-relationship.md)  
- このタスクでは、プライマリ キーと外部キー リレーションシップを介して直接リンクされているディメンションを介して間接的にファクト テーブルにディメンションをリンクするについて説明します。  
+ ここでは、主キーと外部キーのリレーションシップを介して直接リンクされているディメンションを使用して、ディメンションをファクトテーブルに間接的にリンクする方法について説明します。  
   
  [ファクト リレーションシップの定義](lesson-5-2-defining-a-fact-relationship.md)  
  ここでは、ファクト テーブルのデータに基づいてディメンションを定義する方法を学習します。また、ディメンション リレーションシップをファクト リレーションシップとして定義する方法を学習します。  
@@ -40,11 +39,11 @@ ms.locfileid: "66078418"
  ここでは、特定のメジャー グループに対し、ディメンションの粒度を定義する方法を学習します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6:計算の定義](lesson-6-defining-calculations.md)  
+ [レッスン 6: 計算の定義](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;Adventure Works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
+ [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

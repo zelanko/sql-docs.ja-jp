@@ -1,5 +1,6 @@
 ---
 title: user options サーバー構成オプションの構成 | Microsoft Docs
+description: "\"user options\" オプションについて説明します。 SQL Server によってユーザーの作業セッションで確立されるクエリ処理オプションの既定値が、これによってどのように変化するかを説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659770"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options サーバー構成オプションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **user options** オプションは、すべてのユーザーに対するグローバルな既定値を指定します。 ユーザーの作業セッション中に、一連の既定のクエリ処理オプションが設定されます。 **user options** オプションを使用すると、SET オプションの既定値を変更できます (サーバーの既定の設定が適切でない場合)。  
   
@@ -32,9 +33,9 @@ ms.locfileid: "68012165"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **user connections 構成オプションを構成する方法:**  
   
@@ -44,13 +45,13 @@ ms.locfileid: "68012165"
   
 -   **補足情報:** [user options 構成オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   次の表は、 **user options**の構成値と説明の一覧です。 すべての構成値が他の構成値と両立するわけではありません。 たとえば、ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF を同時に設定することはできません。  
   
-    |[値]|構成|[説明]|  
+    |値|構成|説明|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|中間制約チェックまたは遅延制約チェックを制御します。|  
     |2|IMPLICIT_TRANSACTIONS|dblib ネットワーク ライブラリ接続の場合、ステートメントの実行時にトランザクションを暗黙的に開始するかどうかを制御します。 IMPLICIT_TRANSACTIONS の設定は、ODBC または OLEDB 接続には影響を与えません。|  
@@ -70,12 +71,12 @@ ms.locfileid: "68012165"
   
 -   **user options** のビット位置は、@@OPTIONS のビット位置と同じです。 接続にはそれぞれの構成環境を表す @@OPTIONS 関数があります。 \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインすると、ユーザーは **user options** の現在の値が @@OPTIONS に代入される既定の環境を受け取ります。 **user options** について SET ステートメントを実行すると、そのセッションの @@OPTIONS 関数の対応する値に適用されます。 この設定の変更後に作成された接続は、すべて新しい値を受け取ります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>user connections 構成オプションを構成するには  
   
@@ -87,7 +88,7 @@ ms.locfileid: "68012165"
   
      既定では、ユーザー オプションは構成されていません。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>user connections 構成オプションを構成するには  
   
@@ -107,7 +108,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a>補足情報: user options 構成オプションを構成した後  
+##  <a name="follow-up-after-you-configure-the-user-options-configuration-option"></a><a name="FollowUp"></a>補足情報: user options 構成オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

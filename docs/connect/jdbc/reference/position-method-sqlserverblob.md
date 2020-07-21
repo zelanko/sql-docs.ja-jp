@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63722ef778e8aebbf3974d076ef3085fe8c2f7a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66201b28d6f52801fe776ff6d6e5a392be586272
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976347"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914190"
 ---
 # <a name="position-method-sqlserverblob"></a>position メソッド (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67976347"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[position (java.sql.Blob, long)](../../../connect/jdbc/reference/position-method-java-sql-blob-long.md)|渡されたパターンと開始インデックスに基づいて、BLOB 内の指定されたパターンの位置を返します。|  
 |[position (byte&#91;&#93;, long)](../../../connect/jdbc/reference/position-method-byte-long.md)|渡された **byte** 配列パターンと開始インデックスに基づいて、BLOB 内の指定されたパターンの位置を返します。|  

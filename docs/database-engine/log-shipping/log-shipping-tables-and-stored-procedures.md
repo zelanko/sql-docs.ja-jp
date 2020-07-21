@@ -1,5 +1,6 @@
 ---
 title: ログ配布テーブルとストアド プロシージャ | Microsoft Docs
+description: ログ配布構成に関連付けられているすべてのテーブルおよびストアド プロシージャについてご確認ください。 ログ配布テーブルは各サーバーの msdb に格納されます。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d0164cee84309f9789dc71e2e64caf812b12b4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695975"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、ログ配布構成に関連付けられているすべてのテーブルおよびストアド プロシージャについて説明します。 すべてのログ配布テーブルは、各サーバーの **msdb** に保存されます。 次の表は、ログ配布構成にあるどのサーバーで、どのテーブルおよびストアド プロシージャが使用されるかを示しています。  
   
 ## <a name="primary-server-tables"></a>プライマリ サーバーのテーブル  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|警告ジョブ ID を格納します。 リモート監視サーバーが構成されていない場合のみ、このテーブルがプライマリ サーバーで使用されます。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|このプライマリ サーバーに関連付けられているログ配布ジョブのエラー詳細を格納します。|  
@@ -39,7 +40,7 @@ ms.locfileid: "68030724"
   
 ## <a name="primary-server-stored-procedures"></a>プライマリ サーバーのストアド プロシージャ  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|バックアップ ジョブ、ローカル監視レコード、リモート監視レコードを含め、ログ配布構成のプライマリ データベースを設定します。|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|既存のプライマリ データベースにセカンダリ データベース名を追加します。|  
@@ -53,7 +54,7 @@ ms.locfileid: "68030724"
   
 ## <a name="secondary-server-tables"></a>セカンダリ サーバーのテーブル  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|警告ジョブ ID を格納します。 リモート監視サーバーが構成されていない場合のみ、このテーブルがセカンダリ サーバーで使用されます。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|このセカンダリ サーバーに関連付けられているログ配布ジョブのエラー詳細を格納します。|  
@@ -67,7 +68,7 @@ ms.locfileid: "68030724"
   
 ## <a name="secondary-server-stored-procedures"></a>セカンダリ サーバーのストアド プロシージャ  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|ログ配布についてセカンダリ データベースを設定します。|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|指定したプライマリ データベースのセカンダリ サーバーに対して、プライマリ情報の設定、ローカルおよびリモート監視リンクの追加、コピー ジョブと復元ジョブの作成を行います。|  
@@ -82,7 +83,7 @@ ms.locfileid: "68030724"
   
 ## <a name="monitor-server-tables"></a>監視サーバーのテーブル  
   
-|テーブル|[説明]|  
+|テーブル|説明|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|警告ジョブ ID を格納します。|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|ログ配布ジョブのエラーの詳細を格納します。|  
@@ -92,7 +93,7 @@ ms.locfileid: "68030724"
   
 ## <a name="monitor-server-stored-procedures"></a>監視サーバーのストアド プロシージャ  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|ログ配布警告ジョブがまだ作成されていない場合は、作成します。|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|プライマリ データベースが関連付けられていない場合は、ログ配布警告ジョブを削除します。|  

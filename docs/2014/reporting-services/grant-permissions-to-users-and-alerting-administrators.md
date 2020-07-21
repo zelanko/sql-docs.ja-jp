@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48311ccaa22878fb5b17be75c3f12c64cb4a67e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109057"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>ユーザーおよび警告管理者に権限を付与する
@@ -47,7 +47,7 @@ ms.locfileid: "66109057"
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
+ [Sharepoint サイト上のレポートサーバーアイテムに対する権限を設定するには、SharePoint 統合モードで Reporting Services &#40;&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Reporting Services のデータ警告](../ssms/agent/alerts.md)  
   
   

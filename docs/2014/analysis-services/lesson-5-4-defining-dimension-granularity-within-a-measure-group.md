@@ -1,5 +1,5 @@
 ---
-title: メジャー グループ内のディメンションの粒度の定義 |Microsoft Docs
+title: メジャーグループ内でのディメンション粒度の定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06d1b643ce53be3b263ea493a8594f8db7ff11c9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078454"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542834"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>メジャー グループでのディメンション粒度の定義
   ファクト データは、利用目的ごとに異なる粒度でディメンションを作成しなければならない場合があります。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
@@ -32,9 +31,9 @@ ms.locfileid: "66078454"
   
 1.  **Adventure Works DW 2012** データ ソース ビューに切り替えます。  
   
-2.  内を右クリックして、**ダイアグラム オーガナイザー**ウィンドウで、をクリックして**新しいダイアグラム**、し、名前を図`Sales Quotas`します。  
+2.  [**ダイアグラムオーガナイザー** ] ペイン内の任意の場所を右クリックし、[**新しいダイアグラム**] をクリックして、ダイアグラムに名前を指定し `Sales Quotas` ます。  
   
-3.  ドラッグ、**従業員**、 **Sales Territory**、および`Date`テーブルから、**テーブル**ペイン、**ダイアグラム**ウィンドウ。  
+3.  [テーブル] ペインから [ **Employee**]、[ **Sales 区域**]、および [ `Date` テーブル] を**ダイアグラム**ペインにドラッグします。 **Tables**  
   
 4.  **[ダイアグラム]** ペイン内を右クリックし、 **[テーブルの追加と削除]** をクリックして、 **FactSalesQuota** テーブルを **[ダイアグラム]** ペインに追加します。  
   
@@ -44,49 +43,49 @@ ms.locfileid: "66078454"
   
      このテーブルのデータの詳細度が四半期単位になっていることがわかります。FactSalesQuota の最も低い詳細レベルが四半期単位ということになります。  
   
-6.  データ ソース ビュー デザイナーでは、変更、 **FriendlyName**のプロパティ、 **FactSalesQuota**テーブル`SalesQuotas`します。  
+6.  データソースビューデザイナーで、 **FactSalesQuota**テーブルの**FriendlyName**プロパティをに変更 `SalesQuotas` します。  
   
 7.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに切り替え、 **[キューブ構造]** タブをクリックします。  
   
-8.  内を右クリックして、**メジャー**ウィンドウで、 をクリックして**新しいメジャー グループ**、 をクリックして`SalesQuotas`で、**新しいメジャー グループ** ダイアログ ボックスし、クリックして**OK**します。  
+8.  [**メジャー** ] ペイン内の任意の場所を右クリックし、[**新しいメジャーグループ**] をクリックし `SalesQuotas` ます。次に、[**新しいメジャーグループ**] ダイアログボックス内をクリックし、[ **OK**] をクリックします。  
   
-     `Sales Quotas`メジャー グループに表示されます、**メジャー**ウィンドウ。 **ディメンション**ウィンドウで、注意を新しい`Date`キューブ ディメンションも定義されて、に基づいて、`Date`データベース ディメンション。 新しい時間キューブ ディメンションが定義されてしまうのは、Sales Quotas メジャー グループの基となる [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] FactSalesQuota **ファクト テーブルの** DateKey **列に関連付けられている時間キューブ ディメンションがどのディメンションなのかを、** に指定していないためです。 時間キューブ ディメンションの設定は、このトピックの別の実習で変更します。  
+     `Sales Quotas`メジャーグループが [**メジャー** ] ペインに表示されます。 [**ディメンション**] ペインで、 `Date` データベースディメンションに基づいて新しいキューブディメンションも定義されていることを確認し `Date` ます。 新しい時間キューブ ディメンションが定義されてしまうのは、Sales Quotas メジャー グループの基となる [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] FactSalesQuota **ファクト テーブルの** DateKey **列に関連付けられている時間キューブ ディメンションがどのディメンションなのかを、** に指定していないためです。 時間キューブ ディメンションの設定は、このトピックの別の実習で変更します。  
   
-9. 展開、`Sales Quotas`メジャー グループです。  
+9. メジャーグループを展開し `Sales Quotas` ます。  
   
 10. **[メジャー]** ペインで、 **Sales Amount Quota**をクリックします。次に、[プロパティ] ウィンドウで、 **FormatString** プロパティの値を **Currency** に設定します。  
   
-11. 選択、 **Sales Quotas Count**を測定し、入力`#,#`の値として、 **FormatString**プロパティ ウィンドウでプロパティ。  
+11. **Sales Quota Count**メジャーを選択し、 `#,#` プロパティウィンドウで**FormatString**プロパティの値として「」と入力します。  
   
-12. 削除、 **Calendar Quarter**メジャーを`Sales Quotas`メジャー グループです。  
+12. メジャーグループから**Calendar Quarter**メジャーを削除 `Sales Quotas` します。  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって、Calendar Quarter メジャーの基となる列 (この列には他のメジャーも含まれている) が自動的に検出されました。 しかし、このトピックの後の操作で Sales Quotas メジャー グループを Date ディメンションにリンクさせるときは、検出された列および CalendarYear 列の値を手動で割り当てます。  
   
-13. **メジャー**ウィンドウを右クリックし、`Sales Quotas`メジャー グループ、およびクリックして**新しいメジャー**します。  
+13. [**メジャー** ] ペインで、メジャーグループを右クリック `Sales Quotas` し、[**新しいメジャー**] をクリックします。  
   
      **[新しいメジャー]** ダイアログ ボックスが開き、メジャーの使用法が **[合計]** である場合に選択できる列が表示されます。  
   
-14. **新しいメジャー**ダイアログ ボックスで、**個別のカウント**で、**使用状況**一覧で、いることを確認`SalesQuotas`でが選択されている、**ソース テーブル**一覧で、 **EmployeeKey**で、**基になる列**ボックスの一覧をクリックして**OK**します。  
+14. [**新しいメジャー** ] ダイアログボックスで、**使用法**の一覧から [**個別のカウント**] を選択し、[基になるテーブル] ボックスの一覧でが選択されていることを確認し `SalesQuotas` ます。次に、[基になる**列**] ボックスの一覧で [**従業員キー** ] を選択し、[ **OK**] をクリック**Source table**  
   
      **Sales Quotas 1**という名前の新しいメジャー グループに、メジャーが作成されます。 処理速度を最大限に向上させるため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の "個別のカウント" メジャーは専用のメジャー グループに作成されます。  
   
-15. 値を変更、**名前**プロパティを**Employee Key Distinct Count**メジャーを`Sales Person Count`、し、入力`#,#`の値として、 **FormatString**プロパティ。  
+15. **Employee Key Distinct Count**メジャーの**Name**プロパティの値をに変更し、 `Sales Person Count` `#,#` **FormatString**プロパティの値として「」と入力します。  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Sales Quota メジャー グループのメジャーの日付順での表示  
   
 1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]** ボタンをクリックします。  
+2.  配置が正常に完了したら、 **Tutorial キューブのキューブ デザイナーで** [ブラウザー] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
 3.  Excel ショートカットをクリックし、 **[有効化]** をクリックします。  
   
-4.  ピボット テーブル フィールド リストで、展開、`Sales Quotas`メジャー グループ、およびドラッグし、 **Sales Amount Quota**メジャーを値領域にします。  
+4.  ピボットテーブルのフィールドリストでメジャーグループを展開し、 `Sales Quotas` **Sales Amount Quota**メジャーを [値] 領域にドラッグします。  
   
 5.  **Sales Territory** ディメンションを展開し、 **Sales Territories** ユーザー定義階層を行ラベルにドラッグします。  
   
      次の図に示すように、Sales Territory キューブ ディメンションは、直接的にも間接的にも Fact Sales Quota テーブルには関連付けられていません。  
   
-     ![Sales Territory キューブ ディメンション](../../2014/tutorials/media/l5-granularity-2.gif "Sales Territory キューブ ディメンション")  
+     ![販売区域キューブディメンション](../../2014/tutorials/media/l5-granularity-2.gif "Sales Territory キューブ ディメンション")  
   
      このトピックの次の一連の手順では、Sales Territory キューブ ディメンションと Fact Sales Quota テーブルの間に参照ディメンションのリレーションシップを定義します。  
   
@@ -94,25 +93,25 @@ ms.locfileid: "66078454"
   
 7.  ピボットテーブル フィールド リストで **Sales Territories** ユーザー定義階層を選択し、右側の下矢印をクリックします。  
   
-     ![フィールド リスト内の sales Territories 階層](../../2014/tutorials/media/l5-granularity-1a.png "フィールド リスト内の Sales Territories 階層")  
+     ![フィールドの一覧内の Sales Territories 階層](../../2014/tutorials/media/l5-granularity-1a.png "フィールドの一覧内の Sales Territories 階層")  
   
 8.  フィルターで [すべて選択] チェック ボックスをクリックしてすべての選択を解除してから、 **North America**だけを選択します。  
   
      ![North America を選択するためのフィルター ペイン](../../2014/tutorials/media/l5-granularity-1b.png "North America を選択するためのフィルター ペイン")  
   
-9. ピボット テーブル フィールド リストで `Date`します。  
+9. ピボットテーブルのフィールドリストで、を展開 `Date` します。  
   
 10. **Date.Fiscal Date** ユーザー階層を行ラベルにドラッグします。  
   
 11. ピボットテーブルで、行ラベルの横にある下矢印をクリックします。 **FY 2008**以外のすべての年をオフにします。  
   
-     だけ、 **2007 年 7 月**のメンバー、**月**レベルが表示されたらの代わりに、 **、2007 年 7 月**、 **、2007 年 8 月**、および **、2007 年 9 月**のメンバー**月**レベル、およびのみを **、2007 年 7 月 1 日**のメンバー、 `Date` 31 日間のすべてではなく、レベルが表示されます。 この問題の原因は、ファクト テーブル内のデータの粒度が四半期レベルの粒度では、`Date`ディメンションは、毎日のレベル。 この変更は、このトピックの別の実習で行います。  
+     **Month レベル**の**2007**年7月のメンバーだけが表示されます。これ**2007** **2007****は、月レベルの** **2007**メンバーではなく、7月1日のうち、 **6 月 1**日のメンバーのみが31日ではなく、そのレベルの2007メンバーのみが表示されることに注意して `Date` ください。 この動作が発生するのは、ファクトテーブル内のデータの粒度が quarter レベルで、ディメンションの粒度が日次レベルであるためです `Date` 。 この変更は、このトピックの別の実習で行います。  
   
      また、月単位および日単位の **Sales Amount Quota** の値が四半期のそれと同じである $13,733,000.00 になっています。 これは、Sales Quotas メジャー グループのデータの最低詳細レベルが四半期単位になっているためです。 この変更は、レッスン 6 で行います。  
   
      次の図は、 **Sales Amount Quota**の値を示しています。  
   
-     ![売上の値は Amount Quota](../../2014/tutorials/media/l5-granularity-3.png "Amount Quota の売上の値")  
+     ![Sales Amount Quota の値](../../2014/tutorials/media/l5-granularity-3.png "Sales Amount Quota の値")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Sales Quotas メジャー グループにおけるディメンションの使用法の定義  
   
@@ -120,13 +119,13 @@ ms.locfileid: "66078454"
   
 2.  **[属性]** ペインで、 **[SalesTerritoryKey]** をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyVisible** プロパティを **False** に設定します。さらに、 **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定し、 **AttributeHierarchyOrdered** プロパティを **False**に設定します。  
   
-     この属性がリンクに必要な**Sales Territory**ディメンションを`Sales Quotas`と**Sales Quotas 1**参照元ディメンションとしてメジャー グループです。  
+     この属性は、**販売区域**ディメンションを、 `Sales Quotas` 参照ディメンションとしておよび**sales quota 1**メジャーグループにリンクするために必要です。  
   
-3.  キューブ デザイナーで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブは、をクリックして、**ディメンションの使用法**タブをクリックし、内のディメンションの使用法を確認し、`Sales Quotas`と**Sales Quotas 1**メジャー グループです。  
+3.  チュートリアルキューブのキューブデザイナーで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [ディメンションの**使用法**] タブをクリックし、[ `Sales Quotas` および**Sales quota 1** ] メジャーグループ内のディメンションの使用法を確認します。  
   
-     注意、**従業員**と`Date`にキューブ ディメンションがリンクされている、 **Sales Quotasand Sales Quotas 1**標準リレーションシップによりメジャー グループです。 また、 **Sales Territory** キューブ ディメンションはどちらのメジャー グループにもリンクしていません。  
+     **Employee** `Date` ディメンションと cube ディメンションが、通常のリレーションシップを通じて**sales Quotasand sales quota 1**メジャーグループにリンクされていることに注意してください。 また、 **Sales Territory** キューブ ディメンションはどちらのメジャー グループにもリンクしていません。  
   
-4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと`Sales Quotas`メジャー グループと、参照ボタンをクリックして ( **.** ). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+4.  **販売区域**ディメンションとメジャーグループが交差する位置にあるセルをクリックし、 `Sales Quotas` 参照ボタン ([.**..**]) をクリックします。[**リレーションシップの定義**] ダイアログボックスが表示されます。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "66078454"
   
 10. **[OK]** をクリックします。  
   
-11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして ( **.** ). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+11. **販売区域**ディメンションと**sales quota 1**メジャーグループが交差する位置にあるセルをクリックし、参照ボタン ([.**..**]) をクリックします。[**リレーションシップの定義**] ダイアログボックスが表示されます。  
   
 12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
@@ -154,15 +153,15 @@ ms.locfileid: "66078454"
   
 17. **[OK]** をクリックします。  
   
-18. 削除、`Date`キューブ ディメンションです。  
+18. `Date`キューブディメンションを削除します。  
   
-     次の 4 つの時間関連のキューブ ディメンションはなく、使用する、 **Order Date**内のキューブ ディメンション、`Sales Quotas`販売ノルマを対応する対象となる日付としてメジャー グループです。 また、このキューブ ディメンションはキューブ内のプライマリ日付ディメンションにもなります。  
+     時間に関連する4つのキューブディメンションを用意する代わりに、メジャーグループの**Order Date**キューブディメンションを使用して、販売ノルマを測定する日付を使用し `Sales Quotas` ます。 また、このキューブ ディメンションはキューブ内のプライマリ日付ディメンションにもなります。  
   
-19. **ディメンション**一覧で、名前の変更、 **Order Date**キューブ ディメンションを`Date`します。  
+19. [**ディメンション**] ボックスの一覧で、 **Order Date**キューブディメンションの名前をに変更 `Date` します。  
   
-     名前の変更、 **Order Date**キューブ ディメンションを`Date`をこのキューブのプライマリ日付ディメンションとしての役割を理解しやすきます。  
+     **Order Date**キューブディメンションの名前をに変更する `Date` と、ユーザーはそのロールをこのキューブのプライマリ日付ディメンションとして簡単に理解できるようになります。  
   
-20. [参照] ボタンをクリックします ( **.** ) の交差部分にあるセルで、`Sales Quotas`メジャー グループと`Date`ディメンション。  
+20. **...** `Sales Quotas` メジャーグループとディメンションが交差する位置にあるセルで、参照ボタン ([...]) をクリックします。 `Date`  
   
 21. **[リレーションシップの定義]** ダイアログ ボックスで、 **[リレーションシップの種類の選択]** ボックスの一覧から **[標準]** を選択します。  
   
@@ -179,9 +178,9 @@ ms.locfileid: "66078454"
   
 ## <a name="defining-attribute-relationships-between-the-calendar-quarter-attribute-and-the-other-dimension-attributes-in-the-date-dimension"></a>Calendar Quarter 属性およびその他の属性間の属性リレーションシップの Date ディメンションへの定義  
   
-1.  切り替える**ディメンション デザイナー**の`Date`ディメンションをクリックして、**属性リレーションシップ** タブ。  
+1.  ディメンションの**ディメンションデザイナー**に切り替え `Date` 、[**属性リレーションシップ**] タブをクリックします。  
   
-     注意が**暦年**にリンクされている**Calendar Quarter**を通じて、 **Calendar Semester**属性、属性が 1 つだけにリンクされている会計カレンダーします。リンクされていない、 **Calendar Quarter**属性し、そのため、において正しく集計されません、`Sales Quotas`メジャー グループです。  
+     Calendar **Year** **は calendar Quarter 属性を**介して calendar **Quarter**にリンクされていますが、会計カレンダーの属性は互いにリンクされています。**Calendar Quarter**属性にリンクされていないため、メジャーグループ内で正しく集計されません `Sales Quotas` 。  
   
 2.  ダイアグラムで、 **[Calendar Quarter]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "66078454"
   
 4.  **[OK]** をクリックします。  
   
-     警告メッセージが表示されることを示す通知、`Date`ディメンションには粒度属性として使用する非キー属性に集計がデータを妨げる可能性のある 1 つまたは複数の重複する属性リレーションシップが含まれています。  
+     `Date`非キー属性が粒度属性として使用されている場合にデータが集計されない可能性がある1つ以上の冗長属性リレーションシップがディメンションに含まれていることを示す警告メッセージが表示されます。  
   
 5.  **Month Name** 属性と **Fiscal Quarter** 属性との間の属性リレーションシップを削除します。  
   
@@ -217,14 +216,14 @@ ms.locfileid: "66078454"
   
      会計四半期レベルの各メンバーが、四半期レベルと同じ値になっています。 たとえば、 **Q1 FY 2008** では、 **Q1 FY 2008** の分の $9,180,000.00 が、その各メンバーの値にもなっています。 このように表示されるのは、ファクト テーブルの詳細度が四半期単位であり、同時に Date ディメンションの詳細レベルも四半期単位であるためです。 レッスン 6 では、四半期ごとの販売量を各月に均等に割り振る方法について学習します。  
   
-     ![Sales Quota メジャー グループの次元は正しく](../../2014/tutorials/media/l5-granularity-7.gif "正しくの次元は、Sales Quota メジャー グループ")  
+     ![適切にディメンションが指定された Sales Quota メジャー グループ](../../2014/tutorials/media/l5-granularity-7.gif "適切にディメンションが指定された Sales Quota メジャー グループ")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6:計算の定義](lesson-6-defining-calculations.md)  
+ [レッスン 6: 計算の定義](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>関連項目  
- [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [標準のリレーションシップとファクト リレーションシップのプロパティを定義します。](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [ディメンションのリレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [標準リレーションシップおよび標準リレーションシッププロパティの定義](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
+ [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

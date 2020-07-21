@@ -1,25 +1,25 @@
 ---
-title: Web サービス操作の分類 (Master Data Services) | Microsoft Docs
+title: Web サービス操作の分類
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2ef95a0c24e6435fda2268f0928d6154b051ccec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098603"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900999"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がユーザー インターフェイスを通じて行うすべての機能をコード記述で制御できるようにするための操作が、完全なセットとして含まれています。 Web サービス操作は、<xref:Microsoft.MasterDataServices.IService> インターフェイスによって定義され、<xref:Microsoft.MasterDataServices.ServiceClient> クラスのメソッドとして実装されます。 このトピックでは、Web サービス API の使用方法を理解しやすくするために、Web サービス操作を概念ごとのカテゴリに分類します。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68098603"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>データ インポートの操作  
- これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「[概要:テーブルからデータをインポートする &#40;マスター データ サービス&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「[概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098603"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>データ エクスポートの操作  
- これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「[概要:データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「 [概要: データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -149,7 +149,7 @@ ms.locfileid: "68098603"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>セキュリティの操作  
+## <a name="security-operations"></a>セキュリティ運用担当者  
  これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのアクセスを制御するセキュリティ設定を変更するために使用されます。 詳細については、「[セキュリティ (マスター データ サービス)](../../master-data-services/security-master-data-services.md)」を参照してください。  
   
 ||  

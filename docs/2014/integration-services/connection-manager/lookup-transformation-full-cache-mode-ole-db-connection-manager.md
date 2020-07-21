@@ -1,5 +1,5 @@
 ---
-title: OLE DB 接続マネージャーを使用してフル キャッシュ モードで参照変換を実装する |Microsoft Docs
+title: OLE DB 接続マネージャーを使用してフルキャッシュモードの参照変換を実装する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a40ae949eecdaa71053b0e7f4253817643bc669f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833708"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438349"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
@@ -51,11 +50,11 @@ ms.locfileid: "62833708"
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         \- または -  
+         または  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         \- または -  
+         または  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62833708"
   
 13. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [キャッシュなしモードまたは部分キャッシュ モードの参照を実装する](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services の変換](../data-flow/transformations/integration-services-transformations.md)  

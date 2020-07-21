@@ -1,125 +1,135 @@
 ---
-title: パスワード (AccessToSQL) の管理 |Microsoft Docs
+title: パスワードの管理 (管理用 Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/01/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897578"
 ---
-# <a name="managing-passwords-accesstosql"></a>パスワードの管理 (AccessToSQL)
-このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  
+# <a name="managing-passwords-accesstosql"></a>パスワードの管理 (管理用 Sql)
+このセクションでは、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。  
   
-1.  パスワードをセキュリティで保護します。  
+1.  パスワードのセキュリティ保護  
   
-2.  エクスポートまたは暗号化されたパスワードをインポートします。  
+2.  暗号化されたパスワードのエクスポートまたはインポート  
   
-## <a name="securing-password"></a>パスワードをセキュリティで保護します。  
-SSMA では、データベースのパスワードをセキュリティで保護できます。  
+## <a name="securing-password"></a>パスワードのセキュリティ保護  
+SSMA を使用すると、データベースのパスワードをセキュリティで保護することができます。  
   
-セキュリティで保護された接続を実装するために、次の手順を使用します。  
+セキュリティで保護された接続を実装するには、次の手順に従います。  
   
-次の 3 つのメソッドのいずれかを使用して有効なパスワードを指定します。  
+次の3つの方法のいずれかを使用して、有効なパスワードを指定します。  
   
-1.  **テキストを消去します。** 'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
+1.  **クリアテキスト:**[パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
   
-    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。 *"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
+    クリアテキストのパスワードはセキュリティで保護されていません。 このため、コンソールの出力には、 *"サーバー &lt; サーバー-id パスワードはセキュリティで保護されてい &gt; ないクリアテキスト形式で提供されます。 ssma コンソールアプリケーションは、暗号化によってパスワードを保護するオプションを提供します。詳細については、ssma ヘルプファイルの-securepassword オプションを参照してください。"*  
   
-    **暗号化されたパスワード:** この場合、指定したパスワードは、ProtectedStorage.ssma でローカル コンピューターの暗号化された形式で格納されます。  
+    **暗号化されたパスワード:** この場合、指定されたパスワードは、ProtectedStorage のローカルコンピューター上の暗号化された形式で格納されます。  
   
-    -   **パスワードをセキュリティで保護します。**  
+    -   **パスワードのセキュリティ保護**  
   
-        -   実行、`SSMAforAccessConsole.exe`で、`-securepassword`サーバー定義のセクションではパスワード ノードを含む接続またはスクリプト ファイルをサーバーに渡すコマンド ライン スイッチを追加します。  
+        -   を使用してを実行し、 `SSMAforAccessConsole.exe` `-securepassword` コマンドラインで [サーバーの定義] セクションの [パスワード] ノードを含むサーバー接続またはスクリプトファイルを渡します。  
   
-        -   プロンプトで、ユーザーは、データベースのパスワードを入力し、確認を求められます。  
+        -   プロンプトが表示されたら、データベースのパスワードを入力して確認します。  
   
-            サーバーの定義 id とその対応する暗号化されたパスワードがローカル コンピューター上のファイルに格納されています。  
-  
-            例 1 :
+            サーバー定義 id とそれに対応する暗号化されたパスワードは、ローカルコンピューター上のファイルに格納されます。  
+
+            &nbsp;
+
+            _例 1:_
             
-                Specify password
+            パスワードの指定
+
+            ```console
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+            ```
+
+            Server_id ' XXX_1 ' のパスワードを入力してください: xxxxxxx
                 
-                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+            Server_id ' XXX_1 ' のパスワードを再入力してください: xxxxxxx  
+
+            &nbsp;
+
+            _例 2:_
+
+            ```console
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            ```
+
+            Server_id ' source_1 ' のパスワードを入力してください: xxxxxxx
                 
-                Enter password for server_id 'XXX_1': xxxxxxx
+            Server_id ' source_1 ' のパスワードを再入力してください: xxxxxxx
                 
-                Re-enter password for server_id 'XXX_1': xxxxxxx  
-            
-            例 2:
-            
-                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            Server_id ' target_1 ' のパスワードを入力してください: xxxxxxx
                 
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            Server_id ' target _1 ' のパスワードを再入力してください: xxxxxxx  
   
-    -   **暗号化されたパスワードを削除します。**  
+    -   **暗号化されたパスワードの削除**  
   
-        実行、`SSMAforAccessConsole.exe`で、`-securepassword`と`-remove`で暗号化されたパスワードをローカル コンピューターに存在する保護されたストレージ ファイルから削除する、サーバー id を渡すコマンド ライン スイッチします。  
+        とを使用してを実行し、 `SSMAforAccessConsole.exe` `-securepassword` サーバー id を渡してコマンドラインでを実行して、 `-remove` 暗号化されたパスワードをローカルコンピューターに存在する保護されたストレージファイルから削除します。  
+
+        ```console
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"
+        ```
   
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"  
+    -   **パスワードが暗号化されているサーバー Id を一覧表示する**  
   
-    -   **パスワードが暗号化されてサーバー Id の一覧表示**  
-  
-        実行と SSMAforAccessConsole.exe、`-securepassword`と`-list`コマンドラインでパスワードが暗号化されているすべてのサーバー id を一覧表示するためのスイッチします。  
-  
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list  
+        コマンドラインでを使用して SSMAforAccessConsole.exe を実行し、 `-securepassword` `-list` パスワードが暗号化されているすべてのサーバー id を一覧表示します。  
+
+        ```console
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list
+        ```
   
     > [!NOTE]  
-    > 1.  スクリプトまたはサーバーの接続ファイルで説明したクリア テキストでパスワードは、セキュリティで保護されたファイル内の暗号化されたパスワードよりも優先されます。  
-    > 2.  サーバー接続ファイルまたはスクリプト ファイルの [サーバー] セクションではパスワードが存在しない場合、またはローカル コンピューターのセキュリティ保護されていないが場合は、コンソールでは、パスワードを入力するように求められます。  
+    > 1.  スクリプトまたはサーバー接続ファイルで説明されているクリアテキストのパスワードは、セキュリティで保護されたファイルの暗号化されたパスワードよりも優先されます。  
+    > 2.  サーバー接続ファイルまたはスクリプトファイルの server セクションにパスワードが存在しない場合、またはローカルコンピューター上でセキュリティ保護されていない場合は、コンソールにパスワードの入力を求めるメッセージが表示されます。  
   
-## <a name="exporting-or-importing-encrypted-passwords"></a>エクスポートまたは暗号化されたパスワードをインポートします。  
-SSMA コンソール アプリケーションをセキュリティで保護されたファイル、およびその逆に、ローカル コンピューター上のファイルに存在するデータベースの暗号化されたパスワードをエクスポートすることができます。 暗号化されたパスワードのマシンを独立したために役立ちます。 エクスポート機能は、サーバー id を読み取ると、ローカル コンピューターからパスワード保護された記憶域と、暗号化されたファイルに情報を保存します。 セキュリティで保護されたファイルのパスワードの入力を求められます。 入力したパスワードは 8 文字の長さ以上を確認します。 このセキュリティで保護されたファイルは、別のコンピューター間で可能です。 インポート機能では、セキュリティで保護されたファイルから、サーバー id とパスワードの情報を読み取ります。 ユーザーはセキュリティで保護されたファイルのパスワードを入力するように求められ、保護されているローカル ストレージに情報を追加します。  
+## <a name="exporting-or-importing-encrypted-passwords"></a>暗号化されたパスワードのエクスポートまたはインポート  
+SSMA コンソールアプリケーションを使用すると、ローカルコンピューター上のファイルに存在する暗号化されたデータベースパスワードを、セキュリティで保護されたファイルにエクスポートできます。また、その逆も可能です。 暗号化されたパスワードをコンピューターに依存させるのに役立ちます。 エクスポート機能は、ローカルで保護されているストレージからサーバー id とパスワードを読み取り、暗号化されたファイルに情報を保存します。 ユーザーは、セキュリティで保護されたファイルのパスワードを入力するように求められます。 入力したパスワードの長さが8文字以上であることを確認します。 このセキュリティで保護されたファイルは、異なるコンピューター間で移植できます。 インポート機能は、サーバー id とパスワードの情報をセキュリティで保護されたファイルから読み取ります。 ユーザーは、セキュリティで保護されたファイルのパスワードを入力するように求められ、ローカルで保護されているストレージに情報が追加されます。  
 
+### <a name="export-password"></a>パスワードのエクスポート
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
+1. エクスポートされたファイルを保護するためのパスワードを入力してください
 
+2. `C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"`
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
+3. エクスポートされたファイルを保護するためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+4. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+5. `C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"`
+
+6. エクスポートされたファイルを保護するためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+7. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
+
+### <a name="import-an-encrypted-password"></a>暗号化されたパスワードをインポートする
+
+1. インポートされたファイルを保護するためのパスワードを入力してください
+
+2. `C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"`
+
+3. 暗号化されたファイルからサーバーをインポートするためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+4. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+5. `C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"`
+
+6. 暗号化されたファイルからサーバーをインポートするためのパスワードを入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+7. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
+
 ## <a name="see-also"></a>関連項目  
 [SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

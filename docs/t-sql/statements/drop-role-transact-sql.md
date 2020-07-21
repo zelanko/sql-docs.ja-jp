@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68043919"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
@@ -60,7 +60,7 @@ DROP ROLE role_name
  *role_name*  
  データベースから削除するロールを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  セキュリティ保護可能なリソースを所有するロールは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ロールを削除するには、まず、セキュリティ保護可能なリソースの所有権を転送するか、リソースをデータベースから削除する必要があります。 メンバーを含むロールは、データベースから削除できません。 メンバーを含むロールを削除するには、まず、ロールのメンバーを削除する必要があります。  
   
  データベース ロールからメンバーを削除するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。  
@@ -77,7 +77,7 @@ DROP ROLE role_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する **ALTER ANY ROLE** アクセス許可、ロールに対する **CONTROL** アクセス許可、または **db_securityadmin** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース ロール `purchasing` を `AdventureWorks2012` データベースから削除します。  
   
 ```  

@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1732f099dcdf9ab5119ba288d625ad45384bd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 705e5f381d8df82aff6f662b97d9742586ab498a
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066047"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302034"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   セキュリティ保護可能なエンティティの所有権を変更します。    
     
@@ -43,7 +43,7 @@ ms.locfileid: "68066047"
     
 ## <a name="syntax"></a>構文    
     
-```    
+```syntaxsql
 -- Syntax for SQL Server  
 ALTER AUTHORIZATION    
    ON [ <class_type>:: ] entity_name    
@@ -60,7 +60,7 @@ ALTER AUTHORIZATION
     }    
 ```    
 
-```
+```syntaxsql
 -- Syntax for SQL Database  
   
 ALTER AUTHORIZATION    
@@ -79,7 +79,7 @@ ALTER AUTHORIZATION
 ```    
 
     
-```    
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -99,7 +99,7 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-```    
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -121,32 +121,34 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-## <a name="arguments"></a>引数    
-\<class_type> は、所有者を変更するエンティティのセキュリティ保護可能なクラスを指定します。 既定値は OBJECT です。    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+\<class_type> 所有者を変更するエンティティのセキュリティ保護可能なクラスを指定します。 既定値は OBJECT です。    
     
 |||    
 |-|-|    
-|OBJECT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|ASSEMBLY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ASYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |**適用対象**:SQL Server 2012 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
-|CERTIFICATE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|CONTRACT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|DATABASE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 詳しくは、後の「[データベースに対する ALTER AUTHORIZATION](#AlterDB)」をご覧ください。|    
-|ENDPOINT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|FULLTEXT CATALOG|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|FULLTEXT STOPLIST|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|MESSAGE TYPE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|REMOTE SERVICE BINDING|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|ROLE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|ROUTE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SCHEMA|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
-|SEARCH PROPERTY LIST|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|SERVER ROLE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SERVICE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
-|SYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|TYPE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|XML SCHEMA COLLECTION|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|OBJECT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|ASSEMBLY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ASYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|AVAILABILITY GROUP |**適用対象**:SQL Server 2012 以降。|
+|CERTIFICATE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|CONTRACT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|DATABASE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 詳しくは、後の「[データベースに対する ALTER AUTHORIZATION](#AlterDB)」をご覧ください。|    
+|ENDPOINT|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|FULLTEXT CATALOG|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|FULLTEXT STOPLIST|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|MESSAGE TYPE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|REMOTE SERVICE BINDING|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|ROLE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|ROUTE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|SCHEMA|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
+|SEARCH PROPERTY LIST|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|SERVER ROLE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|SERVICE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。|    
+|SYMMETRIC KEY|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|TYPE|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
+|XML SCHEMA COLLECTION|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
     
  *entity_name*    
  エンティティの名前を指定します。    
@@ -154,7 +156,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  エンティティの所有者となるセキュリティ プリンシパルの名前。 データベース オブジェクトはデータベース プリンシパル (データベース ユーザーまたはデータベース ロール) が所有する必要があります。 サーバー オブジェクト (データベースなど) はサーバー プリンシパル (ログイン) が所有する必要があります。 **SCHEMA OWNER** を *principal_name* として指定して、オブジェクトのスキーマを所有するプリンシパルがオブジェクトを所有する必要があることを示します。    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
  ALTER AUTHORIZATION は、所有者が存在するエンティティの所有権を変更するときに使用できます。 データベースに含まれるエンティティの所有権は、任意のデータベース レベルのプリンシパルに譲渡できます。 サーバー レベルのエンティティの所有権は、サーバー レベルのプリンシパルのみに譲渡できます。    
     
 > [!IMPORTANT]    
@@ -191,7 +193,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE または ASYMMETRIC KEY|これらのエンティティの所有権をロールまたはグループに譲渡することはできません。|    
 |ENDPOINT|プリンシパルは、ログインであることが必要です。|    
   
-## <a name="AlterDB"></a> データベースに対する ALTER AUTHORIZATION  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> データベースに対する ALTER AUTHORIZATION  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>SQL Server の場合:  
 **新しい所有者の要件:**    
@@ -229,10 +231,10 @@ ALTER AUTHORIZATION ON
   
 実行者  |移行先  |結果    
 ---------|---------|---------  
-SQL サーバー認証ログイン     |SQL サーバー認証ログイン         |成功  
+SQL サーバー認証ログイン     |SQL サーバー認証ログイン         |Success  
 SQL サーバー認証ログイン     |Azure AD ユーザー         |失敗           
-Azure AD ユーザー     |SQL サーバー認証ログイン         |成功           
-Azure AD ユーザー     |Azure AD ユーザー         |成功           
+Azure AD ユーザー     |SQL サーバー認証ログイン         |Success           
+Azure AD ユーザー     |Azure AD ユーザー         |Success           
   
 データベースの Azure AD 所有者を確認するには、ユーザー データベース (この例では `testdb`) で次の Transact-SQL コマンドを実行します。  
     
@@ -260,11 +262,11 @@ Azure AD ユーザーをデータベースの個人所有者として使う代�
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  データベースを所有する Azure AD グループを作成し、そのグループをユーザー データベースにユーザーとして追加します。 例:  
+2.  データベースを所有する Azure AD グループを作成し、そのグループをユーザー データベースにユーザーとして追加します。 次に例を示します。  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 例:  
+3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 次に例を示します。  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -285,7 +287,7 @@ SELECT IS_MEMBER ('db_owner');
 ## <a name="permissions"></a>アクセス許可    
  エンティティに対する TAKE OWNERSHIP 権限が必要です。 新しい所有者がステートメントを実行するユーザーではない場合は、次の条件に応じた権限が必要になります。1) 新しい所有者がユーザーまたはログインの場合は、新しい所有者に対する IMPERSONATE 権限。2) 新しい所有者がロールまたはロールのメンバーシップの場合は、ロールに対する ALTER 権限。3) 新しい所有者がアプリケーション ロールの場合は、アプリケーション ロールに対する ALTER 権限。    
     
-## <a name="examples"></a>使用例    
+## <a name="examples"></a>例    
     
 ### <a name="a-transfer-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する    
  次の例では、テーブル `Sprockets` の所有権をユーザー `MichikoOsada` に譲渡します。 このテーブルは、スキーマ `Parts` 内にあります。    
@@ -302,7 +304,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- オブジェクトのスキーマがステートメントの一部として含まれない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はユーザーの既定のスキーマでオブジェクトを検索します。 例:    
+ オブジェクトのスキーマがステートメントの一部として含まれない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はユーザーの既定のスキーマでオブジェクトを検索します。 次に例を示します。    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
@@ -328,7 +330,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. エンドポイントの所有権を SQL Server ログインに譲渡する    
  次の例では、エンドポイント `CantabSalesServer1` の所有権を `JaePak` に譲渡します。 エンドポイントはサーバー レベルでセキュリティ保護可能なリソースであるため、エンドポイントを譲渡できるのはサーバー レベルのプリンシパルのみです。    
     
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]    
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。    
     
 ```    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -345,7 +347,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. データベースの所有者を変更する    
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ～ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。    
     
  次の例では、`Parts` データベースの所有者をログイン `MichikoOsada` に変更します。    
     

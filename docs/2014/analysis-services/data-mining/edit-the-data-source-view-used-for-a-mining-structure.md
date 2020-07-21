@@ -1,5 +1,5 @@
 ---
-title: マイニング構造に使用されるデータ ソース ビューの編集 |Microsoft Docs
+title: マイニング構造に使用されるデータソースビューの編集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6a5db00e6b25741cb9367d0b4a42101ca06650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084514"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522494"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>マイニング構造に使用されるデータ ソース ビューの編集
   データ ソース ビューは、データ マイニング デザイナーから開いて変更できます。  

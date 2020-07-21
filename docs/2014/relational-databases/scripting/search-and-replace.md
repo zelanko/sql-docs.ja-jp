@@ -1,6 +1,6 @@
 ---
-title: 検索と置換 | Microsoft Docs
-ms.custom: ''
+title: 検索と置換
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -25,18 +25,17 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55422fa7201213477426c7bc25c45ff05acf8945
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009359"
 ---
 # <a name="search-and-replace"></a>検索と置換
-  テキストの検索と置換にはいくつかの方法があります。 **[編集]** メニューの **[検索と置換]** には、4 つの選択が用意されています: **[クイック検索]** 、 **[クイック置換]** 、 **[フォルダーを指定して検索]** 、 **[フォルダーを指定して置換]** 。 各オプションを選択すると、各バージョンの **[検索と置換]** ダイアログ ボックスが表示されます。 ダイアログ ボックスを使用しないで、インクリメンタル検索キーボード ショートカット キーによって検索することも可能です。 これらの方法によって、検索と置換の範囲を設定することや、検索一致項目や置換項目を確認する方法を選択することができます。  
+  テキストの検索と置換にはいくつかの方法があります。 **[編集]** メニューの **[検索と置換]** には、 **[クイック検索]** 、 **[クイック置換]** 、 **[フォルダーを指定して検索]** 、 **[フォルダーを指定して置換]** という 4 つのオプションが用意されています。 各オプションを選択すると、各バージョンの **[検索と置換]** ダイアログ ボックスが表示されます。 ダイアログ ボックスを使用しないで、インクリメンタル検索キーボード ショートカット キーによって検索することも可能です。 これらの方法によって、検索と置換の範囲を設定することや、検索一致項目や置換項目を確認する方法を選択することができます。  
   
  テキストの検索と置換に関する注意点は次のとおりです。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66090203"
   
  一般に、グラフィカル ビューを持つ項目の検索はできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アクティブ ドキュメントのインクリメンタル検索](search-an-active-document-incrementally.md)   
  [ドキュメントの対話形式の検索](search-documents-interactively.md)   
  [結果一覧を使用してドキュメントを検索する方法](search-documents-using-results-lists.md)   

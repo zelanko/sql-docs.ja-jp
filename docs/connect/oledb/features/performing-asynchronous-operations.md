@@ -1,6 +1,6 @@
 ---
-title: 非同期操作の実行 |Microsoft Docs
-description: OLE DB Driver for SQL Server を使用した非同期操作の実行
+title: 非同期操作の実行 | Microsoft Docs
+description: OLE DB Driver for SQL Server での非同期操作の実行
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989018"
 ---
 # <a name="performing-asynchronous-operations"></a>非同期操作の実行
@@ -52,7 +52,7 @@ ms.locfileid: "67989018"
 ## <a name="execution-and-rowset-initialization"></a>実行と行セットの初期化  
  コマンドの実行結果を非同期に開くようデザインされているアプリケーションは、DBPROP_ROWSET_ASYNCH プロパティに DBPROPVAL_ASYNCH_INITIALIZE ビットを設定できます。 **IDBInitialize::Initialize**、**ICommand::Execute**、**IOpenRowset::OpenRowset** または **IMultipleResults::GetResult** を呼び出す前にこのビットを設定するときは、*riid* 引数を IID_IDBAsynchStatus、IID_ISSAsynchStatus、または IID_IUnknown に設定する必要があります。  
   
- メソッドはすぐに制御を戻し、行セットの初期化が直ちに完了した場合は S_OK、行セットの初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS を返して、*ppRowset* を行セット上の要求されたインターフェイスに設定します。 SQL Server 用の OLE DB ドライバーの場合、このインターフェイスには**IdbasISSAsynchStatus** **Chstatus**または のみを指定できます。 このインターフェイスは、行セットが完全に初期化されるまでは中断状態にあるかのように動作し、**IID_IDBAsynchStatus** または **IID_ISSAsynchStatus** 以外のインターフェイスに対して **QueryInterface** が呼び出された場合、E_NOINTERFACE を返すことがあります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 **IDBAsynchStaus::GetStatus** または **ISSAsynchStatus::WaitForAsynchCompletion** が非同期操作が完了したことを示す値を返した場合、要求したすべてのインターフェイスを使用できます。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
+ メソッドはすぐに制御を戻し、行セットの初期化が直ちに完了した場合は S_OK、行セットの初期化が非同期に続行される場合は DB_S_ASYNCHRONOUS を返して、*ppRowset* を行セット上の要求されたインターフェイスに設定します。 OLE DB Driver for SQL Server の場合、このインターフェイスは **IDBAsynchStatus** または **ISSAsynchStatus** のいずれかです。 このインターフェイスは、行セットが完全に初期化されるまでは中断状態にあるかのように動作し、**IID_IDBAsynchStatus** または **IID_ISSAsynchStatus** 以外のインターフェイスに対して **QueryInterface** が呼び出された場合、E_NOINTERFACE を返すことがあります。 コンシューマーが明示的に非同期処理を要求しない限り、行セットは同期的に初期化されます。 **IDBAsynchStaus::GetStatus** または **ISSAsynchStatus::WaitForAsynchCompletion** が非同期操作が完了したことを示す値を返した場合、要求したすべてのインターフェイスを使用できます。 これは、必ずしも行セットに完全にデータが格納されたことを意味するものではありませんが、行セットは完成し、完全に機能します。  
   
  実行されたコマンドが行セットを返さない場合でも、このコマンドは、**IDBAsynchStatus** をサポートするオブジェクトを直ちに返します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67989018"
   
  コマンドの実行が完了すると、**IMultipleResults** を通常どおり使用できます。ただし、非同期処理の場合は 1 つだけ例外があり、DB_S_ASYNCHRONOUS が返される可能性があります。この場合、**IDBAsynchStatus** または **ISSAsynchStatus** を使用して、操作が完了しているかどうかを確認できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、アプリケーションが非ブロッキング メソッドを呼び出し、いくつか他の処理を実行し、制御を戻して結果を処理します。 **ISSAsynchStatus::WaitForAsynchCompletion** は、非同期実行操作が完了するか、*dwMilisecTimeOut* により指定された時間が経過するまで、内部イベント オブジェクト上で待機します。  
   
 ```  

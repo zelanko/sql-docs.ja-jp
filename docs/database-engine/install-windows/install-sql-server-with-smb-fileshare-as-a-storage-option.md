@@ -1,5 +1,6 @@
 ---
 title: SMB ファイル共有ストレージを使用して SQL Server をインストールする | Microsoft Docs
+description: SQL Server では、ストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーを指定して、システム データベースとデータベース エンジンのユーザー データベースをインストールできます。
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990928"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883508"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB ファイル共有ストレージを使用して SQL Server をインストールする
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、システム データベース (Master、Model、MSDB、TempDB) と [!INCLUDE[ssDE](../../includes/ssde-md.md)] ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
   
@@ -80,7 +81,7 @@ ms.locfileid: "67990928"
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]におけるさまざまなコマンド ライン パラメーター オプションの使用方法については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>オペレーティング システムに関する注意事項 (SMB プロトコルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>オペレーティング システムに関する注意事項 (SMB プロトコルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Windows オペレーティング システムのバージョンによって SMB プロトコルのバージョンも異なりますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、どのバージョンの SMB プロトコルにも対応します。 SMB プロトコルの各バージョンによって、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に対するメリットも異なります。  
   
 |オペレーティング システム|SMB2 プロトコルのバージョン|に対するメリット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -123,7 +124,7 @@ ms.locfileid: "67990928"
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

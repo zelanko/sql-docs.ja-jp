@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 072fc285fa5470aa5fa589f028e3e5aba7e3f5fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101563"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298346"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
 
@@ -50,7 +50,7 @@ ms.locfileid: "68101563"
 ## <a name="log-entries"></a>ログ エントリ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
 |**OnPipelinePostEndOfRowset**|**ProcessInput** メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
@@ -92,7 +92,7 @@ ms.locfileid: "68101563"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに **OnPipelineRowsSent** イベントによって書き込まれました。  
   
-|[列]|[説明]|[値]|  
+|列|説明|値|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの **ID** プロパティの値です。|1185|  
 |**PathName**|パスの **Name** プロパティの値です。|OLE DB ソースの出力|  

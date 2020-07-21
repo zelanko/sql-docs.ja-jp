@@ -1,5 +1,5 @@
 ---
-title: フィールドを遅延 |Microsoft Docs
+title: 遅延フィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2c229d31941d5cef0da253545cecd7d1496ee4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076821"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305973"
 ---
 # <a name="deferred-fields"></a>遅延フィールド
-値*フィールドを遅延*設定されているが、ドライバーは、遅延の影響用の変数のアドレスを保存する場合は使用しません。 ドライバー、アプリケーション パラメーター記述子への呼び出し時に、変数の内容を使用して**SQLExecDirect**または**SQLExecute**します。 アプリケーションの追加行記述子では、ドライバーはフェッチ時に、変数の内容を使用します。  
+*遅延フィールド*の値は、設定されているときは使用されませんが、遅延効果のために変数のアドレスが保存されます。 アプリケーションパラメーター記述子の場合、ドライバーは、 **SQLExecDirect**または**sqlexecute**の呼び出し時に変数の内容を使用します。 アプリケーションの行記述子の場合、ドライバーは、フェッチ時に変数の内容を使用します。  
   
- 次に、遅延のフィールドを示します。  
+ 遅延フィールドは次のとおりです。  
   
--   記述子レコードの SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR フィールドです。  
+-   記述子レコードの SQL_DESC_DATA_PTR および SQL_DESC_INDICATOR_PTR フィールド。  
   
--   アプリケーション記述子レコードの SQL_DESC_OCTET_LENGTH_PTR フィールドです。  
+-   アプリケーション記述子レコードの SQL_DESC_OCTET_LENGTH_PTR フィールド。  
   
--   複数行のフェッチの場合、記述子のヘッダー フィールドの SQL_DESC_ARRAY_STATUS_PTR と SQL_DESC_ROWS_PROCESSED_PTR フィールド。  
+-   複数行フェッチの場合、記述子ヘッダーの SQL_DESC_ARRAY_STATUS_PTR および SQL_DESC_ROWS_PROCESSED_PTR フィールドです。  
   
- 記述子が割り当てられると、各記述子レコードのフィールドの遅延が最初に含まれる null 値にします。 Null 値の意味は次のとおりです。  
+ 記述子が割り当てられると、各記述子レコードの遅延フィールドには、最初に null 値が設定されます。 Null 値の意味は次のとおりです。  
   
--   SQL_DESC_ARRAY_STATUS_PTR に null 値がある場合は、このコンポーネントの行ごとの診断情報を返す複数行のフェッチは失敗します。  
+-   SQL_DESC_ARRAY_STATUS_PTR に null 値が含まれている場合、複数行のフェッチでは、行ごとの診断情報のこのコンポーネントを返すことができません。  
   
--   SQL_DESC_DATA_PTR が null の値を持つ場合、レコードは連結ではありません。  
+-   SQL_DESC_DATA_PTR に null 値が含まれる場合、レコードはバインド解除されます。  
   
--   ARD の SQL_DESC_OCTET_LENGTH_PTR フィールドは、null 値を持つ、ドライバーでは、その列の長さの情報は返されません。  
+-   の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値が含まれている場合、ドライバーはその列の長さの情報を返しません。  
   
--   場合は、APD の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値があり、ユーザーがパラメーターは文字の文字列は、ドライバーは、文字列が null 終端であると仮定します。 出力の動的パラメーターのこのフィールドに null 値により、ドライバー、長さ情報を返します。 (SQL_DESC_TYPE フィールドが文字の文字列パラメーターを表していない場合、SQL_DESC_OCTET_LENGTH_PTR フィールドは無視されます。)  
+-   APD の SQL_DESC_OCTET_LENGTH_PTR フィールドに null 値が含まれていて、パラメーターが文字列の場合、ドライバーはその文字列が null で終わることを前提としています。 出力動的パラメーターの場合、このフィールドに null 値を指定すると、ドライバーは長さの情報を返すことができません。 (SQL_DESC_TYPE フィールドに文字文字列パラメーターが指定されていない場合、SQL_DESC_OCTET_LENGTH_PTR フィールドは無視されます)。  
   
- アプリケーションの割り当てを解除またはドライバーの読み取りまたは書き込みに時間と、フィールドとそれらを関連付けます時間の間の遅延のフィールドに使用される変数を破棄する必要がありますできません。
+ アプリケーションでは、遅延フィールドに使用される変数を、フィールドと関連付けられた時刻と、ドライバーが読み書きする時間の間で、割り当てを解除したり破棄したりすることはできません。

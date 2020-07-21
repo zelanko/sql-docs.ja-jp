@@ -1,5 +1,5 @@
 ---
-title: getStatementHandleCacheEntryCount メソッド (SQLServerConnection) |Microsoft Docs
+title: getStatementHandleCacheEntryCount メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6a5d87ab4f78a5f006e87c34fa774fd9f430aaae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6905c7d92686f61d3a2c3593475cb2bdf852f460
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979536"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926276"
 ---
 # <a name="getstatementhandlecacheentrycount-method-sqlserverconnection"></a>getStatementHandleCacheEntryCount メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- プールされた準備されたステートメントハンドルの現在の数を返します。
+ プール済みの準備されたステートメントの現在のハンドル数が返されます。
 
 ## <a name="syntax"></a>構文  
   
@@ -35,13 +35,13 @@ public int getStatementHandleCacheEntryCount()
 ```  
 
 ## <a name="return-value"></a>戻り値
- プールされた準備されたステートメントハンドルの現在の数を格納している**int** 。
+ プール済みの準備されたステートメントの現在のハンドル数を含む **int** です。
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
- このメソッドは、JDBC driver バージョン6.4 以降で使用できます。
+## <a name="remarks"></a>解説  
+ このメソッドは、JDBC ドライバー バージョン 6.4 以降で使用できます。
  
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_availability_replica_cluster_states (TRANSACT-SQL) |Microsoft Docs
+title: dm_hadr_availability_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_states dynamic management view
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d228cb59a2bd0bff98715e0ae273217c8b57b30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764356"
 ---
-# <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>dm_hadr_availability_replica_cluster_states (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のすべての AlwaysOn 可用性グループ (レプリカの場所を問いません) の AlwaysOn 可用性レプリカ (結合状態を問いません) ごとに 1 行のデータを返します。  
   
@@ -37,12 +37,12 @@ ms.locfileid: "67900636"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|可用性レプリカの一意識別子。|  
-|**replica_server_name**|**nvarchar (256)**|インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリカをホストします。|  
+|**replica_server_name**|**nvarchar(256)**|レプリカをホストするのインスタンスの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**group_id**|**uniqueidentifier**|可用性グループの一意識別子。|  
-|**join_state**|**tinyint**|0 = 未結合<br /><br /> 1 = 結合済み、スタンドアロン インスタンス<br /><br /> 2 = 結合済み、フェールオーバー クラスター インスタンス|  
-|**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE_INSTANCE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
+|**join_state**|**tinyint**|0 = 未結合<br /><br /> 1 = 結合済み、スタンドアロン<br /><br /> 2 = 参加済み、フェールオーバークラスターインスタンス|  
+|**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

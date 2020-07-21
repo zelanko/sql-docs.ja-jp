@@ -21,15 +21,15 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68697493"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008108"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 データ型は、以下のシナリオで変換される場合があります。
 -   あるオブジェクトのデータを他のオブジェクトのデータに移動、比較、または結合する場合は、あるオブジェクトのデータ型から他のオブジェクトのデータ型への変換が必要な場合があります。  
@@ -56,7 +56,7 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に許可されている、すべての明示的および暗黙的なデータ型変換です。 **xml**、**bigint**、**sql_variant** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
   
-![データ型変換表](../../t-sql/data-types/media/lrdatahd.png "データ型変換表")
+![データ型変換テーブル](../../t-sql/data-types/media/lrdatahd.png "データ型変換テーブル")
 
 上のグラフは、SQL Server で許可されているすべての明示的および暗黙的な変換を示していますが、変換の結果のデータ型を示すものではありません。 SQL Server で明示的な変換が実行されると、ステートメント自体によって結果のデータ型が決定されます。 暗黙的な変換の場合、変数の値の設定や列への値の挿入などの代入ステートメントは、変数宣言または列定義によって定義されたデータ型になります。 比較演算子または他の式の場合、結果のデータ型は、データ型の優先順位の規則によって異なります。
 
@@ -120,18 +120,18 @@ SELECT @notastring + '1'
   
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型への変換を示します。
   
-|SQL Server データ型|Visual Basic データ型|  
+|SQL Server のデータ型|Visual Basic データ型|  
 |--------------------------|----------------------------|  
 |**char**、**varchar**、**text**、**nvarchar**、**ntext**|**String**|  
 |**decimal**、**numeric**|**String**|  
 |**bit**|**Boolean**|  
 |**binary**、**varbinary**、**image**|1 次元 **Byte()** 配列|  
 |**int**|**Long**|  
-|**smallint**|**Integer**|  
+|**smallint**|**整数**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Single**|  
-|**money**、 **smallmoney**|**Currency**|  
+|**money**、 **smallmoney**|**通貨**|  
 |**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
   
@@ -139,16 +139,16 @@ SELECT @notastring + '1'
   
 次の表は、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型への変換を示しています。
   
-|Visual Basic データ型|SQL Server データ型|  
+|Visual Basic データ型|SQL Server のデータ型|  
 |----------------------------|--------------------------|  
 |**Long**、**Integer**、**Byte**、**Boolean**、**Object**|**int**|  
 |**Double**、**Single**|**float**|  
-|**Currency**|**money**|  
+|**通貨**|**money**|  
 |**Date**|**datetime**|  
 |4,000 文字以下の **String**|**varchar**/**nvarchar**|  
 |4,000 文字を超える **String**|**text**/**ntext**|  
 |8,000 バイト以下の 1 次元 **Byte()** 配列|**varbinary**|  
-|8,000 バイトを超える 1 次元 **Byte()** 配列|**image**|  
+|8,000 バイトを超える 1 次元 **Byte()** 配列|**画像**|  
   
 ## <a name="see-also"></a>参照
 [OLE オートメーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  

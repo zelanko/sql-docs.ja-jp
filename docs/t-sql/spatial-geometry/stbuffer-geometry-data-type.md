@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a091906818ffea85a8b30b3678f75f02de3a886
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748744"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスからの距離が指定した値以下となる、すべての地点の和集合を表すジオメトリック オブジェクトを返します。
   
@@ -45,7 +45,7 @@ ms.locfileid: "67930367"
   
  CLR の戻り値の型:**SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `STBuffer()` は、*tolerance* = distance \* .001 と *relative* = **false** を指定して [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) と同様の方法でバッファーを計算します。  
   
  *distance* > 0 のときは、**Polygon** または **MultiPolygon** インスタンスが返されます。  
@@ -68,9 +68,9 @@ ms.locfileid: "67930367"
   
  理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents * 1.E-7) です。tolerance は distance \* .001 になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. 1 次元の geometry インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. 1 次元の geometry インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
  次の例では、空の `GeometryCollection` インスタンスが返されます。  
   
 ```
@@ -78,7 +78,7 @@ ms.locfileid: "67930367"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Polygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. Polygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
  次の例では、バッファーが負の値の `Polygon` インスタンスが返されます。  
   
 ```
@@ -86,7 +86,7 @@ ms.locfileid: "67930367"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. CurvePolygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. CurvePolygon インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、STBuffer() を呼び出す  
  次の例では、`CurvePolygon` インスタンスからバッファーが負の値の `Polygon` インスタンスが返されます。  
   
 ```
@@ -107,7 +107,7 @@ ms.locfileid: "67930367"
   
  この **SELECT** ステートメントからは `GEOMETRYCOLLECTION EMPTY.` が返されます。  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. パラメーターに 0 を指定して STBuffer() を呼び出す  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. パラメーターに 0 を指定して STBuffer() を呼び出す  
  次の例では、呼び出し元の `geometry` インスタンスのコピーが返されます。  
   
 ```
@@ -124,7 +124,7 @@ ms.locfileid: "67930367"
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. パラメーターに 0 を上回る (> 0) 値を指定して STBuffer() を呼び出す  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. パラメーターに 0 を上回る (> 0) 値を指定して STBuffer() を呼び出す  
  次の例では、`Polygon` インスタンスが返されます。  
   
 ```

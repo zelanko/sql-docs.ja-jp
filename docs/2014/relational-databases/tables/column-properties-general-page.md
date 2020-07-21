@@ -11,21 +11,20 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29a82df217eef719b4f0efffb3fc0c24b36a27aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047279"
 ---
-# <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
+# <a name="column-properties-general-page"></a>[列のプロパティ] ([全般] ページ)
   このページを使用すると、選択されている列のプロパティを表示できます。  
   
  このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]** をクリックします。  
   
-## <a name="options"></a>および  
- **名前**  
+## <a name="options"></a>オプション  
+ **Name**  
  列の名前です。  
   
  **[データ型]**  
@@ -37,7 +36,7 @@ ms.locfileid: "62854905"
  **主キー**  
  列が主キーであるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
- **Null を許容**  
+ **[NULL を許容]**  
  列が NULL 値を許容するかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **[計算値]**  
@@ -53,7 +52,7 @@ ms.locfileid: "62854905"
  ID 列の最初の行の値を示します。  
   
  **[IDENTITY インクリメント]**  
- **[ID の増分値]** プロパティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
+ **[ID の増分値]** プロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
   
  **[既定のバインド]**  
  列にバインドされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値です。 既定値がバインドされていない場合、このオプションは空白になります。  
@@ -67,10 +66,10 @@ ms.locfileid: "62854905"
  **[ルール スキーマ]**  
  参照される列にバインドされたルールを所有する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スキーマを表示します。 ルールがバインドされていない場合、このオプションは空白になります。  
   
- **Length**  
+ **[データ型]**  
  列によって許容される文字またはバイトの最大数を示します。  
   
- **[照合順序]**  
+ **Collation**  
  列の現在の照合順序を表示します。 空白の場合、照合順序プロパティはオブジェクトから継承されます。  
   
  **[数値有効桁数]**  

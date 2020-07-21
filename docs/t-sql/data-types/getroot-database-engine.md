@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbc5bd95c10c89da4fb6fc6cbd1400f2e310927b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738203"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (データベース エンジン)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 階層ツリーのルートを返します。 GetRoot() 静的メソッドです。
   
@@ -46,10 +46,10 @@ static SqlHierarchyId GetRoot ( )
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 階層ツリー内のルート ノードを決定するために使用されます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-transact-sql-example"></a>A. Transact-SQL の例  
 次の例では、階層ツリーのルートを返します。

@@ -1,6 +1,6 @@
 ---
 title: Linux 用の SQL Server データベースを開発してデプロイする | Microsoft Docs
-description: ''
+description: Visual Studio を使用した SQL Server Data Tools は、SQL Server on Linux 用の強力な開発およびデータベース ライフサイクル管理環境です。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -8,28 +8,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 93e65b7ab401479cc126e8428295cb0f0715eae4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077403"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896263"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して SQL Server on Linux 用のデータベースを作成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-SQL Server Data Tools (SSDT) によって、Visual Studio を SQL Server on Linux 用の強力な開発およびデータベース ライフサイクル管理 (DLM) 環境として使用できます。 アプリケーション コードを開発する場合と同様に、ソース管理されたプロジェクトからデータベースを開発、ビルド、テスト、および発行できます。
+SQL Server Data Tools (SSDT) によって、Visual Studio を SQL Server on Linux 用の強力な開発およびデータベース ライフサイクル管理 (DLM) 環境として使用できます。 ソース管理されたプロジェクトからデータベースを開発、ビルド、テスト、および発行できます。 アプリケーション コードを開発する場合と同様です。
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Install Visual Studio と SQL Server Data Tools をインストールする
 
-1. お使いの Windows コンピューターに Visual Studio がまだインストールされていない場合は、[Visual Studio をダウンロードしてインストールする]します。 Visual Studio のライセンスをお持ちでない場合は、学生、オープンソースの開発者、個人の開発者向けの全機能を備えた無料の IDE Visual Studio Community エディションを使用できます。
+1. お使いの Windows コンピューターに Visual Studio がまだインストールされていない場合は、[Visual Studio をダウンロードしてインストール](https://visualstudio.microsoft.com/downloads/)します。 Visual Studio のライセンスをお持ちでない場合は、学生、オープンソースの開発者、個人の開発者向けの全機能を備えた無料の IDE である Visual Studio Community エディションを使用できます。
 
 2. Visual Studio のインストール中に、 **[インストールの種類を選択してください]** オプションで **[カスタム]** を選択します。 **[次へ]** をクリックします。
 
 3. 機能選択の一覧から、 **[Microsoft SQL Server Data Tools]** 、 **[Git for Windows]** 、 **[GitHub Extension for Visual Studio]** を選択します。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
 4. Visual Studio のインストールを続行して完了します。 これには数分かかる可能性があります。
 
@@ -47,15 +47,15 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 3. **[接続]** ページで、 **[ローカル Git リポジトリ]** セクションの **[新規]** をクリックします。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. **[作成]** をクリックします。 ローカル Git リポジトリが作成されたら、 **[SSDTRepo]** をダブルクリックします。
+4. **Create** をクリックしてください。 ローカル Git リポジトリが作成されたら、 **[SSDTRepo]** をダブルクリックします。
 
-4. **[ソリューション]** セクションの **[新規]** をクリックします。 **[新規プロジェクト]** ダイアログで、 **[その他の言語]** ノードの下の **[SQL Server]** を選択します。
+5. **[ソリューション]** セクションの **[新規]** をクリックします。 **[新規プロジェクト]** ダイアログで、 **[その他の言語]** ノードの下の **[SQL Server]** を選択します。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. [名前] に「**TutorialDB**」と入力し、 **[OK]** をクリックして新しいデータベース プロジェクトを作成します。
+6. [名前] に「**TutorialDB**」と入力し、 **[OK]** をクリックして新しいデータベース プロジェクトを作成します。
 
 ## <a name="create-a-new-table-in-the-database-project"></a>データベース プロジェクト内に新しいテーブルを作成する
 
@@ -65,11 +65,11 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 3. **[追加]** で **[テーブル]** を選択します。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
 4. テーブル デザイナーを使用して、次の図に示すように、[Name] `nvarchar(50)` と [Location] `nvarchar(50)` の 2 つの列を追加します。 デザイナーで列を追加すると、SSDT によって `CREATE TABLE` スクリプトが生成されます。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
 5. **Table1.sql**ファイルを保存します。
 
@@ -77,7 +77,7 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 1. **[TutorialDB]** のデータベース プロジェクト メニューを開き、 **[ビルド]**  を選択します。 SSDT によって、プロジェクト内の .sql ソース コード ファイルがコンパイルされ、データ層アプリケーション パッケージ (dacpac) ファイルがビルドされます。 これを使用して、Linux 上の SQL Server インスタンスにデータベースを発行できます。 
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Visual Studio の **[出力]** ウィンドウで、ビルド成功メッセージを確認します。 
 
@@ -87,11 +87,11 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 2. **[編集]** をクリックし、Linux 上の SQL Server インスタンスを選択します。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
 3. [接続] ダイアログ ボックスに、Linux 上の SQL Server インスタンスの IP アドレスまたはホスト名、ユーザー名、およびパスワードを入力します。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
 4. [発行] ダイアログで **[発行]** ボタンをクリックします。
 
@@ -99,18 +99,18 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 6. **[結果の表示]** または **[スクリプトの表示]** をクリックして、SQL Server on Linux でのデータベースの発行結果の詳細を確認します。
 
-    <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
+   <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
 これで、Linux 上の SQL Server インスタンスに新しいデータベースが作成され、ソース管理されたデータベース プロジェクトを使用してデータベースを開発するための基本を学習できました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-T-SQL を初めて使用する場合は、「[チュートリアル: Transact-SQL ステートメントの作成]」と「[Transact-SQL リファレンス (データベース エンジン)]」を参照してください。
+T-SQL を初めて使用する場合は、「[チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
 
-SQL Data Tools を使用したデータベースの開発の詳細については、[SSDT MSDN のドキュメント]を参照してください。
+SQL Data Tools を使用したデータベースの開発の詳細については、以下の記事を参照してください。
 
-[Visual Studio をダウンロードしてインストールする]: https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN のドキュメント]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[チュートリアル: Transact-SQL ステートメントの作成]: https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL リファレンス (データベース エンジン)]: https://msdn.microsoft.com/library/bb510741.aspx
+* [Visual Studio をダウンロードしてインストールする](https://www.visualstudio.com/downloads/)
+* [SSDT をダウンロードしてインストールする](https://aka.ms/ssdt-download)
+* [SSDT MSDN のドキュメント](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [チュートリアル:Transact-SQL ステートメントの作成](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Transact-SQL リファレンス (データベース エンジン)](https://msdn.microsoft.com/library/bb510741.aspx)

@@ -1,5 +1,6 @@
 ---
-title: トレース (マスター データ サービス) | Microsoft Docs
+title: トレース
+description: Web.config ファイルには、SQL Server 2016 マスターデータサービスの新機能であるトレースセクションが含まれています。 既定のトレース動作について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812687"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Web.config ファイルには、次のようにトレース セクションが含まれています。 これは、 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
@@ -66,7 +67,7 @@ ms.locfileid: "68263983"
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
     |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
     |Level|このトレース エントリのレベル。|  
-    |メッセージ|トレースのメッセージ本文。|  
+    |Message|トレースのメッセージ本文。|  
   
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ記事「 [Troubleshooting Logging Improvement (トラブルシューティングのためのログ記録の改善)](https://go.microsoft.com/fwlink/p/?LinkId=615377)」  

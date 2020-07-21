@@ -14,32 +14,32 @@ f1_keywords:
 helpviewer_keywords:
 - Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e864d225ade97737ab0471a5b6a19fb66d875857
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949773"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764273"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions コレクション (ADO MD)
-含まれています、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)キューブを作成するオブジェクト。  
+キューブを構成する[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- **ディメンション**は、標準の ADO のコレクションです。 プロパティとメソッドのコレクションでは、次の操作を実行できます。  
+## <a name="remarks"></a>Remarks  
+ **ディメンション**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   
--   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  
   
--   既定値は、コレクションからオブジェクトを返す[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   既定の[Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクションからオブジェクトを返します。  
   
--   コレクション内のプロバイダーからオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダーからコレクション内のオブジェクトを更新します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/dimensions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

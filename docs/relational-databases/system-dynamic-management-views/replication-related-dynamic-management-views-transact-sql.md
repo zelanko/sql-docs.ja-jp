@@ -1,5 +1,5 @@
 ---
-title: レプリケーション関連の動的管理ビュー (TRANSACT-SQL) |Microsoft Docs
+title: レプリケーション関連の動的管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], replication
 - replication dynamic management objects [SQL Server]
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9eb38392c2982234bcb2f7452c123291b8a4f600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73d74ed49bbb1e1bb3746ae686eeeb7a73f7c2ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634964"
 ---
-# <a name="replication-related-dynamic-management-views-transact-sql"></a>レプリケーション関連の動的管理ビュー (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="replication-related-dynamic-management-views-transact-sql"></a>レプリケーション関連の動的管理ビュー (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このセクションには、レプリケーションで使用される次の動的管理オブジェクトが含まれています。  
+  ここでは、レプリケーションで使用される次の動的管理オブジェクトについて説明します。  
   
 |||  
 |-|-|  

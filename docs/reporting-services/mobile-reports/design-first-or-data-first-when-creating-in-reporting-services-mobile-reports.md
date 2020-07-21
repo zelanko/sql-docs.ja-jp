@@ -1,5 +1,6 @@
 ---
 title: Reporting Services のモバイル レポートを作成するときにデザインとデータのどちらを優先するか | Microsoft Docs
+description: Mobile Report Publisher では、レポートを作成するために、データ優先のアプローチとデザイン優先のアプローチをサポートしています。 最初にすべてのデータをインポートするか、デザインを作成してから、データをインポートします。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cf9afd8c4aa916d87929a8e7d73347cc33456252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8e6628c233e90d59cb940521995234ee8a2b30e8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066644"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79447885"
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Reporting Services のモバイル レポートを作成するときにデザインとデータのどちらを優先するか
   
@@ -36,7 +37,7 @@ ms.locfileid: "63066644"
   
 ![SS_MRP_DataTab](../../reporting-services/mobile-reports/media/ss-mrp-datatab.png)  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
 -  [iPhone アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  

@@ -1,6 +1,6 @@
 ---
-title: PDW のトポロジ - Analytics Platform System |Microsoft Docs
-description: Analytics Platform System の PDW のトポロジ。
+title: PDW のトポロジ
+description: 分析プラットフォームシステムの PDW トポロジ。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,18 +8,19 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 665bd84c6f44c23559ef6450111c045d2701811b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5dd758cec82a9839d14ae98c03bd232d560e48e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960354"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74400846"
 ---
-# <a name="pdw-topology"></a>PDW のトポロジ
-SQL Server PDW のコンポーネントに関する名とネットワークの情報が表示されます。 使用して、**アプライアンス トポロジのネットワーク構成**network IP アドレスを変更するページ。  
+# <a name="pdw-topology"></a>PDW トポロジ
+SQL Server PDW コンポーネントに関する名前とネットワーク情報が表示されます。 [**アプライアンストポロジネットワークの構成**] ページを使用して、ネットワークの IP アドレスを変更します。  
   
-![Dwconfig 上部のメニュー](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
+![DWConfig PWD トップ メニュー](./media/pdw-topology/SQL_Server_PDW_DWConfig_PDWTop.png "SQL_Server_PDW_DWConfig_PDWTop")  
   
-## <a name="see-also"></a>関連項目  
-[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>参照  
+[Configuration Manager &#40;Analytics Platform System&#41;を起動します。](launch-the-configuration-manager.md)  
   

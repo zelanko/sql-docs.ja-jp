@@ -1,5 +1,5 @@
 ---
-title: 接続 (Visual C 構文用の ADO) |Microsoft Docs
+title: 接続 (ADO for Visual C++ 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Connection collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ba62fde43bad840f2559758fe45db34d1e8a507
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919542"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760318"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -36,7 +36,7 @@ Open(BSTR ConnectionString, BSTR UserID, BSTR Password, long Options)
 OpenSchema(SchemaEnum Schema, VARIANT Restrictions, VARIANT SchemaID, _ADORecordset **pprset)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_Attributes(long *plAttr)  
@@ -76,5 +76,5 @@ WillConnect(BSTR *ConnectionString, BSTR *UserID, BSTR *Password, long *Options,
 WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, long *Options, EventStatusEnum *adStatus, _ADOCommand *pCommand, _ADORecordset *pRecordset, _ADOConnection *pConnection)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

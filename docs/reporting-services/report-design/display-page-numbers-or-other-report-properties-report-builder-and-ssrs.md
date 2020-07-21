@@ -1,5 +1,5 @@
 ---
-title: ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ページ番号またはその他のレポート プロパティの表示 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,31 +8,31 @@ ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 14496cc4e46118b5421f4d061136f7b1c5b16850
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580891"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080493"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
   レポートのページ ヘッダーまたはページ フッターにページ番号、レポート タイトル、ファイル名、およびその他のレポート プロパティを簡単に追加できます。 これらのプロパティは、レポート データ ペインの [組み込みフィールド] フォルダーのフィールドとして保存されます。  
   
 -   [実行時間]  
   
--   [ページ番号]  
+-   ページ番号  
   
 -   [レポート フォルダー]  
   
--   [レポート名]  
+-   レポート名  
   
 -   [レポート サーバー URL]  
   
 -   [総ページ数]  
   
--   [ユーザー ID]  
+-   User ID  
   
--   [言語]  
+-   言語  
   
  ページ番号については、番号の前に "ページ" という語を追加したり、 総ページ数を表示したりすることもできます。  
   

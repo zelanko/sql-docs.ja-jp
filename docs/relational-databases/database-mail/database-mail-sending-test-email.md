@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b5363ab8fe37e67b7efa1aa193e269585064f07e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a689daf33baece845ddf81c09b99fc61c96509a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726502"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>データベース メールでテスト メールを送信する  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [テスト電子メールの送信] ダイアログ ボックスを使用して、特定のプロファイルからメールを送信する機能をテストできます。
 
@@ -49,15 +49,13 @@ ms.locfileid: "68137435"
 
 1. エラーが発生した場合は、次のステートメントを実行してエラー メッセージを表示します。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 
     WHERE mailitem_id = <the mailitem_id from the previous step> ;
     ```
 
 
-##  <a name="RelatedContent"></a> 参照 
+##  <a name="see-also"></a><a name="RelatedContent"></a> 参照 
   
 -   [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [データベース メール メッセージング オブジェクト](../../relational-databases/database-mail/database-mail-messaging-objects.md)

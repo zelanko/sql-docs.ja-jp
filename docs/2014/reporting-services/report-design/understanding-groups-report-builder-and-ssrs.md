@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104539"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>グループについて (レポート ビルダーおよび SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104539"
   
  グループとはどのようなものかを視覚的に理解するために、[プレビュー] で Tablix データ領域を示した次の図を参照してください。 この図では、行グループで製品タイプ別にデータセットが分類され、列グループで地理的領域と年度別にデータセットが分類されています。  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Tablix データ領域部分](../media/rs-tablixareas.gif "Tablix データ領域部分")  
   
  次のセクションでは、グループのさまざまな側面について説明します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66104539"
  グループには、ユーザーが指定した名前とグループ式のセットがあります。 グループ式のセットは、単一のデータセット フィールド参照である場合も、複数の式の組み合わせである場合もあります。 グループ式は実行時に組み合わされ、グループに複数の式がある場合は、グループ内のデータに適用されます。 たとえば、データ領域のデータを整理するデータ フィールドを使用するグループがあるとします。 実行時に、データはまず日付で整理され、日付ごとに他のデータセット値の合計と共に表示されます。  
   
 ## <a name="when-do-i-create-groups"></a>グループを作成するタイミング  
- ほとんどの場合、データ領域をデザインすると、レポート ビルダーとレポート デザイナーによって自動的にグループが作成されます。 テーブル、マトリックス、または一覧の場合、グループはグループ化ペインにフィールドをドロップすると作成されます。 グラフの場合、グループはグラフのドロップゾーンにフィールドをドロップすると作成されます。 ゲージの場合は、[ゲージのプロパティ] ダイアログ ボックスを使用する必要があります。 テーブル、マトリックス、または一覧では、グループを手動で作成することもできます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 レポートの作成時にグループを追加する方法の例については、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
+ ほとんどの場合、データ領域をデザインすると、レポート ビルダーとレポート デザイナーによって自動的にグループが作成されます。 テーブル、マトリックス、または一覧の場合、グループはグループ化ペインにフィールドをドロップすると作成されます。 グラフの場合、グループはグラフのドロップゾーンにフィールドをドロップすると作成されます。 ゲージの場合は、[ゲージのプロパティ] ダイアログ ボックスを使用する必要があります。 テーブル、マトリックス、または一覧では、グループを手動で作成することもできます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。 レポートを作成するときにグループを追加する方法の例については、「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
 ## <a name="how-can-i-modify-a-group"></a>グループの変更方法  
  グループを作成したら、フィルターや並べ替え式、改ページ、グループ変数など、スコープ固有のデータを保持するためのデータ領域固有のプロパティを設定できます。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
@@ -63,7 +63,7 @@ ms.locfileid: "66104539"
 > [!NOTE]  
 >  グループにはさまざまなデータ領域があり、名前も異なりますが、グループの作成方法と使用方法の背景にある原則は同じです。 データ領域にグループを作成する際には、データ領域にリンクされているデータセットの詳細データを編成する方法を指定します。 各データ領域では、グループ化されたデータを表示するグループ構造がサポートされています。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix データ領域のグループ:詳細グループ、行グループ、列グループ  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix データ領域のグループ: 詳細グループ、行グループ、列グループ  
  このトピックで前述したとおり、Tablix データ領域を使用すると、行または列ごとのグループにデータを編成できます。 ただし、Tablix データ領域には、行グループと列グループ以外にも使用可能なグループがあります。 このデータ領域で使用できるグループの種類は次のとおりです。  
   
 -   **詳細グループ** : 詳細グループは、レポート ビルダーまたはレポート デザイナーがデータセットとデータ領域フィルターを適用した後のレポート データセットの全データで構成されています。 そのため、詳細グループはグループ式がない唯一のグループです。  
@@ -101,7 +101,7 @@ ms.locfileid: "66104539"
 ## <a name="see-also"></a>参照  
  [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [グループまたは Tablix データ領域への合計の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [データ領域内のデータの並べ替え &#40;レポート ビルダーおよび SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [ドリルダウン アクション &#40;レポート ビルダーおよび SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

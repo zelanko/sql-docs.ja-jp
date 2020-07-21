@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3eaa589014bb866a7993b82c4f7b90ce7d0b42bd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768585"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427489"
 ---
 # <a name="coding-a-custom-log-provider"></a>カスタム ログ プロバイダーのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>ログ エントリの記述  
- パッケージ内のオブジェクトがいずれかのイベント インターフェイスで Fire\<event> メソッドを呼び出してイベントを発生させるたびに、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドが呼び出されます。 各イベントを発生させるときは、イベントのコンテキスト情報に加えて、通常は説明のメッセージが使用されます。 ただし、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドのすべての呼び出しに、すべてのメソッド パラメーターの情報が含まれているわけではありません。 たとえば、名前が説明になっている一部の標準イベントは MessageText を提供しません。また DataCode と DataBytes は、省略可能な補足情報のためのものです。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>メソッドは、いずれかのイベントインターフェイスで Fire メソッドを呼び出すことによって、パッケージ内のオブジェクトがイベントを発生させるたびに呼び出され \<event> ます。 各イベントを発生させるときは、イベントのコンテキスト情報に加えて、通常は説明のメッセージが使用されます。 ただし、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドのすべての呼び出しに、すべてのメソッド パラメーターの情報が含まれているわけではありません。 たとえば、名前が説明になっている一部の標準イベントは MessageText を提供しません。また DataCode と DataBytes は、省略可能な補足情報のためのものです。  
   
  次のコード例では、<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> メソッドを実装し、前のセクションで開かれたストリームにイベントを書き込みます。  
   
@@ -188,10 +187,10 @@ Public Overrides  Sub CloseLog()
 End Sub  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照する](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
- [カスタム ログ プロバイダーの作成](creating-a-custom-log-provider.md)   
+## <a name="see-also"></a>関連項目  
+ [カスタムログプロバイダーの作成](creating-a-custom-log-provider.md)   
  [カスタム ログ プロバイダー用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-log-provider.md)  
   
   

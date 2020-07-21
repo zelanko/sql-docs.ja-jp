@@ -8,28 +8,30 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 986807ab07a563fef1ae8a9231db194a4a5943e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 01ed6baa4e28efad63e034e6e734feb1895f3040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674273"
 ---
-# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB データベース)
+# <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker のプロパティを設定します。
 
 ## <a name="syntax"></a>構文
 
 ```sql
-catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
+catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
+    , [ @PropertyName = ] PropertyName
+    , [ @PropertyValue = ] PropertyValue 
 ```
 
 ## <a name="arguments"></a>引数
@@ -40,9 +42,9 @@ Scale Out Worker の worker エージェント ID。 *WorkerAgentId* は **uniqu
 プロパティの名前。 *PropertyName* は **nvarchar(256)** です。
 
 [@PropertyValue =] *PropertyValue*  
-プロパティの値です。 *PropertyValue* は **nvarchar(max)** です。
+プロパティの値。 *PropertyValue* は **nvarchar(max)** です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 有効なプロパティ名は、**DisplayName**、**Description**、**Tags** です。
 
 ## <a name="return-code-value"></a>リターン コード値  

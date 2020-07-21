@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) |Microsoft Docs
-ms.custom: ''
+title: pdw_nodes_column_store_segments (Transact-sql)
+ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,43 +13,43 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822511"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197193"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>pdw_nodes_column_store_segments (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-1 行、列ストア インデックス内の各列のデータが含まれています。
+列ストアインデックスの列ごとに1行の値を格納します。
 
 | 列名                 | データ型  | 説明                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | パーティション ID を示します。 データベース内で一意です。     |
-| **hobt_id**                 | **bigint** | この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。 |
+| **hobt_id**                 | **bigint** | この列ストアインデックスを持つテーブルのヒープまたは B ツリーインデックス (hobt) の ID。 |
 | **column_id**               | **int**    | 列ストア列の ID。                                |
-| **segment_id**              | **int**    | 列セグメントの ID。 旧バージョンと互換性のため、列名が行グループ ID です。 この場合でも、segment_id を呼び出せる続けます < Hobt_id で、partition_id、column_id > を使用してセグメントを一意に識別できます < segment_id >。 |
-| **version**                 | **int**    | 列セグメント形式のバージョンです。                        |
-| **encoding_type**           | **int**    | そのセグメントを使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (内部のいくつかのバリエーションを 4 に似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED - non-string/binary with no dictionary<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - string/binary with no dictionary<br /><br /> すべてのエンコーディングでは、可能な場合のエンコード ビット パッキングと実行の長さの活用します。 |
+| **segment_id**              | **int**    | 列セグメントの ID。 旧バージョンとの互換性を維持するために、列名は行グループ ID でも segment_id 呼び出されます。 セグメントを一意に識別するには、<hobt_id、partition_id、column_id>、<segment_id> を使用します。 |
+| **version**                 | **int**    | 列セグメント形式のバージョン。                        |
+| **encoding_type**           | **int**    | そのセグメントに使用されるエンコードの種類:<br /><br /> 1 = VALUE_BASED-辞書のない文字列/バイナリ (内部のバリエーションがある場合は4に似ています)<br /><br /> 2 = VALUE_HASH_BASED-ディクショナリに共通の値を持つ非文字列/バイナリ列<br /><br /> 3 = ディクショナリに共通の値を持つ STRING_HASH_BASED 文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED-辞書のない文字列/バイナリ<br /><br /> 5 = ディクショナリのない STRING_STORE_BY_VALUE_BASED 文字列/バイナリ<br /><br /> すべてのエンコーディングは、可能であれば、ビットパックと実行時間のエンコーディングを利用します。 |
 | **row_count**               | **int**    | 行グループ内の行の数。                             |
-| **has_nulls**               | **int**    | 列セグメントに null 値がある場合は 1。                     |
-| **base_id**                 | **bigint** | エンコードの種類 1 が使用されている場合は、ベース値 ID。  エンコードの種類 1 が使用されていない場合、base_id は 1 に設定されます。 |
-| **magnitude**               | **float**  | エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が使用されていない場合、magnitude は 1 に設定されます。 |
-| **primary__dictionary_id**  | **int**    | プライマリ辞書の ID。 0 以外の値は、この列に現在のセグメント (つまり行グループ) のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。 |
-| **secondary_dictionary_id** | **int**    | セカンダリ辞書の ID。 0 以外の値は、この列に現在のセグメント (つまり行グループ) のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。 |
+| **has_nulls**               | **int**    | 列セグメントに null 値が含まれている場合は1。                     |
+| **base_id**                 | **bigint** | エンコードの種類1が使用されている場合は、ベース値 ID。  エンコードの種類1が使用されていない場合、base_id は1に設定されます。 |
+| **桁違い**               | **float**  | エンコードの種類1が使用されている場合の大きさ。  エンコードの種類1が使用されていない場合、マグニチュードは1に設定されます。 |
+| **primary__dictionary_id**  | **int**    | プライマリ辞書の ID。 0以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカル辞書を指します。 値-1 は、このセグメントにローカルディクショナリがないことを示します。 |
+| **secondary_dictionary_id** | **int**    | セカンダリ辞書の ID。 0以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカル辞書を指します。 値-1 は、このセグメントにローカルディクショナリがないことを示します。 |
 | **min_data_id**             | **bigint** | 列セグメントの最小データ ID。                       |
 | **max_data_id**             | **bigint** | 列セグメントの最大データ ID。                       |
 | **null_value**              | **bigint** | NULL を表すために使用される値。                               |
-| **on_disk_size**            | **bigint** | (バイト単位) セグメントのサイズ。                                    |
-| **pdw_node_id**             | **int**    | 一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。 |
+| **on_disk_size**            | **bigint** | セグメントのサイズ (バイト単位)。                                    |
+| **pdw_node_id**             | **int**    | ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Sys.pdw_nodes_column_store_segments と 1 つの論理テーブルの列ストア セグメントの数を決定するには、その他のシステム テーブルを結合します。
+論理テーブルあたりの列ストアセグメントの数を決定するには、他のシステムテーブルと共に sys. pdw_nodes_column_store_segments を結合します。
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -86,7 +86,7 @@ ORDER BY    table_nm
 
 ## <a name="see-also"></a>関連項目
 
-[SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[sys.pdw_nodes_column_store_row_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

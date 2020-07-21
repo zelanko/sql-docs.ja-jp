@@ -1,10 +1,9 @@
 ---
-title: '[保存 (許可されない)] ダイアログ ボックス | Microsoft Docs'
-ms.custom: ''
+title: '[保存 (許可されない)] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84cfbc428c617126c3e895b4dafc65c816b386e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9dde13a71dac042d8bf5c351cb4f9655f322acd8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266892"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255124"
 ---
 # <a name="save-not-permitted-dialog-box"></a>[保存 (許可されない)] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

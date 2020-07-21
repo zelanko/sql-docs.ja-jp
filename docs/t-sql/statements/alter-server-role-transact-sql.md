@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68070271"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -67,7 +67,7 @@ DROP MEMBER *server_principal*
 WITH NAME **=** _new_server_role_name_  
 ユーザー定義サーバー ロールの新しい名前を指定します。 サーバー内に存在しない名前を指定してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ユーザー定義サーバー ロールの名前を変更しても、ロールの ID 番号、所有者、権限は変わりません。  
   
 ロールのメンバーシップの変更では、`ALTER SERVER ROLE` は sp_addsrvrolemember と sp_dropsrvrolemember を置き換えます。 これらのストアド プロシージャは非推奨です。  
@@ -93,7 +93,7 @@ WITH NAME **=** _new_server_role_name_
 > [!NOTE]  
 >  固定サーバー ロールとは異なり、ユーザー定義サーバー ロールのメンバーには、同じロールにメンバーを追加する権限がもともとありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-name-of-a-server-role"></a>A. サーバー ロールの名前を変更する  
 次の例では、`Product` という名前のサーバー ロールを作成し、そのサーバー ロールの名前を `Production` に変更します。  
@@ -156,7 +156,7 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>H. 基本構文  
 次の例では、ログイン `Anna` をサーバー ロール `LargeRC` に追加します。  

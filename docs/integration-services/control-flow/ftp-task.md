@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c41f2ba3fdd8b514a37951b623643584841c9a23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988217"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294139"
 ---
 # <a name="ftp-task"></a>FTP タスク
 
@@ -54,7 +54,7 @@ ms.locfileid: "67988217"
 ## <a name="predefined-ftp-operations"></a>定義済みの FTP 操作  
  FTP タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|[説明]|  
+|Operation|説明|  
 |---------------|-----------------|  
 |ファイルの送信|ローカル コンピューターのファイルを FTP サーバーに送信します。|  
 |ファイルの受信|FTP サーバーのファイルをローカル コンピューターに保存します。|  
@@ -68,7 +68,7 @@ ms.locfileid: "67988217"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP タスクで使用できるカスタム ログ エントリ  
  次の表は、FTP タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|タスクで FTP サーバーへの接続が開始されたことを示します。|  
 |**FTPOperation**|タスクで実行された FTP 操作の開始および種類を報告します。|  
@@ -83,7 +83,7 @@ ms.locfileid: "67988217"
 ## <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[FtpConnection]**  
  既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
   
@@ -95,23 +95,23 @@ ms.locfileid: "67988217"
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
   
- **[名前]**  
+ **名前**  
  FTP タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  FTP タスクの説明を入力します。  
   
 ## <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター] ([ファイル転送] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[ファイル転送]** ページを使用すると、タスクで実行される FTP 操作を構成できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[IsRemotePathVariable]**  
  リモート パスが変数に格納されているかどうかを表します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[RemoteVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[RemotePath]** が表示されます。|  
@@ -122,7 +122,7 @@ ms.locfileid: "67988217"
  **[IsLocalPathVariable]**  
  ローカル パスが変数に格納されているかどうかを表します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプションの **[LocalVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプションの **[LocalPath]** が表示されます。|  
@@ -130,7 +130,7 @@ ms.locfileid: "67988217"
  **操作**  
  実行する FTP 操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]** 、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
 |**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]** 、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  

@@ -1,5 +1,5 @@
 ---
-title: ユーティリティ ダッシュ ボード (SQL Server ユーティリティ) |Microsoft Docs
+title: ユーティリティダッシュボード (SQL Server ユーティリティ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d43be3710695bc4101f4b9453eb7e985fda94c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927666"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードにデータを表示するには、ユーティリティ エクスプローラーのツリーで最上位ノード "Utility<UCP 名>\\(ComputerName\UCP)" を選択します。 ダッシュボードには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのマネージド インスタンス、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのすべてのデータ層アプリケーションに関する概要データと詳細データが表示されます。 ダッシュボードのデータを更新するには、ユーティリティ エクスプローラーのツリーで最上位ノードを右クリックし、 **[更新]** をクリックします。  
   
  ユーティリティ コントロール ポイントの作成方法については、「 [SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)をクリックします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに追加する方法については、「[Enroll an Instance of SQL Server &#40;SQL Server Utility&#41; (SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;)](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
+## <a name="ui-element-list"></a>UI 要素の一覧  
  マネージド インスタンスの正常性  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの左側に表示されます。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62773814"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
   
- 使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの削除]** の順にクリックします。  
+ 使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]**、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、**[フィルター]**、**[フィルターの削除]** の順にクリックします。  
   
  個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ &#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
   
@@ -103,8 +102,8 @@ ms.locfileid: "62773814"
  ダッシュボードの右下には、記憶域の使用率を示す円グラフが表示されます。このグラフでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージド インスタンスを含むコンピューターにあるボリュームについて、使用済み領域と空き領域の比率を確認できます。 ここに表示されるデータは、15 分ごとに更新されます。  
   
 ## <a name="see-also"></a>参照  
- [ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [SQL Server のインスタンスの登録&#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [ユーティリティエクスプローラーを使用して SQL Server ユーティリティを管理する](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+ [SQL Server &#40;SQL Server ユーティリティのインスタンスを登録する&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [リソース正常性ポリシーの定義の変更 &#40;SQL Server Utility&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

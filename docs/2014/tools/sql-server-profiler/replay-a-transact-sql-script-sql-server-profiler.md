@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6570eeacfe7da346cc0d41352888f5acc57baf2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5abf22a1201ac927f12ef9e4cfdd1f6d3026d00a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011420"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>Transact-SQL スクリプトの再生 (SQL Server Profiler)
   パフォーマンスの問題に対して考えられる解決策をテストする場合、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを再生し、変更を加える前と加えた後のパフォーマンスを比較します。  
@@ -34,7 +33,7 @@ ms.locfileid: "68211064"
   
 4.  **[構成の再生]** ダイアログ ボックスで設定を確認し、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トレースの再生](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

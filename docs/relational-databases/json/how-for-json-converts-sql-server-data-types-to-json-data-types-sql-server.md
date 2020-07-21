@@ -1,9 +1,7 @@
 ---
-title: FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2016
+title: FOR JSON が SQL Server データ型を JSON データ型に変換する方法
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,27 +9,29 @@ helpviewer_keywords:
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f45621bc4bf5bd2af93c52257c9ca3128da6a77d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56ef56aa22a67a3286b544211d161568dae5e8d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722288"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **FOR JSON** 句は、次の規則に従って、JSON 出力で SQL Server データ型を JSON 型に変換します。  
   
-|カテゴリ|SQL Server データ型|JSON データ型|  
+|カテゴリ|SQL Server のデータ型|JSON データ型|  
 |--------------|--------------|---------------|  
 |文字型と文字列型|char、nchar、varchar、nvarchar|string|  
 |数値型|int、bigint、float、decimal、numeric|number|  
 |ビット型|bit|Boolean (true または false)|  
 |日付型と時刻型|date、datetime、datetime2、time、datetimeoffset|string|  
 |バイナリ型|varbinary、binary、image、timestamp、rowversion|BASE64 エンコード文字列|  
-|CLR 型|geometry、geography、他の CLR 型|サポートされていません。 これらの型はエラーを返します。<br /><br /> SELECT ステートメントで CAST または CONVERT を使用するか、CLR プロパティまたはメソッドを使用して、JSON 型に正常に変換できる SQL Server データ型にソース データを変換します。 たとえば、geometry 型には **STAsText()** を使い、CLR 型には **ToString()** を使います。 次に、JSON 出力値の型が、SELECT ステートメントで適用している変換の戻り値の型から導き出されます。|  
+|CLR 型|geometry、geography、他の CLR 型|サポートされていません。 これらの型はエラーを返します。<br /><br /> SELECT ステートメントで CAST または CONVERT を使用するか、CLR プロパティまたはメソッドを使用して、JSON 型に正常に変換できる SQL Server データ型にソース データを変換します。 たとえば、geometry 型には **STAsText()** を使い、CLR 型には **ToString()** を使います。 JSON 出力値の型は、その後 SELECT ステートメントで適用している変換の戻り値の型から派生します。|  
 |その他の種類|uniqueidentifier、money|string|  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  

@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember (TRANSACT-SQL) |Microsoft Docs
+title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 8be7e84ccd80d80c1345adec3450e5bc8e0f4da6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124847"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012701"
 ---
-# <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+# <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロールからセキュリティ アカウントを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +44,7 @@ sp_droprolemember [ @rolename = ] 'role' ,
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse と Parallel Data Warehouse の両方の構文
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse と並列データウェアハウスの両方の構文
 
 ```  
 sp_droprolemember 'role' ,  
@@ -53,43 +52,43 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'` メンバーの削除元となるロールの名前です。 *ロール*は**sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
+`[ @rolename = ] 'role'`メンバーを削除するロールの名前を指定します。 *role*の型は**sysname**で、既定値はありません。 *ロール*は現在のデータベースに存在している必要があります。  
   
-`[ @membername = ] 'security_account'` ロールから削除されているセキュリティ アカウントの名前。 *これ*は**sysname**、既定値はありません。 *これ*データベース ユーザー、別のデータベース ロール、Windows ログイン、または Windows グループにすることができます。 *これ*現在のデータベースに存在する必要があります。  
+`[ @membername = ] 'security_account'`ロールから削除するセキュリティアカウントの名前を指定します。 *security_account*は**sysname**であり、既定値はありません。 *security_account*には、データベースユーザー、別のデータベースロール、windows ログイン、または windows グループを指定できます。 *security_account*は、現在のデータベースに存在している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- sp_droprolemember の各は、sysmembers テーブルから行を削除することによって、データベース ロールからメンバーを削除します。 メンバーがロールから削除されたときに、メンバーには、そのロールのメンバーシップがあるすべてのアクセス許可が失われます。  
+## <a name="remarks"></a>解説  
+ sp_droprolemember は、sysmembers テーブルから行を削除することにより、データベース ロールからメンバーを削除します。 メンバーがロールから削除されると、メンバーはそのロールのメンバーシップによって与えられた権限を失います。  
   
- 固定サーバー ロールからユーザーを削除するには、sp_dropsrvrolemember を使用します。 パブリックのロールからユーザーを削除して、dbo はどのロールから削除することはできません。  
+ ユーザーを固定サーバー ロールから削除するには、sp_dropsrvrolemember を使用します。 public ロールからユーザーを削除することはできません。また、どのロールからも dbo は削除できません。  
   
- メンバーを表示する sp_helpuser を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ロール、および使用する ALTER ROLE をロールにメンバーを追加します。  
+ ロールのメンバーを表示するには sp_helpuser を使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] し、ロールにメンバーを追加するには ALTER role を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロールに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ロール `JonB` からユーザー `Sales` を削除します。  
   
 ```sql
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、ロール `JonB` からユーザー `Sales` を削除します。  
   
 ```sql
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

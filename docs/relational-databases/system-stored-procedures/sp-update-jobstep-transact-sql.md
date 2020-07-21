@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_jobstep (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a81a0f6b79cdf2f2975372dc4bbefc02ae6c4cbe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084885"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891312"
 ---
-# <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   自動化された処理の実行に使用するジョブのステップに関する設定を変更します。  
   
@@ -61,86 +61,86 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ステップが属するジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @job_id = ] job_id`ステップが属するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @job_name = ] 'job_name'` ステップが属するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+`[ @job_name = ] 'job_name'`ステップが属するジョブの名前です。 *job_name*は**sysname**,、既定値は NULL です。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @step_id = ] step_id` 変更するジョブ ステップの識別番号。 この数を変更することはできません。 *step_id*は**int**、既定値はありません。  
+`[ @step_id = ] step_id`変更するジョブステップの識別番号を指定します。 この数を変更することはできません。 *step_id*は**int**,、既定値はありません。  
   
-`[ @step_name = ] 'step_name'` ステップの新しい名前です。 *step_name*は**sysname**、既定値は NULL です。  
+`[ @step_name = ] 'step_name'`ステップの新しい名前を指定します。 *step_name*は**sysname**,、既定値は NULL です。  
   
-`[ @subsystem = ] 'subsystem'` 実行する Microsoft SQL Server エージェントによって使用されるサブシステム*コマンド*します。 *サブシステム*は**nvarchar (40)** 、既定値は NULL です。  
+`[ @subsystem = ] 'subsystem'`*コマンド*を実行するために Microsoft SQL Server エージェントによって使用されるサブシステムです。 *サブシステム*は**nvarchar (40)**,、既定値は NULL です。  
   
-`[ @command = ] 'command'` 使用して実行するコマンド*サブシステム*します。 *コマンド*は**nvarchar (max)** 、既定値は NULL です。  
+`[ @command = ] 'command'`*サブシステム*を介して実行されるコマンドです。 *コマンド*は**nvarchar (max)**,、既定値は NULL です。  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @cmdexec_success_code = ] success_code` によって返される値、 **CmdExec**を示すサブシステム コマンド*コマンド*が正常に実行します。 *success_code*は**int**、既定値は NULL です。  
+`[ @cmdexec_success_code = ] success_code`*コマンド*が正常に実行されたことを示すために、 **CmdExec**サブシステムコマンドによって返される値。 *success_code*は**int**,、既定値は NULL です。  
   
-`[ @on_success_action = ] success_action` ステップが成功した場合に実行するアクション。*success_action*は**tinyint**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @on_success_action = ] success_action`ステップが成功した場合に実行するアクション。*success_action*は**tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明 (動作)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
 |**3**|次のステップに進む|  
-|**4**|手順に進みます*success_step_id します。*|  
+|**4**|手順 success_step_id に進み*ます。*|  
   
-`[ @on_success_step_id = ] success_step_id` ステップが成功した場合に実行するには、このジョブ ステップの識別番号と*success_action*は**4**します。 *success_step_id*は**int**、既定値は NULL です。  
+`[ @on_success_step_id = ] success_step_id`ステップが成功し*success_action*が**4**の場合に実行する、このジョブのステップの識別番号を指定します。 *success_step_id*は**int**,、既定値は NULL です。  
   
-`[ @on_fail_action = ] fail_action` ステップが失敗した場合に実行するアクション。 *fail_action*は**tinyint**、既定値は NULL でこれらの値のいずれかを指定できます。  
+`[ @on_fail_action = ] fail_action`ステップが失敗した場合に実行するアクション。 *fail_action*は**tinyint**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明 (動作)|  
+|値|説明 (アクション)|  
 |-----------|----------------------------|  
 |**1**|正常に終了します。|  
 |**2**|失敗した状態で終了|  
 |**3**|次のステップに進む|  
-|**4**|手順に進みます*fail_step_id * *。*|  
+|**4**|手順*fail_step_id * * に進みます。*|  
   
-`[ @on_fail_step_id = ] fail_step_id` ステップが失敗した場合に実行するには、このジョブ ステップの識別番号と*fail_action*は**4**します。 *fail_step_id*は**int**、既定値は NULL です。  
+`[ @on_fail_step_id = ] fail_step_id`ステップが失敗し、 *fail_action*が**4**の場合に実行する、このジョブのステップの識別番号を指定します。 *fail_step_id*は**int**,、既定値は NULL です。  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*は**nvarchar (128)** 、既定値は NULL です。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*サーバー*は**nvarchar (128)**,、既定値は NULL です。  
   
-`[ @database_name = ] 'database'` 実行するためのデータベースの名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]手順。 *データベース*は**sysname**します。 角かっこ () で囲まれた名前を指定することはできません。 既定値は NULL です。  
+`[ @database_name = ] 'database'`ステップを実行するデータベースの名前です [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *データベース*は**sysname**です。 角かっこ ([]) で囲まれた名前は使用できません。 既定値は NULL です。  
   
-`[ @database_user_name = ] 'user'` 実行時に使用するユーザー アカウントの名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]手順。 *ユーザー*は**sysname**、既定値は NULL です。  
+`[ @database_user_name = ] 'user'`ステップの実行時に使用するユーザーアカウントの名前 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*の部分は**sysname**で、既定値は NULL です。  
   
-`[ @retry_attempts = ] retry_attempts` 再試行の回数は、このステップが失敗した場合は、使用しようとします。 *retry_attempts*は**int**、既定値は NULL です。  
+`[ @retry_attempts = ] retry_attempts`このステップが失敗した場合に使用する再試行回数。 *retry_attempts*は**int**,、既定値は NULL です。  
   
-`[ @retry_interval = ] retry_interval` 再試行間隔を分単位の時間数。 *retry_interval*は**int**、既定値は NULL です。  
+`[ @retry_interval = ] retry_interval`再試行の間隔 (分) です。 *retry_interval*は**int**,、既定値は NULL です。  
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` このステップの出力を保存するファイルの名前。 *file_name*は**nvarchar (200)** 、既定値は NULL です。 このパラメーターは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムまたは CmdExec サブシステム上で実行されるコマンドに対してのみ有効です。  
+`[ @output_file_name = ] 'file_name'`このステップの出力が保存されるファイルの名前。 *file_name*は**nvarchar (200)**,、既定値は NULL です。 このパラメーターは、[!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムまたは CmdExec サブシステム上で実行されるコマンドに対してのみ有効です。  
   
- Output_file_name を NULL に設定するに設定する必要があります*output_file_name*に空の文字列 (' ') や、空白文字の文字列を使用できない、 **char (32)** 関数。 たとえば、この引数を空の文字列よう設定します。  
+ Output_file_name を NULL に戻すには、 *output_file_name*を空の文字列 (' ') または空白文字の文字列に設定する必要がありますが、 **CHAR (32)** 関数は使用できません。 たとえば、次のように、この引数に空の文字列を設定します。  
   
- **@output_file_name = ' '**  
+ **@output_file_name= ' '**  
   
-`[ @flags = ] flags` 動作を制御するオプション。 *フラグ*は**int**、これらの値のいずれかを指定できます。  
+`[ @flags = ] flags`動作を制御するオプション。 *フラグ*は**int**,、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|出力ファイルを上書きします。|  
-|**2**|出力ファイルに追加します。|  
+|**2**|出力ファイルに追加|  
 |**4**|Transact-SQL ジョブ ステップの出力をステップ履歴に書き込む|  
 |**8**|テーブルにログを書き込む (既存の履歴を上書きする)|  
-|**16**|テーブルにログを書き込む (既存の履歴に追加します)|  
+|**16**|ログをテーブルに書き込む (既存の履歴に追加する)|  
   
-`[ @proxy_id = ] proxy_id` ジョブ ステップを実行するプロキシの ID 番号。 *proxy_id*型は、 **int**、既定値は NULL です。 いない場合*proxy_id*が指定されていない*proxy_name*が指定されているおよび no *user_name*を指定すると、ジョブ ステップをサービス アカウントとして実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  
+`[ @proxy_id = ] proxy_id`ジョブステップを実行するプロキシの ID 番号を指定します。 *proxy_id*の型は**int**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-`[ @proxy_name = ] 'proxy_name'` ジョブ ステップを実行するプロキシの名前。 *proxy_name*型は、 **sysname**、既定値は NULL です。 いない場合*proxy_id*が指定されていない*proxy_name*が指定されているおよび no *user_name*を指定すると、ジョブ ステップをサービス アカウントとして実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  
+`[ @proxy_name = ] 'proxy_name'`ジョブステップを実行するプロキシの名前を指定します。 *proxy_name*の型は**sysname**で、既定値は NULL です。 *Proxy_id*が指定されておらず、 *proxy_name*が指定されておらず、 *user_name*が指定されていない場合、ジョブステップはエージェントのサービスアカウントとして実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_update_jobstep**から実行する必要があります、 **msdb**データベース。  
+## <a name="remarks"></a>注釈  
+ **sp_update_jobstep**は、 **msdb**データベースから実行する必要があります。  
   
  ジョブ ステップを更新すると、ジョブのバージョン番号が増えます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -150,12 +150,12 @@ sp_update_jobstep
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**別のユーザーが所有するジョブ ステップを更新することができます。  
+ 他のユーザーが所有するジョブステップを更新できるのは、 **sysadmin**のメンバーだけです。  
   
- ジョブ ステップは、プロキシへのアクセスを必要とするジョブ ステップの作成者が、ジョブ ステップのプロキシへのアクセスに必要です。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 メンバーの**sysadmin**と使用できるすべてのプロキシにアクセスできる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロキシ エージェント サービス アカウント。  
+ ジョブステップがプロキシへのアクセスを必要とする場合、ジョブステップの作成者は、そのジョブステップのプロキシへのアクセス権を持っている必要があります。 Transact-SQL を除くすべてのサブシステムでは、プロキシ アカウントが必要です。 **Sysadmin**のメンバーは、すべてのプロキシにアクセスでき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロキシにエージェントサービスアカウントを使用できます。  
   
-## <a name="examples"></a>使用例  
- 次の例の最初のステップの再試行回数を変更する、`Weekly Sales Data Backup`ジョブ。 この例を実行すると、再試行回数は `10` 回になります。  
+## <a name="examples"></a>例  
+ 次の例では、ジョブの最初のステップの再試行回数を変更し `Weekly Sales Data Backup` ます。 この例を実行すると、再試行回数は `10` 回になります。  
   
 ```  
 USE msdb ;  
@@ -169,9 +169,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [表示またはジョブの変更](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [ジョブの表示または変更](../../ssms/agent/view-or-modify-jobs.md)   
+ [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab1b930b3238cb541965e1984d1561f1a1c22d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004212"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 関数と [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 関数は、0 ～ 1000 の序数値 (順位値) を含む "RANK" 列を返します。 これらの値を使用すれば、選択基準への適合度合いに応じて、返された行に順位を付けることができます。 この順位値が示しているのは、結果セット内の各行の単なる相対順位であり、値が小さいほど関連性は低くなります。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。  
@@ -35,9 +34,9 @@ ms.locfileid: "66011147"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、一致結果を順位で並べ替え、指定された数の行のみを返します。 このオプションを使用すると、パフォーマンスが大幅に向上します。 たとえば、通常ならば 100 万行のテーブルから 10 万行を返すクエリに対して、上位 100 行だけを返すように要求すれば、そのクエリの処理が速くなります。  
   
-##  <a name="examples"></a> RANK を使用して検索結果を制限する例  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> RANK を使用して検索結果を制限する例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 a:上位 3 件の一致結果のみを検索する  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A: 上位 3 件の一致結果のみを検索する  
  次の例では、CONTAINSTABLE を使用して上位 3 件の一致結果のみを返します。  
   
 ```  
@@ -68,7 +67,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>例 b:上位 10 件の一致結果を検索する  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>例 B: 上位 10 件の一致結果を検索する  
  次の例では、CONTAINSTABLE を使用して、 `Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
   
 ```  
@@ -90,7 +89,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> 検索クエリの結果が順位付けされる方法  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> 検索クエリの結果が順位付けされる方法  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のフルテキスト検索では、フルテキスト クエリが返すデータの関連性を示す省略可能なスコア (順位値) を生成できます。 この順位値は 1 行ごとに計算され、クエリの結果セットを関連性に従って並べ替える順序付け基準として使用できます。 順位値は、単に、結果セット内の各行の相対的な関連順位を示します。 実際の値は重要ではなく、通常はクエリが実行されるたびに変わります。 順位値は、他のクエリでは意味を持ちません。  
   
 ### <a name="statistics-for-ranking"></a>順位付けの統計  
@@ -143,7 +142,7 @@ GO
   
  `IndexRowCount` などの統計は大きく異なる場合があります。 たとえば、カタログのマスター インデックスに 20 億の行が格納されている場合、1 つの新規ドキュメントにメモリ内で中間インデックスが作成され、そのメモリ内インデックスのドキュメント数に基づいてドキュメントが順位付けされると、マスター インデックスのドキュメントの順位と整合性のない結果になる可能性があります。 こうした理由から、任意の作成処理により大量の行がインデックス化または再インデックス化された場合は、ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してこれらのインデックスをマスター インデックスにマージすることを推奨します。 また、中間インデックスの数やサイズなどのパラメーターを基に、Full-Text Engine によるインデックスのマージも自動的に実行されます。  
   
- `MaxOccurrence` の値は 1 ～ 32 の範囲のいずれかに正規化されます。 これは、たとえば 50 語のドキュメントが 100 語のドキュメントと同様に扱われるということを意味します。 正規化に使用される表を以下に示します。 同じ長さ、128 として効果的に扱われるドキュメントの長さが隣接するテーブル値 32 と 128 の間の範囲であるため (32 < `docLength` < = 128)。  
+ `MaxOccurrence` の値は 1 ～ 32 の範囲のいずれかに正規化されます。 これは、たとえば 50 語のドキュメントが 100 語のドキュメントと同様に扱われるということを意味します。 正規化に使用される表を以下に示します。 ドキュメントの長さは、隣接するテーブル値32と128の間の範囲内にあるため、実際には同じ長さの 128 (32 < <= 128) として扱われ `docLength` ます。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

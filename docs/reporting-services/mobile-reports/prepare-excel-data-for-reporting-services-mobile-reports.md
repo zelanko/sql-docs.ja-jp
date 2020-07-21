@@ -1,5 +1,6 @@
 ---
 title: Reporting Services モバイル レポート用に Excel データを準備する | Microsoft Docs
+description: Reporting Services モバイル レポートでは、Excel ファイルのデータを使用できます。 簡単にインポートできるように Excel ファイルとワークシートを準備するには、次のヒントに従ってください。
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62499953"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448375"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用に Excel データを準備する
   
@@ -44,7 +45,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
 ![SS_MRP_ExcelDataSheet](../../reporting-services/mobile-reports/media/ss-mrp-exceldatasheet.png)  
           
-## <a name="column-headers"></a>列ヘッダー  
+## <a name="column-headers"></a>列見出し  
   
 上記の例の最初の行には、列のメトリックの名前が含まれているのがわかります。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] では、これらの列ヘッダーを、ギャラリー要素設定で簡単に参照できるように保持します。 ただし、列ヘッダーは必須ではありません。 列ヘッダーがない場合、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は Excel の生成規則 ( A、B、C、…、AA、BB、...) に従ってヘッダーを生成します。  
   
@@ -63,7 +64,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]にインポートする Excel ファイルの格納場所について、制限はありません。 ただし、インポート後にファイルの移動または名前の変更を行った場合、データ ビューにある **[すべてのデータの更新]** コマンドでそのデータを更新することができなくなります。   
   
->**注**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は Excel のデータを自動更新しません。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **[更新]** コマンドを使用してファイルを更新することができますが、それはファイルが移動されていない場合に限られます。  
+>**注**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は Excel のデータを自動更新しません。 データはファイルが移動されていない場合に限り、[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **[更新]** コマンドを使用して更新できます。  
   
 ## <a name="dates"></a>日付  
   
@@ -83,7 +84,7 @@ Excel ファイルをモバイル レポート用のデータセットとして�
   
 Excel ワークシート内のカスタム オブジェクト (ピボット テーブル、視覚化エフェクト、画像など) は、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]にインポートされません。  
   
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 - [Reporting Services モバイル レポート用にデータを準備する](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad アプリ (Power BI for iOS) で SQL Server モバイル レポートと KPI を表示する](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  

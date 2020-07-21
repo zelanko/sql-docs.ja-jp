@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a98ca22f9d34627e484a698dcf540b31808d07e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097022"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Reporting Services WMI プロバイダー ライブラリ リファレンス (SSRS)
@@ -37,10 +37,10 @@ ms.locfileid: "66097022"
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
  レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。  
   
- WMI 操作の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK に付属の WMI SDK ドキュメントを参照してください。  
+ Wmi 操作の詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sdk に付属の wmi sdk ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services WMI プロバイダーへのアクセス](../tools/access-the-reporting-services-wmi-provider.md)   
+ [Reporting Services WMI プロバイダーにアクセスする](../tools/access-the-reporting-services-wmi-provider.md)   
  [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)  
   
   

@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - CURRENT_TRANSACTION_ID function
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6bd6cbe675fa5e9aba72fc545d1108c3aad6f930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 640fd2b0f64d6125279ad8d9446225bb9d54d945
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026344"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011454"
 ---
-# <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 この関数によって、現在のセッションの現在のトランザクションのトランザクション ID が返されます。
   
@@ -47,7 +47,7 @@ CURRENT_TRANSACTION_ID( )
 ## <a name="permissions"></a>アクセス許可  
 あらゆるユーザーが現在のセッションのトランザクション ID を返すことができます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、現在のセッションのトランザクション ID が返されます。
   
 ```sql

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 985fb4f48363a1cb3f8411b80365705ee2392498
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a27c3069e89672b569dcabd95ff0b365e121b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762229"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を基に **geometryPoint** インスタンスを返します。
   
@@ -46,14 +46,14 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**Point**  
+ OGC の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STPointFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

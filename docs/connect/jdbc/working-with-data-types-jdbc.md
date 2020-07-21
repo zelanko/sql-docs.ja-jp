@@ -1,5 +1,5 @@
 ---
-title: データ型の操作 (JDBC) |Microsoft Docs
+title: データ型の処理 (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d5f4414e596ab59f33ab73b6d01908b16d89b24
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025698"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923914"
 ---
 # <a name="working-with-data-types-jdbc"></a>データ型の処理 (JDBC)
 
@@ -32,12 +32,12 @@ SQL Server のデータ型を処理するために、JDBC ドライバーには�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[基本データ型のサンプル](../../connect/jdbc/basic-data-types-sample.md)|結果セットの getter メソッドを使用して基本的な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の値を取得する方法と、結果セットの update メソッドを使用してそれらの値を更新する方法を示しています。|  
 |[SQLXML データ型のサンプル](../../connect/jdbc/sqlxml-data-type-sample.md)|XML データのリレーショナル データベースへの格納、データベースからの XML データの取得、および、XML データの解析を、**SQLXML** Java データ型を使用して行う方法を示しています。|  
-|[空間データ型のサンプル](../../connect/jdbc/spatial-data-types-sample.md)|Microsoft JDBC Driver で定義されている**geometry**および**geography** Java 型を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、空間データ型 ' geometry ' とデータベースの geography ' を格納および取得する方法について説明します。|
+|[空間データ型のサンプル](../../connect/jdbc/spatial-data-types-sample.md)|Microsoft JDBC Driver によって定義されている **Geometry** および **Geography** Java 型を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの空間データ型 'Geometry' と 'Geography' を使用して、データを格納および取得する方法について説明します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  

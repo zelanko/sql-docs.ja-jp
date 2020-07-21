@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c00da27f5e4e6502bb431854ef0105e3b20954a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060837"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298835"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
 
@@ -34,13 +34,13 @@ ms.locfileid: "68060837"
   
  [新しい Oracle CDC Windows Service] ダイアログ ボックスまたは [CDC Service のプロパティ] ダイアログ ボックスに次の情報を入力します。  
   
-**[サービス名]**  
+**サービス名**  
  新しい Oracle CDC Windows Service の名前を入力します。 可能な限り長い名前は使用しないでください。 / 文字および \ 文字はサービス名で使用できません。  
   
 > [!NOTE]  
 > このオプションは、サービスを編集するときは使用できません。 既に存在する Windows サービスの名前を変更することはできません。  
   
- **[説明]**  
+ **説明**  
  サービスを識別するのに役立つ説明を入力します。  
   
  **[サービス アカウント]**  
@@ -54,7 +54,7 @@ ms.locfileid: "68060837"
   
      Windows Vista または Windows Server 2008 では、既定のサービス アカウントは NETWORK SERVICE アカウントです。  
   
-     Windows 7 および Windows Server 2008 R2 以降では、既定のサービス アカウントは NT Service\\<サービス名> です。  
+     Windows 7 および Windows Server 2008 R2 以降では、既定のサービス アカウントは NT Service\\<service-name> です。  
   
      これらのアカウントにはパスワードが不要なため、これらのアカウントを使用すると、パスワードを使用せずに作業を行うことができます。 さらにこれらのアカウントは、Oracle CDC Service の実行に必要な権限のみを提供します。  
   
@@ -62,8 +62,8 @@ ms.locfileid: "68060837"
   
  **[サーバー名]** : 接続先となる対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します (例: **\\\\<コンピューター名>\\<インスタンス名>** )。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
- **[認証]**  
- 次のいずれかを選択します。  
+ **認証**  
+ 次のいずれかを選択してください。  
   
 -   **[Windows 認証]** :このオプションを選択した場合、Oracle CDC Service はサービス アカウント ID を使用して対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが異なるコンピューターで実行されている場合、Windows 認証をドメイン アカウントと共に使用する必要があります。  
   

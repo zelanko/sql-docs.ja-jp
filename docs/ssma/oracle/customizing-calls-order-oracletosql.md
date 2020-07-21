@@ -1,5 +1,5 @@
 ---
-title: 呼び出し順序 (OracleToSQL) のカスタマイズ |Microsoft Docs
+title: 呼び出し順序のカスタマイズ (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,21 +13,21 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 77586a09172fa0f737c7efb0f54fdc98fcb858da
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266096"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>呼び出し順序のカスタマイズ (OracleToSQL)
-この手順では、テストするオブジェクトが呼び出される順序を選択します。  
+このステップでは、テストするオブジェクトが呼び出される順序を選択します。  
   
-## <a name="customizing-order"></a>順序のカスタマイズ  
-正しい順序でオブジェクトを配置するオブジェクトの一覧で、グリッドの上部にあるボタンを使ってが配置されます。 また、使用することができますが、行の選択と、右側のボタンが表示されていた。  
+## <a name="customizing-order"></a>カスタマイズ (順序を)  
+オブジェクトの一覧があるグリッドの上部にあるボタンを使用して、オブジェクトを適切な順序で配置します。 または、行が選択されたときに右側に表示されるボタンを使用することもできます。  
   
 ## <a name="next-step"></a>次の手順  
-[テスト_ケースの準備の終了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[テストケースの準備 &#40;OracleToSQL&#41;を終了しています](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
-## <a name="see-also"></a>関連項目  
-[移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>参照  
+[移行されたデータベースオブジェクト &#40;OracleToSQL&#41;のテスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

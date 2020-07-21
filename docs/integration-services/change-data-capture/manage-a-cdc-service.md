@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 41a01902287ac3021bce03306a7f4079328bd965
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6838ae985c16f4188ed43e3442b4f86c4a3557b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045624"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298675"
 ---
 # <a name="manage-a-cdc-service"></a>CDC サービスの管理
 
@@ -49,6 +49,6 @@ ms.locfileid: "68045624"
 ## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC デザイナー コンソールから CDC サービスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [新しいインスタンス ウィザードを使用する](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

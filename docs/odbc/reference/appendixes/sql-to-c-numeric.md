@@ -12,18 +12,18 @@ helpviewer_keywords:
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a23e60b161c09367cfb079cea1f7ca146b4ebee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056851"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296412"
 ---
 # <a name="sql-to-c-numeric"></a>SQL から C へ: 数値
 
-識別子の数値の ODBC SQL データ型に次のとおりです。
+数値の ODBC SQL データ型の識別子は次のとおりです。
 
 - SQL_DECIMAL  
 - SQL_BIGINT  
@@ -34,28 +34,28 @@ ms.locfileid: "68056851"
 - SQL_SMALLINT  
 - SQL_DOUBLE SQL_INTEGER  
 
-次の表は、ODBC C データ型が数値の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
+次の表は、数値の SQL データの変換先となる ODBC C データ型を示しています。 テーブル内の列と用語の詳細については、「 [SQL から C データ型へのデータの変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)」を参照してください。  
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|バイトの長さを文字 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|文字長 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの文字の長さ<br /><br /> データの文字の長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|[A] を切り捨てることがなく変換されたデータ<br /><br /> データを変換する小数部の桁数が [a] の切り捨て<br /><br /> データの変換が [a] (ではなく小数部) の整数桁の損失になります|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|データは、数の変換先のデータ型の範囲内で、[a]<br /><br /> データが数の変換先のデータ型の範囲外 [a]|データ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
-|SQL_C_BIT|データが 0 または 1 [a]<br /><br /> データが 2 よりも小さいと等しくない [a] の 1、0 より大きい<br /><br /> データが 0 未満またはより大きい、または [a] の 2|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] [c] SQL_C_INTERVAL_DAY SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|データは切り捨てられません<br /><br /> 秒の小数部分が切り捨てられます<br /><br /> 数値の切り捨ての全体の一部|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|数値の切り捨ての全体の一部|未定義。|未定義。|22015|  
+|SQL_C_CHAR|文字のバイト長 < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|文字の長さ < *Bufferlength*<br /><br /> *Bufferlength* < 整数 (小数部ではなく) の数字<br /><br /> 整数の桁数 (小数部ではなく) >= *Bufferlength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ (文字数)<br /><br /> データの長さ (文字数)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|切り捨てなしで変換されたデータ [a]<br /><br /> 小数部の桁の切り捨てで変換されたデータ [a]<br /><br /> データを変換すると、(小数点ではなく) 全体が失われることになります。|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|データは、数値が変換されるデータ型の範囲内にある [a]<br /><br /> データが、数値を変換するデータ型の範囲外です [a]|データ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_BIT|データが0または 1 [a]<br /><br /> データが0より大きく2未満で、1以外の値が指定されています [a]<br /><br /> データが0より小さいか、または2以上です [a]|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|切り捨てられていないデータ<br /><br /> 秒の小数部の切り捨て<br /><br /> 切り捨てられた数値の部分全体|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|切り捨てられた数値の部分全体|未定義。|未定義。|22015|  
   
- [a] の値*BufferLength*この変換は無視されます。 ドライバーでのサイズ **TargetValuePtr* C データ型のサイズです。  
+ [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
   
  [b] これは、対応する C データ型のサイズです。  
   
- [c] この変換は、真数データ型 (SQL_DECIMAL、SQL_NUMERIC、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、および SQL_BIGINT) のみサポートされます。 (SQL_REAL、使用できます、または SQL_DOUBLE) のおおよその数値データ型はサポートされません。  
+ [c] この変換は、正確な数値データ型 (SQL_DECIMAL、SQL_NUMERIC、SQL_TINYINT、SQL_SMALLINT、SQL_INTEGER、および SQL_BIGINT) に対してのみサポートされています。 概数データ型 (SQL_REAL、SQL_FLOAT、または SQL_DOUBLE) ではサポートされていません。  
 
-## <a name="sqlcnumeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC と SQLSetDescField
+## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC と SQLSetDescField
 
- [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)SQL_C_NUMERIC 値で手動のバインディングを実行するが必要です。 (SQLSetDescField が ODBC 3.0 で追加されたことに注意してください)。手動バインドを実行するには、まず記述子ハンドルを取得する必要があります。  
+ SQL_C_NUMERIC 値を使用して手動バインドを実行するには、 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)が必要です。 (SQLSetDescField は ODBC 3.0 で追加されたことに注意してください)。手動バインドを実行するには、最初に記述子ハンドルを取得する必要があります。  
 
 ```cpp
 if (fCType == SQL_C_NUMERIC) {   

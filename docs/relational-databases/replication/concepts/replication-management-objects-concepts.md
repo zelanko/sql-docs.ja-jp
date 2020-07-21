@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0d494427e4963dcd1a6afbde4195255ca4f3585d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2729c884f93defe9f920105134f68652a00ae628
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768183"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158940"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68768183"
  [[ディストリビューションの構成]](../../../relational-databases/replication/configure-distribution.md)  
  このセクションのトピックでは、RMO を使用してパブリッシングおよびディストリビューションを構成する方法について説明します。  
   
- [パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [パブリケーションを作成する](../../../relational-databases/replication/publish/create-a-publication.md)  
  このセクションのトピックでは、RMO を使用してパブリケーションおよびアーティクルを作成、削除、および変更する方法について説明します。  
   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
@@ -92,8 +92,6 @@ ms.locfileid: "68768183"
 9. **[表示]** メニューの **[コード]** をクリックします。  
   
 10. コード内で、名前空間のステートメントの前に次の **using** ステートメントを入力し、RMO 名前空間内の型を修飾します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     // These namespaces are required.  

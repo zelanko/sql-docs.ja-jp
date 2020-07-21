@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63000343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049472"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>マージ レプリケーションの競合検出および解決の詳細
   パブリッシャーとサブスクライバーが接続され、同期が発生すると、マージ エージェントによって競合の検出が行われます。 競合が検出された場合、マージ エージェントは競合回避モジュール (アーティクルをパブリケーションに追加するときに指定) を使用して、他のサイトに反映する許容データを決定します。  
@@ -40,7 +39,7 @@ ms.locfileid: "63000343"
   
     -   マネージド コードで記述された *ビジネス ロジック ハンドラー*  
   
-    -   COM ベースの *カスタム競合回避モジュール*  
+    -   COM ベースの*カスタム競合回避モジュール*。  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]によって提供される COM ベースの競合回避モジュール  
   
@@ -59,7 +58,7 @@ ms.locfileid: "63000343"
   
  アーティクルに対して競合の追跡と競合解決のレベルを指定するには、「 [マージ アーティクルの競合追跡と解決のレベルを指定](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)」を参照してください。  
   
-## <a name="conflict-resolution"></a>競合解決  
+## <a name="conflict-resolution"></a>競合の解決  
  競合が検出されると、選択した競合回避モジュールがマージ エージェントによって起動され、この競合回避モジュールを使用して、競合で優先するデータを決定します。 競合で優先された行がパブリッシャーおよびサブスクライバーで適用され、優先されなかった行のデータは競合テーブルに書き込まれます。 対話型操作による競合解決を選択しなかった場合、競合はモジュールの実行直後に解決されます。  
   
 ### <a name="resolver-types"></a>競合回避モジュールの種類  
@@ -77,15 +76,15 @@ ms.locfileid: "63000343"
   
 -   ビジネス ロジック ハンドラー  
   
-     ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、競合など同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 詳細については、「[Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md)」 (マージ同期中のビジネス ロジックの実行) を参照してください。  
+     ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、競合など同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 詳細については、「[Execute Business Logic During Merge Synchronization](execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
   
 -   COM ベースのカスタム競合回避モジュール  
   
-     マージ レプリケーションには、競合回避モジュールを COM オブジェクトとして作成するための API が用意されています。この COM オブジェクトは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]などの言語で記述します。 詳細については、「 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)」を参照してください。  
+     マージレプリケーションには、やなどの言語で、リゾルバーを COM オブジェクトとして書き込むための API が用意されて [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] います。 詳細については、「 [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md)」を参照してください。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、COM ベースの競合回避モジュールが各種用意されています。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)]には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、COM ベースの競合回避モジュールが多数含まれています。 詳細については、「 [Microsoft COM ベースの競合回避モジュール](advanced-merge-replication-conflict-com-based-resolvers.md)」を参照してください。  
   
  適切な競合回避モジュールの種類の選択方法は、「[競合回避モジュールの選択](advanced-merge-replication-conflict-choose-a-resolver.md)」を参照してください。  
   
@@ -94,9 +93,9 @@ ms.locfileid: "63000343"
   
  マージ サブスクリプションの種類と競合解決の優先度を指定するには、「  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[マージ サブスクリプションの種類と競合解決の優先度の指定 &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [マージ サブスクリプションの種類と競合解決の優先度の指定 &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミングおよびレプリケーション管理オブジェクト (RMO) プログラミング:「[プル サブスクリプションの作成](../create-a-pull-subscription.md)」と「[プッシュ サブスクリプションの作成](../create-a-push-subscription.md)」  
+-   「レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミングおよびレプリケーション管理オブジェクト (RMO) プログラミング: [Create a Pull Subscription](../create-a-pull-subscription.md) および [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>インタラクティブ競合回避モジュール  
  レプリケーションにはインタラクティブ競合回避モジュールのユーザー インターフェイスが用意されており、既定の優先度に基づく競合回避モジュールやアーティクル競合回避モジュールと併用できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同期マネージャーを使用して要求時同期を実行すると、インタラクティブ競合回避モジュールに実行時の競合データが表示され、競合の解決方法を選択できます。 対話型解決を有効にする方法およびインタラクティブ競合回避モジュールの起動方法の詳細については、「 [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md)」を参照してください。  
@@ -109,7 +108,7 @@ ms.locfileid: "63000343"
   
  競合表示モジュールには、次に示す 3 つのシステム テーブルの情報が表示されます。  
   
--   レプリケーションは、マージ アーティクルの各テーブルに対して競合テーブルを作成し、そのテーブルに **MSmerge_conflict_\<PublicationName>_\<ArticleName>** という形式の名前を付けます。  
+-   レプリケーションでは、マージアーティクル内のテーブルごとに競合テーブルが作成されます。 **MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **の形式で名前が付けられます。  
   
      競合テーブルには、基になるテーブルと同じ構造があります。 これらのテーブルの行は競合で優先されなかった行で構成されています (競合で優先された行は実際のユーザー テーブルにあります)。  
   
@@ -127,9 +126,9 @@ ms.locfileid: "63000343"
   
  **競合を表示するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[マージ パブリケーションでのデータの競合の表示および解決 &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [マージ パブリケーションでのデータの競合の表示および解決 &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング:[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../view-conflict-information-for-merge-publications.md)  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a>参照  
  [データの同期](../synchronize-data.md)  

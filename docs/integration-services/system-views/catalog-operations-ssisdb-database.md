@@ -11,25 +11,25 @@ helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f1f3695854adbb49c57716f3273e176d7e1fa62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68e848fac38e304514341973fb2e413085e8020c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671763"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべての操作の詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|操作の一意識別子 (ID)。|  
 |operation_type|**smallint**|操作の種類。|  
@@ -37,7 +37,7 @@ ms.locfileid: "68045222"
 |object_type|**smallint**|操作の影響を受けるオブジェクトの種類。 オブジェクトは、フォルダー (`10`)、プロジェクト (`20`)、パッケージ (`30`)、環境 (`40`)、または実行のインスタンス (`50`) です。|  
 |object_id|**bigint**|操作の影響を受けるオブジェクトの ID。|  
 |object_name|**nvarchar(260)**|オブジェクトの名前。|  
-|ステータス|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
+|status|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |start_time|**datetimeoffset**|操作が開始したときの日時。|  
 |end_time|**datetimeoffsset**|操作が終了したときの日時。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
@@ -48,7 +48,7 @@ ms.locfileid: "68045222"
 |server_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定されたインスタンスに関する Windows サーバーとインスタンスの情報。|  
 |machine_name|**nvarchar(128)**|サーバー インスタンスが稼働しているコンピューターの名前。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの各操作に対して 1 つの行を表示します。 管理者は、プロジェクトの配置、パッケージの実行など、サーバーで実行されたすべての論理操作を列挙します。  
   
  この表示は、次の操作の種類に記載されている、**operation_type** 列。  

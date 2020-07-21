@@ -21,21 +21,21 @@ helpviewer_keywords:
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f6876003c64889d32e31266ebe74b6532c1a8f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1d3e6c8d141f2923cb2fd9074999fde7c80dfcc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731355"
 ---
-# <a name="-wildcard---match-one-character-transact-sql"></a>_ (ワイルドカード - 1 文字に一致) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="_-wildcard---match-one-character-transact-sql"></a>_ (ワイルドカード - 1 文字に一致) (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 アンダースコア _ を使用し、`LIKE` や `PATINDEX` などのパターン照合を含む文字列比較操作で任意の 1 文字に一致させます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
-## <a name="a-simple-example"></a>A:簡単な例   
+## <a name="a-simple-example"></a>A: 簡単な例   
 
 次の例では、データベース名の文字 `m` から始まり、3 番目の文字が `d` のデータベースがすべて返されます。 アンダースコア文字は、名前の 2 番目の文字は何の文字でもよいことを指定します。 `model` データベースと `msdb` データベースがこの条件を満たしています。 `master` データベースはこの条件を満たしません。
 
@@ -54,7 +54,7 @@ msdb
 
 複数のアンダースコアを使用し、複数の文字を表すことができます。 `LIKE` 条件を変更し、2 つのアンダースコア `'m__%` を含めると、結果に master データベースが含まれます。
 
-### <a name="b-more-complex-example"></a>B:より複雑な例
+### <a name="b-more-complex-example"></a>B: より複雑な例
  次の例では、_ 演算子を使用して、`Person` テーブル内の `an` で終わる 3 文字の名前 (名) を持つすべての人物を検索します。  
   
 ```sql  

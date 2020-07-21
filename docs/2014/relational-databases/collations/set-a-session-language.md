@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf4eb1d7595d16369a0355562f090b746a4203ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da8d6adce66ac5b97e533b5afaefabda40e4b966
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953447"
 ---
 # <a name="set-a-session-language"></a>セッション言語の設定
   セッション言語は、言語とカルチャの設定に基づいて、次の要素がサーバー上でどのように表示されるかを設定するために使用できます。  
   
--   エラーとその他のシステム メッセージで使用される言語。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるすべての言語で、すべてのシステム エラー文字列とシステム メッセージの複数のコピーを保持できます。 このようなメッセージは、 [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) カタログ ビューに表示できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズ版をインストールすると、これらのシステム メッセージが、インストールする言語バージョン用に変換されます。 既定では、これらのメッセージの英語 (U.S.) セットも取得されます。 さらに、[sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) を使用して、特定の言語のユーザー定義メッセージを追加することもできます。  
+-   エラーとその他のシステム メッセージで使用される言語。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるすべての言語で、すべてのシステム エラー文字列とシステム メッセージの複数のコピーを保持できます。 このようなメッセージは、 [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) カタログ ビューに表示できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズ版をインストールすると、これらのシステム メッセージが、インストールする言語バージョン用に変換されます。 既定では、これらのメッセージの英語 (U.S.) セットも取得されます。 さらに、 [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)を使用して、特定の言語のユーザー定義メッセージを追加することもできます。  
   
 -   日付と時刻のデータの形式  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c617d4303593588b6e86a5b9b7662a5ec690c577
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43587a5d42afdcdefe875d1b33b6f88070f61066
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731231"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   インスタンスに格納されている **Z** (標高) 値と **M** (メジャー) 値で補完された **geometry** インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現を返します。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "67948074"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR の戻り値の型:**SqlBytes**  
+ CLR 戻り値の型: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```sql  
 DECLARE @g1 GEOGRAPHY = 'Point(1 1 2 3)';  

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d2e5dcfe771e1f2ff00dbdb1fb1efd5cd4f8b984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2265dc1b88b222b716f311ad7562722ba6d4fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061699"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ
   このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照している条件の一覧を表示できます。  
   
-## <a name="options"></a>および  
- **名前**  
+## <a name="options"></a>オプション  
+ **Name**  
  現在のファセットを参照している各条件の名前を一覧表示します。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: スカラー関数エスケープ シーケンス |Microsoft Docs
+title: スカラー関数のエスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ helpviewer_keywords:
 - scalar functions [ODBC], escape sequences
 - ODBC escape sequences [ODBC], scalar function
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8347b8e6f0fab6dffc5295fb3b8260a6a56ed123
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057067"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305075"
 ---
 # <a name="scalar-function-escape-sequence"></a>スカラー関数のエスケープ シーケンス
-ODBC スカラー関数のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
+ODBC では、スカラー関数にエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
   
 ```  
 {fn scalar-function}  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- BNF 表記では、構文がとおりです。  
+ BNF 表記では、構文は次のようになります。  
   
- *ODBC スカラー関数エスケープ*:: =  
+ *ODBC スカラー関数-escape* :: =  
   
- *ODBC のイニシエーター esc* fn*スカラー関数 ODBC esc 終端*  
+ *Odbc-esc-イニシエーター* fn*スカラー関数 ODBC-esc-ターミネータ*  
   
  *スカラー関数*:: =*関数名*(*引数リスト*)  
   
- (、非終端要素の定義*関数名*と*関数名*(*引数リスト*) は、スカラー関数の一覧から派生[付録 e:スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md))。  
+ (非終端の*関数名*と*関数名*(*引数リスト*) の定義は、 [「付録 E: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)」のスカラー関数の一覧から派生します)。  
   
- *ODBC のイニシエーター esc* :: = {  
+ *ODBC-esc-イニシエーター* :: = {  
   
- *Esc 終端の ODBC* :: =}  
+ *ODBC-esc-ターミネータ*:: =}  
   
- データ ソースには、プロシージャがサポートされ、ドライバーは ODBC プロシージャの呼び出し構文をサポートしているかどうかを調べるにアプリケーションを呼び出すことができます**SQLGetInfo**します。 詳細については、次を参照してください[付録 e:。スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)します。
+ データソースがプロシージャをサポートしているかどうか、およびドライバーが ODBC プロシージャ呼び出し構文をサポートしているかどうかを判断するために、アプリケーションは**SQLGetInfo**を呼び出すことができます。 詳細については、「[付録 E: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)」を参照してください。

@@ -1,7 +1,7 @@
 ---
 title: OUTPUT 句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706028"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   INSERT、UPDATE、DELETE、または MERGE の各ステートメントの影響を受ける行の情報や、それらに基づく式を返します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。 また、結果をテーブルまたはテーブル変数に挿入することもできます。 さらに、入れ子になった INSERT、UPDATE、DELETE、または MERGE ステートメント内の OUTPUT 句の結果を取得して対象のテーブルまたはビューに挿入することもできます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67901873"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -138,7 +138,7 @@ DELETE Sales.ShoppingCartItem
  $action  
  MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って、次のいずれかの値をそれぞれの行について返します。'INSERT'、'UPDATE'、または 'DELETE'。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
   
 > [!NOTE]  
@@ -311,7 +311,7 @@ DROP TABLE dbo.table1;
   
  \<output_table> で指定するテーブルに対する INSERT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. OUTPUT INTO を単純な INSERT ステートメントと共に使用する  
  次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar``table` 変数に返します。 `ScrapReasonID` 列が IDENTITY プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってこの列用に生成された値が、`OUTPUT` 句で `inserted.ScrapReasonID` 列に返されます。  
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. OUTPUT INTO を UPDATE ステートメント内で from_table_name と共に使用する  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. OUTPUT INTO を UPDATE ステートメント内で from_table_name と共に使用する  
  次の例は、`WorkOrder` テーブルの `ScrapReasonID` 列の、指定された `ProductID` と `ScrapReasonID` を持つすべての作業指示を更新します。 `OUTPUT INTO` 句は、更新するテーブルの値 (`WorkOrder`) と、`Product` テーブルの値を返します。 更新する行を指定するために、`Product` テーブルを `FROM` 句の中で使用します。 `WorkOrder` テーブルには `AFTER UPDATE` トリガーが定義されているため、`INTO` キーワードが必要です。  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. OUTPUT INTO を DELETE ステートメント内で from_table_name と共に使用する  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. OUTPUT INTO を DELETE ステートメント内で from_table_name と共に使用する  
  次の例では、`ProductProductPhoto` テーブルの行を、`FROM` ステートメントの `DELETE` 句内で定義された検索条件に基づいて削除します。 `OUTPUT` 句は削除するテーブルの各列 (`deleted.ProductID`、`deleted.ProductPhotoID`) と、`Product` テーブルの列を返します。 このテーブルは、削除する行を指定するために `FROM` 句内で使用します。  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

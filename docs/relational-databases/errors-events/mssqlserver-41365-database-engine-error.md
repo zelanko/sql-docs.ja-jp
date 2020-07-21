@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4fc7ec15-b722-4e3d-b7f9-3d39d171e96e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0844bcea9213a3f9272389ee9233ef1becdcd5ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 841ea749faa87d66216754ce3aabb61c03d6f996
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765314"
 ---
-# <a name="mssqlserver41365"></a>MSSQLSERVER_41365
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_41365"></a>MSSQLSERVER_41365
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|41365|  
 |イベント ソース|MSSQLSERVER|  

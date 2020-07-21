@@ -12,21 +12,21 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193885"
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
-  表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、7 種類の表示拡張機能 (HTML、Excel、Word、CSV (Text)、XML、Image、PDF) を備えています。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
+  表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、HTML、Excel、Word、CSV またはテキスト、XML、画像および PDF の 7 つの表示拡張機能があります。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  
   
 > [!NOTE]  
 >  どの表示拡張機能を利用できるかは、RSReportServer.config ファイルのインストール済み拡張機能の一覧で確認できます。  
   
  次の表は、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] が備えている表示拡張機能の説明です。  
   
-|Extension Name|[説明]|  
+|拡張機能の名前|説明|  
 |--------------------|-----------------|  
 |**XML**|XML 形式でレポートを表示します。 レポートは任意のブラウザーで開きます。 この XML 出力にさらに手を加えれば、新しい表示拡張機能を開発しなくても、必要な表示拡張機能を効率的に追加することができます。|  
 |**CSV**|コンマ区切り形式でレポートを表示します。 レポートは、CSV ファイル形式に関連付けられている表示ツールで開きます。|  
@@ -46,7 +46,7 @@ ms.locfileid: "63193885"
  レポートが処理されると、その処理結果は、表示オブジェクト モデル (ROM) として知られる、公開オブジェクト モデルになります。 この表示オブジェクト モデルは、処理されたレポートの内容、レイアウト、およびデータを定義するクラスのコレクションです。 開発者は、ROM を使用して、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能を設計、開発、展開できます。 ROM は、レポートの XML 定義とユーザーにより定義されたレポート データが、レポート サーバーにより処理される際に作成されます。 処理が完了すると、表示拡張機能によりこの公開オブジェクト モデルが使用され、レポートの出力が定義されます。 ROM の利用可能なパブリック クラスは、**Microsoft.ReportingServices.OnDemandReportRendering** 名前空間に定義されています。  
   
 ## <a name="writing-custom-rendering-extensions"></a>カスタム表示拡張機能の記述  
- カスタム表示拡張機能の作成を決める前に、より簡単な代替手段を評価する必要があります。 可能な代替手段としては以下の方法があります。  
+ カスタム表示拡張機能の作成を決める前に、より簡単な代替手段を評価する必要があります。 次のようにすることができます。  
   
 -   既存の拡張機能のデバイス情報の設定を詳細に指定して、表示される出力をカスタマイズする。  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52ef0cfa67e476110097ae5cf3a4680acbd0377b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d2c33b52d851facfea5a20b8aac6faf8428758f3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043714"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290852"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Paradox ドライバーのプログラミングに関する考慮事項
-このセクションでは、次のトピックについて説明します。  
+このセクションのトピックは次のとおりです。  
   
 -   [Paradox ドライバーのプログラムでオプションの設定](../../odbc/microsoft/setting-options-programmatically-for-the-paradox-driver.md)  
   
@@ -34,4 +34,4 @@ ms.locfileid: "68043714"
 -   [その他の Paradox ドライバーのプログラミングの詳細](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
   
 > [!NOTE]  
->  ODBC のデスクトップ データベース ドライバーを通じて Paradox ISAM ファイルにアクセスするには、Borland データベース エンジンのインストールが必要です。
+>  ODBC デスクトップデータベースドライバーを使用して Paradox ISAM ファイルにアクセスするには、Borland データベースエンジンをインストールする必要があります。

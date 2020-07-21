@@ -1,34 +1,29 @@
 ---
-title: トレースとトレーステンプレートを保存する |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: トレースとトレース テンプレートの保存
+titleSuffix: SQL Server Profiler
+description: SQL Server Profiler で、キャプチャされたイベント データをトレース ファイルまたはデータベース テーブルに保存する方法と、ユーザー定義のトレース テンプレートを保存する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- exporting trace templates
-- importing trace templates
-- SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928742"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151694"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  トレース ファイルの保存とトレース テンプレートの保存は、区別して考えることが重要です。 トレース ファイルを保存すると、キャプチャされたイベント データが特定の場所に保存されます。 トレース テンプレートを保存すると、特定のデータ列、イベント クラス、フィルターなどのトレースの定義が保存されます。  
+
+トレース ファイルの保存とトレース テンプレートの保存は、区別して考えることが重要です。 トレース ファイルを保存すると、キャプチャされたイベント データが特定の場所に保存されます。 トレース テンプレートを保存すると、特定のデータ列、イベント クラス、フィルターなどのトレースの定義が保存されます。  
   
 ## <a name="saving-traces"></a>トレースの保存  
  キャプチャしたイベント データの分析や再生を後で行う必要がある場合、データをファイルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。 トレース ファイルは、次の用途に使用します。  
@@ -51,7 +46,7 @@ ms.locfileid: "67928742"
  トレースのテンプレート定義には、トレースの作成に使用するイベント クラス、データ列、フィルター、およびその他のすべてのプロパティ (キャプチャしたイベント データは除く) が含まれています。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] にはシステム テンプレートがあらかじめ定義されていて、これを使用することでトレースの一般的な作業、およびデータベース エンジン チューニング アドバイザーで物理的なデータベース デザインをチューニングするためのワークロードを作成するなどの特定の作業を行うことができます。 ユーザー定義テンプレートを作成して保存することもできます。  
   
 ### <a name="importing-and-exporting-templates"></a>テンプレートのインポートとエクスポート  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、サーバー間でテンプレートのインポートとエクスポートを行うことができます。 テンプレートをエクスポートすると、既存のテンプレートのコピーが指定したディレクトリに移動されます。 テンプレートをインポートすると、指定したテンプレートのコピーが作成されます。 インポートまたはエクスポートしたテンプレートは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で表示したときにテンプレート名の後に "(ユーザー)" という語が付いて、システム テンプレートと区別されます。 あらかじめ定義されているシステム テンプレートを上書きしたり、直接変更したりすることはできません。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、サーバー間でテンプレートのインポートとエクスポートを行うことができます。 テンプレートをエクスポートすると、既存のテンプレートのコピーが指定したディレクトリに移動されます。 テンプレートをインポートすると、指定したテンプレートのコピーが作成されます。 インポートまたはエクスポートしたテンプレートは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で表示したときにテンプレート名の後に "(ユーザー)" という語が付いて、システム テンプレートと区別されます。 あらかじめ定義されているシステム テンプレートを上書きしたり、直接変更したりすることはできません。  
   
 ### <a name="analyzing-performance-with-templates"></a>テンプレートを使用したパフォーマンスの分析  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を頻繁に監視する場合は、テンプレートを使用してパフォーマンスを分析してください。 テンプレートを使用すれば、同一のイベント データを毎回キャプチャし、同一のトレース定義で同一のイベントを監視できます。 トレースを作成するたびにイベント クラスやデータ列を定義する必要はありません。 さらに、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントを監視するために、テンプレートを他のユーザーに提供できます。 たとえば、サポート プロバイダーから顧客にテンプレートを提供できます。 顧客はこのテンプレートを使用して必要なイベント データをキャプチャし、キャプチャしたデータを分析のためサポート プロバイダーに送信します。  

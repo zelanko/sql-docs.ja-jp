@@ -1,10 +1,8 @@
 ---
-title: '[エラー一覧] ウィンドウ (Management Studio) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: '[エラー一覧] ウィンドウ'
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253633"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243392"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL デバッガー - [エラー一覧] ウィンドウ
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[エラー一覧]** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[エラー一覧]** には、[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>[エラー一覧] の機能  
- **[エラー一覧]** は、次の機能を提供します。  
+
+**[エラー一覧]** は、次の機能を提供します。  
   
 -   スクリプトを編集すると、 **クエリ エディターの IntelliSense によって生成されたエラーと警告が** [エラー一覧] [!INCLUDE[ssDE](../../includes/ssde-md.md)] に表示されます。  
   
@@ -74,10 +80,10 @@ ms.locfileid: "68253633"
  **[既定の順序]**  
  エントリの作成順を示す整数を表示します。  
   
- **[説明]**  
+ **説明**  
  エラー エントリのテキストを表示します。 説明文が長い場合には、追加の行に折り返されます。  
   
- **ファイル**  
+ **[最近使ったファイル]**  
  エラーを生成したスクリプト ファイルの名前を表示します。  
   
  **線**  

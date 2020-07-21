@@ -1,5 +1,5 @@
 ---
-title: 手順 2:破損ファイルの作成 |Microsoft Docs
+title: '手順 2: 破損ファイルの作成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4095d76eb4710d67abd1e5ed25a05544142d1e3c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767384"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440449"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>手順 2:破損ファイルの作成
   変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
@@ -28,18 +27,18 @@ ms.locfileid: "62767384"
   
      このサンプル データは、SSIS のレッスン パッケージに含まれています。 サンプル データとレッスン パッケージをダウンロードするには、次の手順を実行します。  
   
-    1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=267527)」に移動します。  
+    1.  [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=267527)に移動します。  
   
-    2.  **[ダウンロード]** タブをクリックします。  
+    2.  [**ダウンロード**] タブをクリックします。  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
-2.  使用して、テキスト エディターの検索と置換機能のすべてのインスタンスを`VEB`に置き換えます`BAD`します。  
+2.  テキストエディターの検索と置換機能を使用して、のすべてのインスタンスを検索 `VEB` し、それらをに置き換え `BAD` ます。  
   
-3.  他のサンプル データ ファイルと同じフォルダーで、変更されたファイルとして保存`Currency_BAD.txt`します。  
+3.  他のサンプルデータファイルと同じフォルダーで、変更したファイルをとして保存し `Currency_BAD.txt` ます。  
   
     > [!IMPORTANT]  
-    >  必ず`Currency_BAD.txt`他のサンプル データ ファイルと同じフォルダーに保存されます。  
+    >  `Currency_BAD.txt`が他のサンプルデータファイルと同じフォルダーに保存されていることを確認します。  
   
 4.  テキスト エディターを閉じます。  
   
@@ -61,6 +60,6 @@ ms.locfileid: "62767384"
     >  数値 27 はコンポーネントの ID です。 この値はデータ フローを構築したときに割り当てられるもので、パッケージの値とは異なることがあります。  
   
 ## <a name="next-steps"></a>次の手順  
- [ステップ 3:エラー フロー リダイレクションの追加](lesson-4-3-adding-error-flow-redirection.md)  
+ [手順 3:エラー フロー リダイレクトの追加](lesson-4-3-adding-error-flow-redirection.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: コードの書式設定の管理 | Microsoft Docs
-ms.custom: ''
+title: コードの書式設定の管理
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c971543a87645c1c4a25d181fa7cef478eef0f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265414"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261865"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68265414"
   
 5.  以下のいずれかのオプションをクリックします。  
   
-    -   **None**。 カーソルは次の行の先頭に移動します。  
+    -   **なし**。 カーソルは次の行の先頭に移動します。  
   
     -   **[ブロック]** 。 次行のインデントは前行に合わせて設定されます。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68265414"
 3.  テキストを小文字に変換するには、Ctrl キーと Shift キーを押しながら L キーを押すか、 **[編集]** メニューの **[詳細設定]** サブメニューの **[小文字に変換]** をクリックします。  
   
 > [!NOTE]  
->  キーボード ショートカット キーの完全な一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
+>  キーボード ショートカット キーの完全な一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
   
 ## <a name="displaying-and-linking-to-urls"></a>URL の表示とリンクの設定  
  クリック可能な URL をコード内に作成して、表示できます。 URL の既定の設定は以下のとおりです。  

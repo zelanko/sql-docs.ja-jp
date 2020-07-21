@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b261a0f02075ffea736899dfa941a4e9f5acfb86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 18a76daa7a901c6d20e15ff338e69832354015fc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982045"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906748"
 ---
 # <a name="getmaxrowsize-method-sqlserverdatabasemetadata"></a>getMaxRowSize メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxRowSize()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxRowSize メソッドは、java メタデータインターフェイスの getMaxRowSize メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxRowSize メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxRowSize メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

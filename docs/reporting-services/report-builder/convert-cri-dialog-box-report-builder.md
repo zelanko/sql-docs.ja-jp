@@ -1,5 +1,6 @@
 ---
 title: '[CRI の変換] ダイアログ ボックス (レポート ビルダー) | Microsoft Docs'
+description: レポート ビルダーでは、サポートされていない機能を持つ、一部のカスタム レポート アイテムを、新しいレポート定義形式に変換するように求められます。
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 16d2e745c923e719699c8295e186d5f91e7462da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 5c3d7ece0e4bccf6bea6426391498005887ef6c8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580797"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342905"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>[CRI の変換] ダイアログ ボックス (レポート ビルダー)
 

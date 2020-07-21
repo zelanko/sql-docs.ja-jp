@@ -1,6 +1,6 @@
 ---
-title: SQL クエリの実行 (SQLXML マネージ クラス) |マイクロソフトのドキュメント
-ms.custom: ''
+title: SQL クエリの実行 (SQLXML)
+description: SQLXML マネージクラスを使用して SQL クエリを実行する方法について説明します。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,25 +16,26 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08fc10138a8c0a6c6e55eb0c6f757f9abe0b5b9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcb35f21b2208d2d5f924102a48ba1364eb9c154
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649545"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL クエリの実行 (SQLXML マネージド クラス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   この例では、次のことを行います。  
   
--   パラメーター (SqlXmlParameter オブジェクト) を作成します。  
+-   パラメーターの作成 (SqlXmlParameter オブジェクト)  
   
--   SqlXmlParameter オブジェクトのプロパティ (名前と値) に値を割り当てます。  
+-   SqlXmlParameter オブジェクトのプロパティ (名前と値) に値を代入します。  
   
- この例では、単純な SQL クエリを実行して、従業員の姓、名、および誕生日を取得します。従業員の姓の値はパラメーターとして渡されます。 パラメーターを指定するときに (*LastName*)、Value プロパティのみを設定します。 Name プロパティは設定されていませんので、このクエリでは、パラメーターは位置指定し、名前は必要ありません。  
+ この例では、単純な SQL クエリを実行して、従業員の姓、名、および誕生日を取得します。従業員の姓の値はパラメーターとして渡されます。 パラメーター (*LastName*) を指定する場合は、Value プロパティのみが設定されます。 Name プロパティが設定されていません。このクエリでは、パラメーターは位置指定であり、名前は必要ありません。  
   
- 既定で SqlXmlCommand オブジェクトの CommandType プロパティが**Sql**します。 したがって、このプロパティは明示的に設定しません。  
+ SqlXmlCommand オブジェクトの CommandType プロパティは、既定では**Sql**です。 したがって、このプロパティは明示的に設定しません。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -99,11 +100,9 @@ public static int Main(String[] args)
   
 3.  コマンド プロンプトで、DocSample.exe を実行します。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  この例をテストするには、コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされている必要があります。  
   
- コマンド テキストとして SQL クエリを指定する代わりに、次のコード フラグメントのようなテンプレートを指定して、(同様にテンプレートとして提供されている) アップデートグラムを実行し、顧客レコードを挿入することもできます。 テンプレートとアップデートグラムはファイル内に指定し、ファイルとして実行できます。 詳細については、次を参照してください。 [CommandText プロパティを使用してテンプレート ファイルを実行する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)します。  
+ コマンド テキストとして SQL クエリを指定する代わりに、次のコード フラグメントのようなテンプレートを指定して、(同様にテンプレートとして提供されている) アップデートグラムを実行し、顧客レコードを挿入することもできます。 テンプレートとアップデートグラムはファイル内に指定し、ファイルとして実行できます。 詳細については、「 [CommandText プロパティを使用したテンプレートファイルの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)」を参照してください。  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -124,7 +123,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>ExecuteToStream の使用  
- 既存のストリームがある場合は、Stream オブジェクトを作成して、Execute メソッドを使用してではなく ExecuteToStream メソッドを使用できます。 前の例のコードを改訂され、ここで ExecuteToStream メソッドを使用します。  
+ 既存のストリームがある場合は、Stream オブジェクトを作成し、Execute メソッドを使用する代わりに、ExecuteToStream メソッドを使用できます。 前の例のコードは、次のように ExecuteToStream メソッドを使用するように改訂されています。  
   
 ```  
 using System;  
@@ -157,6 +156,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  XmlReader オブジェクトを返す ExecuteXMLReadermethod を使用することもできます。 詳細については、次を参照してください。 [ExecuteXMLReader メソッドを使用して SQL クエリを実行する](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)します。  
+>  XmlReader オブジェクトを返す ExecuteXMLReadermethod を使用することもできます。 詳細については、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
   
   

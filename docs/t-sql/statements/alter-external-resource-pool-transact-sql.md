@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - ALTER_EXTERNAL_RESOURCE_POOL_TSQL
@@ -17,15 +17,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c369153668e725a1e19ee99a930a96f9824e06b0
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893684"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301878"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 外部プロセスで使うことができるリソースを指定する Resource Governor 外部プールを変更します。 
 
@@ -41,7 +41,7 @@ ms.locfileid: "68893684"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -61,6 +61,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数
 
 { *pool_name* | "default" }  
@@ -73,7 +75,7 @@ CPU の競合がある場合に、この外部リソース プールのすべて
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 外部リソース プールを特定の CPU にアタッチします。
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs. AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** を使うと、外部リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU に関連付けられます。
+AFFINITY CPU = **(** \<CPU_range_spec> **)** では、指定された CPU_ID によって識別される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU に外部リソース プールがマップされます。 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** を使うと、外部リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物理 CPU にアフィニティ化されれます。
 
 MAX_MEMORY_PERCENT =*value*  
 この外部リソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
@@ -81,18 +83,18 @@ MAX_MEMORY_PERCENT =*value*
 MAX_PROCESSES =*value*  
 外部リソース プールに許されるプロセスの最大数を指定します。 0 を指定すると、プールのしきい値は無制限になり、その後はコンピューターのリソースによってのみ拘束されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) ステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はリソース プールを実装します。
 
 リソース プールの一般的な情報については、「[リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)」、「[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)」、および「[sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)」をご覧ください。  
 
-外部リソース プールを使った Machine Learning ジョブの管理に固有の情報については、「[Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)」(SQL Server での Machine Learning のリソース管理) をご覧ください。
+外部リソース プールを使った Machine Learning ジョブの管理に固有の情報については、「[Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)」(SQL Server での Machine Learning のリソース管理) をご覧ください。
 ## <a name="permissions"></a>アクセス許可
 
 `CONTROL SERVER` 権限が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次のステートメントは外部プールを変更して、CPU 使用率を 50% に、最大メモリ量をコンピューターで使用可能なメモリの 25% に制限します。
   
@@ -108,9 +110,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-+ [SQL Server での Machine Learning のリソース管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [SQL Server での Machine Learning のリソース管理](../../machine-learning/administration/resource-governor.md)
 + [external scripts enabled サーバー構成オプション](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)

@@ -1,6 +1,6 @@
 ---
 title: 空間データ (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 505785e4b0460d2a59e4d42898d950bc55b25de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32014323cf9921cdbff9db6235e6625b4dc431ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725871"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  空間データは、幾何オブジェクトの物理的な位置と形状に関する情報を表します。 それらのオブジェクトは、点の位置である場合もあれば、国、道、湖などのより複雑なオブジェクトである場合もあります。  
+  空間データは、幾何学的オブジェクトの物理的な場所と形状に関する情報を表します。 これらのオブジェクトは、ポイントの場所や、国、道路、湖などのより複雑なオブジェクトである可能性があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **geometry** と **geography** の 2 つの空間データ型がサポートされています。  
   
@@ -38,10 +38,7 @@ ms.locfileid: "68048502"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、どちらのデータ型も .NET 共通言語ランタイム (CLR) のデータ型として実装されています。  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)」 (SQL Server 2012 の新しい空間機能) をダウンロードして参照してください。  
-  
-##  <a name="reltasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 関連タスク  
  [geometry インスタンスの作成、構築、およびクエリ](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  geometry データ型のインスタンスで使用できるメソッドについて説明します。  
   
@@ -58,7 +55,7 @@ ms.locfileid: "68048502"
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)  
  空間データ型について説明します。  
   
--   [ポイント](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -66,7 +63,7 @@ ms.locfileid: "68048502"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [多角形](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   

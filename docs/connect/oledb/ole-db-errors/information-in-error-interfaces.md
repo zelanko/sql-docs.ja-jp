@@ -1,8 +1,8 @@
 ---
-title: エラーインターフェイス内の情報 |Microsoft Docs
-description: エラー インターフェイス内の情報
+title: エラー インターフェイス内の情報
+description: OLE DB Driver for SQL Server では、OLE DB 定義のエラー インターフェイス IErrorInfo、IErrorRecords、ISQLErrorInfo によって、一部のエラーと状態情報が報告されます。
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 92e396b88ec7fe0869d2657b602ad3463d7b95da
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67994935"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922389"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "67994935"
 
   OLE DB Driver for SQL Server は、OLE DB 定義のエラー インターフェイス **IErrorInfo**、**IErrorRecords**、および **ISQLErrorInfo** によって、一部のエラーと状態情報を報告します。  
   
- SQL Server の OLE DB Driver は、次のように**IErrorInfo**メンバー関数をサポートしています。  
+ OLE DB Driver for SQL Server では、次の **IErrorInfo** メンバー関数がサポートされています。  
   
-|メンバー関数|[説明]|  
+|メンバー関数|説明|  
 |---------------------|-----------------|  
 |**GetDescription**|エラー メッセージを説明する文字列を返します。|  
 |**GetGUID**|エラーを定義したインターフェイスの GUID を返します。|  
@@ -41,22 +41,22 @@ ms.locfileid: "67994935"
 |**GetHelpFile**|サポートされていません。 常に NULL が返されます。|  
 |**GetSource**|文字列 "Microsoft OLE DB Driver for SQL Server"。|  
   
- OLE DB Driver for SQL Server は、次のように、コンシューマーが使用できる**Ierrorrecords**メンバー関数をサポートしています。  
+ OLE DB Driver for SQL Server では、コンシューマーが使用できる、次の **IErrorRecords** メンバー関数がサポートされています。  
   
-|メンバー関数|[説明]|  
+|メンバー関数|説明|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|エラーに関する基本情報を ERRORINFO 構造体に設定します。 ERRORINFO 構造体には、エラーの HRESULT 戻り値およびエラーが適用されるプロバイダーとインターフェイスを特定するメンバーが含まれます。|  
 |**GetCustomErrorObject**|**ISQLErrorInfo** インターフェイスと [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) インターフェイスの参照を返します。|  
 |**GetErrorInfo**|**IErrorInfo** インターフェイスの参照を返します。|  
-|**GetErrorParameters**|OLE DB Driver for SQL Server は、 **GetErrorParameters**経由でコンシューマーにパラメーターを返しません。|  
+|**GetErrorParameters**|OLE DB Driver for SQL Server では、**GetErrorParameters** 経由でコンシューマーにパラメーターを返すことはありません。|  
 |**GetRecordCount**|使用できるエラー レコードの数を返します。|  
   
- OLE DB Driver for SQL Server では、次のように**ISQLErrorInfo:: GetSQLInfo**パラメーターがサポートされています。  
+ OLE DB Driver for SQL Server では、次の **ISQLErrorInfo::GetSQLInfo** パラメーターがサポートされています。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
-|*pbstrSQLState*|エラーの SQLSTATE 値を返します。 SQLSTATE 値は、SQL-92、ODBC と ISO SQL、および API の各仕様で定義されています。 と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB ドライバーのどちらも、実装固有の SQLSTATE 値を定義 SQL Server。|  
-|*plNativeError*|該当する場合は、**master.dbo.sysmessages** から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー番号を返します。 ネイティブエラーは、SQL Server データソースの OLE DB ドライバーを正常に初期化しようとした後に使用できます。 この試行の前に、SQL Server の OLE DB ドライバーは常に0を返します。|  
+|*pbstrSQLState*|エラーの SQLSTATE 値を返します。 SQLSTATE 値は、SQL-92、ODBC と ISO SQL、および API の各仕様で定義されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または OLE DB Driver for SQL Server でも、実装固有の SQLSTATE 値は定義されません。|  
+|*plNativeError*|該当する場合は、**master.dbo.sysmessages** から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー番号を返します。 OLE DB Driver for SQL Server のデータ ソースの初期化の試行が成功すると、ネイティブ エラーが使用できるようになります。 この試行の前は、OLE DB Driver for SQL Server では常に 0 が返されます。|  
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  

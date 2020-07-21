@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5acdc8b4e265ee2ebf6d6ffa4e3cc3e65a9b73b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b0a9ef87aa696292a1011a9b8d829a595eaeec2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940063"
 ---
 # <a name="relationship-representation-tabular"></a>リレーションシップ表現 (テーブル)
   リレーションシップとは、2 つのデータ テーブルの間の接続です。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。  
@@ -50,7 +49,7 @@ private Boolean createRelationship(string PKTableName, string PKColumnName, stri
     //Make sure PKTableName.PKColumnName  is set as PK ==> <attribute>.usage == AMO.AttributeUsage.Key  
     if (tabularDb.Dimensions[PKTableName].Attributes[PKColumnName].Usage != AMO.AttributeUsage.Key)  
     {  
-        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not beeing the PK of the table  
+        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not being the PK of the table  
         setPKColumn(tabularDb, PKTableName, PKColumnName);  
     }  
   

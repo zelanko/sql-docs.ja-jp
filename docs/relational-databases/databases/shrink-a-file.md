@@ -1,5 +1,6 @@
 ---
 title: ファイルの圧縮 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server でデータまたはログ ファイルを圧縮する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 330bdd5e1857df0ad605ca42e3bd5f83c8072b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715502"
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータ ファイルまたはログ ファイルを圧縮する方法について説明します。  
   
  ファイルの末尾にあるデータのページを、ファイルの先頭に近い占有されていない領域に移動することにより、データ ファイルが圧縮され、領域が回復されます。 ファイル末尾に十分な空き領域が作成された場合は、ファイル末尾のデータ ページの割り当てを解除して、ファイル システムに戻すことができます。  
@@ -38,9 +39,9 @@ ms.locfileid: "68127388"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルを圧縮するには:**  
   
@@ -48,22 +49,22 @@ ms.locfileid: "68127388"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   プライマリ データ ファイルは、model データベースのプライマリ ファイルのサイズより小さくすることはできません。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   ファイルを圧縮するために移動されたデータは、ファイル内のあらゆる使用可能な場所に分散される場合があります。 これにより、インデックスの断片化が発生し、広範なインデックスを検索するクエリのパフォーマンスが低下する場合があります。 断片化を解消するには、圧縮後にファイルのインデックスを再構築することを検討してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>データ ファイルまたはログ ファイルを圧縮するには  
   
@@ -79,7 +80,7 @@ ms.locfileid: "68127388"
      **ファイルの種類**  
      ファイルの種類を選択します。 選択できるファイルの種類は **[データ]** および **[ログ]** です。 既定の選択は **[データ]** です。 別のファイル グループの種類を選択すると、その選択に応じて他のフィールドの選択が変更されます。  
   
-     **ファイル グループ**  
+     **[ファイル グループ]**  
      上記で選択した **[ファイルの種類]** に関連付けられたファイル グループの一覧から、ファイル グループを選択します。 別のファイル グループを選択すると、その選択に応じて他のフィールドの選択が変更されます。  
   
      **[ファイル名]**  
@@ -124,7 +125,7 @@ ms.locfileid: "68127388"
   
 9. **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>データ ファイルまたはログ ファイルを圧縮するには  
   

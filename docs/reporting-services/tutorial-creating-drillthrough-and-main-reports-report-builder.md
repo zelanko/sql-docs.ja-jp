@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294733"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73637983"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
@@ -25,7 +25,7 @@ ms.locfileid: "63294733"
 このチュートリアルの推定所要時間: 30 分。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=191575)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
+このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=18279)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
   
 もう一方のファイル (ContosoBIdemoBAK.exe) は、ContosoDW データ ウェアハウスのファイルです。ContosoDW データ ウェアハウスは、このチュートリアルでは使用しません。  
   
@@ -35,7 +35,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
     
 全般的な要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
-## <a name="DMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用して詳細レポートを作成する  
+## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用して詳細レポートを作成する  
 [作業の開始] ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。 このウィザードには、レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 このチュートリアルでは、レポート デザイン モードを使用します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
@@ -50,7 +50,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** が選択されていることを確認します。  
   
-## <a name="DConnection"></a>1a. データ接続を指定する  
+## <a name="1a-specify-a-data-connection"></a><a name="DConnection"></a>1a. データ接続を指定する  
 データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する (レポート ビルダー)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -96,7 +96,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 14. **[次へ]** をクリックします。  
   
-## <a name="DMDXQuery"></a>1b. MDX クエリを作成する  
+## <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. MDX クエリを作成する  
 レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
@@ -106,7 +106,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
+    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -149,7 +149,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
     > [!NOTE]  
     > このパラメーターは、製品カテゴリの名前を格納します。 メイン レポートで製品カテゴリの名前をクリックすると、その名前が、このパラメーターを使用して詳細レポートに渡されます。  
   
-### <a name="DSkip"></a>データセットを作成するには  
+### <a name="to-create-the-dataset"></a><a name="DSkip"></a>データセットを作成するには  
   
 1.  Channel ディメンションから Channel Name をデータ ペインにドラッグします。  
   
@@ -165,7 +165,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 7.  **[次へ]** をクリックします。  
   
-## <a name="DLayout"></a>1c. データをグループにまとめる  
+## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. データをグループにまとめる  
 データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -191,7 +191,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 6.  **[次へ]** をクリックします。  
   
-## <a name="DTotals"></a>1d. 小計と合計を追加する  
+## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 小計と合計を追加する  
 グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかも選択できます。  
   
 #### <a name="to-add-subtotals-and-totals"></a>小計と合計を追加するには  
@@ -208,7 +208,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  レポートをプレビューするには、 **[実行 (!)]** をクリックします。  
   
-## <a name="DFormat"></a>2.データに通貨の書式を設定する  
+## <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2.データに通貨の書式を設定する  
 詳細レポートの売上高のフィールドに通貨の書式設定を適用します。  
   
 #### <a name="to-format-data-as-currency"></a>データに通貨の書式を設定するには  
@@ -219,7 +219,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[ホーム]** タブの **[数値]** グループで、 **[通貨]** をクリックします。  
   
-## <a name="DSparkline"></a>3.売上の値をスパークラインで表示する列を追加する  
+## <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3.売上の値をスパークラインで表示する列を追加する  
 このレポートでは、売上と売上返品を、通貨値ではなくスパークラインで表示します。  
   
 #### <a name="to-add-sparklines-to-columns"></a>列にスパークラインを追加するには  
@@ -252,7 +252,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 13. レポートをプレビューするには、 **[実行]** をクリックします。  
   
-## <a name="DReportTitle"></a>4.製品カテゴリ名を含むレポート タイトルを追加する  
+## <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4.製品カテゴリ名を含むレポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このチュートリアルでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
@@ -279,7 +279,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 レポート タイトルに含まれるのは、最初の製品カテゴリの名前です。 この後の手順でこのレポートを詳細レポートとして実行すると、メイン レポートでクリックした製品カテゴリの名前を反映して製品カテゴリの名前が動的に変化します。  
   
-## <a name="DParameter"></a>5.パラメーターのプロパティを更新する  
+## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5.パラメーターのプロパティを更新する  
 既定ではパラメーターが表示されますが、この設定は、このレポートには適していません。 したがって、詳細レポートのパラメーターのプロパティを更新します。  
   
 #### <a name="to-hide-a-parameter"></a>パラメーターを非表示にするには  
@@ -302,7 +302,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="DSave"></a>6.レポートを SharePoint ライブラリに保存する  
+## <a name="6-save-the-report-to-a-sharepoint-library"></a><a name="DSave"></a>6.レポートを SharePoint ライブラリに保存する  
 レポートは、SharePoint ライブラリ、レポート サーバー、またはコンピューターに保存することができます。 コンピューターに保存する場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。 このチュートリアルでは、SharePoint ライブラリにレポートを保存します。  
   
 #### <a name="to-save-the-report"></a>レポートを保存するには  
@@ -335,7 +335,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 7.  **[保存]** をクリックします。  
   
-## <a name="MMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用してメイン レポートを作成する  
+## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用してメイン レポートを作成する  
 **[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-the-main-report"></a>メイン レポートを作成するには  
@@ -348,7 +348,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
  
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-## <a name="MConnection"></a>1a. データ接続を指定する  
+## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. データ接続を指定する  
 メイン レポートに埋め込みデータ ソースを追加します。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -387,7 +387,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 14. **[次へ]** をクリックします。  
   
-## <a name="MMDXQuery"></a>1b. MDX クエリを作成する  
+## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. MDX クエリを作成する  
 次に、埋め込みデータセットを作成します。 これを行うには、クエリ デザイナーを使用して、フィルター、パラメーター、および計算されるメンバーと、データセット自体を作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
@@ -397,7 +397,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
+    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -469,7 +469,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 8.  **[名前]** ボックスに「  **Net Sales**」と入力し、 **[OK]** をクリックします。計算されるメンバー ペインに、計算されるメンバー **Net Sales** が表示されます。  
   
-### <a name="MSkip"></a>データセットを作成するには  
+### <a name="to-create-the-dataset"></a><a name="MSkip"></a>データセットを作成するには  
   
 1.  Channel ディメンションから Channel Name をデータ ペインにドラッグします。  
   
@@ -485,7 +485,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 6.  **[次へ]** をクリックします。  
   
-## <a name="MLayout"></a>1c. データをグループにまとめる  
+## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. データをグループにまとめる  
 データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -504,7 +504,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     手順 3. および 4. で、マトリックスに表示するデータが指定されます。  
   
-## <a name="MTotals"></a>1d. 小計と合計を追加する  
+## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 小計と合計を追加する  
 レポートには小計と総計を表示できます。 メイン レポートのデータはインジケーターとして表示されるため、ウィザードの完了後に総計を削除します。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>小計と総計を追加するには  
@@ -519,7 +519,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-## <a name="MGrandTotal"></a>2.総計行を削除する  
+## <a name="2-remove-the-grand-total-row"></a><a name="MGrandTotal"></a>2.総計行を削除する  
 データ値は、列グループの合計も含め、インジケーターの状態として表示されます。 したがって、総計を表示する行を削除します。  
   
 #### <a name="to-remove-the-grand-total-row"></a>総計行を削除するには  
@@ -530,7 +530,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-## <a name="MDrillthrough"></a>3.ドリルスルーのためのテキスト ボックス アクションを構成する  
+## <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3.ドリルスルーのためのテキスト ボックス アクションを構成する  
 ドリルスルーを有効にするために、メイン レポートのテキスト ボックスでアクションを指定します。  
   
 #### <a name="to-enable-an-action"></a>アクションを有効にするには  
@@ -574,7 +574,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 製品カテゴリ名が、一般的なリンクの書式 (下線付きの青い文字) になります。  
   
-## <a name="MIndicators"></a>4.数値をインジケーターに置き換える  
+## <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4.数値をインジケーターに置き換える  
 販売ルート Online および Reseller の数量と売上の状態をインジケーターで表示します。  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Net QTY 値のインジケーターを追加するには  
@@ -587,7 +587,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 4.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [ `Net_QTY`] を選択します。  
+5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_QTY`] を選択します。  
   
 6.  `[Sum(Net QTY)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 2. ～ 5. を繰り返します。  
   
@@ -599,13 +599,13 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [ `Net_Sales`] を選択します。  
+4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_Sales`] を選択します。  
   
 5.  `[Sum(Net_Sales)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 1. ～ 4. を繰り返します。  
   
 6.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-## <a name="MParameter"></a>5.パラメーターのプロパティを更新する  
+## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5.パラメーターのプロパティを更新する  
 既定ではパラメーターが表示されますが、この設定は、このレポートには適していません。 パラメーターのプロパティを更新して、パラメーターを内部パラメーターにします。  
   
 #### <a name="to-make-the-parameter-internal"></a>パラメーターを内部パラメーターにするには  
@@ -620,7 +620,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="MTitle"></a>6.レポート タイトルを追加する  
+## <a name="6-add-a-report-title"></a><a name="MTitle"></a>6.レポート タイトルを追加する  
 メイン レポートにタイトルを追加します。  
   
 #### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
@@ -635,7 +635,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-## <a name="MSave"></a>7.メイン レポートを SharePoint ライブラリに保存する  
+## <a name="7-save-the-main-report-to-a-sharepoint-library"></a><a name="MSave"></a>7.メイン レポートを SharePoint ライブラリに保存する  
 メイン レポートを SharePoint ライブラリに保存します。  
   
 #### <a name="to-save-the-report"></a>レポートを保存するには  
@@ -661,7 +661,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 7.  **[保存]** をクリックします。  
   
-## <a name="MRunReports"></a>8.メイン レポートと詳細レポートを実行する  
+## <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8.メイン レポートと詳細レポートを実行する  
 メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  
   
 #### <a name="to-run-the-reports"></a>レポートを実行するには  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a5bcf05ccb3876ab22227ea2f5a5e5c9d7bbbbc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6f90cdcc77b587ad04a22dd7b3f853cc66adbc0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068848"
 ---
 # <a name="device-driver-control-error"></a>デバイス ドライバー制御エラー
   このルールでは、システム イベント ログの EventId 11 を確認します。 このエラーは、デバイス ドライバーの破損、ハードウェアの問題、ケーブル接続の不具合、または接続の問題が原因で発生する場合があります。  

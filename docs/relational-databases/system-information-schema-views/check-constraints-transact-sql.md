@@ -19,31 +19,30 @@ ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8df7b7dd55fd1436493cc736d8771955dbb7965
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
-ms.translationtype: MT
+ms.openlocfilehash: 2264c1eda9b4cba826b1229cc6dfe38a18a25572
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794712"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999593"
 ---
 # <a name="check_constraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベースの CHECK 制約ごとに1行のデータを返します。 この情報スキーマビューでは、現在のユーザーがアクセス許可を持っているオブジェクトに関する情報が返されます。  
   
- これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。** _view_name_。  
+ これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|制約修飾子。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|制約が属するスキーマの名前。<br /><br /> &#42;&#42;重要&#42; &#42; INFORMATION_SCHEMA ビューを使用してオブジェクトのスキーマを決定しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|制約修飾子。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|制約が属するスキーマの名前。<br /><br /> &#42;&#42; 重要 &#42;&#42; では、オブジェクトのスキーマを決定するために INFORMATION_SCHEMA ビューを使用しないでください。 INFORMATION_SCHEMA ビューは、オブジェクトのメタデータのサブセットのみを表します。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**CONSTRAINT_NAME**|**sysname**|制約名。|  
-|**CHECK_CLAUSE**|**nvarchar(** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義ステートメントの実際のテキスト|  
+|**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義ステートメントの実際のテキスト|  
   
-## <a name="see-also"></a>関連項目  
- [システムビュー &#40;transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [情報スキーマビュー &#40;transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [check_constraints &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+ [check_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

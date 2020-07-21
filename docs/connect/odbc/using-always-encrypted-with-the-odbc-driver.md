@@ -1,19 +1,20 @@
 ---
-title: SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する | Microsoft Docs
+title: ODBC ドライバーで Always Encrypted を使用する
+description: Always Encrypted と Microsoft ODBC Driver for SQL Server を使用して ODBC アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 09/01/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+author: v-chojas
+ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702704"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886299"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -23,15 +24,15 @@ ms.locfileid: "68702704"
 - ODBC Driver 13.1 for SQL Server
 - ODBC Driver 17 for SQL Server
 
-### <a name="introduction"></a>概要
+### <a name="introduction"></a>はじめに
 
-この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) と [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
+この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) と [ODBC Driver for SQL Server](microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
 
 Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 ODBC Driver for SQL Server など、Always Encrypted が有効なドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 "*セキュリティで保護されたエンクレーブが設定された*" Always Encrypted では、この機能を拡張して、データの機密性を保ちながら機密データに対してより豊富な機能を使えるようになります。
 
-詳細については、「 [Always Encrypted (データベースエンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 」および「 [Secure Enclaves での Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
+詳細については、「[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」と「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 データベースで Always Encrypted を構成します。 この処理には、Always Encrypted キーのプロビジョニング、および選択したデータベース列の暗号化の設定が含まれます。 Always Encrypted が構成されたデータベースがない場合は、「 [Always Encrypted の作業の開始](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)」の手順に従います。 特に、ご利用のデータベースには、列マスターキー (CMK) 用、列暗号化キー (CEK) 用、およびその CEK を使用して暗号化された 1 つまたは複数の列を含むテーブル用のメタデータ定義を含める必要があります。
 
@@ -59,23 +60,26 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
 
-バージョン17.4 以降では、ドライバーは Secure Enclaves の Always Encrypted をサポートしています。 SQL Server 2019 以降に接続するときにエンクレーブを使用できるようにするに`ColumnEncryption`は、DSN、接続文字列、または接続属性をエンクレーブの種類と構成証明プロトコルの名前に設定し、関連する構成証明データをコンマで区切って設定します。 バージョン17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)エンクレーブの種類と[ホストガーディアンサービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)の構成証明`VBS-HGS`プロトコル (で示される) のみがサポートされています。これを使用するには、構成証明サーバーの URL を指定します。次に例を示します。
+> [!NOTE]
+> Linux および macOS 上でセキュア エンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
+
+バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
 ```
 
-サーバーと構成証明サービスが正しく構成されていて、目的の列に対してエンクレーブ対応 CMKs と CEKs が適切に構成されている場合は、次のように、エンクレーブを使用するクエリを実行できるようになりました。Always Encrypted によって提供される既存の機能。 詳細については[、「Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 」を参照してください。
+サーバーと構成証明サービスが適切に構成され、目的の列に対してエンクレーブ対応の CMK と CEK が構成されていれば、Always Encrypted に備わる既存の機能に加え、インプレース暗号化や豊富な計算などのエンクレーブを使用するクエリを実行できるようになります。 詳細については、[セキュリティで保護されたエンクレーブが設定された Always Encrypted の構成](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md)に関する記事を参照してください。
 
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
-接続で Always Encrypted を有効にすると、標準の ODBC Api を使用できるようになります。 ODBC Api では、暗号化されたデータベース列のデータを取得または変更できます。 次のドキュメントは、このような場合に役立ちます。
+接続で Always Encrypted を有効にすると、標準の ODBC API を使用できるようになります。 ODBC API を使うと、暗号化されたデータベース列のデータを取得または変更できます。 次のドキュメント項目は、このような場合に役立ちます。
 
-- [ODBC サンプルコード](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC サンプル コード](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC プログラマー リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)
 
-アプリケーションには、必要なデータベース権限が必要であり、列マスターキーにアクセスできる必要があります。 次に、ドライバーは、暗号化された列を対象とするすべてのクエリパラメーターを暗号化します。 ドライバーは、暗号化された列から取得したデータの暗号化も解除します。 ドライバーは、ソースコードからの支援を受けずに、すべての暗号化と復号化を実行します。 プログラムに対しては、列が暗号化されていないかのようになります。
+アプリケーションは必要なデータベースアクセス許可を持っている必要があります。また、列マスター キーにアクセスできる必要があります。 次に、ドライバーによって、暗号化された列を対象とするすべてのクエリ パラメーターが暗号化されます。 ドライバーによって、暗号化された列から取得されたデータも暗号化が解除されます。 ソース コードを利用せずに、ドライバーによってこのすべての暗号化と暗号化解除が実行されます。 プログラムからは、列が暗号化されていない場合のように処理できます。
 
 Always Encrypted が有効でない場合、暗号化された列をターゲットとするパラメーターを含むクエリは失敗します。 暗号化された列をターゲットとするパラメーターがクエリにない場合は、暗号化された列からデータを取得できます。 ただし、ドライバーによって暗号化の解除は試みられず、アプリケーションでは暗号化されたバイナリ データを (バイト配列として) 受け取ることになります。
 
@@ -83,8 +87,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 |クエリの特性 | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる|Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている|
 |:---|:---|:---|:---|
-| 暗号化された列をターゲットとするパラメーター。 | パラメーター値は透過的に暗号化されます。 | Error | Error|
-| 暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 | Error | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。
+| 暗号化された列をターゲットとするパラメーター。 | パラメーター値は透過的に暗号化されます。 | エラー | エラー|
+| 暗号化された列をターゲットとするパラメーターを含まない、暗号化された列からのデータの取得。| 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションでは、プレーン テキスト列の値を受け取ります。 | エラー | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列として受け取ります。
 
 次の例は、暗号化された列のデータを取得および変更する方法を示しています。 この例では、次のスキーマを持つテーブルを想定しています。 SSN 列と BirthDate 列が暗号化されていることに注意してください。
 
@@ -111,9 +115,9 @@ CREATE TABLE [dbo].[Patients](
 
 - このサンプル コードの暗号化に固有のものは何もありません。 暗号化された列をターゲットとする SSN および日付パラメータの値が、ドライバーによって自動的に検出されて、暗号化されます。 これにより、アプリケーションに対して暗号化が透過的に実行されます。
 
-- 暗号化された列を含め、データベース列に挿入された値は、バインドされたパラメーターとして渡されます (「[SQLBindParameter 関数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)」を参照してください)。 暗号化されていない列に値を送信する場合、パラメーターの使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 SSN 列または BirthDate 列に挿入された値がクエリ ステートメントに埋め込まれたリテラルとして渡された場合、ドライバーではクエリ内のリテラルの暗号化または処理が試行されないため、クエリは失敗します。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
+- 暗号化された列を含め、データベース列に挿入された値は、バインドされたパラメーターとして渡されます (「[SQLBindParameter 関数](../../odbc/reference/syntax/sqlbindparameter-function.md)」を参照してください)。 暗号化されていない列に値を送信する場合、パラメーターの使用は省略可能です (ただし、SQL インジェクションを防ぐのに役立つので、強くお勧めします) が、暗号化された列をターゲットとする値に対しては必須です。 SSN 列または BirthDate 列に挿入された値がクエリ ステートメントに埋め込まれたリテラルとして渡された場合、ドライバーではクエリ内のリテラルの暗号化または処理が試行されないため、クエリは失敗します。 その結果、サーバーはこれらの値を、暗号化された列と互換性がないと見なして拒否します。
 
-- SSN 列に挿入されるパラメーターの SQL 型は SQL_CHAR (**char** SQL Server データ型にマップされる) に設定されます (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 パラメーターの型が SQL_WCHAR (**nchar** にマップされる) に設定された場合、クエリは失敗します。暗号化された nchar 値から、暗号化された char 値へのサーバー側変換が Always Encrypted でサポートされていないためです。 データ型のマッピングについては、「[ODBC プログラマー リファレンス - 付録 D: データ型](https://msdn.microsoft.com/library/ms713607.aspx)」を参照してください。
+- SSN 列に挿入されるパラメーターの SQL 型は SQL_CHAR (**char** SQL Server データ型にマップされる) に設定されます (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 パラメーターの型が SQL_WCHAR (**nchar** にマップされる) に設定された場合、クエリは失敗します。暗号化された nchar 値から、暗号化された char 値へのサーバー側変換が Always Encrypted でサポートされていないためです。 [「ODBC プログラマー リファレンス」の「付録 D:データ型](../../odbc/reference/appendixes/appendix-d-data-types.md)」で、データ型のマッピングについて確認してください。
 
 ```
     SQL_DATE_STRUCT date;
@@ -161,7 +165,7 @@ CREATE TABLE [dbo].[Patients](
 - ドライバーが SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除するので、プログラムで出力される値はすべてプレーンテキストになります。
 
 > [!NOTE]
-> 暗号化が決定的である場合、または secure エンクレーブが有効になっている場合にのみ、クエリは暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
+> 暗号化が決定論的である場合、またはセキュリティで保護されたエンクレーブが有効な場合にのみ、暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
 
 ```
 SQLCHAR SSN[12];
@@ -285,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API を使用すると、SQLBindCol にバインドされ、行データが事前に取り込まれているバッファーを使用して結果セット内の行をアプリケーションで更新することができます。 暗号化された固定長型の非対称の埋め込み動作が原因で、これらの列のデータは、行内の他の列に対して更新が行われている間に、予期せずに変更される可能性があります。 AE では、固定長文字の値は、バッファー サイズより小さい場合に埋め込まれます。
 
-この動作を軽減するには、`SQLBulkOperations` の一環として更新されない列、およびカーソル ベースの更新に `SQLSetPos` を使用する場合に更新されない列を無視するために、`SQL_COLUMN_IGNORE`フラグを使用します。  アプリケーションによって直接変更されない列はすべて無視する必要があります。パフォーマンス上の理由と、実際の (DB) サイズより*小さい*バッファーにバインドされている列の切り捨てを回避するための両面からそのようにします。 詳細については、[SQLSetPos 関数のリファレンス](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)を参照してください。
+この動作を軽減するには、`SQLBulkOperations` の一環として更新されない列、およびカーソル ベースの更新に `SQLSetPos` を使用する場合に更新されない列を無視するために、`SQL_COLUMN_IGNORE`フラグを使用します。  アプリケーションによって直接変更されない列はすべて無視する必要があります。パフォーマンス上の理由と、実際の (DB) サイズより*小さい*バッファーにバインドされている列の切り捨てを回避するための両面からそのようにします。 詳細については、[SQLSetPos 関数のリファレンス](../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults と SQLDescribeCol
 
-アプリケーション プログラムでは、準備されたステートメント内の列のメタデータを返すために、[SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx) を呼び出す場合があります。  Always Encrypted が有効にされているとき、`SQLDescribeCol` を呼び出す "*前に*" `SQLMoreResults` を呼び出すと、[sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) が呼び出されるため、暗号化された列のプレーンテキスト メタデータは正しく返されません。 この問題を回避するには、`SQLMoreResults` を呼び出す "*前に*" 準備されたステートメント上で `SQLDescribeCol` を呼び出します。
+アプリケーション プログラムでは、準備されたステートメント内の列のメタデータを返すために、[SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) を呼び出す場合があります。  Always Encrypted が有効にされているとき、`SQLDescribeCol` を呼び出す "*前に*" `SQLMoreResults` を呼び出すと、[sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) が呼び出されるため、暗号化された列のプレーンテキスト メタデータは正しく返されません。 この問題を回避するには、`SQLMoreResults` を呼び出す "*前に*" 準備されたステートメント上で `SQLDescribeCol` を呼び出します。
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Always Encrypted のパフォーマンスの影響を制御する
 
@@ -303,7 +307,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>クエリ パラメーターのメタデータを取得するためのラウンド トリップを制御する
 
-既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャでは、クエリ ステートメントを分析して、パラメーターを暗号化する必要があるかどうかが判断され、必要がある場合は、ドライバーでパラメーターを暗号化できるようにするため、パラメーターごとに暗号化関連の情報が返されます。 上記の動作により、クライアント アプリケーションに対する次のような高度な透明性が確保されます: 暗号化された列をターゲットとする値がパラメーターでドライバーに渡される限り、アプリケーション (およびアプリケーション開発者) は、暗号化された列にどのクエリがアクセスするかを認識する必要はありません。
+既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャでは、クエリ ステートメントを分析して、パラメーターを暗号化する必要があるかどうかが判断され、必要がある場合は、ドライバーでパラメーターを暗号化できるようにするため、パラメーターごとに暗号化関連の情報が返されます。 上記の動作により、クライアント アプリケーションに対する高度な透明性が確保されます。暗号化された列をターゲットとする値がパラメーターでドライバーに渡される限り、アプリケーション (およびアプリケーション開発者) は、暗号化された列にどのクエリがアクセスするかを認識する必要はありません。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>ステートメントごとの Always Encrypted 動作
 
@@ -311,7 +315,7 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 ステートメントの Always Encrypted 動作を制御するには、SQLSetStmtAttr を呼び出して、`SQL_SOPT_SS_COLUMN_ENCRYPTION` ステートメント属性を次のいずれかの値に設定します。
 
-|[値]|[説明]|
+|値|説明|
 |-|-|
 |`SQL_CE_DISABLED` (0)|ステートメントに対して Always Encrypted は無効にされます|
 |`SQL_CE_RESULTSETONLY` (1)|暗号化解除のみです。 結果セットと戻り値は暗号化解除され、パラメーターは暗号化されません|
@@ -364,7 +368,7 @@ ECEK のプレーンテキスト値を取得するために、ドライバーで
 
 ODBC Driver for SQL Server には、次の組み込みのキーストア プロバイダーが付属しています。
 
-| [オブジェクト名] | [説明] | プロバイダー (メタデータ) 名 |可用性|
+| 名前 | 説明 | プロバイダー (メタデータ) 名 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |Azure Key Vault に CMK を格納します | `AZURE_KEY_VAULT` |Windows、macOS、Linux|
 |Windows 証明書ストア|Windows キーストアに CMK をローカルに保存します| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -375,10 +379,10 @@ ODBC Driver for SQL Server には、次の組み込みのキーストア プロ�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 
-Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)に関するページを参照してください。
+Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](/archive/blogs/kv/azure-key-vault-step-by-step)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)に関するページを参照してください。
 
 > [!NOTE]
-> ODBC ドライバーは、AKV 認証の Active Directory フェデレーションサービス (AD FS) をサポートしていません。 AKV に対して Azure Active Directory 認証を使用していて、Active Directory 構成にフェデレーションサービスが含まれている場合、認証が失敗する可能性があります。
+> ODBC ドライバーでは、Azure Active Directory に対する直接の AKV 認証のみがサポートされます。 AKV に対する Azure Active Directory 認証を使用しており、Active Directory 構成によって、Active Directory フェデレーション サービス エンドポイントに対する認証が要求されている場合は、認証が失敗する可能性があります。
 > Linux および macOS 用のドライバー バージョン 17.2 以降の場合、`libcurl` は、このプロバイダーを使用する上で必要ですが、明示的な依存関係にはありません。ドライバーを使用した他の操作ではそれを必要としないからです。 `libcurl` に関するエラーが発生する場合は、それがインストールされていることを確認してください。
 
 ドライバーでは、次の資格情報の種類を使用して Azure Key Vault への認証がサポートされます。
@@ -387,12 +391,15 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 
 - クライアント ID /シークレット - この方法では、資格情報はアプリケーションクライアント ID とアプリケーション シークレットです。
 
+- マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
+
 ドライバーが AKV に格納されている CMK を列暗号化に使用できるようにするには、次の接続文字列限定のキーワードを使用します。
 
 |[資格情報の種類]| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|パスワード|
-|クライアント ID/シークレット| `KeyVaultClientSecret`|クライアント ID|シークレット|
+|ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|Password|
+|クライアント ID/シークレット| `KeyVaultClientSecret`|クライアント ID|Secret|
+|マネージド ID|`KeyVaultManagedIdentity`|オブジェクト ID (省略可能、ユーザー割り当ての場合のみ)|(指定なし)|
 
 #### <a name="example-connection-strings"></a>接続文字列の例
 
@@ -410,15 +417,31 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**マネージド ID (システム割り当て)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**マネージド ID (ユーザー割り当て)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 CMK ストレージで AKV を使用する場合、ODBC アプリケーションに他の変更を加える必要はありません。
+
+> [!NOTE]
+> ドライバーには、それが信頼する AKV エンドポイントの一覧が含まれています。 ドライバー バージョン 17.5.2 以降では、この一覧を構成できます。ドライバー内の `AKVTrustedEndpoints` プロパティ、DSN の ODBCINST.INI または ODBC.INI レジストリ キー (Windows)、あるいは `odbcinst.ini` または `odbc.ini` ファイル セクション (Linux/macOS) を、セミコロン区切りの一覧に設定します。 DSN 内でそれを設定すると、ドライバー内の設定よりも優先されます。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。 既定の一覧 (17.5 現在) は `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de` となります。
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
 
-Windows 用の ODBC Driver for SQL Server には、`MSSQL_CERTIFICATE_STORE` と呼ばれる Windows 証明書ストア用の組み込みの列マスター キー ストア プロバイダーが含まれています (このプロバイダーは macOS または Linux では使用できません)。このプロバイダーを使用すると、CMK はクライアント コンピューター上にローカルに格納され、ドライバーでそれを使用するためにアプリケーションで追加の構成を行う必要はありません。 ただし、アプリケーションには、ストア内の証明書とその秘密キーへのアクセス権が必要です。 詳しくは、「[列マスター キーを作成して保存する (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)」をご覧ください。
+Windows 用の ODBC Driver for SQL Server には、`MSSQL_CERTIFICATE_STORE` と呼ばれる Windows 証明書ストア用の組み込みの列マスター キー ストア プロバイダーが含まれています (このプロバイダーは macOS または Linux では使用できません)。このプロバイダーを使用すると、CMK はクライアント コンピューター上にローカルに格納され、ドライバーでそれを使用するためにアプリケーションで追加の構成を行う必要はありません。 ただし、アプリケーションには、ストア内の証明書とその秘密キーへのアクセス権が必要です。 詳しくは、「[列マスター キーを作成して保存する (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
 ### <a name="using-custom-keystore-providers"></a>カスタム キーストア プロバイダーの使用
 
-ODBC Driver for SQL Server では、CEKeystoreProvider インターフェイスを使用したカスタムのサードパーティ製キーストア プロバイダーもサポートされています。 これにより、ドライバーが暗号化された列にアクセスする場合にキーストア プロバイダーを使用できるように、アプリケーションでキーストア プロバイダーの読み込み、クエリ、および構成を行うことができます。 アプリケーションはまた、SQL Server に格納するための CEK を暗号化し、ODBC で暗号化された列にアクセスする以外のタスクを実行するために、キーストア プロバイダーと直接やりとりする場合もあります。詳細については、「[カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)」を参照してください。
+ODBC Driver for SQL Server では、CEKeystoreProvider インターフェイスを使用したカスタムのサードパーティ製キーストア プロバイダーもサポートされています。 これにより、ドライバーが暗号化された列にアクセスする場合にキーストア プロバイダーを使用できるように、アプリケーションでキーストア プロバイダーの読み込み、クエリ、および構成を行うことができます。 アプリケーションはまた、SQL Server に格納するための CEK を暗号化し、ODBC で暗号化された列にアクセスする以外のタスクを実行するために、キーストア プロバイダーと直接やりとりする場合もあります。詳細については、「[カスタム キーストア プロバイダー](custom-keystore-providers.md)」を参照してください。
 
 カスタム キーストア プロバイダーとのやりとりには、2 つの接続属性が使用されます。 これらは次のとおりです。
 
@@ -436,7 +459,7 @@ ODBC Driver for SQL Server では、CEKeystoreProvider インターフェイス�
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |:---|:---|
 |`ConnectionHandle`|[入力] 接続ハンドル。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドルを介して読み込まれたプロバイダーは、同じプロセス内の他のいずれからもアクセス可能です。|
 |`Attribute`|[入力] 設定する属性: `SQL_COPT_SS_CEKEYSTOREPROVIDER` 定数。|
@@ -445,7 +468,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 ドライバーは、プラットフォーム定義の動的なライブラリー読み込みメカニズム (Linux および macOS の場合は `dlopen()`、Windows の場合は `LoadLibrary()`) を使用して ValuePtr パラメーターで識別されたライブラリーの読み込みを試み、そこで定義されているプロバイダーを自身が認識しているプロバイダーのリストに追加します。 次のエラーが発生することがあります。
 
-| Error | [説明] |
+| エラー | 説明 |
 |:--|:--|
 |`CE203`|動的なライブラリを読み込めませんでした。|
 |`CE203`|"CEKeyStoreProvider" エクスポート シンボルがライブラリ内で見つかりませんでした。|
@@ -456,7 +479,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > アプリケーション プログラマーは、任意のカスタム プロバイダーを必要とする任意のクエリを任意の接続を介して送信する前に、そのカスタム プロバイダーを確実に読み込んでおく必要があります。 このようにしないと、エラーが発生します。
 
-| Error | [説明] |
+| エラー | 説明 |
 |:--|:--|
 |`CE200`|キーストア プロバイダー %1 が見つかりません。 適切なキーストア プロバイダー ライブラリが読み込まれていることを確認します。|
 
@@ -471,7 +494,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |:---|:---|
 |`ConnectionHandle`|[入力] 接続ハンドル。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドルを介して読み込まれたプロバイダーは、同じプロセス内の他のいずれからもアクセス可能です。|
 |`Attribute`|[入力] 取得する属性: `SQL_COPT_SS_CEKEYSTOREPROVIDER` 定数。|
@@ -498,7 +521,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |:---|:---|
 |`name`|[入力] 設定時にデータが送信される先のプロバイダーの名前。 取得時には無視されます。 null で終了するワイド文字列。|
 |`dataSize`|[入力] 構造体に続くデータ配列のサイズ。|
@@ -511,17 +534,17 @@ char data[];
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |:---|:---|
 |`ConnectionHandle`| [入力] 接続ハンドル。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドルを介して読み込まれたプロバイダーは、同じプロセス内の他のいずれからもアクセス可能です。|
 |`Attribute`|[入力] 設定する属性: `SQL_COPT_SS_CEKEYSTOREDATA` 定数。|
 |`ValuePtr`|[入力] CEKeystoreData 構造体を指すポインター。 構造体の名前フィールドでは、データが対象とされているプロバイダーが識別されます。|
 |`StringLength`|[入力] SQL_IS_POINTER 定数|
 
-エラーに関する追加の詳細情報は、[SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx) を介して取得できます。
+エラーに関する追加の詳細情報は、[SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md) を介して取得できます。
 
 > [!NOTE]
-> プロバイダーでは必要に応じて接続ハンドルを使用して、書き込まれたデータを特定の接続に関連付けることができます。 これは、接続ごとの構成を実装する場合に役立ちます。 また、データを送信するのに使用した接続に関係なく、接続コンテキストが無視され、データが同じように扱われる場合もあります。 詳細については、「[コンテキストの関連付け](../../connect/odbc/custom-keystore-providers.md#context-association)」を参照してください。
+> プロバイダーでは必要に応じて接続ハンドルを使用して、書き込まれたデータを特定の接続に関連付けることができます。 これは、接続ごとの構成を実装する場合に役立ちます。 また、データを送信するのに使用した接続に関係なく、接続コンテキストが無視され、データが同じように扱われる場合もあります。 詳細については、「[コンテキストの関連付け](custom-keystore-providers.md#context-association)」を参照してください。
 
 #### <a name="reading-data-from-a-provider"></a>プロバイダーからのデータの読み取り
 
@@ -531,7 +554,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引数 | [説明] |
+| 引数 | 説明 |
 |:---|:---|
 |`ConnectionHandle`|[入力] 接続ハンドル。 有効な接続ハンドルである必要がありますが、1 つの接続ハンドルを介して読み込まれたプロバイダーは、同じプロセス内の他のいずれからもアクセス可能です。|
 |`Attribute`|[入力] 取得する属性: `SQL_COPT_SS_CEKEYSTOREDATA` 定数。|
@@ -539,11 +562,11 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`BufferLength`|[入力] SQL_IS_POINTER 定数|
 |`StringLengthPtr`|[出力] BufferLength を返す先のバッファーを指すポインター。 *ValuePtr が null ポインターである場合、長さは返されません。|
 
-呼び出し元は、CEKEYSTOREDATA 構造体をたどるのに十分な長さのバッファーを、書き込み先のプロバイダーに確実に割り当てる必要があります。 戻ると、その dataSize フィールドは、プロバイダーから読み取られたデータの実際の長さで更新されます。 エラーに関する追加の詳細情報は、[SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx) を介して取得できます。
+呼び出し元は、CEKEYSTOREDATA 構造体をたどるのに十分な長さのバッファーを、書き込み先のプロバイダーに確実に割り当てる必要があります。 戻ると、その dataSize フィールドは、プロバイダーから読み取られたデータの実際の長さで更新されます。 エラーに関する追加の詳細情報は、[SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md) を介して取得できます。
 
 このインターフェイスでは、アプリケーションとキーストア プロバイダーの間で転送されるデータの形式に対して追加の要件は設定されていません。 各プロバイダーでは、必要に応じて独自のプロトコル/データ フォーマットを定義できます。
 
-独自のキーストア プロバイダーを実装する例については、「[カスタム キーストア プロバイダー](../../connect/odbc/custom-keystore-providers.md)」を参照してください。
+独自のキーストア プロバイダーを実装する例については、「[カスタム キーストア プロバイダー](custom-keystore-providers.md)」を参照してください。
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Always Encrypted を使用するときの ODBC ドライバーの制限事項
 
@@ -569,11 +592,11 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 - 暗号化テキストを varbinary(max) 形式 (上記で取得したような) で挿入するには、`BCPMODIFYENCRYPTED` オプションを TRUE に設定して BCP IN 操作を実行します。 結果として得られたデータを暗号化解除できるようにするには、変換先列の CEK を、暗号化テキストを最初に取得したときの CEK と確実に同じにしてください。
 
-**bcp** ユーティリティーを使用する場合: `ColumnEncryption` 設定を制御するには、-D オプションを使用して、必要な値を含む DSN を指定します。 暗号テキストを挿入するには、ユーザーの `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 設定を確実に有効にします。
+**bcp** ユーティリティを使用する場合:`ColumnEncryption` 設定を制御するには、-D オプションを使用して、目的の値を含む DSN を指定します。 暗号テキストを挿入するには、ユーザーの `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 設定を確実に有効にします。
 
 次の表は、暗号化された列を操作するときのアクションの要約を示しています。
 
-|`ColumnEncryption`|BCP の方向|[説明]|
+|`ColumnEncryption`|BCP の方向|説明|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (クライアントへ)|暗号化テキストを取得します。 観察対象のデータ型は **varbinary(max)** です。|
 |`Enabled`|OUT (クライアントへ)|プレーンテキストを取得します。 ドライバーでは、列データが暗号化解除されます。|
@@ -590,19 +613,19 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 ### <a name="connection-string-keywords"></a>接続文字列キーワード
 
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
-|`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>*type*、*data* --(バージョン17.4 以降) では、secure エンクレーブと構成証明プロトコルの*種類*、および関連する構成証明データ*データ*を使用して Always Encrypted を有効にします。 <br><br>既定値は `Disabled` です。|
+|`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>*type*、*data* -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブ、構成証明プロトコルの *type*、関連付けられた構成証明データの *data* が設定された Always Encrypted を有効にします。 <br><br>既定では、 `Disabled`です。|
 |`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
-|`KeyStorePrincipalId` | `KeyStoreAuthentication`  = `KeyVaultPassword` の場合は、この値を有効な Azure Active Directory ユーザー プリンシパル名に設定します。 <br>`KeyStoreAuthetication`  = `KeyVaultClientSecret` の場合は、この値を有効な Azure Active Directory アプリケーション クライアント ID に設定します。 |
-|`KeyStoreSecret` | `KeyStoreAuthentication`  = `KeyVaultPassword` の場合は、この値を対応するユーザー名のパスワードに設定します。 <br>`KeyStoreAuthentication`  = `KeyVaultClientSecret` の場合は、この値を、有効な Azure Active Directory アプリケーション クライアント ID に関連付けられたアプリケーション シークレットに設定します。 |
+|`KeyStorePrincipalId` | `KeyStoreAuthentication` = `KeyVaultPassword` の場合は、この値を有効な Azure Active Directory ユーザー プリンシパル名に設定します。 <br>`KeyStoreAuthetication` = `KeyVaultClientSecret` の場合は、この値を有効な Azure Active Directory アプリケーション クライアント ID に設定します。 |
+|`KeyStoreSecret` | `KeyStoreAuthentication` = `KeyVaultPassword` の場合は、この値を対応するユーザー名のパスワードに設定します。 <br>`KeyStoreAuthentication` = `KeyVaultClientSecret` の場合は、この値を、有効な Azure Active Directory アプリケーション クライアント ID に関連付けられたアプリケーション シークレットに設定します。 |
 
 
 ### <a name="connection-attributes"></a>接続属性
 
-|[オブジェクト名]|型|[説明]|  
+|名前|Type|説明|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> *型*へのポインター、*データ*文字列--(バージョン17.4 以降) で secure エンクレーブを有効にします。|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> *type*、*data* 文字列のポインター -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブを使用して有効にします|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定] CEKeystoreProvider の読み込みを試みます<br>[取得] CEKeystoreProvider 名を返します|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|接続後|[設定] CEKeystoreProvider にデータを書き込みます<br>[取得] CEKeystoreProvider からデータを読み取ります|
 |`SQL_COPT_SS_CEKCACHETTL`|接続後|[設定] CEK キャッシュ TTL を設定します<br>[取得] 現在の CEK キャッシュ TTL を取得します|
@@ -610,25 +633,42 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 ### <a name="statement-attributes"></a>ステートメント属性
 
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- ステートメントに対して Always Encrypted が無効にされます <br>`SQL_CE_RESULTSETONLY` (1) -- 暗号化解除のみ。 結果セットと戻り値は暗号化解除され、パラメーターは暗号化されません <br>`SQL_CE_ENABLED` (3) -- Always Encrypted は有効にされ、パラメーターと結果の両方に使用されます|
 
 ### <a name="descriptor-fields"></a>記述子フィールド
 
-|IPD フィールド|サイズ/型|既定値|[説明]|
+|IPD フィールド|サイズ/型|Default value|説明|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 バイト)|0|0 (既定値) の場合: このパラメーターを暗号化するかどうかは、暗号化メタデータの可用性によって決まります。<br><br>ゼロ以外の場合: このパラメーターで暗号化メタデータが使用可能な場合、それは暗号化されます。 それ以外の場合、要求は次のエラーで失敗します: [CE300] [Microsoft][ODBC Driver 13 for SQL Server]必須の暗号化がパラメーターに指定されましたが、サーバーから暗号化メタデータが提供されませんでした。|
 
 ### <a name="bcp_control-options"></a>bcp_control オプション
 
-|オプション名|既定値|[説明]|
+|オプション名|Default value|説明|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|TRUE の場合、varbinary (max) 値を暗号化された列に挿入できるようにします。 FALSE の場合、正しい型と暗号化メタデータが提供されていない限り、挿入を阻止します。|
+
+## <a name="troubleshooting"></a>トラブルシューティング
+
+Always Encrypted の使用に関する問題が発生した場合は、次の点を確認します。
+
+- 目的の列を暗号化する CEK が存在し、サーバーにアクセスできること。
+
+- CEK を暗号化する CMK に、サーバー上にアクセス可能なメタデータがあり、クライアントからもアクセスできること。
+
+- `ColumnEncryption` は、DSN、接続文字列、または接続属性で有効であり、セキュリティで保護されたエンクレーブを使用している場合は、正しい形式であること。
+
+さらに、セキュリティで保護されたエンクレーブを使用する場合、構成証明エラーにより、次の表に従って、構成証明プロセスでエラーが発生した手順が特定されます。
+
+|手順|説明|
+|----|-----------|
+|0 から 99| 構成証明の応答が無効か、署名の検証エラーです。 |
+|100 から 199| 構成証明 URL から証明書を取得中にエラーが発生しました。 `<attestation URL>/v2.0/signingCertificates` が有効であり、アクセスできることを確認してください。 |
+|200 から 299| エンクレーブの ID が予期しない形式か正しくありません。 |
+|300 から 399| エンクレーブを使用してセキュリティで保護されたチャネルを確立中にエラーが発生しました。 |
 
 ## <a name="see-also"></a>参照
 
 - [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
-- [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

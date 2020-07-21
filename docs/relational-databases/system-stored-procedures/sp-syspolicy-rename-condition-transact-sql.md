@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_rename_condition (TRANSACT-SQL) |Microsoft Docs
+title: sp_syspolicy_rename_condition (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 077ec13d8a4cfa5fb42c0b728cd36842a6672e52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081491"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892723"
 ---
-# <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ポリシー ベースの管理で既存の条件の名前を変更します。  
   
@@ -40,28 +40,28 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` 名前を変更する条件の名前です。 *名前*は**sysname**場合に、指定する必要があります*condition_id*は NULL です。  
+`[ @name = ] 'name'`名前を変更する条件の名前を指定します。 *名前*は**sysname**であり、 *condition_id*が NULL の場合に指定する必要があります。  
   
-`[ @condition_id = ] condition_id` 名前を変更する条件の識別子です。 *condition_id*は**int**場合に、指定する必要があります*名前*は NULL です。  
+`[ @condition_id = ] condition_id`名前を変更する条件の識別子を指定します。 *condition_id*は**int**です。 *name*が NULL の場合は、を指定する必要があります。  
   
-`[ @new_name = ] 'new_name'` 新しい条件の名前です。 *新しい名前*は**sysname**、必要があります。 NULL または空の文字列を指定することはできません。  
+`[ @new_name = ] 'new_name'`条件の新しい名前を指定します。 *new_name*は**sysname**であり、必須です。 NULL または空の文字列を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_rename_condition は msdb システム データベースのコンテキストで実行する必要があります。  
   
- いずれかの値を指定する必要があります*名前*または*condition_id*します。 どちらも NULL にできません。 これらの値を取得するには、msdb.dbo.syspolicy_conditions システム ビューをクエリします。  
+ *名前*または*condition_id*のいずれかの値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_conditions システムビューに対してクエリを実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
->  資格情報が昇格される可能性:PolicyAdministratorRole ロールのユーザーがサーバー トリガーを作成しのインスタンスの運用に影響する可能性のあるポリシーの実行をスケジュール設定、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+>  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、の構成の制御によって信頼されているユーザーのみに付与する必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、' Change Tracking Enabled' という条件を変更します。  
+ 次の例では、' Change Tracking Enabled ' という名前の条件の名前を変更します。  
   
 ```  
 EXEC msdb.dbo.sp_syspolicy_rename_condition @name = N'Change Tracking Enabled'  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

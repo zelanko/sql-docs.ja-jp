@@ -1,5 +1,6 @@
 ---
-title: Reporting Services レポートの問題のトラブルシューティング | Microsoft Docs
+title: Reporting Services レポートの問題のトラブルシューティング
+description: この記事では、ネイティブ モードまたは SharePoint モードのレポート サーバーでのレポートのデザイン、プレビュー、エクスポート、パブリッシュ、表示に関する問題のトラブルシューティングを行います。
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573876"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662802"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services レポートの問題のトラブルシューティング
 このトピックは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] レポートのデザイン、レポートのプレビュー、ネイティブ モードまたは SharePoint モードのレポート サーバーへのレポートのパブリッシュ、レポート サーバーでのレポートの表示、別のファイル形式へのレポートのエクスポートに関する問題のトラブルシューティングを行ううえで参考になります。  
@@ -34,7 +35,7 @@ ms.locfileid: "65573876"
   
 呼び出し履歴を表示するには、レポート サーバーにローカル管理者の資格情報を使ってログオンし、レポート マネージャーのページを右クリックして **[ソースの表示]** をクリックします。 呼び出し履歴には、エラー メッセージの詳細なコンテキストが示されます。  
   
-## <a name="use-includessmanstudiofullincludesssmanstudiofullmd-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用してクエリと資格情報を検証する  
+## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用してクエリと資格情報を検証する  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] を使用すると、複雑なクエリをレポートに含める前に検証できます。   
   
 詳細については、「 [データベース エンジン クエリ エディター](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) 」と「 [オブジェクト エクスプローラーを使用したオブジェクトの管理](~/ssms/object/manage-objects-by-using-object-explorer.md)」を参照してください。  

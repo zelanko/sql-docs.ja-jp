@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c8c0fcc59f0ebac385b00a125f9ea6b8687d160f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112199"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297037"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>スクリプト タスクによるパフォーマンス カウンターの監視
 
@@ -40,7 +40,7 @@ ms.locfileid: "68112199"
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次の例では、カスタム パフォーマンス カウンターを作成し、カウンターの値を増やします。 最初に、パフォーマンス カウンターが既に存在しているかどうかを判別します。 パフォーマンス カウンターが作成されていない場合、スクリプトは **PerformanceCounterCategory** オブジェクトの **Create** メソッドを呼び出してパフォーマンス カウンターを作成します。 パフォーマンス カウンターが作成されたら、スクリプトはそのカウンターの値を増やします。 最後に、この例ではベスト プラクティスに従って、パフォーマンス カウンターが不要になると、そのカウンターに対して **Close** メソッドを呼び出します。  
   
 > [!NOTE]  

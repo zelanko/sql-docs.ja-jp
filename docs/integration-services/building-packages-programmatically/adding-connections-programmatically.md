@@ -22,14 +22,14 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3bc66d6191d03f1ba789725caad7bff501896af3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dbeccf07c052eb99c3a110cc5f3d8811cf9529ce
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008005"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71299095"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
 

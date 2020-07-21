@@ -1,5 +1,6 @@
 ---
 title: モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する | Microsoft Docs
+description: Reporting Services モバイル レポート内の任意のゲージ、グラフ、またはデータ グリッドから、別のモバイル レポートまたはカスタム URL にドリルスルーを追加することができます。
 ms.date: 09/20/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b42c68daa49145ba4703c8cd141dc433aa7d64df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280716"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448323"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>モバイル レポートから他のモバイル レポートまたは URL にドリルスルーを追加する
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポート内の任意のゲージ、グラフ、またはデータ グリッドから、別のモバイル レポートまたはカスタム URL にドリルスルーを追加することができます。 
@@ -26,7 +27,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**ヒント**: ターゲット レポートを作成し、それを最初に [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルに保存します。 ソース レポートからのパラメーターを渡す場合は、そのパラメーターをターゲット レポートにも追加します。 ソース レポートからターゲット レポートへのドリルスルーをセットアップできます。 [モバイル レポートへのパラメーターの追加](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)を行います。
+>**ヒント**:ターゲット レポートを作成し、それを最初に [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルに保存します。 ソース レポートからのパラメーターを渡す場合は、そのパラメーターをターゲット レポートにも追加します。 ソース レポートからターゲット レポートへのドリルスルーをセットアップできます。 [モバイル レポートへのパラメーターの追加](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)を行います。
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>モバイル レポートへのドリルスルーを設定する  
 
@@ -37,7 +38,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
 2. **[ビジュアルのプロパティ]** ウィンドウで、 **[ドリルスルー ターゲット]**  >  **[モバイル レポート]** の順に選択します。  
 3. サーバーとターゲット モバイル レポートを選択します。  
 
-   >注: ターゲット モバイル レポートがソース モバイル レポートと同じサーバー上にない場合は、次のセクションの説明に従って、カスタム URL を使用してそれに接続します。  
+   >注:ターゲット モバイル レポートがソース モバイル レポートと同じサーバー上にない場合は、次のセクションの説明に従って、カスタム URL を使用してそれに接続します。  
  
 4. ターゲット モバイル レポートを選択すると、使用可能な入力パラメーターが表示されます。これには、ターゲット モバイル レポートのデータセットに対して構成されたナビゲーター コントロールおよびパラメーターにバインドすることができるプロパティも含まれます。  
 
@@ -58,7 +59,7 @@ URL または別のモバイル レポートに対するドリルスルーがあ
   
    *カスタム URL プロパティへにドリルスルーする*  
   
-4. **[適用]** をクリックします。  
+4. **[Apply]** をクリックします。  
 
   
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]のモバイル レポートをプレビューすると、ドリルスルーで視覚化をクリックした場合には、ドリルスルーが無効になっている旨のメッセージが表示されます。 モバイル レポートを保存または公開してからそれを表示すると、その後は、ターゲットへは実際にドリルスルーするしかなく、 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] のレイアウト モードまたはプレビュー モードでのドリルスルーはできません。  
@@ -76,7 +77,7 @@ Web ポータルでは非表示項目を確認することができます。
 
 非表示の項目が、明るい色で表示されます。
     
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  
 * [Reporting Services モバイル レポートにパラメーターを追加する](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 

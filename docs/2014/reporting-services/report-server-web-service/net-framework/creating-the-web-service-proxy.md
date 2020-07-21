@@ -17,19 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520381"
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
   クライアントと Web サービスは、SOAP メッセージを使用して通信できます。SOAP メッセージは、入力パラメーターと出力パラメーターを XML としてカプセル化します。 プロキシ クラスは、パラメーターを XML 要素にマップした後、ネットワークを介して SOAP メッセージを送信します。 この方法では、プロキシ クラスによって、SOAP レベルで Web サービスと通信する必要がなくなり、SOAP および Web サービスのプロキシをサポートするあらゆる開発環境で Web サービスを呼び出すことができます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用して開発プロジェクトにプロキシ クラスを追加する方法は、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の WSDL ツールを使用すること、および [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] で Web 参照を追加することの 2 種類です。 ここでは、これらの方法について詳しく説明します。  
+ を使用して開発プロジェクトにプロキシクラスを追加するには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]の WSDL ツール[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]を使用する方法と、で[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Web 参照を追加する方法の2つがあります。 ここでは、これらの方法について詳しく説明します。  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>WSDL ツールを使用したプロキシの追加  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK には、Web サービス記述言語ツール (Wsdl.exe) が含まれています。これにより、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開発環境で使用する Web サービス プロキシを生成できます。 Web サービスをサポートする言語 (現在は C# と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) でクライアント プロキシを作成する場合に最も一般的な方法は、WSDL ツールを使用することです。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK には、Web サービス記述言語ツール (Wsdl.exe) が含まれています。これにより、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 開発環境で使用する Web サービス プロキシを生成できます。 Web サービスをサポートする言語 (現在は C# と[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) でクライアントプロキシを作成する最も一般的な方法は、WSDL ツールを使用することです。  
   
  **Wsdl.exe を使用してプロキシ クラスをプロジェクトに追加するには**  
   

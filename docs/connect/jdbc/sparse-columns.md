@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027723"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909581"
 ---
 # <a name="sparse-columns"></a>スパース列
 
@@ -35,7 +35,7 @@ ms.locfileid: "69027723"
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>[説明]
+### <a name="description"></a>説明
 
 このサンプルでは、列セットの検出方法を示します。 また、列セットの XML 出力を解析して、スパース列からデータを取得する方法も示します。
 

@@ -1,21 +1,21 @@
 ---
 title: 手順 8:レッスン 1 パッケージに注釈を付け、書式を設定する | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a494dd0ea0a4c5691bee93cd1a973132d6c4d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fffa5eed608e8cd3faeb13b084e15554e4a8092f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729412"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>レッスン 1-8:レッスン 1 パッケージに注釈を付け、書式を設定する 
 
@@ -51,13 +51,13 @@ ms.locfileid: "67902519"
   
 2.  注釈ボックスに、次のテキストを入力するか、コピーして貼り付けます。  
   
-        The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the DateKey column in the DimDate table, and writes the data to the NewFactCurrencyRate table.
+    このデータ フローは、ファイルからデータを抽出し、DimCurrency テーブルの CurrencyKey 列の値と DimDate テーブルの DateKey 列の値を参照して、データを NewFactCurrencyRate テーブルに書き込みます。
   
     注釈ボックスのテキストを折り返すには、改行する場所にカーソルを置いて、**Enter** を押します。  
   
-    注釈ボックスにテキストを追加しない場合、注釈ボックスの外側をクリックするとボックスの表示が消えます。  
+    注釈ボックスにテキストを追加しない場合、注釈ボックスの外側をクリックするとボックスの表示が消えます。  この動作により、注釈ボックスにテキストを貼り付けたい場合は、[注釈の追加] を選択する前にテキストをクリップボードにコピーします。 
   
-## <a name="go-to-next-task"></a>次の実習に進む
+## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 9:レッスン 1 パッケージをテストする](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7754190fe629412ddc08e7087626b05ff2c093d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700825"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 インスタンスに格納されている **Z** (標高) 値および **M** (メジャー) 値で補完された geometry インスタンスについて、Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。
   
@@ -41,11 +41,11 @@ ms.locfileid: "68027639"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型:**SqlChars**  
+ CLR の戻り値の型: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **Z** (標高) 値および **M** (メジャー) 値を含む `Point` インスタンスを作成する例を次に示します。 `STAsText()` は WKT 値 (1 2) を選択します。`AsTextZM()` は同じ WKT 値を選択し、**Z** および **M** の値も返すため、(1 2 3 4) が出力されます。  
   
 ```  

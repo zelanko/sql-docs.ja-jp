@@ -14,14 +14,14 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bad96bbe83bf2b4c9046a1bd305e351284a2111c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052249"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71299069"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
 
@@ -321,7 +321,7 @@ End Module
   
  タスク固有のクラスにキャストする代わりに <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> クラスをコードで使用する場合、次の利点があります。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
   
 -   コンパイル時にタスクの名前を知る必要がないため、すべてのタスクで動作する汎用ルーチンをコーディングできます。 このような汎用ルーチンには、タスク名を引数として受け取るメソッドが含まれます。このメソッド コードはすべてのタスクで動作します。 これは、テスト コードを記述するのに適したメソッドです。  
   

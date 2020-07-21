@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaf3f25807f1e7148e8f4229542a0ecacdd0bf95
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984287"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893382"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースから、アセンブリとそれに関連するすべてのファイルを削除します。 アセンブリは [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使って作成し、[ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md) を使って変更します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67984287"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]  
 [ WITH NO DEPENDENTS ]  
 [ ; ]  
@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  指定した場合、*assembly_name* だけが削除され、アセンブリで参照される依存アセンブリは削除されません。 指定しない場合、DROP ASSEMBLY では *assembly_name* とすべての依存アセンブリが削除されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アセンブリを削除すると、データベースからアセンブリと、ソース コードやデバッグ ファイルなどのアセンブリに関連するファイルが削除されます。  
   
  WITH NO DEPENDENTS を指定しない場合、DROP ASSEMBLY では *assembly_name* とすべての依存アセンブリが削除されます。 依存アセンブリの削除に失敗した場合、DROP ASSEMBLY ではエラーが返されます。  
@@ -68,7 +68,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  アセンブリの所有権、またはアセンブリに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、アセンブリ `HelloWorld` が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに既に作成されていることを前提としています。  
   
 ```  

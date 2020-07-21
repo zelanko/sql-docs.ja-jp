@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970452"
 ---
 # <a name="manage-data-collection"></a>データ コレクションの管理
-  使用することができます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]の有効化またはコレクションを変更するデータの収集を無効にする設定の構成、または管理データ ウェアハウスのデータの表示などに、プロシージャと、データ コレクションのさまざまな側面を管理する関数を格納します.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]またはの [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャと関数を使用すると、データコレクションの有効化または無効化、コレクションセットの構成の変更、管理データウェアハウスのデータの表示など、データコレクションのさまざまな側面を管理できます。  
   
 ## <a name="manage-data-collection-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用したデータ コレクションの管理  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーを使用することで、次のデータ コレクター関連のタスクを実行できます。  
@@ -113,7 +112,7 @@ ms.locfileid: "62918594"
   
  次の表に、構成情報や実行ログ データの取得に使用できるビューを示します。  
   
-|ビュー名|説明|  
+|ビューの名前|説明|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-config-store-transact-sql)|データ コレクターの構成を取得します。|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/syscollector-collection-items-transact-sql)|コレクション アイテムの情報を取得します。|  
@@ -171,8 +170,8 @@ ms.locfileid: "62918594"
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|ジェネリック SQL トレース コレクター型を使用したデータ収集時にログに記録されたイベントを取得します。|  
   
 ## <a name="see-also"></a>参照  
- [ストアド プロシージャの実行](../stored-procedures/execute-a-stored-procedure.md)   
- [SQL Server Management Studio の使用 [SQL Server]](../../database-engine/use-sql-server-management-studio.md)   
- [データ コレクション](data-collection.md)  
+ [ストアドプロシージャの実行](../stored-procedures/execute-a-stored-procedure.md)   
+ [SQL Server Management Studio を使用する](../../database-engine/use-sql-server-management-studio.md)   
+ [データコレクション](data-collection.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンの有効なアクセス許可の決定 | Microsoft Docs
+description: SQL Server データベース エンジンのさまざまなオブジェクトに対するアクセス許可を持つユーザーを決定する方法について説明します。これには、現在および以前のアクセス許可システムが含まれます。
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995628"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005621"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server データベース エンジンでは、さまざまなオブジェクトのアクセス許可が与えられます。この記事では、アクセス許可が与えられているユーザーを判断する方法について説明します。 SQL Server では、データベース エンジンのために 2 つのアクセス許可システムが実装されます。 固定ロールの古いほうのシステムでは、アクセス許可が事前構成されました。 SQL Server 2005 より、より柔軟で正確なシステムが利用できます。 (この記事の情報は 2005 以降の SQL Server に適用されます。 SQL Server のバージョンによっては、利用できない種類のアクセス許可があります。)
 
@@ -33,7 +34,7 @@ SQL Server データベース エンジンでは、さまざまなオブジェ�
 >  * 古いシステムと新しいシステムには類似点があります。 たとえば、`sysadmin` 固定サーバー ロールのメンバーシップには、`CONTROL SERVER` と同様のアクセス許可が与えられます。 ただし、システムは同じではありません。 たとえば、あるログインに `CONTROL SERVER` アクセス許可のみが与えられ、ストアド プロシージャが `sysadmin` 固定サーバー ロールのメンバーシップを確認する場合、アクセス許可確認は失敗します。 この逆も当てはまります。 
 
 
-## <a name="summary"></a>[概要]   
+## <a name="summary"></a>まとめ   
 * サーバー レベルのアクセス許可は、固定サーバー ロールかユーザー定義サーバー ロールのメンバーシップから与えられます。 全員が `public` 固定サーバー ロールに属し、そこで割り当てられたアクセス許可を受け取ります。   
 * サーバー レベルのアクセス許可は、ログインに与えられるアクセス許可かユーザー定義サーバー ロールから与えられます。   
 * データベース レベルのアクセス許可は、固定データベース ロールのメンバーシップか各ロールベースのユーザー定義データベース ロールから与えられます。 全員が `public` 固定データベース ロールに属し、そこで割り当てられたアクセス許可を受け取ります。   
@@ -145,7 +146,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 例:   
+`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 次に例を示します。   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
@@ -156,5 +157,5 @@ REVERT;
 ## <a name="see-also"></a>参照:
 
 [データベース エンジンの権限の概要](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[チュートリアル:データベース エンジンの概要](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[チュートリアル:データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 

@@ -1,5 +1,5 @@
 ---
-title: GetPermissions および SetPermissions メソッドの例 (vc++) |Microsoft Docs
+title: GetPermissions および SetPermissions メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], VC++ example
 - GetPermissions method [ADOX], VC++ example
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b866e0671786552cfcf1fef70579eb2f83d19de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 238b9d82c3d71fde58a967b9d73d6a410f3883a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966254"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764875"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions および SetPermissions メソッドの例 (VC++)
-この例では、 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)と[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッド。 次のコードでは、フル アクセス権を Orders テーブルに、管理者ユーザーに与えられます。  
+この例では、 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)メソッドと[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッドを示します。 次のコードは、Orders テーブルへのフルアクセスを管理ユーザーに提供します。  
   
 ```  
 // BeginGrantPermissionCpp.cpp  
@@ -97,7 +97,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in GrantPermissionsX...."<< endl;  
+      cout << "Error occurred in GrantPermissionsX...."<< endl;  
    }  
    ::CoUninitialize();  
 }  

@@ -1,7 +1,8 @@
 ---
 title: 拡張キー管理 (EKM) | Microsoft Docs
+description: 拡張キー管理を構成して使用する方法と、それが SQL Server のデータ暗号化機能にどのように適合するかについて説明します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,18 +13,17 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049885"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896789"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
   
  法規制遵守の必要性やデータ プライバシーに対する関心の高まりを受けて、組織では、"多層防御" のソリューションを実現するための手段として暗号化が活用されるようになっています。 このアプローチは多くの場合、データベースの暗号化管理ツールを使用するだけで実現できるものではありません。 各ハードウェア ベンダーからは、 *ハードウェア セキュリティ モジュール* (HSM) を使用して企業のキー管理の問題に対処する製品が提供されています。 HSM デバイスでは、暗号化キーがハードウェア モジュールまたはソフトウェア モジュールに格納されます。 この場合、暗号化キーが暗号化データと一緒に保管されないため、より安全なソリューションが実現されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "68049885"
  Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
   
 ## <a name="ekm-configuration"></a>EKM の構成  
- 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+ 拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  既定では、拡張キー管理は無効です。 この機能を有効にするには、次のオプションと値を使用して sp_configure コマンドを実行します。  
   
@@ -91,7 +91,7 @@ GO
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>ユーザー名/パスワードを使用する EKM デバイス固有の基本認証  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、*ユーザー名/パスワード*のペアを使用する基本認証をサポートしている EKM モジュールで、資格情報による透過的な認証を利用できます。 資格情報の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
- EKM プロバイダーに対して資格情報を作成し、それをログイン (Windows アカウントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントの両方) にマップすることにより、ログインごとに EKM モジュールにアクセスできます。 資格情報の *[識別]* フィールドにユーザー名を含め、 *[シークレット]* フィールドに EKM モジュールに接続するためのパスワードを含めます。  
+ EKM プロバイダーに対して資格情報を作成し、それをログイン (Windows アカウントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アカウントの両方) にマップすることにより、ログインごとに EKM モジュールにアクセスできます。 資格情報の *[ID]* フィールドにはユーザー名が含まれ、 *[シークレット]* フィールドには EKM モジュールに接続するためのパスワードが含まれます。  
   
  ログインにマップされた EKM プロバイダーの資格情報がない場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントにマップされた資格情報が使用されます。  
   

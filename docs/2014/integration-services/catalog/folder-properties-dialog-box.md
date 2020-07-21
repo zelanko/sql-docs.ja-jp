@@ -11,15 +11,14 @@ f1_keywords:
 - sql12.ssis.ssms.isfolderprop.general.f1
 - sql12.ssis.ssms.isfolderprop.permissions.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4075a429f94451d7b00ee44ac1ac799c29787a41
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771588"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439079"
 ---
 # <a name="folder-properties-dialog-box"></a>[フォルダーのプロパティ] ダイアログ ボックス
   フォルダーには、`SSISDB` カタログ内のプロジェクトおよび環境が含まれます。 フォルダーごとに、フォルダーの内容に適用される権限を定義します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の権限の詳細については、「[catalog.grant_permission &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)」をご覧ください。  
@@ -36,7 +35,7 @@ ms.locfileid: "62771588"
   
 5.  **[OK]** をクリックして変更を受け入れ、 **[フォルダーのプロパティ]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; サーバー](integration-services-ssis-server-and-catalog.md)   
  [catalog.grant_permission &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   

@@ -21,15 +21,15 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1042bcf452b369b295476a662028350f75e2aaab
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024907"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279204"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用し、付加列 (非キー列) を追加して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の非クラスター化インデックスの機能を拡張する方法について説明します。 非キー列を含めることにより、より多くのクエリをカバーする非クラスター化インデックスを作成できます。 これは、非キー列には次の利点があるためです。  
   
@@ -41,15 +41,15 @@ ms.locfileid: "68024907"
 > [!NOTE]  
 > クエリによって参照されるすべての列がインデックスに含まれているときは、一般的に、そのインデックスは *クエリをカバーしている*と呼ばれます。  
    
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="DesignRecs"></a> 設計上の推奨事項  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a> 設計上の推奨事項  
   
--   検索や参照に使用される列のみがキー列になるように、大きなサイズのインデックス キーを使用して、非クラスター化インデックスを設計し直します。 クエリをカバーする他のすべての列を非キー列にします。 その結果、クエリをカバーするために必要なすべての列を含むことができますが、インデックス キー自体は小さく、効率的です。  
+-   検索や参照に使用される列のみがキー列になるように、大きなサイズのインデックス キーが含まれる非クラスター化インデックスを設計し直します。 クエリをカバーする他のすべての列を非キー列にします。 その結果、クエリをカバーするために必要なすべての列を含むことができますが、インデックス キー自体は小さく、効率的です。  
   
 -   非クラスター化インデックスに非キー列を含め、現在のインデックス サイズの制限で (最大 32 個のキー列と、最大 1,700 バイトのインデックス キー サイズ) を超えないようにします ([!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] より前は、最大 16 個のキー列と最大 900 バイトのインデックス キーのサイズでした)。 インデックス キー列の数やインデックス キーのサイズを計算するときに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では非キー列が考慮されません。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   非キー列を定義できるのは、クラスター化されていないインデックスだけです。  
   
@@ -67,12 +67,12 @@ ms.locfileid: "68024907"
   
     -   **varchar**、 **nvarchar**、または **varbinary** の各列の長さを拡張します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>非キー列を含むインデックスを作成するには  
   
@@ -88,19 +88,19 @@ ms.locfileid: "68024907"
   
 6.  **[インデックス キー列]** タブで、 **[追加...]** をクリックします。  
   
-7.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+7.  _[table\_name_**から列を選択]** ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
 9. **[付加列]** タブで、 **[追加...]** をクリックします。  
   
-10. _[table\_name_ **から列を選択]** ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
+10. _[table\_name_**から列を選択]** ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 11. **[OK]** をクリックします。  
   
 12. **[新しいインデックス]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>非キー列を含むインデックスを作成するには  
   

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4967d494f381b7562c1bbecdd04811d22239e66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934933"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>[サーバーのプロパティ] ([全般] ページ) - SQL Server Management Studio
   このページを使用すると、インストールされている [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み取り専用情報を表示できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "62809354"
 ## <a name="property-grid"></a>[プロパティ] グリッド  
  サーバー名、サーバーのオペレーティング システム、プロセッサ数など、選択したサーバーのプロパティを表示します。  
   
- **名前**  
+ **Name**  
  サーバー インスタンスの名前を表示します。  
   
  **Product**  
@@ -42,7 +41,7 @@ ms.locfileid: "62809354"
  **バージョン**  
  現在実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションのバージョン番号を表示します。  
   
- **言語**  
+ **Language**  
  実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでサポートされる言語を表示します。  
   
  **[メモリ]**  
@@ -66,7 +65,7 @@ ms.locfileid: "62809354"
 ## <a name="description-field"></a>[説明] フィールド  
  サーバーのプロパティに関する追加情報を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

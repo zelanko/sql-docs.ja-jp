@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015543"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "68015543"
   
  DBTYPE_IUNKNOWN はバインドのデータ型として指定されているため、列または対象パラメーターの型と一致している必要があります。 データを行セット インターフェイスから ISequentialStream を使用して送信する場合は、変換できません。 パラメーターの場合は、ICommandWithParameters::SetParameterInfo を使用しないで、別の型を指定して強制的に変換させます。そのためには、BLOB データをすべてローカルにキャッシュするプロバイダーを使用して、SQL Server に送信する前にそのデータを変換する必要があります。 大きな BLOB をキャッシュし、ローカルに変換すると、パフォーマンスが低下します。  
   
- 詳細については、「 [blob と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
+ 詳細については、「[BLOB と OLE オブジェクト](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  

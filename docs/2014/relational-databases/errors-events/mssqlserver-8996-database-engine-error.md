@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41f92430eecb0eb06fbca18bbb552a2e85ce6069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6ad3945b2ab1aa4138512e10cf9104e9d5bed8d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761838"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550817"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|8996|  
@@ -48,6 +47,6 @@ ms.locfileid: "62761838"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

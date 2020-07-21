@@ -1,23 +1,24 @@
 ---
-title: 環境変数を使って SQL Server の設定を構成する
+title: Linux 上で SQL Server の環境変数を構成する
 description: この記事では、Linux 上で、環境変数を使って SQL Server 2017 の特定の設定を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a09f79c3e5dec6c181855119e36ff0d4f0d7210e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899637"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上で環境変数を使って SQL Server の設定を構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -28,7 +29,7 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2017 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Linux では、いくつかの異なる環境変数を使って SQL Server 2019 プレビューを構成することができます。 このような変数は、次の 2 つのシナリオで使用されます。
+Linux では、いくつかの異なる環境変数を使って SQL Server 2019 を構成することができます。 このような変数は、次の 2 つのシナリオで使用されます。
 
 ::: moniker-end
 
@@ -43,12 +44,12 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 環境変数 | [説明] |
+| 環境変数 | 説明 |
 |-----|-----|
 | **ACCEPT_EULA** | **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージの設定が必要です。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
-| **MSSQL_LCID** | SQL Server 用に使う言語 ID を設定します。 たとえば、1036 はフランス語です。 |
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 指定できる値は、次のとおりです。 </br></br>**評価**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
+| **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば、1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 これにより、言語 ID (LCID) から照合順序への既定のマッピングがオーバーライドされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | SQL Server が使用できるメモリの最大容量 (MB 単位) を設定します。 既定では、これは物理メモリの合計容量の 80% です。 |
 | **MSSQL_TCP_PORT** | SQL Server がリッスンする TCP ポートを構成します (既定値は 1433)。 |
@@ -67,12 +68,12 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 環境変数 | [説明] |
+| 環境変数 | 説明 |
 |-----|-----|
 | **ACCEPT_EULA** | **ACCEPT_EULA** 変数を任意の値に設定し、[使用許諾契約書](https://go.microsoft.com/fwlink/?LinkId=746388)の承諾を確定します。 SQL Server イメージの設定が必要です。 |
 | **MSSQL_SA_PASSWORD** | SA ユーザーのパスワードを構成します。 |
-| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 有効な値は次のとおりです。 </br></br>**Evaluation**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
-| **MSSQL_LCID** | SQL Server 用に使う言語 ID を設定します。 たとえば、1036 はフランス語です。 |
+| **MSSQL_PID** | SQL Server のエディションまたはプロダクト キーを設定します。 指定できる値は、次のとおりです。 </br></br>**評価**</br>**開発者**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**プロダクト キー**</br></br>プロダクト キーを指定する場合は、#####-#####-#####-#####-##### という形式にする必要があります。ここで、'#' は数字または文字を表します。|
+| **MSSQL_LCID** | SQL Server に使用する言語 ID を設定します。 たとえば、1036 はフランス語です。 |
 | **MSSQL_COLLATION** | SQL Server の既定の照合順序を設定します。 これにより、言語 ID (LCID) から照合順序への既定のマッピングがオーバーライドされます。 |
 | **MSSQL_MEMORY_LIMIT_MB** | SQL Server が使用できるメモリの最大容量 (MB 単位) を設定します。 既定では、これは物理メモリの合計容量の 80% です。 |
 | **MSSQL_TCP_PORT** | SQL Server がリッスンする TCP ポートを構成します (既定値は 1433)。 |
@@ -94,7 +95,7 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 この例では、構成済みの環境変数を使って `mssql-conf setup` を実行します。 以下の環境変数が指定されています。
 
 - **ACCEPT_EULA**: エンド ユーザー使用許諾契約に同意します。
-- **MSSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
+- **MSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
 - **MSSQL_SA_PASSWORD**: 強力なパスワードを設定します。
 - **MSSQL_TCP_PORT**: SQL Server がリッスンする TCP ポートを 1234 に設定します。
 
@@ -107,7 +108,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 この docker コマンドの例では、以下の環境変数を使って新しい SQL Server コンテナーを作成します。
 
 - **ACCEPT_EULA**: エンド ユーザー使用許諾契約に同意します。
-- **MSSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
+- **MSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
 - **MSSQL_SA_PASSWORD**: 強力なパスワードを設定します。
 - **MSSQL_TCP_PORT**: SQL Server がリッスンする TCP ポートを 1234 に設定します。 つまり、この例では、ホストのポートにポート 1433 (既定値) をマップするのではなく、`-p 1234:1234` コマンドを使ってカスタム TCP ポートをマップする必要があります。
 
@@ -136,18 +137,18 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Linux/macOS 上で Docker を実行している場合は、単一引用符を含む次の構文を使います。
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 Windows 上で Docker を実行している場合は、二重引用符を含む次の構文を使います。
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ここに記載されていないその他の SQL Server 設定については、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md)」をご覧ください。
 

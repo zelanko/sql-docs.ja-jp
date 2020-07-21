@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb465d2a6f0d1cd69483789e39c47fda904e1800
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b46bd78709861b4967bdb9657f445d35d819e3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637586"
 ---
-# <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
+# <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   実行内のコンポーネント出力からデータ タップを削除します。 データ タップの一意な識別子が実行のインスタンスに関連付けられています。  
   
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  catalog.add_data_tap ストアド プロシージャを使用して作成されるデータ タップの一意識別子。 *data_tap_id* は **bigint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パッケージに同じ名前の複数のデータ フロー タスクが含まれる場合、データ タップは指定された名前で最初に見つかったデータ フロー タスクに追加されます。  
   
 ## <a name="return-codes"></a>リターン コード  
@@ -47,7 +47,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="result-set"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データ タップを削除するには、実行のインスタンスが作成済みの状態 ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **status** 列の値が 1) である必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

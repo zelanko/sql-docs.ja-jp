@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7bf44403cc058e130c59fe65515eaa19c45f08c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749769"
 ---
-# <a name="catalogadddatatap"></a>catalog.add_data_tap 
+# <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   パッケージ データ フロー内のコンポーネントの出力で、実行のインスタンスのデータ タップを追加します。  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。  
   
- 既定では、ファイルが格納されている、\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps フォルダーです。  
+ 既定では、ファイルは \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps フォルダーに格納されます。  
   
  *data_filename* は **nvarchar (4000)** です。  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  データ タップの ID を返します。 *data_tap_id* は **bigint** です。  
   
 ## <a name="example"></a>例  
- 次の例では、データ フロー タスク `\Package\Data Flow Task` において、データ フロー パス `'Paths[OLE DB Source.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (\<*ドライブ*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps) の `output0.txt` ファイルに格納されます。  
+ 次の例では、データ フロー タスク `\Package\Data Flow Task` において、データ フロー パス `'Paths[OLE DB Source.OLE DB Source Output]` 上にデータ タップが作成されます。 タップされたデータは、DataDumps フォルダー (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps) の `output0.txt` ファイルに格納されます。  
   
 ```sql
 Declare @execution_id bigint  
@@ -80,7 +80,7 @@ Exec SSISDB.Catalog.add_data_tap @execution_id, @task_package_path='\Package\Dat
 Exec SSISDB.Catalog.start_execution @execution_id  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データ タップを追加するには、実行のインスタンスが作成された状態である必要があります ([catalog.operations &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューの **[状態]** 列の値が 1)。 実行を処理すると状態の値が変わります。 [catalog.create_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)を呼び出すことによって、実行を作成できます。  
   
  add_data_tap ストアド プロシージャに関する考慮事項を以下に示します。  

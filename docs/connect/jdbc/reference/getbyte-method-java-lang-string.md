@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cfe3f65125f9369630cac6e2f8e8cd4533107b82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2aaefb2191598d69d7f45cd5fe37b52202c1d22d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953442"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926303"
 ---
 # <a name="getbyte-method-javalangstring"></a>getByte (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public byte getByte(java.lang.String sCol)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getByte メソッドは、java.sql.CallableStatement インターフェイスの getByte メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

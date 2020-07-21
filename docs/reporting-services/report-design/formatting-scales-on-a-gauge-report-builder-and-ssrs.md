@@ -1,5 +1,5 @@
 ---
-title: ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ゲージのスケールの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7044e079ddf6aa9ce322a742a78aa83059efca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 546af7322a8aeced15c0593fa2c1fdde5af632cc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580283"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079632"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、ゲージのスケールは、最小値と最大値で決められた範囲の数値であり、ゲージ上に表示されます。 通常、ゲージのスケールにはゲージ ラベルと目盛りがあり、ゲージ ポインターによって示された値を正確に読み取れるようになっています。 1 つのゲージ スケールに 1 つまたは複数のゲージ ポインターが関連付けられているのが普通です。 同じゲージに複数のスケールを指定できます。  
   
- ![ゲージのスケールの要素の概要](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "ゲージのスケールの要素の概要")  
+ ![ゲージ スケールの要素の概要](../../reporting-services/report-design/media/scaleoverviewdiagram.gif "ゲージ スケールの要素の概要")  
   
  複数のグループが定義されるグラフとは異なり、ゲージには 1 つの値しか表示されません。 スケールの最小値と最大値を定義する必要があります。 間隔の数は、最小値と最大値として指定された値に基づいて自動的に計算されます。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "65580283"
   
  スケールの書式設定をすぐに使用する場合は、「[ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="DefiningMinMax"></a> スケールの最小値、最大値、間隔の定義  
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> スケールの最小値、最大値、間隔の定義  
  ゲージは 0 ～ 100 のパーセンテージで計測される KPI の表示に使用されることが多く、ゲージの最小値と最大値のプロパティの既定値にはこれらの値が指定されています。 ただし、これらの値は、表示しようとする値のスケールを表していないことがあります。 KPI データ フィールドによって示される値を判断するロジックは組み込まれていないので、ゲージでは最小値および最大値が自動的に計算されません。 KPI データ フィールドの値が 0 ～ 100 の範囲でない場合は、ゲージに表示される 1 つの値にコンテキストを指定するために最小値および最大値のプロパティの値を明示的に設定する必要があります。  
   
  スケールには、目盛りと補助目盛りがあります。 また、目盛りにはラベルが付けられているのが普通です。 たとえば、スケールには 0、20、40、60、80、および 100 の目盛りがあります。 ラベルはそれらの目盛りに対応している必要があります。 ラベルの値の差をスケール間隔と言います。 この例では、スケール間隔は 20 に設定されます。 間隔のプロパティは、 **[放射状スケールのプロパティ]** ダイアログ ボックスまたは **[線形スケールのプロパティ]** ダイアログ ボックスで設定できます。  
@@ -47,13 +47,13 @@ ms.locfileid: "65580283"
   
  最初のラベルが表示される前に、スキップされる単位の数が間隔のオフセットによって決まります。 スケールに表示される後続の目盛りおよびラベルはすべて、指定された間隔を使用します。 ラベルまたは目盛りの間隔を 0 にした場合は、間隔を Auto にリセットした場合と同じです。  
   
-##  <a name="ReducingCollisions"></a> 乗数によるラベルの重なりの解消  
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> 乗数によるラベルの重なりの解消  
  値の桁数が多い場合は、ゲージが読みにくくなることがあります。 スケールの乗数を使用することで、値のスケールを大きくしたり小さくしたりできます。 スケールの乗数を指定した場合、スケールの元の値はスケールに表示される前に乗数によって乗算されます。 値のスケールを小さくするには、小数を指定する必要があります。 たとえば、スケールが 0 ～ 10000 のときにゲージに 0 ～ 10 と表示する場合、0.001 の乗数を使用します。  
   
 > [!NOTE]  
 >  乗数を使用しても、ゲージで使用される集計フィールドの実際の値は乗算されません。 乗数は、最小値、最大値、および間隔が定義された後に、ゲージに表示されるラベルの値にのみ乗算されます。 乗数を使用する場合、間隔の計算は自動のままにしてください。  
   
-##  <a name="SpecifyingScaleBar"></a> 放射状スケールのスケール バーの幅、半径、および角度の指定  
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> 放射状スケールのスケール バーの幅、半径、および角度の指定  
  **[放射状スケールのプロパティ]** ダイアログ ボックスの **[レイアウト]** ページを使用すると、スケール バーの幅、スケールの半径、スケールの開始角度および掃引角度を設定できます。 これらのプロパティを使用して、スケールのサイズおよび書式をカスタマイズできます。 たとえば、スケールの外側にスケール ラベルを配置する場合、ゲージの内側にラベルが収まるようにスケールの半径のサイズを変更する必要があります。  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "65580283"
   
  掃引角度は、スケールが円弧を描く角度で、0 ～ 360 の間です。 掃引角度が 360 度の場合、スケールは完全な円になります。 これは、時計のようなゲージをデザインする場合に便利です。  
   
-##  <a name="PositioningLabels"></a> 線形スケールまたは放射状スケールへのラベルの配置  
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> 線形スケールまたは放射状スケールへのラベルの配置  
  ラベルの位置を決定する 2 つのプロパティがあります。 ラベル配置のプロパティでは、ラベルをスケール バーの内側や外側に表示するか、またはスケール バーと交差するように表示するかを指定します。 距離のプロパティでは、スケール バーを起点にして、スケールからラベルまでの距離を設定します。 スケール バーの内側にラベルを配置するには、負の数を指定します。 たとえば、ラベルがスケールの外側にあり、スケールからの距離を 10 に設定している場合、ラベルは通常の場所の 10 単位外側に表示されます。このとき、1 単位は次のいずれかの値になります。  
   
 -   放射状ゲージのゲージの直径の 1%。  
@@ -78,7 +78,7 @@ ms.locfileid: "65580283"
   
 ## <a name="see-also"></a>参照  
  [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

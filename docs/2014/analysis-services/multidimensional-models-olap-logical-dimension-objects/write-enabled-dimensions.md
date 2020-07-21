@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545094"
 ---
 # <a name="write-enabled-dimensions"></a>書き込み許可ディメンション
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- ディメンション内のデータは通常、読み取り専用です。 ただし、シナリオによってはディメンションに書き込み許可を設定する必要が生じます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、書き込み許可ディメンションにより、ビジネス ユーザーは、ディメンションの内容を変更し、ディメンションの階層の変更の直接的な影響を参照してください。 1 つのテーブルに基づいているすべてのディメンションへの書き込みを許可できます。 書き込み許可ディメンションでは、ビジネス ユーザーと管理者は、ディメンション内の属性メンバーの変更、移動、追加、および削除を行うことができます。 これらの更新プログラムと総称*ディメンションの書き戻し*します。  
+ ディメンション内のデータは通常、読み取り専用です。 ただし、シナリオによってはディメンションに書き込み許可を設定する必要が生じます。 では [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、ディメンションを書き込み可能にすることにより、ビジネスユーザーはディメンションの内容を変更し、ディメンションの階層に対する変更に対する直接的な影響を確認できます。 1 つのテーブルに基づいているすべてのディメンションへの書き込みを許可できます。 書き込み許可ディメンションでは、ビジネス ユーザーと管理者は、ディメンション内の属性メンバーの変更、移動、追加、および削除を行うことができます。 これらの更新は、まとめて*ディメンションの書き戻し*と呼ばれます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、すべてのディメンション属性に対するディメンションの書き戻しがサポートされており、ディメンションのすべてのメンバーを変更できます。 書き込み許可キューブや書き込み許可パーティションでは、更新はキューブのソース テーブルとは別に、書き戻しテーブルに格納されます。 ただし、書き込み許可ディメンションでは、更新はディメンションのテーブルに直接記録されます。 また、書き込み許可ディメンションが複数パーティションのキューブに含まれており、そのデータ ソースの一部またはすべてにディメンション テーブルのコピーがあると、書き戻しプロセスでは元のディメンション テーブルだけが更新されます。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62727447"
  管理者ロールに含まれているユーザーとグループは、書き込み許可ディメンションがキューブに含まれていなくても、その書き込み許可ディメンションの属性メンバーを更新できます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ディメンション プロパティ](database-dimension-properties.md)   
+ [データベースディメンションのプロパティ](database-dimension-properties.md)   
  [書き込み許可パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   

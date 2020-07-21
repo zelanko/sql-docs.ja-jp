@@ -1,5 +1,5 @@
 ---
-title: ISQLServerDataSource Interface |Microsoft Docs
+title: ISQLServerDataSource インターフェイス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a1d8df253dad8f8315ba2744f8234f20a1b11d52
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977422"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924727"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "67977422"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、 [SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)によって実装されます。  
+## <a name="remarks"></a>解説  
+ このインターフェイスは、[SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)によって実装されています。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   

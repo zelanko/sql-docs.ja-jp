@@ -1,5 +1,5 @@
 ---
-title: MSdistributiondbs (TRANSACT-SQL) |Microsoft Docs
+title: Ms、Db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - MSdistributiondbs system table
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fde8c78cb37b84ae897e2b12bba6049da8ddc4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889953"
 ---
-# <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msdistributiondbs-transact-sql"></a>Ms、Db (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdistributiondbs**テーブルには、ローカル ディストリビューターで定義されている各ディストリビューション データベースの 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
+  **Msディストリビューション db**テーブルには、ローカルディストリビューターで定義されているディストリビューションデータベースごとに1行のデータが格納されます。 このテーブルは、 **msdb**データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|ディストリビューション データベースの名前。|  
-|**min_distretention**|**int**|トランザクションが削除されるまでの時間の最小保有期間。|  
-|**max_distretention**|**int**|トランザクションが削除されるまでの時間の最大保有期間。|  
+|**name**|**sysname**|ディストリビューションデータベースの名前。|  
+|**min_distretention**|**int**|トランザクションが削除されるまでの最小保有期間 (時間単位)。|  
+|**max_distretention**|**int**|トランザクションが削除されるまでの最大保有期間 (時間単位)。|  
 |**history_retention**|**int**|履歴を保持する期間 (時間単位)。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: オブジェクト関連の動的管理ビューおよび関数 (TRANSACT-SQL) |Microsoft Docs
+title: オブジェクト関連の動的管理ビューおよび関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management views [SQL Server], object
 ms.assetid: f9dfff29-2e68-4c76-9460-c46085dca2e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 73004c08657f6e71617bfb0f54380b95250ce177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 272c6d84b382bfc6ddf4e047df388401999da8f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752876"
 ---
 # <a name="object-related-dynamic-management-views-and-functions-transact-sql"></a>オブジェクト関連の動的管理ビューおよび関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ここでは、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の次の動的管理オブジェクトについて説明します。  
   
@@ -33,8 +33,8 @@ ms.locfileid: "68061935"
   
   
 ## <a name="see-also"></a>関連項目  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

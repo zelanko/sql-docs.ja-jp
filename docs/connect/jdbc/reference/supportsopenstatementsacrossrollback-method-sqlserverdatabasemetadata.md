@@ -1,5 +1,5 @@
 ---
-title: supportsOpenStatementsAcrossRollback メソッド |Microsoft Docs
+title: supportsOpenStatementsAcrossRollback メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ea2ba789b3b2d34671f07acad9f5a7e6636326c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d95758b654efc0db294a91b9aa558c5658f23780
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969067"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923068"
 ---
 # <a name="supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossRollback メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean supportsOpenStatementsAcrossRollback()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsOpenStatementsAcrossRollback メソッドは、supportsOpenStatementsAcrossRollback メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsOpenStatementsAcrossRollback メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsOpenStatementsAcrossRollback メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

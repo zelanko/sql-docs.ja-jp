@@ -8,16 +8,16 @@ ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ff8b3953961a6d3a8f13ceec262df5fea079ced8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032231"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897228"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux での SSIS に関する制限事項と既知の問題
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux での SQL Server Integration Services (SSIS) に関する制限事項と既知の問題について説明します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "68032231"
 
 Linux での SSIS パッケージのこのリリースでは、次の機能はサポートされていません。
   - SSIS カタログ データベース
-  - SQL エージェントによるスケジュールされたパッケージの実行
+  - SQL エージェントでスケジュールされたパッケージの実行
   - [Windows 認証]
   - サードパーティ コンポーネント
   - 変更データ キャプチャ (CDC)
@@ -36,7 +36,7 @@ Linux での SSIS パッケージのこのリリースでは、次の機能は�
 
 Linux での SSIS のその他の制限事項と既知の問題については、[リリース ノート](sql-server-linux-release-notes.md#ssis)を参照してください。
 
-## <a name="components"></a> サポートされているコンポーネントとサポートされていないコンポーネント
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> サポートされているコンポーネントとサポートされていないコンポーネント
 
 Linux では、次の組み込みの Integration Services コンポーネントがサポートされています。 これらの一部については、Linux プラットフォームでは制限があります。 ここに記載されていない組み込みコンポーネントは、Linux ではサポートされていません。
 
@@ -102,7 +102,7 @@ SQL Server メンテナンス プランでは、通常、さまざまな SSIS �
 
 ## <a name="supported-data-flow-transformations"></a>サポートされているデータ フロー変換
 - Aggregate
-- 監査
+- Audit
 - Balanced Data Distributor
 - 文字マップ
 - 条件分割
@@ -113,7 +113,7 @@ SQL Server メンテナンス プランでは、通常、さまざまな SSIS �
 - あいまいグループ化
 - あいまい参照
 - 列インポート
-- Lookup
+- 参照
 - Merge
 - マージ結合
 - マルチキャスト
@@ -143,7 +143,7 @@ SQL Server ログ プロバイダーでは、SQL 認証のみがサポートさ�
 -   ファイル パスでは環境変数を使用できません。 環境変数を指定すると、指定したリテラル テキストがファイル パスに表示されます。 たとえば、`%TMP%/log.txt` と指定した場合、ログ プロバイダーでは現在のホスト ディレクトリにリテラル テキスト `/%TMP%/log.txt` が追加されます。
 
 ## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
--   [SSIS で Linux 上のデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
+-   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
 -   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
--   [ssis-conf を使用して Linux で SQL Server Integration Services を構成する](sql-server-linux-configure-ssis.md)
--   [cron を利用して Linux で SQL Server Integration Services パッケージのスケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)
+-   [ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)
+-   [cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

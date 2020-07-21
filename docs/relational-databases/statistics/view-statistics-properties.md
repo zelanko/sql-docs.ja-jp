@@ -15,15 +15,15 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6804d7df60b0d16445399c609b35addc0da5cb49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fc876283635f3a3015efa957b90cf0d9d938386
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934096"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001054"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 統計オブジェクトには、統計に関するメタデータが含まれるヘッダー、統計オブジェクトの最初のキー列の値の分布が含まれるヒストグラム、および列間の相関関係を測定する密度ベクトルが格納されています。 ヒストグラムと密度ベクトルの詳細については、「[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)」を参照してください。  
   
  **このトピックの内容**  
@@ -38,14 +38,14 @@ ms.locfileid: "67934096"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  統計オブジェクトを表示するには、テーブルを所有しているか、固定サーバー ロール **sysadmin** 、固定データベース ロール **db_owner** 、または固定データベース ロール **db_ddladmin** のメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-view-statistics-properties"></a>統計のプロパティを表示するには  
   
@@ -59,9 +59,9 @@ ms.locfileid: "67934096"
   
 5.  プロパティを表示する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  [ **統計のプロパティ -** _statistics_name_ ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
+6.  **[統計のプロパティ -** statistics_name _]_ ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選択します。  
   
-     **統計のプロパティ -** **statistics_name** _statistics_name_ ページで次のプロパティが表示されます。  
+     **[統計のプロパティ -** statistics_name **]** ダイアログ ボックスの _[詳細]_ ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -70,14 +70,14 @@ ms.locfileid: "67934096"
      統計情報が格納されるデータベース オブジェクトの名前が表示されます。  
   
      **[INDEX の統計 statistics_name]**  
-     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、次の 3 つのセクションに分かれています:統計ヘッダー、密度ベクトル、ヒストグラム。  
+     このテキスト ボックスは、統計オブジェクトから返されるプロパティを示します。 このプロパティは、統計ヘッダー、密度ベクトル、およびヒストグラムという 3 つのセクションに分かれています。  
   
      以下に、統計ヘッダーを指定した場合に結果セットに返される列を示します。  
   
-     **[名前]**  
+     **Name**  
      統計オブジェクトの名前。  
   
-     **[更新]**  
+     **更新**  
      統計情報が最後に更新された日付と時刻。  
   
      **行数**  
@@ -107,7 +107,7 @@ ms.locfileid: "67934096"
      以下に、密度ベクトルを指定した場合に結果セットに返される列を示します。  
   
      **[すべての密度]**  
-     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、(A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A、B、C) を使用すると、これらの各リストは次の個別の値リストになります。(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 プレフィックス (A、B) を使用すると、同じ列値に次の個別の値リストが含まれます。(3, 5)、(4, 4)、(4, 5)。  
+     密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、および (A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A, B, C) を使用すると、これらの各リストは個別の値リスト (3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7) のようになります。 プレフィックス (A, B) を使用すると、同じ列値の個別の値リストが (3, 5)、(4, 4)、および (4, 5) になります。  
   
      **[平均の長さ]**  
      列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。  
@@ -134,9 +134,7 @@ ms.locfileid: "67934096"
   
 7.  **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-statistics-properties"></a>統計のプロパティを表示するには  
   

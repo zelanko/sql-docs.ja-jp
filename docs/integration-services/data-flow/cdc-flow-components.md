@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 576565cb5bf688c3dc784eaa377ba7cf8d4a67b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045411"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293401"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
 
@@ -71,7 +71,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Microsoft CDC コンポーネントのアンインストール  
  CDC ソース、CDC スプリッター、または CDC 制御タスクをアンインストールするには、アンインストール ウィザードを使用します。 パッケージの開発に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用している場合は、アンインストール ウィザードの実行前に [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を閉じる必要があります。  
   
-## <a name="benefits"></a>利点  
+## <a name="benefits"></a>メリット  
  SSIS 開発者は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネント用の CDC コンポーネントを使用して、変更データを処理する SSIS パッケージを簡単に構築できます。 これらのコンポーネントは、CDC に対処し、CDC パッケージの複雑さを軽減する SSIS 開発者の能力を高めます。  
   
  SSIS CDC コンポーネントを使用すると、レプリケーション、データ ウェアハウスの読み込み、OLAP の緩やかに変化するディメンションの更新、変更の監査などの目的で処理しやすい形で変更データを提供できます。 後で行う処理の種類は、SSIS 開発者が決定します。  
@@ -81,7 +81,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Change Data Capture コンポーネントの概要  
  一般的な CDC パッケージでは、テーブルのグループに対する変更を処理します。 この種類の CDC パッケージの基本的な制御フローを以下の図に示します。 このパッケージは、トリクル フィード処理パッケージと呼ばれます。  
   
- ![トリクル フィード処理パッケージ制御フロー](../../integration-services/data-flow/media/tricklefeedprocessing.gif "トリクル フィード処理パッケージ制御フロー")  
+ ![パッケージの制御フローを処理するトリクル フィード](../../integration-services/data-flow/media/tricklefeedprocessing.gif "パッケージの制御フローを処理するトリクル フィード")  
   
  この [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 制御フローには、2 つの CDC 制御タスクとデータ フロー タスクが含まれています。 **Get CDC Processing Range** (CDC 処理範囲の取得) という最初のタスクでは、 **Process Changes**(変更の処理) というデータ フロー タスクで処理される変更の LSN 範囲を設定します。 この範囲は、前回のパッケージ実行時に処理されて永続的なストアに保存された内容に基づいて設定されます。  
   
@@ -103,11 +103,11 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  [CDC ソース](../../integration-services/data-flow/cdc-source.md)  
   
- [[CDC ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [[CDC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
  [[CDC ソース エディター] &#40;[列] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
- [[CDC ソース エディター] ([エラー出力] ページ)](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  CDC スプリッターの詳細については、以下のトピックを参照してください。  
   
@@ -125,11 +125,11 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  次の図に、最初の 2 つのシナリオが関係する SSIS パッケージを示します。  
   
- ![最初の 2 つのシナリオが関係する SSIS パッケージ](../../integration-services/data-flow/media/scenarioonetwo.gif "最初の 2 つのシナリオが関係する SSIS パッケージ")  
+ ![初めの 2 つのシナリオを処理する SSIS パッケージ](../../integration-services/data-flow/media/scenarioonetwo.gif "初めの 2 つのシナリオを処理する SSIS パッケージ")  
   
  次の図に、3 番目のシナリオが関係する SSIS パッケージを示します。  
   
- ![3 番目のシナリオが関係する SSIS パッケージ](../../integration-services/data-flow/media/scenario3.gif "3 番目のシナリオが関係する SSIS パッケージ")  
+ ![3 番目のシナリオを処理する SSIS パッケージ](../../integration-services/data-flow/media/scenario3.gif "3 番目のシナリオを処理する SSIS パッケージ")  
   
  初期読み込みパッケージに続き、トリクル フィード更新パッケージがスケジュールに従って繰り返し実行され、処理できるようになった変更を処理します。  
   
@@ -173,7 +173,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
 ## <a name="cdc-state"></a>CDC 状態  
  各 CDC グループには、特定の形式の文字列で表される状態が関連付けられています。 詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。 CDC 状態の値は、次のいずれかです。  
   
-|状態|[説明]|  
+|State|説明|  
 |-----------|-----------------|  
 |0-(INITIAL)|現在の CDC グループでパッケージが実行される前の状態です。 CDC 状態が空のときの状態でもあります。<br /><br /> CDC 制御タスクの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。|  
 |1-ILSTART (Initial-Load-Started)|初期読み込みパッケージが開始されたときの状態です。 CDC 制御タスクに対する **MarkInitialLoadStart** 操作の呼び出し後に、この状態になります。<br /><br /> CDC 制御タスクの操作の詳細については、「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」を参照してください。|  
@@ -188,7 +188,7 @@ CDC コンポーネントをインストールしたら、SQL [!INCLUDE[ssBIDevS
   
  たとえば、初期読み込みパッケージの終了時に状態を ILEND に設定しようとした時点で、状態が TFSTART の場合は CDC グループはエラー状態になり、トリクル フィード更新パッケージは実行されません (初期読み込みパッケージは実行されます)。  
   
- ![状態図](../../integration-services/data-flow/media/statediagram.gif "状態図")  
+ ![状態の図](../../integration-services/data-flow/media/statediagram.gif "状態ダイアグラム")  
   
  初期読み込みパッケージが正常に実行されると、定義済みのスケジュールに従ってトリクル フィード更新パッケージが繰り返し実行され、ソース テーブルに対する変更を処理します。 トリクル フィード更新パッケージの各実行は、CDC 実行です。  
   

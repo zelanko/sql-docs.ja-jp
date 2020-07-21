@@ -17,18 +17,18 @@ helpviewer_keywords:
 - comparing SOUNDEX values
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe01e0d9465495cbf4943ba7867ebf262a1f3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b22244b43ca70dab2d549c62cae247137b649fec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135929"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005914"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、2 つの異なる文字式を対象に [SOUNDEX()](./soundex-transact-sql.md) 値の差を測定し、整数値を返します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68135929"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   
@@ -47,12 +47,12 @@ DIFFERENCE ( character_expression , character_expression )
 ## <a name="return-types"></a>戻り値の型  
 **int**  
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DIFFERENCE` は 2 つの異なる `SOUNDEX` 値を比較し、整数値を返します。 この値は、0 から 4 のスケールで、`SOUNDEX` 値が一致する度合いを測定します。 値が 0 の場合、SOUNDEX 値の類似性が弱いか、類似性がまったくなく、4 の場合、類似性が強いか、まったく同じになります。  
   
 `DIFFERENCE` と `SOUNDEX` には、照合順序の区別があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例の最初の部分で、2 つの非常に似た文字列の `SOUNDEX` 値が比較されます。 照合順序 Latin1_General に対して、`DIFFERENCE` は値 `4` を返します。 この例の 2 番目の部分では、2 つの大きく異なる文字列の `SOUNDEX` 値が比較されます。照合順序 Latin1_General に対して、`DIFFERENCE` は値 `0` を返します。  
   
 ```  

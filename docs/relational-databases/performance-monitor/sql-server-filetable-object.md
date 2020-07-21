@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0411ae3768195fd1fb3f5e7f8776a7b71362817
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775886"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server、FileTable オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 **SQLServer:FileTable** パフォーマンス オブジェクトは、FileTable および非トランザクション アクセスに関連する統計カウンターを提供します。
 
 次の表では、SQL Server **FileTable** パフォーマンス オブジェクトについて説明します。
 
-|**SQL Server FileTable のカウンター**|[説明]|  
+|**SQL Server FileTable のカウンター**|説明|  
 |-------------|-----------------|  
 |**Avg time delete FileTable item**|FileTable アイテムの削除に要した平均時間 (ミリ秒)。|
 |**Avg time FileTable enumeration**|FileTable の列挙要求に要した平均時間 (ミリ秒)。|
@@ -47,15 +47,15 @@ ms.locfileid: "68093505"
 |**FileTable item update reqs/sec**|1 秒間に処理された FileTable アイテムの更新要求の総数。|
 |**FileTable kill handle ops/sec**|1 秒間に処理された FileTable ハンドル強制終了操作の総数。|
 |**FileTable table operations/sec**|FileTable ストア コンポーネントによって 1 秒間に処理されたテーブル操作イベントの総数。|
-|**Time delete FileTable item BASE**|内部使用のみです。|
-|**Time FileTable enumeration BASE**|内部使用のみです。|
-|**Time FileTable handle kill BASE**|内部使用のみです。|
-|**Time move FileTable item BASE**|内部使用のみです。|
-|**Time per file I/O request BASE**|内部使用のみです。|
-|**Time per file I/O response BASE**|内部使用のみです。|
-|**Time rename FileTable item BASE**|内部使用のみです。|
-|**Time to get FileTable item BASE**|内部使用のみです。|
-|**Time update FileTable item BASE**|内部使用のみです。| 
+|**Time delete FileTable item BASE**|内部使用専用です。|
+|**Time FileTable enumeration BASE**|内部使用専用です。|
+|**Time FileTable handle kill BASE**|内部使用専用です。|
+|**Time move FileTable item BASE**|内部使用専用です。|
+|**Time per file I/O request BASE**|内部使用専用です。|
+|**Time per file I/O response BASE**|内部使用専用です。|
+|**Time rename FileTable item BASE**|内部使用専用です。|
+|**Time to get FileTable item BASE**|内部使用専用です。|
+|**Time update FileTable item BASE**|内部使用専用です。| 
  
 ## <a name="see-also"></a>参照  
 [リソースの利用状況の監視 (システム モニター)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

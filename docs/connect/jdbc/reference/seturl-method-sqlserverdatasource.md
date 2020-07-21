@@ -1,5 +1,5 @@
 ---
-title: setURL メソッド (SQLServerDataSource) |Microsoft Docs
+title: setURL メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d42af84c320eadb167126325299fb25cadaed2dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb39d5e5f3805d5c734b51fd01eb36d84fb53410
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972122"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901828"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void setURL(java.lang.String url)
   
  URL を含む**文字列**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  セキュリティ上の理由から、setURL メソッドに渡す URL にはパスワードを含めないでください。 これは、サードパーティの Java アプリケーション サーバーでは、データ ソースの構成用ユーザー インターフェイスに、URL プロパティの値セットが表示されることが非常に多いためです。 パスワードを含める代わりに、[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) メソッドを使用してパスワード値を設定してください。 Java アプリケーション サーバーで、データ ソース内に設定されたパスワードが構成用ユーザー インターフェイスに表示されなくなります。  
   
 > [!NOTE]  

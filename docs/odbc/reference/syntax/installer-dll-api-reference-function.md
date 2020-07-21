@@ -1,5 +1,5 @@
 ---
-title: Installer DLL API Reference 関数 |Microsoft Docs
+title: インストーラー DLL API リファレンス関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - installer DLL [ODBC]
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906212"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298782"
 ---
 # <a name="installer-dll-api-reference-function"></a>Installer DLL API Reference 関数
-このセクションでは、インストーラー DLL API 内の関数の構文について説明します。 Installer DLL API は、20 の機能で構成されます。 これらの関数の 3 つ**SQLGetTranslator**、 **SQLRemoveDSNFromIni**、および**SQLWriteDSNToIni**Dll のセットアップによってのみ呼び出されます。 セットアップおよび管理プログラムによっては、その他の関数が呼び出されます。  
+ここでは、インストーラー DLL API の関数の構文について説明します。 インストーラー DLL API は20の関数で構成されています。 これらの関数のうちの3つである**Sqlgettranslator**、 **sqlremovedsnfromini**、および**Sqlwritedsntoini**は、セットアップ dll によってのみ呼び出されます。 その他の関数は、セットアップおよび管理プログラムによって呼び出されます。  
   
- 各関数には、導入された ODBC のバージョンが付いています。  
+ 各関数には、その関数が導入された ODBC のバージョンが示されています。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67906212"
   
 -   [SQLInstallTranslatorEx 関数](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [SQLManageDataSources 関数](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [SQLManageDataSources ソース関数](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [SQLPostInstallerError 関数](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

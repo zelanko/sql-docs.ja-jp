@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 245b383146e30c1fb42a6c6e23874a5c18d0b187
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014657"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
   次の表に、DDL トリガーまたはイベント通知の実行に使用できる DDL イベント グループ、およびそれらのグループで処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの一覧を示します。 イベント グループは入れ子になっていることに注意してください。 たとえば、FOR DDL_TABLE_EVENTS (10018) を指定した DDL トリガー、またはイベント通知の対象になるのは、CREATE TABLE ステートメント、ALTER TABLE ステートメント、および DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 FOR DDL_TABLE_VIEW_EVENTS (10017) を指定した DDL トリガーまたはイベント通知の対象になるのは、DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS、および DDL_STATISTICS_EVENTS という型の下のすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
@@ -27,12 +26,12 @@ ms.locfileid: "68211727"
 > [!NOTE]  
 >  DDL に似た操作を実行する一部のシステム ストアド プロシージャも、DDL トリガー、またはイベント通知を起動することができます。 実行されるシステム ストアド プロシージャへの応答を判断するために、DDL トリガーおよびイベント通知をテストしてください。 たとえば、CREATE TYPE ステートメントおよび **sp_addtype** ストアド プロシージャはどちらも、CREATE_TYPE イベントで作成される DDL トリガーおよびイベント通知を起動します。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  DDL_DATABASE_LEVEL_EVENTS の下に記載されているイベントは、サーバー (インスタンス) またはデータベース レベルで実行されます。 DDL_SERVER_LEVEL_EVENTS の下に記載されているイベントは、サーバー レベルでのみ実行できます。  
   
 ||||  
 |-|-|-|  
-|parent_type|type|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
@@ -315,7 +314,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [イベント通知](../service-broker/event-notifications.md)   
  [DDL トリガー](ddl-triggers.md)   
  [DDL イベント](ddl-events.md)  

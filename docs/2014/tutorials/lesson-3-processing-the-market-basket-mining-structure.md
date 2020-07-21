@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: Market Basket マイニング構造の処理 |Microsoft Docs'
+title: 'レッスン 3: マーケットバスケットマイニング構造の処理 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653864"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>レッスン 3: Market Basket マイニング構造の処理
-  このレッスンでは、使用、 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)ステートメントと vAssocSeqLineItems および vAssocSeqOrders から、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]マイニング構造とマイニング処理のサンプル データベースをモデル化します。作成した[レッスン 1。Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)と[レッスン 2。Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。  
+  このレッスンでは、 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)ステートメントを使用し、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプルデータベースの vAssocSeqLineItems と vAssocSeqOrders を使用して、「[レッスン 1: マーケットバスケットマイニング構造の作成](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)」および「[レッスン 2: マーケットバスケットマイニング構造へのマイニングモデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)」で作成したマイニング構造とマイニングモデルを処理します。  
   
- マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルを処理すると、選択したデータ マイニング アルゴリズム使用して、マイニング構造で定義されているデータが渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニング モデルの処理の詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
+ マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニングモデルを処理する場合、マイニング構造によって定義されるデータは、選択したデータマイニングアルゴリズムによって渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニングモデルの処理の詳細については、「[データマイニング&#41;&#40;処理の要件と考慮事項](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
  マイニング構造の再処理は、構造列またはソース データを変更した場合にのみ必要です。 処理済みのマイニング構造にマイニング モデルを追加する場合は、`INSERT INTO MINING MODEL` ステートメントを使用して既存のデータに対して新しいマイニング モデルをトレーニングできます。  
   
  Market Basket マイニング構造には入れ子になったテーブルが含まれるため、入れ子になったテーブル構造でトレーニングするようにマイニング列を定義する必要があります。また、`SHAPE` コマンドを使用して、ソース テーブルからトレーニング データを抽出するクエリを定義する必要があります。  
   
 ## <a name="insert-into-statement"></a>INSERT INTO ステートメント  
- Market Basket マイニング構造とその関連マイニング モデルをトレーニングするために使用して、 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)ステートメント。 ステートメントのコードは次の部分に分けることができます。  
+ マーケットバスケットのマイニング構造とそれに関連付けられているマイニングモデルをトレーニングするには、 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)ステートメントを使用します。 ステートメントのコードは次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -60,7 +60,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- コードの次の数行では、マイニング構造で定義される列を指定します。 ここではマイニング構造の各列を指定する必要があります。各列はソース クエリ データ内の列にマップされている必要があります。 `SKIP` を使用すると、ソース データに存在するがマイニング構造に存在しない列を無視できます。 使用する方法の詳細についての`SKIP`を参照してください[INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)します。  
+ コードの次の数行では、マイニング構造で定義される列を指定します。 ここではマイニング構造の各列を指定する必要があります。各列はソース クエリ データ内の列にマップされている必要があります。 `SKIP` を使用すると、ソース データに存在するがマイニング構造に存在しない列を無視できます。 の使用`SKIP`方法の詳細については、「 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)」を参照してください。  
   
 ```  
 (  
@@ -83,18 +83,18 @@ RELATE [<case key>] TO [<foreign key>]
 ) AS [<nested table>]  
 ```  
   
- このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース データに対してクエリを定義するその他の方法については、次を参照してください。 [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)します。  
+ このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソースデータに対するクエリを定義するその他の方法については、「 [&#60;source data query&#62;](/sql/dmx/source-data-query)」を参照してください。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクを実行します。  
+ このレッスンでは、次の作業を実行します。  
   
--   Market Basket マイニング構造を処理します。  
+-   マーケットバスケットのマイニング構造を処理する  
   
 ## <a name="processing-the-market-basket-mining-structure"></a>Market Basket マイニング構造の処理  
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO を使用してマイニング構造を処理するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -106,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Market Basket  
@@ -120,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [OrderNumber],  
@@ -143,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     SHAPE {  
@@ -158,7 +158,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-     ソース クエリの参照、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]で定義されているデータ ソース、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプル プロジェクト。 ソース クエリはこのデータ ソースを使用して、vAssocSeqLineItems ビューと vAssocSeqOrders ビューにアクセスします。 これら 2 つのビューには、マイニング モデルのトレーニングに使用されるソース データが含まれます。 このプロジェクトやこれらのビューを作成していない場合は、次を参照してください。 [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)します。  
+     ソースクエリは、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプルプロジェクトで定義されているデータソースを参照します。 ソース クエリはこのデータ ソースを使用して、vAssocSeqLineItems ビューと vAssocSeqOrders ビューにアクセスします。 これら 2 つのビューには、マイニング モデルのトレーニングに使用されるソース データが含まれます。 このプロジェクトまたはこれらのビューを作成していない場合は、「[基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)」を参照してください。  
   
      `SHAPE` コマンド内では、`OPENQUERY` を使用して 2 つのクエリを定義します。 最初のクエリでは親テーブルを定義し、2 つ目のクエリでは入れ子になったテーブルを定義します。 2 つのテーブルは、両方のテーブルに存在する OrderNumber 列を使用して関連付けられます。  
   
@@ -181,17 +181,17 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-6.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+6.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Process Market Basket.dmx`します。  
+7.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`Process Market Basket.dmx`、ファイル名を指定します。  
   
-8.  ツールバーの**Execute**ボタンをクリックします。  
+8.  ツールバーの [**実行**] ボタンをクリックします。  
   
- クエリの実行終了後、見つかったパターンとアイテムセットを表示したり、関連付けを表示したり、アイテムセット、確率、または重要度でフィルタリングしたりできます。 この情報を表示する[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]、データ モデルの名前を右クリックし、クリックして**参照**します。  
+ クエリの実行終了後、見つかったパターンとアイテムセットを表示したり、関連付けを表示したり、アイテムセット、確率、または重要度でフィルタリングしたりできます。 この情報を表示するに[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]は、でデータモデルの名前を右クリックし、[**参照**] をクリックします。  
   
  次のレッスンでは、Market Basket 構造に追加したマイニング モデルに基づいて、いくつかの予測を作成します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4:マーケット バスケット予測の実行](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [レッスン 4: マーケット バスケット予測の実行](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

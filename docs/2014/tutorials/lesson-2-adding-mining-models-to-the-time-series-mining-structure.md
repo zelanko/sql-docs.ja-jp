@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:時系列マイニング構造にマイニング モデルの追加 |Microsoft Docs
+title: 'レッスン 2: タイムシリーズマイニング構造へのマイニングモデルの追加 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62855715"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2:時系列マイニング構造へのマイニング モデルの追加
-  このレッスンで作成したマイニング構造に新しいマイニング モデルを追加[レッスン 1。タイム シリーズ マイニング モデルとマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)します。  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2: 時系列マイニング構造へのマイニング モデルの追加
+  このレッスンでは、「[レッスン 1: タイムシリーズマイニングモデルとマイニング構造の作成](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)」で作成したマイニング構造に新しいマイニングモデルを追加します。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
- 使用する既存のマイニング構造に新しいマイニング モデルを追加するには、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
+ 新しいマイニングモデルを既存のマイニング構造に追加するには、 [ALTER マイニング構造 &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)ステートメントを使用します。 ステートメント内のコードは、次の部分に分けることができます。  
   
 -   マイニング構造の指定  
   
@@ -45,7 +45,7 @@ USING <algorithm name>([<algorithm parameters>])
 [WITH DRILLTHROUGH]  
 ```  
   
- コードの最初の行では、マイニング モデルの追加先となる既存のマイニング構造を示します。  
+ コードの最初の行では、マイニングモデルを追加する既存のマイニング構造を指定します。  
   
 ```  
 ALTER MINING STRUCTURE [<mining structure name>]  
@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
+ DMX でのオブジェクトの名前付けの詳細については、「 [dmx&#41;&#40;の識別子](/sql/dmx/identifiers-dmx)」を参照してください。  
   
  コードの次の数行では、マイニング モデルで使用するマイニング構造の列を定義します。  
   
@@ -75,7 +75,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- 調整できるアルゴリズム パラメーターの詳細については、次を参照してください。 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)します。  
+ 調整できるアルゴリズムパラメーターの詳細については、「 [Microsoft タイムシリーズアルゴリズムテクニカルリファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  次の構文で、マイニング モデルの列を予測に使用するよう指定できます。  
   
@@ -84,7 +84,7 @@ WITH DRILLTHROUGH
 ```  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクを実行するされます。  
+ このレッスンでは、次のタスクを実行します。  
   
 -   新しい時系列マイニング モデルを構造に追加します。  
   
@@ -95,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 時系列マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントします。次に、[ **DMX** ] をクリックしてクエリエディターと、新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -105,7 +105,7 @@ WITH DRILLTHROUGH
     <mining structure name>   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Forecasting_MIXED_Structure]  
@@ -117,7 +117,7 @@ WITH DRILLTHROUGH
     <mining model name>   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     Forecasting_ARIMA  
@@ -129,7 +129,7 @@ WITH DRILLTHROUGH
     <key columns>,  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [ReportingDate],  
@@ -144,7 +144,7 @@ WITH DRILLTHROUGH
     <mining model columns>  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     ([Quantity] PREDICT,  
@@ -159,7 +159,7 @@ WITH DRILLTHROUGH
     [WITH DRILLTHROUGH]  
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     USING Microsoft_Time_Series (AUTO_DETECT_PERIODICITY = .08, FORECAST_METHOD = 'ARIMA')  
@@ -181,11 +181,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+8.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-9. **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_ARIMA.dmx`します。  
+9. [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`Forecasting_ARIMA.dmx`、ファイル名を指定します。  
   
-10. ツールバーの**Execute**ボタンをクリックします。  
+10. ツールバーの [**実行**] ボタンをクリックします。  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>構造への ARTXP 時系列モデルの追加  
  ARTXP アルゴリズムは、SQL Server 2005 の既定のタイム シリーズ アルゴリズムで、短期の予測に適しています。 3 つのアルゴリズムをすべて使用して予測を比較するために、ARTXP アルゴリズムに基づくモデルをもう 1 つ追加します。  
@@ -209,19 +209,19 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+2.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-3.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_ARTXP.dmx`します。  
+3.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`Forecasting_ARTXP.dmx`、ファイル名を指定します。  
   
-4.  ツールバーの**Execute**ボタンをクリックします。  
+4.  ツールバーの [**実行**] ボタンをクリックします。  
   
  次のレッスンでは、すべてのモデルとマイニング構造を処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 3:タイム シリーズを処理構造およびモデル](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [レッスン 3: 時系列構造と時系列モデルの処理](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Microsoft タイムシリーズアルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

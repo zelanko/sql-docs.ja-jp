@@ -23,16 +23,16 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007169"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003913"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮の有効化
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、テーブルまたはインデックスで圧縮を有効にする方法について説明します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68007169"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **次を使用してテーブルまたはインデックスの圧縮を有効にするには:**  
   
@@ -50,9 +50,9 @@ ms.locfileid: "68007169"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム テーブルで圧縮を有効にすることはできません。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "68007169"
   
 -   固定されていないインデックスがテーブルにある場合、そのパーティションの圧縮設定を変更できません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはインデックスに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>テーブルまたはインデックスの圧縮を有効にするには  
   
@@ -178,13 +178,13 @@ ms.locfileid: "68007169"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **ステータス**  
+     **状態**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  
      プロセスから返されたすべてのエラー メッセージまたは警告メッセージを提供します。  
   
-     **レポート**  
+     **Report**  
      パーティションの作成ウィザードの結果を含むレポートを作成します。 **[レポートの表示]** 、 **[レポートをファイルに保存]** 、 **[レポートをクリップボードにコピー]** 、 **[レポートを電子メールとして送信]** の各オプションがあります。  
   
      **[レポートの表示]**  
@@ -201,8 +201,12 @@ ms.locfileid: "68007169"
   
      完了したら、 **[閉じる]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
-  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
+
+### <a name="sql-server"></a>SQL Server
+
+SQL Server で、`sp_estimate_data_compression_savings` を実行してから、テーブルまたはインデックスの圧縮を有効にします。 以下のセクションをご覧ください。 
+
 #### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
@@ -211,7 +215,7 @@ ms.locfileid: "68007169"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、最初にストアド プロシージャ `sp_estimate_data_compression_savings` を実行して、行の圧縮設定を使用した場合のオブジェクトの推定サイズを返します。 次に、指定したテーブルのすべてのパーティションで行の圧縮を有効にします。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
@@ -229,7 +233,7 @@ ms.locfileid: "68007169"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、最初に `sys.indexes` カタログ ビューを問い合わせて、 `index_id` テーブルの各インデックスの名前と `Production.TransactionHistory` を返します。 次に、ストアド プロシージャ `sp_estimate_data_compression_savings` を実行して、ページの圧縮設定を使用した場合の指定されたインデックス ID の推定サイズを返します。 最後に、インデックス ID 2 (`IX_TransactionHistory_ProductID`) を再構築し、ページの圧縮を指定します。  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, index_id  
@@ -245,7 +249,47 @@ ms.locfileid: "68007169"
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### <a name="on-azure-sql-database"></a>Azure SQL Database 上
+
+Azure SQL Database では、`sp_estimate_data_compression` はサポートされません。 次のスクリプトでは、圧縮率を推定せずに圧縮を行うことができます。 
+
+#### <a name="to-enable-compression-on-a-table"></a>テーブルで圧縮を有効にするには  
+  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、指定したテーブルのすべてのパーティションで行の圧縮を有効にします。  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>インデックスで圧縮を有効にするには  
+  
+1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+  
+2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、最初に `sys.indexes` カタログ ビューを問い合わせて、 `index_id` テーブルの各インデックスの名前と `Production.TransactionHistory` を返します。 最後に、インデックス ID 2 (`IX_TransactionHistory_ProductID`) を再構築し、ページの圧縮を指定します。  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」および「[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)」を参照してください。  
   

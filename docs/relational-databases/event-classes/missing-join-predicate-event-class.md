@@ -1,5 +1,6 @@
 ---
 title: Missing Join Predicate イベント クラス | Microsoft Docs
+description: Missing Join Predicate イベント クラスは、結合述語がないクエリが SQL Server で実行されていることを示します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f0571750b7c8a9ba39c79bf640872c88241fe81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756035"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Missing Join Predicate イベント クラスは、結合述語がないクエリが実行されていることを示します。 クエリの終了に時間がかかる可能性があります。 結合述語の詳細については、「[述語 &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)」を参照してください。  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Missing Join Predicate イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |ClientProcessID|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  

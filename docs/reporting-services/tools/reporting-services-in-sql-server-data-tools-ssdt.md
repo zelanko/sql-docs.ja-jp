@@ -11,28 +11,28 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68889839"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
   
  このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] に使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
  レポートのデザインを開始するには、「[レポート デザイナーを使用してレポートをデザインする (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
-##  <a name="bkmk_SolutionsandProjects"></a> ソリューションとプロジェクト  
+##  <a name="solutions-and-projects"></a><a name="bkmk_SolutionsandProjects"></a> ソリューションとプロジェクト  
  レポート プロジェクトは、レポート定義およびリソースのコンテナーの役割を果たします。 レポート プロジェクト内の各ファイルは、プロジェクトが配置されるときに、レポート サーバーにパブリッシュされます。 プロジェクトを初めて作成する場合は、プロジェクトのコンテナーとしてソリューションも作成されます。 複数のプロジェクトを 1 つのソリューションに追加することができます。  
   
   
-##  <a name="bkmk_Configurations"></a> 構成  
+##  <a name="configurations"></a><a name="bkmk_Configurations"></a> 構成  
  企業のテスト用レポート サーバーや実稼働レポート サーバーなど、さまざまな種類の配置に対して複数のプロジェクト プロパティのセットを作成するには、構成マネージャーを使用します。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
   
-##  <a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
+##  <a name="report-server-projects"></a><a name="bkmk_ReportServerProjects"></a> レポート サーバープロジェクト  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をインストールすると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で次のプロジェクト テンプレートを使用できるようになります。  
   
 -   **レポート サーバー プロジェクト。** レポート サーバー プロジェクトを選択すると、レポート デザイナーが開きます。 レポート サーバー プロジェクトは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] によってインストールされ、 **[新しいプロジェクト]** ダイアログ ボックスで使用できる、ビジネス インテリジェンス プロジェクト用のテンプレートです。 詳細については、「[新規または既存のレポートをレポート プロジェクトに追加する (SSRS)](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md)」を参照してください。レポート サーバー プロジェクトのプロパティは、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] プロジェクト内のすべてのレポートとすべての共有データ ソースに適用されます。 これらのプロパティには、レポート サーバーの URL、およびレポートと共有データ ソースのフォルダー名が含まれます。 現在のプロパティ値を確認するには、 **[プロジェクト プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスを開くには、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
@@ -42,10 +42,10 @@ ms.locfileid: "68889839"
  ![SSDT の新しいプロジェクト テンプレート](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
   
-##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーでは、レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューがサポートされています。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
+ レポート デザイナーは 2 つのビューをサポートしています。レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューです。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
-###  <a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
+###  <a name="report-data-pane"></a><a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
   
  以下を表示するには、[レポート データ] ペインを使用します。  
@@ -68,7 +68,7 @@ ms.locfileid: "68889839"
 >  [レポート データ] ペインが表示されていない場合は、デザイン領域内をクリックし、 **[表示]** メニューの **[レポート データ]** をクリックします。 [レポート データ] ペインが固定されていない場合は、固定することができます。 詳細については、「[レポート デザイナーのレポート データ ペインをドッキングする (SSRS)](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md)」を参照してください。  
   
   
-###  <a name="bkmk_GroupingPane"></a> グループ化ペイン  
+###  <a name="grouping-pane"></a><a name="bkmk_GroupingPane"></a> グループ化ペイン  
  Tablix データ領域のグループを定義するには、[グループ化] ペインを使用します。 テーブルの行グループと詳細グループ、およびマトリックスの行グループと列グループを定義できます。 [グループ化] ペインを使用して、グラフまたは他のデータ領域のグループを定義することはできません。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
  グループ化ペインには、次の 2 つのモードがあります。  
@@ -85,10 +85,10 @@ ms.locfileid: "68889839"
  詳細については、「 [グループ化ペイン](../../reporting-services/tools/grouping-pane.md)」を参照してください。  
   
   
-###  <a name="bkmk_Toolbox"></a> [ツールボックス]  
+###  <a name="toolbox"></a><a name="bkmk_Toolbox"></a> [ツールボックス]  
  ツールボックスには、デザイン画面にドラッグできるレポート アイテムが含まれています。 データ領域は、レポート上のデータを整理する際に使用するレポート アイテムです。 テーブル、マトリックス、一覧、グラフ、ゲージ、データ バー、スパークライン、およびインジケーターはデータ領域です。 その他のレポート アイテムには、マップ、テキスト ボックス、四角形、線、画像、およびサブレポートがあります。 カスタム レポート アイテムがシステム管理者によってインストールおよび登録されている場合、それらのアイテムがこの一覧に表示されることがあります。  
   
-###  <a name="bkmk_PropertiesPane"></a> [プロパティ] ペイン  
+###  <a name="properties-pane"></a><a name="bkmk_PropertiesPane"></a> [プロパティ] ペイン  
  [プロパティ] ペインは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の標準的なウィンドウであり、デザイン画面で現在選択されているレポート アイテムのプロパティの名前と値が表示されます。 ほとんどの場合、プロパティ名は、レポート定義言語 (RDL) ファイル内の要素と属性に対応します。 最も一般的に使用されるプロパティは、選択したアイテムの [プロパティ] ダイアログ ボックスを使用して設定できます。 対応するダイアログ ボックスを開くには、[プロパティ] ペイン ツール バーの **[プロパティ ページ]** ボタンをクリックします。 上級ユーザーは、[プロパティ] ペインでプロパティ値を直接設定できます。  
   
  次の場合、[プロパティ] ペインを使用します。  
@@ -102,25 +102,25 @@ ms.locfileid: "68889839"
  [プロパティ] ペインを表示するには、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックします。 このペインのドッキングを解除して [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウの別の領域に移動したり、デザイン画面上にタブ付きビューとして表示したりできます。  
   
   
-###  <a name="bkmk_SolutionExplorer"></a> ソリューション エクスプローラー  
+###  <a name="solution-explorer"></a><a name="bkmk_SolutionExplorer"></a> ソリューション エクスプローラー  
  ソリューション エクスプローラーは、標準的な [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コンポーネントであり、プロジェクト内のすべてのアイテムが表示されます。 レポート サーバー プロジェクトの場合、これには共有データ ソース、共有データセット、レポート、およびリソースを整理するためのフォルダーが含まれます。 ソリューション ファイルを開くと、フォルダーのアイテムが自動的にアルファベット順に並べ替えられます。 [プロパティ] ペインにアイテムのプロパティを表示するには、アイテムを選択します。  
   
-###  <a name="bkmk_Output"></a> 出力  
+###  <a name="output"></a><a name="bkmk_Output"></a> Output  
  [出力] ウィンドウには、レポートをプレビューした場合の処理エラーと、レポートまたは共有データ ソースを配置した場合の発行エラーが表示されます。  
   
  [出力] ウィンドウと [ドキュメント アウトライン] ウィンドウを使用すると、式のエラーをデバッグできます。  
   
   
-###  <a name="bkmk_DocumentOutline"></a> [ドキュメント アウトライン]  
+###  <a name="document-outline"></a><a name="bkmk_DocumentOutline"></a> [ドキュメント アウトライン]  
  [ドキュメント アウトライン] ウィンドウには、レポート定義内のすべてのレポート アイテムの階層リストが表示されます。 ドキュメント アウトライン ペインを開くには、 **[表示]** メニューの **[その他のウィンドウ]** をポイントし、 **[ドキュメント ウィンドウ]** をクリックします。  
   
  ドキュメント アウトライン ペインを使用すると、テキスト ボックスとその他のレポート アイテムを名前で識別できます。 ドキュメント アウトラインでアイテムを選択すると、そのアイテムはデザイン画面でも選択されます。  
   
-###  <a name="bkmk_TaskList"></a> タスク一覧  
+###  <a name="task-list"></a><a name="bkmk_TaskList"></a> タスク一覧  
  [タスク一覧] ウィンドウには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access などの別のアプリケーションからレポートをインポートした場合に、サポートされていない機能のビルド エラーが表示されます。  
   
   
-##  <a name="bkmk_ReportDesignerDesignView"></a> レポート デザイナーの [デザイン] ビュー  
+##  <a name="report-designer-design-view"></a><a name="bkmk_ReportDesignerDesignView"></a> レポート デザイナーの [デザイン] ビュー  
  既定では、レポート サーバー プロジェクトを作成する際に、レポート デザイナーが [デザイン] ビューで開き、デザイン画面が表示されます。 既定では、デザイン画面には、レポート本文とレポートの背景が表示されます。  
   
  背景のコンテキスト メニューには、ページ ヘッダーとページ フッターを追加するオプションがあります。また、[表示] メニューを使用すると、ルーラーと [グループ化] ペインを表示することができます。  
@@ -130,7 +130,7 @@ ms.locfileid: "68889839"
  レポートをデザインするには、レポート アイテムをツールボックスからデザイン画面にドラッグした後、そのプロパティを構成したり、レポート上での配置を変更したりします。  
   
   
-##  <a name="bkmk_ReportDesignerPreview"></a> レポート デザイナー プレビュー  
+##  <a name="report-designer-preview"></a><a name="bkmk_ReportDesignerPreview"></a> レポート デザイナー プレビュー  
  レポートを実行して、レポート ビューアーに表示レポートを表示するには、[プレビュー] を使用します。 プレビュー時には、レポート データがローカルでキャッシュされます。 また、ブラウザーを使用してデバッグ ビューでレポートを実行するように構成プロパティを設定することもできます。  
   
  レポートをプレビューすると、レポート デザイナーは、レポート データ ソースに接続し、データセット クエリを実行して、データをローカル コンピューターにキャッシュします。その後、レポートを処理してデータとレイアウトを組み合わせて、レポートを表示します。 レポートは、[プレビュー] タブに表示することも、デバッグ モードで表示するようにプロジェクトのプロパティを設定して直接ブラウザーに表示することもできます。  
@@ -144,10 +144,10 @@ ms.locfileid: "68889839"
 -   **[出力] ペインでのエラー メッセージの監視:** レポートのプレビュー時にレポート プロセッサで問題が検出されると、[出力] ペインにエラー メッセージが表示されます。  
   
   
-##  <a name="bkmk_ReportDesignerMenus"></a> レポート デザイナーのメニュー  
+##  <a name="report-designer-menus"></a><a name="bkmk_ReportDesignerMenus"></a> レポート デザイナーのメニュー  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でレポート デザイナー プロジェクトがアクティブになっている場合、次のツール バーがメイン ツール バーに追加されます。 レポート デザイナーのメニューは、[デザイン] ビューのみに表示されます。  
   
-###  <a name="FormatMenu"></a> [書式] メニュー  
+###  <a name="format-menu"></a><a name="FormatMenu"></a> [書式] メニュー  
  デザイン画面でアイテムを選択した場合、 **[書式]** メニューには次のオプションがあります。  
   
 -   **[前景色]** テキストの色を選択します。 既定のテキストの色は黒です。  
@@ -170,12 +170,12 @@ ms.locfileid: "68889839"
   
 -   **[順序]** 選択したオブジェクトを背景または前景に移動します。  
   
-###  <a name="ReportMenu"></a> [レポート] メニュー  
+###  <a name="report-menu"></a><a name="ReportMenu"></a> [レポート] メニュー  
  レポート デザイン画面がアクティブになっている場合、 **[レポート]** メニューには次のオプションがあります。  
   
 -   **[レポートのプロパティ]** **[レポートのプロパティ]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、一般的なレポートのプロパティ (作成者の名前やグリッドの間隔など) を割り当てたり、レポート レイアウトのプロパティ (列数やページ サイズなど) を指定したりできます。 また、カスタム コード、アセンブリやクラスへの参照、データ出力要素の名前、データ変換の名前、およびデータ スキーマの名前も含めることができます。  
   
--   **[表示]** レポート デザイナーの [デザイン] タブと [プレビュー] タブを切り替えます。  
+-   **[表示]** レポート デザイナーのタブ[デザイン] と [プレビュー] を切り替えます。  
   
 -   **[ページ ヘッダー]** レポートのページ ヘッダーを追加または削除します。 ページ ヘッダーを削除すると、ページ ヘッダー内のすべてのアイテムが削除されます。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "68889839"
   
 -   **[グループ化ペイン]** [グループ化] ペインの表示と非表示を切り替えます。  
   
-###  <a name="ViewMenu"></a> [表示] メニュー  
+###  <a name="view-menu"></a><a name="ViewMenu"></a> [表示] メニュー  
  **[表示]** メニューを使用すると、レポート デザイナーのウィンドウとツール バーが表示されます。  
   
 -   **[エラー一覧]** このオプションを使用すると、レポートをパブリッシュまたはプレビューしたときに検出されたエラーが表示されます。  
@@ -202,7 +202,7 @@ ms.locfileid: "68889839"
   
 -   **[レポート データ]** このオプションを使用すると、[レポート データ] ペインが表示されます。このペインでは、レポート パラメーター、データ ソース、データセット、および画像を追加できます。  
   
-###  <a name="ProjectMenu"></a> [プロジェクト] メニュー  
+###  <a name="project-menu"></a><a name="ProjectMenu"></a> [プロジェクト] メニュー  
  プロジェクト内の共有データ ソースおよびレポートを管理するには、 **[プロジェクト]** メニューを使用します。 プロジェクトのアイテムを追加または削除すると、ソリューション エクスプローラーにおけるプロジェクト アイテムの階層表示が自動的に更新されます。  
   
 -   **[新しい項目の追加]** 新しい共有データ ソースまたは新しいレポートをプロジェクトに追加します。  
@@ -220,7 +220,7 @@ ms.locfileid: "68889839"
 -   **[プロパティ]** このプロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [[プロパティ ページ] ダイアログ ボックス](../../reporting-services/tools/project-property-pages-dialog-box.md)」を参照してください。  
   
   
-##  <a name="bkmk_ReportDesignerToolbars"></a> レポート デザイナーのツール バー  
+##  <a name="report-designer-toolbars"></a><a name="bkmk_ReportDesignerToolbars"></a> レポート デザイナーのツール バー  
  レポート デザイナーには、レポートのデザイン時に使用する、次の特殊なツール バーがあります。  
   
 -   **[レポート]** ページ ヘッダーやページ フッターの追加、レポート プロパティの設定、ルーラーや [グループ化] ペインの表示の切り替え、またはズームを使用したレポートの表示変更を実行します。  
@@ -236,17 +236,17 @@ ms.locfileid: "68889839"
  これらのツール バーを表示するかどうかを制御するには、 **[表示]** メニューを使用します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の他のツール バーは、その機能がレポート デザイナーの機能に当てはまらない場合、無効になっていることがあります。  
   
 
-##  <a name="bkmk_SourceControl"></a> ソース管理  
+##  <a name="source-control"></a><a name="bkmk_SourceControl"></a> ソース管理  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。 **[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
-##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
+##  <a name="custom-report-templates"></a><a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは次の場所にあります: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  
   
  また、カスタム スタイルをレポート ウィザードに追加することもできます。  
   
   
-##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server データ ツールのコマンド ライン サポート  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] および基になる devenv.exe アプリケーションに基づいています。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
+##  <a name="command-line-support-for-sql-server-data-tools"></a><a name="bkmk_CommandLineSupportForssdt"></a> SQL Server データ ツールのコマンド ライン サポート  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] および基になる devenv.exe アプリケーションに基づいています。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder、および TargetServerURL のプロジェクト プロパティ。  
   
@@ -274,12 +274,12 @@ ms.locfileid: "68889839"
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2015\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
   
-##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services のキーボード ショートカット キー  
+##  <a name="keyboard-shortcuts-in-reporting-services"></a><a name="bkmk_KeyboardShortcuts"></a> Reporting Services のキーボード ショートカット キー  
  次の場合、キーボード ショートカットを使用します。  
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でのウィンドウおよびモードの制御:  
   
-    |[説明]|キーの組み合わせ|  
+    |説明|キーの組み合わせ|  
     |-----------------|---------------------|  
     |選択したプロジェクトをビルドする|Ctrl + Shift + B|  
     |[プロパティ] ウィンドウを表示する|F4|  
@@ -289,7 +289,7 @@ ms.locfileid: "68889839"
   
 -   レポート デザイン画面でのアイテムの制御:  
   
-    |[説明]|キーの組み合わせ|  
+    |説明|キーの組み合わせ|  
     |-----------------|---------------------|  
     |あるレポート アイテムから次のレポート アイテムにフォーカスを移動する|Tab|  
     |選択したレポート アイテムを移動する|方向キー|  
@@ -303,7 +303,7 @@ ms.locfileid: "68889839"
     |テキスト ボックスで、現在のカーソル位置から表現の末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
     |選択したレポート アイテムのコンテキスト メニューを開く|Shift + F10 + 新しいキーボードのプロパティ キー|
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)   

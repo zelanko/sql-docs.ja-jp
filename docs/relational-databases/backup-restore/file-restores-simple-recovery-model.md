@@ -1,5 +1,6 @@
 ---
 title: ファイルの復元 (単純復旧モデル) | Microsoft Docs
+description: SQL Server では、ファイル復元はデータベース全体を復元することなく 1 つ以上の破損したファイルに適用されます。
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718072"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このトピックは、1 つ以上の読み取り専用セカンダリ ファイル グループが含まれている単純復旧モデルのデータベースのみに関連しています。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68138740"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="Overview"></a> 単純復旧モデルでのファイルとファイル グループの復元の概要  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 単純復旧モデルでのファイルとファイル グループの復元の概要  
  ファイル復元のシナリオは、次に示すように、適切なデータをコピーし、ロールフォワードして、復旧する単一の復元シーケンスで構成されます。  
   
 1.  破損した各ファイルを最新のファイル バックアップから復元します。  
@@ -80,13 +81,13 @@ ms.locfileid: "68138740"
   
      WITH RECOVERY **;**  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 -   [例: 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [例: プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
  **ファイルおよびファイル グループを復元するには**  
   
 -   [既存のファイルにファイルとファイル グループを復元する &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  

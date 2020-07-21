@@ -1,5 +1,5 @@
 ---
-title: パラメーターと行セットのメタデータ |Microsoft Docs
+title: パラメーターと行セットのメタデータ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +10,17 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d661072ae999721c258b2fd85b53665e2104b2f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 79bf81886795d4772a4eac08ee51912b775cc4c8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106922"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005433"
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、OLE DB の日付および時刻の機能強化に関連する、次の型と型メンバーについて説明します。  
   
@@ -41,12 +39,12 @@ ms.locfileid: "68106922"
   
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|日付|DBTYPE_DBDATE|6|10|0|[クリア]|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|[クリア]|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|[クリア]|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
+|time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21.. 27|0..7|オン|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28.. 34|0..7|オン|  
   
  場合によっては、値の範囲が連続していないことに注意してください。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "68106922"
 |*pwszDataSourceType*<br /><br /> (プロバイダー固有)|*pwszDataSourceType*<br /><br /> (OLE DB 汎用)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|無視|  
-|日付|DBTYPE_DBDATE|6|無視|  
+|date|DBTYPE_DBDATE|6|無視|  
 ||DBTYPE_DBTIME|10|無視|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|無視|  
@@ -66,32 +64,32 @@ ms.locfileid: "68106922"
 |datetime2 または DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *BPrecision*パラメーターは無視されます。  
+ *bPrecision* パラメーターは無視されます。  
   
- データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 *bScale*プロバイダー固有の型名の場合は無視されます"**datetime**「または」**smalldatetime**"ために使用されます。 それ以外の場合、アプリケーションである必要がありますように*bScale*が正しく設定されています。 MDAC からアップグレードされたアプリケーションと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client から[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]"DBTYPE_DBTIMESTAMP"が設定されない場合は失敗を使用して*bScale*正しくします。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
+ データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名に "**datetime**" または "**smalldatetime**" が使用されている場合は、*bScale* が無視されます。 それ以外の場合は、appications、 *Bscale*が正しく設定されていることを確認する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"DBTYPE_DBTIMESTAMP" を使用するから MDAC および Native Client からアップグレード [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] されたアプリケーションは、 *bscale*を正しく設定しないと失敗します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
   
- Icommandwithparameters::setparameterinfo が呼び出されていない場合プロバイダー基、サーバーに iaccessor::createaccessor で指定されたバインドの種類から次のように入力します。  
+ ICommandWithParameters:: SetParameterInfo が呼び出されない場合、プロバイダーは IAccessor:: CreateAccessor に指定されているバインドの種類からサーバーの種類を次のように基します。  
   
 |バインドの種類|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|日付|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **Icolumnsrowset::getcolumnsrowset**次の列を返します。  
+ **IColumnsRowset::GetColumnsRowset** は次の列を返します。  
   
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|日付|DBTYPE_DBDATE|6|10|0|[クリア]|  
-|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|[クリア]|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|[クリア]|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
+|time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
  DBCOLUMN_FLAGS では、DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型に対して常に true になり、次のフラグは常に false になります。  
   
@@ -120,12 +118,12 @@ ms.locfileid: "68106922"
   
 |パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|日付|DBTYPE_DBDATE|6|10|0|[クリア]|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|[クリア]|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|[クリア]|  
-|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
+|time(1..7)|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
  *dwFlags* では、DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型に対して常に true になり、次のフラグは常に false になります。  
   
@@ -145,7 +143,7 @@ ms.locfileid: "68106922"
   
  *dwFlags* に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、*wType* が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、*bScale* も使用する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [メタデータ&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+## <a name="see-also"></a>参照  
+ [メタデータ &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

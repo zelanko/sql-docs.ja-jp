@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 761ce75ed8fc80b467c33024beee546162e6013b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970321"
 ---
 # <a name="page-compression-implementation"></a>ページの圧縮の実装
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に実装されているページの圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  
@@ -68,6 +67,6 @@ ms.locfileid: "62918223"
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](data-compression.md)   
- [「行の圧縮の実装」](row-compression-implementation.md)  
+ [行の圧縮の実装](row-compression-implementation.md)  
   
   

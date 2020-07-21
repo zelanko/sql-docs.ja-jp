@@ -8,12 +8,12 @@ description: この記事では、ブランド パッケージを利用してビ
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221725"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "72251914"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -27,7 +27,7 @@ ms.locfileid: "68221725"
   
 Reporting Services のブランド パッケージは 3 つのアイテムから構成されており、zip ファイルとしてパッケージされています。   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (任意)  
   
@@ -75,7 +75,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-出力が処理されるとき、LESS 変数の **@primaryButtonBg** が検索され、 **primary**と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
+処理された出力では、LESS 変数の **\@primaryButtonBg** が検索され、**primary** と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
   
     .btn-primary {   
         color:#ffffff;   
@@ -91,15 +91,15 @@ Reporting Services の colors.json ファイルには 2 つのメイン カテ�
   
 インターフェイス セクションは、以下のグループに分類されます。  
   
-|セクション|[説明]|  
+|Section|説明|  
 |---|---|  
-|primary|ボタンとホバーの色。|  
+|プライマリ|ボタンとホバーの色。|  
 |セカンダリ|タイトル バー、検索バー、左側のメニュー (表示される場合)、それらのアイテムのテキストの色。|  
 |ニュートラル プライマリ|ホームとレポート領域の背景。|  
 |ニュートラル セカンダリ|テキスト ボックスとフォルダー オプションの背景、設定メニュー。|  
 |ニュートラル ターシャリ|サイト設定の背景。|  
 |危険/警告/成功メッセージ|これらのメッセージの色。|  
-|KPI (KPI)|色を good (1)、neutral (0)、neutral (-1)、none で調整します。|  
+|KPI|色を good (1)、neutral (0)、neutral (-1)、none で調整します。|  
   
 Mobile Report Publisher で初めてサーバーに接続するとき、それにブランド パッケージが配置されている場合、そのテーマが利用可能テーマに追加されます。アプリの右上のメニューから利用できます。  
   
@@ -123,7 +123,7 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  **[ブランド化]** を選択します。  
+3.  **[ブランド]** を選択します。  
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   
@@ -241,6 +241,6 @@ Mobile Report Publisher で初めてサーバーに接続するとき、それ�
         }  
     }  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

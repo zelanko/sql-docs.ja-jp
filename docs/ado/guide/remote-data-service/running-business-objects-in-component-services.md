@@ -1,5 +1,5 @@
 ---
-title: コンポーネント サービスでビジネス オブジェクトの実行 |Microsoft Docs
+title: コンポーネントサービスでのビジネスオブジェクトの実行 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,29 +10,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - component services in RDS [ADO]
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87eab0ac5611b437f6e0cbe1957a4d6e8652c4b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f13e876cb5707b7e906235c5b12e5f019f7b5d60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922279"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758998"
 ---
 # <a name="running-business-objects-in-component-services"></a>コンポーネント サービスでのビジネス オブジェクトの実行
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- ビジネス オブジェクトには、実行可能ファイル (.exe) またはダイナミック リンク ライブラリ (.dll) を指定できます。 構成を使用して、ビジネス オブジェクトを実行するかどうか、オブジェクトは、.dll または .exe ファイルによって異なります。  
+ ビジネスオブジェクトには、実行可能ファイル (.exe) またはダイナミックリンクライブラリ (.dll) を指定できます。 ビジネスオブジェクトの実行に使用する構成は、オブジェクトが .dll または .exe ファイルのどちらであるかによって異なります。  
   
--   .Exe ファイルとして作成されたビジネス オブジェクトは、DCOM を介して呼び出すことができます。 クライアントのパフォーマンスが低下する、データの追加のマーシャ リングされるインターネット インフォメーション サービス (IIS) を介してこれらのビジネス オブジェクトを使用する場合。  
+-   .Exe ファイルとして作成されたビジネスオブジェクトは、DCOM を介して呼び出すことができます。 これらのビジネスオブジェクトがインターネットインフォメーションサービス (IIS) で使用されている場合は、データの追加のマーシャリングによって、クライアントのパフォーマンスが低下する可能性があります。  
   
--   As .dll ファイルを使用して、IIS を介して作成されたビジネス オブジェクトと HTTP でも。 いることもできます、コンポーネント サービスを介してのみまたは Microsoft Transaction Server では、DCOM 経由で Windows NT を使用している場合。 ビジネス オブジェクトの Dll は、IIS を介してそれらにアクセスする IIS サーバー コンピューターに登録する必要があります。 DCOM 上で実行する DLL を構成する方法については、このセクションを参照してください。 [DCOM 上で実行するように DLL を有効にする](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)します。  
+-   .Dll ファイルとして作成されたビジネスオブジェクトは、IIS を介して使用することも、HTTP で使用することもできます。 また、Windows NT を使用している場合は、コンポーネントサービスまたは Microsoft トランザクションサーバーを介して DCOM 経由でのみ使用できます。 IIS を使用してアクセスするには、ビジネスオブジェクト Dll を IIS サーバーコンピューターに登録する必要があります。 DLL を DCOM 上で実行するように構成する方法の詳細については、「 [dcom を有効](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)にする」セクションを参照してください。  
   
 > [!NOTE]
->  使用して、中間層ビジネス オブジェクトがコンポーネント サービス コンポーネントとして実装すると**GetObjectContext**、 **SetComplete**、および**SetAbort**、ビジネスオブジェクトは、コンポーネント サービス (または Windows NT を使用している場合は、MTS) を使用できる複数のクライアント呼び出しでその状態を維持するために、コンテキスト オブジェクト。 このシナリオでは、DCOM で、信頼されたクライアントとイントラネット内のサーバーの間は、通常実装を持つ可能性があります。 ここで、 [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクトと[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)クライアント側のメソッドは、トランザクションのコンテキスト オブジェクトに置き換え、 **CreateInstance** によって提供されるメソッドは、**ITransactionContext**インターフェイスし、コンポーネント サービスによって実装されます。  
+>  中間層のビジネスオブジェクトが**Getobjectcontext**、 **SetComplete**、および**SetAbort**を使用してコンポーネントサービスコンポーネントとして実装されている場合、ビジネスオブジェクトはコンポーネントサービス (Windows NT を使用している場合は MTS) を使用して、複数のクライアント呼び出しで状態を維持することができます。 このシナリオは、通常、信頼されたクライアントとイントラネット内のサーバーの間で実装される DCOM で実現できます。 この例では、 [RDS です。](../../../ado/reference/rds-api/dataspace-object-rds.md)クライアント側の領域スペースオブジェクトと[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドは、トランザクションコンテキストオブジェクトと**CreateInstance**メソッドに置き換えられます。このメソッドは、 **ITransactionContext**インターフェイスによって提供され、コンポーネントサービスによって実装されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

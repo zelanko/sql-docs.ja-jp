@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: d3403c3e-d178-4006-b6c9-c18609562db5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0bbd8b256145a9d91e8615aaf7d87a4b8ce7b8b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a35ebcf72195975a69db5b1f1c4e40d987a750a5
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867896"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551427"
 ---
-# <a name="mssqlserver41332"></a>MSSQLSERVER_41332
+# <a name="mssqlserver_41332"></a>MSSQLSERVER_41332
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|41332|  
@@ -38,7 +37,7 @@ ms.locfileid: "62867896"
 ## <a name="user-action"></a>ユーザーの操作  
  他の分離レベルでトランザクションを開始します。 詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

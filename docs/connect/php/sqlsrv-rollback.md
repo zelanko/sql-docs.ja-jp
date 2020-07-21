@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rollback |Microsoft Docs
+title: sqlsrv_rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68014966"
 ---
-# <a name="sqlsrvrollback"></a>sqlsrv_rollback
+# <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 指定した接続で現在のトランザクションをロールバックし、接続を自動コミット モードに戻します。 現在のトランザクションには、 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) の呼び出しの後、 **sqlsrv_rollback** または [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)の呼び出しの前に指定した接続で実行されたすべてのステートメントが含まれています。  

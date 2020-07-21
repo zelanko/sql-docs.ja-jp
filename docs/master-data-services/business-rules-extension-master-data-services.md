@@ -1,5 +1,6 @@
 ---
-title: ビジネス ルールの拡張機能 (マスター データ サービス) | Microsoft Docs
+title: Business Rules Extension
+description: ユーザー定義の SQL スクリプトは、マスターデータサービスで定義済みのビジネスルールの条件とアクションの拡張機能として適用できます。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d6ad76f68acb72072f04728e55793bad3aa9cd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813676"
 ---
 # <a name="business-rules-extension-master-data-services"></a>ビジネス ルールの拡張機能 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
   
@@ -65,12 +66,12 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**[スキーマ]**|**Permissions**|  
+|**[スキーマ]**|**アクセス許可**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |ユーザー|FULL|  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  
@@ -89,7 +90,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 4.  **[エンティティ]** ドロップダウン リストから、エンティティを選択します。  
   
-5.  **[メンバーの種類]** ボックスの一覧から、適用するビジネス ルールのメンバーの種類を選択します。  
+5.  **[メンバーの種類]** ドロップダウン リストから、適用するビジネス ルールのメンバーの種類を選択します。  
   
 6.  **[追加]** をクリックします。  
   
@@ -114,8 +115,8 @@ CREATE PROCEDURE [usr].[YourAction]
     3.  **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目  
- [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
- [ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [ビジネスルール条件 &#40;マスターデータサービス&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

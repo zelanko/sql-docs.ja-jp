@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51cdfca39f0f0124f34f4b2fd380fe0de7bb396a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898868"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294495"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
 
@@ -37,7 +37,7 @@ ms.locfileid: "67898868"
  **[使用法の種類]**  
  複数のファイルの接続マネージャーに使用するファイルの種類を指定します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[ファイルの作成]**|接続マネージャーはファイルを作成します。|  
 |**[既存のファイル]**|接続マネージャーは既存のファイルを使用します。|  
@@ -47,19 +47,19 @@ ms.locfileid: "67898868"
  **[ファイルまたはフォルダー]**  
  次のボタンを使用して追加したファイルまたはフォルダーを表示します。  
   
- **[追加]**  
+ **追加**  
  **[ファイルの選択]** ダイアログ ボックスを使用してファイルを追加するか、 **[フォルダーの参照]** ダイアログ ボックスを使用してフォルダーを追加します。  
   
  **[編集]**  
  ファイルまたはフォルダーを選択し、 **[ファイルの選択]** または **[フォルダーの参照]** ダイアログ ボックスを使用して別のファイルまたはフォルダーで置き換えます。  
   
- **[削除]**  
+ **Remove**  
  ファイルまたはフォルダーを選択し、 **[削除]** ボタンを使用して一覧から削除します。  
   
  **矢印ボタン**  
  ファイルまたはフォルダーを選択し、矢印ボタンを使用して上または下に移動して、アクセスのシーケンスを指定します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

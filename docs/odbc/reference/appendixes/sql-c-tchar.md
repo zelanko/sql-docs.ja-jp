@@ -12,14 +12,14 @@ helpviewer_keywords:
 - pseudo-type identifiers [ODBC], SQL_C_TCHAR
 - data types [ODBC], pseudo-type identifiers
 ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68a03de54a8a5f63a994578d64c6bce5a1279138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 973d94b9b47371090a5f54fd3d259854ba78e9c2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057039"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304073"
 ---
-# <a name="sqlctchar"></a>SQL_C_TCHAR
-SQL_C_TCHAR 型識別子が、データ型を実際に識別できません。これは、Unicode への変換用のヘッダー ファイル内に存在するマクロです。 UNICODE の設定に応じて SQL_C_CHAR、SQL_C_WCHAR またはによって置き換えられる **#define**します。 ANSI および Unicode アプリケーションの両方としてコンパイルされる文字データを転送するアプリケーションに適しています。
+# <a name="sql_c_tchar"></a>SQL_C_TCHAR
+SQL_C_TCHAR 型識別子は実際にはデータ型を識別しません。これは、Unicode 変換のヘッダーファイル内に存在するマクロです。 UNICODE **#define**の設定によっては、SQL_C_CHAR または SQL_C_WCHAR に置き換えられます。 ANSI と Unicode の両方のアプリケーションとしてコンパイルされた文字データをアプリケーションが転送する場合に便利です。

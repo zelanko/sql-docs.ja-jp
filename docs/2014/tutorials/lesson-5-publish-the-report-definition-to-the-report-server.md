@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: レポート サーバーにレポート定義のパブリッシュ |Microsoft Docs'
+title: 'レッスン 5: レポート定義をレポートサーバーにパブリッシュする |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272868"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>レッスン 5: レポート サーバーへのレポート定義のパブリッシュ
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>レッスン 5 : レポート サーバーへのレポート定義のパブリッシュ
   レポート定義を更新する最後の作業として、レポート定義をレポート サーバーにパブリッシュします。  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>レポートをレポート カタログにパブリッシュするには  
   
-1.  コードを置き換える、 `PublishReportDefinition()` 、Program.cs ファイル内のメソッド (Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) を次のコード。  
+1.  Program.cs ファイル (の場合`PublishReportDefinition()` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]は module1.vb) で、メソッドのコードを次のコードに置き換えます。  
   
     ```csharp  
     private void PublishReportDefinition()  
@@ -77,10 +77,10 @@ ms.locfileid: "63272868"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、コンパイルし、実行、`SampleRDLSchema`アプリケーション。 「[レッスン 6:RDL スキーマ アプリケーションの実行&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)します。  
+ 次のレッスンでは、 `SampleRDLSchema`アプリケーションをコンパイルして実行します。 「[レッスン 6: &#40;VB-C&#35;&#41;の RDL スキーマアプリケーションの実行](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL スキーマから生成されたクラスを使用したレポートの更新 SSRS チュートリアル &#40;&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

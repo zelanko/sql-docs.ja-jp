@@ -1,6 +1,6 @@
 ---
-title: '[Microsoft SQL Server Management Studio のバージョン情報] | Microsoft Docs'
-ms.custom: ''
+title: '[Microsoft SQL Server Management Studio のバージョン情報]'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b7026b90766cb98335f1cbb626357ddc9c50718
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: acb6ad109fb34641ab5661f48db8906cf4de1430
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265050"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253296"
 ---
 # <a name="about-sql-server-management-studio"></a>[Microsoft SQL Server Management Studio のバージョン情報]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスを使用すると、インストール済みの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に関する情報を表示したり、コピーしたりできます。 評価版の場合、製品の有効期限を示す日数が表示されます。  
+このダイアログ ボックスを使用すると、インストール済みの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に関する情報を表示したり、コピーしたりできます。 評価版の場合、製品の有効期限を示す日数が表示されます。  
   
 ## <a name="options"></a>オプション  
 **[コンポーネント名]**  
@@ -37,7 +37,7 @@ ms.locfileid: "68265050"
   
 -   **[Microsoft MSXML]**  
   
--   **[[Microsoft Internet Explorer]]**  
+-   **[Microsoft Internet Explorer]**  
   
 -   **[Microsoft .NET Framework]**  
   

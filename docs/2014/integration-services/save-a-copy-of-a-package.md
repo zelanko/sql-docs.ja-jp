@@ -1,5 +1,5 @@
 ---
-title: パッケージのコピーの保存 |Microsoft Docs
+title: パッケージのコピーを保存する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d68eac95885b6c40d607237eeb51050a9c6130f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056265"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422539"
 ---
 # <a name="save-a-copy-of-a-package"></a>パッケージのコピーを保存する
   この手順では、パッケージのコピーをファイル システム、パッケージ ストア、または [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **msdb** データベースに保存する方法について説明します。 パッケージのコピーを保存する場所を指定するとき、パッケージの名前を更新することもできます。  
@@ -37,9 +36,9 @@ ms.locfileid: "66056265"
   
 1.  ソリューション エクスプローラーで、コピーを保存するパッケージをダブルクリックします。  
   
-2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
+2.  [**ファイル**] メニューの [**名前を付け \<package file> てコピー**] をクリックします。  
   
-3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、 **[パッケージの場所]** 一覧からパッケージの保存場所を選択します。  
+3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、**[パッケージの場所]** 一覧からパッケージの保存場所を選択します。  
   
 4.  保存場所が **[SQL Server]** または **[SSIS パッケージ ストア]** の場合、サーバー名を指定します。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66056265"
   
 7.  パッケージの保護レベルを確認します。  
   
-8.  必要に応じて、 **[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
+8.  必要に応じて、**[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
   
     -   **[パッケージの保護レベル]** ダイアログ ボックスで、別の保護レベルを選択します。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66056265"
 9. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
- [サービスをサービスの統合を構成する&#40;SSIS サービス&#41;](service/integration-services-service-ssis-service.md)  
+ [SSIS&#41; パッケージ &#40;Integration Services](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   
   

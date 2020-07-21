@@ -1,5 +1,6 @@
 ---
-title: エンティティ (Master Data Services) | Microsoft Docs
+title: エンティティ
+description: エンティティはマスターデータサービスモデルに含まれるオブジェクトです。 各エンティティには、管理対象のマスター データの行であるメンバーが含まれています。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c40c4cd565d01e7918cecd7c2dc89015f13c9f9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811973"
 ---
 # <a name="entities-master-data-services"></a>エンティティ (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   エンティティは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] モデルに含まれるオブジェクトです。 各エンティティには、管理対象のマスター データの行であるメンバーが含まれています。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "68052042"
  また、場合によっては、エンティティに明示的階層 (単一のエンティティに基づく不規則な構造) とコレクション (メンバーのサブセットの 1 回限りの組み合わせ) を含めることも可能です。 詳細については、「[明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)」および「[コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)」を参照してください。  
   
 ## <a name="using-entities-as-constrained-lists"></a>制約リストとしてのエンティティの使用  
- ユーザーはエンティティ内のメンバーに属性を割り当てるときに、値の制約リストから属性を選択することができます。 これを行うには、エンティティを使用して属性用に値のリストを設定します。 これを、ドメイン ベースの属性といいます。 詳細については、「[ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
+ ユーザーはエンティティ内のメンバーに属性を割り当てるときに、値の制約リストから属性を選択することができます。 これを行うには、エンティティを使用して属性用に値のリストを設定します。 これを、ドメイン ベースの属性といいます。 詳細については、「 [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
   
 ## <a name="base-entities"></a>ベース エンティティ  
  ベース エンティティは、モデル内でオブジェクト間を移動するときのユーザーの開始点です。 ユーザーが **[エクスプローラー]** 機能領域を開いてメニュー バーの **[エクスプローラー]** をクリックすると、ベース エンティティによって画面のレイアウトが決定されます。 エンティティをベース エンティティに指定するには、 **[システム管理]** 機能領域に移動します。 **[モデル ビュー]** ページで、右側のツリー コントロールのエンティティを左側のツリー コントロールのモデルの名前にドラッグします。  
@@ -52,7 +53,7 @@ ms.locfileid: "68052042"
  関連するモデル オブジェクトを含む、エンティティに対する権限をユーザーに付与できます。 詳細については、「[エンティティ権限 (マスター データ サービス)](../master-data-services/entity-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="entity-examples"></a>エンティティの例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   

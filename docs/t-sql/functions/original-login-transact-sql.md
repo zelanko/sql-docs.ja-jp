@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ff9f53c6dd3e0029f2627545c7654ded3219abbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0e5ce89f8d87a3cfea230c5254214de7f20fcc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738034"
 ---
-# <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続しているログインの名前を返します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
   
@@ -45,11 +45,11 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、元の接続コンテキストの ID を監査するときに便利です。 [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) や [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) などの関数では、現在実行しているコンテキストが返されるのに対し、ORIGINAL_LOGIN では、そのセッションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに最初に接続したログインの ID が返されます。  
  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のセッションの実行コンテキストを、ステートメントの呼び出し元のログインから `login1` に切り替えます。 関数 `SUSER_SNAME` および `ORIGINAL_LOGIN` を使用すると、現在のセッションのユーザー (コンテキストの切り替え先のユーザー) と、元のログイン アカウントが返されます。 
  
   >[!NOTE]

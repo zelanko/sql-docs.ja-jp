@@ -1,5 +1,6 @@
 ---
 title: default trace enabled サーバー構成オプション | Microsoft Docs
+description: "\"default trace enabled\" オプションについて説明します。 既定のトレースがトラブルシューティングにどのように役立つかについて説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,24 +13,24 @@ helpviewer_keywords:
 - traces [SQL Server], logs
 - default trace enabled option
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 33a04235580d70567b1de09180b10526255811bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfeec7df441b841cbbaa5da7c0b693f37749e861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772561"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **default trace enabled** オプションは、既定のトレース ログ ファイルを有効または無効にする場合に使用します。 既定のトレース機能では、主に構成オプションに関連する操作および変更の詳しい永続的なログが提供されます。  
   
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  既定のトレース機能は、問題が初めて発生したときに、その問題を診断するために必要なログ データを提供することによって、データベース管理者によるトラブルシューティングを支援します。  
   
 ## <a name="viewing"></a>表示  

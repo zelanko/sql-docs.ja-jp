@@ -1,5 +1,5 @@
 ---
-title: パラメーターの作成 |Microsoft Docs
+title: パラメーターを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a26ae08c08a32b0593be8c9a2777b7cfe9c884fa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060142"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437889"
 ---
-# <a name="create-parameters"></a>Create Parameters
+# <a name="create-parameters"></a>パラメーターを作成する
   プロジェクト パラメーターおよびパッケージ パラメーターを作成するには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用します。 以下の手順では、パッケージ/プロジェクト パラメーターを作成する方法を詳細に説明します。  
   
 > [!NOTE]  
@@ -33,16 +32,16 @@ ms.locfileid: "66060142"
   
 2.  ツール バーの **[パラメーターの追加]** ボタンをクリックします。  
   
-     ![ツール バーの [追加] ボタン](media/denali-parameter-add.gif "ツール バーの [追加] ボタン")  
+     ![[追加] ツール バー ボタン](media/denali-parameter-add.gif "[追加] ツール バー ボタン")  
   
-3.  一覧で直接、または **[プロパティ]** ウィンドウを使用して、 **[名前]** 、 **[データ型]** 、 **[値]** 、 **[区別する]** 、 **[必須]** の各プロパティに値を入力します。 次の表では、これらのプロパティについて説明します。  
+3.  一覧で直接、または **[プロパティ]** ウィンドウを使用して、**[名前]**、**[データ型]**、**[値]**、**[区別する]**、**[必須]** の各プロパティに値を入力します。 次の表では、これらのプロパティについて説明します。  
   
     |プロパティ|説明|  
     |--------------|-----------------|  
     |名前|パラメーターの名前。|  
-    |データ型|パラメーターのデータ型です。|  
+    |データの種類|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
-    |区別する|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
+    |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
     |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
     |説明|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
   
@@ -52,10 +51,10 @@ ms.locfileid: "66060142"
 4.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーターの値はプロジェクト ファイルに格納されます。  
   
     > [!WARNING]  
-    >  リストで直接編集することも、 **[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
+    >  リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
   
     > [!NOTE]  
-    >  プロジェクトを [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で開かずにパッケージ ファイルを再度開くと、 **[パラメーター]** タブは空になり、無効になります。  
+    >  プロジェクトを [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で開かずにパッケージ ファイルを再度開くと、**[パラメーター]** タブは空になり、無効になります。  
   
 ### <a name="to-create-project-parameters"></a>プロジェクト パラメーターを作成するには  
   
@@ -63,29 +62,29 @@ ms.locfileid: "66060142"
   
 2.  ソリューション エクスプローラーで **[Project.params]** を右クリックして **[開く]** をクリックするか、または **[Project.params]** をダブルクリックして開きます。  
   
-     ![プロジェクト パラメーター ウィンドウ](media/denali-project-parameters.gif "プロジェクト パラメーター ウィンドウ")  
+     ![[プロジェクト パラメーター] ウィンドウ](media/denali-project-parameters.gif "[プロジェクト パラメーター] ウィンドウ")  
   
 3.  ツール バーの **[パラメーターの追加]** ボタンをクリックします。  
   
-     ![ツール バーの [追加] ボタン](media/denali-parameter-add.gif "ツール バーの [追加] ボタン")  
+     ![[追加] ツール バー ボタン](media/denali-parameter-add.gif "[追加] ツール バー ボタン")  
   
-4.  **[名前]** 、 **[データ型]** 、 **[値]** 、 **[区別する]** 、 **[必須]** の各プロパティに値を入力します。  
+4.  **[名前]**、**[データ型]**、**[値]**、**[区別する]**、**[必須]** の各プロパティに値を入力します。  
   
     |プロパティ|説明|  
     |--------------|-----------------|  
     |名前|パラメーターの名前。|  
-    |データ型|パラメーターのデータ型です。|  
+    |データの種類|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
-    |区別する|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
+    |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
     |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
     |説明|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
   
 5.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーター値はプロジェクト ファイルの構成に格納されます。 プロジェクト ファイルを保存して、パラメーター値の変更をディスクにコミットしてください。  
   
     > [!WARNING]  
-    >  リストで直接編集することも、 **[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、 **[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
+    >  リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、**[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
   
-## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;パラメーター](integration-services-ssis-package-and-project-parameters.md)  
+## <a name="see-also"></a>関連項目  
+ [SSIS&#41; パラメーターの Integration Services &#40;](integration-services-ssis-package-and-project-parameters.md)  
   
   

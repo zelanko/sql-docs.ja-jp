@@ -1,6 +1,7 @@
 ---
-title: トラブルシューティング:可用性グループ接続の超過 RPO (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性グループ接続の超過 RPO
+description: Always On 可用性グループが回復ポイントの目標 (RPO) を超えた場合の一般的な問題と解決策
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882357"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング:可用性グループ接続の超過 RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   非同期コミット セカンダリ レプリカへの可用性グループの強制手動フェールオーバーを実行した後に、データ損失が回復ポイントの目標 (RPO) を超えていることが判明する場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して非同期コミット セカンダリ レプリカの予想されるデータ損失を計算したときに RTO を超過していることが判明します。  
   
  同期コミット セカンダリ レプリカは、データ損失がないことを保証しますが、非同期コミット セカンダリ レプリカのデータ損失の可能性は、セカンダリ レプリカ上で書き込まれるのを待機しているログの量に依存します。  
@@ -28,7 +29,7 @@ ms.locfileid: "68013740"
   
 2.  [ディスク I/O のボトルネックのために、セカンダリ レプリカでログの書き込みが遅くなる](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> 長いネットワーク遅延またはスループットが低いネットワークは、プライマリ レプリカでログの構築の原因になります。  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> 長いネットワーク遅延またはスループットが低いネットワークは、プライマリ レプリカでログの構築の原因になります。  
  データベースが RPO を超える最も一般的な理由は、セカンダリ レプリカに十分な速さで送信できないことです。  
   
 ### <a name="explanation"></a>説明  
@@ -62,7 +63,7 @@ ms.locfileid: "68013740"
 この問題を解決するには、ネットワーク帯域幅をアップグレードするか、不要なネットワーク トラフィックを削除するか減らしてみてください。  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> ディスク I/O のボトルネックのために、セカンダリ レプリカでログの書き込みが遅くなる  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> ディスク I/O のボトルネックのために、セカンダリ レプリカでログの書き込みが遅くなる  
  データベース ファイルの配置によっては、レポート ワークロードとの I/O の競合により、ログの書き込みが遅くなる可能性があります。  
   
 ### <a name="explanation"></a>説明  
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **物理ディスク: すべてのカウンター**  
   
--   **物理ディスク:Avg. Disk sec/Transfer**  
+-   **物理ディスク:Avg.Disk sec/Transfer**  
   
 -   **SQL Server:Databases > Log Flush Wait Time**  
   
@@ -125,7 +126,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
  I/O のボトルネックを特定し、ログ ファイルとデータ ファイルが同じハード ディスク上に置かれている場合、最初の手順として、データ ファイルとログ ファイルを別々のディスクに置く必要があります。 このベスト プラクティスにより、レポート ワークロードが、プライマリ レプリカからログ バッファーへのログ転送パスに干渉することがなくなり、セカンダリ ディスク上でトランザクションを書き込む機能に影響しなくなります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

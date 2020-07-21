@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7795ee6eca85a22bdd4e84c90ce49a9449ddff28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047141"
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルで CHECK 制約を作成して、1 つ以上の列に入力できるデータ値を指定します。  
@@ -30,7 +29,7 @@ ms.locfileid: "62736202"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **新しい CHECK 制約を作成する方法:**  
   
@@ -38,14 +37,14 @@ ms.locfileid: "62736202"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-new-check-constraint"></a>新しい CHECK 制約を作成するには  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62736202"
   
 6.  **テーブル デザイナー** のカテゴリでは、制約が適用されるタイミングを設定できます。  
   
-    |**目的:**|**[はい] を選択するフィールド:**|  
+    |**To:**|**[はい] を選択するフィールド:**|  
     |-------------|---------------------------------------------|  
     |制約を作成する前に既に存在していたデータで制約をテストする|**[作成または有効化するときに既存データを確認]**|  
     |このテーブルでレプリケーション操作が発生するたびに制約を適用する|**[レプリケーションに対して適用]**|  
@@ -82,7 +81,7 @@ ms.locfileid: "62736202"
   
 7.  **[閉じる]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-new-check-constraint"></a>新しい CHECK 制約を作成するには  
   

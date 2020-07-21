@@ -1,10 +1,11 @@
 ---
 title: OPENXML (SQLServer) | Microsoft Docs
+description: XML ドキュメントの内部表現の行セット ビューを提供する、SQL Server での OPENXML ステートメントについて学習します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753700"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。  
   
  OPENXML を使用できるのは、行セット プロバイダー、ビュー、または OPENROWSET をソースとして指定できる SELECT ステートメントおよび SELECT INTO ステートメントです。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。  
@@ -45,7 +46,7 @@ ms.locfileid: "67995358"
   
  次の図は、この処理を示しています。  
   
- ![OPENXML での XML の解析](../../relational-databases/xml/media/xmlsp.gif "OPENXML での XML の解析")  
+ ![OPENXML で XML を解析する](../../relational-databases/xml/media/xmlsp.gif "OPENXML で XML を解析する")  
   
  OPENXML を理解するには、XPath クエリと XML を詳しく理解している必要があります。 SQL Server での XPath のサポートの詳細については、「 [SQLXML 4.0 での XPath クエリの使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)」を参照してください。  
   
@@ -59,13 +60,13 @@ ms.locfileid: "67995358"
   
  次の例では、2 つの `<Customers>` ステートメントで `Customers` 要素を `<Orders>` テーブルに格納し、 `Orders` 要素を `INSERT` テーブルに格納することで、XML ドキュメントを細分化しています。 また、この例では、 `SELECT` を使用して XML ドキュメントから `OPENXML` と `CustomerID` を取得する `OrderDate` ステートメントも示しています。 この処理の最後に `sp_xml_removedocument`が呼び出されています。 これは、解析時に作成された内部 XML ツリー表現を保持するために割り当てられたメモリを解放するための処理です。  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -90,7 +91,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -138,18 +140,19 @@ EXEC sp_xml_removedocument @docHandle;
   
  次の表で、エッジ テーブルの構造について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID で識別される親が親要素だとは限りません。 識別された親が親要素であるかどうかは、この ID で識別されるノードを親とするノードの NodeType によって決まります。 たとえば、ノードがテキスト ノードの場合、その親は属性ノードである可能性があります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  
 |**node type**|**int**|XML DOM (オブジェクト モデル) でノードの種類に付けられている番号に応じた、ノードの種類を識別するための整数です。<br /><br /> この列に示される、ノードの種類を示す値を次に示します。<br /><br /> **1** = 要素ノード<br /><br /> **2** = 属性ノード<br /><br /> **3** = テキスト ノード<br /><br /> **4** = CDATA セクション ノード<br /><br /> **5** = エンティティ参照ノード<br /><br /> **6** = エンティティ ノード<br /><br /> **7** = 処理命令ノード<br /><br /> **8** = コメント ノード<br /><br /> **9** = ドキュメント ノード<br /><br /> **10** = ドキュメント型ノード<br /><br /> **11** = ドキュメント フラグメント ノード<br /><br /> **12** = 注釈ノード<br /><br /> 詳細については、Microsoft XML (MSXML) SDK の「nodeType Property」を参照してください。|  
 |**localname**|**nvarchar(max)**|要素または属性のローカル名。 DOM オブジェクトに名前がない場合は NULL になります。|  
-|**プレフィックス**|**nvarchar(max)**|ノード名の名前空間のプレフィックス。|  
+|**prefix**|**nvarchar(max)**|ノード名の名前空間のプレフィックス。|  
 |**namespaceuri**|**nvarchar(max)**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  
 |**datatype**|**nvarchar(max)**|要素行または属性行の実際のデータ型です。それ以外は NULL になります。 データ型は、インライン DTD またはインライン スキーマから推定されます。|  
 |**prev**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  
 |**text**|**ntext**|テキスト形式で表した属性の値または要素のコンテンツです。 エッジ テーブルのエントリに値が必要ない場合は NULL になります。|  
-  
+||||
+
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>WITH 句を使用した既存のテーブルの指定  
  WITH 句を使用して、既存のテーブルの名前を指定できます。 これを行うには、OPENXML で使用して行セットを生成できるスキーマを持つ既存のテーブルの名前を指定するだけです。  
   

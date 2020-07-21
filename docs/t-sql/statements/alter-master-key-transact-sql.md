@@ -1,6 +1,6 @@
 ---
 title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+ms.custom: fasttrack-edit
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
@@ -27,12 +27,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5a7600f9657a11a25732aa9527bd6a775234eda
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071295"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868421"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "68071295"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER MASTER KEY <alter_option>
@@ -61,7 +61,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { SERVICE MASTER KEY | PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 -- Note: DROP ENCRYPTION BY SERVICE MASTER KEY is not supported on Azure SQL Database.
 
@@ -79,7 +79,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>
@@ -88,7 +88,9 @@ ALTER MASTER KEY <alter_option>
     <regenerate_option> | <encryption_option>
 
 <regenerate_option> ::=
-    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'<encryption_option> ::=
+    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'
+
+<encryption_option> ::=
     ADD ENCRYPTION BY SERVICE MASTER KEY
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY
@@ -98,7 +100,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*': データベース マスター キーを暗号化または暗号化解除するパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 REGENERATE オプションを指定すると、データベース マスター キーと、それによって保護されるすべてのキーが再作成されます。 これらのキーは、最初に元のマスター キーで暗号化解除され、次に新しいマスター キーで暗号化されます。 この操作はリソースを大量に消費するため、マスター キーのセキュリティに問題がある場合を除き、リソース要求が少ないときに実行するように考慮してください。
 
@@ -114,7 +116,7 @@ ADD ENCRYPTION BY SERVICE MASTER KEY を指定すると、マスター キーの
 
 データベースに対する CONTROL 権限が必要です。 データベース マスター キーがパスワードで暗号化されている場合は、パスワードの情報も必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、`AdventureWorks` の新しいデータベースのマスター キーを作成し、暗号化階層でこのマスター キーの下位にあるキーを再暗号化します。
 
@@ -124,7 +126,7 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO
 ```
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 次の例では、`AdventureWorksPDW2012` の新しいデータベースのマスター キーを作成し、暗号化階層でこのマスター キーの下位にあるキーを再暗号化します。
 

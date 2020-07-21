@@ -1,7 +1,8 @@
 ---
-title: SQLXML 4.0 を実行するために ADO を使用してクエリを実行します。マイクロソフトのドキュメント
+title: ADO を使用した、SQLXML 4.0 クエリの実行
+description: SQLXML extensions for ActiveX データオブジェクト (ADO) を使用して、COM ベースのアプリケーションで SQLXML 4.0 クエリを実行する方法について説明します。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,20 +18,20 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2b5f8ce7f2b7e0fab2da5eed698fadfb9538c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7c2db9cc01bfa50092e5849d869d43da8a622e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665545"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   以前のバージョンの SQLXML では、SQLXML IIS 仮想ディレクトリと SQLXML ISAPI フィルターを使用して、HTTP ベースのクエリを実行することができました。 SQLXML 4.0 では、重複する類似の機能が [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のネイティブ XML Web サービスに付属しているため、これらのコンポーネントが削除されました。  
   
  SQLXML 4.0 では、代わりに Microsoft Data Access Components (MDAC) 2.6 以降で最初に導入された ADO (ActiveX Data Objects) への SQLXML 拡張を使用して、COM ベースのアプリケーションで SQLXML 4.0 を使用してクエリを実行することができます。  
   
- このトピックでは、Visual Basic Scripting Edition (VBScript) アプリケーション (.vbs ファイル名拡張子を持つスクリプト) の一部として SQLXML と ADO を使用してを示します。 SQLXML 4.0 のドキュメントにあるサンプル クエリを作成しテストするときには、ここで紹介する最初の設定手順を参考にしてください。  
+ このトピックでは、Visual Basic Scripting Edition (VBScript) アプリケーション (.vbs ファイル名拡張子を持つスクリプト) の一部として SQLXML と ADO を使用する方法について説明します。 SQLXML 4.0 のドキュメントにあるサンプル クエリを作成しテストするときには、ここで紹介する最初の設定手順を参考にしてください。  
   
 ## <a name="creating-the-sqlxml-40-test-script"></a>SQLXML 4.0 テスト スクリプトの作成  
  ここでは、VBScript (.vbs) ファイル Sqlxml4test.vbs を作成します。このファイルを使用すると、ADO 2.6 以降の SQLXML ADO 拡張を使用して SQLXML クエリを実行できます。  
@@ -107,8 +108,6 @@ ms.locfileid: "68135330"
   
 5.  次に、SQLXML 4.0 テスト スクリプトの使用方法について説明します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="using-the-sqlxml-40-test-script"></a>SQLXML 4.0 テスト スクリプトの使用  
  Sqlxml4test.vbs ファイルを使用して、このドキュメントで提供されるサンプル クエリをテストするには、次の手順に従います。  
   
@@ -116,16 +115,16 @@ ms.locfileid: "68135330"
   
 1.  次の方法で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client がインストールされていること確認します。  
   
-    1.  **開始** メニューの 作成 をポイント**設定**、 をクリックし、**コントロール パネルの** 。  
+    1.  [**スタート**] メニューの [**設定**] をポイントし、[**コントロールパネル**] をクリックします。  
   
-    2.  [コントロール パネル] を開くには**の追加とプログラムの削除**  
+    2.  コントロールパネルで、[**プログラムの追加と削除**] を開きます。  
   
-    3.  現在インストールされているプログラムの一覧であることを確認**Microsoft SQL Server ネイティブ クライアント**リストに表示されます。  
+    3.  現在インストールされているプログラムの一覧で、[ **Microsoft SQL Server Native Client** ] が一覧に表示されていることを確認します。  
   
         > [!NOTE]  
-        >  インストールする必要がある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントを参照してください[SQL Server ネイティブ クライアントをインストールする](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)です。  
+        >  Native Client をインストールする必要がある場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、「 [SQL Server Native Client のインストール](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
-2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC Component Checker ツールを使用します。このツールは Microsoft の Web サイト (www.microsoft.com) から無償でダウンロードできます。 詳細については、Microsoft の Web サイトで "MDAC Component Checker" を検索してください。  
+2.  クライアント コンピューターにインストールされている MDAC のバージョンが 2.6 以降であることを確認します。 MDAC のバージョン情報を確認する必要がある場合は、MDAC コンポーネントチェッカーツールを使用できます。このツールは、Microsoft Web サイトから無料でダウンロードでき [http://www.microsoft.com](https://www.microsoft.com) ます。 詳細については、Microsoft の Web サイトで "MDAC Component Checker" を検索してください。  
   
 3.  スクリプトを実行します。  
   

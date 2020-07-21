@@ -1,5 +1,5 @@
 ---
-title: Status プロパティの例 (vc++) |Microsoft Docs
+title: Status プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d477b23b384bcc8e059afb94e72a3f6fc12fa724
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916782"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759688"
 ---
 # <a name="status-property-example-vc"></a>Status プロパティの例 (VC++)
-この例では、[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新が発生する前に、バッチ操作で変更されたレコードを表示するプロパティ。  
+この例では、 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)プロパティを使用して、バッチ更新が行われる前にバッチ操作で変更されたレコードを表示します。  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -186,5 +186,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

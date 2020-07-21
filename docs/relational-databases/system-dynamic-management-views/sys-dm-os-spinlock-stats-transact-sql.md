@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_spinlock_stats (TRANSACT-SQL) |Microsoft Docs
+title: dm_os_spinlock_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -22,54 +22,54 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718775"
 ---
-# <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (TRANSACT-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>dm_os_spinlock_stats (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-種類別に整理するすべてのスピン ロック待機に関する情報を返します。  
+型別に分類されたすべてのスピンロック待機に関する情報を返します。  
   
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar (256)**|スピンロックの種類の名前です。|  
-|競合|**bigint**|スレッドが、スピン ロックの取得を試みる、ため、現在別のスレッドがブロックされている回数には、スピンロックが保持されます。|  
-|回転します。|**bigint**|スレッドの時間数では、スピンロックの取得を試みているときに、ループを実行します。|  
-|spins_per_collision|**real**|競合あたりの回転の比率です。|  
-|sleep_time|**bigint**|スレッドがスリープ、バックオフが発生した場合にかかったミリ秒単位の時間。|  
-|バックオフ|**int**|「回転」スレッドが、スピンロックの取得に失敗して、スケジューラが得られます回数。|  
+|name|**nvarchar(256)**|スピンロックの種類の名前。|  
+|発生|**bigint**|現在、別のスレッドがスピンロックを保持しているために、スレッドがスピンロックを取得しようとしてブロックされた回数。|  
+|スピン|**bigint**|スピンロックを取得しようとしているときに、スレッドがループを実行する回数。|  
+|spins_per_collision|**real**|競合ごとのスピンの比率。|  
+|sleep_time|**bigint**|バックオフが発生した場合にスレッドがスリープに費やした時間 (ミリ秒単位)。|  
+|バックオフだけ|**int**|"スピンしている" スレッドがスピンロックの取得に失敗し、スケジューラが生成される回数。|  
 
 
 ## <a name="permissions"></a>アクセス許可  
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。    
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。    
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  
- sys.dm_os_spinlock_stats は、スピンロックの競合の原因を識別するために使用できます。 状況によっては、解決またはスピンロックの競合を緩和することができます。 ただし、状況もあります。 が必要になることにお問い合わせください[!INCLUDE[msCoName](../../includes/msconame-md.md)]カスタマー サポート サービス。  
+ スピンロックの競合の原因を特定するには、dm_os_spinlock_stats を使用できます。 場合によっては、スピンロックの競合を解決または減少させることができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる必要があり [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。  
   
- Sys.dm_os_spinlock_stats の内容をリセットするにを使用して`DBCC SQLPERF`次のようにします。  
+ 次のようにを使用して、dm_os_spinlock_stats の内容をリセットできます。 `DBCC SQLPERF`  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
 GO  
 ```  
   
- これにより、すべてのカウンターが 0 にリセットされます。  
+ これにより、すべてのカウンターが0にリセットされます。  
   
 > [!NOTE]  
->  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータが、前回の統計がリセットされた後、または累積的な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始されました。  
+>  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計が最後にリセットされた後、またはが開始されてから累積され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="spinlocks"></a>スピンロック  
- スピンロックは、通常短時間保持されたデータ構造体へのアクセスをシリアル化に使用される軽量の同期オブジェクトです。 スレッドが別のスレッドによって保持されるスピン ロックで保護されているリソースにアクセスしようとすると、スレッドは、ループを実行または「起動」とすぐにラッチやその他のリソースと同様にスケジューラが生成するのではなくリソースにアクセスして、もう一度お試しください。お待ちください。 スレッドは、スピンまで、リソースが使用可能なまたは、ループが完了したら、この時点でスレッド スケジューラが、実行可能キューに戻って続けます。 この実習は、過度にスレッド コンテキストの切り替えを削減に役立ちますが、スピンロックの競合が高いとき、CPU 使用率の大幅ななることがあります。
+ スピンロックは、通常は短時間保持されるデータ構造へのアクセスをシリアル化するために使用される軽量の同期オブジェクトです。 あるスレッドが、別のスレッドによって保持されているスピンロックによって保護されているリソースにアクセスしようとすると、そのスレッドは、ラッチやその他のリソース待機と同様にスケジューラを直ちに開始するのではなく、ループを実行し、"スピン" してリソースへのアクセスを再試行します。 スレッドは、リソースが使用可能になるかループが完了するまでスピンし続け、その時点でスレッドがスケジューラを生成して実行可能キューに戻ります。 これにより、スレッドコンテキストの過度の切り替えを減らすことができますが、スピンロックの競合が高くなると、CPU 使用率が著しく低下する可能性があります。
    
- 次の表には、最も一般的なスピンロックの種類のいくつかの簡単な説明が含まれています。  
+ 次の表に、最も一般的なスピンロックの種類の簡単な説明を示します。  
   
 |スピンロックの種類|説明|  
 |-----------------|-----------------|  
@@ -83,7 +83,7 @@ GO
 |APRC_VALIDATION_QUEUE_LIST|内部使用のみです。|
 |ASYNC_OP_ADMIN_CLIENT_REGISTRATION_LIST|内部使用のみです。|
 |ASYNC_OP_ADMIN_WORK_REGISTRATION_HASH_TABLE|内部使用のみです。|
-|ASYNCSTATSLIST|内部使用のみです。|
+|ASYNCSTATSLIST 場合|内部使用のみです。|
 |BACKUP|内部使用のみです。|
 |BACKUP_COPY_CONTEXT|内部使用のみです。|
 |BACKUP_CTX|内部使用のみです。|
@@ -105,10 +105,10 @@ GO
 |COLUMNSTORE_HASHTABLE|内部使用のみです。|
 |COLUMNSTOREBUILDSTATE_LIST|内部使用のみです。|
 |COM_INIT|内部使用のみです。|
-|コミット|内部使用のみです。|
+|コミットでき|内部使用のみです。|
 |COMPPLAN_SKELETON|内部使用のみです。|
 |CONNECTION_MANAGER|内部使用のみです。|
-|接続します。|内部使用のみです。|
+|接続|内部使用のみです。|
 |CSIBUILDMEM|内部使用のみです。|
 |CURSOR|内部使用のみです。|
 |CURSQL|内部使用のみです。|
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|内部使用のみです。|
 |DBT_HASH|内部使用のみです。|
 |DBT_IO_LIST|内部使用のみです。|
-|DBTABLE|そのデータベースのプロパティを含む SQL Server 内の各データベースのインメモリ データ構造体へのアクセスを制御します。 参照してください[今回](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)詳細についてはします。 |
+|DBTABLE|は、そのデータベースのプロパティを含む SQL Server 内のすべてのデータベースについて、メモリ内のデータ構造へのアクセスを制御します。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)を参照してください。 |
 |DEFERRED_WF_EXT_DROP|内部使用のみです。|
 |DEK_INSTANCE|内部使用のみです。|
 |DELAYED_PARTITIONED_STACK|内部使用のみです。|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|内部使用のみです。|
 |DINPBUF|内部使用のみです。|
 |DIRECTLOGCONSUMER|内部使用のみです。|
-|DP_LIST|間接チェックポイントが有効であるデータベースのダーティ ページの一覧へのアクセスを制御します。 参照してください[今回](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)詳細についてはします。|
+|DP_LIST|間接チェックポイントが有効になっているデータベースのダーティページの一覧へのアクセスを制御します。 詳細については、[この記事](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)を参照してください。|
 |DROP|内部使用のみです。|
 |DROP_TEMPO|内部使用のみです。|
 |DROPPED_ALLOC_UNIT|内部使用のみです。|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|内部使用のみです。|
 |LIVE_TARGET_TVF|内部使用のみです。|
 |LOCK_FREE_LIST|内部使用のみです。|
-|LOCK_HASH|データベースに保持されているロックに関する情報を格納するロック マネージャーのハッシュ テーブルへのアクセスを保護します。 参照してください[今回](https://support.microsoft.com/kb/2926217)詳細についてはします。|
+|LOCK_HASH|データベースに保持されているロックに関する情報を格納するロックマネージャーハッシュテーブルへのアクセスを保護します。 詳細については、[この記事](https://support.microsoft.com/kb/2926217)を参照してください。|
 |LOCK_NOTIFICATION|内部使用のみです。|
 |LOCK_RESOURCE_ID|内部使用のみです。|
 |LOCK_RW_ABTX_HASH_SET|内部使用のみです。|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|内部使用のみです。|
 |SOS_BLOCKALLOCPARTIALLIST|内部使用のみです。|
 |SOS_BLOCKDESCRIPTORBUCKET|内部使用のみです。|
-|SOS_CACHESTORE|SQL server プラン キャッシュ、一時テーブル キャッシュなどのさまざまなのインメモリ キャッシュへのアクセスを同期します。 この種類のスピンロックで多数の競合は競合では、特定のキャッシュによって、さまざまなことを意味します。 連絡先[!INCLUDE[msCoName](../../includes/msconame-md.md)]このスピンロックの種類のトラブルシューティングについてカスタマー サポート サービス。 |
+|SOS_CACHESTORE|プランキャッシュや一時テーブルキャッシュなど、SQL Server 内のさまざまなメモリ内キャッシュへのアクセスを同期します。 このスピンロックの種類の競合が多い場合は、競合している特定のキャッシュに応じて、さまざまなことを意味します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]このスピンロックの種類のトラブルシューティングについては、カスタマーサポートサービスにお問い合わせください。 |
 |SOS_CACHESTORE_CLOCK|内部使用のみです。|
 |SOS_CLOCKALG_INTERNODE_SYNC|内部使用のみです。|
 |SOS_DEBUG_HOOK|内部使用のみです。|
@@ -408,11 +408,11 @@ GO
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
- [SQL Server で重要なドライバーの CPU 使用率のスピンロックが場合でしょうか。](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
+ [スピンロックが SQL Server の CPU 使用率の重要なドライバーです。](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [診断および SQL Server のスピンロックの競合を解決します。](https://www.microsoft.com/download/details.aspx?id=26666)
+ [SQL Server でのスピンロックの競合の診断と解決](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 

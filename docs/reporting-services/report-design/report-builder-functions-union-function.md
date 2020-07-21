@@ -1,5 +1,5 @@
 ---
-title: Union 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Union 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577158"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081118"
 ---
 # <a name="report-builder-functions---union-function"></a>レポート ビルダー関数 - Union 関数
   式で指定された NULL 以外のすべての数値の結合を、指定されたスコープで評価して返します。  
@@ -41,7 +41,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>戻り値  
  式の型に応じて、 **SqlGeometry** または **SqlGeography**のいずれかの空間オブジェクトを返します。 **SqlGeometry** および **SqlGeography** の空間データ型の詳細については、「 [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  式で指定されたデータセットは、同じデータ型である必要があります。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 データセットのスコープはサポートされません。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  

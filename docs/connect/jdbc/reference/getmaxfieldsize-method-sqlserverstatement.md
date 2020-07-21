@@ -1,5 +1,5 @@
 ---
-title: getMaxFieldSize メソッド (SQLServerStatement) |Microsoft Docs
+title: getMaxFieldSize メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a1700cc8bb2bfb54dd9ddee52da54899f764650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67982106"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize メソッド (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getMaxFieldSize()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxFieldSize メソッドは、java. .sql. ステートメントインターフェイスの getMaxFieldSize メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxFieldSize メソッドは、java.sql.Statement インターフェイスの getMaxFieldSize メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメソッド](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   

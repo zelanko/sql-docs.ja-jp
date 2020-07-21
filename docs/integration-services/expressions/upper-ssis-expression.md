@@ -13,14 +13,14 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea5012b367aedd86be7b0180b975964c61c50905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e5a444d6dea225f37b8640fd642d91ae83618d5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967572"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297334"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 式)
 
@@ -43,7 +43,7 @@ UPPER(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  UPPER は、DT_WSTR データ型でのみ機能します。 *character_expression* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、UPPER による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
  引数が NULL の場合、UPPER は NULL を返します。  
@@ -61,7 +61,7 @@ UPPER("hello")
 UPPER(SUBSTRING(FirstName, 1, 1))  
 ```  
   
- この例では、**PostalCode** 変数の値を大文字に変換します。 **PostalCode** が k4b1s2 の場合、返される結果は "K4B1S2" です。  
+ この例では、 **PostalCode** 変数の値を大文字に変換します。 **PostalCode** が k4b1s2 の場合、返される結果は "K4B1S2" です。  
   
 ```  
 UPPER(@PostalCode)  

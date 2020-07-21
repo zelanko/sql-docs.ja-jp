@@ -1,5 +1,6 @@
 ---
 title: ATOMIC ブロック | Microsoft Docs
+description: ANSI SQL 標準の一部である BEGIN ATOMIC について説明します。 SQL Server では、ネイティブ プロシージャで ATOMIC ブロックがサポートされます。
 ms.custom: ''
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 662d5c2fe285e92f8e8fdf74836eb1dddca77206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723420"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ネイティブ プロシージャの ATOMIC ブロック
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** は ANSI SQL 標準の一部です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ネイティブ コンパイル ストアド プロシージャの最上位だけでなく、ネイティブ コンパイル、スカラー ユーザー定義関数について、ATOMIC ブロックをサポートしています。 詳細については、「 [インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」を参照してください。  
   
@@ -133,14 +134,14 @@ GO
   
  **BEGIN ATOMIC**では以下のオプションは必須です。  
   
-|必須の設定|[説明]|  
+|必須の設定|説明|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|サポートされる値は **SNAPSHOT**、 **REPEATABLEREAD**、 **SERIALIZABLE**です。|  
 |**LANGUAGE**|日付と時刻の形式とシステム メッセージが決まります。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) のすべての言語とエイリアスがサポートされます。|  
   
  次の設定は省略可能です。  
   
-|省略可能な設定|[説明]|  
+|省略可能な設定|説明|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての日付形式がサポートされています。 指定した場合、**DATEFORMAT** は **LANGUAGE**に関連付けられた既定の日付形式をオーバーライドします。|  
 |**DATEFIRST**|指定した場合、**DATEFIRST** は **LANGUAGE**に関連付けられた既定をオーバーライドします。|  

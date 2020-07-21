@@ -1,5 +1,5 @@
 ---
-title: データ ソースへの接続 |Microsoft Docs
+title: データソースへの接続 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ef641bbfb94b8fde5f12af6cadd03f13fbfa91f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925798"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761168"
 ---
 # <a name="connecting-to-data-sources"></a>データ ソースへの接続
-ADO**接続**オブジェクトは、DBMS、ファイル ストアでは、コンマ区切りのテキスト ファイルなど、データ ソースとの一意のセッションを表します。 クライアント/サーバー データベース システムでは、ADO 接続はサーバーへの実際のネットワーク接続を指定できます。  
+ADO**接続**オブジェクトは、DBMS、ファイルストア、またはコンマ区切りのテキストファイルを含む、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムの場合、ADO 接続はサーバーへの実際のネットワーク接続にすることができます。  
   
- **接続**オブジェクトがサポートするさまざまな[プロパティとメソッド](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)を開いて、接続を閉じると作成、および実行で、データ ソースに対してコマンドを接続構成を指定するには、、スキーマ行セットの形式で、基になるデータ ソースの設計に関する情報を提供する、などとします。プロバイダー、いくつかのコレクション、メソッド、またはのプロパティでサポートされる機能によって、**接続**オブジェクトを使用できない可能性があります。  
+ 接続**オブジェクトは**、接続構成の指定、接続の開始と終了、データソースに対するコマンドの作成と実行、および基になるデータソースのデザインに関する情報のスキーマ行セットの形式での提供など、さまざまな[プロパティとメソッド](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)をサポートしています。プロバイダーでサポートされている機能によっては、**接続**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
- 使用するか、データ ソースに接続することができます、**接続**オブジェクトまたはを使用して、 **Recordset**オブジェクト。  
+ **接続**オブジェクトを使用するか、**レコードセット**オブジェクトを使用して、データソースに接続できます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -36,4 +36,4 @@ ADO**接続**オブジェクトは、DBMS、ファイル ストアでは、コ�
   
 -   [接続プロパティの指定](../../../ado/guide/data/specifying-connection-properties.md)  
   
--   [トランザクションを制御します。](../../../ado/guide/data/controlling-transactions-ado.md)
+-   [トランザクションの制御](../../../ado/guide/data/controlling-transactions-ado.md)

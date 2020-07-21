@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c928062169ed7feb03f1031362530474109976a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970328"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Standard Compression Scheme for Unicode (SCSU) アルゴリズムの実装を使用して、行またはページの圧縮オブジェクトに格納する Unicode 値を圧縮します。 これらの圧縮オブジェクトでは、`nchar(n)` 列および `nvarchar(n)` 列の Unicode 圧縮が自動的に行われます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ロケールに関係なく、Unicode データが 2 バイトで格納されます。 これは UCS-2 エンコードと呼ばれています。 ロケールによっては、SQL Server の SCSU 圧縮実装で保存できる最大領域がストレージ領域の 50% になる場合があります。  
@@ -46,14 +45,14 @@ ms.locfileid: "62872980"
   
  圧縮により節約されるストレージ領域は、圧縮されるデータの特性とデータのロケールによって異なります。 次の表に、いくつかのロケールで節約できる領域の一覧を示します。  
   
-|ロケール|圧縮率|  
+|Locale|圧縮率|  
 |------------|-------------------------|  
-|英語|50%|  
-|ドイツ語|50%|  
+|English|50%|  
+|German|50%|  
 |ヒンディー語|50%|  
-|トルコ語|48%|  
+|Turkish|48%|  
 |ベトナム語|39%|  
-|日本語|15%|  
+|Japanese|15%|  
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](data-compression.md)   

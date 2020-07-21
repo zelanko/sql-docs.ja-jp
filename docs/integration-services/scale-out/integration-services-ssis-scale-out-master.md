@@ -1,5 +1,5 @@
 ---
-title: SQL Server Integration Services (SSIS) Scale Out Master | Microsoft Docs
+title: Scale Out Master | Microsoft Docs
 description: この記事では、SSIS Scale Out の Scale Out Master コンポーネントについて説明します
 ms.custom: performance
 ms.date: 01/19/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082120"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488132"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
 
@@ -52,10 +52,10 @@ Scale Out Master サービスは、Scale Out Worker との通信を担当する 
 `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` ファイルを使用して、SSIS Scale Out サービスを構成します。 構成ファイルの更新後に、サービスを再起動する必要があります。
 
 
-|構成  |[説明]  |[既定値]  |
+|構成  |説明  |Default value  |
 |---------|---------|---------|
 |PortNumber|Scale Out Worker との通信に利用されるネットワーク ポート番号。|8391|
-|SSLCertThumbprint|Scale Out Worker との通信の保護に利用される SSL 証明書のサムプリント。|Scale Out Master のインストール時に指定される SSL 証明書のサムプリント|
+|SSLCertThumbprint|Scale Out Worker との通信の保護に利用される TLS/SSL 証明書のサムプリント。|Scale Out Master のインストール時に指定される TLS/SSL 証明書のサムプリント|
 |SqlServerName|SSISDB カタログが含まれている [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の名前。 たとえば、ServerName\\InstanceName です。|Scale Out Master と共にインストールされる SQL Server の名前。|
 |CleanupCompletedJobsIntervalInMs|完了した実行ジョブを消去する間隔 (ミリ秒単位)。|43200000|
 |DealWithExpiredTasksIntervalInMs|期限切れ実行ジョブを処理する間隔 (ミリ秒単位)。|300000|
@@ -69,6 +69,6 @@ Scale Out Master サービス ログ ファイルは `<drive>:\Users\[account]\A
 
 *[account]* パラメーターは、Scale Out Master サービスを実行するアカウントです。 既定では、このアカウントは `SSISScaleOutMaster140` です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

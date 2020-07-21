@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([トランザクション ログの配布] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [トランザクション ログの配布] タブを使用すると、データベースをログ配布プライマリ データベースとして有効にし、そのオプションを設定できます。'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75c87efd24b1e345cb99413d1a524e872f0eb022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630968"
 ---
-# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] \([トランザクション ログの配布] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] ([トランザクション ログの配布] ページ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、データベースのログ配布のプロパティを構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ログ配布構成のプライマリ データベースとして有効にする]**  
  このデータベースをログ配布のプライマリ データベースとして有効にします。 オンにした場合は、このページの残りのオプションを構成します。 このチェック ボックスをオフにした場合、このデータベースのログ配布構成は削除されます。  
   
@@ -41,10 +42,10 @@ ms.locfileid: "68099573"
  **[セカンダリ サーバー インスタンスとデータベース]**  
  このプライマリ データベースに対して現在構成されているセカンダリ サーバーおよびセカンダリ データベースを表示します。 セカンダリ データベースに関連付けられているパラメーターを変更するには、データベースを強調表示し、 **[...]** をクリックします。  
   
- **[追加]**  
+ **追加**  
  このプライマリ データベースのログ配布構成にセカンダリ データベースを追加するには、 **[追加]** をクリックします。  
   
- **[削除]**  
+ **Remove**  
  選択されているデータベースをこのログ配布構成から削除します。 データベースを選択してから、 **[削除]** をクリックします。  
   
  **[監視サーバー インスタンスを使用する]**  
@@ -53,7 +54,7 @@ ms.locfileid: "68099573"
  **[監視サーバー インスタンス]**  
  このログ配布構成に対して現在構成されている監視サーバー インスタンスを示します。  
   
- **[設定]**  
+ **設定**  
  ログ配布構成に対して監視サーバー インスタンスを構成します。 この監視サーバー インスタンスを構成するには、 **[設定]** をクリックします。  
   
  **[スクリプトの構成]**  

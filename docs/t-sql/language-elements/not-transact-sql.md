@@ -21,15 +21,15 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f52991347331645857ee2c7ac6d58e5a65f9ba
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121989"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990461"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ブール値を否定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68121989"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 [ NOT ] boolean_expression  
 ```  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68121989"
 ## <a name="result-value"></a>結果の値  
  NOT は、任意のブール式を反転します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  NOT を使用すると、式が否定されます。  
   
  次の表は、NOT 演算子を使用して TRUE 値と FALSE 値を比較した結果です。  
@@ -62,7 +62,7 @@ ms.locfileid: "68121989"
 |**FALSE**|TRUE|  
 |**UNKNOWN**|UNKNOWN|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、標準価格が 400 ドル以下で、色が Silver の自転車を検索します。  
   
 ```  
@@ -87,7 +87,7 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`SalesOrderNumber` の結果を `SO6` で始まる値に制限し、`ProductKeys` を 400 以上に制限しています。  
   
 ```  

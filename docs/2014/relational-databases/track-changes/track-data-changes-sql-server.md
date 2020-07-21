@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e9fb2a89aff63a69d7ad8df111d36f2b7ccafdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63073957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047175"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 エディションの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更データ キャプチャし、変更の追跡、サポートを参照してください、[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更データキャプチャと変更の追跡をサポートするのエディションについては、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>変更データ キャプチャまたは変更の追跡を使用する利点  
  データベースで変更されたデータをクエリする機能は、一部のアプリケーションの効率を高めるための重要な要件です。 一般に、データ変更を確認するには、アプリケーション開発者がトリガー、timestamp 列、および追加のテーブルを組み合わせて使用することで、カスタムの追跡方法をアプリケーションに実装する必要があります。 通常、このようなアプリケーションを作成するには実装に非常に手間がかかり、スキーマの更新も必要になり、多くの場合、パフォーマンスのオーバーヘッドが増加します。  
@@ -65,7 +64,7 @@ ms.locfileid: "63073957"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>変更データ キャプチャと変更の追跡の機能の違い  
  次の表に、変更データ キャプチャと変更の追跡の機能の違いを示します。 変更データ キャプチャの追跡メカニズムでは、非同期キャプチャによりトランザクション ログから変更がキャプチャされ、DML 操作後に変更を利用できます。 変更の追跡の追跡メカニズムでは、同期追跡により DML 操作に即して変更が追跡され、すぐに変更情報を利用できます。  
   
-|機能|変更データ キャプチャ|変更の追跡|  
+|機能|変更データ キャプチャ|Change tracking|  
 |-------------|-------------------------|---------------------|  
 |**追跡される変更**|||  
 |DML の変更|はい|はい|  
@@ -74,7 +73,7 @@ ms.locfileid: "63073957"
 |列が変更されたかどうか|はい|はい|  
 |DML 型|はい|はい|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="change-data-capture"></a><a name="Capture"></a>変更データキャプチャ  
  変更データ キャプチャでは、DML の変更が行われたという事実と変更された実際のデータの両方がキャプチャされ、ユーザー テーブルの変更情報の履歴が提供されます。 変更は、非同期プロセスを使用してトランザクション ログを読み取ることによってキャプチャされます。これは、システムへの影響が少ない方法です。  
   
  次の図に示すように、ユーザー テーブルに対して行われた変更は、対応する変更テーブルにキャプチャされます。 これらの変更テーブルには、時間の経過に伴う変更の履歴が表示されます。 [の](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)変更データ キャプチャ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 関数を使用して、変更データを簡単かつ体系的に利用できます。  
@@ -85,7 +84,7 @@ ms.locfileid: "63073957"
  ここでは、変更データ キャプチャのセキュリティ モデルについて説明します。  
   
  **構成と管理**  
- 有効にするか、変更を無効にするデータのキャプチャ データベースの場合、呼び出し元の[sys.sp_cdc_enable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)または[sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)固定のサーバーのメンバーである必要があります`sysadmin`ロール。 有効にして、テーブル レベルで変更データ キャプチャを無効化の呼び出し元が必要です[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)と[sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)するか、sysadmin ロールのメンバーまたはデータベースのメンバーである`database db_owner`ロール。  
+ データベースの変更データキャプチャを有効または無効にするには、sp_cdc_enable_db の呼び出し元[&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql)または[sp_cdc_disable_db &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql)が固定サーバーロールのメンバーである必要があります。 `sysadmin` テーブルレベルで変更データキャプチャを有効または無効にするには、 [sys. sp_cdc_enable_table の呼び出し元 &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql)および[sys. sp_cdc_disable_table &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql)を sysadmin ロールのメンバーまたはデータベースロールのメンバーにする必要があります。 `database db_owner`  
   
  変更データ キャプチャ ジョブの管理をサポートするストアド プロシージャを使用できるのは、`sysadmin` サーバー ロールのメンバー、および `database db_owner` ロールのメンバーに制限されます。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "63073957"
 |スパース列|はい|columnset を使用する場合は変更のキャプチャをサポートしません。|  
 |計算列|いいえ|計算列に対する変更は追跡されません。 列は適切な種類の変更テーブルに表示されますが、値は NULL になります。|  
 |XML|はい|個々の XML 要素に対する変更は追跡されません。|  
-|timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
+|Timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
 |BLOB データ型|はい|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能  
@@ -125,7 +124,7 @@ ms.locfileid: "63073957"
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 #### <a name="transactional-replication"></a>トランザクション レプリケーション  
- 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 自身で変更データ キャプチャが有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブによって`sp_replcmds`します。 同じデータベースでは、両方の機能が有効な場合、ログ リーダー エージェントを呼び出す`sp_replcmds`します。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
+ 変更データ キャプチャとトランザクション レプリケーションは、同じデータベースで共存できます。ただし、両方の機能が有効になっている場合、変更テーブルが異なる方法で作成されます。 変更データ キャプチャとトランザクション レプリケーションでは、トランザクション ログから変更を読み取る際に、常に同じプロシージャ ( [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)) が使用されます。 変更データキャプチャがそれ自体で有効になっている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブはを呼び出し `sp_replcmds` ます。 同じデータベースで両方の機能が有効になっている場合、ログリーダーエージェントはを呼び出し `sp_replcmds` ます。 このエージェントは、変更テーブルとディストリビューション データベース テーブルの両方を作成します。 詳細については、「 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更データ キャプチャが有効になっており、2 つのテーブルでキャプチャが有効になっているシナリオについて考えてみます。 変更テーブルを作成するために、キャプチャ ジョブによって `sp_replcmds` が呼び出されます。 データベースでトランザクション レプリケーションが有効になり、パブリケーションが作成されます。 次に、ログ リーダー エージェントがデータベースに対して作成され、キャプチャ ジョブが削除されます。 ログ リーダー エージェントは、変更テーブルにコミットされた最後のログ シーケンス番号からログのスキャンを続行します。 これにより、変更テーブル内のデータの一貫性が確保されます。 このデータベースでトランザクション レプリケーションが無効になっている場合、ログ リーダー エージェントが削除され、キャプチャ ジョブが再作成されます。  
   
@@ -143,19 +142,19 @@ ms.locfileid: "63073957"
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
--   データベースをアタッチまたは復元、`KEEP_CDC`変更データ キャプチャが必要なため、操作、エンタープライズ以外のエディションにオプションがブロックされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise。 エラー メッセージ 932 が表示されます。  
+-   Enterprise 以外のエディションに対してオプションを使用してデータベースがアタッチまたは復元された場合 `KEEP_CDC` 、この操作はブロックされます。これは、変更データキャプチャが enterprise を必要とするためです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 エラー メッセージ 932 が表示されます。  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
  [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) を使用すると、復元またはアタッチされたデータベースから変更データ キャプチャを削除できます。  
  
 
-  ##  <a name="Tracking"></a> Change Tracking  
+  ##  <a name="change-tracking"></a><a name="Tracking"></a>Change Tracking  
  変更の追跡では、テーブル内の行が変更されたという事実がキャプチャされますが、変更されたデータはキャプチャされません。 この機能を使用すると、変更された行をアプリケーションで特定し、最新の行データについてはユーザー テーブルから直接取得することができます。 したがって、変更の追跡で確認できる履歴の情報は変更データ キャプチャと比較すると限定されますが、 変更データがキャプチャされないため、履歴情報が必要ではないアプリケーションではストレージ オーバーヘッドがはるかに少なくて済みます。 変更は、同期追跡メカニズムを使用して追跡されます。 これは、DML 操作のオーバーヘッドを最小限に抑えるように設計されています。  
   
  次の図は、変更の追跡を使用すると効果的な同期のシナリオを示しています。 このシナリオのアプリケーションでは、テーブルの前回の同期後に変更されたすべてのテーブル行の現在の行データのみが必要です。 同期メカニズムを使用して変更が追跡されるため、アプリケーションで双方向同期を実行して、発生する可能性がある競合を確実に検出できます。  
   
- ![変更追跡の概念図](../../database-engine/media/cdcart2.gif "変更追跡の概念図")  
+ ![変更の追跡の概念図](../../database-engine/media/cdcart2.gif "変更の追跡の概念図")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>変更の追跡と Sync Services for ADO.NET  
  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] データベース間の同期が可能になり、直感的で柔軟性の高い API を使用して、オフラインおよびコラボレーションのシナリオを対象とするアプリケーションを構築できます。 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 変更を同期する API が用意されていますが、この API ではサーバーまたはピア データベース内の変更は実際には追跡されません。 カスタム変更追跡システムを作成できますが、一般に複雑さやパフォーマンスのオーバーヘッドが大幅に増加します。 サーバーまたはピア データベースの変更を追跡するには、構成が簡単でパフォーマンスの高い追跡を実現できる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の変更の追跡を使用することをお勧めします。  
@@ -168,14 +167,14 @@ ms.locfileid: "63073957"
   
 -   [Microsoft Sync Framework デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] のドキュメントのトピック「How to:Use SQL Server Change Tracking」(方法: SQL Server 変更の追跡を使用する) には、詳細な情報とコードの例が掲載されています。  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]のドキュメントのトピック「SQL Server 変更の追跡の使用方法」には、詳細な情報とコードの例があります。  
   
   
 ## <a name="related-tasks-required"></a>関連タスク (必須)  
   
 |||  
 |-|-|  
-|**タスク**|**トピック**|  
+|**Task**|**トピック**|  
 |変更データ キャプチャの概要を示します。|[変更データ キャプチャについて &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)|  
 |データベースまたはテーブルに対して変更データ キャプチャを有効または無効にする方法について説明します。|[変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |変更データ キャプチャを管理および監視する方法について説明します。|[変更データ キャプチャの管理と監視 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  
@@ -186,10 +185,10 @@ ms.locfileid: "63073957"
 |変更の追跡を使用するアプリケーションが、追跡した変更を取得し、その変更を別のデータ ストアに適用して、ソース データベースを更新する方法について説明します。 また、フェールオーバーが発生してデータベースをバックアップから復元する必要がある場合に、変更の追跡が果たす役割についても説明します。|[変更の追跡のしくみ &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)|  
   
 ## <a name="see-also"></a>参照  
- [変更データ キャプチャの関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
- [変更追跡関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
- [変更データ キャプチャ ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
- [変更データ キャプチャのテーブル &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
+ [変更データキャプチャ関数 &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)   
+ [Change Tracking 関数 &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)   
+ [変更データキャプチャのストアドプロシージャ &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql)   
+ [変更データキャプチャテーブル &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/change-data-capture-tables-transact-sql)   
  [変更データ キャプチャに関連した動的管理ビュー &#40;Transact-SQL&#41;](../views/views.md)  
   
   

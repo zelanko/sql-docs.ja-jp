@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970442"
 ---
 # <a name="management-data-warehouse"></a>管理データ ウェアハウス (management data warehouse)
   管理データ ウェアハウスは、データ コレクションの対象であるサーバーから収集されたデータを格納するリレーショナル データベースです。 このデータは、システム データ コレクション セットのレポートを生成するために使用され、カスタム レポートを作成する際にも使用できます。  
@@ -126,9 +125,9 @@ ms.locfileid: "62918340"
 |「snapshots スキーマ」セクションのテーブルの一覧を更新しました。 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory、および snapshots.io_virtual_file_stats を追加しました。 snapshots.os_process_memory および snapshots.distinct_query_stats を削除しました。|  
   
 ## <a name="see-also"></a>参照  
- [管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
- [データ コレクション](data-collection.md)   
+ [管理データウェアハウスのストアドプロシージャ &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [データコレクション](data-collection.md)   
  [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbbbf196000b8eeb19abebecbce48be8bd4ffd6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058211"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>ダイアグラムへのテーブルの追加 (Visual Database Tools)
   データベース ダイアグラムにテーブルを追加すると、そのテーブルの構造の編集や、ダイアグラム内にある他のテーブルとの関連付けを行えます。 テーブルを追加する方法には、ダイアグラムに既存のデータベース テーブルを追加する方法と、データベースで未定義の新しいテーブルを挿入する方法があります。  
@@ -29,7 +28,7 @@ ms.locfileid: "63297894"
   
      現在のダイアグラムにテーブルを作成するには、ツール バーの **[新しいテーブル]** をクリックします。  
   
-     \- または -  
+     または  
   
      ダイアグラムを右クリックし、 **[新しいテーブル]** をクリックします。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63297894"
 >  選択したテーブルから外部キー制約によって参照されるテーブルと、選択したテーブルを外部キー制約によって参照するテーブルの両方が、ダイアグラムに追加されます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベースダイアグラムの使用 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [データベース ダイアグラムでのテーブルの使用 (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

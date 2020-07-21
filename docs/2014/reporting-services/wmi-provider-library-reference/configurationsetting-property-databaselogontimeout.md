@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4920f5ef2282478f4d12a19b0806cf6ff9632cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097900"
 ---
-# <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonTimeout プロパティ (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogontimeout-property-wmi-msreportserver_configurationsetting"></a>DatabaseLogonTimeout プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースへのログインを失敗と判断するまでの待機時間を秒数で指定します。 値 **0** は、待ち時間が無限であることを示します。 読み取り専用。  
   
 ## <a name="syntax"></a>構文  

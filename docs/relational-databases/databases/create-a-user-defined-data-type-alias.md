@@ -1,5 +1,6 @@
 ---
 title: ユーザー定義データ型の別名の作成 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server 2019 でユーザー定義データ型の別名を作成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c529a7f64fb3db9bdbe7d18cb5a5cb36ebdd9786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bea30f3fac2eaacf612839903ab65f668f412ed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756293"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
   
  **このトピックの内容**  
@@ -33,7 +34,7 @@ ms.locfileid: "68037618"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してユーザー定義データ型の別名を作成するには:**  
   
@@ -41,18 +42,18 @@ ms.locfileid: "68037618"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ユーザー定義データ型の別名は、識別子のルールに準拠した名前である必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  現在のデータベース内の CREATE TYPE 権限、および *schema_name*に対する ALTER 権限が必要です。 *schema_name* を指定しなかった場合は、現在のユーザーのスキーマを判断するための既定の名前解決ルールが適用されます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-user-defined-data-type"></a>ユーザー定義データ型を作成するには  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68037618"
      **[NULL を許容]**  
      ユーザー定義データ型が NULL 値を受け入れるかどうかを指定します。 既存のユーザー定義データ型に対する NULL 値の許容/非許容は編集できません。  
   
-     **データ型**  
+     **データの種類**  
      基本データ型をリスト ボックスから選択します。 リスト ボックスには、 **geography**、 **geometry**、 **hierarchyid**、 **sysname**、 **timestamp** 、および **xml** の各データ型以外のすべてのデータ型が表示されます。 既存のユーザー定義データ型のデータ型は編集できません。  
   
      **[Default]**  
@@ -72,19 +73,19 @@ ms.locfileid: "68037618"
   
      長さは、 **nvarchar (max)** 、 **varchar (max)** 、 **varbinary (max)** の各データ型に対しては表示されません。  
   
-     **[名前]**  
+     **名前**  
      ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 文字の最大数は、システム **sysname** データ型に一致する必要があります。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  
      必要に応じて、ユーザー定義データ型の別名にバインドするルールを選択します。  
   
-     **Scale**  
+     **スケール**  
      小数点の右側にとることのできる 10 進数の最大桁数を指定します。  
   
-     **スキーマ**  
+     **[スキーマ]**  
      現在のユーザーが使用できるすべてのスキーマの一覧からスキーマを選択します。 既定の選択は、現在のユーザーの既定のスキーマです。  
   
-     **ストレージ**  
+     **Storage**  
      ユーザー定義データ型の別名に対応するストレージの最大サイズを表示します。 ストレージの最大サイズは、有効桁数によって異なります。  
   
     |||  
@@ -110,9 +111,7 @@ ms.locfileid: "68037618"
   
 7.  新しいデータ型の別名に既定値またはルールをバインドする場合は、 **[バインド]** で、 **[既定値]** または **[ルール]** ボックスへの設定を完了します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、既定値やルールを作成できません。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 既定値やルールを作成するためのサンプル コードは、テンプレート エクスプローラーで使用できます。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名を作成するには  
   

@@ -9,10 +9,10 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651362"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する
@@ -48,7 +48,7 @@ ms.locfileid: "62651362"
   
 8.  **[コマンドの種類を選択します]** ページで、 **[SQL ステートメントを使用する]** を選択し、 **[次へ]** を選択します。  
   
-9. [ **SQL ステートメントの入力]** ページで、 **AdventureWorks2014** データベースからデータを取得するための次の Transact-SQL クエリを入力し、 **[次へ]** を選択します。  
+9. **[SQL ステートメントの入力]** ページで、 **AdventureWorks2014** データベースからデータを取得するための次の Transact-SQL クエリを入力し、 **[次へ]** を選択します。  
   
     ```  
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  

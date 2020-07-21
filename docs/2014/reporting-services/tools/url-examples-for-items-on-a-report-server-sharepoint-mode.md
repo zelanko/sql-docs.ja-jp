@@ -1,5 +1,5 @@
 ---
-title: SharePoint モード (SSRS) レポート サーバーにパブリッシュされたレポート アイテムの URL の例 |Microsoft Docs
+title: SharePoint モードのレポートサーバー上のパブリッシュされたレポートアイテムの URL の例 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099451"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66099451"
   
  レポート サーバー コンテンツへのアクセスおよびセキュリティ保護には、次に示す Web 階層の要素を使用します。 リストやページなどのオブジェクトは、レポート サーバーのコンテンツへのアクセスに使用されないため、この表では説明しません。  
   
-|オブジェクト|説明|  
+|Object|説明|  
 |------------|-----------------|  
-|SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには http: *//servername*などの URL を指定します。複数のサイトを指定することもできます。|  
-|Site|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
+|SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには http:*//servername*などの URL を指定します。複数のサイトを指定することもできます。|  
+|サイト|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
 |SharePoint ライブラリ|ライブラリには、ドキュメントやフォルダーが格納されます。 レポート、レポート モデル、共有データ ソース、および外部画像を保存できるサイト オブジェクトは、ライブラリまたはライブラリ内のフォルダーのみです。|  
 |アイテム|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
   
@@ -44,21 +44,21 @@ ms.locfileid: "66099451"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint サーバーの URL  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポート サーバーに、レポート サーバー プロジェクトまたはレポート モデル プロジェクトを配置する場合は、SharePoint サーバーの URL を使用する必要があります。  
   
- 使用するサーバーの名前を見つけるには、ブラウザーを開いて、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 プロトコル プレフィックスのすぐ後に、http: *//servername*のような形式のサーバー名が表示されます。  
+ 使用するサーバーの名前を見つけるには、ブラウザーを開いて、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 プロトコル プレフィックスのすぐ後に、http:*//servername*のような形式のサーバー名が表示されます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http: *//servername:8080/reportserver*のようにポート番号が含まれます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http:*//servername:8080/reportserver*のようにポート番号が含まれます。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint Server サイトまたはサブサイトの URL  
- レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL ではサーバー名のすぐ後にサイト名が示されます。たとえば、 http://*servername/site* または http://*servername/site/subsite*のようになります。  
+ レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL ではサーバー名のすぐ後にサイト名が示されます。たとえば、http://*servername/site* または http://*servername/site/subsite*のようになります。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web アプリケーションでは、サイトおよびサブサイトは一般的にメイン サイトのタブに対応します。 サイト名またはサブサイト名を見つけるには、 **[ホーム]** をクリックし、次に **[すべてのサイト コンテンツの表示]** をクリックします。 末尾までスクロールして **[サイトとワークスペース]** を選択します。 このセクションにサイトの一覧が表示されます。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint ライブラリの URL  
  レポートまたは関連アイテムを SharePoint ライブラリに配置する場合は、SharePoint ライブラリの URL を使用する必要があります。 ライブラリに使用する URL は、使用している SharePoint のバージョンによって異なります。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]では、ライブラリはサーバー名の後に示されます。たとえば、 http://*servername/* Shared Documents のようになります。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]では、ライブラリはサーバー名の後に示されます。たとえば、http://*servername/* Shared Documents のようになります。  
   
- [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、 http://*servername/site/* Documents のようになります。  
+ [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、http://*servername/site/* Documents のようになります。  
   
  新しい SharePoint ライブラリまたは使用したことがないサイトのパス情報を見つけるには、ブラウザーを開き、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 ライブラリが空である場合は、任意のファイルをアップロードします。 ファイルを右クリックして **[プロパティ]** をクリックし、 **[プロパティ]** ウィンドウを開きます。 ファイルのアドレスには、パブリッシュ操作に必要な URL 値が含まれています。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66099451"
 ## <a name="examples-of-urls"></a>URL の例  
  アイテムを SharePoint ライブラリにパブリッシュする場合は、完全修飾 URL をターゲット ライブラリに指定する必要があります。 完全修飾 SharePoint URL は、SharePoint Web アプリケーション、サイト、ライブラリ、フォルダー、ファイル、およびファイル名拡張子で構成されます。フォルダーは省略可能です。 使用可能な構文の例をいくつか次に示します。  
   
-|移行先|URL の例|  
+|移行先|Example URL (URL の例)|  
 |------------|-----------------|  
 |SharePoint サーバー|http://TestServer|  
 |SharePoint サーバー サイトまたはサブサイト|http://TestServer/toplevelsite/subsite|  
@@ -102,7 +102,7 @@ ms.locfileid: "66099451"
 |**または** インスタンス上の [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] フォルダー内の Company Sales サンプル レポート。|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |**または** インスタンス上の [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Report Center [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 内の Company Sales サンプル レポート。|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a> 作成ツールから SharePoint ライブラリへのパブリッシュ  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> 作成ツールから SharePoint ライブラリへのパブリッシュ  
  レポート作成ツールを使用してレポートと関連ファイルをライブラリにパブリッシュする場合、ファイルは検証されてから追加されます。 SharePoint ライブラリで **[アップロード]** アクションを使用してレポートと関連ファイルをアップロードする場合、検証チェックは行われません。 ファイルが有効かどうかは、管理、編集、または実行のためにレポートにアクセスするまで知ることができません。  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66099451"
 ### <a name="file-names"></a>ファイル名  
  レポート アイテムに対して URL 内に指定するファイル名にはファイル名拡張子が必要です。 ファイル名拡張子によってファイルの種類が識別されます。 レポート アイテムをレポート作成ツールからパブリッシュする場合は、ファイル名拡張子が自動的に含まれます。 レポート アイテムを SharePoint ライブラリにアップロードする場合は、ファイル名拡張子を含める必要があります。  
   
- SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、`rsInvalidDataSourceReference` エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 次の文字を含めないでください: # % & *: \< > でしょうか。 / { | } は、使わないでください。  
+ SharePoint サイトにアップロードするアイテムにファイル名拡張子を指定しないと、`rsInvalidDataSourceReference` エラーが発生します。 SharePoint アプリケーションで有効なファイル名文字として認識されない文字を、ファイル名に含めることはできません。 次の文字は含めないでください: #% & \< *: >? / { | } は、使わないでください。  
   
 ## <a name="differences-between-uploading-and-publishing"></a>アップロードとパブリッシュの相違点  
  レポート デザイナーまたはレポート ビルダーを使用してレポートと関連ファイルをライブラリにパブリッシュする場合、ファイルは検証されてから追加されます。 SharePoint ライブラリで **[アップロード]** アクションを使用してレポートと関連ファイルをアップロードする場合、検証チェックは行われません。 ファイルが有効かどうかは、管理、編集、または実行のためにレポートにアクセスするまで知ることができません。  

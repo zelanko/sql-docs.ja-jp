@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d9a02c6bf2fa6c9afa48c2192bfc9103c519174
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b40e79c9b2cf41f39dac36ef90e078fe0a542c70
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983653"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917517"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public double getDouble(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **Double**値。  
+ **double** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getDouble メソッドは、java.sql.ResultSet インターフェイスの getDouble メソッドで規定されています。  
   
  このメソッドは、数値ベースのすべてのデータ型を、Java の**double** の忠実性を使用して返します。  

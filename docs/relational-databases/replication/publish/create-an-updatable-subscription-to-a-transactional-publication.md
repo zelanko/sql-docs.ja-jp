@@ -1,6 +1,7 @@
 ---
-title: トランザクション パブリケーションの更新可能なサブスクリプションの作成 | Microsoft Docs
-ms.custom: ''
+title: 更新可能なサブスクリプションの作成 (トランザクション)
+description: SQL Server トランザクション パブリケーションの更新可能なサブスクリプションを作成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 406b27b21d5c212815cd171ceff0ab308fb48aa9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907827"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896812"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションの更新可能なサブスクリプションの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] 2012 から 2016 のバージョンでサポートされています。  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 
@@ -53,8 +54,6 @@ ms.locfileid: "67907827"
     リンクされたサーバー アカウントに必要な権限に関する詳細については、「[ここにサブスクリプションを入力](../../../relational-databases/replication/security/secure-the-subscriber.md)」の「**Queued Updating Subscriptions**」(キューに入れられた更新サブスクリプション) を参照してください。
 
 8. ウィザードを完了します。
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>サブスクライバーから更新可能なサブスクリプションを構成する
 

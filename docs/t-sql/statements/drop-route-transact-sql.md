@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b11908f182037a1368b9d1fda34ebda3f1422918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f46d25f9a6232343e7cbd70050883315fb65a318
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022588"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895232"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   ルートを削除し、その情報を現在のデータベースのルーティング テーブルから削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68022588"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP ROUTE route_name  
 [ ; ]  
@@ -47,7 +47,7 @@ DROP ROUTE route_name
  *route_name*  
  削除するルートの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ルートを格納するルーティング テーブルは、カタログ ビュー **sys.routes** を介して読み取ることができるメタデータ テーブルです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、DROP ROUTE ステートメントでのみ更新できます。  
   
  メッセージ交換でルートが使用されているかどうかに関係なく、ルートを削除することができますが、 しかし、リモート サービスへのルートが他に存在しない場合は、リモート サービスへのルートが作成されるか、メッセージ交換がタイムアウトになるまで、メッセージ交換のメッセージは転送キューに残ります。  
@@ -55,7 +55,7 @@ DROP ROUTE route_name
 ## <a name="permissions"></a>アクセス許可  
  ルートを削除する権限は、既定ではルートの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`ExpenseRoute` ルートを削除します。  
   
 ```  

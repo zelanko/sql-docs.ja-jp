@@ -1,5 +1,5 @@
 ---
-title: Setn文字ストリームメソッドから Reader オブジェクト |Microsoft Docs
+title: Reader オブジェクトへの setNCharacterStream | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 77905630-0135-46ad-a419-215e648996e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdefec49aebd2c5042d9fb8f99486a0ee8d3811e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aa68d7f6a4709594f65c0ff19d004a67ce209290
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973854"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909668"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>setNCharacterStream メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67973854"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[setNCharacterStream &#40;java.lang.String, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された Reader オブジェクトに設定します。|  
 |[setNCharacterStream &#40;java.lang.String, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|指定されたパラメーターを、指定された文字数である指定された Reader オブジェクトに設定します。|  

@@ -19,16 +19,16 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eef3752a362dcc6709d7c7461cd35fdc5c1892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6754139bdd7f12abffcffe8c7bae6171a0eea199
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077779"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999938"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で入力の MD2、MD4、MD5、SHA、SHA1、または SHA2 ハッシュを返します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68077779"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 HASHBYTES ( '<algorithm>', { @input | 'input' } )  
   
 <algorithm>::= MD2 | MD4 | MD5 | SHA | SHA1 | SHA2_256 | SHA2_512   
@@ -55,21 +55,21 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  出力はアルゴリズムの標準に準拠します。MD2、MD4、および MD5 の場合は 128 ビット (16 バイト)、SHA および SHA1 の場合は 160 ビット (20 バイト)、SHA2_256 の場合は 256 ビット (32 バイト)、SHA2_512 の場合は 512 ビット (64 バイト) です。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前の場合、指定できる入力値は 8000 バイトまでに制限されます。  
   
 ## <a name="return-value"></a>戻り値  
  **varbinary** (最大 8,000 バイト)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ハッシュ値を計算するための別の方法として、`CHECKSUM` または `BINARY_CHECKSUM` の使用を検討してください。
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 代わりに SHA2_256 または SHA2_512 を使用してください。 以前のアルゴリズムは引き続き機能しますが、Deprecation イベントが発生します。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="return-the-hash-of-a-variable"></a>変数のハッシュを返す  
- 次の例では、変数 `@HashThis` に格納されている **nvarchar** 型のデータの `SHA2_256` ハッシュを返します。  
+ 次の例では、変数 `SHA2_256` に格納されている **nvarchar** 型のデータの `@HashThis` ハッシュを返します。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>テーブル列のハッシュを返す  
- 次の例では、テーブル `Test1` 内の列 `c1` の値の SHA2_256 ハッシュを返します。  
+ 次の例では、テーブル `c1` 内の列 `Test1` の値の SHA2_256 ハッシュを返します。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

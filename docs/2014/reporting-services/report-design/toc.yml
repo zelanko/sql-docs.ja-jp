@@ -5,7 +5,7 @@
       href: tables-report-builder-and-ssrs.md
     - name: マトリックス
       href: create-a-matrix-report-builder-and-ssrs.md
-    - name: 一覧
+    - name: リスト
       href: create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
     - name: Tablix データ領域
       href: ../tablix-data-region-report-builder-and-ssrs.md

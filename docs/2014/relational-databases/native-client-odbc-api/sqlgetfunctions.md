@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions |マイクロソフトのドキュメント
+title: SQLGetFunctions |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ topic_type:
 helpviewer_keywords:
 - SQLGetFunctions function
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 452f6920c8945097424e8387b5a8c356837b3160
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62657831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022164"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのインターフェイスが 3 つの定義済みの対応レベル for ODBC (ISO、Open Group、および ODBC level 2) に準拠します。 **SQLGetFunctions**すべての ODBC 関数がサポートされているレポート、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc ドライバーインターフェイスは、odbc 用に定義された3つのコンプライアンスレベル (ISO、Open Group、および odbc レベル 2) に準拠しています。 **Sqlgetfunctions**は、NATIVE Client odbc ドライバーですべての odbc 関数がサポートされていることを報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetFunctions 関数](https://go.microsoft.com/fwlink/?LinkId=59353)   

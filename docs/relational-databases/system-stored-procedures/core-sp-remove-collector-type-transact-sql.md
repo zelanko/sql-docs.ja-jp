@@ -1,5 +1,5 @@
 ---
-title: core.sp_remove_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_remove_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9c2b3bf93abd6acfad699f47344f05ddbc34e85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c14d41dabfb8b587b3baaaaec9cb11ac3ac9d8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898184"
 ---
-# <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="coresp_remove_collector_type-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  管理データ ウェアハウス データベースの core.supported_collector_types ビューからエントリを削除します。 管理データ ウェアハウス データベースのコンテキストでプロシージャを実行する必要があります。  
+  管理データ ウェアハウス データベースの core.supported_collector_types ビューからエントリを削除します。 プロシージャは、管理データウェアハウスデータベースのコンテキストで実行する必要があります。  
   
  core.supported_collector_types ビューには、管理データ ウェアハウスにデータをアップロードできる登録済みのコレクター型が表示されます。  
   
@@ -44,16 +44,16 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collector_type_uid = ] '*collector_type_uid*'  
- コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**既定値はありません。  
+ [ @collector_type_uid =] '*collector_type_uid*'  
+ コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
+ **Mdw_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、core.supported_collector_types ビューからジェネリック T-SQL Query コレクター型を削除します。  
   
 ```  
@@ -66,8 +66,8 @@ EXECUTE @RC = core.sp_remove_collector_type @collector_type_uid;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

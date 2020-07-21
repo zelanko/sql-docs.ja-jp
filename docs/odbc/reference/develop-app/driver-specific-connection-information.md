@@ -16,29 +16,29 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69f2c98678739a8b7879e152e13546f2bf9b9cc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 16c8c5fc4fd3ac63aa3613b41e530446dffec118
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046933"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305793"
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
-**SQLConnect**データ ソース名、ユーザー ID、およびパスワードがデータ ソースに接続するための十分なことと、システム上の他のすべての接続情報を格納できることを前提としています。 これは頻繁にできません。 たとえば、ドライバーは、1 人のユーザー ID とパスワード、サーバーおよび別のユーザー ID とパスワードにログオンするため、DBMS にログオンする必要があります。 **SQLConnect**受け取る、1 人のユーザー ID とパスワード、つまり他のユーザー ID とパスワードが場合、システム上のデータ ソース情報を格納する必要があります**SQLConnect**が使用されます。 これは潜在的なセキュリティ違反であり、パスワードは暗号化されていない限り避ける必要があります。  
+**SQLConnect**では、データソース名、ユーザー ID、およびパスワードを使用してデータソースに接続し、他のすべての接続情報をシステムに格納できることを前提としています。 これは多くの場合、そうではありません。 たとえば、サーバーにログオンするために1つのユーザー ID とパスワードが必要であり、DBMS にログオンするために別のユーザー ID とパスワードが必要になる場合があります。 **SQLConnect**は単一のユーザー id とパスワードを受け付けるため、 **SQLConnect**を使用する場合は、他のユーザー id とパスワードをシステム上のデータソース情報と共に保存する必要があります。 これはセキュリティ違反の可能性があるため、パスワードを暗号化しない限り回避する必要があります。  
   
- **SQLDriverConnect**接続文字列のキーワード/値ペアの任意の接続情報の量を定義するドライバーを使用します。 たとえば、ドライバーが必要です、データ ソース名、ユーザー ID とパスワード、サーバー、およびユーザー ID とパスワードの dbms とします。 XYZ Corp のデータ ソースを常に使用するカスタム プログラム可能性がありますの Id とパスワードを求めるし、次のキーワードと値のペアのセットを構築または*接続文字列、* に渡す**SQLDriverConnect**:  
+ **SQLDriverConnect**を使用すると、ドライバーは接続文字列のキーワードと値のペアで任意の量の接続情報を定義できます。 たとえば、ドライバーがデータソース名、サーバーのユーザー ID とパスワード、および DBMS のユーザー ID とパスワードを必要とするとします。 常に XYZ Corp データソースを使用するカスタムプログラムでは、ユーザーに Id とパスワードの入力を求め、次の一連のキーワードと値のペア (*接続文字列)* を作成して、 **SQLDriverConnect**に渡すことができます。  
   
 > [!NOTE]  
->  指定する必要があります Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうか、`Trusted_Connection=yes`接続文字列でユーザー ID とパスワードの情報の代わりにします。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列に`Trusted_Connection=yes`ユーザー ID とパスワードの情報ではなくを指定する必要があります。  
   
 ```  
 DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUserID};PWDDBMS={MyDBMSUserPassword};  
 ```  
   
- **DSN** (データ ソース名) のキーワード、データ ソースの名前、 **UID**と**PWD**キーワードは、ユーザー ID と、サーバーのパスワードを指定し、 **UIDDBMS**と**PWDDBMS**キーワードは、DBMS のユーザー ID とパスワードを指定します。 最後のセミコロンが省略可能なことに注意してください。 **SQLDriverConnect**この文字列を解析して; XYZ Corp データ ソース名を使用して、サーバーのアドレスなど、システムから追加の接続情報を取得して、サーバーと DBMS の指定されたユーザー Id とパスワードを使用してにログオンします。  
+ **DSN** (データソース名) キーワードはデータソースに名前を指定し、 **UID**と**PWD**キーワードはサーバーのユーザー id とパスワードを指定します。また、 **uiddbms**と**PWDDBMS**キーワードは、DBMS のユーザー id とパスワードを指定します。 最後のセミコロンは省略可能であることに注意してください。 **SQLDriverConnect**は、この文字列を解析します。は、サーバーアドレスなどの追加の接続情報をシステムから取得するために、XYZ Corp データソース名を使用します。とは、指定されたユーザー Id とパスワードを使用して、サーバーと DBMS にログオンします。  
   
- キーワードと値のペアで**SQLDriverConnect**特定の構文規則に従う必要があります。 キーワードとその値を含めないで、 **:operator[]{}()、;?\*=! @** 文字。 値、 **DSN**キーワードが空白ののみで構成されていることはできませんし、先頭の空白を含めることはできません。 レジストリの文法のためのキーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字。 スペースは、キーワードと値のペアで、等号は使用できません。  
+ **SQLDriverConnect**のキーワードと値のペアは、特定の構文規則に従う必要があります。 キーワードとその値には、 **[]{}()、;? を含めることはできません。= \*! @** 文字。 **DSN**キーワードの値は、空白のみで構成することはできません。また、先頭に空白を含めることはできません。 レジストリの文法により、キーワードとデータソース名に円記号 (\\) を含めることはできません。 キーワードと値のペアの等号を囲むスペースは使用できません。  
   
- **FILEDSN**への呼び出しでキーワードを使用できます**SQLDriverConnect**データ ソースの情報を含むファイルの名前を指定する (を参照してください[接続を使用してファイル データ ソース](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)、このセクションで後述)。 **SAVEFILE**への呼び出しによって正常な接続のキーワードと値のペアが行われた .dsn ファイルの名前を指定するキーワードを使用できる**SQLDriverConnect**が保存されます。 ファイル データ ソースの詳細については、次を参照してください。、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明。
+ **FILEDSN**キーワードを使用すると、 **SQLDriverConnect**を呼び出して、データソース情報を含むファイルの名前を指定できます (後の「[ファイルデータソースを使用した接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)」を参照してください)。 **SAVEFILE**キーワードを使用すると、 **SQLDriverConnect**への呼び出しによって確立された接続のキーワードと値のペアが保存される、dsn ファイルの名前を指定できます。 ファイルデータソースの詳細については、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)関数の説明を参照してください。

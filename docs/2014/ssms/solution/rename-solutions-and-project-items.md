@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 844951dbb220f317a086bd9fbc7638dae028deab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058309"
 ---
 # <a name="rename-solutions-and-project-items"></a>ソリューションとプロジェクト アイテムの名前変更
   ソリューション エクスプローラーでソリューションとプロジェクト アイテムの名前を変更できます。  

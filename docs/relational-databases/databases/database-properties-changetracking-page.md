@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([変更の追跡] ページ) | Microsoft Docs'
+description: '[データベースのプロパティ] ダイアログ ボックスの [ChangeTracking] タブを使用して、データベースの変更追跡の設定を表示または変更する方法について説明します。'
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -13,18 +14,18 @@ ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0abdb96d6d01ac1d630e8489013c381518573b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756233"
 ---
-# <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] \([変更の追跡] ページ)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] ([変更の追跡] ページ)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このページを使用すると、選択されているデータベースの変更の追跡設定を表示または変更できます。 このページで使用可能なオプションの詳細については、「[変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **変更の追跡**  
  データベースの変更の追跡の有効/無効を切り替えます。  
   

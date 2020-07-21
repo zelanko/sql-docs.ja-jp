@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9a21b5993271ff7be4eeb4afe81caa78438a263
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898263"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882442"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   既存のコントラクトをデータベースから削除します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67898263"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 DROP CONTRACT contract_name   
 [ ; ]  
@@ -47,7 +47,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  削除するコントラクトの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービスまたはメッセージ交換の優先度でコントラクトが参照されている場合は、コントラクトを削除できません。  
   
  コントラクトを削除するとき、そのコントラクトを使用している既存のメッセージ交換は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってエラーと共に終了されます。  
@@ -55,7 +55,7 @@ DROP CONTRACT contract_name
 ## <a name="permissions"></a>アクセス許可  
  コントラクトを削除する権限は、既定ではコントラクトの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベースからコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` を削除します。  
   
 ```  

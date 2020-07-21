@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect による接続 |Microsoft Docs
+title: SQLDriverConnect | を使用した接続Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8285ca9fddf0e1b77ca171414e4c00b0029d110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036504"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299072"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect による接続
-**SQLDriverConnect**接続文字列を使用してデータ ソースに接続するために使用します。 **SQLDriverConnect**の代わりに使用が**SQLConnect**次の理由。  
+**SQLDriverConnect**は、接続文字列を使用してデータソースに接続するために使用されます。 次の理由により、 **SQLConnect**の代わりに**SQLDriverConnect**が使用されます。  
   
--   ドライバー固有の接続情報を使用してアプリケーションをできるようにします。  
+-   アプリケーションでドライバー固有の接続情報を使用できるようにする場合は。  
   
 -   ドライバーがユーザーに対して接続情報を要求する場合  
   
--   データ ソースを指定せずに接続します。  
+-   データソースを指定せずに接続する場合。  
   
  このセクションでは、次のトピックを扱います。  
   

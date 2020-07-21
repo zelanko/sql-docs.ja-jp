@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102645"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>レポート定義スキーマのバージョンを確認する (SSRS)
   レポート定義ファイルでは、rdl ファイルの検証に使用されるレポート定義スキーマのバージョンに対応して、RDL 名前空間が指定されます。 以前の名前空間に対応するレポートが作成済みの場合、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート デザイナーやレポート ビルダーなどのレポート作成環境で .rdl ファイルを開くと、バックアップ ファイルが自動的に作成され、レポートが現在の名前空間にアップグレードされます。 アップグレードされたレポート定義を保存すると、変換された .rdl ファイルが保存されることになります。 これは、レポート定義をアップグレードする唯一の方法です。 レポート定義そのものはレポート サーバーでアップグレードされません。 コンパイル済みレポートが、レポート サーバーで自動的にアップグレードされます。 詳細については、「 [Upgrade Reports](../install-windows/upgrade-reports.md)」を参照してください。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>操作方法:レポートの RDL スキーマのバージョンを確認する  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>レポートの RDL スキーマのバージョンを確認する方法  
   
 1.  メモ帳や、XML を表示できる XML Notepad 2007 などのアプリケーションでレポートの .rdl ファイルを開きます。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66102645"
   
      レポート定義の名前空間は、 `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`という URL で指定されています。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>操作方法:レポート デザイナーの RDL スキーマのバージョンを確認する  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>レポート デザイナーの RDL スキーマのバージョンを確認する方法  
   
-1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、複数のスキーマ バージョンがサポートされています。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
+1.  新しいプロジェクトを開きます。 選択したプロジェクトのバージョンにより、RDL スキーマのバージョンが決まります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、複数のスキーマ バージョンがサポートされています。 詳細については、「 [SQL Server データ ツールの配置およびバージョン サポート (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)には含まれていません。  
   
 2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[新しい項目の追加]** ダイアログ ボックスが表示されます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66102645"
   
      レポート定義の名前空間は、 `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>操作方法:レポート サーバー上で RDL スキーマのバージョンを確認する  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>レポート サーバー上で RDL スキーマのバージョンを確認する方法  
   
 -   レポート マネージャーで、レポート サーバーの URL を入力します。 たとえば、次の URL はローカル コンピューターのレポート サーバーを指定しています。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66102645"
      レポート定義の名前空間は、 `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## <a name="see-also"></a>参照  
- [Upgrade Reports](../install-windows/upgrade-reports.md)   
- [レポート定義言語 (SSRS)](report-definition-language-ssrs.md)  
+ [レポートのアップグレード](../install-windows/upgrade-reports.md)   
+ [レポート定義言語 &#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

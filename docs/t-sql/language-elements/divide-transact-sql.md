@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee91b9b909820a36b8ffa152ff88a3018ed4950c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67894911"
 ---
 # <a name="-division-transact-sql"></a>/ (除算) (Transact-SQL)
@@ -52,10 +52,10 @@ dividend / divisor
   
  整数型の *dividend* を整数型の *divisor* で除算すると、結果は小数部が切り捨てられた整数になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  / 演算子で返される実際の値は、1 番目の式を 2 番目の式で除算して得られる商です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、算術除算演算子を使用して、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の販売員の各月の販売目標を計算しています。  
   
 ```  
@@ -82,7 +82,7 @@ SalesPersonID FirstName    LastName          SalesQuota  Sales Target Per Month
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、除算算術演算子を使用して、各従業員の休暇時間と病気時間の単純な比率を計算します。  
   
 ```  

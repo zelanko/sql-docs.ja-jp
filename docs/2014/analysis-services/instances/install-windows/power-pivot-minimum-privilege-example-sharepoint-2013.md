@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint 2013 の最小限の特権の構成の例 |Microsoft Docs
+title: PowerPivot for SharePoint 2013 | の最小特権構成の例Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f24ee3e02daaaa906c8285cd6d78dacb9973c6ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b00bbdf6063bc0451244792ee423825b4f74cc40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079886"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543864"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Power Pivot for SharePoint 2013 向けに最小限の特権を構成する例
   このトピックでは、最小限の特権を使用する PowerPivot for SharePoint 2013 構成の例について説明します。 この構成では、3 種類のコンポーネントごとに個別のアカウントを使用します。各アカウントには最小レベルの特権を指定します。  
   
 ## <a name="summary-of-accounts"></a>アカウントの概要  
- PowerPivot for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービス アカウントの詳細については、次を参照してください。 [Windows サービス アカウントの構成とアクセス許可](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(https://msdn.microsoft.com/library/ms143504.aspx)します。  
+ PowerPivot for SharePoint 2013 では、Analysis Services サービス アカウントに Network Service アカウントを使用できます。 Network Service アカウントは、SharePoint 2010 のシナリオではサポートされません。 サービスアカウントの詳細については、「 [Windows サービスアカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(」を参照してください https://msdn.microsoft.com/library/ms143504.aspx) 。  
   
  次の表は、最小限の特権の構成の例で使用する 3 種類のアカウントをまとめたものです。  
   
-|スコープ|名前|  
+|Scope|名前|  
 |-----------|----------|  
 |SharePoint 管理者アカウント|**SPAdmin**|  
 |SharePoint ファーム アカウント|**SPFarm**|  
 |Analysis Services サービス アカウント|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>SharePoint 管理者アカウント (SpAdmin)  
- **SPAdmin** は、ファームのインストールと構成に使用するドメイン アカウントです。 SharePoint 構成ウィザードと SharePoint 2013 用 PowerPivot 構成ツールを実行するために使用するアカウントは**SPAdmin**アカウントはのみのアカウントのローカル管理者権限が必要です。 PowerPivot 構成ツールを実行する前に、 **SPAdmin**アカウントの特権を SQL Server データベース インスタンスを SharePoint がコンテンツと構成データベースを作成します。 最小限の特権のシナリオで SPAdmin アカウントを構成する場合、SPAdmin アカウントは **securityadmin** ロールと **dbcreator**ロールのメンバーにします。  
+ **SPAdmin** は、ファームのインストールと構成に使用するドメイン アカウントです。 このアカウントは、SharePoint 構成ウィザードと SharePoint 2013 用 PowerPivot 構成ツールの実行に使用されます。 **Spadmin**アカウントは、ローカル管理者権限を必要とする唯一のアカウントです。 PowerPivot 構成ツールを実行する前に、SharePoint によってコンテンツデータベースと構成データベースが作成される SQL Server データベースインスタンスに、 **Spadmin**アカウントの特権を付与します。 最小限の特権のシナリオで SPAdmin アカウントを構成する場合、SPAdmin アカウントは **securityadmin** ロールと **dbcreator**ロールのメンバーにします。  
   
 ### <a name="the-farm-account-spfarm"></a>ファーム アカウント (SPFarm)  
  **SPFarm** は、SharePoint Timer Service と全体管理用 Web アプリケーションが SharePoint コンテンツ データベースにアクセスするために使用するドメイン アカウントです。 このアカウントは、ローカル管理者である必要はありません。 SharePoint 構成ウィザードでは、バックエンドの SQL Server データベースで必要最小限の特権を付与します。SQL Server の特権の最小限の構成は **securityadmin** ロールと **dbcreator**ロールのメンバーシップです。  
@@ -50,19 +49,19 @@ ms.locfileid: "66079886"
   
  **SharePoint Service アカウントとして使用する新しいドメイン アカウント SPsvc を作成するには**  
   
-1.  SharePoint サーバーの全体管理で、次のようにクリックします。**セキュリティ**します。  
+1.  SharePoint サーバーの全体管理で、[**セキュリティ**] をクリックします。  
   
-2.  クリックして**サービス アカウントの構成**  
+2.  [**サービスアカウントの構成**] をクリックします。  
   
-3.  クリックして**新しい管理アカウントの登録**します。  
+3.  [**新しい管理アカウントの登録**] をクリックします。  
   
  **SPSvc** アカウントにはローカル管理者権限はなく、SharePoint データベースに関する権限もありません。 SPsvc に必要な唯一の特権は、Analysis Services の PowerPivot インスタンスの管理権限です。  
   
  **SPsvc アカウントを使用する適切なアプリケーション プールを構成するには**  
   
-1.  SharePoint サーバーの全体管理で、次のようにクリックします。**セキュリティ**します。  
+1.  SharePoint サーバーの全体管理で、[**セキュリティ**] をクリックします。  
   
-2.  クリックして**サービス アカウントの構成**します。  
+2.  [**サービスアカウントの構成**] をクリックします。  
   
 3.  PowerPivot サービス アプリケーションで使用するサービス アプリケーション プールを選択します。 次に、SPSvc アカウントを選択します。  
   
@@ -72,10 +71,7 @@ ms.locfileid: "66079886"
   
 2.  次の PowerShell コードを実行します。  
   
-    ```  
+    ```powershell
     $webApp = Get-SPWebApplication "http://<servername>"  
-    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")  
-  
+    $webApp.GrantAccessToProcessIdentity("DOMAIN\<ServiceAccountName>")
     ```  
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: RowNumber 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: RowNumber 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7af8523acb3bf531589a04268de1139d8bcefd35
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577187"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081173"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>レポート ビルダー関数 - RowNumber 関数
   指定されたスコープの実行中の行数を返します。  
@@ -32,7 +32,7 @@ RowNumber(scope)
  *スコープ (scope)*  
  (**String**) 行数を評価するコンテキストを示すデータセット、データ領域、またはグループの名前か、NULL (**では** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) です。 **Nothing** は、最も外側のコンテキスト (通常はレポート データセット) を示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **RunningValue** では、集計関数の実行中の値が返されますが、 [RowNumber](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) では、指定したスコープ内の行数の実行中の値が返されます。 スコープを指定すると、行数を 1 にリセットするタイミングが指定されます。  
   
  *scope* には、式を指定することはできません。 *scope* には、コンテナー スコープを指定する必要があります。 一般的なスコープは、外側から内側の順に、レポート データセット、データ領域、行グループまたは列グループです。  

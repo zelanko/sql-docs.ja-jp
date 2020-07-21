@@ -12,14 +12,14 @@ helpviewer_keywords:
 - comparing bookmarks [ODBC]
 - bookmarks [ODBC]
 ms.assetid: ea347635-fbe3-41c1-b537-4048b7c0f7da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44da652ad1e52934fa48f32b1b2f88b30212ad3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c28392c0d48984b4aaf8a8df442b6a4054a7eced
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083304"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307477"
 ---
 # <a name="comparing-bookmarks"></a>ブックマークの比較
-ブックマークがバイトを比較できるため、等値または非等値比較できます。 これを行うには、アプリケーションは、各ブックマークをバイト配列として扱われます、2 つのブックマークのバイトを比較します。 ブックマークは、結果セット内でのみ一意では保証されているため意味がない別の結果セットから取得したブックマークを比較します。
+ブックマークはバイト比較可能であるため、等価性または非等値を比較できます。 これを行うために、アプリケーションは各ブックマークをバイトの配列として扱い、2つのブックマークを1バイトずつ比較します。 ブックマークは、結果セット内でのみ一意であることが保証されるため、異なる結果セットから取得されたブックマークを比較することは意味がありません。

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100076"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio のレポート サーバーの F1 ヘルプ
@@ -24,13 +24,13 @@ ms.locfileid: "66100076"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [[レポート サーバー ジョブのキャンセル]](cancel-report-server-jobs-management-studio.md)  
+-   [レポート サーバー ジョブのキャンセル](cancel-report-server-jobs-management-studio.md)  
   
--   [[カタログ アイテムの削除]](delete-catalog-items-management-studio.md)  
+-   [カタログ アイテムの削除](delete-catalog-items-management-studio.md)  
   
 -   [[ジョブのプロパティ] ページ](job-properties-management-studio.md)  
   
--   [[新しい共有スケジュール]](new-shared-schedule-management-studio.md)  
+-   [新しい共有スケジュール](new-shared-schedule-management-studio.md)  
   
 -   [新しいシステム ロール](new-system-role-management-studio.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66100076"
   
 -   [[ユーザー ロールのプロパティ]](user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [機能リファレンス (Reporting Services)](../feature-reference-reporting-services.md)   
  [SQL Server Management Studio の概要](../../ssms/sql-server-management-studio-ssms.md)  
   

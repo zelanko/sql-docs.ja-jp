@@ -1,5 +1,5 @@
 ---
-title: システム セキュリティ関数 |Microsoft Docs
+title: システムセキュリティ関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ dev_langs:
 ms.assetid: fa2c95df-1211-4330-adc6-9657e1a113e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dff237aca1c928e6921b99f62407848ba536d76e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a911b90617fdffca63711eb759eb088a5dd1645e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783071"
 ---
-# <a name="system-security-functions"></a>システム セキュリティ関数
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="system-security-functions"></a>システムセキュリティ関数
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次のシステムのセキュリティ機能を提供します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、次のシステムセキュリティ関数が用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)  

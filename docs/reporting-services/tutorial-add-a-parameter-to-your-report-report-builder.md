@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041738"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "72252139"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,14 +23,14 @@ ms.locfileid: "63041738"
 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。 
    
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データ ソースの選択、およびデータセットの作成に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
-このチュートリアルの推定所要時間 : 25 分  
+このチュートリアルの推定所要時間:25 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
-## <a name="Setup"></a>1.テーブルまたはマトリックス ウィザードでマトリックス レポートとデータセットを作成する  
+## <a name="1-create-a-matrix-report-and-dataset-in-the-table-or-matrix-wizard"></a><a name="Setup"></a>1.テーブルまたはマトリックス ウィザードでマトリックス レポートとデータセットを作成する  
 マトリックス レポート、データ ソース、およびデータセットを作成します。  
   
 > [!NOTE]  
@@ -82,13 +82,13 @@ ms.locfileid: "63041738"
   
 11. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックしてデータを表示します。   
   
-    結果セットは StoreID 列、Subcategory 列、Quantity 列に、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータが表示されます。店舗名は結果セットには含まれません。 このチュートリアルで後ほど、店舗 ID に対応する店舗の名前を別のデータセットから参照します。  
+    結果セットは、次の列で、4 店舗のサブカテゴリごとの販売済み商品数量を示す 11 行のデータで構成されます:StoreID、Subcategory、Quantity。店舗名は結果セットに含まれません。 このチュートリアルで後ほど、店舗 ID に対応する店舗の名前を別のデータセットから参照します。  
   
     クエリ パラメーターは存在しません。 以降、このチュートリアルの中でクエリ パラメーターを追加していきます。   
   
 12. **[次へ]** をクリックします。  
   
-## <a name="CompleteWizard"></a>2.ウィザードでデータを整理し、レイアウトを選択する  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2.ウィザードでデータを整理し、レイアウトを選択する  
 ウィザードは、データを表示するための最初のデザインを提供します。 ウィザードのプレビュー ペインでは、テーブルやマトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
   
 ### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -127,7 +127,7 @@ ms.locfileid: "63041738"
   
 ここでは、列見出しに店舗 ID は表示されますが店舗名は表示されません。 後ほど、店舗 ID と店舗名のペアが格納されているデータセットで店舗名を参照する式を追加します。  
   
-## <a name="Query"></a>3.クエリ パラメーターを追加してレポート パラメーターを作成する  
+## <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3.クエリ パラメーターを追加してレポート パラメーターを作成する  
 クエリ パラメーターをクエリに対して追加すると、名前、プロンプト、およびデータ型に既定のプロパティを持つ単一値のレポート パラメーターがレポート ビルダーによって自動的に作成されます。  
   
 ### <a name="to-add-a-query-parameter"></a>クエリ パラメーターを追加するには  
@@ -142,9 +142,9 @@ ms.locfileid: "63041738"
     WHERE StoreID = (@StoreID)  
     ```  
   
-    この **WHERE** 句によって、取得されるデータが、クエリ パラメーター *@StoreID* 」) を参照してください。  
+    この **WHERE** 句によって、取得されたデータが、クエリ パラメーター *\@StoreID* で指定した店舗 ID に限定されます。  
   
-4.  クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 この **[クエリ パラメーターの定義]** ダイアログ ボックスが開き、クエリ パラメーター *@StoreID* 」) を参照してください。  
+4.  クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 **[クエリ パラメーターの定義]** ダイアログ ボックスが開き、クエリ パラメーター *\@StoreID* の値を入力するように求められます。  
   
 5.  **[パラメーター値]** に「 **200**」と入力します。  
   
@@ -156,20 +156,20 @@ ms.locfileid: "63041738"
   
 8.  レポート データ ペインで **[パラメーター]** フォルダーを展開します。  
   
-*@StoreID* というレポート パラメーターと、レポート パラメーターをレイアウトできるパラメーター ペインが存在することがわかります。   
+*\@StoreID* というレポート パラメーターと、レポート パラメーターをレイアウトできるパラメーター ペインが存在するようになったことがわかります。   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
 パラメーター ペインが表示されない場合は、 **[表示]** メニューの **[パラメーター]** をクリックします。  
   
-## <a name="ChangeDefaultProperties"></a>4.レポート パラメーターの既定のデータ型とその他のプロパティを変更する  
+## <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4.レポート パラメーターの既定のデータ型とその他のプロパティを変更する  
 プロパティの既定値は、レポート パラメーターの作成後に調整することができます。  
   
 ### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>レポート パラメーターの既定のデータ型を変更するには  
   
 既定では、作成したパラメーターのデータ型は **[テキスト]** です。 店舗 ID は整数なので、データ型を [整数] に変更します。  
   
-1.  レポート データ ペインの **[パラメーター]** ノードで、 *@StoreID* を右クリックし、 **[パラメーターのプロパティ]** 」) を参照してください。  
+1.  **[パラメーター]** ノードのレポート データ ペインで、 *\@StoreID* を右クリックしてから、 **[パラメーターのプロパティ]** をクリックします。  
   
 2.  **[プロンプト]** に「 **Store identifier?** 」と入力します。 レポートを実行すると、レポート ビューアーのツール バーにこのテキストが表示されます。  
   
@@ -179,13 +179,13 @@ ms.locfileid: "63041738"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  **[実行]** をクリックして、レポートをプレビューします。 レポート ビューアーには、 **Store Identifier?** の入力を求めるプロンプト *@StoreID* 」) を参照してください。  
+6.  **[実行]** をクリックして、レポートをプレビューします。 レポート ビューアーには、*\@StoreID* の入力を求めるプロンプト **Store Identifier?** が表示されます。  
   
 7.  レポート ビューアー ツール バーで、店舗 ID の横に「 **200**」と入力し、 **[レポートの表示]** をクリックします。  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
-## <a name="AddDataset"></a>4a. 使用可能な値と表示名を提供するデータセットを追加する  
+## <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4a. 使用可能な値と表示名を提供するデータセットを追加する  
 レポート閲覧者がパラメーターの有効な値しか入力できないようにするには、選択可能な値のドロップダウン リストを作成します。 値は、データセットまたは指定した一覧から取得できます。 使用可能な値は、パラメーターへの参照を含まないクエリが格納されているデータセットから指定する必要があります。  
   
 ### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>パラメーターの有効な値のデータセットを作成するには  
@@ -215,12 +215,12 @@ ms.locfileid: "63041738"
   
     レポート データ ペインの **Stores** データセット ノードに、StoreID フィールドと StoreName フィールドが表示されます。  
   
-## <a name="AvailableValues"></a>4b. 一覧に表示される使用可能な値を指定する 
+## <a name="4b-specify-available-values-to-show-in-a-list"></a><a name="AvailableValues"></a>4b. 一覧に表示される使用可能な値を指定する 
 使用できる値のソースとなるデータセットを作成したら、レポートのプロパティで、レポート ビューアー ツール バーの有効な値のドロップダウン リストに値を設定するために使用するデータセットとフィールドを指定します。  
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>パラメーターに使用できる値をデータセットから提供するには  
   
-1.  レポート データ ペインでパラメーター *@StoreID* を右クリックし、 **[パラメーターのプロパティ]** 」) を参照してください。  
+1.  レポート データ ペインでパラメーター *\@StoreID* を右クリックしてから、 **[パラメーターのプロパティ]** をクリックします。  
   
 2.  **[使用できる値]** をクリックし、 **[クエリから値を取得]** をクリックします。  
   
@@ -246,14 +246,14 @@ ms.locfileid: "63041738"
   
 レポートには、店舗 ID **200**について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
   
-## <a name="DefaultValues"></a>4c. 既定値を指定する 
+## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. 既定値を指定する 
 各パラメーターの既定値を指定して、レポートが自動的に実行されるようにすることができます。  
   
 ### <a name="to-specify-a-default-value-from-a-dataset"></a>データセットから既定値を指定するには  
   
 1.  デザイン ビューに切り替えます。  
   
-2.  レポート データ ペインで *@StoreID* を右クリックし、 **[パラメーターのプロパティ]** 」) を参照してください。  
+2.  レポート データ ペインで *\@StoreID* を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
 3.  **[既定値]** をクリックし、 **[クエリから値を取得]** をクリックします。  
   
@@ -265,13 +265,13 @@ ms.locfileid: "63041738"
   
 7.  レポートをプレビューします。  
   
-For *@StoreID* の値として表示されます。この値が、データセット **Stores**」) を参照してください。 レポートには、店舗 ID **199**について、Digital Cameras の販売数量が表示されます。  
+*\@StoreID* に対して、レポート ビューアーによって値 "Contoso North America Online Store" が表示されます。これがデータセット **Stores** の結果セットの最初の値であるためです。 レポートには、店舗 ID **199**について、Digital Cameras の販売数量が表示されます。  
   
 ### <a name="to-specify-a-custom-default-value"></a>カスタムの既定値を指定するには  
   
 1.  デザイン ビューに切り替えます。  
   
-2.  レポート データ ペインで *@StoreID* を右クリックし、 **[パラメーターのプロパティ]** 」) を参照してください。  
+2.  レポート データ ペインで *\@StoreID* を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
 3.  **[既定値]**  >  **[値を指定]**  >  **[追加]** をクリックします。 新しい値の行が追加されます。  
   
@@ -281,9 +281,9 @@ For *@StoreID* の値として表示されます。この値が、データセ�
   
 6.  レポートをプレビューします。  
   
-For *@StoreID* の値として表示されます。この値が、店舗 ID **200**」) を参照してください。 レポートには、店舗 ID **200**について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
+*\@StoreID* に対して、レポート ビューアーによって "Contoso Catalog Store" が表示されます。これが店舗 ID **200** の表示名であるためです。 レポートには、店舗 ID **200**について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
   
-## <a name="NameValue"></a>4d. 名前/値のペアを参照する  
+## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. 名前/値のペアを参照する  
 データセットには、ID と対応する名前フィールドの両方が含まれている場合があります。 ID しかない場合は、名前と値のペアが格納されている作成済みのデータセットで対応する名前を参照できます。  
   
 ### <a name="to-look-up-a-value-from-a-dataset"></a>データセットから値を参照するには  
@@ -308,13 +308,13 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    店舗の列見出しに、複合式の表示テキスト " **Expr**" が示されます。  
+    店舗の列見出しに、複合式の表示テキストとして次が示されます:**Expr**。  
   
 8.  レポートをプレビューします。  
   
 各列の上部にある列ヘッダーに、店舗 ID ではなく店舗名が表示されます。  
   
-## <a name="Expression"></a>5.選択されたパラメーターの値をレポートに表示する  
+## <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5.選択されたパラメーターの値をレポートに表示する  
 レポート閲覧者がレポートの詳細を確認する場合に、選択したパラメーターの値がわかるようにすることができます。 レポートのパラメーターごとにユーザーが選択した値を保持できます。 そのための方法の 1 つとして、ページ フッターのテキスト ボックスにパラメーターを表示する方法があります。  
   
 ### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>選択されたパラメーターの値とラベルをページ フッターに表示するには  
@@ -323,7 +323,7 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
 2.  ページ フッターを右クリックし、 **[挿入]**  >  **[テキスト ボックス]** をクリックします。 タイムスタンプを示すテキスト ボックスの横にテキスト ボックスをドラッグします。 テキスト ボックスの側面にあるハンドルをクリックしてドラッグすることにより、幅を拡張します。  
   
-3.  レポート データ ペインからテキスト ボックスに *@StoreID* パラメーターをドラッグします。 テキスト ボックスに " `[@StoreID]`" と表示されます。  
+3.  レポート データ ペインからテキスト ボックスにパラメーター *\@StoreID* をドラッグします。 テキスト ボックスに " `[@StoreID]`" と表示されます。  
   
 4.  パラメーターのラベルを表示するには、既存の式の後ろに挿入カーソルが表示されるまでテキスト ボックスをクリックし、空白を入力した後、レポート データ ペインからテキスト ボックスにもう一度パラメーターをドラッグします。 テキスト ボックスに " `[@StoreID] [@StoreID]`" と表示されます。  
   
@@ -335,7 +335,7 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
 7.  レポートをプレビューします。  
   
-## <a name="Filter"></a>6.フィルターにレポート パラメーターを使用する  
+## <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6.フィルターにレポート パラメーターを使用する  
 フィルターを使用すると、外部データ ソースから取得されたデータのうちどのデータをレポートで使用するかを制御できます。 表示するデータをレポート閲覧者が制御できるようにするには、マトリックスのフィルターにレポート パラメーターを含めます。  
   
 ### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>マトリックス フィルターにパラメーターを指定するには  
@@ -364,14 +364,14 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
 マトリックスに、選択した店舗に対応するデータが表示されます。  
   
-## <a name="Multivalued"></a>7.レポート パラメーターを複数値をとるように変更する  
+## <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7.レポート パラメーターを複数値をとるように変更する  
 パラメーターを単一値ではなく複数値を持つように変更するには、クエリと、フィルターなどのパラメーターへの参照を含むすべての式を変更する必要があります。 複数値パラメーターは値の配列です。 データセット クエリでは、クエリ構文で 1 つの値が一連の値に含まれているかどうかをテストする必要があります。 レポート式では、式の構文が個々の値ではなく値の配列にアクセスする必要があります。  
   
 ### <a name="to-change-a-parameter-from-single-to-multivalued"></a>パラメーターを単一値ではなく複数値をとるように変更するには  
   
 1.  デザイン ビューに切り替えます。  
   
-2.  レポート データ ペインで *@StoreID* を右クリックし、 **[パラメーターのプロパティ]** 」) を参照してください。  
+2.  レポート データ ペインで *\@StoreID* を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
 3.  **[複数の値を許可]** を選択します。  
   
@@ -424,7 +424,7 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
     ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
-## <a name="Boolean"></a>8.条件付き表示のためにブール型パラメーターを追加する  
+## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8.条件付き表示のためにブール型パラメーターを追加する  
   
 ### <a name="to-add-a-boolean-parameter"></a>ブール型パラメーターを追加するには  
   
@@ -468,7 +468,7 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
     ページ フッターにテキスト ボックスが表示され、選択したすべての店舗名が示されます。  
   
-## <a name="Title"></a>9.レポート タイトルを追加する  
+## <a name="9-add-a-report-title"></a><a name="Title"></a>9.レポート タイトルを追加する  
   
 ### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
 
@@ -478,7 +478,7 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
 2.  「Parameterized Product Sales」と入力し、テキスト ボックスの外側をクリックします。  
   
-## <a name="Save"></a>10.レポートを保存する  
+## <a name="10-save-the-report"></a><a name="Save"></a>10.レポートを保存する  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  
   
@@ -496,7 +496,7 @@ For *@StoreID* の値として表示されます。この値が、店舗 ID **20
   
 レポートがレポート サーバーに保存されます。 接続しているレポート サーバーがウィンドウ下部のステータス バーに表示されます。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 これで、レポートにパラメーターを追加する方法のチュートリアルは終了です。 パラメーターの詳細については、「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

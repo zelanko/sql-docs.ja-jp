@@ -17,14 +17,14 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31a5d85546a8760dc8853c4bdd25369dc36c2152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e605c4fb62e56113a5cc36e418d5648ed6ba3031
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112551"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297953"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
 
@@ -50,7 +50,7 @@ ms.locfileid: "68112551"
 ## <a name="configuration-of-the-derived-column-transformation"></a>派生列変換の構成  
  派生列変換は、次の方法で構成できます。  
   
--   各入力列または変更する新しい列に対し、式を設定します。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
+-   各入力列または変更する新しい列に対し、式を設定します。 詳細については、「 [Integration Services (SSIS) 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
     > [!NOTE]  
     >  派生列変換によって上書きされる入力列を式が参照する場合、その式は派生した値ではなく、列の元の値を使用します。  
@@ -65,7 +65,7 @@ ms.locfileid: "68112551"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68112551"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **関連トピック**: [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[ &#40;SSIS の式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[ &#40;SSIS の式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **[データ型]**  
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって自動的に式が評価され、データ型が適切に設定されます。 この列の値は読み取り専用です。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
@@ -109,7 +109,7 @@ ms.locfileid: "68112551"
  **[精度]**  
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって、データ型に基づく数値データの有効桁数が自動的に設定されます。 この列の値は読み取り専用です。  
   
- **[スケール]**  
+ **スケール**  
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって、データ型に基づく数値データの小数点以下桁数が自動的に設定されます。 この列の値は読み取り専用です。  
   
  **コード ページ**  

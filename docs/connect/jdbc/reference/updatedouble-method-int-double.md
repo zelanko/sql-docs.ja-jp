@@ -1,5 +1,5 @@
 ---
-title: updateDouble メソッド (int, double) |Microsoft Docs
+title: updateDouble (int, double) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 343a39fbe3f7f98717beb7044b6faab802eaac51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 58959fb80595347b9ab7d09ccdb41a00bf446226
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999032"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919803"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble (int, double) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,19 +36,19 @@ public void updateDouble(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
  *x*  
   
- **Double**値。  
+ **double** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この updateDouble メソッドは、updateDouble インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateDouble メソッドは、java.sql.ResultSet インターフェイスの updateDouble メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateDouble メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   

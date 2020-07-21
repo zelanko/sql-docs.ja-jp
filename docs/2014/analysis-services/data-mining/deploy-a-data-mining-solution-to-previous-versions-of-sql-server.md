@@ -1,5 +1,5 @@
 ---
-title: 以前のバージョンの SQL Server にデータ マイニング ソリューションの配置 |Microsoft Docs
+title: データマイニングソリューションを以前のバージョンの SQL Server | に配置します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084683"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522683"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  
@@ -32,16 +31,16 @@ ms.locfileid: "66084683"
   
  [タイム シリーズ モデルの配置](#bkmk_TimeSeries)  
   
- [提示されたパーティションを使用するモデルの配置](#bkmk_Holdout)  
+ [提示されるモデルのデプロイ](#bkmk_Holdout)  
   
- [フィルターを使用するモデルの配置](#bkmk_Filter)  
+ [フィルターを使用したモデルの配置](#bkmk_Filter)  
   
  [データベース バックアップからの復元](#bkmk_Backup)  
   
  [データベースの同期の使用](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a> タイム シリーズ モデルの配置  
- Microsoft タイム シリーズのアルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+##  <a name="deploying-times-series-models"></a><a name="bkmk_TimeSeries"></a>時系列モデルの配置  
+ Microsoft Time Series アルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
  したがって、新しい ARIMA アルゴリズムを使用するタイム シリーズ マイニング モデルを SQL Server 2005 Analysis Services のインスタンスに配置すると、動作が異なる場合があります。  
   
@@ -51,33 +50,33 @@ ms.locfileid: "66084683"
   
  したがって、モデルが変更されないようにするには、モデルを参照するだけにして、決して処理を行わないようにします。 あるいは、FORECAST_METHOD パラメーターまたは PREDICTION_SMOOTHING パラメーターを明示的に設定することもできます。  
   
- 混合モデルを設定する方法については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ 混合モデルを設定する方法については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  モデルのデータ ソースに使用されるプロバイダーが SQL Client Data Provider 10 の場合、データ ソース定義も変更して、SQL Server Native Client の前のバージョンを指定する必要があります。 そうしないと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で、プロバイダーが登録されていないことを示すエラーが発生します。  
   
-##  <a name="bkmk_Holdout"></a> 提示されたパーティションを使用するモデルの配置  
+##  <a name="deploying-models-with-holdout"></a><a name="bkmk_Holdout"></a> 提示されたパーティションを使用するモデルの配置  
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] で、データ マイニング モデルのテストに使用する提示されたパーティションを含むマイニング構造を作成する場合、マイニング構造を SQL Server 2005 インスタンスに配置できますが、パーティションの情報は失われます。  
   
  SQL Server 2005 Analysis Services でマイニング構造を開くと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でエラーが発生し、提示されたパーティションを削除するためにそのマイニング構造が再生成されます。  
   
- プロパティ ウィンドウに、提示されたパーティションのサイズを使用可能なで不要になった構造が再構築した後ただし、値\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >)、ASSL スクリプト ファイルに存在する可能性があります。  
+ 構造が再構築されると、提示されたパーティションのサイズがプロパティウィンドウで使用できなくなります。ただし、値 \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ) が assl スクリプトファイルに存在していてもかまいません。  
   
-##  <a name="bkmk_Filter"></a> フィルターを使用するモデルの配置  
+##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a> フィルターを使用するモデルの配置  
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] で、マイニング モデルにフィルターを適用する場合、モデルを SQL Server 2005 インスタンスに配置できますが、フィルターは適用されません。  
   
  マイニング モデルを開くと、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でエラーが発生し、フィルターを削除するためにモデルが再生成されます。  
   
-##  <a name="bkmk_Backup"></a> データベース バックアップからの復元  
+##  <a name="restoring-from-database-backups"></a><a name="bkmk_Backup"></a>データベースバックアップからの復元  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で作成されたデータベース バックアップを SQL Server 2005 のインスタンスに復元することはできません。 復元を実行すると、SQL Server Management Studio でエラーが発生します。  
   
  SQL Server 2005 Analysis Services データベースのバックアップを作成して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンス上に復元する場合、前のセクションで示したようにすべてのタイム シリーズ モデルが変更されます。  
   
-##  <a name="bkmk_Synch"></a> データベースの同期の使用  
+##  <a name="using-database-synchronization"></a><a name="bkmk_Synch"></a>データベースの同期の使用  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から SQL Server 2005 へのデータベースの同期はサポートされていません。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースの同期を試みると、サーバーはエラーを返し、データベースの同期は失敗します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services の旧バージョンとの互換性](../analysis-services-backward-compatibility.md)  
   
   

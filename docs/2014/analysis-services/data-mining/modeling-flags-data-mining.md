@@ -1,5 +1,5 @@
 ---
-title: モデリング フラグ (データ マイニング) |Microsoft Docs
+title: モデリングフラグ (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083309"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521080"
 ---
 # <a name="modeling-flags-data-mining"></a>モデリング フラグ (データ マイニング)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のモデリング フラグを使用すると、ケース テーブルで定義されているデータに関する追加情報をデータ マイニング アルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。  
+  のモデリングフラグを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ケーステーブルで定義されているデータに関する追加情報をデータマイニングアルゴリズムに提供できます。 アルゴリズムは、この情報を使用して、より正確なデータ マイニング モデルを作成することができます。  
   
  マイニング構造のレベルで定義されるモデリング フラグもあれば、マイニング モデル列のレベルで定義されるモデリング フラグもあります。 たとえば、`NOT NULL` モデリング フラグはマイニング構造列で使用されます。 モデルの作成に使用するアルゴリズムに応じて、追加的なモデリング フラグをマイニング モデル列に定義することができます。  
   
@@ -71,7 +70,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  新しいマイニング構造またはマイニング モデルでモデリング フラグを指定するには、DMX を使用するか、AMO スクリプトまたは XMLA スクリプトを使用します。 ただし、DMX を使用して、既存のマイニング モデルやマイニング構造で使用されているモデリング フラグを変更することはできません。 `ALTER MINING STRUCTURE....ADD MINING MODEL`構文を使用して新しいマイニング モデルを作成する必要があります。  
   
-##  <a name="bkmk_UseRegressors"></a> REGRESSOR モデリング フラグの使用  
+##  <a name="uses-of-the-regressor-modeling-flag"></a><a name="bkmk_UseRegressors"></a> REGRESSOR モデリング フラグの使用  
  列に REGRESSOR モデリング フラグを設定すると、その列にリグレッサー候補が含まれていることがアルゴリズムに対して示されます。 モデルで使用される実際のリグレッサーはアルゴリズムによって決定されます。 予測可能な属性をモデル化しないリグレッサー候補は破棄できます。  
   
  データ マイニング ウィザードを使用してモデルを作成すると、連続列である入力列のすべてにリグレッサー候補のフラグが付けられます。 したがって、REGRESSOR フラグを明示的に設定していない列がモデルでリグレッサーとして使用される場合もあります。  
@@ -109,7 +108,7 @@ WHERE MODEL_NAME = '<model name>'
 |特定のアルゴリズムでサポートされているモデリング フラグを確認する (各アルゴリズムのリファレンス トピックの「モデリング フラグ」セクション)|[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |マイニング構造列とそこに設定できるプロパティについて詳しく知る|[マイニング構造列](mining-structure-columns.md)|  
 |モデル レベルで適用できるマイニング モデル列とモデリング フラグについて知る|[マイニング モデル列](mining-model-columns.md)|  
-|モデリング フラグを DMX ステートメントで扱うための構文を確認する|[モデリング フラグ &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|モデリング フラグを DMX ステートメントで扱うための構文を確認する|[モデリング フラグ (DMX)](/sql/dmx/modeling-flags-dmx)|  
 |不足値とその取り扱いの方法について知る|[不足値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)|  
 |モデルと構造の管理および使用法のプロパティの設定について知る|[データ マイニング オブジェクトの移動](moving-data-mining-objects.md)|  
   

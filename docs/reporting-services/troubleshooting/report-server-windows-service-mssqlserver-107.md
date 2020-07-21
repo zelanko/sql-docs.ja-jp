@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー Windows サービス (MSSQLServer) 107 | Microsoft Docs
+description: 'このエラー リファレンス ページでは、イベント ID 107: "Report Server Windows Service (SQL Server) cannot connect to the report server database" (レポート サーバー Windows サービス (SQL Server) はレポート サーバー データベースに接続できません) について説明します。'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0133ef77db176910c33ae8e78174cb5c3e507c3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 3d37bca818ecd0641f35cc3ff8a08493f7037a9a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575545"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487766"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>レポート サーバー Windows サービス (MSSQLServer) 107
     
@@ -50,6 +51,6 @@ ms.locfileid: "65575545"
 ## <a name="see-also"></a>参照  
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
+ [レポート サーバー サービスの開始と停止](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

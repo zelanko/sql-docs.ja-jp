@@ -1,5 +1,5 @@
 ---
-title: テスト データのモデルへのフィルターの適用 |Microsoft Docs
+title: モデルテストデータへのフィルターの適用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70a3a7d525bca5698d972b112d3f6de2f368f38a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086146"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525486"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>モデルのテスト データへのフィルターの適用
   モデルのテストに使用する外部データ ソースを指定する場合に、入力データを制限するフィルターを必要に応じて適用できます。 たとえば、特定の所得範囲の顧客に関する予測についてのみモデルをテストできます。  
   
- たとえば、AdventureWorks の対象となる絞り込みメール配信シナリオでするテスト データを含むテーブルでは、ProspectiveBuyer で次のいずれかのようなフィルター式の作成し、所得範囲によってテスト_ケースを制限します。  
+ たとえば、AdventureWorks の絞り込みメール配信シナリオでは、ProspectiveBuyer で次のようなフィルター式を作成できます。これは、テストデータを含むテーブルで、収入範囲に基づいてテストケースを制限します。  
   
  `[YearlyIncome] = '50000'`  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66086146"
   
 3.  **[入力の選択]** タブの **[精度チャートに使用するデータセットの選択]** で、 **[別のデータセットを指定する]** を選択します。  
   
-4.  [参照] ボタンをクリックします **([...])。** をダイアログ ボックスを開き、外部データ セットを選択します。  
+4.  参照ボタン ([. **..])** をクリックしてダイアログボックスを開き、外部データセットを選択します。  
   
 5.  ケース テーブルを選択し、入れ子になったテーブルを必要に応じて追加します。 必要に応じてモデルの列を外部データ セットの列にマップします。 **[列マッピングの指定]** ダイアログ ボックスを閉じてソース テーブルの定義を保存します。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66086146"
   
 9. **[ルールの適用条件]** ボックスをクリックして論理演算子を選択し、複数の条件を結合する方法を定義します。  
   
-10. 必要に応じて、参照 ボタンをクリックして **(...)** の右側にある、**値**テキスト ボックスを開く、**フィルター**  ダイアログ ボックスし、入れ子になったテーブルまたは個々 のケース テーブル列の条件を設定します。  
+10. 必要に応じて、[**値**] テキストボックスの右側にある参照ボタン ([. **..])** をクリックして [**フィルター** ] ダイアログボックスを開き、入れ子になったテーブルまたは個々のケーステーブルの列に対して条件を設定します。  
   
 11. **[式]** ペインに表示されるテキストで、完成したフィルター条件が適切であることを確認します。  
   
@@ -90,8 +89,8 @@ ms.locfileid: "66086146"
      フィルター条件は、精度チャートの作成時にデータ ソースに適用されます。  
   
 ## <a name="see-also"></a>参照  
- [モデルのテスト データの選択およびマップ](choose-and-map-model-testing-data.md)   
- [入れ子になったテーブルのデータを精度チャートの入力として使用する方法](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [モデルテストデータを選択してマップする](choose-and-map-model-testing-data.md)   
+ [入れ子になったテーブルデータを精度チャートの入力として使用する](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [精度チャートの種類の選択とグラフのオプションの設定](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

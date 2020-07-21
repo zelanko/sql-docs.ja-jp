@@ -1,5 +1,5 @@
 ---
-title: ADO MD オブジェクト モデル |Microsoft Docs
+title: ADO MD オブジェクトモデル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,32 +10,32 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, object model
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68a4b4a11c8662cfdd3df19aa99cdc2e749f1de9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930593"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765273"
 ---
 # <a name="ado-md-object-model"></a>ADO MD オブジェクト モデル
-このトピックでは、オブジェクトの表現方法と ADO MD の関連する方法について説明します。  
+このトピックでは、ADO MD でオブジェクトがどのように表され、関連付けられるかについて説明します。  
   
  ![ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
   
- [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)と[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)の各オブジェクトが、[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)コレクション。  
+ [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)オブジェクトと[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)オブジェクトには、それぞれ[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)のコレクションがあります。  
   
- [レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)と[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)の各オブジェクトが、[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクション。  
+ [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトと[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)オブジェクトには、それぞれ[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)コレクションがあります。  
   
- [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)の各オブジェクトがある標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+ [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)、セル[セット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)の各オブジェクトには、それぞれ標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションがあります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD の列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD のメソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+## <a name="see-also"></a>参照  
+ [ADO MD API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD コード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
+ [ADO MD コレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [ADO MD 列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [ADO MD メソッド](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD オブジェクト](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD のプロパティ](../../../ado/reference/ado-md-api/ado-md-properties.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5bd144197379ed574ccd152fedf8089b311881be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e55da683013f55e37fec90bc501acfadb6d0c8d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972016"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
@@ -23,9 +22,9 @@ ms.locfileid: "65483537"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>属性の順序を変更するには  
   
@@ -39,9 +38,9 @@ ms.locfileid: "65483537"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティの編集** ページの **リーフ メンバー属性**、または**統合メンバー属性**、または**コレクション属性**を選択しますこの属性の順序を変更し、上矢印または下矢印をその順序を変更 をクリックします。  
+6.  [**エンティティの編集**] ページの [**リーフメンバー属性**] または [**統合メンバー**属性] または [**コレクション属性**] で、順序を変更する属性を選択し、上矢印または下矢印をクリックして順序を変更します。  
   
-7.  クリックして**エンティティの保存**します。  
+7.  [**エンティティの保存**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  

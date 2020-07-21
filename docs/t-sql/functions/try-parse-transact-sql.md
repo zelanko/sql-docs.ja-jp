@@ -15,17 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: f63e2306932250b8bac43382e4f8cffa85a0a3ed
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893791"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832829"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   式の結果を、要求されたデータ型に変換して返します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャストに失敗した場合は NULL を返します。 TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。  
   
@@ -55,8 +56,8 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>戻り値の型  
  式の結果を、要求されたデータ型に変換して返します。キャストに失敗した場合は、NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
- TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 文字列値の解析には一定のパフォーマンス オーバーヘッドがあることに注意してください。  
+## <a name="remarks"></a>解説  
+ TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 文字列値の解析中に一定のパフォーマンス オーバーヘッドが発生することに注意してください。  
   
  TRY_PARSE は、.NET Framework の共通言語ランタイム (CLR) の存在に依存しています。  
   
@@ -66,17 +67,17 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  *data_type* パラメーターの値は、スタイルと共に、次の表に示す型に制限されます。 スタイル情報は、許可するパターンの種類を決定するために提供されます。 スタイルについて詳しくは、.NET Framework のドキュメントで **System.Globalization.NumberStyles** および **DateTimeStyles** 列挙型を参照してください。  
   
-|カテゴリ|型|.NET の種類|使用されるスタイル|  
+|カテゴリ|種類|.NET の種類|使用されるスタイル|  
 |--------------|----------|---------------|-----------------|  
-|数値|BIGINT|Int64|NumberStyles.Number|  
+|数値|bigint|Int64|NumberStyles.Number|  
 |数値|INT|Int32|NumberStyles.Number|  
-|数値|SMALLINT|Int16|NumberStyles.Number|  
-|数値|TINYINT|Byte|NumberStyles.Number|  
-|数値|Decimal|Decimal|NumberStyles.Number|  
-|数値|NUMERIC|Decimal|NumberStyles.Number|  
-|数値|FLOAT|Double|NumberStyles.Float|  
-|数値|REAL|Single|NumberStyles.Float|  
-|数値|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|数値|smallint|Int16|NumberStyles.Number|  
+|数値|tinyint|Byte|NumberStyles.Number|  
+|数値|decimal|Decimal|NumberStyles.Number|  
+|数値|numeric|Decimal|NumberStyles.Number|  
+|数値|float|Double|NumberStyles.Float|  
+|数値|real|Single|NumberStyles.Float|  
+|数値|smallmoney|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
 |日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -89,9 +90,9 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 言語から .NET Framework カルチャへのマッピングを示します。  
   
-|完全名|別名|LCID (LCID)|特定のカルチャ|  
+|完全名|エイリアス|LCID|特定のカルチャ|  
 |---------------|-----------|----------|----------------------|  
-|us_english|English|1033|en-US|  
+|us_english|English|1033|ja-JP|  
 |Deutsch|German|1031|de-DE|  
 |Français|French|1036|fr-FR|  
 |Japanese|Japanese|1041|ja-JP|  
@@ -121,11 +122,11 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Português (Brasil)|Brazilian|1046|pt-BR|  
 |繁體中文|Traditional Chinese|1028|zh-TW|  
 |한국어|Korean|1042|Ko-KR|  
-|简体中文|Simplified Chinese|2052|zh-CN|  
+|简体中文|簡体中国語|2052|zh-CN|  
 |アラビア語|アラビア語|1025|ar-SA|  
 |ไทย|Thai|1054|Th-TH|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE の簡単な使用例  
   

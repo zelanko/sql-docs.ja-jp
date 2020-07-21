@@ -1,5 +1,5 @@
 ---
-title: CLEAR CALCULATIONS ステートメント (MDX) |Microsoft Docs
+title: CLEAR の計算ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938021"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX データ操作 - CLEAR CALCULATIONS
 
 
-  すべての計算をキューブから削除し、計算パス 0 をキューブを返します。  
+  キューブからすべての計算を削除し、計算パス0にキューブを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,13 +31,13 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  有効な多次元式 (MDX) キューブ式です。  
   
-## <a name="remarks"></a>コメント  
- **FROM**キューブのコンテキストが MDX スクリプトなど、既知の場合、句を省略できます。  
+## <a name="remarks"></a>Remarks  
+ MDX スクリプトなど、キューブのコンテキストがわかっている場合は、 **from**句を省略できます。  
   
 > [!NOTE]  
 >  このステートメントは、サーバー管理者やデータベース管理者、またはキューブのソース データにアクセスできるロールのメンバー (つまり、ReadSourceData=true) のみが実行できます。  
   
-## <a name="see-also"></a>関連項目  
- [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

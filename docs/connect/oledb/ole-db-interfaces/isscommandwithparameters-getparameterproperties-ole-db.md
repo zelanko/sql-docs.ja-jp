@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) |Microsoft Docs'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4ed73892ae0ebe88d4b18f2d2114143423570c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015418"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -48,7 +48,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>リターン コードの値  
  **GetParameterProperties** メソッドは、主要な OLE DB **ICommandProperties::GetProperties** メソッドと同じエラー コードを返します。ただし、DB_S_ERRORSOCCURRED と DB_E_ERRORSOCCURED は返すことができません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ISSCommandWithParameters::GetParameterProperties** メソッドは、**GetParameterInfo** と一貫性を保つように動作します。 [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) または **SetParameterInfo** が呼び出されなかったり、cParams に 0 を指定して呼び出した場合は、**GetParameterInfo** はパラメーター情報を取得して、これを返します。 **ISSCommandWithParameters::SetParameterProperties** または **SetParameterInfo** が少なくとも 1 つのパラメーターに対して呼び出されている場合、**ISSCommandWithParameters::GetParameterProperties** メソッドは、**ISSCommandWithParameters::SetParameterProperties** の呼び出しの対象となったパラメーターのプロパティのみを返します。 **ISSCommandWithParameters::SetParameterProperties** が **ISSCommandWithParameters::GetParameterProperties** または **GetParameterInfo** の後に呼び出された場合、後続の **ISSCommandWithParameters::GetParameterProperties** の呼び出しにより、**ISSCommandWithParameters::SetParameterProperties** メソッドの呼び出しの対象となったパラメーターの値がオーバーライドされます。  
   
  SSPARAMPROPS 構造体は、次のように定義されています。  
@@ -63,7 +63,7 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|メンバー|[説明]|  
+|メンバー|説明|  
 |------------|-----------------|  
 |*iOrdinal*|渡されるパラメーターの序数|  
 |*cPropertySets*|*rgPropertySets* 内の DBPROPSET 構造体の数|  

@@ -1,5 +1,5 @@
 ---
-title: Stretch Database を無効にして、リモート データを戻す | Microsoft Docs
+title: Stretch Database を無効にしてリモート データを戻す
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,31 +10,32 @@ helpviewer_keywords:
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4010930a669caf5b74b1c38c88c78f6b94e80b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 80974811f45a88b740aa8d84ea9ac67c2c2c1c07
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136265"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73843820"
 ---
-# <a name="disable-stretch-database-and-bring-back-remote-data"></a>Stretch Database を無効にして、リモート データを戻す
+# <a name="disable-stretch-database-and-bring-back-remote-data"></a>Stretch Database を無効にしてリモート データを戻す
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  テーブルに対する Stretch Database を無効にするには、SQL Server Management Studio のテーブルで **[拡張する]** を選択します。 以下のオプションの 1 つを選択します。  
+  テーブルに対する Stretch Database を無効にするには、SQL Server Management Studio のテーブルで **[拡張する]** を選択します。 次のいずれかを選択します。  
   
--   **無効化 | Azure からデータを戻します**。 Azure から SQL Server にテーブルのリモート データをコピーして戻し、テーブルに対する Stretch Database を無効にします。 この操作によりデータ転送コストが発生し、取り消すことはできません。  
+-   **無効化 | Azure からデータを戻します**。 Azure から SQL Server にテーブルのリモート データをコピーして戻し、テーブルに対する Stretch Database を無効にします。 この操作にはデータ転送コストが発生し、キャンセルできません。  
   
 -   **無効化 | Azure にデータを残します**。 テーブルに対する Stretch Database を無効にします。  Azure のテーブルのリモート データを破棄します。  
   
  Transact-SQL を使用してテーブルまたはデータベースで Stretch Database を無効にすることもできます。  
   
- テーブルに対する Stretch Database を無効にすると、データの移行が停止し、クエリの結果にリモート テーブルからの結果が含まれなくなります。  
+ テーブルの Stretch Database を無効にすると、データ移行が停止し、クエリ結果にリモート テーブルからの結果が含まれなくなります。  
   
  単にデータの移行を一時停止する場合は、「 [データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)。  
   
 > [!NOTE]
-> テーブルまたはデータベースで Stretch Database を無効にしても、リモート オブジェクトは削除されません。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを削除するまで、引き続き Azure ストレージのコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
+> テーブルまたはデータベースの Stretch Database を無効にしても、リモート オブジェクトは削除されません。 リモート テーブルまたはリモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート オブジェクトを削除するまで、引き続き Azure ストレージのコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
   
 ## <a name="disable-stretch-database-for-a-table"></a>テーブルに対する Stretch Database を無効にする  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68136265"
     > [!NOTE]
     > テーブルのリモート データを Azure から SQL Server にコピーして戻すと、データ転送コストが発生します。 詳細については、「 [Data Transfers (データ転送) の料金詳細](https://azure.microsoft.com/pricing/details/data-transfers/)」を参照してください。    
   
--   テーブルに対する Stretch を無効にして、リモート データを破棄するには、次のコマンドを実行します。  
+-   テーブルの Stretch を無効にしてリモート データを破棄するには、次のコマンドを実行します。  
   
     ```sql  
     USE <Stretch-enabled database name>;
@@ -86,17 +87,17 @@ ms.locfileid: "68136265"
 > [!NOTE]
 > テーブルで Stretch Database を無効にしても、リモート データまたはリモート テーブルは削除されません。 リモート テーブルを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート テーブルを削除するまで、引き続き Azure のコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
   
-## <a name="disable-stretch-database-for-a-database"></a>データベースに対する Stretch Database を無効にする  
+## <a name="disable-stretch-database-for-a-database"></a>データベースの Stretch Database を無効にする  
  データベースに対する Stretch Database を無効にする前に、データベース内で Stretch が有効な個々のテーブルに対する Stretch Database を無効にする必要があります。  
   
-### <a name="use-sql-server-management-studio-to-disable-stretch-database-for-a-database"></a>SQL Server Management Studio を使用して、データベースに対する Stretch Database を無効にする  
+### <a name="use-sql-server-management-studio-to-disable-stretch-database-for-a-database"></a>SQL Server Management Studio を使用し、データベースの Stretch Database を無効にする  
   
 1.  SQL Server Management Studio のオブジェクト エクスプローラーで、Stretch Database を無効にするデータベースを選択します。  
   
 2.  右クリックして **[タスク]** を選択し、 **[拡張する]** を選択してから **[無効にする]** を選択します。  
   
 > [!NOTE]
-> データベースで Stretch Database を無効にしても、リモート データベースは削除されません。 リモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート データベースを削除するまで、引き続き Azure のコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
+> データベースで Stretch Database を無効にしても、リモート データベースは削除されません。 リモート データベースを削除する場合は、Microsoft Azure 管理ポータルを使用して削除する必要があります。 リモート データベースを削除するまで、引き続き Azure のコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
   
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Transact-SQL を使用してデータベースに対する Stretch Database を無効にする  
  次のコマンドを実行します。  
@@ -108,10 +109,10 @@ GO
 ```  
   
 > [!NOTE]
-> データベースで Stretch Database を無効にしても、リモート データベースは削除されません。 リモート データベースを削除する場合は、Azure 管理ポータルを使用して削除する必要があります。 リモート データベースを削除するまで、引き続き Azure のコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
+> データベースで Stretch Database を無効にしても、リモート データベースは削除されません。 リモート データベースを削除する場合は、Microsoft Azure 管理ポータルを使用して削除する必要があります。 リモート データベースを削除するまで、引き続き Azure のコストが発生します。 詳細については、「 [SQL Server Stretch Database の価格](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [データ移行の一時停止と再開 &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
   

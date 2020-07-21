@@ -1,5 +1,5 @@
 ---
-title: 主要オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Key オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,24 +10,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6f683685c4d961ccf63cecde71b6f37e7675d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eab25808c08196286353206c51caacefbc75c709
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965853"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746620"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Key オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [列のコレクション](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns コレクション](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
  [DeleteRule プロパティ](../../../ado/reference/adox-api/deleterule-property-adox.md)  
   
  [Name プロパティ](../../../ado/reference/adox-api/name-property-adox.md)  
   
- [RelatedTable プロパティ](../../../ado/reference/adox-api/relatedtable-property-adox.md)  
+ ["関連性テーブル" プロパティ](../../../ado/reference/adox-api/relatedtable-property-adox.md)  
   
  [Type プロパティ (キー)](../../../ado/reference/adox-api/type-property-key-adox.md)  
   
@@ -39,5 +39,5 @@ ms.locfileid: "67965853"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

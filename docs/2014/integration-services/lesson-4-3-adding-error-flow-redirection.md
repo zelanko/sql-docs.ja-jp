@@ -1,5 +1,5 @@
 ---
-title: 手順 3:エラー フロー リダイレクトの追加 |Microsoft Docs
+title: '手順 3 : エラー フロー リダイレクトの追加 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c9e20ae26c3eec7069a20a09d54bd43836c0c9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62891404"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440459"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクトの追加
   前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
@@ -24,13 +23,13 @@ ms.locfileid: "62891404"
   
  ここでは、失敗した行をエラー出力にリダイレクトするよう Lookup Currency Key 変換を構成します。 データ フローのエラー分岐では、失敗した行はファイルに書き込まれます。  
   
- 既定では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー出力の 2 つの追加列 ( **ErrorCode** と **ErrorColumn**) には、エラー番号を表す数値コードと、エラーが発生した列の ID しか含まれていません。 これらの数値は、対応するエラー説明がないとあまり役に立ちません。  
+ 既定では、エラー出力の2つの追加列 ( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] **ErrorCode**と**errorcolumn**) には、エラー番号を表す数値コードと、エラーが発生した列の ID だけが含まれます。 これらの数値は、対応するエラー説明がないとあまり役に立ちません。  
   
  エラー出力の有用性を高めるには、パッケージによって失敗行がファイルに書き込まれる前に、スクリプト コンポーネントを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API にアクセスし、エラーの説明を取得します。  
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。 **[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
+1.  [ **SSIS ツールボックス**] で **[共通**] を展開し、[**スクリプトコンポーネント**] を [**データフロー** ] タブのデザイン画面にドラッグします。 [ **Lookup Currency Key** ] 変換の右側に**スクリプト**を配置します。  
   
 2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]** をクリックし、 **[OK]** をクリックします。  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62891404"
   
 8.  **[入力および出力]** ページで **[出力 0]** を展開し、 **[出力列]** をクリックして、 **[列の追加]** をクリックします。  
   
-9. `Name`プロパティに「 **ErrorDescription**設定と、`DataType`プロパティを**Unicode 文字列 [DT_WSTR]** します。  
+9. プロパティに `Name` 「 **ErrorDescription** 」と入力し、 `DataType` プロパティを**Unicode 文字列 [DT_WSTR]** に設定します。  
   
-10. **スクリプト** ページで、いることを確認、`LocaleID`プロパティに設定されて**英語 (米国。**  
+10. [**スクリプト**] ページで、 `LocaleID` プロパティが**英語 (米国**に設定されていることを確認します。  
   
-11. **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
+11. **[スクリプトの編集]** をクリックして、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
   
      [Visual Basic]  
   
@@ -96,6 +95,6 @@ ms.locfileid: "62891404"
 13. **[OK]** をクリックして、 **[スクリプト変換エディター]** ダイアログ ボックスを閉じます。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 4。フラット ファイル変換先の追加] (lesson-4-4-adding-a-flat-file-destination.md  
+ [手順 4: フラットファイル変換先の追加](lesson-4-4-adding-a-flat-file-destination.md  
   
   

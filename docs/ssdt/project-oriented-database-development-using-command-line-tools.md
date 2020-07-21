@@ -1,23 +1,24 @@
 ---
-title: コマンド ライン ツールを使用したプロジェクト指向のデータベース開発 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: コマンド ライン ツールを使用したプロジェクト指向のデータベース開発
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df947eec003f171fd962299ad116972bd798151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: 321c0988603f7c31460d1c95791d57e5945c2b07
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110809"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243747"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>コマンド ライン ツールを使用したプロジェクト指向のデータベース開発
+
 SQL Server Data Tools は、プロジェクト指向の各種データベース開発シナリオを実現に導くコマンド ライン ツールを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

@@ -1,5 +1,5 @@
 ---
-title: トランザクションの継承 |Microsoft Docs
+title: 継承されたトランザクション |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 110dfa19f9251b1cd43fc7ad0d6f7b4ce894dfa1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058062"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424779"
 ---
 # <a name="inherited-transactions"></a>トランザクションの継承
   パッケージでパッケージ実行タスクを使用して、別のパッケージを実行できます。 パッケージ実行タスクで実行される子パッケージでは、独自のパッケージ トランザクションを作成する場合もあれば、親パッケージのトランザクションを継承する場合もあります。  
@@ -43,7 +42,7 @@ ms.locfileid: "66058062"
   
 -   パッケージ E、およびパッケージ実行タスク C、パッケージ実行タスク E の**TransactionOption** は **NotSupported** に設定されています。  
   
- ![トランザクションの継承のフロー](media/mw-dts-executepack.gif "トランザクションの継承のフロー")  
+ ![トランザクションの継承フロー](media/mw-dts-executepack.gif "トランザクションの継承フロー")  
   
  パッケージ B、D、および F のみが親パッケージのトランザクションを継承できます。  
   

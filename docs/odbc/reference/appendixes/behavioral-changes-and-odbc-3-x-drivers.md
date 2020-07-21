@@ -1,5 +1,5 @@
 ---
-title: 動作変更および ODBC 3.x ドライバー |Microsoft Docs
+title: 動作の変更と ODBC 3.x ドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27b48951c6fb3be8bfe070863409d77ab760d5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d8343573261d74a6a0c652cf425b12da91f7cb0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915616"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81292366"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>動作変更および ODBC 3.x ドライバー
-環境属性を SQL_ATTR_ODBC_VERSION ODBC が発生する必要があるかどうかにドライバーを示します*2.x*動作または ODBC *3.x*動作します。 SQL_ATTR_ODBC_VERSION 環境属性を設定する方法は、アプリケーションによって異なります。 ODBC *3.x*アプリケーションを呼び出す必要があります**SQLSetEnvAttr**を呼び出すことが後に、この属性を設定する**SQLAllocHandle**環境ハンドルの割り当てに呼び出しの前に、**SQLAllocHandle**接続ハンドルを割り当てられません。 これを行うよう、失敗した場合、ドライバー マネージャーは SQLSTATE HY010 を返します (関数のシーケンス エラーです)、後者の呼び出しで**SQLAllocHandle**します。  
+環境属性 SQL_ATTR_ODBC_VERSION は *、odbc 2.x 動作を*行う必要があるか *、odbc 3.x*動作を表示する必要があるかどうかをドライバーに示します。 SQL_ATTR_ODBC_VERSION 環境属性がどのように設定されるかは、アプリケーションによって異なります。 ODBC *3.x*アプリケーションは、 **SQLAllocHandle**を呼び出して環境ハンドルを割り当て、 **SQLAllocHandle**を呼び出して接続ハンドルを割り当てる前に、 **SQLSetEnvAttr**を呼び出してこの属性を設定する必要があります。 失敗した場合、ドライバーマネージャーは、 **SQLAllocHandle**への呼び出し時に SQLSTATE HY010 (関数シーケンスエラー) を返します。  
   
 > [!NOTE]  
->  動作が変更されると、アプリケーションの機能の詳細については、次を参照してください。[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)します。  
+>  動作の変更とアプリケーションの動作のしくみの詳細については、「[動作の変更](../../../odbc/reference/develop-app/behavioral-changes.md)」を参照してください。  
   
- ODBC *2.x*アプリケーションや ODBC *2.x* 、ODBC を使って再コンパイルされたアプリケーション*3.x*ヘッダー ファイルは呼び出さないでください**SQLSetEnvAttr**します。 ただし、呼び出す**SQLAllocEnv**の代わりに**SQLAllocHandle**環境ハンドルを割り当てられません。 そのため、アプリケーションを呼び出すと**SQLAllocEnv**ドライバー マネージャーは、ドライバー マネージャーで、 **SQLAllocHandle**と**SQLSetEnvAttr**ドライバー。 したがって、ODBC *3.x*ドライバー常に信頼性のこの属性が設定されています。  
+ Odbc *3.x アプリケーションと* *odbc 2.x アプリケーションで*再コンパイルされた odbc 2.X *3.x*アプリケーションは、 **SQLSetEnvAttr**を呼び出しません。 ただし、環境ハンドルを割り当てるために**SQLAllocHandle**ではなく**sqlallocenv**を呼び出します。 このため、アプリケーションがドライバーマネージャーで**Sqlallocenv**を呼び出すと、ドライバーマネージャーはドライバーで**SQLAllocHandle**と**SQLSetEnvAttr**を呼び出します。 したがって、ODBC *3. x*ドライバーは、この属性が設定されている場合、常にカウントできます。  
   
- 呼び出し、ODBC_STD コンパイル フラグでコンパイルされた標準に準拠したアプリケーションの場合**SQLAllocEnv** (ために発生する可能性があります**SQLAllocEnv** ISO で非推奨ではない)、呼び出しにマップされて**SQLAllocHandleStd**コンパイル時にします。 実行時に、アプリケーション呼び出し**SQLAllocHandleStd**します。 ドライバー マネージャーは、SQL_ATTR_ODBC_VERSION 環境属性を SQL_OV_ODBC3 に設定します。 呼び出し**SQLAllocHandleStd**への呼び出しに相当**SQLAllocHandle**で、 *HandleType* sql_handle_env としてとへの呼び出しの**SQLSetEnvAttr**を SQL_ATTR_ODBC_VERSION を SQL_OV_ODBC3 に設定します。  
+ ODBC_STD compile フラグを使用してコンパイルされた標準準拠のアプリケーションが**Sqlallocenv**を呼び出す場合 ( **SQLALLOCENV**が ISO で非推奨とされているために発生する可能性があります)、呼び出しはコンパイル時に**SQLAllocHandleStd**にマップされます。 実行時に、アプリケーションは**SQLAllocHandleStd**を呼び出します。 ドライバーマネージャーは、SQL_ATTR_ODBC_VERSION 環境属性を SQL_OV_ODBC3 に設定します。 **SQLAllocHandleStd**の呼び出しは、 *handletype*が SQL_HANDLE_ENV で**SQLAllocHandle**を呼び出す場合と同じです。また、 **SQLSetEnvAttr**を SQL_OV_ODBC3 に設定する場合は、SQL_ATTR_ODBC_VERSION を呼び出します。  
   
- 特定ドライバーのアーキテクチャでは、ODBC のいずれかとして表示するドライバーが必要である*2.x*ドライバーまたは ODBC *3.x*接続に応じて、ドライバー。 ドライバーここで実際にはありますが、ドライバー、ドライバー マネージャーと他のドライバーの間に存在するレイヤー。 たとえば、ODBC スパイのように、ドライバーを模倣こと可能性があります。 別の例では、EDA]/[SQL のように、ゲートウェイとして機能、可能性があります。 ODBC として表示する*3.x*ドライバーでは、このようなドライバーは、エクスポートすることである必要があります**SQLAllocHandle**、および ODBC として表示する*2.x*ドライバーはエクスポートできる必要があります**SQLAllocConnect**、 **SQLAllocEnv**、および**SQLAllocStmt**します。 ドライバー マネージャーが、このドライバーのエクスポートを確認します、環境、接続、またはステートメントは、割り当てられるが、 **SQLAllocHandle**します。 ドライバーは、ドライバー マネージャーの呼び出しから**SQLAllocHandle**ドライバー。 Odbc ドライバーが動作して場合*2.x*ドライバー、ドライバーはへの呼び出しをマップする必要があります**SQLAllocHandle**に**SQLAllocConnect**、 **SQLAllocEnv**、または**SQLAllocStmt**必要に応じて、します。 何も行う必要がありますも、 **SQLSetEnvAttr** ODBC どおりに動作するときに呼び出す*2.x*ドライバー。  
+ 特定のドライバーアーキテクチャでは、接続に応じて、ドライバー*が odbc 2.x ドライバーまた**は odbc 3.x*ドライバーのいずれかとして表示される必要があります。 この場合、ドライバーは実際にはドライバーではなく、ドライバーマネージャーと別のドライバーの間にあるレイヤーです。 たとえば、ODBC Spy のようなドライバーを模倣する場合があります。 別の例では、EDA/SQL のようなゲートウェイとして機能する場合があります。 ODBC 3.x*ドライバーと*して表示されるようにするには、このようなドライバーは**SQLAllocHandle**をエクスポートでき、odbc 2.x ドライバーとして表示される必要があります。では、 **sqlallocconnect**、 *3.x* **sqlallocconnect**、および**sqlallocconnect**をエクスポートできなければなりません。 環境、接続、またはステートメントが割り当てられると、ドライバーマネージャーは、このドライバーが**SQLAllocHandle**をエクスポートするかどうかを確認します。 ドライバーが動作するため、ドライバーマネージャーはドライバーで**SQLAllocHandle**を呼び出します。 ドライバーが ODBC 2.x ドライバーで動作している場合、ドライバーは、必要に応じて、 **SQLAllocHandle**への呼び出しを**sqlallocconnect**、 **sqlallocconnect**、または**sqlallocconnect**にマップする必要が*あります。* また *、ODBC 2.x*ドライバーとして動作する場合は、 **SQLSetEnvAttr**呼び出しで何もする必要はありません。  
   
  このセクションでは、次のトピックを扱います。  
   

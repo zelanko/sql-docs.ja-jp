@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリング - 発信接続に証明書を使用する | Microsoft Docs
+description: 発信接続を設定した後に、証明書を使用してデータベース ミラーリングの着信接続を認証するようにサーバー インスタンスを構成する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2837bcba7069f3259b23446137aa6162b2443189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754681"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>データベース ミラーリング - 発信接続に証明書を使用する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、データベース ミラーリングの発信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、発信接続を構成する必要があります。  
   
 > [!NOTE]  
@@ -44,7 +45,7 @@ ms.locfileid: "68044563"
   
 ## <a name="procedure"></a>手順  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>ミラーリングの発信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>ミラーリングの発信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
   
 1.  **master** データベースで、データベース マスター キーが存在しない場合は作成します。 データベースの既存のキーを表示するには、 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) カタログ ビューを使用します。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68044563"
      たとえば、HOST_A システム用の証明書を作成するには、次のステートメントを使用します。  
   
     > [!IMPORTANT]  
-    >  証明書の使用期間が 1 年を超える場合は、CREATE CERTIFICATE ステートメントの EXPIRY_DATE オプションを使用して、有効期限を UTC 時間で指定してください。 また、証明書の有効期限が近いことを知らせるポリシー ベースの管理ルールを SQL Server Management Studio で作成することをお勧めします。 ポリシー管理の **[新しい条件の作成]** ダイアログ ボックスを使用し、 **@ExpirationDate** ファセットの **[@ExpirationDate]** フィールドでこのルールを作成します。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 」と「 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)」を参照してください。  
+    >  証明書の使用期間が 1 年を超える場合は、CREATE CERTIFICATE ステートメントの EXPIRY_DATE オプションを使用して、有効期限を UTC 時間で指定してください。 また、証明書の有効期限が近いことを知らせるポリシー ベースの管理ルールを SQL Server Management Studio で作成することをお勧めします。 ポリシー管理の **[新しい条件の作成]** ダイアログ ボックスを使用し、 **[証明書]** ファセットの **[\@ExpirationDate]** フィールドでこのルールを作成します。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 」と「 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)」を参照してください。  
   
     ```  
     USE master;  
@@ -165,7 +166,7 @@ GO
  任意の安全な方法を使用し、証明書を他のシステムにコピーします。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
 > [!IMPORTANT]  
->  発信接続を設定した後、各サーバー インスタンスの着信接続を他のサーバー インスタンス用に構成する必要があります。 詳細については、「[データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)」を参照してください。  
+>  発信接続を設定した後、各サーバー インスタンスの着信接続を他のサーバー インスタンス用に構成する必要があります。 詳細については、「 [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)を使用します。  
   
  Transact-SQL の例を含む、ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、[警告] (マージ パブリケーション、SQL Server 2005 以降) |Microsoft Docs
+title: パブリケーション情報、[警告] (マージパブリケーション、SQL Server 2005 以降) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e0748208c7378c02af382403061e4ba0770d7a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064601"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (マージ パブリケーション、SQL Server 2005 以降)
-  **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューターでは、**[警告]** タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   警告を有効にする。  
   
@@ -51,11 +50,11 @@ ms.locfileid: "63021685"
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   
- **警告**  
+ **Alert**  
  特定のレプリケーションの警告用の警告の設定を有効にする場合に選択します。  
   
  **警告**  
@@ -64,7 +63,7 @@ ms.locfileid: "63021685"
  **しきい値**  
  しきい値の値を指定します。  
   
- **[警告の構成]**  
+ **アラートの構成**  
  **[警告]** グリッドの行を選択し、 **[警告の構成]** をクリックすると、 **[レプリケーションの警告の構成]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、選択したしきい値および警告に関連付けた通知を定義できます。  
   
  **[変更の破棄]**  
@@ -77,9 +76,9 @@ ms.locfileid: "63021685"
  クリックすると、警告およびしきい値に対する変更が保存されます。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [レプリケーション モニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
+ [レプリケーションモニターを開始する](monitor/start-the-replication-monitor.md)   
+ [レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションモニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

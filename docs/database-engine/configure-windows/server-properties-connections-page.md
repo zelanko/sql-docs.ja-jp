@@ -1,5 +1,6 @@
 ---
 title: サーバーのプロパティ ([接続] ページ) | Microsoft Docs
+description: SQL Server の接続設定について説明します。 遅延制約チェック、NULL 処理などの動作を決定するオプションについて説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759143"
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページを使用すると、接続オプションを表示したり変更したりできます。  
   
 ## <a name="connections"></a>接続  
@@ -34,7 +35,7 @@ ms.locfileid: "68025490"
  **Default connection options**  
  次の表に示すような既定の接続オプションを指定します。  
   
-|構成オプション|[説明]|  
+|構成オプション|説明|  
 |--------------------------|-----------------|  
 |**[disable deferred constraint checking]**|中間制約チェックまたは遅延制約チェックを制御します。|  
 |**暗黙のトランザクション**|ステートメント実行時にトランザクションを暗黙的に開始するかどうかを制御します。|  

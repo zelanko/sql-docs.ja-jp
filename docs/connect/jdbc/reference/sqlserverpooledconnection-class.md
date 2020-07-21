@@ -1,5 +1,5 @@
 ---
-title: SQLServerPooledConnection クラス |Microsoft Docs
+title: SQLServerPooledConnection クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c2294a62dd6d829437d1aa69513e1ef6aabd8fb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970855"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923486"
 ---
 # <a name="sqlserverpooledconnection-class"></a>SQLServerPooledConnection クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "67970855"
 public final class SQLServerPoolingDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- SQLServerPooledConnection クラスには、接続プールマネージャーが接続プールを管理するためのメソッドが用意されています。 通常、アプリケーションでこれらの接続のインスタンスが直接作成されることはありません。  
+## <a name="remarks"></a>解説  
+ SQLServerPooledConnection クラスには、接続プール マネージャーで接続プールを管理するためのメソッドが用意されています。 通常、アプリケーションでこれらの接続のインスタンスが直接作成されることはありません。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPooledConnection のメンバー](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   

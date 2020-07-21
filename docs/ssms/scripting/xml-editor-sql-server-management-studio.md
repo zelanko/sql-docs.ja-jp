@@ -1,6 +1,6 @@
 ---
-title: XML エディター (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: XML エディター (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9b82bec0f3def57ac575b4e338e437c05f0bbd1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252827"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252929"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68252827"
   
  デザイナーで XML ファイル、XML スキーマ、およびデータセットを操作する場合は、次の 3 つのビュー (またはモード) を使用できます。  
   
-|表示|[説明]|サポートされるファイルの種類|  
+|表示|説明|サポートされるファイルの種類|  
 |----------|-----------------|--------------------------|  
 |**[スキーマ]**|XML スキーマおよび ADO.NET データセットをビジュアルに作成および変更するために使用します。|.xsd|  
 |**データ**|XML データ ファイルを構造化データ グリッドでビジュアルに変更するために使用します。|.xml|  
@@ -82,10 +82,10 @@ ms.locfileid: "68252827"
 ## <a name="data-view"></a>データ ビュー  
  データ ビューでは、.xml ファイルを編集するためにデータ グリッドを使用できます。 データ ビューでは、XML ファイルの内容 (タグおよび構造体を除く) だけを編集できます。  
   
- データ ビューには 2 つの独立した領域があります: **[データ テーブル]** と **[データ]** です。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
+ データ ビューは、 **[データ テーブル]** 領域と **[データ]** 領域から構成されます。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
   
 > [!NOTE]  
->  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではない場合、データ ビューに切り替えようとすると次のメッセージが表示されます:「このドキュメントは正しい形式ですが、データ ビューで表示できない構造を含んでいます。」  
+>  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではなく、データ ビューへの切り替えが試行されている場合は、"この XML ドキュメントは正しい形式ですが、データ ビューで表示できない構造体を含んでいます。" というメッセージが表示されます。  
   
  データ ビューでは、次の操作を行うことができます。  
   

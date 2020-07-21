@@ -12,17 +12,17 @@ helpviewer_keywords:
 - ODBC [ODBC], application development
 - application development [ODBC], about application development
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039916"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305863"
 ---
 # <a name="developing-applications"></a>アプリケーションの開発
-このセクションには、ODBC インターフェイスとそれを実装するドライバーを使用するアプリケーションの開発に関する情報が含まれています。  
+ここでは、ODBC インターフェイスを使用するアプリケーションの開発と、それを実装するドライバーについて説明します。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -54,5 +54,5 @@ ms.locfileid: "68039916"
   
 -   [プログラミングの考慮事項](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC プログラマー リファレンス](../../../odbc/reference/odbc-programmer-s-reference.md)

@@ -1,10 +1,11 @@
 ---
-title: サーバー監査およびサーバー監査の仕様を作成する方法 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: サーバー監査およびサーバー監査の仕様を作成する
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用し、SQL Server の監査とサーバー監査の仕様を作成する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 f1_keywords:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - server audit [SQL Server]
 - audits [SQL Server], specification
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: DavidTrigano
+ms.author: datrigan
+ms.openlocfilehash: 05f3d283e90affc8a89e32e2e0f249153f2e4935
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899085"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  **このトピックの内容**  
@@ -34,7 +35,7 @@ ms.locfileid: "68095191"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **次のものを使用してサーバー監査およびサーバー監査の仕様を作成するには:**  
   
@@ -42,17 +43,17 @@ ms.locfileid: "68095191"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   サーバー監査仕様を作成するには、対象の監査が事前に存在している必要があります。 サーバー監査仕様は作成されたとき無効な状態です。  
   
 -   CREATE SERVER AUDIT ステートメントはトランザクションのスコープ内にあります。 トランザクションがロールバックされると、ステートメントもロールバックされます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   サーバー監査を作成、変更、または削除する場合、プリンシパルには、ALTER ANY SERVER AUDIT または CONTROL SERVER の権限が必要です。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68095191"
   
 -   サーバー監査仕様の作成後は、CONTROL SERVER または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68095191"
      監査アクションの処理が強制されるまでの時間 (ミリ秒単位) を指定します。  値 0 は同期配信を表します。 既定の最小値は **1000** (1 秒) です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。  
   
      **[監査ログ エラー発生時]**  
-     **Continue**  
+     **続行**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 操作を続行します。 監査レコードは保持されません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 **[続行]** オプションを選択すると、セキュリティ ポリシーに違反する可能性がある、監査されない活動を許すおそれがあります。 完全な監査を維持することより、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] の操作を続行することの方が重要である場合に、このオプションを選択します。 これは既定値です。  
   
      **[サーバーのシャットダウン]**  
@@ -112,7 +113,7 @@ ms.locfileid: "68095191"
      作成する監査ファイル数を指定します (2,147,483,647 まで)。 このオプションは、 **[無制限]** がオフの場合にのみ利用可能です。  
   
      **[最大ファイル サイズ]**  
-     監査ファイルの最大サイズをメガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) 単位で指定します。 1024 MB ～ 2,147,483,647 TB の範囲で指定できます。 **[無制限]** チェック ボックスをオンにした場合、ファイルのサイズに制限は設定されません。 1024 MB 未満の値を指定すると、失敗し、エラーが返されます。 既定では、 **[無制限]** チェック ボックスはオンになっています。  
+     監査ファイルの最大サイズをメガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) 単位で指定します。 最大 2,147,483,647 TB までの数値を指定できます。 **[無制限]** チェック ボックスをオンにした場合、ファイルのサイズに制限は設定されません。 既定では、 **[無制限]** チェック ボックスはオンになっています。  
   
      **[ディスク領域を予約する]** チェック ボックス  
      指定した最大ファイル サイズと等しい領域が、ディスク上に事前に割り当てられるように指定します。 この設定は、 **[最大ファイル サイズ]** の **[無制限]** チェック ボックスがオフの場合にのみ使用できます。 既定では、このチェック ボックスはオフになっています。  
@@ -129,7 +130,7 @@ ms.locfileid: "68095191"
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   
-     **[名前]**  
+     **名前**  
      サーバー監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
@@ -153,9 +154,9 @@ ms.locfileid: "68095191"
      **省略記号 (...)**  
      指定した **[オブジェクト名]** に基づいて、使用可能なオブジェクトを参照して選択するための **[オブジェクトの選択]** ダイアログ ボックスを開きます。  
   
-3.  終了したら **[OK]** をクリックします。  
+3.  操作が終了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
@@ -163,14 +164,19 @@ ms.locfileid: "68095191"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> 監査のファイル ターゲットとして UNC パスを使用することもできますが、注意が必要です。 そのファイル共有に対してネットワーク待機時間がある場合、SQL Server でパフォーマンスの低下が発生する可能性があります。これは、スレッドで、処理を続行する前に監査の書き込みが完了するのを待機するためです。 SQL Server エラー ログには、17894 などのさまざまなエラー メッセージが表示される場合があります:
+>
+>   2020-02-07 12:21:35.100 Server ディスパッチャー プール 'XE Engine main dispatcher pool' のディスパッチャー (0x7954) のワーカー 0x00000058E7300000 が、ノード 0 で応答を停止している可能性があります。
+
+
 #### <a name="to-create-a-server-audit-specification"></a>サーバー監査仕様を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  

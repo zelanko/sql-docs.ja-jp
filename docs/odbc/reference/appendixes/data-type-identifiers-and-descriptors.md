@@ -15,23 +15,23 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019048"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284485"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>データ型識別子と記述子
-データの種類の一覧を[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)前のセクションでは「簡潔な」のデータ型。各識別子は、1 つのデータ型を参照します。 Id とデータ型の間、一対一で対応します。 すべてのケースでは、1 つの値を使用して、データ型を識別するために、記述子がではなく行うただし。 場合によっては、"verbose"のデータ型と型サブコード使用します。 Datetime と間隔のデータ型を除くすべてのデータ型の詳細な型の識別子は、簡潔なタイプ識別子と同じと SQL_DESC_DATETIME_INTERVAL_CODE の値は 0 にします。 Datetime と間隔のデータ型のただし、(SQL_DATETIME または SQL_INTERVAL) の詳細な型に格納 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE で簡潔な型が格納されているされ SQL_DESC_DATETIME_INTERVAL_CODE に簡潔な各種のサブコードが格納されています。 これらのフィールドのいずれかを設定すると、他に影響します。 これらのフィールドの詳細については、次を参照してください。、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明。  
+この付録の「 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)」および「 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)」のセクションに記載されているデータ型は、"簡潔な" データ型です。各識別子は1つのデータ型を参照します。 識別子とデータ型の間には一対一の対応があります。 ただし、記述子では、いずれの場合も、1つの値を使用してデータ型を識別します。 場合によっては、"verbose" データ型と型のサブコードを使用します。 Datetime データ型および interval データ型を除くすべてのデータ型では、詳細な型識別子は簡潔な型識別子と同じであり、SQL_DESC_DATETIME_INTERVAL_CODE の値は0に等しくなります。 ただし、datetime および interval データ型の場合、verbose 型 (SQL_DATETIME または SQL_INTERVAL) は SQL_DESC_TYPE に格納され、簡潔な型は SQL_DESC_CONCISE_TYPE に格納され、各簡潔な型のサブコードは SQL_DESC_DATETIME_INTERVAL_CODE に格納されます。 これらのフィールドのいずれかを設定すると、他のフィールドに影響します。 これらのフィールドの詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明を参照してください。  
   
- 一部のデータ型の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE またはフィールドを設定すると、SQL_DESC_DATETIME_INTERVAL_PRECISION、SQL_DESC_LENGTH、SQL_DESC_PRECISION、および SQL_DESC_SCALE フィールドはデータの該当する場合の既定値に自動的に設定します。入力します。 詳細については、の SQL_DESC_TYPE フィールドの説明を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 既定値の設定のいずれかの情報が適切でない場合、アプリケーションへの呼び出しを通じて記述子フィールドに明示的に設定する必要があります**SQLSetDescField**します。  
+ 一部のデータ型に対して SQL_DESC_TYPE フィールドまたは SQL_DESC_CONCISE_TYPE フィールドが設定されている場合、データ型に応じて、SQL_DESC_DATETIME_INTERVAL_PRECISION、SQL_DESC_LENGTH、SQL_DESC_PRECISION、および SQL_DESC_SCALE の各フィールドが既定値に自動的に設定されます。 詳細については、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)の SQL_DESC_TYPE フィールドの説明を参照してください。 既定値が適切に設定されていない場合は、アプリケーションで**SQLSetDescField**の呼び出しを使用して記述子フィールドを明示的に設定する必要があります。  
   
- 次の表は、簡潔なタイプ識別子、詳細な型の識別子、および各 datetime と SQL の間隔、および C 型識別子の型のサブコードを示します。 SQL_DESC_TYPE と SQL_DESC_DATETIME_INTERVAL_CODE フィールドに同じマニフェスト定数 (実装記述子) での SQL データ型と (アプリケーションでの C データ型の両方がある datetime と間隔のデータ型のこの表に示すよう記述子)。  
+ 次の表は、各 datetime および interval SQL および C 型の識別子の簡潔な型識別子、詳細な型識別子、および型サブコードを示しています。 この表に示すように、datetime データ型および interval データ型では、SQL_DESC_TYPE フィールドと SQL_DESC_DATETIME_INTERVAL_CODE フィールドのマニフェスト定数は、SQL データ型 (実装記述子の場合) と C データ型 (アプリケーション記述子内) の両方で同じです。  
   
-|SQL の簡潔な型|簡潔な C 型|詳細な型|DATETIME_INTERVAL_CODE|  
+|簡潔な SQL 型|簡潔な C 型|詳細な種類|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

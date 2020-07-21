@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eff19816330eb512c48cc6a37237ecf6030d7e4f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bc14a62e8e619e15d262020d747ce199c526acf7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716820"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動によるサブスクリプションの初期化
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サブスクリプションを手動で初期化する方法について説明します。 サブスクリプションを初期化する場合、一般には、初期スナップショットが使用されます。ただし、スキーマおよび初期データがサブスクライバー側に既に存在していれば、パブリケーションのサブスクリプションをスナップショットを使用せずに初期化できます。  
   
 
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データとスキーマをサブスクライバーにコピーしてからサブスクリプションが手動で初期化されるまでの間に、トランザクション レプリケーションを使ってパブリッシュされたデータベース上で処理が実行されると、この処理による変更がサブスクライバーにレプリケートされない場合があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  スキーマ (通常はデータも含まれます) をサブスクリプション データベースにコピーすることによって、パブリケーションに対するサブスクリプションを手動で初期化します。 スキーマとデータは、パブリケーション データベースと一致している必要があります。 その後、サブスクリプションの新規作成ウィザードの **[サブスクリプションの初期化]** ページで、サブスクリプションにスキーマとデータが必要ないことを指定します。 このウィザードへのアクセスの詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 」および「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  初めてサブスクリプションを同期させたときに、レプリケーションに必要なオブジェクトとメタデータがサブスクリプション データベースにコピーされます。  
@@ -44,9 +44,7 @@ ms.locfileid: "68768542"
   
 2.  サブスクリプションの新規作成ウィザードの **[サブスクリプションの初期化]** ページで、 **[初期化]** チェック ボックスをオフにします。 この操作を、レプリケーション オブジェクトとメタデータのみをコピーする必要がある各サブスクリプションに対して行います。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  サブスクリプションは、レプリケーションのストアド プロシージャを使用して手動で初期化できます。  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションのプル サブスクリプションを手動で初期化するには  
@@ -59,7 +57,7 @@ ms.locfileid: "68768542"
   
 4.  サブスクライバーで、 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-5.  ディストリビューション エージェントを起動して、パブリッシャーからレプリケーション オブジェクトを転送し、最新の変更をダウンロードします。 詳細については、「 [プル サブスクリプションの同期](../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。  
+5.  ディストリビューション エージェントを起動して、パブリッシャーからレプリケーション オブジェクトを転送し、最新の変更をダウンロードします。 詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。  
   
 #### <a name="to-manually-initialize-a-push-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションのプッシュ サブスクリプションを手動で初期化するには  
   

@@ -1,5 +1,6 @@
 ---
 title: レポート サーバーでファイルまたはレポートをアップロードする | Microsoft Docs
+description: レポートやその他のファイルをクライアント アプリケーションからパブリッシュせずにレポート サーバーに追加する方法について説明します。
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d5d70a2147ea5cb9846ed37ea8963cc8c3f98e3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573309"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510053"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>レポート サーバーでファイルまたはレポートをアップロードする
 レポート サーバーの Web ポータルには、レポートおよびその他のファイルをクライアント アプリケーションからパブリッシュしなくてもレポート サーバーに追加できるアップロード機能が用意されています。 ファイル システムからアップロードしたファイルは、レポート サーバー上のアイテムとして格納されます。 ファイルがどのように格納されるかは、アップロードするファイルの種類によって異なります。  
@@ -34,7 +35,7 @@ ms.locfileid: "65573309"
   
 4.  アップロードするファイルを参照します。 レポート定義ファイル、画像、ドキュメント、またはレポート サーバーで利用できるようにする任意のファイルをアップロードできます。  
   
-5.  新しいアイテムの名前を入力します。 アイテム名ではスペースを使用できます。以下の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \| です。  
+5.  新しいアイテムの名前を入力します。 アイテム名ではスペースを使用できますが、次の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。  
   
 6.  既存のアイテムを新しいアイテムに置き換える場合は、 **[アイテムが存在する場合は上書きする]** をクリックします。  
   

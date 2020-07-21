@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 700d6e2a086e2085822e2ecd369aecb4e464b2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8fd6ed8e0831c6dc0699ddd1efa13ba1d46a3633
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100820"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74947162"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する
 
@@ -24,7 +24,7 @@ ms.locfileid: "68100820"
 
 Integration Services 配置ウィザードの詳細については、「[Integration Services 配置ウィザード](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 Azure SQL Database へのデプロイに関連してこの記事で説明している検証には、SQL Server Data Tools (SSDT) version 17.4 以降が必要です。 最新版の SSDT を入手する方法については、「[SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」をご覧ください。
 
@@ -44,16 +44,14 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
-1. [Azure ポータル](https://portal.azure.com/)にログインします。
+1. [Azure Portal](https://portal.azure.com/) にログインします。
 2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
-## <a name="wizard_auth"></a> デプロイ ウィザードでの認証方法
+## <a name="supported-authentication-method"></a>サポートされている認証方法
 
-デプロイ ウィザードで SQL Server にデプロイする場合、Windows 認証を使用する必要があります。SQL Server 認証は使用できません。
-
-Azure SQL Database サーバーにデプロイする場合、SQL Server 認証または Azure Active Directory 認証を使用する必要があります。Windows 認証は使用できません。
+[デプロイの認証方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)を参照してください。
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 配置ウィザードを起動する
 1. コマンド プロンプト ウィンドウを開きます。
@@ -72,7 +70,7 @@ Azure SQL Database サーバーにデプロイする場合、SQL Server 認証�
   
 3.  **[配置先の選択]** ページで、プロジェクトの配置先を選びます。
     -   完全修飾サーバー名を入力します。 ターゲット サーバーが Azure SQL Database サーバーの場合、名前は `<server_name>.database.windows.net` 形式になります。
-    -   認証情報を入力し、 **[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。
+    -   認証情報を入力し、 **[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment)」を参照してください。
     -   次に、 **[参照]** を選択し、SSISDB でターゲット フォルダーを選択します。
     -   **[次へ]** を選択し、 **[レビュー]** ページを開きます。 ( **[次へ]** ボタンは、 **[接続]** を選択した後でないと有効になりません。)
 
@@ -87,14 +85,14 @@ Azure SQL Database サーバーにデプロイする場合、SQL Server 認証�
     -   必要に応じて、 **[レポートの保存]** をクリックして結果を XML ファイルに保存します。
     -   **[閉じる]** をクリックしてウィザードを終了します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - パッケージを配置する他の方法を検討します。
     - [SSMS を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-ssms.md)
     - [Transact-SQL (SSMS) を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-tsql-ssms.md)
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-tsql-vscode.md)
     - [PowerShell を使用して SSIS パッケージを配置する](ssis-quickstart-deploy-powershell.md)
     - [C# を使用して SSIS パッケージを配置する](./ssis-quickstart-deploy-dotnet.md) 
-- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事をご覧ください。
+- 配置されたパッケージを実行します。 パッケージを実行するには、いくつかのツールおよび言語から選択することができます。 詳細については、次の記事を参照してください。
     - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
     - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)

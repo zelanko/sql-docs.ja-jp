@@ -10,15 +10,14 @@ helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2199ea1bb78da37f309e59e7444aa77296a5a664
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769038"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437259"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (論理 Not) (SSIS 式)
   ブール型のオペランドを否定します。  
@@ -41,10 +40,10 @@ ms.locfileid: "62769038"
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>コメント  
- 次の表は、! 指定します。  
+## <a name="remarks"></a>解説  
+ 次の表は、! 操作を完了するための次の手順について引き続き調査中です。  
   
-|元のブール式|! 演算子の適用後 演算子 (operator)|  
+|元のブール式|! 演算子の適用後 operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  

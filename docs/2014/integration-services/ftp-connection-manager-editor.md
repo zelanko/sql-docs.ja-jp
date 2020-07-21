@@ -1,5 +1,5 @@
 ---
-title: FTP 接続マネージャー エディター |Microsoft Docs
+title: FTP 接続マネージャーエディター |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5aebb659db6eabd79c6e707b8b47abf21909a88
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058486"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425339"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 接続マネージャー エディター
   **[FTP 接続マネージャー エディター]** ダイアログ ボックスを使用すると、FTP サーバーに接続するためのプロパティを指定できます。  
@@ -29,35 +28,35 @@ ms.locfileid: "66058486"
   
  FTP 接続マネージャーの詳細については、「 [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **サーバー名**  
  FTP サーバーの名前を指定します。  
   
- **[サーバー ポート]**  
+ **サーバーポート**  
  接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は **21**です。  
   
  **ユーザー名**  
  FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous**です。  
   
- **Password**  
+ **パスワード**  
  FTP サーバーにアクセスするために使用するパスワードを指定します。  
   
  **[タイムアウト (秒)]**  
- タスクがタイムアウトするまでの秒数を指定します。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **60**です。  
+ タスクがタイムアウトするまでの秒数を指定します。値**0**は、時間が無制限であることを示します。 このプロパティの既定値は **60**です。  
   
  **[パッシブ モードを使用する]**  
  サーバーまたはクライアントのどちらが接続を開始するかを指定します。 アクティブ モードではサーバーが接続を開始し、パッシブ モードではクライアントが接続を開始します。 このプロパティの既定値は **アクティブ モード**です。  
   
- **[再試行の回数]**  
+ **再試行**  
  接続を試行する回数を指定します。 値 **0** は、無制限に再試行を行うことを示します。  
   
  **[チャンク サイズ (KB)]**  
  データを転送するためのチャンク サイズを KB 単位で指定します。  
   
- **[接続テスト]**  
+ **接続をテスト**  
  FTP 接続マネージャーを構成した後に、 **[接続テスト]** をクリックして、接続が利用可能であることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

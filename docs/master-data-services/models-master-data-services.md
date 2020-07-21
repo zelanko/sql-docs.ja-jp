@@ -1,5 +1,6 @@
 ---
-title: モデル (マスター データ サービス) | Microsoft Docs
+title: モデル
+description: モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルは、マスターデータサービスで最も高いレベルのデータ編成です。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 072228f2a0538915b8ad1a657a205a676b159ca2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813236"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   モデルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の最上位レベルのデータ編成単位です。 モデルは、マスター データ管理ソリューションでのデータの構造を定義します。 モデルには次のオブジェクトが含まれています。  
   

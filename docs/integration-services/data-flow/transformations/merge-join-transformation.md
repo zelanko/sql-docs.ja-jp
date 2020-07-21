@@ -17,14 +17,14 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0613c05ef9db6f19af850ed1ed4d63a1cdad30e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f963a3f8bf82ed3de76e31b6872ac6475d6dfd83
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944124"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297847"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
 

@@ -1,5 +1,5 @@
 ---
-title: Odbc のトランザクション |Microsoft Docs
+title: ODBC ODBC のトランザクション |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f1f3892929e06cbca39b9d96936860cd9f100f06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 073546ef578a8efebff33fef96ae4682dd6f53fe
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086056"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306448"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC のトランザクション (ODBC)
-ODBC でのトランザクションは接続レベルが完了しましたアプリケーションには、トランザクションが完了すると、そのコミットまたはその接続ですべてのステートメント ハンドルで行ったすべての作業をロールバックします。  
+ODBC でのトランザクションは、接続レベルで完了します。つまり、アプリケーションがトランザクションを完了すると、その接続のすべてのステートメントハンドルを通じて実行されたすべての処理がコミットまたはロールバックされます。  
   
  このセクションでは、次のトピックを扱います。  
   

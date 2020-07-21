@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493907"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543091"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>2 次属性に基づく属性メンバーの並べ替え
   レッスン 3 では、名前とキー値に基づいて属性メンバーを並べ替える方法を学習しました。 また、属性メンバーと並べ替え順序に影響する複合メンバー キーの使用方法も学習しました。 詳細については、「 [Date ディメンションの変更](lesson-3-4-modifying-the-date-dimension.md)」を参照してください。 ただし、属性の名前とキーのどちらを使用しても目的の順序での並べ替えを実現できない場合は、2 次属性を使用して目的の順序で並べ替えるようにすることもできます。 属性間にリレーションシップを定義すると、2 次属性を使用して、1 次属性のメンバーを並べ替えることができます。  
@@ -69,13 +68,13 @@ ms.locfileid: "69493907"
   
      次の図のように、月が日付順に並べ替えられました。  
   
-     変更された![ユーザー階層 (時間順])変更された(../../2014/tutorials/media/l4-memberproperties-3.gif "ユーザー階層 (時間順"))  
+     ![時系列順に変更したユーザー階層](../../2014/tutorials/media/l4-memberproperties-3.gif "時系列順に変更したユーザー階層")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Customer ディメンションの属性リレーションシップおよび並べ替え順序の定義  
   
 1.  Customer ディメンションのディメンション デザイナーで **[ブラウザー]** タブに切り替え、 **Commute Distance** 属性階層のメンバーを表示します。  
   
-     この属性階層のメンバーは、ASCII 値であるメンバー キーを基準に並べ替えられています。 この場合、属性名やキーで並べ替えても、通勤距離が短い順には並びません。 この実習では、列内の個々の値に対して数値を適切に並べ替える **CommuteDistanceSort** 名前付き計算に基づいて、メンバーを並べ替えます。 時間を節約するため、 **DW データ ソース ビューの** Customer [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] テーブルに、この名前付き計算が既に用意されています。 このデータ ソース ビューに切り替えれば、CommuteDistanceSort 名前付き計算で使用する SQL スクリプトを表示できます。 詳細については、「[データ ソース ビューでの名前付き計算の定義 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)」をご覧ください。  
+     この属性階層のメンバーは、ASCII 値であるメンバー キーを基準に並べ替えられています。 この場合、属性名やキーで並べ替えても、通勤距離が短い順には並びません。 この実習では、列内の個々の値に対して数値を適切に並べ替える **CommuteDistanceSort** 名前付き計算に基づいて、メンバーを並べ替えます。 時間を節約するため、 **DW データ ソース ビューの** Customer [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] テーブルに、この名前付き計算が既に用意されています。 このデータ ソース ビューに切り替えれば、CommuteDistanceSort 名前付き計算で使用する SQL スクリプトを表示できます。 詳細については、「[データソースビューでの名前付き計算の定義 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
      次の図は、 **Commute Distance** 属性階層のメンバーを、ASCII 値のメンバー キーの順で表示しているようすを示します。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "69493907"
   
      次の図のように、属性階層のメンバーは、通勤距離の長い順に論理的な順序で並べ替えられました。  
   
-     ![Commute Distance 属性階層の再並べ替え](../../2014/tutorials/media/l4-memberproperties-5.gif "Commute Distance 属性階層の再並べ替え")  
+     ![再度並べ替えた Commute Distance 属性階層](../../2014/tutorials/media/l4-memberproperties-5.gif "再度並べ替えた Commute Distance 属性階層")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [ユーザー定義階層の属性間での属性リレーションシップの指定](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

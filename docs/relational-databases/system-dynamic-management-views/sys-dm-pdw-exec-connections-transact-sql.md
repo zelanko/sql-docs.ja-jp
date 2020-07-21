@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_connections (TRANSACT-SQL) |Microsoft Docs
+title: dm_pdw_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,39 +12,39 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899418"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197111"
 ---
-# <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_exec_connections-transact-sql"></a>dm_pdw_exec_connections (Transact-sql)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   このインスタンスの [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] との間に確立された接続に関する情報と各接続の詳細を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|この接続に関連付けられているセッションを識別します。 使用`SESSION_ID()`を返す、`session_id`の現在の接続。|  
+|session_id|**int**|この接続に関連付けられたセッションの識別子。 `SESSION_ID()`現在の接続のを返すには、を使用し `session_id` ます。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|encrypt_option|**nvarchar(40)**|TRUE のことを示します (接続が暗号化されています) または FALSE (接続は enctypred ではありません)。|  
-|auth_scheme|**nvarchar(40)**|指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 認証スキームがこの接続で使用します。 NULL 値は許可されません。|  
-|client_id|**varchar(48)**|このサーバーに接続するクライアントの IP アドレス。 NULL 値が許可されます。|  
-|sql_spid|**int**|接続のサーバー プロセス ID。 使用`@@SPID`を返す、`sql_spid`の現在の接続。最も終えたら、使用、`session_id`代わりにします。|  
+|encrypt_option|**nvarchar(40)**|TRUE (接続が暗号化されている) または FALSE (接続が暗号化されていない赤) を示します。|  
+|auth_scheme|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この接続で使用される/Windows 認証スキームを指定します。 NULL 値は許可されません。|  
+|client_id|**varchar(48)**|このサーバーに接続しているクライアントの IP アドレス。 NULL 値が許可されます。|  
+|sql_spid|**int**|接続のサーバープロセス ID。 `@@SPID`現在の接続のを返すには、を使用し `sql_spid` ます。ほとんどの遂行では、代わりにを使用し `session_id` ます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 必要があります**VIEW SERVER STATE**サーバーに対する権限。  
+ サーバーに対する**VIEW SERVER STATE**権限が必要です。  
   
-## <a name="relationship-cardinalities"></a>リレーションシップの基数  
+## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
 ||||  
 |-|-|-|  
-|dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections.session_id|一対一|  
-|dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections.connection_id|多対一|  
+|dm_pdw_exec_sessions。 session_id|dm_pdw_exec_connections。 session_id|一対一|  
+|dm_pdw_exec_requests。 connection_id|dm_pdw_exec_connections。 connection_id|多対一|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- クエリ専用接続についての情報を収集する典型的なクエリ。  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ クエリ所有の接続に関する情報を収集するための一般的なクエリ。  
   
 ```  
 SELECT  
@@ -58,7 +58,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

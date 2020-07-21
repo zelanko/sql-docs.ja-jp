@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_CURRENT_VERSION (TRANSACT-SQL) |Microsoft Docs
+title: CHANGE_TRACKING_CURRENT_VERSION (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1bf8d568031541df8f4dfa80a4148ad759dad54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b3b32313c296af2d7e08e9797a991171a4be40d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738615"
 ---
-# <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="change_tracking_current_version-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-sql)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  最後にコミットされたトランザクションに関連付けられているバージョンを返します。 使用して変更を列挙する場合は、このバージョンを使用することができます[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)。  
+  最後にコミットされたトランザクションに関連付けられているバージョンを返します。 このバージョンは、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)を使用して変更を列挙するときに使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  データベースで変更の追跡が有効になっていない場合に、NULL を返します。  
   
 ## <a name="examples"></a>使用例  
@@ -55,9 +55,9 @@ SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [変更追跡関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [Change Tracking 関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

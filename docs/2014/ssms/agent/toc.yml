@@ -47,7 +47,7 @@
         - name: ジョブの作成
           href: create-jobs.md
           items:
-            - name: ジョブの作成
+            - name: ジョブを作成する
               href: create-a-job.md
             - name: Give Others Ownership of a Job
               href: give-others-ownership-of-a-job.md
@@ -301,7 +301,7 @@
       href: proxy-account-properties-new-proxy-account-principals-tab.md
     - name: 'プロキシ エディターおよび [プリンシパルの追加]'
       href: proxy-editor-add-principal.md
-    - name: '[プロキシ アカウントのプロパティ] \([参照設定] タブ)'
+    - name: '[プロキシ アカウントのプロパティ]  ([参照設定] タブ)'
       href: proxy-account-properties-references-tab.md
     - name: '[オペレーター] ノード (SQL Server エージェントの F1 ヘルプ)'
       href: operators-node-sql-server-agent-f1-help.md
@@ -317,7 +317,7 @@
       href: configure-sql-server-agent-error-logs-general-page.md
     - name: '[SQL Server エージェント エラー ログの再利用]'
       href: recycle-sql-server-agent-error-logs.md
-    - name: '[SQL Server エージェントのプロパティ]\([全般] ページ)'
+    - name: '[SQL Server エージェントのプロパティ] ([全般] ページ)'
       href: sql-server-agent-properties-general-page.md
     - name: 'SQL Server エージェントのプロパティ ([詳細設定] ページ)'
       href: sql-server-agent-properties-advanced-page.md

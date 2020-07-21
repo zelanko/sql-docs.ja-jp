@@ -14,15 +14,15 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727110"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68017661"
   
  [関連タスク](#Tasks)  
   
-##  <a name="Unique"></a> UNIQUE 制約  
+##  <a name="unique-constraints"></a><a name="Unique"></a> UNIQUE 制約  
  制約とは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって適用される規則です。 たとえば、UNIQUE 制約を使用して、主キーに関係しない特定の列に重複した値が入力されないようにできます。 UNIQUE 制約も PRIMARY KEY 制約も一意性を設定しますが、主キーではない列または列セットに一意性を設定する場合は、PRIMARY KEY 制約ではなく UNIQUE 制約を使用します。  
   
  PRIMARY KEY 制約とは異なり、UNIQUE 制約は NULL 値を許容できます。 ただし、UNIQUE 制約が適用される他の値と同様に、NULL 値も 1 列に 1 つしか使用できません。 UNIQUE 制約は FOREIGN KEY 制約から参照することもできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "68017661"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、UNIQUE 制約による一意性の要件を強制する UNIQUE インデックスを自動的に作成します。 このため、重複した行を挿入しようとすると、UNIQUE 制約に違反していることを示すエラー メッセージが [!INCLUDE[ssDE](../../includes/ssde-md.md)] により返され、テーブルには行が追加されません。 クラスター化インデックスが明示的に指定されていない限り、UNIQUE 制約を強制する一意の非クラスター化インデックスが既定で作成されます。  
   
-##  <a name="Check"></a> CHECK 制約  
+##  <a name="check-constraints"></a><a name="Check"></a> CHECK 制約  
  CHECK 制約は、1 つ以上の列に格納できる値を制限することによってドメインの整合性を強制します。 論理演算子に基づいて TRUE または FALSE を返す論理 (ブール) 式を使って CHECK 制約を作成できます。 たとえば、 **salary** 列の値の範囲は、$15,000 ～ $100,000 のデータのみを許容する CHECK 制約を作成することにより制限できます。 これにより、この一定の給与範囲を超える給与を入力できなくなります。 論理式は、 `salary >= 15000 AND salary <= 100000`になります。  
   
  複数の CHECK 制約を 1 つの列に適用できます。 テーブル レベルで CHECK 制約を作成すると、1 つの CHECK 制約を複数の列に適用できます。 たとえば、複数列の CHECK 制約を使用して、 **country_region** 列の値が **USA** であるいずれかの行の **state** 列に 2 文字の値が格納されているかどうかを確認できます。 これにより、1 か所で複数の条件をチェックできるようになります。  
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
   
  `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
   
-##  <a name="Tasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="Tasks"></a> 関連タスク  
   
 > [!NOTE]  
 >  テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  

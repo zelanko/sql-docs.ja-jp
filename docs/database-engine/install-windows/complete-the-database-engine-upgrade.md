@@ -1,5 +1,6 @@
 ---
 title: データベース エンジンのアップグレードの完了 | Microsoft Docs
+description: この記事では、SQL Server のデータベース エンジンのアップグレードを完了した後に実行する必要がある追加の手順について説明します。
 ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72c5ff1bcb2162bbe3f3584222214ba448b67d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9e625978315a06faf19314b5d7197eafb95567
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054277"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897466"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>データベース エンジンのアップグレードの完了
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-SQL Server へのアップグレードが完了したら、必要に応じて追加の手順をいくつか実行する必要があります。 その一部を次に示します。  
+SQL Server へのアップグレードが完了したら、必要に応じて追加の手順をいくつか実行する必要があります。 コーディネートは次のとおりです。  
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードした後は、次の作業を実行します。  
   

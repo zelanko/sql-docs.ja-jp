@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (Transact-SQL) |Microsoft Docs
+title: MSmerge_identity_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9e62d2e8cf46de73bf8f0881b398437ab4ef58fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4b83d497e70182d8980ec043396b79d7c65ec49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909050"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889777"
 ---
-# <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_identity_range**テーブルがパブリケーションに対するサブスクリプションの id 列に割り当てられている数値の範囲を追跡するために使用されるレプリケーションが自動的に管理するこれらの範囲の割り当て。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  **MSmerge_identity_range**テーブルは、レプリケーションがこれらの範囲の割り当てを自動的に管理するパブリケーションに対するサブスクリプションの id 列に割り当てられた数値範囲を追跡するために使用されます。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**subid**|**uniqueidentifier**|指定されたサブスクリプションの一意な識別番号。|  
-|**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
-|**range_begin**|**numeric(38)**|現在の範囲の開始時の id 値です。|  
-|**range_end**|**numeric(38)**|現在の範囲の最後に id 値です。|  
-|**next_range_begin**|**numeric(38)**|[次へ] の範囲で割り当てられるの開始時の id 値です。|  
-|**next_range_end**|**numeric(38)**|[次へ] の範囲で割り当てられるの最後の id 値です。|  
-|**is_pub_range**|**bit**|値**1** id 範囲がパブリケーションに割り当てられている場合。|  
-|**max_used**|**numeric(38)**|割り当てることができる最大 id 値です。|  
+|**subid**|**uniqueidentifier**|指定されたサブスクリプションの一意の識別番号。|  
+|**artid**|**uniqueidentifier**|指定されたアーティクルの一意の識別番号。|  
+|**range_begin**|**数値 (38)**|現在の範囲の先頭にある id 値。|  
+|**range_end**|**数値 (38)**|現在の範囲の末尾にある id 値。|  
+|**next_range_begin**|**数値 (38)**|割り当てられる次の範囲の先頭にある id 値。|  
+|**next_range_end**|**数値 (38)**|割り当てられる次の範囲の末尾にある id 値。|  
+|**is_pub_range**|**bit**|Id 範囲がパブリケーションに割り当てられている場合は**1**を指定します。|  
+|**max_used**|**数値 (38)**|割り当てることができる最大 id 値。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

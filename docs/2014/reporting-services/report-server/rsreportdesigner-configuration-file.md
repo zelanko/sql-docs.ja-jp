@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103334"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
   RSReportDesigner.config ファイルには、レポート デザイナーに利用できる表示拡張機能およびデータ処理拡張機能に関する設定が保存されています。 データ処理拡張機能の情報は、`Data` 要素に保存されます。 表示拡張機能の情報は、`Render` 要素に保存されます。 `Designer` 要素には、レポート デザイナーで使用されるクエリ ビルダーが列挙されます。  
   
- レポート デザイナーでは、レポートをプレビューするために埋め込みのレポート サーバー機能を使用します。 サーバー関連の設定を指定すると、サーバー側のプレビュー処理をローカルでサポートできます。 レポート サーバーの構成設定の詳細については、次を参照してください。 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)します。  
+ レポート デザイナーでは、レポートをプレビューするために埋め込みのレポート サーバー機能を使用します。 サーバー関連の設定を指定すると、サーバー側のプレビュー処理をローカルでサポートできます。 レポートサーバーの構成設定の詳細については、「 [Rsreportserver Configuration File](rsreportserver-config-configuration-file.md)」を参照してください。  
   
 ## <a name="file-location"></a>ファイルの場所  
  このファイルは、\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies にあります。  
@@ -58,9 +58,9 @@ ms.locfileid: "66103334"
 |-------------|-----------------|  
 |`SecureConnectionLevel`|Web サービス接続のセキュリティ レベルを指定します。 有効な値は、0 ～ 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](../report-server-web-service/net-framework/using-secure-web-service-methods.md)」を参照してください。|  
 |`InstanceName`|プレビュー サーバーの識別子です。 この値は変更しないでください。|  
-|`SessionCookies`|レポート サーバーがブラウザーのクッキーを使用してセッション情報を保持するかどうかを指定します。 有効な値は、`true` および `false` です。 既定値は `true` です。 この値を false に設定すると、セッション データが **reportservertempdb** データベースに格納されます。|  
+|`SessionCookies`|レポート サーバーがブラウザーのクッキーを使用してセッション情報を保持するかどうかを指定します。 有効な値として、`true` および `false` があります。 既定値は、`true` です。 この値を false に設定すると、セッション データが **reportservertempdb** データベースに格納されます。|  
 |`SessionTimeoutMinutes`|セッションのクッキーの有効期間を指定します。 既定値は 3 分です。|  
-|`PolicyLevel`|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rspreviewpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|  
+|`PolicyLevel`|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rspreviewpolicy.config です。詳細については、「 [Reporting Services セキュリティポリシーファイルの使用](../extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|  
 |`CacheDataForPreview`|`True` に設定すると、レポート デザイナーがローカル コンピューター上のキャッシュ ファイルにデータを格納します。 有効な値は、`True` (既定値) および `False` です。 詳細については、「 [レポートのプレビュー](../reports/previewing-reports.md)」を参照してください。|  
 |`Render`|プレビューのためにレポート デザイナーで利用できる表示拡張機能を列挙します。 プレビューに使用する表示拡張機能のセットは、レポート サーバーと一緒にインストールされた表示拡張機能と同一である必要があります。<br /><br /> `Name` は、表示拡張機能を指定します。 コードで表示拡張機能を起動している場合は、この値を使用して、特定の拡張機能を呼び出します。<br /><br /> `Type` は、拡張クラスの完全修飾クラス名、およびライブラリ名をコンマで区切って指定します。<br /><br /> `Visible` は、任意のユーザー インターフェイスに名前を表示するかどうかを指定します。 この値には、`True` (既定値) または `False` があります。 `True` を指定すると、名前がユーザー インターフェイスに表示されます。|  
 |`Data`|レポートにデータを提供するデータ ソースに接続するためにレポート デザイナーで利用できるデータ処理拡張機能を列挙します。 レポート デザイナーで使用するデータ処理拡張機能のセットは、レポート サーバーと一緒にインストールされたデータ処理拡張機能と同一のものである場合があります。 カスタム拡張機能を追加または削除する場合は、「 [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)」を参照してください。<br /><br /> `Name` は、データ処理拡張機能を指定します。<br /><br /> `Type` は、拡張クラスの完全修飾クラス名、およびライブラリ名をコンマで区切って指定します。|  
@@ -69,6 +69,6 @@ ms.locfileid: "66103334"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)   
- [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)  
+ [レポートデザイナー SQL Server Data Tools のクエリデザインツール &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)  
   
   

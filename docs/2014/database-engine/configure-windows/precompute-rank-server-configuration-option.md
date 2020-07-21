@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6d58db4361acd5a97a58c01d17b1f9a78b20916e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abceb123d124a265a5e4a8a991cee235c06e75a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935140"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank サーバー構成オプション
   このオプションは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]には実装されていません。 これは重大な変更です。 この機能を現在使用しているアプリケーションはできるだけ早く変更してください。  

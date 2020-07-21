@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097292"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
@@ -42,19 +42,19 @@ Member_Expression.UniqueName
  ディメンションに解決される有効な多次元式 (MDX) 式です。  
   
  *Hierarchy_Expression*  
- 階層を返す有効な多次元式 (MDX) 式。  
+ 階層を返す有効な多次元式 (MDX) 式です。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式。  
+ レベルを返す有効な多次元式 (MDX) 式です。  
   
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **UniqueName**関数によって返される名ではなく、オブジェクトの一意の名前を返します、[名前](../mdx/name-mdx.md)関数。 返される名前では、キューブの名前は含まれません。 返される結果は、サーバー側の設定または MDX Unique Name Style 接続文字列プロパティによって異なります。  
+## <a name="remarks"></a>Remarks  
+ **UniqueName**関数は、 [name](../mdx/name-mdx.md)関数によって返される名前ではなく、オブジェクトの一意の名前を返します。 返された名前には、キューブの名前は含まれません。 返される結果は、サーバー側の設定または MDX の一意名の形式の接続文字列プロパティによって異なります。  
   
 ## <a name="example"></a>例  
- 次の例では、Adventure Works キューブの Product ディメンション、Product Categories 階層、Subcategory レベル、および Bike Racks メンバーの一意の名前値を返します。  
+ 次の例では、Adventure Works キューブの Product ディメンション、Product Categories 階層、サブカテゴリレベル、および自転車ラックメンバーの一意の名前値が返されます。  
   
 ```  
 WITH MEMBER DimensionUniqueName   
@@ -74,7 +74,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

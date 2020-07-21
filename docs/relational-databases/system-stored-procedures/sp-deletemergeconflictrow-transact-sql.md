@@ -1,5 +1,5 @@
 ---
-title: sp_deletemergeconflictrow (TRANSACT-SQL) |Microsoft Docs
+title: sp_deletemergeconflictrow (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861780"
 ---
-# <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  競合テーブルから行を削除または[MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブル。 このストアド プロシージャは、競合テーブルが格納されているコンピューターの、任意のデータベース上で実行されます。  
+  競合テーブルまたは[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルから行を削除します。 このストアド プロシージャは、競合テーブルが格納されているコンピューターの、任意のデータベース上で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,26 +41,26 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @conflict_table = ] 'conflict_table'` 競合テーブルの名前です。 *conflict_table*は**sysname**、既定値は **%** します。 場合、 *conflict_table*は NULL として指定または **%** 、競合が削除競合と一致する行があると見なされます*rowguid*と*origin_datasource*と*source_object*から削除されて、 [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブル。  
+`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**で、既定値は **%** です。 *Conflict_table*が NULL またはとして指定されている場合、 **%** 競合は削除競合であると見なされ、 *rowguid*と*origin_datasource*と*Source_object*に一致する行が[MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルから削除されます。  
   
-`[ @source_object = ] 'source_object'` ソース テーブルの名前です。 *source_object*は**nvarchar (386)** 、既定値は NULL です。  
+`[ @source_object = ] 'source_object'`ソーステーブルの名前を指定します。 *source_object*は**nvarchar (386)**,、既定値は NULL です。  
   
-`[ @rowguid = ] 'rowguid'` 削除競合の行の識別子です。 *rowguid*は**uniqueidentifier**、既定値はありません。  
+`[ @rowguid = ] 'rowguid'`削除競合の行識別子を示します。 *rowguid*は**uniqueidentifier**,、既定値はありません。  
   
-`[ @origin_datasource = ] 'origin_datasource'` 競合の元です。 *origin_datasource*は**varchar (255)** 、既定値はありません。  
+`[ @origin_datasource = ] 'origin_datasource'`競合の発生元を示します。 *origin_datasource*は**varchar (255)**,、既定値はありません。  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` あることを示すフラグです、 *conflict_table*削除場合は空です。 *drop_table_if_empty*は**varchar (10)** 、既定値は FALSE。  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'`が空の場合に*conflict_table*を削除することを示すフラグです。 *drop_table_if_empty*は**varchar (10)**,、既定値は FALSE です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_deletemergeconflictrow**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_deletemergeconflictrow**は、マージレプリケーションで使用します。  
   
- [MSmerge_conflicts_info &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルはシステム テーブルであり、空である場合でも、データベースからは削除されません。  
+ [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)テーブルはシステムテーブルであり、空の場合でも、データベースからは削除されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_deletemergeconflictrow**します。  
+ **Sp_deletemergeconflictrow**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

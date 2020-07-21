@@ -10,10 +10,10 @@ ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68045656"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server インストールの新機能
@@ -23,9 +23,9 @@ ms.locfileid: "68045656"
   
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインストール時には、抽出されたパッケージを保存するディレクトリを指定するように求められます。 場所が入力されていない場合、サーバーでは、既定でコンピューターのシステム ドライブが使用されます。 抽出されたファイルは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインストールが完了した後も残ります。  
   
- SysPrep は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのインストールでサポートされています。 現在、SysPrep はフェールオーバー クラスターのインストールをサポートしています。 詳細については、「[SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」と「[SysPrep を使用した SQL Server のインストール](../../database-engine/install-windows/install-sql-server-using-sysprep.md)」を参照してください。  
+ SysPrep は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのインストールでサポートされています。 現在、SysPrep はフェールオーバー クラスターのインストールをサポートしています。 詳細については、「 [SysPrep を使用した SQL Server のインストールに関する注意点](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md) 」と「 [SysPrep を使用した SQL Server のインストール](../../database-engine/install-windows/install-sql-server-using-sysprep.md)」を参照してください。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からのアップグレードはサポートされていますが、並列使用はサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サポートに関する詳細については、「[サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からのアップグレードはサポートされていますが、並列使用はサポートされていません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートに関する詳細については、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。  
  
   
 ## <a name="see-also"></a>参照  

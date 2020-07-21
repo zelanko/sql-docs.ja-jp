@@ -11,14 +11,14 @@ helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1ecf37fce2f62a4cadfe574531548aa9351e0057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080921"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71289622"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 式)
 
@@ -41,7 +41,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  引数の式の数値データ型です。 結果は、 *numeric_expression*と同じデータ型の、計算値の整数部分になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、FLOOR は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  

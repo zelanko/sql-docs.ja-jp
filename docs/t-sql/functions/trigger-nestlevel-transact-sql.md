@@ -17,17 +17,17 @@ helpviewer_keywords:
 - number of triggers
 - TRIGGER_NESTLEVEL function
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 3d4300f1a9d5e31751201bd17f2448eac6c37424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714566"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トリガーを起動したステートメントに対して実行されたトリガーの数を返します。 TRIGGER_NESTLEVEL は、DML トリガーおよび DDL トリガーで、現在の入れ子レベルを調べるときに使用します。  
   
@@ -50,7 +50,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  DML トリガーと DDL トリガーのどちらに TRIGGER_NESTLEVEL を適用するかを指定します。 DML トリガーの場合は **DML** を指定します。 DDL トリガーの場合は **DDL** を指定します。 *trigger_event_category* を指定するときは *trigger_type* も指定する必要があります。 **DDL** の場合は **AFTER** だけを指定できます。DDL トリガーは必ず AFTER トリガーであるためです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パラメーターを指定しない場合、TRIGGER_NESTLEVEL は呼び出し履歴上のトリガーの合計数を返します。 この合計数にはそのトリガー自身も含まれます。 トリガーがコマンドを実行することにより、別のトリガーが起動されたり、トリガーを起動するセッションを作成するときはパラメーターを省略できます。  
   
  特定の種類のトリガーおよび特定のイベント カテゴリについて、呼び出し履歴上のトリガーの合計数を返すには、*object_id* に値 0 を指定します。  
@@ -59,7 +59,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
  任意のパラメーターに明示的に NULL を指定した場合、TRIGGER_NESTLEVEL をトリガーの内部で使用したか外部で使用したかにかかわらず、値 NULL が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>A. 特定の DML トリガーの入れ子レベルを調べる  
   

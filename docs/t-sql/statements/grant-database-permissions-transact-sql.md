@@ -20,16 +20,16 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4be7c1494f6f63a87591038265c6b0e63edc83b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 185b3e77666739c92239adbb9c569683970b71f0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344823"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006279"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (データベースの権限の許可) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースに対する権限を許可します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "68344823"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 
 GRANT <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]
@@ -67,49 +67,49 @@ PRIVILEGES: ISO 準拠のために用意されています。 ALL の動作は�
 
 WITH GRANT OPTION: 権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。
 
-AS \<database_principal> このクエリを実行するプリンシパルが権限を許可する権利の派生元のプリンシパルを指定します。
+AS \<database_principal> このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。
 
 *Database_user*: データベース ユーザーを指定します。
 
 *Database_role*: データベース ロールを指定します。
 
 *Application_role*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] まで
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 アプリケーション ロールを指定します。
 
 *Database_user_mapped_to_Windows_User*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
 
 Windows ユーザーにマップされているデータベース ユーザーを指定します。
 
 *Database_user_mapped_to_Windows_Group*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
 
 Windows グループにマップされているデータベース ユーザーを指定します。
 
 *Database_user_mapped_to_certificate*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
 
 証明書にマップされているデータベース ユーザーを指定します。
 
 *Database_user_mapped_to_asymmetric_key*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
 
 非対称キーにマップされているデータベース ユーザーを指定します。
 
 *Database_user_with_no_login*: 対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 > [!IMPORTANT]
-> 権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例:テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。
+> 権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 次に例を示します。テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。
 
 データベースは、セキュリティ保護可能なリソースで、権限の階層で親となっているサーバーに含まれています。 次の表に、データベースで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。
 
 |データベース権限|権限が含まれるデータベース権限|権限が含まれるサーバー権限|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]」を参照してください。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -122,7 +122,7 @@ Windows グループにマップされているデータベース ユーザー�
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |すべての外部データ ソースを変更します。|ALTER|CONTROL SERVER|
 |任意の外部のファイル形式を変更します。|ALTER|CONTROL SERVER|
@@ -210,7 +210,7 @@ AS オプションを使用している場合は、次の追加要件があり�
 
 sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. テーブルを作成する権限を許可する
 
@@ -226,7 +226,7 @@ GO
 
  次の例では、`AdventureWorks2012` データベースでの `SHOWPLAN` 権限を、アプリケーション ロール `AuditMonitor` に対して許可します。
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 ```sql
 USE AdventureWorks2012;
@@ -260,5 +260,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [権限](../../relational-databases/security/permissions-database-engine.md)
+- [アクセス許可](../../relational-databases/security/permissions-database-engine.md)
 - [プリンシパル](../../relational-databases/security/authentication-access/principals-database-engine.md)

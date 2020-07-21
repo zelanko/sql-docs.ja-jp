@@ -12,19 +12,19 @@ helpviewer_keywords:
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 117f43548d2b57233dea6f7423e6bad67b6233b0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076891"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304353"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS ベースのドライバー診断の例
-DBMS ベースのドライバーでは、DBMS に要求を送信し、アプリケーション、ドライバー マネージャーを使用する情報を返します。 書式設定しの引数を返しますが、ドライバーは、ドライバー マネージャーとのインターフェイスのコンポーネントであるため**SQLGetDiagRec**します。  
+DBMS ベースのドライバーは、DBMS に要求を送信し、ドライバーマネージャーを使用してアプリケーションに情報を返します。 ドライバーはドライバーマネージャーとのインターフェイスを持つコンポーネントであるため、 **SQLGetDiagRec**の引数を書式設定して返します。  
   
- たとえば、Oracle Rdb は、無効なカーソル名を検出しましたのは、SQL/サービス、Microsoft ドライバーを使用して、返されます次の値を**SQLGetDiagRec**:。  
+ たとえば、SQL/Services を使用している場合、Microsoft driver for Oracle Rdb で無効なカーソル名が検出された場合は、 **SQLGetDiagRec**から次の値が返される可能性があります。  
   
 ```  
 SQLSTATE:         "34000"  
@@ -32,9 +32,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- ドライバーで、エラーが発生したため、そのプレフィックスに追加、診断メッセージ ([Microsoft]) のベンダーとドライバー ([ODBC Rdb Driver])。  
+ ドライバーでエラーが発生したため、ベンダー ([Microsoft]) とドライバー ([ODBC Rdb ドライバー]) の診断メッセージにプレフィックスが追加されました。  
   
- ドライバー可能性があります書式を設定しから次の値を返す場合は、DBMS では、従業員テーブルが見つかりませんでした、 **SQLGetDiagRec**:  
+ DBMS が EMPLOYEE テーブルを見つけることができなかった場合、ドライバーは**SQLGetDiagRec**から次の値を書式設定して返します。  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -43,4 +43,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- データ ソースで、エラーが発生したため、ドライバーは、診断メッセージをデータ ソース識別子 ([Rdb]) のプレフィックスを追加します。 ドライバーがデータ ソースと接続するコンポーネントであるために、診断メッセージにその仕入先 ([Microsoft]) および ([ODBC Rdb Driver]) の識別子のプレフィックスが追加されます。
+ データソースでエラーが発生したため、ドライバーによってデータソース識別子 ([Rdb]) のプレフィックスが診断メッセージに追加されました。 ドライバーは、データソースとの通信を行うコンポーネントであったので、そのベンダー ([Microsoft]) と識別子 ([ODBC Rdb ドライバー]) のプレフィックスが診断メッセージに追加されました。

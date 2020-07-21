@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012258"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API へのアクセス
@@ -41,7 +41,7 @@ ms.locfileid: "63012258"
   
 -   <xref:ReportExecution2005> エンドポイントでは、開発者がレポート サーバーのレポートをプログラムによって処理および表示できます。 このエンドポイントの WSDL には、`ReportExecution2005.asmx?wsdl` を通してアクセスします。  
   
- WSDL は、SOAP と Web サービスをサポートする、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK などの開発キットによって使用できます。  
+ WSDL は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK などの SOAP および Web サービスをサポートする開発キットによって使用できます。  
   
  次の例は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理 WSDL ファイルへの URL の書式を示しています。  
   
@@ -55,9 +55,9 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |-----------------|-----------------|  
 |*server*|レポート サーバーが配置されているサーバーの名前。|  
 |*reportserver*|XML Web サービスを含むフォルダーの名前。 これはセットアップ中に構成されます。|  
-|*\<endpoint name>.asmx*|Web サービス エンドポイントの名前。|  
+|*\<エンドポイント名> .asmx*|Web サービス エンドポイントの名前。|  
   
- WSDL フォーマットの詳細については、 http://www.w3.org/TR/wsdl の W3C (World Wide Web Consortium) WSDL 仕様を参照してください。  
+ WSDL フォーマットの詳細については、http://www.w3.org/TR/wsdl の W3C (World Wide Web Consortium) WSDL 仕様を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

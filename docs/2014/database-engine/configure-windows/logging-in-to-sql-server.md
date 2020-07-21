@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f791e68c49dfe9a1d1ce3598207b45b8ad63752
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935245"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
-  任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
+  任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などのグラフィカルな管理ツールを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のインスタンスにログインする場合、必要に応じて、サーバー名、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびパスワードを指定するように求められます。 Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により自動的に [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントを使用したログインが行われます。 混合モード認証 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード) で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用してログインする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインとパスワードを指定する必要があります。 可能な場合は、Windows 認証を使用します。  
   
@@ -41,13 +40,13 @@ ms.locfileid: "62782115"
   
  次の例は、APPHOST という名前のコンピューターで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 名前付きインスタンスを指定する場合は、インスタンス名の SQLEXPRESS を使用します。  
   
- **使用例:**  
+ **例:**  
   
 |インスタンスの型|サーバー名の入力|  
 |----------------------|-------------------------------|  
 |既定のプロトコルによる既定のインスタンスへの接続 (これが既定のインスタンスへの推奨される入力です)。|APPHOST|  
 |既定のプロトコルによる名前付きインスタンスへの接続 (これが名前付きインスタンスへの推奨される入力です)。|APPHOST\SQLEXPRESS|  
-|ピリオドを使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の既定のインスタンスへの接続。|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|ピリオドを使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の既定のインスタンスへの接続。|.|  
 |ピリオドを使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の名前付きインスタンスへの接続。|.\SQLEXPRESS|  
 |localhost を使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の既定のインスタンスへの接続。|localhost|  
 |localhost を使用して、インスタンスがローカル コンピューター上で実行されていることを示す、同じコンピューター上の名前付きインスタンスへの接続。|localhost\SQLEXPRESS|  
@@ -84,7 +83,7 @@ WHERE session_id = @@SPID;
   
 -   [SQL Server データベース エンジンへの接続のトラブルシューティングの方法](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [SQL の接続問題のトラブルシューティングの手順](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [SQL の接続問題のトラブルシューティングの手順](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)  

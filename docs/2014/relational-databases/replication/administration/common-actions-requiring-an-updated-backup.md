@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eb10bdca8ee188f7b322a46665c38129d57052b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061570"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>一般にバックアップの更新が必要になるアクション
   定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーション スキーマまたはトポロジを変更した後でパブリケーション、ディストリビューション、サブスクリプション、 **msdb**、および **master** の各データ ベースのバックアップを実行してください。  
@@ -105,8 +104,8 @@ ms.locfileid: "62705031"
   
 -   ディストリビューション パブリッシャーのパブリッシャーの有効化または無効化 (パブリッシャーおよびディストリビューターで)。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases (レプリケートされたデータベースのバックアップと復元)](back-up-and-restore-replicated-databases.md)  
+ [レプリケートされたデータベースのバックアップと復元](back-up-and-restore-replicated-databases.md)  
   
   

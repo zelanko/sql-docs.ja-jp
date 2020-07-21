@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c50e4bdbfe6fd9af1c5e5a6d528a270c0b63c50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4649a51e0cd8842fe4e96e9a07b095091d04d4ed
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870210"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553847"
 ---
-# <a name="mssqlserver12304"></a>MSSQLSERVER_12304
+# <a name="mssqlserver_12304"></a>MSSQLSERVER_12304
     
 ## <a name="details"></a>詳細  
   
-|||  
+|属性|値|  
 |-|-|  
 |製品名|SQL Server|  
 |イベント ID|12304|  
@@ -35,7 +34,7 @@ ms.locfileid: "62870210"
 ## <a name="user-action"></a>ユーザーの操作  
  自らの任意の列と共に IDENTITY プロパティを使用するメモリ最適化テーブル型を使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

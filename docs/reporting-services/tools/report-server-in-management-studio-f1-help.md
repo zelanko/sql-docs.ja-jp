@@ -11,10 +11,10 @@ ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 026583e0093812dbf683c93de9d11fd8ffabb7e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65576144"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio のレポート サーバーの F1 ヘルプ
@@ -22,13 +22,13 @@ ms.locfileid: "65576144"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [[レポート サーバー ジョブのキャンセル]](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
+-   [レポート サーバー ジョブのキャンセル](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
--   [[カタログ アイテムの削除]](../../reporting-services/tools/delete-catalog-items-management-studio.md)  
+-   [カタログ アイテムの削除](../../reporting-services/tools/delete-catalog-items-management-studio.md)  
   
 -   [[ジョブのプロパティ] ページ](../../reporting-services/tools/job-properties-management-studio.md)  
   
--   [[新しい共有スケジュール]](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
+-   [新しい共有スケジュール](../../reporting-services/tools/new-shared-schedule-management-studio.md)  
   
 -   [新しいシステム ロール](../../reporting-services/tools/new-system-role-management-studio.md)  
   

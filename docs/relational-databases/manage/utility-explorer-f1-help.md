@@ -1,5 +1,6 @@
 ---
-title: ユーティリティ エクスプローラーの F1 ヘルプ | Microsoft Docs
+title: ユーティリティ エクスプローラーの F1 ヘルプ
+description: SQL Server ユーティリティのさまざまな領域で提供される機能について詳しく説明します。 ビュー、ダッシュボード、および [ユーティリティ管理] タブについて説明します。
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024477"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197256"
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   次のセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>ユーティリティ ダッシュボード (SQL Server ユーティリティ)
@@ -36,7 +38,7 @@ ms.locfileid: "68024477"
  ユーティリティ コントロール ポイントの作成方法については、「 [SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)をクリックします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに追加する方法については、「[Enroll an Instance of SQL Server &#40;SQL Server Utility&#41; (SQL Server のインスタンスの登録 &#40;SQL Server ユーティリティ&#41;)](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)」を参照してください。  
  
   
-### <a name="uielement-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  マネージド インスタンスの正常性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスの正常性状態は、ユーティリティ エクスプローラーのコンテンツ ペインの左側に表示されます。  
   
@@ -119,15 +121,15 @@ ms.locfileid: "68024477"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>配置済みのデータ層アプリケーションの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [配置済みのデータ層アプリケーション] ビュー内の情報では、個々のデータ層アプリケーションの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を確認できるほか、ポリシーのしきい値を表示および更新できます。 ポリシーのしきい値は、データ層アプリケーション レベルで CPU 使用率やデータベース データ ファイルおよびログ ファイルを対象に制御できます。 個々のデータ層アプリケーションについて、プロパティの詳細を表示することもできます。  
   
-### <a name="uielement-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  リスト ビュー  
  上部ペインのリスト ビューには、個々のデータ層アプリケーションに関するデータが表示されます。 正常性状態アイコンにより、各データ層アプリケーションの状態が使用率カテゴリごとに示されます。  
   
--   緑のチェック - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していないデータ層アプリケーションの数。 リソースは適正使用です。  
+-   緑のチェック - :::image type="icon" source="media/well-utilized.png" border="false"::: - リソース使用率のポリシーに違反していないデータ層アプリケーションの数。 リソースは適正使用です。  
   
--   緑の下向き矢印 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
+-   緑の下向き矢印 - ![下向き矢印](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
   
--   赤の上向き矢印 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - リソースは過大使用です。  
+-   赤の上向き矢印 - ![上向き矢印](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - リソースは過大使用です。  
   
  リスト ビュー内で列を左右にドラッグすると、列の順番を変更できます。 リスト ビューに列を追加したり、リスト ビューから列を削除したりするには、列見出しを右クリックして、目的の列を選択または選択解除します。 右クリック メニューには、並べ替えオプションもあります。 並べ替えは、列名の上部をクリックして有効にすることもできます。  
   
@@ -177,7 +179,7 @@ ms.locfileid: "68024477"
   
 -   復旧モデル: (単純、完全、または一括ログ)  
   
--   最終報告日時: この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、データ層アプリケーションとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -254,22 +256,22 @@ ms.locfileid: "68024477"
   
 -   復旧モデル: (単純、完全、または一括ログ)  
   
--   最終報告日時: この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
 
 ## <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
  ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
   
-### <a name="uielement-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  リスト ビュー  
  上部のペインには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の個々のインスタンス (ComputerName\InstanceName) とそのデータがリスト表示されます。  
   
  正常性状態アイコンにより、各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの状態が使用率カテゴリごとに示されます。  
   
--   緑のチェック - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスの数。 リソースは適正使用です。  
+-   緑のチェック - ![緑のチェック](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスの数。 リソースは適正使用です。  
   
--   緑の下向き矢印 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
+-   緑の下向き矢印 - ![下向き矢印](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
   
--   赤の上向き矢印 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - リソースは過大使用です。  
+-   赤の上向き矢印 - ![上向き矢印](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - リソースは過大使用です。  
   
  リスト ビュー内で列を左右にドラッグすると、列の順番を変更できます。 リスト ビューに列を追加したり、リスト ビューから列を削除したりするには、列見出しを右クリックして、目的の列を選択または選択解除します。 右クリック メニューには、並べ替えオプションもあります。 並べ替えは、列名の上部をクリックして有効にすることもできます。  
   
@@ -417,7 +419,7 @@ ms.locfileid: "68024477"
 ## <a name="utility-administration-sql-server-utility"></a>ユーティリティの管理 (SQL Server ユーティリティ)
 ユーティリティの管理の各タブでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのポリシー設定、セキュリティ設定、およびデータ ウェアハウス設定を管理できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
   
-### <a name="uielement-list"></a>UI 要素の一覧
+### <a name="ui-element-list"></a>UI 要素の一覧
  **[ポリシー] タブ** - このポリシー タブを使用して、グローバル監視ポリシーを表示または指定します。  
   
  [グローバル データ層アプリケーション監視ポリシーを設定する] : このオプションの値一覧を表示するには、ポリシー名の横にある矢印をクリックするか、ポリシーのタイトルをクリックします。  
@@ -480,17 +482,17 @@ ms.locfileid: "68024477"
  
 **[データ ウェアハウス]** タブ - ユーティリティ管理データ ウェアハウスの構成の詳細が表示されます。  
   
- [データ保有期間]  
+ データ保有期間  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス用に収集された使用率情報のデータ保有期間を指定します。 既定の期間は 1 年です。 最小値は 1 か月です。 指定可能な最長期間は 2 年です。  
   
  [ユーティリティ データ ウェアハウスの構成情報]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースで構成できない構成設定は次のとおりです。  
   
--   UMDW 名: Sysutility_mdw_\<GUID>_DATA  
+-   UMDW 名: Sysutility_mdw_\<GUID>_DATA。  
   
 -   コレクション セットのアップロードの頻度: 15 分ごと。  
   
- UMDW ディレクトリは構成可能です: \<システム ドライブ>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<システム ドライブ> は C:\ ドライブです)。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
+ UMDW ディレクトリは構成可能です: \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<System drive> は C:\ ドライブ)。 ログ ファイル UMDW_\<GUID>_LOG は、同じディレクトリにあります。  
   
 > **注:** UMDW (sysutility_mdw) ファイルの場所を変更するには、デタッチとアタッチを使用する方法と ALTER DATABASE を使用する方法があります。 ALTER DATABASE の使用をお勧めします。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

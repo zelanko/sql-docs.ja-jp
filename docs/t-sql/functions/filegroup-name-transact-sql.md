@@ -22,17 +22,17 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071448"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895751"
 ---
-# <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 この館数は、指定されたファイル識別 (ID) 番号のファイル グループ名を返します。  
   
@@ -52,11 +52,11 @@ FILEGROUP_NAME ( filegroup_id )
 ## <a name="return-types"></a>戻り値の型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *filegroup_id* は、**sys.filegroups** カタログ ビューの **data_space_id** 列に対応します。  
   
-## <a name="examples"></a>使用例  
-この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のファイル グループ ID `1` に対するファイル グループの名前を取得します。  
+## <a name="examples"></a>例  
+この例では、`1` データベース内のファイル グループ ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に対するファイル グループの名前を取得します。  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

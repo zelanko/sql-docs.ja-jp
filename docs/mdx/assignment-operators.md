@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0e587e4c87b8d209c86476b1500ca6bbe3d026a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893642"
 ---
 # <a name="assignment-operators"></a>代入演算子
@@ -22,7 +22,7 @@ ms.locfileid: "68893642"
   
  代入演算子は、MDX スクリプトでサブキューブに値を代入する際に使用されます。 詳細については、「[MDX スクリプティングの基礎 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Operators &#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>参照  
+ [MDX 構文 &#40;の演算子&#41;](../mdx/operators-mdx-syntax.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Reporting Services の電子メール配信 | Microsoft Docs
+description: この記事では、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575564"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632535"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メールでレポートを配信するには、1) 電子メール配信のレポート サーバーを構成し、2) 標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 単一のサブスクリプションでは、1 通の電子メール メッセージで複数のレポートを配信できません。 ただし、複数のサブスクリプションを作成することはできます。  
   
- レポート サーバーは、標準の接続を介して電子メール サーバーに接続します。 SSL (Secure Sockets Layer) を使用して暗号化された通信は使用しません。 電子メール サーバーは、レポート サーバーと同じネットワーク上にあるリモートまたはローカルの簡易メール転送プロトコル (SMTP) サーバーである必要があります。  
+ レポート サーバーは、標準の接続を介して電子メール サーバーに接続します。 トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して暗号化された通信は使用しません。 電子メール サーバーは、レポート サーバーと同じネットワーク上にあるリモートまたはローカルの簡易メール転送プロトコル (SMTP) サーバーである必要があります。  
   
  サブスクリプションを作成する詳細な手順については、次を参照してください。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "65575564"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
   
 ## <a name="e-mail-delivery-options"></a>電子メール配信のオプション  
  レポート サーバーの電子メール配信では、以下の方法でレポートを配信できます  
@@ -41,9 +42,9 @@ ms.locfileid: "65575564"
   
 -   電子メール メッセージの [件名] 行を使用して通知を送信します。 既定では、サブスクリプション定義の [件名] に以下の変数が含まれます。サブスクリプションが処理されると、これらの変数はレポート固有の情報に置き換えられます。  
   
-     **@ReportName** は、レポート名を指定します。  
+     **\@ReportName** は、レポート名を指定します。  
   
-     **@ExecutionTime** は、レポートが実行された時間を指定します。  
+     **\@ExecutionTime** は、レポートが実行された時間を指定します。  
   
      これらの変数に静的なテキストを追加したり、各サブスクリプションの [件名] のテキストを変更することができます。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "65575564"
 ## <a name="see-also"></a>参照  
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [ロールの割り当て](../../reporting-services/security/role-assignments.md)  
   
   

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2139a25c4032f4f95b173d4cb5e78fbbc62495f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2601c62446871d8abfb76f52e07b76600cbd054
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973541"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920899"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public void setNull(java.lang.String sCol,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  setNull メソッドは、java.sql.CallableStatement インターフェイスの setNull メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

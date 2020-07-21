@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_syspolicy_delete_policy_category_subscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75390e920074059885ace32333426eb2fa642c49
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010496"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892739"
 ---
-# <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  特定のデータベースのポリシー カテゴリ サブスクリプションを削除します。  
+  特定のデータベースのポリシーカテゴリのサブスクリプションを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,12 +39,12 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` ポリシー カテゴリ サブスクリプションの識別子です。 *policy_category_subscription_id*は**int**します。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`ポリシーカテゴリのサブスクリプションの識別子を示します。 *policy_category_subscription_id*は**int**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  sp_syspolicy_delete_policy_category_subscription は msdb システム データベースのコンテキストで実行する必要があります。  
   
  サブスクリプションが必須の場合は、ポリシー カテゴリのサブスクリプションを削除できません。  
@@ -52,7 +52,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャは、ストアド プロシージャの現在の所有者のコンテキストで実行されます。  
   
- 値を取得する*policy_category_subscription_id*、次のクエリを使用することができます。  
+ *Policy_category_subscription_id*の値を取得するには、次のクエリを使用します。  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  
@@ -71,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

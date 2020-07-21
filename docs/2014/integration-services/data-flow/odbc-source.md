@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3123920553c2e78766b32848c118983c00dc0a79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62901107"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431779"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -63,20 +62,20 @@ ms.locfileid: "62901107"
  ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力元で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
   
 ## <a name="troubleshooting-the-odbc-source"></a>ODBC 入力元のトラブルシューティング  
- ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力元による外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)*」の Microsoft のドキュメントを参照してください。  
+ ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力元による外部データ ソースからのデータ読み込みに関するトラブルシューティングを行うことができます。 ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)* 」の Microsoft のドキュメントを参照してください。  
   
 ## <a name="configuring-the-odbc-source"></a>ODBC 入力元の構成  
  ODBC 入力元は、プログラムによって、または SSIS デザイナーを使用して構成できます。  
   
  詳細については、次のいずれかのトピックを参照してください。  
   
--   [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC ソース エディター ([接続マネージャー] ページ)](../odbc-source-editor-connection-manager-page.md)  
   
 -   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../odbc-source-editor-columns-page.md)  
   
 -   [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)  
   
- **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが表示されます。  
+ [**詳細エディター** ] ダイアログボックスには、プログラムで設定できるプロパティが表示されます。  
   
  **[詳細エディター]** ダイアログ ボックスを開くには、次の操作を実行します。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "62901107"
   
 -   [[ODBC ソース エディター] &#40;[列] ページ&#41;](../odbc-source-editor-columns-page.md)  
   
--   [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC ソース エディター ([接続マネージャー] ページ)](../odbc-source-editor-connection-manager-page.md)  
   
 -   [ODBC 入力元を使用したデータ抽出](odbc-source.md)  
   

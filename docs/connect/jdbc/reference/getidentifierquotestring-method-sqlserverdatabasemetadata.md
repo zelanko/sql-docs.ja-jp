@@ -1,5 +1,5 @@
 ---
-title: getIdentifierQuoteString メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getIdentifierQuoteString メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 85a7b4b32c0c66e5825dc2728a5783c028410d45
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982853"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921527"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getIdentifierQuoteString メソッドは、getIdentifierQuoteString メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getIdentifierQuoteString メソッドは、java.sql.DatabaseMetaData インターフェイスの getIdentifierQuoteString メソッドで指定されています。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは**二重**引用符 ("") が返されます。  
   

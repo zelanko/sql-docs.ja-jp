@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774247"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **SQL Server XTP Databases** パフォーマンス オブジェクトは、インメモリ OLTP データベース固有のカウンターを提供します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "67947797"
 
 次の表では、 **SQL Server XTP Databases** カウンターについて説明します。
 
-|カウンター|[説明]| 
+|カウンター|説明| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size**|トランザクション セグメントの大きいデータ ペイロードの平均サイズ。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|
 |**Avg Transaction Segment Size**|トランザクション セグメントのペイロードの平均サイズ。 この値がゼロになると、バックエンド アロケーターからより多くのページが割り当てられます。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cca2f9e1ff6069a608beb1df1880b37e15f4e869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62871109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965792"
 ---
 # <a name="resource-database"></a>Resource データベース
   Resource データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に搭載されているすべてのシステム オブジェクトを格納する読み取り専用のデータベースです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム オブジェクト (sys.objects など) は、物理的には Resource データベースに保存されていますが、すべてのデータベースの sys スキーマに論理的に表示されます。 Resource データベースには、ユーザーのデータやユーザーのメタデータは保持されません。  
@@ -28,7 +27,7 @@ ms.locfileid: "62871109"
  Resource データベースが実装されたことで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいバージョンへのアップグレードを簡単かつ迅速に実行できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンでは、アップグレードを行う場合、システム オブジェクトを削除してから再度作成する必要がありました。 現在は、すべてのシステム オブジェクトが Resource データベース ファイルに格納されるため、Resource データベース ファイルをローカル サーバーにコピーするだけで、アップグレードを完了できます。  
   
 ## <a name="physical-properties-of-resource"></a>Resource データベースの物理プロパティ  
- Resource データベースの物理ファイル名は、mssqlsystemresource.mdf および mssqlsystemresource.ldf です。 これらのファイルは \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\ に位置しており、移動してはなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスには、関連する mssqlsystemresource.mdf ファイルが 1 つだけあり、このファイルが共有されることはありません。  
+ Resource データベースの物理ファイル名は、mssqlsystemresource.mdf および mssqlsystemresource.ldf です。 これらのファイルは、次の場所にあります \<*drive*> 。 \<version> \<*instance_name*>\MSSQL\Binn\ を移動することはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスには、関連する mssqlsystemresource.mdf ファイルが 1 つだけあり、このファイルが共有されることはありません。  
   
 > [!WARNING]  
 >  アップグレードとサービス パックにより、新しいリソース データベースが提供されることがあります。これは BINN フォルダーにインストールされます。 リソース データベースの場所の変更はサポートされておらず、お勧めしません。  

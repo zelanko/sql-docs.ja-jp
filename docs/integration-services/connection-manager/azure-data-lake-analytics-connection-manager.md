@@ -15,10 +15,10 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: c2ae186aa7d7fe9ee4ef7da26ed0f5e667b8e2d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67904811"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 接続マネージャー
@@ -41,7 +41,7 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
   
 3. **[認証]** フィールドで、Data Lake Analytics のデータにアクセスするために適切な認証の種類を選択します。
 
-   A. **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
+   a. **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
    
       i. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。    
       ii. 接続をテストするには、 **[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Analytics アカウントへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
@@ -49,7 +49,7 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
    > [!NOTE] 
    > **[Azure AD のユーザー ID]** 認証オプションを選択する場合、多要素認証と Microsoft アカウント認証はサポートされません。
     
-   B. **[Azure AD のサービス ID]** 認証オプションを選択する場合は、次の操作を行います。
+   b. **[Azure AD のサービス ID]** 認証オプションを選択する場合は、次の操作を行います。
    
       i. Data Lake Analytics アカウントにアクセスするための Azure AD アプリケーションおよびサービス プリンシパルを作成します。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。    
       ii. 適切な権限を割り当てて、この Azure AD アプリケーションが Data Lake Analytics アカウントにアクセスできるようにします。 [ユーザー追加ウィザード](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user)を使用して Data Lake Analytics アカウントへのアクセス許可を付与する方法を確認してください。    

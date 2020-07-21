@@ -1,5 +1,6 @@
 ---
 title: server trigger recursion サーバー構成オプション | Microsoft Docs
+description: "\"server trigger recursion\" オプションが、SQL Server のサーバーレベルのトリガーの再帰にどのように影響するかについて説明します。 直接および間接再帰をオンまたはオフにする方法について説明します。"
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - triggers [SQL Server], recursive
 - server trigger recursion option
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dcd67a89ea5605647d6736d9d28a6e070a483c16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7dc2dcd132ef32ba4f026a1a9b76d4e67df28b26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715556"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>server trigger recursion サーバー構成オプション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーレベルのトリガーを再帰的に起動できるようにするかどうかを指定するには、 **server trigger recursion** オプションを使用します。 このオプションを 1 (ON) に設定すると、サーバーレベルのトリガーを再帰的に起動できます。 このオプションを 0 (OFF) に設定すると、サーバーレベルのトリガーは再帰的に起動できません。 server trigger recursion オプションが 0 (OFF) の場合は、直接再帰のみが回避されます (間接再帰を無効にするには、**nested triggers** オプションを 0 に設定します)。このオプションの既定値は 1 (ON) です。 この設定はすぐに適用されます。サーバーを再起動する必要はありません。  
   

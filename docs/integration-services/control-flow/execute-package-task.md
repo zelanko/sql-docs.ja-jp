@@ -17,21 +17,21 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b01580216ffb47a5d0d78cf08b8d7c9c14b861b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043902"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294187"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
+  パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
   
  パッケージ実行タスクは、次の目的で使用されます。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68043902"
   
  次のいずれかの方法を使用して、子パッケージに値を渡すことができます。  
   
--   **パッケージ構成**  
+-   **[パッケージ構成]**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、親パッケージ変数という種類の構成を使用して、親パッケージの値を子パッケージに渡すことができます。 この設定は子パッケージ上で構築され、親パッケージ内の変数を使用します。 構成は、子パッケージ内の変数、または子パッケージ内のオブジェクトのプロパティにマップされます。 また、スクリプト タスクまたはスクリプト コンポーネントで使用されるスクリプト内でも変数を使用できます。  
   
@@ -137,23 +137,23 @@ ms.locfileid: "68043902"
   
 -   [[パラメーター バインド] ページのオプションを設定する](#parameter)  
   
-###  <a name="open"></a> パッケージ実行タスク エディターを開く  
+###  <a name="open-the-execute-package-task-editor"></a><a name="open"></a> パッケージ実行タスク エディターを開く  
   
 1.  パッケージ実行タスクが含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] で開きます。  
   
 2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
-###  <a name="general"></a> [全般] ページのオプションを設定する  
- **[名前]**  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションを設定する  
+ **名前**  
  パッケージ実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  パッケージ実行タスクの説明を入力します。  
   
-###  <a name="package"></a> [パッケージ] ページのオプションを設定する  
+###  <a name="set-the-options-on-the-package-page"></a><a name="package"></a> [パッケージ] ページのオプションを設定する  
  **ReferenceType**  
  プロジェクト内の子パッケージの場合は **[プロジェクト参照]** をクリックします。 パッケージの外部にある子パッケージの場合は **[外部参照]** をクリックします。  
   
@@ -172,12 +172,12 @@ ms.locfileid: "68043902"
  **場所**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
   
- **[接続]**  
+ **接続**  
  子パッケージの格納場所の種類を選択します。  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "68043902"
 #### <a name="location-dynamic-options"></a>[Location] の動的オプション  
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
- **[接続]**  
+ **接続**  
  OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "68043902"
  子パッケージの名前を入力するか、[...] をクリックし、パッケージを指定します。  
   
 ##### <a name="location--file-system"></a>Location = ファイル システム  
- **[接続]**  
+ **接続**  
  ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -207,7 +207,7 @@ ms.locfileid: "68043902"
  **PackageNameReadOnly**  
  パッケージ名が表示されます。  
   
-###  <a name="parameter"></a> [パラメーター バインド] ページのオプションを設定する  
+###  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a> [パラメーター バインド] ページのオプションを設定する  
  親パッケージまたはプロジェクトから子パッケージに値を渡すことができます。 プロジェクトはプロジェクト配置モデルを使用し、子パッケージが親パッケージと同じプロジェクトに含まれている必要があります。  
   
  プロジェクト配置モデルへのプロジェクトの変換に関する詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -218,10 +218,10 @@ ms.locfileid: "68043902"
  **バインドするパラメーターまたは変数**  
  子パッケージに渡す値を含むパラメーターまたは変数を選択します。  
   
- **[追加]**  
+ **追加**  
  パラメーターまたは変数を子パッケージのパラメーターにマップする場合にクリックします。  
   
- **[削除]**  
+ **Remove**  
  パラメーターまたは変数と子パッケージのパラメーターの間のマッピングを削除する場合にクリックします。  
   
   

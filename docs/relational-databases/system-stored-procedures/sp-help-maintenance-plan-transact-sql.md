@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096199"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893608"
 ---
-# <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定したメンテナンス プランに関する情報を返します。 プランが指定されていない場合、このストアド プロシージャは、すべてのメンテナンス プランに関する情報を返します。  
+  指定したメンテナンス プランに関する情報を返します。 プランが指定されていない場合、このストアドプロシージャは、すべてのメンテナンスプランに関する情報を返します。  
   
-> **注:** このストアド プロシージャは、データベース メンテナンス プランで使用されます。 この機能は、このストアド プロシージャを使用しないメンテナンス プランに置き換わりました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+> **注:** このストアドプロシージャは、データベースメンテナンスプランで使用されます。 この機能は、このストアドプロシージャを使用しないメンテナンスプランに置き換えられました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -44,50 +44,50 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @plan_id = ] 'plan\_id'` メンテナンス プランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**します。 既定値は NULL です。  
+`[ @plan_id = ] 'plan\_id'`メンテナンスプランのプラン ID を指定します。 *plan_id*は**UNIQUEIDENTIFIER**です。 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし  
+ None  
   
 ## <a name="result-sets"></a>結果セット  
- 場合*plan_id*が指定されている**sp_help_maintenance_plan**は 3 つのテーブルを返します。プラン、データベース、およびジョブ。  
+ *Plan_id*が指定されている場合、 **sp_help_maintenance_plan**は Plan、Database、Job という3つのテーブルを返します。  
   
-### <a name="plan-table"></a>Plan テーブル  
+### <a name="plan-table"></a>プランテーブル  
   
-|列名|データ型|説明|  
+|列名|データ型|Description|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**uniqueidentifier**|メンテナンス プランの ID|  
-|**plan_name**|**sysname**|メンテナンス プランの名前。|  
-|**date_created**|**datetime**|メンテナンス プランが作成された日付。|  
-|**所有者**|**sysname**|メンテナンス プランの所有者です。|  
-|**max_history_rows**|**int**|システム テーブルで、メンテナンス プランの履歴を記録するために割り当てられる行数の最大数。|  
-|**remote_history_server**|**int**|履歴レポートが書き込まれる先のリモート サーバーの名前。|  
-|**max_remote_history_rows**|**int**|履歴レポートが書き込まれる先のリモート サーバー上のシステム テーブルに割り当てられる行数の最大数。|  
-|**user_defined_1**|**int**|既定値は NULL|  
-|**user_defined_2**|**nvarchar(100)**|既定値は NULL|  
-|**user_defined_3**|**datetime**|既定値は NULL|  
-|**user_defined_4**|**uniqueidentifier**|既定値は NULL|  
+|**plan_id**|**uniqueidentifier**|メンテナンスプラン ID。|  
+|**plan_name**|**sysname**|メンテナンスプランの名前。|  
+|**date_created**|**datetime**|メンテナンスプランが作成された日付。|  
+|**責任**|**sysname**|メンテナンスプランの所有者。|  
+|**max_history_rows**|**int**|システムテーブルのメンテナンスプランの履歴を記録するために割り当てられる行の最大数。|  
+|**remote_history_server**|**int**|履歴レポートが書き込まれるリモートサーバーの名前。|  
+|**max_remote_history_rows**|**int**|履歴レポートを書き込むことができるリモートサーバー上のシステムテーブルに割り当てられた行の最大数。|  
+|**user_defined_1**|**int**|既定値は NULL です。|  
+|**user_defined_2**|**nvarchar (100)**|既定値は NULL です。|  
+|**user_defined_3**|**datetime**|既定値は NULL です。|  
+|**user_defined_4**|**uniqueidentifier**|既定値は NULL です。|  
   
 ### <a name="database-table"></a>データベース テーブル  
   
 |列名|説明|  
 |-----------------|-----------------|  
-|**database_name**|メンテナンス プランに関連付けられているすべてのデータベースの名前です。 *database_name* は **sysname** です。|  
+|**database_name**|メンテナンスプランに関連付けられているすべてのデータベースの名前。 *database_name* は **sysname** です。|  
   
-### <a name="job-table"></a>ジョブ テーブル  
+### <a name="job-table"></a>ジョブテーブル  
   
 |列名|説明|  
 |-----------------|-----------------|  
-|**job_id**|メンテナンス プランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**します。|  
+|**job_id**|メンテナンスプランに関連付けられているすべてのジョブの ID。 *job_id*は**uniqueidentifier**です。|  
   
-## <a name="remarks"></a>コメント  
- **sp_help_maintenance_plan**では、 **msdb**データベース。  
+## <a name="remarks"></a>注釈  
+ **sp_help_maintenance_plan**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_help_maintenance_plan**します。  
+ **Sp_help_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- この例のわかりやすい情報、メンテナンスの詳細については、FAD6F2AB-3571-11 D 3 9D4A 00C04FB925FC を計画します。  
+## <a name="examples"></a>例  
+ この例では、メンテナンスプランの FAD6F2AB-3571-11D3-9D4A-00C04FB925FC について説明します。  
   
 ```  
 EXECUTE   sp_help_maintenance_plan   
@@ -96,6 +96,6 @@ EXECUTE   sp_help_maintenance_plan
   
 ## <a name="see-also"></a>関連項目  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [データベース メンテナンス プラン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

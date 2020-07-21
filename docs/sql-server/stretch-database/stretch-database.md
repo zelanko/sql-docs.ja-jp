@@ -1,5 +1,5 @@
 ---
-title: Stretch Database | Microsoft Docs
+title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -9,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f5830ab8196c699e5d7b851c7ac82c1056ca919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091832"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488360"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68091832"
 
 **データの移行を一時停止して** 、ローカル サーバーで発生した問題をトラブルシューティングしたり、使用可能なネットワーク帯域幅を最大化したりできます。  
   
- ![の概要](../../sql-server/stretch-database/media/stretch-overview.png "Stretch Database の概要")  
+ ![Stretch Database の概要](../../sql-server/stretch-database/media/stretch-overview.png "Stretch Database の概要")  
   
 ## <a name="is-stretch-database-for-you"></a>Stretch Database を使用する状況  
  次に当てはまる場合は、Stretch Database がニーズへの対応と問題解決に役立つ可能性があります。  
@@ -72,9 +73,9 @@ ms.locfileid: "68091832"
  Stretch Database 用のデータベースとテーブルを特定するには、SQL Server 2016 Upgrade Advisor の機能、Stretch Database Advisor を使用してください。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。 潜在的なブロッキングの問題の詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。  
 
 ## <a name="test-drive-stretch-database"></a>Stretch Database の試用  
- **AdventureWorks サンプル データベースでの Stretch Database の試用。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://www.microsoft.com/download/details.aspx?id=49502)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 SQL Server 2016 のインスタンスにサンプル データベースを復元したら、サンプル ファイルを解凍し、Stretch DB フォルダーから Stretch DB サンプルのファイルを開きます。 このファイルのスクリプトを実行し、Stretch Database を有効にする前と後にデータで使用する領域を確認したり、データ移行の進行状況を追跡したり、引き続き既存のデータにクエリを実行し、データの移行中と移行後の両方で新しいデータを挿入できることを確認します。  
+ **AdventureWorks サンプル データベースでの Stretch Database の試用。** AdventureWorks サンプル データベースを入手するには、 [こちら](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)から最小限のデータベース ファイルとサンプルおよびスクリプト ファイルをダウンロードしてください。 サンプル データベースを SQL Server 2016 のインスタンスに復元した後に、サンプル ファイルを解凍し、Stretch DB フォルダーの Stretch DB Samples ファイルを開きます。 このファイルのスクリプトを実行し、Stretch Database を有効にする前と後にデータで使用する領域を確認したり、データ移行の進行状況を追跡したり、引き続き既存のデータにクエリを実行し、データの移行中と移行後の両方で新しいデータを挿入できることを確認します。  
   
-## <a name="next-step"></a>次の手順  
- **Stretch Database の候補となるデータベースとテーブルを特定する。** SQL Server 2016 Upgrade Advisor をダウンロードし、Stretch Database Advisor を実行して、Stretch Database の候補となるデータベースとテーブルを特定します。 Stretch Database Advisor はブロックの問題も特定します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」を参照してください。  
+## <a name="next-step"></a>次のステップ  
+ **Stretch Database の候補となるデータベースとテーブルを特定する。** Data Migration Assistant をダウンロードし、評価を実行することで、Stretch Database の候補になるデータベースとテーブルを特定します。 詳細については、「 [Stretch Database Advisor を実行して Stretch Database のデータベースとテーブルを特定する](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)」をご覧ください。  
   
   

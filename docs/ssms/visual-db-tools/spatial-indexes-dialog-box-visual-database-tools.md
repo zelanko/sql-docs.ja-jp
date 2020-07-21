@@ -1,10 +1,9 @@
 ---
-title: '[空間インデックス] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[空間インデックス] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263572"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254971"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68263572"
 **[選択された空間インデックス]**  
 既存の空間インデックスを一覧表示します。 特定の空間インデックスのプロパティを表示するには、そのインデックスをクリックします。 この一覧が空の場合、テーブルには空間インデックスがまったく定義されていません。  
   
-**[追加]**  
+**追加**  
 新しい空間インデックスを作成します。  
   
 **削除**  
@@ -46,13 +47,13 @@ ms.locfileid: "68263572"
 **[IsSpatialIndex]**  
 空間インデックスが選択されていることを示します。  
   
-**[レベル 1]**  
+**Level 1 (レベル 1)**  
 第 1 レベル (最上位) グリッドの密度を示します。  
   
-**[レベル 2]**  
+**Level 2 (レベル 2)**  
 第 2 レベルのグリッドの密度を示します。  
   
-**[レベル 3]**  
+**Level 3 (レベル 3)**  
 第 3 レベルのグリッドの密度を示します。  
   
 **[レベル 4]**  
@@ -67,7 +68,7 @@ ms.locfileid: "68263572"
   
 -   geography 列の場合は **[地理グリッド]** になります。  
   
-**型**  
+**Type**  
 空間インデックスが選択されていることを示します。  
   
 **[X の最大値]**  
@@ -82,13 +83,13 @@ ms.locfileid: "68263572"
 **[Y の最小値]**  
 境界ボックスの左下隅の y 座標を指定します。 このプロパティは、 **[テセレーション スキーム]** が **[地理グリッド]** の場合、淡色表示になります。  
   
-**Identity**  
+**[ID]**  
 展開して、 **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
 **[(名前)]**  
 空間インデックスの名前を表示します。 新しいインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
-**[説明]**  
+**説明**  
 インデックスの説明です。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
 **[テーブル デザイナー] カテゴリ**  

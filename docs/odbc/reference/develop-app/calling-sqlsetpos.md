@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos の呼び出し |Microsoft Docs
+title: SQLSetPos | を呼び出していますMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 46cfbb4e2e6b60f620cd7e38272bf9308ece91bc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068683"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306243"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos の呼び出し
-ODBC で*2.x*、行の状態配列へのポインターが引数**SQLExtendedFetch**します。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**します。 一部のドライバーがこの配列の間で変更しないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**します。 ODBC で*3.x*状態配列へのポインターは、記述子フィールド、および、そのため、変えることができます簡単に別の配列を指すようにします。 これは、とき、ODBC の問題となることができます*3.x* odbc アプリケーションが動作*2.x*ドライバーは呼び出すことが**SQLSetStmtAttr**配列状態のポインターを設定してを呼び出し、**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**します。 次のコードでは、エラーは通常するときに発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC を使用するときに呼び出す*2.x*ドライバー。  
+*ODBC 2.x では、行*状態配列へのポインターは**SQLExtendedFetch**の引数でした。 行の状態の配列は、 **SQLSetPos**の呼び出しによって後で更新されました。 一部のドライバーでは、 **SQLExtendedFetch**と**SQLSetPos**の間でこの配列が変更されないという事実に依存しています。 *ODBC 3.x では、状態*配列へのポインターは記述子フィールドであるため、アプリケーションは簡単に別の配列を指すように変更できます。 ODBC *2.x アプリケーションが*odbc *2.x ドライバーを*使用しているときに、 **SQLSetStmtAttr**を呼び出して配列の状態ポインターを設定し、データをフェッチするために**sqlfetchscroll**を呼び出している場合に、この問題が発生することがあります。 ドライバーマネージャーは、 **SQLExtendedFetch**への一連の呼び出しとしてそれをマップします。 次のコードでは、通常、ODBC 2.x ドライバーを操作するときに Driver Manager が2番目の**SQLSetStmtAttr**呼び出しをマップすると、エラーが発生*します。*  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -33,12 +33,12 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- ODBC での行の状態のポインターを変更する方法がない場合、エラーが生成されます*2.x*呼び出しの間で**SQLExtendedFetch**します。 ODBC を使用する場合に、ドライバー マネージャーが、次の手順を実行する代わりに、 *2.x*ドライバー。  
+ ODBC 2.x の行ステータスポインターを**SQLExtendedFetch**の呼び出し*間で変更*する方法がない場合、エラーが発生します。 代わりに、ドライバーマネージャーは、ODBC 2.x ドライバーを使用するときに次の手順を実行*します。*  
   
-1.  内部のドライバー マネージャーのフラグを初期化します*fSetPosError*を TRUE にします。  
+1.  内部ドライバーマネージャーフラグ*fSetPosError*を TRUE に初期化します。  
   
-2.  アプリケーションを呼び出すと**SQLFetchScroll**、ドライバー マネージャーの設定*fSetPosError*を FALSE にします。  
+2.  アプリケーションが**Sqlfetchscroll**を呼び出すと、ドライバーマネージャーは*fSetPosError*を FALSE に設定します。  
   
-3.  アプリケーションを呼び出すと**SQLSetStmtAttr**ドライバー マネージャーを設定し、SQL_ATTR_ROW_STATUS_PTR を設定する*fSetPosError*と等しい値を True です。  
+3.  アプリケーションが SQL_ATTR_ROW_STATUS_PTR を設定するために**SQLSetStmtAttr**を呼び出すと、ドライバーマネージャーは*FSetPosError* equal totrue を設定します。  
   
-4.  アプリケーションを呼び出すと**SQLSetPos**で*fSetPosError* true の場合、ドライバー マネージャーと等しい SQLSTATE HY011 SQL_ERROR を発生させます (属性はここで設定することはできません) ことを示すアプリケーション呼び出すしようとしています。 **SQLSetPos**行の状態のポインターを変更した後は、呼び出す前に**SQLFetchScroll**します。
+4.  アプリケーションが**sqlsetpos**を呼び出し、 *fSetPosError*が TRUE の場合、ドライバーマネージャーは SQLSTATE HY011 (属性を設定できません) を使用して SQL_ERROR を発生させ、アプリケーションが行ステータスポインターを変更した後、 **sqlfetchscroll**を呼び出す前に**sqlsetpos**を呼び出そうとしたことを示します。

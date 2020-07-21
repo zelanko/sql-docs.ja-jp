@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62823801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061178"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
   特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62823801"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>他のエンコードまたは行終端文字の種類を指定してファイルを保存するには  
   
-1.  **ファイル** メニューのをクリックして**保存\<ファイル名 > として**します。  
+1.  **[ファイル]** メニューの **[名前を付けて \<filename> を保存]** をクリックします。  
   
 2.  **[ファイル名を付けて保存]** ダイアログ ボックスで、 **[保存]** ボタンを展開し、 **[エンコード付きで保存]** をクリックします。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62823801"
 -   UTF8 ファイルは、Visual SourceSafe で安全に動作しません。チェックイン、チェックアウト、差分チェック、マージの実行時に、UTF8 ファイル エディターで問題を起こす原因になる変更が加えられるためです。  
   
 ## <a name="see-also"></a>参照  
- [管理ソリューションとプロジェクト ファイル](files-that-manage-solutions-and-projects.md)   
+ [ソリューションとプロジェクトを管理するファイル](files-that-manage-solutions-and-projects.md)   
  [ファイル拡張子をコード エディターに関連付ける方法](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

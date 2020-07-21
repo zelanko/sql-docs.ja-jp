@@ -1,5 +1,5 @@
 ---
-title: 接続で、日付の書式を設定 |Microsoft Docs
+title: 接続で日付形式を設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - date formats [ODBC]
 - ODBC driver for Oracle [ODBC], date formats
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3075893d37a401110afbecacc68e452425ad684b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9da75702275959b48d4965189c9ef5cd856491ff
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063465"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300742"
 ---
 # <a name="setting-the-date-format-on-connection"></a>接続時の日付形式の設定
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- 新しいバージョンの Microsoft ODBC Driver for Oracle は Oracle の日付フィールドの日付の形式を自動的に設定されません。 ドライバーが接続しているときに使用していた`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`します。  
+ 新しいバージョンの Microsoft ODBC Driver for Oracle では、Oracle の日付フィールドの日付形式が自動的に設定されません。 以前は、ドライバーは接続さ`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`れていました。  
   
- 日付の書式を設定するには、ALTER セッションのセットを呼び出すし、挿入します。 例:  
+ 日付形式を設定するには、ALTER SESSION SET を呼び出し、挿入を実行します。 次に例を示します。  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

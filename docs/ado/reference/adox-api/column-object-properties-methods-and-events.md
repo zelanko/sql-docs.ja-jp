@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Column object [ADOX], members
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5905bbee711d63d86ddc2988799ee8ab5e5c9e79
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966899"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759378"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -35,11 +35,11 @@ ms.locfileid: "67966899"
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [RelatedColumn プロパティ](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)  
+ ["関連性列" プロパティ](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)  
   
- [SortOrder プロパティ](../../../ado/reference/adox-api/sortorder-property-adox.md)  
+ [順序のプロパティ](../../../ado/reference/adox-api/sortorder-property-adox.md)  
   
- [Type プロパティ (列)](../../../ado/reference/adox-api/type-property-column-adox.md)  
+ [Type プロパティ (Column)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>メソッド  
  [なし] :  
@@ -47,5 +47,5 @@ ms.locfileid: "67966899"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

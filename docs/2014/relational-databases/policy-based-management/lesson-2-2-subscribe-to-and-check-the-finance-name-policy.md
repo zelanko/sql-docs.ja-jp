@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061615"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Finance の名前ポリシーのサブスクライブおよび確認
   ここでは、Finance データベースを構成し、Finance ポリシー カテゴリをサブスクライブします。 その後で、Finance の名前ポリシーをテストします。  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Finance ポリシー カテゴリをサブスクライブするには  
   
-1.  オブジェクト エクスプ ローラーで、**データベース**、右クリックして`Finance`、 をポイント**ポリシー**、順にクリックします**カテゴリ**します。  
+1.  オブジェクトエクスプローラーで、[**データベース**] を展開し、を右クリックし `Finance` て [**ポリシー**] をポイントし、[**カテゴリ**] をクリックします。  
   
-2.  選択、**サブスクライブ済み**チェック ボックスをオン、`Finance`カテゴリ。  
+2.  カテゴリの [**サブスクライブ**済み] チェックボックスをオンにし `Finance` ます。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -67,10 +66,10 @@ ms.locfileid: "66090697"
 ## <a name="summary"></a>まとめ  
  このチュートリアルでは、ポリシー ベースの管理の条件、ポリシー、およびポリシー グループを作成する方法と、フィルターを適用してポリシー ベースの管理対象がポリシーに準拠しているかどうかを調べる方法について学習しました。  
   
-## <a name="next"></a>Next  
- このチュートリアルはこれで終了です。 先頭に戻るにはクリックして[チュートリアル。ポリシー ベースの管理を使用してサーバーを管理する](tutorial-administering-servers-by-using-policy-based-management.md)します。  
+## <a name="next"></a>次へ  
+ このチュートリアルはこれで終了です。 最初に戻るには、「 [チュートリアル: ポリシー ベースの管理を使用したサーバーの管理](tutorial-administering-servers-by-using-policy-based-management.md)」をクリックしてください。  
   
- チュートリアルの一覧は、次を参照してください。 [for SQL Server 2014 チュートリアル](../../tutorials/tutorials-for-sql-server-2014.md)します。  
+ チュートリアルの一覧については、 [SQL Server 2014 のチュートリアル](../../tutorials/tutorials-for-sql-server-2014.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  

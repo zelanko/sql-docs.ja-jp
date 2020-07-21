@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallDriverManager function [ODBC]
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f1e3ac7f0a76c607fa07d6eb92d069d99ef5e0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076209"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302113"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0:Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムで非推奨とされます。  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0: Windows XP Service Pack 2、Windows Server 2003 Service Pack 1、およびそれ以降のオペレーティングシステムでは非推奨となりました。  
   
- **概要**  
- **SQLInstallDriverManager** ODBC コア コンポーネントのインストールのターゲット ディレクトリのパスを返します。 呼び出し元のプログラムは、ターゲット ディレクトリにドライバー マネージャーのファイルをコピー実際にする必要があります。  
+ **まとめ**  
+ **Sqlinstalldrivermanager**は、ODBC core コンポーネントのインストール先ディレクトリのパスを返します。 呼び出し元のプログラムは、実際にはドライバーマネージャーのファイルをターゲットディレクトリにコピーする必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,43 +45,43 @@ BOOL SQLInstallDriverManager(
   
 ## <a name="arguments"></a>引数  
  *lpszPath*  
- [出力]インストールのターゲット ディレクトリのパス。  
+ Outputインストール先ディレクトリのパス。  
   
  *cbPathMax*  
- [入力]長さ*lpszPath*します。 以上である必要がありますこれ _MAX_PATH バイト。  
+ 代入*Lpszpath*の長さ。 これは、少なくとも _MAX_PATH バイトである必要があります。  
   
  *pcbPathOut*  
- [出力]合計バイト数 (null 終了バイトを除く) で返される*lpszPath*します。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathMax*、パス*lpszPath*に切り捨てられます*cbPathMax* null 終了マイナス文字。 *PcbPathOut*引数が null ポインターを指定できます。  
+ Output*Lpszpath*で返された合計バイト数 (null 終端バイトを除く)。 返すことのできるバイト数が*Cbpathmax*以上の場合、 *lpszpath*内のパスは*cbpathmax*から null 終端文字に切り捨てられます。 *Pcbpathout*引数は null ポインターにすることができます。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLInstallDriverManager** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlinstalldrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|無効なバッファーの長さ|*LpszPath*引数が出力パスを格納するのに十分な大きさでした。 バッファーには、切り捨てられたパスが含まれています。<br /><br /> *CbPathMax*引数が _MAX_PATH より小さい。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|インクリメントまたはコンポーネントの使用率カウントは減少できませんでした。|ODBC コア コンポーネントの使用率カウントをインクリメントするインストーラーが失敗しました。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszpath*引数は、出力パスを格納するのに十分な大きさではありませんでした。 バッファーには、切り捨てられたパスが含まれています。<br /><br /> *Cbpathmax*引数が _MAX_PATH 未満でした。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|コンポーネントの使用状況カウントをインクリメントまたはデクリメントできませんでした|インストーラーで、ODBC コアコンポーネントの使用回数を増やすことができませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- **SQLInstallDriverManager**が呼び出され、パスの戻り値のシステム情報で ODBC コア コンポーネントとコンポーネントの使用状況の増分をカウントします。 ドライバー マネージャーのバージョンが既に存在するドライバーのコンポーネントの使用率カウントは存在しない場合は、新しいコンポーネントの使用状況カウント値が 2 に設定します。  
+## <a name="comments"></a>説明  
+ **Sqlinstalldrivermanager**が呼び出され、ODBC コアコンポーネントのパスが返され、システム情報に含まれるコンポーネントの使用量が増加します。 ドライバーマネージャーのバージョンが既に存在していても、そのドライバーのコンポーネントの使用量が存在しない場合、新しいコンポーネントの使用状況のカウント値は2に設定されます。  
   
- アプリケーションのセットアップ プログラムはコア コンポーネントのファイルを物理的にコピー担当し、ファイルの使用状況の維持をカウントします。 コア コンポーネントのファイルが以前インストールされていない場合、アプリケーションのセットアップ プログラムはファイルのコピーし、ファイルの使用率カウントを作成する必要があります。 ファイルが既にインストールされている場合、セットアップ プログラムは単なるファイルの使用率カウントをインクリメントします。  
+ アプリケーションのセットアッププログラムでは、コアコンポーネントファイルを物理的にコピーし、ファイルの使用量のカウントを維持する必要があります。 コアコンポーネントファイルが事前にインストールされていない場合は、アプリケーションセットアッププログラムによってファイルがコピーされ、ファイルの使用量が作成されます。 ファイルが既にインストールされている場合、セットアッププログラムは単にファイルの使用量をインクリメントします。  
   
- 場合は、アプリケーションのセットアップ プログラムによっては、以前のバージョンのドライバー マネージャーがインストールされていた、コア コンポーネントがアンインストールされ、再インストール、コア コンポーネントの使用率カウントは有効なようにする必要があります。 **SQLRemoveDriverManager**最初のコンポーネントの使用率カウントをデクリメントを呼び出す必要があります。 **SQLInstallDriverManager**し、コンポーネントの使用率カウントをインクリメントする呼び出す必要があります。 アプリケーションのセットアップ プログラムは、古いコア コンポーネント ファイルを新しいファイルに置き換える必要があります。 ファイル使用状況カウントが、同じままになります、および古いバージョンのコア コンポーネント ファイルを使用する他のアプリケーションがより新しいバージョンのファイルを使用するようになりました。  
+ 以前のバージョンのドライバーマネージャーがアプリケーションセットアッププログラムによって既にインストールされている場合は、コアコンポーネントの使用回数が有効になるように、コアコンポーネントをアンインストールしてから再インストールする必要があります。 コンポーネントの使用回数を減らすには、最初に**Sqlremovedrivermanager**を呼び出す必要があります。 コンポーネントの使用量を増やすには、 **Sqlinstalldrivermanager**を呼び出す必要があります。 アプリケーションセットアッププログラムは、古いコアコンポーネントファイルを新しいファイルに置き換える必要があります。 ファイルの使用量カウントは変わりません。また、古いバージョンのコアコンポーネントファイルを使用する他のアプリケーションでは、新しいバージョンのファイルが使用されるようになります。  
   
- 新規インストール ODBC コア コンポーネント、ドライバー、および翻訳者は、アプリケーションのセットアップ プログラムは、シーケンスで、次の関数を呼び出す必要があります。**SQLInstallDriverManager**、 **SQLInstallDriverEx**、 **SQLConfigDriver** (で、*起こり*ODBC_INSTALL_DRIVER の)、し**SQLInstallTranslatorEx**します。 コア コンポーネント、ドライバー、および変換プログラムのアンインストール、アプリケーションのセットアップ プログラムは、シーケンスで、次の関数を呼び出す必要があります。**SQLRemoveTranslator**、 **SQLRemoveDriver**、し**SQLRemoveDriverManager**します。 このシーケンスでは、これらの関数を呼び出す必要があります。 すべてのコンポーネントのアップグレードでは、シーケンスですべての削除関数を呼び出す必要があり、シーケンスで、すべてのインストール関数を呼び出す必要があります。  
+ ODBC のコアコンポーネント、ドライバー、およびトランスレーターの新規インストールでは、アプリケーションセットアッププログラムは、 **Sqlinstalldrivermanager**、 **sqlinstalldrivermanager**、 **Sqlconfigdriver** ( *frequest* for ODBC_INSTALL_DRIVER) の順に、次の関数を呼び出す必要が**あります。** コアコンポーネント、ドライバー、およびトランスレーターのアンインストールでは、アプリケーションセットアッププログラムは、 **Sqlremovetranslator**、 **sqlremovetranslator**、 **sqlremovedrivermanager**の順に次の関数を呼び出す必要があります。 これらの関数は、この順序で呼び出す必要があります。 すべてのコンポーネントをアップグレードする場合は、すべてのアンインストール機能を順番に呼び出し、すべてのインストール機能を順番に呼び出す必要があります。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|追加、変更、またはドライバーを削除します。|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  
-|ドライバーをインストールします。|[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|  
-|変換プログラムをインストールします。|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|  
-|ドライバーを削除します。|[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
-|ドライバー マネージャーを削除します。|[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
-|翻訳者を削除します。|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+|ドライバーの追加、変更、または削除|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  
+|ドライバーのインストール|[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|  
+|トランスレーターのインストール|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|  
+|ドライバーの削除|[SQLRemoveDriver](../../../odbc/reference/syntax/sqlremovedriver-function.md)|  
+|ドライバーマネージャーの削除|[SQLRemoveDriverManager](../../../odbc/reference/syntax/sqlremovedrivermanager-function.md)|  
+|トランスレーターの削除|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|

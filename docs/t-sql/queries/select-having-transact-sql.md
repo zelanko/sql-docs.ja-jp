@@ -1,7 +1,7 @@
 ---
 title: HAVING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 01/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7cba43ad87b39122f6cd3d3ae7328b963e6fb1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fcbdec5e4d0e6c35d01d02e48e1d680d9702a66c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948434"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999756"
 ---
 # <a name="select---having-transact-sql"></a>SELECT - HAVING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   グループまたは集計の検索条件を指定します。 HAVING は、SELECT ステートメントと共にのみ使用できます。 通常、HAVING は GROUP BY 句と共に使用されます。 GROUP BY を使用しない場合は、暗黙的な 1 つの集計グループがあります。   
   
@@ -37,16 +37,16 @@ ms.locfileid: "67948434"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 [ HAVING <search condition> ]  
 ```  
   
 ## <a name="arguments"></a>引数  
-\<search_condition> は、条件を満たすグループまたは集計の 1 つまたは複数の述語を指定します。 検索条件および述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
+\<search_condition> 条件を満たすグループまたは集計の 1 つまたは複数の述語を指定します。 検索条件および述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
   
  **text**、**image**、および **ntext** 型は HAVING 句では使用できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`HAVING` テーブルから `SalesOrderID` を超える `SalesOrderDetail` ごとの合計を取得する単純な `$100000.00` 句を使用しています。  
   
 ```sql
@@ -59,8 +59,8 @@ HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、`HAVING` 句を使用して、`FactInternetSales` テーブルから `OrderDateKey` が 2004 年以降の各 `SalesAmount` の合計を取得します。  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、`HAVING` 句を使用して、`FactInternetSales` テーブルから各 `OrderDateKey` の `80000` を超える合計 `SalesAmount` を取得します。  
   
 ```sql
 -- Uses AdventureWorks  

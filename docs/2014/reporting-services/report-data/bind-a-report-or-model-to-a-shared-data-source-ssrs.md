@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107451"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>レポートまたはモデルを共有データ ソースにバインドする (SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "66107451"
   
 5.  **[接続の種類]** 領域で、 **[共有データ ソース]** が選択されていることを確認します。  
   
-6.  **[データ ソース リンク]** 領域で、省略記号ボタン ( [...] ) をクリックします。  
+6.  [**データソースリンク**] 領域で、省略記号ボタン ([...]) をクリックします。  
   
 7.  使用するデータ ソースを探します。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "66107451"
 10. **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ファイルまたはレポートをアップロードする (レポート マネージャー)](../reports/upload-a-file-or-report-report-manager.md)   
- [SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [ファイルまたはレポートをアップロード &#40;レポートマネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [Sharepoint モードで Reporting Services &#40;ドキュメントを SharePoint ライブラリにアップロード&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
+ [SharePoint 統合モードで Reporting Services &#40;共有データソースを作成および管理&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services でサポートされるデータ ソース (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

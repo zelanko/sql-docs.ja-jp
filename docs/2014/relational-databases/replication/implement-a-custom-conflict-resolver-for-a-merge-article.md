@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23e684213114f3c9bb2f1ad56de06fcfc89b819a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049491"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールの実装
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] または [COM ベースのカスタム競合回避モジュール](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。  
+   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] または [COM ベースのカスタム競合回避モジュール](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -34,25 +33,25 @@ ms.locfileid: "62721232"
   
      [COM ベースの競合回避モジュール](#COM)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  各パブリッシャーで、固有のカスタム競合回避モジュールを [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャとして記述できます。 同期中に、このストアド プロシージャは、競合回避モジュールが登録されているアーティクル内で競合が発生した場合に呼び出されます。競合する行の情報は、マージ エージェントによってプロシージャの必須パラメーターに渡されます。 ストアド プロシージャ ベースのカスタム競合回避モジュールは、常にパブリッシャーで作成されます。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャ競合回避モジュールは、行の変更ベースの競合を処理するためにのみ呼び出されます。 このモジュールは、他の種類の競合 (PRIMARY KEY 違反による挿入の失敗や一意インデックス制約違反) の処理には使用できません。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアドプロシージャ競合回避モジュールは、行の変更に基づく競合を処理するためにのみ呼び出されます。 このモジュールは、他の種類の競合 (PRIMARY KEY 違反による挿入の失敗や一意インデックス制約違反) の処理には使用できません。  
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>ストアド プロシージャ ベースのカスタム競合回避モジュールを作成するには  
   
 1.  パブリッシャーのパブリケーションまたは **msdb** データベースで、次の必須パラメーターを実装する新しいシステム ストアド プロシージャを作成します。  
   
-    |パラメーター|データ型|説明|  
+    |パラメーター|データの種類|説明|  
     |---------------|---------------|-----------------|  
     |**@tableowner**|`sysname`|競合を解決する対象のテーブルの所有者名。 これは、パブリケーション データベース内のテーブルの所有者です。|  
     |**@tablename**|`sysname`|競合を解決する対象のテーブル名。|  
     |**@rowguid**|`uniqueidentifier`|競合している行の一意の識別子。|  
     |**@subscriber**|`sysname`|競合する変更の反映元であるサーバーの名前。|  
     |**@subscriber_db**|`sysname`|競合する変更の反映元であるデータベースの名前。|  
-    |**@log_conflict OUTPUT**|`int`|競合を後で解決できるように、マージ処理で競合をログに記録するかどうかを指定します。<br /><br /> **0** = 競合をログに記録しない。<br /><br /> **1** = サブスクライバーは競合で優先されない。<br /><br /> **2** = パブリッシャーは競合で優先されない。|  
-    |**@conflict_message OUTPUT**|`nvarchar(512)`|競合をログに記録する場合の解決に関するメッセージ。|  
+    |**@log_conflictOUTPUT**|`int`|競合を後で解決できるように、マージ処理で競合をログに記録するかどうかを指定します。<br /><br /> **0** = 競合をログに記録しない。<br /><br /> **1** = サブスクライバーは競合で優先されない。<br /><br /> **2** = パブリッシャーは競合で優先されない。|  
+    |**@conflict_messageOUTPUT**|`nvarchar(512)`|競合をログに記録する場合の解決に関するメッセージ。|  
     |**@destowner**|`sysname`|サブスクライバー側でパブリッシュされたテーブルの所有者。|  
   
      このストアド プロシージャは、マージ エージェントからパラメーターに渡された値を使用して、カスタム競合回避ロジックを実装します。このロジックでは、ベース テーブルと同じ構造を持ち、競合で優先されたバージョンの行のデータ値を含んでいる、単一行の結果セットを返す必要があります。  
@@ -61,16 +60,16 @@ ms.locfileid: "62721232"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>新しいテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
-1.  **@article_resolver** パラメーターに **MicrosoftSQL** **Server ストアド プロシージャ競合回避モジュール**の値を、 **@resolver_info** パラメーターに競合回避ロジックを実装するストアド プロシージャの名前を指定し、[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義します。 詳しくは、「 [Define an Article](publish/define-an-article.md)」をご覧ください。  
+1.  **** パラメーターに **MicrosoftSQL@article_resolver** **Server ストアド プロシージャ競合回避モジュール**の値を、**@resolver_info** パラメーターに競合回避ロジックを実装するストアド プロシージャの名前を指定し、[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>既存のテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
-1.  **@publication** と **@article** を指定し、 **@property** に **article_resolver** の値を、 **@value** に **MicrosoftSQL** **Server Stored ProcedureResolver** の値を指定して、[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。  
+1.  [Sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。を指定します。には article_resolver の値を指定し、には **@publication** **@article** **article_resolver** **@property** **microsoft Sql** **Server に格納され**ている ProcedureResolver の値を指定し **@value** ます。  
   
-2.  **@publication** と **@article** を指定し、 **@property** に **resolver_info** の値を、 **@value** に競合回避ロジックを実装するストアド プロシージャの名前を指定して、[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。  
+2.  [Sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。を指定し、に resolver_info を指定し、に **@publication** **@article** **resolver_info** **@property** 競合回避モジュールのロジックを実装するストアドプロシージャの名前を指定し **@value** ます。  
   
-##  <a name="COM"></a> COM ベースのカスタム競合回避モジュールの使用  
- <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間により実装されるインターフェイスを利用して、マージ レプリケーション同期処理で発生するイベントを処理し、競合を回避するための複雑なビジネス ロジックを作成できます。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。 また、ネイティブ コード ベースのカスタム ビジネス ロジックを独自に作成して、競合を回避することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ などの製品を使用して、このロジックを COM コンポーネントとしてビルドし、ダイナミック リンク ライブラリ (DLL) にコンパイルします。 このような COM ベースのカスタム競合回避モジュールには、競合回避のために用意されている専用の **ICustomResolver** インターフェイスを実装する必要があります。  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a>COM ベースのカスタム競合回避モジュールの使用  
+ <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間により実装されるインターフェイスを利用して、マージ レプリケーション同期処理で発生するイベントを処理し、競合を回避するための複雑なビジネス ロジックを作成できます。 詳細については、「[マージアーティクルのビジネスロジックハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。 また、ネイティブ コード ベースのカスタム ビジネス ロジックを独自に作成して、競合を回避することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ などの製品を使用して、このロジックを COM コンポーネントとしてビルドし、ダイナミック リンク ライブラリ (DLL) にコンパイルします。 このような COM ベースのカスタム競合回避モジュールは、競合解決のために特別に設計された**ICustomResolver**インターフェイスを実装する必要があります。  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>COM ベース カスタム競合回避モジュールを作成して登録するには  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62721232"
   
 8.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行し、そのライブラリがカスタム競合回避モジュールとしてまだ登録されていないことを確認します。  
   
-9. カスタム競合回避モジュールとしてライブラリを登録するには、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) を実行します。 COM オブジェクトのフレンドリ名を指定 **@article_resolver** のライブラリの ID (CLSID)  **@resolver_clsid** の値と`false`の **@is_dotnet_assembly** .  
+9. カスタム競合回避モジュールとしてライブラリを登録するには、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) を実行します。 に COM オブジェクトのフレンドリ名を、に **@article_resolver** ライブラリの ID (CLSID) を、に値を指定し **@resolver_clsid** `false` **@is_dotnet_assembly** ます。  
   
     > [!NOTE]  
     >  カスタム競合回避モジュールが不要になったら、[sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) を使用して登録を解除できます。  
@@ -108,24 +107,24 @@ ms.locfileid: "62721232"
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義します。 手順 1. で調べたアーティクル競合回避モジュールの表示名を **@article_resolver** を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義します。 手順 1. で説明したアーティクル競合回避モジュールの表示名をに指定し **@article_resolver** ます。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>既存のテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行し、 **@publication** 、 **@article** を指定し、 **@property** に **article_resolver** 値、 **@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
+2.  [Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を指定し、、、 **@publication** **@article** の**article_resolver**の値、 **@property** および手順 1. のアーティクル競合回避モジュールのフレンドリ名を指定して &#40;sp_changemergearticle を実行 **@value** します。  
   
 #### <a name="viewing-a-sample-custom-resolver"></a>サンプルのカスタム競合回避モジュールの表示  
   
-1.  SQL Server 2000 サンプル ファイルにサンプルが提供されています。 ダウンロード、 [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip)します。 これにより、6.9 MB に 3 つのファイルがダウンロードされます。  
+1.  SQL Server 2000 サンプル ファイルにサンプルが提供されています。 [**sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip)をダウンロードします。 これで、3つのファイルが 6.9 MB よっにダウンロードされます。  
   
 2.  ダウンロードされた圧縮済み .cab ファイルからファイルを抽出します。  
   
-3.  **setup.exe**を実行します。  
+3.  実行**setup.exe**  
   
     > [!NOTE]  
-    >  インストール オプションを選択する場合は、 **レプリケーション** サンプルをインストールするだけで済みます。 (既定のインストール パスは**C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\** )  
+    >  インストール オプションを選択する場合は、 **レプリケーション** サンプルをインストールするだけで済みます。 (既定のインストールパスは**C:\Program files (x86) \Microsoft SQL Server 2000 Samples\1033 \\ **)  
   
 4.  インストール フォルダーに移動します。 (既定のフォルダーは **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\unzip_sqlreplSP3.exe**)  
   
@@ -136,9 +135,9 @@ ms.locfileid: "62721232"
   
 6.  **subspres** フォルダーで、すべてのソース ファイルで **#include sqlres.h** を検出し、 **#import "replrec.dll" no_namespace, raw_interfaces_only**で置き換えます。  
   
-## <a name="see-also"></a>関連項目  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
+## <a name="see-also"></a>参照  
+ [マージレプリケーションの競合検出と解決の詳細](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [COM ベースのカスタム競合回避モジュール](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  
   
   

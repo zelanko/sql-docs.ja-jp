@@ -1,6 +1,6 @@
 ---
-title: フェールオーバー クラスター インスタンスのストレージ SMB の構成 - SQL Server on Linux
-description: ''
+title: SMB ストレージ FCI の構成 - SQL Server on Linux
+description: SQL Server on Linux 用の SMB ストレージを使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032325"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902356"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの構成 - SMB - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) の SMB ストレージを構成する方法について説明します。 
  
@@ -58,19 +58,19 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       sudo systemctl status mssql-server
       ```
       
-   1. 完全にスーパーユーザーに切り替えます。 成功した場合は、受信確認を受信しません。
+   1. 完全にスーパーユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       sudo -i
       ```
       
-   1. mssql ユーザーに切り替えます。 成功した場合は、受信確認を受信しません。
+   1. mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       su mssql
       ```
       
-   1. SQL Server のデータ ファイルとログ ファイルを格納するための一時ディレクトリを作成します。 成功した場合は、受信確認を受信しません。
+   1. SQL Server のデータ ファイルとログ ファイルを格納するための一時ディレクトリを作成します。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       mkdir <TempDir>
@@ -82,7 +82,7 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       mkdir /var/opt/mssql/tmp
       ```
       
-   1. SQL Server のデータ ファイルとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、受信確認を受信しません。
+   1. SQL Server のデータ ファイルとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       cp /var/opt/mssql/data/* <TempDir>
@@ -98,7 +98,7 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       
       \<TempDir> は、手順 d で作成したフォルダーの名前です。
       
-   1. 既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、受信確認を受信しません。
+   1. 既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       rm - f /var/opt/mssql/data/*
@@ -112,7 +112,7 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       
    1. 「exit」と入力して、ルート ユーザーに切り替えます。
       
-   1. SQL Server データフォルダーに SMB 共有をマウントします。 成功した場合は、受信確認を受信しません。 この例は、Windows Server ベースの SMB 3.0 共有に接続するための構文を示しています。
+   1. SQL Server データフォルダーに SMB 共有をマウントします。 成功した場合は、確認応答を何も受け取りません。 この例は、Windows Server ベースの SMB 3.0 共有に接続するための構文を示しています。
       
       ```bash
       Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
@@ -138,13 +138,13 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       mount
       ```
       
-   1. mssql ユーザーに切り替えます。 成功した場合は、受信確認を受信しません。
+   1. mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       su mssql
       ```
       
-   1. 一時ディレクトリ /var/opt/mssql/data からファイルをコピーします。 成功した場合は、受信確認を受信しません。
+   1. 一時ディレクトリ /var/opt/mssql/data からファイルをコピーします。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       cp /var/opt/mssql/tmp/* /var/opt/mssql/data
@@ -156,9 +156,9 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       ls /var/opt/mssql/data
       ```
       
-   1. mssql にならないように「exit」と入力してください 
+   1. 「exit」と入力して mssql を終了します 
       
-   1. ルートにならないように「exit」と入力してください
+   1. 「exit」と入力してルートを終了します
    
    1. SQL Server を起動します。 すべてが正しくコピーされ、セキュリティが正しく適用されている場合、SQL Server は起動済みと表示されます。
       
@@ -192,7 +192,7 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       
 5. ユーザー データベースやバックアップなどのシステム データベース以外のものについては、次の手順に従います。 既定の場所のみを使用する場合は、手順 14 に進みます。
    
-   1. スーパーユーザーになるように切り替えます。 成功した場合は、受信確認を受信しません。
+   1. スーパーユーザーになるように切り替えます。 成功した場合は、確認応答を何も受け取りません。
       
       ```bash
       sudo -i
@@ -210,7 +210,7 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
       mkdir /var/opt/mssql/userdata
       ```
       
-   1. SQL Server データフォルダーに SMB 共有をマウントします。 成功した場合は、受信確認を受信しません。 次の例は、Samba ベースの SMB 3.0 共有に接続するための構文を示しています。
+   1. SQL Server データフォルダーに SMB 共有をマウントします。 成功した場合は、確認応答を何も受け取りません。 次の例は、Samba ベースの SMB 3.0 共有に接続するための構文を示しています。
       
       ```bash
       Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
@@ -252,7 +252,7 @@ SMB を正常に使用するためのヒントと注意事項を次に示しま�
 
 これで、FCI を構成する準備が整いました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c88e14257630f74b168c89bc2cd8409763358f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113691"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297768"
 ---
 # <a name="tutorial-using-the-odata-source"></a>チュートリアル:OData ソースの使用
 
@@ -28,7 +28,7 @@ ms.locfileid: "68113691"
   
 1.  **SQL Server Data Tools** または [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+2.  **[ファイル]** をクリックし、 **[新規作成]** をポイントして、 **[プロジェクト]** をクリックします。  
   
 3.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]** 、 **[テンプレート]** 、 **[ビジネス インテリジェンス]** の順に展開し、 **[Integration Services]** をクリックします。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68113691"
   
 10. **[コレクション]** ドロップダウン リストで、 **[Employees]** を選択します。  
   
-11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、`$orderby=CompanyName&$top=100` のようになります。 このチュートリアルでは、「`$top=5`」と入力します。  
+11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、「 `$orderby=CompanyName&$top=100` 」のように入力します。 このチュートリアルでは、「`$top=5`」と入力します。  
   
 12. **[プレビュー]** をクリックして、データをプレビューします。  
   

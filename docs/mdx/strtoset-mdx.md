@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036790"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
 
-  MDX 形式の文字列によって指定されたセットを返します。  
+  多次元式 (MDX) 形式の文字列によって指定されたセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,17 +31,17 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  直接的または間接的にセットを指定する有効な文字列式です。  
   
-## <a name="remarks"></a>コメント  
- **StrToSet**関数は、文字列式で指定されたセットを返します。 **StrToSet**またはを返すセットの指定を外部関数から MDX ステートメントで MDX クエリがパラメーター化されたときに関数が通常使用のユーザー定義関数。  
+## <a name="remarks"></a>Remarks  
+ **StrToSet**関数は、文字列式で指定されたセットを返します。 通常、 **StrToSet**関数はユーザー定義関数と共に使用して、セットの指定を外部関数から mdx ステートメントに返すか、mdx クエリがパラメーター化されたときに使用します。  
   
--   修飾名または修飾されていないメンバー名または修飾名または修飾されていないメンバー名の中かっこで囲まれたを含む組のセットをセットの指定を含める必要があります、CONSTRAINED フラグを使用すると、{}します。 このフラグは、指定された文字列によるインジェクション攻撃のリスク軽減のために使用されます。 文字列が指定されている場合は、修飾名または修飾されていないに直接解決できないメンバー名は次のエラーが表示されます。"CONSTRAINED によって設定された制限 STRTOSET 関数でフラグに違反しました"。  
+-   制約付きフラグを使用する場合、セットの指定には、修飾または非修飾メンバー名、または中かっこ{}で囲まれた修飾メンバー名または非修飾メンバー名を含む組のセットを含める必要があります。 このフラグは、指定された文字列を使用してインジェクション攻撃のリスクを軽減するために使用されます。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列が指定されると、"STRTOSET 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
   
 -   CONSTRAINED フラグを使用しない場合、セットを返す有効な多次元式 (MDX) 式に解決されるセットの指定を指定できます。  
   
--   セットとメンバー間の違いを理解するには、セット式を使用して、メンバー式の使用を参照してください。  
+-   セットとメンバーの違いについて理解を深めるには、「Set 式の使用」および「メンバー式の使用」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して、State-province 属性階層のメンバーのセットを返します、 **StrToSet**関数。 有効な MDX セット式、セットの指定を提供します。  
+ 次の例では、 **StrToSet**関数を使用して州の属性階層のメンバーのセットを返します。 セットの指定には、有効な MDX セット式が用意されています。  
   
 ```  
 SELECT StrToSet ('[Geography].[State-Province].Members')  
@@ -50,7 +50,7 @@ FROM [Adventure Works]
   
 ```  
   
- 次の例では、CONSTRAINED フラグによってエラーを返します。 セットの指定には有効な MDX セット式が指定されていますが、CONSTRAINED フラグを使用する場合は、セットの指定に修飾されたメンバー名または修飾されていないメンバー名を含める必要があります。  
+ 次の例では、制約付きフラグによってエラーが返されます。 セットの指定には有効な MDX セット式が指定されていますが、CONSTRAINED フラグを使用する場合は、セットの指定に修飾されたメンバー名または修飾されていないメンバー名を含める必要があります。  
   
 ```  
 SELECT StrToSet ('[Geography].[State-Province].Members', CONSTRAINED)  
@@ -59,7 +59,7 @@ FROM [Adventure Works]
   
 ```  
   
- 次の例では、ドイツとカナダの国で、Reseller Sales Amount メジャーを返します。 指定した文字列で指定されたセットの指定には、CONSTRAINED フラグによって必要に応じて、修飾されたメンバー名が含まれています。  
+ 次の例では、ドイツおよびカナダの国の再販業者の Sales Amount メジャーを返します。 指定された文字列に指定されたセット指定には、制約付きフラグによって要求される修飾メンバー名が含まれています。  
   
 ```  
 SELECT StrToSet ('{[Geography].[Geography].[Country].[Germany],[Geography].[Geography].[Country].[Canada]}', CONSTRAINED)  
@@ -67,7 +67,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264730"
 ---
 # <a name="deploying-a-custom-assembly"></a>カスタム アセンブリの配置
-  カスタム アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に配置するには、レポート デザイナーとレポート サーバーの両方のアプリケーション フォルダーにアセンブリを入れます。 既定では、カスタム アセンブリには [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の `Execution` 権限が付与されます。 カスタム アセンブリに Execute アクセス許可よりも上位のアクセス許可を付与するには、レポート サーバーの rssrvpolicy.config 構成ファイルとレポート デザイナー プレビュー ウィンドウの rspreviewpolicy.config 構成ファイルを編集する必要があります。 または、グローバル アセンブリ キャッシュ (GAC) にカスタム アセンブリをインストールできます。  
+  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カスタムアセンブリを配置するには、レポートデザイナーとレポートサーバーの両方のアプリケーションフォルダーにアセンブリを配置します。 既定では、カスタム アセンブリには [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の `Execution` 権限が付与されます。 カスタム アセンブリに Execute アクセス許可よりも上位のアクセス許可を付与するには、レポート サーバーの rssrvpolicy.config 構成ファイルとレポート デザイナー プレビュー ウィンドウの rspreviewpolicy.config 構成ファイルを編集する必要があります。 または、グローバル アセンブリ キャッシュ (GAC) にカスタム アセンブリをインストールできます。  
   
 > [!NOTE]  
 >  レポート デザイナーには 2 種類のプレビュー モードがあります。1 つは [プレビュー] タブ。もう 1 つは、レポート プロジェクトを `DebugLocal` モードで開始したときに起動されるポップアップ プレビュー ウィンドウです。 [プレビュー] タブでは、`FullTrust` 権限セットを使用してすべてのレポート式を実行します。セキュリティ ポリシー設定は適用しません。 レポート サーバー機能のシミュレーションを目的としているプレビュー ウィンドウには、ポリシー構成ファイルが備わっています。レポート デザイナーでカスタム アセンブリを使用する場合、ユーザーまたは管理者はこの構成ファイルを変更する必要があります。 また、このポップアップ プレビュー ウィンドウでは、カスタム アセンブリがロックされます。 したがって、カスタム アセンブリ コードを変更または更新するには、プレビュー ウィンドウを閉じる必要があります。  
@@ -62,7 +62,7 @@ ms.locfileid: "63264730"
 ```  
   
 ## <a name="see-also"></a>参照  
- [レポートでのカスタム アセンブリの使用](using-custom-assemblies-with-reports.md)   
+ [レポートでのカスタムアセンブリの使用](using-custom-assemblies-with-reports.md)   
  [アセンブリとグローバル アセンブリ キャッシュの使用](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

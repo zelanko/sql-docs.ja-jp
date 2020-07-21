@@ -1,5 +1,5 @@
 ---
-title: パスのメタデータをデータ フロー パス エディターで表示 |Microsoft Docs
+title: データフローパスエディターでパスのメタデータを表示する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9832d212b49e743dcccb2e0aac62c9a218e82317
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054484"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419999"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>データ フロー パス エディターでパスのメタデータを表示する
   パスは、2 つのデータ フロー コンポーネントを連結します。 パスのメタデータを表示する場合、データ フローには、2 つ以上の連結されたデータ フロー コンポーネントをあらかじめ含めておく必要があります。 詳細については、「 [データ フローでコンポーネントを追加または削除する](data-flow/add-or-delete-a-component-in-a-data-flow.md) 」と「 [データ フロー内でコンポーネントを連結する](data-flow/connect-components-in-a-data-flow.md)」を参照してください。  
@@ -39,8 +38,8 @@ ms.locfileid: "66054484"
   
 7.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [Integration Services のパス](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>参照  
+ [Integration Services パス](data-flow/integration-services-paths.md)   
  [データ フロー](data-flow/data-flow.md)  
   
   

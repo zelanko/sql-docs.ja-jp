@@ -1,5 +1,6 @@
 ---
 title: Detail プロパティ | Microsoft Docs
+description: Reporting Services SoapException クラスの Detail プロパティについて説明します。具体的には、プロパティを定義する XML 要素について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991553"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215621"
 ---
 # <a name="detail-property"></a>Detail プロパティ
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティには、次の XML 構造があります。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** クラスの **Detail** プロパティの XML 構造は次のとおりです。  
   
 ## <a name="elements"></a>要素  
  **Detail**  
@@ -44,7 +45,7 @@ ms.locfileid: "62991553"
  製品の名前です。 既定値は **Microsoft SQL Server Reporting Services** です。  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx.00 のようになります。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン。 最大長は 15 文字です。 バージョン番号の形式は、8.00.0xxx. 00 です。  
   
  **ProductLocaleId**  
  アプリケーションの INTL DLL のロケール ID または言語 ID (0x41A など)。  

@@ -1,5 +1,5 @@
 ---
-title: SQLServerClob クラス |Microsoft Docs
+title: SQLServerClob クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1aea1cb4026096574e0fe3acfeb9ad4b7c123e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e09ad6c3021383fca9eb397e002f02ffe978a854
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67971820"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920400"
 ---
 # <a name="sqlserverclob-class"></a>SQLServerClob クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67971820"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  CLOB は、TEXT データ型または NTEXT データ型として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に格納されます。  
   
 ## <a name="see-also"></a>参照  

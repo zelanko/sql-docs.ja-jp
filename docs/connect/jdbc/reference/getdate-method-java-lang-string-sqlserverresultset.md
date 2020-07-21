@@ -1,5 +1,5 @@
 ---
-title: getDate メソッド (java. System.string) column |Microsoft Docs
+title: getDate (java.lang.String) メソッドの列 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c534c043de11d9123beaaa36f38c4bbd009012c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eac14323f765ff23a913ecf4f68d8a277ee66cee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983911"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922688"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public java.sql.Date getDate(java.lang.String columnName)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクトです。  
+ Date オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getDate メソッドは、java.sql.ResultSet インターフェイスの getDate メソッドで規定されています。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な日付部分が返されます。時刻部分は Java のベースラインの時刻である 00:00 (午前 0 時) に設定されます。  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36def4705f6b2be9d5e1828f920ae41a51477272
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108088"
 ---
 # <a name="pdf-device-information-settings"></a>PDF デバイス情報の設定
@@ -30,7 +30,7 @@ ms.locfileid: "66108088"
 |**DpiX**|出力デバイスの x 方向の解像度。|  
 |**DpiY**|出力デバイスの y 方向の解像度。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は `StartPage` の値です。|  
-|`HumanReadablePDF`|PDF を圧縮するかどうかを示します。圧縮することにより、ソースをより見やすくすることができます。 既定値は `false.`|  
+|`HumanReadablePDF`|PDF を圧縮するかどうかを示します。圧縮することにより、ソースをより見やすくすることができます。 既定値は `false.` です。|  
 |**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定はオーバーライドされます。|  
@@ -39,9 +39,9 @@ ms.locfileid: "66108088"
 |**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、8.5in)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |`StartPage`|表示するレポートの最初のページ。 値 `0` はすべてのページを表示することを示します。 既定値は `1` です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [表示拡張機能にデバイス情報設定を渡す](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [RSReportServer の表示拡張機能パラメーターをカスタマイズする](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [テクニカル リファレンス (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

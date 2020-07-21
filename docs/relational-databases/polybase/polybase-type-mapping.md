@@ -1,18 +1,19 @@
 ---
 title: PolyBase を使用した型マッピング | Microsoft Docs
+description: PolyBase 外部データ ソースと SQL Server 間のマッピングについては、次の表を参照してください。 Transact-SQL CREATE EXTERNAL TABLE を使用して外部テーブルを定義します。
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
-ms.openlocfilehash: 1c9797eb7020b4381d21e5324ab2a3b23bb14b29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: ''
+ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061965"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215748"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase を使用した型マッピング
 
@@ -31,29 +32,29 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 
 ## <a name="hadoop-type-mapping-reference"></a>Hadoop 型マッピング リファレンス
 
-| SQL データ型 | .NET データ型            | Hive データ型 | Hadoop と Java のデータ型 | コメント                       |
+| SQL データ型 | .NET データ型            | Hive データ型 | Hadoop と Java のデータ型 | 説明                       |
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
-| TINYINT       | Byte                      | TINYINT        | ByteWritable          | 符号なし数値の場合のみです。     |
-| SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
+| tinyint       | Byte                      | tinyint        | ByteWritable          | 符号なし数値の場合のみです。     |
+| smallint      | Int16                     | smallint       | ShortWritable         |
 | INT           | Int32                     | INT            | IntWritable           |
-| BIGINT        | Int64                     | BIGINT         | LongWritable          |
+| bigint        | Int64                     | bigint         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
-| FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Single                    | FLOAT          | FloatWritable         |
+| float         | Double                    | double         | DoubleWritable        |
+| real          | Single                    | float          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
-| SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
+| smallmoney    | Decimal                   | double         | DoubleWritable        |
+| nchar         | String<br /><br /> Char[] | string         | Varchar               |
+| nvarchar      | String<br /><br /> Char[] | string         | Varchar               |
 | char          | String<br /><br /> Char[] | string         | Varchar               |
 | varchar       | String<br /><br /> Char[] | string         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | Hive 0.8 以降に適用されます。 |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | Hive 0.8 以降に適用されます。 |
-| date          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
-| Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Hive0.11 以降が適用されます。 |
+| date          | DateTime                  | timestamp      | TimestampWritable     |
+| smalldatetime | DateTime                  | timestamp      | TimestampWritable     |
+| datetime2     | DateTime                  | timestamp      | TimestampWritable     |
+| DATETIME      | DateTime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
+| decimal       | Decimal                   | decimal        | BigDecimalWritable    | Hive0.11 以降が適用されます。 |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
@@ -62,11 +63,11 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 
 | Oracle データ型 | SQL Server の型 | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,13 +94,13 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 
 | BSON データ型     | SQL Server の型 |
 | ------------------ | --------------- |
-| Double             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | Binary Data        | nvarchar        |
 | Object ID          | nvarchar        |
 | Boolean            | bit             |
-| date               | Datetime2       |
-| 32-bit integer     | Int             |
+| Date               | Datetime2       |
+| 32-bit integer     | int             |
 | Timestamp          | nvarchar        |
 | 64-bit integer     | BigInt          |
 |Decimal 128         | Decimal         | 
@@ -119,7 +120,7 @@ MongoDB では、BSON ドキュメントを使用して、データ レコード
 
 | Teradata データ型 | SQL Server の型 | 
 | -------------      | -------------   |
-|INTEGER             |Int              |
+|INTEGER             |int              |
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
@@ -134,7 +135,7 @@ MongoDB では、BSON ドキュメントを使用して、データ レコード
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
+|DATE                |Date             |
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |
@@ -142,6 +143,6 @@ MongoDB では、BSON ドキュメントを使用して、データ レコード
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これを使用する方法について詳しくは、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) に関する Transact-SQL 参照記事をご覧ください。

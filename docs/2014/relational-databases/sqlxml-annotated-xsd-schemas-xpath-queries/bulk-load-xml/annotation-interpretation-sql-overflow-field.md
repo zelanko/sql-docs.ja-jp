@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft Docs
+title: 'sql: overflow フィールド (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 45f29994242d40bd91a05b68f7afc3dcc2a38384
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068204"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列は、スキーマ内で `sql:overflow-field` 注釈により指定します。 オーバーフロー列は複数指定することもできます。  
@@ -29,7 +28,7 @@ ms.locfileid: "66013470"
   
  XML 一括読み込みでは、オーバーフロー列へのデータの格納時に、`sql:overflow-field` が定義されている親要素の開始タグと終了タグも格納されます。  
   
- たとえば、次のスキーマについて説明します、 **\<顧客 >** と **\<CustOrder >** 要素。 これらの要素それぞれに、オーバーフロー列が指定されています。  
+ たとえば、次のスキーマでは、要素と要素が記述されて **\<Customers>** **\<CustOrder>** います。 これらの要素それぞれに、オーバーフロー列が指定されています。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,15 +72,15 @@ ms.locfileid: "66013470"
 </xsd:schema>  
 ```  
   
- スキーマで、 **\<顧客 >** 要素は Cust テーブルにマップし、 **\<順序 >** 要素は CustOrder テーブルにマップされます。  
+ スキーマでは、 **\<Customer>** 要素は Cust テーブルにマップされ、 **\<Order>** 要素は custorder テーブルにマップされます。  
   
- 両方の **\<顧客 >** と **\<順序 >** 要素は、オーバーフロー列を識別します。 したがって、XML 一括読み込みを保存します未使用のすべての子の要素と属性、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素と、未使用の子要素と、の属性をすべて **\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
+ 要素と要素は、どちらも **\<Customer>** **\<Order>** オーバーフロー列を識別します。 したがって、XML 一括読み込みでは、すべての未使用の子要素と要素の属性が、 **\<Customer>** Cust テーブルのオーバーフロー列と、 **\<Order>** custorder テーブルのオーバーフロー列にある要素のすべての未使用の子要素と属性に保存されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
 1.  この例のスキーマを SampleSchema.xml として保存します。  
   
-2.  これらのテーブルを作成します。  
+2.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Cust (  

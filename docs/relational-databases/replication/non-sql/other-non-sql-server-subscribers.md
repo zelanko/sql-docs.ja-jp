@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dce8d383ca01fd205645a18f7aa181d12cff4675
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7f6a8e580d89b9364d6c141dbacac8a405a0667
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110949"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892223"
 ---
 # <a name="other-non-sql-server-subscribers"></a>その他の SQL Server 以外のサブスクライバー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] がサポートしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーの一覧については、「[SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 ここでは、ODBC ドライバーと OLE DB プロバイダーの要件について説明します。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC ドライバーの要件  
@@ -60,7 +60,7 @@ ms.locfileid: "68110949"
   
 -   **IDBProperties**  
   
- プロバイダーが **IDBInfo** インターフェイスをサポートしている場合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこのインターフェイスを使用して、引用符で囲まれた識別子、SQL ステートメントの最大長、テーブル名と列名の最大文字数などの情報を取得します。  
+ プロバイダーが **IDBInfo** インターフェイスをサポートしている場合、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はこのインターフェイスを使用して、引用符で囲まれた識別子の文字、SQL ステートメントの最大長、テーブル名と列名の最大文字数などの情報を取得します。  
   
 ### <a name="session-object-interfaces"></a>Session オブジェクト インターフェイス  
  以下のインターフェイスが必要です。  
@@ -115,6 +115,6 @@ ms.locfileid: "68110949"
  OLE DB プロバイダーの詳細については、OLE DB プロバイダー付属のマニュアルを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+ [SQL Server 以外のサブスクライバー](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

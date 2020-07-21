@@ -1,5 +1,5 @@
 ---
-title: 名前付きコマンドにパラメーターを渡す |Microsoft Docs
+title: 名前付きコマンドへのパラメーターの引き渡し |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924690"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764773"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
-コマンドの結果がとして渡された場合と同様、*アウト*名前付きのコマンドでは、パラメーターの変数されているパラメーター化コマンドとして渡された*で*変数を名前付きコマンド。  
+コマンドの結果が名前付きコマンドの*out*変数として渡されるのと同じように、パラメーター化されたコマンドのパラメーターを *、変数と*して名前付きコマンドに渡すことができます。  
   
- 次のコード例を持つ顧客が配置のすべての注文の取得を試みます**CustomerID** "ALKFI"は、Northwind データベースからです。 値**CustomerID**は名前付きコマンドを呼び出すときに時間時に指定します。  
+ 次のコード例では、 **CustomerID**が Northwind データベースの "ALKFI" である顧客によって配置されたすべての注文を取得しようとしています。 **CustomerID**の値は、名前付きコマンドが呼び出された時点で指定されます。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,21 +76,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 任意の出力変数の前に指定する必要がありますすべての入力パラメーターやパラメーターのデータ型と一致する必要がありますでの対応するフィールドに変換できるいることに注意してください。 次のステートメント-  
+ すべての入力パラメーターが出力変数の前にある必要があり、パラメーターのデータ型が一致しているか、対応するフィールドのデータ型に変換できることに注意してください。 次のステートメント  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -の必須の入力パラメーターであるため、一致しないデータ型のエラーが発生、**文字列**の種類のではありません、**整数**型。  
+ -必要な入力パラメーターが**整数**型ではなく**文字列**型であるため、データ型が一致しないというエラーが発生します。  
   
- 次の呼び出し-  
+ 次の呼び出し:  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -有効ですが、データベースにこのようなレコードが存在しないため、設定、空の結果になります。  
+ -は有効ですが、データベース内にそのようなレコードが存在しないため、空の結果セットが生成されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

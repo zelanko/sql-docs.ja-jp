@@ -1,5 +1,5 @@
 ---
-title: サブスクリプション ビュー形式 (マスター データ サービス) | Microsoft Docs
+title: サブスクリプション ビュー形式
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812320"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>サブスクリプション ビュー形式 (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   選択するエンティティまたは派生階層に基づいて、次の形式をサブスクリプション ビューで使用できます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68085613"
 |**派生レベル (派生階層ビュー)**|派生階層構造をレベル形式で含みます。|  
   
 ## <a name="see-also"></a>関連項目  
- [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [概要: データのエクスポート &#40;マスターデータサービス&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

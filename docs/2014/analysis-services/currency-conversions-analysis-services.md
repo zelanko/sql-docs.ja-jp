@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b60acaf4254112a53d905340c2750dd1e2e6e8f7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086553"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525997"
 ---
 # <a name="currency-conversions-analysis-services"></a>通貨換算 (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** 多次元のみ  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多次元式 (MDX) スクリプトによって実行される機能の組み合わせを使用して、複数の通貨をサポートしているキューブに通貨換算のサポートが提供されています。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66086553"
   
 |||||  
 |-|-|-|-|  
-|換算レートの方向|**多対一**|**[一対多]**|**[多対多]**|  
+|換算レートの方向|**多対一**|**[一対多]**|**多対多**|  
 |**n 個のピボット通貨対 1 つのサンプル通貨**|メジャーをピボット通貨に換算するには、換算するメジャーを現地の通貨の換算レート メジャーと掛け合わせます。|メジャーをレポートの通貨に換算するには、換算するメジャーをレポートの通貨の換算レート メジャーで割ります。|メジャーをピボット通貨に換算するには、換算するメジャーを現地の通貨の換算レート メジャーと掛け合わせ、メジャーをレポートの通貨に換算するには、換算するメジャーをレポートの通貨の換算レート メジャーで割ります。|  
 |**n 個のサンプル通貨対 1 つのピボット通貨**|メジャーをピボット通貨に換算するには、換算するメジャーを現地の通貨の換算レート メジャーで割ります。|メジャーをレポートの通貨に換算するには、換算するメジャーをレポートの通貨の換算レート メジャーと掛け合わせます。|メジャーをピボット通貨に換算するには、換算するメジャーを現地の通貨の換算レート メジャーで割り、メジャーをレポートの通貨に換算するには、換算するメジャーをレポートの通貨の換算レート メジャーと掛け合わせます。|  
   
@@ -137,7 +136,7 @@ ms.locfileid: "66086553"
   
      たとえば、ピボット通貨を米国ドル (USD) に設定し、トランザクションをユーロ (EUR)、豪ドル (AUD)、およびメキシコ ペソ (MXN) でファクト テーブルに格納するように設定できます。 この種類の換算では、これらのトランザクションは、指定されている現地の通貨から、ピボット通貨に換算されます。 その結果、トランザクションは、指定されている現地の通貨で格納でき、通貨換算用に定義されているレポートの通貨ディメンションに指定されている、ピボット通貨で表示できます。  
   
--   **[多対多]**  
+-   **多対多**  
   
      トランザクションは現地の通貨でファクト テーブルに格納されます。 このようなトランザクションは、通貨換算機能によって、ピボット通貨に換算され、その後 1 つまたは複数の他のレポートの通貨に換算されます。  
   
@@ -185,6 +184,6 @@ ms.locfileid: "66086553"
  通貨換算に含まれているスクリプト コマンドは、必要に応じて変更できます。 ただし、通貨換算を上書きした場合、変更は失われます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services 多次元のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ [Analysis Services 多次元のグローバル化のシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

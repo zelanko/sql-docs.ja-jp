@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d59fa2ed197a410de6b68e388e76d2bf21c334d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994660"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーの設定 (Visual Database Tools)
   データベース ダイアグラム デザイナーを使用するには、 **db_owner** ロールのメンバーによって、ダイアグラムへのアクセスを制御するようにあらかじめ設定しておく必要があります。  
@@ -58,8 +57,8 @@ ms.locfileid: "63067621"
     9. sp_upgraddiagrams ストアド プロシージャ  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムの所有権について&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [データベース ダイアグラムの以前のエディション アップグレード&#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [Visual Database Tools &#40;データベースダイアグラムの所有権について&#41;](visual-database-tools.md)   
+ [以前のエディションのデータベースダイアグラムをアップグレードする &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

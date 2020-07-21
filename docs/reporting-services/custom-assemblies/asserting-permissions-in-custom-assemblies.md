@@ -1,5 +1,6 @@
 ---
 title: カスタム アセンブリでのアクセス許可のアサート | Microsoft Docs
+description: セキュリティ システム内で保護されたリソースを安全に呼び出すカスタム アセンブリを実装できるように、アクセス許可をアサートする方法について説明します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194324"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217062"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>カスタム アセンブリでの権限のアサート
   既定では、カスタム アセンブリ コードは、限定された **Execution** アクセス許可セットに基づいて実行されます。 ただし、場合によっては、(ファイルやレジストリなど) セキュリティ システムで保護されたリソースを安全に呼び出すカスタム アセンブリを実装する必要が生じる場合もあります。 そのためには、次の操作を実行する必要があります。  

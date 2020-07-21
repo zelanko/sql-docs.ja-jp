@@ -10,22 +10,21 @@ helpviewer_keywords:
 - FOR XML clause, formatting
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 707c1389f1a1a97d904617ebb54cbf5c5495a9d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065701"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>サーバー側の XML 書式設定 (SQLXML 4.0)
   ここでは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに対するクエリを実行して生成される行セットを基に、サーバー側で XML ドキュメントを書式設定する場合の情報をまとめます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベース テーブルに XML ドキュメントを格納したり、データベース テーブルから XML ドキュメントを取得することができます。 XML ドキュメントを取得するには、SELECT クエリで FOR XML クエリ拡張を使用します。  
   
- たとえば、クライアント アプリケーションに対してコマンドを実行する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]次で構成される[!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ。  
+ たとえば、クライアントアプリケーションが、次のクエリで構成されるに対してコマンドを実行するとし [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] ます。  
   
 ```  
 SELECT FirstName, LastName  
@@ -50,11 +49,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- FOR XML 句の詳細については、次を参照してください。 [For を使用して XML](../../xml/for-xml-sql-server.md)します。  
+ FOR XML 句の詳細については、「 [for Xml を使用した xml の構築](../../xml/for-xml-sql-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [クライアント側とサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [クライアント側の XML 書式設定&#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
+ [クライアント側およびサーバー側の XML 書式設定のアーキテクチャ &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [クライアント側の XML 書式設定 &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  
   
   

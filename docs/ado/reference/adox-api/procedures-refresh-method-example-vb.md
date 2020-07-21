@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 162e6739a61b52922998a61c019225ef0f8d5216
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965375"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748601"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh メソッドの例 (VB)
-次のコードを更新する方法を示しています、[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)のコレクションを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。 これは、前に必要[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトから、**カタログ**アクセスできます。  
+次のコードは、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクションを更新する方法を示しています。 これは、**カタログ**からの[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトにアクセスする前に必要です。  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -54,7 +54,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -1,6 +1,6 @@
 ---
-title: エディターの構成 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: エディターの構成 (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfc2f81c95b25397da77aa046ba80edeecaaa7a7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256458"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253960"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>エディターの構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68256458"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |エクスプローラーで、指定された拡張子を持つファイルをダブルクリックしたときに開かれるエディターを指定する方法について説明します。|[ファイル拡張子をコード エディターに関連付ける方法](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|コードおよびテキストを読みやすくするためにフォントをカスタマイズする方法について説明します。|[フォントの色、サイズ、およびスタイルを変更する方法](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
+|コードおよびテキストを読みやすくするためにフォントをカスタマイズする方法について説明します。|[フォントの色、サイズ、スタイルを変更する方法](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
 |プロパティの表示方法について説明します。|[Management Studio の [プロパティ] ウィンドウの使用](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
 |エディター オプション ダイアログの F1 ヘルプ ページの場所です。|[[クエリ オプション] ページの F1 ヘルプ](https://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   

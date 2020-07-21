@@ -1,5 +1,5 @@
 ---
-title: ヘッダー ファイル |Microsoft Docs
+title: ヘッダーファイル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139029"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300192"
 ---
 # <a name="header-files"></a>ヘッダー ファイル
-Sql.h ヘッダー ファイルには、主要な ODBC インターフェイスへの準拠レベルの機能のプロトタイプが含まれています。 Sqlext.h ヘッダー ファイルには、レベル 1 およびレベル 2 API の適合性レベルで機能のプロトタイプが含まれています。 Sqltypes.h ヘッダー ファイルには、型の定義と、SQL データ型のインジケーターが含まれています。  
+Sql .h ヘッダーファイルには、コア ODBC インターフェイス準拠レベルの関数と機能のプロトタイプが含まれています。 Sqlext .h ヘッダーファイルには、レベル1およびレベル2の API 準拠レベルの関数と機能のプロトタイプが含まれています。 Sqltypes ヘッダーファイルには、SQL データ型の型定義とインジケーターが含まれています。  
   
- すべてを含むヘッダー ファイル、 **#define**ODBCVER、アプリケーション、ドライバーは ODBC のさまざまなバージョン用にコンパイルするのに設定できます。  
+ ヘッダーファイルにはすべて、アプリケーションまたはドライバーがさまざまなバージョンの ODBC 用にコンパイルされるように設定できる **#define**odbcver が含まれています。  
   
- ヘッダー ファイルには開いてグループ CLI と ISO CLI でアラインするにはへの呼び出しで使用される情報の種類のエイリアスが含まれて**SQLGetInfo**します。 次の表には、「ODBC 名」列はで情報の種類を ODBC の名前を示します。 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)します。 列「ヘッダー ファイル内の別名」では、ISO CLI と開いているグループ CLI で使用される名前を示します。 これらのマニフェスト名の実際の数値は、ODBC と標準の Cli の両方で同じです。 これらの別名には、ODBC を使用してコンパイルするには、標準に準拠したアプリケーションまたはドライバーが有効にする*3.x*ヘッダー ファイル。  
+ ISO CLI を使用してグループ CLI を開くと、ヘッダーファイルには**SQLGetInfo**の呼び出しで使用される情報の種類のエイリアスが含まれます。 次の表では、"ODBC name" 列は[ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)の情報の種類の odbc 名を示しています。 列 "ヘッダーファイル内の別名" は、ISO CLI および Open Group CLI で使用される名前を示します。 これらのマニフェスト名の実際の数値は、ODBC と標準 Cli の両方で同じです。 これらのエイリアスを使用すると、標準に準拠しているアプリケーションまたはドライバーが ODBC *3. x*ヘッダーファイルでコンパイルできるようになります。  
   
- これらの別名には、名前がわかりやすくなるように、ODBC 名での省略形の拡張が含まれます。 "OUTER_JOIN"に"MULTIPLE"、"OJ"を「トランザクションです」に「トランザクション」に、"MAX"を"MAXIMUM"、"LEN"に"LENGTH"、"MULT"に拡張します。  
+ これらのエイリアスには、名前がわかりやすくなるように、ODBC 名の省略形が含まれています。 "MAX" は "MAXIMUM"、"LEN" から "LENGTH"、"MULT" から "MULTIPLE"、"OJ"、"OUTER_JOIN" に、"TXN" を "TRANSACTION" に展開します。  
   
-|ODBC の名前|ヘッダー ファイル内の別名|  
+|ODBC 名|ヘッダーファイル内の別名|  
 |---------------|--------------------------|  
 |SQL_MAX_CATALOG_NAME_LEN|SQL_MAXIMUM_CATALOG_NAME_LENGTH|  
 |SQL_MAX_COLUMN_NAME_LEN|SQL_MAXIMUM_COLUMN_NAME_LENGTH|  

@@ -1,6 +1,7 @@
 ---
-title: Microsoft レプリケーション競合表示モジュール (トランザクション レプリケーション) | Microsoft Docs
-ms.custom: ''
+title: レプリケーション競合表示モジュール (ピアツーピア)
+description: レプリケーション競合表示モジュールとそれを使用し、ピアツーピア トランザクション レプリケーションおよびキュー更新サブスクリプションを使用するトランザクション レプリケーションでの競合を表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,15 +14,15 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 35138719e779da2301ab635e29e9adcaacf2fdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722018"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft レプリケーション競合表示モジュール (トランザクション レプリケーション)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="replication-conflict-viewer-transactional-replication"></a>レプリケーション競合表示モジュール (トランザクション レプリケーション)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   レプリケーション競合表示モジュールを使用すると、ピア ツー ピア トランザクション レプリケーション、およびキュー更新サブスクリプションを使用するトランザクション レプリケーションの同期中に発生した競合を表示できます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
   
 > [!NOTE]  
@@ -38,7 +39,7 @@ ms.locfileid: "68770579"
  **パブリケーション**  
  競合があるテーブルを含むパブリケーションを選択します。  
   
- **テーブル**  
+ **Table**  
  競合を含むテーブルを選択します。  
   
  **[フィルターの定義]**  
@@ -53,7 +54,7 @@ ms.locfileid: "68770579"
  **[すべて選択解除]**  
  グリッドに一覧表示されたすべての競合の選択を解除します。  
   
- **[削除]**  
+ **Remove**  
  選択された競合をビューアーから削除し、関連するメタデータをレプリケーション システム テーブルから削除します。  
   
  **[すべての列を表示]**  
@@ -63,7 +64,7 @@ ms.locfileid: "68770579"
  最初の 5 列および競合データが含まれている列を表示します。 これは、テーブルに多数の列があり、競合を解決するのに最も関連する列のみを表示する場合に便利です。 主キーや名前フィールドなど、行を識別するフィールドはテーブルの最初の列にある場合が多いため、このビューでは最初の 5 列が必ず表示されます。  
   
  **列情報の表示** ( **[...]** )  
- 列情報を表示するには、次の順にクリックします。 **[テーブル名]** 、 **[列名]** 、 **[データ型]** 、 **[列の値]** 。  
+ 列の情報である **[テーブル名]** 、 **[列名]** 、 **[データ型]** 、および **[列の値]** を表示します。  
   
  **[競合の詳細をログに記録]**  
  このボックスをオンにすると、競合の詳細がファイルに記録されます。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、参照ボタン ( **[...]** ) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  

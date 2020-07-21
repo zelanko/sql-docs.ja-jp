@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5747704601e5e325624c79ce853526e36f6cbe1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919123"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765603"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete メソッド (ADO Recordset)
 現在のレコードまたはレコードのグループを削除します。  
@@ -35,31 +35,31 @@ recordset.Delete AffectRecords
   
 #### <a name="parameters"></a>パラメーター  
  *AffectRecords*  
- [AffectEnum](../../../ado/reference/ado-api/affectenum.md)レコードの数を決定する値、**削除**メソッドに影響されます。 既定値は**adAffectCurrent**します。  
+ **Delete**メソッドによって影響を受けるレコードの数を決定する[AffectEnum](../../../ado/reference/ado-api/affectenum.md)値。 既定値は [ **adて、現在**の値です。  
   
 > [!NOTE]
->  **adAffectAll**と**呼び出します**に有効な引数ではなく**削除**します。  
+>  **adAffectAll**と**AdAffectAllChapters**は、**削除**する有効な引数ではありません。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**削除**メソッドは、現在のレコードまたはレコードのグループを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを削除します。 場合、 **Recordset**オブジェクトは、レコードの削除を許可しないエラーが発生します。 即時更新モードの場合は、削除はすぐに、データベースで発生します。 呼び出しの後に、レコードが編集モードのままは場合 (たとえば、データベース整合性違反) のため、レコードを正常に削除することはできません、 [Update](../../../ado/reference/ado-api/update-method.md)します。 これで更新を取り消す必要があることを意味[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)現在のレコードから移動する前に (たとえば、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)、[移動](../../../ado/reference/ado-api/move-method-ado.md)、または[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  
+## <a name="remarks"></a>Remarks  
+ **Delete**メソッドを使用すると、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の現在のレコードまたはレコードのグループが削除対象としてマークされます。 レコード**セット**オブジェクトでレコードの削除が許可されていない場合、エラーが発生します。 即時更新モードの場合、削除はすぐにデータベースで発生します。 たとえば、データベースの整合性違反が原因でレコードを正常に削除できない場合、レコードは[更新](../../../ado/reference/ado-api/update-method.md)の呼び出し後も編集モードのままになります。 つまり、現在のレコードから移動する前に、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)で更新プログラムをキャンセルする必要があります (たとえば、 [Close](../../../ado/reference/ado-api/close-method-ado.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)など)。  
   
- バッチ更新モードの場合は、レコードがキャッシュからの削除とマークされてし、実際の削除の動作を呼び出すとき、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド。 使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを削除したレコードを表示します。  
+ バッチ更新モードの場合、レコードはキャッシュから削除対象としてマークされ、実際の削除は、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを呼び出したときに行われます。 削除されたレコードを表示するには、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用します。  
   
- 削除されたレコードからフィールドの値を取得するには、エラーが生成されます。 現在のレコードを削除すると、削除されたレコードを別のレコードに移動するまで最新の状態します。 移動すると、削除されたレコードはアクセスできません。  
+ 削除されたレコードからフィールド値を取得すると、エラーが発生します。 現在のレコードを削除すると、別のレコードに移動するまで、削除されたレコードは最新の状態のままになります。 削除されたレコードから移動すると、アクセスできなくなります。  
   
- トランザクションで、入れ子にする場合で削除されたレコードを回復することができます、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッド。 バッチ更新モードの場合は、保留中の削除または保留中の削除でのグループをキャンセルすることができます、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド。  
+ トランザクションで削除を入れ子にすると、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して削除されたレコードを復元できます。 バッチ更新モードの場合は、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドを使用して保留中の削除または保留中の削除のグループを取り消すことができます。  
   
- 基になるデータとの競合レコードを削除する試行が失敗した場合 (たとえば、レコードが別のユーザーが既に削除されている場合)、プロバイダーに警告を返し、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション プログラムは停止されませんが、実行します。 要求されたすべてのレコードの競合がある場合にのみ、実行時エラーが発生します。  
+ 基になるデータと競合しているためにレコードを削除しようとして失敗した場合 (たとえば、レコードが別のユーザーによって既に削除されている場合)、プロバイダは[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションに警告を返しますが、プログラムの実行を停止することはありません。 実行時エラーは、要求されたすべてのレコードに競合がある場合にのみ発生します。  
   
- 場合、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的プロパティを設定すると、および**レコード セット**は複数のテーブルに対して結合操作を実行した結果、**削除**メソッドは削除されるだけ指定したテーブルから行、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)プロパティ。  
+ [Unique table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的プロパティが設定されていて、**レコードセット**が複数のテーブルに対して結合操作を実行した結果である場合、 **Delete**メソッドでは、[一意のテーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)プロパティのという名前のテーブルからのみ行が削除されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Delete メソッドの例 (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Delete メソッドの例 (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
- [Delete メソッドの例 (vc++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
+ [Delete メソッドの例 (VC + +)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
  [Delete メソッド (ADO Fields コレクション)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DeleteRecord メソッド (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

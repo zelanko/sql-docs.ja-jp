@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergesubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6e2a01f60f982d3803fbad72cfbad6202b90315
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933873"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881814"
 ---
-# <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マージ パブリケーションのサブスクリプションおよびこれと関連するマージ エージェントを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージ パブリケーションのサブスクリプションおよびこれと関連するマージ エージェントを削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,43 +42,43 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は NULL です。 パブリケーションは既に存在し、識別子の規則に準拠している必要があります。  
+`[ @publication = ] 'publication'`パブリケーション名を指定します。 *publication*は**sysname**,、既定値は NULL です。 パブリケーションは既に存在し、識別子のルールに準拠している必要があります。  
   
-`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー* は **sysname** 、既定値は NULL です。  
+`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*の**sysname**,、既定値は NULL です。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *subscription_database*は**sysname**、既定値は NULL です。  
+`[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscription_database*は**sysname**,、既定値は NULL です。  
   
-`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類です。 *subscription_type*は**nvarchar (15)** 、これらの値のいずれかを指定できます。  
+`[ @subscription_type = ] 'subscription_type'`サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**all**|プッシュ、プル、および匿名サブスクリプション|  
-|**匿名**|匿名サブスクリプションです。|  
-|**push**|サブスクリプションをプッシュします。|  
-|**プル**|プル サブスクリプションです。|  
-|**どちらも**(既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
+|**すべての**|プッシュサブスクリプション、プルサブスクリプション、および匿名サブスクリプション|  
+|**非同期**|匿名サブスクリプションです。|  
+|**push**|プッシュサブスクリプション。|  
+|**だとすると**|プル サブスクリプションです。|  
+|**both** (既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
   
-`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターでクリーンアップ タスクを実行せずにサブスクリプションを削除する使用できます。 ディストリビューターを再インストールした場合にも便利です。  
+`[ @ignore_distributor = ] ignore_distributor`ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**,、既定値は**0**です。 このパラメーターを使用すると、ディストリビューターでクリーンアップタスクを実行せずに、サブスクリプションを削除できます。 また、ディストリビューターを再インストールする必要がある場合にも役立ちます。  
   
-`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み*は**ビット**、既定値は**0**します。  
+`[ @reserved = ] reserved`将来使用するために予約されています。 *予約済み*は**ビット**,、既定値は**0**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_dropmergesubscription**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_dropmergesubscription**は、マージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergesubscription**します。  
+ **Sp_dropmergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [プッシュ サブスクリプションを削除します。](../../relational-databases/replication/delete-a-push-subscription.md)   
- [プル サブスクリプションを削除します。](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
+ [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

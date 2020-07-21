@@ -1,5 +1,5 @@
 ---
-title: 定義、データ ソース ビュー (Analysis Services) |Microsoft Docs
+title: データソースビューの定義 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546944"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>データ ソース ビューの定義 (Analysis Services)
-  データ ソース ビューには、論理モデルで使用されるスキーマが含まれています。[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多次元データベース オブジェクトつまりキューブ、ディメンション、およびマイニング構造です。 データ ソース ビューとは、XML 形式で格納されている、統合ディメンショナル モデル (UDM) とマイニング構造で使用されるこれらのスキーマ要素のメタデータ定義です。 データ ソース ビューには、次の特徴があります。  
+  データソースビューには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多次元データベースオブジェクト (つまり、キューブ、ディメンション、およびマイニング構造) によって使用されるスキーマの論理モデルが含まれています。 データ ソース ビューとは、XML 形式で格納されている、統合ディメンショナル モデル (UDM) とマイニング構造で使用されるこれらのスキーマ要素のメタデータ定義です。 データ ソース ビューには、次の特徴があります。  
   
 -   スキーマ生成に関するトップダウン アプローチに従う場合は、基になる 1 つ以上のデータ ソースから選択したオブジェクトを表すメタデータ、または基になるリレーショナル データ ソースの生成に使用されるメタデータを格納します。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66075398"
   
  [セカンダリ データ ソースの追加](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a> データ ソース ビューの構成  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>データソースビューの構成  
  データ ソース ビューには、次の項目が含まれています。  
   
 -   名前と説明  
@@ -78,7 +77,7 @@ ms.locfileid: "66075398"
   
     -   テーブル、ビュー、および名前付きクエリ間の論理主キーと外部キーのリレーションシップ  
   
-##  <a name="bkmk_startWiz"></a> データ ソース ビュー ウィザードを使用した DSV の作成  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>データソースビューウィザードを使用して DSV を作成する  
  DSV を作成するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]内のソリューション エクスプローラーでデータ ソース ビュー ウィザードを実行します。  
   
 > [!NOTE]  
@@ -100,18 +99,18 @@ ms.locfileid: "66075398"
   
 4.  **使用できるオブジェクトのフィルター処理**  
   
-     [使用できるオブジェクト] ボックスの一覧に非常に多くのオブジェクトが含まれている場合、選択条件として文字列を指定する単純なフィルターを適用して一覧を絞り込むことができます。 たとえば、「 **dbo** 」と入力し、 **[フィルター]** ボタンをクリックすると、"dbo" で始まる項目のみが **[使用できるオブジェクト]** ボックスの一覧に表示されます。 フィルターは、(たとえば、"sal"を返します。 sales と給与) の部分の文字列を使用できますが、複数の文字列や演算子を含めることはできません。  
+     [使用できるオブジェクト] ボックスの一覧に非常に多くのオブジェクトが含まれている場合、選択条件として文字列を指定する単純なフィルターを適用して一覧を絞り込むことができます。 たとえば、「 **dbo** 」と入力し、 **[フィルター]** ボタンをクリックすると、"dbo" で始まる項目のみが **[使用できるオブジェクト]** ボックスの一覧に表示されます。 フィルターは、文字列の一部にすることができます (たとえば、"sal" は sales と salary を返します) が、複数の文字列や演算子を含めることはできません。  
   
 5.  テーブルのリレーションシップが設定されていないリレーショナル データ ソースの場合は、 **[名前の一致]** ページが表示され、名前を一致させる適切な方法を選択することができます。 詳細については、このトピックの「 [リレーションシップの名前一致条件の指定](#bkmk_NameMatch) 」セクションを参照してください。  
   
-##  <a name="bkmk_secondaryDS"></a> セカンダリ データ ソースの追加  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>セカンダリデータソースの追加  
  複数のデータ ソースに属するテーブル、ビュー、または列を含むデータ ソース ビューを定義するとき、データ ソース ビューに追加するオブジェクトの最初のデータ ソースはプライマリ データ ソースとして指定されます (定義後にプライマリ データ ソースを変更することはできません)。 1 つのデータ ソースのオブジェクトに基づいてデータ ソース ビューを定義した後に、他のデータ ソースのオブジェクトを追加することはできます。  
   
  OLAP 処理またはデータ マイニング クエリで、1 つのクエリに複数のデータ ソースのデータが必要な場合は、プライマリ データ ソースが `OpenRowset` を使用したリモート クエリをサポートしている必要があります。 通常、これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースになります。 たとえば、複数のデータ ソースの列にバインドされている属性を含む OLAP ディメンションを設計する場合は、処理中にこのディメンションを作成する `OpenRowset` クエリが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって作成されます。 ただし、OLAP オブジェクトを作成できるか、データ マイニング クエリが 1 つのデータ ソースから解決される場合、`OpenRowset` クエリは作成されません。 特定の状況では、属性間の属性リレーションシップを定義して、`OpenRowset` クエリを必要なくすることができます。 属性リレーションシップの詳細については、「 [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」、「 [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) 」、「 [属性リレーションシップの定義](attribute-relationships-define.md)内のソリューション エクスプローラーでデータ ソース ビュー ウィザードを実行します。  
   
  セカンダリ データ ソースからテーブルおよび列を追加するには、ソリューション エクスプローラーで DSV をダブルクリックしてデータ ソース ビュー デザイナーで開いた後、[テーブルの追加と削除] ダイアログ ボックスを使用して、プロジェクトで定義した他のデータ ソースからオブジェクトを追加します。 詳細については、「 [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)内のソリューション エクスプローラーでデータ ソース ビュー ウィザードを実行します。  
   
-##  <a name="bkmk_NameMatch"></a> リレーションシップの名前一致条件の指定  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>リレーションシップの名前一致条件の指定  
  DSV を作成すると、データ ソース内の外部キー制約に基づいて、テーブル間にリレーションシップが生成されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンで適切な OLAP 処理クエリおよびデータ マイニング クエリを構築するには、これらのリレーションシップが必要です。 ただし、複数のテーブルが含まれているデータ ソースには、外部キー制約がない場合があります。 データ ソースに外部キー制約がない場合は、異なるテーブルの列名を照合する方法を定義するように指示するプロンプトがデータ ソース ビュー ウィザードに表示されます。  
   
 > [!NOTE]  
@@ -123,22 +122,22 @@ ms.locfileid: "66075398"
 |----------------------------|-----------------|  
 |**[主キーと同一の名前]**|基になるテーブルの外部キー列名は、対象になるテーブルの主キー列名と同じです。 たとえば、外部キー列 `Order.CustomerID` は、主キー列 `Customer.CustomerID`と同じです。|  
 |**[対象のテーブル名と同一の名前]**|基になるテーブルの外部キー列名は、対象になるテーブルの名前と同じです。 たとえば、外部キー列 `Order.Customer` は、主キー列 `Customer.CustomerID`と同じです。|  
-|**一致先のテーブル名と主キー名の組み合わせ**|基になるテーブルの外部キー列名は、対象になるテーブル名と主キー列名を連結したものと同じです。 区切り記号としてスペースまたはアンダースコアを使用できます。 たとえば、次の外部キーと主キーのペアはすべて一致します。<br /><br /> `Order.CustomerID` 」、「 `Customer.ID`<br /><br /> `Order.Customer ID` 」、「 `Customer.ID`<br /><br /> `Order.Customer_ID` 」、「 `Customer.ID`|  
+|**一致先のテーブル名と主キー名の組み合わせ**|基になるテーブルの外部キー列名は、対象になるテーブル名と主キー列名を連結したものと同じです。 区切り記号としてスペースまたはアンダースコアを使用できます。 たとえば、次の外部キーと主キーのペアはすべて一致します。<br /><br /> `Order.CustomerID` および `Customer.ID`<br /><br /> `Order.Customer ID` および `Customer.ID`<br /><br /> `Order.Customer_ID` および `Customer.ID`|  
   
  選択した条件によって、DSV の **NameMatchingCriteria** プロパティの設定が変わります。 この設定によって、ウィザードによる関連テーブルの追加方法が決まります。 また、この設定では、データ ソース ビュー デザイナーを使用してデータ ソース ビューを変更するときに、列をどのように一致させて DSV のテーブル間にリレーションシップを作成するかも決定されます。 **NameMatchingCriteria** プロパティの設定は、データ ソース ビュー デザイナーで変更できます。 詳細については、「[データ ソース ビューのプロパティの変更 (Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
 > [!NOTE]  
->  データ ソース ビュー ウィザードを完了したら、データ ソース ビュー デザイナーのスキーマ ペインでリレーションシップを追加または削除できます。 詳細については、「[データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)」を参照してください。  
+>  データ ソース ビュー ウィザードを完了したら、データ ソース ビュー デザイナーのスキーマ ペインでリレーションシップを追加または削除できます。 詳細については、「[データ ソース ビューでの論理リレーションシップの定義 &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューでの論理主キーの定義 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューでの名前付きクエリの定義 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [データ ソース ビューでのデータの検索 (Analysis Services)](explore-data-in-a-data-source-view-analysis-services.md)   
- [データ ソース ビューの削除 (Analysis Services)](delete-a-data-source-view-analysis-services.md)   
+## <a name="see-also"></a>参照  
+ [データソースビューでのテーブルまたはビューの追加または削除 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
+ [データソースビューでの論理主キーの定義 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [データソースビューで名前付き計算を定義する &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [データソースビューでの名前付きクエリの定義 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [データソースビューのテーブルまたは名前付きクエリの置換 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [データソースビューデザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [データソースビューでのデータの探索 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [データソースビュー &#40;Analysis Services の削除&#41;](delete-a-data-source-view-analysis-services.md)   
  [データ ソース ビューでのスキーマの更新 (Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: rollback |Microsoft Docs'
+title: PDO::rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d37145856da6c4b3ff6def1620de443b20faebfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0f0d3760be13b157f7e711539c0be88bd9856d1d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936194"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919047"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>戻り値  
 メソッドの呼び出しに成功した場合は true、それ以外の場合は false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO::rollback は PDO::ATTR_AUTOCOMMIT の値によって影響を受けず、PDO::ATTR_AUTOCOMMIT の値に影響を与えません。  
   
 PDO::rollback を使用する例については、「 [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) 」を参照してください。  

@@ -1,22 +1,23 @@
 ---
 title: PolyBase のよく寄せられる質問 |Microsoft Docs
+description: PolyBase とリンク サーバーを比較して、ビッグ データ クラスターの PolyBase とスタンドアロン インスタンスの PolyBase を比較します。 PolyBase 2019 の新機能について説明します。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 49376b0a4fa95c673255420962d173903b84ca15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760445"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="polybase-vs-linked-servers"></a>PolyBase と リンク サーバー
 次の表に、PolyBase とリンク サーバーの機能の違いを示します。
@@ -54,13 +55,13 @@ ms.locfileid: "68062213"
 
 |機能 |ビッグ データ クラスター|スタンドアロン インスタンス|
 |--------------------------|--------------------------|---------|   
-|SQL Server、Oracle、Teradata、Mongo DB に対する外部データ ソースを作成する |×|× |
-|互換性のあるサードパーティ製 ODBC ドライバーを使用して外部データ ソースを作成する | | ×|
-|HADOOP データ ソースに対する外部データ ソースを作成する | ×| ×|
-|Azure Blob Storage に対する外部データ ソースを作成する | ×| ×|
-|SQL Server データ プールに外部テーブルを作成する | ×| |
-|SQL Server ストレージ プールに外部テーブルを作成する | ×| |
-|クエリの実行をスケールアウトする | ×| ×|
+|SQL Server、Oracle、Teradata、Mongo DB に対する外部データ ソースを作成する |X|X |
+|互換性のあるサードパーティ製 ODBC ドライバーを使用して外部データ ソースを作成する | | X|
+|HADOOP データ ソースに対する外部データ ソースを作成する | X| X|
+|Azure Blob Storage に対する外部データ ソースを作成する | X| X|
+|SQL Server データ プールに外部テーブルを作成する | X| |
+|SQL Server ストレージ プールに外部テーブルを作成する | X| |
+|クエリの実行をスケールアウトする | X| X|
 
 > [!NOTE]
 >この表では、最新の [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP で利用できる機能については説明されていません。 使用可能な機能については、リリース ノートをご覧ください。 ODBC ジェネリック コネクタを使用した接続の詳細については、[ODBC ジェネリック型を構成するためのハウツー ガイド](polybase-configure-odbc-generic.md)の記事をご覧ください。

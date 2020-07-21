@@ -1,5 +1,5 @@
 ---
-title: ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: ロジスティック回帰モデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3232e4344b94e0b812df72ddebdc9a8d389d9f05
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083621"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521368"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>ロジスティック回帰モデルの構造について  
  ロジスティック回帰モデルは、Microsoft ニューラル ネットワーク アルゴリズムで、非表示ノードを取り除くようモデルを制約するパラメーターを使用して作成されます。 そのため、ロジスティック回帰モデルの全体的な構造は、ニューラル ネットワークの全体的な構造とほぼ同じです。各モデルには、モデルとそのメタデータを表す 1 つの親ノードと、モデルで使用される入力に関する説明的な統計情報を提供する特殊なマージナル統計ノード (NODE_TYPE = 24) があります。  
@@ -51,18 +50,18 @@ ms.locfileid: "66083621"
  ATTRIBUTE_NAME  
  このノードに対応する属性の名前。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|出力属性名|  
   
  NODE_NAME  
- ノードの名前。 現在、この列には NODE_UNIQUE_NAME と同じ値が格納されていますが、将来のリリースで変更される可能性があります。  
+ ノード名。 現在、この列には NODE_UNIQUE_NAME と同じ値が格納されていますが、将来のリリースで変更される可能性があります。  
   
  NODE_UNIQUE_NAME  
  ノードの一意の名前。  
@@ -89,7 +88,7 @@ ms.locfileid: "66083621"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|子ノードの数を示します。1 つ以上のネットワーク、1 つの必須マージナル ノード、および 1 つの必須入力層が含まれます。 たとえば、値が 5 の場合はサブネットワークが 3 つあります。|  
 |マージナル統計|常に 0 です。|  
@@ -107,27 +106,27 @@ ms.locfileid: "66083621"
  NODE_DESCRIPTION  
  ノードについてのわかりやすい説明。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
   
  NODE_RULE  
  ノードに埋め込まれたルールの XML による記述。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|NODE_DESCRIPTION 列と同じ情報が含まれている XML フラグメント。|  
   
  MARGINAL_RULE  
@@ -151,14 +150,14 @@ ms.locfileid: "66083621"
  特定の値に対するトレーニング ケースでのサポートについて情報を得るには、マージナル統計ノードを参照してください。  
   
  MSOLAP_MODEL_COLUMN  
- |ノード|コンテンツ|  
+ |Node|コンテンツ|  
 |----------|-------------|  
-|モデル ルート|空白|  
-|マージナル統計|空白|  
-|入力層|空白|  
+|モデル ルート|新規|  
+|マージナル統計|新規|  
+|入力層|新規|  
 |入力ノード|入力属性名。|  
-|hidden layer|空白|  
-|出力層|空白|  
+|hidden layer|新規|  
+|出力層|新規|  
 |出力ノード|入力属性名。|  
   
  MSOLAP_NODE_SCORE  
@@ -167,7 +166,7 @@ ms.locfileid: "66083621"
  MSOLAP_NODE_SHORT_CAPTION  
  ロジスティック回帰モデルでは常に空白です。  
   
-##  <a name="bkmk_NodeIDs"></a> ノードの名前と ID の使用  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>ノード名と Id の使用  
  ロジスティック回帰モデルのノードの名前付けでは、モデル内のノード間のリレーションシップに関する追加情報が提供されます。 次の表に、各層のノードに割り当てられる ID の規則を示します。  
   
 |ノードの種類|ノード ID の規則|  
@@ -185,7 +184,7 @@ ms.locfileid: "66083621"
   
 ## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](microsoft-logistic-regression-algorithm.md)   
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラルネットワークモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

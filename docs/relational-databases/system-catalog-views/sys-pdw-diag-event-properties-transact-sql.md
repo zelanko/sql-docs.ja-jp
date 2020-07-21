@@ -1,10 +1,10 @@
 ---
-title: sys.pdw_diag_event_properties (TRANSACT-SQL) |Microsoft Docs
+title: pdw_diag_event_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,24 +12,24 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc14e2f03deb833d18a0d68be05deefe69842cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9cdd74a5044603b869b38dc1c8b94e2c1049be7f
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915000"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627539"
 ---
-# <a name="syspdwdiageventproperties-transact-sql"></a>sys.pdw_diag_event_properties (TRANSACT-SQL)
+# <a name="syspdw_diag_event_properties-transact-sql"></a>pdw_diag_event_properties (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  プロパティに関する診断イベントに関連付けられた情報を保持します。  
+  診断イベントに関連付けられているプロパティに関する情報を保持します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|**event_name**|**nvarchar (255)**|特定の診断イベントの名前。||  
-|**property_name**|**nvarchar (255)**|イベントのプロパティの名前です。||  
+|**event_name**|**nvarchar(255)**|特定の診断イベントの名前。||  
+|**property_name**|**nvarchar(255)**|イベントのプロパティの名前。||  
   
-## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>参照  
+ [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

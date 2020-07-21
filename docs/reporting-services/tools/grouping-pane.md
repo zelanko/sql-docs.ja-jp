@@ -14,10 +14,10 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892552"
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
@@ -49,7 +49,7 @@ ms.locfileid: "68892552"
 ## <a name="advanced-mode"></a>詳細設定モード  
 詳細設定モードでは、グループのすべての静的メンバーと動的メンバーを表示できます。 メンバーを選択すると、現在選択されている **Tablix メンバー**のプロパティが [プロパティ] ウィンドウに表示されます。  
   
-![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]** をクリックします。  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png)**詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]** をクリックします。  
   
 ほとんどの場合、静的および動的グループ行とグループ列の表示を制御するプロパティは、グループの作成時または合計の追加時に自動設定されます。 
 
@@ -67,7 +67,7 @@ ms.locfileid: "68892552"
   
 -   **Hidden**。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
--   **ToggleItem。** 文字列です。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
+-   **ToggleItem。** 文字列 をオンにします。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   
  Tablix データ領域でのこれらの動作を制御する方法の詳細については、「[レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9abf6ef954a493d4386d46b9d113348a9cb91e1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc83ba06b9cf5efdf90253a1987140ac9877d8a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641445"
 ---
-# <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>詳細  
   
@@ -27,7 +27,7 @@ ms.locfileid: "68011127"
 |イベント ID|278|  
 |イベント ソース|SQL Server Local Database Runtime 12.0|  
 |コンポーネント|Local Database Runtime API|  
-|メッセージ テキスト|注:メッセージ テキストが空の場合このメッセージが全体を意味するため (HRESULTS をメッセージ テキストにマップする FormatMessage 関数を含む)、LocalDB API をご利用いただけません。|  
+|メッセージ テキスト|注: このメッセージは LocalDB API 全体 (HRESULT をメッセージテキストにマップする FormatMessage 関数を含む) が使用できないことを意味するため、メッセージテキストは空です。|  
   
 ## <a name="explanation"></a>説明  
  Local Database Runtime は、コンピューターにインストールされていません。  

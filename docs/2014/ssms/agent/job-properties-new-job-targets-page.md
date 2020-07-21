@@ -1,5 +1,5 @@
 ---
-title: ジョブのプロパティ:新しいジョブ (ターゲット ページ) |Microsoft Docs
+title: 'ジョブのプロパティ: [新しいジョブ] ([ターゲット] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7da2e71078badde3bb0bbd1bab0ecc64e3bf875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62695438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062218"
 ---
 # <a name="job-properties-new-job-targets-page"></a>[ジョブのプロパティ]:[新しいジョブ] ([対象サーバー] ページ)
   このページを使用すると、ジョブのターゲット サーバーを管理できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ローカル サーバーを対象とする]**  
  ローカル サーバー上でジョブを実行します。 ターゲット サーバーがリストされていない場合は、これが唯一利用できるオプションです。  
   

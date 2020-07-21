@@ -1,6 +1,6 @@
 ---
-title: OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート | Microsoft Docs
-ms.custom: ''
+title: OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート
+description: SQL Server の OPENROWSET 一括行セット プロバイダーを使用すると、ラージ オブジェクト データとして一括インポートすることができます。 サポートされている型は、varbinary(max)、varchar(max)、nvarchar(max) です。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c567cfbe90cad610655deae600f986a73c50d80d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3c998b1efeb6fff7726161ffb02e240e8a8847f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640703"
 ---
-# <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider-sql-server"></a>OPENROWSET 一括行セット プロバイダーを使用したラージ オブジェクト データの一括インポート (SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET 一括行セット プロバイダーを使用すると、データ ファイルをラージ オブジェクト データとして一括インポートすることができます。  
   

@@ -1,6 +1,8 @@
 ---
-title: cancel オプション (分散再生管理ツール) | Microsoft Docs
-ms.custom: ''
+title: cancel オプション管理ツール
+titleSuffix: SQL Server Distributed Replay
+description: この記事では、SQL Server 分散再生管理ツールの cancel コマンドライン オプションと構文について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,16 +12,18 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dd320b55b81a515bcd42e0e971b0c9cc6e98b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 41d76a8b87e6aa0bc46c5199c2843cce89f7cdac
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942852"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152117"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>cancel オプション (Distributed Replay 管理ツール)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe** は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **cancel** コマンド ライン オプションとそれに対応する構文について説明します。  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生管理ツールである **DReplay.exe** は、分散再生コントローラーと通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **cancel** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **cancel** オプションは、コントローラーで実行されている現在の操作をキャンセルします。  
   
@@ -43,7 +47,7 @@ dreplay cancel [-m controller] [-q]
   
  **-q** パラメーターは省略可能です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、非表示モードでキャンセル要求が送信されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。  
   
 ```  

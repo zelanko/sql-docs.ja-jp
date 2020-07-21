@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b446c3300b2c8a440a092084f01c55105c9be95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068664"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての COM ベースの競合回避モジュールでは、更新の競合が処理され、指定した場所で挿入および削除の競合が処理されます。 すべての競合回避モジュールで列追跡処理が可能です。また、ほとんどのモジュールで行追跡処理を行うこともできます。 この競合回避モジュール、および他の COM ベースの競合回避モジュールで処理可能な競合の種類が宣言され、それ以外の競合に対してはマージ  エージェントで既定の競合回避モジュールが使用されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "63240210"
   
  次の表は、特定の競合回避モジュールの属性を示しています。  
   
-|名前|必要な入力|説明|コメント|  
+|Name|必要な入力|説明|説明|  
 |----------|--------------------|-----------------|--------------|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 追加競合回避モジュール|合計する列の名前。 **int**、 **smallint**、 **numeric**などの算術データ型である必要があります。|優先される競合データは優先度値によって決まります。 指定された列の値は、変換元の列の値と変換先の列の値を合計した値に設定されます。 1 つを NULL に設定した場合、他の列の値に設定されます。|更新の競合を対象とし、列追跡のみを行います。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平均競合回避モジュール|平均をとる列の名前。 **int**、 **smallint**、 **numeric**などの算術データ型である必要があります。|優先される競合データは優先度値によって決まります。 結果の列の値は、変換元の列の値と変換先の列の値の平均値に設定されます。 1 つを NULL に設定した場合、他の列の値に設定されます。|更新の競合を対象とし、列追跡のみを行います。|  
@@ -44,7 +43,7 @@ ms.locfileid: "63240210"
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ダウンロード専用競合回避モジュール|入力なし。|パブリッシャーにアップロードされた変更は拒否されます。変更はサブスクライバーにダウンロードされます。|全種類の競合を対象とします。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLServer ストアド プロシージャ競合回避モジュール|競合を処理するために競合回避モジュールが呼び出すストアド プロシージャの名前。|競合の回避は、指定したストアド プロシージャのロジックに依存します。|更新の競合を対象とします。 詳細については、「[Implement a Custom Conflict Resolver for a Merge Article](../implement-a-custom-conflict-resolver-for-a-merge-article.md)」 (マージ アーティクルのカスタム競合回避モジュールの実装) を参照してください。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)  
   

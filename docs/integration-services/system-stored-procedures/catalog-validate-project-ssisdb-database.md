@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5361b1a179f5c8c712468f46e56d1fcc9d560604
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4180093e97237b5b433714ad437447065235e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673647"
 ---
-# <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB データベース)
+# <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトを非同期的に検証します。  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [ @project_name = ] *project_name*  
- プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
+ プロジェクトの名前です。 *project_name* は **nvarchar(128)** です。  
   
  [ @validate_type = ] *validate_type*  
  実行する検証の種類を示します。 文字 `F` を使用すると、完全な検証を実行します。 このパラメーターは省略可能です。文字 `F` が既定で使用されます。 *validate_type* は **char (1)** です。  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  検証の一意識別子 (ID) を返します。 *validation_id* は **bigint** です。  
   
  [ @use32bitruntime = ] *use32bitruntime*  
- 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 `1` を使用して 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターはオプションです。 *use32bitruntime* は **bit** です。  
+ 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 `1` を使用して 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターは省略可能です。 *use32bitruntime* は **bit** です。  
   
  [ @environment_scope = ] *environment_scope*  
  検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターは省略可能です。文字 `D` が既定で使用されます。 *environment_scope* は **char(1)** です。  
@@ -88,7 +88,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  検証では、プロジェクトのパッケージが正常に実行されない問題を特定することができます。 検証の状態を監視するには、[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) または [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューを使用します。  
   
  検証で使用できるのは、ユーザーがアクセスできる環境のみです。 検証の出力は結果セットとしてクライアントに送信されます。  

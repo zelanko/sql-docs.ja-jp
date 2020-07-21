@@ -1,5 +1,5 @@
 ---
-title: XPath クエリの実行 (SQLXML マネージ クラス) |Microsoft Docs
+title: XPath クエリの実行 (SQLXML マネージクラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d7430b8e32353e40ede0baf42b6c5306461988f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015321"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath クエリの実行 (SQLXML マネージド クラス)
   この例では、マッピング スキーマに対する XPath クエリの実行方法を示します。  
@@ -88,7 +87,7 @@ class Test
   
 2.  この例で提供される XSD スキーマ (MySchema.xml) をフォルダーに保存します。  
   
-3.  スキーマが格納されている同じフォルダーには、この例では、c# コード (DocSample.cs されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+3.  この例で提供されている C# コード (DocSample.cs) を、スキーマが格納されているのと同じフォルダーに保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 4.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

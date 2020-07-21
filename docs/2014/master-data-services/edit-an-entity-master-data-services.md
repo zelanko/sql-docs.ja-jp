@@ -1,5 +1,5 @@
 ---
-title: エンティティ名を変更 (マスター データ サービス) |Microsoft Docs
+title: エンティティ名を変更する (マスターデータサービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 801d5b38b765a559ac2c6ca3cdb617b3779a9baa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483884"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961782"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>エンティティ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティの名前を変更できます。  
@@ -28,9 +27,9 @@ ms.locfileid: "65483884"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-an-entity-name"></a>エンティティ名を変更するには  
   
@@ -44,13 +43,13 @@ ms.locfileid: "65483884"
   
 5.  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティ名**ボックスに、エンティティの新しい名前を入力します。  
+6.  [**エンティティ名**] ボックスに、エンティティの更新後の名前を入力します。  
   
-7.  クリックして**エンティティの保存**します。  
+7.  [**エンティティの保存**] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [エンティティを作成する&#40;マスター データ サービス&#41;](create-an-entity-master-data-services.md)   
- [エンティティを削除する (マスター データ サービス)](delete-an-entity-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [エンティティ &#40;マスターデータサービスを作成し&#41;](create-an-entity-master-data-services.md)   
+ [エンティティ &#40;マスターデータサービスの削除&#41;](delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](entities-master-data-services.md)  
   
   

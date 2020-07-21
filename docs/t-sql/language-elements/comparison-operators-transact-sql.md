@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140258"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706611"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較演算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   比較演算子は、2 つの式が同じかどうかをテストします。 比較演算子は **text**、**ntext**、または **image** データ型の式を除くすべての式で使用できます。 次の表は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の比較演算子の一覧です。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68140258"
 |[\!> (以下)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|より大きくない (ISO 標準外)|  
   
 ## <a name="boolean-data-type"></a>ブール値型  
- 比較演算子の結果は**ブール** データ型になります。 これには 3 つの値があります。TRUE、FALSE、UNKNOWN です。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
+ 比較演算子の結果は**ブール** データ型になります。 有効値には、TRUE、FALSE、UNKNOWN があります。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
   
  **ブール** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
   

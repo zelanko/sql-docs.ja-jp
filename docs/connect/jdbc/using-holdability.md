@@ -1,5 +1,5 @@
 ---
-title: Using 保持機能 |Microsoft Docs
+title: 保持可能性の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c126385955ce6e9fa9098ec5a09ba115b94ffb0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026199"
 ---
 # <a name="using-holdability"></a>保持可能性の使用

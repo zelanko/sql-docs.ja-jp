@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - GetDataProviderDSO Method [ADO]
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55272fdbcd0aacfc8e98cb4e38ae19270b3b461a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932486"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760048"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO メソッド
-Shape プロバイダーから基になる OLE DB データ ソース オブジェクトを取得します。  
+基になる OLE DB データソースオブジェクトをシェイププロバイダーから取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +33,10 @@ HRESULT GetDataProviderDSO(
   
 #### <a name="parameters"></a>パラメーター  
  *ppDataProviderDSOIUnknown*  
- [out] 返す基になる OLE DB データ ソース オブジェクトの IUnknown ポインターへのポインター。  
+ 入出力 基になる OLE DB データソースオブジェクトの IUnknown を返すポインターへのポインター。  
   
-## <a name="remarks"></a>コメント  
- このメソッドではない addref インターフェイス ポインター。 呼び出し元が必要な addref を行う必要があります、呼び出し元ポインターを保持する場合、およびリリースします。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、インターフェイスポインターを addref しません。 呼び出し元がポインターを保持することを計画している場合、呼び出し元は必要な addref と release を実行する必要があります。  
   
-## <a name="applies-to"></a>対象  
+## <a name="applies-to"></a>適用対象  
  [IDSOShapeExtensions インターフェイス](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

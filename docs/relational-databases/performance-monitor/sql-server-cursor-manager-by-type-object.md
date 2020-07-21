@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a5d93f420ba40e71ee43cfbcd088bb97c839b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986693"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773159"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server: Cursor Manager by Type オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:Cursor Manager by Type** オブジェクトには、種類別にグループ化されたカーソルを監視するカウンターが用意されています。  
   
  次の表で、SQL Server **Cursor Manager by Type** カウンターについて説明します。  
   
-|Cursor Manager by Type カウンター|[説明]|  
+|Cursor Manager by Type カウンター|説明|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|アクティブなカーソルの数。|  
 |**Cache Hit Ratio**|キャッシュ ヒットとキャッシュ参照の比率。|  
-|**Cache Hit Ratio Base**|内部使用のみです。| 
+|**Cache Hit Ratio Base**|内部使用専用です。| 
 |**Cached Cursor Counts**|キャッシュ内の特定種類のカーソルの数。|  
 |**Cursor Cache Use Count/sec**|キャッシュされている各種のカーソルが使用された時間。|  
 |**Cursor memory usage**|カーソルによって消費されたメモリ量 (KB)。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67986693"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|Cursor Manager のインスタンス|[説明]|  
+|Cursor Manager のインスタンス|説明|  
 |-----------------------------|-----------------|  
 |**_Total**|すべてのカーソルに関する情報。|  
 |**API Cursor**|API カーソルのみに関する情報。|  

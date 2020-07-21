@@ -1,5 +1,5 @@
 ---
-title: sp_grant_login_to_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_grant_login_to_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: e944a3b8e2f7b46f22ff0a349e061b03072407b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51793a451187f5901d8d1dd8d84f35e4a472d356
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891844"
 ---
-# <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (TRANSACT-SQL)
+# <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  プロキシには、セキュリティ プリンシパルのアクセスを付与します。  
+  プロキシへのセキュリティプリンシパルアクセスを許可します。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,26 +44,26 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @login_name = ] 'login_name'` アクセスを許可するログイン名。 *Login_name*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@login_name** 、 **@fixed_server_role** 、または **@msdb_role** を指定するストアド プロシージャは失敗します。  
+`[ @login_name = ] 'login_name'`アクセス権を付与するログイン名。 *Login_name*は**nvarchar (256)**,、既定値は NULL です。 ** \@ Login_name**、 ** \@ fixed_server_role**、または** \@ msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` アクセスを許可する固定サーバー ロール。 *@Fixed_server_role*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@login_name** 、 **@fixed_server_role** 、または **@msdb_role** を指定するストアド プロシージャは失敗します。  
+`[ @fixed_server_role = ] 'fixed_server_role'`アクセス権を付与する固定サーバーロール。 *Fixed_server_role*は**nvarchar (256)**,、既定値は NULL です。 ** \@ Login_name**、 ** \@ fixed_server_role**、または** \@ msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @msdb_role = ] 'msdb_role'` データベース ロール、 **msdb**データベース アクセス権を付与します。 *Msdb_role*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@login_name** 、 **@fixed_server_role** 、または **@msdb_role** を指定するストアド プロシージャは失敗します。  
+`[ @msdb_role = ] 'msdb_role'`アクセスを許可する**msdb**データベースのデータベースロール。 *Msdb_role*は**nvarchar (256)**,、既定値は NULL です。 ** \@ Login_name**、 ** \@ fixed_server_role**、または** \@ msdb_role**のいずれかを指定する必要があります。指定しないと、ストアドプロシージャは失敗します。  
   
-`[ @proxy_id = ] id` アクセス権を与えるプロキシの識別子。 *Id*は**int**、既定値は NULL です。 いずれかの **@proxy_id** または **@proxy_name** を指定するストアド プロシージャは失敗します。  
+`[ @proxy_id = ] id`アクセス権を付与するプロキシの識別子。 *Id*は**int**,、既定値は NULL です。 ** \@ Proxy_id**または** \@ proxy_name**のいずれかを指定する必要があります。指定しない場合、ストアドプロシージャは失敗します。  
   
-`[ @proxy_name = ] 'proxy_name'` アクセス権を与えるプロキシの名前。 *Proxy_name*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@proxy_id** または **@proxy_name** を指定するストアド プロシージャは失敗します。  
+`[ @proxy_name = ] 'proxy_name'`アクセス権を付与するプロキシの名前。 *Proxy_name*は**nvarchar (256)**,、既定値は NULL です。 ** \@ Proxy_id**または** \@ proxy_name**のいずれかを指定する必要があります。指定しない場合、ストアドプロシージャは失敗します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_grant_login_to_proxy**から実行する必要があります、 **msdb**データベース。  
+## <a name="remarks"></a>注釈  
+ **sp_grant_login_to_proxy**は、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行**sp_grant_login_to_proxy**します。  
+ **Sp_grant_login_to_proxy**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ログイン `adventure-works\terrid` に対してプロキシ `Catalog application proxy` の使用を許可します。  
   
 ```sql
@@ -77,8 +77,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [Transact-sql&#41;&#40;ログインの作成](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

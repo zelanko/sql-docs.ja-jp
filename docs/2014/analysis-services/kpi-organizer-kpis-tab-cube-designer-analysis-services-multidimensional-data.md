@@ -1,5 +1,5 @@
 ---
-title: '[KPI オーガナイザー] ([Kpi] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs'
+title: '[KPI オーガナイザー] (キューブデザイナーの [Kpi] タブ) (Analysis Services 多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5693369574a7c7fc8ea357248347fb89dee0f214
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543648"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>[KPI オーガナイザー] (キューブ デザイナーの [KPIs] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブにある **[KPI オーガナイザー]** ペインを使用すると、指定したキューブに含まれる主要業績評価指標 (KPI) へのアクセスと並べ替えを行うことができます。  
@@ -25,7 +24,7 @@ ms.locfileid: "66079402"
 > [!NOTE]  
 >  このペインは、フォーム ビューには表示されません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **一覧**  
  KPI の名前を表示します。  
   
@@ -36,17 +35,17 @@ ms.locfileid: "66079402"
   
 |オプション|定義|  
 |------------|----------------|  
-|**新しい KPI**|**KPI フォーム エディター** を表示し、新しい KPI を作成します。 詳細については、 **KPI フォーム エディター**を参照してください[KPI フォーム エディター &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)します。|  
-|**[上へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で上へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注:さらに、選択した KPI を移動できない場合は、このオプションが無効です。|  
-|**[下へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で下へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注:さらに、選択した KPI を移動できない場合は、このオプションが無効です。|  
+|**[新しい KPI]**|**KPI フォーム エディター** を表示し、新しい KPI を作成します。 **Kpi フォームエディター**の詳細については、「 [kpi フォームエディター &#40;kpi] タブ」、「キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**[上へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で上へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注: 選択した KPI がそれ以上移動できない場合、このオプションは無効です。|  
+|**[上へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で下へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注: 選択した KPI がそれ以上移動できない場合、このオプションは無効です。|  
 |**削除**|選択した KPI を削除します。|  
   
-## <a name="see-also"></a>関連項目  
- [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Kpi&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [計算ツール&#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [KPI フォーム エディター &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [KPI ブラウザー &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>参照  
+ [キューブデザイナー &#40;Analysis Services-多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Kpi &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー &#40;キューブデザイナーの [Kpi] タブ&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算ツール &#40;キューブデザイナーの [Kpi] タブ&#41; &#40;Analysis Services-多次元データ&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI フォームエディター &#40;[Kpi] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI ブラウザー &#40;[Kpi] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

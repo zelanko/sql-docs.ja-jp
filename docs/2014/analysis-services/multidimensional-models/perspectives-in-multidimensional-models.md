@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9c408f79dcecd0a7850c7361716cc29b07f4cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1c645486a0d328a1074f1a25b730bfbac1b14af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545841"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多次元モデルのパースペクティブ
   パースペクティブは、特定のアプリケーションまたはユーザーのグループに対して作成されるキューブのサブセットです。 キューブ自体は既定のパースペクティブになります。 パースペクティブは、キューブとしてクライアントに表示されます。 ユーザーがパースペクティブを表示すると、キューブと同じように表示されます。 パースペクティブで書き戻しによりキューブ データに行われる変更は、元のキューブに対して行われます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のビューの詳細については、「 [パースペクティブ](../multidimensional-models-olap-logical-cube-objects/perspectives.md)」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "66073345"
   
 -   メジャー  
   
--   ディメンション  
+-   Dimensions  
   
 -   階層  
   
@@ -59,9 +58,9 @@ ms.locfileid: "66073345"
   
 -   計算されるメンバー  
   
- オブジェクトを表示するには、 **[キューブ オブジェクト]** の下にあるオブジェクトの種類のカテゴリ ( **[メジャー グループ]** 、 **[ディメンション]** 、 **[KPI]** 、 **[計算]** 、または **[アクション]** ) を展開します。 ディメンション内の階層または属性を表示するには、まず、ディメンションを展開してから、 **[階層]** または **[属性]** 行を展開します。 メジャー グループ内のメジャーを表示するには、メジャー グループを展開します。  
+ オブジェクトを表示するには、**[キューブ オブジェクト]** の下にあるオブジェクトの種類のカテゴリ ( **[メジャー グループ]**、 **[ディメンション]**、 **[KPI]**、 **[計算]**、または **[アクション]**) を展開します。 ディメンション内の階層または属性を表示するには、まず、ディメンションを展開してから、 **[階層]** または **[属性]** 行を展開します。 メジャー グループ内のメジャーを表示するには、メジャー グループを展開します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデルのキューブ](cubes-in-multidimensional-models.md)  
   
   

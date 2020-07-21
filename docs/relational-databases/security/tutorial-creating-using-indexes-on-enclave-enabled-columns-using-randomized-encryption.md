@@ -1,7 +1,8 @@
 ---
-title: チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する | Microsoft Docs
-ms.custom: ''
-ms.date: 06/26/2019
+title: ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成する (チュートリアル)
+description: このチュートリアルでは、セキュリティで保護されたエンクレーブが設定された SQL Server の Always Encrypted でサポートされているランダム化された暗号化を使用して、エンクレーブ対応の列にインデックスを作成して使用する方法を説明します。
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,28 +13,28 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126795"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279289"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 このチュートリアルでは、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](encryption/always-encrypted-enclaves.md) でサポートされているランダム化された暗号化を使用して、エンクレーブ対応の列にインデックスを作成して使用する方法を説明します。 次のことを示します。
 
 - 列を保護しているキー (列マスター キーと列暗号化キー) にアクセスできるときに、インデックスを作成する方法。
 - 列を保護しているキーにアクセスできないときに、インデックスを作成する方法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルは、「[チュートリアル: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](./tutorial-getting-started-with-always-encrypted-enclaves.md)」に続くものです。 以下の手順に従う前に、それが完了していることを確認してください。
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>手順 1:データベースで高速データベース復旧 (ADR) を有効にする
 
-ランダム化された暗号化を使用してエンクレーブ対応の列で最初のインデックスを作成する前に、データベースで ADR を有効にすることを強くお勧めします。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](./encryption/always-encrypted-enclaves.md)」の「[Database Recovery (データベースの復旧)](./encryption/always-encrypted-enclaves.md##database-recovery)」セクションをご覧ください。
+ランダム化された暗号化を使用してエンクレーブ対応の列で最初のインデックスを作成する前に、データベースで ADR を有効にすることを強くお勧めします。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](./encryption/always-encrypted-enclaves.md)」の「[データベース復旧](./encryption/always-encrypted-enclaves.md#database-recovery)」セクションを参照してください。
 
 1. 前のチュートリアルで使ったすべての SSMS インスタンスを閉じます。 これにより、開いたデータベース接続が閉じられます。ADR を有効にするにはこうする必要があります。
 1. SSMS の新しいインスタンスを開き、データベース接続の Always Encrypted を有効に**しないで**、sysadmin として SQL Server インスタンスに接続します。
@@ -171,6 +172,8 @@ ms.locfileid: "68126795"
 
    1. **[ライブ クエリ統計]** (クエリ ウィンドウの下部) で、クエリによりインデックスが使われていることを確認します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
+- [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- セキュリティで保護されたエンクレーブが設定された Always Encrypted の他のユース ケースについては、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する](encryption/configure-always-encrypted-enclaves.md)」をご覧ください。
+## <a name="see-also"></a>関連項目
+- [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](encryption/always-encrypted-enclaves-create-use-indexes.md)

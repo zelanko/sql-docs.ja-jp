@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3b0230b2a3cc3adfae2fe28a520b520f90dc2e8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa3c520480930e9a2c21272d483b1a2e6b9e8cc4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945494"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295069"
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージのトラブルシューティング
 

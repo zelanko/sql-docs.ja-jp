@@ -1,10 +1,9 @@
 ---
-title: データベース ダイアグラムからのテーブルの削除 (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: データベース ダイアグラムからのテーブルの削除
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae136b4de6a85d26d14b487e1812c3b95a17b7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6e3847aa5471b757333a4ec7ff1964acabf0e1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256082"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255261"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>データベース ダイアグラムからのテーブルの削除 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68256082"
   
 2.  テーブルを右クリックし、ショートカット メニューの **[ダイアグラムからテーブルを削除]** を選択します。  
   
-    \- または -  
+    または  
   
     Esc キーを押します。  
   
@@ -41,5 +42,5 @@ ms.locfileid: "68256082"
   
 ## <a name="see-also"></a>参照  
 [データベース ダイアグラムの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[方法:データベースからテーブルを削除する (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+方法: データベースからテーブルを削除する(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

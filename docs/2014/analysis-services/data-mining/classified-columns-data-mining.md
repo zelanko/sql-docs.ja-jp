@@ -1,5 +1,5 @@
 ---
-title: 分類列 (データ マイニング) |Microsoft Docs
+title: 分類済みの列 (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bb1484ff3bad80979c9421e8d46ec4f46e866b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085685"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524812"
 ---
 # <a name="classified-columns-data-mining"></a>分類済みの列 (データ マイニング)
   分類済みの列を定義する場合は、マイニング構造内の現在の列と別の列の間でリレーションシップを作成します。 マイニング構造内で分類済みの列として指定した列のデータには、その構造内の別の列の値について説明した分類情報が含まれています。  
@@ -40,13 +39,13 @@ ms.locfileid: "66085685"
   
  次の一覧では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で分類済みの列に対してサポートされているコンテンツの種類について説明します。  
   
- **PROBABILITY**  
+ **確率**  
  この列の値は、関連付けられている値の確率であり、0 から 1 までの数値です。  
   
- **VARIANCE**  
+ **SV**  
  この列の値は、関連付けられている値の分散です。  
   
- **[STDEV]**  
+ **STDEV**  
  この列の値は、関連付けられている値の標準偏差です。  
   
  **PROBABILITY_VARIANCE**  
@@ -55,12 +54,12 @@ ms.locfileid: "66085685"
  **PROBABILITY_STDEV**  
  この列の値は、関連付けられている値の確率の標準偏差です。  
   
- **SUPPORT**  
+ **ご**  
  この列の値は、関連付けられている値の重み (ケース レプリケーション係数) です。  
   
-## <a name="see-also"></a>関連項目  
- [コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)   
- [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>参照  
+ [コンテンツの種類 &#40;データマイニング&#41;](content-types-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services-データマイニング&#41;](mining-structures-analysis-services-data-mining.md)   
  [データ型 (データ マイニング)](data-types-data-mining.md)  
   
   

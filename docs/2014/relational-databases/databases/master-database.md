@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac38453237ed6816c32ed974e8141c57c93ceb44
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965912"
 ---
 # <a name="master-database"></a>master データベース
-  **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **データベースが使用できないと、** を開始できません。  
+  **master** データベースには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのシステム レベルの情報がすべて記録されます。 記録される情報には、ログオン アカウント、エンドポイント、リンク サーバー、システム構成設定など、インスタンス全体のメタデータが含まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、システム オブジェクトが **master** データベースではなく、 [Resource データベース](resource-database.md)に格納されるようになりました。 また、 **master** は、他のすべてのデータベースの存在、それらのデータベース ファイルの場所、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の初期化情報を記録するデータベースでもあります。 したがって、 **master** データベースが使用できないと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始できません。  
   
 ## <a name="physical-properties-of-master"></a>master データベースの物理プロパティ  
  \line 次の表は、 **master** のデータ ファイルとログ ファイルの初期構成値の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
@@ -29,7 +28,7 @@ ms.locfileid: "62917045"
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
 |プライマリ データ|master|master.mdf|ディスクがいっぱいになるまで 10% ずつ自動拡張|  
-|Log|mastlog|mastlog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
+|ログ|mastlog|mastlog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
   
  **master** のデータ ファイルとログ ファイルの移動方法の詳細については、「 [システム データベースの移動](system-databases.md)」を参照してください。  
   
@@ -39,37 +38,37 @@ ms.locfileid: "62917045"
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|いいえ|  
-|ANSI_NULL_DEFAULT|OFF|はい|  
-|ANSI_NULLS|OFF|はい|  
-|ANSI_PADDING|OFF|はい|  
-|ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
-|AUTO_CLOSE|OFF|いいえ|  
+|ANSI_NULL_DEFAULT|OFF|Yes|  
+|ANSI_NULLS|OFF|Yes|  
+|ANSI_PADDING|OFF|Yes|  
+|ANSI_WARNINGS|OFF|Yes|  
+|ARITHABORT|OFF|Yes|  
+|AUTO_CLOSE|OFF|No|  
 |AUTO_CREATE_STATISTICS|ON|はい|  
-|AUTO_SHRINK|OFF|いいえ|  
+|AUTO_SHRINK|OFF|No|  
 |AUTO_UPDATE_STATISTICS|ON|はい|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
-|CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Yes|  
+|CHANGE_TRACKING|OFF|No|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
+|CURSOR_DEFAULT|GLOBAL|Yes|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> No<br /><br /> No|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|はい|  
-|PAGE_VERIFY|CHECKSUM|はい|  
+|NUMERIC_ROUNDABORT|OFF|Yes|  
+|PAGE_VERIFY|CHECKSUM|Yes|  
 |PARAMETERIZATION|SIMPLE|はい|  
 |QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|はい|  
 |RECURSIVE_TRIGGERS|OFF|はい|  
-|Service Broker のオプション|DISABLE_BROKER|いいえ|  
+|Service Broker のオプション|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|はい|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
-## <a name="restrictions"></a>制限  
+## <a name="restrictions"></a>制約  
  **master** データベースでは、次の操作は実行できません。  
   
 -   ファイルまたはファイル グループの追加。  
@@ -84,7 +83,7 @@ ms.locfileid: "62917045"
   
 -   データベースの削除。  
   
--   データベースからの **guest** ユーザーの削除。  
+-   データベースから**guest**ユーザーを削除しています。  
   
 -   変更データ キャプチャの有効化。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "62917045"
   
 -   データベースまたはプライマリ ファイル グループの READ_ONLY への設定。  
   
-## <a name="recommendations"></a>推奨事項  
+## <a name="recommendations"></a>Recommendations  
  **master** データベースで作業を行っているときは、次の推奨設定を考慮してください。  
   
 -   **master** データベースの現在のバックアップを、常に使用可能にする。  
@@ -132,7 +131,7 @@ ms.locfileid: "62917045"
 ## <a name="related-content"></a>関連コンテンツ  
  [システム データベースの再構築](rebuild-system-databases.md)  
   
- [システム データベース](system-databases.md)  
+ [システムデータベース](system-databases.md)  
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

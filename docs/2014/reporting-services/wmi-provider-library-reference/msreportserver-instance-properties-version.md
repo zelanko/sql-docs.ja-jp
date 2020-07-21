@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b090e92912c67256034c3c634465fcb99f404f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097076"
 ---
-# <a name="version-property-wmi-msreportserverinstance"></a>Version プロパティ (WMI MSReportServer_Instance)
-  Major.Minor.Build.Revision 形式でレポート サーバーのバージョンを返します。 読み取り専用。  
+# <a name="version-property-wmi-msreportserver_instance"></a>Version プロパティ (WMI MSReportServer_Instance)
+  Major.Minor.Build.Revision 形式でレポート サーバーのバージョンを返します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   

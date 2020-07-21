@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 740c45266a1512b14954286d9926b6ee837678af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480518"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937623"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 操作にソース データを使用し、処理後のデータをエクスポートするには、次のいずれかの方法を使用できます。  
@@ -30,7 +29,7 @@ ms.locfileid: "65480518"
   
 -   データベースの SQL ログインへのアクセスを付与または変更するには、Windows ユーザー アカウントがデータベース エンジン インスタンスの適切な固定サーバー ロール (securityadmin、serveradmin、sysadmin など) のメンバーであることが必要です。  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権をユーザーに付与するには  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>DQS_STAGING_DATA データベースへの読み取り/書き込みアクセス権をユーザーに付与するには  
   
 1.  Microsoft SQL Server Management Studio を起動します。  
   
@@ -40,13 +39,13 @@ ms.locfileid: "65480518"
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
-5.  右ウィンドウで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ウィンドウで次のロールを選択します。  
+5.  右ペインで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ペインで次のロールを選択します。  
   
-    -   **db_datareader**:テーブル/ビューからのデータの読み取り。  
+    -   **db_datareader**: テーブル/ビューからのデータの読み取り。  
   
-    -   **db_datawriter**:テーブル内のデータの追加、削除、または変更。  
+    -   **db_datawriter**: テーブル内のデータの追加、削除、または変更。  
   
-    -   **db_ddladmin**:テーブル/ビューの作成、変更、または削除。  
+    -   **db_ddladmin**: テーブル/ビューの作成、変更、または削除。  
   
 6.  **[ログインのプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックして変更を適用します。  
   

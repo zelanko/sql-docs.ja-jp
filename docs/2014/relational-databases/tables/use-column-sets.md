@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055022"
 ---
 # <a name="use-column-sets"></a>列セットの使用
   スパース列を使用するテーブルでは、テーブル内のすべてのスパース列を返すための列セットを指定できます。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットは、テーブルに物理的に保存されないという点で計算列に似ています。 計算列と異なるのは、列セットが直接更新できる点です。  
@@ -106,18 +105,18 @@ GO
   
  この例では、 `i`列に値が指定されていませんが、値 `0` が挿入されています。  
   
-## <a name="using-the-sqlvariant-data-type"></a>sql_variant データ型の使用  
+## <a name="using-the-sql_variant-data-type"></a>sql_variant データ型の使用  
  `sql_variant` データ型には、`int`、`char`、`date` などの種類の異なる複数のデータ型を格納できます。 列セットは、`sql_variant` 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
-|データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|有効桁数|Scale|  
+|データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|Precision|スケール|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|`char`、 `varchar`、 `binary`|-1|'Default'|0|0|8000|なし**|適用なし|  
+|`char`, `varchar`, `binary`|-1|'Default'|0|0|8000|なし**|適用なし|  
 |`nvarchar`|-1|'Default'|0|0|4000|適用なし|適用なし|  
-|`decimal`、 `float`、 `real`|適用なし|適用なし|適用なし|適用なし|適用なし|18|0|  
+|`decimal`, `float`, `real`|適用なし|適用なし|適用なし|適用なし|適用なし|18|0|  
 |`integer`, `bigint`, `tinyint`, `smallint`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
 |`datetime2`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|7|  
 |`datetime offset`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|7|  
-|`datetime`、 `date`、 `smalldatetime`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
+|`datetime`, `date`, `smalldatetime`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
 |`money`, `smallmoney`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|  
 |`time`|適用なし|適用なし|適用なし|適用なし|適用なし|適用なし|7|  
   
@@ -125,7 +124,7 @@ GO
   
  **  なし = 列セットでの選択操作時に、対象の属性に対して値が出力されません。 挿入または更新操作で列セットに対して指定された XML 表記で呼び出し元がこの属性に値を指定すると、エラーが発生します。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
  列セットのセキュリティ モデルは、テーブルと列の間に介在するセキュリティ モデルと同じように機能します。 列セットはミニテーブルとして視覚化できます。選択操作は、このミニテーブルに対する SELECT * 操作と同様です。 ただし、列セットとスパース列は、厳密なコンテナーではなくグループ化の関係にあります。 セキュリティ モデルでは、列セットの列に対してセキュリティがチェックされ、基になるスパース列で DENY 操作が適用されます。 セキュリティ モデルには、これ以外に次のような特性があります。  
   
 -   列セットの列に対し、テーブル内の他の列と同様に、セキュリティ権限を与えたり取り消したりすることができます。  
@@ -136,7 +135,7 @@ GO
   
 -   スパース列または列セットに対して REVOKE ステートメントを実行すると、セキュリティは、既定でその親オブジェクトのセキュリティに設定されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。  
   
 ### <a name="a-creating-a-table-that-has-a-column-set"></a>A. 列セットを含むテーブルを作成する  

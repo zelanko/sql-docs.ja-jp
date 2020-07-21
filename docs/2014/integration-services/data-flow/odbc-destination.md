@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e398766c827f7611432f5ecd94353f1168e136b4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771028"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431899"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
@@ -26,12 +25,12 @@ ms.locfileid: "62771028"
   
  ODBC 入力先には、1 つの標準出力と 1 つのエラー出力があります。  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> 読み込みオプション  
  ODBC 入力先先は、2 つのアクセス読み込みモジュールのうちどちらかを使用できます。 [ODBC ソース エディター &#40;[接続マネージャー] ページ&#41;](../odbc-source-editor-connection-manager-page.md)。 次の 2 つのモードがあります。  
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
--   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、**SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
+-   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、 **SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
   
 ## <a name="error-handling"></a>エラー処理  
  ODBC 入力先にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "62771028"
   
  ODBC 入力先は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[CDC ソース エディター &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)」を参照してください。  
   
-## <a name="parallelism"></a>並列処理  
+## <a name="parallelism"></a>Parallelism  
  並列実行できる ODBC 入力先コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
  ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  

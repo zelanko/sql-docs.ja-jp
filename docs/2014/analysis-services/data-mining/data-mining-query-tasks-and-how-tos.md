@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ タスクと操作方法 |Microsoft Docs
+title: データマイニングのクエリタスクと操作方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 454a3af33d0c18232bb36771235b328a17da6b86
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084946"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523118"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>データ マイニングのクエリ タスクと操作方法
   データ マイニング モデルを利用する場合は、クエリを作成できることが不可欠です。 ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で提供されるツールを使用して、データ マイニング モデルに対するクエリの作成例のリンクを示します。 データ マイニング クエリとは何かに関する情報、または作成できるさまざまな種類のクエリに関する情報が必要な場合は、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
@@ -57,8 +56,8 @@ ms.locfileid: "66084946"
  [XMLA を使用したデータ マイニング クエリの作成](create-a-data-mining-query-by-using-xmla.md)  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XMLA テンプレートを使用して、マイニング モデル コンテンツに対するクエリを作成する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [クエリと式言語のリファレンス (Analysis Services)](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
+## <a name="see-also"></a>参照  
+ [クエリと式言語のリファレンス &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
  [データ マイニングのストアド プロシージャ (Analysis Services - データ マイニング)](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

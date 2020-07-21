@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83dc56056e6000a789c8944b38326c23d7632bb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049284"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 
 
-  1 レベル下に、指定したレベル、セットの最下位メンバーをドリル ダウンします。  
+  指定されたレベルで、セットの最下位メンバーを1レベル下にドリルダウンします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,31 +28,31 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式。  
+ レベルを返す有効な多次元式 (MDX) 式です。  
   
  *Numeric_Expression*  
- 任意。 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 任意。 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
  *Include_Calc_Members*  
- 任意。 計算されるメンバーがドリルダウン結果に追加するキーワードです。  
+ 任意。 ドリルダウン結果に計算されるメンバーを追加するキーワード。  
   
-## <a name="remarks"></a>コメント  
- 数値式が指定されている場合、 **DrilldownLevelBottom**関数、子メンバーのセットに対して評価された指定の値に基づいて、指定されたセット内の各メンバーの子の順序の昇順で並べ替えます。 数値式が指定されていない場合、指定されたセット内の各メンバーの子を、クエリ コンテキストから判別した子メンバーのセットが表すセルの値に基づいて、昇順で並べ替えます。この動作は、並べ替えを行わずに自然な順序でメンバーのセットを返す、BottomCount および Tail (MDX) 関数に似ています。  
+## <a name="remarks"></a>Remarks  
+ 数値式が指定されている場合、 **DrilldownLevelBottom**関数は、指定されたセット内の各メンバーの子を、子メンバーのセットに対して評価されるように、指定された値に従って昇順で並べ替えます。 数値式が指定されていない場合、指定されたセット内の各メンバーの子を、クエリ コンテキストから判別した子メンバーのセットが表すセルの値に基づいて、昇順で並べ替えます。この動作は、並べ替えを行わずに自然な順序でメンバーのセットを返す、BottomCount および Tail (MDX) 関数に似ています。  
   
- 並べ替えの後、 **DrilldownLevelBottom**関数が、親メンバーと指定された子メンバーの数を含むセットを返します*カウント*、最低の値。  
+ 並べ替えの後、 **DrilldownLevelBottom**関数は、親メンバーと、 *Count*で指定した子メンバーの数のうち、最小値を含むセットを返します。  
   
- **DrilldownLevelBottom**機能に似ています、 [DrilldownLevel](../mdx/drilldownlevel-mdx.md)関数が、指定されたレベルでは、各メンバーのすべての子ではなく、 **DrilldownLevelBottom**関数は、子メンバーの最下位の数を返します。  
+ **DrilldownLevelBottom**関数は、[ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)関数に似ていますが、指定されたレベルで各メンバーのすべての子を含めるのではなく、 **DrilldownLevelBottom**関数は、子メンバーの最下位の数を返します。  
   
- XMLA プロパティの MdpropMdxDrillFunctions にクエリを実行、サーバーがドリル関数; が提供するサポートのレベルを確認することができます。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)詳細についてはします。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、既定のメジャーに基づいて Product Category レベルの子を最小のものから 3 つ返します。 Adventure Works サンプル キューブで、[アクセサリ] の下の 3 つの子はタイヤと真空管、Pumps、Panniers です。 Management studio で MDX クエリ ウィンドウでは製品に移動することができます |製品カテゴリ |メンバー |すべての製品 |完全な一覧を表示するアクセサリ。 複数のメンバーを返す Count 引数を増やすことができます。  
+ 次の例では、既定のメジャーに基づいて Product Category レベルの子を最小のものから 3 つ返します。 Adventure Works のサンプルキューブでは、アクセサリの下部の3つの子はタイヤ、チューブ、ポンプ、および Panになっています。 Management Studio では、[MDX クエリ] ウィンドウで [製品] に移動します。製品カテゴリ |Members |すべての製品 |[アクセサリ] を参照して、完全な一覧を表示します。 Count 引数を増やすと、さらに多くのメンバーを返すことができます。  
   
 ```  
 SELECT DrilldownLevelBottom   
@@ -63,7 +63,7 @@ SELECT DrilldownLevelBottom
    FROM [Adventure Works]  
 ```  
   
- 次の例を使用して、 **include_calc_members**フラグをドリル ダウン レベルで計算されるメンバーを含めるために使用します。 [Reseller Order Count] メジャーが追加、 **DrilldownLevelBottom**ステートメントをそのメジャーによって、結果が並べ替えられていることを確認します。 計算されるメンバーを表示するには、count を 9 以上にする必要があります。  
+ 次の例では、ドリルダウンレベルで計算されるメンバーを含めるために使用する**include_calc_members**フラグの使用方法を示します。 メジャー [再販業者の注文数] が**DrilldownLevelBottom**ステートメントに追加され、結果がそのメジャーで並べ替えられるようになります。 計算されるメンバーを表示するには、カウントを少なくとも9に増やす必要があります。  
   
 ```  
 WITH MEMBER   
@@ -80,8 +80,8 @@ DRILLDOWNLEVELBOTTOM(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+## <a name="see-also"></a>参照  
+ [MDX&#41;&#40;ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

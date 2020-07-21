@@ -1,6 +1,7 @@
 ---
-title: マージ同期中のビジネス ロジックの実行 | Microsoft Docs
-ms.custom: ''
+title: マージ同期中のビジネス ロジック
+description: マージ レプリケーションの同期に使用するビジネス ロジックのマネージド アセンブリ コードを記述する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3f3601aca4a8cf5325071a99a6c7605253ff0aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880077"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>マージ同期中のビジネス ロジックの実行
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 ビジネス ロジック ハンドラー フレームワークには単純なプログラミング モデルが用意されており、マージ処理によってアセンブリに提供されるデータは ADO.NET データセットの形式になっています。このため、専用インターフェイスについての知識ではなく ADO.NET についての知識を活用できます。 ビジネス ロジック ハンドラーのプログラミングの詳細については、以下のトピックを参照してください。  
   
 -   アプリケーション プログラミング インターフェイス (API) リファレンス : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
@@ -60,7 +61,7 @@ ms.locfileid: "68033314"
      これは、特定のデータの値または操作をオーバーライドする必要があるアプリケーションに役立ちます。 たとえば、アプリケーションでは、行の削除を、その行の **status** 列を "削除" の値に設定するという特殊な更新方法に変更して、その削除を実行するクライアントの ID を追跡することができます。 これは、監査やワークフローにも役立ちます。  
   
 ### <a name="custom-conflict-resolution"></a>カスタム競合解決  
- マージ レプリケーションには、競合の検出機能と解決機能が用意されており、既定の解決方法を受け入れるか、競合に対するカスタム解決方法を選択することができます。 詳しくは、「 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。 ビジネス ロジック ハンドラーは、競合しているデータの変更処理中に呼び出すことができ、次の 2 つの操作のいずれかを実行できます。  
+ マージ レプリケーションには、競合の検出機能と解決機能が用意されており、既定の解決方法を受け入れるか、競合に対するカスタム解決方法を選択することができます。 詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。 ビジネス ロジック ハンドラーは、競合しているデータの変更処理中に呼び出すことができ、次の 2 つの操作のいずれかを実行できます。  
   
 -   既定の解決の受け入れ  
   
@@ -94,6 +95,6 @@ ms.locfileid: "68033314"
  [マージ レプリケーション](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [データの同期](../../../relational-databases/replication/synchronize-data.md)   
- [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
+ [マージ レプリケーションの Web 同期](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

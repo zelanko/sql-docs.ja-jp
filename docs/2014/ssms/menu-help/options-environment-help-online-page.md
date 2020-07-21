@@ -1,5 +1,5 @@
 ---
-title: オプション (環境-ヘルプ オンライン ページ) |Microsoft Docs
+title: '[オプション] ([環境]/[ヘルプ]/[オンライン] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03df9e953e8e6441a933f39632993804c6ea1227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048687"
 ---
-# <a name="options-environment-help-online-page"></a>オプション (環境-ヘルプ オンライン ページ)
+# <a name="options-environment-help-online-page"></a>[オプション] ([環境]/[ヘルプ]/[オンライン] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]** 、 **[オンライン]** の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  
   
  **[ヘルプ コンテンツを読み込むとき]**  

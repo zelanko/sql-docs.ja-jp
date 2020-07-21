@@ -1,5 +1,5 @@
 ---
-title: 共通言語ランタイム関連の動的管理ビュー (TRANSACT-SQL) |Microsoft Docs
+title: 共通言語ランタイム関連の動的管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - common language runtime [SQL Server], dynamic management views
 - dynamic management objects [SQL Server], common language runtime
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd75656f2fa5d90bace8cfddb4b22da1a8c6db94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc2faece9e109e1bcaa0e6bf99c34c72be9745f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720341"
 ---
 # <a name="common-language-runtime-related-dynamic-management-views-transact-sql"></a>共通言語ランタイム関連の動的管理ビュー (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このセクションには、次の動的管理ビューが含まれています。  
+  ここでは、次の動的管理ビューについて説明します。  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: '実証: インメモリ OLTP のパフォーマンスの向上 |Microsoft Docs'
+title: '実証: インメモリ OLTP によるパフォーマンスの向上 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,29 +9,28 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4858e4c35263ab3dd1d9fdcf55a2b136dd8eeaf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63071787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050180"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
   この例では、インメモリ OLTP を使用した場合のパフォーマンスの向上を取り上げます。メモリ最適化テーブルと従来のディスク ベースのテーブルとに対してまったく同じ Transact-SQL クエリを実行したときの応答時間の違いを比較します。 応答時間は一般に、ネイティブ コンパイル ストアド プロシージャでメモリ最適化テーブルを照会したときに最短となります。そこで、ネイティブにコンパイルされたストアド プロシージャも (同じクエリに基づいて) 作成、実行して、その点を実証することにします。 このサンプルを通じて証明されるのは、メモリ最適化テーブルのデータにアクセスしたときに得られるパフォーマンス向上の一面 (挿入操作時のデータ アクセス効率) だけです。 このサンプルはシングル スレッドで、インメモリ OLTP のコンカレンシーの利点を利用していません。 コンカレンシーを使用するワークロードでは、さらにパフォーマンスが向上します。  
   
 > [!NOTE]  
->  メモリ最適化テーブルを示す別のサンプルについては、「 [SQL Server 2014 のインメモリ OLTP のサンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)します。  
+>  メモリ最適化テーブルをデモンストレーションするもう1つの例については[、SQL Server 2014 のインメモリ OLTP サンプル](https://msftdbprodsamples.codeplex.com/releases/view/114491)を参照してください。  
   
  このサンプルを実行するために、次の作業を行います。  
   
-1.  という名前のデータベースを作成する**imoltp**を設定して、インメモリ OLTP を使用してそのファイルの詳細を変更します。  
+1.  **Imoltp**という名前のデータベースを作成し、そのファイルの詳細を変更してインメモリ OLTP を使用するように設定します。  
   
 2.  サンプルに必要なデータベース オブジェクトとして、3 つのテーブルと 1 つのネイティブ コンパイル ストアド プロシージャを作成します。  
   
 3.  各種のクエリを実行して、クエリごとの応答時間を表示します。  
   
- セットアップに、 **imoltp**例では、データベースは、まず空のフォルダーを作成: **c:\imoltp_data**、し、次のコードを実行します。  
+ この例で**imoltp**データベースを設定するには、最初に空のフォルダー **c:\ imoltp_data**を作成し、次のコードを実行します。  
   
 ```sql  
 USE master  
@@ -182,13 +181,13 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  実際の応答時間を比較すると、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャを用いた手法の方が、従来型のディスク ベースのテーブルに対して同じワークロードを実行した場合よりも一貫して応答時間が短いことがわかります。  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP を実証する adventureworks の拡張機能](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [インメモリ OLTP を示す AdventureWorks の拡張機能](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [メモリ最適化テーブル](memory-optimized-tables.md)   
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)   
+ [ネイティブコンパイルストアドプロシージャ](natively-compiled-stored-procedures.md)   
  [メモリ最適化テーブルを使用するための要件](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE とメモリ最適化テーブル](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [プロシージャおよびメモリ最適化テーブルの作成](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

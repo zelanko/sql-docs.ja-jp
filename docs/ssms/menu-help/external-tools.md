@@ -1,6 +1,6 @@
 ---
-title: '[外部ツール] | Microsoft Docs'
-ms.custom: ''
+title: '[外部ツール]'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f86cd81ce23c0e68854a10c3df6e2aa0019bf9ab
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262815"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257719"
 ---
 # <a name="external-tools"></a>[外部ツール]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68262815"
 **[下へ移動]**  
 **[ツール]** メニューで表示されるツールの一覧に、選択したツールを表示する位置を下へ移動します。  
   
-**[追加]**  
+**追加**  
 新しいツールを指定できるようにテキスト ボックスをクリアします。  
   
 **削除**  
@@ -42,7 +42,7 @@ ms.locfileid: "68262815"
 **Title**  
 **[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前です。 ツールの名前の中でツールのアクセス キーとして使用する文字の前にアンパサンドを配置します。 たとえば、 `&Spy++` は **[ツール]** メニューの **[Spy++]** を表示します。  
   
-**Command**  
+**コマンド**  
 起動する .exe、.com、.pif、.bat、.cmd などのファイルへのパスを指定します。 `.bat`[出力ウィンドウを使用] `.com`チェック ボックスがオンになっている場合は、 **や** などのファイルからの出力を [出力] ウィンドウに表示できます。  
   
 **引数**  

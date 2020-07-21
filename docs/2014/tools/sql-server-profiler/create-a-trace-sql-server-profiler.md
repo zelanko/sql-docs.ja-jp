@@ -1,5 +1,5 @@
 ---
-title: トレースを作成する (SQL Server Profiler) |Microsoft Docs
+title: トレースの作成 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54677355520ee8c045a0c3fb78a25ead8ac4d885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064059"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
-  このトピックでは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
   
 ### <a name="to-create-a-trace"></a>トレースを作成するには  
   
@@ -29,7 +28,7 @@ ms.locfileid: "68211087"
      **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  **[接続の確立直後にトレースを開始する]** を選択している場合は、 **[トレースのプロパティ]** ダイアログ ボックスは表示されずに、トレースが開始されます。 この設定を無効にするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
+    >  **[接続の確立直後にトレースを開始する]** を選択している場合は、**[トレースのプロパティ]** ダイアログ ボックスは表示されずに、トレースが開始されます。 この設定を無効にするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "68211087"
   
 5.  必要に応じて、 **[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
   
-6.  イベント、データ列、フィルターを追加または削除するには、 **[イベントの選択]** タブをクリックします。 詳細については、以下をご覧ください。[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+6.  イベント、データ列、フィルターを追加または削除するには、**[イベントの選択]** タブをクリックします。 詳細については、「[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)」を参照してください。  
   
 7.  **[実行]** をクリックしてトレースを開始します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler の実行に必要な権限](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](sql-server-profiler-templates-and-permissions.md)   
  [[SQL Server Profiler]](sql-server-profiler.md)   

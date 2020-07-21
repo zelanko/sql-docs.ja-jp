@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 437e919b8dfba5d375a80fc53267a539d907aaa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec7514eeb2e614c1313fba81c4a48b8803f0c29d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902513"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296089"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>レッスン 1 から 9:レッスン 1 のパッケージをテストする
 
@@ -56,7 +56,7 @@ ms.locfileid: "67902513"
 ## <a name="go-to-next-lesson"></a>次のレッスンに進む
 [レッスン 2:SSIS でのループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md) 
   
   

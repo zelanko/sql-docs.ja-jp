@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905783"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
 
-  指定したメンバーを含むメンバーのセットを返します。  
+  指定されたメンバーまでのメンバーのセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,23 +28,23 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *Index*  
+ *インデックス*  
  期間の数を指定する有効な数値式です。  
   
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- 期間の指定した数が正の値の場合、 **LastPeriods**関数だけ後退したメンバーで始まるメンバーのセットを返します*インデックス*-1 から指定されたメンバー式、および末尾には、指定されたメンバー。 関数によって返されるメンバーの数が等しく*インデックス*します。  
+## <a name="remarks"></a>Remarks  
+ 指定された期間の数が正の場合、 **lastperiods**関数は、指定されたメンバー式から*インデックス*-1 を遅延するメンバーで始まり、指定されたメンバーで終わるメンバーのセットを返します。 関数によって返されるメンバーの数は、 *Index*と同じです。  
   
- 指定した期間の数が負の場合、 **LastPeriods**関数は、指定されたメンバーで始まるメンバーのセットを返し、潜在顧客をメンバーで終わる (-*インデックス*- 1) 指定された対象からメンバー。 関数によって返されるメンバーの数がの絶対値と等しい*インデックス*します。  
+ 指定された期間の数が負の値の場合、 **lastperiods**関数は、指定されたメンバーで始まり、指定されたメンバーから (- *Index* -1) のメンバーで終わるメンバーのセットを返します。 関数によって返されるメンバーの数は、*インデックス*の絶対値と同じです。  
   
- 指定した期間の数が 0 の場合、 **LastPeriods**関数は空のセットを返します。 これとは異なり、 **Lag** 0 が指定されている場合は、指定されたメンバーを返す関数。  
+ 指定された期間の数が0の場合、 **lastperiods**関数は空のセットを返します。 これは**Lag**関数とは異なり、0が指定されている場合は、指定されたメンバーを返します。  
   
- メンバーが指定されていない場合、 **LastPeriods**関数は**Time.CurrentMember**します。 時間ディメンションとしてディメンションが設定されていない場合、関数が解析し、エラーなしで実行がクライアント アプリケーションでセルのエラーが発生します。  
+ メンバーが指定されていない場合、 **Lastperiods**関数は、 **Time. currentmember**を使用します。 ディメンションが時間ディメンションとしてマークされていない場合、関数はエラーを発生させずに解析して実行しますが、クライアントアプリケーションではセルエラーが発生します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、2002 会計年度の第 2 の 3 番目、および第 4 会計四半期の既定のメジャー値を返します。  
+ 次の例では、2002会計年度の第2第3四半期と第4四半期の既定のメジャー値が返されます。  
   
 ```  
 SELECT LastPeriods(3,[Date].[Fiscal].[Fiscal Quarter].[Q4 FY 2002]) ON 0  
@@ -52,11 +52,11 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  この例を使用して書き込むこともできます、: (コロン) 演算子。  
+>  この例は、: (コロン) 演算子を使用して記述することもできます。  
 >   
 >  `[Date].[Fiscal].[Fiscal Quarter].[Q4 FY 2002]: [Date].[Fiscal].[Fiscal Quarter].[Q2 FY 2002]`  
   
- 次の例では、2002 会計年度の第 1 会計四半期の既定のメジャー値を返します。 指定された期間の数は 3 ですが、この会計年度より前の期間が存在しないため、返すことができる期間は 1 つだけです。  
+ 次の例では、2002会計年度の最初の会計四半期の既定のメジャー値が返されます。 指定された期間の数は 3 ですが、この会計年度より前の期間が存在しないため、返すことができる期間は 1 つだけです。  
   
 ```  
 SELECT LastPeriods  
@@ -65,7 +65,7 @@ SELECT LastPeriods
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

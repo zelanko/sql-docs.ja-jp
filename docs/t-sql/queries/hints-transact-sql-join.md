@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80fe147fcdeb205752429521887d1c0b8f76234f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731306"
 ---
 # <a name="hints-transact-sql---join"></a>ヒント (Transact-SQL) - Join
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文に関する一般的な情報については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67902013"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
@@ -57,7 +57,7 @@ ms.locfileid: "67902013"
   
 ## <a name="arguments"></a>引数  
  LOOP | HASH | MERGE  
- クエリ内の結合は、ループ、ハッシュ、またはマージを使用します。 LOOP | HASH | MERGE JOIN を使用すると、2 つのテーブル間に特定の結合が設定されます。 LOOP は、RIGHT または FULL と共に結合の種類として指定することはできません。  
+ クエリ内の結合は、ループ、ハッシュ、またはマージを使用します。 LOOP | HASH | MERGE JOIN を使用すると、2 つのテーブル間に特定の結合が設定されます。 LOOP は、RIGHT または FULL と共に結合の種類として指定することはできません。 詳細については、[結合](../../relational-databases/performance/joins.md)に関するページを参照してください。
   
  REMOTE  
  右側のテーブルのサイトで結合操作を実行します。 これは、左側のテーブルがローカル テーブルで、右側のテーブルがリモート テーブルの場合に効果的です。 REMOTE は、左側のテーブルの行数が右側のテーブルの行数よりも少ないときだけ使用します。  
@@ -68,10 +68,10 @@ ms.locfileid: "67902013"
   
  REMOTE は、INNER JOIN 操作に対してのみ使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  結合ヒントは、クエリの FROM 句で指定します。 結合ヒントにより、2 つのテーブル間の結合方法を設定できます。 2 つのテーブルに対して結合ヒントが指定されると、クエリ オプティマイザーは、ON キーワードの位置に基づいて、クエリ内のすべての結合テーブルに対して結合の順番を自動的に設定します。 ON 句を指定せずに CROSS JOIN を使用する場合は、かっこを使用して結合の順番を指定できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-hash"></a>A. HASH を使用する  
  次の例では、クエリの `JOIN` 操作を `HASH` 結合によって実行することを指定します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  

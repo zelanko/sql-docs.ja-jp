@@ -1,5 +1,5 @@
 ---
-title: 'T-SQL のチュートリアル: データベース オブジェクトを削除する | Microsoft Docs'
+title: 'T-SQL のチュートリアル: データベース オブジェクトの削除 | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 36b68bb833c5c95beeb65b792b9621f2f9bb9c4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68031571"
 ---
-# <a name="lesson-3-delete-database-objects"></a>レッスン 3:データベース オブジェクトの削除
+# <a name="lesson-3-delete-database-objects"></a>レッスン 3: データベース オブジェクトの削除
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 この短いレッスンでは、レッスン 1 とレッスン 2 で作成したオブジェクトを削除してから、データベースを削除します。  
   

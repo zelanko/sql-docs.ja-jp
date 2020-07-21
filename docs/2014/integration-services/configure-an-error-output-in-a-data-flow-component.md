@@ -1,5 +1,5 @@
 ---
-title: データ フロー コンポーネントでエラー出力の構成 |Microsoft Docs
+title: データフローコンポーネントでエラー出力を構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f5db0ec29fb6900dbe74ea021f31d0afc5551d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060814"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434889"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
-  多くのデータ フロー コンポーネントがエラー出力をサポートしており、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでエラー出力を構成する方法は、コンポーネントに応じて異なります。 エラー出力の構成以外に、エラー出力の列を構成することもできます。 これには、コンポーネントによって追加される **[ErrorCode]** 列や **[ErrorColumn]** 列の構成が含まれます。  
+  多くのデータ フロー コンポーネントがエラー出力をサポートしており、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでエラー出力を構成する方法は、コンポーネントに応じて異なります。 エラー出力の構成以外に、エラー出力の列を構成することもできます。 これには、コンポーネントによって追加される **[ErrorCode]** 列や **[ErrorColumn]** 列の構成が含まれます。  
   
 ## <a name="configuring-an-error-output"></a>エラー出力の構成  
  エラー出力を構成する場合、2 つのオプションがあります。  
@@ -82,7 +81,7 @@ ms.locfileid: "66060814"
   
 4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
-5.  **[入力プロパティと出力プロパティ]** タブをクリックして、 **[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
+5.  [**入力プロパティと出力プロパティ**] タブをクリックし、[ ** \<component name> エラー出力**]、[**出力列**] の順に展開します。  
   
 6.  列をクリックして、プロパティを更新します。  
   

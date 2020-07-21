@@ -1,5 +1,5 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft Docs
+title: memory_optimized_tables_internal_attributes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,15 +20,14 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 636bacd800bc75d0b7a087683e1aef34584d596e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102381"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004800"
 ---
-# <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 ユーザー メモリ最適化テーブルを格納するために使用される各内部メモリ最適化テーブルの行が含まれます。 各ユーザー テーブルは、1 つ以上の内部テーブルに対応します。 1 つのテーブルは、コア データ ストレージで使用されます。 その他の内部テーブルは、メモリ最適化テーブルの一時的な列ストア インデックスおよび行外 (LOB) ストレージなどの機能をサポートするために使用されます。
  
@@ -43,7 +42,7 @@ ms.locfileid: "68102381"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. 行外に格納されているすべての列を返す
 
@@ -97,7 +96,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. メモリ最適化テーブルでの列ストア インデックスのメモリ使用量を返す
 
-メモリ最適化テーブルに列ストア インデックスのメモリ使用量を表示するのにには、次のクエリを使用します。
+次のクエリを使用して、メモリ最適化テーブルの列ストアインデックスのメモリ使用量を表示します。
 
 ```Transact-SQL
 SELECT
@@ -113,7 +112,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-列ストア インデックスのメモリ最適化テーブルで使用される内部構造全体でメモリ消費量を次のクエリ break を使用します。
+次のクエリを使用して、メモリ最適化テーブルの列ストアインデックスに使用される内部構造全体のメモリ消費量を分割します。
 
 ```Transact-SQL
 SELECT

@@ -1,5 +1,5 @@
 ---
-title: Microsoft クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft Docs
+title: Microsoft クラスタリングアルゴリズムテクニカルリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522136"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
   ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
@@ -94,7 +93,7 @@ ms.locfileid: "66084031"
  CLUSTERING_METHOD  
  アルゴリズムで使用するクラスタリング手法を指定します。 使用可能なクラスタリング手法は次のとおりです。  
   
-|ID|方法|  
+|id|Method|  
 |--------|------------|  
 |1|スケーラブル EM|  
 |2|非スケーラブル EM (Non-scalable EM)|  
@@ -161,16 +160,16 @@ ms.locfileid: "66084031"
   
 |モデリング フラグ|説明|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|列は 2 つの状態を持つものとして扱われます。Missing および Existing。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
+|MODEL_EXISTENCE_ONLY|列が、Missing および Existing の 2 つの可能な状態を持つ列として扱われます。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできません。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  クラスタリング モデルは、キー列と入力列を含んでいる必要があります。 入力列は、予測可能列として定義することもできます。 `Predict Only` に設定されている列は、クラスターの作成には使用されません。 クラスター内のそれらの値の分布は、クラスターの作成後に算出されます。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
-|[列]|コンテンツの種類|  
+|Column|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Table、Ordered|  
@@ -179,8 +178,8 @@ ms.locfileid: "66084031"
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)   
- [クラスタリング モデルのクエリ例](clustering-model-query-examples.md)   
+ [Microsoft クラスタリングアルゴリズム](microsoft-clustering-algorithm.md)   
+ [クラスタリングモデルのクエリ例](clustering-model-query-examples.md)   
  [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

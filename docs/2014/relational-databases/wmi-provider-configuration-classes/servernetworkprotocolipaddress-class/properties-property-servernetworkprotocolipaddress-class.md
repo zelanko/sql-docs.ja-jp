@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 815158ddcdb93b1e779f9a12ef06f034741de590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e940c73295561002d3a1fc352568a0325e1e19b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059809"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties プロパティ (ServerNetworkProtocolIPAddress クラス)
   IP アドレスに関連付けられたプロパティを取得します。  
@@ -36,16 +35,16 @@ object
 .Properties [= value]  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md)のインスタンス上のネットワーク プロトコルの IP アドレスを表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ のインスタンス上のネットワークプロトコルの IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスによってサポートされるプロパティを表すオブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:レプリケーションのためのサーバーの準備 |Microsoft Docs
+title: 'チュートリアル : レプリケーションに備えたサーバーの準備 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bc070d34bdc580eecb7f2ce0c35d277545f1281
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049070"
 ---
-# <a name="tutorial-preparing-the-server-for-replication"></a>チュートリアル:レプリケーションに備えたサーバーの準備
+# <a name="tutorial-preparing-the-server-for-replication"></a>チュートリアル : レプリケーションに備えたサーバーの準備
   レプリケーション トポロジを構成するには、事前にセキュリティ計画を立てることが重要です。 このチュートリアルでは、レプリケーション トポロジのセキュリティを向上する方法と、データのレプリケートで最初のステップとなるディストリビューションの構成方法を学習します。 他のチュートリアルを行う前に、まずこのチュートリアルを実行してください。  
   
 > [!NOTE]  
@@ -35,20 +34,20 @@ ms.locfileid: "63199068"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。  
   
- **このチュートリアルの推定所要時間: 30 分。**  
+ **このチュートリアルの推定所要時間:30 分。**  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
   
--   [レッスン 1:レプリケーション用アカウントの Windows の作成](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [レッスン 1 : レプリケーション用の Windows アカウントの作成](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [レッスン 2:スナップショット フォルダーの準備](lesson-2-preparing-the-snapshot-folder.md)  
+-   [レッスン 2 : スナップショット フォルダーの準備](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [レッスン 3:ディストリビューションの構成](lesson-3-configuring-distribution.md)  
+-   [レッスン 3 : ディストリビューションの構成](lesson-3-configuring-distribution.md)  
   
  [チュートリアルを開始する](lesson-1-creating-windows-accounts-for-replication.md)  
   
 ## <a name="see-also"></a>参照  
- [[ディストリビューションの構成]](configure-distribution.md)   
+ [ディストリビューションの構成](configure-distribution.md)   
  [SQL Server レプリケーションのセキュリティ](security/view-and-modify-replication-security-settings.md)  
   
   

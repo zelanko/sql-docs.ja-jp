@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100438"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続する
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファミリのあらゆるサーバーに接続して、その内容をグラフィカルに表示できます。 Reporting Services については、オブジェクト エクスプローラーを使用して、次のことを実行できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファミリのあらゆるサーバーに接続して、その内容をグラフィカルに表示できます。 Reporting Services については、オブジェクト エクスプローラーを使用して、次のことを実行できます。  
   
 -   レポート サーバーの機能を有効にする。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66100438"
   
 4.  認証の種類を選択します。 Windows 認証を使用している場合は、資格情報を使用して接続する必要があります。 基本認証またはフォーム認証を選択した場合は、アカウントおよびパスワードを入力します。  
   
-5.  **[接続]** をクリックします。 レポート サーバーがオブジェクト エクスプローラーに表示されます。  
+5.  **[Connect]** をクリックします。 レポート サーバーがオブジェクト エクスプローラーに表示されます。  
   
 6.  サーバー ノードを右クリックし、システムのプロパティおよびサーバーの既定値を設定します。 詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)」を参照してください。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "66100438"
   
 2.  [接続] をクリックしてサーバーの種類を一覧表示し、 **[Reporting Services]** を選択します。  
   
-3.  **[サーバーへの接続]** ダイアログ ボックスに、SharePoint サイトへの URL を入力します。 次の例に示す構文: http://\<web server >/sites/\<サイト >。  
+3.  **[サーバーへの接続]** ダイアログ ボックスに、SharePoint サイトへの URL を入力します。 Http://\<web server>/sites/\<site> の構文の例を次に示します。  
   
 4.  認証の種類を選択します。 Windows 認証を使用している場合は、資格情報を使用して接続する必要があります。 基本認証またはフォーム認証を選択した場合は、アカウントおよびパスワードを入力します。  
   
-5.  **[接続]** をクリックします。 レポート サーバーがオブジェクト エクスプローラーに表示されます。  
+5.  **[Connect]** をクリックします。 レポート サーバーがオブジェクト エクスプローラーに表示されます。  
   
 6.  サーバー ノードを右クリックし、システムのプロパティおよびサーバーの既定値を設定します。 詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100438"
   
     -   ネイティブ モードのレポート サーバーでは、レポート サーバー インスタンスの名前を入力します。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 既定では、ローカル レポート サーバー インスタンスのインスタンス名はコンピューター名です。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、 *\<サーバー名>[\\<インスタンス名\>]* の形式でサーバーを指定します。  
   
-    -   SharePoint 統合モードで動作するレポート サーバーの場合、接続先のサーバーは、レポート サーバーが接続されている SharePoint サイトです。 SharePoint サイトに接続して初めて、レポート サーバーのコンテンツおよび操作へのアクセスを制御する権限レベルを閲覧できるようになります。 サイト コレクション内の任意のサイトを指定できます。 構文例を次に示します。 http://mysharepointsite  
+    -   SharePoint 統合モードで動作するレポート サーバーの場合、接続先のサーバーは、レポート サーバーが接続されている SharePoint サイトです。 SharePoint サイトに接続して初めて、レポート サーバーのコンテンツおよび操作へのアクセスを制御する権限レベルを閲覧できるようになります。 サイト コレクション内の任意のサイトを指定できます。 構文例を次に示します。http://mysharepointsite  
   
 5.  **[認証]** では、Web サーバーへのアクセスに使用する認証モードを選択します。 レポート サーバーで既に使用している認証モードを選択する必要があります。  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66100438"
 |----------------|-----------|-----------------|  
 |ネイティブ モードのレポート サーバー (既定のインスタンスまたは名前付きインスタンスとして接続)<br /><br /> \<サーバー名>\<_instance><br /><br /> レポート サーバーへの接続は、レポート サーバー WMI プロバイダーを介して行われます。|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。<br /><br /> 共有スケジュールを作成および管理する。<br /><br /> ロール定義を作成、変更、または削除する。|システム管理者ロールへの割り当て。|  
 |ネイティブ モードのレポート サーバー (レポート サーバー Web サービスのエンドポイントを介し、既定のインスタンスまたは名前付きインスタンスとして接続)<br /><br /> http://\<servername>/reportserver<br /><br /> レポート サーバーの URL を指定することによって、レポート サーバーに接続することもできます。|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。<br /><br /> 共有スケジュールを作成および管理する。<br /><br /> ロール定義を作成、変更、または削除する。|システム管理者ロールへの割り当て。|  
-|SharePoint 統合モードのレポート サーバー (SharePoint サイトを介して接続)<br /><br /> http://\<web サーバー >/\<SharePointSite >|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。<br /><br /> 接続先のサイトに定義される共有スケジュールを作成および管理する。<br /><br /> 接続先のサイトに定義された権限レベルを表示する。|接続先の SharePoint サイトに対するフル コントロール レベルの権限。|  
+|SharePoint 統合モードのレポート サーバー (SharePoint サイトを介して接続)<br /><br /> http://\<web サーバー>\</sharepointsite>|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。<br /><br /> 接続先のサイトに定義される共有スケジュールを作成および管理する。<br /><br /> 接続先のサイトに定義された権限レベルを表示する。|接続先の SharePoint サイトに対するフル コントロール レベルの権限。|  
 |SharePoint 統合モードのレポート サーバー (レポート サーバー インスタンスの名前を介して接続)<br /><br /> \<サーバー名>\<_instance>|サーバーのプロパティと既定値を表示および設定する。<br /><br /> ジョブを表示および取り消す。|レポート サーバーと統合された SharePoint サイトに対するフル コントロール レベルの権限。<br /><br /> SharePoint サイトに接続せずに、レポート サーバーに接続した場合は、実行できるタスクの数が大幅に減っている点に注意してください。 これは、レポート サーバーが、レポート サーバー データベースで保存または管理されたアプリケーション データのみ返すことができ、SharePoint の構成データベースとコンテンツ データベースに格納されたデータを返すことはできないためです。|  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;レポートサーバーデータベース接続の構成&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

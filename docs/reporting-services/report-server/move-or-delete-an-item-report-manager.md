@@ -12,10 +12,10 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1be40ed580de1163c0e85e37e7b8ffc1bccc342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581089"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
@@ -28,11 +28,11 @@ ms.locfileid: "65581089"
   
 |アイコン|移動可能なアイテム|  
 |----------|-------------------|  
-|![レポート アイコン](../../reporting-services/report-server/media/hlp-16doc.gif "レポート アイコン")|レポート|  
+|![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "レポート アイコン")|レポート|  
 |![リンク レポート アイコン](../../reporting-services/report-server/media/hlp-16linked.gif "リンク レポート アイコン")|リンク レポート|  
-|![フォルダー アイコン](../../reporting-services/report-server/media/hlp-16folder.gif "フォルダー アイコン")|フォルダー|  
+|![フォルダー アイコン](../../reporting-services/report-server/media/hlp-16folder.gif "フォルダー アイコン")|Folder|  
 |![汎用リソース アイコン](../../reporting-services/report-server/media/hlp-16file.gif "汎用リソース アイコン")|汎用リソース|  
-|![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")|[共有データ ソース]|  
+|![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン")|[共有データ ソース]|  
 ||共有データセット|  
   
  作業に使用するすべてのアイテムを移動できるわけではありません。 サブスクリプションまたはレポート履歴など、レポートに関連付けられたアイテムを移動することはできません。 これらのアイテムは、関連するレポートと共に移動します。 同様に、フォルダー階層の外部にある、共有スケジュールなどのアイテムは移動できません。 操作を行うための権限がない場合は、アイテムを移動できません。 アイテムを移動するための権限は、当該アイテムのロールの割り当てで "レポートの管理"、"モデルの管理"、"フォルダーの管理、および "データ ソースの管理" のタスクを選択した場合に許可されます。  
@@ -55,7 +55,7 @@ ms.locfileid: "65581089"
   
  または、移動するオブジェクトに移動して **[プロパティ]** をクリックし、ページの上部にある **[移動]** をクリックします。  
   
-## <a name="delete-an-item"></a>アイテムの削除  
+## <a name="delete-an-item"></a>項目を削除する  
  アイテムを削除する前に、そのアイテムが他のアイテムによって使用されていないかどうかを確認してください。 たとえば、共有データ ソースを削除した場合、そのデータ ソースを使用するレポートおよびモデルは実行できなくなります。 レポートを削除すると、そのレポートに関連付けられているサブスクリプションおよびレポート履歴も削除されます。 あるアイテムに依存しているアイテムを検索するには、「[[依存アイテム] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e)」を参照してください。  
   
 #### <a name="to-delete-a-report-or-item"></a>レポートまたはアイテムを削除するには  
@@ -71,7 +71,7 @@ ms.locfileid: "65581089"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [[コンテンツ] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

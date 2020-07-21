@@ -19,18 +19,18 @@ helpviewer_keywords:
 - IDs [SQL Server], schemas
 - default schema IDs
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5882a98a856916ebeaa0ad30d545d29cdf21071c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00a3667c5e058bcc25faa4195af3d676ae9cdf08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089876"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003669"
 ---
-# <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   スキーマ名に関連付けられているスキーマ ID を返します。  
   
@@ -44,7 +44,7 @@ SCHEMA_ID ( [ schema_name ] )
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
 |*schema_name*|スキーマの名前です。 *schema_name* は、 **sysname**です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
   
@@ -53,10 +53,10 @@ SCHEMA_ID ( [ schema_name ] )
   
  場合に、NULL が返される *schema_name* 有効なスキーマではありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SCHEMA_ID は、システム スキーマ ID とユーザー定義スキーマ ID を返します。 SCHEMA_ID は、選択リストの中、WHERE 句の中、また、式を使える所であればどこでも呼び出すことができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-default-schema-id-of-a-caller"></a>A. 呼び出し元の既定のスキーマ ID を返す  
   

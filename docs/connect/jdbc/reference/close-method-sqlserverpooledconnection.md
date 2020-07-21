@@ -1,5 +1,5 @@
 ---
-title: close メソッド (SQLServerPooledConnection) |Microsoft Docs
+title: close メソッド (SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e04edd22f354440d1ef3704090f3d3c0b8189f23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d9205ad146dc4ad170281d351d8e13d0b64e554
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955570"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923646"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>close メソッド (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  close メソッドは、javax.sql.PooledConnection インターフェイスの close メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

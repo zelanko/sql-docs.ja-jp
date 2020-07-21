@@ -16,15 +16,15 @@ ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a455e6a8bf07b41a35b9c71f9d024278d0387e65
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113285"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002321"
 ---
 # <a name="subqueries-sql-server"></a>サブクエリ (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  
 サブクエリとは、`SELECT`、`INSERT`、`UPDATE`、または `DELETE` の各ステートメントの内部、または別のサブクエリの内部で入れ子になっているクエリです。 サブクエリは、式が使えるところであればどこにでも使用できます。 次の例では、SELECT ステートメント内にある MaxUnitPrice という列に対する式としてサブクエリを使用します。
 
@@ -39,7 +39,7 @@ FROM Sales.SalesOrderHeader AS Ord;
 GO
 ```
 
-## <a name="fundamentals"></a> サブクエリの基礎
+## <a name="subquery-fundamentals"></a><a name="fundamentals"></a> サブクエリの基礎
 サブクエリは内部クエリや内部選択と呼ばれることもあります。また、サブクエリを含むステートメントは外部クエリや外部選択と呼ばれます。   
 
 サブクエリを含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの多くは、サブクエリを使う代わりに結合を使って表現することもできます。 サブクエリでしか発生しない問題もあります。 通常、[!INCLUDE[tsql](../../includes/tsql-md.md)] では、サブクエリを含むステートメントと、意味は同じでもサブクエリを含まないステートメントとの間にパフォーマンスの違いはありません。 ただし、存在を検査する必要がある場合には、結合によってパフォーマンスが向上することもあります。 それ以外の場合は、入れ子になったクエリを外側のクエリの結果ごとに処理し、重複が確実に解消されるようにする必要があります。 このような場合、結合のアプローチを使った方が良い結果になります。 次の例は、サブクエリ `SELECT` と結合の `SELECT` が同じ結果を返すことを示しています。
@@ -92,7 +92,7 @@ GO
 -   修飾されていない比較演算子で導かれ、単一の値を返す必要があるサブクエリ
 -   `EXISTS` で導かれる、存在を検査するサブクエリ。
 
-## <a name="rules"></a> サブクエリの規則
+## <a name="subquery-rules"></a><a name="rules"></a> サブクエリの規則
 サブクエリには次の制限があります。 
 -   比較演算子で導かれたサブクエリの選択リストには、式または列名を 1 つしか入れることができません。ただし、`EXISTS` および `IN` では、それぞれ `SELECT *` とリストを使用できます。   
 -   1 つ上のレベルのクエリの `WHERE` 句に列名が含まれている場合、サブクエリの選択リストで指定されている列との結合互換性が必要です。   
@@ -104,7 +104,7 @@ GO
 -   サブクエリで作成されたビューは、更新できません。   
 -   `EXISTS` で導かれたサブクエリの選択リストには、通例、単一の列名ではなくアスタリスク (\*) が使用されます。 `EXISTS` で導かれるサブクエリの規則は、標準の選択リストの規則と同じです。これは、`EXISTS` で導かれるサブクエリは存在検査を行うもので、データではなく TRUE または FALSE を返すためです。   
 
-## <a name="qualifying"></a> サブクエリで使用する列名の修飾
+## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> サブクエリで使用する列名の修飾
 次の例で、外側のクエリの `WHERE` 句内の *BusinessEntityID* 列は、外側のクエリの `FROM` 句内のテーブル名 (*Sales.Store*) で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
 
 ```sql
@@ -140,7 +140,7 @@ GO
 > [!IMPORTANT]
 > サブクエリで参照している列が、サブクエリの `FROM` 句で参照しているテーブルにない場合でも、外側のクエリの `FROM` 句で参照しているテーブルに存在すれば、エラーが発生することなくクエリが実行されます。 サブクエリで参照している列は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、外側のクエリのテーブル名で暗黙的に修飾されます。   
 
-## <a name="nesting"></a> 複数レベルの入れ子
+## <a name="multiple-levels-of-nesting"></a><a name="nesting"></a> 複数レベルの入れ子
 サブクエリには 1 つ以上のサブクエリを含めることができます。 1 つのステートメント内で任意の数のサブクエリを入れ子にできます。   
 
 次のクエリでは、従業員であり販売員でもある者の名前を検索しています。   
@@ -202,7 +202,7 @@ ON e.BusinessEntityID = s.BusinessEntityID;
 GO
 ```
 
-## <a name="correlated"></a> 相関サブクエリ
+## <a name="correlated-subqueries"></a><a name="correlated"></a> 相関サブクエリ
 多くのクエリは、サブクエリを 1 回実行し、その結果である 1 つまたは複数の値を外側のクエリの `WHERE` 句に代入することにより評価されます。 相関サブクエリ (繰り返しサブクエリとも呼びます) を含むクエリでは、サブクエリの値は外側のクエリによって決まります。 つまり、外側のクエリで選択される各行に対して 1 回ずつ、サブクエリが繰り返し実行されることになります。
 次のクエリでは、各従業員の姓と名を検索し、その中から *SalesPerson* テーブルで示される特別手当の値が 5,000 で、従業員 ID が *Employee* テーブルと *SalesPerson* テーブルで一致しているものを取得しています。
 
@@ -259,7 +259,7 @@ GO
 
 相関サブクエリでは、特定のテーブルに含まれている列をテーブル値関数の引数として外側のクエリで参照することにより、`FROM` 句にテーブル値関数を含めることもできます。 この場合、外側のクエリの各行について、サブクエリに従ってテーブル値関数が評価されます。    
   
-## <a name="types"></a> サブクエリの種類
+## <a name="subquery-types"></a><a name="types"></a> サブクエリの種類
 サブクエリは、次のようにクエリのさまざまな部分で指定できます。 
 -   別名と共に指定します。 詳しくは、「[別名を使ったサブクエリ](#aliases)」をご覧ください。
 -   `IN` または `NOT IN` で。 詳しくは、「[IN で導かれるサブクエリ](#in)」および「[NOT IN で導かれるサブクエリ](#notin)」をご覧ください。
@@ -269,7 +269,7 @@ GO
 -   `EXISTS` または `NOT EXISTS` で。 詳しくは、「[EXISTS を使ったサブクエリ](#exists)」および「[NOT EXISTS を使用したサブクエリ](#notexists)」をご覧ください。
 -   式の代わりに指定します。 詳しくは、「[式の代わりに使われるサブクエリ](#expression)」をご覧ください。
 
-### <a name="aliases"></a> 別名を使ったサブクエリ
+### <a name="subqueries-with-aliases"></a><a name="aliases"></a> 別名を使ったサブクエリ
 サブクエリと 1 つ上のレベルのクエリで同じテーブルを参照しているステートメントは、テーブルをそのテーブル自体に結合する自己結合として表すこともできます。 たとえば、サブクエリを使用して特定の州に住む従業員の住所を見つけられます。   
 
 ```sql
@@ -326,7 +326,7 @@ GO
 
 別名を明示的に指定すると、サブクエリ内の *Person.Address* への参照が、1 つ上のレベルのクエリ内の参照と同一ではないことが明確になります。   
 
-### <a name="in"></a> IN で導かれるサブクエリ
+### <a name="subqueries-with-in"></a><a name="in"></a> IN で導かれるサブクエリ
 `IN` または `NOT IN` で導かれたサブクエリの結果は、0 個以上の値のリストになります。 サブクエリが結果を返すと、1 つ上のレベルのクエリがこの結果を使用します。    
 次のクエリでは、Adventure Works Cycles が製造しているすべてのホイール製品の名前が検索されます。     
 
@@ -468,7 +468,7 @@ GO
 
 結合は常にサブクエリとして表すことができます。 サブクエリは、多くの場合、結合として表すことができますが、常に表せるわけではありません。 これは、結合に対照性があるためです。つまり、テーブル A とテーブル B をどのような順序で結合しても、得られる答えは同じになります。 サブクエリを使った場合、同じことが当てはまりません。    
 
-### <a name="notin"></a> NOT IN で導かれるサブクエリ
+### <a name="subqueries-with-not-in"></a><a name="notin"></a> NOT IN で導かれるサブクエリ
 キーワード NOT IN で導かれるサブクエリも、0 個以上の値のリストを返します。   
 次のクエリでは、自転車 (完成品) 以外の製品名が検索されます。   
 
@@ -488,7 +488,7 @@ GO
 
 このステートメントは結合に変換できません。 非等価結合はこれとよく似ていますが、意味は異なります。つまり、自転車 (完成品) 以外のサブカテゴリに属する製品名が検索されます。      
 
-### <a name="upsert"></a> UPDATE、DELETE、および INSERT ステートメントでのサブクエリ
+### <a name="subqueries-in-update-delete-and-insert-statements"></a><a name="upsert"></a> UPDATE、DELETE、および INSERT ステートメントでのサブクエリ
 サブクエリは、`UPDATE`、`DELETE`、`INSERT`、`SELECT` の各データ操作言語 (DML) ステートメントで入れ子にできます。    
 
 次の例では、*ListPrice* テーブルの *Production.Product* 列の値が 2 倍になります。 `WHERE` 句のサブクエリでは *Purchasing.ProductVendor* テーブルを参照して、*Product* テーブルで更新される行を *BusinessEntity* 1540 の行だけに制限しています。
@@ -518,7 +518,7 @@ INNER JOIN Purchasing.ProductVendor AS pv
 GO   
 ```
 
-### <a name="comparison"></a> 比較演算子によるサブクエリ
+### <a name="subqueries-with-comparison-operators"></a><a name="comparison"></a> 比較演算子によるサブクエリ
 サブクエリは、次の比較演算子のいずれかで導くことができます (=、< >、>、> =、<、! >、! <、< =)。   
 
 修飾されていない比較演算子 (後ろに `ANY` や `ALL` がない比較演算子) で導かれるサブクエリでは、`IN` によって導かれるサブクエリと同様に、値のリストでなく単一の値を返す必要があります。 このようなサブクエリから複数の値が返された場合は、SQL Server によりエラー メッセージが表示されます。    
@@ -569,7 +569,7 @@ WHERE ListPrice >
 GO
 ```
 
-### <a name="comparison_modified"></a> ANY、SOME、または ALL で修飾された比較演算子
+### <a name="comparison-operators-modified-by-any-some-or-all"></a><a name="comparison_modified"></a> ANY、SOME、または ALL で修飾された比較演算子
 サブクエリを導く比較演算子は、キーワード ALL または ANY で修飾できます。 SOME は `ANY` に相当する ISO 標準です。     
 
 修飾した比較演算子で導かれたサブクエリは、0 個以上の値のリストを返し、`GROUP BY` 句または `HAVING` 句を含むことができます。 これらのサブクエリは、`EXISTS` を使用して書き換えることができます。     
@@ -667,7 +667,7 @@ GO
 
 `NOT IN` と同じ意味の `<>ALL` 演算子を使用しても同じ結果が得られます。   
 
-### <a name="exists"></a> EXISTS を使ったサブクエリ
+### <a name="subqueries-with-exists"></a><a name="exists"></a> EXISTS を使ったサブクエリ
 サブクエリの導入にキーワード `EXISTS` を使用した場合、そのサブクエリは存在検査として機能します。 外側のクエリの `WHERE` 句により、このサブクエリから返される行が存在するかどうかがテストされます。 サブクエリは実際にはデータを生成せず、TRUE または FALSE の値を返します。   
 
 EXISTS を使用して導入するサブクエリの構文は、次のとおりです。   
@@ -735,7 +735,7 @@ WHERE ProductSubcategoryID IN
 GO
 ```   
 
-### <a name="notexists"></a> NOT EXISTS を使用したサブクエリ
+### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> NOT EXISTS を使用したサブクエリ
 `NOT EXISTS` の機能は `EXISTS` と似ています。ただし、NOT EXISTS が使用されている `WHERE` 句が条件を満たすのは、対応するサブクエリによって返される行がない場合です。    
 
 たとえば、Wheels サブカテゴリに含まれていない製品の名前を検出するには、次のクエリを実行します。   
@@ -754,7 +754,7 @@ WHERE NOT EXISTS
 GO
 ```   
 
-### <a name="expression"></a> 式の代わりに使われるサブクエリ
+### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> 式の代わりに使われるサブクエリ
 [!INCLUDE[tsql](../../includes/tsql-md.md)] では、`SELECT`、`UPDATE`、`INSERT`、`DELETE` の各ステートメントで式が使えるところであればどこでも、サブクエリを式の代わりに使用できます。ただし、`ORDER BY` リストにはサブクエリを使用できません。    
 
 次の例に、この拡張機能の使用方法を示します。 次のクエリにより、すべてのマウンテン バイク製品の価格、平均価格、および各マウンテン バイクの価格と平均価格との差がわかります。    

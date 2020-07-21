@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel および Mode プロパティの例 (VB) |Microsoft Docs
+title: IsolationLevel と Mode プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918416"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758678"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel および Mode プロパティの例 (VB)
-この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel と Mode プロパティの例 (VB)
+この例では、 [Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを使用して排他接続を開き、 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
   
 ```  
 'BeginIsolationLevelVB  
@@ -115,7 +115,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

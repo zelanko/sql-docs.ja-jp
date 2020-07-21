@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 721cc221643ed1e315566f32fde5a24752083738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114905"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010748"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY (データベースの権限の拒否) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースに対する権限を拒否します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "68114905"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]
@@ -64,14 +64,14 @@ PRIVILEGES: ISO 準拠のために用意されています。 ALL の動作は�
 
 CASCADE: 指定したプリンシパルが権限を許可したプリンシパルに対しても、権限を拒否することを示します。
 
-AS \<database_principal>: このクエリを実行するプリンシパルが権限を拒否する権利の派生元のプリンシパルを指定します。
+AS \<database_principal> このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。
 
 *Database_user*: データベース ユーザーを指定します。
 
 *Database_role*: データベース ロールを指定します。
 
 *Application_role*
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] まで。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
 アプリケーション ロールを指定します。
 
@@ -85,13 +85,13 @@ AS \<database_principal>: このクエリを実行するプリンシパルが権
 
 *Database_user_with_no_login*: 対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 データベースは、セキュリティ保護可能なリソースで、権限の階層で親となっているサーバーに含まれています。 次の表に、データベースで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。
 
 |データベース権限|権限が含まれるデータベース権限|権限が含まれるサーバー権限|
 |-------------------------|------------------------------------|----------------------------------|
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]」を参照してください。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|
@@ -104,7 +104,7 @@ AS \<database_principal>: このクエリを実行するプリンシパルが権
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br /> **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |すべての外部データ ソースを変更します。|ALTER|CONTROL SERVER|
 |任意の外部のファイル形式を変更します。|ALTER|CONTROL SERVER|
@@ -115,7 +115,7 @@ AS \<database_principal>: このクエリを実行するプリンシパルが権
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|
-|すべてのセキュリティ ポリシーを変更します。<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|CONTROL SERVER|
+|すべてのセキュリティ ポリシーを変更します。<br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|
@@ -175,7 +175,7 @@ AS \<database_principal>: このクエリを実行するプリンシパルが権
 
 AS オプションを使用する場合、指定するプリンシパルはデータベースを所有している必要があります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-denying-permission-to-create-certificates"></a>A. 証明書を作成する権限を拒否する
 
@@ -191,7 +191,7 @@ GO
 
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでの `REFERENCES` 権限を、アプリケーション ロール `AuditMonitor` に対して拒否します。
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
 ```sql
 USE AdventureWorks2012;
@@ -215,5 +215,5 @@ GO
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [GRANT](../../t-sql/statements/grant-transact-sql.md)
-- [権限](../../relational-databases/security/permissions-database-engine.md)
+- [アクセス許可](../../relational-databases/security/permissions-database-engine.md)
 - [プリンシパル](../../relational-databases/security/authentication-access/principals-database-engine.md)

@@ -10,27 +10,27 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8274597a9dddc42b9745d99add5160889f814572
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787316"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server の Columnstore オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **SQLServer:Columnstore** オブジェクトは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で列ストア インデックスの実行を監視するカウンターを提供します。  
+  **SQLServer:Columnstore** オブジェクトには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で列ストア インデックスの実行を監視するためのカウンターが用意されています。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** カウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** カウンターについて説明します。  
   
-|Columnstore カウンター|[説明]|  
+|Columnstore カウンター|説明|  
 |--------------------------|-----------------|  
 |**閉じられたデルタ行グループ数**|閉じられたデルタ行グループの数。|  
 |**圧縮されたデルタ行グループ数**|圧縮されたデルタ行グループの数。|  
 |**作成されたデルタ行グループ数**|作成されたデルタ行グループの数。|  
 |**セグメント キャッシュ ヒット率**|ディスクから読み取らずに、columnstore プール内で見つかった列セグメントのパーセンテージ。|  
-|**セグメント キャッシュ ヒット率ベース**|内部使用のみです。|
+|**セグメント キャッシュ ヒット率ベース**|内部使用専用です。|
 |**セグメント読み取り数/秒**|物理セグメント読み取りの発生回数。|  
 |**削除バッファーの合計移行回数**|組ムーバーが削除バッファーをクリーンアップした回数。|  
 |**マージ ポリシーの合計評価数**|columnstore のマージ ポリシーを評価した回数。|  

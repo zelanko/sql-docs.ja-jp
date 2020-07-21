@@ -1,5 +1,6 @@
 ---
 title: データベース ミラーリング中に発生する可能性のあるエラー | Microsoft Docs
+description: 物理的な、オペレーティング システムの、または SQL Server の問題によって発生するデータベース ミラーリング セッションの失敗と、エラーに対処する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b1a6778dd969f751fff51c54d9148b3cd0e5bf5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b1e2a216a38ed3a9009d446ebf8d5abd79048df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735231"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   物理的な問題、オペレーティング システムの問題、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題により、データベース ミラーリング セッションが失敗する場合があります。 データベース ミラーリングでは、Sqlservr.exe が依存しているコンポーネントを定期的にチェックして、それらのコンポーネントが正常に機能しているのか失敗したのかを確認する処理は行われません。 ただし、失敗の種類によっては、影響を受けたコンポーネントからエラーが Sqlservr.exe に報告されます。 他のコンポーネントから報告されるエラーを *ハード エラー*といいます。 データベース ミラーリングでは、通知されないその他の失敗を検出するために、独自のタイムアウト メカニズムを実装しています。 ミラーリングでタイムアウトが発生すると、データベース ミラーリングでは失敗が発生したと想定し、 *ソフト エラー*を宣言します。 ただし、SQL Server のインスタンス レベルで発生する一部の失敗ではミラーリングがタイムアウトしないため、失敗が検出されない場合があります。  
   
 > [!IMPORTANT]  
@@ -80,7 +81,7 @@ ms.locfileid: "68009954"
   
 -   TCP リンクのタイムアウト、パケットの紛失または破損、不正な順序のパケットなどのネットワーク エラー。  
   
--   オペレーティング システム、サーバー、またはデータベースの停止状態。  
+-   オペレーティング システム、サーバー、またはデータベースの応答の停止。  
   
 -   Windows サーバーのタイムアウト。  
   
@@ -99,7 +100,7 @@ ms.locfileid: "68009954"
   
  **タイムアウト値を変更するには (高い安全性モードのみ)**  
   
--   [ALTER DATABASE \<データベース> SET PARTNER TIMEOUT \<整数値>](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用します。  
+-   [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用します。  
   
  **現在のタイムアウト値を表示するには**  
   
@@ -110,7 +111,7 @@ ms.locfileid: "68009954"
   
 ## <a name="see-also"></a>参照  
  [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
+ [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

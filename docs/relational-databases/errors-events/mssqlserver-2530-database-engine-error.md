@@ -9,20 +9,20 @@ ms.topic: language-reference
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b51fb99c97447d630610be45dc3e3b681d90c40f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76ad2670dc60665fa128dd97aa335330228262ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780359"
 ---
-# <a name="mssqlserver2530"></a>MSSQLSERVER_2530
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|2530|  
 |イベント ソース|MSSQLSERVER|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 207341d09f153ed819d331960cf00dbb6c410bf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704951"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **geography** インスタンスの Open Geospatial Consortium (OGC) Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。  
   
@@ -41,14 +41,14 @@ ms.locfileid: "68042501"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型:**SqlChars**  
+ CLR の戻り値の型: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、サーバー上で返される結果セットが **FullGlobe** インスタンスに拡張されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STAsText()` を使用して、`LineString``geography` インスタンスを、テキストから (-122.360, 47.656) ～ (-122.343, 47.656) の範囲で作成する例を次に示します。 その後、結果をテキストで返します。  
   
 ```  

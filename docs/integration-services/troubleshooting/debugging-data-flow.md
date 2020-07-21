@@ -14,21 +14,21 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c87cd625222fc320d2a9a6f022a19361e74964f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945585"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71295120"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、データ ビューアーが用意されています。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67945585"
   
  次の表では、色分けについて説明します。  
   
-|色|[説明]|  
+|Color|説明|  
 |-----------|-----------------|  
 |無色|データ フロー エンジンによる呼び出しの待機中です。|  
 |黄|変換の実行、データの抽出、またはデータの読み込みを行っています。|  
@@ -179,11 +179,11 @@ order by source_component_name desc
     > [!NOTE]  
     >  列の一覧には、コンポーネントの入力列、前のエラー出力で追加された **[ErrorCode]** 列と **[ErrorColumn]** 列、このコンポーネントによって追加された **[ErrorCode]** 列と **[ErrorColumn]** 列が表示されます。  
   
-7.  クリックして **OK.**  
+7.  **[OK]** をクリックします。  
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
-## <a name="add_viewer"></a> データ フローにデータ ビューアーを追加する
+## <a name="add-a-data-viewer-to-a-data-flow"></a><a name="add_viewer"></a> データ フローにデータ ビューアーを追加する
   このトピックでは、データ フローにデータ ビューアーを追加して構成する方法について説明します。 データ ビューアーには、2 つのデータ フロー コンポーネント間を移動するデータが表示されます。 たとえば、データ ビューアーでは、データ ソースから抽出されたデータを、データ フローの変換で変更される前の状態で表示できます。  
   
  パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内のコンポーネントを連結します。  
@@ -213,7 +213,7 @@ order by source_component_name desc
 9. [表示する列] 領域で、データ ビューアーに表示する列を選択します。 既定では、表示可能なすべての列が選択され、 **[表示する列]** の一覧に表示されます。 表示しない列は、選択してから左矢印をクリックして、 **[未使用の列]** の一覧に移動させます。  
   
     > [!NOTE]  
-    >  グリッドでは、DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値は、ISO 8601 に従って書式設定された文字列として表示され、 **T** 区切りが空白区切りに置き換わります。 DT_DATE データ型および DT_FILETIME データ型を表す値には、秒の小数部を表す 7 桁が含まれています。 DT_FILETIME データ型では秒の小数部が 3 桁のみ格納されるため、残りの 4 桁についてはグリッドに 0 が表示されます。 DT_DBTIMESTAMP データ型を表す値には、秒の小数部を表す 3 桁が含まれています。 DT_DBTIME2、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値については、秒を表す小数点以下桁数が、列のデータ型で指定された小数点以下桁数と一致します。 ISO 8601 形式の詳細については、「 [日付および時刻の形式](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)」を参照してください。 データ型の詳細については、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+    >  グリッドでは、DT_DATE、DT_DBTIME2、DT_FILETIME、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値は、ISO 8601 に従って書式設定された文字列として表示され、 **T** 区切りが空白区切りに置き換わります。 DT_DATE データ型および DT_FILETIME データ型を表す値には、秒の小数部を表す 7 桁が含まれています。 DT_FILETIME データ型では秒の小数部が 3 桁のみ格納されるため、残りの 4 桁についてはグリッドに 0 が表示されます。 DT_DBTIMESTAMP データ型を表す値には、秒の小数部を表す 3 桁が含まれています。 DT_DBTIME2、DT_DBTIMESTAMP2、および DT_DBTIMESTAMPOFFSET の各データ型を表す値については、秒を表す小数点以下桁数が、列のデータ型で指定された小数点以下桁数と一致します。 ISO 8601 形式の詳細については、「 [日付および時刻の形式](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39)」を参照してください。 データ型について詳しくは、「 [Integration Services のデータ型](../../integration-services/data-flow/integration-services-data-types.md)」をご覧ください。  
   
 10. **[OK]** をクリックします。  
 

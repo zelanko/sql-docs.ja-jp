@@ -1,5 +1,5 @@
 ---
-title: 電源レポート プロパティ (SSAS テーブル) の表示 |Microsoft Docs
+title: レポートのプロパティの Power View (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d91578e5c3f4b47f56eeb86aa738e37e8f59b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066815"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938763"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View レポート プロパティ (SSAS テーブル)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、データ アナリスト、意思決定者、インフォメーション ワーカーなどのビジネス ユーザーのための、直感的なアドホック レポートを提供します。 これを使用すると、PowerPivot ギャラリーで発行される PowerPivot ブックに基づくテーブル モデル、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して作成されて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services インスタンスに配置されるテーブル モデルから、データのビューを簡単に作成して対話できます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] はブラウザー ベースの Silverlight アプリケーションであり、SharePoint Server 2010 以降から起動されます。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f4fd01821e8f432d39905fb0bca974c155a151af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f0d5de286e36671341f60e13c5837a132f748e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762081"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 geometry オブジェクトのセットに対して和集合演算を実行します。
   
@@ -43,7 +43,7 @@ UnionAggregate ( geometry_operand )
 ## <a name="exceptions"></a>例外  
  入力値が無効である場合は、`FormatException` をスローします。 「[STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  入力が空である場合または入力の SRID が異なる場合は、**null** が返されます。 「[SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
  メソッドでは、**null** 入力は無視されます。  
@@ -51,7 +51,7 @@ UnionAggregate ( geometry_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、テーブル変数の **geometry** オブジェクトのセットの和集合を返します。  
  ```
  -- Setup table variable for UnionAggregate example 

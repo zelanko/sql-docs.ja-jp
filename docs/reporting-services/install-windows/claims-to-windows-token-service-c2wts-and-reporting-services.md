@@ -6,12 +6,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 49a42d5b84217e5fd2b49cd9de0092336d7933b2
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264998"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002660"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
 
@@ -49,7 +49,7 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
 
     **ベスト プラクティスとしては、C2WTS を独自のドメイン ID で実行する必要があります。**
 
-    * Active Directory アカウントを作成し、SharePoint サーバーの管理アカウントとしてアカウントを登録します。 マネージド アカウントの詳細については、[SharePoint のマネージド アカウント](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)に関する記事を参照してください
+    * Active Directory アカウントを作成し、SharePoint サーバーの管理アカウントとしてアカウントを登録します。
    
     * [SharePoint サーバーの全体管理] > [セキュリティ] > [サービス アカウントの構成] > [Windows サービス - Claims to Windows Token Service] から、マネージド アカウントを使用するための C2WTS サービスを構成します
 

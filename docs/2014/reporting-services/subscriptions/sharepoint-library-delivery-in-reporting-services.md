@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100697"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
@@ -68,13 +68,13 @@ ms.locfileid: "66100697"
  内部での使用に限られる出力形式や、SharePoint 統合モードで実行中のレポート サーバーでサポートされない出力形式は指定できません。 指定できない形式は、Null、RGDI、および HTMLOWC などです。  
   
  ファイル名と拡張子  
- 対象ライブラリでレポートが表示されるときのファイル名と拡張子を指定します。 ファイル拡張子を指定しなければ、レポートの出力形式に基づいてレポート サーバーで拡張子が作成されます。 この値は必須です。 ファイル名に使用できない文字は、: \ / * ? " < > | # { } % です。 " \< > | # { } %  
+ 対象ライブラリでレポートが表示されるときのファイル名と拡張子を指定します。 ファイル拡張子を指定しなければ、レポートの出力形式に基づいてレポート サーバーで拡張子が作成されます。 この値は必須です。 ファイル名に使用できない文字は、: \ / * ? " < > | # { } % です。 " \< > |# { } %  
   
- [タイトル]  
+ Title  
  対象ライブラリ内のレポートの `Title` プロパティ (オプション) を指定します。 これは、ライブラリに格納されているすべてのアイテムに対する標準プロパティです。 ユーザーは、SharePoint サイトでライブラリ コンテンツを表示するときに、このプロパティを表示するか非表示にするかを指定できます。  
   
- パス  
- SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 例:<http://mySharePointWeb/MySite/MyDocLib>が"<http://mySharePointWeb>"は Web アプリケーションでは、"MySite"は、SharePoint サイトと、"MyDocLib"は、レポートを配信する SharePoint ライブラリです。  
+ Path  
+ SharePoint ライブラリへの完全修飾 URL (SharePoint Web アプリケーションおよびサイトを含む) を指定します。 たとえば、次<http://mySharePointWeb/MySite/MyDocLib>のようになります。"<http://mySharePointWeb>" は Web アプリケーションを示し、"個人用サイト" は sharepoint サイト、"MyDocLib" はレポートが配信される sharepoint ライブラリです。  
   
  ページ、サイト、またはリストを指定することはできません。 対象コンテナーは、同じサイトまたはファームにあるライブラリであることが必要です。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "66100697"
  同じファイル名と拡張子を持つファイルは、サブスクリプションの処理時に新しい方のバージョンに置き換えられます。 既存のファイルを新しいバージョンに置き換える場合、 **[上書き]** を選択します。 サブスクリプションでファイルを置き換えない場合には、 **[なし]** を選択します。 この場合、対象ファイルと名前と拡張子が同じであるファイルが存在すると、配信が実行されません。 ファイル名の末尾に数値を付加して、同じファイルの連続するバージョンを追加する場合は、 **[自動増分]** を選択します。  
   
  [自動コピー]  
- [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 使用した場合**Autoincrement**または**なし**、配信が失敗し、`rsDeliveryError`エラーが発生します。  
+ [自動コピー] 機能を使用して、最新バージョンのファイルを複数の場所に自動コピーする場合、 **[上書き]** が有効な場合にのみファイルがコピーされます。 **Autoincrement**または**None**を使用した場合、配信は失敗`rsDeliveryError`し、エラーが発生します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

@@ -1,5 +1,6 @@
 ---
 title: サービス マスター キーのバックアップ | Microsoft Docs
+description: Transact-SQL を使用して SQL Server でサービス マスター キーをバックアップする方法について説明します。 サービス マスター キーは、暗号化階層のルートになります。
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 4a5b28fda96be3fce311abc159bbe8e94fc061ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895910"
 ---
 # <a name="back-up-the-service-master-key"></a>サービス マスター キーのバックアップ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   この記事では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用してサービス マスター キーをバックアップする方法について説明します。 サービス マスター キーは、暗号化階層のルートになります。 サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
 
 ## <a name="before-you-begin"></a>はじめに  
@@ -30,7 +31,7 @@ ms.locfileid: "68024424"
   
 - マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可
 データベースに対する CONTROL 権限が必要です。  
@@ -68,7 +69,5 @@ ms.locfileid: "68024424"
 8. ファイルをバックアップ メディアにコピーして、コピーしたファイルを確認します。  
   
 9. バックアップを安全な場所に保存します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)」と「[BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)」を参照してください。  

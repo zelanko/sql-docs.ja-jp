@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08a38e8a907c32a2614b3bda07a3153141b127d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893822"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817789"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server の各エディションがサポートする Integration Services の機能
 
@@ -35,29 +35,33 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 
 180 日の試用期間中、SQL Server Evaluation Edition をご利用いただけます。  
     
-> [![Evaluation Center からダウンロードする](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Evaluation Center からダウンロードする](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Centerから SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> SQL Server 2017 の新しい Integration Services 機能
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> SQL Server 2017 の新しい Integration Services 機能
   
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|特徴量|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|はい|||||
 |Scale Out Worker|はい|はい <sup>1</sup>|TBD|TBD|TBD|
 |OData コンポーネントで Microsoft Dynamics AX および Microsoft Dynamics CRM をサポート <sup>2</sup>|はい|はい||||
+|Linux Support|はい|はい|||はい|
 
 <sup>1</sup> Scale Out で Enterprise のみの機能を必要とするパッケージを実行する場合は、Scale Out Worker を SQL Server Enterprise のインスタンスでも実行する必要があります。
 
 <sup>2</sup> この機能は、SQL Server 2016 Service Pack 1 でもサポートされています。
 
-## <a name="IEWiz"></a> SQL Server インポートおよびエクスポート ウィザード
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> SQL Server インポートおよびエクスポート ウィザード
 
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|特徴量|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server インポートおよびエクスポート ウィザード|はい|はい|はい|はい|はい|  
+|SQL Server インポートおよびエクスポート ウィザード|はい|はい|はい|可<sup>1</sup>|可<sup>1</sup>|
 
-## <a name="IS"></a> Integration Services  
+<sup>1</sup> DTSWizard.exe は、Linux 上の SQL には用意されていません。 ただし、Linux 上の dtexec を、Windows 上の DTSWizard によって作成されたパッケージを実行するために使用できます。
+
+
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|特徴量|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |組み込みのデータ ソース コネクタ|はい|はい|||| 
 |組み込みのタスクと変換|はい|はい||||  
@@ -66,9 +70,9 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 |Hadoop/HDFS コネクタおよびタスク|はい|はい||||  
 |基本的なデータ プロファイリング ツール|はい|はい|||| 
 
-## <a name="ISAA"></a> Integration Services – 高度なソース/ターゲット  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services – 高度なソース/ターゲット  
   
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|特徴量|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity 高パフォーマンス Oracle ソース/ターゲット|はい|||||  
 |Attunity 高パフォーマンス Teradata ソース/ターゲット|はい|||||  
@@ -77,9 +81,9 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 |ディメンション処理変換先|はい|||||  
 |パーティション処理変換先|はい|||||  
   
-## <a name="ISAT"></a> Integration Services - 高度なタスクおよび変換  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services - 高度なタスクおよび変換  
   
-|機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|特徴量|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Attunity 変更データ キャプチャ コンポーネント <sup>1</sup>|はい|||||  
 |データ マイニング クエリ変換|はい|||||  

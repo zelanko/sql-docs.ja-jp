@@ -1,5 +1,5 @@
 ---
-title: 属性リレーションシップ ダイアグラムで図形を整列 |Microsoft Docs
+title: 属性リレーションシップダイアグラムでの図形の整列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7c3a1e5e72f13546f971bedba4af14e4e2d4264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544694"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>属性リレーションシップ ダイアグラムでの図形の整列
   **のディメンション デザイナーでは、[ディメンション構造] ビューの** [属性リレーションシップ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで図形の配置を変更できます。  
@@ -30,8 +29,8 @@ ms.locfileid: "66077138"
   
      **[図形の整列]** をクリックし、ディメンション デザイナーで使用される配置アルゴリズムに従ってすべての図形を自動的に整列することもできます。  
   
-## <a name="see-also"></a>関連項目  
- [のディメンション デザイナーでは、[ディメンション構造] ビューの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+## <a name="see-also"></a>参照  
+ [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [属性リレーションシップの定義](attribute-relationships-define.md)  
   
   

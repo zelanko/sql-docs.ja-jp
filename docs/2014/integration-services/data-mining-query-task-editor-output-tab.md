@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 003a184e2a9f94a7e116a819a30bc5cd3b6f5181
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890468"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437459"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
@@ -33,11 +32,11 @@ ms.locfileid: "68890468"
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  データ マイニング クエリ タスクの説明を入力します。  
   
 ## <a name="output-tab-options"></a>[出力] タブのオプション  
- **Connection**  
+ **接続**  
  接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
  **[新規作成]**  
@@ -50,9 +49,9 @@ ms.locfileid: "68890468"
  予測クエリで、出力先のテーブルを削除して再作成することにより、テーブルの内容を上書きするかどうかを指定します。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング クエリ タスク エディター ([マイニング モデル] タブ)](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [データ マイニング クエリ タスク エディター ([クエリ] タブ)](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [データ マイニング デザイナー](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Integration Services のエラーとメッセージの参照](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [データマイニングクエリタスクエディター &#40;[マイニングモデル] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [データマイニングクエリタスクエディター &#40;[クエリ] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

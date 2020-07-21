@@ -1,5 +1,5 @@
 ---
-title: レポートをクリックスルー レポートとしてモデルにリンクする |Microsoft Docs
+title: レポートをクリックスルーレポートとしてモデルにリンクする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108368"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>レポートをクリックスルー レポートとしてモデルにリンクする
@@ -31,7 +31,7 @@ ms.locfileid: "66108368"
   
 1.  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 以降を開きます。  
   
-2.  Web ブラウザーのアドレス バーに、レポート マネージャーの URL を入力します。 既定では、URL は http://\<*ComputerName*>/reports です。  
+2.  Web ブラウザーのアドレス バーに、レポート マネージャーの URL を入力します。 既定では、URL は http://\<*ComputerName*>/レポートです。  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>カスタマイズされたクリックスルー レポートを作成するには  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108368"
   
 7.  **[適用]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [クリックスルー レポート&#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [クリックスルーレポート &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
   
   

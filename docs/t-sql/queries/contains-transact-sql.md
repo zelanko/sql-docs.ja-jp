@@ -1,6 +1,6 @@
 ---
 title: CONTAINS (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: CONTAINS 言語要素の Transact-SQL リファレンス。 別の式内で単語や語句を検索するために使用されます。
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902124"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736322"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 CONTAINS は [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
@@ -65,7 +65,7 @@ ms.locfileid: "67902124"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   
@@ -151,7 +151,7 @@ CONTAINS (
  検索条件の FROM 句で指定したテーブルのすべてのフルテキスト インデックス付きの列が検索対象になります。 CONTAINS 句内の列は、フルテキスト インデックスがある単一テーブルから取得する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  指定した検索条件を検索するドキュメント プロパティを指定します。  
   
@@ -159,7 +159,7 @@ CONTAINS (
 >  行を返すクエリの場合、フルテキスト インデックスの検索プロパティ リストで *property_name* を指定し、フルテキスト インデックスに *property_name* のプロパティに固有のエントリを含める必要があります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
   
  LANGUAGE *language_term*  
- クエリにおいて、単語区切り、語幹検索、類義語の拡張と置換、およびノイズ語 ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) の破棄を行うときに使用する言語を指定します。 このパラメーターはオプションです。  
+ クエリにおいて、単語区切り、語幹検索、類義語の拡張と置換、およびノイズ語 ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) の破棄を行うときに使用する言語を指定します。 このパラメーターは省略可能です。  
   
  1 つの列に複数の異なる言語のドキュメントが BLOB (Binary Large Object) として格納されている場合、インデックスの作成に使用される言語は、各ドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、LANGUAGE *language_term* を指定すると検索結果の一致率が高まります。  
   
@@ -174,7 +174,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  *column_name* で検索するテキストと、その一致条件を指定します。  
   
-*\<contains_search_condition>* is **nvarchar**. 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`CONTAINS` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。
+*\<contains_search_condition>* は **nvarchar** です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`CONTAINS` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。
   
 ```sql  
 USE AdventureWorks2012;  
@@ -234,7 +234,7 @@ WHERE CONTAINS(Description, @SearchWord);
  検索対象のドキュメントに含まれている必要がある単語または語句の照合を指定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] \<custom_proximity_term>を使用することをお勧めします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]\<custom_proximity_term> を使用することをお勧めします。  
   
  NEAR | ~  
  一致が返されるには、NEAR (~) 演算子の両側の単語または語句がドキュメントに含まれている必要があります。 検索語句は 2 つ指定する必要があります。 検索語句には、二重引用符で区切られた 1 つの単語または語句を指定できます ("*語句*")。  
@@ -246,7 +246,7 @@ WHERE CONTAINS(Description, @SearchWord);
  汎用近接語句の詳細については、「[NEAR による他の単語の近くにある単語の検索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)」を参照してください。  
   
  \<custom_proximity_term>  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
   
  一致させる単語または語句と、必要に応じて検索語句間の許容最大距離を指定します。 また、検索語句を指定したとおりの順序で検索するように指定することもできます (\<match_order>)。  
   
@@ -263,7 +263,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
  \<maximum_distance>  
  文字列と一致すると見なされるための、その文字列の先頭と末尾にある検索語句間の許容最大距離を指定します。  
   
- *整数 (integer)*  
+ *integer*  
  0 から 4294967295 の正の整数を指定します。 この値により、指定した他の検索用語を除く最初と最後の検索語句間にある非検索語句の数を制御できます。  
   
  たとえば、次のクエリでは、最大距離が 5 語以内で `AA` と `BB` を任意の順序で検索します。  
@@ -354,7 +354,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  この作業を終えると、CONTAINS または [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 述語に 4 つの要素で構成される名前を使用して、リンク サーバー上の対象のテーブルのフルテキスト インデックス列にクエリを実行できます。 フルテキスト クエリを受け取るようリモート サーバーを準備するには、リモート サーバー上の検索対象のテーブルおよび列にフルテキスト インデックスを作成し、リモート サーバーをリンク サーバーとして追加します。  
   
 ## <a name="comparison-of-like-to-full-text-search"></a>LIKE とフルテキスト検索の比較  
- フルテキスト検索とは異なり、[LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数とサイズにもよりますが、数秒以内で結果を取得できます。 もう 1 つの注意事項は、LIKE ではテーブル全体の単純なパターンのスキャンしか実行されないことです。 これに対し、フルテキスト クエリでは、言語が識別され、インデックスの作成時やクエリの実行時に、ストップワードのフィルター処理、類義語辞典と変化形の拡張の作成など、特定の変換が適用されます。 これらの変換により、フルテキスト クエリの再呼び出しの精度および結果の最終的なランク付けを向上させることができます。  
+ フルテキスト検索とは異なり、 [LIKE](../../t-sql/language-elements/like-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 述語は、文字パターンにのみで動作します。 また、フォーマットされたバイナリ データのクエリには LIKE 述語を使用できません。 さらに、構造化されていない大量のテキスト データに対して LIKE クエリを実行すると、同じデータに対して同等のフルテキスト検索を実行する場合に比べてはるかに時間がかかります。 数百万行のテキスト データに対して LIKE クエリを実行すると、結果が得られるまでに数分かかる場合があります。一方、同じデータに対してフルテキスト クエリを実行すると、返される行数とサイズにもよりますが、数秒以内で結果を取得できます。 もう 1 つの注意事項は、LIKE ではテーブル全体の単純なパターンのスキャンしか実行されないことです。 これに対し、フルテキスト クエリでは、言語が識別され、インデックスの作成時やクエリの実行時に、ストップワードのフィルター処理、類義語辞典と変化形の拡張の作成など、特定の変換が適用されます。 これらの変換により、フルテキスト クエリの再呼び出しの精度および結果の最終的なランク付けを向上させることができます。  
   
 ## <a name="querying-multiple-columns-full-text-search"></a>複数列のクエリ (フルテキスト検索)  
  検索する列のリストを指定することで、複数の列に対してクエリを実行できます。 クエリを実行する列は同じテーブルに含まれている必要があります。  
@@ -369,9 +369,9 @@ FROM Production.Product
 WHERE CONTAINS((Name, Color), 'Red');  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. CONTAINS を \<simple_term> と共に使用する  
+### <a name="a-using-contains-with-simple_term"></a>A. CONTAINS を \<simple_term> と共に使用する  
  次の例では、 `Mountain` という単語を含み、価格が `$80.99` であるすべての製品を検索します。  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. CONTAINS と語句を \<simple_term> と共に使用する  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. CONTAINS と語句を \<simple_term> と共に使用する  
  次の例では、`Mountain` または `Road` のいずれかの語句が含まれている、すべての製品を返します。  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. CONTAINS を \<prefix_term> と共に使用する  
+### <a name="c-using-contains-with-prefix_term"></a>C. CONTAINS を \<prefix_term> と共に使用する  
  次の例では、`Name` 列の中で、chain というプレフィックスで始まる 1 つ以上の単語が含まれている、すべての製品名を返します。  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. CONTAINS および OR を \<prefix_term> と共に使用する  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. CONTAINS および OR を \<prefix_term> と共に使用する  
  次の例では、`chain` または `full` のいずれかのプレフィックスを持つ文字列が含まれている、すべてのカテゴリ説明を返します。  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. CONTAINS を \<proximity_term> と共に使用する  
+### <a name="e-using-contains-with-proximity_term"></a>E. CONTAINS を \<proximity_term> と共に使用する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  次の例では、`Production.ProductReview` テーブルを対象として、10 語以内の距離で `bike` と "`control`" という単語を含むすべてのコメントを、指定した順序 (つまり、"`bike`"、"`control`" の順) で検索します。  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. CONTAINS を \<generation_term> と共に使用する  
+### <a name="f-using-contains-with-generation_term"></a>F. CONTAINS を \<generation_term> と共に使用する  
  次の例では、`ride` を原型とする riding、ridden などの単語が含まれている、すべての製品を検索します。  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. CONTAINS を \<weighted_term> と共に使用する  
+### <a name="g-using-contains-with-weighted_term"></a>G. CONTAINS を \<weighted_term> と共に使用する  
  次の例では、`performance`、`comfortable`、または `smooth` という単語を含むすべての製品名を検索します。各単語にはそれぞれ異なる重み付けが割り当てられています。  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. ドキュメント プロパティに対してクエリを実行する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  次のクエリでは、`Production.Document` テーブルの `Document` 列内で、インデックス化されたプロパティ `Title` を検索します。 このクエリは、`Title` または `Maintenance` という文字列が `Repair` プロパティに含まれているドキュメントのみを返します。  
   

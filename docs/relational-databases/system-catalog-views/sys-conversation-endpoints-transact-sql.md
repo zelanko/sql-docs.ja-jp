@@ -1,5 +1,5 @@
 ---
-title: sys.conversation_endpoints (TRANSACT-SQL) |Microsoft Docs
+title: conversation_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,50 +17,50 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d371f877c35d1a7935b3a98e00695b03a0a1c961
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109537"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892204"
 ---
-# <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  各側、[!INCLUDE[ssSB](../../includes/sssb-md.md)]メッセージ交換はメッセージ交換のエンドポイントで表されます。 このカタログ ビューには、データベース内のメッセージ交換のエンドポイントごとに 1 行が含まれています。  
+  メッセージ交換の各側 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、メッセージ交換のエンドポイントによって表されます。 このカタログビューには、データベース内のメッセージ交換エンドポイントごとに1行のデータが含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|conversation_handle|**uniqueidentifier**|このメッセージ交換のエンドポイントの識別子。 Null を許容しません。|  
-|conversation_id|**uniqueidentifier**|メッセージ交換の識別子。 この識別子はメッセージ交換の両側で共有されます。 識別子と is_initiator 列は、この機能は、データベース内で一意です。 Null を許容しません。|  
-|is_initiator|**tinyint**|このエンドポイントが側か相手側メッセージ交換の対象かどうか。  Null を許容しません。<br /><br /> 1 = 発信側<br /><br /> 0 = target|  
-|service_contract_id|**int**|このメッセージ交換のコントラクトの識別子です。 Null を許容しません。|  
-|conversation_group_id|**uniqueidentifier**|このメッセージが属するメッセージ交換グループの識別子。 Null を許容しません。|  
-|service_id|**int**|メッセージ交換の一方 (このビューを現在使用している側) で使用するサービスの識別子。 Null を許容しません。|  
-|有効期間|**datetime**|メッセージ交換の有効期限 (日付と時刻)。 Null を許容しません。|  
-|state|**char(2)**|メッセージ交換の現在の状態。 Null を許容しません。 次のいずれかです。<br /><br /> したがって送信開始。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このメッセージ交換に対して BEGIN CONVERSATION が処理されたが、メッセージがまだ送信されていません。<br /><br /> SI 受信開始。 別のインスタンスで新しいメッセージ交換を開始する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がまだ完全に受信の最初のメッセージ。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初のメッセージが受け取られなかった場合は、メッセージ交換をこの状態で作成可能性がありますまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]順序どおりにメッセージを受信します。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO (メッセージ交換確立) 状態のメッセージ交換が作成されることがあります。<br /><br /> CO 会話しています。 メッセージ交換が確立され、メッセージ交換の両側でメッセージを送信できます。 通常のサービスでのメッセージ交換の大半は、メッセージ交換がこの状態のときに行われます。<br /><br /> DI 切断受信します。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションは、メッセージ交換のメッセージを受信も可能性があります。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションで END CONVERSATION を発行と、メッセージ交換は CD (終了) 状態に移動します。<br /><br /> DO 送信切断。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側には、END CONVERSATION が承認される、メッセージ交換は CD (終了) 状態に移動します。<br /><br /> ER エラーです。 このエンドポイントでエラーが発生しました。 エラー メッセージは、アプリケーション キューに格納されます。 アプリケーション キューが空の場合は、アプリケーションが既にがエラー メッセージを受信することを示します。<br /><br /> CD が閉じられます。 メッセージ交換のエンドポイントは解放されました。|  
-|state_desc|**nvarchar(60)**|メッセージ交換のエンドポイントの状態の説明です。 このコラムでは、null 値です。 次のいずれかです。<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **会話しています。**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CLOSED**<br /><br /> **ERROR**|  
-|far_service|**nvarchar (256)**|メッセージ交換のリモート側で使用されるサービスの名前。 Null を許容しません。|  
-|far_broker_instance|**nvarchar(128)**|メッセージ交換のリモート側のブローカー インスタンス。 NULL 値を許容します。|  
-|principal_id|**int**|証明書は、ダイアログのローカル側で使用されるプリンシパルの識別子です。 Null を許容しません。|  
-|far_principal_id|**int**|証明書は、ダイアログ ボックスのリモート側で使用されるユーザーの識別子。 Null を許容しません。|  
-|outbound_session_key_identifier|**uniqueidentifier**|このダイアログ ボックスの送信時の暗号化キーの識別子。 Null を許容しません。|  
-|inbound_session_key_identifier|**uniqueidentifier**|ダイアログで使用される受信暗号化キーの識別子。 Null を許容しません。|  
-|security_timestamp|**datetime**|ローカルのセッション キーが作成された時刻。 Null を許容しません。|  
-|dialog_timer|**datetime**|このダイアログのメッセージ交換タイマーが DialogTimer メッセージを送信する時間。 Null を許容しません。|  
-|send_sequence|**bigint**|送信シーケンスの次のメッセージ番号。 Null を許容しません。|  
-|last_send_tran_id|**binary(6)**|メッセージを送信する最後のトランザクションの内部トランザクション ID。 Null を許容しません。|  
-|end_dialog_sequence|**bigint**|終了ダイアログ メッセージのシーケンス番号。 Null を許容しません。|  
-|receive_sequence|**bigint**|メッセージ受信シーケンスで予測される次のメッセージ番号。 Null を許容しません。|  
-|receive_sequence_frag|**int**|メッセージ受信シーケンスで予測される次のメッセージ フラグメント番号。 Null を許容しません。|  
-|system_sequence|**bigint**|ダイアログの最後のシステム メッセージのシーケンス番号。 Null を許容しません。|  
-|first_out_of_order_sequence|**bigint**|このダイアログ ボックスの順不同のメッセージの最初のメッセージのシーケンス番号。 Null を許容しません。|  
-|last_out_of_order_sequence|**bigint**|ダイアログの、順序どおりでないメッセージのうち最後のメッセージのシーケンス番号。 Null を許容しません。|  
-|last_out_of_order_frag|**int**|このダイアログ ボックスの順不同のフラグメントの最後のメッセージのシーケンス番号。 Null を許容しません。|  
-|is_system|**bit**|この場合は 1 には、システム ダイアログです。 Null を許容しません。|  
-|priority|**tinyint**|このメッセージ交換のエンドポイントに割り当てられているメッセージ交換の優先度。 Null を許容しません。|  
+|conversation_handle|**uniqueidentifier**|このメッセージ交換エンドポイントの識別子。 NULL 値は許容されません。|  
+|conversation_id|**uniqueidentifier**|メッセージ交換の識別子。 この識別子はメッセージ交換の両側で共有されます。 この識別子と is_initiator 列はデータベース内で一意です。 NULL 値は許容されません。|  
+|is_initiator|**tinyint**|このエンドポイントが、メッセージ交換の発信側と発信先のどちらであるかを示します。  NULL 値は許容されません。<br /><br /> 1 = 発信側<br /><br /> 0 = ターゲット|  
+|service_contract_id|**int**|このメッセージ交換のコントラクトの識別子。 NULL 値は許容されません。|  
+|conversation_group_id|**uniqueidentifier**|このメッセージ交換が属しているメッセージ交換グループの識別子。 NULL 値は許容されません。|  
+|service_id|**int**|メッセージ交換の一方 (このビューを現在使用している側) で使用するサービスの識別子。 NULL 値は許容されません。|  
+|有効期間|**datetime**|メッセージ交換の有効期限 (日付と時刻)。 NULL 値は許容されません。|  
+|state|**char(2)**|メッセージ交換の現在の状態。 NULL 値は許容されません。 つぎのいずれかです。<br /><br /> 送信が開始されました。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このメッセージ交換の開始メッセージ交換を処理しましたが、メッセージはまだ送信されていません。<br /><br /> SI   受信開始。 別のインスタンスがとの新しいメッセージ交換を開始し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ましたが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初のメッセージをまだ完全に受信していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最初のメッセージが断片化されている場合、またはメッセージを順不同で受信した場合に、この状態のメッセージ交換を作成することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO (メッセージ交換確立) 状態のメッセージ交換が作成されることがあります。<br /><br /> CO   メッセージ交換確立。 メッセージ交換が確立され、メッセージ交換の両側でメッセージを送信できます。 通常のサービスでのメッセージ交換の大半は、メッセージ交換がこの状態のときに行われます。<br /><br /> DI 受信が切断されました。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションがメッセージ交換のメッセージを受信する場合もあります。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションがメッセージ交換を終了すると、メッセージ交換は CD (Closed) 状態に移動します。<br /><br /> 送信を切断します。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側がメッセージ交換の終了を確認すると、メッセージ交換は CD (Closed) 状態に移動します。<br /><br /> ER エラーです。 このエンドポイントでエラーが発生しました。 エラーメッセージはアプリケーションキューに格納されます。 アプリケーションキューが空の場合は、アプリケーションが既にエラーメッセージを使用していることを示します。<br /><br /> CD を閉じました。 メッセージ交換のエンドポイントは解放されました。|  
+|state_desc|**nvarchar(60)**|エンドポイントのメッセージ交換の状態の説明。 この列は NULL 値を許容します。 つぎのいずれかです。<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **会話**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **開閉**<br /><br /> **エラー**|  
+|far_service|**nvarchar(256)**|メッセージ交換のリモート側で使用されるサービスの名前。 NULL 値は許容されません。|  
+|far_broker_instance|**nvarchar(128)**|メッセージ交換のリモート側のブローカーインスタンス。 NULLABLE.|  
+|principal_id|**int**|ダイアログのローカル側で使用される証明書を持つプリンシパルの識別子。 NULL 値は許容されません。|  
+|far_principal_id|**int**|ダイアログのリモート側で使用される証明書を持つユーザーの識別子。 NULL 値は許容されません。|  
+|outbound_session_key_identifier|**uniqueidentifier**|このダイアログの送信暗号化キーの識別子。 NULL 値は許容されません。|  
+|inbound_session_key_identifier|**uniqueidentifier**|ダイアログで使用される受信暗号化キーの識別子。 NULL 値は許容されません。|  
+|security_timestamp|**datetime**|ローカルのセッション キーが作成された時刻。 NULL 値は許容されません。|  
+|dialog_timer|**datetime**|このダイアログのメッセージ交換タイマーによって、表示タイマーメッセージが送信される時刻。 NULL 値は許容されません。|  
+|send_sequence|**bigint**|送信シーケンスの次のメッセージ番号。 NULL 値は許容されません。|  
+|last_send_tran_id|**binary(6)**|メッセージを送信する最後のトランザクションの内部トランザクション ID。 NULL 値は許容されません。|  
+|end_dialog_sequence|**bigint**|終了ダイアログ メッセージのシーケンス番号。 NULL 値は許容されません。|  
+|receive_sequence|**bigint**|メッセージ受信シーケンスで予測される次のメッセージ番号。 NULL 値は許容されません。|  
+|receive_sequence_frag|**int**|メッセージ受信シーケンスで予測される次のメッセージ フラグメント番号。 NULL 値は許容されません。|  
+|system_sequence|**bigint**|ダイアログの最後のシステム メッセージのシーケンス番号。 NULL 値は許容されません。|  
+|first_out_of_order_sequence|**bigint**|このダイアログの順不同メッセージ内の最初のメッセージのシーケンス番号。 NULL 値は許容されません。|  
+|last_out_of_order_sequence|**bigint**|ダイアログの、順序どおりでないメッセージのうち最後のメッセージのシーケンス番号。 NULL 値は許容されません。|  
+|last_out_of_order_frag|**int**|このダイアログの順序が不足しているフラグメント内の最後のメッセージのシーケンス番号。 NULL 値は許容されません。|  
+|is_system|**bit**|システムダイアログの場合は1。 NULL 値は許容されません。|  
+|priority|**tinyint**|このメッセージ交換のエンドポイントに割り当てられているメッセージ交換の優先度。 NULL 値は許容されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

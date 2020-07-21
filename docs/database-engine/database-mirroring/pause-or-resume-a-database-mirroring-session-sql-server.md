@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションの一時停止または再開 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング セッションを一時停止して再開するには
+description: SQL Server Management Studio または Transact-SQL (T-SQL) を使用して、SQL Server データベース ミラーリング セッションを一時停止および再開する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9829ffeb1eaf609ae538fc92054517aa8c9bbf3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0104928ede91b1130636bd4d29cc7329b4e63c86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643439"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションの一時停止または再開 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリングを一時停止または再開する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ReplaceThisText:**  
   
@@ -41,18 +42,18 @@ ms.locfileid: "67996478"
   
 -   **補足情報:** [データベース ミラーリングを一時停止または再開した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  データベース ミラーリング セッションをいつでも中断して、ボトルネックの発生中にパフォーマンスを向上させることができます。また、中断したセッションはいつでも再開できます。  
   
 > [!CAUTION]  
 >  強制的なサービスの後に、最初のプリンシパル サーバーが再接続されると、ミラーリングが中断します。 この状況でミラーリングを再開すると、元のプリンシパル サーバーのデータが失われる可能性があります。 データ損失の可能性への対処の詳細については、「[データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  データベース ミラーリング セッションを一時停止または再開するには、 **[データベースのプロパティ]** の [ミラーリング] ページを使用します。  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>データベース ミラーリングを一時停止または再開するには  
@@ -61,7 +62,7 @@ ms.locfileid: "67996478"
   
 2.  **[データベース]** を展開し、データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** を選択し、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  セッションを一時停止するには、 **[一時停止]** をクリックします。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "67996478"
   
 5.  セッションを再開するには、 **[再開]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-pause-database-mirroring"></a>データベース ミラーリングを一時停止するには  
   
@@ -109,7 +110,7 @@ ms.locfileid: "67996478"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>補足情報: データベース ミラーリングを一時停止または再開した後  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a>補足情報: データベース ミラーリングを一時停止または再開した後  
   
 -   **データベース ミラーリングを一時停止した後**  
   
@@ -119,7 +120,7 @@ ms.locfileid: "67996478"
   
      データベース ミラーリングを再開することで、ミラー データベースを SYNCHRONIZING 状態にします。 安全性レベルが FULL の場合、プリンシパルに対するミラーの遅れが解消され、ミラー データベースが SYNCHRONIZED 状態になります。 この時点で、フェールオーバーが可能になります。 ミラーリング監視サーバーが存在していて、オンになっている場合は、自動フェールオーバーが可能です。 ミラーリング監視サーバーが存在しない場合は、手動フェールオーバーが可能です。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [データベース ミラーリングを削除する &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   

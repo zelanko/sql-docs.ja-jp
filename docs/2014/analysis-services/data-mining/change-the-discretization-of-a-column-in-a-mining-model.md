@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル内の列の分離の変更 |Microsoft Docs
+title: マイニングモデルの列の分離を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f5dfbc1ab2481afc1b4f4b152c7748f9ac5a03a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085895"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525068"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>マイニング モデルでの列の分離の変更
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 値が自動的に分離-列の数値のデータのビンのつまり、特定のシナリオ。 たとえば、データに連続する数値データが含まれている場合にデシジョン ツリー モデルを作成すると、データの分布に応じて、連続するデータの各列が自動的にビン分割されます。 データの分離方法を制御するには、モデルでのデータの使用方法を制御するマイニング構造列のプロパティを変更する必要があります。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]値を自動的に分離します。つまり、特定のシナリオでは、数値列にデータをビン分割します。 たとえば、データに連続する数値データが含まれている場合にデシジョン ツリー モデルを作成すると、データの分布に応じて、連続するデータの各列が自動的にビン分割されます。 データの分離方法を制御するには、モデルでのデータの使用方法を制御するマイニング構造列のプロパティを変更する必要があります。  
   
  マイニング モデルでプロパティを設定する方法については、 [「マイニング モデル列」](mining-model-columns.md)を参照してください。  
   
@@ -39,14 +38,14 @@ ms.locfileid: "66085895"
   
 ### <a name="to-change-the-discretization-method"></a>分離メソッドを変更するには  
   
-1.  **マイニング プロパティ**ウィンドウで、横にあるテキスト ボックスをクリックして**コンテンツ**、選択と`Discretized`ドロップダウン リストから。  
+1.  [**マイニングプロパティ**] ウィンドウで、[**コンテンツ**] の横にあるテキストボックスをクリックし、 `Discretized` ドロップダウンリストからを選択します。  
   
      マイニング モデル全体に関連付けられているプロパティが、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> プロパティと <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> プロパティが有効になりました。  
   
-2.  **プロパティ**ウィンドウで、横にあるテキスト ボックスをクリックして<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>値は次のいずれかを選択します: `Automatic`、 `EqualAreas`、または`Cluster`します。  
+2.  [**プロパティ**] ウィンドウで、の横にあるテキストボックスをクリックし、 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 、、 `Automatic` またはのいずれかの値を選択します `EqualAreas` `Cluster` 。  
   
     > [!NOTE]  
-    >  列の使用法に設定されている場合`Ignore`、**プロパティ**列のウィンドウは空白です。  
+    >  列の使用法がに設定されている場合 `Ignore` 、列の [**プロパティ**] ウィンドウは空白になります。  
   
      新しい値は、デザイナーで別の要素を選択したときに有効になります。  
   

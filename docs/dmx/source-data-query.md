@@ -1,30 +1,30 @@
 ---
-title: '&lt;ソースデータクエリ&gt; |Microsoft Docs'
+title: '&lt;ソースデータクエリ &gt; |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892341"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670008"
 ---
-# <a name="ltsource-data-querygt"></a>&lt;ソースデータクエリ&gt;
+# <a name="ltsource-data-querygt"></a>&lt;source data query&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データマイニングモデルをトレーニングし、マイニングモデルから予測を作成するには、データベースの[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]外部にあるデータにアクセスする必要があります。 この外部データ\<を定義するには、データマイニング拡張機能 (DMX) でソースデータクエリ > 句を使用します。 [ &#40;Dmx&#41;への挿入](../dmx/insert-into-dmx.md)、[モデル&#60;&#62;予測からの選択&#40;、&#41;dmx](../dmx/select-from-model-prediction-join-dmx.md)の選択、および[[自然予測 join ステートメントからの選択]](../dmx/select-from-model-prediction-join-dmx.md)では、すべて **\<ソースデータクエリが使用され >** .  
+  データマイニングモデルをトレーニングし、マイニングモデルから予測を作成するには、データベースの外部にあるデータにアクセスする必要があり [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 \<この外部データを定義するには、データマイニング拡張機能 (DMX) でソースデータクエリ> 句を使用します。 [Dmx&#41;&#40;への挿入](../dmx/insert-into-dmx.md)、 [&#60;&#62; モデルからの選択、dmx &#40;の選択](../dmx/select-from-model-prediction-join-dmx.md)、および [[自然予測 join ステートメントからの選択](../dmx/select-from-model-prediction-join-dmx.md)] では、すべて** \< ソースデータクエリ&#41;** が使用されます。  
   
-## <a name="query-types"></a>クエリの種類  
+## <a name="query-types"></a>クエリ型  
  ソース データの指定には、最も一般的な次の 3 つの方法があります。  
   
  [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
- このステートメントは、既存のデータソースを使用し[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]て、のインスタンスの外部にあるデータを照会します。  
+ このステートメントは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、既存のデータソースを使用して、のインスタンスの外部にあるデータを照会します。  
   
  **Openquery**は関数の**OPENROWSET**に似ていますが、 **openquery**には次のような利点があります。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "68892341"
 -   管理者は、サーバー上のデータへのアクセス方法をより細かく制御できます。 たとえば、管理者は、サーバーに読み込まれるプロバイダーや、アクセスできる外部データを管理できます。  
   
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
- このステートメントは、既存のデータソースを使用し[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]て、のインスタンスの外部にあるデータを照会します。  
+ このステートメントは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、既存のデータソースを使用して、のインスタンスの外部にあるデータを照会します。  
   
- [図形&#40;DMX&#41;](../dmx/source-data-query-shape.md)  
+ [DMX&#41;&#40;図形](../dmx/source-data-query-shape.md)  
  このステートメントは複数のデータ ソースをクエリして、入れ子になったテーブルを作成します。 **SHAPE**を使用すると、複数のソースのデータを1つの階層テーブルに結合できます。 これは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を利用して、テーブル内にテーブルを埋め込むことによってテーブルを入れ子にします。  
   
  ソースデータを指定するには、次のオプションを使用することもできます。  
@@ -50,9 +50,9 @@ ms.locfileid: "68892341"
   
 -   行セットパラメーター  
   
-## <a name="see-also"></a>関連項目  
- [データマイニング拡張&#40;機能&#41; DMX データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データマイニング拡張&#40;機能&#41; DMX ステートメントリファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [入れ子に&#40;なったテーブル Analysis Services-データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
+## <a name="see-also"></a>参照  
+ [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
+ [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
+ [入れ子になったテーブル &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   
   

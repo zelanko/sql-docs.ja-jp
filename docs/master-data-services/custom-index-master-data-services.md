@@ -1,5 +1,5 @@
 ---
-title: カスタム インデックス (マスター データ サービス) | Microsoft Docs
+title: カスタム インデックス
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 18eaba26b326b95871594e46ae5c55355e2ac199
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811992"
 ---
 # <a name="custom-index-master-data-services"></a>カスタム インデックス (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   カスタムインデックスは、1つの属性 (単一のインデックス) または属性の一覧 (複合インデックス) に、エンティティ内の非クラスター化インデックスを作成します。 通常、インデックスによりクエリ処理のパフォーマンスが向上します。 SQL Server インデックスの詳細については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
   

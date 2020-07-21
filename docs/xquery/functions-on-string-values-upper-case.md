@@ -1,5 +1,6 @@
 ---
-title: upper-case 関数 (XQuery) |Microsoft Docs
+title: upper case 関数 (XQuery) |Microsoft Docs
+description: XQuery 関数の大文字 () を使用して、文字を大文字に変換する方法について説明します。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720025"
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値に使用する関数 - upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  この関数では、各文字に変換 *$arg*大文字にします。 Unicode コード ポイント用 Microsoft Windows バイナリ大文字/小文字の変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
+  この関数は、 *$arg*内の各文字を、それと等価な大文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準コードポイント標準のマッピングとは異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,20 +42,20 @@ fn:upper-case($arg as xs:string?) as xs:string
 |用語|定義|  
 |*$arg*|大文字に変換する文字列値。|  
   
-## <a name="remarks"></a>コメント  
- 場合の値 *$arg*が空、長さ 0 の文字列が返されます。  
+## <a name="remarks"></a>Remarks  
+ *$Arg*の値が空の場合は、長さ0の文字列が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更します。  
- 次の例では、変更、入力文字列 ' abcDEF!@4' を大文字に変換します。  
+### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
+ 次の例では、入力文字列 ' abcDEF! ' を変更します。 @4大文字にします。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字の文字列の検索  
+### <a name="b-search-for-a-specific-character-string"></a>B: 特定の文字列を検索する  
  この例では、upper-case 関数を使用して、大文字と小文字を区別せずに検索を行う方法を示しています。  
   
 ```  

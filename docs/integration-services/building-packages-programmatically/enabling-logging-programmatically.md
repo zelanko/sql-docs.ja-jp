@@ -21,14 +21,14 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 62a39e7ea876a405459a23d91e140b2d087d771a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070663"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294944"
 ---
 # <a name="enabling-logging-programmatically"></a>プログラムによるログ記録の有効化
 
@@ -47,7 +47,7 @@ ms.locfileid: "68070663"
   
  次の表に、使用可能なログ プロバイダー、説明、および <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A> 情報を示します。  
   
-|プロバイダー|[説明]|ConfigString プロパティ|  
+|プロバイダー|説明|ConfigString プロパティ|  
 |--------------|-----------------|---------------------------|  
 |SQL Server プロファイラー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler でキャプチャおよび表示される SQL トレースを生成します。 このプロバイダーで使用されるファイル名の既定の拡張子は、.trc です。|構成は必要ありません。|  
 |SQL Server|イベント ログ エントリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの **sysssislog** テーブルに書き込みます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダーの場合は、データベースへの接続と対象データベースの名前を指定する必要があります。|  

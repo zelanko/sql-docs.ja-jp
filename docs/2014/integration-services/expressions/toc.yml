@@ -16,7 +16,7 @@
           href: property-expressions-editor.md
 - name: データ フロー コンポーネントで式を使用する
   href: ../use-an-expression-in-a-data-flow-component.md
-- name: '[式ビルダー]'
+- name: 式ビルダー
   href: expression-builder.md
 - name: 式タスク
   href: ../control-flow/expression-task.md
@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <= (以下) (SSIS 式)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? :(条件) (SSIS 式)'
+    - name: '? : (条件) (SSIS 式)'
       href: conditional-ssis-expression.md
 - name: 関数 (SSIS 式)
   href: functions-ssis-expression.md

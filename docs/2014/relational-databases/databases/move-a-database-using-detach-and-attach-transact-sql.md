@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917095"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965892"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデタッチしたデータベースを別の場所に移動し、同じまたは異なるサーバー インスタンスに再アタッチする方法について説明します。 ただし、データベースを移動するときは、デタッチとアタッチではなく、ALTER DATABASE による計画的再配置手順を使用することをお勧めします。 詳細については、「 [ユーザー データベースの移動](move-user-databases.md)」を参照してください。  
@@ -49,9 +48,9 @@ ms.locfileid: "62917095"
 3.  コピーしたファイルをアタッチします。 詳細については、「 [Attach a Database](attach-a-database.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例のコピーを作成する、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメントに接続されている、サーバー インスタンスがアタッチされているクエリ エディター ウィンドウで実行されます。  
+ 次の例では、ステートメントのコピーを、がアタッチされている [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] サーバーインスタンスに接続されているクエリエディターウィンドウで実行します。  
   
-1.  デタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメント。  
+1.  ステートメントをデタッチし [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] ます。  
   
     ```  
     USE master;  
@@ -60,7 +59,7 @@ ms.locfileid: "62917095"
     GO  
     ```  
   
-2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) をC:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
+2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) を C:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
   
     > [!IMPORTANT]  
     >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  

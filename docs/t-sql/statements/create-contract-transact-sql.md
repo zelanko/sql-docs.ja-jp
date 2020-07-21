@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902878"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391727"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   新しいコントラクトを作成します。 コントラクトは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換で使用されるメッセージ型を定義し、またメッセージ交換のどちら側がその型のメッセージを送信できるかを決定するものです。 各メッセージ交換は、コントラクトに従います。 発信側サービスでは、メッセージ交換の開始時に、そのメッセージ交換用のコントラクトを指定します。 ターゲット サービスでは、メッセージ交換を受け入れるコントラクトを指定します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67902878"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 CREATE CONTRACT contract_name  
    [ AUTHORIZATION owner_name ]  
@@ -46,8 +46,10 @@ CREATE CONTRACT contract_name
        } [ ,...n] )   
 [ ; ]  
 ```  
-  
-## <a name="arguments"></a>引数  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *contract_name*  
  作成するコントラクトの名前です。 新しいコントラクトは現在のデータベースで作成され、AUTHORIZATION 句で指定するプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *contract_name* には、最大 128 文字までを指定できます。  
   
@@ -75,7 +77,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  コントラクトで、既定のメッセージ型のメッセージがサポートされることを示します。 既定では、すべてのデータベースに DEFAULT という名前のメッセージ型が含まれます。 このメッセージ型では、NONE の検証を使用します。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 Microsoft SQL Server では、DEFAULT メッセージ型を指定する DEFAULT コントラクトも提供されています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コントラクトのメッセージ型の順序は重要ではありません。 発信先が最初のメッセージを受信した後は、メッセージ交換のいずれの側からも、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を介して、その側の許可されているメッセージをいつでも送信できるようになります。 たとえば、メッセージ交換の発信側でメッセージ型 **//Adventure-Works.com/Expenses/SubmitExpense** が許可されている場合、この発信側は [!INCLUDE[ssSB](../../includes/sssb-md.md)] を介して、メッセージ交換中に任意の数だけ **SubmitExpense** メッセージを送信できます。  
   
  コントラクトのメッセージ型と方向は変更できません。 コントラクトの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
@@ -93,12 +95,12 @@ CREATE CONTRACT contract_name
   
  CREATE CONTRACT ステートメントを実行するには、指定されているすべてのメッセージ型に対する REFERENCES 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A.コントラクトを作成する**  
   
  次の例では、3 つのメッセージ型に基づいて経費の払い戻しのコントラクトを作成します。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]           
     VALIDATION = WELL_FORMED_XML ;           

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c96a881443c03362f58fdfa857d6244789a7fe7e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 08dd294c6d9c0283c6f8e3616c8289d28f2e8ef2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716675"
 ---
 # <a name="republish-data"></a>データの再パブリッシュ
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   再パブリッシュ モデルでは、パブリッシャーがデータをサブスクライバーに送信し、このサブスクライバーがそのデータを任意の数の他のサブスクライバーに再パブリッシュします。 これは、パブリッシャーが、低速、またはコストが高い通信リンクを使用してサブスクライバーにデータを送信する必要がある場合に役立ちます。 多数のサブスクライバーがそのリンクの端末に接続されている場合には、リパブリッシャーの使用によりディストリビューションの負荷の大部分がそのリンク側に移ります。  
   
  データの再パブリッシュを行うには、以下の手順を実行します。  
@@ -40,14 +40,12 @@ ms.locfileid: "68769631"
   
 6.  サブスクリプションを初期化します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  再パブリッシュ トポロジでマージ レプリケーションを使用する場合、すべての再パブリッシュ サブスクライバーはサーバー サブスクリプションを使用する必要があります。 サブスクリプションの種類の詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
   
  以下の図では、パブリッシャーとリパブリッシャーの両方が、各自のローカル ディストリビューターとして動作します。 それぞれがリモート ディストリビューターを使用するように設定された場合は、各ディストリビューターは、低速またはコストが高い通信リンクの、それぞれのパブリッシャーと同じ側に置く必要があります。 パブリッシャーとリモート ディストリビューターは、信頼性の高い、高速通信リンクで接続する必要があります。  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![データの再パブリッシュ](../../relational-databases/replication/media/repl-06a.gif "データの再パブリッシュ")  
   
  どのサーバーも、パブリッシャーとサブスクライバーの両方として動作できます。 たとえば、以下の図では、ロンドンにあるテーブルを、シカゴ、ニューヨーク、サンディエゴ、シアトルの 4 つの米国の都市に配信する必要がある場合のパブリケーションを示しています。 この場合は、ニューヨークのサイトが以下の条件を満たしているので、ロンドンでパブリッシュされたテーブルをニューヨークにあるサーバーがサブスクライブするように選択します。  
   
@@ -61,14 +59,14 @@ ms.locfileid: "68769631"
   
  レプリケーションでは、次の表に示す再パブリッシュのシナリオがサポートされます。  
   
-|パブリッシャー|パブリッシュ元のサブスクライバー|サブスクライバー (Subscriber)|  
+|Publisher|パブリッシュ元のサブスクライバー|サブスクライバー (Subscriber)|  
 |---------------|---------------------------|----------------|  
 |トランザクション パブリケーション|トランザクション サブスクリプション/トランザクション パブリケーション|トランザクション サブスクリプション|  
 |トランザクション パブリケーション|トランザクション サブスクリプション/マージ パブリケーション*|マージ サブスクリプション|  
 |マージ パブリケーション|マージ サブスクリプション/マージ パブリケーション|マージ サブスクリプション|  
 |マージ パブリケーション|マージ サブスクリプション/トランザクション パブリケーション|トランザクション サブスクリプション|  
   
- \*マージ パブリケーションの **@published_in_tran_pub** プロパティを設定する必要があります。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+ \* マージ パブリケーションで `@published_in_tran_pub` プロパティを設定する必要があります。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)   

@@ -1,5 +1,5 @@
 ---
-title: 依存関係ネットワーク タブ (マイニング モデル ビューアー) |Microsoft Docs
+title: '[依存関係ネットワーク] タブ (マイニングモデルビューアー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dde94a8d08bba3ea529c9edf3fde12ee0260a3f0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081941"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528738"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>[依存関係ネットワーク] タブ (マイニング モデル ビューアー)
   **[依存関係ネットワーク]** タブでは、マイニング モデルに含まれるすべての属性のグラフィカル ビューが表示され、属性がどのように関連しているかが示されます。  
@@ -30,26 +29,26 @@ ms.locfileid: "66081941"
   
  [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>および  
- **ビューアーのコンテンツを更新します。**  
+## <a name="options"></a>オプション  
+ **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するものを選択します。 マイニング モデルがカスタム ビューに表示されます。 各モデルで使用されるカスタム ビューアーの種類は、モデルの作成時に使用したアルゴリズムによって決まります。  
   
- **ビューアー**  
+ **Viewer**  
  選択したマイニング モデルを調べるために使用するビューアーを選択します。 モデルごとに、各マイニング モデル用に用意されているカスタム ビューアー、または [!INCLUDE[msCoName](../includes/msconame-md.md)] マイニング コンテンツ ビューアーを使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。 Microsoft コンテンツ ツリー ビューアーはすべてのモデルで使用でき、モデルの内容を HTML テーブルで表現します。  
   
- **ズーム イン**  
+ **拡大**  
  属性の詳細を見ることができるように、図を拡大します。  
   
- **ズーム アウト**  
+ **縮小**  
  多くの属性とリンクが表示されるように、図を拡大します。  
   
- **グラフ ビューのコピー**  
+ **[グラフ ビューのコピー]**  
  ダイアグラムで表示されている部分をクリップボードにコピーします。  
   
- **グラフ全体のコピー**  
+ **[グラフ全体のコピー]**  
  ダイアグラム全体をクリップボードにコピーします。  
   
  **リンク**  
@@ -64,8 +63,8 @@ ms.locfileid: "66081941"
  すべてのモデルに適用される一般的なルールとして、リンクが強ければ強いほど、2 つの属性間の予測関係も強くなります。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

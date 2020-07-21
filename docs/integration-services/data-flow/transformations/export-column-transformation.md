@@ -19,14 +19,14 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f90f42b21946b4a29c81f33f8f484656c6f5919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944455"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297943"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
 
@@ -38,7 +38,7 @@ ms.locfileid: "67944455"
 ## <a name="append-and-truncate-options"></a>追加オプションと切り捨てオプション  
  次の表では、追加オプションと切り捨てオプションが結果に与える影響について説明します。  
   
-|追加|切り捨て|ファイルが存在するか|[結果]|  
+|Append|Truncate|ファイルが存在するか|[結果]|  
 |------------|--------------|-----------------|-------------|  
 |False|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
@@ -61,7 +61,7 @@ ms.locfileid: "67944455"
     > [!NOTE]  
     >  BOM は、データが既存のファイルに追加されず、DT_NTEXT データ型の場合にのみ書き込まれます。  
   
- この変換では入力列の組を使用します: 1 つの列にはファイル名が含まれ、もう 1 つの列にはデータが含まれます。 データセットの各行では、異なるファイルを指定できます。 この変換により行が処理されると、データは指定したファイルに挿入されます。 実行時に既存のファイルがない場合、変換によりファイルが作成され、そのファイルにデータが書き込まれます。 書き込まれるデータは、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型である必要があります。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ この変換では、ファイル名が含まれる入力列と、データが含まれる入力列の組を使用します。 データセットの各行では、異なるファイルを指定できます。 この変換により行が処理されると、データは指定したファイルに挿入されます。 実行時に既存のファイルがない場合、変換によりファイルが作成され、そのファイルにデータが書き込まれます。 書き込まれるデータは、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型である必要があります。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "67944455"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -86,10 +86,10 @@ ms.locfileid: "67944455"
  ファイル パスとファイル名を持つ入力列の一覧から選択します。 すべての行には、 **[列の抽出]** と **[ファイル パス列]** の定義が含まれます。  
   
  **[追加の許可]**  
- 変換により、既存のファイルにデータを追加するかどうかを指定します。 既定値は **false**です。  
+ 変換により、既存のファイルにデータを追加するかどうかを指定します。 既定値は **false** です。  
   
  **[強制的に切り捨て]**  
- 変換により、データを書き込む前に既存のファイルの内容を削除するかどうかを指定します。 既定値は **false**です。  
+ 変換により、データを書き込む前に既存のファイルの内容を削除するかどうかを指定します。 既定値は **false** です。  
   
  **[バイト順マークの書き込み]**  
  バイト順マーク (BOM) をファイルに書き込むかどうかを指定します。 BOM は、データが **DT_NTEXT** または DT_WSTR のデータ型を持つ場合にのみ書き込まれ、既存のデータ ファイルには追加されません。  
@@ -110,7 +110,7 @@ ms.locfileid: "67944455"
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  

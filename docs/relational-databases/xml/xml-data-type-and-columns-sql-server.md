@@ -1,5 +1,6 @@
 ---
 title: XML データ型と列 (SQL Server) | Microsoft Docs
+description: SQL Server で XML データを格納する場合の xml データ型の利点と制限事項について学習します。
 ms.custom: ''
 ms.date: 05/17/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a23431727b25135751693d1dbec68b6377dcd4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729792"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックでは、 **での** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する利点と制限および、XML データを保存する方法の正しい選択について説明します。  
   
 ## <a name="relational-or-xml-data-model"></a>リレーショナル データ モデルと XML データ モデル  

@@ -1,5 +1,6 @@
 ---
-title: '例: &lt;row&gt; 要素の名前を変更する | Microsoft Docs'
+title: 例:&lt;row&gt; 要素の名前を変更する | Microsoft Docs
+description: FOR XML 句の RAW モードに省略可能な引数を指定することにより、XML 行要素の名前を変更する例を示します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 275b1c6c138b11fa6330dc61fbfbfd2014a229c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc297571daec9825a91d4e35ebbac737d88b5619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633045"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>例: &lt;row&gt; 要素の名前を変更する
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="example-renaming-the-ltrowgt-element"></a>例:&lt;row&gt; 要素の名前を変更する
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   結果セットの各行では、RAW モードによって `<row>`要素が生成されます。 次のクエリに示すように、必要に応じて、RAW モードへの省略可能な引数を指定することにより、この要素に別の名前を指定できます。 クエリでは、行セットの行ごとに <`ProductModel`> 要素が返されます。  
   
 ## <a name="example"></a>例  

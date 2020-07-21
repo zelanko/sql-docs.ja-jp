@@ -1,5 +1,5 @@
 ---
-title: 規則タブ (マイニング モデル ビューアー) |Microsoft Docs
+title: '[ルール] タブ (マイニングモデルビューアー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07617e2a49d784352911088f7c5e09bc727ab7d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070098"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539014"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>[ルール] タブ (マイニング モデル ビューアー)
   アルゴリズムによってデータから抽出されたルールを表示するには、関連モデルの **[ルール]** ペインを使用します。 ルールは、アイテムが互いにどのように関連しているのかを記述し、推奨を作成するために使用できます。  
@@ -27,25 +26,25 @@ ms.locfileid: "66070098"
 > [!WARNING]  
 >  既定では、 **[最小の確率]** に定義された確率のしきい値を上回るルールだけがビューアーに表示されます。 ルールの出力に対する確率のしきい値はモデルの作成時に決定されるので、ビューアーでこの値を小さくすることはできません。 詳細については、「 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](data-mining/microsoft-association-algorithm-technical-reference.md)」を参照してください。  
   
- **詳細情報。** [Microsoft アソシエーション アルゴリズム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **詳細:** [Microsoft アソシエーション アルゴリズムム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>および  
- **ビューアーのコンテンツを更新します。**  
+## <a name="options"></a>オプション  
+ **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するモデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **ビューアー**  
+ **Viewer**  
  選択したマイニング モデルを表示するために使用するビューアーを選択します。 各マイニング モデル用のカスタム ビューアーまたは **Microsoft 汎用コンテンツ ツリー ビューアー**を使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
- **最小の確率**  
+ **[最小の確率]**  
  ビューアーにルールを表示するために必要な最小の確率を設定するには、この値を変更します。 確率の値を大きくすると、表示されるルールの数が減ります。  
   
- **最小の重要度**  
+ **[最小の重要度]**  
  ビューアーにルールを表示するために必要な最小の重要度を設定するには、この値を変更します。 重要度の値を大きくすると、表示されるルールの数が減ります。  
   
- **フィルタの規則**  
+ **[ルールのフィルター]**  
  ビューアーに表示するルールの数をフィルタリングするための文字列値を入力します。  
   
  フィルター条件として、.NET 正規表現を入力することもできます。 たとえば、次の式を入力すると、左辺に 'Road Bottle Cage' を含むすべてのルールが返されます。  
@@ -56,7 +55,7 @@ ms.locfileid: "66070098"
   
  既定では、フィルター条件は属性のフルネームと値の組み合わせに適用されます。したがって、属性名だけを表示している場合は、フィルター条件が適切に適用されたかどうかはっきりしないことがあります。 **[表示]** ボックスの一覧の **[属性の名前と値を表示]** をクリックして、アイテムセットの一覧が適切にフィルター処理されたことを確認してください。  
   
- **[表示]**  
+ **表示**  
  ビューアーにルールを表示する方法を調整します。 次の 3 つのオプションのいずれかを選択できます。  
   
 -   [属性の名前と値を表示]  
@@ -65,10 +64,10 @@ ms.locfileid: "66070098"
   
 -   [属性名のみ表示]  
   
- **長い名前を表示します。**  
+ **[長い名前を表示する]**  
  マイニング モデル コンテンツに表示されるルールのフル ネームを表示します。  
   
- **行の最大数**  
+ **[最大行数]**  
  ビューアーに表示するルールの数を制限します。  
   
  **確率**  
@@ -86,9 +85,9 @@ ms.locfileid: "66070098"
   
  列見出しをクリックすることで、ルールのテキストで並べ替えることができます。  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>参照  
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

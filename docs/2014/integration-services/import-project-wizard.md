@@ -1,5 +1,5 @@
 ---
-title: プロジェクトのインポート ウィザード |Microsoft Docs
+title: プロジェクトのインポートウィザード |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.importprojectwizard.f1
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b9f20115010f2ad51159f29a4b64da195938969
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058051"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436649"
 ---
 # <a name="import-project-wizard"></a>プロジェクトのインポート ウィザード
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトのインポート ウィザードを使用すると、既存のプロジェクトに基づいて新しい Integration Services プロジェクトが作成されます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログに既に配置されているプロジェクトをインポートするか、またはプロジェクト配置ファイル (拡張子は .ispac) からプロジェクトをインポートします。  
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>.ispac ファイルまたはカタログ内のプロジェクトに基づいてプロジェクトを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、[プロジェクト] をクリックします。  
+1.  [**ファイル**]、[**新規作成**] の順にポイントし、[プロジェクト] をクリックします。  
   
 2.  **[ビジネス インテリジェンス]** を展開し、 **[Integration Services]** をクリックします。  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66058051"
   
 8.  **[結果]** ページに、ウィザードが実行したインポート処理の結果が表示されます。 **[レポートの保存]** をクリックして、レポートを XML ファイルに保存します。  
   
-9. **[閉じる]** をクリックしてウィザードを閉じます。  
+9. [**閉じる**] をクリックしてウィザードを閉じます。  
   
   

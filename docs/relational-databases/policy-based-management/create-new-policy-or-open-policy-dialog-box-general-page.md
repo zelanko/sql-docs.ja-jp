@@ -1,6 +1,7 @@
 ---
-title: '[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ | Microsoft Docs'
-ms.custom: ''
+title: '[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ'
+descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,19 +15,19 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae5b12473756d6ca5c5a20b188b3c282205d9bd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 110cdd1ac1a74986178b6d96803d20a1fc6284a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749468"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを新規作成したり、既存のポリシーを変更したりできます。 ポリシーの適用対象を一部のサーバーに制限するには、 **[対象]** 領域と **[サーバーの制限]** 領域をフィルターとして使用します。 対象フィルターとして使用する条件は、物理ファセットで定義する必要があり、関数や LIKE 演算子をその条件に含めることはできません。 ポリシーのオブジェクト セットをシステムが計算する際、既定ではシステム オブジェクトが除外されます。  たとえば、ポリシーのオブジェクト セットがすべてのテーブルを参照する場合、システム テーブルにはそのポリシーが適用されません。 システム オブジェクトに対してポリシーを評価する必要がある場合は、ユーザーが、それらのオブジェクト セットに対し、システム オブジェクトを明示的に追加できます。 **"スケジュールに基づいて確認"** の評価モードではすべてのポリシーがサポートされますが、パフォーマンス上の理由により、 **"変更時に確認"** の評価モードでは、任意のオブジェクト セットを含んだポリシーは、必ずしもすべてサポートされるとは限りません。 詳細については、[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx) を参照してください。  
   
 ## <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  新しいポリシーの場合は、新しいポリシー名を入力します。 既存のポリシーの場合は、その名前が表示されます。  
   
  **有効**  

@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM アプリケーションでのデータベース操作との競合の回避 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 競合の回避 - FILESTREAM データベース操作 | Microsoft Docs
+description: FILESTREAM BLOB データの読み取りまたは書き込みを行うアプリケーションでは、Transact-SQL ステートメントで競合エラーが発生する可能性があります。 これらの種類の競合を回避する方法について学習します。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,31 +13,31 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 22c0c0771c3e4566ba2f3f1cef6e2dd4d921f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743939"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM アプリケーションでのデータベース操作との競合の回避
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SqlOpenFilestream() により Win32 ファイル ハンドルを開いて FILESTREAM BLOB データの読み取りまたは書き込みを行うアプリケーションでは、共通のトランザクションで管理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで競合エラーが発生する場合があります。 この例として、完了までに時間がかかる [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや MARS クエリなどがあります。 アプリケーションは、このような競合を回避できるように注意深く設計する必要があります。  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] またはアプリケーションが FILESTREAM BLOB を開こうとする場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、関連付けられたトランザクション コンテキストがチェックされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、DDL ステートメント、DML ステートメント、データの取得、トランザクションの管理のうち、どれが開く操作の対象になっているかに基づいて、要求を許可または拒否します。 次の表は、トランザクションで開いているファイルの種類に基づいて、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが許可されるか拒否されるかが、 [!INCLUDE[tsql](../../includes/tsql-md.md)] でどのように決まるかを示しています。  
   
 |Transact-SQL ステートメント|読み取り用に開く|書き込み用に開く|  
 |------------------------------|---------------------|----------------------|  
-|CREATE TABLE、CREATE INDEX、DROP TABLE、ALTER TABLE などの、データベース メタデータを処理する DDL ステートメント|Allowed|ブロックされてタイムアウトで失敗|  
-|UPDATE、DELETE、INSERT などの、データベース内に格納されているデータを処理する DML ステートメント|Allowed|拒否|  
-|SELECT|Allowed|Allowed|  
+|CREATE TABLE、CREATE INDEX、DROP TABLE、ALTER TABLE などの、データベース メタデータを処理する DDL ステートメント|許可|ブロックされてタイムアウトで失敗|  
+|UPDATE、DELETE、INSERT などの、データベース内に格納されているデータを処理する DML ステートメント|許可|拒否|  
+|SELECT|許可|許可|  
 |COMMIT TRANSACTION|拒否*|拒否*|  
 |SAVE TRANSACTION|拒否*|拒否*|  
 |ROLLBACK|許可*|許可*|  
   
  \* トランザクションは取り消され、トランザクション コンテキストで開かれたハンドルは無効になります。 アプリケーションは、開いているハンドルをすべて閉じる必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと FILESTREAM Win32 アクセスで競合が発生する可能性がある場合を示します。  
   
 ### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. 書き込みアクセス用に FILESTREAM BLOB を開く  

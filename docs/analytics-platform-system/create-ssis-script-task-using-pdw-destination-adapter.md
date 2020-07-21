@@ -1,5 +1,5 @@
 ---
-title: SSIS PDW 変換先アダプターを使用したスクリプト タスクの作成 |Microsoft Docs
+title: SSIS PDW 変換先アダプターを使用したスクリプトタスクの作成
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961064"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401220"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプト タスクを作成します。
-この SSIS パッケージのスクリプト コードは、SSIS PDW 変換先アダプターを使用するためのコード例です。  Integration Services のスクリプト タスクでは、SSIS の制御フローのコンテキスト内で .Net アプリケーションで実行できるほぼすべての操作を実行できます。 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプトタスクを作成する
+この SSIS パッケージスクリプトコードは、SSIS PDW 変換先アダプターを使用するためのコード例です。  Integration Services スクリプトタスクを使用すると、SSIS 制御フローのコンテキスト内で .Net アプリケーションで実行できるほぼすべての操作を実行できます。 
   
 ## <a name="sample-code"></a>サンプル コード  
   
-1.  SSIS では、空のスクリプト タスクを作成します。  
+1.  SSIS で空のスクリプトタスクを作成します。  
   
-2.  タスクを開いて、**スクリプト タスク エディター**、 をクリック**スクリプトの編集**します。  
+2.  [**スクリプトタスクエディター**] でタスクを開き、[**スクリプトの編集**] をクリックします。  
   
-3.  以下にコードを使用するスクリプトを編集します。 環境にスクリプトをカスタマイズするには、次の変更を加えます。  
+3.  スクリプトを編集して、以下に示すコードを使用します。 次の変更を行うことで、スクリプトを環境に合わせてカスタマイズします。  
   
-    -   スクリプト タスクによって作成されたスクリプトの名前空間を保持する必要があります。 名前空間の名前をメモ`namespace ST_<GUID>`を変更する以下のスクリプトを編集および*ST_<GUID>* 元*GUID*スクリプト タスクの。  
+    -   スクリプトタスクによって作成されたスクリプトの名前空間を保持する必要があります。 名前空間`namespace ST_<GUID>`の名前をメモし、次のスクリプトを編集して、 *ST_<GUID> *をスクリプトタスクの元の*GUID*に変更します。  
   
-    -   プレース ホルダーの値の 4 つの箇所を置き換えます*XXXXXXXX*環境と意図した操作に適切な値を使用します。  
+    -   プレースホルダー値*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*の4回の出現箇所を環境に適した値に置き換えて、目的のアクションを実行します。  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -263,8 +264,8 @@ ms.locfileid: "67961064"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目  
-[Integration Services を使用してデータを読み込む](load-with-ssis.md)  
+## <a name="see-also"></a>参照  
+[Integration Services を使用したデータの読み込み](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

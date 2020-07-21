@@ -1,5 +1,6 @@
 ---
 title: ミラー化されたインスタンスのアップグレード | Microsoft Docs
+description: ローリング アップグレードを使用して SQL Server のミラー化されたインスタンスをアップグレードするときのダウンタイムを短縮する方法について説明します。 この記事には、ベスト プラクティスが含まれています。
 ms.custom: ''
 ms.date: 02/01/2016
 ms.prod: sql
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeb7b6d13a49262554dc98767b2bc8117ba007ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758215"
 ---
 # <a name="upgrading-mirrored-instances"></a>ミラー化されたインスタンスのアップグレード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のミラー化されたインスタンスを新しい [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス パックまたは累積的な更新プログラム、あるいは新しい Windows サービス パックまたは累積的な更新プログラムにアップグレードする場合、ローリング アップグレードを実行して、ミラー化された各データベースのダウンタイムを 1 回の手動フェールオーバーのみに減らすことができます (または、元のプライマリにフェールバックする場合は 2 回の手動フェールオーバー)。 ローリング アップグレードは複数の段階から成るプロセスです。最も単純な形式では、ミラーリング セッションで現在ミラー サーバーとして機能している [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスをアップグレードした後、ミラー化されたデータベースを手動でフェールオーバーし、以前のプリンシパル [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスをアップグレードして、ミラーリングを再開します。 実際に実行するプロセスは、動作モードと、アップグレードする [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスで実行しているミラーリング セッションの数やレイアウトによって異なります。  
   
 > [!NOTE]  
 >  移行中にデータベース ミラーリングとログ配布を併用する方法については、 [データベース ミラーリングとログ配布に関するホワイト ペーパー](https://t.co/RmO6ruCT4J)をダウンロードしてください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  作業を開始する前に、次の重要な情報を確認してください。  
   
 -   [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
@@ -67,7 +68,7 @@ ms.locfileid: "68050632"
   
  次の図は、動作モードごとにローリング アップグレードの基本的な段階をフローチャートで示したものです。 図の後で、対応する各手順について説明します。  
   
- ![ローリング アップグレードの手順のフローチャート](../../database-engine/database-mirroring/media/dbm-rolling-upgrade.gif "ローリング アップグレードの手順のフローチャート")  
+ ![ローリング アップグレードの手順を示すフローチャート](../../database-engine/database-mirroring/media/dbm-rolling-upgrade.gif "ローリング アップグレードの手順を示すフローチャート")  
   
 > [!IMPORTANT]  
 >  同時実行ミラーリング セッションでは、1 つのサーバー インスタンスが複数の異なるミラーリング ロール (プリンシパル サーバー、ミラー サーバー、またはミラーリング監視サーバー) を実行している場合があります。 この場合は、基本的なローリング アップグレード プロセスを適宜調整する必要があります。 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。  
@@ -156,13 +157,13 @@ ms.locfileid: "68050632"
 ## <a name="see-also"></a>参照  
  [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+ [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ミラー化されたデータベースの状態の確認 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング セッションでのサービスの強制 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   

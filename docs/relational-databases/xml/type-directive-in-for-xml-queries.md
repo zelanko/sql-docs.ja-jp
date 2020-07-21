@@ -1,5 +1,6 @@
 ---
 title: FOR XML クエリの TYPE ディレクティブ | Microsoft Docs
+description: FOR XML 句で TYPE ディレクティブを使用して、クエリの結果を XML データとして返すように要求する方法について学習します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729842"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) がサポートされるため、必要に応じて TYPE ディレクティブを指定することにより、FOR XML クエリの結果を **xml** データ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、その結果に対して XQuery を指定したり、結果を **xml** 型の変数に割り当てたり、 [入れ子になった FOR XML クエリ](../../relational-databases/xml/use-nested-for-xml-queries.md)を記述したりできます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用した FOR XML クエリなど、サーバーでのさまざまな構成の結果として、または SQL テーブルの列および出力パラメーターの XML インスタンス データ値を返すために **xml** データ型が使用された場合に、XML データ型のインスタンス データをクライアントに返します。 クライアント アプリケーション コードでは、ADO.NET プロバイダーが、この XML データ型の情報をサーバーからバイナリ エンコードで送信するように要求します。 ただし、TYPE ディレクティブを指定せずに FOR XML を使用した場合、この XML データは文字列型として返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。 TYPE ディレクティブを指定していない最上位レベルでの FOR XML 句は、カーソルと共に使用できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、FOR XML クエリでの TYPE ディレクトリの使用方法を示しています。  
   
 ### <a name="retrieving-for-xml-query-results-as-xml-type"></a>FOR XML クエリの結果の xml 型としての取得  
@@ -74,7 +75,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>FOR XML クエリの結果のクエリ  
  FOR XML クエリにより、XML が返されます。 したがって、FOR XML クエリにより返された XML 結果には、 **query()** や **value()** などの **xml**型のメソッドを適用できます。  
   
- 次のクエリでは、**xml** データ型の `query()` メソッドを使用して、`FOR XML` クエリの結果にクエリします。 詳細については、「[query&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)」を参照してください。  
+ 次のクエリでは、 `query()` xml **データ型の** メソッドを使用して、 `FOR XML` クエリの結果にクエリします。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/query-method-xml-data-type.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 内側の `SELECT ... FOR XML` クエリにより **xml** 型の結果が返され、外側の `SELECT` によりその **xml** 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
+ 内側の `SELECT ... FOR XML` クエリにより **xml** 型の結果が返され、外側の `SELECT` によりその `query()` xml **型の結果に** メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
   
  結果を次に示します。  
   
@@ -104,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 次のクエリでは、**xml** データ型の `value()` メソッドを使用して、`SELECT...FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/value-method-xml-data-type.md)」を参照してください。  
+ 次のクエリでは、 `value()` xml **データ型の** メソッドを使用して、 `SELECT...FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](../../t-sql/xml/value-method-xml-data-type.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,7 +125,7 @@ declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure
 SELECT @FirstPhoneFromAdditionalContactInfo;  
 ```  
   
- `value()` メソッドの XQuery パス式により、`BusinessEntityID` が `1` の顧客の連絡先から 1 つ目の電話番号が取得されます。  
+ `value()` メソッドの XQuery パス式により、 `BusinessEntityID` が `1`の顧客の連絡先から 1 つ目の電話番号が取得されます。  
   
 > [!NOTE]  
 >  TYPE ディレクティブを指定しなかった場合、この FOR XML クエリの結果は **nvarchar(max)** 型として返されます。  

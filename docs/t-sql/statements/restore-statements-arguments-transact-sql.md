@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141235"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896012"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-このトピックでは、RESTORE {DATABASE|LOG} ステートメントと、関連する補助ステートメントRESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、および RESTORE VERIFYONLY の「構文」に記載されている引数について説明します。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。  
+このトピックでは、RESTORE {DATABASE|LOG} ステートメントと、関連する補助ステートメントRESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,11 +120,11 @@ FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } 通常、バッ
   
  FROM 句を省略した場合、バックアップの復元は行われず、 代わりにデータベースが復旧されます。 この機能により、NORECOVERY オプションで復元されているデータベースを復旧したり、スタンバイ サーバーに切り替えたりすることができます。 FROM 句を省略する場合は、WITH 句の中で NORECOVERY、RECOVERY、または STANDBY を指定する必要があります。  
   
- \<backup_device> [ **,** ...*n* ] 復元操作に使用する論理または物理バックアップ デバイスを指定します。  
+ \<backup_device> [ **,** ...*n* ] 復元操作に使用する、論理バックアップ デバイスまたは物理バックアップ デバイスを指定します。  
   
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)、[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
- \<backup_device>::= バックアップ操作に使用する論理または物理バックアップ デバイスを、次のように指定します。  
+ \<backup_device>::= 次のように、バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  データベースの復元元である、**sp_addumpdevice** で作成されたバックアップ デバイスの論理名を指定します。この名前は識別子の規則に従っている必要があります。 変数 ( **@** _logical\_backup\_device\_name\_var_) として指定する場合、バックアップ デバイス名は、文字列定数 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) として、または **ntext** や **text** データ型を除く、文字の文字列データ型の変数として指定できます。  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  復元操作で情報が **msdb** 履歴テーブルに読み込まれることを指定します。 LOADHISTORY オプションを指定した場合は、確認中の 1 つのバックアップ セットに対して、メディア セットに格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに関する情報が、**msdb** データベース内のバックアップおよび復元履歴テーブルに読み込まれます。 履歴テーブルの詳細については、「[システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)」を参照してください。  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  RESTORE DATABASE および RESTORE LOG ステートメントでは、一般的な WITH オプションをすべて使用できます。 これらのオプションの一部は、以下で説明するように 1 つ以上の補助ステートメントでもサポートされます。  
   
 ##### <a name="restore-operation-options"></a>復元操作オプション  
@@ -247,14 +247,14 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)、[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
-**適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 以降
   
  Microsoft Azure Blob ストレージ サービスからバックアップを復元する場合にのみ使用されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合、URL からの復元時にのみ、1 つのデバイスから復元できます。 URL からの復元時に複数のデバイスから復元するには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合、URL からの復元時にのみ、1 つのデバイスから復元できます。 URL からの復元時に複数のデバイスから復元するには、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)を使用する必要があります。また、Shared Access Signature (SAS) トークンを使用する必要があります。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップを有効にする](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (PowerShell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。  
   
- [REPLACE]  
+ REPLACE  
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指定したデータベースと同じ名前のデータベースが既に存在していても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベースとその関連ファイルを作成することを指定します。 この場合、既存のデータベースは削除されます。 REPLACE オプションを指定しない場合、安全性チェックが行われます。 これにより、他のデータベースを誤って上書きするのを防止できます。 安全性チェックで次の両方に該当した場合は、RESTORE DATABASE ステートメントで現在のサーバーにデータベースが復元されることはありません。  
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **サポートしているステートメント:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
  Windows と互換性のあるディレクトリ名です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベース レベルの FILESTREAM ディレクトリ名の間で一意である必要があります。 一意性の比較では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序の設定とは関係なく、大文字と小文字は区別されません。  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  RESTORE 操作の後、テープ ドライブにテープを読み込んだままにすることを指定します。  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  このオプションは、バックアップ作成時にデータベースがレプリケートされた場合にのみ使用します。  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
 -   ウォーム スタンバイ サーバーの名前が、プライマリ サーバーと同じ名前に変更されていること。  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  このオプションは、バックアップ作成時にデータベースで変更データ キャプチャが有効になっていた場合にのみ使用します。  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  データベース ミラーリングでの変更データ キャプチャの使用については、「[変更データ キャプチャとその他の SQL Server 機能](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)」を参照してください。  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ配信を有効または無効にするか、新しい [!INCLUDE[ssSB](../../includes/sssb-md.md)] 識別子を設定します。 このオプションは、バックアップ作成時にデータベースに対して [!INCLUDE[ssSB](../../includes/sssb-md.md)] が有効 (アクティブ) になっていた場合にのみ使用します。  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
  NEW_BROKER  
  データベースに新しい Service Broker 識別子を割り当てることを指定します。 データベースは新しい Service Broker と見なされるため、データベースにおける既存のメッセージ交換は、終了ダイアログ メッセージを生成せずに、直ちに削除されます。 古い Service Broker 識別子を参照するルートは、新しい識別子を使用して作成し直す必要があります。  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **サポートしているステートメント:** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) および完全または一括ログ復旧モデルの場合のみ。  
   
  STOPAT、STOPATMARK、または STOPBEFOREMARK 句で目的の復旧ポイントを指定することで、特定の時点またはトランザクションにデータベースを復元できます。 指定された時間またはトランザクションへの復元は、常にログ バックアップから行われます。 復元シーケンスのすべての RESTORE ステートメントで、同一の STOPAT、STOPATMARK、STOPBEFOREMARK のいずれかの句で目的の時間またはトランザクションを指定する必要があります。  
@@ -541,7 +541,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  追加説明については、次のトピックを参照してください。  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -565,7 +565,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  次の表で説明するように、このオプションの動作はステートメントによって異なります。  
   
-|ステートメントから削除してください。|バックアップ セットの FILE オプションの動作|  
+|ステートメント|バックアップ セットの FILE オプションの動作|  
 |---------------|-----------------------------------------|  
 |RESTORE|既定のバックアップ セット ファイル番号は 1 です。 1 つの RESTORE ステートメントでは、1 つのバックアップ セットの FILE オプションのみが許可されます。 ここではバックアップ セットを順序どおり指定することが重要です。|  
 |RESTORE FILELISTONLY|既定のバックアップ セット ファイル番号は 1 です。|  
@@ -594,7 +594,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
 |MOVE|√|-|-|-|-|√|  
 |PASSWORD|√|√|√|-|-|√|  
 |{ REWIND &#124; NOREWIND }|√|REWIND のみ|REWIND のみ|REWIND のみ|-|√|  
-|STATS|√|-|-|-|-|√|  
+|[統計]|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=** _backup\_set\_file\_number_。{FILE | FILEGROUP} とは異なります。  
@@ -614,7 +614,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、次のトピックを参照してください。  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

@@ -1,5 +1,6 @@
 ---
 title: サーバー ネットワークの構成 | Microsoft Docs
+description: SQL Server ネットワークの構成タスクについて説明します。 プロトコルの有効化、暗号化の構成、SPN の登録、その他のアクションについて説明します。
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef32cd47093c2397752c01dc49dfa2af494fd8fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724021"
 ---
 # <a name="server-network-configuration"></a>サーバー ネットワークの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   サーバー ネットワークの構成作業には、プロトコルの有効化、プロトコルで使用されるポートまたはパイプの変更、暗号化の構成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの構成、ネットワーク上での [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の公開または非表示、サーバー プリンシパル名の登録などがあります。 ほとんどの場合、サーバー ネットワークの構成を変更する必要はありません。 特殊なネットワーク要件がある場合は、サーバー ネットワーク プロトコルのみを再構成します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネットワーク構成は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して行います。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、その製品に付属するサーバー ネットワーク ユーティリティを使用します。  
@@ -40,7 +41,7 @@ ms.locfileid: "68025610"
  動的ポート向けに構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用されるポートは、起動のたびに変更される可能性があります。 ファイアウォールを通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって使用されるポートを開く必要があります。 また、特定のポートを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成して、サーバーへの通信を許可するようにファイアウォールを構成できます。 詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
 ### <a name="changing-a-named-pipe"></a>名前付きパイプの変更  
- 指定した名前付きパイプでリッスンするように名前付きパイプ プロトコルを構成できます。 既定では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスはパイプ \\\\.\pipe\sql\query で、名前付きインスタンスの場合はパイプ \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query でそれぞれリッスンします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンできる名前付きパイプは 1 つのみですが、必要に応じてパイプの名前を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、クライアントが接続時にパイプを識別するのに役立ちます。 詳細については、「[代替パイプをリッスンするサーバーの構成  &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)」を参照してください。  
+ 指定した名前付きパイプでリッスンするように名前付きパイプ プロトコルを構成できます。 既定では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスにより、既定のインスタンスの場合はパイプ \\\\.\pipe\sql\query で、名前付きインスタンスの場合はパイプ \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query でそれぞれリッスンが行われます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] がリッスンできる名前付きパイプは 1 つのみですが、必要に応じてパイプの名前を変更できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、クライアントが接続時にパイプを識別するのに役立ちます。 詳細については、「[代替パイプをリッスンするサーバーの構成  &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)」を参照してください。  
   
 ## <a name="force-encryption"></a>[強制的に暗号化]  
  クライアント アプリケーションとの通信時に暗号化を要求するように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を構成できます。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -49,7 +50,7 @@ ms.locfileid: "68025610"
  チャネル バインドとサービス バインドを使用した認証の拡張保護のサポートは、拡張保護をサポートしているオペレーティング システムで使用できます。 詳細については、「 [拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)」を参照してください。  
   
 ## <a name="authenticating-by-using-kerberos"></a>Kerberos を使用した認証  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Kerberos 認証をサポートしています。 Kerberos 認証の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 」および「 [Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Kerberos 認証をサポートしています。 Kerberos 認証の詳細については、「[Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」および「[Microsoft® Kerberos Configuration Manager for SQL Server®](https://www.microsoft.com/download/details.aspx?id=39046)」を参照してください。  
   
 ### <a name="registering-a-server-principal-name-spn"></a>サービス プリンシパル名 (SPN) の登録  
  Kerberos 認証サービスでは、SPN を使用してサービスが認証されます。 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: trace_xe_event_map (TRANSACT-SQL) |Microsoft Docs
+title: trace_xe_event_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 154eb6731264fb8363aff0825e3ec0639e4e142c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750195"
 ---
-# <a name="extended-events-tables---tracexeeventmap"></a>拡張イベント テーブル - trace_xe_event_map
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="extended-events-tables---trace_xe_event_map"></a>拡張イベント テーブル - trace_xe_event_map
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  SQL トレース イベント クラスに割り当てられている拡張イベントのイベントごとに 1 行のデータを格納します。 このテーブルは、sys スキーマ内の master データベースに格納されます。  
+  SQL トレース イベント クラスに割り当てられている拡張イベントのイベントごとに 1 行のデータを格納します。 このテーブルは、sys スキーマの master データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |trace_event_id|**smallint**|マップされている SQL トレース イベント クラスの ID。|  
-|package_name|**nvarchar(60)**|マップされたイベントが存在する拡張イベント パッケージの名前。|  
-|xe_event_name|**nvarchar(60)**|SQL トレース イベントのクラスにマップされている拡張イベントのイベントの名前。|  
+|package_name|**nvarchar(60)**|マップされたイベントが存在する拡張イベントパッケージの名前です。|  
+|xe_event_name|**nvarchar(60)**|SQL トレースイベントクラスにマップされる拡張イベントイベントの名前です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  次のクエリを使用すると、SQL トレース イベント クラスと同様の拡張イベントを特定できます。  
   
 ```  

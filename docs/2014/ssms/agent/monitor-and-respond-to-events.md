@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afdf1beffd6099fce84f03a8ba65f7de9abb8f0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001945"
 ---
 # <a name="monitor-and-respond-to-events"></a>イベントの監視と応答
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、 *からのメッセージ、特定のパフォーマンス条件、WMI (Windows Management Instrumentation) イベントなどの*イベント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を監視したり、イベントに自動的に応答したりできます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、のメッセージ*events* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、特定のパフォーマンス条件、Windows Management Instrumentation (WMI) イベントなどのイベントを監視し、自動的に応答します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [警告](alerts.md)  
@@ -67,7 +66,7 @@ ms.locfileid: "62720126"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、イベントのソースが何であっても、イベントの警告で指定されたタスクを実行することによりそのイベントに応答します。  
   
-## <a name="see-also"></a>関連項目  
- [sp_altermessage &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+## <a name="see-also"></a>参照  
+ [sp_altermessage &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

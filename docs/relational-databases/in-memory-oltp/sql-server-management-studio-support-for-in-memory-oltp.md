@@ -1,6 +1,7 @@
 ---
-title: SQL Server Management Studio によるインメモリ OLTP のサポート | Microsoft Docs
-ms.custom: ''
+title: SSMS によるインメモリ OLTP のサポート
+description: SQL Server Management Studio を使用して、メモリ最適化テーブル、テーブルのインデックス、ネイティブ コンパイル ストアド プロシージャ、およびユーザー定義テーブル型を管理します。
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75cf54d5e52b708bf50d45ddefa7beaf1f3a8fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b909ab9d5290ae0c34c9c65a1bd47010a20952e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734981"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのツールが備わっています。 詳細については、「 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)」を参照してください。  
   
  このトピックのタスクでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してメモリ最適化テーブル、メモリ最適化テーブルのインデックス、ネイティブ コンパイル ストアド プロシージャ、およびユーザー定義のメモリ最適化テーブル型を管理する方法について説明します。  
@@ -36,9 +37,7 @@ ms.locfileid: "68086273"
   
 4.  ファイル グループにファイル (コンテナー) を追加するには、 **[全般]** ページをクリックします。 **[データベース ファイル]** の **[追加]** をクリックします。 **[ファイルの種類]** として **[FILESTREAM データ]** を選択し、コンテナーの論理名を指定して、メモリ最適化ファイル グループを選択します。次に **[自動拡張 / 最大サイズ]** が **[無制限]** に設定されていることを確認します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して新しいデータベースを作成する方法の詳細については、「 [データベースの作成](../../relational-databases/databases/create-a-database.md)」を参照してください。  
   
 ### <a name="to-create-a-memory-optimized-table"></a>メモリ最適化テーブルを作成するには  
   
@@ -88,7 +87,7 @@ ms.locfileid: "68086273"
   
     -   **[オブジェクト エクスプローラー]** で、データベースを右クリックし、 **[プロパティ]** 、 **[全般]** ページの順にクリックします。 **[メモリ最適化オブジェクトに割り当てられたメモリ]** プロパティの値は、データベースのメモリ最適化オブジェクトに割り当てられたメモリを示します。 **[メモリ最適化オブジェクトに使用されるメモリ]** プロパティの値は、データベースのメモリ最適化オブジェクトに使用されるメモリを示します。  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされる機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>でサポートされる機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、メモリ最適化データ ファイル グループ、メモリ最適化テーブル、インデックス、およびネイティブ コンパイル ストアド プロシージャを含むデータベースのデータベース エンジンによってサポートされる操作と機能をサポートしています。  
   
  データベース、テーブル、ストアド プロシージャ、ユーザー定義テーブル型、またはインデックス オブジェクトについては、インメモリ OLTP をサポートするために [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の次の機能が更新または拡張されています。  
@@ -101,9 +100,9 @@ ms.locfileid: "68086273"
   
     -   スクリプト化  
   
-    -   処理手順  
+    -   タスク  
   
-    -   [レポート]  
+    -   Reports  
   
     -   Properties  
   
@@ -154,7 +153,7 @@ ms.locfileid: "68086273"
   
 -   テンプレート エクスプローラー  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  インメモリ OLTP オブジェクトに対して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、データベース エンジンでもサポートされない機能と操作はサポートしていません。  
   
  サポートされていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能の詳細については、「 [インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください 。  

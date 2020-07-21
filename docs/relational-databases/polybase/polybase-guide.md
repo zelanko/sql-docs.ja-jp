@@ -1,5 +1,6 @@
 ---
 title: PolyBase とは | Microsoft Docs
+description: PolyBase を使用すると、Hadoop や Azure Blob Storage など、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。
 ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: polybase
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - Hadoop import, PolyBase overview
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: b414cf8eb783a64deb65010ab549c9791e82580c
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495379"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818200"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
 
@@ -39,13 +40,13 @@ PolyBase を使用すると、SQL Server 2016 インスタンスで Hadoop か�
 PolyBase では、クエリ全体を最適化するために計算の一部が Hadoop ノードにプッシュされます。 しかし、PolyBase の外部アクセスは Hadoop だけではありません。 その他の構造化されていない非リレーショナル テーブルもサポートしています (区切られたテキスト ファイルなど)。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 では、SQL Server、Oracle、Teradata、および MongoDB を含む新しい PolyBase 用のコネクタが導入されています。 詳細については、[ SQL Server 2019 CTP 2.0 用の PolyBase のドキュメント](polybase-guide.md?view=sql-server-ver15)を参照してください。
+> SQL Server 2019 では、SQL Server、Oracle、Teradata、および MongoDB を含む新しい PolyBase 用のコネクタが導入されています。 詳細については、[ SQL Server 2019 用の PolyBase のドキュメント](polybase-guide.md?view=sql-server-ver15)に関するページを参照してください。
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-PolyBase を使用すると、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。 SQL Server 2016 以降は、Hadoop と Azure Blob Storage 内の外部データにアクセスできます。 SQL Server 2019 CTP 2.0 以降、PolyBase を使用して、[SQL Server](polybase-configure-sql-server.md)[Oracle](polybase-configure-oracle.md)[Teradata](polybase-configure-teradata.md)および [MongoDB](polybase-configure-mongodb.md)内の外部データにアクセスできるようになります。
+PolyBase を使用すると、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。 SQL Server 2016 以降は、Hadoop と Azure Blob Storage 内の外部データにアクセスできます。 SQL Server 2019 以降、PolyBase を使用して、[SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md)、および [MongoDB](polybase-configure-mongodb.md) 内の外部データにアクセスできるようになりました。
 
 外部データにアクセスするのと同じクエリでは、SQL Server インスタンス内のリレーショナル テーブルを対象にすることもできます。 これにより、外部ソースのデータとデータベース内の高価値のリレーショナル データを組み合わせることができます。 SQL Server では、[外部テーブル](../../t-sql/statements/create-external-table-transact-sql.md)または[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)によって Hadoop と接続します。
 
@@ -92,14 +93,14 @@ PolyBase を使用すると、SQL Server で次のシナリオに対応できま
 
 ## <a name="performance"></a>パフォーマンス
 
-- **Hadoop に計算をプッシュする。** クエリ オプティマイザーはコスト ベースの決定を行い、クエリのパフォーマンスが向上する場合は Hadoop に計算をプッシュします。  コスト ベースの決定には、外部テーブルの統計が使用されます。 計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。
+- **Hadoop に計算をプッシュする。** クエリ オプティマイザーでは、クエリのパフォーマンスが向上する場合は Hadoop への計算のプッシュを行うためのコスト ベースの決定が行われます。  クエリ オプティマイザーでは、コスト ベースの決定に外部テーブルの統計が使用されます。 計算のプッシュでは、MapReduce ジョブが作成され、Hadoop の分散コンピューティング リソースが活用されます。
 
 - **コンピューティング リソースをスケーリングする。** クエリのパフォーマンスを向上させるために、SQL Server [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)を使用できます。 これにより、SQL Server インスタンスと Hadoop ノードの間の並列データ転送が可能になります。また、外部データに対する操作のためのコンピューティング リソースが追加されます。
 
 <!--SQL Server 2016/2017-->
 ::: moniker range="=sql-server-2016||=sql-server-2017"
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase を使用する前に [PolyBase 機能をインストールする](polybase-installation.md)必要があります。 その後、使用するデータ ソースに応じて、次の構成ガイドを参照してください。
 
@@ -110,7 +111,7 @@ PolyBase を使用する前に [PolyBase 機能をインストールする](poly
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase を使用する前に [PolyBase 機能をインストールする](polybase-installation.md)必要があります。 その後、使用するデータ ソースに応じて、次の構成ガイドを参照してください。
 - [Hadoop](polybase-configure-hadoop.md)

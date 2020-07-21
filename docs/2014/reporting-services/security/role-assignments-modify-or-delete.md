@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101957"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>ロールの割り当てを変更または削除する (レポート マネージャー)
@@ -62,10 +62,10 @@ ms.locfileid: "66101957"
   
 6.  ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- (作成-と-管理-ロール-assignments.md)   
+## <a name="see-also"></a>参照  
+ (create-and-manage-role-assignments.md)   
  [ロールの割り当て](role-assignments.md)   
- [[サイトの設定] ページ &#40;レポート マネージャー&#41;](../site-settings-page-report-manager.md)   
- [新しいシステム ロールの割り当て:システム ロールの割り当て ページを編集&#40;レポート マネージャー&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [[サイトの設定] ページ &#40;レポートマネージャー&#41;](../site-settings-page-report-manager.md)   
+ [[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ &#40;レポート マネージャー&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

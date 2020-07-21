@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 88684c3a1ca12ea579859759ed804ca281647fa5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934425"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 認証の使用によるデータベースのミラーリング監視の追加 (Transact-SQL)
   データベースのミラーリング監視を設定するには、データベース所有者が、データベース エンジンのインスタンスをミラーリング監視サーバーの役割に割り当てます。 ミラーリング監視サーバーのインスタンスは、プリンシパル サーバーまたはミラー サーバーのインスタンスと同じコンピューターで実行できますが、このようにすると、自動フェールオーバーの堅牢性が大幅に低下します。  
@@ -33,7 +32,7 @@ ms.locfileid: "67792612"
   
 ### <a name="to-establish-a-witness"></a>ミラーリング監視を確立するには  
   
-1.  ミラーリング監視サーバーのインスタンスで、データベース ミラーリングのエンドポイントが存在することを確認します。 サポートされるミラーリング セッションの数に関係なく、サーバー インスタンスにはデータベース ミラーリング エンドポイントが 1 つだけ存在する必要があります。 データベース ミラーリング セッションにおけるミラーリング監視サーバーとしてのみ、このサーバー インスタンスを使用する場合は、エンドポイントにミラーリング監視サーバーの役割を割り当てる (ロール **=** ミラーリング監視サーバー)。 このサーバー インスタンスを 1 つ以上の他のデータベース ミラーリング セッションのパートナーとして使用する場合、エンドポイントの役割を ALL に割り当てます。  
+1.  ミラーリング監視サーバーのインスタンスで、データベース ミラーリングのエンドポイントが存在することを確認します。 サポートされるミラーリング セッションの数に関係なく、サーバー インスタンスにはデータベース ミラーリング エンドポイントが 1 つだけ存在する必要があります。 このサーバーインスタンスをデータベースミラーリングセッションでミラーリング監視サーバーとして排他的に使用する場合は、ミラーリング監視サーバーのロールをエンドポイント (ロール **=** 監視) に割り当てます。 このサーバー インスタンスを 1 つ以上の他のデータベース ミラーリング セッションのパートナーとして使用する場合、エンドポイントの役割を ALL に割り当てます。  
   
      SET WITNESS ステートメントを実行するには、データベース ミラーリング セッションが (パートナー間で) 既に開始されていて、ミラーリング監視のエンドポイントの STATE が STARTED に設定されている必要があります。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "67792612"
     ```  
   
     > [!IMPORTANT]  
-    >  データベース ミラーリング エンドポイントが存在し、既に使用されている場合、サーバー インスタンスのすべてのセッションでそのエンドポイントを使用することをお勧めします。 使用中のエンドポイントを削除すると、既存のセッションの接続が切断されます。 セッションにミラーリング監視サーバーが設定されている場合、データベース ミラーリングのエンドポイントを削除すると、そのセッションのプリンシパル サーバーがクォーラムを失う可能性があります。プリンシパル サーバーがクォーラムを失うと、データベースがオフラインになりユーザー接続が切断されます。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  データベース ミラーリング エンドポイントが存在し、既に使用されている場合、サーバー インスタンスのすべてのセッションでそのエンドポイントを使用することをお勧めします。 使用中のエンドポイントを削除すると、既存のセッションの接続が切断されます。 セッションにミラーリング監視サーバーが設定されている場合、データベース ミラーリングのエンドポイントを削除すると、そのセッションのプリンシパル サーバーがクォーラムを失う可能性があります。プリンシパル サーバーがクォーラムを失うと、データベースがオフラインになりユーザー接続が切断されます。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
      ミラーリング監視にエンドポイントが存在しない場合は、「[Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)」を参照してください。  
   
@@ -54,15 +53,15 @@ ms.locfileid: "67792612"
   
      ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
-     *<database_name>* はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、 *<server_network_address>* はミラーリング監視サーバー インスタンスのサーバー ネットワーク アドレスです。  
+     *<database_name>* はミラー化するデータベースの名前 (両方のパートナーで同一の名前にします)、*<server_network_address>* はミラーリング監視サーバー インスタンスのサーバー ネットワーク アドレスです。  
   
      サーバー ネットワーク アドレスの構文は次のとおりです。  
   
-     TCP **://** \<_system-address>_ **:** \<*port>*  
+     TCP:**//** \<_system-address> _**:**\<*port>*  
   
-     \<*system-address*> は目的のコンピューター システムを明確に指定する文字列です。また、\<*port>* はパートナー サーバー インスタンスのミラーリング エンドポイントが使用するポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)を使用します。  
+     ここで \<*system-address> * は、対象のコンピューターシステムを明確に識別する文字列です \<*port> 。 * は、パートナーサーバーインスタンスのミラーリングエンドポイントで使用されるポート番号です。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)を使用します。  
   
-     たとえば、プリンシパル サーバー インスタンスでは、次の ALTER DATABASE ステートメントでミラーリング監視を設定します。 データベース名は **AdventureWorks**、システム アドレスは DBSERVER3 (ミラーリング監視システムの名前)、ミラーリング監視のデータベース ミラーリング エンドポイントが使用するポートは `7022` です。  
+     たとえば、プリンシパル サーバー インスタンスでは、次の ALTER DATABASE ステートメントでミラーリング監視を設定します。 データベース名は**AdventureWorks**、システムアドレスは DBSERVER3-監視システムの名前、ミラーリング監視サーバーのデータベースミラーリングエンドポイントで使用されるポートは `7022` 次のとおりです。  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -128,10 +127,10 @@ ms.locfileid: "67792612"
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
- [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
+ [Windows 認証 &#40;使用してデータベースミラーリングエンドポイントへのネットワークアクセスを許可する SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Windows 認証 &#40;Transact-sql&#41;のデータベースミラーリングエンドポイントを作成する](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Windows 認証 &#40;使用してデータベースミラーリングセッションを確立する Transact-sql&#41;](database-mirroring-establish-session-windows-authentication.md)   
+ [データベースミラーリングセッションからミラーリング監視サーバーを削除 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)  
   
   

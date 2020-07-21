@@ -9,10 +9,10 @@ ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68223231"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>カスタム セキュリティ拡張機能をインストールする方法
@@ -91,7 +91,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
     </system.web>
 ```
 
-### <a name="power-bi-report-server"></a>Power BI レポート サーバー
+### <a name="power-bi-report-server"></a>Power BI Report Server
 
 これは、2017 年 6 月 (ビルド 14.0.600.301) リリースの時点で使用可能な内容です。
 
@@ -117,7 +117,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 </UI>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポート サーバーでカスタム認証またはフォーム認証を構成する](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
 [カスタム認証クッキーを送信するようにレポート マネージャーを構成する](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)

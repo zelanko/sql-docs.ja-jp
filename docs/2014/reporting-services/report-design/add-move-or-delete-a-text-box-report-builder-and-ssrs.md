@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 49ba35fb0ecb5ed70fe737a10ce9a700d4e4c816
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106586"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>テキスト ボックスの追加、移動、または削除 (レポート ビルダーおよび SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66106586"
     > [!NOTE]  
     >  テキスト ボックスの中をクリックして編集モードになった場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押すとテキスト ボックスを選択できます。  
   
-2.  テキスト ボックスのハンドルをクリックし、テキスト ボックスを新しい場所にドラッグします。 または、方向キーを使用して、選択したテキスト ボックスを横方向または縦方向に移動できます。 デザイン画面でテキスト ボックスを細かく移動するには、Ctrl キーを押しながら方向キーを使用します。  
+2.  テキスト ボックスのハンドルをクリックし、テキスト ボックスを新しい場所にドラッグします。 または、方向キーを使用して、選択したテキスト ボックスを横方向または縦方向に移動できます。 デザイン画面でテキスト ボックスを細かく移動するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら方向キーを使用します。  
   
 ### <a name="to-delete-a-text-box"></a>テキスト ボックスを削除するには  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66106586"
     >  テキスト ボックスの中をクリックして編集モードになった場合は、&lt;localizedText&gt;Esc&lt;/localizedText&gt; キーを押すとテキスト ボックスを選択できます。  
   
 ## <a name="see-also"></a>参照  
- [テキスト ボックス &#40;レポート ビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [テキストボックス &#40;レポートビルダーおよび SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [キーボード ショートカット (レポート ビルダー)](../report-builder/keyboard-shortcuts-report-builder.md)  
   

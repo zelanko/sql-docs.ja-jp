@@ -1,20 +1,20 @@
 ---
 title: PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d3e27e4f4fdf813e30775c2cf44cfb4ca272b10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0890fbce533a540300ebd6b7da37a1fc26572a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114657"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768063"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -71,18 +71,18 @@ PostgreSQL データベースの名前。
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。 
 
-    ```
-    Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 
-    ```
-    Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
-    ```
+```console
+Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+```
 
 接続文字列を入力した後に表示される画面を次に示します。
 

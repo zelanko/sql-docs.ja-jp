@@ -16,19 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165137"
 ---
 # <a name="implementing-a-delivery-extension"></a>配信拡張機能の実装
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] により、ユーザーはレポートを作成し、パブリッシュできます。レポートは、作成しパブリッシュした後、さまざまな場所に配信できます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  
+  ユーザーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] により、作成およびパブリッシュ後にさまざまな場所に配信できるレポートを作成およびパブリッシュできます。 さらに、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には配信拡張機能と配信 API も用意されています。開発者は別の配信拡張機能を作成し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信機能をさらに拡張することもできます。  
   
  配信拡張機能の実装例については、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services 製品サンプル) をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [配信拡張機能の概要] 配信の拡張機能-overview.md)  
+ [配信拡張機能の概要] 配信拡張機能-overview.md)  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のカスタム配信拡張機能の記述方法について説明します。  
   
  [配信拡張機能を実装する準備](preparing-to-implement-a-delivery-extension.md)  
@@ -67,8 +67,8 @@ ms.locfileid: "63165137"
  [配信拡張機能の削除](removing-a-delivery-extension.md)  
  レポート サーバーから配信拡張機能を削除する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
- [Reporting Services の拡張機能](../reporting-services-extensions.md)   
+## <a name="see-also"></a>参照  
+ [Reporting Services 拡張機能](../reporting-services-extensions.md)   
  [Reporting Services 拡張機能ライブラリ](../reporting-services-extension-library.md)  
   
   

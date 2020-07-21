@@ -1,5 +1,5 @@
 ---
-title: 列 (SSAS テーブル) のデータ型の設定 |Microsoft Docs
+title: 列のデータ型の設定 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938663"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>列のデータ型の設定 (SSAS テーブル)
   モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
@@ -50,7 +49,7 @@ ms.locfileid: "66066609"
   
 |モデルのデータ型|  
 |----------------------|  
-|テキスト<br /><br /> 10 進数<br /><br /> 整数<br /><br /> 通貨<br /><br /> TRUE/FALSE<br /><br /> date|  
+|テキスト<br /><br /> 10 進数<br /><br /> 整数<br /><br /> 通貨<br /><br /> TRUE または FALSE<br /><br /> Date|  
   
  インポートしたデータのデータ型が間違っていた場合や、目的のデータ型と違っていた場合は、次の選択肢があります。  
   

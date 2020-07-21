@@ -1,5 +1,5 @@
 ---
-title: SQLServerBlob Members |Microsoft Docs
+title: SQLServerBlob のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81ce2d655214de3d31eb233deb4de2b1c3ae49f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17f51e9b0ebe03da7772bd07de4ad0d525826050
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67971949"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927260"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67971949"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|SQLServerBlob クラスの新しいインスタンスを初期化します。|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971949"
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|このメソッドは、BLOB オブジェクトと、それが占有していたリソースを解放します。|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|BLOB からデータを読み取る入力ストリームを返します。|  

@@ -1,6 +1,7 @@
 ---
-title: sp_validate_replica_hosts_as_publishers (TRANSACT-SQL) |Microsoft Docs
-ms.custom: ''
+title: sp_validate_replica_hosts_as_publishers (T-sql)
+description: すべてのセカンダリレプリカの検証を可能にする sp_validate_replica_hosts_as_publishers ストアドプロシージャについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723042"
 ---
-# <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **sp_validate_replica_hosts_as_publishers**の拡張機能は、 **sp_validate_redirected_publisher**すべてのセカンダリ レプリカを現在のプライマリ レプリカだけではなく検証できるようにします。 **sp_validate_replicat_hosts_as_publisher** Alwayson レプリケーション トポロジ全体を検証します。 **sp_validate_replica_hosts_as_publishers**ダブルホップ セキュリティ エラー (21892) を回避するためにリモート デスクトップ セッションを使用して、ディストリビューターに対して直接実行する必要があります。  
+  **sp_validate_replica_hosts_as_publishers**は、現在のプライマリレプリカだけではなく、すべてのセカンダリレプリカを検証できるようにする**sp_validate_redirected_publisher**の拡張機能です。 **sp_validate_replicat_hosts_as_publisher**は Always On レプリケーショントポロジ全体を検証します。 **sp_validate_replica_hosts_as_publishers**は、ダブルホップセキュリティエラー (21892) を回避するために、リモートデスクトップセッションを使用してディストリビューターで直接実行する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @original_publisher = ] 'original_publisher'` インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを最初に発行します。 *original_publisher*は**sysname**、既定値はありません。  
+`[ @original_publisher = ] 'original_publisher'`データベースを最初にパブリッシュしたのインスタンスの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher*は**sysname**であり、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシュするデータベースの名前。 *publisher_db* は **sysname** 、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**であり、既定値はありません。  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` リダイレクトの対象と**sp_redirect_publisher**元パブリッシャーとパブリッシュされたデータベースのペアに対して呼び出されました。 *redirected_publisher*は**sysname**、既定値はありません。  
+`[ @redirected_publisher = ] 'redirected_publisher'`元のパブリッシャー/パブリッシュされたデータベースのペアに対して**sp_redirect_publisher**が呼び出されたときのリダイレクトの対象。 *redirected_publisher*は**sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -52,12 +53,12 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>コメント  
- パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher**出力パラメーターに null を返します *@redirected_publisher* します。 それ以外の場合、関連付けられているリダイレクトされたパブリッシャーが返されます、成功と失敗の両方。  
+## <a name="remarks"></a>Remarks  
+ パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**出力パラメーター * \@ redirected_publisher*に null が返されます。 それ以外の場合は、成功と失敗の両方で、関連するリダイレクトされたパブリッシャーが返されます。  
   
- 検証が成功すると、 **sp_validate_redirected_publisher**成功を示す値を返します。  
+ 検証が成功した場合、 **sp_validate_redirected_publisher**は成功を示す値を返します。  
   
- 検証に失敗した場合は、適切なエラーが発生します。  **sp_validate_redirected_publisher**によりすべての問題とだけでなく、最初に発生させる最善の努力が発生しました。  
+ 検証が失敗した場合は、適切なエラーが発生します。  **sp_validate_redirected_publisher**では、最初に発生した問題だけでなく、すべての問題を発生させることができます。  
   
 > [!NOTE]  
 >  セカンダリ レプリカのホストで読み取りアクセスが許可されていない場合や、読み取りを目的としたアクセスを指定する必要がある場合、**sp_validate_replica_hosts_as_publishers** による検証は失敗し、次のエラー メッセージが表示されます。  
@@ -69,12 +70,12 @@ sp_validate_replica_hosts_as_publishers
 >  レプリカ ホスト 'MyReplicaHostName' について、1 つまたは複数のパブリッシャー検証エラーが発生しました。  
   
 ## <a name="permissions"></a>アクセス許可  
- 呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  
+ 呼び出し元は、 **sysadmin**固定サーバーロールのメンバーであるか、ディストリビューションデータベースの**db_owner**固定データベースロールのメンバーであるか、パブリッシャーデータベースに関連付けられている定義済みパブリケーションのパブリケーションアクセスリストのメンバーである必要があります。  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
   
   

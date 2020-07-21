@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) パッケージおよびプロジェクト パラメーター | Microsoft Docs
+title: パッケージとプロジェクトのパラメーター | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dfab14edde8351d014714e314c500c5319a265f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057489"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903859"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
 
@@ -50,7 +50,7 @@ ms.locfileid: "68057489"
   
  次の表に、値の型の一覧を示します。  
   
-|値の名前|[説明]|値の型|  
+|値の名前|説明|値の型|  
 |----------------|-----------------|-------------------|  
 |実行値|パッケージ実行の特定のインスタンスに割り当てられる値です。 この割り当ては他のすべての値をオーバーライドしますが、適用されるのは、パッケージ実行の 1 つのインスタンスのみです。|リテラル|  
 |サーバーの値|プロジェクトが Integration Services サーバーに配置された後にプロジェクトのスコープ内にあるパラメーターに割り当てられる値です。 この値は、設計上の既定値をオーバーライドします。|リテラルまたは環境変数の参照|  
@@ -58,7 +58,7 @@ ms.locfileid: "68057489"
   
  1 つのパラメーターを使用して、複数のパッケージのプロパティに値を割り当てることができます。 1 つのパッケージのプロパティには、1 つのパラメーターの値のみを割り当てることができます。  
   
-###  <a name="executions"></a> 実行とパラメーター値  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> 実行とパラメーター値  
  *実行* とは、パッケージ実行の 1 つのインスタンスを表すオブジェクトです。 実行を作成するときに、実行パラメーター値など、パッケージの実行に必要なすべての詳細情報を指定します。 既存の実行のパラメーター値を変更することもできます。  
   
  実行パラメーター値を明示的に設定すると、その値はその特定の実行インスタンスにのみ適用できます。 実行値は、サーバーの値または設計上の値の代わりに使用されます。 実行値を明示的に設定せず、サーバーの値が指定されている場合は、サーバーの値が使用されます。  
@@ -89,7 +89,7 @@ ms.locfileid: "68057489"
   
  **の** [パッケージの実行] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用してパラメーター値を変更することもできます。 詳細については、「 [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)」を参照してください。  
   
- dtexec の **/Parameter** オプションを使用してパラメーター値を変更することもできます。 詳細については、「 [dtexec Utility](../integration-services/packages/dtexec-utility.md)」を参照してください。  
+ dtexec の **/Parameter** オプションを使用してパラメーター値を変更することもできます。 詳細については、「[dtexec ユーティリティ](../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
 ### <a name="parameter-validation"></a>パラメーターの検証  
  パラメーター値を解決できない場合、対応するパッケージ実行は失敗します。 失敗を回避するために、 **の** [検証] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用してプロジェクトとパッケージを検証できます。 検証を使用すると、すべてのパラメーター値に必要な値が設定されているか、または特定の環境参照で必要な値を解決できるかを確認できます。 検証では、その他の一般的なパッケージの問題も確認されます。  
@@ -103,7 +103,7 @@ ms.locfileid: "68057489"
   
  特定のパッケージ実行インスタンスの準備中には、 **pkgOptions** パラメーターに値 5 が割り当てられます。 この値は実行値と呼ばれます。これは、その特定の実行インスタンスのパラメーターにのみ適用されるためです。 実行が開始されると、 **pkgOptions** パラメーターに対応するパッケージ プロパティに値 5 が割り当てられます。  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>パラメーターの作成
 プロジェクト パラメーターおよびパッケージ パラメーターを作成するには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用します。 以下の手順では、パッケージ/プロジェクト パラメーターを作成する方法を詳細に説明します。  
   
 > **注:** 以前のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用して作成したプロジェクトをプロジェクトの配置モデルに変換する場合は、**Integration Services プロジェクト変換ウィザード**を使用して、構成に基づいたパラメーターを作成できます。 詳細については、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -116,18 +116,18 @@ ms.locfileid: "68057489"
   
 2.  ツール バーの **[パラメーターの追加]** ボタンをクリックします。  
   
-     ![ツール バーの [追加] ボタン](../integration-services/media/denali-parameter-add.gif "ツール バーの [追加] ボタン")  
+     ![[追加] ツール バー ボタン](../integration-services/media/denali-parameter-add.gif "[追加] ツール バー ボタン")  
   
 3.  一覧で直接、または **[プロパティ]** ウィンドウを使用して、 **[名前]** 、 **[データ型]** 、 **[値]** 、 **[区別する]** 、 **[必須]** の各プロパティに値を入力します。 次の表では、これらのプロパティについて説明します。  
   
-    |プロパティ|[説明]|  
+    |プロパティ|説明|  
     |--------------|-----------------|  
-    |[オブジェクト名]|パラメーターの名前。|  
+    |Name|パラメーターの名前。|  
     |データ型|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
-    |区別する|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
-    |Required|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
-    |[説明]|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
+    |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
+    |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
+    |説明|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
   
     > **注:** プロジェクトをカタログに配置すると、いくつかのプロパティがプロジェクトに関連付けられます。 カタログ内のすべてのパラメーターのすべてのプロパティを表示するには、[catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューを使用します。  
   
@@ -143,22 +143,22 @@ ms.locfileid: "68057489"
   
 2.  ソリューション エクスプローラーで **[Project.params]** を右クリックして **[開く]** をクリックするか、または **[Project.params]** をダブルクリックして開きます。  
   
-     ![プロジェクト パラメーター ウィンドウ](../integration-services/media/denali-project-parameters.gif "プロジェクト パラメーター ウィンドウ")  
+     ![[プロジェクト パラメーター] ウィンドウ](../integration-services/media/denali-project-parameters.gif "[プロジェクト パラメーター] ウィンドウ")  
   
 3.  ツール バーの **[パラメーターの追加]** ボタンをクリックします。  
   
-     ![ツール バーの [追加] ボタン](../integration-services/media/denali-parameter-add.gif "ツール バーの [追加] ボタン")  
+     ![[追加] ツール バー ボタン](../integration-services/media/denali-parameter-add.gif "[追加] ツール バー ボタン")  
   
 4.  **[名前]** 、 **[データ型]** 、 **[値]** 、 **[区別する]** 、 **[必須]** の各プロパティに値を入力します。  
   
-    |プロパティ|[説明]|  
+    |プロパティ|説明|  
     |--------------|-----------------|  
-    |[オブジェクト名]|パラメーターの名前。|  
+    |Name|パラメーターの名前。|  
     |データ型|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
-    |区別する|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
-    |Required|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
-    |[説明]|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
+    |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
+    |必須|パッケージを実行する前に、設計上の既定値以外の値を指定する必要があります。|  
+    |説明|管理しやすさを考慮した、パラメーターの説明。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] では、該当するパラメーター ウィンドウでパラメーターを選択したときに、Visual Studio プロパティ ウィンドウでパラメーターの説明を設定します。|  
   
 5.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーター値はプロジェクト ファイルの構成に格納されます。 プロジェクト ファイルを保存して、パラメーター値の変更をディスクにコミットしてください。  
   
@@ -180,10 +180,10 @@ ms.locfileid: "68057489"
  **新しいパラメーターを作成する**  
  タスクのプロパティと関連付ける新しいパラメーターを作成するには、このオプションを選択します。  
   
- **[名前]**  
+ **Name**  
  作成するパラメーターの名前を指定します。  
   
- **[説明]**  
+ **説明**  
  パラメーターの説明を指定します。  
   
  **Value**  
@@ -217,6 +217,6 @@ ms.locfileid: "68057489"
  Transact-SQL を使用してサーバーの既定値を設定するには、[catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。 現在のサーバーの既定値を表示するには、[catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューをクエリします。 サーバーの既定値をクリアするには、[catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- mattmasson.com のブログ記事、「[SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
+ mattmasson.com のブログ「 [SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
   
   

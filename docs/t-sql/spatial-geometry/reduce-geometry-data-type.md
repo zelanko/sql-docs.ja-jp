@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56f2efd4fe6b84cb7758c0da723d9c11c51afc21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748832"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 指定された **geometry** インスタンスの近似を返します。 近似は、指定された許容範囲で、特定のインスタンスに対して Douglas-Peucker アルゴリズムの拡張を実行することにより生成されます。
   
@@ -43,9 +43,9 @@ ms.locfileid: "68101041"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コレクションの場合、このアルゴリズムは個別に各 **geometry** インスタンスに含まれています。  
   
  このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  
@@ -58,7 +58,7 @@ ms.locfileid: "68101041"
   
  円弧が検出されると、指定された許容範囲の半分以内で弦によって円弧を近似できるかどうかが近似アルゴリズムによってチェックされます。 弦がこの条件を満たす場合、円弧は計算において弦で置き換えられます。 弦がこの条件を満たしていない場合は、円弧が保持され、近似アルゴリズムが残りのセグメントに適用されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Reduce() を使用して LineString を簡略化する  
  `LineString` インスタンスを作成し、`Reduce()` を使用してそのインスタンスを簡略化する例を次に示します。  

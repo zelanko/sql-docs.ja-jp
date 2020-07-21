@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036237"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server エージェントのアップグレードに関する問題
   アップグレードに影響する可能性がある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに関する問題については、以下のトピックを参照してください。 これらのトピックでは、これらの変更が各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境にもたらす影響を軽減するための措置についても説明します。  
@@ -42,7 +41,7 @@ ms.locfileid: "66092010"
 -   [アップグレードすると SQL Server エージェント ユーザーのプロキシ アカウントが一時的な UpgradedProxyAccount に変更される](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)   
  [アップグレードに関する問題の解決](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

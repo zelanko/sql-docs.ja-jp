@@ -1,5 +1,5 @@
 ---
-title: SQLPutData |マイクロソフトのドキュメント
+title: SQLPutData |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,37 +11,36 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d847c7df84c1d00ed357a40a72839ff52f5737c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021757"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  SQLPutData を使用して、65,535 バイトを超えるデータを送信するときに、次の制限が適用されます (の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21) または 400 KB を sql_longvarchar (SQL Server バージョン 6.0 以降) 用のデータを (`text`)、SQL_WLONGVARCHAR (`ntext`) またはSQL_LONGVARBINARY (`image`) 列。  
+  SQLPutData を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR ( `text` )、SQL_WLONGVARCHAR ( `ntext` )、または SQL_LONGVARBINARY () 列に対して65535バイトを超えるデータ 400 (SQL Server バージョン6.0 以降) を送信する場合は、次の制限が適用され `image` ます。  
   
--   参照先のパラメーターは、 *insert_value* INSERT ステートメントでします。  
+-   参照されるパラメーターには、INSERT ステートメント内の*insert_value*を指定できます。  
   
--   参照先のパラメーターは、*式*UPDATE ステートメントの SET 句でします。  
+-   参照されるパラメーターは、UPDATE ステートメントの SET 句の*式*にすることができます。  
   
- 実行するサーバーのブロック単位でデータを提供する SQLPutData 呼び出しのシーケンスを取り消す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 6.5 以前のバージョンを使用する場合に、列の値の部分的な更新を発生します。 `text`、 `ntext`、または`image`SQLCancel が呼び出されたときに参照された列は、中間のプレース ホルダーの値に設定されます。  
+ を実行しているサーバーにブロック内のデータを提供する SQLPutData 呼び出しのシーケンスをキャンセルすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン6.5 以前を使用しているときに列の値が部分的に更新されます。 `text` `ntext` SQLCancel が呼び出されたときに参照された、、または `image` 列は、中間プレースホルダー値に設定されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 以前のバージョンへの接続をサポートしません。  
   
 ## <a name="diagnostics"></a>診断  
- 1 つである[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 固有の SQLSTATE SQLPutData:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData には、Native Client 固有の SQLSTATE が1つあります。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|22026|文字列データの長さが合致しません|送信するバイトのデータの長さが指定されている場合、アプリケーションによってなどを SQL_LEN_DATA_AT_EXEC で (*n*)、 *n*経由でアプリケーションによって指定されたバイトの合計数、0 より大きいSQLPutData は、指定した長さと一致する必要があります。|  
+|22026|文字列データの長さが合致しません|たとえば SQL_LEN_DATA_AT_EXEC (*n*) を使用して、送信されるデータの長さ (バイト単位) がアプリケーションによって指定されている場合 ( *n*が0を超える場合)、sqlputdata を使用してアプリケーションで指定されたバイト数の合計が、指定された長さと一致している必要があります。|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData とテーブル値パラメーター  
- SQLPutData は、テーブル値パラメーターの可変の行バインドを使用する場合、アプリケーションによって使用されます。 *StrLen_Or_Ind*パラメーターは、次の行またはテーブル値パラメーターのデータの行のデータを収集するドライバーの準備ができたこと、またはそれ以上の行が使用できることを示します。  
+ SQLPutData は、テーブル値パラメーターとの変数行バインドを使用する場合に、アプリケーションによって使用されます。 *StrLen_Or_Ind*パラメーターは、ドライバーがテーブル値パラメーターデータの次の行または行のデータを収集できる状態であること、または使用可能な行がないことを示します。  
   
 -   値が 0 を超える場合は、次の行の値のセットを使用できることを示します。  
   
@@ -49,19 +48,19 @@ ms.locfileid: "63046627"
   
 -   値が 0 未満の場合は、エラーが発生し、"文字列長またはバッファー長が正しくありません" というメッセージで SQLState HY090 の診断レコードが記録されます。  
   
- *DataPtr*パラメーターは無視されますが、NULL 以外の値に設定する必要があります。 詳細については、可変の行バインドのセクションをご覧ください。[バインドと Data Transfer of Table-Valued パラメーターおよび列の値](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)します。  
+ *DataPtr*パラメーターは無視されますが、NULL 以外の値に設定する必要があります。 詳細については、「バインド」の「変数 TVP 行バインド」[と「テーブル値パラメーターと列の値のデータ転送](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)」を参照してください。  
   
- 場合*StrLen_Or_Ind* SQL_DEFAULT_PARAM または 0 から SQL_PARAMSET_SIZE までの数値以外の任意の値を持つ (つまり、 *ColumnSize* SQLBindParameter のパラメーター)、エラーになります。 このエラーには、SQL_ERROR が返される SQLPutData が発生します。SQLSTATE = HY090、"無効な文字列長またはバッファー長"。  
+ *StrLen_Or_Ind*に SQL_DEFAULT_PARAM 以外の値または0と SQL_PARAMSET_SIZE (つまり、SQLBindParameter の*columnsize*パラメーター) の数値が含まれている場合、エラーになります。 このエラーが発生すると、SQLPutData は、"文字列長またはバッファー長が正しくありません" というメッセージで SQLSTATE=HY090 の SQL_ERROR を返します。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>SQLPutData による機能強化された日付と時刻のサポート  
- 日付/時刻型のパラメーターの値で説明したように変換[C から SQL への変換](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。  
+ 日付型または時刻型のパラメーター値は、「 [C から SQL への変換](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)」で説明されているように変換されます。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData による大きな CLR UDT のサポート  
- `SQLPutData` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ `SQLPutData` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLPutData 関数](https://go.microsoft.com/fwlink/?LinkId=59365)   

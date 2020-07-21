@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5f6b2b306c4fe8db08b088d9607cfb19ab0f25e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066389"
 ---
 # <a name="delete-user-defined-functions"></a>ユーザー定義関数の削除
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用してユーザー定義関数を削除できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -26,7 +25,7 @@ ms.locfileid: "68196462"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ユーザー定義関数を削除するために使用するもの:**  
   
@@ -34,20 +33,20 @@ ms.locfileid: "68196462"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベース内に、この関数を参照し SCHEMABINDING を使って作成された Transact-SQL 関数またはビューがある場合、または、この関数を参照する計算列、CHECK 制約、DEFAULT 制約がある場合、関数は削除できません。  
   
 -   この関数を参照し、インデックスが作成された計算列がある場合、関数の削除はできません。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  関数が属しているスキーマに対する ALTER 権限、または関数に対する CONTROL 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-delete-a-user-defined-function"></a>ユーザー定義関数を削除するには  
   
@@ -68,9 +67,9 @@ ms.locfileid: "68196462"
 5.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  **オブジェクトの削除** ダイアログ ボックスの **依存関係の表示** をクリックして _function_name_**の依存関係** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
+    >  [**オブジェクトの削除**] ダイアログボックスの [**依存関係の表示**] をクリックして、[ _function_name_の**依存関係**] ダイアログボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-user-defined-function"></a>ユーザー定義関数を削除するには  
   

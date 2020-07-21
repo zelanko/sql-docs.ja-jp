@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106286"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>グラフの凡例の書式設定 (レポート ビルダーおよび SSRS)
@@ -76,9 +76,9 @@ ms.locfileid: "66106286"
 ## <a name="formatting-the-legend-text"></a>凡例テキストの書式設定  
  凡例テキストのフォント、サイズ、スタイル、および色は、 **[凡例のプロパティ]** ダイアログ ボックスの **[フォント]** ページで変更できます。  
   
- 既定では、凡例テキストは、凡例領域に合わせて最適化されません。 自動的に割り当てられた領域に合わせて凡例テキストは、AutoFitTextDisabled プロパティを設定`False`し、MinFontSize プロパティと思われる最小のフォント サイズを表現できる、可能で凡例のフォントの最小サイズを設定最適化します。  
+ 既定では、凡例テキストは、凡例領域に合わせて最適化されません。 割り当てられた領域に凡例のテキストが自動的に適合するようにするには`False` 、AutoFitTextDisabled プロパティをに設定し、minfontsize プロパティの最小のフォントサイズを最小のフォントサイズに設定します。これは、表示可能で、凡例の最適化が可能であると考えられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[全般] ([凡例のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   

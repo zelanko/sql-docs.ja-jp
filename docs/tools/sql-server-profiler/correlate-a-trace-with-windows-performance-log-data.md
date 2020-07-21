@@ -1,43 +1,40 @@
 ---
-title: トレースと Windows パフォーマンス ログ データの関連付け | Microsoft Docs
-ms.custom: ''
-ms.date: 07/12/2017
+title: トレースと Windows パフォーマンス ログ データの関連付け
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- correlating trace with log data
-- logs [SQL Server], traces
-- Profiler [SQL Server Profiler], correlating trace with log data
-- traces [SQL Server], logs
-- SQL Server Profiler, correlating trace with log data
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 92d925158e04e11b0a00181ec0ecaf42c6ff7b37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
+ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930098"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307322"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>トレースと Windows パフォーマンス ログ データの関連付け
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、Microsoft Windows パフォーマンス ログを開き、トレースと関連付けるカウンターを選択し、選択したパフォーマンス カウンターをトレースと共に [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに表示できます。 トレース ウィンドウでイベントを選択すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の [システム モニター] データ ウィンドウ画面の赤い縦棒で、選択したトレース イベントに関連付けられているパフォーマンス ログ データが示されます。  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、Microsoft Windows パフォーマンス ログを開き、トレースと関連付けるカウンターを選択し、選択したパフォーマンス カウンターをトレースと共に [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに表示できます。 トレース ウィンドウでイベントを選択すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の [システム モニター] データ ウィンドウ画面の赤い縦棒で、選択したトレース イベントに関連付けられているパフォーマンス ログ データが示されます。  
   
- トレースをパフォーマンス カウンターに関連付けるには、 **StartTime** および **EndTime** data columns, および then click **で** [ファイル] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **File** menu. パフォーマンス ログを開き、トレースに関連付けるシステム モニター オブジェクトおよびカウンターを選択します。  
+ トレースをパフォーマンス カウンターに関連付けるには、**StartTime** および **EndTime** データ列を含んでいるトレース ファイルまたはテーブルを開き、**の**[ファイル][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] メニューで **[パフォーマンス データのインポート]** をクリックします。 パフォーマンス ログを開き、トレースに関連付けるシステム モニター オブジェクトおよびカウンターを選択します。  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>トレースとパフォーマンス ログ データとを相互に関連付けるには  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]で、保存されているトレース ファイルまたはトレース テーブルを開きます。 イベント データを収集している実行中のトレースを相互に関連付けることはできません。 システム モニター データとの相関関係の精度を保証するには、 **[StartTime]** データ列と **[EndTime]** データ列の両方がトレースに含まれている必要があります。  
   
-2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[ファイル]** メニューで、 **[パフォーマンス データのインポート]** をクリックします。  
+2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の **[ファイル]** メニューで、 **[パフォーマンス データのインポート]** をクリックします。  
   
 3.  **[開く]** ダイアログ ボックスで、パフォーマンス ログが含まれているファイルを選択します。 パフォーマンス ログ データは、トレース データがキャプチャされたのと同じ期間にキャプチャされている必要があります。  
   
-4.  **[パフォーマンス カウンター制限]** ダイアログ ボックスで、トレースと一緒に表示するシステム モニター オブジェクトとカウンターに対応するチェック ボックスをオンにします。 クリックして **OK.**  
+4.  **[パフォーマンス カウンター制限]** ダイアログ ボックスで、トレースと一緒に表示するシステム モニター オブジェクトとカウンターに対応するチェック ボックスをオンにします。 **[OK]** をクリックします。  
   
 5.  トレース イベント ウィンドウでイベントを選択するか、トレース イベント ウィンドウ内のいくつかの隣接する行の間を、方向キーを使用して移動します。 **[システム モニター データ]** ウィンドウ内の赤い縦棒は、選択したトレース イベントと相互に関連しているパフォーマンス ログ データを示します。  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100759"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
@@ -28,7 +28,7 @@ ms.locfileid: "66100759"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
   
  **このトピックの内容:**  
   
@@ -38,17 +38,17 @@ ms.locfileid: "66100759"
   
 -   [PowerShell を使用してサブスクリプションを監視する](#bkmk_use_powershell)  
   
--   [無効なサブスクリプションの管理](#bkmk_manage_inactive)  
+-   [非アクティブなサブスクリプションの管理](#bkmk_manage_inactive)  
   
-##  <a name="bkmk_native_mode"></a> ネイティブ モードのユーザー インターフェイス  
+##  <a name="native-mode-user-interface"></a><a name="bkmk_native_mode"></a> ネイティブ モードのユーザー インターフェイス  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ユーザーは、 **[個人用サブスクリプション]** ページ、またはレポート マネージャーの **[サブスクリプション]** タブを使用して、サブスクリプションの状態を監視できます。 [サブスクリプション] ページには、サブスクリプションが最後に実行された日時およびサブスクリプションの状態を示す列があります。 サブスクリプションの処理がスケジュールされると、状態メッセージが更新されます。 トリガーが発生しない場合 (レポート実行スナップショットが更新されない、スケジュールが実行されないなどの場合)、状態メッセージは更新されません。  
   
  **[状態]** 列に表示されることのある値を、次の表に示します。  
   
-|状態|説明|  
+|Status|説明|  
 |------------|-----------------|  
 |新しいサブスクリプション|初めてサブスクリプションを作成するときに表示されます。|  
-|Inactive|サブスクリプションを処理できないときに表示されます。 詳細については、このトピックの「無効なサブスクリプションの管理」を参照してください。|  
+|非アクティブ|サブスクリプションを処理できないときに表示されます。 詳細については、このトピックの「無効なサブスクリプションの管理」を参照してください。|  
 |完了: 合計 \<*number*> 件のうち、処理済み \<*number*> 件; エラー \<*number*> 件です。|データ ドリブン サブスクリプション実行の状態を表示します。このメッセージはスケジュールおよび配信のプロセッサで作成されます。|  
 |\<*number*> 処理済み|スケジュールおよび配信のプロセッサが正常に配信した通知、または配信の試行が行われなくなった通知の件数です。 データ ドリブンの配信が完了したとき、処理された通知の件数と生成された通知の合計件数が等しくなる必要があります。|  
 |\<*number*> 合計|最後にサブスクリプションを配信したときに生成されたサブスクリプションの通知の合計件数です。|  
@@ -68,7 +68,7 @@ ms.locfileid: "66100759"
 ### <a name="native-mode-log-files"></a>ネイティブ モードのログ ファイル  
  配信中にエラーが発生すると、レポート サーバーのトレース ログにエントリが作成されます。  
   
- レポート サーバー管理者は、**reportserverservice_\*.log** ファイルを参照して、サブスクリプションの配信状態を判断できます。 電子メール配信については、特定の電子メール アカウントに対する処理および配信の記録がレポート サーバーのログ ファイルに出力されます。 ログ ファイルの既定の場所を次に示します。  
+ レポートサーバー管理者は、 **reportserverservice_\*.log**ファイルを確認して、サブスクリプションの配信状態を確認できます。 電子メール配信については、特定の電子メール アカウントに対する処理および配信の記録がレポート サーバーのログ ファイルに出力されます。 ログ ファイルの既定の場所を次に示します。  
   
  `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
   
@@ -78,33 +78,33 @@ ms.locfileid: "66100759"
   
  サブスクリプションに関連するトレース ログ ファイルのサンプル エラー メッセージを次に示します。  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR:**Error sending email**. 例外:System.Net.Mail.SmtpException:SMTP サーバーには、セキュリティで保護された接続が必要です。 または、クライアントは認証されていません。 サーバーの応答は次のとおりでした。5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i 情報: サーバー システムで指定されているとおり、EnableExecutionLogging を 'True' に初期化中です properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e エラー: **メールを送信中にエラーが発生しました**。 例外:System.Net.Mail.SmtpException:SMTP サーバーにセキュリティで保護された接続が必要であるか、クライアントが認証されていません。 サーバーの応答内容:5.7.1 クライアントは System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) で認証されませんでした  
   
  ログ ファイルには、レポートが開かれているかどうか、または実際に配信が成功したかどうかに関する情報は含まれません。 配信が成功するということは、スケジュールおよび配信のプロセッサでエラーが生成されず、レポート サーバーがメール サーバーに接続したことを意味します。 電子メールがユーザーのメールボックスで配信不能なメッセージ エラーとなった場合、その情報はログ ファイルに含まれません。 ログ ファイルの詳細については、「 [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
-##  <a name="bkmk_sharepoint_mode"></a> SharePoint モード  
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepoint_mode"></a>SharePoint モード  
  SharePoint モードでサブスクリプションを監視する: サブスクリプションの状態は **[サブスクリプションの管理]** ページから監視できます。  
   
 1.  レポートがあるドキュメント ライブラリを参照します。  
   
-2.  レポートのコンテキスト メニューを開きます (**[...]**)。  
+2.  レポートのコンテキスト メニューを開きます ( **[...]** )。  
   
-3.  展開されたメニュー オプションを選択します (**[...]**)。  
+3.  展開されたメニュー オプションを選択します ( **[...]** )。  
   
-4.   **[サブスクリプションの管理]** を選択します。  
+4.  **[サブスクリプションの管理]** を選択します。  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS ログ ファイル  
  サブスクリプション関連の情報は、SharePoint ULS ログに書き込まれます。 ULS ログの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] イベント構成の詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションに関連した ULS ログのエントリの例を次に示します。  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|[処理]|領域|カテゴリ|Level|Correlation|メッセージ|  
-|5/21/2014 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services (SQL Server Reporting Services)|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** 例外:System.Net.Mail.SmtpException:メールボックスが使用できません。 サーバーの応答は次のとおりでした。5.7.1 クライアントは位置がありません (SmtpStatusCode statusCode, String serverResponse) 次の場所で、この送信者として送信するアクセス許可で System.net.mail.datastopcommand.send(smtpconnection conn)Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (通知の通知) で System.Net.Mail.SmtpClient.Send (MailMessage メッセージ)|  
+|Date|Process|領域|カテゴリ|Level|Correlation|Message|  
+|5/21/2014 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** 例外:System.Net.Mail.SmtpException:メールボックスが使用できません。 サーバーの応答内容:5.7.1 クライアントは、次の場所で、この送信者として送信する権限がありません。System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)、System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)、System.Net.Mail.SmtpClient.Send(MailMessage message)、Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
-##  <a name="bkmk_use_powershell"></a> PowerShell を使用してサブスクリプションを監視する  
+##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> PowerShell を使用してサブスクリプションを監視する  
  ネイティブ モードまたは SharePoint モードのサブスクリプションの状態を確認するために使用できる PowerShell スクリプトの例は、「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
-##  <a name="bkmk_manage_inactive"></a> 無効なサブスクリプションの管理  
+##  <a name="managing-inactive-subscriptions"></a><a name="bkmk_manage_inactive"></a>非アクティブなサブスクリプションの管理  
  サブスクリプションが無効になった場合、サブスクリプションが処理されない根本的な条件を解決して、サブスクリプションを削除または再び有効にする必要があります。 処理を妨げる条件が発生すると、サブスクリプションは無効になることがあります。 このような条件の例を次に示します。  
   
 -   サブスクリプションで指定された配信拡張機能を削除またはアンインストールした。  

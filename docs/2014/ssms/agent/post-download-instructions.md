@@ -11,37 +11,36 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9a0b20947892510f09790b0592bee58b350d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62473051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067669"
 ---
 # <a name="post-download-instructions"></a>ダウンロード命令の通知
   このページを使用すると、ターゲット サーバーに対するダウンロード命令を指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[命令の種類]**  
  送信するダウンロード命令の種類を指定します。  
   
- **[説明]**  
+ **説明**  
  ダウンロード命令の説明を表示します。  
   
  **[ポーリング間隔]**  
  ターゲット サーバーに対するポーリングの間隔を設定します。 **[ポーリング間隔の設定]** 命令に対してのみ適用されます。  
   
- **[すべての対象サーバー]**  
+ **[すべてのターゲット サーバー]**  
  このオプションをクリックすると、ダウンロード命令がすべてのターゲット サーバーに送信されます。  
   
- **[特定の対象サーバー]**  
+ **[特定のターゲット サーバー]**  
  このオプションをクリックすると、ダウンロード命令が、選択されたターゲット サーバーに送信されます。  
   
  **Select**  
  ターゲット サーバーでダウンロード命令を受け取るよう指定します。  
   
- **[対象サーバー]**  
+ **対象サーバー**  
  ターゲット サーバーの名前を表示します。  
   
  **[ローカル時刻]**  

@@ -1,5 +1,5 @@
 ---
-title: + (追加)(MDX) |Microsoft Docs
+title: + アドイン(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9cb5ddf37104c0de00e17bdec5946d9b39d60020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017211"
 ---
 # <a name="-add-mdx"></a>+ (加算) (MDX)
 
 
-  2 つの数値を加算する算術演算を実行します。  
+  2つの数値を加算する算術演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,15 +29,15 @@ Numeric_Expression + Numeric_Expression
   
 #### <a name="parameters"></a>パラメーター  
  *数値式*  
- 数値の値を返す有効な多次元式 (MDX) 式。  
+ 数値を返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 優先順位の高いパラメーターのデータ型の値。  
+ 優先順位の高いパラメーターのデータ型を持つ値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値に評価される場合、この演算子は、もう一方の式の結果を返します。  
   
-## <a name="see-also"></a>関連項目  
- [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

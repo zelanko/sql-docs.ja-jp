@@ -1,5 +1,6 @@
 ---
-title: '方法: Windows 認証を使用して接続する |Microsoft Docs'
+title: 方法:Windows 認証を使用した接続
+description: Drivers for PHP for SQL Server を介した Windows 統合認証を使用して接続する場合の詳細について説明します。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936506"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634830"
 ---
-# <a name="how-to-connect-using-windows-authentication"></a>方法: Windows 認証を使用して接続する
+# <a name="how-to-connect-using-windows-authentication"></a>方法:Windows 認証を使用した接続
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の既定では、Windows 認証を使用して SQL Server に接続します。 つまり、サーバーに接続するときに、ほとんどのシナリオでエンドユーザーの ID ではなく、Web サーバーのプロセス ID またはスレッド ID (Web サーバーが権限の借用を使用している場合) が使用されるという点が重要です。  
@@ -31,7 +32,7 @@ Windows 認証を使用して SQL Server に接続する場合は、次の点を
 -   SQL Server と Web サーバーが別のコンピューター上にある場合、リモート接続を有効にするように SQL Server を構成する必要があります。  
   
 > [!NOTE]  
-> 接続を確立するときに、 *Database* や *ConnectionPooling* などの接続属性を設定できます。 サポートされている接続属性の一覧については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
+> 接続を確立するときに、 *Database* や *ConnectionPooling* などの接続属性を設定できます。 サポートされている接続属性の一覧については、「 [Connection Options](connection-options.md)」を参照してください。  
   
 次の理由のために可能な場合は、SQL Server への接続に Windows 認証を使用する必要があります。  
   
@@ -39,7 +40,7 @@ Windows 認証を使用して SQL Server に接続する場合は、次の点を
   
 -   ユーザーは、アカウントを一元管理されます。また、パスワードの有効期限、パスワードの最小の長さ、および複数の無効なログイン要求後のアカウント ロックアウトなど、セキュリティ ポリシーが強制されます。  
   
-Windows 認証を使用できない場合、「 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)」を参照してください。  
+Windows 認証を使用できない場合、「[方法: SQL Server 認証を使用して接続する](how-to-connect-using-sql-server-authentication.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、Windows 認証で [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用して、SQL Server のローカル インスタンスに接続します。 接続が確立すると、サーバーに対して、データベースにアクセスしているユーザーのログインが照会されます。  
@@ -105,15 +106,15 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>参照  
-[方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[方法: SQL Server 認証を使用して接続する](how-to-connect-using-sql-server-authentication.md)
 
-[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](programming-guide-for-php-sql-driver.md)
 
-[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
+[ドキュメントのコード例について](about-code-examples-in-the-documentation.md)
 
-[SQL Server ログインを作成する方法](../../relational-databases/security/authentication-access/create-a-login.md)
+[方法: SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[データベース ユーザーを作成する方法](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[方法: データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [ユーザー、ロール、およびログインの管理](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

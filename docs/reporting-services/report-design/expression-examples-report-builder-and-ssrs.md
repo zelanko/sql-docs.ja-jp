@@ -1,5 +1,5 @@
 ---
-title: 式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 式の例 (レポート ビルダー) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,22 +23,22 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661340"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  RDL サンドボックスが有効になっている場合は、レポートのパブリッシュ時に式のテキストで使用できる型およびメンバーが特定の型およびメンバーに制限されます。 詳細については、「 [RDL サンドボックスの有効化と無効化](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)」を参照してください。  
+>  RDL サンドボックスが有効になっている場合は、レポートのパブリッシュ時に式のテキストで使用できる型およびメンバーが特定の型およびメンバーに制限されます。 詳細については、 [「RDL サンドボックスの有効化と無効化」](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)を参照してください。  
   
 このトピックでは、レポート内で一般的なタスクに使用できる式の例を示します。  
   
--   [Visual Basic の関数](#VisualBasicFunctions) [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の日付関数、文字列関数、変換関数、および条件関数の例。  
+-   [Visual Basic の関数](#VisualBasicFunctions)[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の日付関数、文字列関数、変換関数、および条件関数の例。  
   
 -   [レポートの関数](#ReportFunctions) 集計および組み込みのレポート関数の例。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "68661340"
 
   
 ## <a name="functions"></a>関数  
- レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]などの <xref:System.Text.RegularExpressions>」を参照してください。  
+ レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、[!INCLUDE[msCoName](../../includes/msconame-md.md)] などの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> のクラスを使用することもできます。  
   
-##  <a name="VisualBasicFunctions"></a> Visual Basic の関数  
+##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic の関数  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、日付固有の書式など、さまざまなカスタム書式が用意されています。 詳細については、MSDN の「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
@@ -87,7 +87,7 @@ ms.locfileid: "68661340"
     = Round(1.3*5)/5  
     ```  
   
-###  <a name="DateFunctions"></a> 日付関数  
+###  <a name="date-functions"></a><a name="DateFunctions"></a> 日付関数  
   
 -   **Today** 関数は現在の日付を返します。 この式は、レポートに日付を表示するテキスト ボックス、または現在の日付に基づいてデータをフィルター処理するパラメーターに使用できます。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68661340"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   **Year** 関数は、特定の日付の年を表示します。 この関数を使用して、日付をグループ化したり、一連の日付のラベルとして年を表示したりできます。 次の式では、指定した販売注文日グループの年が返されます。 また、 **Month** 関数および他の関数を使用して、日付を操作することもできます。 詳細については、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のドキュメントを参照してください。  
+-   **Year** 関数は、特定の日付の年を表示します。 この関数を使用して、日付をグループ化したり、一連の日付のラベルとして年を表示したりできます。 次の式では、指定した販売注文日グループの年が返されます。 また、 **Month** 関数および他の関数を使用して、日付を操作することもできます。 詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のドキュメントを参照してください。  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -192,7 +192,7 @@ ms.locfileid: "68661340"
 |1 年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |2 年前|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-###  <a name="StringFunctions"></a> 文字列関数  
+###  <a name="string-functions"></a><a name="StringFunctions"></a> 文字列関数  
   
 -   連結演算子および [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の定数を使用して、複数のフィールドを組み合わせます。 次の式では、2 つのフィールドが、同じテキスト ボックス内の別々の行に返されます。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "68661340"
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     次の式では、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> System.String [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] クラスのメンバーを使用しています。返される値は、上記の式と同じです。  
+     次の式では、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の関数の代わりに <xref:System.String> の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] クラスのメンバーを使用しています。返される値は、上の式と同じです。  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -233,7 +233,7 @@ ms.locfileid: "68661340"
   
     ```  
   
--   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   **の** に含まれる [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Regex<xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -242,7 +242,7 @@ ms.locfileid: "68661340"
     > [!NOTE]  
     >  Fields!Phone.Value に余分なスペースがないことと、データ型が <xref:System.String>」を参照してください。  
   
-### <a name="lookup"></a>Lookup  
+### <a name="lookup"></a>参照  
   
 -   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "68661340"
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-###  <a name="ConversionFunctions"></a> 変換関数  
+###  <a name="conversion-functions"></a><a name="ConversionFunctions"></a> 変換関数  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、フィールドのデータ型を別のデータ型に変換することができます。 変換関数を使用すると、フィールドの既定のデータ型を、計算やテキストの連結に必要なデータ型に変換できます。  
   
 -   次の式では、フィルター式の [値] フィールドの [!INCLUDE[tsql](../../includes/tsql-md.md)] money データ型と比較するために、定数 500 を Decimal 型に変換します。  
@@ -273,7 +273,7 @@ ms.locfileid: "68661340"
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-###  <a name="DecisionFunctions"></a> 決定関数  
+###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> 決定関数  
   
 -   **Iif** 関数では、式が True かどうかによって、2 つの値のいずれかが返されます。 次の式では、 **Iif** 関数を使用して、 **の値が 100 を超える場合にブール値** True `LineTotal` が返されます。 それ以外の場合は **False**を返します。  
   
@@ -328,10 +328,10 @@ ms.locfileid: "68661340"
   
     ```  
   
-##  <a name="ReportFunctions"></a> レポートの関数  
+##  <a name="report-functions"></a><a name="ReportFunctions"></a> レポートの関数  
  レポートには、これ以外にも、レポート内のデータを操作するレポート関数への参照を追加することができます。 ここでは、このような関数のうち 2 つの例を紹介します。 レポートの関数と例の詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
-###  <a name="Sum"></a> Sum  
+###  <a name="sum"></a><a name="Sum"></a> Sum  
   
 -   **Sum** 関数を使用すると、グループまたはデータ領域内の値を合計できます。 この関数は、グループのヘッダーまたはフッターで役立ちます。 次の式では、Order グループまたは Order データ領域内のデータの合計が表示されます。  
   
@@ -345,7 +345,7 @@ ms.locfileid: "68661340"
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-###  <a name="RowNumber"></a> RowNumber  
+###  <a name="rownumber"></a><a name="RowNumber"></a> RowNumber  
   
 -   **RowNumber** 関数をデータ領域内のテキスト ボックスで使用すると、式が表示されるテキスト ボックスの各インスタンスの行数が表示されます。 この関数は、テーブル内の行数を数える場合に役立ちます。 また、行数に基づいた改ページの指定など、より複雑なタスクにも役立ちます。 詳細については、このトピックの「 [改ページ](#PageBreaks) 」を参照してください。  
   
@@ -355,10 +355,10 @@ ms.locfileid: "68661340"
     =RowNumber(Nothing)  
     ```  
   
-##  <a name="AppearanceofReportData"></a> レポート データの表示方法  
+##  <a name="appearance-of-report-data"></a><a name="AppearanceofReportData"></a> レポート データの表示方法  
  式を使用して、レポートにデータを表示する方法を操作できます。 たとえば、2 つのフィールドの値を 1 つのテキスト ボックスに表示したり、レポートに関する情報を表示したり、レポートに改ページを挿入する方法に影響を与えたりすることができます。  
   
-###  <a name="PageHeadersandFooters"></a> ページ ヘッダーとページ フッター  
+###  <a name="page-headers-and-footers"></a><a name="PageHeadersandFooters"></a> ページ ヘッダーとページ フッター  
  レポートをデザインする場合、必要に応じてレポート名とページ番号をレポート フッターに表示できます。 この操作を行うには、以下の式を使用できます。  
   
 -   次の式では、レポート名、およびレポートが実行された時刻が返されます。 この式は、レポート フッターまたはレポート本文のテキスト ボックスで使用できます。 時間の書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の短い日付用の書式設定の文字列を使用して設定されます。  
@@ -398,7 +398,7 @@ ms.locfileid: "68661340"
 > [!NOTE]  
 >  ページ ヘッダーまたはページ フッターでは、1 つの式につき 1 つのレポート アイテムしか参照できません。 また、ページ ヘッダーまたはページ フッターの式では、テキスト ボックスの名前を参照することはできますが、テキスト ボックス内の実際のデータ式は参照できません。  
   
-###  <a name="PageBreaks"></a> 改ページ  
+###  <a name="page-breaks"></a><a name="PageBreaks"></a> 改ページ  
  レポートによっては、グループやレポート アイテムに改ページを設定せずに、またはグループやレポート アイテムの改ページに追加する形で、指定した行数の最後に改ページを挿入したい場合があります。 この操作を行うには、必要なグループや詳細レコードを含むグループを作成し、そのグループに改ページを追加した後、指定された行数でグループ化を行うグループ式を追加します。  
   
 -   次の式をグループ式で使用すると、25 行ごとに数値が割り当てられます。 グループに改ページが定義されている場合は、この式の結果として、25 行ごとに改ページが行われます。  
@@ -415,10 +415,10 @@ ms.locfileid: "68661340"
   
      グループに改ページを設定する方法の詳細については、「[改ページの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Properties"></a> プロパティ  
+##  <a name="properties"></a><a name="Properties"></a> プロパティ  
  式は、テキスト ボックスにデータを表示するためだけに使用するものではありません。 レポート アイテムにプロパティを適用する方法を変更する場合にも使用できます。 レポート アイテムのスタイル情報を変更したり、情報の表示を変更することができます。  
   
-###  <a name="Formatting"></a> 書式設定  
+###  <a name="formatting"></a><a name="Formatting"></a> 書式設定  
   
 -   テキスト ボックスの Color プロパティで次の式を使用すると、 `Profit` フィールドの値に応じてテキストの色が変更されます。  
   
@@ -448,7 +448,7 @@ ms.locfileid: "68661340"
 ### <a name="chart-colors"></a>グラフの色  
  図形グラフの色を指定するには、色がデータ点にマップされる順序を制御するカスタム コードを使用できます。 これは複数のグラフで同じカテゴリ グループの色を統一するときに役立ちます。 詳細については、「[複数の図形グラフでの色の統一 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)」を参照してください。  
   
-###  <a name="Visibility"></a> 表示  
+###  <a name="visibility"></a><a name="Visibility"></a> 表示  
  レポート アイテムの表示プロパティを使用して、レポート内のアイテムの表示/非表示を切り替えることができます。 テーブルなどのデータ領域では、最初に、式の値に基づいて詳細行を非表示にできます。  
   
 -   グループ内の詳細行の初期表示に次の式を使用すると、 `PctQuota` フィールドで 90% を超えるすべての売上の詳細行が表示されます。  
@@ -469,7 +469,7 @@ ms.locfileid: "68661340"
     =IIF(Fields!Column_1.IsMissing, true, false)  
     ```  
   
-###  <a name="Hyperlinks"></a> URL  
+###  <a name="urls"></a><a name="Hyperlinks"></a> URL  
  レポート データを使用して URL をカスタマイズできます。また、テキスト ボックスに対するアクションとして URL を追加するかどうかを、条件付きで制御することもできます。  
   
 -   次の式をテキスト ボックスに対するアクションとして使用すると、URL パラメーターとしてデータセット フィールド `EmployeeID` を指定する、カスタマイズされた URL が生成されます。  
@@ -486,10 +486,10 @@ ms.locfileid: "68661340"
     =IIF(Parameters!IncludeURLs.Value,"https://adventure-works.com/productcatalog",Nothing)  
     ```  
   
-##  <a name="ReportData"></a> レポート データ  
+##  <a name="report-data"></a><a name="ReportData"></a> レポート データ  
  式を使用して、レポートで使用するデータを操作できます。 パラメーターおよび他のレポート情報を参照できます。 レポートのデータを取得するために使用されるクエリを変更することもできます。  
   
-###  <a name="Parameters"></a> パラメーター  
+###  <a name="parameters"></a><a name="Parameters"></a> パラメーター  
  パラメーターの式を使用して、パラメーターの既定値を変更できます。 たとえば、パラメーターを使用して、レポートの実行に使用されるユーザー ID に基づき、特定のユーザーに合わせてデータをフィルター処理することができます。  
   
 -   パラメーターの既定値として次の式を使用すると、レポートを実行するユーザーのユーザー ID が収集されます。  
@@ -510,7 +510,7 @@ ms.locfileid: "68661340"
     =Fields(Parameters!ParameterField.Value).Value  
     ```  
   
-##  <a name="CustomCode"></a> カスタム コード  
+##  <a name="custom-code"></a><a name="CustomCode"></a> カスタム コード  
  レポート内では、カスタム コードを使用できます。 カスタム コードは、レポート内に埋め込むか、レポートで使用されるカスタム アセンブリに格納します。 カスタム コードの詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>グループ変数を使用したカスタム集計  

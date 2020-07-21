@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cff9c60e466418f7aeff19a9ee23649042d844d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047860"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Deadlock Graph の保存 (SQL Server Profiler)
   このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して Deadlock Graph を保存する方法について説明します。 Deadlock Graph は XML ファイルとして保存されます。  
@@ -39,7 +38,7 @@ ms.locfileid: "63150702"
   
 4.  次のいずれかの操作を行います。  
   
-    -   トレースをファイルにキャプチャするには、 **[ファイルに保存]** チェック ボックスをオンにします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。  
+    -   トレースをファイルにキャプチャするには、**[ファイルに保存]** チェック ボックスをオンにします。 **[最大ファイル サイズの設定]** ボックスに値を指定します。  
   
          必要に応じて、 **[ファイル ロールオーバーを有効にする]** チェック ボックスと **[サーバーがトレース データを処理する]** チェック ボックスをオンにします。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "63150702"
   
 10. 1 つの XML ファイルに Deadlock Graph のすべてのイベントを保存するには、 **[1 つのファイルにすべてのデッドロック XML バッチを保存する]** をクリックします。また、Deadlock Graph ごとに新しい XML ファイルを作成するには、 **[個別のファイルに各デッドロック XML バッチを保存する]** をクリックします。  
   
- デッドロック ファイルを保存した後は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でファイルを開くことができます。 詳細については、「[デッドロック ファイルを開く、表示、および印刷する方法 &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md)」を参照してください。  
+ デッドロック ファイルを保存した後は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でファイルを開くことができます。 詳細については、「[デッドロック ファイルを開く、表示、および印刷する方法 &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler を使用したデッドロックの分析](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  

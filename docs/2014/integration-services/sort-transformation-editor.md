@@ -11,23 +11,22 @@ f1_keywords:
 helpviewer_keywords:
 - Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c78bfc5503673de6dae51db20243cf1dc1ea65a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055492"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421299"
 ---
 # <a name="sort-transformation-editor"></a>並べ替え変換エディター
   **[並べ替え変換エディター]** ダイアログ ボックスを使用すると、並べ替える列を選択し、並べ替え順を設定して、重複する部分を削除するかどうかを指定できます。  
   
  並べ替え変換の詳細については、「 [Sort Transformation](data-flow/transformations/sort-transformation.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **使用できる入力列**  
+## <a name="options"></a>オプション  
+ **[使用できる入力列]**  
  このチェック ボックスを使用して、並べ替える列を指定します。  
   
  **名前**  
@@ -39,7 +38,7 @@ ms.locfileid: "66055492"
  **入力列**  
  各行に対して使用できる入力列の一覧から選択します。 選択内容が **[使用できる入力列]** テーブルのチェック ボックスに反映されます。  
   
- **[出力の別名]**  
+ **出力のエイリアス**  
  各出力列の別名を入力します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
   
  **[並べ替えの種類]**  

@@ -12,10 +12,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67930316"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
@@ -49,7 +49,7 @@ ALTER SERVER STATE アクセス許可が必要です。
 ## <a name="general-remarks"></a>全般的な解説  
 DBCC SHRINKLOG では、データベースのメタデータに格納されているログのサイズは変更されません。 メタデータには引き続き CREATE DATABASE または ALTER DATABASE ステートメントで指定された LOG_SIZE パラメーターが含まれます。
   
-## <a name="examples"></a>使用例 
+## <a name="examples"></a>例 
 ### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. トランザクション ログを CREATE DATABASE で指定された元のサイズに圧縮します。  
 Addresses データベースが作成されたとき、Addresses データベースのトランザクション ログは 100 MB に設定されたものとします。 つまり、Addresses の CREATE DATABASE ステートメントは LOG_SIZE = 100 MB に設定されていました。 ここでは、ログが 150 MB に増えたので、100 MB に戻すものとします。
   

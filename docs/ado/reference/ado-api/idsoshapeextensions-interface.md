@@ -1,5 +1,5 @@
 ---
-title: IDSOShapeExtensions インターフェイス |Microsoft Docs
+title: Idsoの拡張機能の Interface |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - IDSOShapeExtensions interface [ADO]
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: deca1648d6ef4f9ba3a1dfd020dc5193c8cc0d25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7d49db4cb1d471d06b6e834e46218307bc25a008
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932420"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758708"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions インターフェイス
-SHAPE プロバイダーの基になる OLE DB データ ソース オブジェクトを取得します。  
+図形プロバイダーの基になる OLE DB データソースオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ public:
   
 |||  
 |-|-|  
-|[GetDataProviderDSO メソッド](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Shape プロバイダーから基になる OLE DB データ ソース オブジェクトを取得します。|  
+|[GetDataProviderDSO メソッド](../../../ado/reference/ado-api/getdataproviderdso-method.md)|基になる OLE DB データソースオブジェクトをシェイププロバイダーから取得します。|  
   
 ## <a name="requirements"></a>必要条件  
- **バージョン：** ADO 2.0 以降  
+ **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
   

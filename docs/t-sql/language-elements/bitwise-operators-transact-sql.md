@@ -17,15 +17,15 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943050"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004004"
 ---
 # <a name="bitwise-operators-transact-sql"></a>ビットごとの演算子 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ビットごとの演算子は、整数型に分類されるデータ型を持つ 2 つの式に対してビット操作を実行します。  
   ビットごとの演算子は 2 つの整数値をバイナリ ビットに変換し、各ビットに対して AND、OR、または NOT 演算を実行して結果を生成します。 次にその結果を整数に変換します。  
@@ -33,10 +33,10 @@ ms.locfileid: "67943050"
   たとえば、整数 170 はバイナリの 1010 1010 に変換されます。
 整数 75 はバイナリの 0100 1011 に変換されます。
 
-|演算子 (operator)|ビットごとの数値演算|
+|operator|ビットごとの数値演算|
 |---- |---- |
 |AND <br> 任意の位置にあるビットが両方とも 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
-|[OR] <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|OR <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> すべてのビット位置にあるビット値を反転させます。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 次のトピックを参照してください。   
@@ -52,7 +52,7 @@ ms.locfileid: "67943050"
   
 |左オペランド|右オペランド|  
 |------------------|-------------------|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint**、または **tinyint**|  
+|[[バイナリ]](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint**、または **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**、**smallint**、**tinyint**、または **bit**|  
 |[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**bigint**、**int**、**smallint**、**tinyint**、**binary**、または **varbinary**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary**、または **varbinary**|  

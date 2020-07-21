@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098331"
 ---
-# <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificates メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー コンピューター上にある証明書の一覧を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -46,7 +46,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
  *HostName[]*  
  [out] 証明書のホスト名。  
   
- *Length*  
+ *[データ型]*  
  [out] *CertificateHash*配列、 *CertName* 配列、および *HostName* 配列の長さを表します。  
   
  *HRESULT*  
@@ -55,12 +55,12 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

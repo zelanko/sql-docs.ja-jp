@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b2649e16997e980135c8aecc271f285423bfb3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097540"
 ---
-# <a name="senderemailaddress-property-wmi-msreportserverconfigurationsetting"></a>SenderEmailAddress プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバーからの電子メール送信に使用するアドレスを取得します。 読み取り専用。  
+# <a name="senderemailaddress-property-wmi-msreportserver_configurationsetting"></a>SenderEmailAddress プロパティ (WMI MSReportServer_ConfigurationSetting)
+  レポート サーバーからの電子メール送信に使用するアドレスを取得します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 86f995fc650460bdbda6004917c974377cd1b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65d23be37a4b43845b352750c1924b641f008318
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762331"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Open Geospatial Consortium (OGC) Well-Known Binary (WKB) 表現から **geometryMultiPoint** インスタンスを返します。
   
@@ -38,7 +38,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>引数  
  *WKB_multipoint*  
- 返される **geometryMultiPoint** インスタンスの WKB 表現です。 *WKB_multipoint* は **varbinary (max)** 式です。  
+ 返される **geometryMultiPoint** インスタンスの WKB 表現です。 *WKB_multipoint* は、**varbinary(max)** 式です。  
   
  *SRID*  
  返される **geometryMultiPoint** インスタンスの SRID (spatial reference ID) を表す **int** 式です。  
@@ -46,14 +46,14 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**MultiPoint**  
+ OGC の型: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STMPointFromWKB()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

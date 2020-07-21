@@ -1,5 +1,6 @@
 ---
 title: 非クラスター化インデックスのサイズの算出 | Microsoft Docs
+description: SQL Server で非クラスター化インデックスを格納するために必要な領域を見積もるには、次の手順を実行します。
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743327"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   非クラスター化インデックスを格納するために必要な領域を算出するには、次の手順に従います。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "67934463"
   
      ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
-     ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が少ないことが予想される場合、その使用率に基づいて ***Max_Var_Key_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
+     ***Max_Var_Key_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Key_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
      可変長列が存在しない場合は、 ***Variable_Key_Size*** に 0 を設定します。  
   
@@ -239,7 +240,7 @@ ms.locfileid: "67934463"
   
  この計算では、次のことは考慮されていません。  
   
--   [パーティション分割]  
+-   パーティション分割  
   
      パーティション分割による領域のオーバーヘッドはわずかですが、計算が複雑になります。 これは、計算に含めるほど重要なことではありません。  
   

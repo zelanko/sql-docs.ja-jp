@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1532197e46e0ad6ea314ec83acb46b841ed7b72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731382"
 ---
 # <a name="transaction-isolation-levels"></a>トランザクション分離レベル
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、カタログ ビュー、互換性ビュー、情報スキーマ ビュー、またはメタデータ生成組み込み関数を使用してメタデータにアクセスするようなクエリでのロック ヒントの使用は保証されていません。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68072205"
   
  次の表は、各種の分離レベルでのメタデータ アクセスをまとめたものです。  
   
-|分離レベル|Supported|使用|  
+|分離レベル|サポートされています|使用|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|いいえ|保証なし|  
 |READ COMMITTED|はい|はい|  

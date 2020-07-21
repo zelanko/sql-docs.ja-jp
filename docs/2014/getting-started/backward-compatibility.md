@@ -1,5 +1,5 @@
 ---
-title: 旧バージョンとの互換性 |Microsoft Docs
+title: 下位互換性 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,14 @@ helpviewer_keywords:
 - compatibility [Reporting Services]
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd8be66efd648f5b6703a76855a549a9bd30f1e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927223"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   次の各セクションでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの旧バージョンとの互換性について説明します。 この内容には、非推奨の機能、提供が中止された機能、重大な変更、および動作変更に関する情報が含まれています。  
@@ -44,11 +43,11 @@ ms.locfileid: "66088577"
 |[Analysis Services の旧バージョンとの互換性](../../2014/analysis-services/analysis-services-backward-compatibility.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、一部のアプリケーションは修正が必要になります。|  
 |[Integration Services の旧バージョンとの互換性](../integration-services/integration-services-backward-compatibility.md)|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存のデータ変換サービス アプリケーションを修正する必要があります。|  
 |[Reporting Services の旧バージョンとの互換性](../reporting-services/reporting-services-backward-compatibility.md)|[!INCLUDE[ssRS](../includes/ssrs.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ソリューションを修正する必要があります。|  
-|[旧バージョンとの互換性&#40;マスター データ サービス&#41;](../master-data-services/backward-compatibility-master-data-services.md)|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ソリューションを修正する必要があります。|  
+|[旧バージョンとの互換性 &#40;マスターデータサービス&#41;](../master-data-services/backward-compatibility-master-data-services.md)|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ソリューションを修正する必要があります。|  
 |[レプリケーションの旧バージョンとの互換性](../../2014/relational-databases/replication/replication-backward-compatibility.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存のレプリケーション ソリューションを修正する必要があります。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 をインストールします。](../database-engine/install-windows/install-sql-server.md)   
+ [SQL Server 2014 をインストールする](../database-engine/install-windows/install-sql-server.md)   
  [SQL Server 2014 へのアップグレード](../database-engine/install-windows/upgrade-sql-server.md)  
   
   

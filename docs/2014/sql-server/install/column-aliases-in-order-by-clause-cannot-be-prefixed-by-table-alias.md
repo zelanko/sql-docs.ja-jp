@@ -1,5 +1,5 @@
 ---
-title: ORDER BY 句で列の別名はテーブル別名によってプレフィックス指定できません。Microsoft Docs
+title: ORDER BY 句の列の別名をテーブル別名 | で始まることはできませんMicrosoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44333d778753a2f8761d32d181681b798e3bc409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037086"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 句の列の別名をテーブル別名によってプレフィックス指定できない
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、ORDER BY 句の列の別名はテーブル別名によってプレフィックス指定できません。  
@@ -70,8 +69,8 @@ FROM Person.Contact p
 ORDER BY p.LastName  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>参照  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

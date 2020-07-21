@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888686"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>コール センター データ用のデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
@@ -22,7 +22,7 @@ ms.locfileid: "68888686"
   
  さらに、データ ソース ビュー デザイナーを使用して曜日の列を追加します。 これは、ソース データによってコール センター データを日付別に追跡していますが、問い合わせ件数とサービス品質にはどちらも、週末か平日かによって定期的なパターンがあることが経験上わかっているためです。  
   
-## <a name="procedures"></a>手順  
+## <a name="procedures"></a>プロシージャ  
   
 #### <a name="to-add-a-data-source-view"></a>データ ソース ビューを追加するには  
   
@@ -32,9 +32,9 @@ ms.locfileid: "68888686"
   
 2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **[データソースの選択]** ページの **[リレーショナルデータソース]** で、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データソースを選択します。 このデータソースがない場合は、「[基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)」を参照してください。 **[次へ]** をクリックします。  
+3.  [**データソースの選択**] ページの [**リレーショナルデータソース**] で、 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データソースを選択します。 このデータソースがない場合は、「[基本的なデータマイニングチュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)」を参照してください。 **[次へ]** をクリックします。  
   
-4.  **[テーブルとビューの選択]** ページで、次のテーブルを選択し、右矢印をクリックしてデータソースビューに追加します。  
+4.  [**テーブルとビューの選択**] ページで、次のテーブルを選択し、右矢印をクリックしてデータソースビューに追加します。  
   
     -   **FactCallCenter (dbo)**  
   
@@ -42,25 +42,25 @@ ms.locfileid: "68888686"
   
 5.  **[次へ]** をクリックします。  
   
-6.  既定では、 **[ウィザードの完了]** ページにはという名前[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]のデータソースビューがあります。 名前を**Callcenter**に変更し、 **[完了]** をクリックします。  
+6.  既定では、[**ウィザードの完了**] ページにはという名前[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]のデータソースビューがあります。 名前を**Callcenter**に変更し、[**完了**] をクリックします。  
   
      データソースビューデザイナーが開き、 **Callcenter**データソースビューが表示されます。  
   
-7.  データソースビュー ペイン内を右クリックし、**テーブルの追加と削除** をクリックします。 テーブル**DimDate**を選択し、[ **OK]** をクリックします。  
+7.  [データソースビュー] ペイン内を右クリックし、[**テーブルの追加と削除**] をクリックします。 テーブル**DimDate**を選択し、[ **OK]** をクリックします。  
   
      各テーブルの列の`DateKey`間にリレーションシップが自動的に追加されます。 このリレーションシップを使用して、 **DimDate**テーブルから列**EnglishDayNameOfWeek**を取得し、モデルで使用します。  
   
-8.  データソースビューデザイナーで、 **FactCallCenter**テーブルを右クリックし、 **[新しい名前付き計算]** をクリックします。  
+8.  データソースビューデザイナーで、 **FactCallCenter**テーブルを右クリックし、[**新しい名前付き計算**] をクリックします。  
   
-     **[名前付き計算の作成]** ダイアログボックスで、次の値を入力します。  
+     [**名前付き計算の作成**] ダイアログボックスで、次の値を入力します。  
   
     |||  
     |-|-|  
     |**列名**|DayOfWeek|  
-    |**[説明]**|DimDate テーブルから曜日を取得。|  
-    |**[式]**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
+    |**説明**|DimDate テーブルから曜日を取得。|  
+    |**正規表現**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
-     式によって必要なデータが作成されることを確認するには、 **FactCallCenter**テーブルを右クリックし、 **[データの探索]** を選択します。  
+     式によって必要なデータが作成されることを確認するには、 **FactCallCenter**テーブルを右クリックし、[**データの探索**] を選択します。  
   
 9. データ マイニングでの使用方法を理解するために、使用可能なデータを少し時間をかけて確認します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68888686"
 |FactCallCenterID|データ ウェアハウスにデータがインポートされたときに作成される任意のキー。<br /><br /> この列は一意のレコードを識別する列で、データ マイニング モデルのケース キーとして使用されます。|  
 |DateKey|コール センター業務の日付 (整数値)。 データ ウェアハウスでは日付のキーに整数がよく使用されますが、日付の値でグループ化する場合は、日付/時刻の形式で日付を取得することもできます。<br /><br /> ベンダーからは日々、シフトごとに別個のレポートが提供されるため、日付は一意ではありません。|  
 |WageType|曜日が平日、週末、または休日であるかどうかを示します。<br /><br /> 週末と平日の顧客サービスの品質に違いがある可能性があるため、この列を入力として使用します。|  
-|Shift|問い合わせが記録されるシフトを示します。 このコールセンターでは、稼働日を4つのシフトに分割します。AM、PM1、PM2、および深夜。<br /><br /> カスタマー サービスの質がシフトによって異なる可能性があるため、この列を入力として使用します。|  
+|シフト|問い合わせが記録されるシフトを示します。 このコール センターでは、1 日の労働時間が、AM、PM1、PM2、Midnight の 4 つのシフトに分かれています。<br /><br /> カスタマー サービスの質がシフトによって異なる可能性があるため、この列を入力として使用します。|  
 |LevelOneOperators|関税におけるレベル1演算子の数を示します。<br /><br /> コール センターの従業員のレベルはレベル 1 から始まるため、このレベルの従業員は経験が浅い従業員です。|  
 |LevelTwoOperators|勤務しているレベル 2 オペレーターの人数を示します。<br /><br /> 従業員は、レベル2のオペレーターとして限定するために、特定の数のサービス時間をログに記録する必要があります。|  
 |TotalOperators|シフト中に勤務しているオペレーターの人数の合計。|  
@@ -80,14 +80,14 @@ ms.locfileid: "68888686"
 |AverageTimePerIssue|問い合わせの電話への応対に要した平均時間。|  
 |ServiceGrade|サービスの一般品質を示すメトリック。シフト全体の*破棄率*として測定されます。 電話放棄呼率が高いほど、顧客の満足度が低下し、注文の機会を失う可能性が高くなります。|  
   
- データには`WageType`、1つの日付列 (、 **DayOfWeek**、 `Shift`、) `DateKey`に基づく4つの異なる列が含まれていることに注意してください。 通常、データ マイニングでは、同じデータから派生する列を複数使用することはお勧めしません。それらの値の間の関連が強すぎて、他のパターンがわかりにくくなることがあるからです。  
+ データには`WageType`、1つの日付列 (、 **DayOfWeek**、 `Shift`、) に基づく4つの異なる列`DateKey`が含まれていることに注意してください。 通常、データ マイニングでは、同じデータから派生する列を複数使用することはお勧めしません。それらの値の間の関連が強すぎて、他のパターンがわかりにくくなることがあるからです。  
   
- ただし、一意の値が`DateKey`多数含まれているため、モデルではを使用しません。 と`Shift` **dayofweek の**間に直接的な関係はありません。およびdayofweekは部分的にのみ関連しています。`WageType` 共線性について気にかかる場合は、使用可能なすべての列を使用して構造を作成し、モデルごとに無視する列を変えて影響をテストしてみてください。  
+ ただし、一意の値が`DateKey`多数含まれているため、モデルではを使用しません。 と`Shift` **dayofweek**の間に`WageType`直接的な関係はありません。および**dayofweek**は部分的にのみ関連しています。 共線性について気にかかる場合は、使用可能なすべての列を使用して構造を作成し、モデルごとに無視する列を変えて影響をテストしてみてください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [ニューラルネットワーク構造とモデル&#40;の中間データマイニングチュートリアルの作成&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [「中級者向けデータマイニングチュートリアル &#40;ニューラルネットワーク構造とモデルの作成」チュートリアル&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>関連項目  
- [「多次元モデルのデータ ソース ビュー」](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
+## <a name="see-also"></a>参照  
+ [多次元モデル内のデータ ソース ビュー](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

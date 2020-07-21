@@ -10,15 +10,15 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64f394c88faf6e0695223a79e7f72d173b96eae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787532"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用してパーティション テーブルまたはパーティション インデックスのパーティション関数で、指定するパーティションの数を 1 つずつ増減させることにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でのテーブルまたはインデックスのパーティション分割方法を変更できます。 パーティションを追加するには、既存のパーティションを 2 つのパーティションに分割し、新しいパーティションの境界を再定義します。 パーティションを削除するには、2 つのパーティションの境界を 1 つのパーティションにマージします。 この最後の操作により、1 つのパーティションが再作成され、もう 1 つのパーティションは未割り当てのままになります。  
   
 > [!CAUTION]  
@@ -38,13 +38,13 @@ ms.locfileid: "68024884"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   ALTER PARTITION FUNCTION は、1 つのパーティションを 2 つに分割するか、または 2 つのパーティションを 1 つにマージする目的にのみ使用できます。 テーブルまたはインデックスのパーティション分割方法を変更する (たとえば 10 個のパーティションから 5 個のパーティションに変更する) には、次のいずれかの方法を使用できます。  
   
-    -   適切なパーティション関数でパーティション テーブルを新規作成し、INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の**パーティションの管理ウィザード**で古いテーブルから新しいテーブルにデータを挿入します。  
+    -   適切なパーティション関数でパーティション テーブルを新規作成し、INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは **の** パーティションの管理ウィザード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で古いテーブルから新しいテーブルにデータを挿入します。  
   
     -   パーティション分割されたクラスター化インデックスを、ヒープ上に作成します。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "68024884"
   
 -   ALTER PARTITION FUNCTION の影響を受けるすべてのファイル グループは、オンラインである必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  次の権限のいずれかを使用すると、ALTER PARTITION FUNCTION を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
@@ -70,7 +70,7 @@ ms.locfileid: "68024884"
   
 -   パーティション関数が作成されたデータベースのサーバーでの CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **パーティション関数を変更するには:**  
   
  この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション関数を変更するには、最初にパーティション関数を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション関数を作成する必要があります。 詳細については、「  
@@ -85,9 +85,7 @@ ms.locfileid: "68024884"
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいパーティション関数が選択されていることを確認し、 **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>1 つのパーティションを 2 つのパーティションに分割するには  
   

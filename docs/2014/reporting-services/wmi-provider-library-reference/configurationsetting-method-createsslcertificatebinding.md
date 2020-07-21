@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098539"
 ---
-# <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>CreateSSLCertificateBinding メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding メソッド (WMI MSReportServer_ConfigurationSetting)
   SSL 証明書のバインドを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,7 +38,7 @@ public void CreateSSLCertificateBinding(string application,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *アプリケーション*  
+ *Application*  
  証明書のバインドを作成する必要があるアプリケーションの名前。  
   
  *CertificateHash*  
@@ -47,7 +47,7 @@ public void CreateSSLCertificateBinding(string application,
  *IPAddress*  
  アプリケーションの IP アドレス。  
   
- *ポート*  
+ *[ポート]*  
  バインドに関連付けられた SSL ポート。  
   
  *Lcid*  
@@ -62,7 +62,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドは、アプリケーションの rsreportserver.config にバインドを追加します。 バインドが HTTP.SYS に存在しない場合は作成されます。  
   
  バインドを作成する前に、メソッドの呼び出しによって、指定されたアプリケーションの URL 予約が調査され、SSL 証明書のバインドが有効かどうかが確認されます。  

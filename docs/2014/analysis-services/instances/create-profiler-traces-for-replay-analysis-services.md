@@ -1,5 +1,5 @@
 ---
-title: 再生 (Analysis Services) 用の Profiler トレースの作成 |Microsoft Docs
+title: 再生用のプロファイラートレースの作成 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc494fa63064d5c48c94e44cb91db5b1fe0f988d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 994fa58d9def8048f7fb88e09721055d2b184bb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544004"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>再生用のプロファイラー トレースの作成 (Analysis Services)
-  ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で収集する必要があります。 このようなイベントの収集を開始するには、 **[トレースのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブで適切なイベント クラスを選択する必要があります。 たとえば、Query Begin イベント クラスが選択されている場合は、クエリを含んでいるイベントが収集され、再生に使用されます。 また、トレース ファイルには、分散環境におけるサーバー トランザクションを当初のトランザクション シーケンスで再生するための十分な情報が含まれています。  
+  ユーザーによってに送信されたクエリ、検出、およびコマンドを再生するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 必要なイベントを収集する必要があります。 このようなイベントの収集を開始するには、 **[トレースのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブで適切なイベント クラスを選択する必要があります。 たとえば、Query Begin イベント クラスが選択されている場合は、クエリを含んでいるイベントが収集され、再生に使用されます。 また、トレース ファイルには、分散環境におけるサーバー トランザクションを当初のトランザクション シーケンスで再生するための十分な情報が含まれています。  
   
 ## <a name="replay-for-queries"></a>クエリの再生  
  クエリを再生するには、次のイベントを [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でキャプチャする必要があります。  
@@ -44,7 +43,7 @@ ms.locfileid: "66080142"
   
 -   すべてのデータ列が含まれた Audit Login イベント クラス。 このイベント クラスでは、ログインしたユーザーとセッションの設定に関する情報が提供されます。 SPID では、ユーザー セッションに対する参照が提供されます。 詳細については、「 [Security Audit のデータ列](https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns)」を参照してください。  
   
--   すべてのデータ列が含まれた Discover Begin イベント クラス。 TextData 列では、 \<RequestType > 検出要求され、RequestProperties 列の部分を提供、\<プロパティ > 検出要求の一部です。 EventSubclass 列では、検出の種類が提供されます。 詳細については、「 [Discover イベントのデータ列](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)」を参照してください。  
+-   すべてのデータ列が含まれた Discover Begin イベント クラス。 TextData 列は \<RequestType> discover 要求の一部を提供し、RequestProperties 列は \<Properties> discover 要求の一部を提供します。 EventSubclass 列では、検出の種類が提供されます。 詳細については、「 [Discover イベントのデータ列](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)」を参照してください。  
   
 -   すべてのデータ列が含まれた Discover End イベント クラス。 このイベント クラスでは、検出要求の状態が検証されます。 詳細については、「 [Discover イベントのデータ列](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)」を参照してください。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66080142"
 -   すべてのデータ列が含まれた Command End イベント クラス。 このイベント クラスでは、コマンドの状態が検証されます。 詳細については、「 [Command イベントのデータ列](https://docs.microsoft.com/bi-reference/trace-events/command-events-data-columns)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
+ [トレースイベントの Analysis Services](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)   
  [SQL Server Profiler による Analysis Services の監視の概要](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
   
   

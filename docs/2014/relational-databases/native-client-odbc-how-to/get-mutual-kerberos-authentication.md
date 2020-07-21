@@ -1,5 +1,5 @@
 ---
-title: Kerberos 相互認証 |マイクロソフトのドキュメント
+title: 相互 Kerberos 認証を取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 870bf3b2d01f9e7cbf630175567741c1f1887bf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044015"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Kerberos 相互認証の取得
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で ODBC を使用して、Kerberos 相互認証を行う方法を紹介しています。  
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../native-client/features/service-principal-name-spn-support-in-client-connections.md)します。  
+ 詳細については、「[クライアント接続でのサービスプリンシパル名 &#40;SPN&#41; サポート](../native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
@@ -33,7 +32,7 @@ ms.locfileid: "63200413"
   
  また、顧客から提供された SPN を指定する必要があります。 " CP_SPN " の部分を顧客から提供された SPN に変更してください。  
   
- /EHsc、/D "_UNICODE"、/D "UNICODE"、および odbc32.lib を使用してコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ /EHsc、/D "_UNICODE"、/D "UNICODE"、および odbc32.lib を使用してコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: /EHsc /D "_UNICODE" /D "UNICODE" odbc32.lib  

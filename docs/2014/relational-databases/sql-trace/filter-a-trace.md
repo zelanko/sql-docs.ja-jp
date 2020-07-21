@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068317"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
   フィルターを使用すると、トレースに出力するイベントを制限することができます。 フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。 たとえば、トレースに出力する Windows ユーザーとして特定のユーザー名を指定すると、それらのユーザーのデータのみが出力されます。  
@@ -62,13 +61,13 @@ ms.locfileid: "62714719"
   
 |関係演算子|演算子記号|説明|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
+|Like|LIKE|イベントのトレース データが入力したテキストと同じでなければならないことを指定します。 複数の値を指定できます。|  
 |パターンに一致しない|パターンに一致しない|イベントのトレース データが入力したテキストと同じであってはならないことを指定します。 複数の値を指定できます。|  
-|[等しい]|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
+|等しい|=|イベントのトレース データが入力した値と等しくなければならないことを指定します。 複数の値を指定できます。|  
 |等しくない|<>|イベントのトレース データが入力した値と等しくあってはならないことを指定します。 複数の値を指定できます。|  
 |より大きい|>|イベントのトレース データが入力した値よりも大きくなければならないことを指定します。|  
 |以上|>=|イベントのトレース データが入力した値以上でなければならないことを指定します。|  
-|次の値未満|<|イベントのトレース データが入力した値よりも小さくなければならないことを指定します。|  
+|より小さい|<|イベントのトレース データが入力した値よりも小さくなければならないことを指定します。|  
 |以下|<=|イベントのトレース データが入力した値以下でなければならないことを指定します。|  
   
  次の表は、フィルターを適用できるデータ列と利用可能な関係演算子の一覧です。  
@@ -114,7 +113,7 @@ ms.locfileid: "62714719"
 |**OwnerID**|=、<>、>=、<=|  
 |**OwnerName**|LIKE、NOT LIKE|  
 |**ParentName**|LIKE、NOT LIKE|  
-|**権限**|=、<>、>=、<=|  
+|**アクセス許可**|=、<>、>=、<=|  
 |**ProviderName**|LIKE、NOT LIKE|  
 |**Reads**|=、<>、>=、<=|  
 |**RequestID**|=、<>、>=、<=|  
@@ -127,17 +126,17 @@ ms.locfileid: "62714719"
 |**SqlHandle**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**StartTime**|>=、<=|  
 |**State**|=、<>、>=、<=|  
-|**成功**|=、<>、>=、<=|  
+|**Success**|=、<>、>=、<=|  
 |**TargetLoginName**|LIKE、NOT LIKE|  
 |**TargetLoginSid**|このデータ列のイベントにフィルターを適用するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 詳細については、「 [SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)」を参照してください。|  
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** <sup>1</sup>|LIKE、NOT LIKE|  
 |**TransactionID**|=、<>、>=、<=|  
-|**型**|=、<>、>=、<=|  
+|**Type**|=、<>、>=、<=|  
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   
- <sup>1</sup>からイベントをトレースしている場合、 **osql**ユーティリティまたは**sqlcmd**ユーティリティでは、常に追加 **%** でフィルターする、 **TextData**データ列。  
+ <sup>1</sup> **osql**ユーティリティまたは**sqlcmd**ユーティリティからイベントをトレースする場合は、常に **%** **TextData**データ列のフィルターにを追加します。  
   
  セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
   

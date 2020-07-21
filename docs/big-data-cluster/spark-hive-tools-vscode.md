@@ -1,20 +1,21 @@
 ---
-title: SQL Server ビッグ データ クラスター上で Spark & Hive Tools for VS Code を使用して Spark ジョブを実行する
-titleSuffix: SQL Server big data clusters
+title: ジョブの実行:Spark & Hive Tools for VS Code
+titleSuffix: SQL Server Big Data Clusters
 description: SQL Server ビッグ データ クラスター上で Spark & Hive Tools for Visual Studio Code を使用して Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653730"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255916"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>SQL Server ビッグ データ クラスター上の Visual Studio Code で Spark ジョブを送信する
 
@@ -31,7 +32,7 @@ Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code で
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [Mono](https://www.mono-project.com/docs/getting-started/install/)。 Mono は、Linux と macOS の場合にのみ必要です。
 - [Visual Studio Code 用に PySpark の対話型の環境を設定します](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)。
-- **SQLBDCexample**という名前のローカルディレクトリ。  この記事では、 **C:\SQLBDC\SQLBDCexample**を使用します。
+- **SQLBDCexample** という名前のローカル ディレクトリ。  この記事では、**C:\SQLBDC\SQLBDCexample** を使用しています。
 
 ## <a name="install-spark--hive-tools"></a>Spark & Hive Tools をインストールする
 
@@ -53,9 +54,9 @@ Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code で
 
 次の手順を実行して作業フォルダーを開き、Visual Studio Code でファイルを作成します。
 
-1. メニューバーで、[**ファイル** > ] **[フォルダーを開く...** ] の順に移動します。C:\SQLBDC\SQLBDCexample をクリックし、 **[フォルダーの選択]** ボタンを選択します。  >  左側の **[Explorer]\(エクスプローラー\)** ビューにフォルダーが表示されます。
+1. メニュー バーから **[ファイル]**  >  **[フォルダーを開く]**  > **C:\SQLBDC\SQLBDCexample** に移動し、 **[フォルダーの選択]** ボタンを選択します。 左側の **[Explorer]\(エクスプローラー\)** ビューにフォルダーが表示されます。
 
-2. **[エクスプローラー]** ビューで、 **SQLBDCexample**フォルダーを選択し、作業フォルダーの横にある**新しいファイル**アイコンをクリックします。
+2. **[エクスプローラー]** ビューで、**SQLBDCexample** というフォルダーを選択し、作業フォルダーの横にある **[新しいファイル]** アイコンを選択します。
 
    ![新しいファイル](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -90,7 +91,7 @@ Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code で
 
 Visual Studio Code からクラスターにスクリプトを送信するには、SQL Server ビッグ データ クラスターをリンクする必要があります。
 
-1. メニュー バーから **[表示]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Link a Cluster**」と入力します。
+1. メニュー バーから **[View]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Link a Cluster**」と入力します。
 
    ![クラスターのリンク コマンド](./media/spark-hive-tools-vscode/link-cluster-command.png)
 
@@ -108,7 +109,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="list-clusters"></a>クラスターを一覧表示する
 
-1. メニュー バーから **[表示]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:List Cluster**」と入力します。
+1. メニュー バーから **[View]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:List Cluster**」と入力します。
 
 2. **[OUTPUT]\(出力\)** ビューを確認します。  このビューには、リンクされたクラスターが表示されます。
 
@@ -116,7 +117,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="set-default-cluster"></a>既定のクラスターを設定する
 
-1. [前](#open-work-folder)の手順で作成した**SQLBDCexample**フォルダーを再度開きます。  
+1. [前の手順](#open-work-folder)で作成したフォルダー **SQLBDCexample** を閉じている場合は再び開きます。  
 
 2. [以前の手順](#open-work-folder)で作成した **HelloWorld.py** ファイルを選択し、スクリプト エディターで開きます。
 
@@ -132,7 +133,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 次の手順に従って、対話型の PySpark クエリを送信できます。
 
-1. [前](#open-work-folder)の手順で作成した**SQLBDCexample**フォルダーを再度開きます。  
+1. [前の手順](#open-work-folder)で作成したフォルダー **SQLBDCexample** を閉じている場合は再び開きます。  
 
 2. [以前の手順](#open-work-folder)で作成した **HelloWorld.py** ファイルを選択し、スクリプト エディターで開きます。
 
@@ -146,7 +147,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
    ![PySpark Interactive の Python Interactive ウィンドウ](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. 「 **%%Info**」と入力し、**Shift + Enter** キーを押してジョブ情報を表示します。 (オプション)
+6. 「 **%%Info**」と入力し、**Shift + Enter** キーを押してジョブ情報を表示します。 (省略可能)
 
    ![ジョブ情報の表示](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -159,7 +160,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="submit-pyspark-batch-job"></a>PySpark バッチ ジョブを送信する
 
-1. [前](#open-work-folder)の手順で作成した**SQLBDCexample**フォルダーを再度開きます。  
+1. [前の手順](#open-work-folder)で作成したフォルダー **SQLBDCexample** を閉じている場合は再び開きます。  
 
 2. [以前の手順](#open-work-folder)で作成した **HelloWorld.py** ファイルを選択し、スクリプト エディターで開きます。
 
@@ -173,9 +174,9 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="apache-livy-configuration"></a>Apache Livy の構成
 
-[Apache Livy](https://livy.incubator.apache.org/) の構成はサポートされており、ワーク スペース フォルダーの **.VSCode\settings.json** で設定できます。 現時点では、Livy の構成では Python スクリプトのみがサポートされています。 詳細については、[Livy の README](https://github.com/cloudera/livy/blob/master/README.rst ) を参照してください。
+[Apache Livy](https://livy.incubator.apache.org/) の構成はサポートされており、ワーク スペース フォルダーの **.VSCode\settings.json** で設定できます。 現在、Livy の構成では Python スクリプトのみがサポートされています。 詳細については、[Livy の README](https://github.com/cloudera/livy/blob/master/README.rst ) を参照してください。
 
-### <a id="triggerlivyconf"></a>**Livy の構成をトリガーする方法**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Livy の構成をトリガーする方法**
 
 #### <a name="method-1"></a>方法 1
 
@@ -200,7 +201,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 **要求本文**
 
-| NAME | description | type |
+| name | description | type |
 | :- | :- | :- |
 | file | 実行するアプリケーションを含むファイル | パス (必須) |
 | proxyUser | ジョブの実行時に権限を借用するユーザー | string |
@@ -210,22 +211,22 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 | pyFiles | このセッションで使用される Python ファイル | 文字列の一覧 |
 | files | このセッションで使用されるファイル | 文字列の一覧 |
 | driverMemory | ドライバー プロセスに使用するメモリの量 | string |
-| driverCores | ドライバー プロセスに使用するコアの数 | ssNoversion |
+| driverCores | ドライバー プロセスに使用するコアの数 | INT |
 | executorMemory | 実行プログラム プロセスごとに使用するメモリの量 | string |
-| executorCores | 実行プログラムごとに使用するコアの数 | ssNoversion |
-| numExecutors | このセッションで起動する実行プログラムの数 | ssNoversion |
+| executorCores | 実行プログラムごとに使用するコアの数 | INT |
+| numExecutors | このセッションで起動する実行プログラムの数 | INT |
 | archives | このセッションで使用するアーカイブ | 文字列の一覧 |
 | queue | 送信先の YARN キューの名前 | string |
-| NAME | このセッションの名前 | string |
+| name | このセッションの名前 | string |
 | conf | Spark の構成プロパティ | キーのマップ = val |
 
 #### <a name="response-body"></a>応答本文
 
 作成されるバッチ オブジェクト。
 
-| NAME | description | type |
+| name | description | type |
 | :- | :- | :- |
-| id | セッション ID | ssNoversion |
+| id | セッション ID | INT |
 | appId | このセッションのアプリケーション ID | String |
 | appInfo | アプリケーションの詳細情報 | キーのマップ = val |
 | log | ログの行 | 文字列の一覧 |
@@ -248,11 +249,11 @@ Spark & Hive for Visual Studio Code は次の機能をサポートしていま�
 
 ## <a name="unlink-cluster"></a>クラスターのリンク解除
 
-1. メニュー バーから **[表示]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Unlink a Cluster**」と入力します。  
+1. メニュー バーから **[View]\(表示\)**  >  **[Command Palette]\(コマンド パレット\)** に移動し、「**Spark / Hive:Unlink a Cluster**」と入力します。  
 
 2. リンクを解除するクラスターを選択します。  
 
 3. **[OUTPUT]\(出力\)** ビューを確認します。  
 
-## <a name="next-steps"></a>次の手順
-ビッグデータクラスターとそれに関連するシナリオの SQL Server の詳細[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)については、「」を参照してください。
+## <a name="next-steps"></a>次のステップ
+SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)」を参照してください。

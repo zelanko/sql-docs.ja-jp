@@ -10,15 +10,14 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abcad704ed02655c03a970d3fe4b80556b96cf69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62772136"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439399"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
@@ -37,7 +36,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure HDInsight 接続マネージャー](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   処理手順  
+-   タスク  
   
     -   [Azure BLOB のアップロード タスク](control-flow/azure-blob-upload-task.md)  
   
@@ -65,7 +64,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure Data Lake Store Destination](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 列挙子と ADLS File 列挙子。 「 [Foreach Loop Container](control-flow/foreach-loop-container.md)」を参照してください。  
+-   Azure Blob 列挙子は、ADLS File 列挙子 & ます。 「 [Foreach ループコンテナー](control-flow/foreach-loop-container.md)」を参照してください。  
   
  
 ## <a name="download-the-feature-pack"></a>Feature Pack のダウンロード  

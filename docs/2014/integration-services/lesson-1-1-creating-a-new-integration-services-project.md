@@ -1,5 +1,5 @@
 ---
-title: 手順 1:新しい Integration Services プロジェクトの作成 | Microsoft Docs
+title: '手順 1: 新しい Integration Services プロジェクトの作成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c96b23a8807741429eaee00dace7c22f1cd540c5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62891763"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436229"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>手順 1:新しい Integration Services プロジェクトの作成
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でパッケージを作成するには、まず [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成する必要があります。 このプロジェクトには、データ変換ソリューションで使用するオブジェクト (データ ソース、データ ソース ビュー、パッケージ) のテンプレートが用意されています。  
@@ -25,11 +24,11 @@ ms.locfileid: "62891763"
 > [!NOTE]  
 >  このチュートリアルには、Microsoft SQL Server Data Tools が必要です。  
 >   
->  SQL Server Data Tools のインストールの詳細については、「[SQL Server Data Tools のダウンロード](https://msdn.microsoft.com/data/hh297027)」を参照してください。  
+>  SQL Server Data Tools のインストールの詳細については、「 [SQL Server Data Tools のダウンロード](https://msdn.microsoft.com/data/hh297027)」を参照してください。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成するには  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Data Tools]** をクリックします。  
   
 2.  新しい **プロジェクトを作成するため、** [ファイル] **メニューの**[新規作成] **をポイントし、** [プロジェクト] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] をクリックします。  
   

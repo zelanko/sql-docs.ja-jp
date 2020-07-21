@@ -1,6 +1,6 @@
 ---
-title: SQL Server 拡張イベント エンジン | Microsoft Docs
-ms.custom: ''
+title: SQL Server 拡張イベント エンジン
+description: SQL Server 拡張イベント エンジンを使用すると、イベントの定義とイベント データの処理が有効になり、拡張イベントが管理され、セッションの一覧が管理されます。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,16 +13,16 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9178b6246c32c54aee6979bec00bac8b53e700fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756864"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 拡張イベント エンジン
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント エンジンは、次の役割を持った各種のサービスおよびオブジェクトで構成されます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68009403"
   
  拡張イベント セッションの概略図を次に示します。 詳細については、「 [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)」を参照してください。  
   
- ![拡張イベント アーキテクチャの詳細](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "拡張イベント アーキテクチャの詳細")  
+ ![拡張イベントのアーキテクチャの詳細](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "拡張イベントのアーキテクチャの詳細")  
   
  次のことを考慮してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: データベース ディメンション プロパティ |Microsoft Docs
+title: データベースディメンションのプロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 504e190f4c513a8c999c4d7d7ab9eaabb83298c3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62728503"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545192"
 ---
 # <a name="database-dimension-properties"></a>データベース ディメンション プロパティ
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションの特性は、さまざまなディメンション プロパティの設定と、属性またはディメンションに含まれる階層に基づいて、ディメンションのメタデータによって定義されます。 次の表では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション プロパティについて説明します。  
+  で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、ディメンションの特性は、さまざまなディメンションプロパティの設定およびディメンションに含まれる属性または階層に基づいて、ディメンションのメタデータによって定義されます。 次の表では、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション プロパティについて説明します。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -49,12 +48,12 @@ ms.locfileid: "62728503"
 |`WriteEnabled`|ディメンションの書き戻しを使用できるかどうかを示します (セキュリティ権限に依存)。|  
   
 > [!NOTE]  
->  Null 値やその他のデータ整合性の問題を使用する場合の ErrorConfiguration および UnknownMember プロパティの値を設定する方法についての詳細については、次を参照してください。 [Analysis Services 2005 でのデータの整合性問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)します。  
+>  Null 値やその他のデータの整合性の問題を処理するときの ErrorConfiguration プロパティと UnknownMember プロパティの値の設定の詳細については、「 [Analysis Services 2005 でのデータ整合性の問題の処理](https://go.microsoft.com/fwlink/?LinkId=81891)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](attributes-and-attribute-hierarchies.md)   
  [ユーザー階層](user-hierarchies.md)   
- [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [ディメンションのリレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

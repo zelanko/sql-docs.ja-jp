@@ -1,6 +1,7 @@
 ---
-title: SQL Server とデータベースの暗号化キー (データベース エンジン) | Microsoft Docs
-ms.custom: ''
+title: SQL Server とデータベース暗号化キー
+description: データを暗号化し、セキュリティで保護する目的で SQL Server データベース エンジンによって使用されるサービス マスター キーとデータベース マスター キーについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111570"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279338"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化キーを使用して、サーバー データベースに格納されているデータ、資格情報、および接続情報のセキュリティを保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *対称* と *非対称*の 2 種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを最初に起動するときの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初期化時に作成されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、このキーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されている機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、データベースに機密データを格納する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに作成されます。  
@@ -29,11 +30,11 @@ ms.locfileid: "68111570"
 
 ### <a name="service-master-key"></a>サービス マスター キー
   
- サービス マスター キーは、SQL Server 暗号化階層のルートになります。 SMK は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの初回起動時に自動的に生成され、リンク サーバーのパスワード、資格情報、およびデータベース マスター キーの暗号化に使用されます。 SMK は、Windows データ保護 API (DPAPI) を使用するローカル コンピューター キーを使用して暗号化されます。 DPAPI では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報およびコンピューターの資格情報から派生するキーが使用されます。 サービス マスター キーの暗号化を解除できるのは、作成元のサービス アカウント、またはコンピューターの資格情報にアクセスできるプリンシパルに限られています。
+ サービス マスター キーは、SQL Server 暗号化階層のルートになります。 SMK は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの初回起動時に自動的に生成され、リンク サーバーのパスワード、資格情報、およびデータベース マスター キーの暗号化に使用されます。 SMK は、Windows データ保護 API (DPAPI) を使用するローカル コンピューター キーを使用して暗号化されます。 DPAPI では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報およびコンピューターの資格情報から派生するキーが使用されます。 サービス マスター キーの暗号化を解除できるのは、作成元のサービス アカウント、またはコンピューターの資格情報にアクセスできるプリンシパルに限られています。
 
 サービス マスター キーを作成した Windows サービス アカウント、またはサービス アカウント名とサービス アカウントのパスワードの両方にアクセスできるプリンシパルだけが、サービス マスター キーを開くことができます。
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK の再作成の詳細については、「[ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)」および「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 SMK の再作成の詳細については、「[ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md)」および「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。
 
 ### <a name="database-master-key"></a>データベース マスター キー
   
@@ -67,7 +68,7 @@ ms.locfileid: "68111570"
 >  上記のキーすべてにアクセスできなくなると、それらのキーで保護されているオブジェクト、接続、およびデータにもアクセスできなくなります。 ここで示したリンクの説明に従ってサービス マスター キーを復元するか、または元の暗号化システムに戻ってアクセスを復旧します。 アクセスを復旧するための "抜け道" はありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [サービス マスター キー](../../../relational-databases/security/encryption/service-master-key.md)  
  サービス マスター キーとその推奨事項について簡単に説明します。  
   
  [拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -102,7 +103,7 @@ ms.locfileid: "68111570"
 ## <a name="see-also"></a>参照  
  [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS構成マネージャー&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   

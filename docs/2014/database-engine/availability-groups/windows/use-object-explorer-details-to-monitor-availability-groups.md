@@ -1,5 +1,5 @@
 ---
-title: オブジェクト エクスプ ローラーの詳細を使用して、可用性グループ (SQL Server Management Studio) の監視 |Microsoft Docs
+title: オブジェクトエクスプローラーの詳細を使用して可用性グループを監視する (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 419f1cd22e0a7aa314f6a1036793091bb7b385fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936303"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 (SQL Server Management Studio)
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
@@ -29,9 +28,9 @@ ms.locfileid: "62788325"
 > [!NOTE]  
 >  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「 [[オブジェクト エクスプローラーの詳細] ペイン](../../../ssms/object/object-explorer-details-pane.md)」を参照してください。  
   
--   **作業を開始する準備:** [前提条件](#Prerequisites)  
+-   **作業を開始する準備:**  [前提条件](#Prerequisites)  
   
--   **可用性グループを監視するを使用します。** [SQL Server Management Studio](#SSMSProcedure)  
+-   **可用性グループを監視するために使用するもの:**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **オブジェクト エクスプローラーの詳細:**  
   
@@ -41,12 +40,12 @@ ms.locfileid: "62788325"
   
      [可用性データベースの詳細](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  プライマリ レプリカまたはセカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス (サーバー インスタンス) に接続されている必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性グループ、可用性レプリカ、および可用性データベースを監視するには**  
   
 1.  [表示] メニューの **[オブジェクト エクスプローラーの詳細]** をクリックするか、 **F7** キーを押します。  
@@ -67,20 +66,20 @@ ms.locfileid: "62788325"
   
          複数の可用性データベースに対する操作を行うには、それらのデータベースを選択して右クリックし、ショートカット メニューを開きます。ここには、使用できるコマンドが表示されます。  
   
-##  <a name="AvGroupsDetails"></a> 可用性グループの詳細  
+##  <a name="availability-groups-details"></a><a name="AvGroupsDetails"></a>可用性グループの詳細  
  **[可用性グループ]** の詳細画面には、次の列が表示されます。  
   
  **名前**  
- 選択した可用性グループの **[可用性レプリカ]** 、 **[可用性データベース]** 、および **[可用性グループ]** リスナー フォルダーが表示されます。  
+ 選択した可用性グループの **[可用性レプリカ]**、 **[可用性データベース]**、および **[可用性グループ]** リスナー フォルダーが表示されます。  
   
-##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
  **[可用性レプリカ]** の詳細画面には、次の列が表示されます。  
   
  **サーバー インスタンス**  
  可用性レプリカをホストするサーバー インスタンス名と、サーバー インスタンスからローカル サーバー インスタンスへの現在の接続状態を示すアイコンが表示されます。  
   
  **ロール**  
- 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]** ) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
+ 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
  **[セカンダリ ロールの接続モード]**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 特定の可用性レプリカのデータベースがクライアントから接続を受け入れることができるかどうかを示します。  
@@ -98,8 +97,8 @@ ms.locfileid: "62788325"
   
 |値|説明|  
 |-----------|-----------------|  
-|**切断済み**|リモート可用性レプリカの場合、ローカル可用性レプリカから切断されていることを示します。 接続解除状態のローカル レプリカの応答は、そのロールによって次のように異なります。<br /><br /> プライマリ レプリカでは、セカンダリ レプリカが切断されている場合、プライマリ レプリカ上のセカンダリ データベースは **[同期未実行]** とマークされ、プライマリ レプリカはセカンダリが再接続するのを待機します。<br /><br /> セカンダリ レプリカでは、切断されていることを検出すると、セカンダリ レプリカはプライマリ レプリカへの再接続を試みます。|  
-|**接続済み**|現在ローカル レプリカに接続されているリモート可用性レプリカです。|  
+|**[Disconnected]\(切断済み\)**|リモート可用性レプリカの場合、ローカル可用性レプリカから切断されていることを示します。 接続解除状態のローカル レプリカの応答は、そのロールによって次のように異なります。<br /><br /> プライマリ レプリカでは、セカンダリ レプリカが切断されている場合、プライマリ レプリカ上のセカンダリ データベースは **[同期未実行]** とマークされ、プライマリ レプリカはセカンダリが再接続するのを待機します。<br /><br /> セカンダリ レプリカでは、切断されていることを検出すると、セカンダリ レプリカはプライマリ レプリカへの再接続を試みます。|  
+|**接続中**|現在ローカル レプリカに接続されているリモート可用性レプリカです。|  
 |**NULL**|ローカル レプリカがセカンダリ レプリカの場合、この値は他のセカンダリ レプリカに対して NULL です。|  
   
  **[同期状態]**  
@@ -107,14 +106,14 @@ ms.locfileid: "62788325"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[同期未実行]**|データベースが同期されていないか、可用性グループにまだ参加していません。|  
-|**同期済み**|データベースは、現在のプライマリ レプリカ上、または最後のプライマリ レプリカ上のプライマリ データベースと同期されています。<br /><br /> 注:パフォーマンス モードでは、データベースは Synchronized 状態ではなくは。|  
+|**未同期**|データベースが同期されていないか、可用性グループにまだ参加していません。|  
+|**済**|データベースは、現在のプライマリ レプリカ上、または最後のプライマリ レプリカ上のプライマリ データベースと同期されています。<br /><br /> 注: パフォーマンス モードでは、データベースは同期済みの状態にはなりません。|  
 |**NULL**|不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。|  
   
 > [!NOTE]  
 >  可用性レプリカのパフォーマンス カウンターの詳細については、「 [SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)」を参照してください。  
   
-##  <a name="AvDbDetails"></a> 可用性データベースの詳細  
+##  <a name="availability-database-details"></a><a name="AvDbDetails"></a>可用性データベースの詳細  
  **[可用性データベース]** の詳細画面には、可用性グループ内の可用性データベースの次のプロパティが表示されます。  
   
  **名前**  
@@ -127,14 +126,14 @@ ms.locfileid: "62788325"
   
 |値|説明|  
 |-----------|-----------------|  
-|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注:非同期コミット モードでは、同期状態は常に**Synchronizing**します。|  
+|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注: 非同期コミット モードでは、同期の状態は常に **[同期中]** です。|  
   
- **中断**  
+ **状態**  
  可用性データベースが現在オンラインであるかどうかを示します。 次のような値が考えられます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**中断**|この状態は、データベースがローカルで中断され、手動で再開する必要があることを示します。<br /><br /> プライマリ レプリカでは、セカンダリ データベースの値の信頼性が低くなります。 セカンダリ データベースが中断されているかどうかを確実に判断するには、データベースをホストするセカンダリ レプリカでクエリを実行します。|  
+|**状態**|この状態は、データベースがローカルで中断され、手動で再開する必要があることを示します。<br /><br /> プライマリ レプリカでは、セカンダリ データベースの値の信頼性が低くなります。 セカンダリ データベースが中断されているかどうかを確実に判断するには、データベースをホストするセカンダリ レプリカでクエリを実行します。|  
 |**未参加**|セカンダリ データベースが可用性グループにまだ参加していないか、グループから削除されていることを示します。|  
 |**オンライン**|データベースがローカル可用性レプリカで中断されておらず、データベースが接続されていることを示します。|  
 |**未接続**|セカンダリ レプリカが現在プライマリ レプリカに接続できないことを示します。|  
@@ -142,9 +141,9 @@ ms.locfileid: "62788325"
 > [!NOTE]  
 >  可用性データベースのパフォーマンス カウンターの詳細については、「 [SQL Server、Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
- [AlwaysOn ダッシュ ボードを使用して、 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+## <a name="see-also"></a>参照  
+ [dm_os_performance_counters &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [AlwaysOn ダッシュボード &#40;SQL Server Management Studio を使用&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   
  [可用性レプリカのプロパティの表示 &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   

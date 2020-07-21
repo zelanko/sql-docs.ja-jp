@@ -1,5 +1,5 @@
 ---
-title: SQL Server エージェント サービスは、SQL Server 認証を使用できない |Microsoft Docs
+title: SQL Server エージェントサービスは SQL Server Authentication | を使用できませんMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e16882247a123b32ba07fbbae0d1f3573fd2d678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32188b1c47168aefbca914fa15f71850df716153
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036249"
 ---
 # <a name="sql-server-agent-service-cannot-use-sql-server-authentication"></a>SQL Server エージェント サービスで SQL Server 認証を使用できない
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは Windows 認証のみをサポートします。  

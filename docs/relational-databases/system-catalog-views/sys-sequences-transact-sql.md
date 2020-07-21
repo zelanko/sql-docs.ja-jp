@@ -1,5 +1,5 @@
 ---
-title: sys.sequences (TRANSACT-SQL) |マイクロソフトのドキュメント
+title: sys. シーケンス (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,48 +18,48 @@ helpviewer_keywords:
 - sequence number object, sys. sequences catalog view
 - sys.sequences catalog view
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717561"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   データベース内のシーケンス オブジェクトごとに 1 行のデータを格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|\<列を継承 >||すべての列を継承[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
-|**start_value**|**sql_variant NOT NULL**|シーケンス オブジェクトの開始値。 ALTER SEQUENCE を使用してシーケンス オブジェクトを再開するときに、この値から再開されます。 ときに、シーケンス オブジェクトによりに進みます、 **minimum_value**または**maximum_value**ではなく、 **start_value**します。|  
-|**increment**|**sql_variant NOT NULL**|それぞれの後、シーケンス オブジェクトをインクリメントするために使用する値には、値が生成されます。|  
-|**minimum_value**|**sql_variant 型の NULL**|シーケンス オブジェクトによって生成できる最小値。 この値に達すると、シーケンス オブジェクトはエラーを返すかより多くの値を生成または CYCLE オプションが指定されている場合の再起動を試みるとします。 MINVALUE が指定されていない場合、この列は、シーケンス ジェネレーターのデータ型でサポートされる最小値を返します。|  
-|**maximum_value**|**sql_variant 型の NULL**|シーケンス オブジェクトによって生成できる最大値。 シーケンス オブジェクトがこの値に達した後にいずれかが開始されます CYCLE オプションが指定されている場合、複数の値または再起動を生成しようとするときはエラーを返します。 MAXVALUE が指定されていない場合、この列は、シーケンス ジェネレーターのデータ型によってサポートされる最大値を返します。|  
+|\<inherited columns>||は、すべての[列を継承します。](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**start_value**|**NULL 以外の sql_variant**|シーケンスオブジェクトの開始値。 ALTER SEQUENCE を使用してシーケンス オブジェクトを再開するときに、この値から再開されます。 シーケンスオブジェクトは、 **start_value**ではなく、 **minimum_value**または**maximum_value**に進みます。|  
+|**increment**|**NULL 以外の sql_variant**|生成された各値の後にシーケンスオブジェクトをインクリメントするために使用される値。|  
+|**minimum_value**|**sql_variant NULL**|シーケンスオブジェクトによって生成できる最小値。 この値に達すると、シーケンスオブジェクトは、より多くの値を生成するときにエラーを返すか、または CYCLE オプションが指定されている場合に再起動します。 MINVALUE が指定されていない場合、この列は、シーケンスジェネレーターのデータ型でサポートされる最小値を返します。|  
+|**maximum_value**|**sql_variant NULL**|シーケンスオブジェクトによって生成できる最大値。 この値に達すると、シーケンスオブジェクトは、より多くの値を生成しようとしたときにエラーを返すか、または CYCLE オプションが指定されている場合に再起動します。 MAXVALUE が指定されていない場合、この列は、シーケンス ジェネレーターのデータ型によってサポートされる最大値を返します。|  
 |**is_cycling**|**bit NOT NULL**|シーケンス オブジェクトに対して NO CYCLE が指定されている場合は 0 を返し、CYCLE が指定されている場合は 1 を返します。|  
-|**is_cached**|**bit NOT NULL**|キャッシュが指定されている場合、シーケンス オブジェクトと 1 の NO CACHE が指定されている場合は、0 を返します。|  
+|**is_cached**|**bit NOT NULL**|シーケンスオブジェクトに対してキャッシュが指定されていない場合は0、CACHE が指定されている場合は1を返します。|  
 |**cache_size**|**int NULL**|シーケンス オブジェクトの指定されたキャッシュ サイズを返します。 シーケンスが NO CACHE オプションを使用して作成されている場合、またはキャッシュ サイズを指定せずに CACHE が指定されている場合、この列には NULL が格納されます。 キャッシュ サイズとして指定された値がシーケンス オブジェクトで返すことができる値の最大数より大きい場合、取得不可能なキャッシュ サイズがそのまま表示されます。|  
-|**system_type_id**|**tinyint NOT NULL**|シーケンス オブジェクトのデータ型のシステム型の ID。|  
-|**user_type_id**|**int NOT NULL**|ユーザーが定義されているシーケンス オブジェクトのデータ型の ID。|  
-|**有効桁数 (precision)**|**tinyint NOT NULL**|データ型の最大有効桁数です。|  
-|**scale**|**tinyint NOT NULL**|型の小数点以下の最大桁数。 スケールは完全なメタデータを提供する有効桁数と共に返されます。 スケールは、整数型のみが許可されているために、シーケンス オブジェクトの場合は 0 では常にします。|  
-|**current_value**|**sql_variant NOT NULL**|義務は最後の値。 NEXT VALUE FOR 関数の実行を最後の値の最後に実行から返される値、 **sp_sequence_get_range**プロシージャ。 シーケンスが使用されていない場合は、START WITH 値を返します。|  
-|**is_exhausted**|**bit NOT NULL**|0 は、多くの値をシーケンスから生成できることを示します。 1 は、シーケンス オブジェクトが MAXVALUE パラメーターに達したし、シーケンスは、サイクルに設定されていないことを示します。 ALTER SEQUENCE を使用して、シーケンスが再開されるまで、NEXT VALUE FOR 関数はエラーを返します。|  
-|**last_used_value**|**sql_variant 型の NULL**|によって生成された最後の値を返します、 [Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)関数。 SQL Server 2017 以降を適用します。|  
+|**system_type_id**|**tinyint NOT NULL**|シーケンスオブジェクトのデータ型のシステム型の ID。|  
+|**user_type_id**|**int NOT NULL**|ユーザーによって定義された、シーケンスオブジェクトのデータ型の ID。|  
+|**有効桁数 (precision)**|**tinyint NOT NULL**|データ型の最大有効桁数。|  
+|**scale**|**tinyint NOT NULL**|型の小数点以下の最大桁数。 Scale は、ユーザーに完全なメタデータを提供するために、精度と共に返されます。 シーケンスオブジェクトでは、整数型のみが許可されているため、小数点以下桁数は常に0になります。|  
+|**current_value**|**NULL 以外の sql_variant**|最後の値の義務。 つまり、NEXT VALUE FOR 関数の最後の実行から返された値、または**sp_sequence_get_range**プロシージャを実行した最後の値です。 シーケンスが使用されていない場合は、START の値を返します。|  
+|**is_exhausted**|**bit NOT NULL**|0は、シーケンスからより多くの値を生成できることを示します。 1は、シーケンスオブジェクトが MAXVALUE パラメーターに達し、シーケンスが CYCLE に設定されていないことを示します。 NEXT VALUE FOR 関数は、ALTER SEQUENCE を使用してシーケンスが再起動されるまでエラーを返します。|  
+|**last_used_value**|**sql_variant NULL**|[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)関数によって生成された最後の値を返します。 SQL Server 2017 以降に適用されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンのカタログ ビュー内のメタデータの可視性はセキュリティ保護可能なユーザーが所有しているかをユーザーが権限を許可されてに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、カタログビューでのメタデータの表示は、ユーザーが所有しているか、ユーザーが権限を許可されている securables に制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [&#40;Transact-sql&#41;の次の値](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

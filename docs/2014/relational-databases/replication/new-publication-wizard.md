@@ -42,13 +42,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fddd9efeea8d0cb00bbe421e5638b60cc508d832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060645"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   ここでは、パブリケーションの新規作成ウィザードの以下のページについて説明します。  
@@ -79,7 +78,7 @@ ms.locfileid: "63022579"
   
 -   [スナップショット エージェント (パブリケーションの新規作成ウィザード)](snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Create a Publication](publish/create-a-publication.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
 

@@ -13,15 +13,14 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbfb92a70f795cc3098303d666b59ebfc0bebc74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828149"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432349"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
   文字列比較は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]によって実行される多くの変換において重要な部分です。また、文字列比較は、変数内の式やプロパティ式の評価でも使用されます。 たとえば、並べ替え変換はデータセット内の値を比較し、昇順または降順にデータを並べ替えます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62828149"
   
 -   条件分割変換は、式の内部で文字列比較を使用し、データ行を送信する出力を決定できます。 詳細については、「 [Conditional Split Transformation](transformations/conditional-split-transformation.md)」を参照してください。  
   
--   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [Derived Column Transformation](transformations/derived-column-transformation.md)」を参照してください。  
+-   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [派生列変換](transformations/derived-column-transformation.md)」を参照してください。  
   
  変数、変数マッピング、および優先順位制約でも、文字列比較を含めた式を使用できます。 式の詳細については、「[Integration Services &#40;SSIS&#41; の式](../expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62828149"
  また、フラット ファイル接続マネージャーや、複数のフラット ファイル接続マネージャー用のロケールも指定できます。  
   
 ## <a name="setting-comparison-options"></a>比較オプションの設定  
- ロケールは、文字列データの比較に関する基本ルールを提供します。 たとえば、ロケールは、アルファベット内の各文字の並べ替えの位置を指定します。 ただし、こうしたルールは一部の変換が実行する比較に対しては十分でない場合があり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではロケールの比較ルールよりも詳細な比較オプションのセットがサポートされています。 これらの比較オプションは、列レベルで設定されます。 たとえば、詳細比較オプションの 1 つを使用すると、分音文字を無視できます。 このオプションの効果が分音文字など、"a"と「å」と同じですが、アクセントを無視する比較のためです。  
+ ロケールは、文字列データの比較に関する基本ルールを提供します。 たとえば、ロケールは、アルファベット内の各文字の並べ替えの位置を指定します。 ただし、こうしたルールは一部の変換が実行する比較に対しては十分でない場合があり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではロケールの比較ルールよりも詳細な比較オプションのセットがサポートされています。 これらの比較オプションは、列レベルで設定されます。 たとえば、詳細比較オプションの 1 つを使用すると、分音文字を無視できます。 このオプションの効果は、アクセントなどの分音文字を無視することです。これにより、比較のために "a" と "時間" が同一になります。  
   
  次の表では、比較オプションと並べ替えスタイルについて説明します。  
   

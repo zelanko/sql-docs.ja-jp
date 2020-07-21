@@ -1,6 +1,7 @@
 ---
-title: 複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンスを Linux に構成する
-description: ''
+title: 複数サブネットの可用性グループと FCI の構成 (Linux)
+description: 複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンス (FCI) を SQL Server on Linux に構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077588"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196970"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンスを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI) が複数のサイトにまたがっている場合、通常、各サイトには独自のネットワークがあります。 つまり、多くの場合、各サイトに独自の IP アドレス指定があります。 たとえば、サイト A のアドレスが 192.168.1.*x* から開始し、サイト B のアドレスが 192.168.2.*x* から開始します (*x* はサーバー固有の IP アドレスの一部)。 ネットワーク層で何らかのルーティングが行われていない場合、これらのサーバーは相互に通信できません。 このシナリオに対処する方法は 2 つあります。2 つの異なるサブネットをブリッジするネットワーク (VLAN) をセットアップするか、サブネット間のルーティングを構成します。
 
@@ -27,17 +28,17 @@ Always On 可用性グループ (AG) またはフェールオーバー クラス
 
 AG または FCI 用の IP アドレスの作成は、VLAN で実行されます。 次の例では、VLAN のサブネットは 192.168.3.*x* であるため、AG または FCI に作成される IP アドレスは 192.168.3.104 です。 1 つの IP アドレスが AG または FCI に割り当てられているため、その他の構成は必要ありません。
 
-![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
+![複数のサブネットを構成する 01](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
 ## <a name="configuration-with-pacemaker"></a>Pacemaker を使用した構成
 
 Windows の世界では、Windows Server フェールオーバー クラスター (WSFC) が複数のサブネットをネイティブでサポートし、IP アドレスに対して OR 依存関係を使用して複数の IP アドレスを処理します。 Linux には OR 依存関係はありませんが、次に示すように、適切な複数のサブネットを Pacemaker でネイティブに実現する方法があります。 通常の Pacemaker コマンドラインを使用してリソースを変更しただけでは、これを行うことはできません。 クラスター情報ベース (CIB) を変更する必要があります。 CIB は、Pacemaker 構成の XML ファイルです。
 
-![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
+![複数のサブネットを構成する 02](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
 ### <a name="update-the-cib"></a>CIB を更新する
 
-1.  CIB をエクスポートします。
+1. CIB をエクスポートします。
 
     **Red Hat Enterprise Linux (RHEL) と Ubuntu**
 
@@ -53,7 +54,7 @@ Windows の世界では、Windows Server フェールオーバー クラスタ�
 
     ここで、*filename* は CIB に付ける名前です。
 
-2.  生成されたファイルを編集します。 `<resources>` セクションを探します。 AG または FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられたものを探します。 2 番目の IP アドレスの情報を含む `<instance attributes>` セクションを、既存のセクションの前後いずれか、ただし `<operations>` の前に追加します。 構文は次のようになります。
+2. 生成されたファイルを編集します。 `<resources>` セクションを探します。 AG または FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられたものを探します。 2 番目の IP アドレスの情報を含む `<instance attributes>` セクションを、既存のセクションの前後いずれか、ただし `<operations>` の前に追加します。 構文は次のようになります。
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -79,7 +80,7 @@ Windows の世界では、Windows Server フェールオーバー クラスタ�
     </instance attributes>
     ```
 
-3.  変更した CIB をインポートし、Pacemaker を再構成します。
+3. 変更した CIB をインポートし、Pacemaker を再構成します。
 
     **RHEL/Ubuntu**
     
@@ -97,7 +98,7 @@ Windows の世界では、Windows Server フェールオーバー クラスタ�
 
 ### <a name="check-and-verify-failover"></a>フェールオーバーを確認して検証する
 
-1.  CIB が更新済みの構成に正常に適用されたら、Pacemaker で IP アドレス リソースに関連付けられている DNS 名に対して ping を実行します。 これは、現在 AG または FCI をホストしているサブネットに関連付けられた IP アドレスを反映する必要があります。
-2.  AG または FCI を他のサブネットにフェールオーバーします。
-3.  AG または FCI が完全にオンラインになったら、IP アドレスに関連付けられている DNS 名に対して ping を実行します。 これは、2 番目のサブネットの IP アドレスを反映する必要があります。
-4.  必要であれば、AG または FCI を元のサブネットにフェールオーバーします。
+1. CIB が更新済みの構成に正常に適用されたら、Pacemaker で IP アドレス リソースに関連付けられている DNS 名に対して ping を実行します。 これは、現在 AG または FCI をホストしているサブネットに関連付けられた IP アドレスを反映する必要があります。
+2. AG または FCI を他のサブネットにフェールオーバーします。
+3. AG または FCI が完全にオンラインになったら、IP アドレスに関連付けられている DNS 名に対して ping を実行します。 これは、2 番目のサブネットの IP アドレスを反映する必要があります。
+4. 必要であれば、AG または FCI を元のサブネットにフェールオーバーします。

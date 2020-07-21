@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 972c23b318855f2ac575c4905455c22ddbc02b16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061864"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
   AND で条件を結合するには、クエリに対して列を 2 回 (各条件について 1 回ずつ) 追加します。 OR で条件を結合するには、[フィルター] 列で最初の条件を指定し、次の条件を **[または...]** 列で指定します。  
@@ -30,7 +29,7 @@ ms.locfileid: "63225807"
   
 -   入社日が 5 年以上前で、かつ職務レベルが 100 の従業員  
   
-     \- または -  
+     または  
   
 -   職務レベルが 200 の従業員  
   
@@ -58,9 +57,9 @@ ms.locfileid: "63225807"
     ```  
   
 ## <a name="see-also"></a>参照  
- [OR が優先する場合の条件を結合&#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [抽出条件ペインで検索条件を結合するための規則&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
- [ルールを入力するための値を検索する&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Visual Database Tools &#40;またはが優先される場合に条件を結合&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [抽出条件ペインで検索条件を組み合わせる場合の規則 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Visual Database Tools &#40;検索値を入力するための規則&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

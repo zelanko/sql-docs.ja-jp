@@ -1,5 +1,5 @@
 ---
-title: 手順 7:追加して、OLE DB 変換先の構成 |Microsoft Docs
+title: '手順 7 : OLE DB 変換先の追加と構成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2d8576f664ae41dfa32230c6498069b62a8c87a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767561"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440659"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7:OLE DB 変換先の追加と構成
   前回までの実習で、フラット ファイル ソースからデータを抽出し、変換先との互換性のある形式にデータを変換できるパッケージを作成しました。 次は、変換したデータを実際に変換先に読み込みます。 データを読み込むには、データ フローに OLE DB 変換先を追加する必要があります。 OLE DB 変換先では、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込むことができます。  
@@ -24,7 +23,7 @@ ms.locfileid: "62767561"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>サンプルの OLE DB 変換先を追加および構成するには  
   
-1.  **SSIS ツールボックス**で **[その他の変換先]** を展開し、 **[OLE DB 変換先]** を **[データ フロー]** タブのデザイン画面にドラッグします。OLE DB 変換先を **[Lookup Date Key]** 変換のすぐ下に置きます。  
+1.  [ **SSIS ツールボックス**] で **[その他の**変換先] を展開し、[ **OLE DB Destination** ] を [**データフロー** ] タブのデザイン画面にドラッグします。 OLE DB の変換先を [ **Lookup Date Key** ] 変換のすぐ下に配置します。  
   
 2.  **[Lookup Date Key]** 変換をクリックし、緑色の矢印を、新しく追加した **[OLE DB 変換先]** にドラッグします。2 つのコンポーネントが接続されます。  
   
@@ -50,12 +49,12 @@ ms.locfileid: "62767561"
   
 13. **[Sample OLE DB Destination]** 変換先を右クリックし、 **[プロパティ]** をクリックします。  
   
-14. [プロパティ] ウィンドウであることを確認、`LocaleID`プロパティに設定されて**英語 (米国)** と`DefaultCodePage`プロパティに設定されて**1252**します。  
+14. プロパティウィンドウで、 `LocaleID` プロパティが**英語 (米国)** に設定され、 `DefaultCodePage` プロパティが**1252**に設定されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 8:レッスン 1 パッケージを理解しやすきます。](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [手順 8:レッスン 1 のパッケージをわかりやすくする作業](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>参照  
- [[OLE DB 変換先]](data-flow/ole-db-destination.md)  
+## <a name="see-also"></a>関連項目  
+ [OLE DB 変換先](data-flow/ole-db-destination.md)  
   
   

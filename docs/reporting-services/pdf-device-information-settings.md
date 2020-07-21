@@ -12,18 +12,18 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503680"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "70911329"
 ---
 # <a name="pdf-device-information-settings"></a>PDF デバイス情報の設定
   次の表は、PDF 形式のレポートを表示するデバイス情報の設定を示しています。  
   
-|設定|[値]|  
+|設定|値|  
 |-------------|-----------|  
-| **AccessiblePDF** | サイズは大きいが、読み上げと移動のためのスクリーン リーダーやその他の支援技術で使いやすい、アクセシブル/タグ付き PDF をレンダリングするかどうかを示します。 既定値は **false**です。 [Power BI Report Server (2018 年 3 月) 以降で使用可能です] |
+| **AccessiblePDF** | サイズは大きいが、読み上げと移動のためのスクリーン リーダーやその他の支援技術で使いやすい、アクセシブル/タグ付き PDF をレンダリングするかどうかを示します。 既定値は **false** です。 [Power BI Report Server (2018 年 3 月) 以降で使用可能です] |
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**DpiX**|出力デバイスの x 方向の解像度。|  

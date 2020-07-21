@@ -10,24 +10,22 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809809"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138243"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 **EXPLAIN** を使用して、どの操作でデータの移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は、Azure SQL Data Warehouse (プレビュー) に適用されます。
-  
- クエリ プランの詳細については、[!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]にある「Understanding Query Plans」 (クエリ プランについて) を参照してください。  
+  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 EXPLAIN を使用して、どの操作でデータ移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は、Azure SQL Data Warehouse (プレビュー) に適用されます。
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
@@ -35,9 +33,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>引数
 
  *SQL_statement*  
- **EXPLAIN** を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、次のいずれかのコマンドを使用できます:**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE**。
 
-*WITH_RECOMMENDATIONS* SQL ステートメントのパフォーマンスを最適化するための推奨事項と共にクエリ プランを返します。  
+ EXPLAIN を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、次のいずれかのコマンドを使用できます:SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
+
+"*WITH_RECOMMENDATIONS* " (プレビュー)
+
+SQL ステートメントのパフォーマンスを最適化するための推奨事項と共にクエリ プランを返します。  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -77,7 +78,6 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 |操作の種類|コンテンツ|例|  
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE、DISTRIBUTE_REPLICATED_TABLE_MOVE、MASTER_TABLE_MOVE、PARTITION_MOVE、SHUFFLE_MOVE、および TRIM_MOVE|これらの属性を持つ `<operation_cost>` 要素。 値には、ローカル操作のみが反映されます。<br /><br /> -   *cost* は、ローカル オペレーター コストで、実行する操作の推定所要時間 (ミリ秒) を示します。<br />-   *accumulative_cost* は、プランで見られるすべての操作 (並列処理の合計値を含む) の合計です (ミリ秒)。<br />-   *average_rowsize*は、操作中に取得されて渡される行の推定平均サイズ (バイト) です。<br />-   *output_rows* は、出力 (ノード) カーディナリティで、出力行の数を示します。<br /><br /> `<location>`:操作が実行されるノードまたはディストリビューション。 オプション:"Control"、"ComputeNode"、"AllComputeNodes"、"AllDistributions"、"SubsetDistributions"、"Distribution"、"SubsetNodes"。<br /><br /> `<source_statement>`:SHUFFLE_MOVE のソース データ。<br /><br /> `<destination_table>`:データの移動先となる内部の一時テーブル。<br /><br /> `<shuffle_columns>`:(SHUFFLE_MOVE 操作にのみ適用可能)。 一時テーブルのディストリビューション列として使用される 1 つまたは複数の列。|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
-|CopyOperation|`<operation_cost>`:上記の `<operation_cost>` を参照。<br /><br /> `<DestinationCatalog>`:宛先ノード。<br /><br /> `<DestinationSchema>`:DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`:宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`:宛先データベースの接続の名前または情報。<br /><br /> `<Username>` および `<Password>`:これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<BatchSize>`:コピー操作のバッチ サイズ。<br /><br /> `<SelectStatement>`:コピーを実行するために使用される Select ステートメント。<br /><br /> `<distribution>`:コピーが実行されるディストリビューション。|`<operation_cost cost="0" accumulative_cost="0" average_rowsize="4" output_rows="1" />`<br /><br /> `<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>[TableName]</DestinationTableName>`<br /><br /> `<DestinationDatasource>localhost, 8080</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<BatchSize>6000</BatchSize>`<br /><br /> `<SelectStatement>SELECT T1_1.c1 AS c1 FROM [qatest].[dbo].[gigs] AS T1_1</SelectStatement>`<br /><br /> `<distribution>ControlNode</distribution>`|  
 |MetaDataCreate_Operation|`<source_table>`:操作のソース テーブル。<br /><br /> `<destination_table>`:操作の宛先テーブル。|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
 |ON|`<location>`:上記の `<location>` を参照。<br /><br /> `<sql_operation>`:ノードで実行される SQL コマンドを識別します。|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`:宛先カタログ。<br /><br /> `<DestinationSchema>`:DestinationCatalog 内の宛先スキーマ。<br /><br /> `<DestinationTableName>`:宛先テーブルの名前または "TableName"。<br /><br /> `<DestinationDatasource>`:宛先データソースの名前。<br /><br /> `<Username>` および `<Password>`:これらのフィールドには、宛先で必要となるユーザー名とパスワードが示されます。<br /><br /> `<CreateStatement>`:宛先データベースのテーブルの作成ステートメント。|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
@@ -89,7 +89,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
   
  **EXPLAIN** はユーザー トランザクションではサポートされていません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、**SELECT**ステートメントで実行される **EXPLAIN** コマンドと、XML 結果を示します。  
   
  **EXPLAIN ステートメントの送信**  
@@ -310,7 +310,7 @@ GO
 **EXPLAIN ステートメント WITH_RECOMMENDATIONS の送信**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +326,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**EXPLAIN WITH_RECOMMENDATIONS の出力例** (プレビュー)
+**EXPLAIN WITH_RECOMMENDATIONS の出力例**  
 
 以下の出力には、View1 という名前の推奨される具体化されたビューの作成が含まれています。  
 
@@ -613,7 +613,7 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 </dsql_query>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   

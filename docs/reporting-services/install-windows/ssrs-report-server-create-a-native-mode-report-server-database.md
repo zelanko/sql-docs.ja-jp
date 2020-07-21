@@ -1,8 +1,10 @@
 ---
-title: ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 05/24/2018
+title: ネイティブ モードのレポート サーバー データベースを作成する (Configuration Manager) | Microsoft Docs
+description: ネイティブ モードの Reporting Services では、SQL Server データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652340"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866335"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースの作成
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>ネイティブ モードのレポート サーバー データベースを作成する (SSRS Configuration Manager)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。  
+ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが内部ストレージとして使用されます。 データベースは必須で、パブリッシュされたレポート、モデル、共有データ ソース、セッション データ、リソース、およびサーバー メタデータの格納に使用されます。  
 
 レポート サーバー データベースの作成や、接続文字列または資格情報の変更を行うには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーの [データベース] ページにあるオプションを使用します。  
   
@@ -30,7 +32,7 @@ ms.locfileid: "62652340"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をネイティブ モードの既定の構成でインストールした場合、レポート サーバー データベースは、レポート サーバー インスタンスのインストール時に自動的に作成および構成されています。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、セットアップによって自動的に構成された設定を表示または変更できます。  
   
-##  <a name="rsdbrequirements"></a> 開始前の準備  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> 開始前の準備  
  レポート サーバー データベースの作成または構成は、複数の手順から成るプロセスです。 レポート サーバー データベースを作成する前に、次の項目をどのように指定するかを検討してください。  
   
  **データベース サーバーの選択**  
@@ -67,11 +69,11 @@ ms.locfileid: "62652340"
   
 6.  サービスを再起動します。  
   
-7.  ファイアウォール ソフトウェアを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするポートを開きます。 既定のインスタンスの場合、このポートは通常、TCP/IP 接続のポート 1433 です。 Windows ファイアウォールの詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+7.  ファイアウォール ソフトウェアを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするポートを開きます。 既定のインスタンスの場合、このポートは通常、TCP/IP 接続のポート 1433 です。 詳しくは、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」をご覧ください。  
   
 ### <a name="to-create-a-local-report-server-database"></a>ローカルのレポート サーバー データベースを作成するには  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」で確認します。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [データベース] ページの **[データベースの変更]** を選択します。  
   
@@ -111,7 +113,7 @@ ms.locfileid: "62652340"
   
 7.  [概要] ページの情報で設定が正しいことを確認し、 **[次へ]** を選択します。  
   
-8.  [レポート サーバー URL] ページで URL を選択することにより、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、レポート サーバーのフォルダー階層が表示されます。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+8.  [レポート サーバー URL] ページで URL を選択することにより、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、レポート サーバーのフォルダー階層が表示されます。 詳細については、「 [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。  
 
 ## <a name="change-database-credentials"></a>データベース資格情報の変更
 
@@ -145,7 +147,7 @@ ms.locfileid: "62652340"
 
 6. 変更を行ってから、 **[完了]** を選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

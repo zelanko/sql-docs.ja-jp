@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543504"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>キューブとディメンションのプロパティの確認
   キューブを定義した後は、その結果をキューブ デザイナーで確認できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブの構造を確認します。  
@@ -34,7 +33,7 @@ ms.locfileid: "66078999"
   
 4.  **[キューブ構造]** タブの **[ディメンション]** ペインで **[Customer]** を展開し、 **[Customer の編集]** をクリックしてディメンション デザイナーでディメンションを開きます。  
   
-     ディメンション デザイナーには、これらのタブが含まれています。**ディメンション構造**、**属性リレーションシップ**、**翻訳**、および**ブラウザー**します。 注意、**ディメンション構造** タブには、3 つのペインが含まれています。**属性**、**階層**、および**データ ソース ビュー**します。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、[ユーザー定義階層の](multidimensional-models/user-defined-hierarchies-create.md)します。  
+     ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、「[ディメンション属性プロパティのリファレンス](multidimensional-models/dimension-attribute-properties-reference.md)」、「[ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)」を参照してください。  
   
 5.  キューブ デザイナーに切り替えるには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブを右クリックし、 **[ビュー デザイナー]** をクリックします。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66078999"
   
 7.  **[パーティション]** タブをクリックします。  
   
-     キューブ ウィザードは、集計なしの MOLAP (multidimensional online analytical processing) ストレージ モードを使用して、1 つのパーティションをキューブに定義します。 MOLAP では、パフォーマンスを最適化するため、すべてのリーフレベル データと集計がキューブに格納されます。 集計とは、事前に計算された要約データです。質問の答えをあらかじめ用意しておくことで、クエリの応答時間が短くなります。 **[パーティション]** タブでは、新しいパーティション、ストレージ設定、および書き戻し設定を定義できます。パーティションの詳細については、「[パーティション (Analysis Services - 多次元データ)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)」、「[集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)」を参照してください。  
+     キューブ ウィザードは、集計なしの MOLAP (multidimensional online analytical processing) ストレージ モードを使用して、1 つのパーティションをキューブに定義します。 MOLAP では、パフォーマンスを最適化するため、すべてのリーフレベル データと集計がキューブに格納されます。 集計とは、事前に計算された要約データです。質問の答えをあらかじめ用意しておくことで、クエリの応答時間が短くなります。 [**パーティション**] タブでは、追加のパーティション、ストレージ設定、および書き戻し設定を定義できます。詳細については、「[パーティション &#40;Analysis Services-多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)、[集計、および集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)」を参照してください。  
   
 8.  **[ブラウザー]** タブをクリックします。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66078999"
   
 9. ソリューション エクスプローラーで、 **[キューブ]** ノード内にある **[Analysis Services Tutorial]** を右クリックし、 **[コードの表示]** をクリックします。 場合によっては、しばらく待つ必要があります。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの XML コードが、 **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** タブに表示されます。ディメンションの配置時には、実際にはこのコードによってキューブが [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに作成されます。 詳細については、「[Analysis Services のプロジェクトでの XML の表示 (SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)」を参照してください。  
+     チュートリアルキューブの XML コード [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、[ ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube [XML]** ] タブに表示されます。これは、配置中にのインスタンスにキューブを作成するために使用される実際のコードです [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 詳細については、「[Analysis Services のプロジェクトでの XML の表示 (SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)」を参照してください。  
   
 10. XML コードのタブを閉じます。  
   

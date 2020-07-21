@@ -1,5 +1,6 @@
 ---
-title: 複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 複数のレポートからのデータ フィードの生成 (レポート ビルダー) | Microsoft Docs
+description: Reporting Services Atom 表示拡張機能により、ページ分割されたレポートのデータ フィードとレポートのデータ領域からのフィードでサービス ドキュメントが生成されます。
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 93eecfd3ffb66be1a1758f3265bf91a5842a4abc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580734"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342803"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "65580734"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> データ フィードとしてのレポート  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a> データ フィードとしてのレポート  
  運用レポートをデータ フィードとしてエクスポートすることも、データ フィードの形式でアプリケーションにデータを提供することを第 1 の目的とするレポートを作成することもできます。 データ フィードとしてのレポートは、クライアント データ プロバイダーを介してデータにアクセスするのが困難な場合や、データ ソースの複雑さを隠してデータをより簡単に使用できるようにする場合に、データをアプリケーションに提供するための方法の 1 つです。 レポート データをデータ フィードとして使用するもう 1 つのメリットは、セキュリティ、スケジュール設定、レポート スナップショットなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を使用して、データ フィードを提供するレポートを管理できることです。  
   
  Atom 表示拡張機能を有効に利用するためには、レポートがどのようにデータ フィードに表示されるかを理解する必要があります。 既存のレポートを使用している場合は、レポートからどのようなデータ フィードが生成されるかを予測できることが必要です。データ フィードとして使用する専用のレポートを作成している場合は、データ フィードの有用性を最大限に高めるために、データを組み込んでレポート レイアウトを微調整できることが重要です。  
@@ -39,7 +40,7 @@ ms.locfileid: "65580734"
  詳細については、「[1 つのレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="AtomServiceDocument"></a> Atom サービス ドキュメント (.atomsvc ファイル)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a> Atom サービス ドキュメント (.atomsvc ファイル)  
  Atom サービス ドキュメントは、1 つまたは複数のデータ フィードへの接続を指定します。 接続は、少なくとも、フィードを生成するデータ サービスへの単純な URL です。  
   
  Atom 表示拡張機能を使用してレポート データを表示すると、Atom サービス ドキュメントによってレポートで利用できるデータ フィードが一覧表示されます。 このドキュメントには、レポート内の各データ領域について 1 つ以上のデータ フィードが一覧表示されます。 テーブルおよびゲージから生成されるデータ フィードはそれぞれ 1 つのみです。これに対し、マトリックス、リスト、およびグラフの場合、表示するデータによっては複数のデータ フィードが生成される場合があります。  
@@ -59,7 +60,7 @@ ms.locfileid: "65580734"
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
   
-##  <a name="DataFeeds"></a> データ フィード  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a> データ フィード  
  データ フィードは、時間が経過しても変化しない一貫した表形式と、レポートを実行するたびに変化する可能性のある可変データから成る、XML ファイルです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって生成されるデータ フィードは、ADO.NET Data Services によって生成されるデータ フィードと同じ形式です。  
   
  データ フィードには、ヘッダー セクションとデータ セクションの 2 つのセクションが含まれます。 Atom 仕様には、各セクションの要素が定義されています。 ヘッダーには、データ フィードで使用する文字エンコード スキーマなどの情報が含まれています。  
@@ -105,7 +106,7 @@ ms.locfileid: "65580734"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>データ フィードの操作  
- レポートによって生成されるすべてのデータ フィードには、データ フィードを生成するデータ領域の親のスコープ内のレポート アイテムが含まれます。 と統合された SharePoint サイトを使用して生成できます。 複数のテーブルと 1 つのグラフが含まれているレポートを想像してください。 レポート本文のテキスト ボックスは、各データ領域の説明テキストを提供します。 レポートによって生成されるすべてのデータ フィードのすべてのエントリには、テキスト ボックスの値が含まれます。 たとえば、テキストが "販売地域別の月次売上の平均を示すグラフ" の場合、3 つのすべてのデータ フィードの各行にこのテキストが含まれます。  
+ レポートによって生成されるすべてのデータ フィードには、データ フィードを生成するデータ領域の親のスコープ内のレポート アイテムが含まれます。 。 複数のテーブルと 1 つのグラフが含まれているレポートを想像してください。 レポート本文のテキスト ボックスは、各データ領域の説明テキストを提供します。 レポートによって生成されるすべてのデータ フィードのすべてのエントリには、テキスト ボックスの値が含まれます。 たとえば、テキストが "販売地域別の月次売上の平均を示すグラフ" の場合、3 つのすべてのデータ フィードの各行にこのテキストが含まれます。  
   
  入れ子になったデータ領域のような階層データ リレーションシップがレポート レイアウトに含まれている場合、これらのリレーションシップは、レポート データのフラット化された行セットに含まれます。  
   
@@ -122,7 +123,7 @@ ms.locfileid: "65580734"
  データ フィードは、拡張子が .atom のファイル名で保存されます。 テキスト エディターまたは XML エディター (たとえば、メモ帳や XML Editor) を使用して、ファイルの構造および内容を確認できます。  
   
   
-##  <a name="FlatteningReportData"></a> レポート データのフラット化  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a> レポート データのフラット化  
  Atom レンダラーは、XML 形式のフラット化された行セットとしてレポート データを提供します。 データ テーブルをフラット化する場合のルールは、いくつかの例外を除き、CSV レンダラーに適用されるルールと同じです。  
   
 -   スコープ内のアイテムは、詳細レベルにフラット化されます。 CSV レンダラーとは異なり、最上位レベルにあるテキスト ボックスは、データ フィードに書き込まれるすべてのエントリに含められます。  
@@ -144,7 +145,7 @@ ms.locfileid: "65580734"
  詳細については、「 [テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)」を参照してください。  
   
   
-##  <a name="AtomRendering"></a> Atom 表示ルール  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a> Atom 表示ルール  
  Atom 表示拡張機能は、データ フィードを表示するときに次の情報を無視します。  
   
 -   書式設定およびレイアウト  
@@ -157,9 +158,9 @@ ms.locfileid: "65580734"
   
 -   四角形  
   
--   線  
+-   路線  
   
--   画像  
+-   イメージ  
   
 -   自動集計  
   
@@ -167,11 +168,11 @@ ms.locfileid: "65580734"
   
  次の表では、表示した際のレポート アイテムの外観について説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  
-|マトリックス|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
-|一覧|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
+|Matrix|マトリックスを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。|  
+|List|一覧の詳細行またはインスタンスそれぞれに対応するレコードが表示されます。|  
 |サブレポート|親アイテムは、コンテンツのインスタンスごとに繰り返し表示されます。|  
 |グラフ|それぞれのグラフ値にすべてのグラフ ラベルを付けてレコードを表示します。 階層内の系列およびカテゴリのラベルは、フラット化され、グラフ値の行内に含まれています。|  
 |データ バー|グラフのように表示されます。 通常、データ バーには階層またはラベルは含まれません。|  
@@ -181,10 +182,10 @@ ms.locfileid: "65580734"
 |マップ|各マップ データ領域にデータ フィードを生成します。 複数のマップ レイヤーが同じデータ領域を使用している場合、データ フィードにはすべてのマップ レイヤーが含まれます。 データ フィードには、マップ レイヤーのマップ メンバーごとにラベルと値を持つレコードが含まれます。|  
   
   
-##  <a name="DeviceInfo"></a> デバイス情報設定  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> デバイス情報設定  
  使用するエンコード スキーマなど、このレンダラーのいくつかの既定の設定は変更することができます。 詳細については、「 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)」を参照してください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [CSV ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [レポートのエクスポート](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  

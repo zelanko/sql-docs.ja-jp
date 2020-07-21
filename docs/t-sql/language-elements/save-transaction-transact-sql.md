@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 499b62d172ebcf2fef29c9f32a038921d2e2d30c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706187"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   トランザクション内でセーブポイントを設定します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68121813"
 
  ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }  
 [ ; ]  
@@ -49,12 +49,12 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>引数  
  *savepoint_name*  
- セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*savepoint_name* では常に大文字と小文字が区別されます。  
+ セーブポイントに割り当てる名前を指定します。 セーブポイント名は識別子の規則に従う必要があります。文字数は半角 32 文字に制限されます。 *のインスタンスで大文字と小文字が区別されない場合であっても、* savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では常に大文字と小文字が区別されます。  
   
  @*savepoint_variable*  
  有効なセーブポイント名を含むユーザー定義の変数名を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。 この変数には 32 文字を超える文字列も渡されますが、使用されるのは最初の 32 文字だけです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ユーザーは、トランザクション内にセーブポイントというマーカーを設定できます。 セーブポイントでは、トランザクションの一部が条件付きで取り消された場合に、トランザクションが戻ることのできる位置を定義します。 トランザクションがセーブポイントまでロールバックされた場合は、必要であれば追加の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと、COMMIT TRANSACTION ステートメントを使用して、トランザクションを最後まで実行します。最後まで実行しない場合は、開始位置までロールバックしてトランザクション全体を取り消す必要があります。 トランザクション全体を取り消す場合は、ROLLBACK TRANSACTION *transaction_name* を使用します。 この場合、そのトランザクションのすべてのステートメントまたはプロシージャが取り消されます。  
   
  1 つのトランザクションでは同じセーブポイント名を重複して指定できますが、ROLLBACK TRANSACTION ステートメントでそのセーブポイント名を指定した場合は、そのセーブポイント名を使用している最新の SAVE TRANSACTION のみにロールバックできます。  
@@ -67,7 +67,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ストアド プロシージャの実行前にアクティブなトランザクションが開始された場合に、トランザクション セーブポイントを使用して、ストアド プロシージャによる変更だけをロールバックする方法を示します。  
   
 ```  

@@ -1,20 +1,20 @@
 ---
 title: Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8156ce9aba96d01253b84c15309c6c19a46eaff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773551"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -27,15 +27,16 @@ ms.locfileid: "68114490"
 > Oracle データベースに接続するための詳細な要件と前提条件については、この Microsoft の記事では説明しません。 この記事では、Oracle クライアント ソフトウェアをインストール済みであることと、ターゲットの Oracle データベースに正常に接続できることを前提としています。 詳細については、Oracle データベース管理者に問い合わせるか、Oracle のドキュメントを参照してください。
 
 ## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle を使用して Oracle に接続する
-ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで **[.NET Framework Data Provider for Oracle]** を選択すると、そのページにプロバイダーのオプションのグループ化された一覧が表示されます。 これらの多くは、分かりにくい名前となじみのない設定です。 幸い、2、3 の情報を提供するだけで済みます。 他の設定の既定値は無視できます。
+ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで **[.NET Framework Data Provider for Oracle]** を選択すると、そのページにプロバイダーのオプションのグループ化された一覧が表示されます。 これらの多くは、わかりにくい名前となじみのない設定です。 幸い、2、3 の情報を提供するだけで済みます。 他の設定の既定値は無視できます。
 
 > [!NOTE]
 > このデータ プロバイダーの接続オプションは、Oracle が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
 |必要な情報|.NET Framework Data Provider for Oracle プロパティ|
 |---|---|
-|サーバー名|**[データ ソース]**|
+|サーバー名|**データ ソース**|
 |認証 (ログイン) 情報|**ユーザー ID** と**パスワード**、または**統合セキュリティ**|
+|||
 
 リストの **[ConnectionString]** フィールドに接続文字列を入力する必要はありません。 Oracle サーバー名 (**データ ソース**) とログイン情報に個別の値を入力すると、ウィザードが個々のプロパティとその値から、接続文字列をアセンブルします。 
 
@@ -70,9 +71,9 @@ Oracle サーバーの名前。
 ### <a name="connection-string-format"></a>接続文字列の形式
 一般的な接続文字列の形式を次に示します。
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
 **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
@@ -86,7 +87,7 @@ Oracle サーバーの名前。
 
 `SELECT host_name FROM v$instance`
 
-内の複数の
+or
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d0d82dcc4e9caa3e61f5c8d33d034b9395e57fd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4636dde3123cc3742a7dde57fa2a468583e2f2bd
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057715"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293600"
 ---
 # <a name="copy-package-objects"></a>パッケージ オブジェクトをコピーする
 
@@ -66,8 +66,8 @@ ms.locfileid: "68057715"
 6.  **[接続マネージャー]** 領域を右クリックして、 **[貼り付け]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [[制御フロー]](../integration-services/control-flow/control-flow.md)   
- [[データ フロー]](../integration-services/data-flow/data-flow.md)   
+ [制御フロー](../integration-services/control-flow/control-flow.md)   
+ [データ フロー](../integration-services/data-flow/data-flow.md)   
  [Integration Services &#40;SSIS&#41; の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [プロジェクト アイテムをコピーする](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   

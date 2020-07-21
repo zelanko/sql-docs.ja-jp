@@ -1,5 +1,5 @@
 ---
-title: したがって |マイクロソフトのドキュメント
+title: SQLExecDirect |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLExecDirect function
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f9e4790cfae631a9a977431f25282aae766f3e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68188506546e7b4a5dd4c05bc9a94cbf34300001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067512"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022571"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
-  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が 0 の場合、SQLExecDirect しない場合は、sql_error が返さし、sqlstate 診断レコードが生成 = HY024「無効な属性値 SQL_SOPT_SS_PARAM_FOCUS が (実行時に 0 にする必要があります)」メッセージ。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](sqlsetstmtattr.md)します。  
+  ステートメント属性 SQL_SOPT_SS_PARAM_FOCUS が0でない場合、SQLExecDirect は SQL_ERROR を返し、SQLSTATE = HY024 の診断レコードと、"無効な属性値、SQL_SOPT_SS_PARAM_FOCUS (実行時にはゼロでなければなりません)" というメッセージを生成します。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](sqlsetstmtattr.md)」を参照してください。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=80709)   

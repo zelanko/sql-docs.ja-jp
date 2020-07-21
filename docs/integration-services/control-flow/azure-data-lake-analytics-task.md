@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947356"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
@@ -38,7 +38,7 @@ Data Lake Analytics タスクを使用して、U-SQL ジョブを Azure Data Lak
 
 **[全般]** ページを使ってタスクを構成し、タスクが送信する U-SQL スクリプトを指定します。 U-SQL 言語について詳しくは、[U-SQL 言語のリファレンス](/u-sql/)をご覧ください。
 
-### <a name="basic-configuration"></a>[基本構成]
+### <a name="basic-configuration"></a>基本構成
 
 タスクの名前と説明を指定できます。
 
@@ -48,7 +48,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 
 **SourceType** は U-SQL スクリプトのソースを指定します。 スクリプトは、SSIS パッケージの実行中に、Data Lake Analytics アカウントに送信されます。 このプロパティのオプションは次のとおりです。
 
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**DirectInput (直接入力)**|インライン エディターを使用して U-SQL スクリプトを指定します。 この値を選択すると、動的オプション **[USQLStatement]** が表示されます。|  
 |**[FileConnection]**|U-SQL スクリプトを含むローカルな .usql ファイルを指定します。 この値を選択すると、動的オプション **[FileConnection]** が表示されます。|  
@@ -56,7 +56,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 
 **SourceType 動的オプション**では、U-SQL クエリのスクリプトの内容を指定します。 
 
-|[SourceType]|動的オプション|  
+|SourceType|動的オプション|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|送信する U-SQL クエリを、オプション ボックスに直接入力します。または、参照ボタン [...] をクリックし、 **[Enter U-SQL Query]\(U-SQL クエリの入力\)** ダイアログ ボックスで U-SQL クエリを入力します。|  
 |**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…** > を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)」をご覧ください。|  
@@ -74,7 +74,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 - **RuntimeVersion:** U-SQL ジョブの Data Lake Analytics ランタイム バージョンを指定します。 既定では、"default" に設定されます。 通常、このプロパティを変更する必要はありません。
 - **Synchronous:** このブール値では、タスクがジョブの実行の完了を待つかどうかを指定します。 値を true に設定する場合、タスクはジョブの完了後に**成功**とマークされます。 値を false に設定する場合、タスクはジョブが準備フェーズを通過した後に**成功**とマークされます。
 
-  |[値]|[説明]|
+  |値|説明|
   |-----------|-----------------|
   |True|タスクの結果は、U-SQL ジョブの実行結果に基づきます。 ジョブの成功 > タスクの成功。 ジョブの失敗 > タスクの失敗。 タスクの成功または失敗 > タスクの完了。|
   |False|タスクの結果は、U-SQL ジョブの送信と準備の結果に基づきます。 ジョブの送信に成功し、準備フェーズを通過した > タスクの成功。 ジョブの送信に失敗、または準備フェーズでジョブが失敗した > タスクの失敗。 タスクの成功または失敗 > タスクの完了。|
@@ -85,7 +85,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 
 **[Azure Data Lake Analytics Task Editor]\(Azure Data Lake Analytics タスク エディター\)** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用して、U-SQL スクリプトのパラメーター (U-SQL 変数) に変数をマップします。
 
-- **[変数名]:** **[追加]** を選択してパラメーター マッピングを追加したら、システム変数またはユーザー定義の変数を一覧から選択します。 または、<**新しい変数...** > を選択して、 **[変数の追加]** ダイアログ ボックスを使用して新しい変数を追加できます。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」をご覧ください。  
+- **変数名:** **[追加]** を選択してパラメーター マッピングを追加したら、システム変数またはユーザー定義の変数を一覧から選択します。 または、<**新しい変数...** > を選択して、 **[変数の追加]** ダイアログ ボックスを使用して新しい変数を追加できます。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」をご覧ください。  
 
 - **[パラメーター名]:** U-SQL スクリプトのパラメーター/変数名を指定します。 パラメーター名が \@ 記号で始まっていることを確認します (例: \@Param1)。 
 
@@ -121,10 +121,10 @@ OUTPUT @rs1
 
 入力と出力のパスは **\@in** および **\@out** パラメーターで定義されています。 U-SQL スクリプトの **\@in** および **\@out** パラメーターの値は、パラメーター マッピングの構成に従って動的に渡されます。
 
-|[変数名]|[パラメーター名]|
+|変数名|パラメーター名|
 |-------------|--------------|
-|ユーザー :Variable1|\@in|
-|ユーザー :Variable2|\@out| 
+|ユーザー: Variable1|\@in|
+|ユーザー: Variable2|\@out| 
 
 ## <a name="expression-page-configuration"></a>式ページの構成
 

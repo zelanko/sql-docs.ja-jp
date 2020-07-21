@@ -14,14 +14,14 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0d5c4f71605b8d03549d19ff4943a928f981e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eedc7754a9bb5f48a07b4865cfb426f7e234d192
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070789"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294983"
 ---
 # <a name="advanced-editor"></a>[詳細エディター]
 
@@ -57,6 +57,6 @@ ms.locfileid: "68070789"
 -   [Integration Services の変換](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーとメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
   
   

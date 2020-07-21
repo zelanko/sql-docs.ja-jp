@@ -1,5 +1,5 @@
 ---
-title: 手順 2:配置バンドルの確認 | Microsoft Docs
+title: '手順 2: 配置バンドルの確認 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e2bef735ab6a0f798df175fc9fd8749126056f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba8767f4d1b4f8c38638dc1d12adb1a351511fc7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086588"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283594"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>レッスン 2-2 - 配置バンドルの確認
 
@@ -59,7 +59,7 @@ ms.locfileid: "68086588"
 5.  Internet Explorer またはテキスト エディターを終了します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 3:SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)  
+[レッスン 3: SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)  
   
   
   

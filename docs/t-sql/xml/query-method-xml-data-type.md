@@ -1,7 +1,7 @@
 ---
-title: query() メソッド (xml データ型) | Microsoft Docs
+title: query() メソッド (xml データ型)
 ms.custom: ''
-ms.date: 07/26/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -14,38 +14,40 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051261"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393040"
 ---
 # <a name="query-method-xml-data-type"></a>query() メソッド (xml データ型)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 **xml** データ型のインスタンスに対する XQuery を指定します。 結果は、**xml** 型の値になります。 このメソッドでは、型指定されていない XML のインスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 query ('XQuery')  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 XQuery  
 XML インスタンス内の XML ノード (要素や属性など) をクエリする XQuery 式の文字列です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 このセクションでは、**xml** データ型の query() メソッドの使用例について説明します。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 型変数に対する query() メソッドの使用  
-次の例では、**xml** 型の変数 **@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
+次の例では、**xml** 型の変数 **\@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
   
 次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
   
-```  
+```sql
 declare @myDoc xml  
 set @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
@@ -70,7 +72,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. xml 型列に対する query() メソッドの使用  
 次の例では、**query()** メソッドを使用して、**AdventureWorks** データベースの **xml** 型の列 **CatalogDescription** に対して XQuery を指定します。  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -100,7 +102,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 query() メソッドと exist() メソッドは、どちらも PD プレフィックスを宣言していることに注意してください。 このような場合は、WITH XMLNAMESPACES を最初に使用して、プレフィックス定義し、これをクエリで使用することもできます。  
   
-```  
+```sql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

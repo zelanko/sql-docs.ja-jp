@@ -16,10 +16,10 @@ ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4f3c26ca45da6cba3a86324e970117cde9fcc4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67971993"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob コンストラクター (SQLServerConnection, byte)

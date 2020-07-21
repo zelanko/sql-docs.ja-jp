@@ -1,5 +1,5 @@
 ---
-title: レッスン 4:Bike Buyer マイニング モデルの参照 |Microsoft Docs
+title: 'レッスン 4: 自転車購入者マイニングモデルの参照 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070893"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>レッスン 4:Bike Buyer マイニング モデルの参照
-  このレッスンでは、使用、 [SELECT (DMX)](/sql/dmx/select-dmx)デシジョン ツリー モデルとマイニングをクラスタ リングでコンテンツを参照するステートメントをモデル化で作成した[レッスン 2。予測マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)します。  
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>レッスン 4: Bike Buyer マイニング モデルの参照
+  このレッスンでは、 [select (DMX)](/sql/dmx/select-dmx)ステートメントを使用して、「[レッスン 2: 予測マイニング構造へのマイニングモデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)」で作成したデシジョンツリーおよびクラスターマイニングモデルの内容を調査します。  
   
- マイニング モデルに含まれる列は、マイニング構造で定義されている列ではなく、アルゴリズムによって検出された傾向とパターンを記述している、特定の列のセットです。 これらのマイニング モデル列に記載されて、 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)スキーマ行セット。 たとえば、コンテンツ スキーマ行セットの MODEL_NAME 列には、マイニング モデルの名前が含まれます。 クラスター マイニング モデルの場合、NODE_CAPTION 列には各クラスターの名前が含まれ、NODE_DESCRIPTION 列には各クラスターの特性の説明が含まれます。 SELECT FROM を使用してこれらの列を参照する\<モデル >。DMX でコンテンツのステートメント。 このステートメントを使用すると、マイニング モデルの作成に使用されたデータを調査することもできます。 このステートメントを使用するには、マイニング構造上でドリルスルーを有効にする必要があります。 ステートメントの詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)します。  
+ マイニング モデルに含まれる列は、マイニング構造で定義されている列ではなく、アルゴリズムによって検出された傾向とパターンを記述している、特定の列のセットです。 これらのマイニングモデル列については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)スキーマ行セット」を参照してください。 たとえば、コンテンツ スキーマ行セットの MODEL_NAME 列には、マイニング モデルの名前が含まれます。 クラスター マイニング モデルの場合、NODE_CAPTION 列には各クラスターの名前が含まれ、NODE_DESCRIPTION 列には各クラスターの特性の説明が含まれます。 これらの列を参照するには、[ \<モデルから選択]> を使用します。DMX の CONTENT ステートメント。 このステートメントを使用すると、マイニング モデルの作成に使用されたデータを調査することもできます。 このステートメントを使用するには、マイニング構造上でドリルスルーを有効にする必要があります。 ステートメントの詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;&#40;ケース](/sql/dmx/select-from-model-content-dmx)。  
   
  SELECT DISTINCT ステートメントを使用することにより、不連続列のすべての状態を返すこともできます。 たとえば、性別の列でこの操作を実行すると、クエリでは `male` と `female` が返されます。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
- このレッスンでは、次のタスクを実行するされます。  
+ このレッスンでは、次のタスクを実行します。  
   
 -   マイニング モデルに含まれる内容の調査  
   
@@ -34,9 +34,9 @@ ms.locfileid: "63070893"
 -   特定の不連続列に対して可能な状態の調査  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>マイニング モデルの内容を返す  
- このレッスンでは使用して、 [SELECT FROM&#60;モデル&#62;します。コンテンツ&#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx)ステートメントは、クラスタ リング モデルの内容を返します。  
+ このレッスンでは、 [SELECT FROM &#60;model&#62; を使用します。コンテンツ &#40;DMX&#41;](/sql/dmx/select-from-model-dimension-content-dmx)ステートメントによって、クラスターモデルの内容が返されます。  
   
- SELECT FROM の汎用例を次に\<モデル >。コンテンツのステートメント。  
+ 次に、[モデルから\<の選択]> の一般的な例を示します。コンテンツステートメント:  
   
 ```  
 SELECT <select list> FROM [<mining model>].CONTENT  
@@ -49,7 +49,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- マイニング モデル名の後の .CONTENT 句は、マイニング モデルから内容を返すことを示します。 マイニング モデルに含まれる列に関する詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)します。  
+ マイニング モデル名の後の .CONTENT 句は、マイニング モデルから内容を返すことを示します。 マイニングモデルに含まれる列の詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)」を参照してください。  
   
  コードの最終行では、ステートメントで返される結果をフィルター選択します。この行は省略可能です。  
   
@@ -63,15 +63,15 @@ WHERE <where clause>
 WHERE NODE_SUPPORT > 100  
 ```  
   
- WHERE ステートメントの使用に関する詳細については、次を参照してください。[選択&#40;DMX&#41;](/sql/dmx/select-dmx)します。  
+ WHERE ステートメントの使用方法の詳細については、「 [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)」を参照してください。  
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>クラスター マイニング モデルの内容を返すには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
-2.  SELECT FROM の汎用例をコピー\<モデル >。空のクエリにコンテンツのステートメント。  
+2.  [モデルから\<選択]> の汎用的な例をコピーします。空のクエリに CONTENT ステートメントを指定します。  
   
 3.  次の部分を探します。  
   
@@ -79,13 +79,13 @@ WHERE NODE_SUPPORT > 100
     <select list>   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     *  
     ```  
   
-     置換することもできます * のいずれかに含まれる列の一覧で、 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)します。  
+     また、* を[DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)内に含まれる任意の列の一覧に置き換えることもできます。  
   
 4.  次の部分を探します。  
   
@@ -93,7 +93,7 @@ WHERE NODE_SUPPORT > 100
     [<mining model>]   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Clustering]  
@@ -105,18 +105,18 @@ WHERE NODE_SUPPORT > 100
     SELECT * FROM [Clustering].CONTENT  
     ```  
   
-5.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+5.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-6.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`SELECT_CONTENT.dmx`します。  
+6.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`SELECT_CONTENT.dmx`、ファイル名を指定します。  
   
-7.  ツールバーの**Execute**ボタンをクリックします。  
+7.  ツールバーの [**実行**] ボタンをクリックします。  
   
      クエリが実行され、マイニング モデルの内容が返されます。  
   
 ## <a name="use-drillthrough"></a>ドリルスルーの使用  
- 次の手順では、ドリルスルー ステートメントを使用して、デシジョン ツリー マイニング モデルのトレーニングに使用されたケースの一部を返します。 このレッスンでは使用して、 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx)ステートメント、デシジョン ツリー モデルの内容を返します。  
+ 次の手順では、ドリルスルー ステートメントを使用して、デシジョン ツリー マイニング モデルのトレーニングに使用されたケースの一部を返します。 このレッスンでは、 [SELECT FROM &#60;model&#62; を使用します。](/sql/dmx/select-from-model-content-dmx)デシジョンツリーモデルの内容を返す DMX&#41;ステートメント &#40;ケース。  
   
- SELECT FROM の汎用例を次に\<モデル >。ステートメントの場合:  
+ 次に、[モデルから\<の選択]> の一般的な例を示します。CASE ステートメント:  
   
 ```  
 SELECT <select list>   
@@ -138,15 +138,15 @@ SELECT <select list> FROM [<mining model>].CASES
 WHERE IsInNode('<node id>')  
 ```  
   
- IsInNode で WHERE ステートメントの使用に関する詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)します。  
+ WHERE ステートメントを IsInNode と共に使用する方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;&#40;ケース](/sql/dmx/select-from-model-content-dmx)。  
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>マイニング モデルのトレーニングに使用されたケースを返すには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
-2.  SELECT FROM の汎用例をコピー\<モデル >。空のクエリに CASES ステートメント。  
+2.  [モデルから\<選択]> の汎用的な例をコピーします。空のクエリに CASE ステートメントを記述します。  
   
 3.  次の部分を探します。  
   
@@ -154,13 +154,13 @@ WHERE IsInNode('<node id>')
     <select list>   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     *  
     ```  
   
-     \* は、ソース データ内に含まれる任意の列の一覧 ([Bike Buyer] など) に置き換えることもできます。  
+     * は、ソース データ内に含まれる任意の列の一覧 ([Bike Buyer] など) に置き換えることもできます。  
   
 4.  次の部分を探します。  
   
@@ -168,7 +168,7 @@ WHERE IsInNode('<node id>')
     [<mining model>]   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Decision Tree]  
@@ -181,11 +181,11 @@ WHERE IsInNode('<node id>')
     FROM [Decision Tree].CASES  
     ```  
   
-5.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+5.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-6.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`SELECT_DRILLTHROUGH.dmx`します。  
+6.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`SELECT_DRILLTHROUGH.dmx`、ファイル名を指定します。  
   
-7.  ツールバーの**Execute**ボタンをクリックします。  
+7.  ツールバーの [**実行**] ボタンをクリックします。  
   
      クエリが実行され、デシジョン ツリー マイニング モデルのトレーニングに使用されたソース データが返されます。  
   
@@ -209,7 +209,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>不連続列の状態を返すには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスを右クリックし、[**新しいクエリ**] をポイントして [ **DMX**] をクリックします。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -221,7 +221,7 @@ SELECT DISTINCT [<column>]
     [<column,name>   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Bike Buyer]  
@@ -233,7 +233,7 @@ SELECT DISTINCT [<column>]
     [<mining model>]   
     ```  
   
-     これを次の文字列に置き換えます。  
+     次の内容に置き換えます。  
   
     ```  
     [Decision Tree]  
@@ -246,11 +246,11 @@ SELECT DISTINCT [<column>]
     FROM [Decision Tree]  
     ```  
   
-5.  **ファイル** メニューのをクリックして**付けて DMXQuery1.dmx を保存**します。  
+5.  [**ファイル**] メニューの [**名前を付けて DMXQuery1 を保存**] をクリックします。  
   
-6.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`SELECT_DISCRETE.dmx`します。  
+6.  [名前を**付けて保存**] ダイアログボックスで、適切なフォルダーを参照し`SELECT_DISCRETE.dmx`、ファイル名を指定します。  
   
-7.  ツールバーの**Execute**ボタンをクリックします。  
+7.  ツールバーの [**実行**] ボタンをクリックします。  
   
      クエリが実行され、Bike Buyer 列の可能な状態が返されます。  
   

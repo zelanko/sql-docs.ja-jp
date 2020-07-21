@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 87e612d8b20fc169873d6d8b4356fdb61a8d0311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775824"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server:Locks オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:Locks** オブジェクトでは、各リソースの種類の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロックに関する情報を提供します。 ロックは、複数のトランザクションで同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが同時に使用されるのを防ぐために、トランザクション中に読み取られたり変更されたりする行などにかけられます。 たとえば、あるトランザクションによってテーブルの行に排他 (X) ロックがかけられると、他のトランザクションはロックが解除されるまでその行を変更できません。 ロックを最小限にとどめるとコンカレンシーが向上し、パフォーマンスが向上します。 異なる種類のリソースのロックを表す複数の **Locks** オブジェクトのインスタンスを同時に監視することができます。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** カウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** カウンターについて説明します。  
   
-|SQL Server:Locks カウンター|[説明]|  
+|SQL Server:Locks カウンター|説明|  
 |-------------------------------|-----------------|  
 |**Average Wait Time (ms)**|待つ必要がある各ロック要求の平均待ち時間 (ミリ秒)。|  
-|**Average Wait Time Base**|内部使用のみです。|
+|**Average Wait Time Base**|内部使用専用です。|
 |**Lock Requests/sec**|ロック マネージャーから 1 秒あたりに要求された新しいロックと、ロック変換の数。|  
 |**Lock Timeouts (timeout > 0)/sec**|NOWAIT ロックの要求を除く、1 秒あたりにタイムアウトしたロック要求の数。|  
 |**Lock Timeouts/sec**|NOWAIT ロックの要求を含めた、1 秒あたりにタイムアウトしたロック要求の数。|  
@@ -39,18 +39,18 @@ ms.locfileid: "68093433"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下のリソースをロックできます。  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |**_Total**|すべてのロックに関する情報。|  
 |**AllocUnit**|アロケーション ユニットのロック。|  
-|**アプリケーション**|アプリケーションで指定されているリソースのロック。|  
+|**Application**|アプリケーションで指定されているリソースのロック。|  
 |**[データベース]**|データベース内のすべてのオブジェクトを含むデータベースのロック。|  
 |**Extent**|連続した 8 ページのグループのロック。|  
 |**[最近使ったファイル]**|データベース ファイルのロック。|  
 |**Heap/BTree**|ヒープまたは BTree (HOBT)。 データ ページのヒープまたはインデックスの BTree 構造のロック。|  
 |**[キー]**|インデックスの行のロック。|  
-|**メタデータ**|カタログ情報 (メタデータ) のロック。|  
-|**オブジェクト**|すべてのデータとインデックスを含む、テーブル、ストアド プロシージャ、ビューなどのロック。 このオブジェクトには、 **sys.all_objects**内のエントリを持つ任意のアイテムが含まれます。|  
+|**Metadata**|カタログ情報 (メタデータ) のロック。|  
+|**Object**|すべてのデータとインデックスを含む、テーブル、ストアド プロシージャ、ビューなどのロック。 このオブジェクトには、 **sys.all_objects**内のエントリを持つ任意のアイテムが含まれます。|  
 |**ページ**|データベース内の 8 KB のページのロック。|  
 |**RID**|行 ID。 ヒープ内の単一行のロック。|  
   

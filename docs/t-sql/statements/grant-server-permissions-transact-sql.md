@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880388"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (サーバーの権限の許可) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーに対する権限を許可します。 
   
@@ -33,7 +33,7 @@ ms.locfileid: "68050793"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -60,7 +60,7 @@ GRANT permission [ ,...n ]
   
  TO \<grantee_principal> 権限を許可するプリンシパルを指定します。  
   
- AS \<grantor_principal> このクエリを実行するプリンシパルが権限を許可する権利の派生元のプリンシパルを指定します。  
+ AS \<grantor_principal> このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。  
   
  WITH GRANT OPTION  
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
@@ -83,7 +83,7 @@ GRANT permission [ ,...n ]
  *server_role*  
  ユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を許可できるのは、現在のデータベースが master のときだけです。  
   
  サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。 サーバー ロールのメンバーシップに関する情報は、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューで確認できます。  
@@ -127,7 +127,7 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の 3 つのサーバー権限が、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で追加されました。  
   
  **CONNECT ANY DATABASE** 権限  
@@ -142,7 +142,7 @@ GRANT permission [ ,...n ]
 ## <a name="permissions"></a>アクセス許可  
  権限の許可者 (または AS オプションで指定されたプリンシパル) は、GRANT OPTION によって与えられた権限を保持しているか、権限が暗黙的に与えられる上位の権限を保持している必要があります。 sysadmin 固定サーバー ロールのメンバーは、すべての権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. ログインに権限を許可する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `TerryEminhizer` に `CONTROL SERVER` 権限を許可します。  

@@ -1,5 +1,5 @@
 ---
-title: IIS で仮想サーバーの構成 |Microsoft Docs
+title: IIS での仮想サーバーの構成 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5888cb9666488ced6f9e112d21c48d0265f5c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922833"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749996"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS での仮想サーバーの構成
-Internet Information Services 4.0 での仮想サーバーを作成するときに、RDS を使用する仮想サーバーを構成するには、次の 2 つの余分な手順が必要です。  
+インターネットインフォメーションサービス4.0 で仮想サーバーを作成する場合は、RDS を使用するように仮想サーバーを構成するために、次の2つの追加の手順が必要になります。  
   
-1.  サーバーを設定する場合は、「Execute アクセスを許可する」。 を確認してください。  
+1.  サーバーをセットアップするときに、[実行アクセスを許可する] チェックボックスをオンにします。  
   
-2.  移動する msadcs.dll *vroot*\msadc、場所*vroot* virtual server のホーム ディレクトリは。  
+2.  Msadcs を*vroot*\ msadc に移動します。ここで、 *vroot*は仮想サーバーのホームディレクトリです。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

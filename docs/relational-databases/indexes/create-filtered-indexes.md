@@ -17,15 +17,15 @@ ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 086cb367b0ca533fcdb54ae815ccda1c3ba0b7e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc37d9d18d75a9e24b1e894b28b8e7a0a29f602c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753110"
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、フィルター選択されたインデックスを作成する方法について説明します。 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上するだけでなく、テーブル全体のインデックスと比較してインデックスのメンテナンス コストおよびストレージ コストを削減できます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68024924"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してフィルター選択されたインデックスを作成するには:**  
   
@@ -59,15 +59,15 @@ ms.locfileid: "68024924"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Design"></a> デザインに関する考慮事項  
+###  <a name="design-considerations"></a><a name="Design"></a> デザインに関する考慮事項  
   
 -   クエリに関連する少数の値だけが列に含まれている場合、値のサブセットにフィルター選択されたインデックスを作成できます。 たとえば、列の値がほとんど NULL の場合に、クエリで常に NULL 以外の値を選択するときは、NULL 以外のデータ行にフィルター選択されたインデックスを作成できます。 作成したインデックスは、同じキー列に定義されているテーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
 -   テーブルに異種データの行が含まれている場合、1 つ以上のカテゴリのデータに対してフィルター選択されたインデックスを作成できます。 これにより、クエリのフォーカスをテーブルの特定の領域に狭めて、これらのデータに対するクエリのパフォーマンスを向上させることができます。 繰り返しになりますが、作成したインデックスは、テーブル全体の非クラスター化インデックスよりも小さく、メンテナンス コストが少なくなります。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   フィルター選択されたインデックスをビューに作成することはできません。 ただし、クエリ オプティマイザーにとって、ビューで参照されているテーブルに定義されたフィルター選択されたインデックスは役立ちます。 クエリ オプティマイザーでは、クエリ結果が正しくなる場合、ビューから選択するクエリに対してフィルター選択されたインデックスが検討されます。
 
@@ -83,7 +83,7 @@ ms.locfileid: "68024924"
   
     -   一意ではないインデックス。 フィルター選択されたインデックスは一意ではないインデックスにすることができますが、インデックス付きビューは一意である必要があります。  
   
--   フィルター選択されたインデックスは 1 つのテーブルで定義され、単純な比較演算子のみをサポートします。 複数のテーブルを参照するフィルター式や複雑なロジックを含むフィルター式が必要な場合は、ビューを作成する必要があります。  
+-   フィルター選択されたインデックスは 1 つのテーブルで定義され、単純な[比較演算子](../../t-sql/language-elements/comparison-operators-transact-sql.md)のみをサポートします。 複数のテーブルを参照するフィルター式や複雑なロジックを含むフィルター式が必要な場合は、ビューを作成する必要があります。 フィルター選択されたインデックスでは `LIKE` 演算子はサポートされません。 
   
 -   フィルター選択されたインデックスの式がクエリ述語と同じであり、フィルター選択されたインデックスの式の列がクエリ結果と共に返されない場合、その式の列を、フィルター選択されたインデックスの定義でキー列または付加列にする必要はありません。  
   
@@ -97,12 +97,12 @@ ms.locfileid: "68024924"
 
 - [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 構文のフィルター選択されたインデックスの作成に必要な SET オプションを確認します。
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。 フィルター選択されたインデックスの式を変更するには、CREATE INDEX WITH DROP_EXISTING を使用します。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   
@@ -126,9 +126,7 @@ ms.locfileid: "68024924"
   
 10. **[OK]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  
   

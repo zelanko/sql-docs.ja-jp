@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c7d215f956b02f33a14ba91fd769a691acdd622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003615"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294195"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
 
@@ -43,23 +43,23 @@ ms.locfileid: "68003615"
 3.  **[データ プロファイル タスク エディター]** で、 **[全般]** をクリックします。  
   
 ## <a name="data-profiling-options"></a>データ プロファイルに関するオプション  
- **Timeout**  
+ **タイムアウト**  
  データ プロファイル タスクがタイムアウトして実行を停止するまでの秒数を指定します。 既定値は 0 であり、タイムアウトしないことを示します。  
   
 ## <a name="destination-options"></a>転送先に関するオプション  
   
 > [!IMPORTANT]  
->  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」をご覧ください。  
+>  出力ファイルには、データベースに関する機密データやデータベースに格納されているデータが含まれる場合があります。 このファイルの安全性を高める方法の推奨事項については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
   
  **[DestinationType]**  
  データ プロファイル出力をファイルに保存するか変数に保存するかを指定します。  
   
-|[値]|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
-|**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注:使用するファイル接続マネージャーは **[Destination]** オプションで指定します。|  
-|**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注:使用するパッケージ変数は **[Destination]** オプションで指定します。|  
+|**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注: 使用するファイル接続マネージャーは **[Destination]** オプションで指定します。|  
+|**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注: 使用するパッケージ変数は **[Destination]** オプションで指定します。|  
   
- **変換先**  
+ **宛先**  
  データ プロファイル出力を含むファイル接続マネージャーまたはパッケージ変数を指定します。  
   
 -   **[DestinationType]** オプションが **[FileConnection]** に設定されている場合、 **[Destination]** オプションには使用可能なファイル接続マネージャーが表示されます。 これらの接続マネージャーのいずれかを選択するか、[\<新しいファイル接続>] を選択して新しいファイル接続マネージャーを作成します。  

@@ -1,5 +1,5 @@
 ---
-title: Oracle データベース (SSAS) への接続 |Microsoft Docs
+title: Oracle Database への接続 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6d6344fd130a9d84b67c242af93f7a3f2ce204e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087023"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526988"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>[Oracle データベースへの接続] (SSAS)
-  **テーブルのインポート ウィザード**のこのページを使用すると、Oracle データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  **テーブルのインポート ウィザード** のこのページを使用すると、Oracle データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
  データ ソースに接続するには、適切なプロバイダーがコンピューターにインストールされている必要があります。  
   
 > [!NOTE]  
 >  このページでデータベースを選択する際には、現在のユーザーの資格情報が使用されます。 ただし、[権限借用情報] ページで指定されたユーザーに、選択したデータベースの読み取り権限がないと、インポートは成功しません。  
   
-## <a name="uielement-list"></a>UI 要素の一覧  
- **接続の表示名**  
- このデータ ソース接続の一意の名前を入力します。 このフィールドは必須です。  
+## <a name="ui-element-list"></a>UI 要素の一覧  
+ **[接続の表示名]**  
+ このデータ ソース接続の一意の名前を入力します。 これは必須フィールドです。  
   
  **サーバー名**  
  接続するサーバー インスタンスの名前を入力または選択します。  
@@ -39,16 +38,16 @@ ms.locfileid: "66087023"
   
  このユーザー名は、データ ソースの接続文字列を構築するときに使用されます。 [テーブルのプロパティ] ウィンドウおよびインポート ウィザードでデータのプレビューまたはフィルター処理を行う際も、これらの資格情報が使用されます。 データをインポートまたは更新する際には、これらの資格情報は使用されず、[権限借用情報] ページで指定された Windows の資格情報が使用されます。  
   
- **Password**  
+ **パスワード**  
  データベース接続に使用するパスワードを指定します。  
   
- **パスワードを保存します。**  
+ **[パスワードを保存する]**  
  **[パスワード]** ボックスに入力したパスワードを保存するかどうかを指定します。  
   
  **詳細設定**  
  **[詳細プロパティの設定]** ダイアログ ボックスを使用して追加の接続プロパティを設定します。 詳細については、「[[詳細プロパティの設定] (SSAS)](set-advanced-properties-ssas.md)」を参照してください。  
   
- **[接続テスト]**  
+ **接続をテスト**  
  現在の設定を使用して、データ ソースに対する接続の確立を試みます。 接続が正常に確立されたかどうかを示すメッセージが表示されます。  
   
   

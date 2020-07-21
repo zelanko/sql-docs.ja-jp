@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108029"
 ---
 # <a name="publish-reports"></a>レポートのパブリッシュ
@@ -40,10 +40,10 @@ ms.locfileid: "66108029"
     >  レポートをパブリッシュするときは、レポートが使用する共有データ ソースを配置する必要もあります。  
   
 ## <a name="see-also"></a>参照  
- [データ ソースとレポートのパブリッシュ](reports/publishing-data-sources-and-reports.md)   
+ [データソースとレポートのパブリッシュ](reports/publishing-data-sources-and-reports.md)   
  [レポートのプレビュー](reports/previewing-reports.md)   
- [レポート サーバーへのレポートのパブリッシュ](reports/publishing-reports-to-a-report-server.md)   
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [レポートサーバーへのレポートのパブリッシュ](reports/publishing-reports-to-a-report-server.md)   
+ [レポートの検索、表示、および管理 &#40;レポートビルダーと SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

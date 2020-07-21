@@ -18,22 +18,22 @@ ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167f17d793bcc8d65c1104b70a6188782543c544
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125999"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002530"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   1、0、または NULL の値をとる整数型です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は **bit** 列の記憶域を最適化します。 テーブル内で 8 個以下の **bit** 列がある場合は、列が 1 バイトとして格納されます。 **bit** 列が 9 ～ 16 ある場合には、列は 2 バイトとして格納されます。
   
-文字列値 TRUE および FALSE は **bit** 値に変換できます。TRUE は 1 に変換され、FALSE は 0 に変換されます。
+文字列値 TRUE および FALSE は **bit** 値へ変換することができます: TRUE は 1 へ、FALSE は 0 へと変換されます。
   
 bit 型への変換において、0 以外の値はすべて 1 へと変換されます。
   

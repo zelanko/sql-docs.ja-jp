@@ -10,15 +10,14 @@ helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774e7e689dab8b329ec11d2c2c2a7286592c8bdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046719"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無効な文字とエスケープの規則
   このトピックでは、無効な XML 文字が FOR XML 句でどのように処理されるのかを説明し、XML 名では無効になる文字のエスケープの規則を示します。  

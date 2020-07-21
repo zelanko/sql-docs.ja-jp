@@ -1,29 +1,29 @@
 ---
-title: トレーステンプレートのインポート (SQL Server プロファイラー) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: トレース テンプレートをインポートする
+titleSuffix: SQL Server Profiler
+description: ユーザー定義テンプレートを SQL Server Profiler にインポートして、定義済みのシステム テンプレートと共にトレースで使用できるようにする方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03a029abbf9468bbf2164be9e6a09644a2363428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 51bb55eb4213464fbaca2fd9e5990894c46c3c14
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074949"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151729"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>トレース テンプレートのインポート (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレース テンプレート ファイル (.tdf) をインポートする方法について説明します。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレース テンプレート ファイル (.tdf) をインポートする方法について説明します。  
   
 ### <a name="to-import-a-trace-template"></a>トレース テンプレートをインポートするには  
   

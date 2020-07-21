@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee603023798638b7bd5c25a72d1018d379da2075
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88a872ca15544c3dd6909cd210f98987d21a13dc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003320"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304113"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:レベル 1  
+ ODBC API の準拠: レベル1  
   
- 指定された結果セットの現在のレコードの 1 つのフィールドの値を取得します。  
+ 指定された結果セットの現在のレコード内の1つのフィールドの値を取得します。  
   
- 詳細については、次を参照してください。 [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md) 」を参照してください。

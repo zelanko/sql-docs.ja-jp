@@ -1,5 +1,5 @@
 ---
-title: createClob メソッド (SQLServerConnection) |Microsoft Docs
+title: createClob メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 417a5048d809cb4498c543c589324e151a843a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 291016047ab29d4e563e2a7248c4cd4624669ef9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955391"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927708"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>createClob メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +35,10 @@ public java.sql.Clob createClob()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この createClob メソッドは、java. .sql. 接続インターフェイスの createClob メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この createClob メソッドは、java.sql.Connection インターフェイスの createClob メソッドで指定されています。  
   
- このメソッドは[、 &#40;&#41;SQLServerClob コンストラクター SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)の必要性を置き換えます。  
+ このメソッドにより、[SQLServerClob コンストラクター &#40;SQLServerConnection, java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md) は必要なくなります。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

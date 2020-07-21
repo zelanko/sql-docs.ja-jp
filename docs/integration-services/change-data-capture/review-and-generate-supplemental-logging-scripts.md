@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 17df9f0ab491fde590e77bfdc84e2b82c0d3d304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086640"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71294577"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>補足ログ スクリプトの確認および生成
 
@@ -59,6 +59,6 @@ ms.locfileid: "68086640"
   
 ## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [スクリプトを実行するための Oracle 資格情報](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

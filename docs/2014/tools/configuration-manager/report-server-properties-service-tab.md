@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06e8d38be6f1e8e1ef816f5fa38c66d74a69987a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054504"
 ---
 # <a name="report-server-properties-service-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
-  このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
+  このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>および  
- **バイナリ パス**  
+## <a name="options"></a>オプション  
+ **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
  **[エラー制御]**  
@@ -33,7 +32,7 @@ ms.locfileid: "62506774"
  **Host Name**  
  フルテキスト検索を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **名前**  
+ **Name**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -42,19 +41,19 @@ ms.locfileid: "62506774"
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **開始モード**  
+ **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動：このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   自動：このサービスは、このコンピューターの起動時に起動しようとします。  
+-   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
   
--   無効になっています。このサービスを開始できません。  
+-   \[無効]: このサービスは開始できません。  
   
  **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[SQL Server のサービス]](../../../2014/tools/configuration-manager/sql-server-services.md)  
+ [SQL Server のサービス](../../../2014/tools/configuration-manager/sql-server-services.md)  
   
   

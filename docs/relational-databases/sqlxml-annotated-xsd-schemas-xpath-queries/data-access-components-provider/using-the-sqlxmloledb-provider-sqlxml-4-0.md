@@ -1,6 +1,6 @@
 ---
-title: SQLXMLOLEDB プロバイダー (SQLXML 4.0) の使用 |Microsoft Docs
-ms.custom: ''
+title: SQLXMLOLEDB プロバイダーの使用 (SQLXML)
+description: ADO アプリケーションでの SQLXMLOLEDB プロバイダー固有のプロパティの使用に関する情報を表示します。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f71fffba9ccfff30188056d931fb08526ce43a75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7de27ec74af3b3fd4b0127745416e1f81902f905
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650022"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダーの使用 (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   ここでは、SQLXMLOLEDB プロバイダー固有のプロパティの使用法を示す ADO サンプル アプリケーションを紹介します。  
   
 ## <a name="application-requirements-for-sqlxmloledb-40-provider"></a>SQLXMLOLEDB 4.0 プロバイダーのアプリケーション要件  
@@ -31,36 +32,34 @@ ms.locfileid: "67895122"
   
 1.  Microsoft Visual Basic の .exe アプリケーションを作成し、次のいずれかの参照を追加します。  
   
-    -   Microsoft ActiveX データ オブジェクト 2.6 ライブラリ  
+    -   Microsoft ActiveX データオブジェクト2.6 ライブラリ  
   
-    -   Microsoft ActiveX データ オブジェクト 2.7 ライブラリ  
+    -   Microsoft ActiveX データオブジェクト2.7 ライブラリ  
   
     -   Microsoft ActiveX Data Objects 2.8 Library  
   
 2.  SQLXML 4.0 と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を配置し、インストールします。  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see on [SQLXML 4.0 Programming Concepts](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+     詳細については、「 [SQLXML 4.0 のプログラミング概念](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)」および「 [SQL Server Native Client のインストール](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQL クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
- SQL クエリを実行する ClientSideXML および xml ルート プロパティの使用方法を示します。  
+ [SQLXMLOLEDB Provider&#41;&#40;の SQL クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
+ ClientSideXML および xml ルートプロパティを使用して SQL クエリを実行する方法について説明します。  
   
- [SQL クエリを含むテンプレートの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ [SQL クエリを含むテンプレートの実行 &#40;SQLXMLOLEDB Provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  ClientSideXML プロパティの使用方法を示します。  
   
- [XPath クエリの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
- ClientSideXML、ベース パス、およびマッピング スキーマのプロパティの使用方法を示します。  
+ [SQLXMLOLEDB Provider&#41;&#40;の XPath クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
+ ClientSideXML、基本パス、およびマッピングスキーマプロパティの使用方法を示します。  
   
- [XPath クエリの名前空間を持つ実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
+ [名前空間 &#40;SQLXMLOLEDB Provider&#41;を使用した XPath クエリの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  名前空間の修飾子が付けられたスキーマに対してクエリを実行する方法を示します。  
   
- [XPath クエリを含むテンプレートの実行&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
- ClientSideXML、ベース パス、およびマッピング スキーマのプロパティを使用して SQL クエリでテンプレートを実行する方法を示しています。  
+ [SQLXMLOLEDB Provider&#41;&#40;XPath クエリを含むテンプレートの実行](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ ClientSideXML、ベースパス、およびマッピングスキーマプロパティを使用して、SQL クエリでテンプレートを実行する方法について説明します。  
   
- [XSL 変換の適用&#40;SQLXMLOLEDB プロバイダー&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
- XSL 変換の適用で ClientSideXML と xsl プロパティの使用方法を示します。  
+ [SQLXMLOLEDB Provider&#41;&#40;の XSL 変換の適用](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ XSL 変換の適用時に ClientSideXML プロパティと xsl プロパティを使用する方法を示します。  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  

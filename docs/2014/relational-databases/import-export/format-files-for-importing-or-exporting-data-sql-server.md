@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463bd0f3fee203820eb6312a6d4ecfa3165d31b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026822"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートしたり、テーブルからデータを一括エクスポートしたりする場合、 *フォーマット ファイル* を使用して、データの一括エクスポートと一括インポートに必要なすべてのフォーマット情報を格納できます。 これには、そのテーブルに対応するデータ ファイル内の各フィールドのフォーマット情報が含まれます。  
@@ -28,14 +27,14 @@ ms.locfileid: "66011949"
   
  
   
-##  <a name="Benefits"></a> フォーマット ファイルの利点  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> フォーマット ファイルの利点  
   
 -   他のデータ形式に準拠したり、他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 行うことなく、データ ファイルを出力できる柔軟なシステムが実現します。  
   
 -   不要なデータを追加または削除したり、データ ファイル内の既存のデータを並べ替えたりしなくても、データを一括インポートできます。 フォーマット ファイルは、データ ファイルのフィールドとテーブルの列間に不一致がある場合に特に役立ちます。  
   
-##  <a name="ExamplesOfFFs"></a> フォーマット ファイルの例  
- 次の例では、XML 以外のフォーマット ファイルと XML フォーマット ファイルのレイアウトを示します。 これらのフォーマット ファイルは、 `HumanResources.myTeam` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルに対応しています。 このテーブルには、`EmployeeID`、`Name`、`Title`、および `ModifiedDate` という 4 つの列があります。  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> フォーマット ファイルの例  
+ 次の例では、XML 以外のフォーマット ファイルと XML フォーマット ファイルのレイアウトを示します。 これらのフォーマット ファイルは、 `HumanResources.myTeam` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルに対応しています。 このテーブルには、 `EmployeeID`、 `Name`、 `Title`、および `ModifiedDate`という 4 つの列があります。  
   
 > [!NOTE]  
 >  このテーブルの詳細とテーブルを作成する方法については、「[HumanResources.myTeam サンプル テーブル &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)」を参照してください。  
@@ -53,7 +52,7 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- 詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)」をご覧ください。  
+ 詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
  
   
@@ -84,11 +83,11 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 </BCPFORMAT>  
 ```  
   
- 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」をご覧ください。  
+ 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
   
 
   
-##  <a name="WhenFFrequired"></a> フォーマット ファイルが必要になるケース  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> フォーマット ファイルが必要になるケース  
  INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントでは、常にフォーマット ファイルが必要です。  
   
 -   **bcp** または BULK INSERT の場合、単純な状況では、フォーマット ファイルを使用しなくてもかまいません。必要になることはほとんどありません。 ただし、複雑な一括インポート操作を実行する場合は、頻繁にフォーマット ファイルが必要になります。  
@@ -114,7 +113,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -128,7 +127,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

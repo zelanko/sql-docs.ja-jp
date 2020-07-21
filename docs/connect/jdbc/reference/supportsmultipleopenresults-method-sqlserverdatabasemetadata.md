@@ -1,5 +1,5 @@
 ---
-title: 'Supports: Openresults メソッド (SQLServerDatabaseMetaData) |Microsoft Docs'
+title: supportsMultipleOpenResults メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73eab48ff558a5a93eb64b3a9a908914003b579e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67969266"
 ---
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults メソッド (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsMultipleOpenResults()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Supports多重 Openresults メソッドは、java メタデータインターフェイスの Supportsの Openresults メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsMultipleOpenResults メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsMultipleOpenResults メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

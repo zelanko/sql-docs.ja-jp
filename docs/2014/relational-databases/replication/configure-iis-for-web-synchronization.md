@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523c4fc30151acd3ee4df21f2fdaa2187e702870
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62722371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011029"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
   ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[方法:Web 同期を使用するサブスクリプションを構成する\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Web 同期が使用されるようにサブスクリプションを構成する方法 \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   レプリケーション [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング: [方法:Web 同期 (レプリケーション TRANSACT-SQL プログラミング) を使用するサブスクリプションを構成します。](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   レプリケーション [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング: [Web 同期を使用するようにサブスクリプションを構成する方法 (レプリケーション Transact-SQL プログラミング)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO:[方法:Web 同期 (RMO プログラミング) を使用するサブスクリプションを構成します。](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Web 同期を使用するようにサブスクリプションを構成する方法 (RMO プログラミング)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS バージョン 5.0、IIS バージョン 6.0、および IIS バージョン 7.0 がサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。  
   
 > [!IMPORTANT]  
->  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンを使用するとエラーが発生する可能性があります。 その一部を次に示します。"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
+>  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンを使用するとエラーが発生する可能性があります。 たとえば、"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
   
 > [!CAUTION]  
 >  WebSync と代替スナップショット フォルダーの場所を同時に使用しないでください。  
@@ -42,7 +41,7 @@ ms.locfileid: "62722371"
   
 1.  SSL (Secure Sockets Layer) を構成します。 IIS とすべてのサブスクライバー間の通信には SSL が必要です。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用して、IIS を実行しているコンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続コンポーネントをインストールします。 手順 3. で説明する Web 同期の構成ウィザードを使用する場合は、IIS を実行しているコンピューターに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] もインストールする必要があります。  
+2.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールウィザードを使用して、IIS を実行しているコンピューターに接続コンポーネントをインストール [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 手順 3. で説明する Web 同期の構成ウィザードを使用する場合は、IIS を実行しているコンピューターに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] もインストールする必要があります。  
   
 3.  IIS を実行しているコンピューターを Web 同期用に構成します。 手動でコンピューターを構成するか、Web 同期の構成ウィザードを使用できます。 ウィザードを使用することをお勧めします。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62722371"
   
     1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
-    2.  **オープン**ボックスに「 `inetmgr`、順にクリックします**OK**します。  
+    2.  [**名前**] ボックスに「 `inetmgr` 」と入力し、[ **OK**] をクリックします。  
   
 3.  IIS 証明書ウィザードを実行します。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62722371"
   
 4.  **[OK]** をクリックします。  
   
- CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=30958)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
+ CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=5135)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
   
 > [!NOTE]  
 >  Web サイトで SSL を使用できるようにするには、事前に証明書を Web サイトに関連付ける必要があります。 SelfSSL を使用すると、証明書が既定の Web サイトに自動的に関連付けられます。 既に証明書を保有しているか、または後で CA から証明書をインストールする場合は、証明書を Web 同期で使用する Web サイトと明示的に関連付ける必要があります。 サブスクリプションの同期に使用する Web サイトに関連付けられた証明書が 1 つしか存在しないことを確認します。 複数の証明書が存在する場合、サブスクライバーは使用可能な最初の Web サイトを使用します。  
@@ -91,7 +90,7 @@ ms.locfileid: "62722371"
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
-2.  SelfSSL をダウンロードしてインストールします。 このアプリケーションの既定のインストール先は \<*drive*>:\Program Files\IIS Resources\SelfSSL です。 アプリケーションおよびマニュアルのショートカットが \<*drive*>:\Documents and Settings\All Users\Start Menu\Programs\IIS Resources\SelfSSL にコピーされます。  
+2.  SelfSSL をダウンロードしてインストールします。 既定では、アプリケーションは、次のようにインストールされ \<*drive*> ます。 アプリケーションとドキュメントのショートカットは \<*drive*> 、\Documents および Settings\All Users\Start Menu\Programs\IIS resources/selfsslにコピーされます。  
   
 3.  SelfSSL を実行します。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62722371"
         > [!NOTE]  
         >  SelfSSL を使用してインストールした証明書の既定の有効期限は 7 日間です。  
   
-    -   1 つ以上のパラメーターの値を指定するには、 **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。 SelfSSL のインストール ディレクトリに移動して「 `SelfSSL`」と入力し、1 つ以上のパラメーターの値を指定します。 パラメーターの一覧を確認する場合は、「 `SelfSSL -?`」と入力します。  
+    -   1 つ以上のパラメーターの値を指定するには、 **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 [**名前**] ボックスに「」と入力し、 `cmd` [ **OK**] をクリックします。 SelfSSL のインストール ディレクトリに移動して「 `SelfSSL`」と入力し、1 つ以上のパラメーターの値を指定します。 パラメーターの一覧を確認する場合は、「 `SelfSSL -?`」と入力します。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>接続コンポーネントと SQL Server Management Studio のインストール  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62722371"
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 このウィザードの使用の詳細については、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
   
 3.  **[機能の選択]** ページで、 **[クライアント ツール接続]** を選択します。  
   
@@ -129,9 +128,9 @@ ms.locfileid: "62722371"
     > [!NOTE]  
     >  指定した Web サイトから Web 同期で使用するコンポーネントにアクセスできます。 Web サイトの構成を行わなければ、そのサイトで他のデータや Web ページにアクセスすることはできません。  
   
--   仮想ディレクトリおよびこのディレクトリに関連付けられた別名を作成します。 この別名は、Web 同期コンポーネントにアクセスするときに使用されます。 たとえば、IIS のアドレスが https://*server.domain.com* である場合に、別名を "websync1" と指定すると、replisapi.dll コンポーネントにアクセスするアドレスは https://*server.domain.com*/websync1/replisapi.dll となります。  
+-   仮想ディレクトリおよびこのディレクトリに関連付けられた別名を作成します。 この別名は、Web 同期コンポーネントにアクセスするときに使用されます。 たとえば、IIS のアドレスが `https://*server.domain.com*` である場合に、別名を "websync1" と指定すると、replisapi.dll コンポーネントにアクセスするアドレスは `https://*server.domain.com*/websync1/replisapi.dll` となります。  
   
--   基本認証を使用します。 基本認証の使用をお勧めする理由は、基本認証では、Kerberos 委任を必要とすることなく、IIS と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーまたはディストリビューターを別々のコンピューターで実行すること (推奨の構成) が可能になるからです。 基本認証を使用した SSL では、ログインやパスワードなどすべてのデータが暗号化されて送信されます (使用する認証の種類にかかわらず、SSL は必須です)。Web 同期の推奨事項の詳細については、「[Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)」の「Security Best Practices for Web Synchronization (Web 同期のセキュリティの推奨事項)」を参照してください。  
+-   基本認証を使用します。 基本認証の使用をお勧めする理由は、基本認証では、Kerberos 委任を必要とすることなく、IIS と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーまたはディストリビューターを別々のコンピューターで実行すること (推奨の構成) が可能になるからです。 基本認証を使用した SSL では、ログインやパスワードなどすべてのデータが暗号化されて送信されます  (使用する認証の種類にかかわらず、SSL は必須です)。Web 同期のベストプラクティスの詳細については、「web 同期の[構成](configure-web-synchronization.md)」の「web 同期のセキュリティのベストプラクティス」を参照してください。  
   
 #### <a name="to-configure-the-computer-that-is-running-iis-by-using-the-configure-web-synchronization-wizard"></a>Web 同期の構成ウィザードを使用して IIS を実行しているコンピューターを構成するには  
   
@@ -155,7 +154,7 @@ ms.locfileid: "62722371"
   
     1.  **[別名]** ボックスに仮想ディレクトリの別名を入力します。  
   
-    2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、入力した`websync1`で、**エイリアス**ボックスに、入力`C:\Inetpub\wwwroot\websync1`で、**パス**ボックス。 **[次へ]** をクリックします。  
+    2.  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、[エイリアス] ボックスに「」と入力した場合は、[ `websync1` **Alias** `C:\Inetpub\wwwroot\websync1` **パス**] ボックスに「」と入力します。 **[次へ]** をクリックします。  
   
     3.  両方のダイアログ ボックスで **[はい]** をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 .  
   
@@ -169,7 +168,7 @@ ms.locfileid: "62722371"
   
 8.  **[ディレクトリ アクセス]** ページで以下の操作を行います。  
   
-    1.  **[追加]** をクリックし、 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、サブスクライバーが IIS への接続に使用するアカウントを追加します。 これらのアカウントは、サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページで指定するか、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* パラメーターの値として指定します。  
+    1.  **[追加]** をクリックし、 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、サブスクライバーが IIS への接続に使用するアカウントを追加します。 これらのアカウントは、サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページで指定するか、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* パラメーターの値として指定します。  
   
 9. **[スナップショットの共有へのアクセス]** ページで、スナップショット共有を入力します。 サブスクライバーがスナップショット ファイルにアクセスできるように、この共有に適切な権限を設定します。 共有の権限の詳細については、「[スナップショット フォルダーのセキュリティ保護](security/secure-the-snapshot-folder.md)」を参照してください。  
   
@@ -179,11 +178,11 @@ ms.locfileid: "62722371"
   
 11. IIS を実行しているコンピューターで、64 ビット バージョンの Windows を実行している場合、replisapi.dll を適切なディレクトリにコピーする必要があります。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`iisreset`、順にクリックします**OK**します。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 [**名前**] ボックスに「」と入力し、 `iisreset` [ **OK**] をクリックします。  
   
     2.  IIS が停止して再起動したら、 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi から手順 6b. で指定したディレクトリに replisapi.dll をコピーします。  
   
-    3.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。  
+    3.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 [**名前**] ボックスに「」と入力し、 `cmd` [ **OK**] をクリックします。  
   
     4.  手順 6b. で指定したディレクトリで、次のコマンドを実行します。  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62722371"
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>SQL Server レプリケーション リスナーのインストールと構成を行うには  
   
-1.  IIS を実行しているコンピューターに、replisapi.dll を格納するファイル ディレクトリを作成します。 ディレクトリはどこに作成してもかまいませんが、\<*drive*>:\Inetpub ディレクトリの下に作成することをお勧めします。 たとえば、ディレクトリ \<*drive*>:\Inetpub\SQLReplication\\ を作成します。  
+1.  IIS を実行しているコンピューターに、replisapi.dll を格納するファイル ディレクトリを作成します。 ディレクトリは任意の場所に作成できますが、: \Inetpub under ディレクトリにディレクトリを作成することをお勧めし \<*drive*> ます。 たとえば、\Inetpub\SQLReplication というディレクトリを作成し \<*drive*> \\ ます。  
   
     > [!IMPORTANT]  
     >  FAT ファイル システム パーティションではなく NTFS ファイル システム パーティションにこのディレクトリを作成することを強くお勧めします。 NTFS ファイル システムであれば、NTFS ファイル システムのファイル アクセス許可を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションにアクセスできるユーザーを厳密に制御することができます。  
@@ -203,7 +202,7 @@ ms.locfileid: "62722371"
   
 3.  次の手順に従って replisapi.dll を登録します。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **オープン**ボックスに、入力`cmd`、順にクリックします**OK**します。  
+    1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 [**名前**] ボックスに「」と入力し、 `cmd` [ **OK**] をクリックします。  
   
     2.  手順 1. で作成したディレクトリで、次のコマンドを実行します。  
   
@@ -211,20 +210,20 @@ ms.locfileid: "62722371"
   
 4.  レプリケーション用の新しい Web サイトを作成するか、既存のサイトを使用します。 Web サイトは、同期の際にレプリケーション コンポーネントからアクセスされます。 Web サイトを作成する方法の詳細については、IIS のマニュアルを参照してください。  
   
-5.  IIS で仮想ディレクトリを作成します。 仮想ディレクトリは、手順 4. で作成した Web サイトの下に作成し、手順 1. で作成したディレクトリにマッピングします。 仮想ディレクトリを作成する方法の詳細については、IIS のマニュアルを参照してください。 このディレクトリに割り当てる権限は、最小限にすることをお勧めします。 **[読み取り]** 権限と **[ISAPI アプリケーションや CGI などを実行する]** 権限は選択する必要がありますが、 **[ASP などのスクリプトを実行する]** 、 **[書き込み]** 、および **[参照]** 権限は選択しなくてもかまいません。  
+5.  IIS で仮想ディレクトリを作成します。 仮想ディレクトリは、手順 4. で作成した Web サイトの下に作成し、手順 1. で作成したディレクトリにマッピングします。 仮想ディレクトリを作成する方法の詳細については、IIS のマニュアルを参照してください。 このディレクトリに割り当てる権限は、最小限にすることをお勧めします。 **[読み取り]** 権限と **[ISAPI アプリケーションや CGI などを実行する]** 権限は選択する必要がありますが、 **[ASP などのスクリプトを実行する]**、 **[書き込み]**、および **[参照]** 権限は選択しなくてもかまいません。  
   
 6.  replisapi.dll を実行できるように IIS を構成します。 手順 4. で割り当てた権限は、以前のバージョンの IIS では十分ですが、IIS バージョン 6.0 では ISAPI (インターネット サーバー API) 拡張を有効にする必要があります。 詳細については、IIS 6.0 のマニュアルの「ISAPI 拡張を構成する」および「動的コンテンツを有効および無効にする」を参照してください。  
   
 #### <a name="to-configure-iis-authentication"></a>IIS 認証を構成するには  
   
--   サブスクライバーが IIS に接続するには、サブスクライバーがリソースやプロセスにアクセスする前に、IIS がサブスクライバーを認証する必要があります。 IIS では 3 種類の認証が提供されています。匿名認証、基本認証、統合認証です。 認証は、Web サイト全体または作成した特定の仮想ディレクトリに適用することができます。  
+-   サブスクライバーが IIS に接続するには、サブスクライバーがリソースやプロセスにアクセスする前に、IIS がサブスクライバーを認証する必要があります。 IIS では、匿名認証、基本認証、統合認証の 3 種類の認証方式が用意されています。 認証は、Web サイト全体または作成した特定の仮想ディレクトリに適用することができます。  
   
      基本認証と SSL を組み合わせて使用することをお勧めします。 使用する認証の種類にかかわらず、SSL は必須です。 認証を構成する方法の詳細については、IIS のマニュアルを参照してください。  
   
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server レプリケーション リスナーの権限の設定  
  サブスクライバーが IIS を実行しているコンピューターに接続するときは、IIS の構成時に指定した認証の種類を使用して、サブスクライバーが認証されます。 IIS はサブスクライバーを認証した後、サブスクライバーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを実行する権限があるかどうかを確認します。 replisapi.dll の権限を設定して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションを実行できるユーザーを制御します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションに許可なくアクセスされることがないように権限を正しく構成する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーの実行に使用するアカウントを最小の権限で構成するには、次の手順を完了する必要があります。 この手順は、IIS 6.0 を実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] に適用されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーの実行に使用するアカウントを最小の権限で構成するには、次の手順を完了する必要があります。 手順は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] IIS 6.0 の実行に適用されます。  
   
  次の手順の他に、PAL (パブリケーション アクセス リスト) に必要なログインが登録されていることを確認してください。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](security/secure-the-publisher.md)」を参照してください。  
   
@@ -260,13 +259,13 @@ ms.locfileid: "62722371"
   
     1.  replisapi.dll のために作成したフォルダーに移動し、フォルダーを右クリックして、 **[共有とセキュリティ]** をクリックします。  
   
-    2.  **[セキュリティ]** タブで、 **[追加]** をクリックします。  
+    2.  **[セキュリティ]** タブで **[追加]** をクリックします。  
   
     3.  **[ユーザー、コンピューター、またはグループの選択]** ダイアログ ボックスで、手順 1. で作成したアカウントを追加します。  
   
     4.  **[場所を指定してください]** フィールドの名前が、ドメインではなくローカル コンピューターの名前であることを確認します。 ローカル コンピューターの名前でない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   
-    5.  アカウントには、 **[読み取り]** 、 **[読み取りと実行]** 、 **[フォルダーの内容の一覧表示]** のみが許可されていることを確認します。  
+    5.  アカウントには、**[読み取り]**、**[読み取りと実行]**、**[フォルダーの内容の一覧表示]** のみが許可されていることを確認します。  
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]** をクリックします。  
   
@@ -276,7 +275,7 @@ ms.locfileid: "62722371"
   
     1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。  
   
-    2.  **オープン**ボックスに「 `inetmgr`、順にクリックします**OK**します。  
+    2.  [**名前**] ボックスに「 `inetmgr` 」と入力し、[ **OK**] をクリックします。  
   
     3.  **インターネット インフォメーション サービス (IIS) マネージャー**で、 **[ローカル コンピューター]** ノードを展開します。  
   
@@ -290,7 +289,7 @@ ms.locfileid: "62722371"
   
     2.  作成したアプリケーション プールを右クリックして、 **[プロパティ]** をクリックします。  
   
-    3.  **[\<ApplicationPoolName> のプロパティ]** ダイアログ ボックスで、 **[識別]** タブの **[構成可能]** をクリックします。  
+    3.  [ ** \<ApplicationPoolName> プロパティ**] ダイアログボックスの [ **id** ] タブで、[**構成可能**] をクリックします。  
   
     4.  **[ユーザー名]** および **[パスワード]** フィールドに、手順 1. で作成したアカウントとパスワードを入力します。  
   
@@ -302,7 +301,7 @@ ms.locfileid: "62722371"
   
     2.  Web 同期に使用している Web サイトを展開し、Web 同期用に作成した仮想ディレクトリを右クリックして、 **[プロパティ]** をクリックします。  
   
-    3.  **[\<VirtualDirectoryName> のプロパティ]** ダイアログ ボックスの **[仮想ディレクトリ]** タブで、手順 5. で作成したアプリケーション プールを **[アプリケーション プール]** ボックスから選択します。  
+    3.  [ ** \<VirtualDirectoryName> プロパティ**] ダイアログボックスの [**仮想ディレクトリ**] タブで、手順 5. で作成したアプリケーションプールを [**アプリケーションプール**] ボックスの一覧から選択します。  
   
     4.  **[OK]** をクリックします。  
   
@@ -323,7 +322,7 @@ ms.locfileid: "62722371"
   
     5.  **[OK]** をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 たとえば、 https://server.domain.com/directory/replisapi.dll?diag のようにします。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 (例: `https://server.domain.com/directory/replisapi.dll?diag`)。  
   
 3.  IIS に指定した証明書が Windows オペレーティング システムによって認識されない場合は、 **[セキュリティの警告]** ダイアログ ボックスが表示されます。 証明書がテスト用の証明書であるか、Windows が認識しない証明機関 (CA) によって発行されていると、この警告が表示されます。  
   
@@ -347,7 +346,7 @@ ms.locfileid: "62722371"
     > [!NOTE]  
     >  ユーザーの証明書がインストールされます。 IIS と同期するユーザーすべてに対してこの手順を実行する必要があります。  
   
-4.  **[\<ServerName> に接続]** ダイアログ ボックスで、マージ エージェントが IIS サーバーへの接続に使用するログインとパスワードを指定します。 これらの資格情報は、サブスクリプションの新規作成ウィザードで指定することもできます。  
+4.  [**接続先 \<ServerName> ** ] ダイアログボックスで、マージエージェントが IIS への接続に使用するログインとパスワードを指定します。 これらの資格情報は、サブスクリプションの新規作成ウィザードで指定することもできます。  
   
 5.  **[SQL Web 同期診断情報]** と呼ばれる Internet Explorer のウィンドウで、ページの **[Status]** 列の値が **[SUCCESS]** になっていることを確認します。  
   

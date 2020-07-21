@@ -23,12 +23,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 55324ac26eef5f685339b21162360544a4ae5af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141109"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807906"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68141109"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE ASSEMBLY assembly_name  
 [ AUTHORIZATION owner_name ]  
 FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }  
@@ -110,7 +110,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  CREATE ASSEMBLY では、.dll ファイルとしてコンパイル済みのアセンブリがマネージド コードからアップロードされ、SQL Server インスタンス内で使用できるようになります。  
  
 有効にすると、`CREATE ASSEMBLY` および `ALTER ASSEMBLY` のステートメントの `PERMISSION_SET` オプションが実行時に無視されますが、`PERMISSION_SET` オプションはメタデータに保持されます。 オプションを無視すると、既存のコード ステートメントの改変が最小限に抑えられます。
@@ -165,17 +165,17 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>例 A:dll からアセンブリを作成する  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  次の例では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サンプルがローカル コンピューターの既定の場所にインストールされており、HelloWorld.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[Hello World サンプル](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)」を参照してください。  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld   
-FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
+FROM '<system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll'  
 WITH PERMISSION_SET = SAFE;  
 ```  
 
@@ -184,11 +184,11 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>例 B:アセンブリのビットからアセンブリを作成する  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  アセンブリ ビットを (完全性または有効ではない) サンプル ビットに置き換えます。  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld  
     FROM 0x4D5A900000000000  
 WITH PERMISSION_SET = SAFE;  

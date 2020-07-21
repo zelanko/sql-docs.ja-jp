@@ -19,16 +19,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091773"
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Azure SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68091773"
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|REPLICATION|  
+|AUTHORIZATION|FREETEXTTABLE|レプリケーション|  
 |BACKUP|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
@@ -118,7 +118,7 @@ ms.locfileid: "68091773"
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**ACTION**|**EXECUTE**|**PAD**|  
+|**アクション**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
@@ -234,7 +234,7 @@ ms.locfileid: "68091773"
 |CLASS|MAP|START|  
 |CLOB|MATCH|STATE|  
 |COLLATION|MEMBER|STATEMENT|  
-|COLLECT|METHOD|STATIC|  
+|COLLECT|メソッド|STATIC|  
 |COMPLETION|MINUTE|STDDEV_POP|  
 |CONDITION|MOD|STDDEV_SAMP|  
 |CONNECT|MODIFIES|STRUCTURE|  
@@ -249,7 +249,7 @@ ms.locfileid: "68091773"
 |CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|NO|TIMEZONE_MINUTE|  
-|CURRENT_PATH|なし|TRAILING|  
+|CURRENT_PATH|NONE|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  
 |CURRENT_TRANSFORM_GROUP_FOR_TYPE|OBJECT|TREAT|  
@@ -260,7 +260,7 @@ ms.locfileid: "68091773"
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|値|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|PARAMETER|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  

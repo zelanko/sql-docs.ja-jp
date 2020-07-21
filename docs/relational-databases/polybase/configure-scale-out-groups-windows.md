@@ -1,27 +1,28 @@
 ---
 title: Windows 上で PolyBase スケールアウト グループを構成する | Microsoft Docs
+description: SQL Server インスタンスのクラスターを作成するように PolyBase スケールアウト グループを設定します。 これにより、外部ソースからの大規模なデータ セットのクエリ パフォーマンスが向上します。
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: tutorial
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4f34532c2e2a54a457557410a4bc079c4cd4cbc0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811317"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892054"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 この記事では、Windows 上で [PolyBase スケールアウト グループ](polybase-scale-out-groups.md)を設定する方法について説明します。 これにより、Hadoop や Azure Blob Storage などの外部データ ソースからの大量のデータ セットを、クエリ パフォーマンスの向上のためにスケールアウト形式で処理するために、SQL Server インスタンス クラスターが作成されます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
   
 - 同じドメイン内の複数のマシン  
   
@@ -35,13 +36,11 @@ ms.locfileid: "68811317"
   
 2. 1 つの SQL Server インスタンスをヘッド ノードとして選択します。 ヘッド ノードは、SQL Server Enterprise を実行するインスタンスでのみ指定できます。
   
-3. [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md) を使用して、残りの SQL Server インスタンスをコンピューティング ノードとして追加します。
+3. [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)を使用して、残りの SQL Server インスタンスをコンピューティング ノードとして追加します。
 
 4. [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) を使用して、グループのノードを監視します。
 
-5. 省略可。 [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md) を使用して、コンピューティング ノードを削除します。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+5. 省略可能。 [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md) を使用して、コンピューティング ノードを削除します。
 
 ## <a name="example-walk-through"></a>サンプル チュートリアル
 
@@ -63,7 +62,7 @@ ms.locfileid: "68811317"
   
 3. [サーバーの構成] ページで、SQL Server PolyBase エンジンと SQL Server PolyBase Data Movement サービス用に**ドメイン アカウント** PQTH4A\PolyBaseUser を使用します。
   
-4. [PolyBase の構成] ページで、 **[PolyBase スケール アウト グループの一部として、SQL Server インスタンスを使用します]** オプションを選択します。 これにより、ファイアウォールが開かれて、PolyBase サービスへの着信接続が許可されます。
+4. [PolyBase の構成] ページで、 **[PolyBase スケール アウト グループの一部として、SQL Server インスタンスを使用します]** オプションを選択します。 これにより、ファイアウォールが開かれて、PolyBase サービスへの着信接続が許可されます。 ヘッド ノードが名前付きインスタンスの場合は、ヘッド ノードの Windows ファイアウォールに SQL Server ポートを手動で追加する必要があります。また、ヘッド ノードで SQL Browser を開始します。
   
 5. セットアップが完了したら、 **services.msc**を実行します。 SQL Server、PolyBase エンジン、および PolyBase データ移動サービスが実行されていることを確認します。
   
@@ -88,7 +87,10 @@ ms.locfileid: "68811317"
 3. コンピューティング ノード (PQTH4A-CMP02) で、services.msc を実行します。
   
 4. PolyBase エンジンをシャット ダウンし、PolyBase データ移動サービスを再起動します。
-  
+
+> [!NOTE] 
+> Polybase Engine サービスが再起動したか、ヘッド ノードで停止した場合、Data Movement Service (DMS) と Polybase Engine サービス (DW) の間で通信チャネルが閉じられた直後、DMS サービスが停止します。 DW エンジンが 2 回以上再起動した場合、DMS は 90 分間沈黙します。次回の自動起動試行まで 90 分待機する必要があります。 そのような状況では、すべてのノードで、このサービスを手動で開始してください。
+
 ## <a name="optional-remove-a-compute-node"></a>省略可能:コンピューティング ノードを削除する  
   
 1. コンピューティング ノードの SQL Server (PQTH4A-CMP02) に接続します。
@@ -105,7 +107,7 @@ ms.locfileid: "68811317"
   
 5. PQTH4A-CMP01 で DMV sys.dm_exec_compute_nodes を実行して、ノードが削除されたことを確認します。 これで、PQTH4A-CMP02 はスタンドアロンのヘッド ノードとして機能するようになります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
 トラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。
   

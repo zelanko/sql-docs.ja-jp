@@ -1,5 +1,5 @@
 ---
-title: sp_get_query_template (TRANSACT-SQL) |Microsoft Docs
+title: sp_get_query_template (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124082"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881650"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  パラメーター化された形式のクエリを返します。 結果返される同等のものを強制パラメーター化を使用して生成するクエリのパラメーター化形式。 sp_get_query_template は、主に TEMPLATE プラン ガイドの作成時に使用されます。  
+  パラメーター化された形式のクエリを返します。 返される結果は、強制パラメーター化の使用によるパラメーター化形式のクエリに似ています。 sp_get_query_template は、主にテンプレートプランガイドを作成するときに使用されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,23 +42,23 @@ sp_get_query_template
 ```  
   
 ## <a name="arguments"></a>引数  
- '*ステートメント*'  
- パラメーター化されたバージョンが生成されるクエリです。 '*ステートメント*' 単一引用符で囲む必要があり、前に、n 個の Unicode を指定します。 N'*ステートメント*' に割り当てられた値は、@querytextパラメーター。 これは、型の**nvarchar (max)** します。  
+ '*query_text*'  
+ パラメーター化されたバージョンを生成するクエリを指定します。 '*query_text*' は、単一引用符で囲む必要があります。また、前には N Unicode 指定子を指定する必要があります。 N '*query_text*' は、パラメーターに割り当てられた値です @querytext 。 **Nvarchar (max)** 型です。  
   
  @templatetext  
- 型の出力パラメーター **nvarchar (max)** に示されるように、パラメーター化形式の受信に用意されている*ステートメント*文字列リテラルとして。  
+ パラメーター化された形式の*query_text*を文字列リテラルとして受け取る、 **nvarchar (max)** 型の出力パラメーターを指定します。  
   
  @parameters  
- 型の出力パラメーター **nvarchar (max)** でパラメーター化されたパラメーター名とデータ型のリテラル文字列を受信する、指定したとおりに提供@templatetextします。  
+ は、によってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです @templatetext 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
--   内の定数リテラル値をパラメーター化は*ステートメント*します。  
+-   *Query_text*の定数リテラル値をパラメーター化しません。  
   
--   *ステートメント*が null の場合、Unicode 文字列ではなく、構文が正しくない、またはコンパイルすることはできません。  
+-   *query_text*が NULL であるか、Unicode 文字列ではないか、構文が正しくないか、またはコンパイルできません。  
   
- Sp_get_query_template は、エラーを返した場合の値は変更されません、@templatetextと@parameters出力パラメーター。  
+ Sp_get_query_template がエラーを返す場合、との出力パラメーターの値は変更されません @templatetext @parameters 。  
   
 ## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
@@ -85,7 +85,7 @@ SELECT @my_templatetext;
 SELECT @my_parameters;  
 ```  
   
- パラメーター化の結果の次のとおり、`@my_templatetext``OUTPUT`パラメーター。  
+ パラメーターのパラメーター化された結果を次に示し `@my_templatetext``OUTPUT` ます。  
   
  `select pi . ProductID , SUM ( pi . Quantity ) as Total`  
   
@@ -101,20 +101,20 @@ SELECT @my_parameters;
   
  `having SUM ( pi . Quantity ) > 400`  
   
- なお、最初の定数リテラル`2`パラメーターに変換されます。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
+ 最初の定数リテラルのは、パラメーターに変換されることに注意して `2` ください。 2 番目のリテラル `400` は `HAVING` 句の内部にあるため、変換されません。 sp_get_query_template によって返される結果は、ALTER DATABASE の PARAMETERIZATION オプションが FORCED に設定されている場合のパラメーター化形式クエリに似ています。  
   
- パラメーター化の結果の次のとおり、`@my_parameters OUTPUT`パラメーター。  
+ パラメーターのパラメーター化された結果を次に示し `@my_parameters OUTPUT` ます。  
   
 ```  
 @0 int  
 ```  
   
 > [!NOTE]  
->  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 アップグレードは、同じクエリのパラメーター化を定数リテラルのさまざまな可能性もと出力パラメーターの両方の結果に適用される文字間隔が変化します。  
+>  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 また、アップグレードによって、同じクエリに対して異なる定数リテラルのセットがパラメーター化され、両方の出力パラメーターの結果に適用される間隔が異なる場合もあります。  
   
 ## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

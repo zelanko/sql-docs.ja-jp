@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048932"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
   このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
   
-##  <a name="Capture"></a> キャプチャ ジョブ  
+##  <a name="capture-job"></a><a name="Capture"></a> キャプチャ ジョブ  
  キャプチャ ジョブは、パラメーターなしのストアド プロシージャ `sp_MScdc_capture_job` を実行することによって開始されます。 このストアド プロシージャは、msdb.dbo.cdc_jobs からキャプチャ ジョブの *maxtrans*、 *maxscans*、 *continuous*、および *pollinginterval* の構成値を抽出することによって開始されます。 これらの構成値は、パラメーターとしてストアド プロシージャ `sp_cdc_scan` に渡されます。 これは `sp_replcmds` を呼び出してログ スキャンを実行する場合に使用されます。  
   
 ### <a name="capture-job-parameters"></a>キャプチャ ジョブのパラメーター  
@@ -36,11 +35,11 @@ ms.locfileid: "62672147"
 #### <a name="maxscans-parameter"></a>maxscans パラメーター  
  *maxscans* パラメーターは、制御を返す前 (continuous = 0)、または waitfor を実行する前 (continuous = 1) に、ログを空にするために実行されるスキャン サイクルの最大数を指定します。  
   
-#### <a name="continous-parameter"></a>continous パラメーター  
- *連続*パラメーター コントロールかどうか`sp_cdc_scan`ログをドレイン中またはスキャン サイクル (ワン ショット モード) の最大数を実行した後で制御を解放します。 また、明示的に停止されるまで、`sp_cdc_scan` の実行を継続するかどうかもこのパラメーターが制御します (連続モード)。  
+#### <a name="continuous-parameter"></a>continuous パラメーター  
+ *Continuous*パラメーターは、 `sp_cdc_scan` ログをドレインするか、最大数のスキャンサイクル (ワンショットモード) を実行した後で、で制御が解放されるかどうかを制御します。 また、明示的に停止されるまで、`sp_cdc_scan` の実行を継続するかどうかもこのパラメーターが制御します (連続モード)。  
   
 ##### <a name="one-shot-mode"></a>ワン ショット モード  
- ワン ショット モードでは、キャプチャ ジョブ要求`sp_cdc_scan`セットアップを実行する*maxtrans*回のスキャンをログを空にして返すを再試行してください。 ログに存在するトランザクションで *maxtrans* を超えた分は後のスキャンで処理されます。  
+ ワンショットモードでは、キャプチャジョブは `sp_cdc_scan` 最大*maxtrans*スキャンを実行してログのドレインを試行し、を返すように要求します。 ログに存在するトランザクションで *maxtrans* を超えた分は後のスキャンで処理されます。  
   
  ワン ショット モードは、処理するトランザクションのボリュームがわかっている、制御されたテストで使用され、完了時にジョブが自動的に終了するという利点があります。 ワン ショット モードは、実稼働環境用にはお勧めできません。 これは、このモードではジョブ スケジュールに依存してスキャン サイクル実行の頻度が管理されるためです。  
   
@@ -61,13 +60,13 @@ ms.locfileid: "62672147"
 ### <a name="capture-job-customization"></a>キャプチャ ジョブのカスタマイズ  
  キャプチャ ジョブでは、追加のロジックを適用することにより、固定したポーリング間隔に依存せずに、新しいスキャンをすぐに開始するか、スリープ状態を経てから新しいスキャンを開始するかを決定できます。 この決定は単に時刻に基づきます。たとえば、アクティビティのピーク時に非常に長いスリープを強制したり、その日の処理を完了し、夜間の運用に備えることが重要な 1 日の終わりにポーリング間隔を 0 にしたりします。 また、キャプチャ プロセスの進捗状態を監視して、午前零時までにコミットされたすべてのトランザクションのスキャンが完了して変更テーブルに格納された時刻を判断することもできます。 これにより、キャプチャ ジョブを終了して、毎日 1 回のスケジュールで再起動することが可能になります。 `sp_cdc_scan` を呼び出すジョブ ステップを、ユーザーが作成した `sp_cdc_scan` のラッパーに置き換えることにより、高度にカスタマイズされた動作を簡単に実現できます。  
   
-##  <a name="Cleanup"></a> クリーンアップ ジョブ  
+##  <a name="cleanup-job"></a><a name="Cleanup"></a> クリーンアップ ジョブ  
  ここでは、変更データ キャプチャのクリーンアップ ジョブの仕組みについて説明します。  
   
 ### <a name="structure-of-the-cleanup-job"></a>クリーンアップ ジョブの構造  
  変更データ キャプチャでは、保有期間に基づくクリーンアップ戦略を使用して変更テーブルのサイズを管理します。 クリーンアップ メカニズムは、最初のデータベース テーブルが有効になったときに作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブで構成されます。 単一のクリーンアップ ジョブがすべてのデータベース変更テーブルのクリーンアップを処理し、定義されたすべてのキャプチャ インスタンスに同じ保有期間値を適用します。  
   
- クリーンアップ ジョブは、パラメーターなしのストアド プロシージャ `sp_MScdc_cleanup_job` を実行することによって開始されます。 このストアド プロシージャは、構成された保有期間値およびしきい値をクリーンアップ ジョブのために `msdb.dbo.cdc_jobs` から抽出することによって開始されます。 保有期間値は、変更テーブルの新しい低水位マークの計算に使用します。 指定した数の分が最大値から減算されます*tran_end_time*値から、`cdc.lsn_time_mapping`テーブルを datetime 値として表す新しい低水位マークを取得します。 その後、CDC.lsn_time_mapping テーブルを使用して、対応する `lsn` 値にこの datetime 値を変換します。 テーブル内の複数のエントリが同じコミット時刻を共有する場合は、最小の `lsn` を持つエントリに対応する `lsn` が新しい低水位マークとして選択されます。 この `lsn` 値は `sp_cdc_cleanup_change_tables` に渡され、データベース変更テーブルから変更テーブル エントリが削除されます。  
+ クリーンアップ ジョブは、パラメーターなしのストアド プロシージャ `sp_MScdc_cleanup_job` を実行することによって開始されます。 このストアド プロシージャは、構成された保有期間値およびしきい値をクリーンアップ ジョブのために `msdb.dbo.cdc_jobs` から抽出することによって開始されます。 保有期間値は、変更テーブルの新しい低水位マークの計算に使用します。 指定した分数は、 *tran_end_time* `cdc.lsn_time_mapping` datetime 値として表現された新しい下限を取得するために、テーブルの最大 tran_end_time 値から減算されます。 その後、CDC.lsn_time_mapping テーブルを使用して、対応する `lsn` 値にこの datetime 値を変換します。 テーブル内の複数のエントリが同じコミット時刻を共有する場合は、最小の `lsn` を持つエントリに対応する `lsn` が新しい低水位マークとして選択されます。 この `lsn` 値は `sp_cdc_cleanup_change_tables` に渡され、データベース変更テーブルから変更テーブル エントリが削除されます。  
   
 > [!NOTE]  
 >  最新のトランザクションのコミット時刻を、新しい低水位マークの計算のベースとして使用する利点は、変更を特定の時刻の変更テーブルに残せることです。 これは、キャプチャ プロセスが背後で実行されている場合でも同様です。 実際の低水位マークの共有コミット時刻を持つ最小の `lsn` を選択することにより、現在の低水位マークと同じコミット時刻を持つすべてのエントリは、変更テーブル内に引き続き表示されます。  
@@ -77,7 +76,7 @@ ms.locfileid: "62672147"
 ### <a name="cleanup-job-customization"></a>クリーンアップ ジョブのカスタマイズ  
  クリーンアップ ジョブの場合、カスタマイズが可能なのは、破棄する変更テーブル エントリを決定する戦略です。 配布されたクリーンアップ ジョブでサポートされる唯一の戦略は時間ベースのものです。 この状況では、新しい低水位マークは最後に処理されたトランザクションのコミット時刻から許容保有期間を引いて計算します。 基になるクリーンアップ プロシージャは、時間ではなく `lsn` に基づいているため、変更テーブルに保持する最小の `lsn` を決定する戦略はいくつもあります。 厳密には時間ベースのものはそのうちの一部のみです。 たとえばクライアントに関する知識は、変更テーブルへのアクセスを必要とするダウンストリーム プロセスを実行できない場合にフェールセーフを提供するために使用できます。 また、既定の戦略ではすべてのデータベースの変更テーブルのクリーンアップに同じ `lsn` を使用しますが、基になるクリーンアップ プロシージャを呼び出してキャプチャ インスタンス レベルでクリーンアップすることもできます。  
   
-##  <a name="Monitor"></a> 変更データ キャプチャ プロセスの監視  
+##  <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> 変更データ キャプチャ プロセスの監視  
  変更データ キャプチャ プロセスを監視すると、変更が変更テーブルに適切に書き込まれているかどうか、および書き込み時の待機時間が妥当かどうかを判断できます。 また、発生する可能性のあるエラーを特定することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、変更データ キャプチャの監視に役立つ 2 つの動的管理ビューが用意されています。 [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) と [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)です。  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>空の結果セットを含むセッションの特定  
@@ -105,7 +104,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>データ コレクターを使用したサンプル データの収集  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ コレクターを使用すると、任意のテーブルまたは動的管理ビューからデータのスナップショットを収集して、パフォーマンス データ ウェアハウスを構築することができます。 データベースで変更データ キャプチャが有効になっている場合、sys.dm_cdc_log_scan_sessions ビューおよび sys.dm_cdc_errors ビューのスナップショットを一定間隔で取得すると、後の分析に役立ちます。 次の手順では、sys.dm_cdc_log_scan_sessions 管理ビューからサンプル データを収集するデータ コレクターを設定します。  
   
- **データ コレクションの構成**  
+ **データ収集の構成**  
   
 1.  データ コレクターを有効にし、管理データ ウェアハウスを構成します。 詳細については、「 [データ コレクションの管理](../data-collection/data-collection.md)」を参照してください。  
   
@@ -159,10 +158,10 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4.  手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
- [変更データ キャプチャについて &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
- [変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   
+ [変更データキャプチャについて &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
+ [変更データキャプチャを有効または無効にする &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   
  [変更データの処理 &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
   
   

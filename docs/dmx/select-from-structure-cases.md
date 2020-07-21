@@ -1,33 +1,33 @@
 ---
-title: SELECT FROM&lt;構造&gt;します。場合 |Microsoft Docs
+title: '[構造から] を選択し &lt; &gt; ます。ケース |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928295"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670100"
 ---
-# <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;構造&gt;します。場合
+# <a name="select-from-ltstructuregtcases"></a>[構造から] を選択し &lt; &gt; ます。場合
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   マイニング構造の作成に使用されたケースを返します。  
   
- ドリルスルーが構造で使用可能でない場合、ステートメントは失敗します。 また、マイニング構造に対するドリルスルー権限がユーザーに与えられていない場合も、ステートメントは失敗します。  
+ ドリルスルーが構造で使用可能でない場合、ステートメントは失敗します。 また、マイニング構造に対するドリルスルー権限がユーザーに与えられていない場合、ステートメントは失敗します。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、新しいマイニング構造でドリルスルーが既定で有効にします。 特定の構造のドリルスルーが有効になっているかどうかを確認するかどうかの値、 **CacheMode**プロパティに設定されて**KeepTrainingCases**します。  
+ で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、新しいマイニング構造のドリルスルーが既定で有効になっています。 特定の構造に対してドリルスルーが有効になっているかどうかを確認するには、 **Cachemode**プロパティの値が**KeepTrainingCases**に設定されているかどうかを確認します。  
   
- 場合の値**CacheMode**に変更が**ClearAfterProcessing**構造ケースがキャッシュから消去、および、ドリルスルーを使用することはできません。  
+ **Cachemode**の値が**clearafterprocessing**に変更された場合、構造ケースはキャッシュから消去され、ドリルスルーを使用することはできません。  
   
 > [!NOTE]  
->  データ マイニング拡張機能 (DMX) を使用してマイニング構造のドリルスルーを有効または無効にすることはできません。  
+>  データマイニング拡張機能 (DMX) を使用して、マイニング構造のドリルスルーを有効または無効にすることはできません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,34 +41,34 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *n*  
  任意。 返す行数を指定する整数値です。  
   
- *式リスト*  
+ *式の一覧*  
  式のコンマ区切りのリストです。  
   
  式には、列識別子、ユーザー定義関数、および VBA 関数を含めることができます。  
   
- *構造体*  
- 構造の名前です。  
+ *データ*  
+ 構造体の名前。  
   
  *条件式*  
- 列のリストから返される値を制限する条件です。  
+ 列リストから返される値を制限する条件。  
   
  *式 (expression)*  
  任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>コメント  
- モデルと構造の両方についてドリルスルーを有効にした場合、そのマイニング構造とマイニング モデルに対するドリルスルー権限を持つロールのすべてのメンバーは、次の構文を使用して、モデルに含まれていない構造列を返すことができます。  
+## <a name="remarks"></a>Remarks  
+ モデルと構造の両方でドリルスルーが有効になっている場合、マイニング構造およびモデルに対するドリルスルー権限を持つロールのメンバーは、モデルに含まれていない構造列を返すことができます。そのためには、次の構文を使用します。  
   
 ```  
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- したがって、機密データまたは個人情報保護のため、する必要がありますを構築、個人情報をマスクし、付与、するデータ ソース ビュー **AllowDrillthrough**マイニング構造またはマイニング モデルに対する権限場合にのみいる。  
+ したがって、機密データや個人情報を保護するには、個人情報をマスクするデータソースビューを構築し、マイニング構造またはマイニングモデルに対して**Allowdrillthrough スルー**権限を必要な場合にのみ許可する必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例に基づく Targeted Mailing マイニング構造に基づいています、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース、および関連するマイニング モデルです。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+## <a name="examples"></a>例  
+ 次の例は、マイニング構造、データベースに基づく対象メーリング、および関連するマイニングモデルに基づいてい [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] ます。 詳細については、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を参照してください。  
   
-### <a name="example-1-drill-through-to-structure-cases"></a>例 1 : 構造ケースにドリルスルーします。  
- 次の例では、マイニング構造 Targeted Mailing で最も古い 500 人の顧客のリストが返されます。 このクエリではマイニング モデル内のすべての列が返されますが、行は自転車を購入した顧客に制限され、年齢順に並べ替えられます。 必要な列のみを返すように式のリストを編集することもできます。  
+### <a name="example-1-drill-through-to-structure-cases"></a>例 1: 構造ケースにドリルスルーする  
+ 次の例では、マイニング構造内の最も古い500の顧客の一覧を返します (対象メーリング)。 このクエリでは、マイニングモデル内のすべての列が返されますが、行は自転車を購入したユーザーに限定され、年齢別に並べ替えられます。 必要な列のみを返すように式のリストを編集することもできます。  
   
 ```  
 SELECT TOP 500 *  
@@ -77,8 +77,8 @@ WHERE [Bike Buyer] = 1
 ORDER BY Age DESC;  
 ```  
   
-### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>例 2:テスト_ケースまたはトレーニング ケースのみへのドリルスルー  
- 次の例では、テスト用に予約されている Targeted Mailing の構造ケースのリストが返されます。 マイニング構造に、提示されたテスト セットが含まれていない場合、既定ではすべてのケースがトレーニング ケースとして扱われ、このクエリはケースを返しません。  
+### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>例 2: テストケースまたはトレーニングケースへのドリルスルーのみ  
+ 次の例では、テスト用に予約されている対象メーリングの構造ケースの一覧を返します。 提示されたテストセットがマイニング構造に含まれていない場合、既定ではすべてのケースがトレーニングケースとして扱われ、このクエリは0ケースを返します。  
   
 ```  
 SELECT [Customer Key], Gender, Age  
@@ -86,12 +86,12 @@ FROM [Targeted Mailing].Cases
 WHERE IsTestCase();  
 ```  
   
- トレーニング ケースを返すには、関数を `IsTrainingCase()` に置き換えます。  
+ トレーニングケースを返すには、関数を置き換え `IsTrainingCase()` ます。  
   
 ## <a name="see-also"></a>参照  
- [選択&#40;DMX&#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [DMX&#41;を選択 &#40;](../dmx/select-dmx.md)   
+ [DMX&#41; データ定義ステートメント &#40;のデータマイニング拡張機能](../dmx/dmx-statements-data-definition.md)   
+ [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

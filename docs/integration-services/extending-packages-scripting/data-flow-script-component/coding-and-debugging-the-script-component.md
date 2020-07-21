@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6b1392368eeceb391d99321326c7a7ec19b87c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074600"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71286542"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
 
@@ -40,7 +40,7 @@ ms.locfileid: "68074600"
 ### <a name="script-component-development-environment"></a>スクリプト コンポーネント開発環境  
  スクリプトを記述するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。  
   
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、 **[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
   
  スクリプト コンポーネントで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト コンポーネントを使用してもパッケージの配置には影響しません。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "68074600"
   
     -   **Connections** コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。  
   
-    -   **Variables** コレクション クラス。 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
+    -   **Variables** コレクション クラス。**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
   
--   **BufferWrapper** プロジェクト アイテム。 **[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
+-   **BufferWrapper** プロジェクト アイテム。**[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
   
  これらのオブジェクト、メソッド、およびプロパティの使用方法については、「[スクリプト コンポーネントのオブジェクト モデルについて](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)」をご覧ください。 特定の種類のスクリプト コンポーネントで、これらのクラスのメソッドおよびプロパティを使用する方法については、セクション「[その他のスクリプト コンポーネントの例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)」をご覧ください。 サンプルについてのトピックでは、完全なコード例も示します。  
   
@@ -174,7 +174,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |変数:|**ComponentWrapper** プロジェクト アイテムの **Variables** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Variables** プロパティを介して公開されています。<br /><br /> **PreExecute** メソッドでは、読み取り専用変数にのみアクセスできます。 **PostExecute** メソッドでは、読み取り専用変数および読み取り/書き込み変数の両方にアクセスできます。|  
 |接続|**ComponentWrapper** プロジェクト アイテムの **Connections** コレクション クラス内の、名前付きで型指定されたアクセサー プロパティを使用します。これは **ScriptMain** クラスの **Connections** プロパティを介して公開されています。|  
-|イベント|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの **Fire\<X>** メソッドを使用して、イベントを発生させます。|  
+|events|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスの **Fire\<X>** メソッドを使用して、イベントを発生させます。|  
 |ログ記録|**ScriptMain** クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> メソッドを使用して、ログ記録を実行します。|  
   
 ## <a name="debugging-the-script-component"></a>スクリプト コンポーネントのデバッグ  

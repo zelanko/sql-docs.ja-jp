@@ -1,5 +1,5 @@
 ---
-title: getMaxCursorNameLength メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxCursorNameLength メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 53c47f912711a486ea60cf0181411e7ed68029ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 548fcee8a4ea2af139fd379fa455fec3571acf87
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982138"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906932"
 ---
 # <a name="getmaxcursornamelength-method-sqlserverdatabasemetadata"></a>getMaxCursorNameLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxCursorNameLength()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxCursorNameLength メソッドは、getMaxCursorNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxCursorNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxCursorNameLength メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

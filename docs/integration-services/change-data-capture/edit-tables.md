@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1bdff1386edf4563eadfb04694cbe573f6b1d5c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9c25ae3771a8ca7087f4668b717643fbe4b2648
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060755"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71298797"
 ---
 # <a name="edit-tables"></a>テーブルの編集
 
@@ -44,7 +44,7 @@ ms.locfileid: "68060755"
 > [!NOTE]  
 >  既にミラー テーブルがあるテーブルの型マッピングは編集できません。 型マッピングは新しいテーブルに対してのみ行うことができます。  
   
- **[削除]**  
+ **Remove**  
  一覧からテーブルを選択して **[削除]** をクリックすると、CDC インスタンスからテーブルを削除できます。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: XML データ内部のリレーショナル データのバインド | Microsoft Docs
+title: XML データ内部のリレーショナル データのバインド
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051334"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392840"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)を **xml** データ型変数または列に対して指定できます。 たとえば、[query&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/query-method-xml-data-type.md) では、XML インスタンスに対して指定した XQuery が実行されます。 この方法で XML を構築するときに、XML 以外の型の列の値や Transact-SQL 変数を使用することもできます。 この処理を、XML 内部のリレーショナル データのバインドと呼びます。  
   

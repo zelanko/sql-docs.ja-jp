@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84871fb62e07cd49d0e63335c6a6b78b9e3ba0ae
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972122"
 ---
 # <a name="business-rules-master-data-services"></a>ビジネス ルール (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のビジネス ルールは、マスター データの品質と精度を保証するために使用するルールです。 ビジネス ルールを使用して自動的にデータを更新したり、電子メールを送信したり、ビジネス プロセスまたはワークフローを開始したりできます。  
@@ -76,7 +75,7 @@ ms.locfileid: "65483656"
 |ビジネス ルールが適用されたときに通知を送信するように [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を構成する。|[通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |特定のメンバーにビジネス ルールを適用する。|[ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |ビジネス ルールを除外して、使用されないようにする。|[ビジネス ルールを除外する &#40;マスター データ サービス&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
-|既存のビジネス ルールを削除する。|[ビジネス ルールを削除する &#40;マスター データ サービス&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
+|既存のビジネス ルールを削除する。|[ビジネス ルールを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   

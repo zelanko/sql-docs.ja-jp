@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f046767dba460063a71769091f010840848c2e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075334"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011529"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 この関数は、連結の結果、またはエンド ツー エンドの方法で 2 つ以上の文字列値の結合の結果の文字列を返します。 これらの連結文字列値を、最初の関数の引数に指定された区切り記号で区切ります。 (`CONCAT_WS` は "*区切りを使用した連結*" を示します。)
 
 ##  <a name="syntax"></a>構文   
-```sql
+```syntaxsql
 CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 ```
 
@@ -45,7 +45,7 @@ argument1, argument2, argument*N*
 ## <a name="return-types"></a>戻り値の型
 長さと型を入力に依存する文字列値。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>解説   
 `CONCAT_WS` は、文字列引数の可変数を取得して、1 つの文字列に連結 (または結合) します。 これらの連結文字列値を、最初の関数の引数に指定された区切り記号で区切ります。 `CONCAT_WS` には、separator 引数と、他の 2 つの文字列値引数の最小値が必要です。指定しないと、`CONCAT_WS` でエラーが発生します。 `CONCAT_WS` は連結する前に、すべての引数を文字列型に暗黙的に変換します。 
 
 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 動作とデータ型変換の詳細について、「[CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)」を参照してください。
@@ -60,7 +60,7 @@ argument1, argument2, argument*N*
 
 区切り記号で区切られた null 値があるシナリオの場合は、`ISNULL` 関数の使用を検討してください。 詳細については、例 C を参照してください。
 
-## <a name="examples"></a>使用例   
+## <a name="examples"></a>例   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  区切りで値を連結する
 この例では、値を `-` で区切って、sys.databases テーブルの 3 つの列を連結します。   

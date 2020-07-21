@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_cache_directory (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_set_cache_directory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: affa8825053f1123c3fae5518f006e2172b9be39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010667"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892867"
 ---
-# <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  管理データ ウェアハウスにアップロードする前に収集されたデータの格納先ディレクトリを指定します。  
+  収集したデータが管理データウェアハウスにアップロードされる前に保存されるディレクトリを指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,21 +40,21 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @cache_directory = ] 'cache_directory'` 収集されたデータが一時的に格納されている場所、ファイル システム ディレクトリ。 *cache_directory*は**nvarchar (255)** 既定値は NULL です。 この値を指定しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の一時ディレクトリが使用されます。  
+`[ @cache_directory = ] 'cache_directory'`収集したデータが一時的に格納されるファイルシステム内のディレクトリ。 *cache_directory*は**nvarchar (255)**,、既定値は NULL です。 この値を指定しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の一時ディレクトリが使用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、次を参照してください。[有効] または [データ コレクションの無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)、および[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)します。  
+## <a name="remarks"></a>Remarks  
+ キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、「[データコレクションの有効化または無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)」と「[データコレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)」を参照してください。  
   
- sp_syscollector_set_cache_directory の実行時には指定されたディレクトリが存在する必要はありませんが、ディレクトリが作成されるまで、データを正常にキャッシュしてアップロードすることはできません。 このストアド プロシージャを実行する前に、ディレクトリを作成することをお勧めします。  
+ 指定されたディレクトリは、sp_syscollector_set_cache_directory の実行時に存在する必要はありません。ただし、ディレクトリが作成されるまで、データを正常にキャッシュおよびアップロードすることはできません。 このストアド プロシージャを実行する前に、ディレクトリを作成することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
+ このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データ コレクターを無効にします、キャッシュ ディレクトリを設定するデータ コレクターの`D:\tempdata`、され、データ コレクターを有効になります。  
+ 次の例では、データコレクターを無効にし、データコレクターのキャッシュディレクトリをに設定 `D:\tempdata` してから、データコレクターを有効にします。  
   
 ```sql  
 USE msdb;  
@@ -67,8 +67,8 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

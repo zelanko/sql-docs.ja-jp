@@ -14,15 +14,15 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ff36fb2d0a5ed84beae6a90f6058a7a66ab9f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6a8c9ad32e12d78a04579a0d93a4659546a9c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637555"
 ---
 # <a name="page-compression-implementation"></a>ページの圧縮の実装
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に実装されているページの圧縮方法の概要を説明します。 この概要では、データに必要なストレージ領域の計画に役立つ基本的な情報を提供します。  
   
@@ -35,8 +35,6 @@ ms.locfileid: "68030489"
 2.  プレフィックスの圧縮  
   
 3.  ディクショナリの圧縮  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  ページの圧縮を使用する場合、行の圧縮のみを使用して、リーフ レベル以外のページのインデックスが圧縮されます。 行の圧縮の詳細については、 [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)を参照してください。  
   
@@ -73,6 +71,6 @@ ms.locfileid: "68030489"
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](../../relational-databases/data-compression/data-compression.md)   
- [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)  
+ [行の圧縮の実装](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   

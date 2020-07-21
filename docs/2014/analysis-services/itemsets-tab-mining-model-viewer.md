@@ -1,5 +1,5 @@
 ---
-title: アイテム セット タブ (マイニング モデル ビューアー) |Microsoft Docs
+title: '[アイテムセット] タブ (マイニングモデルビューアー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,35 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 800e14fb360feef3f03804f5d57ed36c57142744
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543694"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>[アイテムセット] タブ (マイニング モデル ビューアー)
   **[アイテムセット]** ペインを使用すると、アソシエーション ルール マイニング モデルに含まれる、よく使用されるアイテムセットを表示できます。 アソシエーション モデルには多数のアイテムセットが含まれる可能性があるので、ビューアーには、ビューアーに表示するアイテムセットを絞り込むためのコントロールが用意されています。  
   
- **詳細情報。** [Microsoft アソシエーション アルゴリズム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **詳細:** [Microsoft アソシエーション アルゴリズムム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>および  
- **ビューアーのコンテンツを更新します。**  
+## <a name="options"></a>オプション  
+ **[ビューアーのコンテンツを最新状態に更新]**  
  ビューアーにマイニング モデルを再読み込みします。  
   
  **[マイニング モデル]**  
  現在のマイニング構造に含まれているマイニング モデルから、表示するモデルを選択します。 関連付けられているビューアーが開き、マイニング モデルが表示されます。  
   
- **ビューアー**  
+ **Viewer**  
  選択したマイニング モデルを表示するために使用するビューアーを選択します。 アソシエーション モデル用のカスタム ビューアーまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft 汎用コンテンツ ツリー ビューアーを使用できます。 利用可能な場合プラグイン ビューアーを使用することもできます。  
   
- **最小のサポート**  
+ **[最小のサポート]**  
  アイテムセットをビューアーに表示するために必要な最小のサポートを設定するには、この値を変更します。 モデルを初めて開いたときに表示される既定値はモデルによって計算されますが、値を変更することで、表示するアイテムセットの数を増減できます。  
   
- **最小のアイテム セットのサイズ**  
+ **[最小のアイテムセットのサイズ]**  
  アイテムセットをビューアーに表示するために必要なアイテムの最小数を設定するには、この値を変更します。  
   
- **アイテム セットのフィルター**  
+ **[アイテムセットのフィルター]**  
  ビューアーに表示するアイテムセットの数を絞り込むための文字列値を入力します。  
   
  フィルター条件として、.NET 正規表現を入力することもできます。 たとえば、次の式を入力すると、'Road Bottle Cage' を含むすべてのアイテムセットが返されます。  
@@ -51,7 +50,7 @@ ms.locfileid: "66079558"
   
  既定では、フィルター条件は属性のフルネームと値の組み合わせに適用されます。したがって、属性名だけを表示している場合は、フィルター条件が適切に適用されたかどうかはっきりしないことがあります。 **[表示]** ボックスの一覧の **[属性の名前と値を表示]** をクリックして、アイテムセットの一覧が適切にフィルター処理されたことを確認してください。  
   
- **[表示]**  
+ **表示**  
  アイテムセットをどのようにビューアーに表示するかを調整します。 次の 3 つのオプションのいずれかを選択できます。  
   
 -   [属性の名前と値を表示]  
@@ -62,24 +61,24 @@ ms.locfileid: "66079558"
   
  このオプションはモデルのクエリを再実行しません。表示される属性または値を絞り込むだけです。  
   
- **長い名前を表示します。**  
+ **[長い名前を表示する]**  
  マイニング モデルの内容に含まれるアイテムセットのフルネームを表示するには、このオプションを設定します。  
   
- **行の最大数**  
+ **[最大行数]**  
  ビューアーに表示されるアイテムセットの数を制限します。 既定では、アイテムセットはサポートの降順に表示されるので、この値を小さくすると、最も一般的なアイテムセットだけが表示されます。  
   
  **サポート**  
  各アイテムセットのサポートを表示します。  
   
- **Size**  
+ **[サイズ]**  
  各アイテムセットに存在するアイテムの数を表示します。  
   
- **アイテム セット**  
+ **[アイテムセット]**  
  各アイテムセットの説明を表示します。 既定では、アイテムセットは、属性とその値のコンマ区切りの一覧として表されます。 **[表示]** オプションを使用して、表示方法を変更できます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
+ [データマイニングアルゴリズム &#40;Analysis Services-データマイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データマイニングモデルデザイナー &#40;のマイニングモデルビューアー&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

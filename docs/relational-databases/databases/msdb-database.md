@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2551ad6702eea03fc440b52437faef8cea8dc75f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1117deac53e93f208e7f93af9f20ae38e603fe3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728425"
 ---
 # <a name="msdb-database"></a>msdb データベース
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssSB](../../includes/sssb-md.md)]、データベース メールなどの機能でも使用されます。  
+  **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、データベース メールなどの機能でも使用されます。  
   
- たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンラインのバックアップおよび復元の履歴をすべて **msdb**データベース内のテーブルで自動的に管理します。 この情報には、バックアップの実行者名、バックアップ日時、バックアップが格納されているデバイスやファイルなどが含まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、この情報を使用して、データベースを復元してトランザクション ログ バックアップを適用するプランを立てます。 すべてのデータベースに対するバックアップ イベントは、独自のアプリケーションやサード パーティのツールで発生した場合にも記録されます。 たとえば、SMO (SQL Server 管理オブジェクト) オブジェクトを呼び出してバックアップ操作を行う [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションの場合、イベントは **msdb** システム テーブル、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 **msdb**に格納される情報を保護するために、 **msdb** トランザクション ログをフォールト トレラント ストレージに置くことを検討するようにお勧めします。  
+ たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、オンラインのバックアップおよび復元の履歴をすべて **msdb**データベース内のテーブルで自動的に管理します。 この情報には、バックアップの実行者名、バックアップ日時、バックアップが格納されているデバイスやファイルなどが含まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、この情報を使用して、データベースを復元してトランザクション ログ バックアップを適用するプランを立てます。 すべてのデータベースに対するバックアップ イベントは、独自のアプリケーションやサード パーティのツールで発生した場合にも記録されます。 たとえば、SMO (SQL Server 管理オブジェクト) オブジェクトを呼び出してバックアップ操作を行う [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] アプリケーションを使用する場合、イベントは **msdb** システム テーブル、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 **msdb**に格納される情報を保護するために、 **msdb** トランザクション ログをフォールト トレラント ストレージに置くことを検討するようにお勧めします。  
   
- 既定では、 **msdb** は単純復旧モデルを使用します。 [バックアップおよび復元の履歴](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)テーブルを使用する場合は、**msdb** の完全復旧モデルを使用することをお勧めします。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールまたはアップグレードするとき、Setup.exe を使用してシステム データベースを再構築すると必ず、**msdb** の復旧モデルは自動的に simple に設定されることに注意してください。  
+ 既定では、 **msdb** は単純復旧モデルを使用します。 [バックアップおよび復元の履歴](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md) テーブルを使用する場合は、 **msdb**の完全復旧モデルを使用することをお勧めします。 詳細については、「[復旧モデル &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールまたはアップグレードするとき、Setup.exe を使用してシステム データベースを再構築すると必ず、 **msdb** の復旧モデルは自動的に simple に設定されることに注意してください。  
   
 > [!IMPORTANT]  
->  データベースのバックアップや復元など、**msdb** を更新する操作の後は、**msdb** をバックアップすることをお勧めします。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
+>  データベースのバックアップや復元など、 **msdb**を更新する操作の後は、 **msdb**をバックアップすることをお勧めします。 詳細については、「[システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)」を参照してください。  
   
 ## <a name="physical-properties-of-msdb"></a>msdb データベースの物理プロパティ  
  **msdb** データベースのデータとログ ファイルの初期構成値を次の表に示します。 これらのファイルのサイズは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のエディションによって多少異なる場合があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "68100446"
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
 |プライマリ データ|MSDBData|MSDBData.mdf|ディスクがいっぱいになるまで 10% ずつ自動拡張|  
-|Log|MSDBLog|MSDBLog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
+|ログ|MSDBLog|MSDBLog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
   
  **msdb** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   
@@ -113,6 +113,6 @@ ms.locfileid: "68100446"
   
  [データベース メール](../../relational-databases/database-mail/database-mail.md)  
   
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

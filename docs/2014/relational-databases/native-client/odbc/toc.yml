@@ -148,7 +148,7 @@
 - name: text 列と image 列の管理
   href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
   items:
-    - name: バインドされたtext、image 型の列とバインドされない text、image 型の列
+    - name: バインドされた text、image 型の列とバインドされない text、image 型の列
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
     - name: ログに記録される変更と記録されない変更
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: スパース列を持つテーブルに対する SQLColumns の呼び出し
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: '方法:Geography 列に行を挿入する (ODBC)'
+    - name: Geography 列に行を挿入する方法 (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Kerberos 相互認証の取得
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

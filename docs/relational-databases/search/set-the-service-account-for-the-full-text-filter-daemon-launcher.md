@@ -1,5 +1,5 @@
 ---
-title: フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定 | Microsoft Docs
+title: フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,15 +13,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21e427db754f9ba76895800cad047697fed47379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628934"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、SQL フルテキスト フィルター デーモン ランチャー サービス (MSSQLFDLauncher) のサービス アカウントを設定または変更する方法について説明します。 SQL Server のセットアップで使われる既定のサービス アカウントは、`NT Service\MSSQLFDLauncher` です。
   
   
@@ -30,7 +31,7 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
   
 SQL フルテキスト フィルター デーモン ランチャー サービスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のインスタンスに関連付けられているインスタンス対応のサービスです。 SQL フルテキスト フィルター デーモン ランチャー サービスにより、起動される各フィルター デーモン ホスト プロセスにサービス アカウント情報が反映されます。  
 
-##  <a name="setting"></a> サービス アカウントの設定  
+##  <a name="set-the-service-account"></a><a name="setting"></a> サービス アカウントの設定  
   
 1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、 **[SQL Server 2016 構成マネージャー]** をクリックします。  
   
@@ -42,7 +43,7 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
   
 ![SQL フルテキスト フィルター デーモン ランチャー プロセスのプロパティ](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> SQL フルテキスト フィルター デーモン ランチャー サービスが開始しない場合にトラブルシューティングする  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> SQL フルテキスト フィルター デーモン ランチャー サービスが開始しない場合にトラブルシューティングする  
  SQL フルテキスト フィルター デーモン ランチャー サービスが開始しない場合は、次の原因が考えられます。  
   
 ### <a name="permissions-issues"></a>アクセス許可の問題

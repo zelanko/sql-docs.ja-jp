@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c690c2cd19acae2fb3a6bde8b2dcd6d72b3acf18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947883"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758913"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server: Wait Statistics オブジェクト
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **SQLServer:Wait Statistics** パフォーマンス オブジェクトには、待機状態に関する情報を報告するパフォーマンス カウンターが含まれています。  
   
  Wait Statistics オブジェクトに含まれるカウンターを次の表に示します。  
   
-|SQL Server Wait Statistics カウンター|[説明]|  
+|SQL Server Wait Statistics カウンター|説明|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|ロックを待機しているプロセスの統計。|  
 |**Log buffer waits**|ログ バッファーが使用可能になるのを待機しているプロセスの統計。|  
@@ -43,7 +43,7 @@ ms.locfileid: "67947883"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|[説明]|  
+|アイテム|説明|  
 |----------|-----------------|  
 |**平均待機時間 (ミリ秒)**|選択した待機の種類の平均時間。|  
 |**1 秒あたりの累積待機時間 (ミリ秒)**|選択した待機の種類の 1 秒あたりに集計された待機時間。|  

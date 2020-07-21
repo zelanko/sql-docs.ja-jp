@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 986f464752f631d55b994469b733a3374a1926a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c34c9ff7a9494496d6c60d5920184c0ce86131d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63161824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025074"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>インデックス操作用のトランザクション ログのディスク領域
   大規模なインデックス操作では、大量のデータが読み込まれるためにトランザクション ログがすぐにいっぱいになることがあります。 インデックス操作を確実にロールバックできるようにするには、インデックス操作が完了するまでトランザクション ログを切り捨てることができません。ただし、インデックス操作中にログをバックアップすることはできます。 このため、トランザクション ログには、インデックス操作中のインデックス操作によるトランザクションと同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な空き領域が必要です。 これは、インデックス操作がオフラインでもオンラインでも同じです。 オフライン インデックス操作中は基になるテーブルにアクセスできないので、ユーザー トランザクションはそれほど多くなく、ログの増大もそれほど速くない可能性があります。 オンライン インデックス操作では同時実行ユーザーによる操作を防ぐことができないので、大規模なオンライン インデックス操作で同時実行ユーザーによる膨大なトランザクションが発生すると、ログの切り捨てオプションが使用されずに、トランザクション ログが増大し続けることがあります。  
   
-## <a name="recommendations"></a>推奨事項  
+## <a name="recommendations"></a>Recommendations  
  大規模なインデックス操作を実行する場合は、次の推奨事項を考慮してください。  
   
 1.  大規模なインデックス操作をオンラインで実行する前に、トランザクション ログを必ずバックアップし切り捨てを行います。また、予定しているインデックス トランザクションとユーザー トランザクションを格納できるだけの十分な領域をログのために用意しておきます。  
@@ -41,7 +40,7 @@ ms.locfileid: "63161824"
 4.  明示的なトランザクションではオンライン インデックス操作を実行しないでください。 ログの切り捨ては、明示的なトランザクションが終了するまで行われません。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [インデックス DDL 操作に必要なディスク領域](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [インデックスのディスク領域の例](index-disk-space-example.md)  
   

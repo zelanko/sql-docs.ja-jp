@@ -12,18 +12,18 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 952690e4f37be304d80a542e38d461ef92ce2c21
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102116"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886439"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、「[How to enable SSL on a SharePoint 2010 web application」(SQL Server 2010 Web アプリケーションで SSL を有効にする方法) (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、「[How to enable SSL on a SharePoint 2010 web application」(SQL Server 2010 Web アプリケーションで SSL を有効にする方法) (https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application) を参照してください。  
   
  インターネット インフォメーション サービス (IIS) でも HTTP SSL が使用されるため、IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行する場合は、相互運用性に関する重要な問題について考慮する必要があります。 これらの問題の対処方法については、「IIS との相互運用性の問題」を確認してください。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66102116"
   
 4.  証明書を選択します。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
 6.  URL をクリックして機能するかどうかを検証します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66102116"
   
 1.  **[レポート マネージャー URL]** をクリックします。  
   
-2.  **[詳細設定]** をクリックします。  
+2.  [**詳細設定**] をクリックします。  
   
 3.  **[レポート マネージャーで複数の SSL ID を使用]** で、 **[追加]** をクリックします。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "66102116"
   
  Reporting Services 構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SSL バインドを削除すると、インターネット インフォメーション サービス (IIS) を実行しているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して SSL が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。 このレジストリ キーが削除されると、IIS の SSL バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに SSL が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。この問題を解決するには、IIS マネージャーを使用して、Web サイトに対する SSL バインドを復元します。今後この問題が発生しないようにするには、IIS マネージャーを使用して SSL バインドを削除した後、IIS マネージャーを使用して目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 構成マネージャー &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services Configuration Manager &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

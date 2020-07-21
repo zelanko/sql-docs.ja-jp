@@ -1,5 +1,5 @@
 ---
-title: UI デザイナーおよびダイアログのデータ マイニング テーブル分析 |Microsoft Docs
+title: データマイニングテーブル分析用の UI デザイナーとダイアログ |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,17 +8,16 @@ ms.technology: analysis-services
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0ec03cf9cdf8ce0f86d321126fc0bea11efc587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f3f0c765ad6a9f50695a7d57adf4e03c1a6103
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938263"
 ---
-# <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>UI デザイナーとデータ マイニング分析のためのダイアログ ボックス
+# <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>データマイニング分析用の UI デザイナーとダイアログ
 
-このセクションには、ユーザー インターフェイス (UI) デザイナーおよびデータ マイニング分析のためのダイアログ ボックスに関するドキュメントが含まれています。
+ここでは、データマイニング分析のためのユーザーインターフェイス (UI) デザイナーおよびダイアログボックスについて説明します。
 
 ## <a name="next-steps"></a>次の手順
 

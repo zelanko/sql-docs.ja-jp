@@ -1,5 +1,5 @@
 ---
-title: 使用 (PowerPivot for SharePoint) のディスク領域の構成 |Microsoft Docs
+title: ディスク領域使用量の構成 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547559"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>ディスクの使用領域の構成 (PowerPivot for SharePoint)
   PowerPivot for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、PowerPivot データベースをキャッシュします。 後ですばやく再読み込みして新しい要求を処理できるように、メモリに読み込まれているすべての PowerPivot データベースが最初にディスクにキャッシュされます。 既定では、PowerPivot for SharePoint は、使用できるすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "66071807"
   
  Backup フォルダーは、ローカル コンピューターのメモリに読み込まれる任意の PowerPivot データベースの共通のキャッシュ ストレージです。 ファームで複数の PowerPivot サービス アプリケーションを定義した場合は、それぞれがローカル サーバーを使用して PowerPivot データを読み込み、キャッシュすることができます。 データの読み込みとキャッシュは、どちらも Analysis Services サーバーの操作です。 したがって、ディスクの合計使用量は、Backup フォルダーにおいて Analysis Services インスタンス レベルで管理されます。 このため、ディスク使用量を制限する構成設定は、SharePoint アプリケーション サーバー上で実行される単一の SQL Server Analysis Services インスタンスで設定します。  
   
- キャッシュには、PowerPivot データベースのみが格納されます。 PowerPivot データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 PowerPivot データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 下にある GUID フォルダー  **\<serviceApplicationName >** PowerPivot データベースの親フォルダーです。 PowerPivot データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
+ キャッシュには、PowerPivot データベースのみが格納されます。 PowerPivot データベースは、1 つの親フォルダー (Backup フォルダー) の下に複数のファイルとして格納されます。 PowerPivot データベースは Excel ブックの内部データとして使用することが意図されているため、データベース名はわかりやすい名前ではなく、GUID ベースになっています。 の下の GUID フォルダー **\<serviceApplicationName>** は、PowerPivot データベースの親フォルダーです。 PowerPivot データベースがサーバーに読み込まれると、データベースごとに追加のフォルダーが作成されます。  
   
  PowerPivot データはファーム内の Analysis Services インスタンスに読み込まれることがあるため、同じデータがファーム内の複数のコンピューターにキャッシュされる可能性があります。 この処理ではディスク領域の使用率よりパフォーマンスを優先していますが、その代わりに、既にディスク上で使用可能になっているデータにユーザーが迅速にアクセスできます。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071807"
   
  システム レベルでは、ディスク領域が少なくなったときに通知する電子メールによる警告を作成できます。 Microsoft System Center には、電子メール警告機能があります。 また、ファイル サーバー リソース マネージャー、タスク スケジューラ、または PowerShell スクリプトを使用して、警告を設定することもできます。 次のリンクでは、ディスク領域不足に関する通知を設定するための有用な情報が提供されています。  
   
--   [新しいファイル サーバー リソース マネージャーでは](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx) します。  
+-   [ファイルサーバーリソースマネージャーの新機能](https://technet.microsoft.com/library/hh831746.aspx)( https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [Windows Server 2008 R2 のファイル サーバー リソース マネージャーのステップ バイ ステップ ガイド](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875) します。  
+-   [Windows server 2008 R2 のファイルサーバーリソースマネージャーのステップバイステップガイド (「」を](https://go.microsoft.com/fwlink/?LinkID=204875)参照 https://go.microsoft.com/fwlink/?LinkID=204875) してください。  
   
--   [Windows Server 2008 でディスクの空き領域のアラートの設定](https://go.microsoft.com/fwlink/?LinkID=204870)(https://go.microsoft.com/fwlink/?LinkID=204870) します。  
+-   [Windows Server 2008 でディスク領域不足のアラートを設定](https://go.microsoft.com/fwlink/?LinkID=204870) https://go.microsoft.com/fwlink/?LinkID=204870) する (  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   
@@ -66,17 +65,17 @@ ms.locfileid: "66071807"
   
 3.  [ディスク使用量] の **[合計ディスク領域]** で、キャッシュ用に使用されるディスク容量の上限を制限する値を GB 単位で設定します。 既定値は 0 です。この場合、Analysis Services は使用可能なすべてのディスク領域を使用できます。  
   
-4.  ディスク使用量 で、**キャッシュされた最後の 'n' 内のデータベースの削除時間**キャッシュを空にすると、ディスク領域が上限に最近使用した条件を指定を設定します。  
+4.  [ディスク使用量] の [**直前の ' n ' 時間にキャッシュ**されたデータベースを削除する] 設定で、ディスク領域が上限に達したときにキャッシュを空にするための最終使用条件を指定します。  
   
      既定値は 4 時間です。この場合、4 時間以上非アクティブであったすべてのデータベースがファイル システムから削除されます。 非アクティブであってもまだメモリ内にあるデータベースは、アンロードされた後、ファイル システムから削除されます。  
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>データベースがキャッシュ内に保持される期間を制限する方法  
   
-1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
+1.  サーバーの全体管理で、[アプリケーション管理] の [**サービスアプリケーションの管理**] をクリックします。  
   
-2.  クリックして**Default PowerPivot Service Application**管理ダッシュ ボードを開きます。  
+2.  [**既定の PowerPivot サービスアプリケーション**] をクリックして、管理ダッシュボードを開きます。  
   
-3.  [アクション] で **[サービス アプリケーションの設定の構成]** をクリックします。  
+3.  [アクション] で、[**サービスアプリケーションの設定の構成**] をクリックします。  
   
 4.  [ディスク キャッシュ] セクションで、新しい要求を処理するために非アクティブなデータベースをメモリ内に保持する期間 (既定では 48 時間) およびキャッシュ内に保持する期間 (既定では 120 時間) を指定できます。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66071807"
 5.  **[OK]** をクリックして変更を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、PowerPivot for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、次を参照してください。 [PowerPivot の正常性ルール - 構成](configure-power-pivot-health-rules.md)します。  
+ サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、PowerPivot for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、「 [PowerPivot の正常性ルール-構成](configure-power-pivot-health-rules.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  

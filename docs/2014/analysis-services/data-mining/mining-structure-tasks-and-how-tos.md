@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2093bfc0fc36b324054fe30c11ff1e61042c6b21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083438"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521182"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>マイニング構造のタスクと操作方法
   **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブには、マイニング構造の作成、編集、および処理に使用できるツールが含まれています。  

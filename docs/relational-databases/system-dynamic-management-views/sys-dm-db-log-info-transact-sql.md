@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft Docs
+title: dm_db_log_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262078"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (TRANSACT-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>dm_db_log_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-返します[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のトランザクション ログの情報。 すべてのトランザクション ログ ファイルは、テーブルの出力にまとめられていますに注意してください。 出力の各行は、トランザクション ログ内の VLF を表し、その VLF をログに関連する情報を提供します。
+トランザクションログの[仮想ログファイル (値)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)を返します。 メモすべてのトランザクションログファイルがテーブル出力で結合されていることに注意してください。 出力の各行は、トランザクションログの "1" を表し、ログ内のその中に関連する情報を提供します。
 
 ## <a name="syntax"></a>構文  
   
@@ -39,39 +39,39 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>引数  
- *database_id* | NULL | DEFAULT  
- データベースの ID です。 *database_id* は **int** です。有効な値は、データベース、null の場合、または既定の ID 番号です。 既定値は NULL です。 NULL および DEFAULT は現在のデータベースのコンテキストで同じ値になります。
+ *database_id* |NULL |標準  
+ データベースの ID を示します。 *database_id*は**int**です。有効な入力値は、データベースの ID 番号、NULL、または DEFAULT です。 既定値は NULL です。 現在のデータベースのコンテキストでは、NULL および DEFAULT は同じ値になります。
  
- 現在のデータベースの VLF 情報を返す NULL を指定します。
+ NULL を指定すると、現在のデータベースのすべての情報が返されます。
 
- 組み込み関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)を指定できます。 使用する場合`DB_ID`データベース名を指定せず、現在のデータベースの互換性レベルを 90 以上にする必要があります。  
+ 組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。 データベース名`DB_ID`を指定せずにを使用する場合は、現在のデータベースの互換性レベルが90以上である必要があります。  
 
 ## <a name="table-returned"></a>返されるテーブル  
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|データベース ID。|
-|file_id|**smallint**|トランザクション ログのファイル id。|  
-|vlf_begin_offset|**bigint** |オフセットの位置を[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)トランザクション ログ ファイルの先頭から。|
-|vlf_size_mb |**float** |[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)サイズ (mb)、小数点以下 2 桁に丸められます。|     
-|vlf_sequence_number|**bigint** |[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)シーケンス番号が作成された順序で。 ログ ファイルの Vlf を一意に識別するために使用します。|
-|vlf_active|**bit** |示すかどうか[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)使用されていますか。 <br />0 - VLF 使用されていません。<br />1-VLF がアクティブです。|
-|vlf_status|**int** |状態、[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)します。 使用可能な値が含まれます <br />0 - VLF がアクティブではありません。 <br />1-VLF が初期化されますが、使用されていません。 <br /> 2-VLF がアクティブです。|
-|vlf_parity|**tinyint** |同等の[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)します。内部的には、使用すると、VLF 内のログの末尾を決定します。|
-|vlf_first_lsn|**nvarchar(48)** |[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)で最初のログ レコードの[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)します。|
-|vlf_create_lsn|**nvarchar(48)** |[ログ シーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)ログの記録を作成した、[仮想ログ ファイル (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)します。|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **適用対象:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 使用して、VLF を暗号化するかどうか、VLF の暗号化機能の拇印を表示[Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md),、それ以外の場合は NULL です。 |
+|file_id|**smallint**|トランザクションログのファイル id。|  
+|vlf_begin_offset|**bigint** |トランザクションログファイルの先頭からの[仮想ログファイル (%)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のオフセット位置。|
+|vlf_size_mb |**float** |[仮想ログファイル](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のサイズ (単位は MB)。小数点以下2桁に丸められます。|     
+|vlf_sequence_number|**bigint** |作成された順序での[仮想ログファイル (列)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のシーケンス番号。 ログファイル内の Vlf を一意に識別するために使用されます。|
+|vlf_active|**bit** |[仮想ログファイル (無効)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)が使用中かどうかを示します。 <br />0: の場合、使用されていません。<br />1-状態がアクティブです。|
+|vlf_status|**int** |[仮想ログファイル](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)の状態 (%)。 使用できる値は次のとおりです。 <br />0: 1-1 が非アクティブです <br />1-1-2 は初期化されていますが、未使用です <br /> 2-状態がアクティブです。|
+|vlf_parity|**tinyint** |[仮想ログファイル (%)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)のパリティ。指定した範囲内のログの末尾を特定するために内部的に使用されます。|
+|vlf_first_lsn|**nvarchar (48)** |[仮想ログファイル (](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)列 1) 内の最初のログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
+|vlf_create_lsn|**nvarchar (48)** |[仮想ログファイル](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)を作成したログレコードの[ログシーケンス番号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
+|vlf_encryptor_thumbprint|**varbinary(20)**| **適用対象:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 値が[Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用して暗号化されている場合は、オフの暗号化の拇印を表示します。それ以外の場合は NULL を示します。 |
 
-## <a name="remarks"></a>コメント
-`sys.dm_db_log_info`動的管理関数は、`DBCC LOGINFO`ステートメント。    
+## <a name="remarks"></a>Remarks
+動的`sys.dm_db_log_info`管理関数は、ステートメント`DBCC LOGINFO`を置き換えます。    
  
 ## <a name="permissions"></a>アクセス許可  
-必要があります、`VIEW DATABASE STATE`データベースの権限。  
+データベースの`VIEW DATABASE STATE`権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Vlf の数が多いと、SQL Server インスタンス内のデータベースの判別
-次のクエリは、ログ ファイルは、データベースの起動、復元、および回復の時間に影響が 100 を超える Vlf を使用してデータベースを決定します。
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 多数の Vlf がある SQL Server インスタンスでデータベースを決定する
+次のクエリでは、ログファイルに 100 Vlf 以上のデータベースがあるかどうかを確認します。これは、データベースの起動、復元、および復旧時間に影響を与える可能性があります。
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -81,9 +81,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 最後の位置を判別`VLF`ログ ファイルを圧縮する前にトランザクション ログ
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. ログファイルを圧縮する前に`VLF` 、トランザクションログの最後の位置を決定する
 
-トランザクション ログが圧縮できるかを判断するトランザクション ログの shrinkfile を実行する前に最新のアクティブな VLF の位置を決定するのには、次のクエリを使用できます。
+次のクエリを使用すると、トランザクションログで shrinkfile を実行してからトランザクションログを圧縮できるかどうかを判断する前に、最後にアクティブ化された状態の位置を確認できます。
 
 ```sql
 USE AdventureWorks2016
@@ -109,9 +109,9 @@ FROM cte_vlf_cnt
 GO
 ```
 
-## <a name="see-also"></a>関連項目  
-[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+## <a name="see-also"></a>参照  
+[Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106031"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106031"
   
 3.  デザイン画面で、ラベルを右クリックし、 **[系列ラベルのプロパティ]** をクリックします。 **[系列ラベルのプロパティ]** ダイアログ ボックスが表示されます。  
   
-4.  型`#PERCENT`の**データ ラベル**オプション。  
+4.  [ `#PERCENT` **ラベルデータ**] オプションに「」と入力します。  
   
 5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、「#PERCENT{P*n*}」と入力します。ここで、 *n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「#PERCENT{P0}」と入力します。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66106031"
   
 1.  デザイン画面で、円グラフを右クリックし、 **[系列のプロパティ]** をクリックします。 **[系列のプロパティ]** ダイアログ ボックスが表示されます。  
   
-2.  **凡例**、型`#PERCENT`の**カスタムの凡例テキスト**プロパティ。  
+2.  [**凡例**] に`#PERCENT` 、[**凡例のカスタムテキスト**] プロパティに「」と入力します。  
   
 ## <a name="see-also"></a>参照  
- [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;円グラフ](charts-report-builder-and-ssrs.md)   
+ [グラフの凡例の書式設定 &#40;レポートビルダーと SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;円グラフの外側にデータポイントラベルを表示する](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

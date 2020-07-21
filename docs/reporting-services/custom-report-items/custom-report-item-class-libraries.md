@@ -1,5 +1,6 @@
 ---
 title: カスタム レポート アイテムのクラス ライブラリ | Microsoft Docs
+description: カスタム レポート アイテムのクラス ライブラリについて説明し、コード サンプルを利用してクラスの利用方法について理解します。
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30b581c67eb161bd0d221b9a4aa341d90ab7148
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194102"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216948"
 ---
 # <a name="custom-report-item-class-libraries"></a>カスタム レポート アイテムのクラス ライブラリ
   カスタム レポート アイテムは、**Microsoft.ReportDesigner** 名前空間のクラスを使用します。 カスタム レポート アイテムを実装する際に使用するクラスは、2 つの主なカテゴリに分類できます。1 つは、カスタム レポート アイテム インフラストラクチャをサポートするためにデザインされた独自のクラス、もう 1 つは、関連するレポート定義言語 (RDL) 要素の機能をカプセル化するマネージド ラッパー クラスです。 これらのクラスの使用方法のコード サンプルについては、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
@@ -34,15 +35,15 @@ ms.locfileid: "63194102"
   
 |||  
 |-|-|  
-|**[名前]**|カスタム レポート アイテムの名前|  
-|**型**|カスタム レポート アイテムの種類。|  
+|**名前**|カスタム レポート アイテムの名前|  
+|**Type**|カスタム レポート アイテムの種類。|  
 |**CustomData**|デザイン時に指定されたカスタム レポート アイテムのデータ プロパティをカプセル化する <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> オブジェクト|  
 |**CustomProperties**|カスタム レポート アイテムのカスタム プロパティのコレクション|  
 |**Height**|カスタム レポート アイテム コントロールの高さ|  
 |**Width**|カスタム レポート アイテム コントロールの幅|  
-|**レポート**|レポート レベルのプロパティ (レポートのデータセットの一覧など) のコンテナー|  
+|**Report**|レポート レベルのプロパティ (レポートのデータセットの一覧など) のコンテナー|  
 |**AltReportItem**|カスタム レポート アイテムの実行時コントロールがサポートされていない場合に使用される代替レポート アイテム オブジェクト|  
-|**スタイル**|カスタム レポート アイテムのスタイルのプロパティ|  
+|**Style**|カスタム レポート アイテムのスタイルのプロパティ|  
 |**Adornment**|コントロールのインタラクティブな編集のために使用される装飾ウィンドウ|  
 |**Site**|コンポーネントの **ISite**|  
 |**DesignerVerbCollection**|コントロールのショートカット メニューのカスタム動詞の配列|  

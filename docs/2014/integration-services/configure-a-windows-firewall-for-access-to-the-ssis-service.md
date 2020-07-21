@@ -1,5 +1,5 @@
 ---
-title: SSIS サービスにアクセスするための Windows ファイアウォールの構成 |Microsoft Docs
+title: SSIS サービスにアクセスできるように Windows ファイアウォールを構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, firewalls
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af43443b110be4d30d748aa3ce409e5167ce0371
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060852"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434969"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS サービスにアクセスするように Windows ファイアウォールを構成する
     
@@ -35,7 +34,7 @@ ms.locfileid: "66060852"
 > [!IMPORTANT]  
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](configuring-the-integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォールを介した DCOM プロトコルのしくみの詳細については、情報の記事を参照してください。"[ファイアウォールで分散 COM を使用して](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかの詳細については、「[ファイアウォールでの分散 COM の使用](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)」を参照してください。  
   
  多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合、使用しているシステム固有の情報については、そのファイアウォールのマニュアルを参照してください。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "66060852"
   
 #### <a name="to-configure-a-windowsfirewall-using-the-command-prompt-window"></a>コマンド プロンプト ウィンドウを使用して Windows ファイアウォールを構成するには  
   
-1.  次のコマンドを実行します。 `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
+1.  `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET` コマンドを実行します  
   
-2.  次のコマンドを実行します。 `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
+2.  `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET` コマンドを実行します  
   
     > [!NOTE]  
     >  すべてのコンピューターおよびインターネット上のコンピューターに対してファイアウォールを開くには、scope=SUBNET を scope=ALL に変更します。  
@@ -71,7 +70,7 @@ ms.locfileid: "66060852"
   
 4.  **[例外]** タブで、 **[ポートの追加]** をクリックします。  
   
-5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)** 」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
+5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは常にポート 135 を使用します。 別のポートを指定することはできません。  
@@ -88,7 +87,7 @@ ms.locfileid: "66060852"
     >  Windows ファイアウォールを構成するために、この手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、Windows ファイアウォールは、 **netsh** コマンド ライン ツール、またはセキュリティが強化された Windows ファイアウォールの [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (MMC) スナップインを使用して構成することもできます。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)   
+ [SSIS サービス &#40;Integration Services サービスの構成&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   
   

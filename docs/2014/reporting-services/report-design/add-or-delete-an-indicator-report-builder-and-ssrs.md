@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106574"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>インジケーターの追加または削除 (レポート ビルダーおよび SSRS)
-  インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「[インジケーター (レポート ビルダーおよび SSRS)](indicators-report-builder-and-ssrs.md)」を参照してください。  
+  インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 詳細については、「 [インジケーター (レポート ビルダーおよび SSRS)](indicators-report-builder-and-ssrs.md)」を参照してください。  
   
  通常、インジケーターはテーブルまたはマトリックス内のセルに置かれますが、単独で使用したり、ゲージと並べて使用したり、ゲージに埋め込むこともできます。  
   
  インジケーターを最初に追加すると、既定では測定単位としてパーセンテージを使用するように構成されます。 パーセンテージの範囲は、インジケーター セットのメンバー間に均等に配分されます。テーブルやマトリックスなど、インジケーターの親が、インジケーターによって表示される値のスコープです。  
   
- インジケーターの値および状態は、更新することができます。 詳細については、次の各トピックを参照してください。  
+ インジケーターの値および状態は、更新することができます。 詳細については、次のトピックを参照してください。  
   
 -   [インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   

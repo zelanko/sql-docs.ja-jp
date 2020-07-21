@@ -1,10 +1,10 @@
 ---
 title: Integration Services (SSIS) プロジェクトとソリューション | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -16,25 +16,24 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ba2eaa75299181de8d8599ca67c53dfb85ac08e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057451"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71680982"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) プロジェクトとソリューション
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] パッケージを開発するための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が用意されています。  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージはプロジェクト内に存在します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../integration-services/install-windows/install-integration-services.md)」を参照してください。  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージはプロジェクト内に存在します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) をインストールする必要があります。 詳細については、「 [Integration Services のインストール](../integration-services/install-windows/install-integration-services.md)」を参照してください。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成する場合は、 **[新しいプロジェクト]** ダイアログ ボックスに **[Integration Services プロジェクト]** テンプレートが表示されます。 このプロジェクト テンプレートでは、パッケージを 1 つ含む新しいプロジェクトが作成されます。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成する場合は、 **[新しいプロジェクト]** ダイアログ ボックスに **[Integration Services プロジェクト]** テンプレートが表示されます。 このプロジェクト テンプレートでは、パッケージを 1 つ含む新しいプロジェクトが作成されます。
   
 ## <a name="projects-and-solutions"></a>[プロジェクトおよびソリューション]  
  プロジェクトはソリューション内に保存されます。 最初にソリューションを作成し、次に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをそのソリューションに追加できます。 既存のソリューションがない場合、最初にプロジェクトを作成したときに [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] は自動的にソリューションを作成します。 1 つのソリューションにさまざまな種類の複数のプロジェクトを含めることができます。  
@@ -65,40 +64,46 @@ ms.locfileid: "68057451"
 ## <a name="folders-in-integration-services-projects"></a>Integration Services プロジェクトのフォルダー  
  次の図は、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] での [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクト内のフォルダーを示しています。  
   
- ![Integration Services プロジェクトのフォルダー](../integration-services/media/solutionexplorer.gif "Integration Services プロジェクトのフォルダー")  
+![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
   
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに表示されるフォルダーについて説明します。  
   
-|フォルダー|[説明]|  
-|------------|-----------------|  
+|Folder|説明|  
+|------------|-----------------|
+|接続マネージャー|プロジェクト接続マネージャーが含まれています。 詳細については、「[Integration Services (SSIS) の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ|パッケージが含まれます。 詳細については、「[Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md)」を参照してください。|  
+|パッケージ パーツ|再利用またはインポートできるパッケージ パーツが含まれています。 詳細については、「[制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md)」を参照してください。
 |その他|パッケージ ファイル以外のファイルが含まれます。|  
   
 ## <a name="files-in-integration-services-projects"></a>Integration Services プロジェクトのファイル  
- 新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトまたは既存のプロジェクトをソリューションに追加すると、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] により、.dtproj、.dtproj.user、および .database 拡張子を持つプロジェクト ファイルが作成されます。  
+ 新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトまたは既存のプロジェクトをソリューションに追加すると、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] により、.dtproj、.dtproj.user、.database、Project.params 拡張子を持つプロジェクト ファイルが作成されます。 
   
 -   *.dtproj ファイルには、プロジェクトの構成と、パッケージなどのアイテムに関する情報が含まれます。  
   
 -   *.dtproj.user ファイルには、プロジェクト処理の設定に関する情報が含まれます。  
   
--   *.database ファイルには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開くために必要な情報が含まれます。  
+-   *.database ファイルには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開くために必要な情報が含まれます。
+
+-   Project.params ファイルには、[プロジェクト パラメーター](integration-services-ssis-package-and-project-parameters.md)に関する情報が含まれています。
   
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services プロジェクトの対象バージョン  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、SQL Server 2017、SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
   
- ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+ ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2017]、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
  ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
- 
+
 ## <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を開きます。  
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** ペインで、 **[Integration Services プロジェクト]** テンプレートを選択します。  
+3.  **[新しいプロジェクト]** ダイアログ ボックスで **[ビジネス インテリジェンス]** を選択してから、 **[Integration Services プロジェクト]** テンプレートを選択します。  
   
-     **[Integration Services プロジェクト]** テンプレートでは、空のパッケージを 1 つ含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが作成されます。  
+     **[Integration Services プロジェクト]** テンプレートでは、空のパッケージを 1 つ含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが作成されます。
+
+  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
   
 4.  (省略可) プロジェクトの名前と場所を変更します。  
   
@@ -113,16 +118,6 @@ ms.locfileid: "68057451"
     > **注:** 選択したソース管理プラグインを表示、変更したり、ソース管理の環境を構成するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[ソース管理]** ノードを展開します。  
   
 8.  **[OK]** をクリックしてソリューションを**ソリューション エクスプローラー**に追加し、プロジェクトをソリューションに追加します。  
-  
-## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>プロジェクトとそのパッケージのターゲット バージョンを選択する  
-  
-1.  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。  
-  
-2.  **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
-  
-     ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
-  
- SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>プロジェクトのインポート ウィザードで既存のプロジェクトをインポートする
   
@@ -142,7 +137,7 @@ ms.locfileid: "68057451"
   
 8.  **[次へ]** をクリックして、 **[ソースの選択]** ページに移動します。  
   
-9. **.ispac** ファイルからインポートする場合は、ファイル名を含むパスを **[パス]** ボックスに入力します。 **[参照]** をクリックして、ソリューションを格納するフォルダーに移動し、 **[ファイル名]** ボックスにファイル名を入力して、 **[開く]** をクリックします。  
+9. **.ispac** ファイルからインポートする場合は、ファイル名を含むパスを **[パス]** テキスト ボックスに入力します。 **[参照]** をクリックして、ソリューションを格納するフォルダーに移動し、 **[ファイル名]** ボックスにファイル名を入力して、 **[開く]** をクリックします。  
   
      **Integration Services カタログ**からインポートする場合は、データベース インスタンス名を **[サーバー名]** ボックスに入力するか、または **[参照]** をクリックしてカタログを含むデータベース インスタンスを選択します。  
   
@@ -218,4 +213,8 @@ ms.locfileid: "68057451"
 4.  コピー先の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、 **[貼り付け]** をクリックします。  
   
      アイテムが適切なフォルダーに自動的にコピーされます。 パッケージではない [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトにアイテムをコピーする場合は、アイテムが **[その他]** フォルダーにコピーされます。  
-     
+
+## <a name="next-steps"></a>次のステップ
+
+- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) のダウンロードとインストール。
+- [SSIS ETL パッケージを作成する方法](ssis-how-to-create-an-etl-package.md)

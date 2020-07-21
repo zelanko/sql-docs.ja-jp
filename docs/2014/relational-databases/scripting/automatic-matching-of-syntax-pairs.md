@@ -1,6 +1,6 @@
 ---
-title: 構文ペアの自動照合 | Microsoft Docs
-ms.custom: ''
+title: 構文ペアの自動照合
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063491"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
@@ -56,7 +55,7 @@ ms.locfileid: "66064149"
   
 -   照合の開始タグと終了タグ。  
   
--   不等号 "\<" と ">" のすべてのペア。  
+-   "" 山かっこの任意のペア \<" and "> 。  
   
 -   コメントの開始と終了。  
   

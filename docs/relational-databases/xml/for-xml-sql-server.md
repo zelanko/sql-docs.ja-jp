@@ -1,7 +1,8 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
+description: XML として結果を取得するために SQL クエリで使用される FOR XML 句について学習します。
 ms.custom: fresh2019may
-ms.date: 05/22/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,19 +18,18 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 5d497064378b7fe34c95ffe9c886144bb3523256
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 8cacd5efbc5d94c639c6dbc76c0a8865c4d4d7dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729931"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 SELECT クエリは、結果を行セットとして返します。 必要に応じて、SQL クエリに FOR XML 句を指定することで、SQL クエリの結果を XML 形式で取得することができます。 FOR XML 句は、最上位レベルのクエリとサブクエリのいずれでも使用できます。 最上位レベルの FOR XML 句は、SELECT ステートメント内でのみ使用できます。 サブクエリでは、FOR XML を INSERT、UPDATE、DELETE ステートメント内で使用できます。 FOR XML は代入ステートメントでも使用できます。
 
@@ -40,7 +40,7 @@ FOR XML 句には、次のモードのうち 1 つを指定します。
 - EXPLICIT
 - PATH
 
-RAW モードは SELECT ステートメントによって返された行セットの行 1 つにつき 1 つの \<row> 要素を生成します。 入れ子にした FOR XML クエリを作成することで、XML 階層を生成できます。
+RAW モードでは、SELECT ステートメントによって返された行セットの行 1 つにつき 1 つの \<row> 要素を生成します。 入れ子にした FOR XML クエリを作成することで、XML 階層を生成できます。
 
 AUTO モードは、SELECT ステートメントがどのように指定されているかに基づき、帰納的な方法で入れ子になった結果の XML を生成します。 生成される XML の構造については最小限の制御しか行えません。 AUTO モードで帰納的に生成された XML 構造に対して、入れ子になった FOR XML クエリを作成し、XML 階層を生成することができます。
 
@@ -85,7 +85,7 @@ SELECT TOP 1 LastName
 
 &nbsp;
 
-**ローカル サーバー**:&nbsp; `ServerName` がローカル サーバーの場合、クエリでは次のテキストが返されます。
+**ローカル サーバー**:&nbsp;`ServerName` がローカル サーバーの場合、クエリでは次のテキストが返されます。
 
 ```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
@@ -93,7 +93,7 @@ SELECT TOP 1 LastName
 
 &nbsp;
 
-**ネットワーク サーバー**:&nbsp; `ServerName` がネットワーク サーバーの場合、クエリでは次のテキストが返されます。
+**ネットワーク サーバー**:&nbsp;`ServerName` がネットワーク サーバーの場合、クエリでは次のテキストが返されます。
 
 ```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />

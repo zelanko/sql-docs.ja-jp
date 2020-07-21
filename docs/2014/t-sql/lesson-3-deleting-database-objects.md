@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 01856f105a8a06ba590a4a8877e9315eaa81baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eacc6155ff7f394b223e39ff525920b7d8815202
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63063048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054533"
 ---
 # <a name="lesson-3-deleting-database-objects"></a>レッスン 3: データベース オブジェクトの削除
   この短いレッスンでは、レッスン 1 とレッスン 2 で作成したオブジェクトを削除してから、データベースを削除します。  
@@ -27,6 +26,6 @@ ms.locfileid: "63063048"
 -   [データベース オブジェクトの削除](lesson-3-1-deleting-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [Deleting Database Objects](lesson-3-1-deleting-database-objects.md)  
+ [データベース オブジェクトの削除](lesson-3-1-deleting-database-objects.md)  
   
   

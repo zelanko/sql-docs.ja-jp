@@ -1,21 +1,20 @@
 ---
-title: SQL Server ドキュメント ナビゲーション ガイド
-description: SQL Server 技術ドキュメントを参照する際のガイドです。ハブ ページ、目次、ヘッダー、階層リンクの使用方法、バージョン フィルターの使用方法などについて説明します。
-ms.date: 07/11/2019
+title: SQL Server ドキュメント ナビゲーションのヒント
+description: SQL Server 技術ドキュメントを参照する際のヒントとテクニックです。ハブ ページ、目次、ヘッダー、階層リンクの使用方法、バージョン フィルターの使用方法などについて説明します。
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941166"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "76831626"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server ドキュメント ナビゲーション ガイド 
 
@@ -38,22 +37,21 @@ PDF を作成する場合は、すべての目次の下部にある **[Download 
 
 ![[Download PDF]\(PDF をダウンロード\)](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>目次のナビゲーションのヒント
+## <a name="toc-symbols"></a>TOC の記号 
 
-エントリの末尾に `>` がある目次のエントリは、docs.microsoft.com 以外にリンクされていることを示します。 
+エントリの最後に `>` がある目次 (TOC) のエントリは、別の目次を含む技術ドキュメントにリンクされていることを示します。 
 
 ![目次のシングル キャロット](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-`>>` がある目次のエントリは、別の目次を含む技術ドキュメントにリンクされていることを示します。 
+`>>` がある目次のエントリは、docs.microsoft.com 以外にリンクされていることを示します。 
 
 ![目次のナビゲーション マーカー](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-このようなページのいずれかに移動した場合、メインの SQL Server 技術ページと目次に戻るには、各目次の上部にある「Welcome to SQL Server >>」(SQL Server へようこそ >>) エントリを選択します。 
+このようなページのいずれかに移動した場合、メインの SQL Server 技術ページと目次に戻るには、各目次の上部にある「Welcome to SQL Server >」(SQL Server へようこそ >) エントリを選択します。 
 
 ![SQL の目次に戻る](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>目次の検索のヒント
+## <a name="toc-search"></a>TOC の検索 
 docs.microsoft.com では、上部にあるフィルター検索ボックスを使用して、目次内のコンテンツを検索できます。 
 
 ![フィルター ボックスを使用する](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -61,18 +59,17 @@ docs.microsoft.com では、上部にあるフィルター検索ボックスを�
 ## <a name="version-filter"></a>バージョン フィルター
 SQL Server 技術ドキュメントには、SQL Server のいくつかのサポートされているバージョンとフレーバーのコンテンツが記載されています。 機能は SQL Server のバージョンとフレーバーによって異なる場合があります。そのため、コンテンツ自体が異なる場合があります。 
 
-バージョン フィルターを使用すると、SQL Server の適切なバージョンとフレーバーのコンテンツを確実に表示できます。 
+[バージョン フィルター](versioning-system-monikers-ui-sql-server.md)を使用すると、SQL Server の適切なバージョンとフレーバーのコンテンツを確実に表示できます。 
 
 ![SQL ドキュメントのバージョン フィルター](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-**[All SQL]\(すべての SQL\)**  >  **[Hide nothing]\(すべて表示\)** を選択すると、すべてのコンテンツが表示され、バージョン フィルターによる非表示が解除されます。 
+**[All SQL]\(すべての SQL\)** \> **[Hide nothing]\(すべて表示\)** を選択すると、すべてのコンテンツが表示され、バージョン フィルターによる非表示が解除されます。 「**Hide nothing**」オプションを選択すると、同じ記事内に複数の異なるバージョンの SQL Server に関連するコンテンツが表示されることがあり、矛盾したり、不明確であったり、紛らわしいことがあります。 そのため、[「**Hide nothing**」オプションは、通常の使用にはお勧めしません](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing)。 
 
 ## <a name="breadcrumbs"></a>階層リンク
 
 階層リンクは、ヘッダーの下と目次の上にあり、現在の記事が目次内のどこにあるかを示します。  これによって読んでいるコンテンツの種類にコンテキストを設定できるだけでなく、目次ツリーの上に戻ることもできます。
 
 ![SQL ドキュメントの階層リンク](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>記事セクションのナビゲーション
 
@@ -93,8 +90,8 @@ SQL Server 技術ドキュメントには、SQL Server のいくつかのサポ�
 
 ![SQL ドキュメントの編集](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- [SQL Server の技術ドキュメント](sql-server-technical-documentation.md)を使い始めます。 
+- [SQL Server の技術ドキュメント](index.yml)を使い始めます。
 - SQL Server に関するフィードバックの送信方法または支援を受ける方法の詳細については、[支援を受ける方法](sql-server-get-help.md)のページを参照してください。 
-- すべてのクイックスタートとチュートリアルにすばやくアクセスするには、[SQL Server 教育センター](../lp/sql-server/sql-education-center.md)をアクセスしてください。
+- すべてのクイックスタートとチュートリアルにすばやくアクセスするには、「[学習用 SQL リソース](../sql-server/educational-sql-resources.yml)」を参照してください。

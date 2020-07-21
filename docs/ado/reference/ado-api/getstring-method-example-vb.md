@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - GetString method [ADO], Visual Basic example
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6928d870c00fce0f712e7a9fc01cc2a2a33a57d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f73ae3fa0600bad94493ab08c6248ee422cdb56
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918501"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758738"
 ---
 # <a name="getstring-method-example-vb"></a>GetString メソッドの例 (VB)
-この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッド。  
+この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドを示します。  
   
- データ アクセスの問題をデバッグし、迅速で簡単な方法で、小規模の現在の内容を印刷[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+ データアクセスの問題をデバッグしているときに、小さな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
   
 ```  
 'BeginGetStringVB  
@@ -101,6 +101,6 @@ End Sub
 'EndGetStringVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

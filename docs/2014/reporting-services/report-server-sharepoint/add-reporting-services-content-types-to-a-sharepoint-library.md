@@ -1,5 +1,5 @@
 ---
-title: Web ページ (SharePoint 統合モードで Reporting Services) に、レポート ビューアー Web パーツの追加 |Microsoft Docs
+title: レポートビューアー Web パーツを Web ページに追加します (SharePoint 統合モードの Reporting Services)。Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104290"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)
@@ -38,7 +38,7 @@ ms.locfileid: "66104290"
   
 2.  **[サイトの操作]** の **[ページの編集]** をクリックします。  
   
-3.  **[Web パーツの追加]** をクリックします。  
+3.  [ **Web パーツの追加] を**クリックします。  
   
 4.  Web パーツ カテゴリの一覧で、 **[その他]** カテゴリをクリックし、 **[SQL Server Reporting Services レポート ビューアー]** をクリックします。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66104290"
   
 6.  ビューアー内で、 **[ツール ペインを開くにはここをクリックします]** をクリックします。  
   
-7.  参照ボタン ( **[...]** ) をクリックして、現在のサイト コレクションの任意のライブラリにあるレポートを選択します。 レポートの URL を入力することもできます。 レポートの URL を調べるには、レポートを右クリックし、 **[プロパティ]** をクリックします。 レポートの横にある下向きの矢印アイコンはクリックしないでください。アイテムの [プロパティの表示] ページでは、レポートの URL は表示されません。 **[プロパティ]** ダイアログ ボックスで URL をコピーし、貼り付ける場合には、URL 内の "%20" をスペースに置き換えてください (たとえば、"Company%20Sales" は "Company Sales" にします)。  
+7.  参照ボタン (**[...]**) をクリックして、現在のサイト コレクションの任意のライブラリにあるレポートを選択します。 レポートの URL を入力することもできます。 レポートの URL を調べるには、レポートを右クリックし、 **[プロパティ]** をクリックします。 レポートの横にある下向きの矢印アイコンはクリックしないでください。アイテムの [プロパティの表示] ページでは、レポートの URL は表示されません。 **[プロパティ]** ダイアログ ボックスで URL をコピーし、貼り付ける場合には、URL 内の "%20" をスペースに置き換えてください (たとえば、"Company%20Sales" は "Company Sales" にします)。  
   
     > [!NOTE]  
     >  1 つのレポート ビューアー Web パーツには、1 つのレポートが格納されます。 URL は、現在の SharePoint サイト、または同じ Web アプリケーションやファーム内のサイト上のレポートへの完全修飾パスで指定する必要があります。 この URL は、ドキュメント ライブラリとして解決されるか、ドキュメント ライブラリ内でレポートが格納されるフォルダーとして解決される必要があります。 レポート URL には、ファイル拡張子 .rdl を含める必要があります。 レポートがモデル ファイルまたは共有データ ソース ファイルに依存している場合、URL でそのファイルを指定する必要はありません。 必要なファイルへの参照は、レポートに含まれています。  
@@ -55,10 +55,10 @@ ms.locfileid: "66104290"
   
 9. ツール ペインの下部で **[適用]** をクリックし、 **[OK]** をクリックしてペインを閉じます。  
   
-## <a name="see-also"></a>関連項目  
- [SharePoint サイトのレポート ビューアー Web パーツ](../report-viewer-web-part-on-a-sharepoint-site.md)   
- [レポート ビューアー Web パーツのカスタマイズ](../customize-the-report-viewer-web-part.md)   
- [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [インストールまたはアンインストール、Reporting Services アドイン、SharePoint の&#40;SharePoint 2010 および SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+## <a name="see-also"></a>参照  
+ [SharePoint サイトのレポートビューアー Web パーツ](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [レポートビューアー Web パーツのカスタマイズ](../customize-the-report-viewer-web-part.md)   
+ [SharePoint サイト上のレポートサーバーアイテムに対する権限の許可](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Sharepoint &#40;sharepoint 2010 および SharePoint 2013 の Reporting Services アドインをインストールまたはアンインストール&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

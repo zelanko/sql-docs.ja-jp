@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 954302809c01769f6d3869e7762917e91cfd8f98
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892223"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>パフォーマンス カウンター MSRS 2011 SharePoint モード パフォーマンス オブジェクト
@@ -33,7 +33,7 @@ ms.locfileid: "68892223"
   
  パフォーマンス カウンターとネイティブ モードのレポート サーバーについては、「[MSRS 2011 Web Service と MSRS 2011 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)」および「[MSRS 2011 Web Service SharePoint Mode と MSRS 2011 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)」を参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター](#bkmk_webservice)  
   
@@ -41,12 +41,12 @@ ms.locfileid: "68892223"
   
 -   [PowerShell コマンドレットを使用して一覧を取得する](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター  
+##  <a name="msrs-2011-web-service-sharepoint-mode-performance-counters"></a><a name="bkmk_webservice"></a> MSRS 2011 Web Service SharePoint Mode のパフォーマンス カウンター  
  **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトは、レポート サーバーのパフォーマンスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、主に対話的なレポート表示操作によって開始されるレポート サーバー処理の追跡に使用されます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。 これらのカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] がレポート サーバー Web サービスを停止した時点でリセットされます。  
   
  次の表は、 **MSRS 2011 Web Service SharePoint Mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**Active sessions**|アクティブなセッションの数。 このカウンターは、レポートの実行によって生成されたすべてのブラウザー セッション (アクティブであるかどうかにかかわらず) の累積数を表示します。<br /><br /> セッション レコードが削除されると、カウンターの値は減少します。 既定では、セッションは利用されない状態が 10 分間続くと削除されます。|  
 |**Cache Hits/Sec**|キャッシュされたレポートに対する 1 秒あたりの要求数。 これはレポートの再表示の要求であり、キャッシュから直接処理されるレポートの要求ではありません (このトピックで後述する「 **Total Cache Hits** 」を参照してください)。|  
@@ -69,14 +69,14 @@ ms.locfileid: "68892223"
 |**Total Processing Failures**|レポート サーバー Web サービスの要求処理で発生したエラーの数。|  
 |**Total Rejected Threads**|非同期処理が拒否された後、続けて同一スレッド内の同期処理として処理されたスレッドの総数。 各データ ソースは、それぞれ 1 つのスレッドで処理されます。 スレッドの容量がいっぱいになった場合、スレッドでは非同期処理が拒否され、連続して処理されます。|  
 |**Total Reports Executed**|サービスの開始後に、正常に実行されたレポートの総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
-|**Total Requests**|サービスの開始後、レポート サーバーに対して行われたすべての要求の総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
+|**要求の合計数**|サービスの開始後、レポート サーバーに対して行われたすべての要求の総数。 このカウンターは、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によってレポート サーバー Web サービスが停止すると必ずリセットされます。|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint モードのパフォーマンス カウンター  
+##  <a name="msrs-2011-windows-service-sharepoint-mode-performance-counters"></a><a name="bkmk_windowsservice"></a> MSRS 2011 Windows Service SharePoint モードのパフォーマンス カウンター  
  **MSRS 2011 Windows Service SharePoint Mode** パフォーマンス オブジェクトを使用して、レポート サーバー Windows サービスを監視します。 このパフォーマンス オブジェクトには複数のカウンターが含まれ、スケジュールされた操作を介して開始されるレポート処理の追跡に使用されます。 スケジュールされた操作には、サブスクリプションと配信、レポート実行スナップショット、およびレポート履歴を含めることができます。 設定したカウンターは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのインスタンスに適用することも、特定のインスタンスにだけ適用することもできます。  
   
  次の表は、 **MSRS 2011 Windows Service SharePoint mode** パフォーマンス オブジェクトに含まれているカウンターの一覧です。  
   
-|カウンター|[説明]|  
+|カウンター|説明|  
 |-------------|-----------------|  
 |**Active sessions**|レポート サーバー データベースに格納されるアクティブ セッションの数です。 このカウンターは、レポート サブスクリプションから生成される使用可能なすべてのブラウザー セッションの累積数と、セッションがまだアクティブかどうかを示します。|  
 |**Alerting: event queue length**||  
@@ -115,11 +115,11 @@ ms.locfileid: "68892223"
 |**Total Processing Failures**|レポート サーバー Windows サービスの要求処理で発生したエラーの数。|  
 |**Total Rejected Threads**|非同期処理が拒否された後、続けて同一スレッド内の同期処理として処理されたスレッドの総数。 負荷が中程度または高い状況では、このカウンターは徐々に増加します。|  
 |**Total Reports Executed**|実行されたレポートの総数です。|  
-|**Total Requests**|サービスの開始後に、正常に実行されたレポートの総数。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。|  
+|**要求の合計数**|サービスの開始後に、正常に実行されたレポートの総数。 このカウンターは、アプリケーション ドメインが再利用される際にリセットされます。|  
 |**Total Snapshot Updates**|レポート実行スナップショットの更新回数の合計。|  
   
-##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
- ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まる一連のカウンターを返します。  
+##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
+ ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まるカウンター セットを返します。  
   
 ```  
 get-counter -listset msr*  

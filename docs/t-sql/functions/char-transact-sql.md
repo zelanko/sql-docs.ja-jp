@@ -24,18 +24,18 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0a56a5c8cc76ab2358d2a89d2b5290905092bf6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002200"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数では、**int** ASCII コードが文字値に変換されます。
   
@@ -43,7 +43,7 @@ ms.locfileid: "68113701"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 CHAR ( integer_expression )  
 ```  
   
@@ -57,16 +57,16 @@ CHAR ( integer_expression )
 ## <a name="return-types"></a>戻り値の型
 **char(1)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 文字列に制御文字を挿入するには `CHAR` を使用します。 次の表に、よく使用される制御文字の一部を示します。
   
-|制御文字|[値]|  
+|制御文字|値|  
 |---|---|
 |タブ|**char(9)**|  
 |ライン フィード|**char(10)**|  
 |キャリッジ リターン|**char(13)**|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. ASCII と CHAR を使用して、文字列から ASCII 値を印刷するには  
 この例では、`New Moon` という文字列の各文字とそれに対応する ASCII コードの値を出力します。

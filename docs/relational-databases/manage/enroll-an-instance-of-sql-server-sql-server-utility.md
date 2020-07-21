@@ -1,5 +1,6 @@
 ---
 title: SQL Server のインスタンスの登録 (SQL Server ユーティリティ) | Microsoft Docs
+description: SQL Server のインスタンスのパフォーマンスと構成の監視を開始するには、既存の SQL Server ユーティリティに登録します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776007"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンスとしてそのパフォーマンスおよび構成を監視します。 ユーティリティ コントロール ポイント (UCP) では、15 分ごとに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスから構成情報およびパフォーマンス情報を収集します。 情報は UCP のユーティリティ管理データ ウェアハウス (UMDW) に格納されます。UMDW ファイル名は sysutility_mdw です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス データはポリシーと比較され、リソース使用時のボトルネックおよび統合の可能性を特定するのに役立ちます。  
   
  このリリースでは、UCP および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのマネージド インスタンスが次の要件を満たしている必要があります。  
@@ -87,17 +88,17 @@ ms.locfileid: "68115415"
   
 -   [SQL Server インスタンスの登録](#Enrolling)  
   
-##  <a name="Welcome"></a> インスタンスの登録ウィザードの概要  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> インスタンスの登録ウィザードの概要  
  このウィザードを起動するには、ユーティリティ エクスプローラーのツリーでユーティリティ コントロール ポイントを展開し、 **[マネージド インスタンス]** ノードを右クリックして、 **[マネージド インスタンスの追加]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Instance_name"></a> SQL Server インスタンスの指定  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> SQL Server インスタンスの指定  
  接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Connection_dialog"></a> 接続ダイアログ  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 接続ダイアログ  
  [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
   
 > [!NOTE]  
@@ -105,7 +106,7 @@ ms.locfileid: "68115415"
   
  続行するには、 **[接続]** をクリックします。  
   
-##  <a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> ユーティリティ コレクション セットのアカウント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットを実行する Windows ドメイン アカウントを指定します。 このアカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントとして使用されます。 また、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントを使用することもできます。 検証の要件を満たすには、次のガイドラインに従ってアカウントを指定します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのオプションを指定する場合は、次のガイドラインに従います。  
@@ -114,7 +115,7 @@ ms.locfileid: "68115415"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Validation_rules"></a> SQL Server インスタンスの検証  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> SQL Server インスタンスの検証  
  このリリースでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで、次の条件が満たされている必要があります：  
   
 |条件|修正措置|  
@@ -141,7 +142,7 @@ ms.locfileid: "68115415"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Summary"></a> インスタンス登録の概要  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> インスタンス登録の概要  
  概要ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに追加する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの情報が表示されます。  
   
  マネージド インスタンスの設定は次のとおりです。  
@@ -152,7 +153,7 @@ ms.locfileid: "68115415"
   
  続行するには、 **[次へ]** をクリックします。  
   
-##  <a name="Enrolling"></a> SQL Server インスタンスの登録  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> SQL Server インスタンスの登録  
  登録ページでは、次のように、処理の進行状況が表示されます。  
   
 -   インスタンスを登録する準備をしています。  
@@ -170,7 +171,7 @@ ms.locfileid: "68115415"
 >   
 >  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  追加情報:Windows NT グループまたはユーザー '\<ドメイン名\アカウント名>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
+>  追加情報:Windows NT グループまたはユーザー '\<DomainName\AccountName>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
 >   
 >  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。  
   
@@ -183,7 +184,7 @@ ms.locfileid: "68115415"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティからマネージド インスタンスを削除するには、 **ユーティリティ エクスプローラーのナビゲーション** ウィンドウで **[マネージド インスタンス]** を選択してマネージド インスタンスのリスト ビューを設定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ **ウィンドウのリスト ビューで** インスタンス名を右クリックして、 **[マネージド インスタンスを削除]** を選択します。  
   
-##  <a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> PowerShell を使用した SQL Server インスタンスの登録  
  次の例を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに登録します:  
   
 ```  

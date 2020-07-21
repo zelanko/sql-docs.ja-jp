@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepullsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_changemergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090847"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872542"
 ---
-# <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マージ プル サブスクリプションのプロパティを変更します。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
+  マージ プル サブスクリプションのプロパティを変更します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,74 +41,74 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は % です。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は% です。  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は % です。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は% です。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は % です。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は% です。  
   
-`[ @property = ] 'property'` 変更するプロパティの名前です。 *プロパティ*は**sysname**テーブル内の値のいずれかを指定できます。  
+`[ @property = ] 'property'`変更するプロパティの名前を指定します。 *プロパティ*は**sysname**,、テーブル内のいずれかの値を指定できます。  
   
-`[ @value = ] 'value'` 指定したプロパティの新しい値です。 *値*は**nvarchar (255)** テーブル内の値のいずれかを指定できます。  
+`[ @value = ] 'value'`指定したプロパティの新しい値を指定します。 *値*は**nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
   
-|プロパティ|値|説明|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**alt_snapshot_folder**||スナップショット フォルダーの場合は、場所は以外、またはさらに、既定の場所に格納される場所。|  
+|**alt_snapshot_folder**||場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
 |**description**||このマージ プル サブスクリプションの説明です。|  
 |**ディストリビューター**||ディストリビューターの名前。|  
-|**distributor_login**||ディストリビューターで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証|  
-|**distributor_password**||ディストリビューターで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**distributor_security_mode**|**1**|ディストリビューターに接続するときに、Windows 認証を使用します。|  
-||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターに接続するときに認証します。|  
+|**distributor_login**||ディストリビューターで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**distributor_password**||認証のためにディストリビューターで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**distributor_security_mode**|**1**|ディストリビューターへの接続時に Windows 認証を使用します。|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターへの接続時に認証を使用します。|  
 |**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダーへのパスです。|  
-|**ftp_address**||旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用ファイル転送プロトコル (FTP) サービスのネットワーク アドレスです。|  
-|**ftp_login**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
-|**ftp_password**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
-|**ftp_port**||旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
-|**ホスト名**||指定します、この関数は、結合フィルターまたは論理レコード リレーションシップの WHERE 句で使用される場合の HOST_NAME() の値。|  
-|**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントを使用してログインします。|  
-|**internet_password**||マージ エージェントが基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに使用するログインのパスワードです。|  
-|**internet_security_mode**|**1**|Web 同期をホストしている Web サーバーに接続するときは、Windows 認証を使用します。|  
+|**ftp_address**||旧バージョンとの互換性のためにのみ使用できます。 ディストリビューターのファイル転送プロトコル (FTP) サービスのネットワークアドレスを示します。|  
+|**ftp_login**||旧バージョンとの互換性のためにのみ使用できます。 FTP サービスへの接続に使用するユーザー名です。|  
+|**ftp_password**||旧バージョンとの互換性のためにのみ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
+|**ftp_port**||旧バージョンとの互換性のためにのみ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
+|**hostname**||結合フィルターまたは論理レコードリレーションシップの WHERE 句でこの関数を使用する場合の HOST_NAME () の値を指定します。|  
+|**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインです。|  
+|**internet_password**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインのパスワード。|  
+|**internet_security_mode**|**1**|Web 同期をホストしている Web サーバーに接続するときに Windows 認証を使用します。|  
 ||**0**|Web 同期をホストしている Web サーバーに接続するときは、基本認証を使用します。|  
-|**internet_timeout**||Web 同期要求の有効期限が切れるまでの秒数で、時間の長さ。|  
-|**internet_url**||Web 同期レプリケーション リスナーの位置を表す URL です。|  
-|**merge_job_login**||エージェントを実行する Windows アカウントにログインします。|  
+|**internet_timeout**||Web 同期要求が期限切れになるまでの時間の長さ (秒単位)。|  
+|**internet_url**||Web 同期用のレプリケーションリスナーの場所を表す URL。|  
+|**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
-|**priority**||旧バージョンとの互換性だけです。実行[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)パブリッシャー側で代わりに、サブスクリプションの優先度を変更します。|  
-|**publisher_login**||パブリッシャーで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**publisher_password**||パブリッシャーで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**publisher_security_mode**|**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証します。|  
+|**的**||旧バージョンとの互換性のためにのみ使用できます。サブスクリプションの優先度を変更する代わりに、パブリッシャーで[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を実行します。|  
+|**publisher_login**||パブリッシャーで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**publisher_password**||認証のためにパブリッシャーで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**publisher_security_mode**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。|  
 ||**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
-||**2**|同期のトリガーを使用して、静的な**sysservers**でリモート プロシージャ コール (RPC)、およびパブリッシャーを実行するエントリを定義する必要があります、 **sysservers**リモート サーバーまたはリンク サーバーとしてのテーブル。|  
-|**sync_type**|**自動**|スキーマと初期データのパブリッシュされたテーブルの」は最初に、サブスクライバーに転送されます。|  
-||**none**|スキーマと初期データのパブリッシュされたテーブル以外のサブスクライバーに既に存在します。システム テーブルとデータは常に転送します。|  
-|**use_ftp**|**true**|一般的なプロトコルの代わりに FTP を使用して、スナップショットを取得します。|  
-||**false**|スナップショットを取得するのにには、一般的なプロトコルを使用します。|  
-|**use_web_sync**|**true**|サブスクリプションは、HTTP 経由で同期できます。|  
+||**2**|同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、パブリッシャーは、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
+|**sync_type**|**自動**|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  
+||"**なし**"|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既にあります。システムテーブルとデータは常に転送されます。|  
+|**use_ftp**|**true**|一般的なプロトコルの代わりに FTP を使用してスナップショットを取得します。|  
+||**false**|スナップショットを取得するには、一般的なプロトコルを使用します。|  
+|**use_web_sync**|**true**|サブスクリプションは HTTP 経由で同期できます。|  
 ||**false**|サブスクリプションは HTTP 上で同期できません。|  
 |**use_interactive_resolver**|**true**|調整時にインタラクティブ競合回避モジュールを使用します。|  
-||**false**|インタラクティブ競合回避モジュールには使用されません。|  
-|**working_directory**||ディレクトリへの完全修飾パスが、そのオプションを指定した場合は、FTP を使用してスナップショット ファイルを転送します。|  
-|NULL (既定値)||サポートされている値の一覧を返します*プロパティ*します。|  
+||**false**|インタラクティブ競合回避モジュールは使用されません。|  
+|**working_directory**||オプションが指定されている場合に、FTP を使用してスナップショットファイルが転送されるディレクトリへの完全修飾パスです。|  
+|NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_changemergepullsubscription**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_changemergepullsubscription**は、マージレプリケーションで使用します。  
   
  現在のサーバーがサブスクライバー、現在のデータベースがサブスクライバー データベースであると解釈されます。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changemergepullsubscription**します。  
+ **Sp_changemergepullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
  [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

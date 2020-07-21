@@ -1,5 +1,6 @@
 ---
-title: ローカルの名前-から-QName (XQuery) |Microsoft Docs
+title: ローカル名-QName (XQuery) |Microsoft Docs
+description: ローカル名から QName () 関数を使用して、QName のローカル名部分を返す方法について説明します。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 78511d83ad75df4fe458bb5a5b3d2d59a8636c7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720011"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>QNames に関係する関数 - local-name-from-QName
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-  指定された QName のローカル部分を表す xs:NCNAME を返します *$arg*します。 場合、結果が空のシーケンスには *$arg*は空のシーケンスです。  
+  *$Arg*によって指定された QName のローカル部分を表す XS: NCNAME を返します。 *$Arg*が空のシーケンスの場合、結果は空のシーケンスになります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,15 +39,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  ローカル名部分を抽出する QName です。  
   
 ## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
+ このトピックでは、データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示し [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] ます。  
   
- 次の例では、 **local-name-from-QName()** QName 型の値からパーツのローカル名と名前空間 URI を取得します。 この例では、次の操作が実行されます。  
+ 次の例では、**ローカル名-qname ()** 関数を使用して、qname 型の値からローカル名と名前空間 URI の部分を取得します。 この例では、次の処理を実行します。  
   
--   XML スキーマ コレクションを作成します。  
+-   XML スキーマコレクションを作成します。  
   
--   xml 型の列を持つテーブルの作成。 Xml 型は、XML スキーマ コレクションを使用して入力されます。  
+-   xml 型の列を持つテーブルの作成。 Xml 型は、XML スキーマコレクションを使用して型指定されます。  
   
--   サンプル XML インスタンスをテーブルに保存します。 使用して、 **query()** インスタンスから QName 型の値のローカル名部分を取得するクエリ式では、xml データ型のメソッドを実行します。  
+-   サンプル XML インスタンスをテーブルに格納します。 Xml データ型の**query ()** メソッドを使用すると、クエリ式を実行して、インスタンスから QName 型の値のローカル名部分を取得します。  
   
 ```sql
 DROP TABLE T  
@@ -76,6 +77,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [QNames に関係する関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [QNames &#40;XQuery&#41;に関連する関数](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

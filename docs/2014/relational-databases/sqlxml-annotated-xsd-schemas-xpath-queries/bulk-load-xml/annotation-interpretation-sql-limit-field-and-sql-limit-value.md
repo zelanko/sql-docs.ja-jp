@@ -1,5 +1,5 @@
 ---
-title: sql:limit- およびフィールドの値 (SQLXML 4.0) |Microsoft Docs
+title: 'sql: limit-field および sql: limit-value (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4e54d543ca97612cff08013e26c8fb8088f10f28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068241"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field と sql:limit-value (SQLXML 4.0)
-  XML 一括読み込みでは、`sql:limit-field` および `sql:limit-value` 注釈が定義に従って処理されます。 詳細については、次を参照してください。 [sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)します。  
+  XML 一括読み込みでは、`sql:limit-field` および `sql:limit-value` 注釈が定義に従って処理されます。 詳細については、「 [sql: limit-field および sql: limit-value &#40;SQLXML 4.0&#41;を使用した値のフィルター選択](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)」を参照してください。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66013571"
   
 1.  この例のスキーマを SampleSchema.xml として保存します。  
   
-2.  これらのテーブルを作成します。  
+2.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Customer(  
@@ -121,7 +120,7 @@ ms.locfileid: "66013571"
     set objBL=Nothing  
     ```  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  

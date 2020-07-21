@@ -1,5 +1,5 @@
 ---
-title: 接続文字列のセキュリティ保護 |Microsoft Docs
+title: 接続文字列のセキュリティ保護 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1483beed275649156ab84c370facc716818fb974
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8f783db5fef7c0da10fb0ec856f3766388be49f5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027741"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928430"
 ---
 # <a name="securing-connection-strings"></a>接続文字列のセキュリティ保護
 

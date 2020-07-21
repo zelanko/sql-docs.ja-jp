@@ -1,10 +1,10 @@
 ---
-title: データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL) | Microsoft Docs
+title: データベース スナップショット (T-SQL) のスパース ファイルのサイズを表示する方法
+description: Transact-SQL を使用して、SQL Server データベース ファイルがスパース ファイルであることを確認し、実際の、および最大のサイズを確かめます。 データベース スナップショットではスパース ファイルが使用されます。
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: ''
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ad89273416373b2c5c93f4d830c5f07d64beaa84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f62d33f45d390a4449bf603254ccc54be16a38b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727527"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルがスパース ファイルであることを確認する方法と、その実サイズおよび最大サイズを調べる方法について説明します。 NTFS ファイル システムの機能であるスパース ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットによって使用されます。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ファイルがスパース ファイルであることを確認する方法と、その実サイズおよび最大サイズを調べる方法について説明します。 NTFS ファイル システムの機能であるスパース ファイルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットによって使用されます。  
   
 > [!NOTE]  
 >  スパース ファイルは、データベース スナップショットの作成時に CREATE DATABASE ステートメント内のファイル名を使用して作成されます。 これらのファイル名は、 **sys.master_files** の **physical_name** 列に格納されます。 ソース データベース内とスナップショット内のいずれであっても、 **sys.database_files** の **physical_name** 列には、ソース データベース ファイルの名前が必ず格納されます。  
@@ -36,13 +37,11 @@ ms.locfileid: "68127048"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで次の操作を実行する:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
+     データベース スナップショットの **sys.database_files** または **sys.master_files** から **is_sparse**列を選択します。 次に示すように、この値からファイルがスパース ファイルであるかどうかがわかります。  
   
-     1 = File is a sparse file.  
+     1 = ファイルはスパース ファイルです。  
   
-     0 = File is not a sparse file.  
+     0 = ファイルはスパース ファイルではありません。  
   
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>スパース ファイルの実際のサイズを調べる  
   

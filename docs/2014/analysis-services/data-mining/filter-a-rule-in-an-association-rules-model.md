@@ -1,5 +1,5 @@
 ---
-title: フィルター ルール モデルのアソシエーション ルール |Microsoft Docs
+title: アソシエーションルールモデルでルールをフィルター処理する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10f0dff6db48300b276ea586ec358e2f15089e14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084408"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522448"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>アソシエーション ルール モデルのルールのフィルター選択
   アソシエーション モデルでフィルターを使用して、結果を必要なアソシエーションだけに限定できます。 たとえば、ルールをフィルター選択して、特定の製品を含むルールだけを表示できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "66084408"
   
 5.  **[最小の重要度]** では、重要度の値を大きくすると表示されるルール数が減り、値を小さくすると表示されるルール数が増えます。  
   
-6.  **表示**、次のオプションのいずれかを選択します。**属性の名前と値を表示する**、 **属性名のみ**、または**属性値のみを表示する**します。  
+6.  **[表示]** では、 **[属性の名前と値を表示]**、 **[属性名のみ表示]**、 **[属性値のみ表示]** のいずれかのオプションを選択します。  
   
 7.  **[最大行数]** では、値を大きくすると指定した条件を満たすルールの総数が増え、値を小さくすると返されるルールの数が制限されます。 ルールは確率の順に並べられるので、確率または重要度に対して指定した条件を満たす余分なルールを除外できます。  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66084408"
   
 -   [結合モデルのクエリ例](association-model-query-examples.md)  
   
-## <a name="see-also"></a>関連項目  
- [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [レッスン 3:マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+## <a name="see-also"></a>参照  
+ [マイニングモデルビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft アソシエーションルールビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [レッスン 3: マーケット バスケット シナリオの作成 (中級者向けデータ マイニング チュートリアル)](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

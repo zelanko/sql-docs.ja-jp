@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e9a5e7f4a1f290673ca1a914e883ab359dcc8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945343"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71296467"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 の Integration Services の新機能
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-このトピックでは、 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で追加または更新された機能について説明します。
+このトピックでは、[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で追加または更新された機能について説明します。
 
 > [!NOTE]
 > SQL Server 2017 には、SQL Server 2016 の機能と、SQL Server 2016 更新プログラムで追加された機能も含まれています。 SQL Server 2016 の新しい SSIS 機能については、 [「SQL Server 2016 で Integration Services の新機能」](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)を参照してください。
@@ -33,7 +33,7 @@ SQL Server 2017 の Integration Services の最も重要な新機能は以下の
 
 -   **Scale Out**。複数の worker コンピューター間に SSIS パッケージの実行をより簡単に配布し、単一のマスター コンピューターから実行と worker を管理します。 詳しくは、「[Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md)」(Integration Services の Scale Out) をご覧ください。
 
--   **Linux の Integration Services**。 Linux コンピューターで SSIS パッケージを実行できます。 詳しくは、「[Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md)」(SSIS で Linux 上のデータの抽出、変換、読み込みを行う) をご覧ください。
+-   **Linux の Integration Services**。 Linux コンピューターで SSIS パッケージを実行できます。 詳しくは、「[SSIS で Linux 上のデータの抽出、変換、読み込みを行う](../linux/sql-server-linux-migrate-ssis.md)」 をご覧ください。
 
 -   **接続性の向上**。 更新された OData コンポーネントで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できます。 
 
@@ -107,7 +107,7 @@ SQL Server 2017 CTP 1.1 には、SSIS の新機能はありません。
    
 Scale Out Master と Scale Out Worker をインストールすると、パッケージを配布し、さまざまな Worker で自動的に実行できます。 実行が予期せずに終了した場合、自動的に再試行されます。 また、Master を利用し、すべての実行と Worker が中央管理されます。
    
-詳細については、[「Integration Services Scale Out」](../integration-services/scale-out/integration-services-ssis-scale-out.md) を参照してください。
+詳細については、 [「Integration Services Scale Out」](../integration-services/scale-out/integration-services-ssis-scale-out.md)を参照してください。
    
 ### <a name="support-for-microsoft-dynamics-online-resources"></a>Microsoft Dynamics オンライン リソースのサポート
 

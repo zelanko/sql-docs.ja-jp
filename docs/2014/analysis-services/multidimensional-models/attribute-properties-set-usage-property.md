@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c01db1cdafc0a3e624cc8e92815a791c08ee4188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544714"
 ---
 # <a name="set-usage-property"></a>使用法プロパティの設定
-  属性の使用法を設定するには、ディメンション デザイナーの **[ディメンション構造]** ビューを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスします。  
+  属性の使用法を設定するには、ディメンション デザイナーの **[ディメンション構造]** ビューを使用します。ディメンション デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスします。  
   
- 属性の使用法を設定した場合、ディメンションを処理するまで変更内容は有効になりません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+ 属性の使用法を設定した場合、ディメンションを処理するまで変更内容は有効になりません。 詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
 ### <a name="to-set-usage-for-an-attribute"></a>属性の使用法を設定するには  
   
@@ -33,11 +32,11 @@ ms.locfileid: "66077166"
   
 2.  **[属性]** で、使用法を設定する属性を右クリックし、 **[属性の使用法を設定]** をポイントして次のいずれかのオプションをクリックします。  
   
-    -   **Regular**  
+    -   **標準**  
   
-    -   **[キー]**  
+    -   **キー**  
   
-    -   **Parent**  
+    -   **親**  
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

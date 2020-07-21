@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f2780a4eadfc27ed2db15881d676965fca81e35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026597"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>一括エクスポートまたは一括インポートのデータの準備 (SQL Server)
   ここでは、一括エクスポート操作の計画に関する考慮事項と一括インポート操作の要件について説明します。  
@@ -55,7 +54,7 @@ ms.locfileid: "67046704"
 -   データ ファイルの各フィールドは、インポート先テーブルの対応する列と互換性がある必要があります。 たとえば、`int` フィールドを `datetime` 列に読み込むことはできません。 詳細については、「[一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)」および「[bcp を使用した互換性のためのデータ形式の指定 &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)」を参照してください。  
   
     > [!NOTE]  
-    >  ファイル全体をインポートするのではなく、データ ファイルからインポートする行のサブセットを指定するには、**bcp** コマンドと **-F** *first_row* スイッチまたは **-L** *last_row* スイッチ、あるいは両方のスイッチを組み合わせて使用します。 詳しくは、「 [bcp Utility](../../tools/bcp-utility.md)」をご覧ください。  
+    >  ファイル全体をインポートするのではなく、データ ファイルからインポートする行のサブセットを指定するには、**bcp** コマンドと、 **-F** *first_row* スイッチ、 **-L** *last_row* スイッチ、またはその両方のスイッチを組み合わせて使用します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
   
 -   固定長フィールドまたは固定幅フィールドを含むデータ ファイルからデータをインポートするには、フォーマット ファイルを使用する必要があります。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
   
@@ -87,8 +86,8 @@ ms.locfileid: "67046704"
 |---------------------|  
 |OLE DB Provider for Jet を使用した CSV データのインポートについての情報を追加しました。|  
   
-## <a name="see-also"></a>関連項目  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>参照  
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)   

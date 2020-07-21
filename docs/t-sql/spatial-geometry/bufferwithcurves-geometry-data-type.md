@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67929313"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
@@ -41,7 +41,7 @@ ms.locfileid: "67929313"
 ## <a name="return-types"></a>戻り値の型  
 SQL Server 戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  次の条件を満たす場合、**ArgumentException** がスローされます。  
@@ -52,7 +52,7 @@ SQL Server 戻り値の型: **geometry**
   
 -   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の図には、このメソッドによって返される geometry インスタンスの例を示しています。  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,18 +62,18 @@ SQL Server 戻り値の型: **geometry**
 |distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
-|distance < 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス **注:** 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります|  
+|distance < 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス **注:** 負の値のバッファーでは、空の **GeometryCollection** が作成されることもあります。|  
 |distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
 |distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   
 > [!NOTE]  
->  *distance* は **float** であるため、非常に小さな値は計算においてゼロと同一視されることがあります。 その場合、呼び出し元のコピー **geometry** インスタンスが返されます。 「[float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)」を参照してください。  
+>  *distance* は **float** であるため、非常に小さな値は計算においてゼロと同一視されることがあります。 その場合、呼び出し元のコピー **geometry** インスタンスが返されます。 「[float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)」を参照してください。  
   
  バッファーに負の値を指定すると、geometry インスタンスの境界から、指定された距離の範囲内にある地点がすべて削除されます。 次の図には、負の値のバッファーを薄い網掛けがある円の領域として示しています。 点線は元の多角形の境界を示しており、実線は結果として得られる多角形の境界を示しています。  
   
  **string** パラメーターをこのメソッドに渡すと、**float** に変換されるか、`ArgumentException` がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. 1 次元の geometry インスタンスに対して、パラメーターに 0 を下回る値を指定して、BufferWithCurves() を呼び出す  
  次の例では、空の `GeometryCollection` インスタンスが返されます。  

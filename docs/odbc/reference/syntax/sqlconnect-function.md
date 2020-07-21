@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConnect function [ODBC]
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121459"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301218"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLConnect**ドライバーとデータ ソースへの接続を確立します。 接続ハンドルの状態、トランザクションの状態、およびエラー情報を含む、データ ソースへの接続に関するすべての情報のストレージを参照します。  
+ **SQLConnect**は、ドライバーとデータソースへの接続を確立します。 接続ハンドルは、データソースへの接続に関するすべての情報 (状態、トランザクション状態、エラー情報など) のストレージを参照します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,145 +52,145 @@ SQLRETURN SQLConnect(
  [入力] 接続ハンドル。  
   
  *ServerName*  
- [入力]データ ソースの名前。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 アプリケーションがデータ ソースを選択する方法については、次を参照してください。[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
+ 代入データソース名。 データが、プログラムと同じコンピューター、またはネットワーク上の別のコンピューターに配置されている可能性があります。 アプリケーションでデータソースを選択する方法の詳細については、「[データソースまたはドライバーの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)」を参照してください。  
   
  *NameLength1*  
- [入力]長さ **ServerName*文字数。  
+ 代入**ServerName*の長さ (文字数)。  
   
- *UserName*  
- [入力]ユーザーの識別子です。  
+ *ユーザー名*  
+ 代入ユーザー識別子。  
   
  *NameLength2*  
- [入力]長さ **UserName*文字数。  
+ 代入**ユーザー名*の長さ (文字数)。  
   
- *\[認証]*  
- [入力]認証の文字列 (通常はパスワード)。  
+ *認証*  
+ 代入認証文字列 (通常はパスワード)。  
   
  *NameLength3*  
- [入力]長さ **認証*文字数。  
+ 代入文字での **認証*の長さ。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLConnect** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得できる**SQLGetDiagRec**で、 *HandleType* sql _ のHANDLE_DBC と*処理*の*ConnectionHandle*します。 次の表に、によって返される通常の SQLSTATE 値**SQLConnect** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **SQLConnect**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返した場合、関連付けられた SQLSTATE 値を取得するには、 *handletype* SQL_HANDLE_DBC および*connectionhandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLConnect**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプション値が変更されました|ドライバーでは、指定した値はサポートされていませんでした、 *ValuePtr*引数**SQLSetConnectAttr**のような値を置き換えるとします。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|08001|クライアント接続を確立できません。|ドライバーは、データ ソースとの接続を確立できませんでした。|  
-|08002|使用されている接続名|(DM)、指定した*ConnectionHandle*を確立、データ ソースとの接続と、接続がまだ開かれていたか、ユーザーの接続の参照が既に使用されている必要があります。|  
-|08004|サーバー接続を拒否しました|データ ソースには、実装定義上の理由から、接続の確立が拒否されます。|  
-|08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとの接続に、ドライバーにしようとしたが、データ ソース間の通信リンクに失敗しました。|  
-|28000|無効な認証指定|引数が指定された値*UserName*または引数が指定された値*認証*データ ソースで定義されている制約に違反します。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|(DM)、ドライバー マネージャーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *ConnectionHandle*します。 **SQLConnect**関数が呼び出され、実行を完了する前に[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)が呼び出されて、 *ConnectionHandle*、およびし**SQLConnect**で関数が再度呼び出されました、 *ConnectionHandle*します。<br /><br /> また、 **SQLConnect**関数が呼び出された、および前に、実行を完了**SQLCancelHandle**が呼び出されて、 *ConnectionHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *ConnectionHandle*この関数が呼び出されたときに実行されているとします。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*NameLength1*、 *NameLength2*、または*NameLength3* SQL_NTS 等しくもありませんが、0 より小さいをでした。<br /><br /> 引数に指定された (DM) 値*NameLength1*データ ソース名の最大長を超えています。|  
-|HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、完了したデータ ソースに接続する前に有効期限が切れました。 によって、タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_LOGIN_TIMEOUT します。|  
-|HY114|ドライバーは接続レベルの非同期関数の実行をサポートしていません|(DM)、アプリケーションでは、接続を確立する前に、接続ハンドルでの非同期操作を有効になります。 ただし、ドライバーは接続ハンドルで非同期操作をサポートしていません。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) データ ソース名で指定されたドライバーは、関数をサポートしていません。|  
-|IM002|データ ソースが見つかりませんと指定された既定のドライバー|(DM)、データ ソース名が、引数で指定された*ServerName*システム情報 で見つからなかったも既定ドライバーの仕様がありました。|  
-|IM003|指定されたドライバーに接続できませんでした。|(DM) データで、ドライバーが表示されているシステム情報のソースの仕様が見つからなかったか、でしたに接続されていないその他の何らかの理由。|  
-|IM004|Sql_handle_env としてドライバーの SQLAllocHandle に失敗しました|(DM) 中に**SQLConnect**、ドライバー マネージャーという、ドライバーの**SQLAllocHandle**関数と、 *HandleType* sql_handle_env としてとドライバーのエラーが返されました。|  
-|IM005|Sql_handle_dbc としてドライバーの SQLAllocHandle に失敗しました|(DM) 中に**SQLConnect**、ドライバー マネージャーという、ドライバーの**SQLAllocHandle**関数と、 *HandleType*ドライバー sql_handle_dbc としてのエラーが返されました。|  
-|IM006|ドライバーの SQLSetConnectAttr できませんでした。|中に**SQLConnect**、ドライバー マネージャーという、ドライバーの**SQLSetConnectAttr**関数と、ドライバーにエラーが返されます。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|IM009|トランスレーター DLL に接続できません。|ドライバーは、変換、データ ソースの指定された DLL への接続にできませんでした。|  
-|IM010|データ ソース名が長すぎます|(DM)  *\*ServerName* SQL_MAX_DSN_LENGTH 文字を超えていました。|  
-|IM014|指定された DSN には、ドライバーとアプリケーション間のアーキテクチャの不一致が含まれています。|64 ビット ドライバー; に接続する DSN を使用する (DM) 32 ビット アプリケーションまたはその逆です。|  
-|IM015|ドライバーの SQLConnect SQL_HANDLE_DBC_INFO_HANDLE に失敗しました|ドライバーでは、SQL_ERROR が返された場合は、ドライバー マネージャーは、アプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
-|S1118|ドライバーが非同期通知をサポートしていません|ドライバーが非同期通知をサポートしていない場合、SQL_ATTR_ASYNC_DBC_EVENT または SQL_ATTR_ASYNC_DBC_RETCODE_PTR を設定することはできません。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01S02|オプションの値が変更されました|ドライバーは、 **SQLSetConnectAttr**の*valueptr*引数に指定された値をサポートしておらず、同様の値に置き換えられました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|08001|クライアントが接続を確立できません|ドライバーは、データソースとの接続を確立できませんでした。|  
+|08002|使用中の接続名|(DM) 指定された*Connectionhandle*は、データソースとの接続を確立するために既に使用されていましたが、接続が開いているか、ユーザーが接続を参照していました。|  
+|08004|サーバーが接続を拒否しました|データソースは、実装定義の理由により、接続の確立を拒否しました。|  
+|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続しようとしているデータソースとの間の通信リンクが失敗しました。|  
+|28000|認証の指定が無効です|引数の*ユーザー名*に指定された値、または引数*認証*に指定された値が、データソースによって定義された制限に違反しました。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|(DM) ドライバーマネージャーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*Connectionhandle*に対して非同期処理が有効になりました。 **SQLConnect**関数が呼び出され、実行が完了する前に、 [Sqlcancelhandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)が*connectionhandle*で呼び出されました。その後、 **SQLConnect**関数が*connectionhandle*で再度呼び出されました。<br /><br /> または、 **SQLConnect**関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドからの*Connectionhandle*で**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数 (この1つではない) が*Connectionhandle*に対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) 引数*NameLength1*、 *NameLength2*、または*NameLength3*に指定された値が0未満ですが、SQL_NTS と等しくありません。<br /><br /> (DM) 引数*NameLength1*に指定された値が、データソース名の最大長を超えました。|  
+|HYT00|タイムアウトに達しました|データソースへの接続が完了する前に、クエリのタイムアウト期間が経過しました。 タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_LOGIN_TIMEOUT によって設定されます。|  
+|HY114|ドライバーは、接続レベルの非同期関数の実行をサポートしていません|(DM) アプリケーションは、接続を確立する前に、接続ハンドルで非同期操作を有効にしました。 ただし、ドライバーは接続ハンドルに対する非同期操作をサポートしていません。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) データソース名で指定されたドライバーでは、関数はサポートされていません。|  
+|IM002|データソースが見つからず、既定のドライバーが指定されていません|(DM) 引数*ServerName*に指定されたデータソース名がシステム情報に見つからなかったか、既定のドライバー仕様がありませんでした。|  
+|IM003|指定されたドライバーに接続できませんでした|(DM) システム情報のデータソースの仕様に記載されているドライバが見つからないか、何らかの理由で接続できませんでした。|  
+|IM004|SQL_HANDLE_ENV のドライバーの SQLAllocHandle に失敗しました|(DM) **SQLConnect**中、ドライバーマネージャーは、 *handletype*が SQL_HANDLE_ENV のドライバーの**SQLAllocHandle**関数を呼び出しましたが、ドライバーはエラーを返しました。|  
+|IM005|SQL_HANDLE_DBC のドライバーの SQLAllocHandle に失敗しました|(DM) **SQLConnect**中、ドライバーマネージャーは、 *handletype*が SQL_HANDLE_DBC のドライバーの**SQLAllocHandle**関数を呼び出しましたが、ドライバーはエラーを返しました。|  
+|IM006|ドライバーの SQLSetConnectAttr に失敗しました|**SQLConnect**中に、ドライバーマネージャーがドライバーの**SQLSetConnectAttr**関数を呼び出し、ドライバーがエラーを返しました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|IM009|Translation DLL に接続できません|ドライバーは、データソースに対して指定された変換 DLL に接続できませんでした。|  
+|IM010|データソース名が長すぎます|(DM) * \*サーバー名*が SQL_MAX_DSN_LENGTH 文字を超えています。|  
+|IM014|指定された DSN には、ドライバーとアプリケーションのアーキテクチャの不一致が含まれています|(DM) 32 ビットアプリケーションは、64ビットドライバーに接続する DSN を使用します。または、その逆も同様です。|  
+|IM015|SQL_HANDLE_DBC_INFO_HANDLE のドライバーの SQLConnect に失敗しました|ドライバーが SQL_ERROR を返した場合、ドライバーマネージャーはアプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、「 [ODBC ドライバーでの接続プールの認識の開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)」を参照してください。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
+|S1118|ドライバーは非同期通知をサポートしていません|ドライバーが非同期通知をサポートしていない場合、SQL_ATTR_ASYNC_DBC_EVENT または SQL_ATTR_ASYNC_DBC_RETCODE_PTR を設定することはできません。|  
   
-## <a name="comments"></a>コメント  
- アプリケーションを使用する理由について**SQLConnect**を参照してください[SQLConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)します。  
+## <a name="comments"></a>説明  
+ アプリケーションで**SQLConnect**を使用する理由の詳細については、「 [SQLConnect を使用した接続](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)」を参照してください。  
   
- ドライバー マネージャーでは、アプリケーションは、関数を呼び出すまで、ドライバーに接続しません (**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**) に接続するため、ドライバー。 その時点まで、ドライバー マネージャーは、独自の処理と連携し、接続情報を管理します。 指定したかどうかをドライバーに現在接続されているアプリケーションが接続関数を呼び出すと、ドライバー マネージャーを確認します*ConnectionHandle*:  
+ ドライバーマネージャーは、アプリケーションが関数 (**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**) を呼び出してドライバーに接続するまで、ドライバーに接続しません。 その時点までは、ドライバーマネージャーは独自のハンドルを使用し、接続情報を管理します。 アプリケーションが接続関数を呼び出すと、ドライバーマネージャーは、指定された*Connectionhandle*に対してドライバーが現在接続されているかどうかを確認します。  
   
--   ドライバー マネージャーは、ドライバーと呼び出しに接続するドライバーが接続されていない場合**SQLAllocHandle**で、 *HandleType* sql_handle_env としての**SQLAllocHandle**で、*HandleType* sql_handle_dbc としての**SQLSetConnectAttr** (かどうか、アプリケーション指定された任意の接続属性)、およびドライバーの接続関数。 ドライバー マネージャーは、SQLSTATE IM006 を返します (ドライバーの**SQLSetConnectOption**に失敗しました) と接続関数の場合は、ドライバーのエラーを返しました SQL_SUCCESS_WITH_INFO **SQLSetConnectAttr**します。 詳細については、次を参照してください。[データ ソースまたはドライバーに接続する](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)します。  
+-   ドライバーがに接続されていない場合、ドライバーマネージャーはドライバーに接続し、 *Handletype*が SQL_HANDLE_ENV、 **SQLAllocHandle**が*handletype* SQL_HANDLE_DBC、 **SQLSetConnectAttr** (アプリケーションで接続属性が指定されている場合)、およびドライバー内の接続関数を使用して**SQLAllocHandle**を呼び出します。 ドライバーマネージャーは SQLSTATE IM006 (ドライバーの**SQLSetConnectOption** failed) を返し、ドライバーが**SQLSetConnectAttr**に対してエラーを返した場合は、接続関数の SQL_SUCCESS_WITH_INFO します。 詳細については、「[データソースまたはドライバーへの接続](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)」を参照してください。  
   
--   指定されたドライバーをオンに既に接続されている場合、 *ConnectionHandle*、ドライバー マネージャーがドライバーの接続関数のみを呼び出します。 この場合、ドライバーがすべての接続の属性を確認してくださいに行う必要があります、 *ConnectionHandle*現在の設定を維持します。  
+-   指定したドライバーが既に*Connectionhandle*でに接続されている場合、ドライバーマネージャーはドライバー内の接続関数だけを呼び出します。 この場合、ドライバーは、 *Connectionhandle*のすべての接続属性が現在の設定を維持していることを確認する必要があります。  
   
--   ドライバー マネージャーを呼び出す場合に、別のドライバーは接続されている、 **SQLFreeHandle**で、 *HandleType* sql_handle_dbc としての次に、その他のドライバーがその環境に接続されていない、呼び出しますと**SQLFreeHandle**で、 *HandleType* sql_handle_env として接続されているドライバーの後、そのドライバーを切断します。 ドライバーに接続されていない場合と同じ操作を実行します。  
+-   別のドライバーがに接続されている場合、ドライバーマネージャーは SQL_HANDLE_DBC の*Handletype*を使用して**sqlfreehandle**を呼び出し、その環境で他のドライバーがに接続されていない場合は、接続されたドライバーの SQL_HANDLE_ENV の*Handletype*を使用して**sqlfreehandle**を呼び出し、そのドライバーを切断します。 次に、ドライバーがに接続されていない場合と同じ操作を実行します。  
   
- ドライバーは、ハンドルの割り当てし、自体を初期化します。  
+ 次に、ドライバーによってハンドルが割り当てられ、それ自体が初期化されます。  
   
- アプリケーションを呼び出すと**SQLDisconnect**、ドライバー マネージャー呼び出し**SQLDisconnect**ドライバー。 ただし、ドライバーは切断されません。 これにより、繰り返しに接続し、データ ソースから切断するアプリケーションのメモリのドライバーが維持されます。 アプリケーションを呼び出すと**SQLFreeHandle**で、 *HandleType*ドライバー マネージャーを呼び出し、sql_handle_dbc としての**SQLFreeHandle**で、 *HandleType* sql_handle_dbc としてのし**SQLFreeHandle**で、 *HandleType* driver では、sql_handle_env としての接続を切断し、ドライバーと。  
+ アプリケーションが**sqldisconnect**を呼び出すと、ドライバーマネージャーはドライバーで**sqldisconnect**を呼び出します。 ただし、ドライバーは切断されません。 これにより、データソースに対して繰り返し接続および切断を行うアプリケーションに対して、ドライバーがメモリ内に保持されます。 アプリケーションが SQL_HANDLE_DBC の*Handletype*を使用して**sqlfreehandle**を呼び出すと、ドライバーマネージャーは、 *handletype が*SQL_HANDLE_DBC で sqlfreehandle を呼び出した後、ドライバーの SQL_HANDLE_ENV の*handletype*を使用して**sqlfreehandle** **を呼び出し、** ドライバーを切断します。  
   
- ODBC アプリケーションでは、1 つ以上の接続を確立できます。  
+ ODBC アプリケーションでは、複数の接続を確立できます。  
   
-## <a name="driver-manager-guidelines"></a>ドライバー マネージャーのガイドライン  
- 内容 **ServerName*ドライバー マネージャーとドライバーがどのように連携してデータ ソースへの接続を確立するには影響します。  
+## <a name="driver-manager-guidelines"></a>ドライバーマネージャーのガイドライン  
+ **ServerName*の内容は、ドライバーマネージャーとドライバーが連携してデータソースへの接続を確立する方法に影響します。  
   
--   場合\* *ServerName*有効なデータ ソース名を含むドライバー マネージャーのシステム情報に対応するデータ ソースの指定を検索して、関連するドライバーに接続します。 ドライバー マネージャーに渡す各**SQLConnect**ドライバーへの引数。  
+-   \* *ServerName*に有効なデータソース名が含まれている場合、ドライバーマネージャーは対応するデータソースの仕様をシステム情報で検索し、関連付けられているドライバーに接続します。 ドライバーマネージャーは、各**SQLConnect**引数をドライバーに渡します。  
   
--   データ ソース名が見つからない場合、または*ServerName* null ポインターの場合は、ドライバー マネージャーの既定のデータ ソースの仕様を検索して、関連するドライバーに接続します。 ドライバー マネージャーがドライバーに渡します、 *UserName*と*認証*未変更の状態で引数との"DEFAULT"、 *ServerName*引数。  
+-   データソース名が見つからない場合、または*ServerName*が null ポインターの場合は、ドライバーマネージャーが既定のデータソースの仕様を特定し、関連付けられているドライバーに接続します。 ドライバーマネージャーは、*ユーザー名*と*認証*の引数が変更されていないことをドライバーに渡し、 *ServerName*引数の "DEFAULT" を渡します。  
   
--   場合、 *ServerName*引数が"DEFAULT"、ドライバー マネージャーの既定のデータ ソースの仕様を検索して、関連するドライバーに接続します。 ドライバー マネージャーに渡す各**SQLConnect**ドライバーへの引数。  
+-   *ServerName*引数が "default" の場合は、ドライバーマネージャーが既定のデータソースの仕様を特定し、関連付けられているドライバーに接続します。 ドライバーマネージャーは、各**SQLConnect**引数をドライバーに渡します。  
   
--   データ ソース名が見つからない場合、または*ServerName*は null ポインターの場合、既定のデータ ソースの指定がない場合は、ドライバー マネージャーは、SQLSTATE IM002 SQL_ERROR を返します (データ ソースが見つかりません名前と既定値はありません。指定されたドライバー)。  
+-   データソース名が見つからない場合、または*ServerName*が null ポインターであり、既定のデータソースの仕様が存在しない場合、ドライバーマネージャーは SQLSTATE IM002 (データソース名が見つからず、既定のドライバーが指定されていません) で SQL_ERROR を返します。  
   
- 接続されているドライバー マネージャーによって後、ドライバーはシステム情報内でその対応するデータ ソースの仕様を検索し、仕様からドライバー固有の情報を使用して、必要な接続情報のセットを完了します。  
+ ドライバーマネージャーによって接続されると、ドライバーは、対応するデータソースの仕様をシステム情報で特定し、仕様のドライバー固有の情報を使用して必要な接続情報のセットを完成させることができます。  
   
- データ ソースのシステム情報の既定のライブラリは翻訳が指定されている場合、ドライバーは、それに接続します。 呼び出すことによって、別の翻訳ライブラリに接続できる**SQLSetConnectAttr** SQL_ATTR_TRANSLATE_LIB 属性を持つ。 呼び出して変換オプションを指定できます**SQLSetConnectAttr** SQL_ATTR_TRANSLATE_OPTION 属性を持つ。  
+ 既定の変換ライブラリがデータソースのシステム情報に指定されている場合、ドライバーはそのライブラリに接続します。 SQL_ATTR_TRANSLATE_LIB 属性を使用して**SQLSetConnectAttr**を呼び出すことによって、別の変換ライブラリに接続できます。 SQL_ATTR_TRANSLATE_OPTION 属性を指定して**SQLSetConnectAttr**を呼び出すことによって、翻訳オプションを指定できます。  
   
- ドライバーをサポートしている場合**SQLConnect**、システム情報、ドライバーのドライバー キーワード セクションを含める必要があります、 **ConnectFunctions**キーワードの最初の文字"Y"に設定。  
+ ドライバーが**SQLConnect**をサポートしている場合、ドライバーのシステム情報の driver キーワードセクションには、最初の文字が "Y" に設定された**connectfunctions**キーワードが含まれている必要があります。  
   
-### <a name="connection-pooling"></a>接続のプール  
- 接続プールでは既に作成されている接続を再利用するアプリケーション。 接続プールが有効にすると、 **SQLConnect**を呼び出すと、ドライバー マネージャーの接続プールが指定されている環境で接続プールの一部である接続を使用して接続を確立しよう。 この環境は、プール内の接続を使用するすべてのアプリケーションで使用される共有環境です。  
+### <a name="connection-pooling"></a>接続プール  
+ 接続プールを使用すると、既に作成されている接続をアプリケーションで再利用できます。 接続プールが有効になっていて、 **SQLConnect**が呼び出されると、ドライバーマネージャーは、接続プール用に指定された環境内の接続のプールの一部である接続を使用して接続を試みます。 この環境は、プール内の接続を使用するすべてのアプリケーションで使用される共有環境です。  
   
- 接続プールが有効になって、環境が呼び出すことによって割り当てられた**SQLSetEnvAttr** SQL_CP_ONE_PER_DRIVER (元のドライバーごとに 1 つのプールの最大数を指定) または SQL_CP_ONE_PER_HENV SQL_ATTR_CONNECTION_POOLING に設定するには(環境ごとに 1 つのプールの最大数を指定します。) **SQLSetEnvAttr**ここで使用して呼び出した*EnvironmentHandle*属性は、プロセス レベルの属性が null に設定します。 SQL_ATTR_CONNECTION_POOLING を SQL_CP_OFF に設定すると、接続プールは無効になります。  
+ **SQLSetEnvAttr**を呼び出すことによって環境が割り当てられる前に、接続プールが有効になります。これにより SQL_ATTR_CONNECTION_POOLING が SQL_CP_ONE_PER_DRIVER に設定されます (ドライバーごとに最大1つのプールを指定)。または SQL_CP_ONE_PER_HENV (環境あたり最大1つのプールを指定)。 この場合、 **SQLSetEnvAttr**は、 *EnvironmentHandle*を null に設定して呼び出されます。これにより、属性がプロセスレベルの属性になります。 SQL_ATTR_CONNECTION_POOLING が SQL_CP_OFF に設定されている場合、接続プールは無効になります。  
   
- 接続プールが有効になったら、 **SQLAllocHandle**で、 *HandleType*環境を割り当てる sql_handle_env としてが呼び出されます。 この呼び出しによって割り当てられた環境は、接続プールが有効になっているために、共有環境です。 ただし、使用される環境はまで決まりません**SQLAllocHandle**で、 *HandleType* sql_handle_dbc としてが呼び出されます。  
+ 接続プールを有効にすると、SQL_HANDLE_ENV の*Handletype*を持つ**SQLAllocHandle**が呼び出され、環境が割り当てられます。 接続プールが有効になっているため、この呼び出しによって割り当てられる環境は共有環境です。 ただし、 **SQLAllocHandle** SQL_HANDLE_DBC の*handletype*が呼び出されるまで、使用される環境は決定されません。  
   
- **SQLAllocHandle**で、 *HandleType* sql_handle_dbc としては、接続の割り当てに呼び出されます。 ドライバー マネージャーは、アプリケーションによって設定された環境属性に一致する既存の共有環境を見つけようとします。 このような環境が存在しない場合、暗黙の型として作成されます*共有環境*します。 一致する共有環境が見つかった場合は、環境ハンドルは、アプリケーションに返され、参照カウントがインクリメントされます。  
+ SQL_HANDLE_DBC の*Handletype*を持つ**SQLAllocHandle**は、接続を割り当てるために呼び出されます。 ドライバーマネージャーは、アプリケーションによって設定された環境属性に一致する既存の共有環境の検索を試みます。 このような環境が存在しない場合は、暗黙的な*共有環境*として作成されます。 一致する共有環境が見つかった場合は、環境ハンドルがアプリケーションに返され、その参照カウントがインクリメントされます。  
   
- ただし、使用される接続はまで決まりません**SQLConnect**が呼び出されます。 その時点では、ドライバー マネージャーは、アプリケーションによって要求された条件に一致する接続プール内の既存の接続を見つけようとします。 これらの基準への呼び出しで要求された接続オプションを含める**SQLConnect** (の値、 *ServerName*、 *UserName*、および*認証*キーワード) ため、任意の接続属性セットと**SQLAllocHandle**で、 *HandleType* sql_handle_dbc としてが呼び出されました。 ドライバー マネージャーは、対応する接続キーワードと、プール内の接続での属性に対してこれらの条件を確認します。 一致が見つかった場合は、プール内の接続が使用されます。 一致が検出されない場合は、新しい接続が作成されます。  
+ ただし、 **SQLConnect**が呼び出されるまで、使用される接続は決定されません。 その時点で、ドライバーマネージャーは、アプリケーションによって要求された条件に一致する接続プール内の既存の接続を見つけようとします。 これらの条件には、 **SQLConnect**の呼び出しで要求された接続オプション ( *ServerName*、 *UserName*、 *Authentication*キーワードの値) と、 **SQLAllocHandle**以降に設定されたすべての接続属性 (SQL_HANDLE_DBC の*handletype*が呼び出された場合) が含まれます。 ドライバーマネージャーは、プール内の接続の対応する接続キーワードと属性に対して、これらの条件を確認します。 一致が見つかった場合は、プール内の接続が使用されます。 一致するものが見つからない場合は、新しい接続が作成されます。  
   
- SQL_ATTR_CP_MATCH 環境属性が SQL_CP_STRICT_MATCH に設定されている場合、一致が使用するプール内の接続の正確な場合があります。 SQL_ATTR_CP_MATCH 環境属性が SQL_CP_RELAXED_MATCH に設定されている場合、接続オプションへの呼び出し**SQLConnect**一致がないすべての接続属性する必要がありますに一致する必要があります。  
+ SQL_ATTR_CP_MATCH 環境属性が SQL_CP_STRICT_MATCH に設定されている場合、使用するプール内の接続に対して一致する必要があります。 SQL_ATTR_CP_MATCH 環境属性が SQL_CP_RELAXED_MATCH に設定されている場合、 **SQLConnect**の呼び出しの接続オプションは一致している必要がありますが、すべての接続属性が一致している必要があります。  
   
- 次のルールが前に、アプリケーションによって設定されたときに、接続属性を適用は**SQLConnect**を呼び出すと、プール内の接続の接続属性と一致しません。  
+ **SQLConnect**が呼び出される前にアプリケーションによって設定された接続属性がプール内の接続の接続属性と一致しない場合は、次の規則が適用されます。  
   
--   場合は、接続が行われる前に、接続属性を設定する必要があります。  
+-   接続を確立する前に接続属性を設定する必要がある場合は、次のようにします。  
   
-     SQL_ATTR_CP_MATCH が SQL_CP_STRICT_MATCH の場合は、SQL_ATTR_PACKET_SIZE プールされた接続では、アプリケーションによって設定された属性と同じである必要があります。 別の SQL_CP_RELAXED_MATCH、SQL_ATTR_PACKET_SIZE の値を使用できます。 場合、  
+     SQL_ATTR_CP_MATCH が SQL_CP_STRICT_MATCH 場合、プールされた接続の SQL_ATTR_PACKET_SIZE は、アプリケーションによって設定された属性と同じである必要があります。 SQL_CP_RELAXED_MATCH 場合、SQL_ATTR_PACKET_SIZE の値は異なる場合があります。  
   
-     SQL_ATTR_LOGIN_VALUE の値は、一致には影響しません。  
+     SQL_ATTR_LOGIN_VALUE の値は一致には影響しません。  
   
--   接続の確立後または前に、接続属性を設定できます。 場合、  
+-   接続の作成前または終了後に接続属性を設定できる場合は、次のように指定します。  
   
-     接続属性は、アプリケーションが設定されていませんが、プール内の接続が設定されている場合、既定値は、プールされた接続で接続の属性は、既定値に戻してし、一致するものは宣言されています。 既定値がない場合は、プールされた接続には一致するものはありません。  
+     接続属性がアプリケーションによって設定されておらず、プール内の接続に設定されていて、既定値がある場合は、プールされた接続の接続属性が既定値に戻り、一致が宣言されます。 既定値がない場合、プールされた接続は一致と見なされません。  
   
-     接続属性が、アプリケーションによって設定されている、プール内の接続に設定されていない場合は、プールの接続属性は、アプリケーションがそのセットに変更され、一致するものは宣言されています。  
+     接続属性がアプリケーションによって設定されていても、プール内の接続に対して設定されていない場合、プールの接続属性はアプリケーションによって設定されたものに変更され、一致が宣言されます。  
   
-     接続属性が、アプリケーションで設定されているし、プール内の接続に設定されても、値が異なる場合は、アプリケーションの接続属性の値を使用し、一致が宣言されています。  
+     接続属性がアプリケーションによって設定されており、プール内の接続にも設定されていても、値が異なる場合は、アプリケーションの接続属性の値が使用され、一致が宣言されます。  
   
--   ドライバー固有の接続属性の値が同一でない SQL_ATTR_CP_MATCH が SQL_CP_STRICT_MATCH に設定されている場合は、プール内の接続は使用されません。  
+-   ドライバー固有の接続属性の値が同一ではなく、SQL_ATTR_CP_MATCH が SQL_CP_STRICT_MATCH に設定されている場合、プール内の接続は使用されません。  
   
- アプリケーションを呼び出すと**SQLDisconnect**切断するには、接続が接続プールに返され、再利用できます。  
+ アプリケーションが**Sqldisconnect**を呼び出して切断すると、接続が接続プールに返され、再利用できるようになります。  
   
-### <a name="optimizing-connection-pooling-performance"></a>接続プールのパフォーマンスを最適化します。  
- 分散トランザクションが関与すると、接続を使用してプールのパフォーマンスを最適化することは**SQL_DTC_TRANSITION_COST**、SQLUINTEGER ビットマスクであります。 呼ばれる遷移は、接続属性に 0 以外の場合、値 0 から移動 SQL_ATTR_ENLIST_IN_DTC の遷移、またはその逆です。 これからの接続は、分散トランザクションに参加しているいませんは、分散トランザクションでは、その逆に参加しています。 どのドライバー (設定の接続属性 SQL_ATTR_ENLIST_IN_DTC) の参加の実装が、によってそれらの遷移は高価な場合があり、最適なパフォーマンスは避ける必要がありますので。  
+### <a name="optimizing-connection-pooling-performance"></a>接続プールのパフォーマンスの最適化  
+ 分散トランザクションが関係している場合は、SQLUINTEGER ビットマスクである**SQL_DTC_TRANSITION_COST**を使用して、接続プールのパフォーマンスを最適化することができます。 参照される遷移は、値0から0以外の値に移動する SQL_ATTR_ENLIST_IN_DTC 接続属性の遷移であり、その逆も同様です。 これは、分散トランザクションに参加していない分散トランザクションに参加していない接続であり、その逆も同様です。 ドライバーが参加を実装した方法 (接続属性の設定 SQL_ATTR_ENLIST_IN_DTC) によっては、これらの移行に負荷がかかり、最適なパフォーマンスが得られないようにする必要があります。  
   
- ドライバーによって返される値には、次のビットの任意の組み合わせが含まれています。  
+ ドライバーによって返される値には、次のビットの任意の組み合わせが含まれます。  
   
--   **SQL_DTC_ENLIST_EXPENSIVE**ときに、設定、0 以外の遷移にゼロが 0 以外の値から別の 0 以外の値 (次のトランザクションで以前に参加している接続の参加) への移行よりも大幅に高くことを意味します。  
+-   **SQL_DTC_ENLIST_EXPENSIVE**が設定されている場合、0以外の移行では、0以外の値から別の0以外の値への移行よりも大幅にコストが高くなります (次のトランザクションで、以前に参加した接続に参加します)。  
   
--   **SQL_DTC_UNENLIST_EXPENSIVE**ときに、設定、SQL_ATTR_ENLIST_IN_DTC 属性を持つが、既に 0 に設定の接続を使用するよりも大幅に高く、0 個の遷移を 0 以外のことを意味します。  
+-   **SQL_DTC_UNENLIST_EXPENSIVE**が設定されている場合は、0以外の値を設定すると、SQL_ATTR_ENLIST_IN_DTC 属性が既に0に設定されている接続を使用する場合よりも大幅にコストが高くなります。  
   
- これは、接続の使用状況のトレードオフとパフォーマンスです。 ドライバーは、1 つ以上のこれらの遷移が高価なことを示している場合、ドライバー マネージャーの接続プーラーはプールにより多くの接続を維持することでこれに応答します。 接続プール内の一部に非トランザクションの使用に適しているし、トランザクションの使用に適したいくつか。 ただし場合は、ドライバーは、これらの遷移が高価ないないことを示します、接続数を使用できます、おそらくの非トランザクションとトランザクションの使用の間で切り替えます。  
+ パフォーマンスと接続の使用のトレードオフがあります。 ドライバーが、これらの遷移のうち1つ以上が高コストであることを示している場合、ドライバーマネージャーの接続プーラーは、プール内の接続数を増やすことによってこれに応答します。 プール内の一部の接続は非トランザクション使用に適しており、トランザクション使用に適しています。 ただし、これらの遷移が高コストでないことがドライバーによって示されている場合は、使用できる接続の数を減らすことができます。  
   
- SQL_ATTR_ENLIST_IN_DTC をサポートしていないドライバーは、SQL_DTC_TRANSITION_COST をサポートする必要はありません。 SQL_ATTR_ENLIST_IN_DTC がない SQL_DTC_TRANSITION_COST をサポートするドライバー、遷移がドライバーにはこの値を 0 (ビットが設定されていない) が返される場合、高価ないないことを前提とします。  
+ SQL_ATTR_ENLIST_IN_DTC をサポートしていないドライバーは、SQL_DTC_TRANSITION_COST をサポートする必要はありません。 SQL_DTC_TRANSITION_COST ではなく SQL_ATTR_ENLIST_IN_DTC をサポートするドライバーの場合、この値に対してドライバーが 0 (ビットセット) を返した場合と同じように、移行に負荷がかかることが想定されます。  
   
- ただし、SQL_DTC_TRANSITION_COST は、ODBC 3.5 では、ODBC 2 で導入されました。*x*ドライバーもサポートできますが、ドライバー マネージャーがドライバーのバージョンに関係なく、この情報にクエリを実行しているためです。  
+ SQL_DTC_TRANSITION_COST は odbc 3.5 (ODBC 2) で導入されました。ドライバーマネージャーは、ドライバーのバージョンに関係なく、この情報を照会するため、 *x*ドライバーでもサポートされます。  
   
 ### <a name="code-example"></a>コード例  
- 次の例では、アプリケーションを割り当てる環境と接続ハンドル。 ユーザー ID ジョンズ SalesOrders データ ソースとパスワード Sesame に接続し、データを処理します。 データの処理が完了したら、データ ソースから切断し、ハンドルを解放します。  
+ 次の例では、アプリケーションが環境ハンドルと接続ハンドルを割り当てます。 次に、ユーザー ID ジョンズとパスワード Sesame を使用して SalesOrders データソースに接続し、データを処理します。 データの処理が完了すると、データソースから切断され、ハンドルが解放されます。  
   
 ```cpp  
 // SQLConnect_ref.cpp  
@@ -247,12 +247,12 @@ int main() {
   
 ### <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|解決方法については、|  
 |---------------------------|---------|  
-|ハンドルの割り当てください。|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|検出およびデータ ソースに接続するために必要な値を列挙します。|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|データ ソースからの切断|[SQLDisconnect 関数](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|接続文字列またはダイアログ ボックスを使用してデータ ソースへの接続|[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|ハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|データソースへの接続に必要な値の検出と列挙|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|データソースからの切断|[SQLDisconnect 関数](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|接続文字列またはダイアログボックスを使用したデータソースへの接続|[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |接続属性の設定を返す|[SQLGetConnectAttr 関数](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |接続属性の設定|[SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   

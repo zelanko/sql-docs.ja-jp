@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2dd1ecf333c452e2f1e2710a7ad16782a1a3628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100420"
 ---
 # <a name="delete-an-item-management-studio"></a>アイテムの削除 (Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "66100420"
   
 ## <a name="see-also"></a>参照  
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
- [カタログ アイテムの削除 (Management Studio)](delete-catalog-items-management-studio.md)   
- [SQL Server Management Studio の Reporting Services (SSRS)](reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [カタログ アイテムの削除 &#40;Management Studio&#41;](delete-catalog-items-management-studio.md)   
+ [SQL Server Management Studio の Reporting Services &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

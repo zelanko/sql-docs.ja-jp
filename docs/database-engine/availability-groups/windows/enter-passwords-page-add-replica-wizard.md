@@ -1,7 +1,7 @@
 ---
-title: 可用性グループの [パスワードの入力] ページ (レプリカ追加ウィザード)
+title: 'レプリカの追加ウィザード: 可用性グループの [パスワードの入力] ページ'
 description: SQL Server Management Studio のレプリカ追加ウィザードの [パスワードの入力] ページに表示されるプロパティの説明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6198ca1183caf731a78026dfd1f2f7644979580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 761e91a8da521756e212da501c2dd768e998f35f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894439"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 可用性グループの [パスワードの入力] ページ (レプリカ追加ウィザード)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このヘルプ トピックでは、 **[パスワードの入力]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。  
   
  **[レプリカの指定]** ページで選択したレプリカに、データベース マスター キーがあるデータベースが含まれている場合は、[パスワードの入力] ページが表示されます。  
@@ -28,13 +28,13 @@ ms.locfileid: "68008442"
 ## <a name="enter-passwords-options"></a>パスワード入力オプション  
  **[この SQL Server のインスタンス上のユーザー データベース]** グリッドには、すべてのローカル ユーザー データベースが表示されます。 次の列で構成されます。  
   
- **[名前]**  
+ **名前**  
  ローカル ユーザー データベースの名前が表示されます。  
   
  **[サイズ]**  
  データベースのサイズが表示されます (サイズをウィザードで使用できる場合)。  
   
- **ステータス**  
+ **状態**  
  データベース マスターキーがあるデータベースに対して " **パスワードが必要です** " と表示されます。 データベース マスター キーのパスワードを **[パスワード]** 列に入力し、 **[更新]** をクリックします。 パスワードを正しく入力した場合、 **[状態]** 列に **[パスワードが入力されました]** が表示されます。  
   
  データベースにデータベース マスター キーがない場合、 **[状態]** 列には **[パスワードは必要ありません]** が表示されます。  

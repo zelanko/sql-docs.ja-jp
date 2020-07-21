@@ -1,5 +1,6 @@
 ---
 title: データベースに対するデータ ファイルまたはログ ファイルの追加 | Microsoft Docs
+description: SQL Server Management Studio または Transact-SQL を使用して、SQL Server 2019 でデータまたはログ ファイルをデータベースに追加する方法について説明します。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727581"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>データベースに対するデータ ファイルまたはログ ファイルの追加
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースにデータ ファイルまたはログ ファイルを追加する方法について説明します。  
   
  **このトピックの内容**  
@@ -35,7 +36,7 @@ ms.locfileid: "68137404"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルをデータベースに追加するには:**  
   
@@ -43,20 +44,20 @@ ms.locfileid: "68137404"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   BACKUP ステートメントの実行中にファイルを追加したり削除したりすることはできません。  
   
 -   各データベースに、最大 32,767 のファイルと 32,767 のファイル グループを指定できます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>データ ファイルまたはログ ファイルをデータベースに追加するには  
   
@@ -72,7 +73,7 @@ ms.locfileid: "68137404"
   
 6.  ファイルの種類 (データまたはログ) を選択します。  
   
-7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、 **[\<新しいファイル グループ>]** をクリックして新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
+7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、 **\<new filegroup>** を選択して新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
   
 8.  ファイルの初期サイズを指定します。 データベースに格納するデータの予想最大量に基づいて、データ ファイルのサイズを可能な限り大きく設定しておきます。  
   
@@ -102,7 +103,7 @@ ms.locfileid: "68137404"
   
 12. **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>データ ファイルまたはログ ファイルをデータベースに追加するには  
   
@@ -110,7 +111,7 @@ ms.locfileid: "68137404"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、2 つのファイルから成るファイル グループをデータベースに追加します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに `Test1FG1` ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、2 つのファイルから成るファイル グループをデータベースに追加します。 `Test1FG1` データベースに [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ファイル グループを作成し、そのファイル グループに 5 MB のファイルを 2 つ追加します。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

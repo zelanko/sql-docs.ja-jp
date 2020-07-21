@@ -1,10 +1,7 @@
 ---
-title: SQL Server エージェント サービスのアカウントの選択 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/04/2017
+title: SQL Server エージェント サービスのアカウントの選択
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811553"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253232"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -39,7 +41,7 @@ ms.locfileid: "68811553"
   
 -   **[ビルトイン アカウント]** 。 次のビルトイン Windows サービス アカウントの一覧から選択できます。  
   
-    -   **[ローカル システム]** アカウント。 このアカウントの名前は NT AUTHORITY\System です。 これは、すべてのローカル システム リソースに無制限にアクセスできる強力なアカウントです。 これは、ローカル コンピューターの Windows **Administrators** グループのメンバーです。つまり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーです。  
+    -   **[ローカル システム]** アカウント。 このアカウントの名前は NT AUTHORITY\System です。 これは、すべてのローカル システム リソースに無制限にアクセスできる強力なアカウントです。 これは、ローカル コンピューターの Windows **Administrators** グループのメンバーです。つまり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**sysadmin** 固定サーバー ロールのメンバーです。  
   
         > [!IMPORTANT]  
         > **[ローカル システム アカウント]** オプションは、旧バージョンとの互換性のためだけに用意されています。 ローカル システム アカウントには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが必要としない権限があります。 ローカル システム アカウントとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行するのは避けてください。 セキュリティを強化するには、次の「Windows ドメイン アカウントの権限」に示す権限のある Windows ドメイン アカウントを使用します。  
@@ -62,7 +64,7 @@ ms.locfileid: "68811553"
   
     -   プロセスに対してメモリ クォータを調整する権限 (SeIncreaseQuotaPrivilege)  
   
-    -   ネットワークからこのコンピューターにアクセスする権限 (SeNetworkLogonRight)  
+    -   ネットワークからこのコンピューターへのアクセス許可 (SeNetworkLogonRight)  
   
 > [!NOTE]  
 > アカウントにプロキシのサポートに必要な権限がない場合は、 **sysadmin** 固定サーバー ロールのメンバーのみがジョブを作成できます。  
@@ -82,11 +84,11 @@ ms.locfileid: "68811553"
   
 |サービス アカウントの種類|非クラスター化サーバー|クラスター化サーバー|ドメイン コントローラー (非クラスター化)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows ドメイン アカウント (Windows Administrators グループのメンバー)|Supported|Supported|Supported|  
-|Windows ドメイン アカウント (管理者以外)|Supported<br /><br />以下に示す制限事項 1 を参照してください。|Supported<br /><br />以下に示す制限事項 1 を参照してください。|Supported<br /><br />以下に示す制限事項 1 を参照してください。|  
-|ネットワーク サービス アカウント (NT AUTHORITY\NetworkService)|Supported<br /><br />以下に示す制限事項 1、3、4 を参照してください。|サポートされていません|サポートされていません|  
-|ローカル ユーザー アカウント (管理者以外)|Supported<br /><br />以下に示す制限事項 1 を参照してください。|サポートされていません|適用なし|  
-|ローカル システム アカウント (NT AUTHORITY\System)|Supported<br /><br />以下に示す制限事項 2 を参照してください。|サポートされていません|Supported<br /><br />以下に示す制限事項 2 を参照してください。|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows ドメイン アカウント (Windows Administrators グループのメンバー)|サポートされています|サポートされています|サポートされています|  
+|Windows ドメイン アカウント (管理者以外)|サポートされています<br /><br />以下に示す制限事項 1 を参照してください。|サポートされています<br /><br />以下に示す制限事項 1 を参照してください。|サポートされています<br /><br />以下に示す制限事項 1 を参照してください。|  
+|ネットワーク サービス アカウント (NT AUTHORITY\NetworkService)|サポートされています<br /><br />以下に示す制限事項 1、3、4 を参照してください。|サポートされていません|サポートされていません|  
+|ローカル ユーザー アカウント (管理者以外)|サポートされています<br /><br />以下に示す制限事項 1 を参照してください。|サポートされていません|適用なし|  
+|ローカル システム アカウント (NT AUTHORITY\System)|サポートされています<br /><br />以下に示す制限事項 2 を参照してください。|サポートされていません|サポートされています<br /><br />以下に示す制限事項 2 を参照してください。|  
 |ローカル サービス アカウント (NT AUTHORITY\LocalService)|サポートされていません|サポートされていません|サポートされていません|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>制限事項 1: マルチサーバー管理での非管理者アカウントの使用  
@@ -118,7 +120,7 @@ ms.locfileid: "68811553"
   
 **SQL Server エージェントのメール プロファイルを指定するには**  
   
--   [方法: データベース メールを使用するように SQL Server エージェント メールを構成する方法 (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [方法: データベース メールを使用するように SQL Server エージェント メールを構成する](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、オペレーティング システムを起動するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを開始する必要があることを指定します。  

@@ -10,18 +10,17 @@ helpviewer_keywords:
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc25a2ea7f37086722d83113603ef178b43d86b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003287"
 ---
 # <a name="multipoint"></a>MultiPoint
   `MultiPoint` は、0 個以上のポイントのコレクションです。 `MultiPoint` インスタンスの境界は空になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、SRID が 23 で、ポイントが 2 つある (1 つは座標 (2,3) のポイントで、もう 1 つは座標 (7,8) で Z が 9.5 のポイント) `geometry MultiPoint` インスタンスを作成します。  
   
 ```  
@@ -43,7 +42,7 @@ SELECT @g.STGeometryN(1).STAsText();
 ```  
   
 ## <a name="see-also"></a>参照  
- [ポイント](point.md)   
+ [視点](point.md)   
  [空間データ &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

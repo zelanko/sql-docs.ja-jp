@@ -14,15 +14,14 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e77b9f442ae8478c57d5b0e68955b541eda38aff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831770"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433189"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62831770"
 ## <a name="connecting-to-a-data-source"></a>データ ソースへの接続  
  SQL 実行タスクでは、さまざまな種類の接続マネージャーを使用して、SQL ステートメントまたはストアド プロシージャを実行するデータ ソースに接続できます。 このタスクが使用できる接続の種類の一覧を、次の表に示します。  
   
-|接続の種類|[ODBC 入力先エディター]|  
+|接続の種類|[ODBC 入力元エディター]|  
 |---------------------|------------------------|  
 |EXCEL|[Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)|  
 |OLE DB (OLE DB)|[OLE DB 接続マネージャー](../connection-manager/ole-db-connection-manager.md)|  
@@ -56,7 +55,7 @@ ms.locfileid: "62831770"
   
  SQL ステートメントがファイルに格納されている場合、タスクはファイル接続マネージャーを使用してそのファイルに接続します。 詳しくは「 [File Connection Manager](../connection-manager/file-connection-manager.md)」をご覧ください。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 **[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである**クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 **[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである **クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  有効な SQL ステートメントが SQL 実行タスクの外部に記述されている場合、SQL 実行タスクは解析に失敗することがあります。  
@@ -85,15 +84,15 @@ ms.locfileid: "62831770"
 > [!NOTE]  
 >  SQL 実行タスクでは、データ プロバイダーがサポートしている場合のみ、パラメーターを使用できます。  
   
- SQL 実行タスクにおけるパラメーターとリターン コードの使用については、「[SQL 実行タスクのパラメーターとリターン コード](execute-sql-task.md)」を参照してください。  
+ SQL 実行タスクにおけるパラメーターとリターン コードの使用については、「 [SQL 実行タスクのパラメーターとリターン コード](execute-sql-task.md)」を参照してください。  
   
 ## <a name="specifying-a-result-set-type"></a>結果セットの種類の指定  
  結果セットが SQL 実行タスクに返されるかどうかは、SQL コマンドの種類によって決まります。 たとえば、通常、SELECT ステートメントは結果セットを返しますが、INSERT ステートメントは返しません。 SELECT ステートメントからの結果セットに含まれる行数は、0 行、1 行、または多数行である場合があります。 また、ストアド プロシージャは、プロシージャの実行状態を示すリターン コードという整数値を返すこともできます。 この場合、結果セットは 1 行で構成されます。  
   
- SQL 実行タスクにおける SQL コマンドからの結果セットの取得については、「[SQL 実行タスクにおける結果セット](../result-sets-in-the-execute-sql-task.md)」を参照してください。  
+ SQL 実行タスクにおける SQL コマンドからの結果セットの取得については、「 [SQL 実行タスクにおける結果セット](../result-sets-in-the-execute-sql-task.md)」を参照してください。  
   
 ## <a name="troubleshooting-the-execute-sql-task"></a>SQL 実行タスクのトラブルシューティング  
- SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
+ SQL 実行タスクによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、SQL 実行タスクが実行する SQL コマンドに関するトラブルシューティングを行うことができます。 SQL 実行タスクによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択します。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
  SQL コマンドまたはストアド プロシージャから、複数の結果セットが返される場合があります。 このような結果セットには、`SELECT` クエリの結果である行セットだけでなく、`RAISERROR` ステートメントまたは `PRINT` ステートメントのエラーの結果である単一値も含まれています。 1 つ目以外の結果セット内のエラーがタスクで無視されるかどうかは、使用する接続マネージャーの種類によって異なります。  
   
@@ -127,11 +126,11 @@ ms.locfileid: "62831770"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SQL 実行タスク エディター &#40;[全般] ページ&#41;](../execute-sql-task-editor-general-page.md)  
+-   [[SQL 実行タスクエディター] &#40;[全般] ページ&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [SQL 実行タスク エディター&#40;パラメーター マッピング ページ&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [[SQL 実行タスクエディター] &#40;[パラメーターマッピング] ページ&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [SQL 実行タスク エディター&#40;結果セット ページ&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [[SQL 実行タスクエディター &#40;結果セット] ページ&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

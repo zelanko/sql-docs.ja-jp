@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68259364"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ 
 
 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリー マップおよびサンバースト視覚エフェクトは、階層データを視覚的に表現する上で非常に効果的です。 この記事では、ツリー マップまたはサンバースト グラフを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに追加する方法の概要を説明します。 この記事には、開始するための AdventureWorks サンプル クエリも含まれています。  
   
-##  <a name="bkmk_treemap_chart"></a> ツリー マップ グラフ  
+##  <a name="treemap-chart"></a><a name="bkmk_treemap_chart"></a> ツリー マップ グラフ  
 
 ツリー マップ グラフでは、グラフ領域がデータ階層のさまざまなレベルと相対サイズを表す複数の四角形に分割されます。 マップは、幹から次第に小さな枝へと分かれていく、木の枝に似ています。 各四角形は、階層内の次のレベルを表す、より小さな四角形に分割されます。 最上位レベルのツリー マップ四角形は、最も大きな四角形がグラフの左上隅に、最も小さな四角形が右下隅にという並びで順々に配置されます。  四角形内では、次のレベルの四角形が同様に左上から右下へ大きい順に配置されます。  
 
@@ -67,7 +67,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 7. 表示されるラベル値の数は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズにより変わります。 より多くのラベルを表示するには、**LineTotal** の **[ラベル フォント]** プロパティを既定の **8pt** から **10pt** に変更します。  
 
-##  <a name="bkmk_sunburst_chart"></a> サンバースト グラフ  
+##  <a name="sunburst-chart"></a><a name="bkmk_sunburst_chart"></a> サンバースト グラフ  
 
 サンバースト グラフでは、階層は一連の円で表されます。 階層の最上位レベルは中心であり、階層の下位レベルは中心の外側の輪です。  最下位レベルの階層は、最も外側のリングとなります。  
   
@@ -107,7 +107,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
 
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
 
-##  <a name="bkmk_sample_data"></a> AdventureWorks データのサンプル
+##  <a name="sample-adventureworks-data"></a><a name="bkmk_sample_data"></a> AdventureWorks データのサンプル
 
 このセクションでは、サンプル クエリを紹介すると共に、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] でデータ ソースとデータセットを作成するための基本的な手順について説明します。 レポートにデータ ソースとデータセットが既に存在する場合、このセクションは省略できます。  
   
@@ -125,7 +125,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
     3. [接続の種類] で **[Microsoft SQL Server]** を選択します。  
   
-    4. サーバーとデータベースに接続文字列を入力します。 例:  
+    4. サーバーとデータベースに接続文字列を入力します。 次に例を示します。  
   
         ```
         Data Source=[server name];Initial Catalog=AdventureWorks2016  

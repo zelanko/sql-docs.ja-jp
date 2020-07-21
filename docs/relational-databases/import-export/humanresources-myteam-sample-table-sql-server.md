@@ -1,5 +1,6 @@
 ---
 title: HumanResources.myTeam サンプル テーブル (SQL Server) | Microsoft Docs
+description: SQL Server で一括データをインポートおよびエクスポートするコード例を実行するには、myTeam という名前のテスト テーブルを HumanResources スキーマに作成する必要があります。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d68c1cab5ea8902a4858cc7aaad79d08aa458f01
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035682"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012445"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   「 [一括データのインポートおよびエクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) 」のコード例の大部分では、 **myTeam**という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、 **データベースの** HumanResources **スキーマに** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを作成する必要があります。  
   
 > [!NOTE]  
@@ -31,12 +32,12 @@ ms.locfileid: "68035682"
   
  **myTeam** テーブルには、次の列が含まれています。  
   
-|[列]|データ型|NULL 値の許容|[説明]|  
+|列|データ型|NULL 値の許容|説明|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|不可|行の主キー。 チーム メンバーの従業員 ID。|  
-|**[名前]**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
-|**Title**|**nvarchar (50)**|[可]|チームにおける従業員の肩書き。|  
-|**背景情報**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
+|**名前**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
+|**Title**|**nvarchar (50)**|Nullable|チームにおける従業員の肩書き。|  
+|**バックグラウンド**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   
 **HumanResources.myTeam テーブルを作成するには**  
   

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 807eec350627d64a642abc1043977d67069cc0d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749348"
 ---
 # <a name="import-policies-dialog-box"></a>[ポリシーのインポート] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、XML ファイルとして保存された 1 つ以上のポリシー (およびその参照された条件) を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の現在のインスタンスにインポートできます。  
   
 ## <a name="options"></a>オプション  
@@ -42,6 +42,6 @@ ms.locfileid: "68087235"
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)   
- [ポリシー ベースの管理ポリシーのエクスポート](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)  
+ [ポリシーベースの管理ポリシーのエクスポート](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)  
   
   

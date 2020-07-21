@@ -1,5 +1,5 @@
 ---
-title: sp_pdw_log_user_data_masking (SQL データ ウェアハウス) |Microsoft Docs
+title: sp_pdw_log_user_data_masking (SQL Data Warehouse) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -11,24 +11,24 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5541d065b24e349e4a784b7db1b8245df0a8aaf4
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056452"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196979"
 ---
-# <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL データ ウェアハウス)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  使用**sp_pdw_log_user_data_masking**ユーザーのデータのマスキングを有効にする[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。 ユーザー データのマスキングでは、アプライアンス上のすべてのデータベースでのステートメントに影響します。  
+  **Sp_pdw_log_user_data_masking**を使用して、アクティビティログでユーザーデータのマスキングを有効に [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] します。 ユーザーデータのマスキングは、アプライアンス上のすべてのデータベースのステートメントに影響します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログを受ける**sp_pdw_log_user_data_masking**特定は[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。 **sp_pdw_log_user_data_masking**データベースのトランザクション ログには影響しませんまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログ。  
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **Sp_pdw_log_user_data_masking**によって影響を受けるアクティビティログは、特定の [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログです。 **sp_pdw_log_user_data_masking**は、データベーストランザクションログまたはエラーログには影響しません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- **背景知識:** 既定の構成で[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログが完全に含む[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、およびによってなどの操作に含まれるユーザー データを含める**挿入**、 **UPDATE**と**選択**ステートメント。 アプライアンス上の問題が発生した場合は、問題を再現するがなくても問題の原因となった状況の分析を許可します。 ユーザー データが書き込まれることを防ぐために[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ、顧客は、このストアド プロシージャを使用してユーザー データのマスキングを有効にすることを選択できます。 ステートメントが引き続きに書き込まれます[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動作状況のログがいくつかの定義済みの定数値に置き換えられます; ユーザー データを含む可能性のあるステートメント内のリテラルを隠蔽することができます。  
+ **背景:** 既定の構成 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログには完全なステートメントが含まれ [!INCLUDE[tsql](../../includes/tsql-md.md)] ており、場合によっては**INSERT**、 **UPDATE**、 **SELECT**ステートメントなどの操作に含まれるユーザーデータが含まれます。 アプライアンスで問題が発生した場合は、問題の原因となった状況を分析して問題を再現する必要がありません。 ユーザーデータがアクティビティログに書き込まれないようにするには [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、このストアドプロシージャを使用してユーザーデータのマスキングを有効にすることを選択できます。 ステートメントは引き続きアクティビティログに書き込まれます [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] が、ユーザーデータを含む可能性のあるステートメント内のすべてのリテラルはマスクされ、いくつかの定義済みの定数値に置き換えられます。  
   
- アプライアンスの透過的なデータ暗号化が有効な場合は、内のユーザー データのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログが自動的にオンにします。  
+ アプライアンスで transparent data encryption を有効にすると、アクティビティログ内のユーザーデータのマスキングが自動的に有効になり [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,34 +39,34 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-`[ @masking_mode = ] masking_mode` 透過的なデータ暗号化ログ ユーザー データのマスキングが有効になっているかどうかを判断します。 *masking_mode*は**int**値は次のいずれかを指定できます。  
+`[ @masking_mode = ] masking_mode`透過的なデータ暗号化ログユーザーデータのマスキングが有効かどうかを指定します。 *masking_mode*は**int**,、値は次のいずれかを指定することができます。  
   
--   0 = 無効、ユーザーに表示されるデータ、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
+-   0 = 無効。ユーザーデータはアクティビティログに表示され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。  
   
--   1 = 有効、ユーザーがデータのステートメントでの表示、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログは、ユーザー データはマスクされています。  
+-   1 = 有効になっていると、ユーザーデータステートメントはアクティビティログに表示され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ますが、ユーザーデータはマスクされます。  
   
--   2 = ステートメントにユーザー データを含むは書き込まれません、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
+-   2 = ユーザーデータを含むステートメントは、アクティビティログには書き込まれません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
- 実行**sp_pdw log_user_data_masking**パラメーターでは、TDE ログ ユーザー データのマスキングの現在の状態を返すスカラーの結果セットとしてアプライアンス上なくです。  
+ パラメーターを指定せずに**sp_pdw_ log_user_data_masking**を実行すると、アプライアンス上の tde ログユーザーデータマスクの現在の状態がスカラー結果セットとして返されます。  
   
-## <a name="remarks"></a>コメント  
- ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティで定義済みの定数値を持つリテラルの置換を有効をログ**選択**や DML ステートメントでは、ユーザー データを含めることができるようにします。 設定*masking_mode*を 1 にマスクしません、列名またはテーブル名などのメタデータ。 設定*masking_mode* 2 列名またはテーブル名などのメタデータを持つステートメントを削除します。  
+## <a name="remarks"></a>解説  
+ ユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログでは、ユーザーデータを含めることができる**SELECT**ステートメントと DML ステートメントで、定義済みの定数値を持つリテラルを置換できます。 *Masking_mode*を1に設定しても、列名やテーブル名などのメタデータはマスクされません。 *Masking_mode*を2に設定すると、列名やテーブル名などのメタデータを含むステートメントが削除されます。  
   
- ユーザーのデータのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログは、次のように実装されます。  
+ アクティビティログでのユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、次のように実装されます。  
   
--   TDE とユーザー データのマスキング[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログは既定でオフにします。 ステートメントは自動的にマスクされないアプライアンスでデータベースの暗号化が有効でない場合。  
+-   既定では、アクティビティログの TDE とユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] はオフになっています。 アプライアンスでデータベース暗号化が有効になっていない場合、ステートメントは自動的にマスクされません。  
   
--   ユーザー データのマスキング アプライアンスで TDE を自動的に有効にするオン[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
+-   アプライアンスで TDE を有効にすると、アクティビティログのユーザーデータのマスキングが自動的にオンになり [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。  
   
--   TDE を無効にした場合、ユーザーのデータのマスキングは影響しません[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログ。  
+-   TDE を無効にしても、アクティビティログでのユーザーデータのマスキングには影響しません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。  
   
--   ユーザー データのマスキングでは、明示的に有効に[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アクティビティ ログを使用して、 **sp_pdw_log_user_data_masking**プロシージャ。  
+-   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] **Sp_pdw_log_user_data_masking**の手順を使用して、アクティビティログでユーザーデータのマスキングを明示的に有効にすることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限。  
+ **Sysadmin**固定データベースロールまたは**CONTROL SERVER**権限のメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 次の例では、TDE のログ ユーザー データが、アプライアンスのマスクを有効します。  
+ 次の例では、TDE のログユーザーデータのマスキングを有効にします。  
   
 ```  
 EXEC sp_pdw_log_user_data_masking 1;  

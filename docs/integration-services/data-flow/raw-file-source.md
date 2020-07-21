@@ -16,14 +16,14 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8c65fe330869f5059fdce928bd529141505f4298
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e18b3ea191e51dabe010dc66ad0cff0fce8c8f50
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034354"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488559"
 ---
 # <a name="raw-file-source"></a>RAW ファイル ソース (Raw File source)
 
@@ -57,7 +57,7 @@ ms.locfileid: "68034354"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
+-   sqlservercentral.com のブログ「 [RAW ファイルは最高](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)」  
   
 ## <a name="raw-file-source-editor-connection-manager-page"></a>[生ファイル ソース エディター] ([接続マネージャー] ページ)
   RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。   

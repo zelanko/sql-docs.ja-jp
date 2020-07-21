@@ -1,5 +1,6 @@
 ---
 title: '[データベースの復元] ([ファイル] ページ) | Microsoft Docs'
+description: SQL Server でデータベースを復元するときに、[データベースの復元] ダイアログ ボックスの [ファイル] ページを使用して、データベース内で復元するように特定のファイルを管理します。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab1cedc6960052ec8a9007b72d9062b8fc818ab7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737732"
 ---
 # <a name="restore-database-files-page"></a>[データベースの復元]\([ファイル] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[データベースの復元]** ダイアログ ボックスの **[ファイル]** ページを使用して、データベース内で復元するように選択した特定のファイルを管理します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 ### <a name="restore-database-files-as"></a>[次のデータベース ファイルに復元]  
  復元されたファイルに新しいファイル パスを割り当て、管理できます。  
@@ -32,7 +33,7 @@ ms.locfileid: "67944828"
  **[すべてのファイルをフォルダーに移動]**  
  復元されたファイルを再配置します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**データ ファイル フォルダー**|復元されたデータ ファイルが移されるデータ ファイルのフォルダー名を入力または検索します。|  
 |**ログ ファイル フォルダー**|復元されたログ ファイルが移されるログ ファイル フォルダーを入力または検索します。|  

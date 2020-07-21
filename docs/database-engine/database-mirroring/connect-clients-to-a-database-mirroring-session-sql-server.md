@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションへのクライアントの接続 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリングへのクライアントの接続
+description: Native Client または SQL Server 用の .NET Framework Provider を使用して、クライアントを構成し、データベース ミラーリングに接続します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789770"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
   
   
-##  <a name="InitialConnection"></a> データベース ミラーリング セッションへの最初の接続  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> データベース ミラーリング セッションへの最初の接続  
  クライアントはミラー化されたデータベースに初めて接続するときに、最低限サーバー インスタンスの名前を含む接続文字列を指定する必要があります。 この必須のサーバー名は、現在のプリンシパル サーバー インスタンスを特定するもので、 *イニシャル パートナー名*と呼びます。  
   
  接続文字列には、必要に応じて、別のサーバー インスタンスの名前を指定することもできます。この名前は、現在のミラー サーバー インスタンスを特定するもので、最初の接続試行でイニシャル パートナーを使用できない場合に使用されます。 この 2 つ目の名前を *フェールオーバー パートナー名*と呼びます。  
@@ -47,7 +48,7 @@ ms.locfileid: "67952009"
   
  次の図は、 **Db_1**という名前のミラー化されたデータベースのイニシャル パートナーである **Partner_A**へのクライアント接続を示しています。 この図では、クライアントが指定したイニシャル パートナー名が現在のプリンシパル サーバーである **Partner_A**を正しく特定しています。 最初の接続試行が成功し、データ アクセス プロバイダーのローカル キャッシュに、ミラー サーバーの名前 (現在は **Partner_B**) がフェールオーバー パートナー名として保存されます。 最後に、クライアントが **Db_1** データベースのプリンシパル コピーに接続されます。  
   
- ![イニシャル パートナーがプリンシパルの場合のクライアント接続](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "イニシャル パートナーがプリンシパルの場合のクライアント接続")  
+ ![最初のパートナーがプリンシパルである場合のクライアント接続](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "最初のパートナーがプリンシパルである場合のクライアント接続")  
   
  最初の接続試行は、ネットワーク エラーやアクティブでないサーバー インスタンスが原因で失敗する場合があります。 最初のパートナーが使用できないときに、データ アクセス プロバイダーがフェールオーバー パートナーへの接続を試行するには、クライアントが接続文字列にフェールオーバー パートナー名を指定している必要があります。  
   
@@ -87,11 +88,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  接続文字列には、イニシャル パートナー名を指定する **Server** 属性を含める必要があります。この名前で現在のプリンシパル サーバー インスタンスを特定します。  
   
- サーバー インスタンスを特定する最も簡単な方法は、 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ] の形式でインスタンス名を指定することです。 例:  
+ サーバー インスタンスを特定する最も簡単な方法は、 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ] の形式でインスタンス名を指定することです。 次に例を示します。  
   
  `Server=Partner_A;`  
   
- 内の複数の  
+ or  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -100,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  接続文字列に名前付きインスタンス名を指定し、ポート名を指定しない場合は、SQL Server Browser クエリの実行が必要です。  
   
- **Server** 属性では、`Server=` *<ip_address>* `,`\<*port*> という形式で IP アドレスとポートを指定します。次に例を示します。  
+ **Server** 属性では、`Server=` *<ip_address>* `,` *\<port>* > という形式で IP アドレスとポートを指定します。次に例を示します。  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -120,12 +121,12 @@ Server=123.34.45.56,4724;
 >  この文字列では、認証情報が省略されています。  
   
 > [!IMPORTANT]  
->  **Server** 属性にプロトコル プレフィックスを指定すると (`Server=tcp:`\<*servername>* )、**Network** 属性と互換性がなくなります。また、両方の属性にプロトコルを指定すると、エラーが発生する可能性が高くなります。 このため、接続文字列でプロトコルを指定するときには **Network** 属性を使用し、**Server** 属性にはサーバー名だけを指定することをお勧めします。つまり、`"Network=dbmssocn; Server=`\<*servername>* `"` という形式を使用します。  
+>  **Server** 属性にプロトコル プレフィックスを指定すると (`Server=tcp:` *\<servername>* )、**Network** 属性と互換性がなくなります。また、両方の属性にプロトコルを指定すると、エラーが発生する可能性が高くなります。 このため、接続文字列でプロトコルを指定するときには **Network** 属性を使用し、**Server** 属性にはサーバー名だけを指定することをお勧めします。つまり、`"Network=dbmssocn; Server=` *\<servername>* `"` という形式を使用します。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  クライアントは、イニシャル パートナー名以外に、現在のミラー サーバー インスタンスを特定するフェールオーバー パートナー名も指定できます。 フェールオーバー パートナーは、Failover Partner 属性を表すいずれかのキーワードで指定します。 この属性を表すキーワードは、使用する API によって異なります。 次の表は、これらのキーワードを示しています。  
   
-|API (API)|Failover Partner 属性を表すキーワード|  
+|API|Failover Partner 属性を表すキーワード|  
 |---------|--------------------------------------------|  
 |OLE DB プロバイダー|**FailoverPartner**|  
 |ODBC ドライバー|**Failover_Partner**|  
@@ -154,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> 接続再試行アルゴリズム (TCP/IP 接続用)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> 接続再試行アルゴリズム (TCP/IP 接続用)  
  TCP/IP 接続では、両方のパートナー名がキャッシュ内に存在すると、データ アクセス プロバイダーは接続再試行アルゴリズムに従います。 これは、セッションに初めて接続する場合にも、確立した接続が切断された後に再接続する場合にも当てはまります。 接続を開いた後の場合、ログイン前およびログイン時の手順を完了するのにさらに時間がかかります。  
   
 > [!NOTE]  
@@ -172,9 +173,9 @@ Server=123.34.45.56,4724;
   
  ここでは、 *PreviousRetryTime* の初期値は 0 です。  
   
- たとえば、15 秒という既定のログイン タイムアウト期間を使用すると、 *LoginTimeout* *= 15*となります。 この場合、最初の 3 ラウンドに割り当てられる再試行時間は次のようになります。  
+ たとえば、15 秒という既定のログイン タイムアウト期間を使用すると、*LoginTimeout* *= 15* となります。 この場合、最初の 3 ラウンドに割り当てられる再試行時間は次のようになります。  
   
-|四捨五入|*RetryTime* の計算|接続試行ごとの再試行時間|  
+|Round|*RetryTime* の計算|接続試行ごとの再試行時間|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
 |2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  
@@ -183,7 +184,7 @@ Server=123.34.45.56,4724;
   
  次の図では、連続する接続試行のそれぞれがタイムアウトする再試行時間を示しています。  
   
- ![15 秒ログイン タイムアウトの最大再試行間隔](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "15 秒ログイン タイムアウトの最大再試行間隔")  
+ ![15 秒のログイン タイムアウト期間での最大再試行間隔](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "15 秒のログイン タイムアウト期間での最大再試行間隔")  
   
  既定のログイン タイムアウト期間に対して、接続試行の最初の 3 ラウンドに割り当てられた最大時間は 14.4 秒です。 各接続試行で割り当てられた時間をすべて使用してしまった場合、ログイン期間がタイムアウトするまでに 0.6 秒しか残っていません。その場合、4 ラウンド目は短縮されるので、最後は、イニシャル パートナー名を使用した簡単な接続試行しか行うことができません。 ただし、特に後半のラウンドでは、割り当てられた再試行時間が経過しないうちに接続試行が失敗する場合があります。 たとえば、ネットワーク エラーが発生すると、再試行時間がタイムアウトする前に、試行が終了する場合があります。 初期の接続試行がネットワーク エラーによって失敗すると、4 ラウンド目とおそらくは追加のラウンドで、使用できる時間が追加されることがあります。  
   
@@ -201,9 +202,9 @@ Server=123.34.45.56,4724;
   
  次の図では、手動フェールオーバー中の再試行間隔による接続試行への影響を示しています。ここでは、パートナーは役割を交換しています。 ログイン タイムアウト期間は 15 秒です。  
   
- ![再試行間隔アルゴリズム](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "再試行間隔アルゴリズム")  
+ ![再試行間隔のアルゴリズム](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "再試行間隔のアルゴリズム")  
   
-##  <a name="Reconnecting"></a> データベース ミラーリング セッションへの再接続  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> データベース ミラーリング セッションへの再接続  
  データベース ミラーリングのフェールオーバーなどの理由でデータベース ミラーリング セッションに対して確立された接続が失敗し、アプリケーションが最初のサーバーに再接続を試みると、データ アクセス プロバイダーは、クライアントのキャッシュに保存されたフェールオーバー パートナー名を使用して再接続を試みる場合があります。 ただし、再接続は自動的には行われず、 アプリケーションではエラーを検出することになります。 その後、アプリケーションは失敗した接続を閉じて、同じ接続文字列属性を使用して新しい接続を開く必要があります。 この時点で、データ アクセス プロバイダーがフェールオーバー パートナーに接続をリダイレクトします。 この名前で識別されるサーバー インスタンスが現在のプリンシパル サーバーの場合は、通常、接続試行は成功します。 トランザクションがコミットされたかロールバックされたかはっきりしない場合、アプリケーションでは、スタンドアロンのサーバー インスタンスに再接続するときと同じように、トランザクションの状態を確認する必要があります。  
   
  再接続は、接続文字列でフェールオーバー パートナー名を指定した最初の接続と同様に行われます。 最初の接続試行が失敗すると、クライアントがプリンシパル サーバーに接続するか、データ アクセス プロバイダーがタイムアウトするまで、イニシャル パートナー名とフェールオーバー パートナー名を交互に使用して接続が試行されます。  
@@ -224,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> 古いフェールオーバー パートナー名の影響  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 古いフェールオーバー パートナー名の影響  
  データベース管理者はフェールオーバー パートナーをいつでも変更できます。 このため、クライアントが指定したフェールオーバー パートナー名が *古い*場合があります。 たとえば、別のサーバー インスタンス Partner_C で置き換えられる Partner_B というフェールオーバー パートナーを考えてみます。 クライアントがフェールオーバー パートナー名として Partner_B を指定した場合、それは古い名前です。 クライアント指定のフェールオーバー パートナー名が古い場合、データ アクセス プロバイダーは、クライアントでフェールオーバー パートナー名が指定されていない場合と同じように動作します。  
   
  たとえば、クライアントによって 1 つの接続文字列が 4 回の接続試行に使用される場合を検討します。 この接続文字列では、次のようにイニシャル パートナー名が Partner_A で、フェールオーバー パートナー名が Partner_B です。  

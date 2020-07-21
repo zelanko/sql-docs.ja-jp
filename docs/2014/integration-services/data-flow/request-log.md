@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d3bf7ecec87b19158908f94cf340b60fc91b6e7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770889"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431511"
 ---
 # <a name="request-log"></a>[要求のログ]
   サンプル データの SAP Netweaver BW システムに対する要求中にログに記録されたイベントを表示するには、 **[要求のログ]** ダイアログ ボックスを使用します。 この情報は、SAP BW 変換元の構成をトラブルシューティングする場合に便利です。  
@@ -41,11 +40,11 @@ ms.locfileid: "62770889"
     > [!NOTE]  
     >  **[プレビュー]** をクリックすると、 **[プレビュー]** ダイアログ ボックスが表示されます。 このダイアログ ボックスの詳細については、「 [プレビュー](preview.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **[時刻]**  
+## <a name="options"></a>オプション  
+ **Time**  
  イベントが記録された時刻を表示します。  
   
- **型**  
+ **Type**  
  記録されたイベントの種類を表示します。 次の表は、使用可能なイベントの種類を示しています。  
   
 |値|説明|  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5052d9830c3df97e8e491c38a3c606bbdfca1919
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974245"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922328"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +37,13 @@ public void setFetchSize(int rows)
 #### <a name="parameters"></a>パラメーター  
  *rows*  
   
- フェッチする行の数を示す**int** 。  
+ フェッチする行数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setFetchSize メソッドは、java. ResultSet インターフェイスの setFetchSize メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setFetchSize メソッドは、java.sql.ResultSet インターフェイスの setFetchSize メソッドによって指定されます。  
   
  指定されたフェッチ サイズが 0 の場合、JDBC ドライバーはこの値を無視し、必要となるフェッチ サイズを推測します。 既定値は、結果セットを作成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって設定されます。 フェッチ サイズはいつでも変更できます。  
   

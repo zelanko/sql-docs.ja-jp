@@ -1,5 +1,5 @@
 ---
-title: ステートメントの使用 (ODBC) |Microsoft Docs
+title: ステートメントを使用する (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5aea14840dd92c0fa6fb571081044e2d84e0f27b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018709"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
     
@@ -35,11 +34,11 @@ ms.locfileid: "63200329"
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
-     \- - または -  
+     \- または  
   
      ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
-     \- - または -  
+     \- または  
   
      カタログ関数を呼び出すと、結果が返されます。  
   
@@ -47,11 +46,11 @@ ms.locfileid: "63200329"
   
      ステートメントの結果セットを一度に 1 行ずつフェッチします。  
   
-     \- - または -  
+     \- または  
   
      ブロック カーソルを使用して一度に複数行の結果セットをフェッチします。  
   
-     \- - または -  
+     \- または  
   
      [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   
@@ -70,6 +69,6 @@ ms.locfileid: "63200329"
 8.  *HandleType* を SQL_HANDLE_STMT として [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md) を呼び出し、ステートメント ハンドルを解放します。  
   
 ## <a name="see-also"></a>参照  
- [クエリを実行方法に関するトピック&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [クエリの実行方法に関するトピック &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

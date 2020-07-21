@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ace2712cd53b1b0371bd9deeb4191308a1393de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0051be2c84fe9444d034dec87d77bde95178d2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060648"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781416"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>詳細  
   
-|||  
-|-|-|  
+| 属性 | 値 |  
+| :-------- | :---- |  
 |製品名|SQL Server|  
 |イベント ID|10536|  
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_TOO_MANY_STMTS|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。指定された **@plan_handle** に対応するバッチまたはモジュールに含まれるステートメントが 1000 個を超えています。 バッチまたはモジュール内の各ステートメントに **statement_start_offset** 値を指定して、各ステートメントにプラン ガイドを作成してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。指定された **\@plan_handle** に対応するバッチまたはモジュールに含まれるステートメントが 1000 個を超えています。 バッチまたはモジュール内の各ステートメントに **statement_start_offset** 値を指定して、各ステートメントにプラン ガイドを作成してください。|  
   
 ## <a name="explanation"></a>説明  
-指定された **@plan_handle** に対応するバッチまたはモジュールに含まれるステートメントが 1000 個を超えています。  
+指定した **\@plan_handle** に対応するバッチまたはモジュールに、条件を満たすステートメントが 1000 以上含まれています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 バッチまたはモジュール内の各ステートメントに **statement_start_offset** 値を指定して、各ステートメントにプラン ガイドを作成してください。  

@@ -13,76 +13,76 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754046"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
-行を表す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータ プロバイダー、あるいはファイルやディレクトリなどの半構造化データ プロバイダーによって返されるオブジェクト。  
+[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータプロバイダーの行、またはファイルやディレクトリなどの半構造化データプロバイダーによって返されるオブジェクトを表します。  
   
-## <a name="remarks"></a>コメント  
- A**レコード**オブジェクトは、データの 1 つの行を表しており、1 つの行といくつかの概念の類似性を持つ**Recordset**します。 プロバイダーの機能に応じて**レコード**オブジェクトは、1 つの行ではなく、プロバイダーから直接返される可能性があります**Recordset**ときに 1 行のみを選択する SQL クエリの例は、実行されます。 または、**レコード**から直接オブジェクトを取得できる、 **Recordset**オブジェクト。 または、**レコード**Microsoft Exchange の OLE DB プロバイダーなどの半構造化データに、プロバイダーから直接返されることができます。  
+## <a name="remarks"></a>Remarks  
+ **レコード**オブジェクトは1行のデータを表し、1行の**レコードセット**と概念的に似ています。 プロバイダーの機能によっては、**レコード**オブジェクトが1行の**レコードセット**ではなく、プロバイダーから直接返される場合があります。たとえば、1つの行のみを選択する SQL クエリが実行された場合などです。 または、**レコード**オブジェクトを**レコードセット**オブジェクトから直接取得することもできます。 または、**レコード**をプロバイダーから、Microsoft Exchange OLE DB プロバイダーなどの半構造化データに直接返すことができます。  
   
- 関連付けられているフィールドを表示することができます、**レコード**でのオブジェクト、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに、**レコード**オブジェクト。 ADO では、オブジェクトの値を持つ列を含む**Recordset**、 **SafeArray**とでスカラー値、**フィールド**のコレクション**レコード**オブジェクト。  
+ **レコードオブジェクト**に関連付けられているフィールドは、**レコード**オブジェクトの[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションを使用して表示できます。 ADO では、**レコード**オブジェクトの**Fields**コレクションで、レコード**セット**、 **SafeArray**、スカラー値を含むオブジェクト値列を使用できます。  
   
- 場合、**レコード**オブジェクト内の行を表します、**レコード セット**はその元に返すことのできる**レコード セット**で、[ソース](../../../ado/reference/ado-api/source-property-ado-record.md)プロパティ。  
+ **レコード**オブジェクトが**レコードセット**内の行を表している場合、 [Source](../../../ado/reference/ado-api/source-property-ado-record.md)プロパティを使用して元の**レコードセット**に戻ることができます。  
   
- **レコード**オブジェクトも使用できますで半構造化データ プロバイダーなど、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)、ツリー構造の名前空間をモデル化します。 ツリー内の各ノードは、**レコード**関連付けられている列を持つオブジェクト。 列には、そのノードとその他の関連情報の属性を表すことができます。 **レコード**オブジェクトは、リーフ ノードとツリー構造内の非リーフ ノードの両方を表すことができます。 非リーフ ノードは、それらの内容として他のノードがリーフ ノードには、このような内容はありません。 通常、リーフ ノードにはデータのバイナリ ストリームが含まれてし、非リーフ ノードはそれらに関連付けられている既定のバイナリ ストリームにもあります。 プロパティを**レコード**オブジェクトは、ノードの種類を識別します。  
+ **レコード**オブジェクトは、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)などの半構造化データプロバイダーが、ツリー構造の名前空間をモデル化するために使用することもできます。 ツリー内の各ノードは、関連付けられた列を持つ**レコード**オブジェクトです。 列は、そのノードの属性とその他の関連情報を表すことができます。 **レコード**オブジェクトは、リーフノードと、ツリー構造内の非リーフノードの両方を表すことができます。 非リーフノードには、そのコンテンツとして他のノードがありますが、リーフノードにはそのような内容が含まれていません。 リーフノードには通常、バイナリストリームのデータが含まれており、非リーフノードには既定のバイナリストリームが関連付けられている場合もあります。 **レコード**オブジェクトのプロパティは、ノードの種類を識別します。  
   
- **レコード**オブジェクトは、編成されたデータを階層的に移動するのも、別の方法を表します。 A**レコード**オブジェクトは、大規模なツリー構造内の特定のサブツリーのルートを表すために作成され、新しい可能性があります**レコード**子ノードを表すオブジェクトを開くことができます。  
+ また、**レコード**オブジェクトは、階層的に整理されたデータを移動するための別の方法も表します。 大きなツリー構造内の特定のサブツリーのルートを表す**レコード**オブジェクトを作成し、新しい**レコード**オブジェクトを開いて子ノードを表すことができます。  
   
- (たとえば、ファイルまたはディレクトリ) のリソースは、絶対 URL で一意に識別できます。 A[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトが暗黙的に作成されに設定、**レコード**オブジェクトと、**レコード**が絶対 URL を使用して開きます。 A**接続**オブジェクト明示的に設定する、**レコード**オブジェクトを使用して、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティ。 ファイルとディレクトリを使用してアクセスできる、**接続**オブジェクトの定義、*コンテキスト*を**レコード**操作が発生する可能性があります。  
+ リソース (ファイルやディレクトリなど) は絶対 URL で一意に識別できます。 絶対 URL を使用して**レコード**を開くと、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトが暗黙的に作成され、**レコード**オブジェクトに設定されます。 **Connection**オブジェクトは、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを使用して**Record**オブジェクトに明示的に設定できます。 **接続**オブジェクトを使用してアクセスできるファイルとディレクトリは、**レコード**操作が発生する*コンテキスト*を定義します。  
   
- データの変更とナビゲーション メソッド、**レコード**オブジェクトには、絶対 URL を使用してリソースを検索、相対 URL もそのまま使用または**接続**開始点として、オブジェクト コンテキスト。  
+ **レコード**オブジェクトのデータ変更およびナビゲーションメソッドは、相対 url も受け入れます。これは、絶対 url または**接続**オブジェクトコンテキストを使用してリソースを開始点として検索します。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
- A**接続**オブジェクトが互いに関連付けられている**レコード**オブジェクト。 そのため、**レコード**オブジェクトの操作を呼び出すことによって、トランザクションの一部をすることができます**接続**オブジェクトのトランザクション メソッドです。  
+ **接続**オブジェクトは、各**レコード**オブジェクトに関連付けられています。 そのため、**レコード**オブジェクトの操作は、**接続**オブジェクトのトランザクションメソッドを呼び出すことによって、トランザクションの一部にすることができます。  
   
- **レコード**オブジェクトは、ADO のイベントをサポートしないし、通知には応答しません。  
+ **レコード**オブジェクトは ADO イベントをサポートしていないため、通知に応答しません。  
   
- メソッドとプロパティの使用、**レコード**オブジェクトを次を行うことができます。  
+ **レコード**オブジェクトのメソッドとプロパティを使用して、次の操作を実行できます。  
   
--   設定または取得、関連付けられている**接続**オブジェクトを[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティ。  
+-   [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを使用して、関連付けられている**接続**オブジェクトを設定または返します。  
   
--   アクセス許可を示す、[モード](../../../ado/reference/ado-api/mode-property-ado.md)プロパティ。  
+-   [Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを使用してアクセス許可を指定します。  
   
--   によって表されるリソースが含まれている場合に、ディレクトリの URL を返す、**レコード**で、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)プロパティ。  
+-   **レコード**によって表されるリソースが存在する場合、そのディレクトリの Url を[parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)プロパティと共に返します。  
   
--   絶対 URL で、相対 URL を指定または**レコード セット**元となる、**レコード**は派生した、[ソース](../../../ado/reference/ado-api/source-property-ado-record.md)プロパティ。  
+-   [ソース](../../../ado/reference/ado-api/source-property-ado-record.md)プロパティを使用して**レコード**を派生させる絶対 url、相対 Url、または**レコードセット**を指定します。  
   
--   現在の状態を示す、**レコード**で、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティ。  
+-   [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して、**レコード**の現在の状態を示します。  
   
--   種類を示す**レコード** - *単純*、*コレクション*、または*構造化ドキュメント*- で、 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)プロパティ。  
+-   **Record**  -  [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)プロパティを使用して、*単純*、*コレクション*、または*構造化ドキュメント*のレコードの種類を示します。  
   
--   使用して、非同期操作の実行を停止、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)メソッド。  
+-   [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)メソッドを使用して非同期操作の実行を停止します。  
   
--   関連付けを解除、**レコード**でデータ ソースから、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)メソッド。  
+-   [Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用して、データソースの**レコード**の関連付けを解除します。  
   
--   コピーしたファイルまたはディレクトリで表される、**レコード**で別の場所に、 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)メソッド。  
+-   **レコード**で表されるファイルまたはディレクトリを、 [copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)メソッドを使用して別の場所にコピーします。  
   
--   削除、ファイルまたはディレクトリとサブディレクトリをによって表される、**レコード**で、 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)メソッド。  
+-   [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)メソッドを使用して、**レコード**で表されるファイル、またはディレクトリとサブディレクトリを削除します。  
   
--   開く、 **Recordset**によって表されるエンティティのファイルとサブディレクトリを表す行を格納している、**レコード**で、 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)メソッド。  
+-   **レコード**によって表されるエンティティのサブディレクトリとファイルを表す行を含む**レコードセット**を、 [getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md)メソッドを使用して開きます。  
   
--   移動 (変更)、ファイルまたはディレクトリとサブディレクトリ、によって表される、**レコード**で別の場所に、 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)メソッド。  
+-   [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)メソッドを使用して、**レコード**で表されるファイルまたはディレクトリとサブディレクトリを別の場所に移動 (名前変更) します。  
   
--   関連付ける、**レコード**に既存のデータ ソース、または新しいファイルまたはディレクトリを作成、[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。  
+-   **レコード**を既存のデータソースに関連付けるか、 [Open](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドを使用して新しいファイルまたはディレクトリを作成します。  
   
- **レコード**オブジェクトがスクリプトを実行します。  
+ **レコード**オブジェクトは、スクリプトに対して安全です。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Record オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [レコードとストリーム](../../../ado/guide/data/records-and-streams.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

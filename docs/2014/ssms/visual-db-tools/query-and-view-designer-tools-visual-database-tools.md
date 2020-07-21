@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29bd3fa9e171551197927aae0d1bc00446df6e7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63460002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064939"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>クエリおよびビュー デザイナー ツール (Visual Database Tools)
   クエリ、ビュー、インライン関数、または単一ステートメント ストアド プロシージャをデザインするときに使用するデザイナーは、ダイアグラム ペイン、抽出条件ペイン、SQL ペイン、および結果ペインで構成されています。  
   
- ![クエリ デザイナー](../../database-engine/media//vs-queryviewdsgpanes.gif "クエリ デザイナー")  
+ ![クエリ デザイナー](../../database-engine/media//vs-queryviewdsgpanes.gif "[クエリ デザイナー]")  
   
 -   ダイアグラム ペインには、問い合わせているテーブルおよび他のテーブル値オブジェクトが表示されます。 それぞれの四角形は、テーブルまたはテーブル値オブジェクトを表し、使用可能なデータ列を表示します。 結合は、四角形の間を結ぶ線で示されます。 詳細については、「[ダイアグラム ペイン (Visual Database Tools)](visual-database-tools.md)」を参照してください。  
   
@@ -48,8 +47,8 @@ ms.locfileid: "63460002"
  ペインを非表示にする場合、または非表示になっているペインを表示する場合は、デザイン画面を右クリックして **[ペイン]** をポイントし、ペインの名前をクリックします。 クエリおよびビュー デザイナーがクエリ デザイナー モードで開かれている場合、 **[結果]** ペインは使用できません。  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [クエリおよびビュー デザイナーを開く&#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [クエリおよびビューデザイナー &#40;Visual Database Tools&#41;を開きます。](open-the-query-and-view-designer-visual-database-tools.md)   
  [SQL エディター (Visual Database Tools)](sql-editor-visual-database-tools.md)  
   
   

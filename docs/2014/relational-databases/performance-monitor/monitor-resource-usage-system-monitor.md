@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d0bbd52159caf117df1b463a8d913a9fe1c79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038851"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>リソースの利用状況の監視 (システム モニター)
   Microsoft Windows サーバー オペレーティング システムを使用している場合は、システム モニター GUI ツールを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパフォーマンスを測定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオブジェクトやパフォーマンス カウンターだけでなく、プロセッサ、メモリ、キャッシュ、スレッド、プロセスなどその他のオブジェクトの動作も確認できます。 これらの各オブジェクトには、それに関連したデバイス使用率、キューの長さ、遅延を測定するカウンターと、スループットおよび内部輻輳を表示するインジケーターのセットがあります。  
@@ -86,6 +85,6 @@ ms.locfileid: "63032116"
 |システム モニターのカウンターがしきい値に達したときに発生する警告を作成する方法について説明します。|[SQL Server データベース警告の作成](create-a-sql-server-database-alert.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成する方法について説明します。|[グラフ、警告、ログ、およびレポートの作成](create-charts-alerts-logs-and-reports.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況をシステム モニターで監視する際に使用されるオブジェクトとカウンターを示します。|[SQL Server オブジェクトの使用](use-sql-server-objects.md)|  
-|システム モニターでインメモリ OLTP のアクティビティを監視する際に使用されるオブジェクトとカウンターを示します。|[XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)|  
+|システム モニターでインメモリ OLTP のアクティビティを監視する際に使用されるオブジェクトとカウンターを示します。|[XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)|  
   
   

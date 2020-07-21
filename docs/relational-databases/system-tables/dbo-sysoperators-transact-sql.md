@@ -1,5 +1,5 @@
 ---
-title: dbo.sysoperators (TRANSACT-SQL) |Microsoft Docs
+title: dbo.sys演算子 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,44 +17,44 @@ dev_langs:
 helpviewer_keywords:
 - sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7581d1456524c8294e470a952fb55f6f052973b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984909"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890470"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのオペレーターごとに 1 行のデータを格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|オペレーターの ID。|  
-|**name**|**sysname**|オペレーターの名前。|  
-|**enabled**|**tinyint**|アラート通知 (ブール値) の状態です。 場合**1**アラートが発生した場合、このオペレーターが通知を受信できます。|  
-|**email_address**|**nvarchar(100)**|オペレーターの電子メール アドレス。|  
-|**last_email_date**|**int**|この演算子は、電子メールによる警告通知を前回受信した日付。|  
-|**last_email_time**|**int**|この演算子は、電子メールによる警告通知を前回受信した時刻。|  
-|**pager_address**|**nvarchar(100)**|オペレーターのポケットベル アドレス。|  
-|**last_pager_date**|**int**|このオペレーターが前回ポケットベルによる警告通知を受信した日付。|  
-|**last_pager_time**|**int**|このオペレーターが前回ポケットベルによる警告通知を受信した時刻。|  
-|**weekday_pager_start_time**|**int**|このオペレーターがポケットベルによる警告通知を受信可能になる曜日 (月曜から金曜) での時刻。|  
+|**name**|**sysname**|演算子の名前。|  
+|**enabled**|**tinyint**|アラート通知の状態 (ブール値)。 **1**の場合、このオペレーターは警告が発生したときに通知を受け取ることができます。|  
+|**email_address**|**nvarchar (100)**|このオペレーターの電子メールアドレス。|  
+|**last_email_date**|**int**|このオペレーターが最後に電子メール通知を受信した日付。|  
+|**last_email_time**|**int**|このオペレーターが最後に電子メール通知を受信した時刻。|  
+|**pager_address**|**nvarchar (100)**|このオペレーターのポケットベルアドレス。|  
+|**last_pager_date**|**int**|オペレーターが前回ポケットベルによる警告通知を受信した日付。|  
+|**last_pager_time**|**int**|このオペレーターが最後にポケットベルによる警告通知を受信した時刻。|  
+|**weekday_pager_start_time**|**int**|このオペレーターがポケットベルによる警告通知を受け取ることができるようになる曜日 (月曜から金曜) の時刻。|  
 |**weekday_pager_end_time**|**int**|平日 (月曜から金曜まで)、オペレーターのポケットベルによる警告通知が受信不能になる時刻。|  
-|**saturday_pager_start_time**|**int**|土曜日にこのオペレーターがポケットベルによる警告通知を受信可能になる時刻。|  
-|**saturday_pager_end_time**|**int**|その後この演算子は、ポケットベルによる警告通知の受信に使用できる土曜日の時間です。|  
-|**sunday_pager_start_time**|**int**|日曜日、このオペレーターがポケットベルによる警告通知を受信可能になる時刻。|  
-|**sunday_pager_end_time**|**int**|その後この演算子は、ポケットベルによる警告通知の受信に使用できる日曜日の時間です。|  
-|**pager_days**|**tinyint**|このオペレーターのポケットベルによる警告通知の受信に使用できる期間の曜日を表すビットマスク。|  
-|**netsend_address**|**nvarchar(100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**last_netsend_date**|**int**|指定したオペレーター ID に最新のネットワーク メッセージが送信された前回の日付|  
-|**last_netsend_time**|**int**|指定したオペレーター ID に最新のネットワーク メッセージが送信された前回の時間|  
+|**saturday_pager_start_time**|**int**|土曜日にこのオペレーターがポケットベルによる警告通知を受信できるようになる時刻。|  
+|**saturday_pager_end_time**|**int**|土曜日にこのオペレーターがポケットベルによる警告通知を受信できない時間。|  
+|**sunday_pager_start_time**|**int**|日曜日にこのオペレーターがポケットベルによる警告通知を受信できるようになる時刻。|  
+|**sunday_pager_end_time**|**int**|日曜日にこのオペレーターがポケットベルによる警告通知を受信できない時間。|  
+|**pager_days**|**tinyint**|このオペレーターがポケットベルによる警告通知を受け取ることができる曜日を表すビットマスク。|  
+|**netsend_address**|**nvarchar (100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**last_netsend_date**|**int**|指定したオペレーター ID に最新のネットワークメッセージが最後に送信された日付。|  
+|**last_netsend_time**|**int**|指定したオペレーター ID に最新のネットワークメッセージが最後に送信された時刻。|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>関連項目  
- [SQL Server エージェント テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [SQL Server エージェントテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

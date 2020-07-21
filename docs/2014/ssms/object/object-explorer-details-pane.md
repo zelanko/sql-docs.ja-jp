@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69e7c14ae42586b801b2956c224cc8350ac611c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058595"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
@@ -42,8 +41,8 @@ ms.locfileid: "62999937"
 |----------|------------|  
 |**戻る**|[オブジェクト エクスプローラーの詳細] に表示されている前の項目に移動します。 前の表示が検索操作の結果である場合は、検索を再実行します。|  
 |**進む**|**[戻る]** 操作を選択した後に次の画面に移動します。|  
-|**[上へ]**|親のオブジェクトまたはフォルダーに移動します。|  
-|**同期**|[オブジェクト エクスプローラーの詳細] で選択されているオブジェクトに、オブジェクト エクスプローラーのフォーカスを設定します。|  
+|**Up**|親のオブジェクトまたはフォルダーに移動します。|  
+|**Synchronize**|[オブジェクト エクスプローラーの詳細] で選択されているオブジェクトに、オブジェクト エクスプローラーのフォーカスを設定します。|  
 |**Assert**|利用できる場合、構成可能なオブジェクトのサブセットが表示されます。|  
 |**[更新]**|[オブジェクト エクスプローラーの詳細] の表示を更新します。|  
 |**検索**|特定のデータベース オブジェクトの検索語句を入力するための領域を提供します。|  
@@ -57,7 +56,7 @@ ms.locfileid: "62999937"
 ### <a name="sorting"></a>並べ替え  
  列ヘッダーを 1 回クリックすると、その列のデータを使用して並べ替えが行われます。 同じヘッダーを再度クリックすると、その列のデータを使用して逆順に並べ替えが行われます。 並べ替えに関する選択内容は、別のオブジェクトやフォルダーに移動しても、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を再起動した後も、ユーザーごとに保持されます。  
   
-### <a name="filtering"></a>フィルター  
+### <a name="filtering"></a>Filtering  
  [オブジェクト エクスプローラーの詳細] に表示される特定のオブジェクトのリストは、[オブジェクト エクスプローラーの詳細] ツール バーの **[フィルター]** アイコンを使用してフィルター処理できます。 アイコンは、フィルター処理が可能な場合に有効になります。  
   
 ### <a name="details-pane"></a>[詳細] ペイン  
@@ -87,7 +86,7 @@ ms.locfileid: "62999937"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
  ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、次を参照してください。[ワイルドカードを使用した検索テキスト](../../relational-databases/scripting/search-text-with-wildcards.md)します。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「[ワイルドカードを使用したテキストの検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
   
  検索範囲  
   

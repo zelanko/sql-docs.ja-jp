@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: Lastている Tid |Microsoft Docs'
+title: PDO::lastInsertId | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d63244d93ab8fcbf2cbc6957dc3ddfcef435bb27
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936214"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919159"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されて`lastInsertId`いる場合は、指定されたシーケンス名に対して最後に挿入されたシーケンス番号を返します (シーケンス番号の詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)を参照してください)。
+データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されている場合、`lastInsertId` は、指定されたシーケンス名に対して最後に挿入されたシーケンス番号を返します (シーケンス番号の詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)を参照してください)。
   
 ## <a name="syntax"></a>構文  
   
@@ -33,16 +33,16 @@ string PDO::lastInsertId ([ $name = NULL ] );
 $*name*: シーケンス名を指定できる省略可能な文字列。 
   
 ## <a name="return-value"></a>戻り値  
-シーケンス名が指定されていない場合は、最後に追加された行の識別子の文字列。
+シーケンス名が指定されていない場合、最後に追加された行の識別子の文字列。
 シーケンス名が指定されている場合は、最後に追加されたシーケンスの識別子の文字列。
-メソッドの呼び出しが失敗した場合は、空の文字列が返されます。
+メソッドの呼び出しが失敗した場合、空の文字列が返されます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
-バージョン2.0 と4.3 の間では、省略可能なパラメーターはテーブル名で、戻り値は、指定されたテーブルに最後に追加された行の ID になります。
+バージョン 2.0 からバージョン 4.3 までは、省略可能なパラメーターはテーブル名で、戻り値は、指定されたテーブルに最後に追加された行の ID になります。
 5\.0 以降では、省略可能なパラメーターはシーケンス名と見なされ、戻り値は、指定されたシーケンス名に対して最後に追加されたシーケンスになります。
-4\.3 より後のバージョンのテーブル名が指定さ`lastInsertId`れている場合、は空の文字列を返します。
-シーケンスは SQL Server 2012 以降でのみサポートされています。
+4\.3 以降のバージョンでテーブル名が指定されている場合、`lastInsertId` は空の文字列を返します。
+シーケンスは SQL Server 2012 以降でのみサポートされます。
   
 ## <a name="example"></a>例
   

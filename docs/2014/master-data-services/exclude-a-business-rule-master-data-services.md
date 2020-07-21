@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8f18e047b11bee4093ce7a6e494c1ae1bf3d0ada
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef5cba5778c17be419dc5b237059da8b2024f623
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961744"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>ビジネス ルールを除外する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールを完全に削除せずにそのルールに対するデータの検証が行われないようにする場合は、ビジネス ルールを除外します。  
@@ -25,9 +24,9 @@ ms.locfileid: "65483385"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-exclude-a-business-rule"></a>ビジネス ルールを除外するには  
   
@@ -39,19 +38,19 @@ ms.locfileid: "65483385"
   
 4.  **[エンティティ]** の一覧からエンティティを選択します。  
   
-5.  **メンバーの種類**一覧で、メンバーの種類を選択します。  
+5.  [**メンバーの種類**] ボックスの一覧から、メンバーの種類を選択します。  
   
 6.  **[属性]** の一覧で、属性を選択するか、 **[すべて]** の既定値のままにします。  
   
-7.  グリッドで、ビジネス ルールの行のチェック ボックスをオン、**除外**列。 値、**状態**列が**除外の保留中**します。  
+7.  グリッドのビジネスルールの行で、[**除外**] 列のチェックボックスをオンにします。 [**状態**] 列の値が [**除外の保留中**] になっています。  
   
 8.  **[ビジネス ルールのパブリッシュ]** をクリックします。  
   
-9. 確認のダイアログ ボックスで **[OK]** をクリックします。 値、**状態**列が**除外**します。  
+9. 確認のダイアログ ボックスで **[OK]** をクリックします。 **Status**列の値は**除外**されます。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス ルールを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
- [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
+ [ビジネスルール &#40;マスターデータサービスを作成して発行&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

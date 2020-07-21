@@ -1,9 +1,8 @@
 ---
-title: sys.external_languages (TRANSACT-SQL) - SQL Server |Microsoft Docs
+title: external_languages (Transact-sql)-SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,32 +16,33 @@ helpviewer_keywords:
 - sys.external_languages catalog view
 author: nelgson
 ms.author: negust
+ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 225e20e199a401e544be9c86a7b05a078f556530
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65995120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751722"
 ---
-# <a name="sysexternallanguages-transact-sql"></a>sys.external_languages (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sysexternal_languages-transact-sql"></a>external_languages (Transact-sql)
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
-このカタログ ビューでは、データベースの外部の言語の一覧を示します。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。
+このカタログビューには、データベース内の外部言語の一覧が表示されます。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。
 
-## <a name="sysexternallanguages"></a>sys.external_languages
+## <a name="sysexternal_languages"></a>sys.external_languages
 
-カタログ ビューの sys.external_languages には、データベースの外部の言語ごとに 1 行が一覧表示します。
+カタログビューの external_languages には、データベース内の外部言語ごとに1行のデータが表示されます。
 
 |列名 |データ型 | 説明|
 |------|------|------|
-|external_language_id |ssNoversion | 外部の言語の ID|
-|language |sysname |外部の言語の名前。 データベース内で一意です。 R と Python がインスタンスあたりの予約済みの名前|
-|create_date |datetime2 |作成の日付と時刻|
-|principal_id |ssNoversion |この外部ライブラリを所有するプリンシパルの ID|
+|external_language_id |INT | 外部言語の ID|
+|language |sysname |外部言語の名前。 データベース内で一意です。 R と Python は、インスタンスごとに予約された名前です|
+|create_date |datetime2 |作成日時|
+|principal_id |INT |この外部ライブラリを所有するプリンシパルの ID|
 
 ## <a name="see-also"></a>関連項目  
 
 + [sys.external_language_files](sys-external-language-files-transact-sql.md)  
-+ [外部の言語を作成します。](../../t-sql/statements/create-external-language-transact-sql.md) 
++ [外部言語の作成](../../t-sql/statements/create-external-language-transact-sql.md) 

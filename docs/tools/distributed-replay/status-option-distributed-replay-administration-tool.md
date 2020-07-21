@@ -1,6 +1,7 @@
 ---
-title: status オプション (分散再生管理ツール) | Microsoft Docs
-ms.date: 03/14/2017
+title: 管理ツールの status オプション
+titleSuffix: SQL Server Distributed Replay
+description: この記事では、現在の状態を表示する SQL Server 分散再生管理ツールの status コマンドライン オプションと構文について説明します。
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: tools-other
@@ -8,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6370d68b3575e80c4094aa2df82aa4bf6c0b4dd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 658b32d8c66d07505cfc8a95e143decfa26f8013
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949846"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152079"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe** は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **status** コマンド ライン オプションとそれに対応する構文について説明します。  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生管理ツールである **DReplay.exe** は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **status** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **status** オプションは、コントローラーに照会し、現在の状態を表示します。  
   
@@ -41,7 +46,7 @@ dreplay status [-m controller] [-f status_interval]
   
  **-f** パラメーターを指定しない場合は、既定の間隔は 30 秒です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在の状態は 60 秒ごとに表示されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。  
   
 ```  

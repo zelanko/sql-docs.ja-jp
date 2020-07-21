@@ -15,16 +15,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08be945b7703902e72fc92acd2a5462dbbe38fe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049514"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293142"
 ---
-# <a name="data-flow"></a>データ フロー
+# <a name="data-flow"></a>Data Flow
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -101,9 +101,9 @@ ms.locfileid: "68049514"
 ### <a name="sources-available-for-download"></a>ダウンロード可能な変換元  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトから別途ダウンロード可能な変換元を示します。  
   
-|Source|Description|  
+|source|説明|  
 |------------|-----------------|  
-|Oracle 変換元|Oracle 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)のダウンロード ページを参照してください。|  
+|Oracle 変換元|Oracle 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
 |SAP BI 変換元|SAP BI 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換先も含まれます。 詳細については、 [Microsoft SQL Server 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)のダウンロード ページを参照してください。|  
 |Teradata 変換元|Teradata 変換元は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の変換元コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、接続マネージャーおよび変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68049514"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルでは、変換先に含めることができる標準入力とエラー出力の数に制限はありません。また、カスタム変換先を作成すると、複数の入力とエラー出力を実装できます。  
   
- カスタムの変換先を記述することもできます。 詳細については、「 [カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 」と「 [特定の種類のデータ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)」を参照してください。  
+ カスタムの変換先を記述することもできます。 詳しくは、「 [カスタム データ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 」と「 [特定の種類のデータ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)」をご覧ください。  
   
  次の変換先には、プロパティ式で更新できるプロパティがあります。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68049514"
 ### <a name="destinations-available-for-download"></a>ダウンロード可能な変換先  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトから別途ダウンロード可能な変換先を示します。  
   
-|Source|Description|  
+|source|説明|  
 |------------|-----------------|  
 |Oracle 変換先|Oracle 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の変換先コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、接続マネージャーおよび変換元も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384) のダウンロード ページを参照してください。|  
 |SAP BI 変換先|SAP BI 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の変換先コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、接続マネージャーおよび変換元も含まれます。 詳細については、 [Microsoft SQL Server 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)のダウンロード ページを参照してください。|  
@@ -188,7 +188,7 @@ ms.locfileid: "68049514"
  変換元と変換は、常に出力をとります。 出力には 1 つ以上の出力列が含まれており、データ フロー コンポーネントが外部列を使用するように構成されている場合、出力列は外部列を参照できます。 出力は、下流でのデータ処理に有用な情報を提供するように構成できます。 たとえば、出力を並べ替えるかどうかを指定できます。 また、出力に説明を割り当てたり、出力名を更新することもできます。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで出力を構成するには、 **[詳細エディター]** ダイアログ ボックスを使用します。  
   
 ### <a name="error-outputs"></a>エラー出力  
- 変換元、変換先、および変換には、エラー出力を含めることができます。 それぞれの入力または列で、エラーに対するデータ フロー コンポーネントの応答方法を指定するには、 **[エラー出力の構成]** ダイアログ ボックスを使用します。 実行時にエラーまたはデータの切り捨てが発生したとき、データ フロー コンポーネントが行をリダイレクトするように構成されている場合、エラーが発生したデータ行はエラー出力に送信されます。 エラー出力は、追加の変換を適用する変換、または別の変換先にデータを出力する変換に連結できます。 既定では、エラー出力には出力列と、**ErrorCode** および **ErrorColumn** の 2 つのエラー列が含まれます。 出力列には、失敗した行のデータが含まれます。また、 **ErrorCode** はエラー コードを提供し、 **ErrorColumn** は失敗した列を識別します。  
+ 変換元、変換先、および変換には、エラー出力を含めることができます。 それぞれの入力または列で、エラーに対するデータ フロー コンポーネントの応答方法を指定するには、 **[エラー出力の構成]** ダイアログ ボックスを使用します。 実行時にエラーまたはデータの切り捨てが発生したとき、データ フロー コンポーネントが行をリダイレクトするように構成されている場合、エラーが発生したデータ行はエラー出力に送信されます。 エラー出力は、追加の変換を適用する変換、または別の変換先にデータを出力する変換に連結できます。 既定では、エラー出力には出力列と、 **ErrorCode** および **ErrorColumn**の 2 つのエラー列が含まれます。 出力列には、失敗した行のデータが含まれます。また、 **ErrorCode** はエラー コードを提供し、 **ErrorColumn** は失敗した列を識別します。  
   
  詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。  
   

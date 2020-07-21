@@ -17,27 +17,27 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c9f43a8c3739652cabfbe4abe21fca7612e9d38
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735471"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL グラフ)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、1 つまたは複数の行を`node`や`edge`に追加します。 
+`node` で、1 つまたは複数の行を`edge`や[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に追加します。 
 
 > [!NOTE]   
->  標準の TRANSACT-SQL ステートメントについては、「[INSERT TABLE (TRANSACT-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
+>  標準の Transact-SQL ステートメントについては、「[INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)」を参照してください。
   
-![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>ノード テーブルへの INSERT 構文 
 ノード テーブルに挿入するための構文は、通常のテーブルの場合と同じです。 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -116,7 +116,7 @@ INTO
 ユーザーが、エッジを挿入するときに `$from_id` と `$to_id` の値を指定する必要があります。 値が指定されていないか、null がこれらの列に挿入された場合、エラーが返されます。 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ノードへの挿入は、すべてのリレーショナル テーブルへの挿入と同じです。 $Node_id 列の値が自動的に生成されます。
 
 ユーザーが、エッジを挿入するときに `$from_id` と `$to_id` の値を指定する必要があります。   
@@ -134,7 +134,7 @@ INSERT 権限は、既定では **sysadmin** 固定サーバー ロール、**db
 OPENROWSET 関数の BULK オプションで INSERT を実行するには、**sysadmin** 固定サーバー ロールまたは **bulkadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 #### <a name="a--insert-into-node-table"></a>A.  ノード テーブルへの挿入  
 次の例では、Person のノードを作成し、2 つの行をテーブルに挿入します。

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e21bcd83ec6f45aeb34bf4dc2dd82215cbb69123
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026509"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011501"
 ---
-# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="count_big-transact-sql"></a>COUNT_BIG (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 この関数は、グループ内で見つかった項目数を返します。 `COUNT_BIG` は [COUNT](../../t-sql/functions/count-transact-sql.md) 関数と同じように動作します。 これらの関数の違いは、戻り値のデータ型のみです。 `COUNT_BIG` は常に **bigint** データ型の値を返します。 `COUNT` は常に **int** データ型の値を返します。
   
@@ -38,7 +38,7 @@ ms.locfileid: "68026509"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT_BIG ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -66,7 +66,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="return-types"></a>戻り値の型
 **bigint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 COUNT_BIG(\*) は、グループ内の項目数を返します。 これには NULL 値と重複値が含まれます。
   
 COUNT_BIG (ALL *expression*) はグループ内の各行に対して *expression* を評価し、非 NULL 値の数を返します。
@@ -75,7 +75,7 @@ COUNT_BIG (DISTINCT *expression*) はグループ内の各行に対して *expre
   
 COUNT_BIG は、OVER 句や ORDER BY 句 **_なし_** で使用される場合は決定的関数です。 COUNT_BIG が OVER 句や ORDER BY 句と **_共に_** 使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 例については、「[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)」を参照してください。
   
 ## <a name="see-also"></a>参照

@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング監視サーバーの削除
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用してデータベース ミラーリング セッションからミラーリング監視サーバーを削除する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70930149f26088d6c95bad6205b4421850292602
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735201"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリング セッションからミラーリング監視サーバーを削除する方法について説明します。 データベース ミラーリング セッション中のどの時点でも、データベース所有者は、データベース ミラーリング セッションのミラーリング監視サーバーを無効にできます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ミラーリング監視サーバーの削除に使用するツール:**  
   
@@ -39,14 +40,14 @@ ms.locfileid: "68025272"
   
 -   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データベースに対する ALTER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-remove-the-witness"></a>ミラーリング監視サーバーを削除するには  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68025272"
     > [!NOTE]  
     >  自動フェールオーバーを伴う高い安全性モードから高パフォーマンス モードに切り替えると、 **[ミラーリング監視]** フィールドの内容は自動的に消去されます。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-remove-the-witness"></a>ミラーリング監視サーバーを削除するには  
   
@@ -81,7 +82,7 @@ ms.locfileid: "68025272"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>補足情報: ミラーリング監視サーバーを削除した後  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a>補足情報: ミラーリング監視サーバーを削除した後  
  ミラーリング監視を無効にすると、 [動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)トランザクションの安全性の設定に応じて変更されます。  
   
 -   トランザクションの安全性の設定が FULL (既定値) の場合、セッションは自動フェールオーバーを伴わない高い安全性の同期モードで動作します。  
@@ -91,7 +92,7 @@ ms.locfileid: "68025272"
 > [!TIP]  
 >  データベースのトランザクションの安全性設定は、各パートナーについて [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) カタログ ビューの **mirroring_safety_level** 列と **mirroring_safety_level_desc** 列に記録されます。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   

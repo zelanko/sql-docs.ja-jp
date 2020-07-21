@@ -1,10 +1,8 @@
 ---
 title: JSON 関数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 helpviewer_keywords:
@@ -12,21 +10,22 @@ helpviewer_keywords:
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 5b83e6f6eefce1cf56b71e7d433dca19cb4575d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d0c7e172a1be634ada37d8c83d6602112be5ead
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109426"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423107"
 ---
-# <a name="json-functions-transact-sql"></a>JSON 関数 (TRANSACT-SQL)
+# <a name="json-functions-transact-sql"></a>JSON 関数 (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 このセクションのページで説明されている関数を使用して、JSON テキストを検証または変更するか、単純または複雑な値を抽出します。  
   
-|機能|[説明]|  
+|Function|説明|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|文字列に有効な JSON が含まれているかどうかをテストします。|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 文字列からスカラー値を抽出します。|  

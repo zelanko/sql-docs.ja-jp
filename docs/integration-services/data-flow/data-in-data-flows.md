@@ -15,14 +15,14 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c623753cac559d9f4d38633b0d9205288cb57f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ac04c9b6a8838ba338407533834a7950dabe055d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049495"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293050"
 ---
 # <a name="data-in-data-flows"></a>データ フロー内のデータ
 

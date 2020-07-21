@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store (TRANSACT-SQL) |Microsoft Docs
+title: dm_tran_version_store (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_version_store dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ccd2b0e596fc9787a655aa7ef6f612327f7f41b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676343"
 ---
-# <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  バージョン ストア内のすべてのバージョン レコードを表示する仮想テーブルを返します。 **sys.dm_tran_version_store** 、全体のバージョン ストアがクエリし、バージョン ストアが非常に大きくなることがあるため、効率的ではありません。  
+  バージョンストア内のすべてのバージョンレコードを表示する仮想テーブルを返します。 バージョンストア全体に対してクエリを実行し、バージョンストアが非常に大きくなる可能性があるため、dm_tran_version_store を実行するのは効率的ではあり**ません。**  
   
- バージョン管理された各レコードは、いくつかの追跡または状態情報と共にバイナリ データとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
+ バージョン管理された各レコードは、追跡情報や状態情報と共にバイナリデータとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
   
- バージョン レコードはバイナリであるため、異なるデータベース照合順序の異なる問題はありません。 使用**sys.dm_tran_version_store**バージョン ストア内に存在する、バイナリ表現での行の以前のバージョンを検索します。  
+ バージョン付きのレコードはバイナリとして格納されるため、異なるデータベースからの異なる照合順序に関する問題はありません。 バージョンストアに存在する行の以前のバージョンをバイナリ表現で検索するには、 **dm_tran_version_store**を使用します。  
   
   
 ## <a name="syntax"></a>構文  
@@ -48,33 +48,33 @@ sys.dm_tran_version_store
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|レコードのバージョンを生成するトランザクションのシーケンス番号。|  
-|**version_sequence_num**|**bigint**|バージョン レコードのシーケンス番号。 この値は、バージョンを生成するトランザクション内で一意です。|  
-|**database_id**|**int**|バージョン レコードのデータベース ID。|  
+|**version_sequence_num**|**bigint**|バージョン レコードのシーケンス番号。 この値は、バージョン生成トランザクション内で一意です。|  
+|**database_id**|**int**|バージョン管理されたレコードのデータベース ID。|  
 |**rowset_id**|**bigint**|レコードの行セット ID。|  
-|**status**|**tinyint**|2 つのレコードにバージョン レコードに分割されているかどうかを示します。 値が 0 の場合、レコードは 1 ページに格納されています。 値が 1 の場合は、レコードが 2 つの異なるページに格納されている 2 つのレコードに分割されます。|  
-|**min_length_in_bytes**|**smallint**|(バイト単位)、レコードの最小長。|  
+|**status**|**tinyint**|バージョン付きのレコードが2つのレコードに分割されているかどうかを示します。 値が 0 の場合、レコードは 1 ページに格納されています。 値が1の場合、レコードは2つの異なるページに格納されている2つのレコードに分割されます。|  
+|**min_length_in_bytes**|**smallint**|レコードの最小長 (バイト単位)。|  
 |**record_length_first_part_in_bytes**|**smallint**|バージョン レコードの最初の部分の長さ (バイト単位)。|  
-|**record_image_first_part**|**varbinary(8000)**|バージョン レコードの最初の部分のバイナリ イメージ。|  
-|**record_length_second_part_in_bytes**|**smallint**|(バイト単位) のバージョン レコードの 2 番目の部分の長さ。|  
-|**record_image_second_part**|**varbinary(8000)**|バージョン レコードの 2 番目の部分のバイナリ イメージ。|  
+|**record_image_first_part**|**varbinary(8000)**|バージョンレコードの最初の部分のバイナリイメージ。|  
+|**record_length_second_part_in_bytes**|**smallint**|バージョンレコードの2番目の部分の長さ (バイト単位)。|  
+|**record_image_second_part**|**varbinary(8000)**|バージョンレコードの2番目の部分のバイナリイメージ。|  
   
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
+で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
 ## <a name="examples"></a>使用例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  
   
 -   XSN-57。SERIALIZABLE 分離での更新操作です。  
   
--   Xsn-58 では、xsn-57 と同じです。  
+-   XSN-58 は、XSN-57 と同じです。  
   
--   Xsn-59 では、スナップショット分離下で選択操作です。  
+-   XSN-59 は、スナップショット分離での選択操作です。  
   
--   Xsn-60 では、xsn-59 と同じです。  
+-   XSN-60 は、XSN-59 と同じです。  
   
- 次のクエリを実行します。  
+ 次のクエリが実行されます。  
   
 ```  
 SELECT  
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  この出力は、XSN-57 で 1 つのテーブルから 3 つの行バージョンが作成され、XSN-58 で他のテーブルから 1 つの行バージョンが作成されたことを示しています。  
   
 ## <a name="see-also"></a>関連項目  
- [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

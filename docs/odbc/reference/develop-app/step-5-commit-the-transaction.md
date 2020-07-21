@@ -1,5 +1,5 @@
 ---
-title: 手順 5:トランザクションをコミット |Microsoft Docs
+title: '手順 5: トランザクションをコミットする |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - transaction commit [ODBC]
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bde493edbc6d677b27ef72a24736b504959a7b59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e348ce697e512f30db46d14535cf19bd6d530f61
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114129"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283352"
 ---
 # <a name="step-5-commit-the-transaction"></a>手順 5:トランザクションをコミットする
-次の手順は、次の図に示すように、トランザクションをコミットするは。  
+次の手順では、次の図に示すように、トランザクションをコミットします。  
   
- ![トランザクションをコミットする方法を示します](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  
+ ![トランザクションのコミット方法の表示](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  
   
- 5 番目の手順では呼び出しを**SQLEndTran**をコミットまたはトランザクションをロールバックします。 アプリケーションがトランザクションのコミット モードを設定; 手動コミットする場合は、この手順を実行します。トランザクションのコミット モードが既定では、この自動コミットの場合、トランザクションの値が、ステートメントが実行されたときに自動的にコミットします。 詳細については、次を参照してください。[トランザクション](../../../odbc/reference/develop-app/transactions-odbc.md)です。  
+ 5番目の手順では、 **SQLEndTran**を呼び出してトランザクションをコミットまたはロールバックします。 アプリケーションは、トランザクションコミットモードを手動コミットに設定した場合にのみ、このステップを実行します。トランザクションコミットモードが自動コミット (既定) の場合、ステートメントの実行時にトランザクションは自動的にコミットされます。 詳細については、「[トランザクション](../../../odbc/reference/develop-app/transactions-odbc.md)」を参照してください。  
   
- 新しいトランザクションでステートメントを実行するには、アプリケーションは、手順 3 を返します。 をデータ ソースから切断するには、は、アプリケーションは、手順 6. に進みます。
+ 新しいトランザクションでステートメントを実行するには、アプリケーションが手順 3. に戻ります。 データソースから切断するには、アプリケーションが手順 6. に進みます。

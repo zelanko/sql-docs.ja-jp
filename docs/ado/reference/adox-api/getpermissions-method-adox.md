@@ -16,17 +16,17 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a2bbb889bc0277ab01f29896d4f60eebd8236cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966226"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759168"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions メソッド (ADOX)
-に対する権限を返します、[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトまたはオブジェクトのコンテナー。  
+オブジェクトまたはオブジェクトコンテナーに対する[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の権限を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、**長い**グループまたはユーザーのオブジェクトのアクセス許可を含むビットマスクを指定する値。 この値は 1 つ以上には、 [RightsEnum](../../../ado/reference/adox-api/rightsenum.md)定数。  
+ グループまたはユーザーがオブジェクトに対して持っているアクセス許可を含むビットマスクを指定する**Long 型**の値を返します。 この値は、1つ以上の[右 Senum](../../../ado/reference/adox-api/rightsenum.md)定数にすることができます。  
   
 #### <a name="parameters"></a>パラメーター  
  *名前*  
- A**バリアント**アクセス許可を設定する対象のオブジェクトの名前を指定する値。 設定*名前*オブジェクト コンテナーのアクセス許可を取得する場合は、null 値にします。  
+ 権限を設定するオブジェクトの名前を示す**バリアント**値です。 オブジェクトコンテナーのアクセス許可を取得する場合は、[*名前*を null 値に設定します。  
   
  *ObjectType*  
- A**長い**いずれかの値の[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)定数は、アクセス許可を取得する対象のオブジェクトの型を指定します。  
+ [Objecttypeenum](../../../ado/reference/adox-api/objecttypeenum.md)定数の1つであり、アクセス許可を取得するオブジェクトの型を指定する**Long 型**の値です。  
   
  *ObjectTypeId*  
- 任意。 A**バリアント**OLE DB 仕様で定義されていないプロバイダー オブジェクトの種類の GUID を指定する値。 このパラメーターは必要な場合*ObjectType*に設定されている**adPermObjProviderSpecific**。 それ以外は使用されません。  
+ 任意。 OLE DB 仕様で定義されていないプロバイダーオブジェクト型の GUID を示す**バリアント**値です。 *ObjectType*が**Adpermobjproviderspecific**に設定されている場合、このパラメーターは必須です。それ以外の場合は使用されません。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -54,7 +54,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |-|-|  
 |[Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [GetPermissions および SetPermissions メソッドの例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

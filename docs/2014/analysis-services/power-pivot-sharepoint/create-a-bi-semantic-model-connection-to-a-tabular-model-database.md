@@ -1,5 +1,5 @@
 ---
-title: テーブル モデル データベースへの BI セマンティック モデル接続の作成 |Microsoft Docs
+title: テーブルモデルデータベースへの BI セマンティックモデル接続を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37ce07dd3ae9cbd46a6ddd1860c3178fe154513a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535190"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>テーブル モデル データベースへの BI セマンティック モデル接続の作成
   このトピックでは、SharePoint ファーム外の Analysis Services インスタンスで実行しているテーブル モデル データベースにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
@@ -32,14 +31,14 @@ ms.locfileid: "66071659"
   
  [テーブル モデル データベースへの BI セマンティック モデル接続の作成](#bkmk_connect)  
   
- [BI セマンティック モデル接続への SharePoint 権限の構成](#bkmk_permissions)  
+ [BI セマンティックモデル接続に対する SharePoint 権限の構成](#bkmk_permissions)  
   
  [次の手順](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a> 前提条件の確認  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>前提条件の確認  
  BI セマンティック モデル接続ファイルを作成するには、投稿権限以上の権限が必要です。  
   
- BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、次を参照してください。 [BI セマンティック モデル接続のコンテンツ タイプをライブラリに追加&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)します。  
+ BI セマンティック モデル接続のコンテンツ タイプをサポートしているライブラリが必要です。 詳細については、「 [BI セマンティックモデル接続のコンテンツタイプをライブラリ &#40;PowerPivot for SharePoint&#41;に追加](add-bi-semantic-model-connection-content-type-to-library.md)する」を参照してください。  
   
  BI セマンティック モデル接続を設定するサーバーおよびデータベース名を確認しておく必要があります。 Analysis Services は、テーブル モード用に構成する必要があります。 サーバーで実行しているデータベースは、テーブル モデル データベースである必要があります。 サーバー モードを確認する方法については、「 [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
@@ -49,11 +48,11 @@ ms.locfileid: "66071659"
   
  Management Studio で管理者権限を付与するには、Analysis Services のシステム管理者である必要があります。  
   
- PowerPivot for SharePoint は、クラシック モード認証を使用する Web アプリケーションからアクセスする必要があります。 外部データ ソースへの BI セマンティック モデル接続は、クラシック モード サインインに依存します。 詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)します。  
+ PowerPivot for SharePoint は、クラシック モード認証を使用する Web アプリケーションからアクセスする必要があります。 外部データ ソースへの BI セマンティック モデル接続は、クラシック モード サインインに依存します。 詳細については、「 [PowerPivot の認証と承認](power-pivot-authentication-and-authorization.md)」を参照してください。  
   
  接続シーケンスに参加しているすべてのコンピューターとユーザーは、同じドメインまたは信頼されたドメイン (双方向の信頼関係) に属している必要があります。  
   
-##  <a name="bkmk_ssas"></a> 共有サービス アプリケーションへの Analysis Services 管理権限の付与  
+##  <a name="grant-analysis-services-administrative-permissions-to-shared-service-applications"></a><a name="bkmk_ssas"></a>共有サービスアプリケーションに管理権限 Analysis Services 付与する  
  SharePoint から Analysis Services サーバー上のテーブル モデル データベースへの接続は、データを要求するユーザーに代わって、共有サービスによって行われることがあります。 要求を行うサービスは、通常、PowerPivot サービス アプリケーション、Reporting Services サービス アプリケーション、または PerformancePoint サービス アプリケーションです。 接続が成功するために、このサービスには Analysis Services サーバーに対する管理権限が必要です。 Analysis Services では、別のユーザーの権限を借用して接続できるのは管理者のみです。  
   
  次の条件の下で接続が使用される場合は、管理権限が必要です。  
@@ -76,7 +75,7 @@ ms.locfileid: "66071659"
   
      ID を確認するには、サーバーの全体管理を使用できます。 [セキュリティ] セクションの **[サービス アカウントの構成]** を開き、各アプリケーションで使用されるサービス アプリケーション プールにどの Windows アカウントが関連付けられているかどうかを確認します。次に、このトピックの手順に従って、アカウントに管理権限を付与します。  
   
-##  <a name="bkmk_BISM"></a> テーブル モデル データベースの読み取り権限の付与  
+##  <a name="grant-read-permissions-on-the-tabular-model-database"></a><a name="bkmk_BISM"></a>テーブルモデルデータベースに対する読み取り権限の付与  
  データベースがファームの外部にあるサーバーで実行しているため、接続の設定の一環として、バックエンドの Analysis Services サーバーに対するデータベース ユーザー権限を付与します。 Analysis Services はロールベースの権限モデルを使用します。 model データベースに接続するユーザーは、メンバーに読み取りアクセスを付与するロールを介して、読み取り権限以上の権限を使用して接続する必要があります。  
   
  ロール (および場合によってはロール メンバーシップ) が定義されるのは、モデルが [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で作成されるときです。 SQL Server Management Studio ではロールを作成することはできませんが、定義済みのロールにメンバーを追加することはできます。 ロールの作成の詳細については、「[ロールの作成および管理 (SSAS テーブル)](../tabular-models/roles-ssas-tabular.md)」を参照してください。  
@@ -85,11 +84,11 @@ ms.locfileid: "66071659"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーでデータベースを展開し、さらに **[ロール]** を展開します。 既に定義されているロールが表示されます。 ロールが存在しない場合は、モデルの作成者に連絡してロールの追加を依頼します。 Management Studio でロールを表示するには、モデルを再配置する必要があります。  
   
-2.  ロールを右クリックし、 **[プロパティ]** をクリックします。  
+2.  ロールを右クリックし、[**プロパティ**] を選択します。  
   
 3.  [メンバーシップ] ページで、アクセスする必要がある Windows グループ アカウントおよびユーザー アカウントを追加します。  
   
-##  <a name="bkmk_connect"></a> テーブル モデル データベースへの BI セマンティック モデル接続の作成  
+##  <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a><a name="bkmk_connect"></a>テーブルモデルデータベースへの BI セマンティックモデル接続の作成  
  Analysis Services で権限を設定した後で、SharePoint に戻り、BI セマンティック モデル接続を作成できます。  
   
 1.  BI セマンティック モデル接続の格納先となるライブラリで、SharePoint リボンの **[ドキュメント]** をクリックします。  
@@ -110,7 +109,7 @@ ms.locfileid: "66071659"
   
      Excel または Power View でテーブル モデル データベースに接続してみることで、接続を検証できます。 データ ソース接続が成功した場合は、検証による警告が発生していても、接続は有効です。  
   
-##  <a name="bkmk_permissions"></a> BI セマンティック モデル接続への SharePoint 権限の構成  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>BI セマンティックモデル接続に対する SharePoint 権限の構成  
  BI セマンティック モデル接続を Excel ブックまたは Reporting Services レポートのデータ ソースとして使用するには、SharePoint ライブラリ内の BI セマンティック モデル接続アイテムに対する **読み取り** 権限が必要です。 読み取り権限レベルには、BI セマンティック モデル接続情報を Excel デスクトップ アプリケーションにダウンロードできるようにする **"アイテムを開く"** 権限が含まれます。  
   
  SharePoint で権限を付与するには、いくつかの方法があります。 次の手順では、 **読み取り** 権限レベルを持つ、 **BISM ユーザー** という名前の新しいグループを作成する方法について説明します。  
@@ -139,11 +138,11 @@ ms.locfileid: "66071659"
   
 4.  **[ユーザー権限の削除]** をクリックします。  
   
-##  <a name="bkmk_next"></a> 次の手順  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> 次のステップ  
  BI セマンティック モデル接続を作成し、セキュリティで保護したら、データ ソースとして指定できます。 詳細については、「 [Excel または Reporting Services での BI セマンティック モデル接続の使用](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [PowerPivot BI セマンティックモデル接続 &#40;。 bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [PowerPivot ブックへの BI セマンティック モデル接続の作成](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767040"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   指定したテーブルと XML 列に新しい選択的 XML インデックスを作成します。 選択的 XML インデックスは、クエリを通常行うノードのサブセットにのみインデックスを作成します。そのため、XML インデックス作成とクエリのパフォーマンスが向上します。 選択的セカンダリ XML インデックスを作成することもできます。 詳細については、「[選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)」をご覧ください。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68117196"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 CREATE SELECTIVE XML INDEX index_name  
     ON <table_object> (xml_column_name)  
     [WITH XMLNAMESPACES (<xmlnamespace_list>)]  
@@ -94,7 +94,7 @@ identifier
 )  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *index_name*  
  作成する新しいインデックスの名前を指定します。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
@@ -115,7 +115,7 @@ identifier
   
  FOR **(** \<promoted_node_path_list> **)** 省略可能な最適化ヒントを使用してインデックスを作成するパスの一覧を指定します。 CREATE または ALTER ステートメントで指定できるパスと最適化ヒントについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
   
- WITH *\<index_options>* インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」を参照してください。  
+ WITH *\<index_options>* インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」をご覧ください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  ほとんどの場合、通常の XML インデックスではなく選択的 XML インデックスを作成すると、パフォーマンスが向上し、効率的な保管が可能になります。 ただし、選択的 XML インデックスは、次の条件のいずれかに該当する場合はお勧めしません。  
@@ -127,12 +127,12 @@ identifier
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  この機能の制限および制約については、「[選択的 XML インデックス &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、選択的 XML インデックスを作成するための構文を示しています。 また、インデックスを作成するパスと省略可能な最適化ヒントを指定する構文のいくつかのバリエーションを示します。  
   
 ```  

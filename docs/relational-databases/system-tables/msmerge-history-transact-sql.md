@@ -1,5 +1,5 @@
 ---
-title: MSmerge_history (Transact-SQL) |Microsoft Docs
+title: MSmerge_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_history system table
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017692"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889797"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_history**テーブルに履歴行以前のマージ エージェント ジョブ セッションの結果の詳細な説明にはが含まれています。 このテーブルには、エージェントの出力の行ごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースと各サブスクリプション データベースで使用されます。 ディストリビューション データベースでは、すべてのマージ パブリケーションおよびディストリビューターを使用するサブスクリプションの履歴が含まれます。 各サブスクリプション データベースでは、サブスクライバーでサブスクライブしているパブリケーションの履歴が含まれます。  
+  **MSmerge_history**テーブルには、過去のマージエージェントジョブセッションの結果に関する詳細な説明を含む履歴行が含まれています。 このテーブルには、エージェントの出力行ごとに1つの行が含まれています。 このテーブルは、ディストリビューション データベースと各サブスクリプション データベースで使用されます。 ディストリビューションデータベースには、ディストリビューターを使用するすべてのマージパブリケーションおよびサブスクリプションの履歴が含まれています。 各サブスクリプションデータベースには、サブスクライバーがサブスクライブされているパブリケーションの履歴が含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|マージ エージェント ジョブの ID。|  
-|**agent_id**|**int**|マージ エージェントの ID。|  
-|**comments**|**nvarchar (255)**|メッセージ テキストです。|  
-|**error_id**|**int**|エラーの ID、 [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)システム テーブル。|  
+|**session_id**|**int**|マージエージェントジョブの ID。|  
+|**agent_id**|**int**|マージエージェントの ID。|  
+|**コメント**|**nvarchar(255)**|メッセージ テキストです。|  
+|**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)システムテーブル内のエラーの ID。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
-|**updatable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
+|**updatable_row**|**bit**|履歴行を上書きできる場合は、 **1**に設定します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: '[データベースのプロパティ] ([ミラーリング] ページ) | Microsoft Docs'
+description: ミラーリングのプロパティを構成し、ミラーリング セッションの状態を表示する方法について説明します。 ミラーリング セッションを開始、一時停止、または削除する方法を紹介します。
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630983"
 ---
-# <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] \([ミラーリング] ページ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="database-properties-mirroring-page"></a>[データベースのプロパティ] ([ミラーリング] ページ)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このページにはプリンシパル データベースからアクセスし、データベース ミラーリングのプロパティを構成および変更します。 また、データベース ミラーリング セキュリティ構成ウィザードを起動し、ミラーリング セッションの状態の確認やデータベース ミラーリング セッションの一時停止または削除を行うこともできます。  
   
 > **重要!!!** ミラーリングを開始する前に、セキュリティを構成しておく必要があります。 ミラーリングが開始されていない場合、このウィザードを使用して開始する必要があります。 ウィザードが終了するまで、 **[ミラーリング]** ページのテキスト ボックスは使用できません。  
@@ -29,7 +30,7 @@ ms.locfileid: "68099590"
   
 -   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[セキュリティの構成]**  
  このボタンをクリックすると、 **データベース ミラーリング セキュリティ構成ウィザード**が起動します。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68099590"
   
  TCP **://** _fully_qualified_domain_name_ **:** _port_  
   
- パラメーターの説明  
+ where  
   
 -   *fully_qualified_domain_name* は、サーバー インスタンスが存在するサーバーです。  
   
@@ -110,7 +111,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 > **重要!!** **[データベースのプロパティ]** ダイアログ ボックスでプロパティを変更した後に **[フェールオーバー]** をクリックすると、その変更は失われます。 現在の変更を保存するには、確認メッセージで **[いいえ]** をクリックし、 **[OK]** をクリックして変更を保存します。 その後で [データベースのプロパティ] ダイアログ ボックスを再び開き、 **[フェールオーバー]** をクリックします。  
   
  **動作モード**  
- 必要に応じて、動作モードを変更します。 一部の動作モードは、ミラーリング監視サーバーの TCP アドレスを指定すると使用できるようになります。 次のオプションがあります。  
+ 必要に応じて、動作モードを変更します。 一部の動作モードは、ミラーリング監視サーバーの TCP アドレスを指定すると使用できるようになります。 次のようなオプションがあります。  
   
 |オプション|ミラーリング監視サーバー|説明|  
 |------------|--------------|-----------------|  
@@ -122,7 +123,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  動作モードの詳細については、「 [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)」を参照してください。  
   
- **ステータス**  
+ **状態**  
  ミラーリングが開始された後、 **[状態]** パネルには **[ミラーリング]** ページを選択したときのデータベース ミラーリング セッションの状態が表示されます。 **[状態]** パネルを更新するには、 **[最新の情報に更新]** ボタンをクリックします。 表示される状態は次のとおりです。  
   
 |状態|説明|  
@@ -139,7 +140,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **[更新]**  
  クリックすると、 **[状態]** ボックスが更新されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース ミラーリングについて詳しく理解していない場合は、「 [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)をクリックします。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>既存のセッションへのミラーリング監視の追加  
@@ -167,7 +168,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  詳細については、「 [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)をクリックします。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -176,7 +177,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [データベース ミラーリングと Always On 可用性グループのトランスポート セキュリティ &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

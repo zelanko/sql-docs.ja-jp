@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00f3937c13de5db106732ee919db6671485b691f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2d332c8cdffae320d602f0581c7641d69c31c4fa
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057672"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71297697"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 式)
 
@@ -41,7 +41,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  関数に送信された数値式のデータ型です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、ABS は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  

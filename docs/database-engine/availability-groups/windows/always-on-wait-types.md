@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f16a93231cf8b3bc6f3ad224703e3902ff3cb9b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934968"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900923"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>可用性グループに関連付けられている待機を識別する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Always On 可用性グループの遅延のトラブルシューティングを行うときには、動的管理ビュー(DMV) [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) で可用性グループ固有の待機の種類を使用して、累積の統計を監視できるまで待ちます。  
   
  待機の統計の使用に関する概要については、「[SQL Server 2005 Waits and Queues](https://technet.microsoft.com/library/cc966413.aspx)」(SQL Server 2005 の待機とキュー) を参照してください。 このドキュメントは、SQL Server 2005 を対象として記述されましたが、その情報は、それ以降の SQL Server バージョンに適用できます。  
@@ -51,7 +51,7 @@ WHERE name='wait_types' AND map_value LIKE '%hadr%'
 ORDER BY map_key ASC  
 ```  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [待機の種類](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
   
   

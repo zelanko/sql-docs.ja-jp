@@ -27,24 +27,24 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da22de4e2a8de0fda4bfeb12f3638f1b7bcfe25f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099996"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009233"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続によって発行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] への接続によって発行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET TRANSACTION ISOLATION LEVEL
@@ -56,11 +56,14 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+
+>[!NOTE]
+> SQL Data Warehouse では、ACID トランザクションを実装しています。 トランザクションサポートの分離レベルは、既定では READ UNCOMMITTED になります。  これは READ COMMITTED SNAPSHOT ISOLATION に変更できます。それには、マスター データベースに接続する際にユーザー データベースの READ_COMMITTED_SNAPSHOT データベース オプションをオンにします。  有効になると、このデータベース内のすべてのトランザクションが READ COMMITTED SNAPSHOT ISOLATION の下で実行され、セッション レベルで READ UNCOMMITTED を設定しても受け入れられません。 詳細については、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を確認してください。  
 
 ## <a name="arguments"></a>引数  
  READ UNCOMMITTED  
@@ -126,7 +129,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  トランザクションで実行される各ステートメントの検索条件に一致するキー値の範囲には、範囲ロックが設定されます。 これにより、現在のトランザクションで実行されるステートメントの処理対象となる行はブロックされ、他のトランザクションによる行の更新や挿入ができなくなります。 つまり、トランザクションのステートメントが 2 度実行された場合は、2 度目も同じ行セットが読み取られます。 範囲ロックはトランザクションが完了するまで保持されます。 これではキー範囲全体がロックされ、トランザクションが完了するまでその状態が保持されるので、これは最も制限の厳しい分離レベルといえます。 このオプションはコンカレンシーが低いため、必要なときにのみ使用してください。 このオプションは、トランザクション内のすべての SELECT ステートメントで、すべてのテーブルに対して HOLDLOCK を設定するのと同じ効果があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  分離レベル オプションは一度に 1 つだけ設定でき、設定したオプションは明示的に変更されない限り、その接続で継続的に使用されます。 ステートメントの FROM 句内にあるテーブル ヒントで、テーブルに対して別のロック動作やバージョン管理動作が指定されない限り、トランザクションのすべての読み取り操作は、指定した分離レベルのルールに従って実行されます。  
   
  トランザクションの分離レベルでは、読み取り操作に対して取得されるロックの種類が定義されます。 READ COMMITTED または REPEATABLE READ 用に取得される共有ロックは通常、行ロックです。ただし、読み取り操作でページまたはテーブルの行が大量に参照される場合は、ページ ロックまたはテーブル ロックに変更される場合があります。 トランザクションで行の読み取り後に変更が行われる場合、そのトランザクションでは排他ロックによって行が保護され、トランザクションが完了するまでその状態が保持されます。 たとえば REPEATABLE READ トランザクションで、行に対する共有ロックが取得され、その行がトランザクションによって変更される場合、共有行ロックは排他行ロックに変わります。  
@@ -156,19 +159,19 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  FILESTREAM が有効なデータベースでは、次のトランザクション分離レベルがサポートされています。  
   
-|分離レベル|Transact SQL アクセス|ファイル システム アクセス|  
+|分離レベル|Transact SQL アクセス|ファイル システムへのアクセス|  
 |---------------------|-------------------------|------------------------|  
 |READ UNCOMMITTED|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
 |READ COMMITTED|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |REPEATABLE READ|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
-|Serializable|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
+|シリアル化可能|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|サポートされていない|  
 |READ COMMITTED SNAPSHOT|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |スナップショット|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、セッションの `TRANSACTION ISOLATION LEVEL` を設定します。 後続の各 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではトランザクションが完了するまですべての共有ロックが保持されます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  

@@ -1,6 +1,7 @@
 ---
-title: トランザクション パブリケーションのデータの競合の表示 (SSMS) | Microsoft Docs
-ms.custom: ''
+title: データの競合の表示 (トランザクション) - SSMS
+description: SQL Server Management Studio (SSMS) を使用して、トランザクション レプリケーションのデータの競合を表示します。
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c00bfe0043aa4732f2352a604e872c01f0898f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f95994ac6c663020074c5ef3971c1e0a895b3a10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720574"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>トランザクション パブリケーションのデータの競合の表示 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ピア ツー ピア トランザクション レプリケーション、およびキュー更新サブスクリプションを使用するトランザクション レプリケーションでの競合を、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レプリケーション競合表示モジュールで表示できます。 競合の検出と解決方法については、「[ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」と「[キュー更新の競合解決オプションの設定 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
  競合データを表示できるかどうかは、レプリケーションの種類および競合の保有期間によって異なります。  
@@ -31,7 +32,7 @@ ms.locfileid: "68115077"
   
 -   キュー更新サブスクリプションの場合は、すべての競合のデータを表示できます。 競合データは、競合の保有期間に指定した期間 (既定では 14 日間)、レプリケーション競合表示モジュールで表示できます。 競合の保有期間を設定するには、次のいずれかを実行します。  
   
-    -   @conflict_retention sp_addpublication [の](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)パラメーターに保有期間の値を指定します。  
+    -   [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の @conflict_retention パラメーターに保有期間の値を指定します。  
   
     -   [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) の @property パラメーターに **'conflict_retention'** を指定し、@value パラメーターに保有期間の値を指定します。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68115077"
 6.  レプリケーション競合表示モジュールを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

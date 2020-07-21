@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de9035c84862bcde78c3a6f42133d8cbd52ae9b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764970"
 ---
 # <a name="event-notifications"></a>イベント通知
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   イベント通知を使用すると、イベントについての情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信できます。 イベント通知は、さまざまな [!INCLUDE[tsql](../../includes/tsql-md.md)] データ定義言語 (DDL) ステートメントおよび SQL トレースのイベントに応答して実行されます。イベント通知は、これらのイベントに関する情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信することで実行されます。  
   
  イベント通知を使用できるのは、次のような作業を行う場合です。  
@@ -52,7 +52,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>イベント通知の概念  
  イベント通知が作成されると、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] のインスタンスと指定した対象サービスの間で、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージ交換が開かれます。 メッセージ交換は通常、イベント通知がサーバー インスタンス上のオブジェクトとして存在する限り、開いたままになります。 一部のエラーでは、イベント通知が削除される前にメッセージ交換が終了する場合があります。 このようなメッセージ交換がイベント通知間で共有されることはありません。 イベント通知ごとに、独自の排他的なメッセージ交換が確立されます。 メッセージ交換を明示的に終了すると、対象のサービスがこれ以上メッセージを受信しなくなります。また、次回イベント通知が起動されてもメッセージ交換は再度開かれません。  
   
- イベント発生時の情報、影響を受けるデータベース オブジェクトの情報、関係する [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ ステートメント、およびその他の情報を提供するイベント情報が、**xml** 型の変数として [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに配信されます。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)」を参照してください。  
+ イベント発生時の情報、影響を受けるデータベース オブジェクトの情報、関係する [!INCLUDE[ssSB](../../includes/sssb-md.md)] バッチ ステートメント、およびその他の情報を提供するイベント情報が、 **xml** 型の変数として [!INCLUDE[tsql](../../includes/tsql-md.md)] サービスに配信されます。 イベント通知によって生成された XML スキーマの詳細については、「[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)」を参照してください。  
   
 ### <a name="event-notifications-vs-triggers"></a>イベント通知とトリガー  
  次の表では、トリガーとイベント通知の比較対照を示します。  

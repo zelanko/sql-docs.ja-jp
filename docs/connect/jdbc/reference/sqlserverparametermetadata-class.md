@@ -1,5 +1,5 @@
 ---
-title: SQLServerParameterMetaData クラス |Microsoft Docs
+title: SQLServerParameterMetaData クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0721341cbf095e0aa27fab392c8d03f72dc2e3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99a81b89c0707d4d278a886bd7bbcbceb58d6068
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970893"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923875"
 ---
 # <a name="sqlserverparametermetadata-class"></a>SQLServerParameterMetaData クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67970893"
 public class SQLServerParameterMetaData  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パラメーターのメタデータを取得するために、準備されたステートメントは SET FMT ONLY を指定して実行されます。 呼び出し可能ステートメントで sp_sproc_columns が呼び出され、プロシージャ パラメーターの名前とメタデータが取得されます。  
   
 ## <a name="see-also"></a>参照  

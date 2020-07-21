@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac54f2b22de55ed74c4635ec0f86d008c7624a42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025261"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
   このトピックでは、FILL FACTOR について説明すると共に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のインデックスの FILL FACTOR 値を指定する方法について説明します。  
@@ -36,7 +35,7 @@ ms.locfileid: "63036233"
   
      [パフォーマンスに関する考慮事項](#Performance)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスの FILL FACTOR を指定するには:**  
   
@@ -44,9 +43,9 @@ ms.locfileid: "63036233"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Performance"></a> パフォーマンスに関する考慮事項  
+###  <a name="performance-considerations"></a><a name="Performance"></a> パフォーマンスに関する考慮事項  
   
 #### <a name="page-splits"></a>ページ分割  
  適切な FILL FACTOR 値を選択すると、基になるテーブルにデータが追加されたときにインデックスのサイズを拡張するのに十分な領域が確保され、ページ分割が実行される可能性が低くなります。フル インデックス ページに新しい行を追加すると、新しい行を挿入する領域を確保するために、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] により行の約半分が新しいページに移動されます。 この再構成をページ分割といいます。 ページ分割により新しいレコード用の領域が確保されますが、この操作の実行には時間がかかることがあります。また、ページ分割はリソースを集中的に消費する操作です。 さらに、I/O 操作を増加させる断片化の原因となることもあります。 ページ分割が頻繁に行われる場合は、新規または既存の FILL FACTOR 値を使用してデータを再配布して、インデックスを再構築できます。 詳細については、「 [インデックスの再編成と再構築](reorganize-and-rebuild-indexes.md)」を参照してください。  
@@ -56,12 +55,12 @@ ms.locfileid: "63036233"
 #### <a name="adding-data-to-the-end-of-the-table"></a>テーブルの最後へのデータの追加  
  新しいデータがテーブル全体に均等に分散される場合は、0 および 100 以外の FILL FACTOR を指定するとパフォーマンスが向上する可能性があります。 ただし、すべてのデータがテーブルの最後に追加されると、インデックス ページ内の空き領域は埋められません。 たとえば、インデックス キー列が IDENTITY 列であると、新しい行のキーが常に増加し、インデックス行はインデックスの最後に論理的に追加されます。 行のサイズを大きくするデータで既存の行が更新される場合は、FILL FACTOR 値を 100 未満にしてください。 各ページ上の追加のバイトにより、行の追加の長さによって発生するページ分割を最小限にすることができます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>テーブル デザイナーを使用して FILL FACTOR を指定するには  
   
@@ -99,7 +98,7 @@ ms.locfileid: "63036233"
   
 8.  **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>既存のインデックスの FILL FACTOR を指定するには  
   

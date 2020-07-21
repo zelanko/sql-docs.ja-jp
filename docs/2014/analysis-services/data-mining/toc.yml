@@ -77,7 +77,7 @@
           href: mining-model-content-for-sequence-clustering-models.md
         - name: Sequence Clustering Model Query Examples
           href: sequence-clustering-model-query-examples.md
-    - name: Microsoft タイム シリーズ アルゴリズム
+    - name: Microsoft Time Series アルゴリズム
       href: microsoft-time-series-algorithm.md
       items:
         - name: Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス

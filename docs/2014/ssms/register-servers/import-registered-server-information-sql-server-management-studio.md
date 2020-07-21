@@ -1,6 +1,6 @@
 ---
-title: 登録済みサーバー情報のインポート (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 登録済みサーバーの情報のインポート
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], importing
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0106bc32724bbe4e2e2faed4ead5750440508d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddf4a72fa81e12f49b8974881dd964473c863c28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048707"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で保存されている登録済みサーバー情報をインポートする方法について説明します。 登録済みサーバー ファイルをエクスポートした後にインポートすることで、[登録済みサーバー] の同じサーバーを使用して、複数のコンピューターを簡単に構成できます。 この方法は、複数の場所に配置されているコンピューターから多数のサーバーを管理する場合や、経験の浅いユーザーのために基本的な接続設定を構成する場合に便利です。  
@@ -51,8 +50,8 @@ ms.locfileid: "63191910"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するサーバー登録は、パスワードをユーザーごとに格納します。 ユーザーは、サーバー登録をインポートした後、それぞれのサーバーに初めて接続するときにパスワードを入力して、登録済みサーバーの一覧にパスワードを保存する必要があります。 Windows 認証を使用して登録されるサーバーの場合は、この操作は必要ありません。  
   
-## <a name="see-also"></a>関連項目  
- [サーバーの登録変更&#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [登録済みサーバー情報をエクスポート&#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+## <a name="see-also"></a>参照  
+ [サーバーの登録 &#40;変更 SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md) [登録済みサーバーの情報のエクスポート &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

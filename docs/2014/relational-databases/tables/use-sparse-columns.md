@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002902"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
   スパース列は、NULL 値用にストレージが最適化されている通常の列です。 スパース列によって、NULL 以外の値を取得するためのオーバーヘッドは増大しますが、NULL 値に必要となる領域は削減されます。 少なくとも 20 ～ 40% の領域を削減できる場合は、スパース列の使用を検討してください。 スパース列および列セットを定義するには、 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) または [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) ステートメントを使用します。  
@@ -85,7 +84,7 @@ ms.locfileid: "68196651"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Precision-Dependent-Length データ型**  
+ **有効桁数に依存する長さのデータ型**  
   
 |データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
@@ -99,7 +98,7 @@ ms.locfileid: "68196651"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|控えめな推定値として `decimal` 型を使用してください。|||  
   
- **Data-Dependent-Length データ型**  
+ **データに依存する長さのデータ型**  
   
 |データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
@@ -110,7 +109,7 @@ ms.locfileid: "68196651"
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
- \* 長さは、型に含まれているデータの平均に 2 バイトまたは 4 バイトを加えた長さに等しくなります。  
+ * 長さは、型に含まれているデータの平均に 2 バイトまたは 4 バイトを加えた長さに等しくなります。  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>スパース列の更新に必要なインメモリ オーバーヘッド  
  スパース列を含むテーブルをデザインする場合は、行を更新するときにテーブル内の NULL 以外のスパース列ごとに追加の 2 バイトが必要になることに注意してください。 この追加のメモリ要件により、(このメモリ オーバーヘッドを含む) 合計行サイズが 8019 を超え、列を行外に出すことができないと、更新がエラー 576 で予期せずに失敗する可能性があります。  
@@ -166,7 +165,7 @@ ms.locfileid: "68196651"
   
      マージ レプリケーションでは、スパース列または列セットがサポートされません。  
   
--   変更の追跡  
+-   Change tracking  
   
      変更の追跡では、スパース列と列セットがサポートされます。 テーブルで列セットが更新されると、変更の追跡でその操作が行全体の更新として処理されます。 列セットの更新操作で更新された一連のスパース列を正確に特定するための詳細な変更追跡は行われません。 スパース列が DML ステートメントを通じて明示的に更新された場合は、その列に対する変更の追跡が通常どおりに機能し、変更された一連の列を正確に特定できます。  
   
@@ -176,7 +175,7 @@ ms.locfileid: "68196651"
   
 -   テーブルをコピーするとき、列のスパース プロパティは保持されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。 この例のコードでは、スパース列を使用するテーブルを作成し、そのテーブルに 2 つの行を挿入し、そのテーブルからデータを選択します。  
   
 > [!NOTE]  
@@ -231,7 +230,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列セットの使用](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

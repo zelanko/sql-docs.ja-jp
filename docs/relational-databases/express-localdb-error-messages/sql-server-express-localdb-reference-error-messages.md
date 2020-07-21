@@ -1,6 +1,8 @@
 ---
-title: SQL Server Express LocalDB エラー メッセージ リファレンス |Microsoft Docs
-ms.custom: ''
+title: LocalDB のエラーメッセージリファレンス
+description: このセクションでは、次の SQL Server Express LocalDB エラーメッセージに関する参照情報を提供します。
+titleSuffix: SQL Server Express
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +11,15 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f59e898dcb8c51155bebb53352265eb95ebebd4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdfff620e2a83dbd151c7c5a1034ec8d206b7e1f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126961"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458872"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB リファレンス - エラー メッセージ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   ここでは、次の SQL Server Express LocalDB エラー メッセージについての参照情報を示します。  
   
  [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](../../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)  
@@ -84,7 +86,7 @@ ms.locfileid: "68126961"
  指定した共有名は既に使用されています。  
   
  [LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-sql-server-startup-failed.md)  
- SQL Server プロセスが開始されたが、SQL Server の起動に失敗しました。  
+ SQL Server プロセスが開始されましたが、SQL Server の起動に失敗しました。  
   
  [LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES](../../relational-databases/express-localdb-error-messages/localdb-error-too-many-shared-instances.md)  
  共有インスタンスが多すぎます。  
@@ -105,7 +107,7 @@ ms.locfileid: "68126961"
  指定したパッチ レベルはインストールされていません。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../../relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md)  
- 同期ロックを取得中にタイムアウトが発生しました。  
+ 同期ロックを取得しようとしているときにタイムアウトが発生しました。  
   
  [LOCALDB_ERROR_XEVENT_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md)  
  LocalDB インスタンスの API 内で XEvent エンジンを開始できませんでした。  

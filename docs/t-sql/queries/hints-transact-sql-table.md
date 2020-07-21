@@ -1,7 +1,7 @@
 ---
 title: テーブル ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901964"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731327"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   テーブル ヒントでは、ロック手法、1 つ以上のインデックス、クエリ処理操作 (テーブル スキャンやインデックスのシークなど)、またはその他のオプションを指定することによって、データ操作言語 (DML) ステートメントが存続する間だけ、クエリ オプティマイザーの既定の動作をオーバーライドします。 テーブル ヒントは、DML ステートメントの FROM 句で指定され、その句で参照されるテーブルまたはビューのみに影響します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67901964"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -121,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
-WITH **(** \<table_hint> **)**  **[,]** ...*n* ]  
+WITH **(** \<table_hint> **)** [ **[,]** ...*n* ]  
 いくつかの例外を除き、テーブル ヒントは、FROM 句で WITH キーワードを使用して指定した場合にのみサポートされます。 また、テーブル ヒントはかっこを使用して指定する必要があります。  
   
 > [!IMPORTANT]  
 > WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-次のテーブル ヒントは、WITH キーワードの有無に関係なく使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例:  
+次のテーブル ヒントは、`WITH` キーワードの有無にかかわらず許可されます: `NOLOCK`、`READUNCOMMITTED`、`UPDLOCK`、`REPEATABLEREAD`、`SERIALIZABLE`、`READCOMMITTED`、`TABLOCK`、`TABLOCKX`、`PAGLOCK`、`ROWLOCK`、`NOWAIT`、`READPAST`、`XLOCK`、`SNAPSHOT`、および `NOEXPAND`。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 次に例を示します。  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -192,7 +192,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
   
 FORCESEEK ヒントは以下の方法で指定できます。  
   
-|構文|例|[説明]|  
+|構文|例|説明|  
 |------------|-------------|-----------------|  
 |インデックスまたは INDEX ヒントを使用しない場合|`FROM dbo.MyTable WITH (FORCESEEK)`|クエリ オプティマイザーでは、関連するインデックスを介してテーブルやビューにアクセスするためのインデックスのシーク操作のみが検討されます。|  
 |INDEX ヒントと組み合わせた場合|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|クエリ オプティマイザーでは、指定されたインデックスを介してテーブルやビューにアクセスするためのインデックスのシーク操作のみが検討されます。|  
@@ -221,7 +221,7 @@ FORCESEEK ヒントは以下の方法で指定できます。
 > [!CAUTION]  
 > パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、`Plan cannot be generated` というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、クエリ オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
   
-FORCESCAN **適用対象**:[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+FORCESCAN **適用対象**:[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 以降。
 クエリ オプティマイザーに対し、参照されているテーブルやビューへのアクセス パスとして、インデックスのスキャン操作のみを使うことを指定します。 FORCESCAN ヒントは、オプティマイザーが影響を受ける行数を過小評価し、スキャン操作ではなくシーク操作を選択するクエリに役立つ場合があります。 この場合、操作に許可されるメモリの量は少なすぎて、クエリのパフォーマンスに影響します。  
   
 FORCESCAN を指定する際には、INDEX ヒントを使用してもしなくてもかまいません。 インデックス ヒントと組み合わせると (`INDEX = index_name, FORCESCAN`)、クエリ オプティマイザーでは、参照されるテーブルにアクセスする際に、指定されたインデックスを介したアクセス パスのみが検討されます。 インデックス ヒント INDEX(0) ベース テーブルのテーブル スキャン操作を強制するには、FORCESCAN を指定できます。  
@@ -261,7 +261,7 @@ READUNCOMMITTED に相当します。 詳細については、後の「READUNCOM
 > UPDATE ステートメントまたは DELETE ステートメントの場合: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-テーブルでロックがかかったらすぐにメッセージを返すように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を設定します。 NOWAIT は、特定のテーブルに SET LOCK_TIMEOUT 0 を指定することに相当します。 NOWAIT ヒントは、TABLOCK ヒントも指定されている場合は機能しません。 TABLOCK ヒントを使用している場合に待機しないでクエリを終了するには、代わりにクエリの前に `SETLOCK_TIMEOUT 0;` を指定します。  
+テーブルでロックがかかったらすぐにメッセージを返すように[!INCLUDE[ssDE](../../includes/ssde-md.md)]を設定します。 NOWAIT は、特定のテーブルに `SET LOCK_TIMEOUT 0` を指定することに相当します。 NOWAIT ヒントは、TABLOCK ヒントも指定されている場合は機能しません。 TABLOCK ヒントを使用している場合に待機しないでクエリを終了するには、代わりにクエリの前に `SETLOCK_TIMEOUT 0;` を指定します。  
   
 PAGLOCK  
 通常使用される行やキーに対する個々のロックまたは単一のテーブル ロックの代わりに、ページ ロックを使用します。 既定では、操作に適したロック モードを使用します。 SNAPSHOT 分離レベルで実行中のトランザクションにおいてこのオプションを指定しても、UPDLOCK や HOLDLOCK など、ロックが必要な他のテーブル ヒントと組み合わせて指定しない限り、ページ ロックは取得されません。  
@@ -317,7 +317,7 @@ SERIALIZABLE
 HOLDLOCK に相当します。 共有ロックがより制限的になります。テーブルまたはデータ ページが不要になったときに、トランザクションが完了しているかどうかにかかわらず共有ロックが解除されるのではなく、共有ロックはトランザクションが完了するまで保持されます。 SERIALIZABLE 分離レベルで実行しているトランザクションと同じセマンティクスで、スキャンが実行されます。 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
 SNAPSHOT  
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。 
   
 メモリ最適化されたテーブルは、SNAPSHOT 分離でアクセスされます。 SNAPSHOT は、メモリ最適化されたテーブルだけで使用できまます (ディスク ベースのテーブルでは使用できません)。 詳細については、「[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」を参照してください。  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
 geometry オブジェクトや geography オブジェクトのテセレーションに使用するセルの最大数を指定します。 *数*は、1 から 8192 の範囲の値です。  
   
 このオプションを使用すると、プライマリとセカンダリのフィルターの実行時間の間のトレードオフを調整することによって、クエリの実行時間を微調整できます。 値を大きくすると、セカンダリ フィルターの実行時間が短縮されますが、プライマリ フィルターの実行時間が増加します。値を小さくすると、プライマリ フィルターの実行時間が短縮されますが、セカンダリ フィルターの実行時間が増加します。 密度の高い空間データの場合は、大きい値を指定して、プライマリ フィルターでより適切な近似値を提供し、セカンダリ フィルターの実行時間を減少させることで、実行時間を短縮させます。 密度の低いデータでは、小さい値を指定して、プライマリ フィルターの実行時間を短縮させます。  
@@ -339,7 +339,7 @@ geometry オブジェクトや geography オブジェクトのテセレーショ
 TABLOCK  
 取得したロックがテーブル レベルで適用されることを指定します。 取得されるロックの種類は、実行されるステートメントによって異なります。 たとえば、SELECT ステートメントを実行すると、共有ロックが取得されます。 TABLOCK を指定することで、行レベルまたはページ レベルではなくテーブル全体に共有ロックが適用されます。 HOLDLOCK も指定してある場合は、テーブル ロックがトランザクション終了まで保持されます。  
   
-INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> ステートメントを使用してデータをヒープにインポートするときに、対象テーブルに対して TABLOCK ヒントを指定すると、そのステートメントに対してログ記録とロックの最適化を有効にすることができます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要もあります。 詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
+`INSERT INTO <target_table> SELECT <columns> FROM <source_table>` ステートメントを使用してデータをヒープにインポートするときに、対象テーブルに対して TABLOCK ヒントを指定すると、そのステートメントに対して最小ログ記録と最適化されたロックを有効にすることができます。 データベース復旧モデルが単純復旧モデルまたは一括ログ復旧モデルに設定されている必要もあります。 TABLOCK ヒントでは、ヒープまたはクラスター化列ストア インデックスに対する並列挿入も有効になります。 詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」を参照してください。  
   
 テーブルにデータをインポートするため、[OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 一括行セット プロバイダーで TABLOCK を使用すると、対象テーブルへのデータ読み込みを、ログ記録とロックを最適化して、複数のクライアントで同時に行うことができます。 詳細については、「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」次を参照してください。  
   
@@ -354,7 +354,7 @@ UPDLOCK を指定すると、READCOMMITTED および READCOMMITTEDLOCK 分離レ
 XLOCK  
 排他ロックを使用することと、これをトランザクション終了まで保持することを指定します。 ROWLOCK、PAGLOCK、または TABLOCK と組み合わせて指定すると、排他ロックは適切な粒度レベルに適用されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 テーブルがクエリ プランによってアクセスされているのではない場合、テーブル ヒントは無視されます。 これは、オプティマイザーがテーブルにまったくアクセスしないことを選択した結果であるか、またはインデックス付きビューが代わりにアクセスされるためである可能性があります。 後者の場合、OPTION (EXPAND VIEWS) クエリ ヒントを使用することで、インデックス付きビューへのアクセスを防ぐことができます。  
   
 すべてのロック ヒントが、クエリ プランによってアクセスされているすべてのテーブルおよびビュー (ビューで参照されているテーブルおよびビューを含む) に反映されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、対応するロックの一貫性チェックを実行します。  
@@ -414,7 +414,7 @@ NOEXPAND は*インデックス付きビュー*にのみ適用できます。 �
 ## <a name="permissions"></a>アクセス許可  
  KEEPIDENTITY、IGNORE_CONSTRAINTS、IGNORE_TRIGGERS の各ヒントには、テーブルに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. TABLOCK ヒントを使用してロック手法を指定する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Production.Product` テーブルに対して共有ロックを使用することと、このロックを UPDATE ステートメントの終了まで保持することを指定します。  

@@ -1,7 +1,8 @@
 ---
-title: マークされたトランザクションへのデータベースの復元 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: マークされたトランザクションへのデータベースの復元 (SSMS)
+description: SQL Server データベースの復元中に、[トランザクション ログの復元] ダイアログ ボックスを使用して、使用可能なログ バックアップのマークされたトランザクションにデータベースを復元します。
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 066ca4d751e6d5d33f69bf284f5a35fb3aaa27e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f267e998b0bd9693c821000cd51a044326e9161
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718006"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>マークされたトランザクションへのデータベースの復元 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベースが復元中の状態である場合、 **[トランザクション ログの復元]** ダイアログ ボックスを使用して、使用可能なログ バックアップのマークされたトランザクションにデータベースを復元できます。  
   
 > [!NOTE]  
@@ -32,7 +33,7 @@ ms.locfileid: "67937584"
   
 ### <a name="to-restore-a-marked-transaction"></a>マークされたトランザクションを復元するには  
   
-1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
@@ -46,15 +47,15 @@ ms.locfileid: "67937584"
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |[ヘッダー]|[値]|  
+    |ヘッダー|値|  
     |------------|-----------|  
-    |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
+    |\<blank>|マークを選択するためのチェック ボックスを表示します。|  
     |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
     |**Date**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
-    |**[説明]**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
+    |**説明**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
     |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
     |**[データベース]**|マークされたトランザクションがコミットされたデータベースの名前。|  
-    |**[ユーザー名]**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
+    |**ユーザー名**|マークされたトランザクションをコミットしたデータベース ユーザーの名前。|  
   
 ## <a name="see-also"></a>参照  
  [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   

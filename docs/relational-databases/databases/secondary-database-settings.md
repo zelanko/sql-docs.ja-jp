@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759016"
 ---
 # <a name="secondary-database-settings"></a>[セカンダリ データベースの設定]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、ログ配布構成におけるセカンダリ データベースのプロパティを構成および変更できます。  
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "68127219"
  ログ配布構成において、セカンダリ サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 接続に使用するアカウントは、セカンダリ サーバーのインスタンスの sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
  **[初期化] タブ**  
- 次のオプションがあります。  
+ 次のようなオプションがあります。  
   
  **[はい、プライマリ データベースの完全バックアップを生成して、セカンダリ データベースに復元します]**  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、プライマリ データベースをバックアップし、それをセカンダリ サーバーに復元することで、セカンダリ データベースを構成します。 **[セカンダリ データベース]** ボックスに新しいデータベースの名前を入力した場合、データベースは復元操作の一部として作成されます。  
@@ -63,7 +63,7 @@ ms.locfileid: "68127219"
  セカンダリ データベースが既に初期化されていて、プライマリ データベースからトランザクション ログ バックアップを受け入れる準備が整っていることを指定します。 **[セカンダリ データベース]** ボックスに新しいデータベース名を入力した場合は、このオプションは使用できません。  
   
  **[ファイルのコピー] タブ**  
- 次のオプションがあります。  
+ 次のようなオプションがあります。  
   
  **[ファイルのコピー先フォルダー: (通常、このフォルダーはセカンダリ サーバーにあります)]**  
  セカンダリ データベースに復元するために、トランザクション ログ バックアップのコピー先のパスを入力します。 通常は、セカンダリ サーバー上のフォルダーへのローカル パスを指定します。 フォルダーが別のサーバー上にある場合は、フォルダーへの UNC パスを指定する必要があります。 セカンダリ サーバー インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントには、このフォルダーに対する読み取り権限を指定する必要があります。 さらに、コピー ジョブおよび復元ジョブをセカンダリ サーバー インスタンスで実行するプロキシ アカウントに対して、このネットワーク共有に対する読み取り/書き込み権限を許可する必要があります。 既定では、セカンダリ サーバー インスタンスの SQL Server エージェント サービス アカウントが使用されますが、sysadmin はジョブに他のプロキシ アカウントを選択できます。  
@@ -84,7 +84,7 @@ ms.locfileid: "68127219"
  SQL Server エージェントのコピー ジョブを中断します。  
   
  **[トランザクション ログの復元] タブ**  
- 次のオプションがあります。  
+ 次のようなオプションがあります。  
   
  **[バックアップの復元時に、データベースのユーザーを切断する]**  
  トランザクション ログのバックアップの復元時にセカンダリ データベースから自動的にユーザーを切断します。  

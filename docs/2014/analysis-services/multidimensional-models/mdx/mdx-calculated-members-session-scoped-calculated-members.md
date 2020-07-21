@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバー (MDX) のセッション スコープの作成 |Microsoft Docs
+title: セッションスコープの計算されるメンバーの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fe7a9f137d8b74eaa5bad104dbfdb471dd14588
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074549"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546464"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>セッション スコープの計算されるメンバーの作成 (MDX)
-  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、CREATE MEMBER ステートメントの構文は非常に単純で使いやすいものです。  
   
 > [!NOTE]  
->  計算されるメンバーの詳細については、「[Building Calculated Members in MDX (MDX)](mdx-calculated-members-building-calculated-members.md)」(MDX での計算されるメンバーの作成 (MDX))を参照してください。  
+>  計算されるメンバーの詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
 ## <a name="create-member-syntax"></a>CREATE MEMBER の構文  
  MDX ステートメントに CREATE MEMBER ステートメントを追加するための構文は、以下のとおりです。  

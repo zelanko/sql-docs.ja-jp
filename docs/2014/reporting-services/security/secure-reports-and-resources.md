@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101664"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
@@ -74,10 +74,10 @@ ms.locfileid: "66101664"
  機密情報を含むレポートは、重要なデータにアクセスするための資格情報の入力をユーザーに要求することによって、データアクセス レベルのセキュリティで保護する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。 また、未承認のユーザーがアクセスできないように、フォルダーをセキュリティで保護することもできます。 詳細については、「 [フォルダーをセキュリティで保護する](secure-folders.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- (作成-と-管理-ロール-assignments.md)   
- [レポート ビルダーへのアクセスの構成](../report-server/configure-report-builder-access.md)   
+ (create-and-manage-role-assignments.md)   
+ [レポートビルダーアクセスの構成](../report-server/configure-report-builder-access.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
- [共有データ ソース アイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
- [Reporting Services データ ソースに資格情報を保存する](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [共有データソースアイテムをセキュリティで保護する](secure-shared-data-source-items.md)   
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

@@ -1,24 +1,25 @@
 ---
-title: フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
-description: この記事では、Linux で SQL Server フェールオーバー クラスター インスタンス (FCI) を操作する方法について説明します。
+title: FCI の手動フェールオーバー - SQL Server on Linux
+description: SQL Server on Linux でフェールオーバー クラスター インスタンス (FCI) を手動でフェールオーバーさせる方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032287"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897248"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux で SQL Server フェールオーバー クラスター インスタンス (FCI) を操作する方法について説明します。 Linux に SQL Server FCI を作成していない場合は、「[フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)」をご覧ください。 
 
@@ -30,12 +31,12 @@ FCI を別のノードに手動でフェールオーバーすることが必要�
 
 フェールオーバーの方法は、Linux のディストリビューションによって異なります。 お使いの Linux ディストリビューションの指示に従ってください。
 
-- [RHEL または Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL または Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 手動フェールオーバー (RHEL または Ubuntu)
+## <a name="manual-failover-rhel-or-ubuntu"></a>手動フェールオーバー (RHEL または Ubuntu)
 
-手動フェールオーバーを実行するには、Red Hat Enterprise Linux (RHEL) サーバーまたは Ubuntu サーバーで、次の手順を実行します。
+Red Hat Enterprise Linux (RHEL) サーバーまたは Ubuntu サーバーで手動フェールオーバーを実行するには、次の手順を実行します。
 1.  次のコマンドを実行します。 
 
    ```bash
@@ -54,10 +55,10 @@ FCI を別のノードに手動でフェールオーバーすることが必要�
 
 \<FCIResourceName> は、FCI の Pacemaker リソース名です。 
 
-## <a name = "#-manual-failover-sles"></a> 手動フェールオーバー (SLES)
+## <a name="manual-failover-sles"></a>手動フェールオーバー (SLES)
 
 
-Suse Linux Enterprise Server (SLES) では、SQL Server FCI を手動でフェールオーバーするには、`migrate` コマンドを使います。 例:
+Suse Linux Enterprise Server (SLES) では、SQL Server FCI を手動でフェールオーバーするには、`migrate` コマンドを使います。 次に例を示します。
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
@@ -77,7 +78,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 - [フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

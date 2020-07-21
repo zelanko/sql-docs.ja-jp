@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fb706fb8be1864b8da12c91fc4ce1e767355f93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62467856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023081"
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
   次のトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
+ [ユーティリティダッシュボード &#40;SQL Server ユーティリティ&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [データ層アプリケーションの詳細を展開&#40;SQL Server ユーティリティ&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [マネージ インスタンスの詳細&#40;SQL Server ユーティリティ&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   

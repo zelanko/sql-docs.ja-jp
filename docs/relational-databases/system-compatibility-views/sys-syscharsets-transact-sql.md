@@ -1,5 +1,5 @@
 ---
-title: sys.syscharsets (TRANSACT-SQL) |マイクロソフトのドキュメント
+title: sys.sys文字セット (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,31 +21,30 @@ ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4332159765791addfdfcc32a9d19d29836f2460c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 141a57db220be9d415febc5722eb34e313d6830f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053545"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009959"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  1 つの行を含みます。 各文字を設定し、並べ替え順序の定義で使用するための、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 マークされている並べ替え順序のいずれかが**sysconfigures**として既定の並べ替え順序。 実際はこの並べ替え順だけが使用されます。  
+  で使用するために定義された文字セットと並べ替え順序ごとに1行の値を格納し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。 並べ替え順序の1つは、 **sysconfigures**で既定の並べ替え順序としてマークされています。 実際はこの並べ替え順だけが使用されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**type**|**smallint**|この行で表されるエンティティの種類。<br /><br /> 1001 = 文字セット。<br /><br /> 2001 = 並べ替え順|  
-|**id**|**tinyint**|文字セットまたは並べ替え順を表す一意な ID。 並べ替え順と文字セットは、同じ ID 番号を共有できません。 1 ～ 240 の ID は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するために予約されています。|  
-|**csid**|**tinyint**|文字セットを表す行の場合、このフィールドは使用されません。 並べ替え順を表す行の場合は、その並べ替え順が適用される文字セットの ID になります。 この ID を持つ文字セットの行がこのテーブルに存在すると見なされます。|  
+|**id**|**tinyint**|文字セットまたは並べ替え順を表す一意な ID。 注並べ替え順序と文字セットで同じ ID 番号を共有することはできません。 1 ～ 240 の ID は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するために予約されています。|  
+|**csid**|**tinyint**|文字セットを表す行の場合、このフィールドは使用されません。 並べ替え順を表す行の場合は、その並べ替え順が適用される文字セットの ID になります。 このテーブルには、この ID を持つ文字セットの行が存在すると見なされます。|  
 |**status**|**smallint**|内部システム状態の情報ビット。|  
-|**name**|**sysname**|文字の一意の名前は、セットまたは並べ替え順。 このフィールドは文字 A ~ Z または a ~ z、数字 0 - 9、およびアンダーのみを含める必要があります。文字で始まる必要があります。|  
-|**description**|**nvarchar (255)**|文字の機能の説明 (オプション) は、セットまたは並べ替え順。|  
-|**binarydefinition**|**varbinary(6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**definition**|**image**|文字の内部の定義は、セットまたは並べ替え順。 このフィールドのデータの構造は、種類によって異なります。|  
+|**name**|**sysname**|文字セットまたは並べ替え順序の一意の名前。 このフィールドには、A ~ Z または a ~ z の文字、数字 0-9、およびアンダースコア (_) のみを含める必要があります。また、先頭にはアルファベットを使用する必要があります。|  
+|**description**|**nvarchar(255)**|文字セットまたは並べ替え順序の機能について説明します (省略可能)。|  
+|**binarydefinition**|**varbinary (6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**カスタム**|**イメージ**|文字セットまたは並べ替え順序の内部定義。 このフィールド内のデータの構造は、型によって異なります。|  
   
-## <a name="see-also"></a>関連項目  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

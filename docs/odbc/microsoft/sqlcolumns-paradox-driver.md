@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQLColumns function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLColumns
 ms.assetid: d7831c7d-8be9-40a7-bc70-8d89db8fe8c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1738e17742e61a285a4d2d070b179d2832aaf40f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66bc244089af548413046357aae6371ff0c39bbf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132509"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307869"
 ---
 # <a name="sqlcolumns-paradox-driver"></a>SQLColumns (Paradox ドライバー)
 > [!NOTE]  
->  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックでは、Paradox ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|[列]|コメント|  
+|列|説明|  
 |------------|--------------|  
 |TABLE_QUALIFIER|ディレクトリへのパスが返されます。|  
-|TABLE_OWNER|所有者名がサポートされていないために、この列で NULL が返されます。|  
-|NULLABLE|主キーまたは一意のインデックスに参加する列の SQL_NO_NULLS が返されます。|
+|TABLE_OWNER|所有者名がサポートされていないため、この列には NULL が返されます。|  
+|NULLABLE|主キーまたは一意のインデックスに含まれる列に対して SQL_NO_NULLS が返されます。|

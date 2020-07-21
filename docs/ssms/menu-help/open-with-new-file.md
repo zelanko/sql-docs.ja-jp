@@ -1,6 +1,6 @@
 ---
-title: '[ファイルを開くアプリケーションの選択] ([新しいファイル]) | Microsoft Docs'
-ms.custom: ''
+title: '[ファイルを開くアプリケーションの選択] ([新しいファイル])'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,28 +12,28 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252054"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245784"
 ---
-# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
+# <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 1 つ以上のエディターでドキュメントを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>Options  
 **[このファイルを開くのに使用するプログラムを選択してください]**  
 選択されているファイルの種類に対して [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio で利用可能なエディターを一覧表示します。 ドキュメントを開くために使用するエディターを一覧から選択するか、 **[追加]** をクリックして新しいエディターを一覧に含めます。  
   
 **[ファイル]**  
 **[開く]** をクリックすると、選択されたエディターでドキュメントが開きます。  
   
-**[追加]**  
+**追加**  
 このボタンをクリックすると、 **[このファイルを開くのに使用するプログラムを選択してください]** の一覧にプログラムが追加されます。 **[プログラム名]** フィールドにプログラムへのファイル パスを入力するか、 **[参照]** をクリックしてプログラムの場所を指定します。 **[表示名]** に、 **[このファイルを開くのに使用するプログラムを選択してください]** の一覧に表示するプログラム名を入力します。  
   
-**[削除]**  
+**Remove**  
 プログラムを削除するには、プログラムを選択して **[削除]** をクリックします。  
   
 **[既定に設定]**  

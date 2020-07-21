@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
 - F1 Help [SQL Server Database Engine]
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54cc9e8a704dbeab670d5e9fc7eaad4d599ef7cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933033"
 ---
 # <a name="feature-reference-database-engine"></a>機能リファレンス (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には、データベース オブジェクトとデータを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 さらに、サーバーおよびデータベースのパフォーマンスの監視とトラブルシューティングに使用できるツールや、機能、サービス、ネットワーク プロトコルの有効化および無効化に使用できるツールがあります。 ここでは、これらのツールとアプリケーションのダイアログ ボックスに関するトピックを紹介します。  

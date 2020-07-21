@@ -1,6 +1,7 @@
 ---
-title: ミラー化されたデータベースの状態の確認 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: ミラー化されたデータベースの状態の確認
+description: SQL Server Management Studio (SSMS) GUI 内でデータベース ミラーリング用に構成されたデータベースの状態を確認する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ef1c67955944277c7a8b6dd7ec1289fb8a2d280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbac0c31618e419c7d67c3feba861e5e69008ee8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758202"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>ミラー化されたデータベースの状態の確認 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   データベース ミラーリング セッション中に、 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで状態を確認できます。  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>データベース ミラーリング セッションの状態を確認するには  
@@ -36,7 +37,7 @@ ms.locfileid: "68050592"
   
     |状態|説明|  
     |------------|-----------------|  
-    |\<空白>|データベース ミラーリング セッションが存在せず、 **[ミラーリング]** ページに表示する動作情報がありません。|  
+    |\<blank>|データベース ミラーリング セッションが存在せず、 **[ミラーリング]** ページに表示する動作情報がありません。|  
     |一時停止|プリンシパル データベースは実行中ですが、ミラー サーバーにログを送信していません。 データベースのミラー コピーは使用できない状態です。|  
     |[接続なし]|プリンシパル サーバー インスタンスから、パートナーまたはミラーリング監視サーバー インスタンス (ある場合) に接続できません。|  
     |[同期中]|ミラー データベースの内容が、プリンシパル データベースの内容に遅れています。 プリンシパル サーバー インスタンスからミラー サーバー インスタンスにログ レコードを送信して、ミラー データベースを更新するための変更を適用しています。<br /><br /> データベース ミラーリング セッションの開始時点では、ミラー データベースとプリンシパル データベースが同期中の状態です。|  

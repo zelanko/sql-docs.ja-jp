@@ -1,5 +1,5 @@
 ---
-title: エラーの構成 (マイニング構造 ダイアログ ボックス) (Analysis Services - 多次元データ) |Microsoft Docs
+title: '[エラーの構成] ([マイニング構造] ダイアログボックス) (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef6ba1926d23990399be8571ed117b87dd2edb8b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081371"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528387"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>[エラーの構成] ([マイニング構造] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **SQL Server Management Studio** で **[マイニング構造のプロパティ]** ダイアログ ボックスの **[エラーの構成]** ページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース内のマイニング構造のエラー構成プロパティを設定できます。  
   
-## <a name="options"></a>および  
- **既定のエラー構成を使用して、**  
+## <a name="options"></a>オプション  
+ **既定のエラー構成を使用する**  
  処理操作でオブジェクトに対して既定のエラー構成を使用します。  
   
  **[キー エラー アクション]**  
@@ -33,7 +32,7 @@ ms.locfileid: "66081371"
   
 -   **[レコードの破棄]** は、レコードの情報をオブジェクトでの処理から除外します。  
   
- **エラーの数を無視します。**  
+ **エラー数を無視する**  
  処理中に発生するエラーは、すべて無視します。  
   
  **[エラー時に停止する]**  
@@ -58,7 +57,7 @@ ms.locfileid: "66081371"
   
 -   **[報告して停止する]** は、エラーを報告して、処理中の操作を停止します。  
   
- **[重複キー]**  
+ **重複するキー**  
  オブジェクトの処理の際に重複キーが見つかった場合に行うアクションを次の中から 1 つ指定します。  
   
 -   **[エラーを無視する]** は、エラーを無視します。  
@@ -67,7 +66,7 @@ ms.locfileid: "66081371"
   
 -   **[報告して停止する]** は、エラーを報告して、処理中の操作を停止します。  
   
- **[不明な種類に変換された NULL キー]**  
+ **Null キーが不明な値に変換されました**  
  オブジェクトの処理の際に NULL メンバー キーが不明なメンバーに追加された場合に行うアクションを次の中から 1 つ指定します。  
   
 -   **[エラーを無視する]** は、エラーを無視します。  
@@ -76,7 +75,7 @@ ms.locfileid: "66081371"
   
 -   **[報告して停止する]** は、エラーを報告して、処理中の操作を停止します。  
   
- **[許可されていない NULL キー]**  
+ **Null キーは使用できません**  
  オブジェクトの処理の際に NULL キーが見つかったが許可されていない場合に行うアクションを次の中から 1 つ指定します。  
   
 -   **[エラーを無視する]** は、エラーを無視します。  
@@ -88,8 +87,8 @@ ms.locfileid: "66081371"
  **[エラー ログのパス]**  
  エラー ログ ファイルの完全なパスとファイル名を入力します。  
   
-## <a name="see-also"></a>関連項目  
- [マイニング構造のプロパティ ダイアログ ボックス&#40;Analysis Services - データ マイニング&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [一般的な&#40;マイニング構造 ダイアログ ボックス&#41; &#40;Analysis Services - データ マイニング&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+## <a name="see-also"></a>参照  
+ [Analysis Services データマイニング&#41;&#40;マイニング構造のプロパティ] ダイアログボックス](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [[全般 &#40;[マイニング構造] ダイアログボックス&#41; &#40;Analysis Services-データマイニング&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

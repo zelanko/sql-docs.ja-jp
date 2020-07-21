@@ -1,5 +1,5 @@
 ---
-title: マップ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: マップ (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428975"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082609"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -29,12 +29,12 @@ ms.locfileid: "66428975"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- 今すぐマップを使い始めるには、「[チュートリアル: マップ レポート &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)」または「[レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+ 今すぐマップを使い始めるには、「[チュートリアル:マップ レポート &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-map-report-report-builder.md)」または「[レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 > [!NOTE]  
 >  マップは、レポート パーツとして、レポートとは別に保存できます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
   
-##  <a name="Process"></a> レポートへのマップの追加  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> レポートへのマップの追加  
  レポートにマップを追加する一般的な手順は次のとおりです。  
   
 -   表示する分析データと必要な空間データの種類を決めます。 たとえば、店舗ごとの相対年間売上をバブル マップに表示するには、分析データとして店舗名と店舗の売上が、さらに、空間データとして店舗名と店舗所在地 (緯度と経度) が必要となります。  
@@ -49,7 +49,7 @@ ms.locfileid: "66428975"
   
  詳細については、「 [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="AddingData"></a> マップへのデータの追加  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> マップへのデータの追加  
  マップには、空間データと分析データという 2 種類のデータが使用されます。 空間データはマップの外観を定義し、分析データはマップに関連付けられている値を提供します。 たとえば、領域内の市区町村の場所は空間データによって定義され、市区町村ごとの人口は分析データによって提供されます。  
   
  マップには必ず空間データが必要です。これに対し、分析データはオプションです。 たとえば、市区町村内の店舗所在地という、単に場所を表示するマップを追加することができます。  
@@ -75,7 +75,7 @@ ms.locfileid: "66428975"
     > [!NOTE]  
     >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([https://www.census.gov/](https://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルに関する詳細情報については、「[TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation (TIGER/Line シェープファイルと TIGER/Line ファイルに関する技術ドキュメント)](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)」をご覧ください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
--   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) のシェープファイル空間データ形式に準拠するデータが格納されています。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
+-   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
 -   **データベースに格納されている SQL Server 空間データ** **リレーショナル データベース内の** SQLGeometry **データ型または** SQLGeography [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定するクエリを使用できます。 詳細については、「[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)」を参照してください。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66428975"
   
     -   **SpatialData :** 市区町村の緯度と経度を指定する空間データが格納されるフィールドです。  
   
-    -   **Name :** 市区町村の名前が格納されるフィールドです。  
+    -   **名前。** 市区町村の名前が格納されるフィールドです。  
   
     -   **Area :** 領域の名前が格納されるフィールドです。  
   
@@ -136,12 +136,12 @@ ms.locfileid: "66428975"
   
  この例で、市区町村名だけで人口を一意に識別することはできません。 たとえば、米国には "アルバニー" という名前の都市が多数存在します。 特定の市区町村を指定するには、市区町村名に加えて領域を指定する必要があります。  
   
-##  <a name="Viewport"></a> マップ ビューポートについて  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> マップ ビューポートについて  
  レポートのマップ データを指定した後、マップの表示領域を制限するには、マップ *ビューポート*を指定します。 既定では、ビューポートには、マップ全体と同じ領域が使用されます。 マップをトリミングする際は、レポートに含める領域を定義する最大座標と最小座標、中心、ズーム レベルを指定できます。 レポートでマップをより見やすく表示するために、凡例、距離スケール、カラー スケールをビューポートの外側に移動することができます。 ビューポートを次の図に示します。  
   
  ![rs_MapViewport](../../reporting-services/report-design/media/rs-mapviewport.gif "rs_MapViewport")  
   
-##  <a name="TileLayer"></a> Bing マップのタイル レイヤーの追加  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Bing マップのタイル レイヤーの追加  
  ビューポートによって定義されている現在のマップ ビューの地理的背景として、Bing マップのタイル レイヤーを追加できます。 タイル レイヤーを追加するには、座標系として **[地理]** を、投影法として **[Mercator]** を指定する必要があります。 ビューポートの中心およびズーム レベルの選択内容に応じて、対応するタイルが自動的に Bing Maps Web サービスから取得されます。  
   
  レイヤーは、次のオプションを指定してカスタマイズできます。  
@@ -152,7 +152,7 @@ ms.locfileid: "66428975"
   
     -   **[航空写真] :** テキストなしの航空画像スタイルで表示します。  
   
-    -   **[ハイブリッド] :** **[道路]** スタイルと **[航空写真]** スタイルを組み合わせて表示します。  
+    -   **ハイブリッド。** **[道路]** スタイルと **[航空写真]** スタイルを組み合わせて表示します。  
   
 -   タイルの表示テキストに使用する言語。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66428975"
   
  タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?linkid=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。  
   
-##  <a name="MapLayers"></a> マップ レイヤーとマップ要素について  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> マップ レイヤーとマップ要素について  
  マップには、複数のレイヤーを追加できます。 レイヤーには 3 つの種類があります。 1 つのレイヤーに表示できる空間データの種類は 1 つだけです。  
   
 -   **多角形レイヤー :** 多角形の中心点のマーカーや領域の輪郭を表示します。中心点は多角形ごとに自動的に計算されます。  
@@ -208,7 +208,7 @@ ms.locfileid: "66428975"
   
  詳細については、「[Interactive Sort, Document Maps, and Links (Report Builder and SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)」(対話的な並べ替え、ドキュメント マップ、およびリンク (レポート ビルダーおよび SSRS)) を参照してください。  
   
-##  <a name="Legends"></a> マップの凡例、カラー スケール、および距離スケールについて  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> マップの凡例、カラー スケール、および距離スケールについて  
  マップを見やすくするために、レポートには各種の凡例を追加できます。 マップに追加できるアイテムは次のとおりです。  
   
 -   **凡例 :** 凡例は複数作成することができます。 凡例に一覧表示されるアイテムは、各レイヤーのマップ要素に指定されたルールに従って自動的に生成されます。 各ルールについて、関連したアイテムをどの凡例に表示するかを指定します。 これにより、複数のレイヤーからのアイテムを、同じ凡例に割り当てることも、異なる凡例に割り当てることもできます。  
@@ -219,14 +219,14 @@ ms.locfileid: "66428975"
   
  凡例、カラー スケール、および距離スケールは、ビューポートの内側または外側に、個別に配置することができます。 詳細については、「 [マップの凡例、カラー スケール、および関連付けられているルールの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="Troubleshooting"></a> マップのトラブルシューティング  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a> マップのトラブルシューティング  
  マップ レポートには、さまざまなデータ ソースからの空間データと分析データが使用されます。 それぞれのマップ レイヤーには、異なるデータ ソースを使用できます。 各レイヤーの表示プロパティには、レイヤーのプロパティ、ルール、マップ要素のプロパティに基づいた、特定の優先順位があります。  
   
  マップ レポートを閲覧する際に期待した結果が表示されない根本原因は多種多様です。 それぞれの問題を特定して把握するには、扱うレイヤーは一度に 1 つずつとすることをお勧めします。 マップ ペインを使用すると、特定のレイヤーを選択し、その表示/非表示を簡単に切り替えることができます。  
   
- マップ レポートの問題の詳細については、「 [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ マップ レポートの問題の詳細については、「[レポートのトラブルシューティング:マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  レポートでマップやマップ レイヤーを扱う際の詳細な手順を紹介しているトピックの一覧を次に示します。  
   
 -   [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -235,7 +235,7 @@ ms.locfileid: "66428975"
   
 -   [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> このセクションの内容  
+##  <a name="in-this-section"></a><a name="Section"></a> トピックの内容  
  [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)  
   
  [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

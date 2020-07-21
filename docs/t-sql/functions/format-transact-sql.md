@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: FORMAT 関数の Transact-SQL リファレンス。
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 7b53865a753cb538ebeb42573e473281057d4201
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+author: markingmyname
+ms.author: maghan
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: 10136ba5d2b0d241de0960acb9df657dadfe9cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752402"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、指定した形式とオプションのカルチャを使用して書式設定された値を返します。 文字列としての日付/時刻と数値のロケール依存の書式指定には FORMAT 関数を使用します。 一般的なデータ型変換では、引き続き CAST または CONVERT を使用します。  
+指定した形式とオプションのカルチャを使用して書式設定された値を返します。 文字列としての日付/時刻と数値のロケール依存の書式指定には FORMAT 関数を使用します。 一般的なデータ型変換では、引き続き CAST または CONVERT を使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   
@@ -61,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  戻り値の長さは *format* によって決まります。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  *valid* でない *culture* 以外のエラーの場合、FORMAT は NULL を返します。 たとえば、*format* に指定された値が無効な場合は NULL を返します。  
 
@@ -75,17 +74,17 @@ FORMAT ( value, format [, culture ] )
   
  *value* 引数の許容データ型の一覧を、.NET Framework にマッピングした同等の型と共に、次の表に示します。  
   
-|カテゴリ|型|.NET の種類|  
+|カテゴリ|Type|.NET の種類|  
 |--------------|----------|---------------|  
-|数値|BIGINT|Int64|  
+|数値|bigint|Int64|  
 |数値|INT|Int32|  
-|数値|SMALLINT|Int16|  
-|数値|TINYINT|Byte|  
-|数値|Decimal|SqlDecimal|  
-|数値|NUMERIC|SqlDecimal|  
-|数値|FLOAT|Double|  
-|数値|REAL|Single|  
-|数値|SMALLMONEY|Decimal|  
+|数値|smallint|Int16|  
+|数値|tinyint|Byte|  
+|数値|decimal|SqlDecimal|  
+|数値|numeric|SqlDecimal|  
+|数値|float|Double|  
+|数値|real|Single|  
+|数値|smallmoney|Decimal|  
 |数値|money|Decimal|  
 |日時|date|DateTime|  
 |日時|time|TimeSpan|  
@@ -94,7 +93,7 @@ FORMAT ( value, format [, culture ] )
 |日時|datetime2|DateTime|  
 |日時|datetimeoffset|DateTimeOffset|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-format-example"></a>A. シンプルな FORMAT 例
 
@@ -191,16 +190,16 @@ ORDER BY CurrencyRateID;
 ```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
-1              1.0002        1,00            1,0002          1,00 €  
-2              1.55          1,55            1,5500          1,55 €  
-3              1.9419        1,94            1,9419          1,94 €  
-4              1.4683        1,47            1,4683          1,47 €  
-5              8.2784        8,28            8,2784          8,28 €  
+1              1.0002        1,00            1,0002          1,00 &euro;  
+2              1.55          1,55            1,5500          1,55 &euro;  
+3              1.9419        1,94            1,9419          1,94 &euro;  
+4              1.4683        1,47            1,4683          1,47 &euro;  
+5              8.2784        8,28            8,2784          8,28 &euro;  
   
  (5 row(s) affected)  
 ```  
   
-### <a name="ExampleD"></a> D. 時刻データ型を使用する FORMAT
+### <a name="d-format-with-time-data-types"></a><a name="ExampleD"></a> D. 時刻データ型を使用する FORMAT
 
  `.` と `:` がエスケープされていないため、FORMAT は NULL を返します。  
   
@@ -245,6 +244,6 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
   
 ## <a name="see-also"></a>参照
 
- [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+- [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

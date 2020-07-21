@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADOX]
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8077e22b2bdbd9fe55cca1ea7306443ee9d61ce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 14328c2db8bf15f98a751cd6a43d31e7489a6c63
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964743"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752945"
 ---
 # <a name="views-delete-method-example-vb"></a>Views Delete メソッドの例 (VB)
-次のコードを使用する方法を示しています、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)カタログからビューを削除するメソッド。  
+次のコードは、 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、カタログからビューを削除する方法を示しています。  
   
 ```  
 ' BeginDeleteViewVB  
@@ -53,6 +53,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Delete メソッド (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

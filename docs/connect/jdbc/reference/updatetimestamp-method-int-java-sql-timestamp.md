@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00e170e0366d5ed785a4b27053f3805c13f2c54c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e1eb09123dfc52c943c155fb21ef7924061c0348
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998157"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919538"
 ---
 # <a name="updatetimestamp-method-int-javasqltimestamp"></a>updateTimestamp (int, java.sql.Timestamp) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
@@ -47,8 +47,8 @@ public void updateTimestamp(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この updateTimestamp メソッドは、java. ResultSet インターフェイスの updateTimestamp メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateTimestamp メソッドは、java.sql.ResultSet インターフェイスの updateTimestamp メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateTimestamp メソッド (SQLServerResultSet)](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   

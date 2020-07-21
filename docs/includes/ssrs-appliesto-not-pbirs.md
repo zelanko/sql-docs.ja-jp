@@ -1,6 +1,6 @@
 ---
-title: ファイルを含める
-description: ファイルを含める
+title: インクルード ファイル
+description: インクルード ファイル
 services: ''
 author: maggiesMSFT
 ms.service: ''
@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: e8cbf4d07fccb7e13de3ad91796347de674bde0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f8ebb842caf13a20e2647a0d73ab8ad037d4f3a
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68221271"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80502379"
 ---
- ![いいえ](media/no.png)Power BI レポート サーバー
+ ![いいえ](media/no-icon.png)Power BI Report Server

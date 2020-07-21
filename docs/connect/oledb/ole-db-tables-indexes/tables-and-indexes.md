@@ -1,6 +1,6 @@
 ---
-title: テーブルとインデックス |Microsoft Docs
-description: OLE DB Driver for SQL Server を使用したテーブルとインデックスの作成、変更、および変更
+title: テーブルとインデックス | Microsoft Docs
+description: OLE DB Driver for SQL Server を使用したテーブルとインデックスの作成、変更、および削除
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015244"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
@@ -35,11 +35,11 @@ ms.locfileid: "68015244"
   
  テーブルやインデックスを作成または削除できるかどうかは、コンシューマー アプリケーション ユーザーの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アクセス権によって決まります。 テーブルの削除は、宣言参照整合性制約やその他の要因の指定によってさらに制約できます。  
   
- を対象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]とするほとんどのアプリケーションは、これらの OLE DB ドライバーではなく、sql-dmo を使用して SQL Server インターフェイスを使用します。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を対象とする多くのアプリケーションでは、このような OLE DB Driver for SQL Server インターフェイスではなく、SQL-DMO が使用されます。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
   
-|プロパティ ID|[説明]|  
+|プロパティ ID|説明|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|型 : VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : NULL<br /><br /> 説明 : このプロパティは、**ITableDefinition** でのみ使用します。 このプロパティに指定した文字列は、[CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md) ステートメントの作成時に<br /><br /> ステートメントの使用などがあります。|  
   

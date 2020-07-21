@@ -13,64 +13,64 @@ f1_keywords:
 helpviewer_keywords:
 - Stream object [ADO]
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9812344008bc066b18328036cf36fe106e8845a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916720"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759658"
 ---
 # <a name="stream-object-ado"></a>Stream オブジェクト (ADO)
-バイナリ データまたはテキストのストリームを表します。  
+バイナリデータまたはテキストのストリームを表します。  
   
- ファイル システムや、電子メール システムなどのツリー構造の階層で、[レコード](../../../ado/reference/ado-api/record-object-ado.md)ファイルや電子メールの内容を含む既定のバイナリ関連付けられているビット ストリームがあります。 A **Stream**オブジェクトは、これらのデータ ストリームを含むフィールドやレコードを操作するために使用できます。 A **Stream**オブジェクトは、次の方法で取得できます。  
+ ファイルシステムや電子メールシステムなどのツリー構造の階層では、[レコード](../../../ado/reference/ado-api/record-object-ado.md)には、ファイルまたは電子メールの内容を含む既定のバイナリストリームが関連付けられている場合があります。 **ストリーム**オブジェクトは、これらのデータストリームを含むフィールドまたはレコードを操作するために使用できます。 **ストリーム**オブジェクトは、次の方法で取得できます。  
   
--   バイナリまたはテキスト データを格納しているオブジェクト (通常はファイル) を指す URL。 このオブジェクトは、単純なドキュメント、**レコード**構造のドキュメントまたはフォルダーを表すオブジェクト。  
+-   バイナリまたはテキストデータを含むオブジェクト (通常はファイル) を指す URL。 このオブジェクトには、単純なドキュメント、構造化されたドキュメントを表す**レコード**オブジェクト、またはフォルダーを指定できます。  
   
--   既定値を開いて**Stream**オブジェクトに関連付けられている、**レコード**オブジェクト。 関連付けられている既定のストリームを取得することができます、**レコード**オブジェクトと、**レコード**ストリームを開くだけへのラウンドト リップの排除を開きます。  
+-   **Record**オブジェクトに関連付けられた既定の**ストリーム**オブジェクトを開く。 レコード**を開い**たときに**レコード**オブジェクトに関連付けられた既定のストリームを取得して、ストリームを開くだけでラウンドトリップが行われないようにすることができます。  
   
--   インスタンス化して、 **Stream**オブジェクト。 これら**Stream**アプリケーションの目的でデータを格納するオブジェクトを使用できます。 異なり、 **Stream** URL、または既定値に関連付けられている**Stream**の**レコード**、インスタンス化された**Stream**との関連付けを持たない、既定では基になるソース。  
+-   **ストリーム**オブジェクトをインスタンス化する。 これらの**ストリーム**オブジェクトは、アプリケーションの目的でデータを格納するために使用できます。 URL に関連付けられた**ストリーム**や**レコード**の既定の**ストリーム**とは異なり、インスタンス化された**ストリーム**には、既定で基になるソースとの関連付けがありません。  
   
- メソッドとプロパティの使用、 **Stream**オブジェクトを次を行うことができます。  
+ **Stream**オブジェクトのメソッドとプロパティを使用して、次の操作を実行できます。  
   
--   開く、 **Stream**オブジェクトから、**レコード**または URL を[オープン](../../../ado/reference/ado-api/open-method-ado-stream.md)メソッド。  
+-   [Open](../../../ado/reference/ado-api/open-method-ado-stream.md)メソッドを使用して、**レコード**または URL から**ストリーム**オブジェクトを開きます。  
   
--   閉じる、 **Stream**で、[閉じる](../../../ado/reference/ado-api/close-method-ado.md)メソッド。  
+-   [Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用して**ストリーム**を閉じます。  
   
--   入力バイトまたはテキストを**Stream**で、[書き込み](../../../ado/reference/ado-api/write-method.md)と[WriteText](../../../ado/reference/ado-api/writetext-method.md)メソッド。  
+-   [Write](../../../ado/reference/ado-api/write-method.md)および[WriteText](../../../ado/reference/ado-api/writetext-method.md)メソッドを使用して**ストリーム**にバイトまたはテキストを入力します。  
   
--   バイトを読み取り、 **Stream**で、[読み取り](../../../ado/reference/ado-api/read-method.md)と[ReadText](../../../ado/reference/ado-api/readtext-method.md)メソッド。  
+-   [Read](../../../ado/reference/ado-api/read-method.md)および[ReadText](../../../ado/reference/ado-api/readtext-method.md)メソッドを使用して、**ストリーム**からバイトを読み取ります。  
   
--   いずれかを記述**Stream** 、ADO ではまだデータ バッファーを基になるオブジェクトへ、[フラッシュ](../../../ado/reference/ado-api/flush-method-ado.md)メソッド。  
+-   ADO バッファーに残っている**ストリーム**データを、 [Flush](../../../ado/reference/ado-api/flush-method-ado.md)メソッドを使用して基になるオブジェクトに書き込みます。  
   
--   内容をコピー、 **Stream**間**Stream**で、 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)メソッド。  
+-   [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)メソッドを使用して**ストリーム**の内容を別の**ストリーム**にコピーします。  
   
--   ソース ファイルから行を読み取る方法を制御、 [SkipLine](../../../ado/reference/ado-api/skipline-method.md)メソッドと[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)プロパティ。  
+-   [SkipLine](../../../ado/reference/ado-api/skipline-method.md)メソッドと[lineseparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)プロパティを使用して、ソースファイルから行を読み取る方法を制御します。  
   
--   ストリームの位置での最後の判断、 [EOS](../../../ado/reference/ado-api/eos-property.md)プロパティと[SetEOS](../../../ado/reference/ado-api/seteos-method.md)メソッド。  
+-   [EOS](../../../ado/reference/ado-api/eos-property.md)プロパティと[SetEOS](../../../ado/reference/ado-api/seteos-method.md)メソッドを使用して、ストリームの位置の終わりを確認します。  
   
--   保存し、ファイル内のデータの復元、 [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)と[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)メソッド。  
+-   [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)メソッドと[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)メソッドを使用して、データをファイルに保存して復元します。  
   
--   格納するために使用する文字セットの指定、 **Stream**で、 [Charset](../../../ado/reference/ado-api/charset-property-ado.md)プロパティ。  
+-   [Charset](../../../ado/reference/ado-api/charset-property-ado.md)プロパティを使用して、**ストリーム**の格納に使用する文字セットを指定します。  
   
--   非同期の中止**Stream**と操作、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)メソッド。  
+-   [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)メソッドを使用して、非同期**ストリーム**操作を停止します。  
   
--   内のバイト数を決定する**Stream**で、[サイズ](../../../ado/reference/ado-api/size-property-ado-stream.md)プロパティ。  
+-   [Size](../../../ado/reference/ado-api/size-property-ado-stream.md)プロパティを使用して、**ストリーム**内のバイト数を決定します。  
   
--   内の現在位置を制御する**Stream**で、[位置](../../../ado/reference/ado-api/position-property-ado.md)プロパティ。  
+-   [Position](../../../ado/reference/ado-api/position-property-ado.md)プロパティを使用して、**ストリーム**内の現在位置を制御します。  
   
--   内のデータの種類を決定する**Stream**で、[型](../../../ado/reference/ado-api/type-property-ado-stream.md)プロパティ。  
+-   [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)プロパティを使用して、**ストリーム**内のデータの種類を決定します。  
   
--   現在の状態を判断、 **Stream** (閉じる、開くには、またはを実行する) で、[状態](../../../ado/reference/ado-api/state-property-ado.md)プロパティ。  
+-   [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して、**ストリーム**の現在の状態 (閉じている、開いている、または実行中) を確認します。  
   
--   指定のアクセス モード、 **Stream**で、[モード](../../../ado/reference/ado-api/mode-property-ado.md)プロパティ。  
+-   [モード](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを使用して、**ストリーム**のアクセスモードを指定します。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
- **Stream**オブジェクトがスクリプトを実行します。  
+ **ストリーム**オブジェクトは、スクリプトに対して安全です。  
   
  このセクションでは、次のトピックを扱います。  
   

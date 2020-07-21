@@ -1,5 +1,5 @@
 ---
-title: レポートのプロパティ ダイアログ ボックスを参照 |Microsoft Docs
+title: '[参照] ([レポートのプロパティ] ダイアログボックス)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,35 +14,35 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104297"
 ---
 # <a name="report-properties-dialog-box-references"></a>[参照] ([レポートのプロパティ] ダイアログ ボックス)
   **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** を選択すると、レポート定義内の式で使用される、カスタム アセンブリまたは他の外部アセンブリ、およびカスタム クラスのインスタンスへの参照を追加または削除できます。  
   
-## <a name="options"></a>および  
- **追加またはアセンブリを削除します。**  
- レポートで参照されるアセンブリを一覧表示します。 アセンブリは、レポートのデザインに使用するツールがインストールされているコンピューターおよびレポート サーバー上で使用できる必要があります。 参照の名前がの内容と一致する必要があります **\<CodeModule >** 正確にレポート定義言語 (.rdl) ファイルにタグを付けます。  
+## <a name="options"></a>オプション  
+ **[アセンブリの追加または削除]**  
+ レポートで参照されるアセンブリを一覧表示します。 アセンブリは、レポートのデザインに使用するツールがインストールされているコンピューターおよびレポート サーバー上で使用できる必要があります。 参照の名前は、レポート定義言語 (.rdl) ファイルの** \<codemodule>** タグの内容と正確に一致する必要があります。  
   
- **[追加]**  
- アセンブリを追加します。 省略記号 (...) ボタンをクリックして、**開く** ダイアログ ボックスとレポートの処理よぶ式の評価を実行するために必要なアセンブリを選択します。  
+ **追加**  
+ アセンブリを追加します。 省略記号ボタン ([...]) をクリックして [**開く**] ダイアログボックスを開き、レポートの処理および式の評価を完了するために必要なアセンブリを選択します。  
   
  **削除**  
  アセンブリの参照を一覧から削除するには、削除するアセンブリ名を選択し、 **[削除]** ボタンをクリックします。  
   
- **追加または削除クラス**  
+ **[クラスの追加または削除]**  
  レポートで使用されるクラスのインスタンスを一覧表示します。 クラスの一覧は、静的メンバーではなく、インスタンス ベースのメンバーでのみ使用されます。  
   
- **[追加]**  
- クラスの参照を追加します。 省略記号 (...) ボタンをクリックして、**開く** ダイアログ ボックスをレポートの処理よぶ式の評価を実行するために必要なクラスを選択します。  
+ **追加**  
+ クラスの参照を追加します。 省略記号ボタン ([...]) をクリックして [**開く**] ダイアログボックスを開き、レポートの処理および式の評価を完了するために必要なクラスを選択します。  
   
  **削除**  
  クラスのインスタンスを削除するには、削除するインスタンスを選択し、 **[削除]** ボタンをクリックします。  
   
- **[上へ]**  
+ **上へ**  
  依存関係のあるクラスについては、この参照の表示位置を一覧の上方に移動できます。  
   
  **[下へ]**  
@@ -50,7 +50,7 @@ ms.locfileid: "66104297"
   
 ## <a name="see-also"></a>参照  
  [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
+ [レポート変数コレクションとグループ変数コレクションは &#40;レポートビルダーと SSRS&#41;を参照します。](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

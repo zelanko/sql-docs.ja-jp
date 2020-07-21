@@ -16,17 +16,17 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581449"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
   
 ## <a name="maximum-size-for-published-reports"></a>パブリッシュされたレポートの最大サイズ  
- レポート サーバー上のレポートとモデルのサイズは、レポート サーバーにパブリッシュされたレポート定義ファイル (.rdl) とレポート モデル ファイル (.smdl) のサイズに基づいています。 レポート サーバーでは、パブリッシュするレポートのサイズは制限されません。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] により、サーバーに送信できるアイテムの最大サイズが制限されています。 既定では、この制限は 4 MB です。 この制限を超えるサイズのファイルをレポート サーバーにアップロードまたはパブリッシュすると、HTTP 例外が返されます。 この場合、Machine.config ファイルの **maxRequestLength** 要素の値を大きくすることで、既定値を変更することができます。  
+ レポート サーバー上のレポートとモデルのサイズは、レポート サーバーにパブリッシュされたレポート定義ファイル (.rdl) とレポート モデル ファイル (.smdl) のサイズに基づいています。 レポート サーバーでは、パブリッシュするレポートのサイズは制限されません。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] により、サーバーに送信できるアイテムの最大サイズが制限されています。 既定では、この制限は 4 MB です。 この制限を超えるサイズのファイルをレポート サーバーにアップロードまたはパブリッシュすると、HTTP 例外が返されます。 この場合、Machine.config ファイルの **maxRequestLength** 要素の値を大きくすることで、既定値を変更することができます。  
   
  レポート モデルは非常に大きくなる場合がありますが、レポート定義が 4 MB を超えることはほとんどありません。 一般的なレポート サイズは、キロバイト (KB) 単位です。 ただし、埋め込み画像が含まれている場合は、これらの画像のエンコードによってレポート定義のサイズが大きくなり、既定の 4 MB を超える可能性があります。  
   

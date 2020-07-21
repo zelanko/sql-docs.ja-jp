@@ -1,23 +1,24 @@
 ---
-title: フェールオーバー クラスター インスタンス用ストレージ iSCSI の構成 - SQL Server on Linux
-description: ''
+title: iSCSI FCI ストレージの構成 - SQL Server on Linux
+description: SQL Server on Linux 用の iSCSI を使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897307"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの構成 - iSCSI - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) 用の iSCSI ストレージを構成する方法について説明します。 
 
@@ -65,7 +66,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName> はネットワークの一意/フレンドリ名、\<TargetIPAddress> は iSCSI ターゲットの IP アドレス、\<TargetPort> は iSCSI ターゲットのポートです。 
+     \<iSCSINetName> はネットワークの一意/フレンドリ名、\<TargetIPAddress> は iSCSI ターゲットの IP アドレス、\<TargetPort> はiSCSI ターゲットのポートです。 
 
     ![iSCSITargetResults][3]
 
@@ -137,208 +138,209 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
 
 12. システム データベース、または既定のデータの場所に格納されているものについては、以下の手順に従います。 それ以外の場合は、手順 13 に進みます。
 
-   *    作業中のサーバーで SQL Server が停止していることを確認します。
+   * 作業中のサーバーで SQL Server が停止していることを確認します。
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    完全にスーパーユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
-
-    ```bash
-    sudo -i
-    ```
-
-   *    mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
-
-    ```bash
-    su mssql
-    ```
-
-   *    SQL Server のデータ ファイルとログ ファイルを格納するための一時ディレクトリを作成します。 成功した場合は、確認応答を何も受け取りません。
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> はフォルダーの名前です。 以下の例では、/var/opt/mssql/TempDir という名前のフォルダーを作成します。
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *    SQL Server のデータ ファイルとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、確認応答を何も受け取りません。
+   * 完全にスーパーユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> は、前の手順で指定したフォルダーの名前です。
+        ```bash
+        sudo -i
+        ```
     
-   *    ファイルがディレクトリ内にあることを確認します。
+   * mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> は、手順 d で作成したフォルダーの名前です。
+        ```bash
+        su mssql
+        ```
+    
+   * SQL Server のデータ ファイルとログ ファイルを格納するための一時ディレクトリを作成します。 成功した場合は、確認応答を何も受け取りません。
 
-   *    既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、確認応答を何も受け取りません。
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> はフォルダーの名前です。 以下の例では、/var/opt/mssql/TempDir という名前のフォルダーを作成します。
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * SQL Server のデータ ファイルとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、確認応答を何も受け取りません。
 
-   *    ファイルが削除されていることを確認します。 次の図は、c から h までのシーケンス全体の例を示しています。
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> は、前の手順で指定したフォルダーの名前です。
+    
+   * ファイルがディレクトリ内にあることを確認します。
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *    「`exit`」と入力して、ルート ユーザーに切り替えます。
+        \<TempDir> は、手順 d で作成したフォルダーの名前です。
 
-   *    iSCSI 論理ボリュームを SQL Server データ フォルダーにマウントします。 成功した場合は、確認応答を何も受け取りません。
+   * 既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * ファイルが削除されていることを確認します。 次の図は、c から h までのシーケンス全体の例を示しています。
 
-    \<VolumeGroupName> はボリューム グループの名前、\<LogicalVolumeName> は作成された論理ボリュームの名前です。 次の構文の例は、前のコマンドのボリューム グループと論理ボリュームに一致しています。
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * 「`exit`」と入力して、ルート ユーザーに切り替えます。
 
-   *    マウントの所有者を mssql に変更します。 成功した場合は、確認応答を何も受け取りません。
+   * iSCSI 論理ボリュームを SQL Server データ フォルダーにマウントします。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *    マウントのグループの所有権を mssql に変更します。 成功した場合は、確認応答を何も受け取りません。
+        \<VolumeGroupName> はボリューム グループの名前、\<LogicalVolumeName> は作成された論理ボリュームの名前です。 次の構文の例は、前のコマンドのボリューム グループと論理ボリュームに一致しています。
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *    mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
+   * マウントの所有者を mssql に変更します。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *    一時ディレクトリ /var/opt/mssql/data からファイルをコピーします。 成功した場合は、確認応答を何も受け取りません。
+   * マウントのグループの所有権を mssql に変更します。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *    ファイルがあることを確認します。
+   * mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * 一時ディレクトリ /var/opt/mssql/data からファイルをコピーします。 成功した場合は、確認応答を何も受け取りません。
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * ファイルがあることを確認します。
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *    「`exit`」と入力して mssql を終了します。
-    
+
    *    「`exit`」と入力してルートを終了します。
 
    *    SQL Server を起動します。 すべてが正しくコピーされ、セキュリティが正しく適用されている場合、SQL Server は起動済みと表示されます。
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *    SQL Server を停止し、シャットダウンされていることを確認します。
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13. ユーザー データベースやバックアップなどのシステム データベース以外のものについては、次の手順に従います。 既定の場所のみを使用する場合は、手順 14 に進みます。
 
    *    スーパーユーザーになるように切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *    SQL Server によって使用されるフォルダーを作成します。 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \<FolderName> はフォルダーの名前です。 正しい場所にない場合は、フォルダーの完全なパスを指定する必要があります。 以下の例では、/var/opt/mssql/userdata という名前のフォルダーを作成します。
+        \<FolderName> はフォルダーの名前です。 正しい場所にない場合は、フォルダーの完全なパスを指定する必要があります。 以下の例では、/var/opt/mssql/userdata という名前のフォルダーを作成します。
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *    前の手順で作成したフォルダーに iSCSI 論理ボリュームをマウントします。 成功した場合は、確認応答を何も受け取りません。
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> はボリューム グループの名前、\<LogicalVolumeName> は作成された論理ボリュームの名前、\<FolderName> はフォルダーの名前です。 構文の例を次に示します。
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> はボリューム グループの名前、\<LogicalVolumeName> は作成された論理ボリュームの名前、\<FolderName> はフォルダーの名前です。 構文の例を次に示します。
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *    作成されたフォルダーの所有権を mssql に変更します。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> は、作成されたフォルダーの名前です。 例を次に示します。
+        \<FolderName> は、作成されたフォルダーの名前です。 次に例を示します。
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *    作成されたフォルダーのグループを mssql に変更します。 成功した場合は、確認応答を何も受け取りません。
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> は、作成されたフォルダーの名前です。 例を次に示します。
+        \<FolderName> は、作成されたフォルダーの名前です。 次に例を示します。
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *    スーパーユーザーではなくなるよう、「`exit`」と入力します。
 
    *    テストするには、そのフォルダーにデータベースを作成します。 以下に示す例では、sqlcmd を使用してデータベースを作成し、コンテキストをそれに切り替え、ファイルが OS レベルで存在することを確認した後、一時的な場所を削除します。 SSMS を使用できます。
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *    共有のマウントを解除します 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> はボリューム グループの名前、\<LogicalVolumeName> は作成された論理ボリュームの名前、\<FolderName> はフォルダーの名前です。 構文の例を次に示します。
+        \<VolumeGroupName> はボリューム グループの名前、\<LogicalVolumeName> は作成された論理ボリュームの名前、\<FolderName> はフォルダーの名前です。 構文の例を次に示します。
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14. Pacemaker のみがボリューム グループをアクティブ化できるようにサーバーを構成します。
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15. サーバー上のボリューム グループの一覧を生成します。 一覧表示されたもののうち iSCSI ディスクでないものは、システムによって使用されます (OS ディスク用など)。
 
     ```bash
@@ -351,11 +353,10 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> は、FCI によって使用されない、手順 20 の出力からのボリューム グループの一覧です。 それぞれを引用符で囲み、コンマで区切ります。 例を次に示します。
+    \<ListOfVGsNotUsedByPacemaker> は、FCI によって使用されない、手順 20 の出力からのボリューム グループの一覧です。 それぞれを引用符で囲み、コンマで区切ります。 次に例を示します。
 
     ![55-ListOfVGs][11]
- 
- 
+
 17. Linux が起動すると、ファイル システムがマウントされます。 Pacemaker だけが iSCSI ディスクをマウントできるようにするために、ルート ファイルシステムのイメージをリビルドします。 
 
     次のコマンドを実行します。完了するまでにしばらく時間がかかる場合があります。 成功した場合、メッセージは返されません。
@@ -373,6 +374,7 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     ```bash
     sudo vgs
     ``` 
+
 23. SQL Server を起動し、それがこのサーバー上で起動できることを確認します。
 
     ```bash
@@ -386,16 +388,17 @@ Linux ベースの iSCSI ターゲットを使用する場合は、FCI ノード
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25. FCI に参加するその他のすべてのサーバー上で、手順 1-6 を繰り返します。
 
 これで、FCI を構成する準備が整いました。
 
-|Distribution |トピック 
-|----- |-----
-|**HA アドオン を含む Red Hat Enterprise Linux** |[構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**HA アドオンを含む SUSE Linux Enterprise Server** |[構成](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| Distribution | トピック |
+| :----------- | :---- |
+| HA アドオンを含む Red Hat Enterprise Linux | [構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[運用](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| HA アドオンを含む SUSE Linux Enterprise Server | [構成](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

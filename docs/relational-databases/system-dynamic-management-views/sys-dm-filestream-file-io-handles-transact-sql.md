@@ -1,5 +1,5 @@
 ---
-title: sys.dm_filestream_file_io_handles (TRANSACT-SQL) |Microsoft Docs
+title: dm_filestream_file_io_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,37 +16,37 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 56e498fb942b87f187ae53a04ec1b240b71d2c96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103301"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898869"
 ---
-# <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_filestream_file_io_handles-transact-sql"></a>dm_filestream_file_io_handles (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Namespace 所有者 (NSO) が知っているファイル ハンドルが表示されます。 クライアントを使用して取得した Filestream ハンドル**OpenSqlFilestream**がこのビューで表示されます。  
+  名前空間の所有者 (NSO) が認識しているファイルハンドルを表示します。 **Opensqlfilestream**を使用してクライアントが受け取った Filestream ハンドルは、このビューに表示されます。  
   
-|[列]|種類|説明|  
+|Column|種類|Description|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary(8)**|クライアントのハンドルに関連付けられた内部 NSO 構造体のアドレスを示します。 NULL 値が許可されます。|  
-|**creation_request_id**|**int**|このハンドルを作成するために使用した REQ_PRE_CREATE I/O 要求からのフィールドを示しています。 NULL 値は許可されません。|  
-|**creation_irp_id**|**int**|このハンドルを作成するために使用した REQ_PRE_CREATE I/O 要求からのフィールドを示しています。 値が許容されません。|  
-|**handle_id**|**int**|ドライバーによって割り当てられるこのハンドルの一意の ID を示しています。 NULL 値は許可されません。|  
-|**creation_client_thread_id**|**varbinary(8)**|このハンドルを作成するために使用した REQ_PRE_CREATE I/O 要求からのフィールドを示しています。 NULL 値が許可されます。|  
-|**creation_client_process_id**|**varbinary(8)**|このハンドルを作成するために使用した REQ_PRE_CREATE I/O 要求からのフィールドを示しています。 NULL 値が許可されます。|  
-|**filestream_transaction_id**|**varbinary (128)**|特定のハンドルに関連付けられているトランザクションの ID を示します。 これは、によって返される値、 **get_filestream_transaction_context**関数。 このフィールドへの参加を使用して、 **sys.dm_filestream_file_io_requests**ビュー。 NULL 値が許可されます。|  
+|**handle_context_address**|**varbinary (8)**|クライアントのハンドルに関連付けられた内部 NSO 構造体のアドレスを表示します。 NULL 値が許可されます。|  
+|**creation_request_id**|**int**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値は許可されません。|  
+|**creation_irp_id**|**int**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 Null 値はありません|  
+|**handle_id**|**int**|ドライバーによって割り当てられるこのハンドルの一意の ID を表示します。 NULL 値は許可されません。|  
+|**creation_client_thread_id**|**varbinary (8)**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値が許可されます。|  
+|**creation_client_process_id**|**varbinary (8)**|このハンドルの作成に使用された REQ_PRE_CREATE i/o 要求のフィールドを表示します。 NULL 値が許可されます。|  
+|**filestream_transaction_id**|**varbinary (128)**|特定のハンドルに関連付けられているトランザクションの ID を示します。 これは、 **get_filestream_transaction_context**関数によって返される値です。 このフィールドを使用して、 **dm_filestream_file_io_requests**ビューに結合します。 NULL 値が許可されます。|  
 |**access_type**|**nvarchar(60)**|NULL 値は許可されません。|  
-|**logical_path**|**nvarchar (256)**|このハンドルによって開かれたファイルの論理パス名を示します。 これは、によって返されるパス名と同じ、**します。パス名**メソッドの**varbinary**(**max**) filestream です。 NULL 値が許可されます。|  
-|**physical_path**|**nvarchar (256)**|ファイルの実際の NTFS パス名を示します。 これは同じパス名がによって返される、**します。PhysicalPathName**のメソッド、 **varbinary**(**max**) filestream です。 トレース フラグ 5556 で有効です。 NULL 値が許可されます。|  
+|**logical_path**|**nvarchar(256)**|このハンドルによって開かれたファイルの論理パス名を示します。 これは、によって返されるパス名と同じ**です。** **Varbinary**(**Max**) filestream の PathName メソッド。 NULL 値が許可されます。|  
+|**physical_path**|**nvarchar(256)**|ファイルの実際の NTFS パス名を示します。 これは、によって返されるパス名と同じ**です。** **Varbinary**(**Max**) filestream の physicalpathname メソッド。 トレースフラグ5556によって有効にされます。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [Filestream および FileTable 動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;の Filestream および FileTable の動的管理ビュー](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

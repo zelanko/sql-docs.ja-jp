@@ -16,17 +16,17 @@ helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 21a6a1fb44908e338f3b640747862ecf93c85885
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914381"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892160"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の、指定したパーティション関数に対して、パーティション分割列の値のセットがマップされるパーティション番号を返します。  
   
@@ -52,12 +52,12 @@ ms.locfileid: "67914381"
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  $PARTITION 返します、 **int** 1 ～ パーティション関数のパーティションの数の値です。  
   
  $PARTITION は、値が現在パーティション関数を使用するパーティション テーブルまたはインデックスに存在するかどうかに関係なく、有効な値のパーティション番号を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. パーティション分割列の値のセットに対してパーティション番号を取得する  
  次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数 `RangePF1` を作成します。 $PARTITION は、`10` のパーティション分割列を表す値 `RangePF1` が、テーブルのパーティション 1 に配置されるかどうかを判定するために使用します。  

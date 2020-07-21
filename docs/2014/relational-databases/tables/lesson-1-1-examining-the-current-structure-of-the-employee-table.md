@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5561d0f2398a0a1adc12ae30a7cd7527fdd5d45
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068103"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Employee テーブルの現在の構造の確認
-  サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 クエリを実行し、 **HumanResources.EmployeeDemo**を使用せず、テーブル内のデータが構造化方法を確認するテーブル、`hierarchyid`データ型。  
+   サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **Humanresources.employee demo**テーブルに対してクエリを実行し、データ型を使用せずにテーブルでデータがどのように構造化されているかを確認します `hierarchyid` 。  
   
 ### <a name="to-copy-the-employee-table"></a>Employee テーブルをコピーするには  
   

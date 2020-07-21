@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure への SQL Server マネージド バックアップ | Microsoft Docs
+description: Microsoft Azure への SQL Server マネージド バックアップでは、Microsoft Azure BLOB ストレージへの SQL Server バックアップを管理および自動化します。
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,39 +11,39 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737680"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は Microsoft Azure BLOB ストレージへの SQL Server バックアップを管理および自動化します。 SQL Server でデータベースのトランザクション ワークロードに基づいて、バックアップ スケジュールを決定するように選択できます。 また、詳細オプションを使用して、スケジュールを定義することもできます。 保有期間の設定で、Azure BLOB ストレージでのバックアップの保存期間を決定します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作が変更されています。 詳細については、「 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)」を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] のプロシージャと基になる動作が変更されています。 詳細については、[SQL Server 2014 マネージド バックアップの設定の SQL Server 2016 への移行](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)に関するページを参照してください。  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、Microsoft Azure 仮想マシンで実行されている SQL Server インスタンスに推奨されます。  
   
-## <a name="benefits"></a>利点  
+## <a name="benefits"></a>メリット  
  現在、複数データベースのバックアップを自動化するには、バックアップ方法の開発、カスタム コードの記述、およびバックアップのスケジュール設定が必要です。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を使用すれば、保有期間と保存場所を指定するだけで、バックアップ プランを作成できます。 詳細設定を使用できますが、必須ではありません。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] で行われます。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、データベース レベルまたは SQL Server インスタンス レベルで構成できます。 インスタンス レベルで構成する場合、新しいすべてのデータベースも自動的にバックアップされます。 データベース レベルでの設定を使用して、個々のケースに対するインスタンス レベルの既定値をオーバーライドすることができます。  
   
  また、セキュリティ強化のためにバックアップを暗号化することができ、バックアップのタイミングを制御するためのカスタム スケジュールをセットアップすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB ストレージを使用する利点の詳細については、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
-##  <a name="Prereqs"></a> 前提条件  
- Microsoft Azure Storage は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がバックアップ ファイルを格納するために使用されます。 次の前提条件を満たす必要があります。  
+##  <a name="prerequisites"></a><a name="Prereqs"></a> 前提条件  
+ Microsoft Azure Storage は、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] がバックアップ ファイルを格納するために使用されます。 以下の前提条件が必要です。  
   
-|前提条件|[説明]|  
+|前提条件|説明|  
 |------------------|-----------------|  
 |**Microsoft Azure アカウント**|[購入オプション](https://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](https://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
-|**Azure ストレージ アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
+|**Azure Storage アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
 |**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
-|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「[Shared Access Signature、第 1 部:SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」をご覧ください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
+|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「[Shared Access Signature、第 1 部:SAS モデル](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)に関するページを参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
 |**SQL Server エージェント**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を機能させるには、SQL Server エージェントを実行する必要があります。 スタートアップ オプションを自動に設定することを検討してください。|  
   
 ## <a name="components"></a>Components  
@@ -52,7 +53,7 @@ ms.locfileid: "68041366"
   
 |||  
 |-|-|  
-|システム オブジェクト|[説明]|  
+|システム オブジェクト|説明|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって作成されたすべてのバックアップに対するメタデータとバックアップ履歴を格納します。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にします。|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|暗号化など、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の詳細設定を構成します。|  
@@ -109,10 +110,10 @@ ms.locfileid: "68041366"
  同時に 10 個を超えるデータベースの完全バックアップがスケジュールされている場合、拡張イベントのデバッグ チャネルを通じて警告が発生します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は、バックアップする必要がある残りのデータベースの優先キューを、すべてのバックアップがスケジュールされ完了するまで管理します。  
 
 > [!NOTE]
-> プロキシ サーバーでは SQL Server Managed Backup はサポートされていません。
+> プロキシ サーバーでは、SQL Server マネージド バックアップはサポートされていません。
 >
   
-##  <a name="support_limits"></a> サポート性  
+##  <a name="supportability"></a><a name="support_limits"></a> サポート性  
  次のサポートの制限事項と考慮事項は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に固有のものです。  
   
 -   **master**、 **model**、 **msdb** の各システム データベースのバックアップがサポートされます。 **tempdb** のバックアップはサポートされません。 

@@ -15,15 +15,14 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3af74dfe4858739e792315ba66512433ffca4a4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900515"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430749"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
   派生列変換では、式を変換入力列に適用することにより新しい列の値を作成します。 式には、変換入力からの列、変数、関数、および演算子の任意の組み合わせを含めることができます。 結果は、新しい列として追加するか、または既存の列の値を置き換える値として挿入できます。 派生列変換では複数の派生列を定義でき、任意の変数または入力列を複数の式に含めることができます。  
@@ -45,7 +44,7 @@ ms.locfileid: "62900515"
 ## <a name="configuration-of-the-derived-column-transformation"></a>派生列変換の構成  
  派生列変換は、次の方法で構成できます。  
   
--   各入力列または変更する新しい列に対し、式を設定します。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」を参照してください。  
+-   各入力列または変更する新しい列に対し、式を設定します。 詳細については、「 [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
     > [!NOTE]  
     >  派生列変換によって上書きされる入力列を式が参照する場合、その式は派生した値ではなく、列の元の値を使用します。  
@@ -77,6 +76,6 @@ ms.locfileid: "62900515"
 ## <a name="related-content"></a>関連コンテンツ  
  social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
- ブログ、 [SSIS を使用して列データの分割方法](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)します。  
+ 記事「 [SSIS を使用して列データを分割する方法](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)」をご覧ください。  
   
   

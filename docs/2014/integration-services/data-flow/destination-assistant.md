@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.dts.designer.destinationassistant.f1
 - SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33cb6954cab5777799809b3897a10a8d339d8991
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62b496b825d60aecdcc78872ccf9fb629988836a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827284"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432169"
 ---
 # <a name="destination-assistant"></a>デスティネーション アシスタント
   変換先アシスタント コンポーネントを使用すると、変換先コンポーネントおよび接続マネージャーを作成できます。 このコンポーネントは、SSIS ツールボックスの **[お気に入り]** セクションにあります。  

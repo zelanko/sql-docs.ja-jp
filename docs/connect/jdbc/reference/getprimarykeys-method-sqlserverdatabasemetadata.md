@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67980766"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys メソッド (SQLServerDatabaseMetaData)
@@ -55,16 +55,16 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getPrimaryKeys メソッドは、java メタデータインターフェイスの getPrimaryKeys メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getPrimaryKeys メソッドは、java.sql.DatabaseMetaData インターフェイスの getPrimaryKeys メソッドで指定されています。  
   
  getPrimaryKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|String|指定したテーブルが含まれているデータベースの名前です。|  
 |TABLE_SCHEM|String|テーブルのスキーマです。|  
-|TABLE_NAME|String|テーブルの名前です。|  
+|TABLE_NAME|String|テーブルの名前。|  
 |COLUMN_NAME|String|列の名前です。|  
 |KEY_SEQ|short|複数列の主キーにおける列のシーケンス番号です。|  
 |PK_NAME|String|主キーの名前です。|  

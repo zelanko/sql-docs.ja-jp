@@ -11,10 +11,10 @@ ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979320"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString メソッド (SQLServerNClob)
@@ -31,7 +31,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  抽出する部分文字列の先頭の文字です。 先頭の文字の位置は 1 です。  
   
@@ -45,7 +45,7 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getSubString メソッドは、java.sql.NClob インターフェイスの getSubString メソッドで規定されています。  
   
  null または長さが 0 の NCLOB から 0 文字を取得しようとすると、空の文字列が返されます。 長さが 0 の NCLOB で、位置 1 以外の場所で任意の長さの文字を取得しようとすると、位置の例外がスローされます。  

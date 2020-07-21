@@ -1,5 +1,5 @@
 ---
-title: ParentCatalog プロパティの例 (vc++) |Microsoft Docs
+title: ParentCatalog プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f57167c975635be7c72c8a80cd9ddff9fe244ad4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9fde13dc2182f5c1258f43c1ec887dd300b2c008
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965576"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763743"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog プロパティの例 (VC++)
-次のコードを使用する方法を示します、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)カタログにテーブルを追加する前に、プロバイダー固有のプロパティにアクセスするプロパティ。 プロパティが**AutoIncrement**、Microsoft Jet データベースを [自動増分] フィールドを作成します。  
+次のコードは、カタログにテーブルを追加する前に、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)プロパティを使用してプロバイダー固有のプロパティにアクセスする方法を示しています。 プロパティは**autoincrement**で、Microsoft Jet データベースに autoincrement フィールドが作成されます。  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  
@@ -94,7 +94,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateAutoIncrColumnX...."<< endl;  
+      cout << "Error occurred in CreateAutoIncrColumnX...."<< endl;  
    }  
   
    m_pCatalog = NULL;  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c21c1153289eddf99220279ed8b71b1377088ac
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083955"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521788"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズム
   ロジスティック回帰は、バイナリ結果のモデリングに使用される代表的な統計手法です。  
@@ -59,7 +58,7 @@ ms.locfileid: "66083955"
   
  Microsoft ニューラル ネットワーク ビューアーを使用してモデルを表示すると、Analysis Services には、特定の結果に影響する要素がその重要度で順位付けされて表示されます。 比較する属性と値を選択できます。 詳細については、「 [Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-neural-network-viewer.md)」を参照してください。  
   
- さらに詳細を知るには、Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルの詳細を参照できます。 ロジスティック回帰モデルのモデル コンテンツには、モデルに使用されるすべての入力を示すマージナル ノード、および予測可能な属性を表すサブネットワークが含まれます。 詳細については、「[ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)」を参照してください。  
+ さらに詳細を知るには、Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルの詳細を参照できます。 ロジスティック回帰モデルのモデル コンテンツには、モデルに使用されるすべての入力を示すマージナル ノード、および予測可能な属性を表すサブネットワークが含まれます。 詳細については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-logistic-regression-models.md)」を参照してください。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルのトレーニング後、モデル コンテンツに対するクエリを作成して回帰係数およびその他の詳細を取得したり、モデルを使用して予測を作成したりできます。  
@@ -68,7 +67,7 @@ ms.locfileid: "66083955"
   
 -   ロジスティック回帰モデルでのクエリの例については、「 [クラスタリング モデルのクエリ例](clustering-model-query-examples.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 -   ドリルスルーはサポートされていません。 これは、マイニング モデルのノードの構造がその基になるデータと必ずしも直接対応しているわけではないからです。  
   
@@ -79,8 +78,8 @@ ms.locfileid: "66083955"
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-logistic-regression-models.md)   
- [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [ロジスティック回帰モデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Microsoft ロジスティック回帰アルゴリズムテクニカルリファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)  
   
   

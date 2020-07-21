@@ -1,5 +1,6 @@
 ---
 title: パブリケーション データベースでのスキーマの変更 | Microsoft Docs
+description: レプリケーションでは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更がサポートされています。 すべての SQL Server サブスクライバーに既定で反映されるスキーマ変更について説明します。
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769873"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160130"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで行った場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
   
@@ -57,7 +58,7 @@ ms.locfileid: "68769873"
 ## <a name="considerations-for-schema-changes"></a>スキーマ変更に関する注意点  
  スキーマ変更をレプリケートする際には、以下の点に注意してください。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   スキーマ変更は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の制限の対象となります。 たとえば、ALTER TABLE で主キー列を変更することはできません。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68769873"
   
 -   外部キーを追加するときに参照されるサブスクライバーのすべてのオブジェクトは、パブリッシャーの対応するオブジェクトと名前と所有者が同じである必要があります。  
   
--   インデックスの明示的な追加、削除、および変更はサポートされていません。 制約 (主キー制約など) に対して暗黙的に作成されたインデックスはサポートされます。  
+-   明示的なインデックスの追加、削除、または変更はレプリケートされません。また、明示的なインデックスに関連する変更は、各レプリカ セットで個別に実行する必要があります。 制約 (主キー制約など) に対して暗黙的に作成されたインデックスはサポートされます。  
   
 -   レプリケーションによって管理されている ID 列の変更や削除はサポートされていません。 ID 列の自動管理の詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
@@ -103,13 +104,13 @@ ms.locfileid: "68769873"
   
 -   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルから削除するには、ALTER TABLE \<Table> DROP \<Column> を実行します。 この列は、既定ですべてのサブスクライバーのテーブルから削除されます。  
   
--   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルからは削除しない場合は、[sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
+-   既存のパブリケーションから列を削除し、その列をパブリッシャーのテーブルで保持しておくには、[sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。  
   
      詳しくは、「 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」をご覧ください。 この場合は、新しいスナップショットの生成が必要になります。  
   
 -   削除する列は、データベースのどのパブリケーションのどのアーティクルのフィルター句でも使用できません。  
   
--   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 例:  
+-   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 次に例を示します。  
   
     -   主キーで使用されている列をトランザクション パブリケーションのアーティクルから削除することはできません。それらの列は、レプリケーションによって使用されます。  
   

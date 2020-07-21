@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493849"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528308"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>ユーザー定義階層の属性間での属性リレーションシップの指定
   このチュートリアルで既に学習したように、ユーザー階層に属性階層を配置し、キューブ内を移動するためのパスを作ることができます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
   
- 一般階層で、各層を構成する属性間に属性リレーションシップが定義されている場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、1 つの階層の集計結果を使用して、その階層に関連付けられている別の階層の結果を取得することができます。 属性間にリレーションシップを定義していない場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってキー属性からすべての非キー属性が集計されます。 そのため、基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理パフォーマンスが向上します。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
+ 一般階層で、各層を構成する属性間に属性リレーションシップが定義されている場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、1 つの階層の集計結果を使用して、その階層に関連付けられている別の階層の結果を取得することができます。 属性間にリレーションシップを定義していない場合は、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってキー属性からすべての非キー属性が集計されます。 そのため、基になるデータで属性リレーションシップがサポートされる場合、属性間の属性リレーションシップを定義する必要があります。 属性リレーションシップを定義すると、ディメンション、パーティション、およびクエリの処理パフォーマンスが向上します。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) 」および「 [属性リレーションシップ](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
- 属性リレーションシップを定義する際、リレーションシップを変更できるようにするのか、または固定するのかを指定できます。 固定のリレーションシップを定義した場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってディメンションの更新時の集計が保持されます。 固定のリレーションシップを変更すると、ディメンションが完全に処理されない限り、処理の途中で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってエラーが生成されます。 適切なリレーションシップとリレーションシップのプロパティを指定すると、クエリ パフォーマンスと処理パフォーマンスが向上します。 詳細については、「[属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「[ユーザー階層プロパティ](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)」を参照してください。  
+ 属性リレーションシップを定義する際、リレーションシップを変更できるようにするのか、または固定するのかを指定できます。 固定のリレーションシップを定義した場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってディメンションの更新時の集計が保持されます。 固定のリレーションシップを変更すると、ディメンションが完全に処理されない限り、処理の途中で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によってエラーが生成されます。 適切なリレーションシップとリレーションシップのプロパティを指定すると、クエリ パフォーマンスと処理パフォーマンスが向上します。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」および「 [ユーザー階層プロパティ](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)」を参照してください。  
   
  このトピックの実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの一般ユーザー階層の属性に属性リレーションシップを定義します。 対象となるのは、 **Customer** ディメンションの **Customer Geography**階層、 **Sales Territory** ディメンションの **Sales Territory** 階層、 **Product** ディメンションの **Product Model Lines** 階層、 **Date** ディメンションの **Fiscal Date** 階層と **Calendar Date** 階層です。 これらのユーザー階層は、すべて一般階層です。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "69493849"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     リレーションシップが重複しているため、ダイアグラムに警告アイコンが表示されます。 リレーションシップ **Full Name** -> **Geography**-> **Postal Code** が既に存在する状態で、リレーションシップ **Full Name** -> **Postal Code**を作成しました。 リレーションシップ **Geography**-> **Postal Code** が重複しているため、このリレーションシップを削除します。  
+     リレーションシップが重複しているため、ダイアグラムに警告アイコンが表示されます。 リレーションシップの**完全名**  ->  **Geography** ->  **郵便**番号は既に存在しています。また、リレーションシップの**完全な名前**の  ->  **郵便**番号を作成しました。 リレーションシップの**地理**郵便番号は重複しているので、 ->  **Postal Code**削除します。  
   
 6.  **[属性リレーションシップ]** ペインで、 **[Geography**-> **Postal Code]** を右クリックし、 **[削除]** をクリックします。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493849"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     リレーションシップ **Geography**-> **City** が重複しているため、このリレーションシップを削除します。  
+     リレーションシップ**Geography** ->  **City**が冗長になり、削除されるようになりました。  
   
-11. [属性リレーションシップ] ペインで、 **[Geography**-> **City]** を右クリックし、 **[削除]** をクリックします。  
+11. [属性リレーションシップ] ペインで、[ **Geography**City] を右クリックし、 ->  **City** [**削除**] をクリックします。  
   
 12. **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]** をクリックします。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493849"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. [属性リレーションシップ] ペインで、 **[Geography**-> **Country-Region]** を右クリックし、 **[削除]** をクリックします。  
+21. [属性リレーションシップ] ペインで、[ **Geography** ->  **Country-Region** ] を右クリックし、[**削除**] をクリックします。  
   
 22. **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]** をクリックします。  
   
@@ -178,12 +177,12 @@ ms.locfileid: "69493849"
   
 13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-14. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+14. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [不明なメンバーと NULL 処理のプロパティの定義](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)   
  [ユーザー階層プロパティ](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

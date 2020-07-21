@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026892"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
@@ -27,21 +26,21 @@ ms.locfileid: "66265151"
  通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。  
   
 > [!NOTE]  
->  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** によって生成されるバージョン 11.0 のフォーマット ファイルを読み取ることができません。  
+>  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、bcp で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**は、bcp によって生成されるバージョン10.0 のフォーマットファイルを読み取ることができますが、bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**では、bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**によって生成されるバージョン11.0 のフォーマットファイルを読み取ることができません [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**。  
   
  このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション ( **-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
   
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
   
- **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
+ **bcp** _table_or_view_ **format** nul **-f** _format_file_name_  
   
 > [!NOTE]  
 >  XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
   
  XML 以外のフォーマット ファイルの構造およびフィールドについては、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  ここでは、 **bcp** コマンドを使用して XML 以外のフォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. ネイティブ データ用の XML 以外のフォーマット ファイルの作成  
@@ -142,7 +141,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  XML フォーマット ファイルの構造およびフィールドについては、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  ここでは、 **bcp** コマンドを使用して XML フォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. 文字データ用の XML フォーマット ファイルの作成  
@@ -234,7 +233,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  このフォーマット ファイルの構文については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。 ネイティブ データの使用方法については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)」を参照してください。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>データ フィールドからテーブル列へのマッピング  
- **bcp**によって作成されたフォーマット ファイルには、すべてのテーブル列が順番に記述されます。 テーブル行を再配置または削除する場合は、フォーマット ファイルを変更できます。 その結果、フィールドとテーブル列とが直接マップされないデータ ファイル用に、フォーマット ファイルをカスタマイズできます。 詳細については、次の各トピックを参照してください。  
+ **bcp**によって作成されたフォーマット ファイルには、すべてのテーブル列が順番に記述されます。 テーブル行を再配置または削除する場合は、フォーマット ファイルを変更できます。 その結果、フィールドとテーブル列とが直接マップされないデータ ファイル用に、フォーマット ファイルをカスタマイズできます。 詳細については、次のトピックを参照してください。  
   
 -   [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
@@ -243,7 +242,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

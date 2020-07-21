@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62702043"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544954"
 ---
 # <a name="merging-partitions-xmla"></a>パーティションのマージ (XMLA)
-  使用して、パーティションをマージするには、同じ集計デザインと構造のパーティションがある場合、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) XML for Analysis (XMLA) コマンド。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
+  パーティションの集計デザインと構造が同じである場合は、XML for Analysis (XMLA) の[Mergepartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンドを使用してパーティションをマージできます。 パーティション管理において、パーティションのマージは重要な操作です。日付によってパーティション分割された履歴データを含むパーティションの場合は特に重要です。  
   
  たとえば、次の 2 つのパーティションを使用する財務キューブがあるとします。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62702043"
  2 つのパーティションは異なるストレージ設定を使用しますが、集計デザインは同じものを使用します。 年の終わりに複数年にわたる履歴データについてキューブを処理する代わりに、`MergePartitions` コマンドを使用して、現在の年のパーティションを過去の年のパーティションにマージできます。 こうすれば、多くの時間をかけてキューブを詳細に処理しなくても、集計データを保持できます。  
   
 ## <a name="specifying-partitions-to-merge"></a>マージするパーティションの指定  
- ときに、`MergePartitions`コマンドの実行で指定されたソース パーティションに格納された集計データ、[ソース](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)プロパティで指定された対象パーティションに追加されます、[ターゲット](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)プロパティ。  
+ コマンドを `MergePartitions` 実行すると、 [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)プロパティで指定されたソースパーティションに格納されている集計データが、[ターゲット](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)プロパティで指定された対象パーティションに追加されます。  
   
 > [!NOTE]  
 >  `Source` プロパティには複数のパーティション オブジェクト参照を含めることができます。 しかし、`Target` プロパティには複数を含めることができません。  
@@ -43,10 +42,10 @@ ms.locfileid: "62702043"
   
  `Source` で指定されたパーティションは、`MergePartitions` コマンドが正常に完了した後に削除されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="description"></a>説明  
- 次の例では、内のすべてのパーティションのマージ、 **Customer Counts**のメジャー グループ、 **Adventure Works**キューブ、 **Adventure Works DW**サンプル[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]へのデータベース、 **Customers_2004**パーティション。  
+ 次の例では、 **adventure works DW**サンプルデータベースの**adventure works**キューブの**Customer カウント**メジャーグループに含まれるすべてのパーティション [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を、 **Customers_2004**パーティションにマージします。  
   
 ### <a name="code"></a>コード  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62702043"
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   
   

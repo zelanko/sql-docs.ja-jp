@@ -1,7 +1,8 @@
 ---
-title: インストール ウィザードを使用した SQL Server のアップグレード (セットアップ) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: アップグレード:インストール ウィザード (セットアップ)
+description: SQL Server インストール ウィザードでは、1 つの機能ツリーを使用して、SQL Server コンポーネントを最新バージョンの SQL Server にインプレース アップグレードできます。
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bcbc5be852e2eed6b22689c8745210dd840e7e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934695"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900204"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは、1 つの機能ツリーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインプレース アップグレードできます。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67934695"
 > * [Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Power Pivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 セットアップは管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、リモート共有に対する読み取り権限と実行権限を持つ、ローカル管理者のドメイン アカウントを使用する必要があります。  
   
 > [!WARNING]  
@@ -70,7 +71,7 @@ ms.locfileid: "67934695"
   
 ## <a name="procedure"></a>手順  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] にアップグレードするには  
+### <a name="to-upgrade-ssnoversion"></a>[!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] にアップグレードするには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67934695"
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
     > [!NOTE]  
-    >  **[インスタンスの選択]** ページで **[\<共有機能のみをアップグレード>]** を選択して、共有機能のアップグレードを選択した場合は、[機能の選択] ページのすべての共有機能があらかじめ選択されています。 すべての共有機能は同時にアップグレードされます。  
+    >  **[インスタンスの選択]** ページで **\<Upgrade shared features only>** を選択して、共有機能のアップグレードを選択した場合、[機能の選択] ページで、すべての共有機能があらかじめ選択されています。 すべての共有機能は同時にアップグレードされます。  
   
 12. [インスタンスの構成] ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのインスタンス ID を指定します。  
   
@@ -115,7 +116,7 @@ ms.locfileid: "67934695"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのインスタンスに含まれるすべてのサービス アカウントに同じログイン アカウントを指定する場合は、ページの下部にあるフィールドに資格情報を指定します。  
   
-     **セキュリティに関する注意** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **セキュリティに関する注意:** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン情報を指定したら、 **[次へ]** をクリックします。  
   
@@ -131,7 +132,7 @@ ms.locfileid: "67934695"
   
 20. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアップグレード後は、次の作業を実行します。  
   
 -   **サーバーの登録**: アップグレードすると、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのレジストリ設定が削除されます。 アップグレード後、サーバーを再登録する必要があります。  

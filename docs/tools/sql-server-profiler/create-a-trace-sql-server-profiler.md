@@ -1,27 +1,28 @@
 ---
-title: トレースの作成 (SQL Server プロファイラー) |Microsoft Docs
-ms.custom: ''
-ms.date: 08/01/2016
+title: トレースを作成する
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930165"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307331"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
   
 ### <a name="to-create-a-trace"></a>トレースを作成するには  
   
@@ -49,11 +50,11 @@ ms.locfileid: "67930165"
   
 5.  必要に応じて、 **[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
   
-6.  イベント、データ列、フィルターを追加または削除するには、 **[イベントの選択]**  タブをクリックします。詳細については、「[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)」を参照してください。  
+6.  イベント、データ列、フィルターを追加または削除するには、 **[イベントの選択]**  タブをクリックします。詳細については、次を参照してください。[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  **[実行]** をクリックしてトレースを開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler の実行に必要な権限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   

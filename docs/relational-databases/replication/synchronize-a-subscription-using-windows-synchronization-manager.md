@@ -1,6 +1,7 @@
 ---
-title: Windows 同期マネージャーを使用したサブスクリプションの同期 | Microsoft Docs
-ms.custom: ''
+title: サブスクリプションの同期 (Windows 同期マネージャー)
+description: Windows 同期マネージャーを使用してサブスクリプションを同期する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 591b33a5ad44a242fde2377c86002ea1f5b5931a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719511"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
   
-1.  **[サブスクリプションのプロパティ - \<サブスクライバー>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
+1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 2.  Windows の **[スタート]** メニューから、同期マネージャーにアクセスします。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68768298"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[** **サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスの **[全般]** ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -119,6 +120,6 @@ ms.locfileid: "68768298"
 >  編集した内容は、回避を選択した行の一部でなければ適用されません。 たとえば、 **[パブリッシャー]** の下を編集し、 **[サブスクライバーを優先]** をクリックしても、編集内容は破棄されます。  
   
 ## <a name="see-also"></a>参照  
- [インタラクティブな競合解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

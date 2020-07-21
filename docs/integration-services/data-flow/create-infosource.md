@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a96c406cdd4b920efbfda6644ee5539e0a351f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1556a98ad812c32c514b8e55ab1ece3e6d7a40e4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049558"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71293262"
 ---
 # <a name="create-infosource"></a>[インフォソースの作成]
 

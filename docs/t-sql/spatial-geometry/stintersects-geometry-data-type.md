@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8a01a4ee58b4bca80cba9bfc9a1a094f575c5154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd517a8396b9e23eaafa761a7e0511fe6926d21f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950128"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762426"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (geometry データ型)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **geometry** インスタンスが別の **geometry** インスタンスと交差する場合、1 を返します。 そうでない場合は 0 を返します。
   
@@ -43,12 +43,12 @@ ms.locfileid: "67950128"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STIntersects()` を使用して 2 つの `geometry` インスタンスが相互に交差しているかどうかを調べる例を次に示します。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: サポートされる Access レポート機能 (SSRS) |Microsoft Docs
+title: サポートされているアクセスレポート機能 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100576"
 ---
 # <a name="supported-access-report-features-ssrs"></a>サポートされる Access レポート機能 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66100576"
 ## <a name="importing-access-reports"></a>Access レポートのインポート  
  一部のクエリには、Access 固有のコードが含まれています。 Access のコードがレポートと一緒にインポートされることはありません。 また、クエリに埋め込み文字列が含まれている場合、レポートは正しくインポートされません。 これを修正するには、文字列を文字コードに置き換えます。 たとえば、コンマ (,) 文字を CHAR(34) に置き換えます。  
   
- インポート プロセスがセミコロン (;) を正しく渡していないや XML マークアップ文字 (\<、> など) で接続文字列情報。 接続文字列にセミコロンや XML マークアップ文字が含まれている場合は、レポートのインポート後に、新しいレポートでパスワードを手動で設定する必要があります。  
+ インポートプロセスで、セミコロン (;) が正しく渡されません。接続文字列情報の XML\<マークアップ文字 (、> など)。 接続文字列にセミコロンや XML マークアップ文字が含まれている場合は、レポートのインポート後に、新しいレポートでパスワードを手動で設定する必要があります。  
   
  インポート処理では、接続文字列に含まれる接続設定や全般的なタイムアウト設定がインポートされません。 レポートをインポートした後、これらの設定の調整が必要になる場合があります。  
   
@@ -49,25 +49,25 @@ ms.locfileid: "66100576"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] などの OLE DB データ ソースをサポートします。 Access プロジェクト (.adp) ファイルからレポートをインポートする場合は、データ ソースの接続文字列は、.adp ファイルの接続文字列から取得されます。 Access データベース (.mdb または .accdb) ファイルからレポートをインポートする場合は、データ ソースの接続文字列が Access データベースを指していることがあるため、レポートのインポート後に修正が必要になる可能性があります。 Access レポートのデータ ソースがクエリである場合は、クエリ情報は変更されることなく RDL に保存されます。 Access レポートのデータ ソースがテーブルである場合は、変換処理の際、テーブル名およびテーブル内のフィールドを基にクエリが作成されます。  
   
 ## <a name="reports-with-custom-modules"></a>カスタム モジュールを含むレポート  
- ユーザー設定がある場合[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]モジュール内に含まれるコードは変換されません。 レポート デザイナーでは、インポート処理中にコードを検出すると、警告が生成されに表示される、**タスク一覧**ウィンドウ。  
+ モジュール内にカスタム[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]コードが含まれている場合は、変換されません。 インポート処理中にレポートデザイナーがコードを検出すると、警告が生成され、[**タスク一覧**] ウィンドウに表示されます。  
   
 ## <a name="report-controls"></a>レポート コントロール  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の Access コントロールがサポートされ、これらは変換後のレポート定義に保持されます。  
   
 |||||  
 |-|-|-|-|  
-|イメージ|group1|線|四角形|  
-|サブフォーム|サブレポート<br /><br /> **注**サブレポート コントロールは、メイン レポート内で変換は、サブレポート自体は個別に変換されます。|テキスト ボックス||  
+|Image|ラベル|Line|Rectangle|  
+|サブフォーム|ポート<br /><br /> **メモ**サブレポートコントロールはメインレポート内で変換されますが、サブレポート自体は個別に変換されます。|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のコントロールはサポートされません。  
   
 |||||  
 |-|-|-|-|  
-|連結オブジェクト フレーム|チェック ボックス|コンボ ボックス|コマンド ボタン|  
-|カスタム コントロール|リスト ボックス|オブジェクト フレーム|オプション ボタン|  
-|タブ コントロール|トグル ボタン|||  
+|連結オブジェクト フレーム|CheckBox|ComboBox|コマンド ボタン|  
+|カスタム コントロール|ListBox|オブジェクト フレーム|OptionButton|  
+|TabControl|トグル ボタン|||  
   
- レポート デザイナーは、インポート処理中にこれらのコントロールのいずれかのように検出すると、警告が生成されに表示される、**タスク一覧**ウィンドウ。  
+ インポート処理中にこれらのコントロールのいずれかが検出さレポートデザイナーと、警告が生成され、[**タスク一覧**] ウィンドウに表示されます。  
   
  ActiveX や Office Web コンポーネントなどのその他のコントロールは、インポートされません。 たとえば、Access レポートに OWC Chart コントロールが含まれていても、インポート時に変換されません。  
   
@@ -76,28 +76,28 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|背景色|背景スタイル|境界線色|BorderStyle|  
+|色|背景スタイル|境界線色|BorderStyle|  
 |境界線幅|下余白|印刷時拡張 (テキスト ボックス)|印刷時縮小 (テキスト ボックス)|  
-|[キャプション]|フォント太字|フォント斜体|フォント名|  
+|Caption|フォント太字|フォント斜体|FontName|  
 |フォントサイズ|フォント下線|フォント太さ|改ページ|  
-|ForeColor|[高さ]|重複データ非表示|ハイパーリンク|  
+|前景色|[高さ]|重複データ非表示|ハイパーリンク|  
 |ハイパーリンクあり|可視|同一ページ印刷 (グループ)|Left|  
-|左余白|線傾斜|ラベル|リンク子フィールド|  
+|左余白|線傾斜|LineSpacing|リンク子フィールド|  
 |リンク親フィールド|改段|ページフッター|ページヘッダー|  
-|ページ数|画像|ピクチャ全体表示 (レポート)|読みの順序|  
+|ページ|写真|ピクチャ全体表示 (レポート)|読みの順序|  
 |セクション繰り返し|右余白|集計実行|OLE サイズ|  
-|TextAlign|TOP|上余白|[幅]|  
+|TextAlign|TOP|上余白|幅|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Access のユーザー インターフェイスから利用できる以下のプロパティはサポートされません。  
   
 |||||  
 |-|-|-|-|  
 |印刷時拡張 (セクション)|印刷時縮小 (セクション)|小数点以下表示桁数|高速レーザー印刷|  
-|Assert|フィルター適用|形式|書式条件|  
+|Assert|フィルター適用|Format|書式条件|  
 |同一ページ印刷グループ|同一ページ印刷 (セクション)|数字の形態|方向|  
 |ペイント パレット|パレット元|ピクチャ配置|ピクチャ表示ページ|  
 |ピクチャサイズ|ピクチャ全体表示 (イメージ)|スクロールバー|立体表示|  
-|[縦]||||  
+|Vertical||||  
   
 ## <a name="grouping"></a>グループ化  
  Access では、グループ式、`GroupOn` プロパティ、および `GroupInterval` プロパティの 3 つのプロパティを組み合わせてグループ レベルを定義します。 グループ ヘッダーまたはグループ フッターのないグループは、このグループに含まれているグループに結合されます。 グループに他のグループが含まれていない場合は、詳細セクションに並べ替えが適用され、このグループは削除されます。  
@@ -111,7 +111,7 @@ ms.locfileid: "66100576"
 #### <a name="array-functions"></a>配列関数  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の配列関数がサポートされています。  
   
--   LBound  
+-   仮定  
   
 -   UBound  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66100576"
 |Asc|CBool|CByte|CCur|  
 |CDate|CDbl|CDec|Chr|  
 |Chr$|CInt|CLng|CSng|  
-|CStr|CVar|CVDate|形式|  
+|CStr|CVar|CVDate|Format|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
 |Hex|Hex$|Nz|Oct|  
 |Oct$|Str|Str$|StrConv|  
@@ -140,7 +140,7 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|CreateReport|GetObject|HyperlinkPart|パーティション|  
+|CreateReport|GetObject|HyperlinkPart|Partition|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のデータベース関数はサポートされません。  
   
@@ -156,12 +156,12 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|date|Date$|DateAdd|DateDiff|  
+|日付|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|日|  
-|Hour|Minute|Month|MonthName|  
-|[今]|第 2 週|Time|Time$|  
-|Timer|TimeSerial|TimeValue|Weekday|  
-|WeekdayName|年|||  
+|時|分|月|MonthName|  
+|Now|秒|Time|Time$|  
+|Timer|TimeSerial|TimeValue|平日|  
+|WeekdayName|Year|||  
   
 #### <a name="ddeole-functions"></a>DDE/OLE 関数  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の DDE/OLE 関数はサポートされません。  
@@ -185,7 +185,7 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|Err|[エラー]|Error$|IsError|  
+|Err|Error|Error$|IsError|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下のエラー処理関数はサポートされていません。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "66100576"
 |-|-|-|-|  
 |DDB|FV|IPmt|IRR|  
 |MIRR|NPer|NPV|Pmt|  
-|PPmt|PV|Rate|SLN|  
+|PPmt|PV|料金|SLN|  
 |SYD||||  
   
 #### <a name="interaction-functions"></a>インタラクティブ関数  
@@ -218,7 +218,7 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|DoEvents|In|入力|Input$|  
+|DoEvents|場所|入力|Input$|  
   
 #### <a name="inspection-functions"></a>特殊評価関数  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の特殊評価関数がサポートされています。  
@@ -233,14 +233,14 @@ ms.locfileid: "66100576"
   
 -   IsMissing  
   
-#### <a name="math-functions"></a>算術関数  
+#### <a name="math-functions"></a>数値演算関数  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の算術関数がサポートされています。  
   
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Fix|Int|Log|Rnd|  
-|四捨五入|Sgn|Sin|Sqr|  
+|Fix|int|ログ|Rnd|  
+|Round|Sgn|Sin|R-sqr|  
 |Tan||||  
   
 #### <a name="message-functions"></a>メッセージ関数  
@@ -255,7 +255,7 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|Choose|IIf|スイッチ||  
+|選択|IIf|Switch||  
   
 #### <a name="sql-aggregate-functions"></a>SQL 集計関数  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、以下の SQL 集計関数がサポートされています。  
@@ -263,7 +263,7 @@ ms.locfileid: "66100576"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|Sum|Var|  
+|StDev|StDevP|SUM|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>文字列関数  
@@ -271,10 +271,10 @@ ms.locfileid: "66100576"
   
 |||||  
 |-|-|-|-|  
-|形式|Format$|InStr|InStrRev|  
+|Format|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
-|Mid$|[置換]|Right|Right$|  
+|Mid$|Replace|Right|Right$|  
 |RTrim|Space|Space$|StrComp|  
 |StrConv|String|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
@@ -294,9 +294,9 @@ ms.locfileid: "66100576"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義では、四角形内に他のレポート アイテムを含めることができます。 レポート アイテムよりも大きく、レポート アイテムの領域のうち 90% を超える領域と重なっている四角形は、そのレポート アイテムのコンテナーになります。  
   
 ## <a name="bitmaps"></a>ビットマップ  
- レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込みイメージについては、次を参照してください。[イメージ&#40;レポート ビルダーおよび SSRS&#41;](report-design/images-report-builder-and-ssrs.md)します。  
+ レポート内に埋め込まれているビットマップはすべて、インポート時に .bmp 形式に変換されます。これらのビットマップの最初の形式は無視されます。 たとえば、レポートに .jpg ファイルおよび .gif ファイルが含まれていた場合、レポートと一緒にインポートされるリソースは .bmp ファイルになります。 ビットマップは、レポートの埋め込み画像として保存されます。 埋め込み画像の詳細については、「[イメージ &#40;レポートビルダーと SSRS&#41;](report-design/images-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="other-considerations"></a>他の考慮事項  
+## <a name="other-considerations"></a>その他の考慮事項  
  上記のほか、Access からインポートされるレポートについては以下の事項も適用されます。  
   
 -   条件付き書式は、変換されません。  

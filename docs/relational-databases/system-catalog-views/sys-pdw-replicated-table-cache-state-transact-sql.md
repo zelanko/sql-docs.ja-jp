@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_replicated_table_cache_state (TRANSACT-SQL) |Microsoft Docs
-ms.custom: ''
+title: sys.pdw_replicated_table_cache_state (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -11,25 +11,25 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4ab853993091b5a8893dc23387a336a9944bd774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2ae652f584ceaad62379256f822527a316c30f89
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001103"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401737"
 ---
-# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (TRANSACT-SQL)
+# <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  レプリケートされたテーブルに関連付けられたキャッシュの状態を返します**object_id**します。  
+  **Object_id**によって、レプリケートされたテーブルに関連付けられたキャッシュの状態を返します。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|テーブルのオブジェクト ID。 参照してください[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。<br /><br /> **object_id**はこのビューのキーです。||  
-|state|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュの状態。|'NotReady','Ready'|  
+|object_id|**int**|テーブルのオブジェクト ID。 「 [Sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。<br /><br /> **object_id**は、このビューのキーです。||  
+|state|**nvarchar(40)**|このテーブルのレプリケートされたテーブルのキャッシュ状態です。|' NotReady '、' Ready '|  
   
 ## <a name="example"></a>例
-この例では、テーブル名と、レプリケートされたテーブルのキャッシュの状態を取得する sys.tables sys.pdw_replicated_table_cache_state を結合します。
+この例では、sys. pdw_replicated_table_cache_state をテーブルと結合して、レプリケートされたテーブルキャッシュのテーブル名と状態を取得します。
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -40,5 +40,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>次のステップ  
- SQL Data Warehouse と Parallel Data Warehouse のすべてのカタログ ビューの一覧は、次を参照してください。 [SQL Data Warehouse と並列データ ウェアハウスのカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)します。   
+ SQL Data Warehouse と並列データウェアハウスのすべてのカタログビューの一覧については、「 [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)」を参照してください。   
   

@@ -11,28 +11,28 @@ helpviewer_keywords:
 - environment handles [ODBC]
 - handles [ODBC], environment
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114319"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300442"
 ---
 # <a name="environment-handles"></a>環境ハンドル
-*環境*はデータにアクセスするためのグローバル コンテキストは、環境に関連付けられているなど、本質的にグローバルに適用されるすべての情報。  
+*環境*とは、データにアクセスするためのグローバルなコンテキストです。環境に関連付けられている情報は、次のように、本質的にグローバルな情報です。  
   
 -   環境の状態  
   
 -   現在の環境レベルの診断  
   
--   環境に現在割り当てられている接続の処理  
+-   環境で現在割り当てられている接続のハンドル  
   
--   環境の各属性の現在の設定  
+-   各環境属性の現在の設定  
   
- ODBC ドライバー マネージャー (ドライバー) を実装するコード内では、環境ハンドルは、この情報を格納する構造体を識別します。  
+ ODBC (ドライバーマネージャーまたはドライバー) を実装するコード内では、この情報を格納する構造体が環境ハンドルによって識別されます。  
   
- 環境ハンドルは、ODBC アプリケーションで頻繁には使用されません。 呼び出しで常に使用する**SQLDataSources**と**SQLDrivers**への呼び出しで使用されることと**SQLAllocHandle**、 **SQLEndTran**、**SQLFreeHandle**、 **SQLGetDiagField**、および**SQLGetDiagRec**します。  
+ ODBC アプリケーションでは、環境ハンドルは頻繁には使用されません。 これらは、 **Sqldatasources ソース**および**sqldatasources**の呼び出しで常に使用され、 **SQLAllocHandle**、 **SQLEndTran**、 **sqlfreehandle**、 **SQLGetDiagField**、 **SQLGetDiagRec**の呼び出しで使用されることがあります。  
   
- ODBC ドライバー マネージャー (ドライバー) を実装するコードの各部分には、1 つまたは複数の環境ハンドルが含まれています。 たとえば、ドライバー マネージャーは、それに接続されている各アプリケーションの別の環境ハンドルを保持します。 使用して環境ハンドルが割り当てられた**SQLAllocHandle**およびに解放された**SQLFreeHandle**します。
+ ODBC (ドライバーマネージャーまたはドライバー) を実装するコードの各部分には、1つまたは複数の環境ハンドルが含まれています。 たとえば、ドライバーマネージャーは、接続されているアプリケーションごとに個別の環境ハンドルを保持します。 環境ハンドルは**SQLAllocHandle**で割り当てられ、 **sqlfreehandle**と共に解放されます。

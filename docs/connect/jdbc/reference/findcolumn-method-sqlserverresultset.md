@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 56e01d155c90e5e57dc9c2add6f8fd3540892596
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954565"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920949"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public int findColumn(java.lang.String columnName)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この findColumn メソッドは、java. ResultSet インターフェイスの findColumn メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この findColumn メソッドは、java.sql.ResultSet インターフェイスの findColumn メソッドで指定されています。  
   
  同じ名前の列が複数存在する場合、findColumn メソッドは、大文字と小文字を区別して最初に一致した列を返します。 大文字と小文字を区別して一致する列が存在しない場合は、大文字と小文字の区別に関係なく最初に一致した列を返します。  
   

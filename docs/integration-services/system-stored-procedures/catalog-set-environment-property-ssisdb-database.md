@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 336262ae9d1779b44b5c0cb7f7f3a4664e834312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 858dcfba366fd6c7fdd8c0668c4379f8a836ea7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758179"
 ---
-# <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (SSISDB データベース)
+# <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの環境のプロパティを設定します。  
   
@@ -72,7 +72,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   環境名が無効  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このリリースで設定できるのは `Description` プロパティだけです。 `Description` プロパティのプロパティ値は 4,000 文字を超えることはできません。  
   
   

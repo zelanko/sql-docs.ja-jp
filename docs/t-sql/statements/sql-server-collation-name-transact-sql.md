@@ -17,16 +17,16 @@ ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94fa842b9af3fed45e9ad40e04c0029ffc135097
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099985"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009220"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 照合順序名 (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の照合順序名を指定する単一の文字列です。
 
@@ -36,7 +36,7 @@ ms.locfileid: "68099985"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 <SQL_collation_name> :: =
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 
@@ -60,7 +60,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **BIN** 使用するバイナリ並べ替え順を指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 現在のサーバーでサポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の一覧を表示するには、次のクエリを実行します。
 
@@ -70,7 +70,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> 並べ替え順 ID 80 では、コード ページ 1250 およびバイナリ順の任意の Window 照合順序を使用します。 例:Albanian_BIN、Croatian_BIN、Czech_BIN、Romanian_BIN、Slovak_BIN、Slovenian_BIN。
+> 並べ替え順 ID 80 では、コード ページ 1250 およびバイナリ順の任意の Window 照合順序を使用します。 たとえば、Albanian_BIN、Croatian_BIN、Czech_BIN、Romanian_BIN、Slovak_BIN、Slovenian_BIN を使用します。
 
 ## <a name="see-also"></a>参照
 

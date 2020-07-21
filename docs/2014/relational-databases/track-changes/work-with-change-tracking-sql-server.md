@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb8205a789894caf8c8e2d3c3f491751757bab6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047104"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
   変更の追跡を使用するアプリケーションは、追跡した変更を取得し、その変更を別のデータ ストアに適用して、ソース データベースを更新できる必要があります。 このトピックでは、これらのタスクの実行方法について説明します。また、フェールオーバーが発生してデータベースをバックアップから復元する必要がある場合に、変更の追跡が果たす役割についても説明します。  
   
-##  <a name="Obtain"></a> 変更追跡関数を使用した変更の取得  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> 変更追跡関数を使用した変更の取得  
  変更追跡関数を使用して、データベースに加えられた変更およびその変更に関する情報を取得する方法について説明します。  
   
 ### <a name="about-the-change-tracking-functions"></a>変更追跡関数について  
@@ -285,7 +284,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  変更の追跡 (または任意のカスタムの追跡メカニズム) を使用する場合にアプリケーションで使用する方法を選択する際には、十分な分析が必要です。 したがって、スナップショット分離を使用した方がはるかに簡単です。  
   
-##  <a name="Handles"></a> 変更の追跡でデータベースへの変更が処理されるしくみ  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>Change Tracking がデータベースへの変更を処理する方法  
  変更の追跡を使用するアプリケーションの中には、別のデータ ストアとの双方向の同期を行うものもあります。 この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで行われた変更が他のデータ ストアで更新され、他のデータ ストアで行われた変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで更新されます。  
   
  別のデータ ストアからの変更でローカル データベースを更新する際には、アプリケーションで次の操作を実行する必要があります。  
@@ -404,7 +403,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  スナップショット トランザクション内で更新の対象になっている行は、スナップショット トランザクションの開始後に別のトランザクションで更新されている可能性があります。 この場合はスナップショット分離の更新の競合が発生し、トランザクションは終了します。 この状況が発生した場合は、更新を再試行してください。 その結果、変更の追跡の競合が検出されることになり、行は変更されません。  
   
-##  <a name="DataRestore"></a> 変更の追跡とデータの復元  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>Change Tracking とデータの復元  
  同期が必要なアプリケーションでは、変更の追跡が有効になっているデータベースが以前のバージョンのデータに戻るケースを考える必要があります。 この状況は、非同期データベース ミラーへのフェールオーバーや、ログ配布の使用時のエラーに伴い、データベースがバックアップから復元された後に発生する可能性があります。 この問題を説明するシナリオを次に示します。  
   
 1.  テーブル T1 は変更の追跡の対象になっており、このテーブルの有効な最小バージョンは 50 になっています。  
@@ -431,14 +430,14 @@ COMMIT TRAN
   
 -   クライアントが変更クエリを実行した時点で、最終同期バージョンの番号をクライアントごとにサーバー上に記録する方法。 データに問題がある場合は、最終同期バージョンの番号が一致しません。 これによって、再初期化が必要であることがわかります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [変更の追跡について &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [変更の追跡の管理 &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
- [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+ [Change Tracking &#40;SQL Server について&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server の管理&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server を有効または無効にする&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [CHANGETABLE &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

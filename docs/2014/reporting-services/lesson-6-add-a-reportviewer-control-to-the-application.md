@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: アプリケーションに ReportViewer コントロールの追加 |Microsoft Docs'
+title: 'レッスン 6: アプリケーションに ReportViewer コントロールを追加する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108422"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>レッスン 6: アプリケーションに ReportViewer コントロールを追加する
@@ -24,17 +24,17 @@ ms.locfileid: "66108422"
   
 1.  **ソリューション エクスプローラー**で、 **Default.aspx**を右クリックし、 **[ビュー デザイナー]** をクリックします。  
   
-2.  **AJAX Extensions**グループにおいて、**ツールボックス**ウィンドウで、ドラッグ、 **ScriptManager**コントロールをデザイン画面。  
+2.  [**ツールボックス**] ウィンドウの [ **AJAX Extensions** ] グループから、 **ScriptManager**コントロールをデザイン画面にドラッグします。  
   
 3.  **[レポート]** から **ReportViewer** コントロールをデザイン画面の **ScriptManager** コントロールの下にドラッグします。  
   
 4.  **ReportViewer** コントロールの右上にある矢印をクリックして、 **[ReportViewer タスク]** ウィンドウを開きます。  
   
-5.  **レポートの選択**ボックスで、作成した親レポートを選択します。  
+5.  [**レポートの選択**] ボックスで、作成した親レポートを選択します。  
   
      レポートを選択すると、レポートで使用されているデータ ソースのインスタンスが自動的に作成されます。 それぞれの DataTable (とその [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) コンテナーを) をインスタンス化するためのコードが生成されます。 レポートで使用されているそれぞれのデータ ソースに対応する [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) コントロールがデザイン画面に追加されます。 このデータ ソース コントロールは自動的に構成されます。  
   
-     Microsoft Visual Studio 2012 を使用している場合は、完全修飾名が表示されている場合、プロジェクトの名前空間で完全修飾 DataSet1 に ObjectDataSource コントロールがバインドされていることを確認してください、 **ビジネスオブジェクトの選択**ドロップダウン リスト ボックス (たとえば、Projectnamespace.DataSet1TableAdapters.ProductTableAdapter)。 リスト ボックスにアクセスするには、ObjectDataSource を右クリックし、をクリックして**データ ソースの構成**します。  
+     Microsoft Visual Studio 2012 を使用している場合は、ObjectDataSource コントロールがプロジェクトの名前空間で完全に修飾されている DataSet1 にバインドされていることを確認してください ([**ビジネスオブジェクトの選択**] ボックスの一覧に完全修飾名が表示されている場合) (たとえば、DataSet1TableAdapters)。 リストボックスにアクセスするには、ObjectDataSource を右クリックし、[**データソースの構成**] をクリックします。  
   
 6.  [ビルド] メニューの [Web サイトのビルド] をクリックします。  
   

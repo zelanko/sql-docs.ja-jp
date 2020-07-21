@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635445"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の監視およびチューニング用のツールは次のとおりです。  
   
-|ツール|[説明]|  
+|ツール|説明|  
 |----------|-----------------|  
-|[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、 **@@CPU_BUSY** には、CPU が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードを実行している時間が格納されます。 **@@CONNECTIONS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続数または接続試行数が格納されます。 **@@PACKET_ERRORS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続で発生するネットワーク パケット数が格納されます。|  
+|[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、 **\@\@CPU_BUSY** には、CPU が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードを実行している時間が格納されます。 **\@\@CONNECTIONS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続数または接続試行数が格納されます。 **\@\@PACKET_ERRORS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続で発生するネットワーク パケット数が格納されます。|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC (データベース コンソール コマンド) ステートメントによって、パフォーマンス統計とデータベースの論理的および物理的一貫性を確認できます。|  
 |[データベース エンジン チューニング アドバイザー (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|データベース エンジン チューニング アドバイザーでは、チューニングするデータベースに対して実行した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパフォーマンス効果が分析されます。 データベース エンジン チューニング アドバイザーでは、インデックス、インデックス付きビュー、およびパーティションを追加、削除、または変更するための推奨設定が提供されます。|  
 |[Database Experimentation Assistant (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|Database Experimentation Assistant (DEA) は、SQL Server の新しい A/B テスト ソリューションです。 これは、特定のワークロードに対してターゲット バージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を評価する場合に役立ちます。 以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降) から任意の新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、DEA で比較分析メトリックを使用できるようになります。|
@@ -61,16 +61,16 @@ ms.locfileid: "68113515"
 |キャプチャしたイベントの再生||可 (1 台のコンピューターから)|可 (複数のコンピューターから)||||||  
 |アドホック監視|可<sup>1</sup>|はい|||はい|はい|はい|はい|  
 |警告の生成||||はい|||||  
-|グラフィック インターフェイス|はい|はい||はい|はい||はい|はい|  
+|グラフィカル インターフェイス|はい|はい||はい|はい||はい|はい|  
 |カスタム アプリケーション内での使用|はい|はい<sup>2</sup>||||はい|||  
   
- <sup>1</sup> [SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) の使用    
- <sup>2</sup> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] システム ストアド プロシージャの使用。  
+ <sup>1</sup>[SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) の使用    
+ <sup>2</sup>[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] システム ストアド プロシージャの使用。  
   
 ## <a name="windows-monitoring-tools"></a>Windows 監視ツール  
  Windows オペレーティング システムおよび Windows Server 2003 では、次の監視ツールが提供されています。  
   
-|ツール|[説明]|  
+|ツール|説明|  
 |----------|-----------------|  
 |タスク マネージャー|システム上で実行中のプロセスやアプリケーションの概要を示します。|  
 |ネットワーク モニター エージェント|ネットワーク トラフィックを監視します。|  

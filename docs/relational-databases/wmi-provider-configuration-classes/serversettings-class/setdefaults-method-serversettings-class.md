@@ -1,6 +1,6 @@
 ---
-title: SetDefaults メソッド (ServerSettings クラス) |Microsoft Docs
-ms.custom: ''
+title: SetDefaults メソッド (ServerSettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 094406b6bd8a07123049837318c00238ffaa2b84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c1f7670aa0e90f848c3f66e65df104181541dee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880733"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults メソッド (ServerSettings クラス)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  インスタンスのすべての既定値を設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既存のデータを上書きするオプションを使用します。  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 既存のデータを上書きするオプションを使用して、のインスタンスのすべての既定値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,22 +35,22 @@ ms.locfileid: "68052812"
 object.SetDefaults(OverwriteAll)  
 ```  
   
-## <a name="parts"></a>要素  
+## <a name="parts"></a>指定項目  
  *object*  
- A [ServerSettings クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)を表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント インスタンス。  
+ クライアントインスタンスを表す[Serversettings クラス](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*OverwriteAll*|インスタンス上の既存の値を上書きするかどうかを指定するブール値[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: **true**既存のデータを上書きするか、 **false**既存のデータを上書きしない場合。|  
+|*OverwriteAll*|のインスタンスの既存の値を上書きするかどうかを指定するブール値 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。既存のデータを上書きする場合は**true** 、既存のデータを上書きしない場合は**false**を指定します。|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- u**int32** 値。サービスが正常に変更された場合は 0、要求がサポートされない場合は 1 になります。それ以外の数値はエラーを示します。  
+ U**int32**値。サービスが正常に変更された場合は0、要求がサポートされていない場合は1になり、それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DefinedSize プロパティ |Microsoft Docs
+title: 未定義サイズプロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,38 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933212"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757398"
 ---
 # <a name="definedsize-property"></a>DefinedSize プロパティ
-データ容量を示します、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
+[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトのデータ容量を示します。  
   
 ## <a name="return-value"></a>戻り値  
- 返します、**長い**フィールド オブジェクトのデータ型によって異なります。 を参照してください フィールドの定義のサイズを反映した値[型](../../../ado/reference/ado-api/type-property-ado.md)詳細についてはします。 固定長データ型を使用するフィールドの場合は、戻り値は、(バイト単位) のデータ型のサイズです。 可変長データ型を使用するフィールドの場合これは、次のいずれかです。  
+ フィールドオブジェクトのデータ型に応じて、定義されたフィールドのサイズを反映する**Long 型**の値を返します。詳細については、「[型](../../../ado/reference/ado-api/type-property-ado.md)」を参照してください。 固定長データ型を使用するフィールドの場合、戻り値はデータ型のサイズ (バイト単位) になります。 可変長データ型を使用するフィールドの場合は、次のいずれかになります。  
   
-1.  文字のフィールドの最大長 (の**adVarChar**と**adVarWChar**) または (バイト単位) (の**adVarBinary**、および**adVarNumeric**) フィールドに定義された長さがある場合。 たとえば、 **adVarChar(5)** フィールドが 5 の最大長。  
+1.  フィールドの最大長 ( **adVarChar**と**adVarWChar**の場合)、またはフィールドに長さが定義されている場合は、バイト単位 ( **AdVarBinary**の場合は、 **adVarNumeric**の場合)。 たとえば、 **adVarChar (5)** フィールドの最大長は5です。  
   
-2.  文字データ型の最大長 (の**ファミリ**と**adWChar**) または (バイト単位) (の**adBinary**と**adNumeric**) 場合、フィールドには、定義された期間はありません。  
+2.  フィールドに長さが定義されていない場合、データ型の最大長 ( **Adchar**と**adchar**の場合) またはバイト単位 ( **adchar**と**adchar**の場合)。  
   
-3.  ~ 0 (ビット演算子、値は 0。 すべてのビットが 1 に設定されます) が定義されている最大長のフィールドもデータ型でもない場合。  
+3.  ~ 0 (ビットごとの、値が0ではありません。すべてのビットが1に設定されています)、フィールドとデータ型のどちらも定義された最大長を持っていません。  
   
-4.  長さがないデータ型では、この設定は ~ 0 (ビット演算子、値は 0。 すべてのビットが 1 に設定されます)。  
+4.  長さが指定されていないデータ型の場合、これは ~ 0 (ビットごとの、値が0ではなく、すべてのビットが1に設定されます) に設定されます。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **DefinedSize**のデータ容量を決定するプロパティを**フィールド**オブジェクト。  
+## <a name="remarks"></a>Remarks  
+ フィールドオブジェクトのデータ容量を確認するには、 **"** 定義済み**サイズ**" プロパティを使用します。  
   
- **DefinedSize**と[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティは異なります。 たとえば、**フィールド**の宣言された型を持つオブジェクト**adVarChar**と**DefinedSize** 50、1 つの文字を含むプロパティの値。 **ActualSize**返すプロパティの値が 1 つの文字の長さ (バイト単位)。  
+ [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティの値**は、それぞれ異なります。** たとえば、 **adVarChar**という宣言された型を持つ**Field**オブジェクトと、1つの文字を含む定義済みの**size**プロパティ値50を考えてみます。 返される**ActualSize**プロパティ値は、1文字の長さ (バイト単位) です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>関連項目  
- [ActualSize および DefinedSize プロパティの例 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize および DefinedSize プロパティの例 (vc++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ActualSize とのサイズプロパティの例 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [ActualSize とのサイズプロパティの例 (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [ActualSize プロパティ (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

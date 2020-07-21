@@ -6,7 +6,6 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 f1_keywords:
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3751c7876af92ac32fc7836583cbf9e06bcf414c
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68223597"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85088339"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "68223597"
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 
@@ -58,7 +57,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* - 分類される列が属するテーブルの名前です。
     - *column_name* - 分類を削除する列の名前です。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 - 1 つの "DROP SENSITIVITY CLASSIFICATION" ステートメントを使用して複数のオブジェクトの分類を削除できます。
 
@@ -67,7 +66,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
 
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 
 ### <a name="a-dropping-classification-from-a-single-column"></a>A. 1 つの列からの分類の削除

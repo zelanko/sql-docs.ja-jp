@@ -1,5 +1,5 @@
 ---
-title: sp_addtabletocontents (TRANSACT-SQL) |Microsoft Docs
+title: sp_addtabletocontents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e9d5e0e22f5dcca3611923782786a83ada1672ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117936"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876039"
 ---
-# <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用して一括で読み込んだ大量のデータを使用して**bcp**がマージ追跡トリガーは起動しません。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 **Bcp**を使用して大量のデータを一括で読み込む場合は、このオプションを使用します。これにより、マージ追跡トリガーは起動されません。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +39,22 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @table_name = ] 'table_name'` テーブルの名前です。 *table_name*は**sysname**、既定値はありません。  
+`[ @table_name = ] 'table_name'`テーブルの名前を指定します。 *table_name*は**sysname**であり、既定値はありません。  
   
-`[ @owner_name = ] 'owner_name'` テーブルの所有者の名前です。 *owner_name*は**sysname**、既定値は NULL です。  
+`[ @owner_name = ] 'owner_name'`テーブルの所有者の名前を指定します。 *owner_name*は**sysname**,、既定値は NULL です。  
   
-`[ @filter_clause = ] 'filter_clause'` 新しく読み込まれたデータの行をマージ追跡テーブルに追加するかを制御するフィルター句を指定します。 *filter_clause*は**nvarchar (4000)** 既定値は NULL です。 場合*filter_clause*は**null**、すべての一括が読み込まれた行が追加されます。  
+`[ @filter_clause = ] 'filter_clause'`新しく読み込まれたデータのどの行をマージ追跡テーブルに追加するかを制御するフィルター句を指定します。 *filter_clause*は**nvarchar (4000)**,、既定値は NULL です。 *Filter_clause*が**null**の場合は、一括読み込みされたすべての行が追加されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_addtabletocontents**マージ レプリケーションでのみ使用されます。  
+## <a name="remarks"></a>Remarks  
+ **sp_addtabletocontents**は、マージレプリケーションでのみ使用されます。  
   
- 内の行、 *table_name*によって参照される、 **rowguidcol**参照がマージ追跡テーブルに追加されます。 **sp_addtabletocontents**一括マージ レプリケーションを使用してパブリッシュされるテーブルにデータをコピーした後に使用する必要があります。 このストアド プロシージャは、コピーされた行のトラッキングを実行し、次の同期処理の際に新しい行を確実に挿入します。  
+ *Table_name*内の行は**rowguidcol**によって参照され、その参照がマージ追跡テーブルに追加されます。 **sp_addtabletocontents**は、マージレプリケーションを使用してパブリッシュされたテーブルにデータを一括コピーした後に使用する必要があります。 このストアド プロシージャは、コピーされた行のトラッキングを実行し、次の同期処理の際に新しい行を確実に挿入します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addtabletocontents**します。  
+ **Sp_addtabletocontents**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

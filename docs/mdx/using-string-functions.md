@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037996"
 ---
 # <a name="using-string-functions"></a>文字列関数の使用
 
 
-  文字列関数は、多次元式 (MDX) 内のほとんどすべてのオブジェクトに対して使用できます。 ストアド プロシージャでは、主にオブジェクトを文字列表記に変換するために文字列関数を使用します。 また、文字列式をオブジェクトに対して評価して値を返すために文字列関数を使用することもできます。  
+  文字列関数は、多次元式 (MDX) 内のほとんどすべてのオブジェクトに対して使用できます。 ストアド プロシージャでは、主にオブジェクトを文字列表記に変換するために文字列関数を使用します。 文字列関数を使用して、値を返すためにオブジェクトに対して文字列式を評価することもできます。  
   
- 最も広く使用されている文字列関数は**Name**と**Uniquename**です。 これらの関数はそれぞれ、オブジェクトの名前と一意の名前を返します。 ほとんどの場合、これらは、計算をデバッグする際に、関数によって返されるメンバーを検出するために使用されます。  
+ 最も広く使用されている文字列関数は、 **Name**と**Uniquename**です。 これらの関数はそれぞれ、オブジェクトの名前と一意の名前を返します。 ほとんどの場合、これらは、計算をデバッグする際に、関数によって返されるメンバーを検出するために使用されます。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリでは、これらの関数の使用方法を示しています。  
+ 次のクエリ例では、これらの関数の使用方法を示しています。  
   
  `WITH`  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68037996"
   
  `FROM [Adventure Works]`  
   
- **Generate**を一連のすべてのメンバーに文字列関数を実行し、結果を連結関数を使用できます。 また、セットの内容を視覚化できるようになるため、計算をデバッグする際に役立つ場合もあります。 次の例では、この用途で関数を使用する方法を示します。  
+ **Generate**関数を使用すると、セットのすべてのメンバーに対して文字列関数を実行し、結果を連結できます。 これは、セットの内容を視覚化できるように計算をデバッグする場合にも役立ちます。 次の例では、この用途で関数を使用する方法を示します。  
   
  `WITH`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037996"
   
  `FROM [Adventure Works]`  
   
- 広く使われているもう 1 つのグループの文字列関数は、オブジェクトやそのオブジェクトに解決される式の一意の名前を含む文字列を、そのオブジェクト自体にキャストできるようにする関数です。 次のクエリを示していますが、どのように**StrToMember**と**StrToSet**関数は。  
+ 広く使用されている文字列関数のグループとして、オブジェクトの uniquename を含む文字列、またはオブジェクトに解決される式をオブジェクト自体にキャストできるものがあります。 次のクエリの例では、 **Strtomember**関数と**StrToSet**関数がこの処理を実行する方法を示しています。  
   
  `SELECT`  
   
@@ -98,14 +98,14 @@ ms.locfileid: "68037996"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  **StrToMember**と**StrToSet**関数は、注意して使用する必要があります。 これらの関数を計算の定義内で使用すると、クエリのパフォーマンスが低下する場合があります。  
+>  **Strtomember**関数と**StrToSet**関数は、注意して使用する必要があります。 計算定義内で使用されている場合、クエリのパフォーマンスが低下する可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [Generate&#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Name&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [MDX&#41;を生成 &#40;](../mdx/generate-mdx.md)   
+ [MDX&#41;&#40;名前](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [Functions&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
- [ストアド プロシージャの使用&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [関数 &#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
+ [MDX&#41;&#40;のストアドプロシージャの使用](../mdx/using-stored-procedures-mdx.md)   
  [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
  [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
   

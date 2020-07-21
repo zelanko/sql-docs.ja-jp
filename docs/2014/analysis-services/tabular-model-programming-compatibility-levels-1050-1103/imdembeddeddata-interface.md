@@ -1,5 +1,5 @@
 ---
-title: IMDEmbedded インターフェイス |Microsoft Docs
+title: IMDEmbedded Interface |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757777"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940113"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded インターフェイス
   IMDEmbedded インターフェイスは、埋め込みの PowerPivot データベースまたはテーブル モデル データベースを管理するために使用されるパブリック インターフェイスです。 このインターフェイスは、`IPersistStream` インターフェイスから継承されます。 このインターフェイスでは、次の操作を実行できます。  
@@ -30,18 +29,18 @@ ms.locfileid: "62757777"
   
 -   現在の埋め込み操作を取り消します。  
   
--   埋め込みオブジェクトを保存するストリームの推定サイズ (単位: バイト) を取得します。 このプロパティは、`IPersistStream` から継承されています。  
+-   埋め込みオブジェクトを保存するストリームの推定サイズ (バイト単位) を取得します。 このプロパティは、`IPersistStream` から継承されています。  
   
--   埋め込みデータベースが最後に保存されてから変更されていないことを確認します。 このプロパティは、`IPersistStream` から継承されています。  
+-   埋め込みデータベースが最後に保存されてから変更されたかどうかを確認します。 このプロパティは、`IPersistStream` から継承されています。  
   
--   ローカルまたはインプロセス エンジンに埋め込み型データベースを読み込みます。 このプロパティは、`IPersistStream` から継承されています。  
+-   ローカルまたはインプロセスエンジンに埋め込みデータベースを読み込みます。 このプロパティは、`IPersistStream` から継承されています。  
   
 -   ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 このプロパティは、`IPersistStream` から継承されています。  
   
-## <a name="reference"></a>リファレンス  
- 次の参照、`IMDEmbedded`インターフェイス**msmd.h**ヘッダー ファイル。  
+## <a name="reference"></a>関連項目  
+ 次のリファレンスでは、 `IMDEmbedded` **msmd.h**ヘッダーファイルに示されているインターフェイスについて説明します。  
   
-### <a name="source-file-pxoembeddeddataidl"></a>ソース ファイル:PXOEmbeddedData.idl  
+### <a name="source-file-pxoembeddeddataidl"></a>ソース ファイル: PXOEmbeddedData.idl  
   
 ```  
 [  
@@ -98,7 +97,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  ストリーム識別子へのアクセス中にエラーが発生しました。  
   
-#### <a name="remarks"></a>コメント  
+#### <a name="remarks"></a>注釈  
  現在の接続に埋め込みデータベースが含まれているかどうかを確認するには、OLE DB 接続プロパティから DBPROP_MSMD_EMBEDDED_DATA プロパティの値を確認してください。  
   
  DBPROP_MSMD_EMBEDDED_DATA は、次のいずれかの値をとります。  
@@ -109,7 +108,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|現在のアプリケーションには埋め込みデータベースが含まれています。|  
 |DBPROPVAL_EMBED_LINKED|0x02|埋め込みデータベースはリモート アプリケーション (SharePoint Server など) でホストされています。|  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +138,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  コンテナー URL の設定中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +168,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  フラグの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +198,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  パスの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -229,7 +228,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  埋め込み操作の取り消し中にエラーが発生しました。  
   
-#### <a name="source"></a>ソース  
+#### <a name="source"></a>source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -315,7 +314,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>説明  
- ローカルまたはインプロセス データベースをコンテナー ドキュメント内の埋め込みストリームに保存します。 このプロパティは、`IPersistStream` から継承されています。  
+ ローカルまたはプロセス内のデータベースをコンテナードキュメント内の埋め込みストリームに保存します。 このプロパティは、`IPersistStream` から継承されています。  
   
 #### <a name="parameters"></a>パラメーター  
  *in_pStm*  

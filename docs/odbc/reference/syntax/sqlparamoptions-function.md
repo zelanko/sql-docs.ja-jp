@@ -18,26 +18,26 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343530"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306913"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 関数
 **互換性**  
- 導入されたバージョン:ODBC 1.0 標準準拠:非推奨  
+ 導入されたバージョン: ODBC 1.0 標準準拠: 非推奨  
   
- **概要**  
+ **まとめ**  
  Odbc 2.0 関数の**Sqlparamoptions**が odbc 3 で置き換えられました。*x*は[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を呼び出します。  
   
 > [!NOTE]  
->  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G:[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。旧バージョンとの互換性のためのドライバーガイドライン。  
+>  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アプリケーションが64ビットのオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

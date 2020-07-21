@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: aa71ebe23557ab470748b3108fc1263469a193cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "62745523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050556"
 ---
-# <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (拡張ストアド プロシージャ API)
+# <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -66,7 +65,7 @@ count
 |SRV_DONE_COUNT|*count* パラメーターに有効なカウントを格納します。|  
 |SRV_DONE_ERROR|現在のクライアント コマンドがエラーを受け取ったことを示します。|  
   
- *info*  
+ *インフォメーション*  
  2 バイトの予約フィールドです。 この値は 0 に設定します。  
   
  *count*  
@@ -75,7 +74,7 @@ count
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  サーバーは 1 つのクライアント要求から、複数のコマンドを実行して複数の結果セットを返すことができます。 **srv_senddone** は、各結果セットに対して結果完了メッセージをクライアントに返す必要があります。  
   
  *count* フィールドは、コマンドの影響を受ける行数を示します。 *count* フィールドにカウントが格納されている場合は、*status* フィールドに SRV_DONE_COUNT フラグを設定する必要があります。 この設定により、*count* の値が 0 かどうか、*count* フィールドが使用されていないのかをクライアントが区別できるようになります。  

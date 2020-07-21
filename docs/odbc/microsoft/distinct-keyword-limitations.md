@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DISTINCT keyword limitations [ODBC]
 - ODBC SQL grammar, DISTINCT keyword limitations
 ms.assetid: 111e2dd7-d64e-4670-8bf0-2135d0a056b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b0167e804111cdbbc0db9437134d898942d8aa3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 62a3dfd87587d8ded5925bf1e53b64b232649d87
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071904"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303473"
 ---
 # <a name="distinct-keyword-limitations"></a>DISTINCT キーワードの制限事項
-長いテキスト フィールド (Microsoft Access) またはメモ フィールド (dBASE) はサポートされていません。
+長いテキストフィールド (Microsoft Access) またはメモフィールド (dBASE) ではサポートされていません。

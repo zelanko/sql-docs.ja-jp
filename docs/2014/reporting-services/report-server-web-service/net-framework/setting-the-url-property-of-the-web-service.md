@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520288"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Web サービスの Url プロパティの設定
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションでは、アプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL をいつでも変更できます。 そのためには、サービス オブジェクトの **Url** プロパティを設定します。 例 :  
+  アプリケーションで[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]いつでも、アプリケーションの現在の送信先であるレポートサーバー Web サービスのベース URL を変更できます。 そのためには、サービス オブジェクトの **Url** プロパティを設定します。 次に例を示します。  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -106,7 +106,7 @@ class Sample
   
  Web サービスの最初のプロキシの作成については、「[Web サービス プロキシの作成](creating-the-web-service-proxy.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](building-applications-using-the-web-service-and-the-net-framework.md)   

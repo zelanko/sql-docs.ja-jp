@@ -1,5 +1,5 @@
 ---
-title: もう 1 つ (Visual Database Tools) の 1 つのデータベース ダイアグラムからテーブルをコピー |Microsoft Docs
+title: データベースダイアグラム間でのテーブルのコピー (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1b0d70a5d8121963d424f25eef517af7cde4ba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea42bb5047daa0a291e9ab34bbec1e28f35f642e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058193"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>データベース ダイアグラム間でのテーブルのコピー (Visual Database Tools)
   データベース ダイアグラムから同じデータベースの他のデータベース ダイアグラムにテーブルをコピーできます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62720072"
  どちらかのダイアグラムでテーブルを編集すると、両方のダイアグラムに変更が反映されます。 同様に、どちらかのダイアグラムのテーブルを保存すると、どちらのダイアグラムでもテーブルは "変更済み" と見なされなくなります。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [データベースダイアグラムの使用 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [ダイアグラムへのテーブルの追加 (Visual Database Tools)](add-tables-to-diagrams-visual-database-tools.md)  
   
   

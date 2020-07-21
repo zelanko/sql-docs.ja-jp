@@ -1,6 +1,7 @@
 ---
-title: チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する | Microsoft Docs
-ms.custom: ''
+title: チュートリアル:トランザクション レプリケーションの構成
+description: このチュートリアルでは、常時接続の 2 つの SQL Server 間でトランザクション レプリケーションを構成する方法を説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720705"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 トランザクション レプリケーションは、常時接続サーバー間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、レプリケーション トポロジを簡単に設定し、管理できます。 
 
 このチュートリアルでは、常時接続サーバー間にトランザクション レプリケーション トポロジを設定する方法を学習します。 トランザクション レプリケーションのしくみについては、[トランザクション レプリケーションの概要](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication)に関するページを参照してください。 
@@ -37,7 +38,7 @@ ms.locfileid: "68769410"
 > * サブスクリプションを検証し、待機時間を計測する。
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルは、データベースの基本的な操作は理解しているが、レプリケーション機能についてはあまり詳しくないユーザーを対象としています。 このチュートリアルを行うには、[チュートリアル: レプリケーション用の SQL Server の準備](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)に関するページを完了しておく必要があります。  
   
 このチュートリアルを実行するには、SQL Server、SQL Server Management Studio (SSMS)、および AdventureWorks データベースが必要です。  
@@ -49,7 +50,7 @@ ms.locfileid: "68769410"
   
 - サブスクライバー サーバー (レプリケーション先) に、[!INCLUDE[ssEW](../../includes/ssew-md.md)] を除く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のエディションをインストールします。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] は、トランザクション レプリケーションのサブスクライバーとして使用できません。  
   
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
 - [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードします。 SSMS でデータベースを復元する方法の詳細については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
  
@@ -105,7 +106,7 @@ ms.locfileid: "68769410"
 
     ![[エージェント セキュリティ] ページと [スナップショット エージェントのセキュリティ] ダイアログ ボックス](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. 同様に、ログ リーダー エージェントのプロセス アカウントとして <*パブリッシャー コンピューター名*> **\repl_logreader** を設定します。 次に **[OK]** を選択します。  
+12. 同様に、ログ リーダー エージェントのプロセス アカウントとして <*パブリッシャー コンピューター名*> **\repl_logreader** を設定します。 **[OK]** をクリックします。  
 
     ![[ログ リーダー エージェントのセキュリティ] ダイアログ ボックスと [エージェント セキュリティ] ページ](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -115,8 +116,6 @@ ms.locfileid: "68769410"
     ![パブリケーション名が表示された [ウィザードの完了] ページ](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. パブリケーションが作成されたら、 **[閉じる]** を選択してウィザードを閉じます。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 パブリケーションを作成しようとしたときに、SQL Server エージェントが実行されていないと、次のエラーが発生する可能性があります。 このエラーは、パブリケーションは正常に作成されたが、スナップショット エージェントが起動できなかったことを示しています。 これが発生した場合は、SQL Server エージェントを起動してから、手動でスナップショット エージェントを起動する必要があります。 次のセクションで手順について説明します。 
 
@@ -146,8 +145,8 @@ ms.locfileid: "68769410"
   
 2. **[ローカル パブリケーション]** フォルダーを展開し、 **[AdvWorksProductTrans]** パブリケーションを右クリックして、 **[プロパティ]** を選択します。  **[パブリケーションのプロパティ]** ダイアログ ボックスが表示されます。    
   
-   A. **[パブリケーション アクセス リスト]** ページを選択して、 **[追加]** を選択します。  
-   B. **[パブリケーション アクセスの追加]** ダイアログ ボックスで、<*パブリッシャー コンピューター名*> **\repl_distribution** を選択して **[OK]** を選択します。
+   a. **[パブリケーション アクセス リスト]** ページを選択して、 **[追加]** を選択します。  
+   b. **[パブリケーション アクセスの追加]** ダイアログ ボックスで、<*パブリッシャー コンピューター名*> **\repl_distribution** を選択して **[OK]** を選択します。
    
    ![パブリケーション アクセス リストにログインを追加する選択](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -193,9 +192,9 @@ ms.locfileid: "68769410"
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサブスクライバーに接続します。 **[セキュリティ]** を展開して **[ログイン]** を右クリックし、 **[新しいログイン]** をクリックします。     
   
-   A. **[全般]** ページの **[ログイン名]** の下で **[検索]** を選択し、<*サブスクライバー コンピューター名*> **\repl_distribution** のログインを追加します。
+   a. **[全般]** ページの **[ログイン名]** の下で **[検索]** を選択し、<*サブスクライバー コンピューター名*> **\repl_distribution** のログインを追加します。
 
-   B. **[ユーザー マッピング]** ページで、**ProductReplica** データベースにログイン **db_owner** メンバーシップを付与します。 
+   b. **[ユーザー マッピング]** ページで、**ProductReplica** データベースにログイン **db_owner** メンバーシップを付与します。 
 
    ![サブスクライバーのログインを構成する選択](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -211,10 +210,10 @@ ms.locfileid: "68769410"
    ![[同期の状態の表示] ダイアログ ボックスを開く選択](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. **[AdvWorksProductTrans]** の下にサブスクリプションが表示されない場合は、F5 キーを押して一覧を更新します。  
   
-詳細については、以下をご覧ください。  
+詳細については、次を参照してください。  
 - [スナップショットを使用したサブスクリプションの初期化](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)  
-- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
+- [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)  
 
 ## <a name="measure-replication-latency"></a>レプリケーションの待機時間を計測する
 このセクションでは、トレーサー トークンを使って、変更内容がサブスクライバーにレプリケートされているかどうかを確認し、待機時間を決定します。 待機時間は、パブリッシャー側で行われた変更がサブスクライバーに表示されるのにかかる時間です。
@@ -225,22 +224,22 @@ ms.locfileid: "68769410"
 
 2. 左ペインでパブリッシャー グループを展開し、パブリッシャー インスタンスを展開して、 **[AdvWorksProductTrans]** パブリケーションを選択します。  
   
-   A. **[トレーサー トークン]** タブを選択します。  
-   B. **[トレーサーの挿入]** を選択します。    
+   a. **[トレーサー トークン]** タブを選択します。  
+   b. **[トレーサーの挿入]** を選択します。    
    c. 次の列にトレーサー トークンの経過時間を表示します。 **[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)** 、 **[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)** 、 **[合計待機時間]** 。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。
 
    ![トレーサー トークンの情報](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-詳細については、以下をご覧ください。 
+詳細については、次を参照してください。 
 - [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [トランザクション レプリケーション エージェントでエラーを見つける](troubleshoot-tran-repl-errors.md)
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 トランザクション レプリケーション用にパブリッシャーとサブスクライバーの両方を正しく構成しました。 これで、パブリッシャーで **Product** テーブルに対してデータを挿入、更新、または削除することができます。 その後、サブスクライバーで **Product** テーブルに対してクエリを実行して、レプリケートされた変更を表示することができます。 
 
 次の記事では、マージ レプリケーションを構成する方法について説明します。  
 
 > [!div class="nextstepaction"]
-> [チュートリアル: サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する](tutorial-replicating-data-with-mobile-clients.md)
+> [チュートリアル:サーバーとモバイル クライアントの間のレプリケーション (マージ) を構成する](tutorial-replicating-data-with-mobile-clients.md)

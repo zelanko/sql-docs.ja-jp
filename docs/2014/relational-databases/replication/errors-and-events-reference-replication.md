@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d40f4f16c3ab8997ddee5c565a5ff3131e70a0f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010706"
 ---
 # <a name="errors-and-events-reference-replication"></a>エラーとイベントのリファレンス (レプリケーション)
   ここでは、レプリケーションに関連するさまざまなエラーの原因と解決方法について説明します。  
   
-|[エラー]|メッセージ|  
+|エラー|Message|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](mssql-eng002601.md)|一意インデックス '%.*ls' を含むオブジェクト '%.\*ls' には重複するキー行を挿入できません。|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|制約 '%.*ls' の %ls 違反。 オブジェクト '%.\*ls' には重複したキーを挿入できません。") です。|  
@@ -76,7 +75,7 @@ ms.locfileid: "62721320"
 |MSSQL_ENG021642。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '%s' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。|  
 |MSSQL_ENG021663。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|ソース テーブル [%s].[%s] に有効な主キーが見つかりません。|  
 |MSSQL_ENG021684。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|Oracle パブリッシャー '%s' の管理者ログインに関連付けられた権限が不十分です。|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' は、形式で有効な Windows ログインである必要があります。有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' は次の形式の有効な Windows ログインにしてください: 'MACHINE\Login' または 'DOMAIN\Login'。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|続行する前に、'%s' エージェント ジョブを '%s' 経由で追加してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|プロセスは、'%1' を '%2' で実行できませんでした。|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|マージ プロセスが、'%1' で生成履歴を変更できませんでした。 トラブルシューティングを行うには、詳細な履歴ログとの同期を再開して、書き込み先の出力ファイルを指定してください。|  

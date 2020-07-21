@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d8b47f2da5e16e83abf6846d33ac7ce9e38aa6af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4c895e71da13d7de38bf5dfc64f27829206d25
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911457"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "71283113"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>レッスン 6-1:レッスン 5 のパッケージをコピーする
 

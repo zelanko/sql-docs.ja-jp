@@ -14,40 +14,40 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965437"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763652"
 ---
 # <a name="procedures-collection-adox"></a>Procedures コレクション (ADOX)
-すべてを含む[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)カタログのオブジェクト。  
+カタログのすべての[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)のメソッド、**プロシージャ**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
+## <a name="remarks"></a>解説  
+ **Procedures**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   新しいプロシージャを使用して、コレクションに追加、 **Append**メソッド。  
+-   **追加**メソッドを使用して、新しいプロシージャをコレクションに追加します。  
   
- 残りのプロパティとメソッドは、ADO のコレクションに標準的です。 可能な代替手段としては以下の方法があります。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
--   使用して、コレクション内のプロシージャのアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のプロシージャにアクセスします。  
   
--   使用して、コレクションに含まれるプロシージャの数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクションに含まれているプロシージャの数を返します。  
   
--   使用して、コレクションからプロシージャを削除、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッド。  
+-   [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、コレクションからプロシージャを削除します。  
   
--   現在のデータベース スキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Parameters コレクションおよび Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+## <a name="see-also"></a>参照  
+ [Command プロパティと CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Parameters コレクション、Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Procedures Delete メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Procedures Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   

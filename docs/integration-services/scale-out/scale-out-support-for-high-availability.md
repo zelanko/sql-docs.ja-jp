@@ -1,5 +1,5 @@
 ---
-title: 高可用性を実現するための SQL Server Integration Services (SSIS) Scale Out のサポート | Microsoft Docs
+title: 高可用性を実現するための Scale Out のサポート | Microsoft Docs
 description: この記事では、高可用性を実現するために SSIS Scale Out を構成する方法について説明します
 ms.custom: performance
 ms.date: 05/23/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 2bcb7e2af7646059f6cb7ee38a4f136f1a62ae2b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028749"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924829"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -31,8 +31,8 @@ Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog
 
 SSIS カタログに Always On を使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
-## <a name="1-prerequisites"></a>1.Prerequisites
-Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
+## <a name="1-prerequisites"></a>1.前提条件
+Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.プライマリ ノードに Scale Out Master をインストールする
 Scale Out Master のプライマリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 
@@ -53,7 +53,7 @@ Scale Out Master のプライマリ ノードに SQL Server データベース �
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3.セカンダリ ノードに Scale Out Master をインストールする
 Scale Out Master のセカンダリ ノードに SQL Server データベース エンジン サービス、Integration Services、Scale Out Master をインストールします。 
 
-プライマリ ノードで使用したものと同じ Scale Out Master 証明書を使用します。 プライマリ ノードで、Scale Out Master SSL 証明書を秘密キーと共にエクスポートし、セカンダリ ノード上のローカル コンピューターのルート証明書ストアにインストールします。 セカンダリ ノードに Scale Out Master をインストールするときに、この証明書を選択します。
+プライマリ ノードで使用したものと同じ Scale Out Master 証明書を使用します。 プライマリ ノードで、Scale Out Master TLS/SSL 証明書を秘密キーと共にエクスポートし、セカンダリ ノード上のローカル コンピューターのルート証明書ストアにインストールします。 セカンダリ ノードに Scale Out Master をインストールするときに、この証明書を選択します。
 
 ![HA マスターの構成 2](media/ha-master-config2.PNG)
 
@@ -113,7 +113,7 @@ Azure の仮想マシンでは、この構成手順の他に追加の手順が�
 ## <a name="upgrade-scale-out-in-high-availability-environment"></a>高可用性環境で Scale Out をアップグレードする
 高可用性環境で Scale Out をアップグレードするには、[Always On for SSIS Catalog のアップグレード手順](../catalog/ssis-catalog.md#Upgrade)に従い、各コンピューター上の Scale Out Master と Scale Out Worker をアップグレードし、上記の手順 7 の Windows Server フェールオーバー クラスター ロールを新しいバージョンの Scale Out Master サービスを使用して再作成します。
 
-## <a name="next-steps"></a>次の手順
-詳細については、次の記事をご覧ください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次の記事を参照してください。
 -   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticlecolumn (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergearticlecolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891647"
 ---
-# <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-sql)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  マージ パブリケーションの指定のテーブルまたはビュー アーティクル内の列の一覧を返します。 ストアド プロシージャには列がないので、アーティクルとしてストアド プロシージャを指定してこのストアド プロシージャを実行するとエラーが返されます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージ パブリケーションの指定のテーブルまたはビュー アーティクル内の列の一覧を返します。 ストアド プロシージャには列がないので、アーティクルとしてストアド プロシージャを指定してこのストアド プロシージャを実行するとエラーが返されます。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,26 +38,26 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。*パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。*publication*は**sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` テーブルまたは情報を取得するアーティクルであるビューの名前です。*記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'`情報を取得するアーティクルであるテーブルまたはビューの名前を指定します。*アーティクル*は**sysname**で、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|列を識別します。|  
-|**column_name**|**sysname**|テーブルまたはビューの列の名前です。|  
-|**公開**|**bit**|列名がパブリッシュされているかどうかを指定します。<br /><br /> **1**列がパブリッシュされていることを指定します。<br /><br /> **0**公開しないことを指定します。|  
+|**column_name**|**sysname**|テーブルまたはビューの列の名前を指定します。|  
+|**投稿**|**bit**|列名がパブリッシュされているかどうかを指定します。<br /><br /> **1**は、列がパブリッシュされることを示します。<br /><br /> **0**は、パブリッシュされていないことを示します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_helpmergearticlecolumn**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpmergearticlecolumn**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **replmonitor**ディストリビューション データベースまたはパブリケーションのパブリケーション アクセス リストの固定データベース ロールが実行できる**sp_helpmergearticlecolumn**します。  
+ **Sp_helpmergearticlecolumn**を実行できるのは、ディストリビューションデータベースの**replmonitor**固定データベースロールのメンバー、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
