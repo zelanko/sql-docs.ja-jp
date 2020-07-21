@@ -1,7 +1,8 @@
 ---
 title: SQL Server 監査のアクション グループとアクション | Microsoft Docs
+description: SQL Server Audit のサーバー レベル、データベース レベル、および監査レベルのアクション グループと個々のアクションについて説明します。
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 43e294d7252afc3297012dbb60b5bcbfb86ba586
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872780"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301901"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよび個別のイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査は、0 個以上の監査アクション項目で構成されます。 これらの監査アクション項目には、アクションのグループ (Server_Object_Change_Group など) を使用することも、個別のアクション (テーブルに対する SELECT 操作など) を使用することもできます。  
@@ -77,8 +78,8 @@ ms.locfileid: "82872780"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
 |BACKUP_RESTORE_GROUP|このイベントは、バックアップまたは復元のコマンドが実行されるたびに発生します。 [Audit Backup/Restore イベント クラス](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)と同じです。|  
-|BATCH_COMPLETED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が完了するたびに発生します。 これは、バッチが完了した後に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体 (結果を含む) を監査します。|  
-|BATCH_STARTED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が開始されるたびに発生します。 これは、実行前に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体を監査します。|  
+|BATCH_COMPLETED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が完了するたびに発生します。 これは、バッチが完了した後に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体 (結果を含む) を監査します。 **SQL Server 2019 で追加されました。**|  
+|BATCH_STARTED_GROUP|このイベントは、バッチ テキスト、ストアド プロシージャ、またはトランザクション管理操作の実行が開始されるたびに発生します。 これは、実行前に発生し、クライアントから送信されたバッチまたはストアド プロシージャのテキスト全体を監査します。 **SQL Server 2019 で追加されました。**|  
 |BROKER_LOGIN_GROUP|このイベントは、Service Broker トランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)と同じです。|  
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 このイベントは、任意のデータベースが作成、変更、または削除されるたびに発生します。 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)と同じです。|  
 |DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。|  

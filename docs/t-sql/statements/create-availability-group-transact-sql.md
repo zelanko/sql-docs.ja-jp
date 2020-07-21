@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151557"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393180"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能に対して有効である場合、新しい可用性グループを作成します。  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]機能に対して有効である場合、新しい可用性グループを作成します。  
   
 > [!IMPORTANT]  
 >  新しい可用性グループの初期プライマリ レプリカとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで CREATE AVAILABILITY GROUP を実行します。 このサーバー インスタンスは、Windows Server フェールオーバー クラスタリング (WSFC) ノードに存在している必要があります。  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>引数  
- *group_name*  
- 新しい可用性グループの名前を指定します。 *group_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[識別子](../../relational-databases/databases/database-identifiers.md)であり、WSFC クラスター内のすべての可用性グループ間で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
+
+*group_name*  
+新しい可用性グループの名前を指定します。 *group_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[識別子](../../relational-databases/databases/database-identifiers.md)であり、WSFC クラスター内のすべての可用性グループ間で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  バックアップを実行する場所を選択する際の、バックアップ ジョブによるプライマリ レプリカの評価方法についての優先設定を指定します。 自動バックアップの優先設定を考慮して、特定のバックアップ ジョブのスクリプトを作成できます。 優先設定は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適用されるものではないので、アドホック バックアップには影響がないことを理解しておくことが重要です。  
   
  サポートされる値は次のとおりです。  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  既存の可用性グループの自動バックアップ設定を確認するには、[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューの **automated_backup_preference** 列または **automated_backup_preference_desc** 列を選択します。 さらに、[sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) を使用して、優先されるバックアップ レプリカを決定することができます。  `AUTOMATED_BACKUP_PREFERENCE = NONE` の場合でも、この関数は少なくとも 1 つのレプリカに対して 1 を返します。  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  この可用性グループの自動フェールオーバーをトリガーするエラー状態を指定します。 FAILURE_CONDITION_LEVEL はグループ レベルで設定されますが、同期コミット可用性モードに構成されている (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 可用性レプリカにのみ適用されます。 さらに、エラー状態が自動フェールオーバーをトリガーできるのは、プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードに構成されていて (FAILOVER_MODE **=** AUTOMATIC)、セカンダリ レプリカが現在プライマリ レプリカと同期されている場合だけです。  
   
  エラー状態レベルの範囲は 1 ～ 5 で、レベル 1 が最も制限が緩く、レベル 5 が最も制限の厳しい指定です。 任意の状態レベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も厳しい状態レベル 5 にはそれより制限が緩い状態レベル (1 から 4) が含まれ、レベル 4 にはレベル 1 から 3 が含まれます。以下同様です。 次の表では、各レベルに対応するエラー状態について説明します。  
@@ -162,7 +166,7 @@ CREATE AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 値と HEALTH_CHECK_TIMEOUT 値は、特定のグループに対する*柔軟なフェールオーバー ポリシー*を定義します。 この柔軟なフェールオーバー ポリシーを使用すると、自動フェールオーバーを引き起こす条件をきめ細かく制御できます。 詳細については、「[可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)」を参照してください。  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってサーバーの状態情報が返されるのを待機する時間 (ミリ秒単位) を指定します。この時間が経過すると、WSFC クラスターはサーバー インスタンスが速度低下またはハングしているものと見なします。 HEALTH_CHECK_TIMEOUT はグループ レベルで設定されますが、自動フェールオーバーで同期コミット可用性モードが構成されている (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 可用性レプリカにのみ適用されます。  さらに、正常性チェック タイムアウトが自動フェールオーバーをトリガーできるのは、プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードに構成されていて (FAILOVER_MODE **=** AUTOMATIC)、セカンダリ レプリカが現在プライマリ レプリカと同期されている場合だけです。  
+ [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってサーバーの状態情報が返されるのを待機する時間 (ミリ秒単位) を指定します。この時間が経過すると、WSFC クラスターはサーバー インスタンスが速度低下または応答停止しているものと見なします。 HEALTH_CHECK_TIMEOUT はグループ レベルで設定されますが、自動フェールオーバーで同期コミット可用性モードが構成されている (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 可用性レプリカにのみ適用されます。  さらに、正常性チェック タイムアウトが自動フェールオーバーをトリガーできるのは、プライマリとセカンダリの両方のレプリカが自動フェールオーバー モードに構成されていて (FAILOVER_MODE **=** AUTOMATIC)、セカンダリ レプリカが現在プライマリ レプリカと同期されている場合だけです。  
   
  HEALTH_CHECK_TIMEOUT の既定値は 30000 ミリ秒 (30 秒) です。 最小値は 15,000 ミリ秒 (15 秒)、最大値は 4,294,967,295 ミリ秒です。  
   
@@ -207,7 +211,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  可用性グループの作成時に 4 つ未満のセカンダリ レプリカを指定した場合は、[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、いつでもセカンダリ レプリカを追加作成できます。 このステートメントを使用すると、既存の可用性グループから任意のセカンダリ レプリカを削除することもできます。  
   
- \<server_instance> レプリカのホストである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのアドレスを指定します。 アドレスの形式は、インスタンスが既定のインスタンスか名前付きインスタンスか、またスタンドアロン インスタンスかフェールオーバー クラスター インスタンス (FCI) かによって、次のように異なります。  
+ \<server_instance> レプリカのホストである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアドレスを指定します。 アドレスの形式は、インスタンスが既定のインスタンスか名前付きインスタンスか、またスタンドアロン インスタンスかフェールオーバー クラスター インスタンス (FCI) かによって、次のように異なります。  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
@@ -442,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  NetBIOS では、dns_name の最初の 15 文字のみが認識されます。 同じ Active Directory で制御されている 2 つの WSFC クラスターがあり、両方のクラスターで可用性グループ リスナーを作成しようとする場合、15 文字より長い名前を使用して、15 文字のプレフィックスが同一であると、エラーが表示され、仮想ネットワーク名リソースをオンラインにできなかったことがレポートされます。 DNS 名のプレフィックスに対する名前付け規則の詳細については、「 [ドメイン名を割り当てる](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx)」を参照してください。  
   
- \<listener_option> LISTENER は次のいずれかの \<listener_option> オプションを受け取ります。 
+ \<listener_option> LISTENER には、次のいずれかの \<listener_option> オプションを指定できます。 
   
  WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  可用性グループ リスナーが動的ホスト構成プロトコル (DHCP) を使用することを指定します。  必要に応じて、ON 句を使用して、このリスナーが作成されるネットワークを識別します。 DHCP は、可用性グループのレプリカをホストする各サーバー インスタンスに使用される単一のサブネットに限定されます。  
@@ -482,7 +486,7 @@ CREATE AVAILABILITY GROUP group_name
   
  AVAILABILITY GROUP Transact-SQL ステートメントの制限については、「[AlwaysOn 可用性グループの Transact-SQL ステートメントの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
@@ -496,7 +500,7 @@ CREATE AVAILABILITY GROUP group_name
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|この自動バックアップの設定によって、プライマリ レプリカがオンラインの唯一のレプリカである場合を除いて、バックアップがセカンダリ レプリカで発生することが示されます (これが既定の動作です)。 AUTOMATED_BACKUP_PREFERENCE 設定が作用するためには、自動バックアップの設定が考慮されるようにバックアップ ジョブのスクリプトを可用性データベースに作成する必要があります。|  
 |FAILURE_CONDITION_LEVEL|3|このエラー条件レベル設定は、孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなど、SQL Server 内部の深刻なエラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
-|HEALTH_CHECK_TIMEOUT|600000|正常性チェックのタイムアウト値を 60 秒に設定します。同期コミット レプリカ (自動フェールオーバー有効) をホストしているサーバー インスタンスについての状態情報が [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャから返されるまで、WSFC クラスターは 60000 ミリ秒待機します。その時間を経過すると、ホスト サーバー インスタンスは速度低下またはハングしているものと見なされます (既定値は 30000 ミリ秒です)。|  
+|HEALTH_CHECK_TIMEOUT|600000|正常性チェックのタイムアウト値を 60 秒に設定します。同期コミット レプリカ (自動フェールオーバー有効) をホストしているサーバー インスタンスについての状態情報が [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャから返されるまで、WSFC クラスターは 60000 ミリ秒待機します。その時間を経過すると、ホスト サーバー インスタンスは速度低下または応答停止しているものと見なされます (既定値は 30000 ミリ秒です)。|  
   
  3 つの可用性レプリカは、`COMPUTER01`、`COMPUTER02`、および `COMPUTER03` という名前のコンピューター上の既定のサーバー インスタンスによってホストされます。 次の表は、レプリカ オプションの指定値をレプリカごとにまとめたものです。  
   
@@ -584,6 +588,3 @@ GO
  [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

@@ -1,5 +1,6 @@
 ---
 title: サポートされていない機能 - インメモリ OLTP
+description: このトピックでは、メモリ最適化オブジェクトに対してサポートされていない SQL Server の機能について説明します。 サポートされるようになったインメモリ OLTP の機能をご確認ください。
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 611fb6d081167053240bcf105d28e63b74c69ada
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77558322"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279273"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされていない SQL Server の機能
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能で、メモリ最適化オブジェクトと共に使用できないものについて説明します。 さらに、最後のセクションでは、インメモリ OLTP でサポートされておらず、後にサポートされるようになった機能の一覧を示します。
   
@@ -38,7 +39,7 @@ ms.locfileid: "77558322"
 |リンク サーバー|メモリ最適化テーブルと同じクエリまたはトランザクションで、リンク サーバーにアクセスすることはできません。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。|  
 |一括ログ記録|データベースの復旧モデルにかかわらず、持続性のあるメモリ最適化テーブル上のすべての操作は、常に完全にログに記録されます。|  
 |最小ログ記録|最小ログ記録は、メモリ最適化テーブルではサポートされていません。 最小ログ記録の詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」および「[一括インポートで最小ログ記録を行うための前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。|  
-|変更の追跡|変更の追跡は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができません。 |
+|変更の追跡|メモリ最適化テーブルでは、変更履歴はサポートされていません。 |
 | DDL トリガー | インメモリ OLTP テーブルまたはネイティブ コンパイル モジュールでは、データベースレベルとサーバーレベルの DDL トリガーはどちらもサポートされません。 |  
 | 変更データ キャプチャ (CDC) | メモリ最適化テーブルが含まれるデータベースで CDC を有効にする、SQL Server 2017 CU15 以上のサポート。 これはデータベースとデータベース内のオンディスク テーブルにのみ該当します。 以前のバージョンの SQL Server では、CDC の内部で DROP TABLE に対して DDL トリガーが使用されているため、メモリ最適化テーブルが含まれるデータベースでは CDC を使用できません。 |  
 | ファイバー モード | ファイバー モードは、メモリ最適化テーブルではサポートされていません。<br /><br />ファイバー モードがアクティブな場合は、メモリ最適化ファイル グループが含まれたデータベースを作成することも、既存データベースへのメモリ最適化ファイル グループの追加を行うこともできません。<br /><br />メモリ最適化ファイル グループが含まれたデータベースを使用している場合に、ファイバー モードを有効にすることはできます。 ただし、ファイバー モードを有効にするには、サーバーを再起動する必要があります。 このような場合、メモリ最適化ファイル グループを含むデータベースは回復できません。 メモリ最適化ファイル グループを含むデータベースのファイバー モードでの使用が無効になっていることを示すエラー メッセージが表示されます。<br /><br />ファイバー モードがアクティブであれば、メモリ最適化ファイル グループが含まれたデータベースのアタッチおよび復元は失敗します。 また、データベースが SUSPECT としてマークされます。<br /><br />詳細については、「 [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)」を参照してください。 |  

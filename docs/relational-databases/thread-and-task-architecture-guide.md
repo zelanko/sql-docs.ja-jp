@@ -1,7 +1,8 @@
 ---
 title: スレッドおよびタスクのアーキテクチャ ガイド | Microsoft Docs
+description: SQL Server のスレッドとタスクのアーキテクチャについて説明します。これには、タスクのスケジューリング、ホット アド CPU、64 個を超える CPU を搭載したコンピューターの使用に関するベスト プラクティスが含まれます。
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287356"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158920"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>オペレーティング システムのタスクのスケジューリング
 スレッドは、オペレーティング システムによって実行できる処理の最小単位であり、アプリケーションのロジックを複数の同時実行パスに分離することができます。 スレッドは、複雑なアプリケーションに同時に実行できるタスクが多数ある場合に役立ちます。 
@@ -34,19 +35,122 @@ ms.locfileid: "79287356"
 ## <a name="sql-server-task-scheduling"></a>SQL Server のタスクのスケジューリング
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスコープでは、**要求**がクエリまたはバッチの論理表現になります。 また、要求では、チェックポイントやログ ライターなどのシステム スレッドに必要な操作も表されます。 要求は有効期間を通してさまざまな状態になり、要求の実行に必要なリソースを使用できないときは待機できます ([ロック](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)または[ラッチ](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)など)。 要求の状態の詳細については、「[sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」を参照してください。
 
-**タスク**は、要求を満たすために完了する必要がある作業の単位を表します。 1 つの要求に 1 つまたは複数のタスクを割り当てることができます。 並列要求には、順次ではなく同時に実行される複数のアクティブなタスクがあります。 順次実行される要求のアクティブなタスクは、特定の時点で 1 つだけです。 タスクは、有効期間全体を通してさまざまな状態になります。 タスクの状態の詳細については、「[sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照してください。 SUSPENDED 状態のタスクは、タスクの実行に必要なリソースが使用可能になるのを待機しています。 待機中のタスクの詳細については、「[sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)」を参照してください。
+**タスク**は、要求を満たすために完了する必要がある作業の単位を表します。 1 つの要求に 1 つまたは複数のタスクを割り当てることができます。 
+-  並列要求には、順次ではなく同時に実行される複数のアクティブなタスクがあります (1 つの**親タスク** (または調整タスク) と複数の**子タスク**から成る)。 並列要求の実行プランには、プランの直列分岐 (並列で実行されない演算子を持つプランの領域) が含まれている場合があります。 親タスクもそれらの順次演算子を実行します。
+-  順次要求では、実行時の特定の時点でアクティブなタスクが 1 つだけ存在します。     
+タスクは、有効期間全体を通してさまざまな状態になります。 タスクの状態の詳細については、「[sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照してください。 SUSPENDED 状態のタスクは、タスクの実行に必要なリソースが使用可能になるのを待機しています。 待機中のタスクの詳細については、「[sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)」を参照してください。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の**ワーカー スレッド** (ワーカーまたはスレッドとも呼ばれます) は、オペレーティング システムのスレッドを論理的に表現したものです。 順次要求を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが生成されて、アクティブなタスクが実行されます。 [行モード](../relational-databases/query-processing-architecture-guide.md#execution-modes)で並列要求を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが割り当てられ、ワーカーに割り当てられたタスクを実行する子ワーカーが調整されます。 各タスクに対して生成されるワーカー スレッドの数は、以下に依存します。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の**ワーカー スレッド** (ワーカーまたはスレッドとも呼ばれます) は、オペレーティング システムのスレッドを論理的に表現したものです。 **順次要求**を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが生成されて、アクティブなタスクが実行されます (1:1)。 [行モード](../relational-databases/query-processing-architecture-guide.md#execution-modes)で**並列要求**を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが割り当てられ、ワーカーに割り当てられたタスクを実行する子ワーカーが調整されます (この場合も 1:1)。これは**親スレッド** (または調整スレッド) とも呼ばれます。 親スレッドには、関連付けられている親タスクがあります。 親スレッドとは、エンジンがクエリを解析する前から存在している要求のエントリ ポイントです。 親スレッドの主な役割は次のとおりです。 
+-  並列スキャンを調整します。
+-  子並列ワーカーを開始します。
+-  並列スレッドから行を収集し、クライアントに送信します。
+-  ローカル集計とグローバル集計を実行します。    
+
+> [!NOTE]
+> クエリ プランに直列分岐と並列分岐がある場合、並列タスクの 1 つが直列分岐の実行を担当します。 
+
+各タスクに対して生成されるワーカー スレッドの数は、以下に依存します。
 -   クエリ オプティマイザーによって決定された並列処理に対して要求が適格であったかどうか。
 -   現在の負荷に基づいてシステムで実際に使用可能な[並列処理の次数 (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP)。 これは、並列処理の最大限度 (MAXDOP) のサーバー構成に基づく推定 DOP とは異なる場合があります。 たとえば、MAXDOP のサーバー構成が 8 であっても、実行時に使用可能な DOP は 2 しかないことがあり、クエリのパフォーマンスに影響します。 
 
 > [!NOTE]
-> **並列処理の最大限度 (MAXDOP)** の制限は、要求ごとではなく、タスクごとに設定されます。 つまり、並列クエリの実行の間に、1 つの要求で複数のタスクを生成し、各タスクで MAXDOP の制限まで複数のワーカーを使用できます。 MAXDOP の詳細については、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
+> **並列処理の最大限度 (MAXDOP)** の制限は、要求ごとではなく、タスクごとに設定されます。 つまり、並列クエリの実行の間に、1 つの要求で複数のタスクを MAXDOP の上限まで生成します。各タスクは 1 つのワーカーを使用します。 MAXDOP の詳細については、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
 
 **スケジューラ** (SOS スケジューラとも呼ばれます) では、タスクに代わって作業を実行するために処理時間を必要とするワーカー スレッドが管理されます。 各スケジューラは、個々のプロセッサ (CPU) にマップされます。 ワーカーがスケジューラでアクティブな状態を維持できる時間は、OS クォンタムと呼ばれ、最大 4 ミリ秒です。 クォンタム時間が経過したワーカーは、CPU リソースへのアクセスを必要とする他のワーカーに時間を明け渡し、その状態を変更します。 CPU リソースへのアクセスを最大化するためのワーカー間のこのような連携は、**協調スケジューリング** (または非プリエンプティブ スケジューリング) と呼ばれます。 その後、ワーカーの状態の変化は、そのワーカーに関連付けられたタスクと、タスクに関連付けられた要求に伝達されます。 ワーカーの状態の詳細については、「[sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)」を参照してください。 スケジューラの詳細については、「[sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」を参照してください。 
 
+要約すると、**要求**によって、作業単位を実行するための 1 つ以上の**タスク**が生成される場合があります。 各タスクは、タスクを実行する**ワーカー スレッド**に割り当てられます。 タスクをアクティブに実行するために、各ワーカー スレッドをスケジュールする (**スケジューラ**に配置する) 必要があります。 
+
+### <a name="scheduling-parallel-tasks"></a>並列タスクのスケジューリング
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が MaxDOP 8 で構成され、CPU アフィニティが NUMA ノード 0 と 1 で 24 個の CPU (スケジューラ) 用に構成されているとします。 スケジューラ 0 から 11 は NUMA ノード 0 に属しており、スケジューラ 12 から 23 は NUMA ノード 1 に属しています。 アプリケーションは、次のクエリ (要求) を[!INCLUDE[ssde_md](../includes/ssde_md.md)]に送信します。
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> [AdventureWorks2016_EXT サンプル データベース](../samples/adventureworks-install-configure.md)を使用して、この例のクエリを実行できます。 テーブル `Sales.SalesOrderHeader` および `Sales.SalesOrderDetail` が 50 回拡大され、`Sales.SalesOrderHeaderBulk` と `Sales.SalesOrderDetailBulk` に名前が変更されました。
+
+実行プランには、2 つのテーブル間の[ハッシュ結合](../relational-databases/performance/joins.md#hash)と、並列で実行される各演算子 (黄色の円で囲まれた 2 つの矢印で示されています) が示されています。 それぞれの並列処理演算子は、プラン内で別個の分岐になります。 したがって、次の実行プランには 3 つの分岐があります。 
+
+![並列クエリ プラン](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> 実行プランがツリーとして考えられる場合、**分岐**は、並列処理演算子 (交換反復子とも呼ばれます) の間にある 1 つ以上の演算子をグループ化するプランの領域になります。 プランの演算子の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。 
+
+実行プランには 3 つの分岐がありますが、実行中の任意の時点で、この実行プランで同時に実行できる分岐は 2 つだけです。
+1.  `Sales.SalesOrderHeaderBulk` で*クラスター化インデックス スキャン*が使用される分岐 (結合のビルド入力) は、単独で実行されます。
+2.  その後、*クラスター化インデックス スキャン*が `Sales.SalesOrderDetailBulk` (結合のプローブ入力) で使用される分岐は、*ビットマップ*が作成され、*Hash Match* が同時に実行される分岐と同時に実行されます。
+
+次のプラン表示 XML では、16 個のワーカー スレッドが予約され、NUMA ノード 0 で使用されています。
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
+</ThreadStat>
+```
+
+スレッド予約により、要求に必要なすべてのタスクを実行するのに十分なワーカー スレッドを[!INCLUDE[ssde_md](../includes/ssde_md.md)]で確保できます。 スレッドは、数個の NUMA ノードで予約できます。また、1 つの NUMA ノードのみで予約することもできます。 スレッド予約は、実行が開始される前にランタイムで行われ、スケジューラの負荷に依存します。 予約されるワーカー スレッドの数は、***同時分岐*  *  *ランタイム DOP*** の式で算出され、親ワーカー スレッドは除外されます。 各分岐は、MaxDOP と同じ数のワーカー スレッドに制限されます。 この例では、2 つの同時分岐と MaxDOP が 8 に設定されているため **2 * 8 = 16** となります。
+
+参考までに、「[ライブ クエリ統計](../relational-databases/performance/live-query-statistics.md)」のライブ実行プランをご覧ください。ここでは、1 つの分岐が実行された後に、2 つの分岐が同時に実行されています。
+
+![ライブ並列クエリ プラン](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は、アクティブなタスクを実行するためにワーカー スレッドを割り当てます (1:1)。これは、次の例に示すように、[sys. dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) DMV に対してクエリを実行することで、クエリの実行中に確認できます。
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> 親タスクの場合、列 `parent_task_address` は常に NULL になります。 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] 現在実行中の分岐に対して 17 個のアクティブなタスクがあることに注目してください。予約されたスレッドに対応する 16 個の子タスクと、親タスク (調整タスク) です。
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> 非常にビジーな [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、予約されたスレッドによって設定された制限を超えて、アクティブなタスクが多数表示される可能性があります。 これらのタスクは、使用されなくなっていて、過渡的な状態にあり、クリーンアップされるのを待っている分岐に属する場合があります。 
+
+16 個の子タスクのそれぞれに異なるワーカー スレッドが割り当てられているものの (`worker_address` 列に表示)、すべてのワーカーが 8 つのスケジューラ (0、5、6、7、8、9、10、11) の同じプールに割り当てられている点に注目してください。また、親タスクはこのプール以外のスケジューラ (3) に割り当てられています。
+
+> [!IMPORTANT]
+> ある分岐の並列タスクの最初のセットがスケジュールされた後、[!INCLUDE[ssde_md](../includes/ssde_md.md)]は、他の分岐のその他のタスクにもスケジューラのその同じプールを使用します。 これは、実行プラン全体のすべての並列タスクで同じセットのスケジューラが使用されることを意味します。これは MaxDOP によってのみ制限されます。  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、タスクの実行に常に同じ NUMA ノードからスケジューラを割り当てようとし、スケジューラが利用可能な場合はそれらを (ラウンドロビン方式で) 順番に割り当てます。 ただし、親タスクに割り当てられたワーカー スレッドは、他のタスクとは異なる NUMA ノードに配置される場合があります。
+
+ワーカー スレッドは、スケジューラでクォンタムの期間 (4 ミリ秒) だけアクティブにしておくことができます。また、別のタスクに割り当てられたワーカー スレッドがアクティブになる可能性があるため、そのクォンタムが経過した後にスケジューラを生成する必要があります。 ワーカーのクォンタムの有効期限が切れ、アクティブでなくなった場合、RUNNABLE 状態になるまで、各タスクは RUNNING 状態の FIFO キューに配置されます。これは、ラッチやロックなど、その時点では利用できないリソースへのアクセスをタスクが必要としないことを想定しています。そのような場合、それらのリソースが利用可能になるまで、タスクが RUNNABLE ではなく SUSPENDED の状態になります。  
+
+> [!TIP] 
+> 上に示した DMV の出力では、すべてのアクティブなタスクが SUSPENDED 状態になっています。 待機中のタスクの詳細を確認するには、[sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV に対してクエリを実行してください。 
+
+要約すると、並列要求によって複数のタスクが生成されます。各タスクは 1 つのワーカー スレッドに割り当てられる必要があり、各ワーカー スレッドは 1 つのスケジューラに割り当てられる必要があります。 そのため、使用中のスケジューラの数は、分岐ごとの並列タスクの数 (MaxDOP で設定) を超えることはできません。 
+
 ### <a name="allocating-threads-to-a-cpu"></a>CPU へのスレッドの割り当て
-既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスによってそれぞれのスレッドが開始され、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスのスレッドは、オペレーティング システムにより、負荷に基づいてコンピューターのプロセッサ (CPU) 間に分散されます。 処理関係がオペレーティング システム レベルで有効な場合、オペレーティング システムによって各スレッドが特定の CPU に割り当てられます。 これに対し、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の**ワーカー スレッド**は**スケジューラ**に割り当てられ、スレッドはスケジューラによって CPU 間に均等に分散されます。
+既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスによってそれぞれのスレッドが開始され、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスのスレッドは、オペレーティング システムにより、負荷に基づいてコンピューターのプロセッサ (CPU) 間に分散されます。 処理関係がオペレーティング システム レベルで有効な場合、オペレーティング システムによって各スレッドが特定の CPU に割り当てられます。 これに対し、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、ラウンドロビン方式で CPU 間に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **ワーカー スレッド**を均等に分散する**スケジューラ**にスレッドを割り当てます。
     
 マルチタスク処理を実行するため、たとえば複数のアプリケーションが CPU の同じセットにアクセスするときなど、オペレーティング システムによってワーカー スレッドが異なる CPU に移動される場合があります。 オペレーティング システムにとっては効率的であっても、この操作で各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドに CPU を割り当てると、プロセッサのリロードが回避され、CPU 間でのスレッドの移行が減ることにより (それにより、コンテキストの切り替えが減ります)、パフォーマンスを改善できます。このようなスレッドとプロセッサの間の関連付けは、"プロセッサ アフィニティ" と呼ばれます。 関係 (affinity) が有効な場合、オペレーティング システムにより、各スレッドが特定の CPU に割り当てられます。 
 
@@ -115,7 +219,7 @@ SQL トレースおよび SQL Profiler は、運用環境で使用しないこ�
 > [!IMPORTANT]
 > SQL トレースと [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] は、非推奨です。 Microsoft SQL Server の Trace や Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 
-> 代わりに拡張イベントを使用します。 [拡張イベント](../relational-databases/extended-events/extended-events.md)の詳細については、「[クイック スタート: SQL Server 拡張イベント](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページを参照してください。
+> 代わりに拡張イベントを使用します。 [拡張イベント](../relational-databases/extended-events/extended-events.md)について詳しくは、「[クイック スタート:SQL Server 拡張イベント](../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページをご覧ください。
 
 > [!NOTE]
 > Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] は非推奨とされず、引き続きサポートされます。

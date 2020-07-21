@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152169"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196074"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps ツール
 
@@ -313,9 +313,9 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 |プロパティ  |説明  |Notes  |
 |---------|---------|---------|
-|name|パラメーターの名前。|パラメーターは、"*プロジェクト パラメーター*" または "*パッケージ パラメーター*" にすることができます。 <br> パラメーターは、親プロジェクトに存在しない場合はスキップされます。|
-|container|パラメーターのコンテナー。|<li>パラメーターがプロジェクト パラメーターの場合、*container* はプロジェクト名である必要があります。 <li>パッケージ パラメーターの場合、*container* は、拡張子が **.dtsx** のパッケージ名である必要があります。 <li> パラメーターが接続マネージャー プロパティの場合、名前は次の形式である必要があります: **CM.\<接続マネージャー名 >.\<プロパティ名>** 。|
-|value|パラメーターの値。|<li>*valueType* が *referenced* の場合: 値は *string* 型の環境変数への参照です。 <li> *valueType* が *literal* の場合: この属性では、任意の有効な "*ブール値*"、"*数値*"、および "*文字列*" の JSON 値がサポートされます。 <br> 値は、ターゲット パラメーターの型に変換されます。 変換できない場合はエラーが発生します。<li> *null* の値は無効です。 タスクではこのパラメーター オブジェクトがスキップされ、警告が示されます。|
+|name|パラメーターの名前。|<li>パラメーターには、プロジェクト パラメーターまたはパッケージ パラメーターを使用できます。 <li>存在しない場合は、パラメーターはスキップされます。 <li>パラメーターが接続マネージャー プロパティの場合、名前は **CM.\<Connection Manager Name>.\<Property Name>** の形式である必要があります。 |
+|container|パラメーターのコンテナー。|<li>パラメーターがプロジェクト パラメーターの場合、*container* はプロジェクト名である必要があります。 <li>パッケージ パラメーターの場合、*container* は、拡張子が **.dtsx** のパッケージ名である必要があります。|
+|value|パラメーターの値。|<li>*valueType* が *referenced* の場合: 値は *string* 型の環境変数への参照です。 <li> *valueType* が *literal* の場合: この属性では、任意の有効な "*ブール値*"、"*数値*"、および "*文字列*" の JSON 値がサポートされます。 <li> 値は、ターゲット パラメーターの型に変換されます。 変換できない場合はエラーが発生します。<li> *null* の値は無効です。 タスクではこのパラメーター オブジェクトがスキップされ、警告が示されます。|
 |valueType|パラメーター値の型。|有効な型は次のとおりです。 <br> *literal*: *value* 属性はリテラル値を表します。 <br> *referenced*: *value* 属性は、環境変数への参照を表します。|
 
 ##### <a name="reference-attributes"></a>参照属性
@@ -344,6 +344,12 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 |sensitive|環境変数の値が機微であるかどうか。|有効な入力は次のとおりです。 <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-102"></a>バージョン 1.0.2
+
+リリース日:2020 年 5 月 26 日
+
+- 構成作業が完了した後に SSIS Catalog Configuration タスクが失敗する場合があるという問題を修正しました。
 
 ### <a name="version-101"></a>Version 1.0.1
 

@@ -1,5 +1,6 @@
 ---
 title: 透過的なデータ暗号化 (TDE) | Microsoft Docs
+description: SQL Server、Azure SQL Database、Azure Synapse Analytics のデータを暗号化する Transparent Data Encryption について説明します。これは、保存データの暗号化として知られています。
 ms.custom: ''
 ms.date: 05/09/2019
 ms.prod: sql
@@ -18,16 +19,16 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e64ad8fb58258006fedbf527b26b59f8120f3ec8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987422"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380885"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 *透過的なデータ暗号化* (TDE) では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]、および [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] のデータ ファイルを暗号化します。 この暗号化は、保存データの暗号化として知られています。
 
@@ -81,7 +82,7 @@ TDE 暗号化のアーキテクチャを次の図に示します。 [!INCLUDE[ss
 
 ![Transparent Database Encryption のアーキテクチャ](../../../relational-databases/security/encryption/media/tde-architecture.png)
 
-## <a name="using-transparent-data-encryption"></a>Transparent Data Encryption の使用
+## <a name="enable-tde"></a>TDE を有効にする
 
 TDE を使用するには、次の手順を実行します。
 
@@ -170,7 +171,7 @@ TDE では、データベース内のすべてのファイルとファイル グ
 > [!TIP]
 > データベースの TDE 状態の変更を監視するには、SQL Server Audit または SQL Database 監査を使用します。 SQL Server の場合、TDE は監査アクション グループ DATABASE_CHANGE_GROUP の下で追跡されます。これは「[SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」で確認できます。
 
-### <a name="restrictions"></a>制限
+## <a name="restrictions"></a>制限
 
 最初のデータベース暗号化、キー変更、またはデータベースの暗号化解除の実行中は、次の操作は許可されません。
 
@@ -222,7 +223,29 @@ CREATE DATABASE ENCRYPTION KEY、ALTER DATABASE ENCRYPTION KEY、DROP DATABASE E
 
 非対称キーでデータベース暗号化キーを暗号化するには、その非対称キーが拡張キー管理プロバイダーに存在している必要があります。
 
-### <a name="transparent-data-encryption-and-transaction-logs"></a>Transparent Data Encryption とトランザクション ログ
+## <a name="tde-scan"></a>TDE スキャン
+
+データベースで TDE を有効にするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で暗号化スキャンを行う必要があります。 スキャンによって、データ ファイルからバッファー プールに各ページが読み取られ、暗号化されたページがディスクに書き戻されます。
+
+暗号化スキャンをより詳細に制御できるように、[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] には、suspend および resume 構文を含む、TDE スキャンが導入されています。 システムのワークロードが大きい場合や、ビジネス クリティカルな時間に、スキャンを一時停止し、後でスキャンを再開することができます。
+
+TDE 暗号化のスキャンを一時停止するには、次の構文を使用します。
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+同様に、TDE 暗号化のスキャンを再開するには、次の構文を使用します。
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+encryption_scan_state 列が、dm_database_encryption_keys 動的管理ビューに追加されました。 暗号化スキャンの現在の状態が表示されています。 また、暗号化スキャンの状態が最後に変更された日時を含む、encryption_scan_modify_date という新しい列もあります。
+
+暗号化スキャンが一時停止されている間に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再起動した場合、メッセージは起動時にエラー ログに記録されます。 このメッセージは、既存のスキャンが一時停止されていることを示します。
+
+## <a name="tde-and-transaction-logs"></a>TDE とトランザクション ログ
 
 データベースで TDE を使用できるようにすると、現在の仮想トランザクション ログの残りの部分が削除されます。 削除時に、次のトランザクション ログが強制的に作成されます。 この動作により、データベースが暗号化対象として設定された後にログにクリア テキストが残らないことが保証されます。
 
@@ -245,11 +268,11 @@ GO
 
 データベース暗号化キーを 2 回変更する場合は、データベース暗号化キーを再度変更する前にログ バックアップを行う必要があります。
 
-### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption と tempdb システム データベース
+## <a name="tde-and-the-tempdb-system-database"></a>TDE と tempdb システム データベース
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上の他のデータベースが TDE を使用して暗号化されている場合、**tempdb** システム データベースは暗号化されます。 この暗号化が、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上にある暗号化されていないデータベースのパフォーマンスに影響する可能性があります。 **tempdb** システム データベースの詳細については、「[tempdb データベース](../../../relational-databases/databases/tempdb-database.md)」を参照してください。
 
-### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption とレプリケーション
+## <a name="tde-and-replication"></a>TDE とレプリケーション
 
 レプリケーションでは、TDE が有効になっているデータベースのデータが暗号化された形式で自動的にレプリケートされることはありません。 ディストリビューションおよびサブスクライバー データベースを保護する場合は、TDE を個別に有効にします。
 
@@ -257,39 +280,39 @@ GO
 
 詳細については、「[データベース エンジンへの暗号化接続の有効化 (SQL Server 構成マネージャー)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。
 
-### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption と FILESTREAM データ
+## <a name="tde-and-always-on"></a>TDE と Always On    
+[暗号化されたデータベースを Always On 可用性グループに追加](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)できます。  
+
+可用性グループに含まれるデータベースを暗号化するには、プライマリ レプリカで[データベース暗号化キー](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)を作成する前に、すべてのセカンダリ レプリカでマスター キーと証明書、または非対称キー (EKM) を作成します。  
+
+証明書がデータベース暗号化キー (DEK) の保護に使用されている場合、プライマリ レプリカで作成された[証明書をバックアップ](../../../t-sql/statements/backup-certificate-transact-sql.md)し、すべてのセカンダリ レプリカで[ファイルから証明書を作成](../../../t-sql/statements/create-certificate-transact-sql.md)してからプライマリ レプリカでデータベース暗号化キーを作成します。 
+
+## <a name="tde-and-filestream-data"></a>TDE と FILESTREAM データ
 
 TDE を有効にした場合でも、**FILESTREAM** データは暗号化されません。
 
 <a name="scan-suspend-resume"></a>
 
-## <a name="transparent-data-encryption-scan"></a>Transparent Data Encryption スキャン
+## <a name="remove-tde"></a>TDE の削除
 
-データベースで TDE を有効にするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で暗号化スキャンを行う必要があります。 スキャンによって、データ ファイルからバッファー プールに各ページが読み取られ、暗号化されたページがディスクに書き戻されます。
-
-暗号化スキャンをより詳細に制御できるように、[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] には、suspend および resume 構文を含む、TDE スキャンが導入されています。 システムのワークロードが大きい場合や、ビジネス クリティカルな時間に、スキャンを一時停止し、後でスキャンを再開することができます。
-
-TDE 暗号化のスキャンを一時停止するには、次の構文を使用します。
+`ALTER DATABASE` ステートメントを使用してデータベースから暗号化を削除します。
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 ```
 
-同様に、TDE 暗号化のスキャンを再開するには、次の構文を使用します。
+データベースの状態を表示するには、[sys.dm_database_encryption_keys](../../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使います。
 
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
+暗号化の解除が完了するまで待機し、その後、[DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md) でデータベース暗号化キーを削除します。
 
-encryption_scan_state 列が、dm_database_encryption_keys 動的管理ビューに追加されました。 暗号化スキャンの現在の状態が表示されています。 また、暗号化スキャンの状態が最後に変更された日時を含む、encryption_scan_modify_date という新しい列もあります。
+> [!IMPORTANT]
+> TDE に使用されているマスター キーと証明書を安全な場所にバックアップします。 データベースが TDE で暗号化されたときに取得されたバックアップを復元するには、マスター キーと証明書が必要です。 データベース暗号化キーを削除したら、ログをバックアップし、それから復号されたデータベースの完全なバックアップを新しく作成します。 
 
-暗号化スキャンが一時停止されている間に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再起動した場合、メッセージは起動時にエラー ログに記録されます。 このメッセージは、既存のスキャンが一時停止されていることを示します。
-
-## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption とバッファー プール拡張機能
+## <a name="tde-and-buffer-pool-extension"></a>TDE とバッファー プール拡張
 
 TDE を使用してデータベースを暗号化する場合、バッファー プール拡張機能 (BPE) に関連するファイルは暗号化されません。 これらのファイルについては、ファイル システム レベルで BitLocker や EFS などの暗号化ツールを使用します。
 
-## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption とインメモリ OLTP
+## <a name="tde-and-in-memory-oltp"></a>TDE とインメモリ OLTP
 
 インメモリ OLTP オブジェクトを含むデータベースで、TDE を有効にすることができます。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] では、TDE を有効した場合、インメモリ OLTP ログ レコードとデータが暗号化されます。 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] では、TDE を有効した場合、インメモリ OLTP ログ レコードは暗号化されますが、MEMORY_OPTIMIZED_DATA ファイル グループのファイルは暗号化されません。
 

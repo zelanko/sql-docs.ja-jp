@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216682"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196855"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] 以降では、Linux と Windows の両方で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] がサポートされています。 Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイと同様に、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] のデータベースとインスタンスは、Linux 下でも高可用性を備えている必要があります。 この記事では、高可用性を備えた Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] データベースとインスタンスを計画し、デプロイするうえでの技術的な側面について説明すると共に、Windows ベースのインストールとの違いについて説明します。 Linux プロフェッショナルは [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] について聞き慣れなかったり、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] プロフェッショナルは Linux について聞き慣れない場合があるかもしれないため、この記事では、一部のプロフェッショナルにとっては馴染みのある概念についても説明しています。
 
@@ -146,7 +146,7 @@ Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 用のそ
 
 このソリューションは、ある意味では Windows を使用したクラスター化構成のデプロイと似ていますが、異なる点も多くあります。 Windows では、クラスタリングの可用性形式 (Windows Server フェールオーバー クラスター (WSFC)) がオペレーティング システムに組み込まれており、WSFC の作成を可能にする機能 (フェールオーバー クラスタリング) は既定で無効になっています。 Windows では、AG と FCI は WSFC の上に構築されており、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] によって提供される特定のリソース DLL により、緊密な統合が共有されます。 この密結合のソリューションは、1 つのベンダーから提供されているからこそ実現できているとも言えます。
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![HA の基本](./media/sql-server-linux-ha-basics/image1.png)
 
 Linux では、サポートされている各ディストリビューションで Pacemaker を利用できますが、それぞれのディストリビューションでカスタマイズすることができ、実装とバージョンが少し異なる場合があります。 相違点の一部は、この記事の手順に反映されています。 クラスタリング レイヤーはオープンソースであるため、ディストリビューションに付属している場合でも、Windows 下の WSFC と同じ方法で緊密に統合されてはいません。 そのため、Microsoft では *mssql-server-ha* を提供してします。これにより、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] と Pacemaker スタックでも、Windows 下の AG や FCI に近いエクスペリエンスを提供できるようになっています (ただし、完全に同じではありません)。
 
@@ -169,10 +169,13 @@ Ubuntu には、可用性に関するガイドはありません。
 
 Pacemaker には、標準リソースとクローン リソースがあります。 クローン リソースとは、すべてのノードで同時に実行されるリソースのことです。 たとえば、負荷分散のために複数のノードで実行される IP アドレスなどがこれに該当します。 FCI 用に作成されたリソースでは、標準リソースが使用されます。これは、FCI は 1 つのノードでしか同時にホストできないためです。
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 AG を作成する際には、マルチステート リソースと呼ばれる特殊な形式の複製リソースが必要になります。 AG のプライマリ レプリカは 1 つだけですが、AG 自体は、動作元として構成されたすべてのノードで実行され、場合によっては、読み取り専用アクセスなども使用することができます。 これはノードを "ライブで" で使用する手法なので、リソースの状態は、マスターとスレーブという 2 つの概念で表されます。 詳細については、「[多状態のリソース:複数モードのリソース](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)」を参照してください。
 
 #### <a name="resource-groupssets"></a>リソース グループ/セット
-WSFC のロールのように、Pacemaker クラスターにはリソース グループという概念があります。 リソース グループ (SLES ではセットと呼ばれます) とは、連携的に機能し、1 つのノードから別のノードにフェールオーバーすることができる、リソースのコレクションのことを指します。 リソース グループには、マスター/スレーブとして構成されたリソースを含めることはできません。したがって、リソース グループは AG には使用できません。 リソース グループは FCI には使用できますが、通常は推奨される構成ではありません。
+
+WSFC のロールのように、Pacemaker クラスターにはリソース グループという概念があります。 リソース グループ (SLES では "_セット_" と呼ばれます) とは、連携的に機能し、1 つのノードから別のノードに 1 つの単位としてフェールオーバーすることができる、リソースのコレクションです。 リソース グループには、マスターまたはスレーブとして構成されたリソースを含めることはできないため、これを AG に使用することはできません。 リソース グループは FCI には使用できますが、通常は推奨される構成ではありません。
 
 #### <a name="constraints"></a>制約
 WSFC には、リソースに関する各種パラメーターに加え、依存関係などの概念もあります。これにより、2 つの異なるリソース間の親子関係が WSFC に伝えられます。 依存関係とは、どのリソースを最初にオンラインにする必要があるかを WSFC に指示するルールのことです。

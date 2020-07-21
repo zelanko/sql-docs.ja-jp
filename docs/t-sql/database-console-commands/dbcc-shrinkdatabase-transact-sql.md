@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68073162"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279535"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 指定したデータベース内のデータ ファイルとログ ファイルのサイズを圧縮します。
   
@@ -44,7 +44,7 @@ ms.locfileid: "68073162"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>引数  
 _database\_name_ | _database\_id_ | 0  
 圧縮するデータベースの名前または ID です。 0 は、現在のデータベースを使用するように指定します。  
@@ -93,7 +104,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>解説  
 
 >[!NOTE]
-> 現在、Azure SQL Data Warehouse では DBCC SHRINKDATABASE はサポートされません。 このコマンドを実行することはお勧めできません。これは大量の I/O が発生する操作であり、データ ウェアハウスがオフラインになる可能性があるためです。 また、このコマンドを実行すると、データ ウェアハウス スナップショットのコストに影響します。 
+> このコマンドを実行することはお勧めできません。これは大量の I/O が発生する操作であり、データ ウェアハウスがオフラインになる可能性があるためです。 また、このコマンドを実行すると、データ ウェアハウス スナップショットのコストに影響します。 
 
 特定のデータベースに関するすべてのデータとログ ファイルを圧縮するには、DBCC SHRINKDATABASE コマンドを実行します。 特定のデータベースで一度に 1 つのデータまたはログ ファイルを圧縮するには、[DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) コマンドを実行します。
   
@@ -120,7 +131,7 @@ DBCC SHRINKDATABASE では、データ ファイルはファイルごとに圧�
   
 次に、**mydb** のデータ ファイルに 7 MB のデータが含まれているとします。 _target\_percent_ を 30 に指定した場合、このデータ ファイルは空き領域のパーセンテージが 30 になるように圧縮されます。 ただし、_target\_percent_ を 40 に指定した場合、データ ファイルは圧縮されません。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、圧縮後のファイル サイズが現在のデータ占有領域よりも小さくなる場合、ファイルは圧縮されません。 
 
-別の考え方をすれば、目的の空き領域 40% にデータ ファイル最大容量の 70% (10 MB 中の 7 MB) を加算すると、100% を超えます。 30 を超える値を _target\_size_ に指定すると、データ ファイルは圧縮されません。 圧縮されない理由は、目的の空き領域のパーセンテージと、データ ファイルの現在の占有パーセンテージを加算した値が 100% を超えることです。
+この問題について別の考え方もできます。目的の空き領域 40% にデータ ファイル最大容量の 70% (10 MB 中の 7 MB) を加算すると、100% を超えます。 30 を超える値を _target\_size_ に指定すると、データ ファイルは圧縮されません。 圧縮されない理由は、目的の空き領域のパーセンテージと、データ ファイルの現在の占有パーセンテージを加算した値が 100% を超えることです。
   
 ログ ファイルの場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では _target\_size_ を使用してログ全体の目標サイズを計算します。 _target\_percent_ は圧縮操作後のログ内の空き領域の量になります。 その後、ログ全体の目標サイズは各ログ ファイルの目標サイズに変換されます。
   
@@ -130,7 +141,7 @@ DBCC SHRINKDATABASE では、各物理ログ ファイルの目標サイズへ�
   
 ## <a name="best-practices"></a>ベスト プラクティス  
 データベースを圧縮する場合は次のことを考慮してください。
--   圧縮操作は、何かの操作後に行うと最も効果的です。 この操作は、未使用領域を作成する、テーブルの切り捨てやテーブルの削除操作などです。  
+-   圧縮操作は、テーブルの切り捨てやテーブルの削除の操作など、未使用領域を作成する操作の後が最も効果的です。
 -   ほとんどのデータベースでは、毎日の定期的操作で使用するための空き領域が必要です。 データベースを繰り返し圧縮し、サイズが再び大きくなったことに気付く場合があります。 この拡張は、通常の操作に圧縮領域が必要であることを示しています。 このような場合、繰り返しデータベースを圧縮することは無意味です。  
 -   圧縮操作では、データベース内のインデックスの断片化状態は保持されず、一般に、断片化の程度が大きくなります。 この結果からも、データベースを繰り返し圧縮することはお勧めできません。  
 -   特別な要件がない限り、AUTO_SHRINK データベース オプションを ON に設定しないでください。  
@@ -170,8 +181,15 @@ GO
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
-## <a name="see-also"></a>参照  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Azure Synapse Analytics データベースを縮小する
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
+## <a name="see-also"></a>関連項目  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

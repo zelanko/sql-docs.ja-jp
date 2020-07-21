@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 1c83519d96d336da2e7577a2b9ea7d3693732d5c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925386"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391881"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 列と制約を変更、追加、または削除して、テーブルの定義を変更します。 また、ALTER TABLE では、パーティションを再割り当ておよび再構築したり、制約とトリガーを無効化および有効化したりもします。
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Azure Synapse Analytics の構文
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -399,6 +401,8 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -563,7 +567,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 
 マスクを削除するには、`DROP MASKED` を使用します。 関数のパラメーターについては、「[動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)」を参照してください。
 
-WITH ( ONLINE = ON | OFF) (\<列の変更の適用対象として>)  
+WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 テーブルを使用可能な状態に維持したまま、列の変更操作の多くを実行できるようにします。 既定値は OFF です。 データ型、列の長さまたは有効桁数、NULL 値の許容、スパースかどうか、および照合順序に関連する列の変更のために、列の変更をオンラインで実行できます。
@@ -685,7 +689,7 @@ MAXDOP オプションを使用して、並列プランの実行に使用され�
 > [!NOTE]
 > 並列インデックス操作は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。
 
-ONLINE **=** { ON | **OFF** } \<drop_clustered_constraint_option に適用する場合>  
+ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 インデックス操作時に、基になるテーブルや関連するインデックスをクエリやデータ変更で使用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。
 
 ON  
@@ -763,7 +767,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 用およびバージョン V12 より前の SQL Database 用に構築された非クラスター化列ストア インデックスは、読み取り専用形式でした。 あらゆる PARTITION 操作を実行する前に、非クラスター化列ストア インデックスを現在の形式に再構築する必要があります (これは更新可能です)。
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)**  
+SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_name* \| **"** default **"** \| **"** NULL **"** } **)**  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は `FILESTREAM` をサポートしていません。
 
 FILESTREAM データの格納場所を指定します。
@@ -783,12 +787,12 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 
 テーブルに関するシステムのバージョン管理を無効または有効にします。 テーブルのシステム バージョン管理を有効にするために、システムでは、システム バージョン管理のためのデータ型、null 値許容制約、および主キー制約の要件が満たされていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムによって現在のテーブルのスキーマに一致する履歴テーブルが生成され、2 つのテーブル間のリンクが作成され、システムが現在のテーブルにある各レコードの履歴を履歴テーブルに記録できるようになります。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を使ってリンクを作成し、既存の履歴テーブルを使用する場合、システムにより現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを行うよう選択できます。 このデータの整合性チェックにより、既存のレコードが重複しないようになります。 既定ではデータの整合性チェックを実行します。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} }  
+HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS} }  
 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 テンポラル テーブルに履歴データ用の有限または無限のリテンション期間を指定します。 省略すると、無限のリテンション期間が使用されます。
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
+SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 許可されるテーブル ロックのエスカレーション方法を指定します。
@@ -845,7 +849,7 @@ COLUMNSTORE_ARCHIVE
 
 複数のパーティションを同時に再構築するには、「[index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)」をご覧ください。 テーブルにクラスター化インデックスが含まれていない場合、データ圧縮を変更するとヒープと非クラスター化インデックスが再構築されます。 圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
 
-ONLINE **=** { ON | **OFF** } \<single_partition_rebuild_option に適用する場合>  
+ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 基となるテーブルの 1 つのパーティションと関連するインデックスを、インデックス操作中のクエリとデータ変更用に利用できるかどうかを指定します。 既定値は OFF です。 REBUILD は ONLINE 操作として実行できます。
 
 ON  
@@ -1031,7 +1035,7 @@ ONLINE **=** ON には次の制限があります。
 既存のクラスター化インデックスを削除するには、クラスター化インデックスの大きさと同じ一時ディスク領域が必要です。 この追加領域は、操作が完了するとすぐに解放されます。
 
 > [!NOTE]
-> *\<drop_clustered_constraint_option>* の下にリストされているオプションは、テーブル上のクラスター化インデックスに適用され、ビュー上のクラスター化インデックスまたは非クラスター化インデックスには適用できません。
+> *\<drop_clustered_constraint_option>* に示されているオプションは、テーブル上のクラスター化インデックスに適用され、ビュー上のクラスター化インデックスまたは非クラスター化インデックスには適用できません。
 
 ## <a name="replicating-schema-changes"></a>スキーマ変更のレプリケート
 
@@ -1845,7 +1849,7 @@ ORDER BY p.partition_number;
 
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. パーティション テーブルのパーティション列を調べる
 
-次のクエリでは、テーブルのパーティション分割列の名前を返します。 `FactResellerSales`
+次のクエリでは、テーブルのパーティション分割列の名前を返します。 `FactResellerSales`.
 
 ```sql
 SELECT t.object_id AS Object_ID, t.name AS TableName,

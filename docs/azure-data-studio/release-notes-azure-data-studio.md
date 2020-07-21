@@ -1,24 +1,84 @@
 ---
 title: リリース ノート
 description: Azure Data Studio リリース ノート
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 04/30/2020
-ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619675"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406255"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="july-2020"></a>2020 年 7 月
+
+2020 年 7 月 15 日 &nbsp; / &nbsp; バージョン:1.20.0
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| 新しい機能ツアーの追加 | Connections Viewlet、Notebook viewlet、Extensions Marketplace などのよく利用される機能のチュートリアルを、ホーム ページとコマンド パレットから機能ツアーを起動して、ユーザーが開始できるようになりました |
+| ノートブックの新機能 | &bull; &nbsp; Markdown ツールバーでのヘッダーのサポート<br/> &bull; &nbsp; テキスト セルでの Markdown の横に並べてのプレビュー
+| クエリ エディターでの列とテーブルのドラッグ アンド ドロップ | ユーザーは、Connections Viewlet からクエリ エディターに、列とテーブルを直接ドラッグ アンド ドロップできるようになりました |
+| アクティビティ バーへの Azure アカウント アイコンの追加 | Azure へのサインインにおける検出の向上 |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed)を参照してください。 |
+| &nbsp; | &nbsp; |
+
+
+## <a name="june-2020"></a>2020 年 6 月
+
+2020 年 6 月 15 日 &nbsp; / &nbsp; バージョン:1.19.0
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| Azure portal 統合に Azure Data Studio が追加されました | ユーザーは Azure SQL DB 接続、Azure Postgres などから、Azure portal を直接起動できるようになりました。 |
+| ノートブックの新機能 | &bull; &nbsp; 新しいノートブック ツール バー <br/> &bull; &nbsp; 新しい [セルの編集] ツールバー <br/> &bull; &nbsp; Python 依存関係ウィザード UX の更新 <br/> &bull; &nbsp; ノートブック間のスペースの向上 |
+| SQL Assessment API 拡張機能の発表 | この拡張機能は、ADS における SQL Server ベスト プラクティス評価を追加します。 以前は PowerShell SqlServer モジュールおよび SMO でしか使用できなかった SQL Assessment API が公開されています。これにより SQL Server インスタンスを評価したり、SQL Server チームによるそれらの推奨事項を受け取ったりすることができるようになります。 [こちらの記事](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15)で、SQL Assessment API の詳細と、この拡張機能でできることについて説明します。 |
+| [Machine Learning 拡張機能の改善点](https://go.microsoft.com/fwlink/?linkid=2129918) | Azure SQL Managed Instance がサポートされるようになりました。 |
+| データ仮想化拡張機能の改善点 | MongoDB と Teradata がサポートされるようになりました |
+| Postgres 拡張機能のバグの修正 | Azure MFA が修正されました |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed)を参照してください。 |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020-hotfix"></a>2020 年 5 月 (修正プログラム)
+
+2020 年 5 月 27 日 &nbsp; / &nbsp; バージョン:1.18.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| バグの修正 #10538 "現在のクエリの実行" キーバインドが予期したとおりに動作しなくなった | [#10538](https://github.com/microsoft/azuredatastudio/issues/10538)  |
+| バグの修正 #10537 バージョン 1.18 で新規または既存の SQL ファイルを開くことができない | [#10537](https://github.com/microsoft/azuredatastudio/issues/10537)  |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020"></a>2020 年 5 月
+
+2020 年 5 月 20 日 &nbsp; / &nbsp; バージョン:1.18.0
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| Redgate SQL Prompt 拡張機能の発表 | この拡張機能を使用すると、Azure Data Studio 内で書式スタイルを直接管理できるため、IDE を離れることなくスタイルを作成および編集できます。 |
+| Machine Learning 拡張機能の発表 | この拡張機能を使用すると、次のことができます。 <br/> &bull; &nbsp; SQL Server Machine Learning Services と Azure Data Studio を使用して Python および R パッケージを管理する。<br/> &bull; &nbsp; ONNX モデルを使用して Azure SQL Edge で予測を行う。<br/> &bull; &nbsp; Azure SQL Edge データベースで ONNX モデルを表示する。 <br/> &bull; &nbsp; ONNX モデルをファイルまたは Azure Machine Learning から Azure SQL Edge データベースにインポートする。 <br/> &bull; &nbsp; ノートブックを作成して実験を実行する。 |
+| ノートブックの新機能 | &bull; &nbsp; Python の依存関係を簡単にインストールできるようにする新しい Python 依存関係ウィザードが追加されました <br/> &bull; &nbsp; Markdown ツール バーのアンダーライン サポートが追加されました |
+| Always Encrypted のパラメーター化 | 暗号化されたデータベース列で挿入、更新、またはフィルター処理を行うクエリを実行できます。|
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2020-hotfix"></a>2020 年 4 月 (修正プログラム)
 
@@ -191,7 +251,7 @@ ms.locfileid: "82619675"
 ### <a name="known-issues"></a>既知の問題
 
 - ノートブック
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
 
 ## <a name="september-2019"></a>2019 年 9 月
 
@@ -211,8 +271,7 @@ ms.locfileid: "82619675"
 ### <a name="known-issues"></a>既知の問題
 
 - ノートブック
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
 
 ## <a name="august-2019"></a>2019 年 8 月
 
@@ -374,7 +433,7 @@ ms.locfileid: "82619675"
 
 | Change | 詳細 |
 | :----- | :------ |
-| 1\.3.8 で発見されたいくつかの問題を修正しました。 | [「1 月の修正プログラム リリース」(GitHub)](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1) を参照してください。<br/><br/>詳細については、以下を参照してください。<br/>&bull; &nbsp; [変更ログ (GitHub)](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)。<br/>&bull; &nbsp; [リリース (GitHub)](https://github.com/Microsoft/azuredatastudio/releases)。 |
+| 1\.3.8 で発見されたいくつかの問題を修正しました。 | [「1 月の修正プログラム リリース」(GitHub)](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1) を参照してください。<br/><br/>詳細については、以下を参照してください。<br/>&bull; &nbsp; [変更ログ (GitHub)](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)。<br/>&bull; &nbsp; [リリース (GitHub)](https://github.com/Microsoft/azuredatastudio/releases)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="january-2019"></a>2019 年 1 月
@@ -445,7 +504,7 @@ ms.locfileid: "82619675"
 - 修正: [問題 #2851](https://github.com/Microsoft/azuredatastudio/issues/2851):TimeSeries グラフが正しく表示されない
 - 修正: [問題 #2996](https://github.com/Microsoft/azuredatastudio/issues/2996):急なセッション変更によって一時テーブルが失われる
 
-詳細については、「[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)」と「[リリース](https://github.com/Microsoft/azuredatastudio/releases)」を参照してください。
+詳細については、「[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)」と「[リリース](https://github.com/Microsoft/azuredatastudio/releases)」を参照してください。
 
 ## <a name="september-2018-ga-release"></a>2018 年 9月 (GA リリース)
 
@@ -480,7 +539,7 @@ Azure Data Studio (旧称 SQL Operations Studio) の一般提供リリース。
 - 修正: [問題 #2647](https://github.com/Microsoft/azuredatastudio/issues/143):グラフの表示が、かなり前のバージョンに後退した。
 - 修正: [問題 #2648](https://github.com/Microsoft/azuredatastudio/issues/143):SELECT で、列全体に JSON ハイパーリンクが返される。
 
-詳細については、「[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)」と「[リリース](https://github.com/Microsoft/azuredatastudio/releases)」を参照してください。
+詳細については、「[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)」と「[リリース](https://github.com/Microsoft/azuredatastudio/releases)」を参照してください。
 
 ## <a name="august-2018"></a>2018 年 8 月
 
@@ -642,7 +701,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 | :----- | :------ |
 | SQL エージェント プレビュー拡張機能の機能強化: | &nbsp; |
 | &nbsp; &nbsp; &nbsp; ファイルのサポートが強化されました。 | &bull; &nbsp; サイズの大きなファイル。<br/>&bull; &nbsp; 保護されたファイル (管理者権限で保護されたファイルの保存用)。<br/>&bull; &nbsp; SQL Operations Studio 内での、\> 256 MB のファイルの格納。 |
-| &nbsp; &nbsp; &nbsp; 統合型のターミナル分割。 | 複数の開いているターミナルを同時に操作できます。 |
+| &nbsp; &nbsp; &nbsp; 統合型のターミナル分割。 | 複数の開いている端末を同時に操作できます。 |
 | &nbsp; &nbsp; &nbsp; インストールと起動にかかる時間の短縮。 | ディスク上のファイル数について、インストールのフットプリントが削減されました。 |
 | &nbsp; | &nbsp; |
 
@@ -674,7 +733,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 | Change | 詳細 |
 | :----- | :------ |
 | [新しい通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui)。 | SQL Operations Studio の通知を簡単に管理して確認できます。 |
-| [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いているターミナルを同時に操作できます。 |
+| [統合型のターミナル分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)。 | 複数の開いている端末を同時に操作できます。 |
 | [大きなファイルと保護されたファイルの保存](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges)。 | 管理者権限で保護された \>256M のファイルを SQL Operations Studio 内に保存できます。 |
 | [大きなファイルのサポートの改善](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements)。 | 大きなファイルのテキスト バッファーが最適化されました。 |
 | [設定検索の改善](https://code.visualstudio.com/updates/v1_20#_settings-search)。 | 自然言語検索で適切な設定を簡単に見つけることができます。 |
@@ -690,7 +749,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 詳細については、[Visual Studio Code の 2 月のリリース ノート](https://code.visualstudio.com/updates/v1_21)と、[Visual Studio Code の 1 月のリリース ノート](https://code.visualstudio.com/updates/v1_20)をご確認ください。
 
-その他の詳細については、「[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)」を参照してください。
+その他の詳細については、「[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)」を参照してください。
 
 ## <a name="march-2018"></a>2018 年 3 月
 
@@ -748,8 +807,8 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 | Change | 詳細 |
 | :----- | :------ |
 | 接続ダイアログで、保存されたサーバー接続が使用できるようになりました。 | &nbsp; |
-| Hot Exit を有効化できるようになりました。 Hot Exit は既定ではオフになっています。有効化するには、[Hot Exit の設定](settings.md#hot-exit)に関する記事を参照してください。 | &nbsp; |
-| サーバー グループに基づくタブの色づけ。 タブの色づけは既定ではオフになっています。有効化するには、[タブの色の設定](settings.md#tab-color)に関する記事を参照してください。 | &nbsp; |
+| Hot Exit を有効化できるようになりました。 既定では、Hot Exit は無効になっています。 有効にするには、[Hot Exit の設定](settings.md#hot-exit)に関するセクションを参照してください。 | &nbsp; |
+| サーバー グループに基づくタブの色づけ。 タブの色づけは、既定では無効になっています。 有効にするには、[タブの色の設定](settings.md#tab-color)に関するセクションを参照してください。 | &nbsp; |
 | 接続ダイアログの *[サーバー名]* が *[サーバー]* に変更されました。 | &nbsp; |
 | 壊れていた *[Run Current Query]\(現在のクエリを実行\)*  コマンドが修正されました。 | &nbsp; |
 | ドラッグ アンド ドロップによるスクリプト作成のバグが修正されました。 | &nbsp; |
@@ -781,7 +840,7 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 
 2017 年 11 月 15 日 &nbsp; / &nbsp; バージョン:0.23.6
 
-- [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初期リリース。
+- Azure Data Studio の最初のリリースです。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -791,6 +850,6 @@ _0.32.8 には、0.32.7 で検出されたいくつかの回帰の修正が含�
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
 - [Azure Data Warehouse に対する接続およびクエリ](quickstart-sql-dw.md)
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] への寄稿:
+Azure Data Studio への投稿:
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

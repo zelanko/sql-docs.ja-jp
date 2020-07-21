@@ -1,5 +1,5 @@
 ---
-title: SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ) | Microsoft Docs
+title: SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
 description: SQL Server ユーティリティ コントロール ポイント (UCP) を作成することによって、リソース使用のボトルネックおよび統合の可能性を特定するのに役立つ情報を得ることができます。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3203785a5850d2ac8a0d635ed9f899daeb2c52fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d29ab79c75adb436b45faab5e8161c8d01e6c533
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776022"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196890"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server ユーティリティ コントロール ポイントの作成 (SQL Server ユーティリティ)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,9 +101,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ コレクション セットは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ以外のコレクション セットとサイド バイ サイドで実行できます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのメンバーであれば、他のコレクション セットによって監視できます。 ただし、マネージド インスタンス上のすべてのコレクション セットは、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ管理データ ウェアハウスにアップロードすることに注意してください。 詳細については、「[SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)」、および「[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)」を参照してください。  
   
 ## <a name="wizard-steps"></a>ウィザードの手順  
- ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
+ ![UCP の作成](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 以降のセクションでは、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP を作成するワーク フローで使用するウィザードの各ページについて説明します。 新しい UCP を作成するウィザードを起動するには、SSMS の [表示] メニューからユーティリティ エクスプローラーを開き、ユーティリティ エクスプローラーのウィンドウ上部にある ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **[UCP の作成]** ボタンをクリックします。  
+ 以降のセクションでは、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP を作成するワーク フローで使用するウィザードの各ページについて説明します。 新しい UCP を作成するウィザードを起動するには、SSMS の [表示] メニューからユーティリティ エクスプローラーを開き、ユーティリティ エクスプローラーのウィンドウ上部にある ![[UCP の作成]](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **[UCP の作成]** ボタンをクリックします。  
   
  次の一覧にあるリンクをクリックすると、ウィザードのページの詳細に移動できます。  
   
@@ -126,9 +126,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> UCP の作成ウィザードの概要  
  ユーティリティ エクスプローラーを開いたときに、接続されたユーティリティ コントロール ポイントがない場合は、ユーティリティ コントロール ポイントに接続するか、新しいユーティリティ コントロール ポイントを作成する必要があります。  
   
- **既存の UCP に接続する** - ユーティリティ コントロール ポイントが既に配置されている場合は、ユーティリティ エクスプローラーのウィンドウ上部にある ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") **[ユーティリティへの接続]** ボタンをクリックして接続できます。 既存の UCP に接続するには、管理者資格情報を持っているか、Utility Reader ロールのメンバーである必要があります。 UCP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに 1 つだけ存在できます。また、1 つの SSMS インスタンスから接続できる UCP は 1 つだけです。  
+ **既存の UCP に接続する** - ユーティリティ コントロール ポイントが既に配置されている場合は、ユーティリティ エクスプローラーのウィンドウ上部にある ![[ユーティリティへの接続]](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") **[ユーティリティへの接続]** ボタンをクリックして接続できます。 既存の UCP に接続するには、管理者資格情報を持っているか、Utility Reader ロールのメンバーである必要があります。 UCP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティごとに 1 つだけ存在できます。また、1 つの SSMS インスタンスから接続できる UCP は 1 つだけです。  
   
- **新しい UCP を作成する** - 新しいユーティリティ コントロール ポイントを作成するには、ユーティリティ エクスプローラーのウィンドウ上部にある ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **[UCP の作成]** ボタンをクリックします。 新しい UCP を作成するには、接続ダイアログで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名と管理者資格情報を指定する必要があります。 UCP は 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにつき 1 つだけ存在します。  
+ **新しい UCP を作成する** - 新しいユーティリティ コントロール ポイントを作成するには、ユーティリティ エクスプローラーのウィンドウ上部にある ![[UCP の作成]](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **[UCP の作成]** ボタンをクリックします。 新しい UCP を作成するには、接続ダイアログで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名と管理者資格情報を指定する必要があります。 UCP は 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにつき 1 つだけ存在します。  
   
 ##  <a name="specify-instance"></a><a name="Instance_name"></a> インスタンスの指定  
  作成する UCP について、次の情報を指定します。  

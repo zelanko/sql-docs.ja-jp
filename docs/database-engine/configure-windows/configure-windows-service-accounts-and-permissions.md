@@ -1,12 +1,13 @@
 ---
 title: Windows サービス アカウントとアクセス許可の構成 | Microsoft Docs
-ms.custom: ''
+description: SQL Server でサービスを開始および実行するために使用されるサービス アカウントについて理解します。 その構成方法と適切なアクセス許可の割り当て方法を確認します。
+ms.custom: contperfq4
 ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -48,18 +49,18 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 93bfa129267ed149ce4d52904a0d5c459b6e87db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178743"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196946"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各サービスは、Windows で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作の認証を管理するための、1 つのプロセスまたはプロセス セットを表しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースにおける既定のサービス構成、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時およびインストール後に設定できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの構成オプションについて説明します。 このトピックでは、上級ユーザー向けにサービス アカウントの詳細について説明します。
 
@@ -82,6 +83,9 @@ ms.locfileid: "82178743"
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** - ビジネス インテリジェンス アプリケーション用のオンライン分析処理 (OLAP) とデータ マイニング機能が用意されています。 実行可能ファイルのパスは \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe です。
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** - レポートの管理、実行、作成、スケジュール、配信を行います。 実行可能ファイルのパスは \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe です。
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** - [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのストレージと実行に対する管理サポートを提供します。 実行可能ファイルのパスは \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe です。
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、展開のスケール アウト用に追加のサービスが含まれている場合があります。 詳細については、「[チュートリアル:Integration Services (SSIS) Scale Out を設定する](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md)」を参照してください。
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - クライアント コンピューター用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続情報を提供する名前解決サービスです。 実行可能ファイルは c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe です。
 - **フルテキスト検索** - コンテンツに対するフルテキスト インデックスと構造化データおよび半構造化データのプロパティをすばやく作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に対するドキュメントのフィルター処理および単語区切りを可能にします。
 - **SQL ライター** - ボリューム シャドウ コピー サービス (VSS) フレームワークで動作するアプリケーションのバックアップと復元を可能にします。
@@ -175,7 +179,7 @@ ms.locfileid: "82178743"
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 
-  Windows Server 2008 R2 および Windows 7 で追加された仮想アカウントは*管理されたローカル アカウント*であり、サービスの管理を簡単にする次の機能を使用できます。 仮想アカウントは自動的に管理され、ドメイン環境でネットワークにアクセスすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでサービス アカウントに既定値を使用した場合、**NT SERVICE\\** _\<サービス名>_ の形式でインスタンス名をサービス名として用いる仮想アカウントが使用されます。 仮想アカウントとして実行されるサービスは、 *<ドメイン名>* __\\__ *<コンピューター名>* __$__ の形式で、コンピューター アカウントの資格情報を使用してネットワーク リソースにアクセスします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するために仮想アカウントを指定する場合は、パスワードを空白のままにします。 仮想アカウントのサービス プリンシパル名 (SPN) を登録していない場合は、SPN を手動で登録します。 SPN の手動登録の詳細については、 [SPN の手動登録](register-a-service-principal-name-for-kerberos-connections.md)に関するページを参照してください。
+  Windows Server 2008 R2 および Windows 7 で追加された仮想アカウントは*管理されたローカル アカウント*であり、サービスの管理を簡単にする次の機能を使用できます。 仮想アカウントは自動的に管理され、ドメイン環境でネットワークにアクセスすることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでサービス アカウントに既定値を使用した場合、**NT SERVICE\\** _\<SERVICENAME>_ の形式でインスタンス名をサービス名として用いる仮想アカウントが使用されます。 仮想アカウントとして実行されるサービスは、 *<ドメイン名>* __\\__ *<コンピューター名>* __$__ の形式で、コンピューター アカウントの資格情報を使用してネットワーク リソースにアクセスします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動するために仮想アカウントを指定する場合は、パスワードを空白のままにします。 仮想アカウントのサービス プリンシパル名 (SPN) を登録していない場合は、SPN を手動で登録します。 SPN の手動登録の詳細については、 [SPN の手動登録](register-a-service-principal-name-for-kerberos-connections.md)に関するページを参照してください。
 
   > [!NOTE]
   > 仮想アカウントは、クラスターの各ノードで同じ SID を使用することができないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでは使用できません。
@@ -245,7 +249,7 @@ ms.locfileid: "82178743"
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> サービスの構成とアクセス制御
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の場合、各サービスに対してサービスごとの SID を使用することができます。これによって、サービスを分離し、多層防御を実現できます。 サービスごとの SID は、サービス名から取得されるので、そのサービスに固有です。 たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのサービス SID 名は、**NT Service\MSSQL$** _\<InstanceName>_ となります。 サービスを分離すると、高い特権のアカウントを使用したり、オブジェクトのセキュリティ保護を弱めたりすることなく、特定のオブジェクトにアクセスできます。 サービス SID を含むアクセス制御エントリを使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはそのリソースへのアクセスを制限することができます。
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の場合、各サービスに対してサービスごとの SID を使用することができます。これによって、サービスを分離し、多層防御を実現できます。 サービスごとの SID は、サービス名から取得されるので、そのサービスに固有です。 たとえば、[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスのサービス SID 名は、**NT Service\MSSQL$** _\<InstanceName>_ です。 サービスを分離すると、高い特権のアカウントを使用したり、オブジェクトのセキュリティ保護を弱めたりすることなく、特定のオブジェクトにアクセスできます。 サービス SID を含むアクセス制御エントリを使用することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスはそのリソースへのアクセスを制限することができます。
 
 > [!NOTE]
 > Windows 7 と [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 以降では、サービスごとの SID は、サービスによって使用される仮想アカウントである場合があります。
@@ -349,10 +353,10 @@ ms.locfileid: "82178743"
 ||80\tools|読み取り、実行|
 ||130\sdk|Read|
 ||Microsoft SQL Server\130\Setup Bootstrap|読み取り、実行|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|\<ToolsDir>\DReplayController\Log\ (空のディレクトリ)|読み取り、実行、フォルダー内容の一覧表示|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー|\<ToolsDir>DReplayController\Log\ (空のディレクトリ)|読み取り、実行、フォルダー内容の一覧表示|
 ||\<ToolsDir>\DReplayController\DReplayController.exe|読み取り、実行、フォルダー内容の一覧表示|
 ||\<ToolsDir>\DReplayController\resources\|読み取り、実行、フォルダー内容の一覧表示|
-||\<ToolsDir>\DReplayController\\{空のディレクトリ}|読み取り、実行、フォルダー内容の一覧表示|
+||\<ToolsDir>\DReplayController\\{すべての dll}|読み取り、実行、フォルダー内容の一覧表示|
 ||\<ToolsDir>\DReplayController\DReplayController.config|読み取り、実行、フォルダー内容の一覧表示|
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|読み取り、実行、フォルダー内容の一覧表示|
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|読み取り、実行、フォルダー内容の一覧表示|
@@ -386,7 +390,7 @@ ms.locfileid: "82178743"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
 ||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer|Read|
 ||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\global.asax|[完全]|
-||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\RSWebApp|読み取り、実行|
+||レポート サーバー Windows サービス アカウント|*\<install>* Instid\Reporting Services\RSWebApp|読み取り、実行|
 ||Everyone|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|
 ||ReportServer Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|
 ||Everyone|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 読み取り制御|
